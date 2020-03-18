@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/03/2020
+ms.date: 03/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d364c77266e51b3dcbc19c237e93f17e6f8d1aa
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7817a747a01a137fd29ee8aae117cd604da233a5
+ms.sourcegitcommit: 4815f07c8c0399c077b71721c6e6b61047c75ae6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352164"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79437102"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Intune を使用してデバイスを保護するための Windows 10 (以降) の設定
 
@@ -359,7 +359,7 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
   **[任意のアドレス]** または **[指定されたアドレス]** を選択します。  
 
   *[指定されたアドレス]* を使用する場合は、1 つまたは複数のアドレスを、規則の対象となるローカル アドレスのコンマ区切りリストとして追加します。 有効なトークンは次のとおりです。  
-  - 任意の "*ローカル アドレス*" には、アスタリスク "*" を使用します。 アスタリスクを使用する場合は、それを、使用する唯一のトークンとする必要があります。  
+  - *任意*のローカル アドレスには、アスタリスク "*" を使用します。 アスタリスクを使用する場合は、それを、使用する唯一のトークンとする必要があります。  
   - サブネットを指定するには、サブネット マスクまたはネットワーク プレフィックス表記のいずれかを使用します。 サブネット マスクとネットワーク プレフィックスのどちらも指定しない場合、サブネット マスクの既定値は 255.255.255.255 となります。  
   - 有効な IPv6 アドレス。  
   - IPv4 アドレス範囲。"開始アドレス - 終了アドレス" の形式とし、スペースは含めません。  
@@ -372,7 +372,7 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
   **[任意のアドレス]** または **[指定されたアドレス]** を選択します。  
 
   *[指定されたアドレス]* を使用する場合は、規則の対象となるリモート アドレスのコンマ区切りリストとして 1 つまたは複数のアドレスを追加します。 トークンは大文字と小文字が区別されません。 有効なトークンは次のとおりです。  
-  - "*任意*" のリモート アドレスには、アスタリスク "*" を使用します。 アスタリスクを使用する場合は、それを、使用する唯一のトークンとする必要があります。  
+  - *任意*のリモート アドレスには、アスタリスク "*" を使用します。 アスタリスクを使用する場合は、それを、使用する唯一のトークンとする必要があります。  
   - "Defaultgateway"  
   - "DHCP"  
   - "DNS"  
@@ -1649,240 +1649,6 @@ Microsoft Defender セキュリティ センターのアプリとアプリ通知
   - **[手動]**
   - **自動**
   - **[無効]**
-
-## <a name="user-rights"></a>ユーザー権利
-
-- **資格情報マネージャーに信頼された呼び出し側としてアクセス**  
-  **既定値**:未構成  
-  CSP: [UserRights/AccessCredentialManagerAsTrustedCaller](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accesscredentialmanagerastrustedcaller)
-
-  このユーザー権限は、バックアップおよび復元の操作中に資格情報マネージャーによって使用されます。 この特権が他のエンティティに付与されると、ユーザーの保存された資格情報がセキュリティ侵害を受ける可能性があります。
-  - **未構成**
-  - **許可**
-
-- **[ローカル ログオンを許可する]**  
-  **既定値**:未構成  
-  CSP: [UserRights/AllowLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-allowlocallogon)
-
-  このユーザー権限によって、コンピューターにログオンできるユーザーが決定されます。
-  - **未構成**
-  - **許可**
-
-- **[ネットワークからのアクセスを許可する]**  
-  **既定値**:未構成  
-  CSP: [UserRights/AccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accessfromnetwork)
-
-  このユーザー権限によって、ネットワーク経由でコンピューターに接続できるユーザーおよびグループが決定されます。
-  - **未構成**
-  - **許可**
-
-- **[OS の一部として動作]**  
-  **既定値**:未構成  
-  CSP: [UserRights/ActAsPartOfTheOperatingSystem](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-actaspartoftheoperatingsystem)
-
-  [OS の一部として動作]
-  - **未構成**
-  - **許可**  
-
-- **ファイルとディレクトリのバックアップ**  
-  **既定値**:未構成  
-  CSP: [UserRights/BackupFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-backupfilesanddirectories)
-
-  このユーザー権限によって、ファイルやディレクトリのバックアップ時に、ファイル、ディレクトリ、レジストリ、その他の持続的なオブジェクトのアクセス許可をバイパスできるユーザーが決定されます。
-  - **未構成**
-  - **許可**
-
-- **システム時刻の変更**  
-  **既定値**:未構成  
-  CSP: [UserRights/ChangeSystemTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-changesystemtime)
-
-  このユーザー権限によって、コンピューターの内部時計の日時を変更できるユーザーとグループが決定されます。
-  - **未構成**
-  - **許可**
-
-- **グローバル オブジェクトの作成**  
-  **既定値**:未構成  
-  CSP: [UserRights/CreateGlobalObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createglobalobjects)
-
-  このセキュリティ設定では、すべてのセッションで使用できるグローバル オブジェクトをユーザーが作成できるかどうかを決定します。 グローバル オブジェクトを作成できるユーザーは、他のユーザーのセッションで実行されるプロセスに影響を与える可能性があります。それによって、アプリケーション エラーが発生したりデータが破損したりする可能性があります。
-  - **未構成**
-  - **許可**
-
-- **[ページファイルの作成]**  
-  **既定値**:未構成  
-  CSP: [UserRights/CreatePageFile](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpagefile)
-
-  このユーザー権限によって、内部 API を呼び出してページ ファイルの作成とサイズ変更を実行できるユーザーおよびグループが決定されます。
-  - **未構成**
-  - **許可**
-
-- **永続的共有オブジェクトの作成**  
-  **既定値**:未構成  
-  CSP: [UserRights/CreatePermanentSharedObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpermanentsharedobjects)
-
-  このユーザー権限によって、オブジェクト マネージャーを使用してディレクトリ オブジェクトを作成するためにプロセスが使用できるアカウントが決定されます。
-  - **未構成**
-  - **許可**
-
-- **シンボリック リンクの作成**  
-  **既定値**:未構成  
-  CSP: [UserRights/CreateSymbolicLinks](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createsymboliclinks)
-
-  このユーザー権限によって、ユーザーがログオンしているコンピューターからシンボリック リンクを作成できるかどうかが決定されます。
-  - **未構成**
-  - **許可**
-
-- **[トークンの作成]**  
-  **既定値**:未構成  
-  CSP: [UserRights/CreateToken](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createtoken)
-
-  このユーザー権限では、あらゆるローカル リソースへのアクセスに使用できるトークンを作成するためにプロセスによって使用できるユーザーまたはグループが決まります。このトークンは、プロセスから内部 API を使用してアクセス トークンを作成するときに使用されます。
-  - **未構成**
-  - **許可**
-
-- **プログラムのデバッグ**  
-  **既定値**:未構成  
-    CSP: [UserRights/DebugPrograms](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-debugprograms)
-
-  このユーザー権限によって、任意のプロセスまたはカーネルにデバッガーをアタッチできるユーザーが決定されます。
-  - **未構成**
-  - **許可**
-
-- **[ネットワークからのアクセスを拒否する]**  
-  **既定値**:未構成  
-  CSP: [UserRights/DenyAccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyaccessfromnetwork)
-
-  このユーザー権限によって、ネットワーク経由でコンピューターにアクセスできないユーザーが決定されます。
-  - **未構成**
-  - **許可**
-
-- **サービスとしてのログオン権限を拒否する**  
-  **既定値**:未構成  
-  CSP: [UserRights/DenyLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denylocallogon)
-
-  このセキュリティ設定では、サービスとしてプロセスを登録できないサービス アカウントを決定します。
-  - **未構成**
-  - **許可**
-
-- **リモート デスクトップ サービスを使ったログオンを拒否**  
-  **既定値**:未構成  
-  CSP: [UserRights/DenyRemoteDesktopServicesLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyremotedesktopserviceslogon)
-
-  このユーザー権限によって、リモート デスクトップ サービス クライアントとしてログオンすることを禁止されるユーザーまたはグループが決定されます。
-  - **未構成**
-  - **許可**
-
-- **委任を有効にする**  
-  **既定値**:未構成  
-  CSP: [UserRights/EnableDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-enabledelegation)
-
- このユーザー権限によって、ユーザーまたはコンピューター オブジェクトに [Trusted for Delegation] を設定できるユーザーが決定されます。
-  - **未構成**
-  - **許可**
-
-- **セキュリティ監査の生成**  
-  **既定値**:未構成  
-  CSP: [UserRights/GenerateSecurityAudits](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-generatesecurityaudits)
-
-  このユーザー権限によって、セキュリティ ログにエントリを追加するためにプロセスが使用できるアカウントが決定されます。 セキュリティ ログは、システムへの未承認のアクセスを追跡するために使用されます。
-  - **未構成**
-  - **許可**
-
-- **[クライアントの偽装]**  
-  **既定値**:未構成  
-  CSP: [UserRights/ImpersonateClient](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-impersonateclient)
-
-  このユーザー権限をユーザーに割り当てると、そのユーザーの代理として実行されているプログラムがクライアントを偽装できるようになります。 この種類の偽装のためにこのユーザー権限を要求することにより、権限のないユーザーが自分で作成したサービスにクライアントを接続させて、その後、そのクライアントを偽装することを妨げることができます。これによって、権限のないユーザーのアクセス許可を管理レベルまたはシステム レベルに昇格できるようになる恐れがあります。
-  - **未構成**
-  - **許可**
-
-- **スケジューリング優先順位の繰り上げ**  
-  **既定値**:未構成  
-  CSP: [UserRights/IncreaseSchedulingPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-increaseschedulingpriority)
-
-  このユーザー権限によって、別のプロセスに対するプロパティの書き込みアクセスを持つプロセスを使用して、そのプロセスに割り当てられている実行の優先順位を上げることができるアカウントが決定されます。
-  - **未構成**
-  - **許可**
-
-- **デバイス ドライバーのロードとアンロード**  
-  **既定値**:未構成  
-  CSP: [UserRights/LoadUnloadDeviceDrivers](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-loadunloaddevicedrivers)
-
-  このユーザー権限によって、デバイス ドライバーまたはその他のコードをカーネル モードで動的に読み込んだりアンロードしたりできるユーザーが決定されます。
-  - **未構成**
-  - **許可**
-
-- **メモリ内のページのロック**  
-  **既定値**:未構成  
-  CSP: [UserRights/LockMemory](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-lockmemory)
-
-  このユーザー権利により、プロセスを使用して物理メモリにデータを保持できるアカウントが判断され、ディスク上の仮想メモリへのデータのページングが防止されます。
-  - **未構成**
-  - **許可**
-
-- **監査とセキュリティ ログの管理**  
-  **既定値**:未構成  
-  CSP: [UserRights/ManageAuditingAndSecurityLog](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-manageauditingandsecuritylog)
-
-  このユーザー権限によって、ファイル、Active Directory オブジェクト、レジストリ キーなど、個々のリソースに対してオブジェクト アクセスの監査オプションを指定できるユーザーが決定されます。
-  - **未構成**
-  - **許可**
-
-- **ボリュームの保守タスクを実行**  
-  **既定値**:未構成  
-  CSP: [UserRights/ManageVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-managevolume)
-
-  このユーザー権限によって、リモート最適化などのボリュームのメンテナンス タスクを実行できるユーザーとグループが決定されます。
-  - **未構成**
-  - **許可**
-
-- **ファームウェア環境値の修正**  
-  **既定値**:未構成  
-  CSP: [UserRights/ModifyFirmwareEnvironment](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyfirmwareenvironment)
-
-  このユーザー権限によって、ファームウェアの環境値を変更できるユーザーが決定されます。
-  - **未構成**
-  - **許可**
-
-- **オブジェクト ラベルの変更**  
-  **既定値**:未構成  
-  CSP: [UserRights/ModifyObjectLabel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyobjectlabel)
-
-  このユーザー権限によって、他のユーザーが所有しているファイル、レジストリ キー、プロセスなどのオブジェクトの整合性ラベルを変更できるユーザー アカウントが決定されます。
-  - **未構成**
-  - **許可**
-
-- **単一プロセスのプロファイル**  
-  **既定値**:未構成  
-  CSP: [UserRights/ProfileSingleProcess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-profilesingleprocess)
-
-  このユーザー権限によって、パフォーマンス監視ツールを使用して、システム プロセスのパフォーマンスを監視できるユーザーが決定されます。
-  - **未構成**
-  - **許可**
-
-- **[リモート シャットダウン]**  
-  **既定値**:未構成  
-  CSP: [UserRights/RemoteShutdown](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-remoteshutdown)
-
-  このユーザー権限によって、ネットワーク上のリモート ロケーションからコンピューターをシャットダウンできるユーザーが決定されます。 このユーザー権限を誤用すると、サービス拒否 (Denial-Of-Service) を引き起こす可能性があります。
-  - **未構成**
-  - **許可**
-  
-- **ファイルとディレクトリの復元**  
-  **既定値**:未構成  
-  CSP: [UserRights/RestoreFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-restorefilesanddirectories)
-  
-  このユーザー権限によって、バックアップされたファイルとディレクトリを復元するときに、ファイル、ディレクトリ、レジストリ、その他の永続オブジェクトのアクセス許可をバイパスできるユーザーが決定され、さらに、有効なセキュリティ プリンシパルをオブジェクトの所有者として設定できるユーザーも決定されます。
-  - **未構成**
-  - **許可**
-  
-- **ファイルまたはオブジェクトの所有権の取得**  
-  **既定値**:未構成  
-  CSP: [UserRights/TakeOwnership](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-takeownership)
-
-  このユーザー権限によって、Active Directory オブジェクト、ファイルとフォルダー、プリンター、レジストリ キー、プロセス、スレッドなど、システム内のセキュリティ設定が可能な任意のオブジェクトの所有権を取得できるユーザーが決定されます。
-  - **未構成**
-  - **許可**
 
 ## <a name="next-steps"></a>次のステップ
 
