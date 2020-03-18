@@ -1,0 +1,67 @@
+---
+title: Microsoft Intune での iOS/iPadOS アプリ プロビジョニング プロファイル
+titleSuffix: ''
+description: Intune には、有効期限が近づいているアプリを持つデバイスに新しいプロビジョニング プロファイルを事前に割り当てるツールが用意されています。
+keywords: ''
+author: Erikre
+ms.author: erikre
+manager: dougeby
+ms.date: 02/27/2020
+ms.topic: conceptual
+ms.service: microsoft-intune
+ms.subservice: apps
+ms.localizationpriority: high
+ms.technology: ''
+ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
+ms.reviewer: mghadial
+ms.suite: ems
+search.appverid: MET150
+ms.custom: intune-azure
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e3cf008c708ce42611a842ff7f8720d48d57ac91
+ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79341621"
+---
+# <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>iOS アプリ プロビジョニング プロファイルを使用して、アプリが期限切れにならないようにする
+
+[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
+## <a name="introduction"></a>概要
+
+iPhone および iPad に割り当てられた Apple iOS/iPadOS 基幹業務アプリは、含まれるプロビジョニング プロファイルおよび証明書で署名されたコードで構築されます。 アプリを実行すると、iOS/iPadOS は iOS/iPadOS アプリの整合性を確認し、プロビジョニング プロファイルで定義されたポリシーを適用します。 次の検証が行われます。
+
+- **インストール ファイルの整合性** - iOS/iPadOS は、アプリの詳細と、エンタープライズ署名証明書の公開キーを比較します。 これらが異なる場合はアプリの内容が変更されている可能性があり、アプリは実行を許可されません。
+- **機能の強制** - iOS/iPadOS では、アプリのインストール (.ipa) ファイルに含まれる、(個々の開発者プロビジョニング プロファイルではなく) エンタープライズ プロビジョニング プロファイルからアプリの機能の適用が試行されます。
+
+
+アプリの署名に使用するエンタープライズ署名証明書は、通常 3 年間は継続します。 ただし、プロビジョニング プロファイルは 1 年後に期限が切れます。 証明書が有効である期間中、Intune には、有効期限が近づいているアプリを持つデバイスに新しいプロビジョニング プロファイルを事前に割り当てるツールが用意されています。
+証明書の期限が切れると、新しい証明書を使用してアプリを再び署名して、新しい証明書のキーを持つ新しいプロビジョニング プロファイルを埋め込む必要があります。
+
+管理者は、セキュリティ グループを追加/除外することで、iOS/iPadOS アプリ プロビジョニング構成を割り当てることができます。 たとえば、すべてのユーザーに iOS/iPadOS アプリ プロビジョニング構成を割り当て、エグゼクティブ グループのみ除外することができます。
+
+## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>iOS モバイル アプリ プロビジョニング プロファイルを作成する方法
+
+1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+2. **[アプリ]**  >  **[iOS アプリ プロビジョニング プロファイル]**  >  **[プロファイルの作成]** を選択します。
+3. **[基本]** ページで、次の値を追加します。
+    - **名前** - このモバイル プロビジョニング プロファイルの名前を指定します。
+    - **説明** - 必要に応じて、ポリシーの説明を指定します。
+    - **プロファイル ファイルのアップロード** - **[開く]** アイコンを選択し、[Apple Developer Web サイト](https://developer.apple.com/)からダウンロードした Apple モバイル構成プロファイル ファイル (拡張子 `.mobileprovision`) を選択します。
+
+   **[有効期限]** は、上記で追加した Apple モバイル構成プロファイル ファイル内の値から設定されます。<br>
+
+   <img alt="Create profile - Basics" src="/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
+
+4. **[次へ]:[スコープ タグ]** をクリックします。<br>
+   **[スコープ タグ]** ページでは、必要に応じて、スコープ タグを構成することにより Intune で iOS/iPadOS アプリ プロビジョニング プロファイルを表示できるユーザーを決定できます。 スコープのタグの詳細については、[分散 IT のためのロールベースのアクセス制御とスコープのタグの使用](../fundamentals/scope-tags.md)に関するページをご覧ください。
+5. **[次へ]:[割り当て]** をクリックします。<br>
+   **[割り当て]** ページでは、ユーザーとデバイスにプロファイルを割り当てることができます。 デバイスが Intune で管理されているかどうかに関係なく、デバイスにプロファイルを割り当てることができることに注意してください。このことは重要です。
+6. **[次へ]:[確認と作成]** をクリックして、プロファイルに対して入力した値を確認します。
+7. 終了したら、 **[作成]** をクリックして、Intune で iOS/iPadOS アプリ プロビジョニング プロファイルを作成します。 
+
+## <a name="next-steps"></a>次のステップ
+
+必要な iOS/iPadOS デバイスにプロファイルを割り当てます。 詳細については、「[デバイス プロファイルを割り当てる方法](../configuration/device-profile-assign.md)」の手順をご覧ください。
