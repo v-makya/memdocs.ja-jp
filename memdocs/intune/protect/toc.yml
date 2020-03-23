@@ -265,6 +265,12 @@
               href: security-baseline-settings-defender-atp.md
             - name: Microsoft Edge のベースライン設定
               href: security-baseline-settings-edge.md
+        - name: ウイルス対策ポリシーの設定
+          items:
+            - name: macOS Defender ウイルス対策の設定
+              href: antivirus-microsoft-defender-settings-macos.md
+            - name: Windows 10 Microsoft Defender ウイルス対策の設定
+              href: antivirus-microsoft-defender-settings-windows.md
         - name: Windows Update の設定
           href: windows-update-settings.md
         - name: コンプライアンス ポリシー設定 - Android

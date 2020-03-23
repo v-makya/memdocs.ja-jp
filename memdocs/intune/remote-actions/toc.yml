@@ -49,7 +49,9 @@
           href: device-rename.md
         - name: 通知を送信する
           href: custom-notifications.md
-        - name: モバイル デバイスのリモート制御
+        - name: モバイル デバイスをリモートで支援する
+          href: remote-assist-mobile-devices.md
+        - name: リモート管理に TeamViewer を使用する
           href: teamviewer-support.md
         - name: デバイスの同期
           href: device-sync.md

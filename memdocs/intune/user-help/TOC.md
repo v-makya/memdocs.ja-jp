@@ -16,6 +16,7 @@
 #### [Android デバイスを登録する](enroll-device-android-company-portal.md)  
 #### [Android 仕事用プロファイルを使用して登録する](enroll-device-android-work-profile.md)
 #### [Microsoft Intune アプリを使用して登録する](enroll-device-android-microsoft-intune-app.md)
+### [新しいデバイス管理のセットアップに移動する](move-to-new-device-management-setup.md)
 ### [デバイスで管理対象アプリを使用する](use-managed-apps-on-your-device-android.md)
 ### [デバイスを暗号化する](encrypt-your-device-android.md)
 ### [PIN またはパスワードを設定する](set-your-pin-or-password-android.md)
