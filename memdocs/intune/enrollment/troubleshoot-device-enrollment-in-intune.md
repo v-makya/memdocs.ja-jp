@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a38664640b448d6770d4728a9a9918e251c37e3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 93fba17973571a9981269eb0b9fc98dae20cb920
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344702"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085860"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune でのデバイス登録に関するトラブルシューティング
 
@@ -47,8 +47,8 @@ ms.locfileid: "79344702"
 
 マネージド デバイスのユーザーが登録ログと診断ログを収集しておくと、管理者が確認できます。 ユーザーがログを収集する手順については、次のページを参照してください。
 
-- [IT 管理者に Android の登録に関するエラーを送信する](https://docs.microsoft.com/user-help/send-enrollment-errors-to-your-it-admin-android)
-- [IT 管理者に iOS/iPadOS に関するエラーを送信する](https://docs.microsoft.com/user-help/send-errors-to-your-it-admin-ios)
+- [IT 管理者に Android の登録に関するエラーを送信する](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
+- [IT 管理者に iOS/iPadOS に関するエラーを送信する](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
 
 
 ## <a name="general-enrollment-issues"></a>登録に関する一般的な問題

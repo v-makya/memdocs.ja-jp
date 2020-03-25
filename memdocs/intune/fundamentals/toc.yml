@@ -282,5 +282,5 @@
               href: troubleshoot-software-updates-in-microsoft-intune.md
             - name: Endpoint Protection の一般的なエラー
               href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-    - name: Intune エンド ユーザー ドキュメント
-      href: /user-help/use-managed-devices-to-get-work-done
+    - name: Intune エンドユーザー ドキュメント
+      href: ../user-help/use-managed-devices-to-get-work-done.md

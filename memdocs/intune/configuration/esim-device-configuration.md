@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f12282acebaa90d3afe868bb28743444d01001d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343493"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086988"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Intune で eSIM 携帯電話プロファイルを構成する - パブリック プレビュー
 
 eSIM は埋め込み SIM チップであり、[Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro) などの eSIM 対応デバイス上で携帯データネットワーク接続を介してインターネットに接続することができます。 eSIM を利用する場合、携帯電話会社から SIM カードを入手する必要はありません。 世界中を旅行する場合でも、携帯電話会社やデータ プランを切り替え、常に回線接続を維持できます。
 
 たとえば、仕事用には携帯データ通信プランを、個人用には異なる携帯電話会社による別のデータ通信プランを利用できます。 旅行時には、現地で通信プランを提供している携帯電話会社を見つけて、インターネットにアクセスすることができます。
+
+この機能は、以下に適用されます。
+
+- Windows 10 以降
 
 Intune では、携帯電話会社によって提供される 1 回限りのアクティブ化コードをインポートすることができます。 eSIM モジュール上で携帯データ通信プランを構成するには、そのアクティブ化コードをご利用の eSIM 対応デバイスに展開します。 Intune でアクティブ化コードがインストールされると、eSIM ハードウェア モジュールはアクティブ化コードのデータを利用して、携帯電話会社に接続します。 完了すると、eSIM プロファイルがデバイスにダウンロードされ、携帯電話のアクティブ化のために構成されます。
 
