@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 89fdcaefebc7329959cc1e5d77a97034d038d5c2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3b3420dce8ea9d21b955e36506229817420cdbf0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79346912"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084186"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Windows デバイスを Intune ポータル サイトで使用する
 
@@ -33,7 +33,7 @@ ms.locfileid: "79346912"
 ## <a name="how-to-get-company-portal"></a>ポータル サイトを取得する方法
 ポータル サイトには Web サイト バージョンがあり、アプリ ダウンロードとしても使用できます。 [ポータル サイト Web サイトにアクセスする](https://go.microsoft.com/fwlink/?linkid=2010980)には、職場や学校の資格情報を使用してサインインします。  
 
-詳細な手順とスクリーンショットについては、「[ポータル サイトにサインインする](https://docs.microsoft.com/user-help/sign-in-to-the-company-portal)」を参照してください。
+詳細な手順とスクリーンショットについては、「[ポータル サイトにサインインする](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal)」を参照してください。
 
 ## <a name="supported-versions"></a>サポートされるバージョン
 

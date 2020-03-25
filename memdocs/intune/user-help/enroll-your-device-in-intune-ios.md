@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ccd264257ee31db1a60400e9054b5219c52a5200
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: aeb2e22348e7197f0abb62ee540c37079f8645f4
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337162"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084694"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>iOS デバイスからの会社のリソースへのアクセスを設定する  
 
@@ -54,7 +54,7 @@ ms.locfileid: "79337162"
 ### <a name="setting-notifications"></a>通知の設定  
 登録後、組織で多要素認証などの新しいセキュリティ要件が適用された場合、ポータル サイト アプリによって通知されます。 デバイスから作業を続行できるように、設定を調整することができます。  
 
-登録の詳細については、[ポータル サイト アプリをインストールして、デバイスを登録するとどうなるか](https://docs.microsoft.com//user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios)についてのページを参照してください。  
+登録の詳細については、[ポータル サイト アプリをインストールして、デバイスを登録するとどうなるか](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios)についてのページを参照してください。  
 
 ## <a name="enroll-your-ios-device"></a>iOS デバイスを登録する  
 

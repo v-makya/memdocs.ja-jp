@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1066e2d86a2c3be4ad4d55a0fd2bbbac03066cc6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7538cce4b116098db21e89d491476e8e0cd7f4e5
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363487"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086088"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Intune で macOS デバイスの登録をセットアップする
 
@@ -51,7 +51,7 @@ macOS デバイスの登録を設定する前に、以下の前提条件を満�
 - [会社のポータル Web サイト](https://portal.manage.microsoft.com)にアクセスします。(または)
 - [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac) で Mac ポータル サイト アプリをダウンロードする。
 
-また、オンライン登録手順へのリンクをユーザーに送信することもできます。(「[Intune に macOS デバイスを登録する](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-macos)」) へのリンクを送信することもできます。
+また、オンライン登録手順へのリンクをユーザーに送信することもできます。(「[Intune に macOS デバイスを登録する](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)」) へのリンクを送信することもできます。
 
 その他のエンドユーザー タスクの詳細については、次の記事を参照してください。
 

@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 66dafbeea3d5fa540a4306c811f784a4c6088c2c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ad586baf79bb818ccdfc012c04a58e55d19d8cc8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79347926"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084485"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>ポータル サイト アプリをインストールしてサインインする
 
@@ -38,6 +38,6 @@ iOS デバイスに Intune ポータル サイト アプリをインストール
 
 3. ポータル サイト アプリを開き、職場または学校の電子メール アドレスとパスワードを入力して、 **[サインイン]** をタップします。
 
-    職場または学校で Intune を使用している場合は、ポータル サイト アプリに初めてサインインするときに、デバイスを Intune に登録するよう求められます。 登録するには、「[Intune に iOS デバイスを登録する](enroll-your-device-in-intune-ios.md)」の手順に従います。 [別のデバイスを使用してサインインする](https://docs.microsoft.com/user-help/sign-in-to-the-company-portal#sign-in-from-another-device)こともできます。
+    職場または学校で Intune を使用している場合は、ポータル サイト アプリに初めてサインインするときに、デバイスを Intune に登録するよう求められます。 登録するには、「[Intune に iOS デバイスを登録する](enroll-your-device-in-intune-ios.md)」の手順に従います。 [別のデバイスを使用してサインインする](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal#sign-in-from-another-device)こともできます。
 
 サポートが必要な場合は、 社内サポートに問い合わせてください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。

@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 889c7ef6d45a51a4aed86bf1a76842feb6f6251a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79336109"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084395"
 ---
 # <a name="install-mobile-threat-defense"></a>Mobile Threat Defense をインストールする   
 
@@ -79,9 +79,9 @@ ms.locfileid: "79336109"
 インストールが失敗した場合は、IT サポート担当者にお問い合わせください。 組織の連絡先情報を検索するには、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)に移動してください。  
 
 アプリのログを IT サポート担当者に送信して、インストールについてより多くのコンテキストを提供することもできます。  
-* Android ユーザー:ポータル サイトから[ログをアップロードして電子メールで送信](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android)します。   
+* Android ユーザー:ポータル サイトから[ログをアップロードして電子メールで送信](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android)します。   
 
-* iOS デバイス ユーザー:Microsoft Edge for iOS から[ログを取得して送信](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-on-ios-to-access-managed-app-logs)します。  
+* iOS デバイス ユーザー:Microsoft Edge for iOS から[ログを取得して送信](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs)します。  
 
 ## <a name="resolve-a-threat"></a>脅威を解決する  
 脅威が組織で定義されている脅威レベルを超えた場合、組織は次のいずれかを行います。  

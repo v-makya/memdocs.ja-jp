@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bcfe4adead40e8a38d7f84af52406af320a394
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b79c7a9cdc740984e1ace90b37bdea8dbdc70de
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338241"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220253"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Intune でカスタム通知を送信する
 
@@ -73,7 +73,6 @@ Android デバイスでポータル サイト アプリを開いている場合�
 - メッセージを作成するには、前の「*アクセス許可*」セクションで説明されている適切なアクセス許可が含まれる Intune ロールが割り当てられているアカウントを使用します。 ユーザーにアクセス許可を割り当てるには、「[ロールの割り当て](../fundamentals/role-based-access-control.md#role-assignments)」を参照してください。
 - カスタム通知では、タイトルは 50 文字まで、メッセージは 500 文字までに制限されています。  
 - Intune では、以前に送信されたカスタム通知からのテキストが保存されることはありません。 メッセージを再送信するには、そのメッセージを再作成する必要があります。  
-- グループに送信できるメッセージ数は、1 時間あたり最大 25 件だけです。 この制限は、テナント レベルで行われます。 この制限は、個々のデバイスに通知を送信するときには適用されません。
 - グループに送信できるメッセージ数は、1 時間あたり最大 25 件だけです。 この制限は、テナント レベルで行われます。 この制限は、個々のデバイスに通知を送信するときには適用されません。
 - 個々のデバイスへのメッセージ送信では、同じデバイスに送信できるメッセージ数は 1 時間あたり最大 10 件だけです。
 - グループ内のユーザーに通知を送信できます。 グループに通知を送信するとき、通知ごとに最大 25 個のグループを直接ターゲットにすることができます。 入れ子になったグループは、この合計にカウントされません。 グループに通知を送信するとき、メッセージのターゲットはグループ内のユーザーに限定され、ユーザーが登録している各 iOS/iPadOS、または Android デバイスに送信されます。 通知をターゲットにすると、グループ内のデバイスは無視されます。

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a81d0cad6e7fa985733675912ada6f446eb501d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4aaa8bcee3684c73fa5ec3d488fd3107585dfc61
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359405"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086166"
 ---
 # <a name="what-is-device-enrollment"></a>デバイス登録とは
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -39,7 +39,7 @@ Intune では、従業員のデバイスやアプリ、従業員が会社のデ�
 |:---:|:---:|:---:|:---:|:---:|
 | | 登録時にデバイスがワイプされます。 | 各デバイスをユーザーに関連付ける。| "はい" の場合、ユーザーはデバイスの登録を解除できません。 | |
 |**[BYOD](#bring-your-own-device)** | いいえ| はい | いいえ | [詳細情報](apple-mdm-push-certificate-get.md)|
-|**[DEM](#device-enrollment-manager)**| いいえ |いいえ |いいえ | [詳細情報](device-enrollment-program-enroll-ios.md)|
+|**[DEM](#device-enrollment-manager)**| いいえ |いいえ |いいえ | [詳細情報](device-enrollment-manager-enroll.md)|
 |**[DEP](#apple-device-enrollment-program)**| はい | 省略可能 | 省略可能|[詳細情報](device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| はい | 省略可能 | いいえ| [詳細情報](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| いいえ | いいえ | いいえ|[詳細情報](apple-configurator-enroll-ios.md)|
@@ -67,7 +67,7 @@ Intune では、従業員のデバイスやアプリ、従業員が会社のデ�
 
 | **個人用** | **登録方法** | **リセットが必要** | **ユーザー アフィニティ** | **ロック済み** | **詳細**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android のデバイス管理**|**ポータル サイトからユーザーが開始** | いいえ | はい | いいえ | [詳細情報](https://docs.microsoft.com/user-help/enroll-device-android-company-portal)|
+|**Android のデバイス管理**|**ポータル サイトからユーザーが開始** | いいえ | はい | いいえ | [詳細情報](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
 |**Android エンタープライズの仕事用プロファイル**|**ポータル サイトからユーザーが開始**| いいえ | はい | いいえ | [詳細情報](android-work-profile-enroll.md)|
 
 

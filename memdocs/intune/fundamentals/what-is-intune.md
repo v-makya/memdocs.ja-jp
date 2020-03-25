@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c567cdeb6cd4e91d40068ba642be4f3838e41d3f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c8fce5e8d7a92922d6061c33655bc4e83b3a1a95
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354621"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233492"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune はデバイスの MDM および MAM プロバイダーです
 
@@ -107,7 +107,7 @@ Intune は多くの部門で使用されています。たとえば、[政府機
 
 ## <a name="next-steps"></a>次のステップ
 
-- [Intune が解決に役立つ一般的なビジネス問題](https://docs.microsoft.com/intune/common-scenarios)のいくつかを参照してください。
+- [Intune が解決に役立つ一般的なビジネス問題](common-scenarios.md)のいくつかを参照してください。
 - [Intune の 30 日の試用](free-trial-sign-up.md)を開始します。
 - [Intune への移行](migration-guide.md)を計画します。
 - 無料試用版またはサブスクリプションを使用して、次の手順を実行します。「[クイックスタート:iOS 用の電子メール デバイス プロファイルを作成する](../configuration/quickstart-email-profile.md)」の手順に従って、iOS デバイス用のテスト デバイス プロファイルを作成します。

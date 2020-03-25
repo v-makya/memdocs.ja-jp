@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 828c033c5b8d7463244f356ebed9228838da74c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0e878294a9af6b80358aa495aa4d10ac6ed93404
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360380"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086341"
 ---
 # <a name="add-wi-fi-settings-for-macos-devices-in-microsoft-intune"></a>Microsoft Intune で macOS デバイス向けの Wi-Fi 設定を追加する
 
@@ -33,7 +33,7 @@ ms.locfileid: "79360380"
 
 ## <a name="before-you-begin"></a>始める前に
 
-[デバイス プロファイルを作成します](device-profile-create.md)。
+[デバイス プロファイルを作成します](wi-fi-settings-configure.md)。
 
 > [!NOTE]
 > これらの設定は、すべての登録の種類で使用できます。 登録の種類の詳細については、[macOS の登録](../enrollment/macos-enroll.md)に関する記事をご覧ください。

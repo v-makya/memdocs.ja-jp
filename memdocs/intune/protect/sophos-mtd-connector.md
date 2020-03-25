@@ -15,15 +15,14 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d40d290fbe07ab4d1f0cf66761b0c78867cf5677
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 285f323f55d41edab5ccd450deb0244b6fbda874
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338748"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526446"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Sophos Mobile Threat Defense コネクタと Intune
-
 モバイル デバイスからの会社のリソースへのアクセスは、Microsoft Intune に統合する Mobile Threat Defense (MTD) ソリューションである Sophos Mobile が実行するリスク評価に基づく条件付きアクセスを利用して制御できます。 リスクは、Sophos Mobile アプリを実行するデバイスが収集した製品利用統計情報に基づいて評価されます。
 条件付きアクセス ポリシーは、Intune のデバイス コンプライアンス ポリシーを使用して有効にする Sophos Mobile でのリスクの評価に基づいて構成できます。これを使用すると、検出された脅威に基づき、準拠していないデバイスが企業リソースにアクセスするのを許可または拒否できます。
 

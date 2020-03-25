@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c2a32561f66f3170b41209cb4d324e368768878
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1f4d51cbd5c8bc6c82822d5e26191c01d2e1bb1d
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344429"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220151"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Windows デバイスの登録をセットアップする
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-この記事は、IT 管理者がそのユーザーの Windows の登録を簡略化する場合に役立ちます。 [Intune が設定](../fundamentals/setup-steps.md)されたら、ユーザーは職場または学校のアカウントで[サインイン](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-windows)し、Windows デバイスを登録します。  
+この記事は、IT 管理者がそのユーザーの Windows の登録を簡略化する場合に役立ちます。 [Intune が設定](../fundamentals/setup-steps.md)されたら、ユーザーは職場または学校のアカウントで[サインイン](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal)し、Windows デバイスを登録します。  
 
 Intune 管理者は次の方法で登録を簡略化できます。
 
@@ -111,7 +111,7 @@ CNAME の構成以外の方法を使用することは、サポートされて�
 > [!NOTE]
 > 特定のバージョンの Windows で割り当てられた Windows アプリを表示するためには、エンド ユーザーは Microsoft Edge を介してポータル サイト Web サイトにアクセスする必要があります。 Google Chrome、Mozilla Firefox、Internet Explorer などの他のブラウザーでは、この種のフィルタリングはサポートされていません。
 
-エンドユーザー用の登録手順については、「[Intune に Windows デバイスを登録する](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-windows)」を参照してください。 また、ユーザーには、[IT 管理者がユーザーのデバイスに関して確認できる情報](https://docs.microsoft.com/user-help/what-can-your-it-administrator-see-when-you-enroll-your-device-in-intune-windows)に関するページも案内してください。
+エンドユーザー用の登録手順については、「[Intune に Windows デバイスを登録する](../user-help/windows-enrollment-company-portal.md)」を参照してください。 また、ユーザーには、[IT 管理者がユーザーのデバイスに関して確認できる情報](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)に関するページも案内してください。
 
 >[!IMPORTANT]
 > MDM 自動登録を有効にしていなくても、Azure AD に参加している Windows 10 デバイスを持っている場合は、登録後に Intune コンソールに 2 つのレコードが表示されます。 これを停止するには、Azure AD に参加しているデバイスを持っているユーザーが、 **[アカウント]**  >  **[職場または学校にアクセスする]** に移動し、同じアカウントを使用して**接続**するようにします。 

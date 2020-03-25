@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfb0012dfc2cedb72c64a54c16b567dffff84c9e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342297"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083554"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>アプリ保護ポリシーを使用するデータ保護フレームワーク 
 
@@ -55,7 +55,7 @@ Microsoft は、APP データ保護フレームワークに対して次の展開
 
 アプリへの変更をテストするときは、[配布のタイミング](app-protection-policy-delivery.md)に注意してください。 特定のユーザーに対する APP 配布の状態を監視できます。 詳細については、「[アプリ保護ポリシーを監視する方法](app-protection-policies-monitor.md)」を参照してください。
 
-Edge と URL *about:Intunehelp* を使用して、各アプリに対する個々の APP 設定を、デバイス上で検証できます。 詳しくは、「[クライアント アプリの保護ログのレビュー](app-protection-policy-settings-log.md)」および「[Microsoft Edge と Microsoft Intune を使用して Web アクセスを管理する](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs)」をご覧ください。
+Edge と URL *about:Intunehelp* を使用して、各アプリに対する個々の APP 設定を、デバイス上で検証できます。 詳しくは、「[クライアント アプリの保護ログのレビュー](app-protection-policy-settings-log.md)」および「[Microsoft Edge と Microsoft Intune を使用して Web アクセスを管理する](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)」をご覧ください。
 
 ## <a name="app-data-protection-framework-settings"></a>APP データ保護フレームワークの設定
 

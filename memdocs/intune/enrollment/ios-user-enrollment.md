@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 842b262c2ae19a7a026d87600df5ffb0e80cf9b8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 969dbcbe3fe1b1a155769bec6403b889b3d326bc
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359236"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086100"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>iOS/iPadOS と iPadOS のユーザー登録を設定する (プレビュー)
 
@@ -59,7 +59,7 @@ Apple のユーザー登録プロセスを使用して、iOS/iPadOS デバイス
 
     - **デバイスの登録**:このプロファイル内のすべてのユーザーは、[デバイスの登録] を使用します。
     - **ユーザー登録**:このプロファイル内のすべてのユーザーは、[ユーザー登録] を使用します。
-    - **Determine based on user choice (ユーザーの選択に基づいて決定する)** :このグループのすべてのユーザーには、使用する登録の種類の選択肢が表示されます。 ユーザーが自分のデバイスを登録すると、 **[I own this device]\(このデバイスを所有している\)** と **[(Company) owns this device]\((会社が) このデバイスを所有している\)** から選択できるようになります。 後者を選択した場合は、デバイスの登録を使用してデバイスが登録されます。 ユーザーが **[I own this device]\(このデバイスを所有している\)** を選択した場合は、さらにデバイス全体をセキュリティで保護するか、職場関連のアプリとデータのみをセキュリティで保護するかを選択できます。 デバイスを所有するかどうかのエンド ユーザーによる選択で、デバイスに実装されている登録の種類が決まります。 このユーザーの選択は、Intune の [デバイスの所有者] 属性にも反映されます。 ユーザー エクスペリエンスの詳細については、[iOS/iPadOS デバイスから会社のリソースへのアクセスを設定する方法](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios)に関する記事をご覧ください。
+    - **Determine based on user choice (ユーザーの選択に基づいて決定する)** :このグループのすべてのユーザーには、使用する登録の種類の選択肢が表示されます。 ユーザーが自分のデバイスを登録すると、 **[I own this device]\(このデバイスを所有している\)** と **[(Company) owns this device]\((会社が) このデバイスを所有している\)** から選択できるようになります。 後者を選択した場合は、デバイスの登録を使用してデバイスが登録されます。 ユーザーが **[I own this device]\(このデバイスを所有している\)** を選択した場合は、さらにデバイス全体をセキュリティで保護するか、職場関連のアプリとデータのみをセキュリティで保護するかを選択できます。 デバイスを所有するかどうかのエンド ユーザーによる選択で、デバイスに実装されている登録の種類が決まります。 このユーザーの選択は、Intune の [デバイスの所有者] 属性にも反映されます。 ユーザー エクスペリエンスの詳細については、[iOS/iPadOS デバイスから会社のリソースへのアクセスを設定する方法](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)に関する記事をご覧ください。
     
 5. **[次へ]** を選択します。
 
