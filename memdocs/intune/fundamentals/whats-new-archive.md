@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17fa979f9563eb0735a68d2cc0ed82d800f8816f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354738"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085830"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune の新機能 (過去数か月)
 
@@ -294,7 +294,7 @@ Android 基幹業務 (LOB) アプリを [Zebra デバイス](../configuration/an
 - カスタム プッシュ通知の表示がサポートされるようになり、iOS と Android 用のポータル サイト アプリに最近追加されたサポートと連携します。 詳細は、「[Intune でカスタム通知を送信する](../remote-actions/custom-notifications.md)」を参照してください。
 ""
 #### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal---4394993---"></a>iOS デバイスの場合は、ポータル サイトの登録プロセスのプライバシー画面をカスタマイズします<!-- 4394993 -->
-Markdown を使用すると、iOS の登録時にエンド ユーザーに表示されるポータル サイトのプライバシー画面をカスタマイズできます。 具体的には、組織がデバイス上で参照または実行できない項目の一覧をカスタマイズできます。 詳しくは、[Intune ポータル サイト アプリを構成する方法](../apps/company-portal-app.md#privacy-statement-customization)に関するページをご覧ください。
+Markdown を使用すると、iOS の登録時にエンド ユーザーに表示されるポータル サイトのプライバシー画面をカスタマイズできます。 具体的には、組織がデバイス上で参照または実行できない項目の一覧をカスタマイズできます。 詳しくは、[Intune ポータル サイト アプリを構成する方法](../apps/company-portal-app.md#configuration)に関するページをご覧ください。
 
 
 
@@ -1094,7 +1094,7 @@ Apple iOS 12.2 でリリースされた MDM 登録変更に合わせて、iOS �
 * [設定] アプリを開き、デバイスに管理プロファイルをインストールする。
 * ポータル サイト アプリに戻り、登録を完了する。  
 
-更新された登録の手順と画面については、[Intune への iOS デバイスの登録](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios)に関するページを参照してください。
+更新された登録の手順と画面については、[Intune への iOS デバイスの登録](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios)に関するページを参照してください。
 
 #### <a name="openssl-encryption-for-android-app-protection-policies---3747362---"></a>Android アプリ保護ポリシー用の OpenSSL 暗号化<!-- 3747362 -->
 Android デバイスに対する Intune アプリ保護ポリシー (APP) で、FIPS 140-2 に準拠した OpenSSL 暗号化ライブラリが使用されるようになりました。 詳細については、「[Microsoft Intune の Android アプリ保護ポリシー設定](../apps/app-protection-policy-settings-android.md)」の「[暗号化](../apps/app-protection-policy-settings-android.md#encryption)」のセクションを参照してください。
@@ -1390,7 +1390,7 @@ Intune のアプリの**トラブルシューティング** ブレードから�
 Intune で、 **[クライアント アプリ]**  >  **[アプリ]** > "アプリ名" > **[デバイスのインストール状態]** の順に選択します。 **[状態の詳細]** 列で新しいエラー メッセージが使用できるようになります。
 
 #### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780----"></a>Windows 10 用ポータル サイト アプリでの新しい [アプリのカテゴリ] 画面<!-- 3834780  -->
-**[アプリのカテゴリ]** という新しい画面が追加され、Windows 10 用ポータル サイトでのアプリの参照と選択のエクスペリエンスが向上しました。 ユーザーには、 **[おすすめ]** 、 **[教育]** 、 **[生産性]** などのカテゴリに並べ替えられたアプリが表示されるようになります。 この変更は、ポータル サイト バージョン 10.3.3451.0 以降で表示されます。 新しい画面を表示するには、「[アプリの UI の新機能](whats-new-app-ui.md)」を参照してください。 ポータル サイトでのアプリの詳細については、「[デバイスにアプリをインストールして共有する](https://docs.microsoft.com/user-help/install-apps-cpapp-windows)」を参照してください。  
+**[アプリのカテゴリ]** という新しい画面が追加され、Windows 10 用ポータル サイトでのアプリの参照と選択のエクスペリエンスが向上しました。 ユーザーには、 **[おすすめ]** 、 **[教育]** 、 **[生産性]** などのカテゴリに並べ替えられたアプリが表示されるようになります。 この変更は、ポータル サイト バージョン 10.3.3451.0 以降で表示されます。 新しい画面を表示するには、「[アプリの UI の新機能](whats-new-app-ui.md)」を参照してください。 ポータル サイトでのアプリの詳細については、「[デバイスにアプリをインストールして共有する](https://docs.microsoft.com/mem/intune/user-help/install-apps-cpapp-windows)」を参照してください。  
 
 #### <a name="power-bi-compliance-app---1455231-doc-work-item---"></a>Power BI コンプライアンス アプリ<!-- 1455231 doc-work-item -->
 [Intune コンプライアンス (データ ウェアハウス)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) アプリを使用して、Power BI Online 内の Intune データ ウェアハウスにアクセスします。 この Power BI アプリを使用すると、設定を行うことも、Web ブラウザーを離れることもなく、事前に作成されたレポートにアクセスし、共有することができます。 詳細については、[変更ログ - Power BI コンプライアンス アプリ](../developer/reports-changelog.md#power-bi-compliance-app)に関するページを参照してください。
@@ -2284,7 +2284,7 @@ Graph API との一貫性を保つために、Intune のユーザー インタ�
 - 大規模なアプリケーション カタログのパフォーマンスの向上
 - すべてのユーザーのアクセシビリティの向上  
 
-[Intune ポータル サイト Web サイトのドキュメント](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website)は、これらの変更を反映するように更新されています。 アプリの拡張機能の例を表示するには、「[Intune とエンド ユーザー アプリの UI の更新](whats-new-app-ui.md)」を参照してください。  
+[Intune ポータル サイト Web サイトのドキュメント](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website)は、これらの変更を反映するように更新されています。 アプリの拡張機能の例を表示するには、「[Intune とエンド ユーザー アプリの UI の更新](whats-new-app-ui.md)」を参照してください。  
 
 ### <a name="monitor-and-troubleshoot"></a>監視とトラブルシューティング
 
