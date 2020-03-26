@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/13/2020
 ms.locfileid: "79342921"
 ---
-「オブジェクトの**適用対象: クラシック ポータルでの Intune**
+**適用対象:クラシック ポータルでの Intune**
 
 > [!Important]
 > 従来の PC 管理は 2020 年 10 月 15 日にサポートが終了します。 デバイスを Windows 10 にアップグレードし、Intune による管理が継続されるように MDM デバイスとして再登録してください。
