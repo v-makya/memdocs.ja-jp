@@ -5,7 +5,7 @@
   items:
     - name: デバイスの登録の概要
       href: device-enrollment.md
-      displayName: COD; BYOD; DEM; DEP; USB-SA; USB-Direct; co-management; GPO
+      displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
     - name: 登録済みのデバイス管理機能
       href: device-management-capabilities.md
     - name: 登録オプション
@@ -20,7 +20,7 @@
   items:
     - name: Autopilot を使用して Windows デバイスを登録する
       href: tutorial-use-autopilot-enroll-devices.md
-    - name: DEP を使って iOS/iPadOS デバイスを登録する
+    - name: ADE を使用して iOS/iPadOS デバイスを登録する
       href: tutorial-use-device-enrollment-program-enroll-ios.md
 - name: 概念
   items:

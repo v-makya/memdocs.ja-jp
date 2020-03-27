@@ -15,36 +15,20 @@
       href: tutorial-walkthrough-administrative-templates.md
 - name: 攻略ガイド
   items:
-    - name: プロファイルを作成する
+    - name: 概要
       href: device-profile-create.md
-    - name: Windows の管理用テンプレート
-      items:
-        - name: Windows の管理用テンプレート
-          href: administrative-templates-windows.md
-        - name: 管理用テンプレートを使用して Office を更新する
-          href: administrative-templates-update-office.md
-      displayName: 'ADMX, GPO, group policy'
-    - name: iOS/iPadOS と macOS のデバイス機能
-      href: device-features-configure.md
+    - name: カスタム デバイス設定
+      href: custom-settings-configure.md
+      displayName: oma-uri
     - name: デバイスの設定と機能を制限する
       href: device-restrictions-configure.md
-      displayName: Device restrictions
-    - name: Windows の更新
-      href: delivery-optimization-windows.md
-      displayName: delivery optimization; updates
-    - name: Windows の BIOS 設定
-      href: device-firmware-configuration-interface-windows.md
-      displayName: 'DFCI, firmware'
-    - name: Windows でのドメイン参加
-      href: domain-join-configure.md
-    - name: Windows と S モードのアップグレード
-      href: edition-upgrade-configure-windows-10.md
+      displayName: device restrictions
     - name: 電子メール
-      href: email-settings-configure.md
-    - name: キオスクと専用デバイス
-      href: kiosk-settings.md
-    - name: 共有のマルチ ユーザー デバイス
-      href: shared-user-device-settings.md
+      items:
+        - name: 電子メールを構成する
+          href: email-settings-configure.md
+        - name: 問題と解決策
+          href: troubleshoot-email-profiles-in-microsoft-intune.md
     - name: VPN
       href: vpn-settings-configure.md
       items:
@@ -54,46 +38,82 @@
           href: vpn-setting-configure-per-app.md
     - name: Wi-Fi ネットワーク
       href: wi-fi-settings-configure.md
-      displayName: wifi
+      displayName: 'wifi, wireless'
       items:
         - name: 事前共有キーを使用する Wi-Fi
           href: wi-fi-profile-shared-key.md
+          displayName: 'psk, oma-uri, eap'
         - name: Wi-Fi のトラブルシューティング
           href: troubleshoot-wi-fi-profiles.md
+    - name: Windows の管理用テンプレート
+      displayName: 'admx, gpo, group policy'
+      items:
+        - name: 管理用テンプレート
+          href: administrative-templates-windows.md
+        - name: 管理用テンプレートを使用して Office を更新する
+          href: administrative-templates-update-office.md
+    - name: Windows の BIOS 設定
+      href: device-firmware-configuration-interface-windows.md
+      displayName: 'dfci, firmware'
+    - name: Windows でのドメイン参加
+      href: domain-join-configure.md
+      displayName: 'enrollment, active directory, azure ad joined, join domain'
+    - name: Windows の更新
+      href: delivery-optimization-windows.md
+      displayName: 'delivery optimization, windows updates'
+    - name: Windows と S モードのアップグレード
+      href: edition-upgrade-configure-windows-10.md
+    - name: iOS/iPadOS と macOS のデバイス機能
+      href: device-features-configure.md
+      displayName: 'airprint, home screen, lock screen, sso, single sign-on'
     - name: macOS での拡張機能
       href: kernel-extensions-overview-macos.md
-    - name: Education Take a Test アプリ
-      href: education-settings-configure.md
+      displayName: 'kernel extensions, system extensions'
+    - name: macOS の設定ファイル
+      href: preference-file-settings-macos.md
+      displayName: 'property list files, plist'
     - name: Zebra デバイス上のモビリティの拡張機能
-      href: android-zebra-mx-overview.md
-      displayName: mx
+      displayName: 'mx, android, stagenow'
+      items:
+        - name: Android デバイス管理者の MX
+          href: android-zebra-mx-overview.md
+        - name: StageNow ログおよび一般的な問題
+          href: android-zebra-mx-logs-troubleshoot.md
     - name: Android エンタープライズでの OEMConfig
       href: android-oem-configuration-overview.md
+      displayName: 'original equipment manufacturers, schema'
+    - name: キオスクと専用デバイス
+      href: kiosk-settings.md
+      displayName: 'single app, multi app'
+    - name: 共有のマルチ ユーザー デバイス
+      href: shared-user-device-settings.md
+      displayName: 'shared pc, education'
+    - name: Education Take a Test アプリ
+      href: education-settings-configure.md
     - name: Windows での eSIM 携帯電話
       href: esim-device-configuration.md
+      displayName: embedded sim
     - name: Android、iOS/iPadOS での通信費
       href: telecom-expenses-monitor.md
-    - name: カスタム デバイス設定
-      href: custom-settings-configure.md
-    - name: プロファイルの割り当て
-      href: device-profile-assign.md
-    - name: プロファイルの監視
-      href: device-profile-monitor.md
+      displayName: saaswedo datalert
+    - name: 展開と監視
+      items:
+        - name: プロファイルの割り当て
+          href: device-profile-assign.md
+          displayName: 'deploy, push'
+        - name: プロファイルの監視
+          href: device-profile-monitor.md
     - name: トラブルシューティング
       items:
         - name: ポリシーとプロファイルのトラブルシューティング
           href: troubleshoot-policies-in-microsoft-intune.md
-        - name: 電子メール プロファイルに関する問題と解決策
-          href: troubleshoot-email-profiles-in-microsoft-intune.md
-        - name: StageNow ログおよび一般的な問題
-          href: android-zebra-mx-logs-troubleshoot.md
         - name: 一般的な質問と回答
           href: device-profile-troubleshoot.md
 - name: 参照先
   items:
     - name: 構成プロファイルの設定
       items:
-        - name: Android
+        - name: Android デバイス管理者
           items:
             - name: デバイスの制限
               href: device-restrictions-android.md
@@ -146,8 +166,6 @@
               href: ../protect/endpoint-protection-macos.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
             - name: の拡張
               href: kernel-extensions-settings-macos.md
-            - name: 設定ファイル
-              href: preference-file-settings-macos.md
             - name: VPN
               href: vpn-settings-macos.md
             - name: Wi-Fi
