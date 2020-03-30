@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c30cc122931588149120efa10710627826c50e2c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 06d5e2163303b9766d41bcb0bd7581dc41bf6980
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337968"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219828"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Intune デバイスのプライマリ ユーザーを確認する
 
@@ -43,8 +43,11 @@ Azure AD または Hybrid Azure AD に参加している Windows 10 デバイス
 3. 新しいユーザーを選択し、 **[選択]** を選択します。
 
 プライマリ ユーザーが更新された後、Intune と Azure AD デバイスのブレードでも更新されます。
-
-共同管理された Windows 10 デバイスでは、プライマリ ユーザーを変更できません。
+>[!NOTE]
+>1. エンドポイント マネージャーと Azure AD 全体でのプライマリ ユーザーの更新は、反映されるまでに最大で 10 分かかる場合があります。
+>2. 現時点では、共同管理された Windows 10 デバイスではプライマリ ユーザーを変更できません。 
+>3. デバイスのプライマリ ユーザーを変更しても、ローカル グループのメンバーシップは変更されません (たとえば、"Administrators" ローカル グループに対するユーザーの追加または削除など)
+>4. プライマリ ユーザーを変更しても、"登録者" ユーザーは変更されません。 
 
 
 ## <a name="what-is-the-primary-user"></a>プライマリ ユーザーとは
@@ -58,7 +61,7 @@ Azure AD または Hybrid Azure AD に参加している Windows 10 デバイス
 
 "This device is already assigned to someone in your organization. (このデバイスは組織内の他のユーザーに既に割り当てられています。) Contact company support about becoming the primary device user. (プライマリ デバイス ユーザーになるには、会社のサポートにお問い合わせください。) You can continue to use Company Portal but functionality will be limited. (ポータル サイトは引き続き使用できますが、機能は制限されます。)"
 
-Intune デバイスにプライマリ ユーザーが割り当てられていない場合、ポータル サイト アプリでは共有デバイスとして検出されます。 共有デバイスは、デバイス タイルに表示される "共有" ラベルで視覚的に特定できます。 このモードでも、ポータル サイトを使用して、使用できるアプリを要求してインストールすることができます。 ただし、セルフサービスのアクション (リセット/名前変更/インベントリからの削除) は利用できません。  
+Intune デバイスにプライマリ ユーザーが割り当てられていない場合、ポータル サイト アプリでは共有デバイスとして検出されます。 共有デバイスは、デバイス タイルに表示される "共有" ラベルによって視覚的に特定できます。 このモードでも、ポータル サイトを使用して、使用できるアプリを要求してインストールすることができます。 ただし、セルフサービスのアクション (リセット/名前変更/インベントリからの削除) は利用できません。  
 
 共有デバイスのポータル サイトに表示するには、使用できるアプリをユーザー グループに割り当てる必要があります。 これらは、IT 管理者によるアプリの構成方法に応じて、システム コンテキストまたはユーザー コンテキストでインストールされます。 アプリ コンテキストの詳細については、「[Windows 10 デバイスでのアプリのインストール](../apps/apps-windows-10-app-deploy.md)」を参照してください。 この機能を使用するには、ポータル サイト バージョン 10.3.4651.0 以降が必要です。
 

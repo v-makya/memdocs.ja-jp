@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d40c4f352d3e7b94ef6e6c2f16a28d188c4e9ad1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: af4dce0d2bb7ef150d5332a9c58357513425cf50
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339385"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220202"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Apple の Device Enrollment Program を使用して iOS/iPadOS デバイスを自動登録する
 
@@ -195,6 +195,9 @@ Apple Business Manager または Apple School Manager のポータルを使用�
 
 11. このプロファイルを使用するデバイスを**コンピューターと同期**できるようにするかどうかを選択します。 **[証明書による Apple Configurator の許可]** を選択した場合は、 **[Apple Configurator の証明書]** で証明書を選択する必要があります。
 
+     > [!NOTE]
+     > **[コンピューターと同期する]** が **[すべて拒否]** に設定されている場合、iOS と iPadOS デバイス上でポートが制限されます。 このポートは課金用にのみ使用でき、それ以外の場合は使用できません。 このポートは、iTunes または Apple Configurator の使用に対してはブロックされます。
+
 12. 前の手順で **[証明書による Apple Configurator の許可]** を選択した場合は、インポートする Apple Configurator の証明書を選択します。
 
 13. デバイスに対して登録時に自動的に適用される名前付け形式と、連続する各チェックインにおける名前付け形式を指定することができます。 名前付けテンプレートを作成するには、 **[デバイス名のテンプレートを適用する]** に **[はい]** を選択します。 次に、 **[デバイス名のテンプレート]** ボックスに、このプロファイルを使用する名前に使うテンプレートを入力します。 デバイスの種類とシリアル番号を含むテンプレート形式を指定できます。 
@@ -278,6 +281,10 @@ Apple と Intune の間の同期と管理を有効にし、DEP デバイスを�
 [Device Enrollment Program を使用して Intune に iOS/iPadOS デバイスを登録する方法](../user-help/enroll-your-device-dep-ios.md)に関する記事をご覧ください。
 
 ## <a name="renew-a-dep-token"></a>DEP トークンを更新する  
+
+> [!NOTE]
+> DEP トークンの毎年の更新に加えて、Apple Business Manager でトークンを設定したユーザーの管理対象の Apple ID のパスワードが変更された場合、またはそのユーザーが Apple Business Manager 組織を脱退した場合に、Intune および Apple Business Manager 内の Enrollment Program トークンを更新する必要があります。
+
 1. deploy.apple.com に移動します。  
 2. **[サーバーの管理]** で、更新するトークン ファイルに関連付けられた MDM サーバーを選択します。
 3. **[新しいトークンの生成]** を選択します。

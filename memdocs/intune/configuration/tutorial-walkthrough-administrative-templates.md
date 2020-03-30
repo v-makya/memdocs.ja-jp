@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/23/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 936634a26dee315c7ad452ac408f9cc0eac00dfe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5988da854eecd528119a7e2591fc083dcdbc29bf
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343272"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220229"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>チュートリアル:クラウドを使用して、ADMX テンプレートと Microsoft Intune で Windows 10 デバイスにグループ ポリシーを構成する
 
@@ -101,7 +101,7 @@ Microsoft Intune では、これらのテンプレートは Intune サービス�
 ## <a name="open-the-endpoint-manager-admin-center"></a>Endpoint Manager admin center を開く
 
 1. Microsoft Edge バージョン 77 以降などの Chromium Web ブラウザーを開きます。
-2. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (https://devicemanagement.microsoft.com) に移動します。 次のアカウントでサインインします。
+2. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) に移動します。 次のアカウントでサインインします。
 
     **ユーザー**: Microsoft 365 テナント サブスクリプションの管理者アカウントを入力します。  
     **パスワード**: パスワードを入力します。
@@ -146,7 +146,7 @@ Intune では、作成したユーザーとグループにポリシーが適用�
     - **[グループの種類]** : **[セキュリティ]** を選択します。
     - **[グループ名]** :「**All Windows devices**」と入力します。
     - **[メンバーシップの種類]** : **[動的デバイス]** を選択します。
-    - **[動的なデバイス メンバー]** : クエリを構成します。
+    - **[動的なデバイス メンバー]** : **[動的クエリの追加]** を選択し、クエリを構成します。
 
         - **プロパティ**: **[deviceOSType]** を選択します。
         - **演算子**: **[次の値と等しい]** を選択します。
@@ -166,7 +166,7 @@ Intune では、作成したユーザーとグループにポリシーが適用�
     - **[グループの種類]** : **[セキュリティ]** を選択します。
     - **[グループ名]** :「**All Teachers**」と入力します。
     - **[メンバーシップの種類]** : **[動的ユーザー]** を選択します。
-    - **[動的なユーザー メンバー]** : クエリを構成します。
+    - **[動的なユーザー メンバー]** : **[動的クエリの追加]** を選択し、クエリを構成します。
 
       - **プロパティ**: **[department]** を選択します。
       - **演算子**: **[次の値と等しい]** を選択します。
@@ -225,12 +225,17 @@ Endpoint Manager admin center で、新しいセキュリティ グループを�
 1. Endpoint Manager admin center で、 **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 2. 次のプロパティを入力します。
 
+    - **[プラットフォーム]** : **[Windows 10 以降]** を選択します。
+    - **[プロファイル]** : **[管理用テンプレート]** を選択します。
+
+3. **[作成]** を選択します。
+4. **[Basics]\(基本\)** で次のプロパティを入力します。
+
     - **名前**:プロファイルのわかりやすい名前を入力します。 後で簡単に識別できるよう、プロファイルに名前を付けます。 たとえば、「**Admin template - Windows 10 student devices**」と入力します。
     - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
-    - **[プラットフォーム]** : **[Windows 10 以降]** を選択します。
-    - **[プロファイルの種類]** : **[管理用テンプレート]** を選択します。
 
-3. **[作成]** を選択します。 ドロップダウン リストで **[カテゴリの選択]** を選択し、 **[すべての製品]** を選択します。 すべての設定が表示されます。 これらの設定では、次のプロパティに注意してください。
+5. **[次へ]** を選択します。
+6. **[構成設定]** のドロップダウン リストで、 **[すべての製品]** を選択します。 すべての設定が表示されます。 これらの設定では、次のプロパティに注意してください。
 
     - ポリシーの**パス**はグループ ポリシーの管理または GPEdit と同じです。
     - 設定は、ユーザーまたはデバイスに適用されます。
@@ -263,7 +268,7 @@ Endpoint Manager admin center で、新しいセキュリティ グループを�
     > [!div class="mx-imgBorder"]
     > ![グループ ポリシーの [コンピューターの構成] の設定オプションを確認する](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
-5. デバイス管理の管理センターで、**Admin template - Windows 10 student devices** テンプレートに移動します。
+5. Endpoint Manager admin center で、**Admin template - Windows 10 student devices** テンプレートに移動します。
 6. ドロップダウン リストから **[すべての製品]** を選択し、**個人用設定**を検索します。
 
     > [!div class="mx-imgBorder"]
@@ -290,7 +295,7 @@ Endpoint Manager admin center で、新しいセキュリティ グループを�
 
 #### <a name="compare-an-edge-policy"></a>Microsoft Edge ポリシーの比較
 
-1. デバイス管理の管理センターで、**Admin template - Windows 10 student devices** テンプレートに移動します。
+1. Endpoint Manager admin center で、**Admin template - Windows 10 student devices** テンプレートに移動します。
 2. ドロップダウン リストから **[Edge version 77 and later]\(Microsoft Edge バージョン 77 以降\)** を選択します。
 3. **スタートアップ**を検索します。 利用可能な設定は次のとおりです。
 4. グループ ポリシー管理エディターで、次の設定を見つけます。
@@ -338,17 +343,16 @@ Intune で管理用テンプレートを作成しました。 このテンプレ
 
 ### <a name="assign-your-template"></a>テンプレートの割り当て
 
-1. テンプレートで、 **[割り当て]** を選択します。 テンプレートを閉じてから、 **[デバイス - 構成プロファイル]** の一覧でテンプレートを選択することが必要になる場合があります。
+1. 使用するテンプレートで、 **[割り当て]**  >  **[含めるグループを選択]** の順に選択します。
 
     > [!div class="mx-imgBorder"]
     > ![Microsoft Intune のデバイス構成プロファイルの一覧から管理用テンプレート プロファイルを選択する](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
 
-2. **[含めるグループを選択]** を選択します。 既存のユーザーとグループの一覧が表示されます。
-3. 前の手順で作成した **All Windows 10 student devices** グループ > **[選択]** を選択します。
+2. 既存のユーザーとグループの一覧が表示されます。 前の手順で作成した **All Windows 10 student devices** グループ > **[選択]** を選択します。
 
     このチュートリアルを運用環境で使用している場合は、空のグループを追加することを検討してください。 目標は、テンプレートの割り当てを練習することです。
 
-4. 変更内容を**保存**します。
+3. **[次へ]** を選択して、 **[確認と作成]** タブに移動します。 **[作成]** を選択して、変更を保存します。
 
 プロファイルを保存するとすぐに、デバイスの Intune へのチェックイン時にプロファイルがデバイスに適用されるようになります。 デバイスがインターネットに接続されている場合、これはすぐに実行されます。 ポリシー更新時間の詳細については、「[デバイスへのポリシー、プロファイル、アプリの割り当て後にそれらが取得されるまでどれくらいの時間がかかりますか?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)」を参照してください。
 
@@ -366,14 +370,17 @@ Endpoint Manager admin center で、管理用テンプレートのデバイス�
 
 2. 次のプロパティを入力します。
 
-    - **名前**:「**Admin template - OneDrive policies that apply to all Windows 10 users**」と入力します。
-    - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
     - **[プラットフォーム]** : **[Windows 10 以降]** を選択します。
-    - **[プロファイルの種類]** : **[管理用テンプレート]** を選択します。
+    - **[プロファイル]** : **[管理用テンプレート]** を選択します。
 
 3. **[作成]** を選択します。
-4. ドロップダウン リストから **[Office]** を選択します。
-5. 以下の設定を**有効**にします。 必ず **[OK]** を選択して変更を保存してください。
+4. **[Basics]\(基本\)** で次のプロパティを入力します。
+
+    - **名前**:「**Admin template - OneDrive policies that apply to all Windows 10 users**」と入力します。
+    - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
+
+5. **[次へ]** を選択します。
+6. **[構成設定]** のドロップダウン リストから、 **[Office]** を選択します。 以下の設定を**有効**にします。 必ず **[OK]** を選択して変更を保存してください。
 
     - **Windows 資格情報を使用して OneDrive 同期クライアントにユーザーをサイレント モードでサインインする**
     - **OneDrive ファイル オンデマンドを使用する**
@@ -388,13 +395,12 @@ OneDrive クライアント設定の詳細については、「[グループ ポ
 
 ### <a name="assign-your-template"></a>テンプレートの割り当て
 
-1. テンプレートで、 **[割り当て]** を選択します。
-2. **[含めるグループを選択]** を選択します。 既存のユーザーとグループの一覧が表示されます。
-3. 前の手順で作成した **All Windows devices** グループ > **[選択]** を選択します。
+1. 使用するテンプレートで、 **[割り当て]**  >  **[含めるグループを選択]** の順に選択します
+2. 既存のユーザーとグループの一覧が表示されます。 前の手順で作成した **All Windows devices** グループ > **[選択]** を選択します。
 
     このチュートリアルを運用環境で使用している場合は、空のグループを追加することを検討してください。 目標は、テンプレートの割り当てを練習することです。
 
-4. 変更内容を**保存**します。
+3. **[次へ]** を選択して、 **[確認と作成]** タブに移動します。 **[作成]** を選択して、変更を保存します。
 
 この時点で、管理用テンプレートをいくつか作成し、作成したグループにそれらのテンプレートを割り当てました。 次の手順では、Windows PowerShell と Microsoft Graph API for Intune を使用して、管理用テンプレートを作成します。
 

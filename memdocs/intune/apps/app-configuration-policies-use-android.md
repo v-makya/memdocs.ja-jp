@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f49d1e419eb7199d2a7cf20f03959689a5f5fa44
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342492"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233469"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>マネージド Android Enterprise デバイス用にアプリ構成ポリシーを追加する
 
@@ -103,15 +103,18 @@ Microsoft Intune でのアプリ構成ポリシーによって、マネージド
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>複数 ID アプリで構成済みの組織アカウントのみを許可する 
 
-Android デバイスでは、次のキー/値ペアを使用します。
+Microsoft Intune 管理者は、マネージド デバイス上の Microsoft アプリにどのユーザー アカウントを追加するかを制御できます。 許可されている組織ユーザー アカウントのみにアクセスを制限したり、登録済みデバイス上の個人アカウントをブロックしたりできます。 Android デバイスでは、次のキー/値ペアを使用します。
 
 | **Key** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
 | **値** | <ul><li>1 つまたは複数の<code>;</code> で区切られた UPN。</li><li>このキーで定義された管理対象のユーザー アカウントのみが許可されます。</li><li> Intune に登録されているデバイスでは、<code>{{userprincipalname}}</code> のトークンを使用して登録済みのユーザー アカウントを表すことができます。</li></ul> |
 
    > [!NOTE]
-   > 複数の ID を使用して構成された組織アカウントのみを許可する場合は、Outlook for Android 2.2.222 以降、Word、Excel、PowerPoint for Android 16.0.9327.1000 以降、または OneDrive for Android 5.28 以降を使用する必要があります。<p></p>
-   > Microsoft Intune 管理者として、マネージド デバイス上の Microsoft Office アプリケーションにどのユーザー アカウントを追加するかを制御できます。 許可されている組織ユーザー アカウントのみにアクセスを制限したり、登録済みデバイス上の個人アカウントをブロックしたりできます。 サポートされているアプリケーションがアプリの構成を処理し、未承認のアカウントを削除してブロックします。<p></p>
+   > 次のアプリでは、上記のアプリ構成が処理され、組織アカウントのみが許可されます。
+   > - Android 用 Edge (42.0.4.4048 以降)
+   > - Android 用 Office、Word、Excel、PowerPoint (16.0.9327.1000 以降)
+   > - OneDrive for Android (5.28 以降)
+   > - Android 用 Outlook (2.2.222 以降)
 
 ## <a name="enter-json-data"></a>JSON データの入力
 

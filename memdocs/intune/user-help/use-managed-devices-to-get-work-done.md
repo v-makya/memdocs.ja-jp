@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 63090c61039c5029e6a8b80f53232191e1beb99a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 95f9677b95dc9dde4b12e60e3006b4cee5081471
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79347068"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233415"
 ---
 # <a name="what-is-device-enrollment"></a>デバイス登録とは
 お使いのデバイスから職場または学校のリソースにアクセスするには、デバイスを Intune ポータル サイト アプリまたは Microsoft Intune アプリに登録する必要があります。 
@@ -79,7 +79,7 @@ Intune ポータル サイトからデバイスを削除またはリセットす
 
 デバイスの削除では、Intune ポータル サイトによってデバイスの登録が解除されます。 そのデバイスは Intune ポータル サイトにアクセスできなくなります。 職場または学校のデータも削除される可能性があります。 
 
-デバイスのリセットでは、ポータル サイトによって、コンピューターまたはデバイスの製造元の既定の設定へのリセットが試みられます。 職場または学校のすべてのデータとすべての個人データがデバイスから削除されます。 リセットは、デバイスを紛失した場合などに便利です。 Intune ポータル サイト Web サイトからデバイスをリモートでリセットできます。  
+デバイスのリセット中に、ポータル サイトによって、コンピューターまたはデバイスの製造元の既定の設定へのリセットが試みられます。 職場または学校のすべてのデータとすべての個人データがデバイスから削除されます。 リセットは、デバイスを紛失した場合などに便利です。 Intune ポータル サイト Web サイトからデバイスをリモートでリセットできます。  
 
 ## <a name="can-you-remove-a-device-from-the-microsoft-intune-app"></a>Microsoft Intune アプリからデバイスを削除できますか
 いいえ。Microsoft Intune アプリから会社所有のデバイスを削除する方法はありません。  
@@ -111,5 +111,3 @@ IT サポート担当者に問い合わせることもできます。 Intune ポ
 * [組織で提供される iOS デバイスを登録する](enroll-your-device-dep-ios.md)
 * [macOS デバイスを登録する](enroll-your-device-in-intune-macos-cp.md)
 * [組織で提供される macOS デバイスを登録する](enroll-company-device-macos.md)
-
-

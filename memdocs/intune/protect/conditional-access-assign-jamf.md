@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 3/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c87fd2bd-7f53-4f1b-b985-c34f2d85a7bc
-ms.reviewer: elocholi
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9760029effc873b510bf37b779c054c9a0574a20
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353152"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219845"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Jamf Pro で管理された Mac にコンプライアンスを適用します
 
@@ -41,7 +41,10 @@ ms.locfileid: "79353152"
 
 2. **[デバイス]**  >  **[コンプライアンス ポリシー]** の順に選択します。 以前に作成したポリシーを使用している場合は、コンソールでそのポリシーを選択し、この手順の次の手順に進みます。 新しいポリシーを作成する場合は、 **[ポリシーの作成]** を選択してから、**macOS** の *[プラットフォーム]* を含むポリシーの詳細を指定します。 組織の要件を満たすように *[設定]* と *[コンプライアンス非対応に対するアクション]* を構成してから、 **[作成]** を選択してポリシーを保存します。
 
-3. ポリシーの *[概要]* ウィンドウで **[割り当て]** を選択します。 使用できるオプションを使用して、このポリシーを受け取る Azure Active Directory (Azure AD) ユーザーとセキュリティ グループを構成します。 Jamf と Intune の統合では、デバイス グループを対象とするコンプライアンス ポリシーがサポートされません。
+3. ポリシーの *[概要]* ウィンドウで **[割り当て]** を選択します。 使用できるオプションを使用して、このポリシーを受け取る Azure Active Directory (Azure AD) ユーザーとセキュリティ グループを構成します。 **Jamf と Intune の統合では、デバイス グループを対象とするコンプライアンス ポリシーがサポートされません。**
+
+> [!NOTE]
+> Jamf と Intune の統合では、AAD ユーザー グループのみがサポートされています。 デバイス グループを対象とするデバイス コンプライアンス ポリシーは適用されません。
 
 4. **[保存]** を選択すると、ポリシーがユーザーに展開されます。  
 

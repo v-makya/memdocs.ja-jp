@@ -1,12 +1,12 @@
 ---
-title: マネージド Google Play アプリを Android Enterprise デバイスに割り当てる
+title: マネージド Google Play アプリを追加して Android Enterprise デバイスに割り当てる
 titleSuffix: Microsoft Intune
 description: マネージド Google Play ストアから Android Enterprise デバイスにアプリを同期して割り当てる方法について説明します。
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec2b1ace9b9b8a5c27ef468969a52f05e1bdcca
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6dab926a59e69f5afb6c2f40ea7e315afed49f8
+ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341452"
+ms.lasthandoff: 03/22/2020
+ms.locfileid: "80117289"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Intune を使ってマネージド Google Play アプリを Android Enterprise デバイスに追加する
 
@@ -33,7 +33,7 @@ Android Enterprise 管理をより簡単に構成して使用できるように�
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Android Enterprise フル マネージド シナリオで使用されます。 このアプリは、デバイス登録プロセスの最中に、フル マネージド デバイスへ自動的にインストールされます。
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - 2 要素認証を使用している場合、アカウントへのサインインを支援します。 このアプリは、デバイス登録プロセスの最中に、フル マネージド デバイスへ自動的にインストールされます。
-- **[Intune ポータル サイト](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - アプリ保護ポリシー (APP) と Android Enterprise 仕事用プロファイルのシナリオで使用されます。
+- **[Intune ポータル サイト](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - アプリ保護ポリシー (APP) と Android Enterprise 仕事用プロファイルのシナリオで使用されます。 このアプリは、デバイス登録プロセスの最中に、フル マネージド デバイスへ自動的にインストールされます。
 - **[マネージド ホーム スクリーン](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** - Android Enterprise 専用のマルチアプリ キオスクのシナリオに使用されます。 IT 管理者は割り当てを作成して、マルチアプリ キオスクのシナリオに使用される専用デバイス上に、このアプリをインストールする必要があります。
 
 >[!NOTE]
@@ -183,7 +183,7 @@ Web リンクは、Microsoft Edge または選択して展開したその他の�
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>マネージド Google Play アプリを Android Enterprise 仕事用プロファイル デバイスに割り当てる
 
-アプリが **[アプリ]** ワークロード ウィンドウの **[アプリ ライセンス]** ノードに表示される場合は、そのアプリをユーザーのグループに割り当てることで、[他のアプリの割り当てと同様の方法で割り当てる](/intune-azure/manage-apps/deploy-apps)ことができます。
+アプリが **[アプリ]** ワークロード ウィンドウの **[アプリ ライセンス]** ノードに表示される場合は、そのアプリをユーザーのグループに割り当てることで、[他のアプリの割り当てと同様の方法で割り当てる](/mem/intune/apps/apps-deploy)ことができます。
 
 アプリを割り当てると、対象のユーザーのデバイス上にインストールされます (あるいは、インストール可能になります)。 デバイスのユーザーがインストールの承認を求められることはありません。 Android Enterprise 仕事用プロファイル デバイスの詳細については、「[Set up enrollment of Android Enterprise work profile devices (Android Enterprise 仕事用プロファイル デバイスの登録を設定する)](../enrollment/android-work-profile-enroll.md)」を参照してください。 
 
@@ -197,7 +197,7 @@ Web リンクは、Microsoft Edge または選択して展開したその他の�
 既定では、Android Enterprise フル マネージド デバイスには、組織によって承認されていないアプリを従業員がインストールすることはできません。 また、従業員は、インストールされているアプリをポリシーに反して削除することはできません。 ユーザーが、マネージド Google Play ストア内で承認されたアプリだけにアクセスするのではなく、完全な Google Play ストアにアクセスしてアプリをインストールできるようにする場合は、 **[Google Play ストア内のすべてのアプリへのアクセスを許可]** を **[許可]** に設定できます。 この設定を利用すると、ユーザーは会社のアカウントを使用して Google Play ストア内のすべてのアプリにアクセスできます。ただし、購入は制限される場合があります。 ユーザーがデバイスに新しいアカウントを追加できるようにすることで、購入を限定する制限を削除できます。 これにより、エンド ユーザーは、個人用アカウントを使用して Google Play ストアからアプリを購入できるだけでなく、アプリ内購入を行うことができます。 詳細については、「[Android Enterprise device settings to allow or restrict features using Intune (Intune を使用して機能を許可または制限する Android Enterprise デバイス設定)](../configuration/device-restrictions-android-for-work.md)」を参照してください。 
 
 > [!NOTE]
-> Microsoft Intune アプリおよび Microsoft Authenticator アプリは、オンボード中にすべてのフル マネージド デバイスに必要なアプリとしてインストールされます。 これらのアプリを自動的にインストールすると、条件付きアクセスのサポートが提供され、Microsoft Intune アプリ ユーザーは、コンプライアンスの問題を確認して解決することができます。 
+> Microsoft Intune アプリ、Microsoft Authenticator アプリ、およびポータル サイト アプリは、オンボード中にすべてのフル マネージド デバイスに必要なアプリとしてインストールされます。 これらのアプリを自動的にインストールすると、条件付きアクセスのサポートが提供され、Microsoft Intune アプリ ユーザーは、コンプライアンスの問題を確認して解決することができます。 
 
 ## <a name="manage-android-enterprise-app-permissions"></a>Android Enterprise アプリのアクセス許可の管理
 Android Enterprise では、Intune にアプリを同期してユーザーに割り当てる前に、マネージド Google Play Web コンソール内でアプリを承認する必要があります。 Android Enterprise を利用すると、ユーザーのデバイスに通知なしで自動的にアプリをプッシュできるため、すべてのユーザーに代わってアプリへのアクセスを許可する必要があります。 ユーザーがアプリをインストールする際はアプリのアクセス許可に関する表示が行われないため、これらのアクセス許可について理解する必要があります。

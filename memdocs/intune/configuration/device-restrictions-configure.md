@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune でポリシーを使用してデバイスの機能を制限する - Azure | Microsoft Docs
-description: デバイス プロファイルを追加して、Microsoft Intune で Android、macOS、iOS、iPadOS、Windows Phone、および Windows 10 の各デバイスの機能を制限します
+description: デバイス プロファイルを追加して、Microsoft Intune で Android デバイス管理者、Android エンタープライズ、macOS、iOS、iPadOS、Windows Phone、および Windows 10 の各デバイスの機能を制限します。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28cf0b8bffc06a0b5a56165c1e9eeab780c453c7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7f1e421a344122dbd4cf59a49ea56ef0ba2bb125
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361823"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087079"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Microsoft Intune でデバイスの制限設定を構成する
-
-
 
 Intune には、管理者が Android、iOS/iPadOS、macOS、および Windows の各デバイスを制御するのに役立つデバイス制限ポリシーが含まれています。 これらの制限を使用して、組織のリソースを保護するための幅広い設定と機能を制御できます。 たとえば、管理者には次の機能があります。
 
@@ -48,7 +46,7 @@ Intune には、管理者が Android、iOS/iPadOS、macOS、および Windows �
     - **説明**:ポリシーの説明を入力します。 この設定は省略可能ですが、推奨されます。
     - **[プラットフォーム]** :デバイスのプラットフォームを選択します。 次のようなオプションがあります。  
 
-        - **Android**
+        - **Android デバイス管理者**
         - **Android エンタープライズ**
         - **iOS/iPadOS**
         - **macOS**
@@ -62,7 +60,7 @@ Intune には、管理者が Android、iOS/iPadOS、macOS、および Windows �
 
 4. 選択したプラットフォームによって構成できる設定が異なります。 詳細な設定については、お使いのプラットフォームを選択してください。
 
-    - [Android の設定](device-restrictions-android.md)
+    - [Android デバイス管理者の設定](device-restrictions-android.md)
     - [Android エンタープライズの設定](device-restrictions-android-for-work.md)
     - [iOS/iPadOS の設定](device-restrictions-ios.md)
     - [macOS の設定](device-restrictions-macos.md)

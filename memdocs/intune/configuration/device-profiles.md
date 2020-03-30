@@ -5,28 +5,28 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: karthib
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ade4842564188c457af94a22fe49d3d18d791ebb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361875"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087093"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune でデバイス プロファイルを使用してデバイスに機能と設定を適用する
 
-Microsoft Intune には、組織内のさまざまなデバイスで有効または無効にできる設定と機能が含まれています。 これらの設定と機能は "構成プロファイル" に追加されます。 さまざまなデバイスおよび iOS/iPadOS、Android、Windows などのさまざまなプラットフォームに対するプロファイルを作成することができます。 次に、Intune を使用して、デバイスへのプロファイルの適用 ("割り当て") を行います。
+Microsoft Intune には、組織内のさまざまなデバイスで有効または無効にできる設定と機能が含まれています。 これらの設定と機能は "構成プロファイル" に追加されます。 さまざまなデバイス、および iOS/iPadOS、Androidデバイス管理者、Android エンタープライズ、Windows などのさまざまなプラットフォームに対するプロファイルを作成することができます。 次に、Intune を使用して、デバイスへのプロファイルの適用 ("割り当て") を行います。
 
 モバイル デバイス管理 (MDM) ソリューションの一部として、これらの構成プロファイルを使用してさまざまなタスクを実行します。 プロファイルの例には、次のようなものがあります。
 
@@ -55,7 +55,7 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 
 この機能では以下をサポートします。 
 
-- Android
+- Android デバイス管理者
 - Android エンタープライズ
 - iOS/iPadOS
 - macOS
@@ -69,7 +69,7 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 
 この機能では以下をサポートします。
 
-- Android
+- Android デバイス管理者
 - Android エンタープライズ
 - iOS/iPadOS
 - macOS
@@ -108,7 +108,7 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 
 この機能では以下をサポートします。
 
-- Android
+- Android デバイス管理者
 - Android エンタープライズ
 - iOS/iPadOS
 - macOS
@@ -143,7 +143,7 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 
 この機能では以下をサポートします。 
 
-- Android
+- Android デバイス管理者
 - Android エンタープライズ
 - iOS/iPadOS
 - Windows Phone 8.1
@@ -241,7 +241,7 @@ Windows デバイスの更新プログラム ポリシーについては、[配�
 
 この機能では以下をサポートします。 
 
-- Android
+- Android デバイス管理者
 - Android エンタープライズ
 - iOS/iPadOS
 - macOS
@@ -255,7 +255,7 @@ Windows デバイスの更新プログラム ポリシーについては、[配�
 
 この機能では以下をサポートします。 
 
-- Android
+- Android デバイス管理者
 - Android エンタープライズ
 - iOS/iPadOS
 - macOS
@@ -276,7 +276,7 @@ Windows デバイスの更新プログラム ポリシーについては、[配�
 
 この機能では以下をサポートします。
 
-- Android (モビリティ拡張機能)
+- Android デバイス管理者 (モビリティ拡張機能)
 
 ## <a name="manage-and-troubleshoot"></a>管理とトラブルシューティング
 

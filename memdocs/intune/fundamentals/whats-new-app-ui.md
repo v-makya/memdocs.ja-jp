@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 03/05/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 767d3671d796299d802fe950d443a152d8e2d645
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ba2b8e407b4c81f74df7c86e7101461b30a0d8e0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354569"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087137"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune とエンド ユーザー アプリの UI の更新
 
@@ -32,10 +32,19 @@ Microsoft Intune アプリに対する最新の更新プログラムについて
 * アプリと登録の変更について、学生と従業員にアラートを表示する。
 * 組織のドキュメントまたはヘルプデスクのプロシージャを更新する。  
 
-従業員または学生である場合は、必ず、ポータル サイトのヘルプ ドキュメントへのリンクとスクリーンショットを確認してください。 ポータル サイト アプリを使用する方法の詳細については、[ポータル サイト ユーザーのヘルプ ドキュメント](https://docs.microsoft.com/user-help/)を参照してください。  
+従業員または学生である場合は、必ず、ポータル サイトのヘルプ ドキュメントへのリンクとスクリーンショットを確認してください。 ポータル サイト アプリを使用する方法の詳細については、[ポータル サイト ユーザーのヘルプ ドキュメント](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)を参照してください。  
 
-<!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+
+## <a name="week-of-march-2-2020"></a>2020 年 3 月 2 日の週   
+### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Android 用ポータル サイトでのサインイン エクスペリエンスの向上   
+エクスペリエンスをユーザーにとってより新しく、シンプルでクリーンなものにするために、Android 用ポータル サイト アプリのいくつかのサインイン画面のレイアウトを更新しました。 Android 用ポータル サイトのすべての登録手順を確認するには、[Android デバイスの登録](../user-help/enroll-device-android-company-portal.md)と [Android の仕事用プロファイルを使用した登録](../user-help/enroll-device-android-work-profile.md)に関する記事をご覧ください。   
+
+
+|更新後|前へ|   
+|---|---|   
+|![新しいポータル サイトのサインイン画面の画像の例 (サインイン ボタン)。](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![以前のポータル サイトのサインイン ページの画像の例 (より煩雑なデザイン)。](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
+|![新しいサインイン進行状況画面の画像の例 (1 つの進行状況バーを表示)。](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![以前のサインイン進行状況画面の画像の例 (より煩雑なデザイン)。](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
 ## <a name="week-of-february-3-2020"></a>2020 年 2 月 3 日の週
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>ポータル サイトの Android 仕事用プロファイルの登録から削除される画面 <!--6103987 -->
@@ -142,7 +151,7 @@ Apple iOS 12.2 でリリースされた MDM 登録変更に合わせて、iOS �
 * [設定] アプリを開き、デバイスに管理プロファイルをインストールする。  
 * ポータル サイト アプリに戻り、登録を完了する。  
 
-更新された登録の手順と画面については、[Intune への iOS デバイスの登録](https://docs.microsoft.com/user-help/enroll-your-device-in-intune-ios)に関するページを参照してください。  
+更新された登録の手順と画面については、[Intune への iOS デバイスの登録](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios)に関するページを参照してください。  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>iOS 用ポータル サイト アプリに関するユーザー エクスペリエンスの更新プログラム <!-- 2536024 -->
 iOS デバイス用ポータル サイト アプリのホーム ページが再設計されました。 この変更によって、ホーム ページでは iOS UI パターンにより適切に従うようになり、アプリと電子ブックの検出可用性も向上しました。  
@@ -166,7 +175,7 @@ Microsoft Intune 管理者は、iOS ポータル サイト アプリ内のユー
 ## <a name="week-of-august-27-2018"></a>2018 年 8 月 27 日の週  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Intune ポータル サイトの新しいユーザー エクスペリエンスの更新 <!--2000968 -->  
-顧客からのフィードバックに基づいて、Intune ポータル サイト Web サイトに新機能を追加しています。 ご利用のデバイスから、既存の機能と使いやすさの大幅な向上を体験できます。 デバイスの詳細、フィードバックとサポート、デバイスの概要など、サイトの特定の領域には、最新の応答性の高いデザインが採用されるようになりました。 [Intune ポータル サイト Web サイトのドキュメント](https://docs.microsoft.com/user-help/using-the-intune-company-portal-website)は、これらの変更を反映するように更新されています。   
+顧客からのフィードバックに基づいて、Intune ポータル サイト Web サイトに新機能を追加しています。 ご利用のデバイスから、既存の機能と使いやすさの大幅な向上を体験できます。 デバイスの詳細、フィードバックとサポート、デバイスの概要など、サイトの特定の領域には、最新の応答性の高いデザインが採用されるようになりました。 [Intune ポータル サイト Web サイトのドキュメント](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website)は、これらの変更を反映するように更新されています。   
 
 更新プログラムでは、次のような内容を確認できます。  
 

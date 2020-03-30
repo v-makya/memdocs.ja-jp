@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f475f6f204225e00424e08afb8c69e20e21e815
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4b8de67a77b2122c5db4dddbb82a4966c20e1936
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342024"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233518"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>アプリ保護ポリシーを作成して割り当てる方法
 
@@ -58,7 +58,7 @@ iOS/iPadOS アプリと Android アプリ向けのアプリ保護ポリシーを
 
     **[プラットフォーム]** の値は、上記の選択に基づいて設定されます。
 
-    ![[ポリシーの作成] ウィンドウの [基本] ページのスクリーンショット](/media/app-protection-policies/app-protection-add-policies-01.png)
+    ![[ポリシーの作成] ウィンドウの [基本] ページのスクリーンショット](./media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. **[次へ]** をクリックして、 **[アプリ]** ページを表示します。<br>
     **[アプリ]** ページでは、このポリシーをさまざまなデバイス上のアプリに適用する方法を選択できます。 アプリを少なくとも 1 つ追加する必要があります。<p>
@@ -123,7 +123,7 @@ iOS/iPadOS アプリと Android アプリ向けのアプリ保護ポリシーを
     
     | 値/オプション | [説明] |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | デバイスのすべての種類のアプリをターゲットにする | あらゆる管理状態のデバイス上のアプリをポリシーのターゲットにするには、このオプションを使用します。 特定の種類のデバイス上のアプリをターゲットにする場合は **[いいえ]** を選択します。 詳細については、「[デバイス管理状態に基づくアプリ保護ポリシーの対象指定](#target-app-protection-policies-based-on-device-management-state)」を参照してください |
+    | デバイスのすべての種類のアプリをターゲットにする | あらゆる管理状態のデバイス上のアプリをポリシーのターゲットにするには、このオプションを使用します。 特定の種類のデバイス上のアプリをターゲットにする場合は **[いいえ]** を選択します。 この設定には、追加のアプリ構成が必要になる場合があります。 詳細については、[デバイス管理状態に基づくターゲット アプリ保護ポリシー](#target-app-protection-policies-based-on-device-management-state)に関するページを参照してください。 |
     |     デバイスの種類 | このオプションを使用して、このポリシーを MDM マネージド デバイスとアンマネージド デバイスのどちらに適用するかを指定します。 iOS/iPadOS APP ポリシーの場合は、 **[アンマネージド]** と **[マネージド]** デバイスから選択します。 Android APP ポリシーの場合は、 **[アンマネージド]** 、 **[Android デバイス管理者]** 、 **[Android エンタープライズ]** から選択します。  |
     | パブリック アプリ | **[パブリック アプリの選択]** をクリックして、ターゲットとなるアプリを選択します。 |
     | カスタム アプリ | **[カスタム アプリの選択]** をクリックして、バンドル ID に基づいてターゲットとなるカスタム アプリを選択します。 |
@@ -178,10 +178,9 @@ Intune アプリ保護ポリシーの対象はユーザーの ID であるため
 - **Android デバイス管理者**: Android デバイス管理 API を使用している Intune マネージド デバイス。
 - **Android エンタープライズ**: Android エンタープライズ仕事用プロファイルまたは Android エンタープライズ フル デバイス管理を使用している Intune マネージド デバイス。
 
-> [!NOTE]
-> Android デバイスでは、選択されているデバイスの種類に関わらず、Intune ポータル サイト アプリのインストールを求められます。 たとえば、"Android エンタープライズ" を選択した場合、アンマネージド Android デバイスを使用しているユーザーにも、まだメッセージが表示されます。
+Android では、選択されているデバイスの種類に関わらず、Android デバイスによって Intune ポータル サイト アプリのインストールを求められます。 たとえば、"Android エンタープライズ" を選択した場合、アンマネージド Android デバイスを使用しているユーザーにも、まだメッセージが表示されます。
 
-iOS/iPadOS の場合、アプリ保護ポリシー (APP) 設定のターゲットを Intune に登録されているデバイス上のアプリにするには、さらにアプリの構成設定が必要になります。
+iOS/iPadOS の場合、[デバイスの種類] の選択を "アンマネージド" デバイスに適用するには、追加のアプリ構成設定が必要です。 これらの構成では、特定のアプリがマネージドであること、したがって APP 設定が適用されないことが APP サービスに示されます。
 
 - **IntuneMAMUPN** を、MDM で管理されているすべてのアプリケーションに構成する必要があります。 詳細については、[Microsoft Intune で iOS/iPadOS アプリ間のデータ転送を管理する方法](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm)に関する記事をご覧ください。
 - すべてのサードパーティ製アプリケーションと基幹業務 MDM マネージド アプリケーションに **IntuneMAMDeviceID** を構成する必要があります。 **IntuneMAMDeviceID** を、デバイスの ID トークンに構成する必要があります。 たとえば、`key=IntuneMAMDeviceID, value={{deviceID}}` となります。 詳細については、「[管理対象の iOS/iPadOS デバイス用アプリ構成ポリシーを追加する](app-configuration-policies-use-ios.md)」をご覧ください。

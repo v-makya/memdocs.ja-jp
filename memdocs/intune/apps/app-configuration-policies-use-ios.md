@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a110b268c31f4e1ee5dada6554215b648449f01
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
+ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342427"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80233460"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>管理対象の iOS/iPadOS デバイス用アプリ構成ポリシーを追加する
 
@@ -106,7 +106,7 @@ Microsoft Intune には、アプリに固有の構成設定が用意されてい
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>複数 ID アプリで構成済みの組織アカウントのみを許可する 
 
-iOS/iPadOS デバイスでは、次のキー/値ペアを使用します。
+Microsoft Intune 管理者は、マネージド デバイス上の Microsoft アプリにどのユーザー アカウントを追加するかを制御できます。 許可されている組織ユーザー アカウントのみにアクセスを制限したり、登録済みデバイス上の個人アカウントをブロックしたりできます。 iOS/iPadOS デバイスでは、次のキー/値ペアを使用します。
 
 | **Key** | **値** |
 |----|----|
@@ -114,7 +114,10 @@ iOS/iPadOS デバイスでは、次のキー/値ペアを使用します。
 | IntuneMAMUPN | <ul><li>アプリへのサインインが許可されているアカウントの UPN。</li><li> Intune に登録されているデバイスでは、<code>{{userprincipalname}}</code> のトークンを使用して登録済みのユーザー アカウントを表すことができます。</li></ul>  |
 
    > [!NOTE]
-   > 複数 ID で構成された組織アカウントのみを許可する場合は、必ず OneDrive for iOS 10.34 以降、Outlook for iOS 2.99.0 以降、または Edge for iOS 44.8.7 以降を使用すると共に、アプリが [Intune アプリ保護ポリシー](app-protection-policy.md)の対象になっている必要があります。
+   > 次のアプリでは、上記のアプリ構成が処理され、組織アカウントのみが許可されます。
+   > - iOS 用 Edge (44.8.7 以降)
+   > - OneDrive for iOS (10.34 以降)
+   > - Outlook (iOS 2.99.0 以降用)
 
 ## <a name="enter-xml-data"></a>XML データを入力する
 

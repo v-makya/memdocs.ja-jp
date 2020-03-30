@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2020
+ms.date: 03/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8586e5c25ec3db4a736d84381e691ecebe6fae32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361680"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80220100"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限するように Windows 10 (以降) のデバイスを設定する
 
@@ -86,7 +86,7 @@ ms.locfileid: "79361680"
   - **[未構成]** (既定値):Intune では、この設定は変更または更新されません。 既定では、他のポリシー設定で定義されているアプリを含め、エンド ユーザーが Microsoft Store 以外の場所からアプリをインストールすることが OS によって許可されている可能性があります。  
   - **[どこでも]** :アプリの推奨設定がオフになり、ユーザーは任意の場所からアプリをインストールできます。  
   - **[Microsoft Store のみ]** :エンド ユーザーに対して、Microsoft Store からのみアプリをインストールするように強制します。
-  - **[推奨事項]** :ユーザーが Microsoft Store で利用可能な Web からアプリをインストールすると、ストアからダウンロードすることを推奨するメッセージが表示されます。  
+  - **[推奨事項]** :ユーザーが Microsoft Store から入手できるアプリを Web からインストールすると、ストアからダウンロードすることを推奨するメッセージが表示されます。  
   - **[Microsoft Store を優先する]** :ユーザーが Microsoft Store 以外の場所からアプリをインストールすると、警告が表示されます。
 
   [SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
@@ -376,8 +376,8 @@ GDI DPI スケールでは、DPI 対応でないアプリケーションをモ�
 - **[閲覧履歴の保存]** : **[はい]** (既定値) に設定すると、Microsoft Edge での閲覧履歴の保存が許可されます。 **[いいえ]** にすると、閲覧履歴を保存できなくなります。
 - **[終了時に閲覧データをクリアする** (デスクトップのみ)]: **[はい]** に設定すると、Microsoft Edge の終了時に履歴と閲覧データが消去されます。 **[未構成]** にすると、OS の既定値が使用され、閲覧データがキャッシュされる可能性があります。
 - **[Sync browser settings between user's devices]\(ユーザーのデバイス間でブラウザーの設定を同期する\)** :デバイス間でブラウザーの設定を同期する方法を選択します。 次のようなオプションがあります。
-  - **[許可]** :ユーザーのデバイス間で Microsoft Edge ブラウザーの設定を同期することを許可します。
-  - **[Block and enable user override]\(ブロックおよびユーザーのオーバーライドを許可\)** :ユーザーのデバイス間で Microsoft Edge ブラウザーの設定が同期されません。 この設定はユーザーがオーバーライドできます。
+  - **[許可]** :ユーザーのデバイス間で Microsoft Edge ブラウザーの設定を同期することを許可します
+  - **[Block and enable user override]\(ブロックおよびユーザーのオーバーライドを許可\)** :ユーザーのデバイス間での Microsoft Edge ブラウザーの設定の同期をブロックします。 この設定はユーザーがオーバーライドできます。
   - **[ブロック]** :ユーザーのデバイス間で Microsoft Edge ブラウザーの設定が同期されなくなります。 この設定はユーザーがオーバーライドできません。
 
 [Block and enable user override]\(ブロックしてユーザーによるオーバーライドを有効にする\) が選択されている場合、ユーザーが管理者による指定をオーバーライドできます。
@@ -474,7 +474,7 @@ GDI DPI スケールでは、DPI 対応でないアプリケーションをモ�
 
 ## <a name="per-app-privacy-exceptions"></a>アプリごとのプライバシー例外
 
-"既定のプライバシー" で定義したものと異なるプライバシー動作のアプリを追加できます。
+"既定のプライバシー" で定義したものと異なるプライバシー動作をするアプリを追加できます。
 
 - **[パッケージ名]** :アプリのパッケージ ファミリ名。
 - **[アプリ名]** :アプリの名前。
@@ -898,6 +898,11 @@ GDI DPI スケールでは、DPI 対応でないアプリケーションをモ�
   [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="microsoft-defender-antivirus-exclusions"></a>Windows Defender ウイルス対策の除外
+
+除外リストを変更することで、特定のファイルを Microsoft Defender ウイルス対策のスキャンから除外できます。 **通常は、除外を適用する必要はありません**。 Microsoft Defender ウイルス対策には、既知の OS の動作と一般的な管理ファイルに基づき、自動的な除外が多数含まれています。これには、エンタープライズ管理、データベース管理、およびその他のエンタープライズのシナリオや状況に使用されるファイルなどが含まれます。
+
+> [!WARNING]
+> **除外を定義すると、Microsoft Defender ウイルス対策によって提供される保護機能が低下します**。 除外を実装することに関連するリスクを、常に評価してください。 悪意がないとわかっているファイルのみを除外してください。
 
 - **[スキャンおよびリアルタイム保護から除外するファイルとフォルダー]** :**C:\Path** や **%ProgramFiles%\Path\filename.exe** などのファイルやフォルダーを、除外リストに 1 つ以上追加します。 これらのファイルとフォルダーは、リアルタイムまたはスケジュールされたスキャンの対象外となります。
 - **[スキャンおよびリアルタイム保護から除外するファイル拡張子]** :**jpg** や **txt** などのファイル拡張子を、除外リストに 1 つ以上追加します。 これらの拡張子が付いたファイルは、リアルタイム スキャンやスケジュールされたスキャンの対象外です。

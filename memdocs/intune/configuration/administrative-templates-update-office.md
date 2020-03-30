@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ba140f9d49cbdfbada0cb992b333a690cbb4a85
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fcf2139019b1f4d764b55ee31f5961711a71834c
+ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350253"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80219879"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>更新プログラム チャネルとターゲット バージョンの設定を使用して、Microsoft Intune 管理用テンプレートで Office 365 を更新する
 
@@ -39,13 +39,15 @@ Intune では [Windows 10 テンプレートを使用してグループ ポリ�
 
 Office アプリの [Office 365 ProPlus 自動更新を有効にする](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus)ようにしてください。 これは、グループ ポリシーまたは Intune Office 2016 ADMX テンプレートを使用して行うことができます。
 
-![Intune 管理用テンプレートで、Office の [自動更新を有効にする] 設定を設定する](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
+> [!div class="mx-imgBorder"]
+> ![Intune 管理用テンプレートで、Office の [自動更新を有効にする] 設定を設定する](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
 
 ## <a name="set-the-update-channel-in-the-intune-administrative-template"></a>Intune 管理用テンプレートで更新プログラム チャネルを設定する
 
-1. [Intune 管理用テンプレート](administrative-templates-windows.md#create-a-template)で、 **[更新プログラム チャネル]** 設定にアクセスして、必要なチャネルを入力します。 たとえば、`Semi-Annual Channel` を選択します。
+1. [Intune 管理用テンプレート](administrative-templates-windows.md#create-the-template)で、 **[更新プログラム チャネル]** 設定にアクセスして、必要なチャネルを入力します。 たとえば、`Semi-Annual Channel` を選択します。
 
-    ![Intune 管理用テンプレートで、Office の [更新プログラム チャネル] 設定を設定する](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
+    > [!div class="mx-imgBorder"]
+    > ![Intune 管理用テンプレートで、Office の [更新プログラム チャネル] 設定を設定する](./media/administrative-templates-update-office/admx-enable-update-channel-setting.png)
 
     > [!NOTE]
     > より頻繁に更新することをお勧めします。 半期は、単に例として使用されています。
@@ -53,7 +55,7 @@ Office アプリの [Office 365 ProPlus 自動更新を有効にする](https://
 2. 必ず、Windows 10 デバイスに[ポリシーを割り当て](device-profile-assign.md)てください。 ポリシーをより早くテストするために、ポリシーを同期することもできます。
 
     - [Intune でポリシーを同期する](../remote-actions/device-sync.md)
-    - [デバイスでポリシーを手動で同期する](https://docs.microsoft.com/user-help/sync-your-device-manually-windows#sync-from-settings-app)
+    - [デバイスでポリシーを手動で同期する](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows#sync-from-settings-app)
 
 ## <a name="check-the-intune-registry-keys"></a>Intune のレジストリ キーを確認する
 
@@ -72,7 +74,8 @@ Office アプリの [Office 365 ProPlus 自動更新を有効にする](https://
 
     次の例を見ると、`L_UpdateBranch` に `<enabled /><data id="L_UpdateBranchID" value="Deferred" />` のような値が含まれていることがわかります。 この値は、半期チャネルに設定されていることを意味します。
 
-    ![管理用テンプレート L_Updatebranch レジストリ キーの例](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
+    > [!div class="mx-imgBorder"]
+    > ![管理用テンプレート L_Updatebranch レジストリ キーの例](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
     > [Configuration Manager を使用した Office 365 ProPlus の管理](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)で、値とその意味が一覧表示されます。 レジストリ値は、選択した配布チャネルに基づきます。
@@ -99,7 +102,8 @@ Office アプリの [Office 365 ProPlus 自動更新を有効にする](https://
 
     次の例を見ると、`UpdateChannel` が `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60` に設定されていることがわかります。これは、**毎月**です。
 
-    ![管理用テンプレート Office 更新プログラム チャネル レジストリ キーの例](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
+    > [!div class="mx-imgBorder"]
+    > ![管理用テンプレート Office UpdateChannel レジストリ キーの例](./media/administrative-templates-update-office/admx-update-channel-office-registry-key.png)
 
     この例は、ポリシーがまだ適用されていないことを意味しています。これは、**半年**ではなく、まだ**毎月**に設定されているためです。
 
@@ -120,7 +124,8 @@ Office アプリの [Office 365 ProPlus 自動更新を有効にする](https://
     2. **[タスク スケジューラ ライブラリ]**  >  **[Microsoft]**  >  **[Office]** を展開します。
     3. **[Office 自動更新 2.0]**  >  **[実行]** を選択します。
 
-        ![タスク スケジュールを開き、Office 自動更新を実行する](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
+        > [!div class="mx-imgBorder"]
+        > ![タスク スケジュールを開き、Office 自動更新を実行する](./media/administrative-templates-update-office/admx-task-scheduler-office-automatic-updates.png)
 
         タスクが完了するのを待ちます。これには数分かかることがあります。
 
@@ -138,11 +143,12 @@ Office アプリの [Office 365 ProPlus 自動更新を有効にする](https://
 
 1. 選択している更新プログラム チャネルが Office バージョンでサポートされていることを確認します。 [Office 365 ProPlus の更新履歴](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date)では、さまざまな更新チャネルをサポートするビルド番号が一覧表示されます。
 
-2. [Intune 管理用テンプレート](administrative-templates-windows.md#create-a-template)で、 **[ターゲット バージョン]** 設定にアクセスして、必要なバージョンを入力します。
+2. [Intune 管理用テンプレート](administrative-templates-windows.md#create-the-template)で、 **[ターゲット バージョン]** 設定にアクセスして、必要なバージョンを入力します。
 
     **[ターゲット バージョン]** 設定は、次の設定のようになります。
 
-    ![Intune 管理用テンプレートで、Office の [ターゲット バージョン] 設定を設定する](./media/administrative-templates-update-office/admx-enable-target-version-setting.png)
+    > [!div class="mx-imgBorder"]
+    > ![Intune 管理用テンプレートで、Office の [ターゲット バージョン] 設定を設定する](./media/administrative-templates-update-office/admx-enable-target-version-setting.png)
 
 > [!IMPORTANT]
 >
@@ -167,7 +173,8 @@ Office アプリの [Office 365 ProPlus 自動更新を有効にする](https://
       1. デバイスで、`C:\Program Files (x86)\Microsoft Office\Updates\Detection\Version` にアクセスします。
       2. `VersionDescriptor.xml` ファイルを開き、`<Version>` セクションに移動します。 使用可能なバージョンは、Intune ポリシーで入力したものと同じバージョンである必要があります。次に例を示します。
 
-          ![バージョン記述子 Office XML ファイルのバージョン セクションを確認する](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)
+          > [!div class="mx-imgBorder"]
+          > ![バージョン記述子 Office XML ファイルのバージョン セクションを確認する](./media/administrative-templates-update-office/office-version-descriptor-xml-example.png)
 
 4. 更新プログラムをインストールすると、Office アプリに新しいバージョンが表示されます (たとえば、 **[アカウント]** メニューで)
 
