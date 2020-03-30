@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
-ms.reviewer: srik
+ms.reviewer: crisk
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b746317ef15065af246cfd977f6e9d745ef4dea7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362681"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086022"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Microsoft Intune のサポートを受ける方法
 
@@ -35,7 +35,6 @@ Intune 管理者は、 **[ヘルプとサポート]** オプションを使用�
 > Intune と連携するサードパーティ製品 (Saaswedo、Cisco、Lookout など) のテクニカル サポートについては、まず、その製品の提供元に連絡してください。 Intune サポート要求を開始する前に、その他の製品が正しく構成されていることを確認します。
 >
 > Microsoft Intune に関連する問題のトラブルシューティングについては、Intune のドキュメントの[トラブルシューティングに関するセクション](help-desk-operators.md)を参照してください。
-
 
 ## <a name="help-and-support-experience"></a>ヘルプとサポート エクスペリエンス
 
@@ -52,10 +51,9 @@ Intune 用に新しく作成されたテナントを使用するとき、*ヘル
 
 - *不明な問題が発生しました。ページを更新しても問題が解決されない場合、[M365 管理センター](https://admin.microsoft.com)でサポート案件を作成し、表示されたセッション ID を参照してください。*
 
-エラーの詳細には、*セッション ID* や*拡張機能*の詳細などが含まれます。 
- 
-この問題は、 https://admin.microsoft.com の **M365 管理センター**または https://portal.office.com の **Office 365 ポータル**で新しいテナント アカウントを認証していない場合に発生します。 この問題を解決するには、メッセージに含まれている *M365 管理センター*のリンクを選択するか、 https://portal.office.com にアクセスしてサインインします。 いずれかの場所での認証後、Intune の*ヘルプとサポート*にアクセスできるようになります。
+エラーの詳細には、*セッション ID* や*拡張機能*の詳細などが含まれます。
 
+この問題は、 https://admin.microsoft.com の **M365 管理センター**または https://portal.office.com の **Office 365 ポータル**で新しいテナント アカウントを認証していない場合に発生します。 この問題を解決するには、メッセージに含まれている *M365 管理センター*のリンクを選択するか、 https://portal.office.com にアクセスしてサインインします。 いずれかの場所での認証後、Intune の*ヘルプとサポート*にアクセスできるようになります。
 
 **ヘルプとサポート**にアクセスする:
 
@@ -67,18 +65,28 @@ Intune 用に新しく作成されたテナントを使用するとき、*ヘル
   > お使いの Intune のインスタンスが、Azure Government のような政府機関向けのプライベート クラウド (ソブリン クラウドとも呼ばれます) でホストされている場合は、この記事で後述する「[Intune での政府機関向けのプライベート クラウドのサポート](#intune-support-for-private-cloud-for-government)」を参照してください。 Intune の *[ヘルプとサポート]* エクスペリエンスは、来年まで、政府機関向けのプライベート クラウドでは利用できません。
 
 - **Microsoft Endpoint Manager 管理センターから**
-  - Intune の機能領域を選択した後、 **[ヘルプとサポート]** のオプションを選択します。
-  - Microsoft Endpoint Manager 管理センターの任意のノードで **?** を選択します。 アイコン (ポータルの右上隅) を選択し、ドロップダウンを使用してヘルプの必要なサービスを選択します。 **[?]** アイコン (Microsoft Endpoint Manager 管理センター) では複数のサービスがサポートされており、支援が必要な特定のサービスを選択する必要があります。  
 
-    ![サービスを選択する](./media/get-support/select-a-service.png)
+  - Microsoft Endpoint Manager 管理センターの任意のノードで **?** を選択します。 アイコン (ポータルの右上隅) を選択し、ドロップダウンを使用してヘルプの必要な管理の種類を選択します。 Microsoft Endpoint Manager admin center は次の管理の種類をサポートしているため、Intune など、サポートが必要な管理の種類を選択する必要があります。
 
-    サービスを選択すると、そのサービスの *[ヘルプとサービス]* ページが表示されます。ここで詳細を指定し、特定の問題に対する[解決方法を検索する](#find-solutions)ことができます。
+    - マネージャーの構成 (Desktop Analytics を含む)
+    - Intune
+    - 共同管理  
 
-    検索結果が、目的のサービスに対して予想されるものと一致しない場合は、正しいサービスを選択したことを確認してください。 サービスの選択は、 *[ヘルプとサポート]* のすぐ後に表示されます。  正しいサービスが選択されていない場合は、 *[サービスの選択]* をクリックして、サービス選択ドロップダウンに戻ります。
+    > [!div class="mx-imgBorder"]
+    > ![管理の種類を選択する](./media/get-support/select-management-type.png)
 
-    ![サービスを確認する](./media/get-support/confirm-your-service-selection.png)
+    管理の種類を選択すると、 *[ヘルプとサポート]* ページが開き、特定の問題について[解決策を見つける](#find-solutions)ための詳細を指定できます。 詳細は、選択した管理の種類に基づいてフィルター処理されます。
 
-###  <a name="the-support-experience"></a>サポート エクスペリエンス
+     適切な管理の種類が選択されていない場合 **(1)** は、 *[管理の種類の選択]* **(2)** をクリックし、管理の種類の選択のドロップダウンに戻ります。
+
+    > [!div class="mx-imgBorder"]
+    > ![管理の種類を確認する](./media/get-support/confirm-management-selection.png)
+
+  - **[トラブルシューティング + サポート]**  >  **[ヘルプとサポート]** から [ヘルプとサポート] を開くと、選択した管理の種類が *[ヘルプとサポート]* に表示されません。
+
+  - *[デバイス]* 、 *[アプリ]* 、 *[ユーザー]* などの他のノードまで展開してから *[ヘルプとサポート]* を選択しても、管理の種類は選択できません。また、 *[ヘルプとサポート]* に種類も表示されません。 この場合は *[Intune]* が想定されます。 コンテキストを Intune にしない場合は、 **[?]** オプションを使用し、別の管理の種類を選択できるようにします。
+
+### <a name="the-support-experience"></a>サポート エクスペリエンス
 
   [ヘルプとサポート] を開くと、ポータルに **[ヘルプが必要ですか?]** ウィンドウが表示されます。
 
@@ -144,8 +152,7 @@ Intune 用に新しく作成されたテナントを使用するとき、*ヘル
 サブスクリプションが政府機関向けのプライベート クラウドにある場合を除き、Azure の *[ヘルプとサポート]* エクスペリエンスにアクセスして、Intune のサポートを受けることはできなくなりました。
 Intune のインスタンスが政府機関向けのプライベート クラウド上で実行されていない場合は、Azure の *[ヘルプとサポート]* に移動すると、サポート インシデントを作成して管理するために Intune の *[ヘルプとサポート]* エクスペリエンスにリダイレクトされます。
 
-左側のナビゲーション ウィンドウの **[ヘルプとサポート]** を使用するか、または **[?]** オプションを使用して *[ヘルプ]* ウィンドウを開き、 **[ヘルプとサポート]** を選択すると、Azure の *[ヘルプとサポート]* ページが開きます。 
-
+左側のナビゲーション ウィンドウの **[ヘルプとサポート]** を使用するか、または **[?]** オプションを使用して *[ヘルプ]* ウィンドウを開き、 **[ヘルプとサポート]** を選択すると、Azure の *[ヘルプとサポート]* ページが開きます。
 
 このページで **[+ 新しいサポート リクエスト]** を選択して、 *[Help + support + New support request]\(ヘルプとサポート + 新しいサポート リクエスト\)* ページの *[基本]* タブを開きます。
 
@@ -159,7 +166,6 @@ Intune のインスタンスが政府機関向けのプライベート クラウ
   次に、[Intune の [ヘルプとサポート] ページ](https://aka.ms/intunehelpsupport)にリダイレクトされるリンクが表示されます。
   
   ![新しいサポート リクエスト](./media/get-support/new-request.png)
-
 
 ## <a name="intune-support-for-private-cloud-for-government"></a>Intune での政府機関向けのプライベート クラウドのサポート
 

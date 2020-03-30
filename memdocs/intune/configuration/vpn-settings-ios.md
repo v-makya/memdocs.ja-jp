@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune で iOS/iPadOS デバイスに対する VPN 設定を構成する - Azure | Microsoft Docs
-description: Microsoft Intune で、iOS/iPadOS を稼働しているデバイスに対して、仮想プライベート ネットワーク (VPN) の構成設定を使用して VPN 構成プロファイルを追加または作成します。これには、基本設定での接続の詳細、認証方法、分割トンネリングや、ID を使用したカスタム VPN の設定およびキーと値のペア、Safari URL を含むアプリごとの VPN の設定と SSID または DNS 検索ドメインを含むオンデマンドの VPN、および構成スクリプト、IP または FQDN アドレス、TCP ポートを含むプロキシの設定などがあります。
+description: iOS/iPadOS デバイスには、仮想プライベート ネットワーク (VPN) 構成設定を使用して VPN 構成プロファイルを追加または作成します。 Microsoft Intune の接続の詳細、認証方法、分割トンネリング、ID を使用したカスタム VPN 設定、キーと値のペア、Safari URL を含むアプリごとの VPN 設定、SSID または DNS 検索ドメインを使用したオンデマンド VPN、構成スクリプトを含むプロキシ設定、IP または FQDN アドレス、TCP ポート。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80ff24193c607003889c2246bb9199db795f1623
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 74e889419dcaaa75c2a31fe16931dddd84d1a967
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360458"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086535"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune で iOS および iPadOS デバイスに対する VPN 設定を構成する
 
@@ -82,10 +82,10 @@ Microsoft Intune には、ご利用の iOS/iPadOS デバイスに展開できる
 
 - **[ネットワーク アクセス制御 (NAC) を有効にする]** (Cisco AnyConnect、Citrix SSO、F5 Access): **[同意する]** を選択すると、このデバイス ID が VPN プロファイルに含められます。 VPN への認証用にこの ID を使用して、ネットワーク アクセスを許可または禁止することができます。
 
-    **ISE で Cisco AnyConnect を使用する場合**、必ず次の操作を行ってください。
+  **ISE で Cisco AnyConnect を使用する場合**、必ず次の操作を行ってください。
 
-    - ISE を Intune for NAC と統合していない場合は、「[Cisco Identity Services Engine Administrator Guide](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)」(Cisco Identity Services Engine 管理者ガイド) にある「**Configure Microsoft Intune as an MDM Server**」(MDM サーバーとしての Microsoft Intune の設定) の説明に従って統合します。
-    - VPN プロファイルで NAC を有効にします。
+  - ISE を Intune for NAC と統合していない場合は、「[Cisco Identity Services Engine Administrator Guide (Cisco Identity Services Engine 管理者ガイド)](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)」の「**Configure Microsoft Intune as an MDM Server (MDM サーバーとしての Microsoft Intune の設定)** 」の説明に従って統合します。
+  - VPN プロファイルで NAC を有効にします。
 
   **ゲートウェイと共に Citrix SSO を使用する場合**、必ず次の操作を行ってください。
 
@@ -107,6 +107,34 @@ Microsoft Intune には、ご利用の iOS/iPadOS デバイスに展開できる
 ## <a name="ikev2-settings"></a>IKEv2 設定
 
 これらの設定は、 **[接続の種類]**  >  **[IKEv2]** を選択した場合に適用されます。
+
+- **[常時接続 VPN]** : **[有効]** を選択すると、VPN クライアントから VPN への接続と再接続が自動実行されるように設定されます。 常時接続 VPN は接続されたままの状態になるか、ユーザーが自分のデバイスをロックした場合、デバイスが再起動した場合、またはワイヤレス ネットワークに変更があった場合に、すぐに接続されます。 **[無効]** (既定) に設定すると、すべての VPN クライアントの常時接続 VPN が無効になります。 有効にする場合は、次の構成も行います。
+
+  - **ネットワーク インターフェイス**:すべての IKEv2 設定は、選択したネットワーク インターフェイスにのみ適用されます。 次のようなオプションがあります。
+    - **Wi-Fi and Cellular (Wi-Fi と携帯ネットワーク)** (既定値):IKEv2 設定は、デバイスの Wi-Fi および携帯ネットワーク インターフェイスに適用されます。
+    - **携帯ネットワーク**:IKEv2 設定は、デバイスの携帯ネットワーク インターフェイスにのみ適用されます。 Wi-Fi インターフェイスが無効か、削除されているデバイスに展開する場合は、このオプションを選択します。
+    - **[Wi-Fi]** :IKEv2 設定は、デバイスの Wi-Fi インターフェイスにのみ適用されます。
+  - **User to disable VPN configuration (ユーザーが VPN 構成を無効にできるようにする)** : **[有効]** を選択すると、ユーザーは常時接続 VPN をオフにできるようになります。 **[無効]** (既定値) を選択すると、ユーザーは無効にすることができなくなります。 この設定の既定値は最も安全なオプションです。
+  - **ボイスメール**:常時接続 VPN が有効な場合のボイスメール トラフィックの処理を選択します。 次のようなオプションがあります。
+    - **Force network traffic through VPN (VPN 経由でのネットワーク トラフィックを強制する)** (既定値):この設定は最も安全なオプションです。
+    - **Allow network traffic to pass outside VPN (ネットワーク トラフィックが VPN の外部を通過することを許可する)**
+    - **Drop network traffic (ネットワーク トラフィックを削除する)**
+  - **AirPrint**:常時接続 VPN が有効な場合の AirPrint トラフィックの処理を選択します。 次のようなオプションがあります。
+    - **Force network traffic through VPN (VPN 経由でのネットワーク トラフィックを強制する)** (既定値):この設定は最も安全なオプションです。
+    - **Allow network traffic to pass outside VPN (ネットワーク トラフィックが VPN の外部を通過することを許可する)**
+    - **Drop network traffic (ネットワーク トラフィックを削除する)**
+  - **Cellular services (携帯ネットワーク サービス)** :iOS 13.0 以降で常時接続 VPN が有効な場合の携帯ネットワーク トラフィックの処理を選択します。 次のようなオプションがあります。
+    - **Force network traffic through VPN (VPN 経由でのネットワーク トラフィックを強制する)** (既定値):この設定は最も安全なオプションです。
+    - **Allow network traffic to pass outside VPN (ネットワーク トラフィックが VPN の外部を通過することを許可する)**
+    - **Drop network traffic (ネットワーク トラフィックを削除する)**
+  - **Allow traffic from non-native captive networking apps to pass outside VPN (ネイティブでないキャプティブ ネットワーク アプリからのトラフィックが VPN の外部を通過することを許可する)** :キャプティブ ネットワークとは、レストランやホテルで一般的に見られる Wi-Fi ホットスポットを指します。 次のようなオプションがあります。
+    - **No**:すべてのキャプティブ ネットワーク (CN) アプリ トラフィックに VPN トンネル経由を強制します。
+    - **Yes, all apps (はい、すべてのアプリ)** :すべての CN アプリ トラフィックに VPN のバイパスを許可します。
+    - **Yes, specific apps (はい、特定のアプリ)** : **[追加]** を選択してトラフィックの VPN のバイパスを許可する CN アプリの一覧を追加します。 CN アプリのバンドル識別子を入力します。 たとえば、「`com.contoso.app.id.package`」と入力します。
+
+  - **Traffic from Captive Websheet app to pass outside VPN (キャプティブ Web シート アプリからのトラフィックに VPN の外部を通過させる)** :キャプティブ Web シートとは、キャプティブ サインオンを処理する組み込みの Web ブラウザーです。 **[有効]** を選択すると、ブラウザー アプリ トラフィックの VPN のバイパスが許可されます。 **[無効]** (既定値) を選択すると、常時接続 VPN の使用が Web シート トラフィックに強制されます。 この既定値は最も安全なオプションです。
+  - **Network address translation (NAT) keepalive interval (seconds) (ネットワーク アドレス変換 (NAT) のキープアライブ間隔 (秒))** :VPN への接続を維持するために、デバイスからネットワーク パケットを送信してアクティブのままにします。 これらのパケットが送信される頻度を秒単位で 20 - 1440 を入力します。 たとえば、「`60`」の値を入力すると、ネットワーク パケットが 60 秒ごとに VPN に送信されます。 既定では、この値は `110` 秒に設定されています。
+  - **Offload NAT keepalive to hardware when device is asleep (デバイスがスリープ状態のときに NAT キープアライブをハードウェアにオフロードする)** : **[有効]** (既定値) を選択すると、デバイスがスリープ状態のときに NAT からキープアライブ パケットが継続的に送信されるため、デバイスと VPN の接続が維持されます。 **[無効]** を選択すると、この機能は無効になります。
 
 - **[リモート識別子]** : IKEv2 サーバーのネットワーク IP アドレス、FQDN、UserFQDN、または ASN1DN を入力します。 たとえば、「`10.0.0.3`」や「`vpn.contoso.com`」と入力します。 通常は、[ **[接続名]** ](#base-vpn-settings) (この記事内) と同じ値を入力します。 ただし、これはお使いの IKEv2 サーバーの設定によって異なります。
 
@@ -183,7 +211,7 @@ Microsoft Intune には、ご利用の iOS/iPadOS デバイスに展開できる
 
 ## <a name="automatic-vpn-settings"></a>自動 VPN 設定
 
-- **アプリごとの VPN**:アプリごとの VPN を有効にします。 特定のアプリを開いたときに VPN 接続が自動的にトリガーされるのを許可します。 また、アプリをこの VPN プロファイルに関連付けます。 アプリごとの VPN は、IKEv2 ではサポートされていません。 詳細については、[iOS/iPadOS 用のアプリごとの VPN を設定する手順](vpn-setting-configure-per-app.md)に関する記事をご覧ください。 
+- **アプリごとの VPN**:アプリごとの VPN を有効にします。 特定のアプリを開いたときに VPN 接続が自動的にトリガーされるのを許可します。 また、アプリをこの VPN プロファイルに関連付けます。 アプリごとの VPN は IKEv2 ではサポートされていません。 詳細については、[iOS/iPadOS 用のアプリごとの VPN を設定する手順](vpn-setting-configure-per-app.md)に関する記事をご覧ください。 
   - **プロバイダーの種類**:Pulse Secure と Custom VPN でのみ利用できます。
   - Pulse Secure または Custom VPN で iOS/iPadOS の**アプリごとの VPN** プロファイルを使用する場合、アプリ層トンネリング (アプリプロキシ) またはパケット レベル トンネリング (パケットトンネル) を選択できます。 **[ProviderType]** 値には、アプリ層トンネリングの場合は **[app-proxy]** を設定し、パケット層トンネリングの場合は **[packet-tunnel]** を設定します。 使用すべき値がわからない場合、ご利用の VPN プロバイダーのドキュメントを参照してください。
   - **この VPN をトリガーする Safari URL**:1 つまたは複数の Web サイト URL を追加します。 これらの URL にデバイスの Safari ブラウザーを使用してアクセスすると、VPN 接続が自動的に確立されます。
@@ -194,7 +222,7 @@ Microsoft Intune には、ご利用の iOS/iPadOS デバイスに展開できる
   - **[URL 文字列プローブ]** :任意。 ルールがテストとして使う URL を入力します。 デバイスによって、この URL がリダイレクトなしにアクセスされた場合は、VPN 接続が開始されます。 さらに、デバイスがターゲット URL に接続されます。 ユーザーには、URL 文字列プローブ サイトは表示されません。
 
     たとえば、URL 文字列プローブは、VPN への接続前にデバイスのポリシー準拠を確認する監査 Web サーバーの URL です。 または、デバイスを VPN 経由でターゲット URL に接続する前に、この URL を使って VPN のサイト接続機能をテストします。
-。
+
   - **ドメインのアクション**:以下のいずれかの項目を選択します。
     - 必要な場合に接続する
     - 接続しない

@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune - Azure での iOS/iPadOS または macOS デバイス プロファイルの作成 | Microsoft Docs
-description: Microsoft Intune で iOS、iPadOS、または macOS デバイス プロファイルを追加または作成し、AirPrint、ホーム画面のレイアウト、アプリの通知、共有デバイス、シングル サインイン、Web コンテンツ フィルター設定を構成します。
+description: Microsoft Intune で iOS、iPadOS、または macOS デバイス プロファイルを追加または作成し、AirPrint、ホーム画面のレイアウト、アプリの通知、共有デバイス、シングル サインオン、Web コンテンツ フィルター設定を構成します。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48f890888d9bdb9d1df67596fb9125534e90a4d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350136"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084095"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Intune での iOS、iPadOS、または macOS デバイスの機能設定の追加
 
@@ -149,12 +149,12 @@ Intune で構成できる設定の一覧については、[iOS/iPadOS でのシ�
 
 ## <a name="single-sign-on-app-extension"></a>シングル サインオン アプリの拡張機能
 
-これらの設定では、iOS、iPadOS、macOS デバイスでのシングル サインオン (SSO) を有効にするアプリ拡張機能を構成します。 ほとんどの基幹業務 (LOB) アプリおよび組織の Web サイトでは、何らかのレベルのセキュリティで保護されたユーザー認証が必要です。 多くの場合、ユーザーは認証のために同じ資格情報を繰り返し入力する必要があります。 SSO を使用すると、ユーザーは資格情報を 1 回入力した後でアプリや Web サイトにアクセスできます。 サインインした後、ユーザーは、アプリや Web サイトに自動的にアクセスするか、または顔 ID、タッチ ID、Apple のパスコードを使用してアクセスすることができます。
+これらの設定では、iOS、iPadOS、macOS デバイスでのシングル サインオン (SSO) を有効にするアプリ拡張機能を構成します。 ほとんどの基幹業務 (LOB) アプリおよび組織の Web サイトでは、何らかのレベルのセキュリティで保護されたユーザー認証が必要です。 多くの場合、ユーザーは認証のために同じ資格情報を繰り返し入力する必要があります。 SSO を使用すると、ユーザーは資格情報を 1 回入力した後でアプリや Web サイトにアクセスできます。 また、SSO によってユーザーの認証エクスペリエンスが向上し、資格情報のプロンプトが繰り返し表示される回数が減ります。
 
-Intune では、これらの設定を使用して、組織、ID プロバイダー、または Apple によって作成された SSO アプリ拡張機能を構成します。 SSO アプリ拡張機能では、ユーザーの認証が処理されます。 これらの設定により、リダイレクトの種類と資格情報の種類の SSO アプリ拡張機能が構成されます。
+Intune では、これらの設定を使用して、組織、ID プロバイダー、Microsoft、または Apple によって作成された SSO アプリ拡張機能を構成します。 SSO アプリ拡張機能では、ユーザーの認証が処理されます。 これらの設定により、リダイレクトの種類と資格情報の種類の SSO アプリ拡張機能が構成されます。
 
-- このリダイレクトの種類は、OAuth や SAML2 などの最新の認証プロトコル向けに設計されています。
-- 資格情報の種類は、チャレンジと応答の認証フロー用に設計されています。 Apple で提供される Kerberos 固有の資格情報拡張機能と汎用的な資格情報拡張機能から選択できます。
+- このリダイレクトの種類は、OAuth や SAML2 などの最新の認証プロトコル向けに設計されています。 Microsoft には、シングル サインオン アプリ拡張機能の設定で有効にできる iOS/iPadOS Azure AD リダイレクト型の SSO アプリ拡張機能があります。
+- 資格情報の種類は、チャレンジと応答の認証フロー用に設計されています。 Apple で提供される Kerberos 固有の資格情報拡張機能または汎用的な資格情報拡張機能から選択できます。
 
 Intune で構成できる設定の一覧については、[iOS/iPadOS SSO アプリ拡張機能](ios-device-features-settings.md#single-sign-on-app-extension)と [macOS SSO アプリ拡張機能](macos-device-features-settings.md#single-sign-on-app-extension)の記事を参照してください。
 
@@ -194,7 +194,7 @@ Intune で構成できる設定の一覧については、[iOS/iPadOS の壁紙]
 
 ## <a name="web-content-filter"></a>Web コンテンツ フィルター
 
-これらの設定では、Apple の組み込みの AutoFilter アルゴリズムを使用して Web ページを評価し、成人向けのコンテンツと成人向けの言葉をブロックできます。 また、許可されている Web リンクと制限された Web リンクの一覧を作成することもできます。 たとえば、`contoso` の Web サイトのみを開くことを許可できます。
+これらの設定では、Apple の組み込みの AutoFilter アルゴリズムを使用して Web ページを評価し、成人向けのコンテンツと成人向けの言葉をブロックします。 また、許可されている Web リンクと制限された Web リンクの一覧を作成することもできます。 たとえば、`contoso` の Web サイトのみを開くことを許可できます。
 
 Intune で構成できる設定の一覧については、[iOS/iPadOS の Web コンテンツ フィルター](ios-device-features-settings.md#web-content-filter)に関する記事を参照してください。
 

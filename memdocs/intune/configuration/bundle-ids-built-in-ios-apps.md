@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99ba07c5895c5a299a2e0b55b0ff16dcbcb2913f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c7de0b978c24f28988c62854a249505a0598db95
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339931"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084073"
 ---
 # <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>Intune で使用できる組み込み iOS および iPadOS アプリ用のバンドル ID
 
@@ -32,6 +32,7 @@ iOS および iPadOS デバイス上で機能を構成すると、iOS および 
 | バンドル ID                   | アプリ名     | 発行者 |
 |-----------------------------|--------------|-----------|
 | com.apple.AppStore          | アプリ ストア    | Apple     |
+| com.apple.store.Jolly       | Apple ストア  | Apple     |
 | com.apple.calculator        | 計算機   | Apple     |
 | com.apple.mobilecal         | 予定表     | Apple     |
 | com.apple.camera            | カメラ       | Apple     |

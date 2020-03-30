@@ -1,12 +1,12 @@
 ---
 title: Microsoft Intune で電子メールの設定を構成する - Azure | Microsoft Docs
 titleSuffix: ''
-description: Microsoft Intune で電子メール プロファイルを作成し、このプロファイルを Android エンタープライズ、iOS、iPadOS、および Windows デバイスに展開します。 電子メール プロファイルを使用して、電子メール サーバーや、自分が管理するデバイスで会社の電子メールに接続するための認証方法など、一般的な電子メールの設定を構成します。
+description: Microsoft Intune で電子メール プロファイルを作成し、このプロファイルを Androidデバイス管理者、Android エンタープライズ、iOS、iPadOS、および Windows デバイスに展開します。 電子メール プロファイルを使用して、電子メール サーバーや、自分が管理するデバイスで会社の電子メールに接続するための認証方法など、一般的な電子メールの設定を構成します。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3921da0032fdc0b28ff21812b99029d22fbbb27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fdf722acf463bf576b222e5f13da2dcaff64504e
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364241"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086979"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Intune を使用してデバイスに電子メールの設定を追加する
 
@@ -29,7 +29,7 @@ Microsoft Intune には、組織内のデバイスに展開できるさまざま
 
 電子メール プロファイルを使用して、次のデバイスの組み込みの電子メール設定を構成できます。
 
-- Android Samsung KNOX Standard 4.0 以降
+- Samsung Knox Standard 4.0 以降上の Android デバイス管理者
 - Android エンタープライズ
 - iOS 8.0 以降
 - iPadOS 13.0 以降
@@ -38,35 +38,48 @@ Microsoft Intune には、組織内のデバイスに展開できるさまざま
 
 この記事では、Microsoft Intune で電子メール プロファイルを作成する方法を示します。 また、より具体的な設定用にさまざまなプラットフォームへのリンクも含まれています。
 
-## <a name="create-a-device-profile"></a>デバイス プロファイルの作成
+## <a name="create-the-profile"></a>プロファイルの作成
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 3. 次のプロパティを入力します。
 
-    - **名前**:ポリシーのわかりやすい名前を入力します。 後で簡単に識別できるよう、ポリシーに名前を付けます。 たとえば、"**すべての Windows デバイスに対する電子メールの設定**" はよいポリシー名です。
-    - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
-    - **[プラットフォーム]** :デバイスのプラットフォームを選択します。 次のようなオプションがあります。
+    - **[プラットフォーム]** :デバイスのプラットフォームを選択します。 次のようなオプションがあります。  
 
-        - **Android** (Samsung Android KNOX Standard のみ)
+        - **Android デバイス管理者** (Samsung Android Knox Standard のみ)
         - **Android エンタープライズ**
         - **iOS/iPadOS**
-        - **Windows Phone 8.1**
         - **Windows 10 以降**
+        - **Windows Phone 8.1**
 
-    - **[プロファイルの種類]** : **[電子メール]** を選択します。
+    - **[プロファイル]** : **[電子メール]** を選択します。
 
-4. 選択したプラットフォームによって構成できる設定が異なります。 詳細な設定については、お使いのプラットフォームを選択してください。
+4. **[作成]** を選択します。
+5. **[Basics]\(基本\)** で次のプロパティを入力します。
 
-    - [Android Samsung Knox Standard の設定](email-settings-android.md)
-    - [Android エンタープライズの設定](email-settings-android-enterprise.md)
-    - [iOS/iPadOS の設定](email-settings-ios.md)
-    - [Windows Phone 8.1 の設定](email-settings-windows-phone-8-1.md)
-    - [Windows 10 の設定](email-settings-windows-10.md)
+    - **名前**:ポリシーのわかりやすい名前を入力します。 後で簡単に識別できるよう、ポリシーに名前を付けます。 適切なポリシー名の例:「**Windows 10:すべての Windows 10 デバイス向けの電子メール設定**」。
+    - **説明**:ポリシーの説明を入力します。 この設定は省略可能ですが、推奨されます。
 
-5. 完了したら、 **[OK]**  >  **[作成]** を選択して変更を保存します。
+6. **[次へ]** を選択します。
 
-設定を入力してプロファイルを作成すると、プロファイルの一覧に自分のプロファイルが表示されます。 次に、[このプロファイルをいくつかのグループに割り当てます](device-profile-assign.md)。
+7. **[構成設定]** では、選択したプラットフォームによって構成できる設定が変わります。 詳細な設定については、お使いのプラットフォームを選択してください。
+
+    - [Android デバイス管理者 (Samsung Knox Standard)](email-settings-android.md)
+    - [Android エンタープライズ](email-settings-android-enterprise.md)
+    - [iOS/iPadOS](email-settings-ios.md)
+    - [Windows 10](email-settings-windows-10.md)
+    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
+
+8. **[次へ]** を選択します。
+9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](device-profile-assign.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+11. **[確認と作成]** で、設定を確認します。 **[作成]** を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
 
 ## <a name="remove-an-email-profile"></a>電子メール プロファイルの削除
 
@@ -104,4 +117,4 @@ Microsoft Intune には、組織内のデバイスに展開できるさまざま
 
 ## <a name="next-steps"></a>次のステップ
 
-プロファイルを作成しましたが、まだ何も行っていません。 次に、[プロファイルを割り当てます](device-profile-assign.md)。
+プロファイルを作成しましたが、まだ何も行っていません。 次に、[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。

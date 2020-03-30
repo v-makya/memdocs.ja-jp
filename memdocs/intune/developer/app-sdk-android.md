@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4354d4b5aeb0957790d469a2a3fd5c6787aa93eb
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363773"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086328"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Android 用 Microsoft Intune アプリ SDK 開発者ガイド
 
@@ -297,7 +297,7 @@ Intune 管理を有効にするために、Android の基底クラスを、そ�
 | android.preference.PreferenceActivity | MAMPreferenceActivity |
 | android.support.multidex.MultiDexApplication | MAMMultiDexApplication |
 | android.widget.TextView | MAMTextView |
-| android.widget.AutoCompleteTextView | MAMAutoCompleteTextView |
+| android.widget.AutoCompleteTextView |    MAMAutoCompleteTextView |
 | android.widget.CheckedTextView | MAMCheckedTextView |
 | android.widget.EditText | MAMEditText |
 | android.inputmethodservice.ExtractEditText | MAMExtractEditText |
@@ -324,7 +324,7 @@ Intune 管理を有効にするために、Android の基底クラスを、そ�
 |--|--|
 | android.support.v7.app.AlertDialog.Builder | MAMAlertDialogBuilder |
 | android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
-| android.support.v7.widget.AppCompatAutoCompleteTextView | MAMAppCompatAutoCompleteTextView |
+| android.support.v7.widget.AppCompatAutoCompleteTextView |    MAMAppCompatAutoCompleteTextView |
 | android.support.v7.widget.AppCompatCheckedTextView | MAMAppCompatCheckedTextView |
 | android.support.v7.widget.AppCompatEditText | MAMAppCompatEditText |
 | android.support.v7.widget.AppCompatMultiAutoCompleteTextView | MAMAppCompatMultiAutoCompleteTextView |
@@ -1079,7 +1079,7 @@ public interface MAMComplianceNotification extends MAMUserNotification {
 | PENDING | 制限時間を超えたときに状態の応答がサービスからまだ受信されていなかったため、コンプライアンス修復の試行に失敗しました。 アプリでトークンの取得を後でもう一度試す必要があります。 |
 | COMPANY_PORTAL_REQUIRED | コンプライアンス修復を成功させるには、デバイス上にポータル サイトをインストールする必要があります。  デバイス上にポータル サイトが既にインストールされている場合は、アプリを再起動する必要があります。  この場合、ユーザーにアプリの再起動を求めるダイアログが表示されます。 |
 
-コンプライアンスの状態が `MAMCAComplianceStatus.COMPLIANT` である場合、アプリで (独自のリソースの) 元のトークンの取得を再度開始する必要があります。 コンプライアンス修復の試行に失敗した場合、`getComplianceErrorTitle()` および `getComplianceErrorMessage()` メソッドによって、アプリで (選択されている場合は) エンド ユーザーに表示できるローカライズされた文字列が返されます。  ほとんどのエラー ケースはアプリで修復できないため、一般的なケースでは、アカウントの作成またはログインが失敗するようにし、ユーザーが後でもう一度試せるようにするのが最適な場合があります。  エラーが続く場合は、MAM ログが原因の特定に役立つことがあります。  エンド ユーザーは、[こちら](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android "電子メールでログを会社のサポートに送信する")で示されている指示に従って、ログを送信できます。
+コンプライアンスの状態が `MAMCAComplianceStatus.COMPLIANT` である場合、アプリで (独自のリソースの) 元のトークンの取得を再度開始する必要があります。 コンプライアンス修復の試行に失敗した場合、`getComplianceErrorTitle()` および `getComplianceErrorMessage()` メソッドによって、アプリで (選択されている場合は) エンド ユーザーに表示できるローカライズされた文字列が返されます。  ほとんどのエラー ケースはアプリで修復できないため、一般的なケースでは、アカウントの作成またはログインが失敗するようにし、ユーザーが後でもう一度試せるようにするのが最適な場合があります。  エラーが続く場合は、MAM ログが原因の特定に役立つことがあります。  エンド ユーザーは、[こちら](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android "電子メールでログを会社のサポートに送信する")で示されている指示に従って、ログを送信できます。
 
 `MAMComplianceNotification` は、`MAMUserNotification` を拡張するので、修復が試行されたユーザーの ID も利用できます。
 
@@ -1206,7 +1206,7 @@ BackupAgent を使用すると、バックアップの対象とするデータ�
 
 **複数 ID による復元:**
 
-データのバックアップ ガイドは、アプリケーションのデータを復元するための一般的なアルゴリズムを指定し、「[Extending BackupAgent](https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgent)」(BackupAgent の拡張) セクションでサンプル コードを提供します。 複数 ID による復元を正常に実行するは、次の点に特に注意して、このコード サンプルで提供される一般的な構造に従う必要があります。
+データのバックアップ ガイドは、アプリケーションのデータを復元するための一般的なアルゴリズムを指定し、「[BackupAgent の拡張](https://developer.android.com/guide/topics/data/keyvaluebackup.html#BackupAgent)」セクションでコード サンプルを提供します。 複数 ID による復元を正常に実行するは、次の点に特に注意して、このコード サンプルで提供される一般的な構造に従う必要があります。
 
 1. `while(data.readNextHeader())` ループを使用して、バックアップ エンティティを処理する必要があります。 前のコードの `data` は、復元時にご利用のアプリに渡す **MAMBackupDataInput** のローカル変数の名前です。
 
@@ -1457,12 +1457,12 @@ public final class MAMFileProtectionManager {
     * this method will silently do nothing.
     *
     * @param identity
-    *       Identity to set.
+    *         Identity to set.
     * @param file
-    *       File to protect.
+    *         File to protect.
     *
     * @throws IOException
-    *       If the file cannot be protected.
+    *         If the file cannot be protected.
     */
    public static void protect(final File file, final String identity) throws IOException;
 
@@ -1864,7 +1864,7 @@ Intune SDK は Android API によって提供されるコントラクトを維�
 Intune App SDK for Android は、アプリからのデータ収集を制御しません。 ポータル サイト アプリケーションでは、システムによって生成されたデータが既定でログに記録されます。 このデータは、Microsoft Intune に送信されます。 Microsoft ポリシーに基づき、個人データは収集しません。
 
 > [!NOTE]
-> エンド ユーザーがこのデータの送信を選択しない場合、ポータル サイト アプリの [設定] で製品利用統計情報をオフにする必要があります。 詳しくは、「[Microsoft による使用状況データの収集を無効にする](https://docs.microsoft.com/user-help/turn-off-microsoft-usage-data-collection-android)」をご覧ください。 
+> エンド ユーザーがこのデータの送信を選択しない場合、ポータル サイト アプリの [設定] で製品利用統計情報をオフにする必要があります。 詳しくは、「[Microsoft による使用状況データの収集を無効にする](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android)」をご覧ください。 
 
 ## <a name="recommended-android-best-practices"></a>推奨される Android のベスト プラクティス
 

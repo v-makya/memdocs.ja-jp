@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7eb597aec20e8010d8694475d2af5d8033a809f0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352892"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084943"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Intune での条件付きアクセスの一般的な使用方法
 
@@ -83,7 +83,7 @@ PC の条件付きアクセスでは、モバイル デバイスで利用でき�
 
 #### <a name="corporate-owned"></a>企業所有
 
-- **オンプレミス AD ドメインへの参加:** この方法は、AD のグループ ポリシーや Configuration Manager を使用して PC を管理している現在のやり方におおむね満足している組織でよく使用されます。
+- **ハイブリッド Azure AD 参加済み:** この方法は、AD のグループ ポリシーや Configuration Manager を使用して PC を管理している現在のやり方におおむね満足している組織でよく使用されます。
 
 - **Azure AD ドメインへの参加と Intune の管理:** このシナリオは、クラウドファーストにすることを望んでいる (つまり、主にクラウド サービスを使用し、オンプレミスのインフラストラクチャの使用を減らすことを目標としている) 組織や、クラウドのみを使用する (オンプレミスのインフラストラクチャがない) 組織向けです。 Azure AD への参加はハイブリッド環境で適切に機能し、クラウドとオンプレミスのアプリとリソースの両方にアクセスできるようにします。 Azure AD に参加したデバイスは Intune に登録されます。会社のリソースにアクセスするときに、これを条件付きアクセスの基準として使用できます。
 

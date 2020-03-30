@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 700e255c55db1f216d605f5c54aa0c474e7f48b5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2ab229e0ef0d2cdefe41f991efc8c45c988979db
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353737"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085025"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Microsoft Intune で認証に証明書を使用する
 
@@ -107,31 +107,47 @@ SCEP、PKCS、PKCS のインポートされた証明書プロファイルの場�
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
-2. **[デバイス]** 、 **[構成プロファイル]** 、 **[プロファイルの作成]** の順に選択します。
+2. **[デバイス]** 、 **[構成プロファイル]** 、 **[プロファイルの作成]** の順に移動します。
 
-   ![Intune に移動して信頼済み証明書用に新しいプロファイルを作成する](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+   ![Intune に移動して信頼済み証明書用に新しいプロファイルを作成する](./media/certificates-configure/certificates-configure-profile-new.png)
 
 3. 次のプロパティを入力します。
+   - **[プラットフォーム]** :このプロファイルを受信するデバイスのプラットフォームを選択します。
+   - **[プロファイル]** : **[信頼された証明書]** を選択します。
+  
+4. **[作成]** を選択します。
 
-   - プロファイルの**名前**
-   - オプションで**説明**を設定
-   - プロファイルをデプロイする**プラットフォーム**
-   - **[プロファイルの種類]** に **[信頼済み証明書]** を設定
+5. **[Basics]\(基本\)** で次のプロパティを入力します。
+   - **名前**:プロファイルのわかりやすい名前を入力します。 後で簡単に識別できるよう、プロファイルに名前を付けます。 たとえば、「*会社全体の信頼済み証明書プロファイル*」は適切なプロファイル名です。
+   - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
 
-4. **[設定]** を選択し、この証明書プロファイルと共に使用する目的でエクスポートした、信頼されたルート CA 証明書 .cer ファイルを参照し、 **[OK]** を選択します。
+6. **[次へ]** を選択します。
 
-5. Windows 8.1 および Windows 10 デバイスの場合のみ、信頼された証明書の**保存先ストア**を以下から選択します。
+7. **[構成設定]** で、以前にエクスポートした信頼されたルート CA 証明書の .cer ファイルを指定します。 
+
+   Windows 8.1 および Windows 10 デバイスの場合のみ、信頼された証明書の**保存先ストア**を以下から選択します。
 
    - **コンピューター証明書ストア - ルート**
    - **コンピューター証明書ストア - 中間**
    - **ユーザー証明書ストア - 中間**
 
-6. 完了したら、 **[OK]** を選択し、 **[プロファイルの作成]** ウィンドウに戻り、 **[作成]** を選択します。
+   ![プロファイルを作成し、信頼済み証明書をアップロードする](./media/certificates-configure/certificates-configure-profile-fill.png)
 
-プロファイルは *[デバイス構成 - プロファイル]* ウィンドウのプロファイル一覧に、 **[信頼済み証明書]** のプロファイル タイプと共に表示されます。 このプロファイルは必ず、SCEP または PKCS 証明書を使用するデバイスに割り当ててください。 プロファイルをグループに割り当てる場合は、[デバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+8. **[次へ]** を選択します。
 
-> [!NOTE]
-> Android デバイスでは、信頼できる証明書がサード パーティによってインストールされたことを知らせるメッセージが表示される場合があります。
+9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。
+
+   **[次へ]** を選択します。
+
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+11. (*Windows 10 のみに適用*) **[適用性ルール]** で、適用性ルールを指定してこのプロファイルの割り当てを調整します。 デバイスの OS エディションまたはバージョンに基づいて、プロファイルを割り当てるかどうかを選択できます。
+
+  詳細については、「*Microsoft Intune でのデバイス プロファイルの作成*」の「[適用性ルール](../configuration/device-profile-create.md#applicability-rules)」を参照してください。
+
+12. **[確認と作成]** で、設定を確認します。 [作成] を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
 
 ## <a name="additional-resources"></a>その他のリソース
 

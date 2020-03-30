@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72e8f8a19ef27eee039090f146c46488ed1e1205
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350578"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526463"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Microsoft Intune で SCEP 証明書プロファイルのためのデバイスから NDES サーバーへの通信をトラブルシューティングする
 
@@ -243,6 +243,19 @@ SCEP アプリケーション プールが開始されていない場合は、�
 
   ![IIS のアクセス許可](../protect/media/troubleshoot-scep-certificate-device-to-ndes/iis-permissions.png)
 
+- **原因 4**:NDESPolicy モジュールの証明書の有効期限が切れています。
+
+  CAPI2 ログ (原因 2 の解決方法を参照を参照してください) には、'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\Modules\NDESPolicy\NDESCertThumbprint' から参照される証明書が証明書の有効期間外であることに関するエラーが示されています。
+
+  **解決方法**:有効な証明書の拇印を使用して参照を更新します。
+  1. 代替の証明書を指定します。
+     - 既存の証明書を更新します
+     - プロパティ (サブジェクト、EKU、キーの種類と長さなど) が似た別の証明書を選択します
+     - 新しい証明書を登録します
+  2. `NDESPolicy` レジストリ キーをエクスポートして、現在の値をバックアップします。
+  3. `NDESCertThumbprint` レジストリ値のデータを新しい証明書の拇印に置き換え、すべての空白を削除し、テキストを小文字に変換します。
+  4. NDES IIS アプリケーション プールを再起動するか、管理者特権のコマンド プロンプトから `iisreset` を実行します。
+
 #### <a name="gatewaytimeout"></a>GatewayTimeout
 
 SCEP サーバーの URL に移動すると、次のエラーが表示されます。
@@ -289,7 +302,7 @@ Azure AD アプリケーション プロキシを構成しました。 SCEP サ�
 
   **解決方法**:アプリケーション プロキシ構成で、SCEP の外部 URL に対して規定のドメイン *yourtenant.msappproxy.net* を使用します。
 
-#### <a name="internal-server-error"></a>500 - 内部サーバー エラー
+#### <a name="500---internal-server-error"></a><a name="internal-server-error"></a>500 - 内部サーバー エラー
 
 SCEP サーバーの URL に移動すると、次のエラーが表示されます。
 

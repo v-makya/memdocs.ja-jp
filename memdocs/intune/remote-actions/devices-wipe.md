@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 227d18a73ac33cfc277ec4c91935002e159da553
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2219dae6de9814e7eacebe507095c46c598f932f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348927"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084712"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>ワイプ、インベントリからの削除、デバイス登録の手動解除を使用し、デバイスを削除する
 
@@ -132,7 +132,7 @@ Android の仕事用プロファイルのデバイスから会社データを削
 
 ### <a name="windows"></a>Windows
 
-|データ型|Windows 8.1 (MDM) と Windows RT 8.1|Windows RT|Windows Phone 8.1 および Windows Phone 8|Windows 10|
+|データ型|Windows 8.1 (MDM) と Windows RT 8.1|Windows RT|Windows Phone 8.1 および Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
 |Intune でインストールされた会社のアプリと関連するデータ。|EFS で保護されているファイルのキーは失効します。 ユーザーがファイルを開くことはできません。|会社のアプリは削除されません。|元々ポータル サイトでインストールされたアプリはアンインストールされます。 会社のアプリ データは削除されます。|アプリはアンインストールされます。 サイドローディング キーは削除されます。<br>Windows 10 バージョン 1703 (Creators Update) 以降の場合、Office 365 ProPlus アプリは削除されません。 Intune 管理拡張機能がインストールされている Win32 アプリは、未登録デバイスではアンインストールされません。 管理者は、割り当ての除外を利用して、Win32 アプリを BYOD デバイスに提供しないようにすることができます。|
 |Settings|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|
@@ -188,7 +188,7 @@ Intune による管理から Apple DEP デバイスを完全に削除する場�
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 2. **[デバイス]** 、 **[すべてのデバイス]** の順に選択してデバイスを選択し、 **[リタイヤ]** を選択します。
 ![インベントリから削除のスクリーンショット](./media/devices-wipe/retire.png)
-3. [deploy.apple.com](http://deploy.apple.com) にアクセスし、シリアル番号によってデバイスを検索します。
+3. [business.apple.com](http://business.apple.com) にアクセスし、シリアル番号によってデバイスを検索します。
 4. **[担当者]** メニューで、 **[未割り当て]** を選択します。
 
 5. **[再割り当て]** を選択します。

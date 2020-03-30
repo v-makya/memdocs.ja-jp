@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f12ea7e320e3334d1925c8ab04905cd84ed56c82
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c57a201d71d3a8278499636c6ca794b437e11e9a
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341660"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083805"
 ---
 # <a name="app-protection-policies-overview"></a>アプリ保護ポリシーの概要
 
@@ -205,6 +205,9 @@ iOS/iPadOS 用および Android 用の OneDrive アプリと SharePoint アプ�
 仕事または "企業" のコンテキストの例としては、職場のアカウントを利用して OneDrive アプリを起動するユーザーが考えられます。 仕事のコンテキストである場合、個人ストレージの場所にファイルを移動することができません。 後で、個人のアカウントで OneDrive を使用するとき、個人の OneDrive から制限なしでデータをコピーしたり、移動したりできます。
 
 Outlook では、"個人" と "企業" 両方の電子メールが組み合わさった電子メール表示になっています。 この場合、Outlook アプリでは、起動時に Intune PIN の入力が求められます。
+
+  >[!NOTE]
+  > Edge は "企業" のコンテキスト内にありますが、ユーザーは OneDrive の "企業" のコンテキスト ファイルを不明な個人のクラウド ストレージの場所に意図的に移動できます。 これを回避するには、「[Microsoft Edge に対して許可またはブロックするサイトのリストを指定する](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge)」を参照し、Edge の許可またはブロックするサイトのリストを構成します。
 
 Intune での複数 ID の詳細については、[MAM および複数 ID](apps-supported-intune-apps.md) に関する記事を参照してください。
 

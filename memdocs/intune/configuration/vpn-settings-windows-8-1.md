@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,20 +15,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76813e4634e55651b44712fb486e0b1babcfba09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2c80bf57b195d7e97308ba423c9e5b53f7e29c74
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360406"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086469"
 ---
 # <a name="add-vpn-settings-on-windows-81-devices-in-microsoft-intune"></a>Microsoft Intune で Windows 8.1 デバイスでの VPN 設定を追加する
-
-
 
 この記事では、Windows 8.1 を実行するデバイスでの VPN 接続の構成に使用できる Intune 設定を示します。
 
 選択した設定によっては、次の一覧に記載されている値の一部を構成できない場合があります。
+
+## <a name="before-you-begin"></a>始める前に
+
+[デバイス構成プロファイルを作成します](vpn-settings-configure.md)。
 
 ## <a name="base-vpn-settings"></a>基本 VPN 設定
 
@@ -48,7 +50,7 @@ ms.locfileid: "79360406"
   - **F5 Edge Client**
   - **Pulse Secure**
 
-<!--- **Fingerprint** (Check Point Capsule VPN only): Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn’t already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
+<!--- **Fingerprint** (Check Point Capsule VPN only): Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn't already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
 
 - **[ログイン グループまたはドメイン]** (SonicWall Mobile Connect のみ):接続するログイン グループまたはドメインの名前を指定します。
 
@@ -83,6 +85,8 @@ ms.locfileid: "79360406"
   ```
 
   カスタム XML コマンドの作成方法については、製造元の VPN ドキュメントをご覧ください。
+
+- **[分割トンネリング]** : **[有効]** を選択すると、トラフィックに応じてデバイスに使用する接続が決定されるようになります。 たとえば、ホテルにいるユーザーは、業務ファイルへのアクセスに VPN 接続を使用しますが、通常の Web 閲覧にはホテルの標準ネットワークを使用します。 VPN 接続がアクティブなときにすべてのトラフィックに VPN トンネルが使用されるようにするには、 **[無効]** に設定します。
 
 ## <a name="proxy-settings"></a>プロキシの設定
 

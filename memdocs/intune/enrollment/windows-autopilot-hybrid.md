@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22268d979b82aad31fdf1c9a67fd0417262de5ca
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 84d14943a37cf29a224c94364317d899b65ffef0
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363292"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526328"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Intune と Windows Autopilot を使用して Hybrid Azure AD 参加済みデバイスをデプロイする
 Intune と Windows Autopilot を使用して、Hybrid Azure Active Directory (Azure AD) 参加済みデバイスを設定できます。 そのためには、この記事の手順のようにします。
@@ -134,7 +134,7 @@ Windows Server では既定で、Internet Explorer セキュリティ強化の�
 
 1. **[グループ]** ウィンドウで、次のようにします。
 
-    」を参照します。 **[グループの種類]** で、 **[セキュリティ]** を選択します。
+    a. **[グループの種類]** で、 **[セキュリティ]** を選択します。
 
     b. **[グループ名]** と **[グループの説明]** を入力します。
 

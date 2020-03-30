@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcaa3d4dc27f1791db77b70513968eeda51c668d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: df05c4b1a7a5ee3f30d33e40620a8a116f508333
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363903"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086490"
 ---
 # <a name="add-vpn-settings-on-windows-phone-81-devices-in-microsoft-intune"></a>Microsoft Intune で Windows Phone 8.1 デバイスでの VPN 設定を追加する
-
-
 
 この記事では、Windows Phone 8.1 を実行するデバイスでの VPN 接続の構成に使用できる Intune 設定を示します。 
 
@@ -32,6 +30,10 @@ ms.locfileid: "79363903"
 
 >[!IMPORTANT]
 >Windows Phone 8.1 の VPN プロファイルは、Windows 10 デバイスにも適用されます。
+
+## <a name="before-you-begin"></a>始める前に
+
+[VPN デバイス構成プロファイルを作成します](vpn-settings-configure.md)。
 
 ## <a name="base-vpn-settings"></a>基本 VPN 設定
 
@@ -51,7 +53,7 @@ ms.locfileid: "79363903"
 - **[会社の Wi-Fi ネットワークでは VPN を使用しない]** :デバイスが企業の Wi-Fi ネットワークに接続しているときは VPN 接続を使用しないことを指定するには、このオプションを有効にします。
 - **[自宅の Wi-Fi ネットワークでは VPN を使用しない]** :デバイスが家庭の Wi-Fi ネットワークに接続しているときは VPN 接続を使用しないことを指定するには、このオプションを有効にします。
 
-- **接続の種類**:以下のベンダーのリストから VPN 接続の種類を選択します。
+- **接続の種類**:VPN 接続の種類を選択します。 次のようなオプションがあります。
   - **Check Point Capsule VPN**
   - **SonicWall Mobile Connect**
   - **F5 Edge Client**
@@ -91,7 +93,7 @@ ms.locfileid: "79363903"
 
   カスタム XML コマンドの作成方法については、製造元の VPN ドキュメントをご覧ください。
 
-- **[分割トンネリング]** :このオプションを **[有効]** または **[無効]** にします。これにより、トラフィックに応じて使用する接続をデバイスが判断できます。 たとえば、ホテルにいるユーザーは、業務ファイルへのアクセスに VPN 接続を使用しますが、通常の Web 閲覧にはホテルの標準ネットワークを使用します。
+- **[分割トンネリング]** : **[有効]** を選択すると、トラフィックに応じてデバイスに使用する接続が決定されるようになります。 たとえば、ホテルにいるユーザーは、業務ファイルへのアクセスに VPN 接続を使用しますが、通常の Web 閲覧にはホテルの標準ネットワークを使用します。 VPN 接続がアクティブなときにすべてのトラフィックに VPN トンネルが使用されるようにするには、 **[無効]** に設定します。
 
 ## <a name="proxy-settings"></a>プロキシの設定
 

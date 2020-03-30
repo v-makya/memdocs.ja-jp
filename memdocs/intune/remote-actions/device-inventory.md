@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df00db079a7e6b73ba24dc612b5cb6b2250c3898
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50c56cff5f6b58894ff1abb24dad397d7e6c2c1e
+ms.sourcegitcommit: cd2cbc23b8909df3a000d8ad4140e87052d6de5a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338189"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79508476"
 ---
 # <a name="see-device-details-in-intune"></a>Intune でデバイスの詳細を確認する
 
@@ -36,7 +36,7 @@ ms.locfileid: "79338189"
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 3. **[デバイス]**  >  **[すべてのデバイス]** を選択します。次に、一覧表示されているデバイスのいずれかを選択して、その詳細を開きます。
 
-   - **[概要]** には、デバイス名が表示され、Bring-Your-Own-Device (BYOD) デバイスであるかどうかや、チェックイン時刻など、デバイスの主なプロパティがいくつか一覧表示されます。 デバイスでは、次のことを実行できます。
+   - **[概要]** にはデバイス名が表示されます。また、個人用デバイスか会社用デバイスか、シリアル番号、プライマリ ユーザーなど、デバイスのいくつかの主要なプロパティが一覧表示されます。 デバイスでは、次のことを実行できます。
       - [削除](devices-wipe.md#retire)
       - [ワイプ](devices-wipe.md#wipe)
       - [削除](devices-wipe.md#delete-devices-from-the-intune-portal)

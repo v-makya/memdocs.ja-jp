@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eaaa9095becbcac7840d5babc2a099e7ec84af03
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dbb8e5644390c589756af5a69f2fdd5a829866a1
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79362018"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084006"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Microsoft Intune で Zebra モビリティ拡張機能を備えた Zebra デバイスを使用および管理する
-
-
 
 Intune には、アプリの管理やデバイス設定の構成など、豊富な機能が含まれています。 これらの組み込みの機能と設定は、Zebra Technologies 社によって製造された Android デバイス ("Zebra デバイス" とも呼ばれる) を管理します。
 
@@ -36,7 +34,9 @@ Android デバイスでは、Zebra の**モビリティ拡張機能 (MX)** プ�
 
 この機能は、以下に適用されます。
 
-- Android
+- Android デバイス管理者
+
+Android Enterprise デバイスの場合は、[OEMConfig](android-oem-configuration-overview.md) を使用します。
 
 あなたの会社では、小売や工場の現場などで Zebra デバイスを使用しているかもしれません。 たとえば、あなたの会社は小売業者であり、その環境には販売員が使用する何千台もの Zebra モバイル機器があるとします。 Intune は、ご利用のモバイル デバイス管理 (MDM) ソリューションの一部として、これらのデバイスを管理するのに役立ちます。
 
@@ -139,7 +139,7 @@ Intune で、デバイス構成プロファイルを作成します。
 
     - **名前**:新しいプロファイルのわかりやすい名前を入力します。
     - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
-    - **[プラットフォーム]** : **[Android]** を選択します。
+    - **[プラットフォーム]** : **[Android デバイス管理者]** を選択します。
     - **[プロファイルの種類]** : **[MX profile (Zebra only)]\(MX プロファイル (Zebra のみ)\)** を選択します。
 
 4. **.xml 形式の MX プロファイル**に、(この記事の説明に従って) [StageNow からエクスポート](#step-4-create-a-device-management-profile-in-stagenow)した XML プロファイル ファイルを追加します。

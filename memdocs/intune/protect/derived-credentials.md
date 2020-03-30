@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3724e425ab284d63dbe1e64dcd236509744abe10
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 50d32a76e638d88adc7a72d103c84e73544079cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352346"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084901"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Microsoft Intune で派生資格情報を使用する
 
@@ -106,7 +106,7 @@ iOS/iPadOS デバイスの場合は、[Microsoft Intune への iOS/iPadOS スト
 
 #### <a name="disa-purebred"></a>DISA Purebred
 
-[DISA Purebred のユーザー ワークフロー](https://docs.microsoft.com/user-help/enroll-ios-device-disa-purebred)を確認します。 このワークフローの主な要件は次のとおりです。
+[DISA Purebred のユーザー ワークフロー](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-disa-purebred)を確認します。 このワークフローの主な要件は次のとおりです。
 
 - ユーザーは、自身のスマート カードを使用して発行者に対して認証することができるコンピューターまたはキオスクにアクセスする必要があります。
 
@@ -122,7 +122,7 @@ DISA Purebred アプリの取得と構成の詳細については、この記事
 
 #### <a name="entrust-datacard"></a>Entrust Datacard
 
-[Entrust Datacard のユーザー ワークフロー](https://docs.microsoft.com/user-help/enroll-ios-device-entrust-datacard)を確認します。 このワークフローの主な要件は次のとおりです。
+[Entrust Datacard のユーザー ワークフロー](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-entrust-datacard)を確認します。 このワークフローの主な要件は次のとおりです。
 
 - ユーザーは、自身のスマート カードを使用して発行者に対して認証することができるコンピューターまたはキオスクにアクセスする必要があります。
 
@@ -132,7 +132,7 @@ DISA Purebred アプリの取得と構成の詳細については、この記事
 
 #### <a name="intercede"></a>Intercede
 
-[Intercede のユーザー ワークフロー](https://docs.microsoft.com/user-help/enroll-ios-device-intercede)を確認します。 このワークフローの主な要件は次のとおりです。
+[Intercede のユーザー ワークフロー](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-intercede)を確認します。 このワークフローの主な要件は次のとおりです。
 
 - ユーザーは、自身のスマート カードを使用して発行者に対して認証することができるコンピューターまたはキオスクにアクセスする必要があります。
 
@@ -221,17 +221,34 @@ Intune を使用したアプリの展開に加えて、DISA Purebred アプリ�
 Web サイトおよびアプリケーションに対する証明書ベースの認証には、派生資格情報を使用します。 アプリ認証用の派生資格情報を提供するには:
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
-3. 次の設定を入力します。
 
-    - **名前**:プロファイルのわかりやすい名前を入力します。 後で簡単に識別できるよう、プロファイルに名前を付けます。 たとえば、**iOS/iPadOS デバイス プロファイル用の派生資格情報**などは適切なプロファイル名です。
-    - **説明**:設定の概要および他の重要な詳細がわかる説明を入力します。
-    - **[プラットフォーム]** : **[iOS/iPadOS]** を選択します。
-    - **[プロファイルの種類]** : **[派生資格情報]** を選択します。
+3. 次のプロパティを入力します。
+   - **[プラットフォーム]** :このプロファイルを受信するデバイスのプラットフォームを選択します。
+   - **[プロファイル]** : **[派生資格情報]** を選択します。
 
-4. **[OK]** を選択して変更を保存します。
-5. 終わったら、 **[OK]**  >  **[作成]** の順に選択して Intune プロファイルを作成します。 完了すると、プロファイルが **[デバイス - 構成プロファイル]** の一覧に表示されます。
-6. 新しいプロファイルを選択し、 **[割り当て]** を選択します。 ポリシーを受け取る必要があるグループを選択します。
+4. **[作成]** を選択します。
+
+5. **[Basics]\(基本\)** で次のプロパティを入力します。
+
+   - **名前**:プロファイルのわかりやすい名前を入力します。 後で簡単に識別できるよう、プロファイルに名前を付けます。 たとえば、**iOS/iPadOS デバイス プロファイル用の派生資格情報**などは適切なプロファイル名です。
+   - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
+
+6. **[次へ]** を選択します。
+
+7. **[構成設定]** で、 **[アプリ認証の派生資格情報を使用する]** を **[はい]** に設定し、 **[次へ]** を選択します。
+
+8. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。
+
+   **[次へ]** を選択します。
+
+9. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+10. **[確認と作成]** で、設定を確認します。 [作成] を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
+
  
 派生資格情報の発行者を設定するときに指定した設定に応じて、アプリまたはメールでユーザーに通知されます。 この通知は、派生資格情報ポリシーを処理できるように、ポータル サイトを起動することをユーザーに知らせます。
 

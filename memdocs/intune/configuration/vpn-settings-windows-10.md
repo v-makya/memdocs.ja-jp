@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26f2998c6b166e1f45c839d7006551867b8deb80
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364085"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086499"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Intune を使用して VPN 接続を追加するための Windows 10 デバイスと Windows Holographic デバイスの設定
-
-
 
 Microsoft Intune を使用して、デバイスの VPN 接続を追加および構成できます。 この記事では、仮想プライベート ネットワーク (VPN) の作成時に一般的に使用される設定および機能の一覧を示して説明します。 これらの VPN 設定および機能は、デバイスにプッシュまたは展開されている、Intune のデバイス構成プロファイルで使用されます。
 
@@ -50,7 +48,7 @@ Microsoft Intune を使用して、デバイスの VPN 接続を追加および�
   - **[IP アドレスまたは FQDN]** :**192.168.1.1** または **vpn.contoso.com** など、デバイスの接続先となる VPN サーバーの IP アドレスまたは完全修飾ドメイン名 (FQDN) を入力します。
   - **[既定のサーバー]** :このサーバーを、デバイスで接続を確立するために使用する既定のサーバーとして有効にします。 1 台のサーバーのみを既定のサーバーとして設定してください。
   - **インポート**: 説明、IP アドレスまたは FQDN、既定のサーバーという形式のサーバーのリストを含む、コンマ区切りのファイルを参照します。 **[OK]** を選んで、これらのサーバーを **[サーバー]** 一覧にインポートします。
-  - **[エクスポート]** :サーバーのリストをコンマ区切り値 (csv) ファイルにエクスポートします。
+  - **エクスポート**:サーバーのリストをコンマ区切り値 (csv) ファイルにエクスポートします。
 
 - **[内部 DNS を持つ IP アドレスを登録します]** : **[有効にする]** を選択すると、内部 DNS で VPN インターフェイスに割り当てられた IP アドレスを動的に登録するように Windows 10 VPN プロファイルが構成されます。 **[無効にする]** を選択すると、IP アドレスは動的に登録されません。
 
@@ -68,10 +66,10 @@ Microsoft Intune を使用して、デバイスの VPN 接続を追加および�
   - **PPTP**
 
   VPN 接続の種類を選択するときに、次の設定を求められる場合があります。  
-  - **Always On**: **[有効にする]** を選択すると、次のようなイベントが発生した場合に VPN 接続に自動的に接続されます。 
+  - **Always On**: **[有効にする]** を選択すると、次のようなイベントが発生した場合に VPN 接続に自動的に接続されます。
     - ユーザーが自分のデバイスにサインインしたとき
     - デバイスでネットワークが変更されたとき
-    - デバイスの画面がオフにされた後でオンに戻されたとき 
+    - デバイスの画面がオフにされた後でオンに戻されたとき
 
   - **[認証方法]** :ユーザーが VPN サーバーに対して認証を行う方法を選びます。 **証明書**を使用すると、ゼロタッチ エクスペリエンス、オンデマンド VPN、アプリごとの VPN などの拡張機能が提供されます。
   - **[ログオンするたびに資格情報を記憶する]** :選択すると、認証資格情報がキャッシュされます。

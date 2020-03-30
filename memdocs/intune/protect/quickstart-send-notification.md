@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe62fa8082923b960773ce3ca45654a541132ca6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1e41ed4d5de66e1ca9573145f865cbfce45f5245
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338956"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084799"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>クイック スタート:非準拠デバイスに通知を送信する
 
@@ -66,9 +66,9 @@ Intune サブスクリプションがない場合は、[無料試用版アカウ
 
 会社名、会社の連絡先情報、会社のロゴの設定について詳しくは、次の記事をご覧ください。
 
-- [会社の情報とプライバシーに関する声明](../apps/company-portal-app.md#company-information-and-privacy-statement)
+- [会社の情報とプライバシーに関する声明](../apps/company-portal-app.md#configuration)
 - [サポート情報](../apps/company-portal-app.md#support-information)
-- [会社 ID のブランドのカスタマイズ](../apps/company-portal-app.md#company-identity-branding-customization)。
+- [ユーザー エクスペリエンスのカスタマイズ](../apps/company-portal-app.md#customizing-the-user-experience)
 
 ## <a name="add-a-noncompliance-policy"></a>非準拠ポリシーを追加する
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31310accbaded1e048cb3c5b574557ffcef0335c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 36e17dc12622b3bb95c35a4472556f1c4f31ccd0
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364228"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087010"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Intune で電子メール、認証、および同期を構成するための Android デバイスの設定
 
@@ -32,7 +32,7 @@ Intune での電子メール プロファイルの詳細については、[電�
 
 ## <a name="before-you-begin"></a>始める前に
 
-[デバイス構成プロファイルを作成します](email-settings-configure.md#create-a-device-profile)。
+[デバイス構成プロファイルを作成します](email-settings-configure.md)。
 
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 
@@ -40,17 +40,15 @@ Intune での電子メール プロファイルの詳細については、[電�
 - **[アカウント名]** :電子メール アカウントの表示名を入力します。 この名前は、ユーザーのデバイス上に表示されます。
 - **[AAD からのユーザー名の属性]** :Intune が Azure Active Directory (Azure AD) から取得する名前。 Intune はこのプロファイルで使用されるユーザー名を動的に生成します。 次のようなオプションがあります。
   - **[ユーザー プリンシパル名]** :`user1` や `user1@contoso.com` などの名前を取得します。
-  - **[ユーザー名]** :`user1` などの名前のみを取得します。
-  - **[sAM アカウント名]** :`domain\user1` などのドメインを要求します。 SAM アカウント名は、Android デバイスにのみ使用されます。
-
-    次の項目も入力します。  
+  - **ユーザー名**:`user1` などの名前のみを取得します。
+  - **[sAM アカウント名]** :`domain\user1` などのドメインを要求します。 SAM アカウント名は、Android デバイスにのみ使用されます。 次の項目も入力します。  
     - **[ユーザー ドメイン名のソース]** : **[AAD]** (Azure Active Directory) または **[カスタム]** を選択します。
 
       **[AAD]** から属性を取得する場合、次を入力します。
-      - **[AAD からのユーザー ドメイン名属性]** :ユーザーの **[完全なドメイン名]** または **[NetBIOS 名]** 属性を取得する選択を行います。
+      - **[AAD からのユーザー ドメイン名属性]** :ユーザーの **[完全なドメイン名]** または **[NetBIOS 名]** のどちらの属性を取得するかを選択します。
 
       **[カスタム]** 属性を使用する選択を行っている場合、次を入力します。
-      - **[使用するカスタム ドメイン名]** :Intune がドメイン名として使用する、`contoso.com` や `contoso` などの値を入力します。
+      - **[使用するカスタム ドメイン名]** :`contoso.com` や `contoso` など、Intune でドメイン名として使用する値を入力します。
 
 - **[AAD からのメール アドレス属性]** :この名前は、Intune が Azure AD から取得する電子メール属性です。 Intune では、このプロファイルに使用される電子メール アドレスが動的に生成されます。 次のようなオプションがあります。
   - **[ユーザー プリンシパル名]** :電子メール アドレスとして完全プリンシパル名 (`user1@contoso.com`、`user1` など) を使用します。

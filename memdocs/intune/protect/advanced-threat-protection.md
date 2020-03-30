@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 398737a89c302031cfbed87709d031077f90fb6a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354270"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80085192"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Intune で条件付きアクセスによる Microsoft Defender ATP のコンプライアンスを強制する
 
@@ -136,24 +136,26 @@ Microsoft Defender ATP への接続を確立したときに、Intune は Microso
 
 コンプライアンス ポリシーによって、デバイスに対して許容可能と見なすリスク レベルが決まります。
 
-### <a name="create-the-compliance-policy"></a>コンプライアンス ポリシーを作成する
+コンプライアンス ポリシーの作成に慣れていない場合は、「*Microsoft Intune でコンプライアンス ポリシーを作成する*」の記事の「[ポリシーを作成する](../protect/create-compliance-policy.md#create-the-policy)」の手順を参照してください。 次の情報は、コンプライアンス ポリシーの一部として Defender ATP を構成する場合に固有です。
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
-2. **[デバイス]**  >  **[コンプライアンス ポリシー]**  >  **[ポリシーの作成]** の順に選択します。
-3. **名前**と**説明**を入力します。
-4. **[プラットフォーム]** で、 **[Windows 10 以降]** を選択します。
-5. **[設定]** で、 **[Microsoft Defender ATP]** を選択します。
-6. **[デバイスは、次のマシン リスク スコア以下であることが必要]** を目的のレベルに設定します。
+
+2. **[デバイス]**  >  **[コンプライアンス ポリシー]**  >  **[ポリシー]**  >  **[ポリシーの作成]** を選択します。
+
+3. **[プラットフォーム]** には *[Windows 10 以降]* を選択し、 **[作成]** を選択して、 **[ポリシーの作成]** 構成ウィンドウを開きます。
+
+4. **[基本]** タブで、後で識別しやすいように **[名前]** を指定します。 **[説明]** を指定することもできます。
+  
+5. **[コンプライアンス設定]** タブで、 **[Microsoft Defender ATP]** グループを展開し、 **[デバイスは、次のマシン リスク スコア以下であることが必要]** を目的のレベルに設定します。
 
    脅威レベルの分類は、[Microsoft Defender ATP によって決定されます](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue)。
 
-   - **[クリア]** :このレベルはセキュリティ上最も安全です。 デバイスには既存のいかなる脅威も存在できず、引き続き会社のリソースにアクセスできます。 いずれかの脅威が見つかった場合、デバイスは非準拠と評価されます。 (Microsoft Defender ATP ユーザーの値は *[セキュア]* です。)
+   - **[クリア]** :このレベルはセキュリティ上最も安全です。 デバイスには既存のいかなる脅威も存在できず、引き続き会社のリソースにアクセスできます。 いずれかの脅威が見つかった場合、デバイスは非準拠と評価されます。 (Microsoft Defender ATP ユーザーの値は *[セキュア]* です)。
    - **低**:低レベルの脅威が存在する場合にのみ、デバイスは準拠しています。 脅威レベルが中または高のデバイスは非準拠になります。
    - **中**: デバイスに存在する脅威が低または中の場合、デバイスは準拠しています。 高レベルの脅威が検出された場合は、デバイスは非準拠と判定されます。
    - **高**: 最も安全性の低いレベルであり、すべての脅威レベルが許容されます。 したがって、脅威レベルが高、中または低のデバイスは準拠していると見なされます。
 
-7. **[OK]** 、 **[作成]** の順に選択して、変更を保存 (およびポリシーを作成) します。
-8. 該当するグループに[デバイス コンプライアンス ポリシーを割り当てます](create-compliance-policy.md#assign-the-policy)。
+6. 該当するグループへのポリシーの割り当てを含め、ポリシーの構成を完了します。
 
 ## <a name="create-a-conditional-access-policy"></a>条件付きアクセス ポリシーを作成する
 

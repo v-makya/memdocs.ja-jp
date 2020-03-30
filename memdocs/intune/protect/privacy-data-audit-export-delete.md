@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db3146bbaae3362e97c8c076823b58dbcd57c4af
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339073"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084803"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Intune での個人データの監査、エクスポート、または削除
 
@@ -66,7 +66,7 @@ Intune からエンド ユーザーの個人データを削除するには、管
 出荷時設定にリセットすると、会社と個人のデータと設定はすべて元の出荷時設定に復元されます。 この方法は、次の従業員にデバイスを提供する場合に便利です。 ユーザー ファイル、ユーザーがインストールしたアプリケーション、および既定以外の設定は削除されます。このデータは、削除アクションから 30 日以内に Intune サービスから削除されます。
 
 ### <a name="user-self-removal-from-intune-management"></a>ユーザー自身が Intune による管理から削除する
-ユーザーは、管理者の支援を受けずに Intune による管理から自分の [Android、Apple、または Windows](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-android) の個人用デバイスを削除できます。   
+ユーザーは、管理者の支援を受けずに Intune による管理から自分の [Android、Apple、または Windows](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android) の個人用デバイスを削除できます。   
 
 ### <a name="retire"></a>インベントリから削除
 **インベントリから削除**すると、会社のアプリケーション、Intune が管理しているアプリに関するデータ、ポリシー設定、Intune でプロビジョニングされた電子メール プロファイルなど、Intune でプロビジョニングされたデータが削除されます。 このアクションでは、ユーザーの個人データはデバイス上にそのまま保持されます。

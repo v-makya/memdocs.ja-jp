@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 387817dfcf929b985c0836779510e3d6c0f9795a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 10accc0c59dc0d97e2f3ac4739335dd1e2cd4cba
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353620"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084958"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune で SCEP 証明書プロファイルを作成して割り当てる
 
@@ -35,28 +35,31 @@ Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするよ�
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
-2. **[デバイス]** 、 **[構成プロファイル]** 、 **[プロファイルの作成]** の順に選択します。
+2. **[デバイス]** 、 **[構成プロファイル]** 、 **[プロファイルの作成]** の順に移動します。
 
 3. 次のプロパティを入力します。
+   - **[プラットフォーム]** :デバイスのプラットフォームを選択します。
+   - **[プロファイル]** : **[SCEP 証明書]** を選択します
 
-4. SCEP 証明書プロファイルの **[名前]** と **[説明]** を入力します。
+     **[Android エンタープライズ]** プラットフォームの場合、 *[プロファイルの種類]* は *[デバイスの所有者のみ]* と *[仕事用プロファイルのみ]* の 2 つのカテゴリに分かれています。 管理するデバイスに対する正しい SCEP 証明書プロファイルを選択してください。  
 
-5. **[プラットフォーム]** ドロップダウン リストで、この SCEP 証明書に対して[サポートされているデバイス プラットフォーム](certificates-configure.md#supported-platforms-and-certificate-profiles)を選択します。
+     "*デバイスの所有者のみ*" プロファイルの SCEP 証明書プロファイルには、次の制限があります。
 
-6. **[プロファイルの種類]** ドロップダウン リストで、 **[SCEP 証明書]** を選択します。  
+      1. [監視] では、証明書レポートはデバイス所有者の SCEP 証明書プロファイルに対しては使用できません。
 
-   **[Android エンタープライズ]** プラットフォームの場合、 *[プロファイルの種類]* は *[デバイスの所有者のみ]* と *[仕事用プロファイルのみ]* の 2 つのカテゴリに分かれています。 管理するデバイスに対する正しい SCEP 証明書プロファイルを選択してください。  
+      2. Intune を使用して、デバイス所有者の SCEP 証明書プロファイルによってプロビジョニングされた証明書を失効させることはできません。 失効を管理するには、外部プロセスを使用するか、証明機関で直接行います。
 
-   "*デバイスの所有者のみ*" プロファイルの SCEP 証明書プロファイルには、次の制限があります。
+      3. Android Enterprise 専用デバイスの場合、SCEP 認証プロファイルは Wi-Fi ネットワーク構成と認証でのみサポートされます。  Android Enterprise 専用デバイスの SCEP 証明書プロファイルは、VPN またはアプリの認証ではサポートされていません。
 
-   1. [監視] では、証明書レポートはデバイス所有者の SCEP 証明書プロファイルに対しては使用できません。
+4. **[作成]** を選択します。
 
-   2. Intune を使用して、デバイス所有者の SCEP 証明書プロファイルによってプロビジョニングされた証明書を失効させることはできません。 失効を管理するには、外部プロセスを使用するか、証明機関で直接行います。 
+5. **[Basics]\(基本\)** で次のプロパティを入力します。
+   - **名前**:プロファイルのわかりやすい名前を入力します。 後で簡単に識別できるよう、プロファイルに名前を付けます。 たとえば、「*会社全体の SCEP プロファイル*」は適切なプロファイル名です。
+   - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
 
-   4. Android Enterprise 専用デバイスの場合、SCEP 認証プロファイルは Wi-Fi ネットワーク構成と認証でのみサポートされます。  Android Enterprise 専用デバイスの SCEP 証明書プロファイルは、VPN またはアプリの認証ではサポートされていません。   
+6. **[次へ]** を選択します。
 
-   
-7. **[設定]** を選択し、次の構成を完了します。
+7. **[構成設定]** で、次の構成を行います。
 
    - **[証明書の種類]** :
 
@@ -209,7 +212,7 @@ Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするよ�
 
    - **[ルート証明書]** :
 
-     構成済みであって、さらにこの SCEP 証明書プロファイルの適用対象のユーザーとデバイスに割り当ててある "*信頼された証明書プロファイル*" を選択します。 信頼された証明書プロファイルは、信頼されたルート CA 証明書でユーザーとデバイスをプロビジョニングするために使用されます。 信頼された証明書プロファイルの詳細については、*Intune での認証に証明書を使用*に関するページの「[信頼されたルート CA 証明書をエクスポートする](certificates-configure.md#export-the-trusted-root-ca-certificate)」と「[信頼された証明書プロファイルを作成する](certificates-configure.md#create-trusted-certificate-profiles)」を参照してください。 ルート証明機関と発行元の証明機関がある場合は、発行元の証明機関に関連付けられている信頼されたルート証明書プロファイルを選択します。
+     構成済みであって、さらにこの SCEP 証明書プロファイルの適用対象のユーザーとデバイスに割り当ててある "*信頼された証明書プロファイル*" を選択します。 信頼された証明書プロファイルは、信頼されたルート CA 証明書でユーザーとデバイスをプロビジョニングするために使用されます。 信頼された証明書プロファイルの詳細については、*Intune での認証に証明書を使用*に関するページの「[信頼されたルート CA 証明書をエクスポートする](certificates-configure.md#export-the-trusted-root-ca-certificate)」と「[信頼された証明書プロファイルを作成する](certificates-configure.md#create-trusted-certificate-profiles)」を参照してください。 ルート証明機関と発行元の証明機関がある場合は、発行元の証明機関の検証に使用する信頼されたルート証明書プロファイルを選択します。
 
    - **[拡張キー使用法]** :
 
@@ -223,7 +226,21 @@ Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするよ�
 
      SCEP 経由で証明書を発行する NDES サーバーの URL を 1 つまたは複数入力します。 たとえば、 *https://ndes.contoso.com/certsrv/mscep/mscep.dll* のようなものを入力します。 URL はプロファイルと共にデバイスにランダムにプッシュされるため、必要に応じて、負荷分散のためにさらに SCEP URL を追加することができます。 SCEP サーバーのいずれか 1 つが利用できない場合、SCEP 要求は失敗し、後でデバイス チェックインをするときに、ダウンしている同じサーバーに対して証明書要求が行われる可能性があります。
 
-8. **[OK]** を選択して、 **[作成]** を選択します。 プロファイルが作成され、 *[デバイス構成 - プロファイル]* リストに表示されます。
+8. **[次へ]** を選択します。
+
+9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。
+
+   **[次へ]** を選択します。
+
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+11. (*Windows 10 のみに適用*) **[適用性ルール]** で、適用性ルールを指定してこのプロファイルの割り当てを調整します。 デバイスの OS エディションまたはバージョンに基づいて、プロファイルを割り当てるかどうかを選択できます。
+
+   詳細については、「*Microsoft Intune でのデバイス プロファイルの作成*」の「[適用性ルール](../configuration/device-profile-create.md#applicability-rules)」を参照してください。
+
+12. **[確認と作成]** で、設定を確認します。 [作成] を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
 
 ### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>エスケープされた特殊文字を含む証明書署名要求を回避する
 

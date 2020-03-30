@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 03/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98eba2cd2905a70157cfb50299bb9b11a6319fcc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5acf0db721accf058a10dafcf8165abeddafe7c7
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342336"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083736"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Microsoft Intune アプリの管理とは
 
@@ -118,7 +118,7 @@ Intune では、アプリを実行するデバイス上で必要なアプリを�
 - **[Windows サイドローディング キー]** :Windows サイドローディング キーを追加します。これを使うと、Windows ストアでアプリを公開およびダウンロードするのではなく、アプリを直接デバイスにインストールできます。 詳しくは、[Windows アプリのサイドロード](app-sideload-windows.md)に関するページをご覧ください。
 - **[Apple VPP トークン]** : iOS/iPadOS Volume Purchase Program (VPP) のライセンスを適用および表示します。 詳しくは、[iOS/iPadOS 大量購入アプリ](vpp-apps-ios.md)に関するページをご覧ください。
 - **[マネージド Google Play]** : マネージド Google Play は、Google のエンタープライズ アプリ ストアであり、Android Enterprise 用の唯一のアプリケーション ソースです。 詳細は、「[Intune で managed Google Play アプリを Android エンタープライズ デバイスに追加する](apps-add-android-for-work.md)」を参照してください。
-- **[ブランド化とカスタマイズ]** : ポータル サイトをカスタマイズして会社のブランドを付与します。 詳しくは、[Intune ポータル サイトの構成](company-portal-app.md)に関するページをご覧ください。
+- **カスタマイズ**:ポータル サイトをカスタマイズして会社のブランドを付与します。 詳しくは、[Intune ポータル サイトの構成](company-portal-app.md)に関するページをご覧ください。
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 335841a8642429e36c277673fd8a238d486366c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f685f1f3d009d7ba7a1dc061ec3025b2f8c96b5f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79350617"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084633"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Jamf Pro と Microsoft Intune の統合のトラブルシューティング
 
@@ -89,8 +89,8 @@ Intune と Jamf Pro の統合を構成し、条件付きアクセス ポリシ�
 たとえば、Microsoft Teams を開くと、次の例のテキストのようなプロンプトが表示されます。
 
 ``` 
-  Microsoft Teams wants to sign using key “Microsoft Workplace Join Key” in your keychain.  
-  To allow this, enter the “login” keychain password 
+  Microsoft Teams wants to sign using key "Microsoft Workplace Join Key" in your keychain.  
+  To allow this, enter the "login" keychain password 
 ```
 
 **原因**:これらのプロンプトは、Azure AD の登録を必要とする該当する各アプリに対して Jamf Pro によって生成されます。 
@@ -156,7 +156,7 @@ Intune ポータル サイト アプリでユーザーに **`Not registered`** �
 
 **解決方法**  
 登録ソースを Intune から Jamf に変更するには:
-1. [Intune から macOS デバイスの登録を解除します](https://docs.microsoft.com/user-help/unenroll-your-device-from-intune-macos)。 Intune から完全に削除されていないデバイスでさらに問題が発生するのを防ぐため、この原因一覧の「[*原因 6*](#cause-6)」を参照してください。  
+1. [Intune から macOS デバイスの登録を解除します](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos)。 Intune から完全に削除されていないデバイスでさらに問題が発生するのを防ぐため、この原因一覧の「[*原因 6*](#cause-6)」を参照してください。  
 
 2. デバイスで、Jamf Self Service を使用して Intune ポータル サイト アプリを開き、Intune にデバイスを登録します。 このタスクを行うには、[Jamf を使用して macOS 用の Intune ポータル サイト アプリを展開](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro)し、[ユーザー デバイスを Azure AD に登録するポリシーを Jamf Pro で作成](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory)しておく必要があります。  
 
@@ -242,9 +242,9 @@ Jamf Pro で Intune の統合を再度有効にします。 「[Jamf Pro で Mic
 登録の間に、macOS デバイスのユーザーは、キーチェーンからキーへの JamfAAD のアクセスの許可を求める次のようなプロンプトを受け取ります。 
 
 ```
-   JamfAAD wants to access key “Microsoft Workplace Join Key" in your keychain. 
+   JamfAAD wants to access key "Microsoft Workplace Join Key" in your keychain. 
     
-   To allow this, enter the “login” keychain password
+   To allow this, enter the "login" keychain password
 ```
 
 **解決方法**  

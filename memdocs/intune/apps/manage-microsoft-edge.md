@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/02/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cf77349508144498b847236598abda6bced52b0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 9c04423f79855f4c28121dad11fa21ccb05216de
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361225"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084167"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Microsoft Edge と Microsoft Intune を使用して Web アクセスを管理する
 
@@ -53,9 +53,15 @@ Microsoft Edge は Intune SDK と統合されているため、アプリケー�
 
 Microsoft Edge が Intune ポリシーの対象ではない場合、ユーザーはそれを使用して、Office アプリなどの他の Intune で管理されているアプリケーションからデータにアクセスすることはできません。 
 
+   >[!NOTE]
+   > 画像をダウンロードできないように名前を付けて保存ポリシーが適用されている場合、Microsoft Edge で長押しは無効になります。
+
 ## <a name="conditional-access-for-microsoft-edge"></a>Microsoft Edge の条件付きアクセス
 
 Azure AD の条件付きアクセスを使って、Microsoft Edge を介してのみ、会社のコンテンツにアクセスするようにユーザーをリダイレクトすることができます。 これにより、Azure AD に接続されている Web アプリへのモバイル ブラウザーからのアクセスは、ポリシーで保護された Microsoft Edge に制限されます。 これにより、Safari や Chrome などの他の保護されていないブラウザーからのアクセスはブロックされます。 条件付きアクセスは、Exchange Online や SharePoint Online のような Azure リソース、Microsoft 365 管理センター、および [Azure AD アプリケーション プロキシ](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)を介して外部ユーザーに公開されているオンプレミス サイトにも適用できます。
+
+> [!NOTE]
+> 保護されたブラウザーで開く必要がある場合、iOS デバイス上の新しい Web クリップ (ピン留めされた Web アプリ) は、Intune Managed Browser ではなく Microsoft Edge で開かれます。 以前の iOS Web クリップの場合は、これらの Web クリップのターゲットを再設定して、Managed Browser ではなく Microsoft Edge で開くようにする必要があります。
 
 Azure AD に接続された Web アプリで iOS および Android 上の Microsoft Edge が使われるように制限するには:
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
@@ -195,7 +201,7 @@ Microsoft Edge と [Azure AD アプリケーション プロキシ](https://docs
 これらの設定を使用すると、Microsoft Edge の新しいタブ ページをカスタマイズして、組織のロゴとブランドの色をページの背景として表示することができます。
 
 組織のロゴと色をアップロードするには、まず、次の手順を実行します。
-- Azure portal 内で [[Microsoft Endpoint Manager admin center]](https://go.microsoft.com/fwlink/?linkid=2109431) ->  **[テナント管理]**  ->  **[ブランド化とカスタマイズ]**  ->  **[Company Identity Branding]\(会社 ID のブランド化\)** に移動します。
+- Azure portal 内で [[Microsoft Endpoint Manager admin center]](https://go.microsoft.com/fwlink/?linkid=2109431) ->  **[テナント管理]**  ->  **[カスタマイズ]**  ->  **[Company Identity Branding]\(会社 ID のブランド化\)** に移動します。
 - ブランドのロゴを設定するために、[表示] の下にある [会社のロゴのみ] を選択します。 背景が透明なロゴをお勧めします。 
 - ブランドの背景色を設定するには、[表示] の下にある [テーマの色] を選択します。 Microsoft Edge では、新しいタブ ページ上に明るい色の網掛けが適用され、ページの読みやすさが向上しています。 
 
@@ -212,7 +218,7 @@ Microsoft Edge モバイル内の新しい タブ ページ エクスペリエ�
 
 |    キー    |    値    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.NewTabPage.IndustryNews    |    **True** にすると、Microsoft Edge モバイルの新しいタブ ページに業界のニュースが表示されます。<p>**False** (既定値) にすると、新しいタブ ページの業界ニュースは非表示になります。    |
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.IndustryNews    |    **true** を設定すると、Microsoft Edge モバイルの新しいタブ ページに業界のニュースが表示されます。<p>**False** (既定値) にすると、新しいタブ ページの業界ニュースは非表示になります。    |
 
 ## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Microsoft Edge 用に管理対象ブックマークを構成する
 
@@ -238,7 +244,7 @@ Microsoft Edge モバイル内の新しい タブ ページ エクスペリエ�
 
 |    キー    |    値    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.MyApps    |    **True** の場合、Microsoft Edge ブックマーク内に MyApps が表示されます。<p>**False** の場合、Microsoft Edge 内で MyApps が非表示となります。    |
+|    com.microsoft.intune.mam.managedbrowser.MyApps    |    **true** を設定すると、Microsoft Edge ブックマーク内に MyApps が表示されます。<p>**False** の場合、Microsoft Edge 内で MyApps が非表示となります。    |
     
 ## <a name="use-https-protocol-as-default"></a>HTTPS プロトコルを既定として使用する
 
@@ -246,7 +252,7 @@ Microsoft Edge モバイル内の新しい タブ ページ エクスペリエ�
 
 |    キー    |    値    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.defaultHTTPS`     |     **True** にすると、既定のプロトコルは HTTPS を使用するように設定されます     |
+|    `com.microsoft.intune.mam.managedbrowser.defaultHTTPS`     |     **true** を設定すると、既定のプロトコルは HTTPS を使用するように設定されます     |
 
 
 ## <a name="specify-allowed-or-blocked-sites-list-for-microsoft-edge"></a>Microsoft Edge に対して許可またはブロックするサイトのリストを指定する
@@ -257,6 +263,15 @@ Microsoft Edge に対して許可またはブロックするサイトのリス�
 |    キー    |    値    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    次の中から選択します。<p>1.許可された URL を指定する場合 (これらの URL のみが許可され、その他のサイトにはアクセスできない):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2.ブロックされた URL を指定する場合 (その他のすべてのサイトにアクセスできる):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    キーに対応する値は URL のリストです。 許可またはブロックするすべての URL をパイプ `|` 文字で区切り、単一の値として入力します。<br>**例:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
+
+次のサイトは、定義された許可リストまたはブロック リストの設定に関係なく、常に許可されます。
+- `https://*.microsoft.com/*`
+- `http://*.microsoft.com/*`
+- `https://microsoft.com/*`
+- `http://microsoft.com/*`
+- `https://*.windowsazure.com/*`
+- `https://*.microsoftonline.com/*`
+- `https://*.microsoftonline-p.com/*`
 
 ### <a name="url-formats-for-allowed-and-blocked-site-list"></a>許可およびブロック サイト リストの URL 形式 
 さまざまな URL 形式を使用して、許可/ブロック サイト リストを作成することができます。 次の表で、これらの許可されているパターンについて詳しく説明します。 開始する前に次のいくつかの点に注意してください。 
@@ -301,19 +316,7 @@ Microsoft Edge に組み込まれているデュアル ID モデルでは、Intu
 
 |    キー    |    値    |
 |-------------------------------------------------------------------|-------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** (既定) の場合、Microsoft Edge で、ブロックされたサイトを開くために個人用コンテキストにユーザーを移行させることができます。<p>**False** では、Microsoft Edge でユーザーを移行させることはできません。 ユーザーには、アクセスしようとしているサイトがブロックされていることを示すメッセージが単に表示されます。    |
-
-## <a name="disable-inprivate-and-microsoft-accounts-msa-to-restrict-personal-browsing"></a>InPrivate および Microsoft アカウント (MSA) を無効にして、個人の閲覧を制限する
-高度に規制された業界で、Microsoft Edge を使用している一部のお客様は、AAD コンテキスト内でのみ閲覧できるようにユーザーのスコープを指定することができます。 次のアプリ構成設定を使用して、Microsoft アカウントまたは InPrivate ブラウズを無効にすることができます。
-
-|    キー    |    値    |
-|-------------------------------------------------------------------|-------------------------------------------------------|
-|     `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **inprivate** を使用して、InPrivate ブラウザーを無効にします。 <br> **msa** を使用して、ユーザーが個人の MSA アカウントを Microsoft Edge に追加する機能を無効にします。<br> InPrivate と MSA の両方のアカウントを無効にするには、`inprivate| msa` を使用します    |  
-
-
-アプリ保護ポリシーを展開していない場合は、ユーザーが Microsoft アカウントを使用できないように制限し、登録されているデバイスでの職場または学校アカウントからの閲覧のみを許可することもできます。 Microsoft Edge の組織アカウント専用モードを構成するためのキーの詳細については、以下を参照してください。
-- [Android 組織アカウント専用](https://docs.microsoft.com/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps)
-- [iOS 組織アカウント専用](https://docs.microsoft.com/intune/apps/app-configuration-policies-use-ios#allow-only-configured-organization-accounts-in-multi-identity-apps)
+|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **true** (既定) を設定すると、Microsoft Edge で、ブロックされたサイトを開くために個人用コンテキストにユーザーを移行させることができます。<p>**False** では、Microsoft Edge でユーザーを移行させることはできません。 ユーザーには、アクセスしようとしているサイトがブロックされていることを示すメッセージが単に表示されます。    |
 
 ## <a name="open-restricted-links-directly-in-inprivate-tab-pages"></a>制限されたリンクを InPrivate タブ ページで直接開く
 
@@ -321,7 +324,7 @@ Microsoft Edge に組み込まれているデュアル ID モデルでは、Intu
 
 |    キー    |    値    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked`    |    **True** の場合、個人用アカウントへの切り替えをユーザーに求めることなく、自動的に InPrivate タブでサイトを直接開きます。 <p> **False** (既定) の場合、Microsoft Edge 内でサイトがブロックされ、ユーザーは自分の個人用アカウントに切り替えて表示するように求められます。    |
+|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked`    |    **true** を設定すると、個人用アカウントへの切り替えをユーザーに求めることなく、自動的に InPrivate タブでサイトを直接開きます。 <p> **False** (既定) の場合、Microsoft Edge 内でサイトがブロックされ、ユーザーは自分の個人用アカウントに切り替えて表示するように求められます。    |
 
 
 ## <a name="disable-microsoft-edge-features-to-customize-the-end-user-experience-for-your-organizations-needs"></a>Microsoft Edge の機能を無効にしてエンド ユーザー エクスペリエンスを組織のニーズに応じてカスタマイズする
@@ -350,32 +353,63 @@ iOS の Microsoft Edge の既定では、ユーザーのパスワードがキー
 |-----------------------|-----------------------|
 |    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **password** にすると、エンド ユーザーのパスワードを保存するための確認が無効になります。    |
 
-### <a name="disable-inprivate-browsing-and-microsoft-accounts-to-restrict-browsing-to-work-only-contexts"></a>InPrivate ブラウズと Microsoft アカウントを無効にして閲覧を職場のみのコンテキストに制限する
+### <a name="disable-users-from-adding-extensions-to-microsoft-edge"></a>ユーザーが Microsoft Edge に拡張機能を追加できないようにする 
 
-組織が規制の厳しい業界で運営されている場合、またはアプリごとの VPN を使用して、ユーザーが Microsoft Edge を使用して職場のリソースにアクセスできるようにする場合は、Microsoft Edge の使用を MAM で保護されたコンテキストのみに限定することができます。 この機能は、MDM に登録されたデバイスに対してのみ提供されます。
+Microsoft Edge 内の拡張機能フレームワークを無効にして、ユーザーが拡張機能アプリをインストールできないようにすることができます。 これを行うには、次の設定を構成します。
 
 |    キー    |    値    |
 |-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **inprivate** にすると、InPrivate ブラウズが無効になります。 <br> **msa** にすると、個人の Microsoft アカウント (MSA) をユーザーが Microsoft Edge アプリに追加できなくなります。 <br> 複数の機能を無効にするには、`|` で値を区切ります。 たとえば、`inprivate|msa` とすると、InPrivate アカウントと個人用アカウントの両方がブロックされます。   |
+|    `com.microsoft.intune.mam.managedbrowser.disableExtensionFramework`    |    **true** を設定すると、拡張機能フレームワークが無効になります    |
+
+### <a name="disable-inprivate-browsing-and-microsoft-accounts-to-restrict-browsing-to-work-only-contexts"></a>InPrivate ブラウズと Microsoft アカウントを無効にして閲覧を職場のみのコンテキストに制限する
+
+組織が規制の厳しい業界で事業を行っている場合、またはアプリごとの VPN を使用してユーザーが Microsoft Edge で作業リソースにアクセスできるようにする場合は、非作業コンテキストと見なされる Microsoft Edge 内の InPrivate ブラウズを無効にすることを選択できます。 
+
+|    キー    |    値    |
+|-----------|-------------|
+|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **inprivate** にすると、InPrivate ブラウズが無効になります。   |
 
 ### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>Microsoft Edge の使用を許可されたアカウントのみに制限する
 
 InPrivate および MSA ブラウズをブロックするだけでなく、ユーザーが AAD アカウントでログインしている場合に限って Microsoft Edge の使用を許可できます。 この機能は、MDM に登録されたユーザーのみが使用できます。 この設定の構成に関する詳細については、次を参照してください。
 
-- [Android の設定](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
-- [iOS の設定](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+>[!NOTE]
+> `com.microsoft.intune.mam.managedbrowser.disableFeatures` を使用すると、複数の機能を同時に無効にすることができます。 たとえば、InPrivate とパスワードの両方を無効にするには、`inprivate| password` を使用します。
 
-## <a name="use-microsoft-edge-on-ios-to-access-managed-app-logs"></a>iOS で Microsoft Edge を使用してマネージド アプリのログにアクセスする
+## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Android デバイスで Microsoft Edge をキオスク アプリとして構成する
 
-iOS デバイスに Microsoft Edge をインストールしているユーザーは、Microsoft で公開されたすべてのアプリの管理状態を表示できます。 管理対象 iOS アプリの問題を解決するためにログを送信できます。 次に手順を示します。
+### <a name="enable-microsoft-edge-as-a-kiosk-app"></a>Microsoft Edge をキオスク アプリとして有効にする
+Microsoft Edge をキオスク アプリとして有効にするには、まずこの親設定を構成します。
 
-1. iOS デバイスで Microsoft Edge を開きます。
+|    キー    |    値    |
+|-----------|-------------|
+|    `com.microsoft.intune.mam.managedbrowser.enableKioskMode`    |    **true** を設定すると、Microsoft Edge のキオスク構成が有効になります    |
+
+### <a name="show-address-bar-in-kiosk-mode"></a>キオスク モードでアドレス バーを表示する
+Microsoft Edge がキオスク モードのときにアドレスバーを表示するには、次の設定を構成します。
+
+|    キー    |    値    |
+|-----------|-------------|
+|    `com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode`    |    **true** を設定すると、アドレス バーが表示されます。 <br> **false** (既定値) を設定すると、アドレス バーが非表示になります。    |
+
+### <a name="show-bottom-action-bar-in-kiosk-mode"></a>キオスク モードで下部のアクション バーを表示する
+|    キー    |    値    |
+|-----------|-------------|
+|    `com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode`    |    **true** を設定すると、Microsoft Edge 内の下部のアクション バーが表示されます。 <br> **false** (既定) を設定すると、下部のバーが非表示になります。    |
+
+
+## <a name="use-microsoft-edge-to-access-managed-app-logs"></a>Microsoft Edge を使用してマネージド アプリ ログにアクセスする
+
+
+iOS または Android デバイスに Microsoft Edge をインストールしているユーザーは、Microsoft で公開されたすべてのアプリの管理状態を表示できます。 次の手順を使用して、iOS または Android のマネージド アプリのトラブルシューティング用のログを送信できます。
+
+1. デバイス上で Microsoft Edge を開きます。
 2. アドレス バーに「`about:intunehelp`」と入力します。
 3. Microsoft Edge がトラブルシューティング モードで起動されます。
 
 アプリ ログに格納されている設定の一覧については、「[Managed Browser 内のアプリの保護ログのレビュー](app-protection-policy-settings-log.md)」を参照してください。
 
-Android デバイスでログを表示する方法については、[メールによる IT 管理者へのログの送信](https://docs.microsoft.com/user-help/send-logs-to-your-it-admin-by-email-android)に関するページを参照してください。
+Android デバイスでログを表示する方法については、[メールによる IT 管理者へのログの送信](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android)に関するページを参照してください。
 
 ## <a name="security-and-privacy-for-microsoft-edge"></a>Microsoft Edge のセキュリティとプライバシー
 
@@ -386,6 +420,15 @@ Microsoft Edge のセキュリティとプライバシーに関するその他�
 - Microsoft Edge では、直接アクセスされたときにのみ、サイトへのアクセスをブロックできます。 ユーザーがサイトへのアクセスに中間サービス (翻訳サービスなど) を使っている場合、アクセスはブロックされません。
 - 認証を許可し、Intune ドキュメントにアクセスするために、* **.microsoft.com** は許可またはブロック リスト設定の対象から除外されます。 常に許可されます。
 - ユーザーはデータ収集を無効にできます。 Microsoft は、Microsoft の製品やサービスを改善するために、Managed Browser のパフォーマンスおよび使用に関する匿名データを自動的に収集します。 ただし、ユーザーはデバイスの **[使用状況データ]** 設定を使用して、データの収集を無効にすることができます。 このデータの収集方法は制御できません。 iOS デバイスでは、証明書の有効期限が切れている Web サイトや証明書が信頼されていない Web サイトにユーザーがアクセスしても、開くことができません。
+
+## <a name="restrict-microsoft-edge-use-to-a-work-or-school-account"></a>Microsoft Edge の使用を職場または学校のアカウントに制限する
+
+最大規模で規制の厳しいお客様のデータのセキュリティとコンプライアンス ポリシーを尊重することは、Microsoft 365 の価値の重要な柱です。 企業によっては、企業環境内のすべての通信情報をキャプチャし、デバイスが企業の通信にのみ使用されるようにする必要があります。 これらの要件をサポートするために、iOS および Android 用の Edge 内で 1 つの企業アカウントのみをプロビジョニングできるように登録済みデバイスの iOS および Android 用の Edge を構成することができます。
+
+組織の許可されたアカウント モード設定の構成については、以下を参照してください。
+
+- [Android の設定](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+- [iOS の設定](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
 ## <a name="next-steps"></a>次のステップ
 

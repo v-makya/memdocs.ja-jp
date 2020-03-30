@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8efa125b78e1265861f55b258cd264d7640154b2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e143530c5e9965a3717c632c1af7fcbc28a664f
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360796"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526293"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune での macOS デバイスの機能設定
 
@@ -219,7 +219,7 @@ Intune では、次のことができます。
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **ドメイン**: アプリに関連付ける Web サイト ドメインを入力します。 ドメインには、サービスの種類と完全修飾ホスト名 (`webcredentials:www.contoso.com`など) が含まれています。
+- **ドメイン**: アプリに関連付ける Web サイト ドメインを入力します。 ドメインには、サービスの種類と完全修飾ホスト名 (`webcredentials: www.contoso.com`など) が含まれています。
 
   ドメインの先頭の前に `*.` (アスタリスクのワイルドカードとピリオド) を入力することで、関連付けられているすべてのドメインのサブドメインと一致させることができます。 ピリオドは必須です。 正確なドメインは、ワイルドカードのドメインよりも優先度が高くなります。 そのため、完全修飾サブドメインで一致が見つからない "*場合*" に、親ドメインのパターンが照合されます。
 

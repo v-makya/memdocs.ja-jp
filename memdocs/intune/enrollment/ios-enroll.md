@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4d5fe8ed78aa5537552ecf3db12eabd2bb6fbde
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359288"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086125"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Intune に iOS/iPadOS デバイスを登録する
 
@@ -46,7 +46,7 @@ Intune 管理のために、ユーザーに個人用デバイスを登録させ�
 - デバイスの登録は、一般的な BYOD の登録と考えることができます。 これにより、管理者は幅広い管理オプションを使用できるようになります。
 - ユーザー登録は、管理者にデバイス管理オプションの一部を提供する、より簡素化された登録プロセスです。 現在のところ、この機能はプレビュー段階です。 
 
-前提条件を満たし、ユーザーのライセンスを割り当てると、ユーザーはアプリ ストアから Intune ポータル サイト アプリをダウンロードし、アプリの登録手順を実行できるようになります。 [プライバシーに関する声明のカスタマイズ](../apps/company-portal-app.md#privacy-statement-customization)に関するページで説明されているように、iOS/iPadOS デバイス上でポータル サイトのプライバシーに関する声明をカスタマイズできます。
+前提条件を満たし、ユーザーのライセンスを割り当てると、ユーザーはアプリ ストアから Intune ポータル サイト アプリをダウンロードし、アプリの登録手順を実行できるようになります。 「[Intune ポータル サイト アプリ、ポータル サイト Web サイト、および Intune アプリをカスタマイズする方法](../apps/company-portal-app.md#configuration)」で説明されているように、iOS/iPadOS デバイスでポータル サイトのプライバシーに関する声明をカスタマイズできます。
 
 ## <a name="company-owned-iosipados-devices"></a>会社所有の iOS/iPadOS デバイス
 

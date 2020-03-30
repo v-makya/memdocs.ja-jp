@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 03/17/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe508dac691f922ec638709e04d6d4dd9f47f078
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f58c20731395c95e532e28165553743fdef701e9
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341699"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083568"
 ---
 # <a name="review-client-app-protection-logs"></a>クライアント アプリの保護ログのレビュー
 
 アプリ保護ログで確認できる設定について説明します。 モバイル クライアント上で Intune 診断を有効にして、ログにアクセスします。 
 
 ログを有効にして収集するプロセスは、プラットフォームによって変わります。
-- **iOS/iPadOS デバイス** - iOS/iPadOS 用 Microsoft Edge を使用してログを収集します。 詳細については、「[Microsoft Edge と Microsoft Intune を使用して Web アクセスを管理する](manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs)」を参照してください。 
+- **iOS/iPadOS デバイス** - iOS/iPadOS 用 Microsoft Edge を使用してログを収集します。 詳細については、「[Microsoft Edge と Microsoft Intune を使用して Web アクセスを管理する](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)」を参照してください。 
 - **Windows 10 デバイス** - *MDMDiag* とイベント ログを使用します。 Windows クライアント管理コンテンツの「[Windows 10 での MDM エラーの診断](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)」と、ブログ「[Windows 10 Intune ポリシー エラーのトラブルシューティング](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/)」を参照してください。
-- **Android デバイス** - Android デバイスに対するアプリ保護ポリシー (APP) の診断データはありません。
+- **Android デバイス** - Android 用 Microsoft Edge を使用してログを収集します。 詳細については、「[Microsoft Edge と Microsoft Intune を使用して Web アクセスを管理する](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)」を参照してください。 
 
 次の表に、アプリ保護ポリシー設定の名前と、ログに記録されるサポートされている値を示します。 また、各設定により、Microsoft Endpoint Manager ポータル内にあるポリシー設定が特定されます。 各設定の詳細については、[iOS/iPadOS アプリ保護ポリシー設定](app-protection-policy-settings-ios.md)に関する記事をご覧ください。
 

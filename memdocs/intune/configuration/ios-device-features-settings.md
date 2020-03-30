@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune の iOS および iPadOS デバイスの機能設定 - Azure | Microsoft Docs
-description: AirPrint、ホーム画面のレイアウト、アプリの通知、共有デバイス、シングル サインイン、Web コンテンツ フィルター設定に関するすべての設定について、Microsoft Intune での iOS および iPadOS デバイスの構成設定をすべて説明します。 デバイス構成プロファイルでこれらの設定を使い、組織内でこのような Apple 機能を使うよう iOS および iPadOS デバイスを構成します。
+description: AirPrint、ホーム画面のレイアウト、アプリの通知、共有デバイス、シングル サインオン、Web コンテンツ フィルター設定に関するすべての設定について、Microsoft Intune での iOS および iPadOS デバイスの構成設定をすべて説明します。 デバイス構成プロファイルでこれらの設定を使い、組織内でこのような Apple 機能を使うよう iOS および iPadOS デバイスを構成します。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 03/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 351c6ade59d98ce620b939c5ff6238e650390a5f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361082"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086958"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune で一般的な iOS および iPadOS 機能を使用するための iOS および iPadOS デバイスの設定
 
-Intune には、iOS および iPadOS ユーザーが自分のデバイスでさまざまな Apple 機能を使用できるようになる組み込みの設定がいくつかあります。 たとえば、管理者は、iOS および iPadOS ユーザーが AirPrint プリンターを使用する方法の制御、ホーム画面のドックおよびページへのアプリとフォルダーの追加、アプリ通知の表示、ロック画面への資産タグの詳細の表示、シングル サインオン認証の使用、および証明書を使用したユーザーの認証を行うことができます。
+Intune には、iOS および iPadOS ユーザーが自分のデバイスでさまざまな Apple 機能を使用できるようになる組み込みの設定がいくつかあります。 たとえば、AirPrint プリンターの制御、ドックおよびホーム画面のページへのアプリとフォルダーの追加、アプリの通知の表示、ロック画面への資産タグの詳細の表示、シングル サインオン認証の使用、証明書認証の使用などを行うことができます。
 
 これらの機能を使用して、iOS および iPadOS デバイスをご利用のモバイル デバイス管理 (MDM) ソリューションの一部として制御します。
 
@@ -48,7 +48,7 @@ Intune には、iOS および iPadOS ユーザーが自分のデバイスでさ�
 - **[IP アドレス]** :プリンターの IPv4 アドレスまたは IPv6 アドレスを入力します。 ホスト名を使用してプリンターを識別している場合は、ターミナルでプリンターに ping を実行することで IP アドレスを取得できます。 詳細については、「IP アドレスとパスを取得する」 (この記事内) を参照してください。
 - **パス**:通常、このパスはネットワーク上のプリンターの `ipp/print` です。 詳細については、「IP アドレスとパスを取得する」 (この記事内) を参照してください。
 - **[ポート]** :AirPrint の接続先のリスニング ポートを入力します。 このプロパティを空白のままにすると、AirPrint には既定のポートが使用されます。 iOS 11.0 以降および iPadOS 13.0 以降で使用できます。
-- **TLS**:トランスポート層セキュリティ (TLS) で AirPrint の接続を保護するには、 **[有効]** を選択します。 iOS 11.0 以降および iPadOS 13.0 以降で使用できます。
+- **TLS**:トランスポート層セキュリティ (TLS) での AirPrint 接続のセキュリティ保護を **[有効]** にします。 iOS 11.0 以降および iPadOS 13.0 以降で使用できます。
 
 AirPrint サーバーを追加するには、次の手順を実行します。
 
@@ -81,7 +81,7 @@ AirPrinter サーバーを追加するには、プリンターの IP アドレ�
 
 ### <a name="dock"></a>ドッキング
 
-**[ドッキング]** 設定で、iOS および iPadOS 画面の Dock に最大 6 つのアイテムまたはフォルダーを追加できます。 多くのデバイスではより少ないアイテムがサポートされています。 たとえば iPhone では最大で 4 つのアイテムがサポートされます。 この場合、追加した最初の 4 つのアイテムのみがデバイスに表示されます。
+**[ドッキング]** 設定で、画面のドックに最大 6 つのアイテムまたはフォルダーを追加できます。 多くのデバイスではより少ないアイテムがサポートされています。 たとえば iPhone では最大で 4 つのアイテムがサポートされます。 この場合、追加した最初の 4 つのアイテムのみがデバイスに表示されます。
 
 デバイスの Dock には最大 **6** つのアイテム (アプリとフォルダーの合計) を追加できます。
 
@@ -283,8 +283,32 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 - **[SSO アプリ拡張機能の種類]** : SSO アプリ拡張機能の種類を選択します。 次のようなオプションがあります。
 
   - **[未構成]** :アプリの拡張機能は使用されません。 アプリの拡張機能を無効にするには、SSO アプリの拡張機能の種類を **[未構成]** に切り替えます。
-  - **[リダイレクト]** : 汎用のカスタマイズ可能なリダイレクト アプリ拡張機能を使用して、最新の認証フローで SSO を実行します。 組織のアプリ拡張機能の拡張機能 ID を確認しておきます。
-  - **[資格情報]** : 汎用のカスタマイズ可能な資格情報アプリ拡張機能を使用し、チャレンジと応答の認証フローで SSO を実行します。 組織のアプリ拡張機能の拡張機能 ID を確認しておきます。
+  - **[リダイレクト]** : 最新の認証フローで SSO を使用するには、汎用のカスタマイズ可能なリダイレクト アプリ拡張機能を使用します。 組織のアプリ拡張機能の拡張機能 ID を確認しておきます。
+
+    iOS/iPadOS 13.0 以降のデバイスでは、このリダイレクト SSO アプリ拡張機能の種類を使用して、**Microsoft Azure AD SSO アプリ拡張機能**を構成できます。 Microsoft Azure AD 拡張機能を使用すると、Microsoft のアプリと、認証に Azure AD を使用する組織のアプリの間で、シングル サインオンを使用できるようになります。 Azure AD 拡張機能は、高度な認証ブローカーとして機能し、セキュリティとエンド ユーザー エクスペリエンスの向上を提供します。 以前に Microsoft Authenticator アプリで仲介型認証を使用していたすべてのアプリは、引き続き SSO 拡張機能で SSO を取得します。 Azure AD SSO 拡張機能では、ブラウザー SSO はまだサポートされていません。 SSO および iOS/iPadOS 認証ブローカーの詳細については、[macOS および iOS/iPadOS での SSO の構成](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios)に関する記事を参照してください。  
+
+    **iOS の Microsoft Azure AD 拡張機能を構成するには:**
+
+    1. **[SSO アプリ拡張機能の種類]** を **[リダイレクト]** に設定します。
+    2. **[拡張機能 ID]** を `com.microsoft.azureauthenticator.ssoextension` に設定します。
+    3. **[チーム ID]** を `SGGM6D27TK` に設定します。
+    4. **[URL]** の設定に、次の URL を入力します。
+
+        - `https://login.microsoftonline.com`
+        - `https://login.windows.net`
+        - `https://login.microsoft.com`
+        - `https://sts.windows.net`
+        - `https://login.partner.microsoftonline.cn`
+        - `https://login.chinacloudapi.cn`
+        - `https://login.microsoftonline.de`
+        - `https://login.microsoftonline.us`
+        - `https://login.usgovcloudapi.net`
+        - `https://login-us.microsoftonline.com`
+
+    > [!IMPORTANT]
+    > iOS/iPadOS Microsoft Azure AD 拡張機能で SSO を実現するには、最初に iOS/iPadOS Microsoft Authenticator アプリをデバイスにインストールします。 Authenticator によりデバイスに Azure AD 拡張機能が提供され、MDM SSO アプリ拡張機能の設定によって Azure AD 拡張機能がアクティブ化されます。 Authenticator と SSO アプリ拡張機能プロファイルをデバイスにインストールすると、ユーザーは資格情報を入力してサインインし、セッションを確立する必要があります。 その後、このセッションは、ユーザーの再認証を必要とせずに、さまざまなアプリケーションで使用されます。
+
+  - **[資格情報]** : 汎用のカスタマイズ可能な資格情報アプリ拡張機能を使用し、チャレンジと応答の認証フローで SSO を使用します。 組織のアプリ拡張機能の拡張機能 ID を確認しておきます。
   - **Kerberos**: iOS 13.0 以降と iPadOS 13.0 以降に含まれる、Apple の組み込みの Kerberos 拡張機能を使用します。 このオプションは、 **[資格情報]** アプリ拡張機能の Kerberos 固有のバージョンです。
 
   > [!TIP]
@@ -303,7 +327,7 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
   - シングル サインオンアプリ拡張機能の Intune プロファイルのすべてのドメインは一意である必要があります。 さまざまな種類の SSO アプリ拡張機能を使用している場合でも、サインオン アプリ拡張機能のプロファイルでドメインを繰り返し指定することはできません。
   - これらのドメインでは大文字と小文字が区別されません。
 
-- **[URL]** (リダイレクトのみ): リダイレクト アプリ拡張機能の SSO を代理で実行する ID プロバイダーの URL プレフィックスを入力します。 ユーザーがこれらの URL にリダイレクトされると、SSO アプリ拡張機能が介入し、SSO のプロンプトが表示されます。
+- **[URL]** (リダイレクトのみ): リダイレクト アプリ拡張機能の SSO を代理で使用する ID プロバイダーの URL プレフィックスを入力します。 ユーザーがこれらの URL にリダイレクトされると、SSO アプリ拡張機能が介入し、SSO のプロンプトが表示されます。
 
   - Intune シングル サインオン アプリ拡張機能プロファイル内のすべての URL は一意である必要があります。 さまざまな種類の SSO アプリ拡張機能を使用している場合でも、SSO アプリ拡張機能のプロファイルでドメインを繰り返し指定することはできません。
   - URL は、 http:// または https:// で始まる必要があります。

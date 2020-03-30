@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1fe46894a9905cba4267e8ff9baa949dde5709a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5bafd916ef31bea50dabb2de5012d693039ca741
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351488"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084822"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>ネットワーク アクセス制御 (NAC) と Intune の統合
 
@@ -65,36 +65,35 @@ NAC は条件付きアクセスと連携して、アクセス制御の決定を�
 8. デバイスが登録されて準拠するようになると、NAC パートナー ソリューションは Intune から状態を取得します。
 9. 接続が正常に確立されて、デバイスは会社のリソースにアクセスできるようになります。
 
-## <a name="use-nac-for-vpn-on-your-iosipados-devices"></a>iOS/iPadOS デバイス上で VPN 用に NAC を使用する  
+## <a name="use-nac-for-vpn-on-your-iosipados-devices"></a>iOS/iPadOS デバイス上で VPN 用に NAC を使用する
 
 NAC を VPN プロファイルで有効にしなくても、NAC は次の VPN で使用できます。
 
-  - NAC for Cisco Legacy AnyConnect
-  - F5 Access Legacy
-  - Citrix VPN
+- NAC for Cisco Legacy AnyConnect
+- F5 Access Legacy
+- Citrix VPN
 
-NAC は、Cisco AnyConnect、Citrix SSO、F5 Access でもサポートされています。 
+NAC は、Cisco AnyConnect、Citrix SSO、F5 Access でもサポートされています。
 
-### <a name="to-enable-nac-for-cisco-anyconnect-for-ios"></a>Cisco AnyConnect for iOS で NAC を有効にするには:
+### <a name="to-enable-nac-for-cisco-anyconnect-for-ios"></a>Cisco AnyConnect for iOS で NAC を有効にするには
 
-  - 次のリンクで説明されているように、NAC のために ISE を Intune と統合します。
-  - VPN プロファイルの **[ネットワーク アクセス制御 (NAC) を有効にする]** 設定を **[はい]** に設定します。
+- 次のリンクで説明されているように、NAC のために ISE を Intune と統合します。
+- VPN プロファイルの **[ネットワーク アクセス制御 (NAC) を有効にする]** 設定を **[はい]** に設定します。
 
-### <a name="to-enable-nac-for-citrix-sso"></a>Citrix SSO で NAC を有効にするには:
+### <a name="to-enable-nac-for-citrix-sso"></a>Citrix SSO で NAC を有効にするには
 
-  - Citrix ゲートウェイ 12.0.59 以上を使用します。  
-  - ユーザーは Citrix SSO 1.1.6 以降をインストールしている必要があります。
-  - Citrix の製品ドキュメントの説明に従って、[NAC のために NetScaler を Inture と統合します](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)。
-  - VPN プロファイルで **[Base setting]** \(基本設定\) >  **[ネットワーク アクセス制御 (NAC) を有効にする]** を選択し、 **[同意する]** を選択します。
+- Citrix ゲートウェイ 12.0.59 以上を使用します。  
+- ユーザーは Citrix SSO 1.1.6 以降をインストールしている必要があります。
+- Citrix の製品ドキュメントの説明に従って、[NAC のために NetScaler を Inture と統合します](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)。
+- VPN プロファイルで **[Base setting]** \(基本設定\) >  **[ネットワーク アクセス制御 (NAC) を有効にする]** を選択し、 **[同意する]** を選択します。
 
+### <a name="to-enable-nac-for-f5-access"></a>F5 Access で NAC を有効にするには
 
-### <a name="to-enable-nac-for-f5-access"></a>F5 Access で NAC を有効にするには:
+- F5 BIG IP 13.1.1.5 以降を使用します。
+- NAC 用に Intune に BIG-IP を統合します。 「[Overview:Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89)」 (エンドポイント管理システムを使用したデバイス ポスチャ チェック用の APM の構成) の F5 のガイドに手順があります。
+- VPN プロファイルで **[Base setting]** \(基本設定\) >  **[ネットワーク アクセス制御 (NAC) を有効にする]** を選択し、 **[同意する]** を選択します。
 
-  - F5 BIG-IP 13.1.1.5 を使用します。 BIG-IP 14 はサポートされていません。
-  - NAC 用に Intune に BIG-IP を統合します。 「[Overview:Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89)」 (エンドポイント管理システムを使用したデバイス ポスチャ チェック用の APM の構成) の F5 のガイドに手順があります。
-  - VPN プロファイルで **[Base setting]** \(基本設定\) >  **[ネットワーク アクセス制御 (NAC) を有効にする]** を選択し、 **[同意する]** を選択します。
-
-  VPN 接続は、セキュリティ上の理由により 24 時間ごとに切断されます。 VPN はすぐに再接続できます。
+VPN 接続は、セキュリティ上の理由により 24 時間ごとに切断されます。 VPN はすぐに再接続できます。
 
 これらの新しいクライアント用の NAC ソリューションをリリースするために、パートナーと協力して作業しています。 この記事は、ソリューションの準備が整ったら、情報を追加して更新されます。
 

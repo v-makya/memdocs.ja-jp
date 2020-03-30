@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0733ac48aa39f611db43164137d129a3248f13d4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 936dc5d4167252fcb2280ca3c9aa8b450a924a98
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342817"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80083636"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Microsoft Intune のポリシーで保護されたブラウザーを使用して Web アクセスを管理する
 
@@ -88,6 +88,9 @@ Managed Browser または Microsoft Edge が Intune で管理されていない�
 ## <a name="conditional-access-for-protected-browsers"></a>保護ブラウザーの条件付きアクセス
 
 Managed Browser は、条件付きアクセスの承認済みクライアント アプリになりました。 つまり、Safari や Chrome など、その他のすべての保護されていないブラウザーからのアクセスをブロックして、モバイル ブラウザー アクセスを、ユーザーが Managed Browser しか使用できない Azure AD に接続された Web アプリに制限することができます。 この保護は、Exchange Online や SharePoint Online などの Azure リソース、Microsoft 365 管理センター、および [Azure AD アプリケーション プロキシ](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)を介して外部ユーザーに公開されているオンプレミス サイトにも適用できます。 
+
+> [!NOTE]
+> 保護されたブラウザーで開く必要がある場合、iOS デバイス上の新しい Web クリップ (ピン留めされた Web アプリ) は、Intune Managed Browser ではなく Microsoft Edge で開かれます。 以前の iOS Web クリップの場合は、これらの Web クリップのターゲットを再設定して、Managed Browser ではなく Microsoft Edge で開くようにする必要があります。
 
 Azure AD に接続された Web アプリをモバイル プラットフォーム上の Intune Managed Browser の使用に制限するために、承認済みのクライアント アプリケーションを必要とする条件付きアクセス ポリシーを作成することができます。 
 

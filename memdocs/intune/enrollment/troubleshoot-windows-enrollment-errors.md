@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cdd92948aed51eb37b4774d2521a1d28cd8245f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
+ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344611"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79526276"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune での Windows デバイスの登録に関する問題のトラブルシューティング
 
@@ -321,6 +321,8 @@ Autopilot を使用してキオスク モードで Windows デバイスを展開
 この問題が発生するのは、通常、デバイスが初期サインイン画面でタイムアウトし、Hybrid Azure AD Autopilot シナリオでデバイスが再起動される前です。 これは、ドメイン コントローラーが見つからないか、または接続の問題のためにドメイン コントローラーに正常にアクセスできないことを意味します。 または、デバイスがドメインに参加できない状態になっています。
 
 **原因:** 最も一般的な原因は、Hybrid Azure AD Join が使用されていて、ユーザーの割り当て機能が Autopilot プロファイルで構成されていることです。 ユーザーの割り当て機能を使用すると、初期サインイン画面の間にデバイスで Azure AD Join が実行され、デバイスはオンプレミス ドメインに参加できない状態になります。 そのため、ユーザーの割り当て機能は、標準の Azure AD Join Autopilot シナリオでのみ使用してください。  この機能は、Hybrid Azure AD Join シナリオでは使用しないでください。
+
+このエラーのもう 1 つの原因として、オートパイロット オブジェクトに関連付けられている AzureAD デバイスが削除されていることが考えられます。 これを解決するには、オートパイロット オブジェクトを削除し、ハッシュを再インポートして新しいハッシュを生成します。
 
 #### <a name="resolution"></a>解決策
 

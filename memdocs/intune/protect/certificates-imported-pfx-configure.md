@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bdb45edb1bcd518b4e55da40f179fb87cefb07c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7a49c71705755f82dcf33c63971ed6f11ffc849f
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353672"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084986"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Intune でインポートした PKCS 証明書を構成して使用する
 
@@ -45,8 +45,8 @@ Intune では、次のプラットフォーム用の PFX 証明書のインポ�
 - Android - デバイス管理者
 - Android Enterprise - フル マネージド
 - Android Enterprise - 仕事用プロファイル
-- iOS
-- Mac
+- iOS/iPadOS
+- macOS
 - Windows 10
 
 ## <a name="requirements"></a>要件
@@ -213,28 +213,53 @@ PowerShell モジュールには、Windows 暗号化を使用してキーを作�
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
-2. **[デバイス]** 、 **[構成プロファイル]** 、 **[プロファイルの作成]** の順に選択します。
+2. **[デバイス]** 、 **[構成プロファイル]** 、 **[プロファイルの作成]** の順に移動します。
 
 3. 次のプロパティを入力します。
+   - **[プラットフォーム]** :デバイスのプラットフォームを選択します。
+   - **[プロファイル]** : **[PKCS のインポートされた証明書]** を選択します
 
-   - プロファイルの**名前**
-   - オプションで説明を設定
-   - プロファイルをデプロイする**プラットフォーム**
-   - **[プロファイルの種類]** に **[PKCS のインポートされた証明書]** を設定
+4. **[作成]** を選択します。
 
-4. **[設定]** を選択し、次のプロパティを入力します。
+5. **[Basics]\(基本\)** で次のプロパティを入力します。
+   - **名前**:プロファイルのわかりやすい名前を入力します。 後で簡単に識別できるよう、プロファイルに名前を付けます。 たとえば、「*会社全体の PKCS のインポートされた証明書プロファイル*」は適切な名前です。
+   - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
+
+6. **[次へ]** を選択します。
+
+7. **[構成設定]** で、次のプロパティを入力します。
 
    - **使用目的**:このプロファイルに対してインポートされた証明書の使用目的を指定します。 管理者は、証明書をさまざまな使用目的でインポートできます (S/MIME 署名、S/MIME 暗号化など)。 証明書プロファイル内で選択された使用目的によって、証明書プロファイルは適切なインポートされた証明書と対応させられます。 使用目的は、インポートした証明書をグループ化するためのタグであり、そのタグを使用してインポートされた証明書が使用目的を満たすことを保証するものではありません。  
-   - **[証明書の有効期間]** : 証明書テンプレートで有効期間が変更されていない限り、このオプションの既定値は 1 年です。
+
+   <!-- Not in new UI:
+   - **Certificate validity period**: Unless the validity period was changed in the certificate template, this option defaults to one year.
+   -->
    - **キー記憶域プロバイダー (KSP)** :Windows では、デバイス上のキーを格納する場所を選択します。
 
-5. **[OK]**  >  **[作成]** を選択してプロファイルを保存します。
+8. **[次へ]** を選択します。
+
+9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。
+
+   **[次へ]** を選択します。
+
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+11. (*Windows 10 のみに適用*) **[適用性ルール]** で、適用性ルールを指定してこのプロファイルの割り当てを調整します。 デバイスの OS エディションまたはバージョンに基づいて、プロファイルを割り当てるかどうかを選択できます。
+
+    詳細については、「*Microsoft Intune でのデバイス プロファイルの作成*」の「[適用性ルール](../configuration/device-profile-create.md#applicability-rules)」を参照してください。
+
+    **[次へ]** を選択します。
+
+12. **[確認と作成]** で、設定を確認します。 [作成] を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
 
 ## <a name="support-for-third-party-partners"></a>サードパーティ パートナーのサポート
 
 次のパートナーからは、PFX 証明書を Intune にインポートするために使用できるサポートされた方法またはツールが提供されています。
 
 ### <a name="digicert"></a>DigiCert
+
 DigiCert PKI プラットフォーム サービスを使用する場合は、DigiCert の **Intune S/MIME 証明書用インポート ツール**を使用して、PFX 証明書を Intune にインポートすることができます。 このツールを使用すると、この記事で既に説明した「[Intune への PFX 証明書のインポート](#import-pfx-certificates-to-intune)」の手順に従う必要がなくなります。
 
 ツールの入手方法など、DigiCert のインポート ツールの詳細については、DigiCert のサポート技術情報の https://knowledge.digicert.com/tutorials/microsoft-intune.html を参照してください。

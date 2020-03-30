@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: cba46d5b4b203cdbb67fb5f6b6b116a21ebacb32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6303d7d98e718c2a4f54b199bf90a3bd0684bf8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338930"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084755"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Microsoft Intune で SCEP 証明書と PKCS 証明書を削除する
 
@@ -91,7 +91,6 @@ PKCS 証明書は次の場合にデバイスに*残ります* (証明書は取�
 - 管理者が Azure AD からユーザーまたはグループを削除する。
 - 管理者が PKCS プロファイルを変更または更新する。
 - 証明書プロファイルがグループ割り当てから削除される。
-
 
 ## <a name="ios-devices"></a>iOS デバイス
 
@@ -190,8 +189,8 @@ PKCS 証明書は次の場合に取り消され、*その上*、削除されま�
 - 管理者が[インベントリからの削除](../remote-actions/devices-wipe.md#retire)アクションを実行する。
 
 PKCS 証明書は次の場合にデバイスに*残ります* (証明書は取り消されず、削除されません)。
-- エンドユーザーが Intune ライセンスを失う。
 
+- エンドユーザーが Intune ライセンスを失う。
 - 管理者が Intune ライセンスを取り消す。
 - 管理者が Azure AD からユーザーまたはグループを削除する。
 - 管理者が PKCS プロファイルを変更または更新する。
@@ -228,7 +227,23 @@ SCEP 証明書は次の場合にデバイスに*残ります* (証明書は取�
 
 ### <a name="pkcs-certificates"></a>PKCS 証明書
 
-PKCS 証明書は macOS ではサポートされていません。
+PKCS 証明書は次の場合に取り消され、*その上*、削除されます。
+
+- ユーザーの登録が解除される。
+- 管理者が[インベントリからの削除](../remote-actions/devices-wipe.md#retire)アクションを実行する。
+
+ルート証明書は次の場合に削除されます。
+
+- ユーザーの登録が解除される。
+- 管理者が[インベントリからの削除](../remote-actions/devices-wipe.md#retire)アクションを実行する。
+
+PKCS 証明書は次の場合にデバイスに残ります (証明書は取り消されず、削除されません)。
+
+- エンドユーザーが Intune ライセンスを失う。
+- 管理者が Intune ライセンスを取り消す。
+- 証明書プロファイルがグループ割り当てから削除される。 (プロファイルは削除されます)。
+- 管理者が Azure AD からユーザーまたはグループを削除する。
+- 管理者が PKCS プロファイルを変更または更新する。
 
 ## <a name="next-steps"></a>次のステップ
 

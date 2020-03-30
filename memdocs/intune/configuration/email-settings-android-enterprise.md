@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/19/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ search.appverid: MET150
 ms.reviewer: maholdaa
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: befd2ba9894d8b5d4f7fac32a96d4ed4cae6337a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ab544d285e49fd3914a8e9867c35ad9ed97f5fe8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364254"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80087026"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Intune を使用して電子メール、認証、および同期を構成するための Android エンタープライズ デバイスの設定
-
-
 
 この記事では、Android エンタープライズ デバイスで制御できるさまざまな電子メール設定の一覧を示して説明します。 モバイル デバイス管理 (MDM) ソリューションの一部として、これらの設定を使って電子メール サーバーの構成や、SSL を使用した電子メールの暗号化などを行います。
 
@@ -35,16 +33,16 @@ Intune での電子メール プロファイルの詳細については、[電�
 
 ## <a name="before-you-begin"></a>始める前に
 
-[デバイス構成プロファイル](email-settings-configure.md#create-a-device-profile)を作成するか (仕事用プロファイルを選択します)、[アプリ構成ポリシー](../apps/app-configuration-policies-use-android.md)を作成してください。
+[デバイス構成プロファイル](email-settings-configure.md)を作成するか (仕事用プロファイルを選択します)、[アプリ構成ポリシー](../apps/app-configuration-policies-use-android.md)を作成してください。
 
 ## <a name="android-enterprise"></a>Android エンタープライズ
 
 - **[メール アプリ]** : **[Gmail]** または **[Nine Work]** を選択します。
-- **[電子メール サーバー]** :Exchange サーバーのホスト名。 たとえば、「`outlook.office365.com`」と入力します。
+- **[電子メール サーバー]** :Exchange サーバーのホスト名を入力します。 たとえば、「`outlook.office365.com`」と入力します。
 - **[AAD からのユーザー名の属性]** :Intune が Azure Active Directory (Azure AD) から取得する名前。 Intune はこのプロファイルで使用されるユーザー名を動的に生成します。 次のようなオプションがあります。
 
   - **[ユーザー プリンシパル名]** :`user1` や `user1@contoso.com` などの名前を取得します。
-  - **[ユーザー名]** :`user1` などの名前のみを取得します。
+  - **ユーザー名**:`user1` などの名前のみを取得します。
 
 - **[AAD からのメール アドレス属性]** :この名前は、Intune が Azure AD から取得する電子メール属性です。 Intune では、このプロファイルに使用される電子メール アドレスが動的に生成されます。 次のようなオプションがあります。
   - **[ユーザー プリンシパル名]** :電子メール アドレスとして完全プリンシパル名 (`user1@contoso.com`、`user1` など) を使用します。

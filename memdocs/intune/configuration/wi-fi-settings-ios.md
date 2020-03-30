@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8ce60109cfd6117bc8c03916c334bc6fc6effa3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c3765794048de337100be0384b325f5288063121
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343103"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80086365"
 ---
 # <a name="add-wi-fi-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune で iOS および iPadOS デバイス向けの Wi-Fi 設定を追加する
 
@@ -62,6 +62,9 @@ ms.locfileid: "79343103"
 - **[SSID]** :**サービス セット識別子**の短縮形です。 このプロパティは、デバイスの接続先のワイヤレス ネットワークの実際の名前です。 ただし、ユーザーが接続を選択したときにユーザーに表示されるのは、構成されたネットワーク名のみです。
 - **[自動的に接続する]** : **[有効]** を選択すると、デバイスが範囲内に入るとこのネットワークに自動的に接続します。 **[無効]** を選択すると、デバイスは自動的に接続されません。
 - **[非公開のネットワーク]** : **[有効]** を選択すると、デバイス上で使用可能なネットワークのリストにこのネットワークが含まれなくなります。 SSID はブロードキャストされません。 **[無効]** を選択すると、デバイスで使用可能なネットワークのリストにこのネットワークが含まれるようになります。
+- **[セキュリティの種類]** :Wi-Fi ネットワークへの認証に使用するセキュリティ プロトコルを選択します。 次のようなオプションがあります。
+  - **WPA - エンタープライズ**
+  - **WPA/WPA2 - エンタープライズ**
 
 - **[EAP の種類]** :次の中から、セキュリティで保護されたワイヤレス接続の認証に使用される拡張認証プロトコル (EAP) の種類を選択します。 次のようなオプションがあります。
 

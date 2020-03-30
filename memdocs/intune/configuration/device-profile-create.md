@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b706ea076ebcc239904a9ae918389ccafa287ec
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339957"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084060"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Microsoft Intune でのデバイス プロファイルの作成
 
@@ -52,7 +52,7 @@ ms.locfileid: "79339957"
    - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
    - **[プラットフォーム]** :デバイスのプラットフォームを選択します。 次のようなオプションがあります。  
 
-       - **Android**
+       - **Android デバイス管理者**
        - **Android エンタープライズ**
        - **iOS/iPadOS**
        - **macOS**
@@ -68,12 +68,14 @@ ms.locfileid: "79339957"
        - [配信の最適化](delivery-optimization-windows.md)
        - [デバイスの機能](device-features-configure.md)
        - [デバイスの制限](device-restrictions-configure.md)
+       - [ドメイン参加](domain-join-configure.md)
        - [エディションのアップグレードとモードの切り替え](edition-upgrade-configure-windows-10.md)
        - [教育](education-settings-configure.md)
        - [電子メール](email-settings-configure.md)
        - [Endpoint Protection](../protect/endpoint-protection-configure.md)
        - [ID 保護](../protect/identity-protection-configure.md)  
        - [キオスク](kiosk-settings.md)
+       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [PKCS 証明書](../protect/certficates-pfx-configure.md)
        - [PKCS のインポートされた証明書](../protect/certificates-imported-pfx-configure.md)
        - [設定ファイル](preference-file-settings-macos.md)
@@ -82,12 +84,12 @@ ms.locfileid: "79339957"
        - [更新ポリシー](../protect/software-updates-ios.md)
        - [VPN](vpn-settings-configure.md)
        - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
        - [Windows 情報保護](../protect/windows-information-protection-configure.md)
 
      たとえば、プラットフォームとして **iOS/iPadOS** を選択した場合、プロファイルの種類のオプションは次のプロファイルのようになります。
 
-     ![Intune で iOS/iPadOS プロファイルを作成する](./media/device-profile-create/create-device-profile.png)
+     > [!div class="mx-imgBorder"]
+     > ![Intune で iOS/iPadOS プロファイルを作成する](./media/device-profile-create/create-device-profile.png)
 
 4. 完了したら、 **[OK]**  >  **[作成]** の順に選択して変更を保存します。 プロファイルが作成され、一覧に表示されます。
 
@@ -138,7 +140,8 @@ ms.locfileid: "79339957"
 
 1. **[適用性ルール]** を選択します。 **[ルール]** 、 **[プロパティ]** 、および **[OS のエディション]** を選択できます。
 
-    ![Microsoft Intune でデバイス構成プロファイルに適用性ルールを追加する](./media/device-profile-create/applicability-rules.png)
+    > [!div class="mx-imgBorder"]
+    > ![Microsoft Intune でデバイス構成プロファイルに適用性ルールを追加する](./media/device-profile-create/applicability-rules.png)
 
 2. **[ルール]** で、ユーザーまたはグループを含めるか除外するかを選択します。 次のようなオプションがあります。
 
@@ -184,7 +187,8 @@ Intune では、複数の更新サイクルを使用して、構成プロファ�
 
   次の画像は、ユーザーとデバイスに適用できる設定の例です。
 
-  ![ユーザーとデバイスに適用される Intune 管理テンプレート](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  > [!div class="mx-imgBorder"]
+  > ![ユーザーとデバイスに適用される Intune 管理テンプレート](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 - 制限の厳しいポリシーを作成するたびに、この変更についてユーザーに伝えます。 たとえば、パスコードの要件を 4 文字から 6 文字に変更する場合、ポリシーを割り当てる前にユーザーに通知できます。
 

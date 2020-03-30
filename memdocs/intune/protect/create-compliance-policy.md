@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7275963f521955c9e89c4b417c11f752e2f06ce1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: f84df30204f866e5498e97b8d64ed3fc6fd4ba28
+ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352606"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80084905"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Microsoft Intune でコンプライアンス ポリシーを作成する
 
@@ -63,80 +63,70 @@ Intune を使用して組織のリソースを保護する場合、デバイス�
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
-2. **[デバイス]**  >  **[コンプライアンス ポリシー]**  >  **[ポリシーの作成]** の順に選択します。
+2. **[デバイス]**  >  **[コンプライアンス ポリシー]**  >  **[ポリシー]**  >  **[ポリシーの作成]** を選択します。
 
-3. 次のプロパティを指定します。
+3. 次のオプションから、このポリシーの **[プラットフォーム]** を選択します。
+   - *Android デバイス管理者*
+   - *Android エンタープライズ*
+   - *iOS/iPadOS*
+   - *macOS*
+   - *Windows Phone 8.1*
+   - *Windows 8.1 以降*
+   - *Windows 10 以降*
 
-   - **名前**:ポリシーのわかりやすい名前を入力します。 後で簡単に識別できるよう、ポリシーに名前を付けます。 たとえば、適切なポリシー名は、**iOS/iPadOS の脱獄されたデバイスを非準拠としてマークする**などです。
+    *Android Enterprise* の場合は、 **[ポリシーの種類]** も選択します。
+     - *Android デバイス所有者のコンプライアンス ポリシー*
+     - *Android 仕事用プロファイルのコンプライアンス ポリシー*
 
-   - **説明**:ポリシーの説明を入力します。 この設定は省略可能ですが、推奨されます。
+    次に、 **[作成]** を選択し、 **[ポリシーの作成]** 構成ウィンドウを開きます。
 
-   - **[プラットフォーム]** :デバイスのプラットフォームを選択します。 次のようなオプションがあります。
-     - **Android デバイス管理者**
-     - **Android エンタープライズ**
-     - **iOS/iPadOS**
-     - **macOS**
-     - **Windows Phone 8.1**
-     - **Windows 8.1 以降**
-     - **Windows 10 以降**
+4. **[基本]** タブで、後で識別しやすいように **[名前]** を指定します。 たとえば、適切なポリシー名は、**iOS/iPadOS の脱獄されたデバイスを非準拠としてマークする**などです。
 
-     *Android Enterprise* では、**プロファイルの種類**を選択する必要があります。
-     - **デバイス所有者**
-     - **仕事用プロファイル**
+   **[説明]** を指定することもできます。
+  
+5. **[コンプライアンス設定]** タブで、使用できるカテゴリを展開し、ポリシーの設定を構成します。  次の記事では、各プラットフォームの設定について説明しています。
+   - [Android デバイス管理者](compliance-policy-create-android.md)
+   - [Android エンタープライズ](compliance-policy-create-android-for-work.md)
+   - [iOS/iPadOS](compliance-policy-create-ios.md)
+   - [macOS](compliance-policy-create-mac-os.md)
+   - [Windows Phone 8.1、Windows 8.1 以降](compliance-policy-create-windows-8-1.md)
+   - [Windows 10 以降](compliance-policy-create-windows.md)  
 
-   - **設定**:次の記事では、プラットフォームの種類ごとの設定を一覧表示して説明します。
-     - [Android デバイス管理者](compliance-policy-create-android.md)
-     - [Android エンタープライズ](compliance-policy-create-android-for-work.md)
-     - [iOS/iPadOS](compliance-policy-create-ios.md)
-     - [macOS](compliance-policy-create-mac-os.md)
-     - [Windows Phone 8.1、Windows 8.1 以降](compliance-policy-create-windows-8-1.md)
-     - [Windows 10 以降](compliance-policy-create-windows.md)  
+6. **[場所]** タブでは、デバイスの場所に基づいてコンプライアンスを強制できます。 既存の場所から選択します。 使用できる場所がまだない場合は、[場所 (ネットワーク フェンス) の使用](use-network-locations.md)に関するページを参照してください。
+   > [!TIP]
+   > **[場所]** は、*Android デバイス管理者*プラットフォームでのみ使用できます。
 
-   - **場所** *"(Android デバイス管理者)"* : ポリシーで、デバイスの場所ごとにコンプライアンスを強制することができます。 既存の場所から選択します。 場所をまだ用意していませんか。 「[Use Locations (network fence) in Intune](use-network-locations.md)」 (Intune で場所 (ネットワーク フェンス) を使用する) で方法が紹介されています。  
+7. **[コンプライアンス非対応に対するアクション]** タブで、このコンプライアンス ポリシーを満たさないデバイスに自動的に適用する一連のアクションを指定します。
 
-   - **コンプライアンス非対応に対するアクション**: コンプライアンス ポリシーに違反するデバイスについて、自動的に適用されるアクションのシーケンスを追加できます。 デバイスを非対応としてマークするスケジュールを更新することができます (たとえば、1 日後)。 デバイスが非対応になったとき、ユーザーにメールを送信する 2 つ目のアクションを構成することもできます。
+   複数のアクションを追加し、一部のアクションのスケジュールと追加の詳細を構成できます。 たとえば、既定のアクションである *[デバイスに非準拠のマークを付ける]* のスケジュールを 1 日後に発生するように変更できます。 次に、デバイスが準拠していない場合にユーザーにメールを送信して、その状態を警告するアクションを追加できます。 非準拠のままになっているデバイスをロックするかインベントリから削除するアクションを追加することもできます。
 
-     ユーザーへの通知メールの作成など、詳細については、[非対応デバイスに対するアクションの追加](actions-for-noncompliance.md)に関するページを参照してください。
+   構成できるアクションについては、ユーザーに送信する通知メールを作成する方法など、[非準拠デバイスに対してアクションを追加する](actions-for-noncompliance.md)方法に関するページを参照してください。
 
-     たとえば、[場所] 機能を使用して、コンプライアンス ポリシー内に場所を追加するとします。 少なくとも 1 つの場所を選択すると、コンプライアンス非対応に対する既定のアクションが適用されます。 選択した場所にデバイスが接続されていない場合、そのデバイスはすぐに非対応と見なされます。 ユーザーには猶予期間 (たとえば、1 日) を与えることができます。
+   [場所] を使用し、コンプライアンス ポリシーに少なくとも 1 つの場所を追加する例もあります。 このケースでは、少なくとも 1 つの場所を選択すると、コンプライアンス非対応に対する既定のアクションが適用されます。 選択した場所のいずれにもデバイスが接続されていない場合、デバイスは準拠していないと見なされます。 ユーザーに 1 日などの猶予期間を与えるようにスケジュールを構成できます。
 
-   - **スコープ (タグ)** : スコープ タグは、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定のグループにポリシーをフィルター処理する場合に便利です。 設定を追加したら、コンプライアンス ポリシーにスコープのタグを追加することもできます。 [スコープのタグを使用したポリシーのフィルター処理](../fundamentals/scope-tags.md)に関するページは、優れたリソースです。
+8. **[スコープ タグ]** タブで、タグを選択して、ポリシーを `US-NC IT Team` や `JohnGlenn_ITDepartment` などの特定のグループにフィルター処理します。 設定を追加したら、コンプライアンス ポリシーにスコープのタグを追加することもできます。 
 
-4. 完了したら、 **[OK]**  >  **[作成]** の順に選択して変更を保存します。 ポリシーが作成され、一覧に表示されます。 次に、グループにポリシーを割り当てます。
+   スコープ タグの使用の詳細については、[スコープのタグを使用してポリシーをフィルター処理する](../fundamentals/scope-tags.md)方法に関するページを参照してください。
 
-## <a name="assign-the-policy"></a>ポリシーを割り当てる
+9. **[割り当て]** タブで、グループにポリシーを割り当てます。  
 
-ポリシーが作成されたら、次の手順として、グループにポリシーを割り当てます。
+   **[+ 含めるグループを選択]** を選択し、ポリシーを 1 つ以上のグループに割り当てます。 次の手順の後でポリシーを保存すると、これらのグループにポリシーが適用されます。 
 
-1. 作成したポリシーを選択します。 既存のポリシーは、 **[デバイス]**  >  **[コンプライアンス ポリシー]**  >  **[ポリシー]** で確認できます。
+10. **[確認および作成]** タブで設定を確認し、コンプライアンス ポリシーを保存する準備ができたら **[作成]** を選択します。  
 
-2. その "*ポリシー*" >  **[割り当て]** の順に選択します。 Azure Active Directory (AD) のセキュリティ グループは、含めることも除外することもできます。
+    ポリシーの対象となるユーザーまたはデバイスは、Intune にチェックインするときにコンプライアンスが評価されます。
 
-3. **[選択したグループ]** を選択すると、Azure AD セキュリティ グループが表示されます。 このポリシーで適用するグループを選択し、 **[保存]** を選択してポリシーを展開します。
+<!-- Evaluate option  - pending details as to its fate with this new Full Screen UI udpate  
 
-ポリシーの対象となるユーザーまたはデバイスは、Intune にチェックインするときにコンプライアンスが評価されます。
+### Evaluate how many users are targeted
 
-### <a name="evaluate-how-many-users-are-targeted"></a>対象となるユーザー数を評価する
+When you assign the policy, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
 
-ポリシーを割り当てるときに、影響を受けるユーザー数を**評価**することもできます。 この機能によってユーザーが計算されます。デバイスは計算されません。
+1. In Intune, select **Devices** > **Compliance policies** > **Policies**.
 
-1. Intune で、 **[デバイス]**  >  **[コンプライアンス ポリシー]**  >  **[ポリシー]** の順に選択します。
+2. Select a *policy* > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this policy.
 
-2. "*ポリシー*" >  **[割り当て]**  >  **[評価]** の順に選択します。 このポリシーの対象となるユーザー数を示すメッセージが表示されます。
-
-**[評価]** ボタンが灰色表示されている場合は、ポリシーが 1 つまたは複数のグループに割り当てられていることを確認してください。
-
-<!-- ## Actions for noncompliance
-
-For devices that don't meet your compliance policies, you can add a sequence of actions to apply automatically. You can change the schedule when the device is marked non-compliant, such as after one day. You can also configure a second action that sends an email to the user when the device isn't compliant.
-
-[Add actions for noncompliant devices](actions-for-noncompliance.md) provides more information, including creating a notification email to your users.
-
-For example, you're using the Locations feature, and add a location in a compliance policy. The default action for noncompliance applies when you select at least one location. If the device isn't connected to the selected locations, it's immediately considered not compliant. You can give your users a grace period, such as one day.
-
-## Scope tags
-
-Scope tags are a great way to assign and filter policies to specific groups, such as Sales, HR, All US-NC employees, and so on. After you add the settings, you can also add a scope tag to your compliance policies. [Use scope tags to filter policies](../fundamentals/scope-tags.md) is a good resource.
+If the **Evaluate** button is grayed out, make sure the policy is assigned to one or more groups.
 -->
 
 ## <a name="refresh-cycle-times"></a>サイクル時間の更新
