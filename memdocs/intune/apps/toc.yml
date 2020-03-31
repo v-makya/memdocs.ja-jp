@@ -96,6 +96,8 @@
               href: apps-advanced-threat-protection-macos.md
         - name: Powershell スクリプト
           href: intune-management-extension.md
+        - name: macOS シェル スクリプト
+          href: macos-shell-scripts.md
     - name: アプリを割り当てる
       items:
         - name: アプリをグループに割り当てる
