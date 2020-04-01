@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5011e24064c4c546107f950925d12489ed9113c9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6095c079c6b5cb6f132d9963e3e7413e97180d70
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340607"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324593"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Microsoft Intune でのアプリ割り当ての組み込みと除外
 
@@ -90,7 +90,7 @@ Intune では、含めるユーザー グループと除外するユーザー �
 
 割り当てを編集するには、アプリの **[割り当て]** 一覧で、変更する特定の割り当てを含む行を選びます。 また、行の末尾にある省略記号 **[...]** を選んで **[削除]** を選ぶことにより、割り当てを削除することもできます。 **[割り当て]** 一覧の表示を変更するには、**割り当ての種類**または**含める/除外する**でグループ化します。
 
-![Intune でのアプリの割り当て - 完了](/media/apps-inc-exl-assignments/apps-inc-exl-05.png)
+![Intune でのアプリの割り当て - 完了](./media/apps-inc-exl-assignments/apps-inc-exl-05.png)
 
 ## <a name="next-steps"></a>次のステップ
 

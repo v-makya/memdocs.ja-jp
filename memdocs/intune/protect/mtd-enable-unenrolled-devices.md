@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e14713ef97896fd73dd0b7f8e819005f67dca492
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5862793180efa2184f620920aad7decf3935e1ae
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339216"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322424"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>未登録デバイスに対して Intune で Mobile Threat Defense コネクタを有効にする
 

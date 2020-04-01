@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3cf008c708ce42611a842ff7f8720d48d57ac91
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a1ce95391e8dbfa9fd8f5a8e2347f9c4249ee79f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341621"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323430"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>iOS アプリ プロビジョニング プロファイルを使用して、アプリが期限切れにならないようにする
 
@@ -53,7 +53,7 @@ iPhone および iPad に割り当てられた Apple iOS/iPadOS 基幹業務ア�
 
    **[有効期限]** は、上記で追加した Apple モバイル構成プロファイル ファイル内の値から設定されます。<br>
 
-   <img alt="Create profile - Basics" src="/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
+   <img alt="Create profile - Basics" src="./media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
 
 4. **[次へ]:[スコープ タグ]** をクリックします。<br>
    **[スコープ タグ]** ページでは、必要に応じて、スコープ タグを構成することにより Intune で iOS/iPadOS アプリ プロビジョニング プロファイルを表示できるユーザーを決定できます。 スコープのタグの詳細については、[分散 IT のためのロールベースのアクセス制御とスコープのタグの使用](../fundamentals/scope-tags.md)に関するページをご覧ください。

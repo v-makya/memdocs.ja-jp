@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed8acbcbe550ffd0a3a3f94e07d5752489ae8be6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 89d9fce6579b0fdf89299e342969f647c457cc84
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340932"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324825"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Intune を使用して Android デバイス用 Google Chrome を構成する 
 
@@ -40,7 +40,7 @@ Intune アプリ構成ポリシーを使用して、Android デバイス用 Goog
 2. **[アプリ]**  >  **[すべてのアプリ]**  >  **[追加]** を選択し、**マネージド Google Play** アプリを追加します。
 3. managed Google Play に移動し、**Google Chrome** を検索して承認します。
 
-    ![Google Chrome を検索して承認する](/media/apps-configure-chrome-android/search.png)
+    ![Google Chrome を検索して承認する](./media/apps-configure-chrome-android/search.png)
 
 4. 必要なアプリの種類として Google Chrome をユーザー グループに割り当てます。 デバイスが Intune に登録されると、Google Chrome が自動的に展開されます。
 
@@ -55,15 +55,15 @@ managed Google Play アプリを Intune に追加する方法の詳細につい�
     - **[デバイス登録の種類]** - この設定は、 **[マネージド デバイス]** に設定されています。
     - **[プラットフォーム]** - **[Android]** を選択します。
 
-    ![Google Chrome 構成ポリシーを追加する](/media/apps-configure-chrome-android/add-policy.png)
+    ![Google Chrome 構成ポリシーを追加する](./media/apps-configure-chrome-android/add-policy.png)
 
 3. **[関連アプリ]** をクリックして、 **[関連アプリ]** ウィンドウを表示します。 **Google Chrome** を検索して選択します。 この一覧には、[承認して Intune に同期したマネージド Google Play アプリ](apps-add-android-for-work.md)が含まれます。
 
-    ![[関連アプリ] で [Google Chrome] を選択する](/media/apps-configure-chrome-android/associated-app.png)
+    ![[関連アプリ] で [Google Chrome] を選択する](./media/apps-configure-chrome-android/associated-app.png)
 
 4. **[構成設定]** をクリックし、 **[構成デザイナーを使用する]** を選択し、 **[追加]** をクリックして構成キーを選択します。
 
-    ![[構成デザイナーを使用する] の追加](/media/apps-configure-chrome-android/configuration.png)
+    ![[構成デザイナーを使用する] の追加](./media/apps-configure-chrome-android/configuration.png)
 
     共通設定の例を次に示します。
     - **URL の一覧へのアクセスをブロックする**: `["*"]`
@@ -73,7 +73,7 @@ managed Google Play アプリを Intune に追加する方法の詳細につい�
 
     構成デザイナーを使用して構成設定が追加されると、表に一覧表示されます。 
 
-    ![共通設定](/media/apps-configure-chrome-android/common-settings.png)
+    ![共通設定](./media/apps-configure-chrome-android/common-settings.png)
 
     上記の設定によりブックマークが作成され、`baidu.com`、`yahoo.com`、`chromium.org`、`chrome://` を除くすべての URL へのアクセスがブロックされます。
 
@@ -84,31 +84,31 @@ managed Google Play アプリを Intune に追加する方法の詳細につい�
 
 Android デバイスが Android Enterprise に登録されると、ポートフォリオ アイコン付きのマネージド Google Chrome アプリが自動的に展開されます。
 
-   <img alt="Managed Google Chrome with the portfolio icon" src="/media/apps-configure-chrome-android/chrome-icon.png" width="350">
+   <img alt="Managed Google Chrome with the portfolio icon" src="./media/apps-configure-chrome-android/chrome-icon.png" width="350">
 
 Google Chrome を起動すると、設定が適用されていることがわかります。
 
    ブックマーク:<br>
-   <img alt="Bookmarks" src="/media/apps-configure-chrome-android/bookmarks.png" width="350">
+   <img alt="Bookmarks" src="./media/apps-configure-chrome-android/bookmarks.png" width="350">
 
    ブロックされた URL:<br>
-   <img alt="Blocked URL" src="/media/apps-configure-chrome-android/blocked-url.png" width="350">
+   <img alt="Blocked URL" src="./media/apps-configure-chrome-android/blocked-url.png" width="350">
 
    許可する URL:<br>
-   <img alt="Allow URL" src="/media/apps-configure-chrome-android/allowed-url.png" width="350">
+   <img alt="Allow URL" src="./media/apps-configure-chrome-android/allowed-url.png" width="350">
 
    シークレット タブ:<br>
-   <img alt="Incognito tab" src="/media/apps-configure-chrome-android/incognito-tab.png" width="350">
+   <img alt="Incognito tab" src="./media/apps-configure-chrome-android/incognito-tab.png" width="350">
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
 1. Intune ポータルを確認してポリシーの展開状態を監視します。
 
-    ![ポリシーの展開状態を監視する](/media/apps-configure-chrome-android/monitor-status.png)
+    ![ポリシーの展開状態を監視する](./media/apps-configure-chrome-android/monitor-status.png)
 
 2. Google Chrome を起動し、**chrome://policy** にアクセスします。 設定が正常に適用されたかどうかを確認できます。
 
-    ![設定が正常に適用されたことを確認する](/media/apps-configure-chrome-android/confirm.png)
+    ![設定が正常に適用されたことを確認する](./media/apps-configure-chrome-android/confirm.png)
 
 ## <a name="additional-information"></a>追加情報
 

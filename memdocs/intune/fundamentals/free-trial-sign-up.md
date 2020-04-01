@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83107121b05b2126e4c6b2b377baf57ee069f917
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343987"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401481"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>クイック スタート:Microsoft Intune を無料で試す
 
@@ -64,7 +64,7 @@ Intune は 30 日間無料で試用できます。 既に職場または学校�
 
 まだポータルにサインインしていない場合は、次の手順を実行します。
 
-1. 新しいブラウザー ウィンドウを開き、アドレスバーに「 **https://devicemanagement.microsoft.com** 」と入力します。 
+1. 新しいブラウザー ウィンドウを開き、アドレスバーに「 **https://endpoint.microsoft.com** 」と入力します。 
 2. 前の手順で指定したユーザー ID を使用して、サインインします ( *yourID@yourdomain* .onmicrosoft.com)。
 
     ![ポータルのサインイン ページの画像](./media/free-trial-sign-up/azure-portal-signin.png)
@@ -126,7 +126,7 @@ MDM 機関について詳しくは、「[モバイル デバイス管理機関�
 ## <a name="admin-experiences"></a>管理者向けの操作性
 
 最も頻繁に使用するポータルは 2 つあります。
-- Microsoft Endpoint Manager admin center ([https://devicemanagement.microsoft.com/](https://devicemanagement.microsoft.com/)) では、[Intune の機能](what-is-intune.md)を調べることができます。 管理者はここで Intune を操作します。
+- Microsoft Endpoint Manager admin center ([https://endpoint.microsoft.com/](https://endpoint.microsoft.com/)) では、[Intune の機能](what-is-intune.md)を調べることができます。 管理者はここで Intune を操作します。
 - Microsoft 365 管理センター ([https://admin.microsoft.com](https://admin.microsoft.com)) では、ユーザーの追加と管理を行えます (このために Azure Active Directory を使用していない場合)。 また、課金やサポートなど、アカウントのその他の要素を管理することもできます。
 
 ## <a name="next-steps"></a>次のステップ

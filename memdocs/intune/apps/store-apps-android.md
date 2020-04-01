@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 754ca7d6b97b528ada692fcb8386118a2888c127
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a0e46e0578205c57c91680154112c917876fba4a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79334224"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325945"
 ---
 # <a name="add-android-store-apps-to-microsoft-intune"></a>Android ストア アプリを Microsoft Intune に追加する
 

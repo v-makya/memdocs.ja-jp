@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c04af78b5493c4751d6358ff64e74765b19159d3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 32c47a5a0273cef3fae333ccc27b2f1db27200ee
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340646"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80275052"
 ---
 # <a name="microsoft-intune-protected-apps"></a>保護されている Microsoft Intune アプリ  
 
@@ -53,7 +53,7 @@ ms.locfileid: "79340646"
 | **Microsoft Edge**<p><img alt="Microsoft app - Microsoft Edge icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-edge.png" width="100"> | Microsoft Edge は、Windows 10 ユーザー向けに、デバイス全体で 1 つの継続的な閲覧エクスペリエンスを作成します。 コンテンツとデータがバックグラウンドでシームレスに同期するため、ユーザーはデバイス全体で安心して閲覧できます。 ユーザーは、ハブなどの使い慣れた Microsoft Edge の機能を使い、不要な情報をすばやく処理して Web を整理できます。外出先でコンテンツを検索、表示、管理しやすくなります。 Microsoft Edge は、Windows 10 ユーザーが求める方法で、どこからでも、各自のフローを中断することなく Web を閲覧できるように設計されています。 | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.microsoft.emmx&hl=en_US)、<br>[App Store のリンク (iOS)](https://itunes.apple.com/us/app/microsoft-edge/id1288723196?mt=8) |  
 | **Microsoft Excel**<p><img alt="Microsoft app - Microsoft Excel icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-excel.png" width="100"> | タブレットとスマートフォン上での Excel スプレッドシートの外観が以前よりも向上しました。 スプレッドシートを編集または作成するときに、コンピューター、Mac、タブレット、スマートフォン全体で確実に望ましい外観が得られます。 すばやく起動し、使い慣れた Office のルック アンド フィールと直感的なタッチ エクスペリエンスを利用できます。<p><p>このアプリは Android および iOS/iPadOS 用の複数 ID アプリとして使用できます。 | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.microsoft.office.excel)、<br>[App Store のリンク (iOS)](https://itunes.apple.com/us/app/microsoft-excel/id586683407?mt=8) |  
 | **Power Automate**<p><img alt="Microsoft Flow icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-flow.png" width="100"> | Power Automate の全機能をどこでも利用できます。 Power Automate を使うと、お気に入りのアプリやサービス間で自動化されたワークフローを作成し、ビジネスの効率化、時間の節約、より効率的な作業を実現できます。| [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.microsoft.flow)、<br>[App Store のリンク (iOS)](https://itunes.apple.com/us/app/microsoft-flow/id1094928825) |  
-| **Microsoft Intune Managed Browser**<p><img alt="Microsoft app - Microsoft Intune Managed Browser icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-intune-managed-browser.png" width="100"> | Intune のモバイル アプリケーション管理ポリシーを使って、企業の IT 管理者が管理する Web 閲覧ソリューションを提供します。<p>**注意:** Intune Managed Browser は廃止予定です。 保護された Intune ブラウザー エクスペリエンスには Microsoft Edge を使用してください。 | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser)、<br>[App Store のリンク (iOS)](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) |   
+| **Microsoft Intune Managed Browser**<p><img alt="Microsoft app - Microsoft Intune Managed Browser icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-intune-managed-browser.png" width="100"> | Intune のモバイル アプリケーション管理ポリシーを使って、企業の IT 管理者が管理する Web 閲覧ソリューションを提供します。<p>**注意:** Intune Managed Browser は廃止予定です。 保護された Intune ブラウザー エクスペリエンスには Microsoft Edge を使用してください。 | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.microsoft.emmx)、<br>[App Store のリンク (iOS)](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) |   
 | **Microsoft Invoicing**<p><img alt="Microsoft app - Microsoft Invoicing icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-invoicing.png" width="100"> | Microsoft Invoicing は小規模企業向けに、洗練された外観の見積もりと請求書の作成、支払いの高速化、および時間の節約を実行しやすくします。 Invoicing を使うと、職場でも外出先でも、ご自分の資金についてよく把握しながら、請求書をすばやく作成して送信し、オンラインで支払いを受け取り、ペーパーワークにかかる時間を減らすことができます。 | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.microsoft.dynamics.ProjectMadeira)、<br>[App Store のリンク (iOS)](https://itunes.apple.com/us/app/microsoft-invoicing/id1145475572?mt=8) |  
 | **Microsoft Kaizala**<p><img alt="Microsoft app - Microsoft Kaizala icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-kiazala.png" width="100"> | Microsoft Kaizala は、大規模なグループ コミュニケーションと作業管理用に設計された、モバイル アプリおよびサービスです。 Kaizala を使うと、あらゆる場所にいる現場の従業員、ベンダー、パートナー、顧客など、バリュー チェーン全体と連絡し、作業を調整しやすくなります。 | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer)、<br>[App Store のリンク (iOS)](https://itunes.apple.com/in/app/microsoft-kaizala/id1112208399) |  
 | **Microsoft Launcher**<p><img alt="Microsoft app - Microsoft Launcher icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-launcher.png" width="100"> | Microsoft Launcher (旧称 Arrow Launcher) では、壁紙、テーマの色、アイコンのパックなどを使って、ご自身のスタイルに一致するように Android デバイスをカスタマイズできます。 Microsoft アカウントまたは職場/学校のアカウントを使って、カスタマイズしたフィード内でご自分のカレンダー、ドキュメント、最近のアクティビティにアクセスできます。 Windows PC 上にある写真、ドキュメント、Web ページを開いて、すべてのデバイス上で効率よく作業することもできます。 | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.microsoft.launcher) |  

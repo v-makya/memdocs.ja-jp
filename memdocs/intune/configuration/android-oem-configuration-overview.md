@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07dd2269b35310b2d312031e1f6c38e0d813b37a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7d6fdb0e019c4c61a83beed63c6d2470a0ed04b1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364683"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326047"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Microsoft Intune で、OEMConfig を使って Android Enterprise デバイスを使用および管理する
 
@@ -153,7 +153,6 @@ OEMConfig アプリでは、標準アプリと比較して、より複雑なス�
 | --- | --- | ---|
 | Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide (Knox サービス プラグイン管理者ガイド)](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
 | Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig overview (Zebra OEMConfig の概要)](http://techdocs.zebra.com/oemconfig ) |
-| Datalogic | com.datalogic.oemconfig | [User Documentation for Datalogic OEMConfig (Datalogic OEMConfig のユーザー ドキュメント)](https://datalogic.github.io/oemconfig/) |
 | Honeywell | com.honeywell.oemconfig |  |
 | 京セラ | jp.kyocera.enterprisedeviceconfig |  |
 | Spectralink - バーコード | com.spectralink.barcode.service |  |

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b833e5265387637a35bfcdf79f4ae5f37558de61
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dc536d4c2c0d06a768d42d4a796ec56cf80c0d66
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343961"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401440"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Intune のガイド付きシナリオの概要 
 
@@ -46,7 +46,7 @@ ms.locfileid: "79343961"
 
 ### <a name="launching"></a>起動  
 
-すべてのガイド付きシナリオは、 **[デバイス管理ポータル](https://devicemanagement.microsoft.com)**  >  **[トラブルシューティングとサポート]**  >  **[ガイド付きシナリオ]** から使用できます。 
+すべてのガイド付きシナリオは、 **[デバイス管理ポータル](https://endpoint.microsoft.com)**  >  **[トラブルシューティングとサポート]**  >  **[ガイド付きシナリオ]** から使用できます。 
 
 このガイド付きシナリオは、シナリオの目的と、セットアップを完了するために必要な前提条件を説明する概要から始まります。 この時点で、管理者のアクセス許可がチェックされ、シナリオを完了するために必要なすべての特権があることが確認されます。  
 

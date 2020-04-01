@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1598be8f5f54f1f509194aed0232730bd821624b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8583c625277735d653143f5cf87c56c350bdc1ff
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79357117"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326721"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>ポリシー セットを使用して管理オブジェクトのコレクションをグループ化する
 
@@ -63,7 +63,7 @@ ms.locfileid: "79357117"
     - **[ポリシー セット名]** - このポリシー セットの名前を指定します。
     - **[説明]** - 必要に応じて、ポリシー セットの説明を指定します。
    <p>
-   <img alt="Create policy set - Basics" src="/media/policy-sets/policy-sets-01.png">
+      <img alt="Create policy set - Basics" src="./media/policy-sets/policy-sets-01.png">
 
 4. **[次へ: アプリケーション管理]** をクリックします。<br>
    **[アプリケーション管理]** ページでは、必要に応じて、ポリシーセットに[アプリ](../apps/apps-add.md)、[アプリ構成ポリシー](../apps/app-configuration-policies-overview.md)、および[アプリ保護ポリシー](../apps/app-protection-policy.md)を追加することができます。 アプリの管理については、「[Microsoft Intune アプリの管理とは](../apps/app-management.md)」を参照してください。

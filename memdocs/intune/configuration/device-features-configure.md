@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0f1552d2edc6bfa5f6bdb255f156bcfb77a4990
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 30bf5ba078029e35988d3531ee510d9db6c6cdb8
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084095"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359483"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Intune での iOS、iPadOS、または macOS デバイスの機能設定の追加
 
@@ -203,30 +203,45 @@ Intune で構成できる設定の一覧については、[iOS/iPadOS の Web �
 - iOS 7.0 以降
 - iPadOS 13.0 以降
 
-## <a name="create-a-device-profile"></a>デバイス プロファイルの作成
+## <a name="create-the-profile"></a>プロファイルの作成
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 3. 次のプロパティを入力します。
 
-    - **名前**:ポリシーのわかりやすい名前を入力します。 後で簡単に識別できるよう、ポリシーに名前を付けます。 たとえば、適切なポリシー名は **macOS: ログイン画面を構成する**などです。
-    - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
     - **[プラットフォーム]** :デバイスのプラットフォームを選択します。 次のようなオプションがあります。  
+
         - **iOS/iPadOS**
         - **macOS**
-    - **[プロファイルの種類]** : **[デバイスの機能]** を選択します。
 
-4. 選択したプラットフォームによって構成できる設定が異なります。 詳細な設定については、お使いのプラットフォームを選択してください。
+    - **[プロファイル]** : **[デバイスの機能]** を選択します。
+
+4. **[作成]** を選択します。
+5. **[Basics]\(基本\)** で次のプロパティを入力します。
+
+    - **名前**:ポリシーのわかりやすい名前を入力します。 後で簡単に識別できるよう、ポリシーに名前を付けます。 たとえば、適切なポリシー名は **macOS: ログイン画面を構成する**などです。
+    - **説明**:ポリシーの説明を入力します。 この設定は省略可能ですが、推奨されます。
+
+6. **[次へ]** を選択します。
+
+7. **[構成設定]** では、選択したプラットフォームによって構成できる設定が変わります。 詳細な設定については、お使いのプラットフォームを選択してください。
 
     - [iOS/iPadOS](ios-device-features-settings.md)
     - [macOS](macos-device-features-settings.md)
 
-5. 完了したら、 **[OK]**  >  **[作成]** を選択して変更を保存します。
+8. **[次へ]** を選択します。
+9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。
 
-プロファイルが作成されて、プロファイル一覧に表示されます。 必ず[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)してください。
+    **[次へ]** を選択します。
+
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](device-profile-assign.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+11. **[確認と作成]** で、設定を確認します。 **[作成]** を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
 
 ## <a name="next-steps"></a>次のステップ
 
-プロファイルが作成されると、割り当てることができます。 次に、[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
+プロファイルは作成されましたが、まだ何も実行できない可能性があります。 次に、[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
 
 [iOS/iPadOS](ios-device-features-settings.md) および [macOS](macos-device-features-settings.md) デバイスのすべてのデバイス機能設定を表示します。

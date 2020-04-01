@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6dab926a59e69f5afb6c2f40ea7e315afed49f8
-ms.sourcegitcommit: e37d5d3f5bdb39a8f89ba0376b31c06aaf3c5d27
+ms.openlocfilehash: ba5aebca04a93198e7694d52085225284c88027c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2020
-ms.locfileid: "80117289"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325010"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Intune を使ってマネージド Google Play アプリを Android Enterprise デバイスに追加する
 

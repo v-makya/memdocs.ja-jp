@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcd6a49c0960bc38215123536e520bc89bcaeca1
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 84e77a894e207d5dfb2ffe9247ef449050d46036
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083466"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80324946"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Microsoft Intune を使用して Windows 10 デバイスに Office 365 アプリを追加する
 
@@ -47,7 +47,7 @@ ms.locfileid: "80083466"
 - **[Office バージョン]** : Office の 32 ビットまたは 64 ビット バージョンのどちらを割り当てるかを選択します。 32 ビットと 64 ビットのどちらのデバイスでも 32 ビット バージョンをインストールできますが、64 ビットのデバイスには 64 ビット バージョンしかインストールできません。
 - **[Remove MSI from end-user devices]** \(エンドユーザーのデバイスから MSI を削除する\): エンドユーザーのデバイスから、既にある Office .MSI アプリを削除するかどうか選択します。 エンドユーザーのデバイスに、既に .MSI アプリがある場合、インストールは成功しません。 インストールされるアプリは、 **[アプリ スイートの構成]** でインストール対象として選択されたアプリに限りません。すべての Office (MSI) アプリがエンド ユーザー デバイスから削除されます。 詳細については、「[Remove existing MSI versions of Office when upgrading to Office 365 ProPlus](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version)」 (Office 365 ProPlus へのアップグレード時に Office の既存の MSI バージョンを削除する) を参照してください。 エンドユーザーのコンピューターに Office が Intune によって再インストールされる場合、エンド ユーザーには前の .MSI Office インストールで使用していたのと同じ言語パックが自動的に提供されます。
 
-## <a name="select-the-office-365-suite-app-type"></a>Office 365 Suite アプリの種類を選択する
+## <a name="select-the-office-365-suite-app-type"></a>Office 365 スイート アプリの種類を選択する
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 2. **[アプリ]**  >  **[すべてのアプリ]**  >  **[追加]** の順に選択します。

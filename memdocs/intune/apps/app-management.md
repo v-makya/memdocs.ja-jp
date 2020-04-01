@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5acf0db721accf058a10dafcf8165abeddafe7c7
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 185cfbf49c9a6623559a2b50f0184980286e03eb
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083736"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80358711"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Microsoft Intune アプリの管理とは
 
@@ -71,7 +71,7 @@ Intune では、アプリを実行するデバイス上で必要なアプリを�
 <sup>1</sup> Windows 10 を実行しているデバイスでアプリを保護するには、[Windows 情報保護](../protect/windows-information-protection-configure.md)の使用を検討してください。<br>
 <sup>2</sup> Intune のみで管理されているデバイスに適用されます。<br>
 <sup>3</sup> Intune では、Android Enterprise デバイス上にあるマネージド Google Play ストアから入手できるアプリがサポートされます。<br>
-<sup>4</sup> Intune では、標準の Android Enterprise デバイス上にアプリへのショートカットを Web リンクとしてインストールする機能は提供されていません。 ただし、[複数アプリ専用の Android Enterprise デバイス](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings)では、Web リンクのサポートが提供されています。 
+<sup>4</sup> Intune では、標準の Android Enterprise デバイス上にアプリへのショートカットを Web リンクとしてインストールする機能は提供されていません。 ただし、[複数アプリ専用の Android Enterprise デバイス](../configuration/device-restrictions-android-for-work.md#dedicated-devices)では、Web リンクのサポートが提供されています。 
 
 
 ## <a name="get-started"></a>作業開始
