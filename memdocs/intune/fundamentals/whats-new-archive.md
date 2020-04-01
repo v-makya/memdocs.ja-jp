@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b2bb9a6220a599cc0e403e6c71f3b8907bbab0e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c047c0f54e64dbe17b6bd9e9082272e80fe7566c
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085830"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401475"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune の新機能 (過去数か月)
 
@@ -229,7 +229,7 @@ VPN、Wi-Fi、電子メールのデバイス構成プロファイル用の認証
 ### <a name="microsoft-365-device-management"></a>Microsoft 365 デバイス管理
 
 #### <a name="improved-administration-experience-in-microsoft-365-device-management---5551239---"></a>Microsoft 365 デバイス管理の管理エクスペリエンスの改善<!-- 5551239 -->
-Microsoft 365 デバイス管理のスペシャリスト向けワークスペース ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) で、更新され合理化された管理エクスペリエンスの一般提供が開始されました。これには以下が含まれます。
+Microsoft 365 デバイス管理のスペシャリスト向けワークスペース ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) で、更新され合理化された管理エクスペリエンスの一般提供が開始されました。これには以下が含まれます。
 
 - **更新されたナビゲーション**:機能が論理的にグループ化される、簡略化された第 1 レベルのナビゲーションが提供されます。
 - **新しいプラットフォーム フィルター**:[デバイスとアプリ] ページで、単一のプラットフォームを選択できます。これにより、選択したプラットフォームのポリシーとアプリだけが表示されます。
@@ -238,7 +238,7 @@ Microsoft 365 デバイス管理のスペシャリスト向けワークスペー
 
 #### <a name="introducing-endpoint-security-node-in-microsoft-365-device-management---5630102---"></a>Microsoft 365 デバイス管理のエンドポイント セキュリティ ノードの概要<!-- 5630102 -->
 
-Microsoft 365 デバイス管理のスペシャリスト向けワークスペース (https://devicemanagement.microsoft.com ) で、**エンドポイント セキュリティ** ノードの一般提供が開始されました。これにより、エンドポイントをセキュリティで保護するための次のような機能がまとめてグループ化されます。
+Microsoft 365 デバイス管理のスペシャリスト向けワークスペース (https://endpoint.microsoft.com ) で、**エンドポイント セキュリティ** ノードの一般提供が開始されました。これにより、エンドポイントをセキュリティで保護するための次のような機能がまとめてグループ化されます。
 
 - セキュリティ ベースライン:Microsoft によって推奨される設定および規定値の既知のグループを適用するのに役立つ、事前構成された設定のグループ。
 - セキュリティ タスク:Microsoft Defender ATP の Threat and Vulnerability Management (TVM) の利用と Intune の使用により、エンドポイントの脆弱性を修復します。
@@ -527,7 +527,7 @@ Intune では、Android エンタープライズ専用デバイス上のキオ�
 - **[専用デバイス]**  >  **[複数アプリ]** : **[メディア ボリューム コントロール]** を利用すると、ユーザーはスライダーを使用してデバイスのメディア ボリュームを制御できます。 
 - **[専用デバイス]**  >  **[複数アプリ]** : **[Enable a screensaver]\(スクリーンセーバーを有効にする\)** では、カスタム画像をアップロードして、スクリーンセーバーが表示されるタイミングを制御します。
 
-現在の設定を確認するには、[Intune を使用して Android エンタープライズ デバイスの機能を許可または制限する設定](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings)に関するページを参照してください。
+現在の設定を確認するには、[Intune を使用して Android エンタープライズ デバイスの機能を許可または制限する設定](../configuration/device-restrictions-android-for-work.md#dedicated-devices)に関するページを参照してください。
 
 適用対象:
 
@@ -1461,7 +1461,7 @@ iOS および macOS を実行するデバイスで一部の設定と機能を制
 #### <a name="kiosk-devices-are-now-called-dedicated-devices-on-android-enterprise-devices---3598402-----"></a>Android エンタープライズ デバイスで "キオスク" デバイスが "専用デバイス" と呼ばれるようになった<!-- 3598402   -->
 Android の用語に合わせるため、Android エンタープライズ デバイスの**キオスク**は、**専用デバイス**に変更されました ( **[デバイス構成]**  >  **[プロファイル]**  >  **[プロファイルの作成]** プラットフォームに **[Android エンタープライズ]** を選択し、 **[デバイスの所有者のみ]**  >  **[デバイスの制限]**  >  **[専用デバイス]** を選択します)。
 
-使用可能な設定を確認するには、[機能を許可または制限するデバイスの設定](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings)に関するページを参照してください。
+使用可能な設定を確認するには、[機能を許可または制限するデバイスの設定](../configuration/device-restrictions-android-for-work.md#dedicated-devices)に関するページを参照してください。
 
 適用対象:  
 Android エンタープライズ
@@ -2106,7 +2106,7 @@ Microsoft Intune 管理者は、iOS ポータル サイト アプリ内のユー
 ### <a name="monitor-and-troubleshoot"></a>監視とトラブルシューティング
 
 #### <a name="new-intune-support-experience-in-the-microsoft-365-device-management-portal---3076965---"></a>Microsoft 365 デバイス管理ポータルでの新しい Intune サポート エクスペリエンス<!-- 3076965 -->
-[Microsoft 365 デバイス管理ポータル]( https://devicemanagement.microsoft.com)での Intune の新しいヘルプとサポート エクスペリエンスがロールアウトされています。 新しいエクスペリエンスでは、自分の言葉で問題を説明し、トラブルシューティングの分析情報と Web ベースの修復コンテンツを受け取ることができます。 これらの解決策は、ユーザーの照会により、ルール ベースの機械学習アルゴリズムを使用して提供されます。  
+[Microsoft 365 デバイス管理ポータル]( https://endpoint.microsoft.com)での Intune の新しいヘルプとサポート エクスペリエンスがロールアウトされています。 新しいエクスペリエンスでは、自分の言葉で問題を説明し、トラブルシューティングの分析情報と Web ベースの修復コンテンツを受け取ることができます。 これらの解決策は、ユーザーの照会により、ルール ベースの機械学習アルゴリズムを使用して提供されます。  
 
 問題固有のガイダンスに加えて、新しいケース作成ワークフローを使用して、メールまたは電話でサポート ケースを開くこともできます。  
 
@@ -2148,7 +2148,7 @@ Simple Certificate Enrollment Protocol (SCEP) を利用することで、Windows
 ### <a name="device-management"></a>デバイス管理
 
 #### <a name="microsoft-365-device-management-administration-center---3078424---"></a>Microsoft 365 デバイス管理の管理センター<!-- 3078424 -->
-Microsoft 365 で Microsoft が約束することの 1 つは簡単な管理です。長年、Intune や Azure AD の条件付きアクセスなどのエンドツーエンド シナリオを届けるべく、Microsoft はバックエンド Microsoft 365 サービスを統合してきました。 新しい [Microsoft 365 管理センター](https://devicemanagement.microsoft.com)は、管理業務を連結、簡素化、統合する場所です。 デバイス管理のスペシャリスト向けワークスペースでは、組織で必要とされるあらゆるデバイス/アプリ管理情報/作業に簡単にアクセスできます。 企業のエンドユーザー コンピューティング チームにとってはこれが主要なクラウド ワークスペースになるものと Microsoft は予想しています。
+Microsoft 365 で Microsoft が約束することの 1 つは簡単な管理です。長年、Intune や Azure AD の条件付きアクセスなどのエンドツーエンド シナリオを届けるべく、Microsoft はバックエンド Microsoft 365 サービスを統合してきました。 新しい [Microsoft 365 管理センター](https://endpoint.microsoft.com)は、管理業務を連結、簡素化、統合する場所です。 デバイス管理のスペシャリスト向けワークスペースでは、組織で必要とされるあらゆるデバイス/アプリ管理情報/作業に簡単にアクセスできます。 企業のエンドユーザー コンピューティング チームにとってはこれが主要なクラウド ワークスペースになるものと Microsoft は予想しています。
 
 
 <!-- ########################## -->

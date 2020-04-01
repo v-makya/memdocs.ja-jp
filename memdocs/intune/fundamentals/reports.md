@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63034080c883452edadb3ae7812d936b841910e7
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d4e377e0cd9ad15d1d3a0ac9fb5c088dc1366d48
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79356584"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326750"
 ---
 # <a name="intune-reports"></a>Intune レポート
 Microsoft Intune レポートを使用すると、組織全体のエンドポイントの正常性とアクティビティをより効果的かつ積極的に監視できるだけでなく、Intune 全体で他のレポート データを提供することもできます。 たとえば、デバイスのポリシー準拠、デバイスの正常性、デバイスの傾向に関するレポートを表示できます。 さらに、カスタム レポートを作成し、より具体的なデータを取得できます。 
