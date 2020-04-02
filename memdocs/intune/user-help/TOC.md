@@ -12,6 +12,7 @@
 
 ## Android デバイスを使用する
 ### [Android デバイスを登録する理由](why-enroll-android-device.md)
+### [中国でポータル サイト アプリをインストールする](install-company-portal-android-china.md)
 ### デバイスを登録する
 #### [Android デバイスを登録する](enroll-device-android-company-portal.md)  
 #### [Android 仕事用プロファイルを使用して登録する](enroll-device-android-work-profile.md)
