@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b66777e9c108ab4a6b84e4d4fa0942532685912f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086729"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327274"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Android デバイスをデバイス管理者から仕事用プロファイル管理に移動する
 
@@ -40,12 +40,12 @@ ms.locfileid: "80086729"
 - [Intune テナント アカウントを Android Enterprise アカウント](connect-intune-android-enterprise.md)に接続して、Android 仕事用プロファイル管理を設定します。
 - Android 仕事用プロファイルに移動するユーザーのグループに対して、[Android Enterprise 仕事用プロファイルの登録を設定します](android-work-profile-enroll.md)。
 - ユーザー デバイスの制限を引き上げることを検討します。 デバイス管理者の管理からデバイスの登録を解除しても、デバイス レコードがすぐに削除されない場合があります。 この期間中の影響を軽減するために、必要に応じて、デバイスの制限容量を増やしてユーザーが仕事用プロファイル管理に登録できるようにします。
-  - ユーザーごとのデバイスの最大数について [Azure Active Directory デバイス設定を構成します](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal.md#configure-device-settings)。
+  - ユーザーごとのデバイスの最大数について [Azure Active Directory デバイス設定を構成します](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)。
   - デバイス制限を設定して、[Intune デバイス制限の制約](enrollment-restrictions-set.md#create-a-device-limit-restriction)を調整します。 
 
 ## <a name="create-device-compliance-policy"></a>デバイス コンプライアンス ポリシーを作成する
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[コンプライアンス ポリシー]**  >  **[ポリシー]**  >  **[ポリシーの作成]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[コンプライアンス ポリシー]**  >  **[ポリシー]**  >  **[ポリシーの作成]** を選択します。
 
     ![ポリシーを作成する](./media/android-move-device-admin-work-profile/create-policy.png)
 
@@ -71,6 +71,7 @@ ms.locfileid: "80086729"
     > [!NOTE]
     > - もちろん、ユーザーへの連絡には、ユーザーにわかりやすいハイパーテキストをリンクに使用できます。 ただし、URL 短縮サービスを使用しないでください。このように変更するとリンクが機能しなくなる可能性があります。
     > - Android ポータル サイトが開いていてバックグラウンドにある場合、ユーザーがリンクをタップすると、代わりに開いていた最後のページが表示される可能性があります。
+    > - ユーザーは、Android デバイス上のリンクをタップする必要があります。 代わりにブラウザーに貼り付けても、Android ポータル サイトは起動しません。 
 
     **[次へ]** を選択します。
 
@@ -80,12 +81,12 @@ ms.locfileid: "80086729"
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
-[新しいデバイス管理設定に移動するエンド ユーザー フロー](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md)のページには、ユーザーをデバイス管理者の管理から登録を解除し、仕事用プロファイル管理を設定する手順が示されています。 ユーザーは、Android ポータル サイト バージョン 5.0.4720.0 以降の [Android デバイス管理者の登録済みデバイス](android-enroll-device-administrator.md)を持っている必要があります。
+[新しいデバイス管理設定に移動するエンド ユーザー フロー](../user-help/move-to-new-device-management-setup.md)のページには、ユーザーをデバイス管理者の管理から登録を解除し、仕事用プロファイル管理を設定する手順が示されています。 ユーザーは、Android ポータル サイト バージョン 5.0.4720.0 以降の [Android デバイス管理者の登録済みデバイス](android-enroll-device-administrator.md)を持っている必要があります。
 
 ### <a name="user-sees-an-error-after-tapping-resolve"></a>ユーザーが [解決] をタップした後にエラーが表示される
 **[解決]** ボタンをタップした後にエラーが表示される場合は、次のいずれかの理由が考えられます。
 - 仕事用プロファイルの登録が正しく設定されていません (Android Enterprise アカウントが接続されていないか、仕事用プロファイルの登録をブロックするように登録制限に設定されています)。
-- デバイスは、仕事用プロファイルの登録をサポートしていない Android 4.4 以前を実行しています。 
+- デバイスでは、仕事用プロファイルの登録をサポートしていない Android 4.4 以前が実行されています。 
 - デバイスの製造元は、デバイス モデルでの仕事用プロファイルの登録をサポートしていません。
 
 ### <a name="resolve-button-doesnt-appear-on-the-users-device"></a>[解決] ボタンがユーザーのデバイスに表示されない
@@ -103,8 +104,5 @@ ms.locfileid: "80086729"
 - Android デバイスで Android 6 以前が使用されています。 
 
 ## <a name="next-steps"></a>次のステップ
-[エンド ユーザー フローを確認する](https://docs.microsoft.com/mem/intune/user-help/move-to-new-device-management-setup.md)
-
+[エンド ユーザーのフローを確認する](../user-help/move-to-new-device-management-setup.md)
 [Intune で Android 仕事用プロファイルのデバイスを管理する](android-enterprise-overview.md)
-
-

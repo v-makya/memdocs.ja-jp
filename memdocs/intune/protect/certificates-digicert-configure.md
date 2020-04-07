@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 958acb7c8e5342d4c85c94a8e6f99cd9f1fee7e9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 716a69690c46e301354012272fc7d1f8be564df9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79353763"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322663"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>DigiCert PKI Platform 用に Intune Certificate Connector をセットアップする
 
@@ -91,7 +91,7 @@ PKCS または System Center Endpoint Protection を使用して Microsoft CA �
 
 4. DigiCert CA にサインインし、タスクから **[Get an RA Cert]\(RA 証明書の取得\)** を参照します。
 
-   」を参照します。 テキスト ボックスに、ステップ 3 の CSR コンテンツを入力します。
+   a. テキスト ボックスに、ステップ 3 の CSR コンテンツを入力します。
 
    b. 証明書のフレンドリ名を指定します。
 
@@ -101,7 +101,7 @@ PKCS または System Center Endpoint Protection を使用して Microsoft CA �
 
 5. Windows 証明書ストアに RA 証明書をインポートします。
 
-   」を参照します。 MMC コンソールを開きます。
+   a. MMC コンソールを開きます。
 
    b. **[ファイル]**  >  **[スナップインの追加と削除]**  >  **[証明書]**  >  **[追加]** の順に選択します。
 
@@ -121,7 +121,7 @@ PKCS または System Center Endpoint Protection を使用して Microsoft CA �
 
 6. 秘密キー証明書をエクスポートしインポートします。
 
-   」を参照します。 **[証明書 (ローカル コンピューター)]**  >  **[個人]**  >  **[証明書]** の順に展開します。
+   a. **[証明書 (ローカル コンピューター)]**  >  **[個人]**  >  **[証明書]** の順に展開します。
 
    b. 前のステップでインポートした証明書を選択します。
 
@@ -157,7 +157,7 @@ PKCS または System Center Endpoint Protection を使用して Microsoft CA �
 
 4. .NET Framework 3.5 をインストールします。
 
-   」を参照します。 **[コントロール パネル]**  >  **[プログラムと機能]**  >  **[Windows の機能の有効化または無効化]** の順に開きます。
+   a. **[コントロール パネル]**  >  **[プログラムと機能]**  >  **[Windows の機能の有効化または無効化]** の順に開きます。
 
    b. **[.NET Framework 3.5]** を選択してインストールします。
 
@@ -193,7 +193,7 @@ Intune 管理ポータルから Intune Certificate Connector の最新バージ�
 
 1. **NDESConnectorSvc** フォルダーの **NDESConnector.exe.config** ファイルをメモ帳で開きます。
 
-   」を参照します。 `RACertThumbprint` キーの値を、前のセクションでコピーした証明書のサムプリントで更新します。 次に例を示します。
+   a. `RACertThumbprint` キーの値を、前のセクションでコピーした証明書のサムプリントで更新します。 次に例を示します。
 
         <add key="RACertThumbprint"
         value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
@@ -202,7 +202,7 @@ Intune 管理ポータルから Intune Certificate Connector の最新バージ�
 
 2. **services.msc** を開きます。
 
-   」を参照します。 **[Intune Connector Service]** を選択します。
+   a. **[Intune Connector Service]** を選択します。
 
    b. サービスを停止し、その後開始します。
 
@@ -229,7 +229,7 @@ Intune マネージド デバイスに展開する PKCS 証明書は、信頼さ
 
 1. DigiCert CA から信頼されたルート証明書を取得します。
 
-   」を参照します。 DigiCert CA 管理ポータルにサインインします。
+   a. DigiCert CA 管理ポータルにサインインします。
 
    b. **[Tasks]\(タスク\)** の **[Manage CAs]\(証明機関の管理\)** を選択します。
 
@@ -239,7 +239,7 @@ Intune マネージド デバイスに展開する PKCS 証明書は、信頼さ
 
 2. Intune ポータルで、信頼済み証明書プロファイルを作成します。
 
-   」を参照します。 [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+   a. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
    b. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 
@@ -321,7 +321,7 @@ Intune Certificate Connector のサービス ログは、NDES Connector コン�
 
 | 問題/エラー メッセージ | 解決手順 |
 | --- | --- |
-| Unable to sign in with the Intune tenant admin account on NDES Connector UI. (NDES Connector UI では Intune テナント管理者アカウントを使用してサインインできません。) | この問題は、Microsoft Endpoint Manager 管理センターでオンプレミスの Certificate Connector が有効になっていない場合に発生します。 この問題を解決するには、次の手順を実行します。 <br><br> 1.[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。 <br> 2. **[テナント管理]** 、 **[コネクタとトークン]** 、 **[証明書のコネクタ]** の順に選択します。 <br> 3.証明書コネクタを見つけ、有効になっていることを確認します。 <br><br> 上記の手順を完了してから、同じ Intune テナント管理者アカウントを使用して NDES Connector UI にサインインします。 |
+| Unable to sign in with the Intune tenant admin account on NDES Connector UI. (NDES Connector UI では Intune テナント管理者アカウントを使用してサインインできません。) | これは、Microsoft Endpoint Manager admin center でオンプレミスの Certificate Connector が有効になっていない場合に発生します。 この問題を解決するには、次の手順を実行します。 <br><br> 1.[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。 <br> 2. **[テナント管理]** 、 **[コネクタとトークン]** 、 **[証明書のコネクタ]** の順に選択します。 <br> 3.証明書コネクタを見つけ、有効になっていることを確認します。 <br><br> 上記の手順を完了してから、同じ Intune テナント管理者アカウントを使用して NDES Connector UI にサインインします。 |
 | NDES Connector 証明書が見つかりませんでした。 <br><br> System.ArgumentNullException:値を null にすることはできません。 | Intune テナント管理者アカウントで NDES Connector UI へサインインしたことがない場合、Intune Certificate Connector にはこのエラーが表示されます。 <br><br> このエラーが引き続き発生する場合は、Intune Service Connector を再起動してください。 <br><br> 1.**services.msc** を開きます。 <br> 2. **[Intune Connector Service]** を選択します。 <br> 3.右クリックして **[再起動]** を選択します。|
 | NDES Connector - IssuePfx -一般的な例外: <br> System.NullReferenceException:オブジェクト参照がオブジェクトのインスタンスに設定されていません。 | このエラーは一時的なものです。 Intune Service Connector を再起動してください。 <br><br> 1.**services.msc** を開きます。 <br> 2. **[Intune Connector Service]** を選択します。 <br> 3.右クリックして **[再起動]** を選択します。 |
 | DigiCert プロバイダー - DigiCert ポリシーを取得できませんでした。 <br><br>"操作がタイムアウトしました。" | Intune Certificate Connector で、DigiCert CA との通信中に操作のタイムアウト エラーが発生しました。 このエラーが続く場合は、接続タイムアウトの値を増やしてからやり直してください。 <br><br> 接続タイムアウトを長くするには: <br> 1.NDES Connector コンピューターにアクセスします。 <br>2.メモ帳で **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config** ファイルを開きます。 <br> 3.次のパラメーターのタイムアウト値を増やします。 <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4.Intune Certificate Connector サービスを再起動します。 <br><br> 問題が解決しない場合は、DigiCert カスタマー サポートに問い合わせてください。 |

@@ -5,623 +5,861 @@ description: Microsoft Defender Advanced Threat Protection を管理するため
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 03/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: shpate
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ebea853ac536b182a9cfe35e8b291aea3a776f0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 897b232e841c59fd85d132d1fa9b720c24ac1c9a
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351202"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488032"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Intune 向けの Microsoft Defender Advanced Threat Protection ベースライン設定
 
-Microsoft Intune でサポートされている Microsoft Defender Advanced Threat Protection (旧称 Windows Defender Advanced Threat Protection) ベースライン設定を表示します。 Advanced Threat Protection (ATP) ベースラインの既定値は、ATP の推奨される構成を表しており、他のセキュリティ ベースラインのベースラインの既定値と一致しない場合があります。  
+Microsoft Intune によってサポートされている Microsoft Defender Advanced Threat Protection ベースライン設定を表示します。 Advanced Threat Protection (ATP) ベースラインの既定値は、ATP の推奨される構成を表しており、他のセキュリティ ベースラインのベースラインの既定値と一致しない場合があります。
 
-ご使用の環境が [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites) を使用するための前提条件を満たしている場合は、Microsoft Defender Advanced Threat Protection ベースラインを使用できます。 
+この記事の詳細は、2020 年 3 月 1 日にリリースされた Microsoft Defender ATP ベースラインのバージョン 3 に適用されます。
+
+ご使用の環境が [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites) を使用するための前提条件を満たしている場合は、Microsoft Defender Advanced Threat Protection ベースラインを使用できます。
 
 このベースラインは、物理デバイス用に最適化されており、現在は仮想マシン (VM) や VDI エンドポイントでの使用は推奨されていません。 特定のベースライン設定が、仮想化された環境でのリモート対話型セッションに影響を与える可能性があります。 詳細については、Windows ドキュメントの「[Increase compliance to the Microsoft Defender ATP security baseline (Microsoft Defender ATP のセキュリティ ベースラインに対するコンプライアンスの強化)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)」をご覧ください。
 
-## <a name="application-guard"></a>Application Guard  
+## <a name="application-guard"></a>Application Guard
+
 詳細については、Windows のドキュメントの「[WindowsDefenderApplicationGuard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp)」を参照してください。  
 
 Microsoft Edge を使用しているとき、ご利用の環境は Windows Defender Application Guard によって、組織で信頼されていないサイトから保護されます。 分離ネットワーク境界のリストに含まれないサイトにユーザーがアクセスすると、そのサイトは Hyper-V 仮想ブラウズ セッションで開きます。 信頼済みサイトは、ネットワーク境界によって定義されます。  
 
-- **Application Guard** - *Settings/AllowWindowsDefenderApplicationGuard*  
-  *[はい]* を選択すると、この機能がオンになり、信頼されていないサイトが Hyper-V 仮想ブラウズ コンテナーで開かれます。 *[未構成]* に設定すると、サイト (信頼済みおよび信頼されていない) はいずれも仮想化されたコンテナー内ではなくデバイス上で開かれます。  
-
-  **既定値**:はい
- 
-  - **エンタープライズ サイトの外部コンテンツ** - *ettings/BlockNonEnterpriseContent*  
-    *[はい]* を選択すると、未承認の Web サイトからのコンテンツの読み込みがブロックされます。 *[未構成]* に設定すると、デバイス上で非エンタープライズ サイトを開けるようになります。 
- 
-    **既定値**:はい
-
-  - **クリップボードの動作** - *Settings/ClipboardSettings*  
-    ローカル PC と Application Guard 仮想ブラウザー間で許可するコピー/貼り付け操作を選択します。  次のオプションがあります。
-    - 未構成  
-    - PC とブラウザーの間でのコピー/貼り付けをブロックする - 両方ともブロックする。 PC と仮想ブラウザーの間でデータを転送できません。  
-    - ブラウザーから PC へのコピー/貼り付けのみを許可する - PC から仮想ブラウザーにデータを転送できません。
-    - PC からブラウザーへのコピー/貼り付けのみを許可する - 仮想ブラウザーからホスト PC にデータを転送できません。
-    - PC とブラウザーの間でのコピー/貼り付けを許可する - コンテンツに対するブロックは存在しません。  
-
-    **既定値**:PC とブラウザーの間でのコピー/貼り付けをブロックする  
-
-- **Windows ネットワーク分離ポリシー – エンタープライズ ネットワーク ドメイン名**  
-  詳細については、Windows のドキュメントの「[Policy CSP - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation)」 (ポリシー CSP - NetworkIsolation) を参照してください。
+- **Microsoft Edge 向けの Application Guard を有効にする (オプション)**  
+  CSP:[Settings/AllowWindowsDefenderApplicationGuard](https://go.microsoft.com/fwlink/?linkid=872350)
   
-  Application Guard がエンタープライズ サイトとして処理するクラウド内でホストされているドメイン、IP アドレス範囲、およびネットワーク境界として、エンタープライズ リソースのリストを指定します。  
-
-  **既定値**: securitycenter.windows.com
-
-## <a name="application-reputation"></a>アプリケーションの評判  
-
-詳細については、Windows ドキュメントの「[Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen)」 (ポリシー CSP - SmartScreen) を参照してください。
-
-- **Block execution of unverified files (確認されていないファイルの実行をブロックする)**  
-    確認されていないファイルをユーザーが実行しないようにします。 *[未構成]* に設定すると、従業員は SmartScreen の警告を無視して悪意のあるファイルを実行することができます。 *[はい]* に設定すると、従業員は SmartScreen の警告を無視して悪意のあるファイルを実行することはできません。  
+  - **Edge に対して有効にする** (*既定値*) - Application Guard では未承認のサイトが Hyper-V 仮想ブラウズ コンテナー内で開かれます。
+  - **未構成** - サイト (信頼済みおよび信頼されていない) はいずれも仮想化されたコンテナー内ではなくデバイス上で開かれます。  
   
-    **既定値**:はい
+  *[Edge に対して有効にする]* に設定すると、 *[Block external content from non-enterprise approved sites]\(承認された非エンタープライズ サイトからの外部コンテンツをブロックする\)* と *[クリップボードの動作]* を構成できます。
 
-- **Require SmartScreen for apps and files (アプリとファイルに SmartScreen を要求する)**  
-  *[はい]* に設定すると、Windows 用の SmartScreen が有効になります。  
+  - **承認された非エンタープライズ サイトからの外部コンテンツをブロックする**  
+    CSP:[Settings/BlockNonEnterpriseContent](https://go.microsoft.com/fwlink/?linkid=872352)
 
-  **既定値**:はい
+    - **はい** (*既定値*) - 未承認の Web サイトからのコンテンツの読み込みをブロックします。
+    - **[未構成]** - デバイス上で非エンタープライズ サイトを開けるようになります。
 
-## <a name="attack-surface-reduction"></a>攻撃の回避  
+  - **[クリップボードの動作]**  
+    CSP:[Settings/ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)
 
-- **Office apps launch child process type (Office アプリの子プロセスの起動の種類)**  
-  [攻撃面の減少ルール](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – *[ブロック]* に設定すると、Office アプリで子プロセスを作成することはできません。 Office アプリには、Word、Excel、PowerPoint、OneNote、および Access などがあります。 子プロセスを作成するのは、一般的なマルウェアの動作です。特に、Office アプリを使用して悪意のある実行可能ファイルの起動またはダウンロードを試みるマクロベースの攻撃で作成されます。  
+    ローカル PC と Application Guard 仮想ブラウザー間で許可するコピー/貼り付け操作を選択します。 次のオプションがあります。
+    - **未構成**  
+    - **PC とブラウザーの間でのコピー/貼り付けをブロックする** (*既定値*) - 両方ともブロックします。 PC と仮想ブラウザーの間でデータを転送できません。
+    - **ブラウザーから PC へのコピー/貼り付けのみを許可する** - PC から仮想ブラウザーにデータを転送できません。
+    - **PC からブラウザーへのコピー/貼り付けのみを許可する** - 仮想ブラウザーからホスト PC にデータを転送できません。
+    - **PC とブラウザーの間でのコピー/貼り付けを許可する** - コンテンツに対するブロックは存在しません。
 
-  **既定値**:ブロックする
+- **Windows ネットワーク分離ポリシー**  
+  CSP:[ポリシー CSP - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation)
 
-- **Script downloaded payload execution type (スクリプトでダウンロードされたペイロードの実行タイプ)**  
-  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection) – ダウンロードするか、インストールを試みるアプリケーションについて、望ましくない可能性の検出レベルを指定します。  
+  "*ネットワーク ドメイン*" のリストを指定します。これらは Application Guard がエンタープライズ サイトとして処理するクラウド内でホストされているエンタープライズ リソースです。
+  - **構成** (*既定値*)
+  - **未構成**
 
-  **既定値**:ブロックする 
+  *[構成]* に設定すると、"*ネットワーク ドメイン*" を定義できるようになります。
 
-- **Prevent credential stealing type (資格情報盗難防止タイプ)**  
-  *[有効]* に設定すると、[Credential Guard によりドメインの派生資格情報が保護されます](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard)。 Microsoft Defender Credential Guard では、仮想化ベースのセキュリティを使用してシークレットを分離し、特権を持つシステム ソフトウェアだけがアクセスできるようにします。 これらのシークレットへの不正アクセスは、Pass-the-Hash や Pass-The-Ticket などの資格情報の盗難攻撃につながる可能性があります。 Microsoft Defender Credential Guard では、NTLM パスワード ハッシュ、Kerberos のチケット保証チケット、およびアプリケーションによってドメイン資格情報として格納された資格情報を保護することで、これらの攻撃を防ぎます。  
+  - **ネットワーク ドメイン**  
+    **[追加]** を選択し、ドメイン、IP アドレス範囲、およびネットワーク境界を指定します。 既定では *securitycenter.windows.com* が構成されます。
 
-  **既定値**:[ウェイクアップ時間 (デスクトップ コンピューター)] を有効にして、デスクトップ コンピューターが、スケジュールされた更新またはソフトウェアのインストールを実行するために、スリープ状態または休止状態から復帰する時刻を指定します。
+## <a name="bitlocker"></a>BitLocker
 
-- **電子メール コンテンツの実行**  
-  [攻撃面の減少ルール](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – *[ブロック]* に設定すると、このルールにより、次の種類のファイルは Microsoft Outlook または Web メール (Gmail.com や Outlook.com など) に表示された電子メールから実行または起動されるのをブロックされます。  
+詳細については、Windows のドキュメントの「[BitLocker グループ ポリシー設定](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings)」を参照してください。
 
-  - 実行可能ファイル (.exe、.dll、.scr など)  
-  - スクリプト ファイル (PowerShell .ps、VisualBasic .vbs、JavaScript .js ファイルなど)  
-  - スクリプト アーカイブ ファイル  
+- **ストレージ カードの暗号化が必須 (モバイルのみ)**  
+  CSP:[RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)
 
-  **既定値**:ブロックする
+  この設定は、Windows Mobile および Mobile Enterprise SKU デバイスにのみ適用されます。
+  - **はい** (*既定値*) - モバイル デバイスの場合は、ストレージ カードでの暗号化が必須です。
+  - **未構成** - 設定は OS の既定値に戻されます。この場合、ストレージ カードの暗号化は必須ではありません。
 
-- **子プロセスでの Adobe Reader の起動**  
-  [攻撃面の減少ルール](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – このルールを "*有効*" にすると、Adobe Reader での子プロセスの作成がブロックされます。 マルウェアは、ソーシャル エンジニアリングまたは悪用によって、追加のペイロードをダウンロードして起動し、Adobe Reader から抜け出すことができます。  
+- **OS および固定データ ドライブのディスク全体の暗号化を有効にする**  
+  CSP:[RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)
 
-  **既定値**:[ウェイクアップ時間 (デスクトップ コンピューター)] を有効にして、デスクトップ コンピューターが、スケジュールされた更新またはソフトウェアのインストールを実行するために、スリープ状態または休止状態から復帰する時刻を指定します。
+  このポリシーが適用される前にドライブが暗号化されている場合、特別にアクションは行われません。 暗号化の方法とオプションがこのポリシーのものと一致する場合、構成からは成功が返されます。 インプレース BitLocker 構成オプションがこのポリシーと一致しない場合、構成からエラーが返される可能性があります。
+  
+  既に暗号化されているディスクにこのポリシーを適用するには、ドライブの暗号化を解除し、MDM ポリシーを再度適用します。 Windows の既定値では、BitLocker ドライブの暗号化は必要ありませんが、Azure AD Join および Microsoft Account (MSA) では、登録またはログインの自動暗号化が適用され、XTS-AES 128 ビット暗号化で BitLocker が有効にされる可能性があります。
 
-- **スクリプトで難読化されたマクロ コード**  
-  [攻撃面の減少ルール](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - マルウェアや他の脅威によって、一部のスクリプト ファイル内で悪意のあるコードの難読化または隠ぺいが試みられる可能性があります。 このルールは、難読化されているらしいスクリプトが実行するのを防ぎます。  
-    
-  **既定値**:ブロックする
+  - **はい** (*既定値*) - BitLocker の使用を強制します。
+  - **未構成** - BitLocker は強制されません。
 
-- **信頼されていない USB プロセス**  
-  [攻撃面の減少ルール](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – *[ブロック]* に設定すると、USB リムーバブル ドライブおよび SD カードからの署名なしまたは信頼されていない実行可能ファイルは実行できません。
+- **BitLocker システム ドライブ ポリシー**  
+  [BitLocker グループ ポリシー設定](https://go.microsoft.com/fwlink/?linkid=2067025)
 
-  実行可能ファイルには次のようなものがあります。
-  - 実行可能ファイル (.exe、.dll、.scr など)
-  - スクリプト ファイル (PowerShell .ps、VisualBasic .vbs、JavaScript .js ファイルなど)  
+  - **構成** (*既定値*)
+  - **未構成**
 
-  **既定値**:ブロックする
+  *[構成]* に設定すると、 *[Configure encryption method for Operating System drives]\(オペレーティング システム ドライブの暗号化方法の構成\)* を構成できるようになります。
 
-- **Office アプリのその他のプロセス インジェクション**  
-  [攻撃面の減少ルール](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - *[ブロック]* に設定すると、Word、Excel、PowerPoint、OneNote などの Office アプリから他のプロセスにコードを挿入することができません。 コードの挿入は、通常、マルウェアがウイルス対策スキャン エンジンからアクティビティを隠ぺいする試みの中で、悪意のあるコードを実行するために使用されます。  
+  - **[Configure encryption method for Operating System drives]\(オペレーティング システム ドライブの暗号化方法の構成\)**  
+    CSP:[EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
+    この設定は、 *[BitLocker システム ドライブポリシー]* が *[構成]* に設定されている場合に使用できます。  
 
-  **既定値**:ブロックする
+    システム ドライブの暗号化の方法と暗号強度を構成します。  *XTS - AES 128 ビット* は Windows の既定の暗号化方法であり、推奨される値です。
 
-- **Office マクロ コードで許可する Win32 インポート**  
-  [攻撃面の減少ルール](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) - *[ブロック]* に設定すると、このルールによって、Win32 DLL をインポートできるマクロ コードが含まれた Office ファイルをブロックすることが試みられます。 Office ファイルには、Word、Excel、PowerPoint、OneNote などがあります。 マルウェアは、Office ファイルのマクロ コードを使用して、Win32 DLL をインポートして読み込んだ後、それを使用して API 呼び出しを行い、システム全体にさらに感染させる可能性があります。  
+    - **[未構成]** ("*既定値*")
+    - **AES 128 ビット CBC**
+    - **AES 256 ビット CBC**
+    - **AES 128 ビット XTS**
+    - **AES 256 ビット XTS**
 
-  **既定値**:ブロックする
+- **BitLocker 固定ドライブ ポリシー**  
+  [BitLocker グループ ポリシー設定](https://go.microsoft.com/fwlink/?linkid=2067018)
 
-- **子プロセスでの Office 通信アプリの起動**  
-  [攻撃面の減少ルール](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – *[有効にする]* に設定すると、このルールによって Outlook による子プロセスの作成が防止されます。 このルールでは、子プロセスの作成をブロックすることで、ソーシャル エンジニアリング攻撃から保護すると共に、エクスプロイトコードが Outlook の脆弱性を悪用するのを防ぐことができます。  
+  - **構成** (*既定値*)
+  - **未構成**
 
-  **既定値**:[ウェイクアップ時間 (デスクトップ コンピューター)] を有効にして、デスクトップ コンピューターが、スケジュールされた更新またはソフトウェアのインストールを実行するために、スリープ状態または休止状態から復帰する時刻を指定します。
+  *[構成]* に設定すると、 *[Block write access to fixed data-drives not protected by BitLocker]\(BitLocker で保護されていない固定データドライブへの書き込みアクセスをブロックする\)* および *[固定データドライブの暗号化方法の構成]* を構成できるようになります。
 
-- **Office アプリの実行可能ファイル コンテンツの作成または起動**  
-  [攻撃面の減少ルール](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – *ブロック* に設定すると、Office アプリで実行可能なコンテンツを作成できなくなります。 Office アプリには、Word、Excel、PowerPoint、OneNote、および Access などがあります。  
+  - **[Block write access to fixed data-drives not protected by BitLocker]\(BitLocker で保護されていない固定データドライブへの書き込みアクセスをブロックする\)**  
+    CSP:[FixedDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872534)  
+    この設定は、 *[BitLocker 固定ドライブ ポリシー]* が *[構成]* に設定されている場合に使用できます。
 
-  このルールの対象は、実行可能ファイルを作成または起動する不審な悪意のあるアドオンとスクリプト (拡張機能) で使用される一般的な動作です。 これは、マルウェアの一般的な手法です。 拡張機能は、Office アプリによって使用されるのをブロックされます。 通常、これらの拡張機能では、特定のタスクを自動化したり、ユーザー作成のアドオン機能を提供したりするスクリプトを実行するために、Windows Scripting Host (.wsh ファイル) が使用されます。
+    - **未構成** (*既定値*) - 暗号化されていない固定ドライブにデータを書き込むことができます。
+    - **はい** - Windows では、BitLocker で保護されていない固定ドライブにデータを書き込むことはできません。 固定ドライブが暗号化されていない場合、書き込みアクセス権が付与される前に、ユーザーはドライブに対して BitLocker セットアップ ウィザードを完了する必要があります。
 
-  **既定値**:ブロックする
+  - **固定データドライブの暗号化方法の構成**  
+    CSP:[EncryptionMethodByDriveType](h https://go.microsoft.com/fwlink/?linkid=872526)  
+    この設定は、 *[BitLocker 固定ドライブ ポリシー]* が *[構成]* に設定されている場合に使用できます。
 
-## <a name="bitlocker"></a>BitLocker  
+    固定データドライブ ディスクの暗号化の方法と暗号強度を構成します。 *XTS - AES 128 ビット* は Windows の既定の暗号化方法であり、推奨される値です。
 
-詳細については、Windows のドキュメントの「[BitLocker グループ ポリシー設定](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings)」を参照してください。  
+    - **[未構成]** ("*既定値*")
+    - **AES 128 ビット CBC**
+    - **AES 256 ビット CBC**
+    - **AES 128 ビット XTS**
+    - **AES 256 ビット XTS**
 
-- **デバイスの暗号化**  
-  BitLocker デバイスの暗号化を有効にするには、 *[はい]* を選択します。 デバイスのハードウェアおよび Windows のバージョンによって異なりますが、デバイス ユーザーは、デバイス上にサードパーティの暗号化が存在しないことを確認するよう求められる場合があります。 サードパーティの暗号化がアクティブになっているときに Windows の暗号化をオンにすると、デバイスが不安定になります。  
+- **BitLocker removable drive policy (Bitlocker のリムーバブル ドライブのポリシー)**  
+  [BitLocker グループ ポリシー設定](https://go.microsoft.com/fwlink/?linkid=2067140)
 
-   **既定値**:はい
+  - **構成** (*既定値*)
+  - **未構成**
 
-- **Bit locker removable drive policy (Bitlocker のリムーバブル ドライブのポリシー)**  
-  このポリシーの値では、BitLocker がリムーバブル ドライブの暗号化に使用する暗号化強度が決定されます。 企業では、セキュリティを強化するために、暗号化のレベルを制御します (AES-256 は AES-128 よりも強力です)。 *[はい]* を選択してこの設定を有効にした場合は、固定データ ドライブやオペレーティング システム ドライブ、リムーバブル データ ドライブのそれぞれに、暗号化アルゴリズムとキーの暗号化強度を構成できます。 固定ドライブやオペレーティング システム ドライブには、XTS-AES アルゴリズムを使用することをお勧めします。 リムーバブル ドライブには、Windows 10 バージョン 1511 以降を実行していないその他のデバイスでドライブを使用する場合は、AES-CBC 128 ビットまたは AES-CBC 256 ビットを使用する必要があります。 ドライブが既に暗号化されているか、暗号化が進行中の場合は、暗号化の種類を変更しても影響はありません。 このような場合、このポリシー設定は無視されます。 
+  *[構成]* に設定すると、 *[Configure encryption method for removable data-drives]\(リムーバブル データドライブの暗号化方法の構成\)* および *[Block write access to removable data-drives not protected by BitLocker]\(BitLocker で保護されていないリムーバブル データドライブへの書き込みアクセスをブロックする\)* を構成できるようになります。
 
-  Bitlocker リムーバブル ドライブ ポリシーの場合は、次の設定を構成します。
+  - **[Configure encryption method for removable data-drives]\(リムーバブル データドライブの暗号化方法の構成\)**  
+    CSP:[EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
+    この設定は、 *[BitLocker リムーバブル ドライブ ポリシー]* が *[構成]* に設定されている場合に使用できます。
 
-  - **Require encryption for write access (書き込みアクセス用に暗号化が必要)**  
-    **既定値**:はい
+    リムーバブル データドライブ ディスクの暗号化方法と暗号強度を構成します。 *XTS - AES 128 ビット* は Windows の既定の暗号化方法であり、推奨される値です。
 
-  - **[暗号化方法]**  
-    **既定値**:AES 128 ビット CBC
+    - **未構成**
+    - **AES 128 ビット CBC**
+    - **AES 256 ビット CBC** (*既定値*)
+    - **AES 128 ビット XTS**
+    - **AES 256 ビット XTS**
 
-- **メモリ カードの暗号化 (モバイルのみ)** "*はい*" を選択すると、モバイル デバイスのメモリ カードが暗号化されます。  
+  - **[Block write access to removable data-drives not protected by BitLocker]\(BitLocker で保護されていないリムーバブル データドライブへの書き込みアクセスをブロックする\)**  
+    CSP:[RemovableDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872540)  
+    この設定は、 *[BitLocker リムーバブル ドライブ ポリシー]* が *[構成]* に設定されている場合に使用できます。
 
-   **既定値**:はい
+    - **未構成** (*既定値*) - 暗号化されていないリムーバブル ドライブにデータを書き込むことができます。  
+    - **はい** - Windows では、BitLocker で保護されていないリムーバブル ドライブにデータを書き込むことはできません。 リムーバブル ドライブが暗号化されていない場合、書き込みアクセス権が付与される前に、ユーザーはドライブに対して BitLocker セットアップ ウィザードを完了する必要があります。
 
-- **Bit locker fixed drive policy (Bitlocker の固定ドライブのポリシー)**  
-  このポリシーの値では、BitLocker が固定ドライブの暗号化に使用する暗号化強度が決定されます。 企業では、セキュリティを強化するために、暗号化のレベルを制御できます (AES-256 は AES-128 よりも強力です)。 この設定を有効にした場合は、固定データ ドライブやオペレーティング システム ドライブ、リムーバブル データ ドライブのそれぞれに、暗号化アルゴリズムとキーの暗号化強度を構成できます。 固定ドライブやオペレーティング システム ドライブには、XTS-AES アルゴリズムを使用することをお勧めします。 リムーバブル ドライブには、Windows 10 バージョン 1511 以降を実行していないその他のデバイスでドライブを使用する場合は、AES-CBC 128 ビットまたは AES-CBC 256 ビットを使用する必要があります。 ドライブが既に暗号化されているか、暗号化が進行中の場合は、暗号化の種類を変更しても影響はありません。 このような場合、このポリシー設定は無視されます。
+## <a name="browser"></a>ブラウザー
 
-  Bitlocker 固定ドライブ ポリシーの場合は、次の設定を構成します。
+- **Require SmartScreen for Microsoft Edge (Microsoft Edge で SmartScreen が必要)**  
+  CSP:[Browser/AllowSmartScreen](https://go.microsoft.com/fwlink/?linkid=2067029)
 
-  - **Require encryption for write access (書き込みアクセス用に暗号化が必要)**  
-    **既定値**:はい
+  - **はい** (*既定値*) - SmartScreen を使用してフィッシング詐欺にあう可能性や悪意のあるソフトウェアからユーザーを保護しています。
+  - **未構成**
 
-  - **[暗号化方法]**  
-    **既定値**:AES 128 ビット XTS
+- **Block malicious site access (悪意のあるサイトへのアクセスをブロックする)**  
+  CSP:[Browser/PreventSmartScreenPromptOverride](https://go.microsoft.com/fwlink/?linkid=2067040)  
 
-- **Bit locker system drive policy (Bitlocker のシステム ドライブのポリシー)**  
-  このポリシーの値では、BitLocker がシステム ドライブの暗号化に使用する暗号化強度が決定されます。 企業では、セキュリティを強化するために、暗号化のレベルを制御したい場合があります (AES-256 は AES-128 よりも強力です)。 この設定を有効にした場合は、固定データ ドライブやオペレーティング システム ドライブ、リムーバブル データ ドライブのそれぞれに、暗号化アルゴリズムとキーの暗号化強度を構成できます。 固定ドライブやオペレーティング システム ドライブには、XTS-AES アルゴリズムを使用することをお勧めします。 リムーバブル ドライブには、Windows 10 バージョン 1511 以降を実行していないその他のデバイスでドライブを使用する場合は、AES-CBC 128 ビットまたは AES-CBC 256 ビットを使用する必要があります。 ドライブが既に暗号化されているか、暗号化が進行中の場合は、暗号化の種類を変更しても影響はありません。 このような場合、このポリシー設定は無視されます。  
+  - **はい** (*既定値*) - ユーザーが Microsoft Defender SmartScreen フィルターの警告を無視できないようにして、サイトへの移動をブロックします。
+  - **未構成**
 
-  Bitlocker システム ドライブ ポリシーの場合は、次の設定を構成します。  
+- **Block unverified file download (確認されていないファイルのダウンロードをブロックする)**  
+  CSP:[Browser/PreventSmartScreenPromptOverrideForFiles](https://go.microsoft.com/fwlink/?linkid=2067023)  
 
-  - **[暗号化方法]**  
-    **既定値**:AES 128 ビット XTS
+  - **はい** (*既定値*) - ユーザーが Microsoft Defender SmartScreen フィルターの警告を無視できないようにして、確認されていないファイルをダウンロードできないようにします。
+  - **未構成**
 
-## <a name="device-control"></a>デバイスの制御  
-
-- **フル スキャン中に、リムーバブル ドライブをスキャンする**  
-  [Defender/AllowFullScanRemovableDriveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning) - *[はい]* に設定すると、Defender ではフルスキャン中に、フラッシュ ドライブなどのリムーバブル ドライブ内で悪意のある望ましくないソフトウェアがスキャンされます。 USB デバイス上のすべてのファイルが Defender Antivirus によってスキャンされてから、USB デバイス上のファイルは実行できるようになります。
-
-  このリスト内の関連設定: *Defender/AllowFullScanOnMappedNetworkDrives*  
-
-  **既定値**:はい
-
-- **Kernel DMA Protection と互換性のない外部デバイスの列挙**  
-   「[Policy CSP - DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)」 (ポリシー CSP - DmaGuard) の「*DmaGuard/DeviceEnumerationPolicy*」を参照してください。
-
-  このポリシーでは、外部 DMA 対応デバイスに対して追加のセキュリティが提供されます。 これにより、DMA デバイス メモリの分離およびサンドボックス化と互換性のない外部 DMA 対応デバイスの列挙をより詳細に制御できます。
-
-  このポリシーが有効になるのは、Kernel DMA Protection がシステム ファームウェアによってサポートされていて、それによって有効にされた場合のみです。 Kernel DMA Protection は、ポリシーによってもデバイスのユーザーによっても制御できないプラットフォーム機能です。 製造時には、それがシステムによってサポートされている必要があります。 
-
-  システムで Kernel DMA Protection がサポートされているかどうかを確認するには、システム上で MSINFO32.exe を実行し、[概要] ページの *[Kernel DMA Protection]* フィールドを確認してください。  
-
-  次のオプションがあります。 
-  - *デバイスの既定値* - サインインを行うか、または画面ロックを解除すると、互換性のあるドライバーを再マッピングする DMA を備えたデバイスをいつでも列挙することができます。 互換性のないドライバーを再マッピングする DMA を備えたデバイスは、ユーザーが画面ロックを解除した後でのみ列挙されます。
-  - *すべて許可* - 外部 DMA 対応 PCIe デバイスはすべて、いつでも列挙できます。
-  - *すべてブロック* - 互換性のあるドライバーを再マップする DMA を備えたデバイスは、いつでも列挙することができます。 互換性のないドライバーを再マップする DMA を備えたデバイスが、DMA の起動および実行を許可されることはありません。
-
-  **既定値**:デバイスの既定値
-
-- **Hardware device installation by device identifiers (デバイス識別子を使用してハードウェア デバイスをインストールする)**  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids) - このポリシーでは、Windows によるインストールが禁止されているデバイス用のプラグ アンド プレイ ハードウェア ID および互換性 ID のリストを指定します。 このポリシー設定は、Windows がデバイスをインストールできるようにするその他のポリシー設定よりも優先されます。 このポリシー設定を有効にした場合 ( *[ハードウェア デバイスのインストールをブロックする]* に設定)、Windows ではプラグ アンド プレイ ハードウェア ID または互換性 ID が作成した一覧に含まれているデバイスはインストールできません。 リモート デスクトップ サーバーでこのポリシーを有効にした場合、このポリシー設定は、リモート デスクトップ クライアントからリモート デスクトップ サーバーへの指定されたデバイスのリダイレクトに影響します。 このポリシー設定を無効にした場合、または構成しなかった場合 ( *[ハードウェア デバイスのインストールを許可する]* に設定) は、他のポリシー設定に従って、デバイスのインストールや更新が許可されるかどうかが決まります。  
-
-  **既定値**:Block hardware device installation (ハードウェア デバイスのインストールをブロックする)  
-
-  *[ハードウェア デバイスのインストールをブロックする]* を選択すると、次の設定が利用できます。
-  - **Remove matching hardware devices (一致するハードウェア デバイスを削除する)**  
-    この設定は *[Hardware device installation by device identifiers]\(デバイス識別子でハードウェア デバイスをインストールする\)* が *[Block hardware device installation]\(ハードウェア デバイスのインストールをブロックする\)* に設定されているときのみ使用できます。  
-
-    **既定値**:はい
-
-  - **Hardware device identifiers that are blocked (ブロックされているハードウェア デバイス識別子)**  
-    この設定は *[Hardware device installation by device identifiers]\(デバイス識別子でハードウェア デバイスをインストールする\)* が *[Block hardware device installation]\(ハードウェア デバイスのインストールをブロックする\)* に設定されているときのみ使用できます。 この設定を構成するには、オプションを展開し、 **[+ 追加]** を選択して、ブロックするハードウェア デバイスの識別子を指定します。  
-
-    **既定値**:PCI\CC_0C0A
+## <a name="data-protection"></a>データ保護
 
 - **Block direct memory access (ダイレクト メモリ アクセスをブロックする)**  
-  [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess) - このポリシー設定を使用すると、ユーザーが Windows にログインするまで、デバイス上のホット プラグ可能なすべての PCI ダウンストリーム ポートへのダイレクト メモリ アクセス (DMA) をブロックできます。 ユーザーがログインすると、Windows はホット プラグ PCI ポートに接続されている PCI デバイスを列挙します。 ユーザーがコンピューターをロックするたびに、ユーザーが再ログインするまで、子デバイスが接続されていないホット プラグ PCI ポートで DMA がブロックされます。 コンピューターのロックが解除された際に既に列挙されていたデバイスは、取り外されるまで機能を維持します。 
+  CSP:[DataProtection/AllowDirectMemoryAccess](https://go.microsoft.com/fwlink/?linkid=2067031)  
 
-  このポリシー設定は、BitLocker またはデバイスの暗号化が有効な場合にのみ適用されます。  
+  このポリシー設定は、BitLocker またはデバイスの暗号化が有効な場合にのみ適用されます。
 
-  **既定値**:はい
+  - **はい** (*既定値*) - ユーザーが Windows にログインするまで、ホット プラグ可能なすべての PCI ダウンストリーム ポートへの直接メモリ アクセス (DMA) が禁止されます。 ユーザーがログインすると、ホスト プラグ PCI ポートに接続されている PCI デバイスが Windows によって列挙されます。 ユーザーがコンピューターをロックするたびに、ユーザーが再ログインするまで、子デバイスが接続されていないホット プラグ PCI ポートで DMA がブロックされます。 コンピューターのロックが解除された際に既に列挙されていたデバイスは、取り外されるまで機能を維持します。
+  - **未構成**
 
+## <a name="device-guard"></a>[Device Guard]  
 
-- **Hardware device installation by setup classes (セットアップ クラスを使用してハードウェア デバイスをインストールする)**  
-  [DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-allowinstallationofmatchingdevicesetupclasses) - このポリシーでは、インストールを禁止するデバイス ドライバーのデバイス セットアップ クラス GUID (グローバル一意識別子) の一覧を指定できます。 このポリシー設定は、Windows がデバイスをインストールできるようにするその他のポリシー設定よりも優先されます。 このポリシー設定を有効にした場合 ( *[ハードウェア デバイスのインストールをブロックする]* に設定)、デバイス セットアップ クラス GUID が作成した一覧に含まれているデバイス ドライバーはインストールすることも更新することもできません。 リモート デスクトップ サーバーでこのポリシー設定を有効にした場合、ポリシー設定は、リモート デスクトップ クライアントからリモート デスクトップ サーバーへの指定されたデバイスのリダイレクトに影響します。 このポリシー設定を無効にした場合、または構成しなかった場合 ( *[ハードウェア デバイスのインストールを許可する]* に設定)、他のポリシー設定に従って、デバイスのインストールや更新が許可されるかどうかが決まります。  
+- **Credential Guard を有効にする**  
+  CSP: [DeviceGuard/ConfigureSystemGuardLaunch](https://go.microsoft.com/fwlink/?linkid=872424)
 
-  **既定値**:Block hardware device installation (ハードウェア デバイスのインストールをブロックする)
+  Credential Guard では、Windows ハイパーバイザーを使用して保護が実現されます。これには、セキュア ブートと DMA 保護が機能する必要があり、そのためにはハードウェア要件が満たされている必要があります。
 
-  *[ハードウェア デバイスのインストールをブロックする]* を選択すると、次の設定が利用できます。  
+  - **未構成** - Credential Guard の使用を無効にします。Windows ではこれが既定値です。
+  - **UEFI ロックで有効にする** (*既定値*) - Credential Guard を有効にし、それをリモートで無効にできないようにします。UEFI で永続化された構成は手動でクリアする必要があるためです。
+  - **UEFI ロックなしで有効にする** - Credential Guard を有効にし、コンピューターへの物理的なアクセスなしにオフにすることを許可します。
 
-  - **Remove matching hardware devices (一致するハードウェア デバイスを削除する)**  
-    この設定は *[Hardware device installation by setup classes]\(設定クラスでハードウェア デバイスをインストールする\)* が *[Block hardware device installation]\(ハードウェア デバイスのインストールをブロックする\)* に設定されているときのみ使用できます。  
- 
-    **既定値**:はい  
+## <a name="device-installation"></a>デバイスのインストール
+
+- **Hardware device installation by device identifiers (デバイス識別子を使用してハードウェア デバイスをインストールする)**  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](h https://go.microsoft.com/fwlink/?linkid=2066794)  
+  
+  このポリシー設定を使用すると、Windows によるインストールが禁止されているデバイスのプラグ アンド プレイ ハードウェア ID と互換 ID の一覧を指定できます。 このポリシー設定は、Windows がデバイスをインストールできるようにするその他のポリシー設定よりも優先されます。  リモート デスクトップ サーバーでこのポリシー設定を有効にした場合、ポリシー設定は、リモート デスクトップ クライアントからリモート デスクトップ サーバーへの指定されたデバイスのリダイレクトに影響します。
+
+  - **未構成**
+  - **ハードウェア デバイスのインストールを許可する** - 他のポリシー設定によって許可または禁止されているとおりに、デバイスをインストールおよび更新することができます。
+  - **ハードウェア デバイスのインストールをブロックする** (*既定値*) - ご自分で定義したリスト内に表示されたハードウェア ID または互換性 ID を持つデバイスを Windows でインストールすることはできません。
+
+  *[ハードウェア デバイスのインストールをブロックする]* に設定すると、 *[一致するハードウェア デバイスを削除する]* および *[ブロックされているハードウェア デバイス ID]* を構成できるようになります。
+
+  - **Remove matching hardware devices (一致するハードウェア デバイスを削除する)**
+
+    この設定は *[Hardware device installation by device identifiers]\(デバイス識別子でハードウェア デバイスをインストールする\)* が *[Block hardware device installation]\(ハードウェア デバイスのインストールをブロックする\)* に設定されているときのみ使用できます。
+    - **あり**
+    - **未構成**
 
   - **Hardware device identifiers that are blocked (ブロックされているハードウェア デバイス識別子)**  
-    この設定は [Hardware device installation by setup classes]\(設定クラスでハードウェア デバイスをインストールする\) が [Block hardware device installation]\(ハードウェア デバイスのインストールをブロックする\) に設定されているときのみ使用できます。 この設定を構成するには、オプションを展開し、 **[+ 追加]** を選択して、ブロックするハードウェア デバイスの識別子を指定します。  
- 
-    **既定値**: {d48179be-ec20-11d1-b6b8-00c04fa372a7}
+    
+    この設定は *[Hardware device installation by device identifiers]\(デバイス識別子でハードウェア デバイスをインストールする\)* が *[Block hardware device installation]\(ハードウェア デバイスのインストールをブロックする\)* に設定されているときのみ使用できます。
 
-## <a name="endpoint-detection-and-response"></a>エンドポイントの検出と応答  
-詳細については、Windows のドキュメントの「[WindowsAdvancedThreatProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)」を参照してください。  
+    **[追加]** を選択して、ブロックするハードウェア デバイスの識別子を指定します。
 
-- **テレメトリの報告頻度を早める** - *Configuration/TelemetryReportingFrequency*
+- **Hardware device installation by setup classes (セットアップ クラスを使用してハードウェア デバイスをインストールする)**  
+  CSP: [DeviceInstallation/AllowInstallationOfMatchingDeviceSetupClasses](https://go.microsoft.com/fwlink/?linkid=2067048)  
+  
+  このポリシー設定を使用すると、Windows によるインストールが禁止されているデバイス ドライバーのデバイス セットアップ クラス GUID (グローバル一意識別子) の一覧を指定できます。 このポリシー設定は、Windows がデバイスをインストールできるようにするその他のポリシー設定よりも優先されます。 リモート デスクトップ サーバーでこのポリシー設定を有効にした場合、ポリシー設定は、リモート デスクトップ クライアントからリモート デスクトップ サーバーへの指定されたデバイスのリダイレクトに影響します。
+
+  - **未構成**
+  - **ハードウェア デバイスのインストールを許可する** - Windows では他のポリシー設定によって許可または禁止されているとおりに、デバイスをインストールおよび更新することができます。
+  - **ハードウェア デバイスのインストールをブロックする** (*既定値*) - ご自分で定義したリスト内に表示されたセットアップ クラス GUID を持つデバイスを Windows でインストールすることはできません。
+
+  *[ハードウェア デバイスのインストールをブロックする]* に設定すると、 *[一致するハードウェア デバイスを削除する]* および *[ブロックされているハードウェア デバイス ID]* を構成できるようになります。
+
+  - **Remove matching hardware devices (一致するハードウェア デバイスを削除する)**
+
+    この設定は *[Hardware device installation by device identifiers]\(デバイス識別子でハードウェア デバイスをインストールする\)* が *[Block hardware device installation]\(ハードウェア デバイスのインストールをブロックする\)* に設定されているときのみ使用できます。
+    - **あり**
+    - **未構成**
+
+  - **Hardware device identifiers that are blocked (ブロックされているハードウェア デバイス識別子)**
+
+    この設定は *[Hardware device installation by device identifiers]\(デバイス識別子でハードウェア デバイスをインストールする\)* が *[Block hardware device installation]\(ハードウェア デバイスのインストールをブロックする\)* に設定されているときのみ使用できます。
+
+    **[追加]** を選択して、ブロックするハードウェア デバイスの識別子を指定します。
+
+## <a name="dma-guard"></a>DMA ガード
+
+- **Kernel DMA Protection と互換性のない外部デバイスの列挙**  
+  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+
+  このポリシーでは、外部 DMA 対応デバイスに対して追加のセキュリティを提供することができます。 これにより、DMA の再マッピング/デバイス メモリの分離およびサンドボックス化と互換性のない外部 DMA 対応デバイスの列挙をより詳細に制御できます。
+  
+  このポリシーが有効になるのは、Kernel DMA Protection がシステム ファームウェアによってサポートされていて、それによって有効にされた場合のみです。 カーネル DMA 保護は、製造時にシステムによってサポートされる必要があるプラットフォーム機能です。 システムで Kernel DMA Protection がサポートされているかどうかを確認するには、MSINFO32.exe の概要ページにある Kernel DMA Protection フィールドを調べます。
+
+  - **未構成** - (*既定値*)
+  - **すべてブロックする**
+  - **すべて許可**
+
+## <a name="endpoint-detection-and-response"></a>エンドポイントの検出と応答
+
+次の設定の詳細については、Windows ドキュメント内の「[WindowsAdvancedThreatProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)」を参照してください。
+
+- **すべてのファイルのサンプル共有**:  
+  CSP: [Configuration/SampleSharing](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+
+  Microsoft Defender Advanced Threat Protection サンプル共有の構成パラメーターを返すか設定します。  
+  
+  - **はい** (*既定値*):
+  - **未構成**
+
+- **テレメトリの報告頻度を早める**:  
+  CSP: [Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Microsoft Defender Advanced Threat Protection テレメトリの報告頻度を早めます。  
 
-  **既定値**:はい
+  - **はい** (*既定値*):
+  - **未構成**
 
-- **すべてのファイルのサンプル共有** - *Configuration/SampleSharing* 
+## <a name="firewall"></a>ファイアウォール
 
-  Microsoft Defender Advanced Threat Protection サンプル共有の構成パラメーターを返すか設定します。  
-
-  **既定値**:はい
-
-## <a name="exploit-protection"></a>悪用に対する保護  
-
-- **[Exploit Protection XML]**  
-  詳細については、Windows ドキュメントの「[Exploit Protection 構成をインポート、エクスポート、展開する](/windows/security/threat-protection/microsoft-defender-atp/import-export-exploit-protection-emet-xml)」を参照してください。  
-
-  IT 管理者が、組織内のすべてのデバイスに対して、目的のシステムとアプリケーションの軽減策オプションを表す構成をプッシュできるようにします。 この構成は XML で表されます。 
-
-  Exploit Protection を適用すると、拡散と感染のために悪用するマルウェアからデバイスを保護できます。 Windows セキュリティ アプリまたは PowerShell を使用して、一連の軽減策 (構成と呼ばれます) を作成します。 次に、この構成を XML ファイルとしてエクスポートし、ネットワーク上の複数のマシンと共有して、すべてのマシンに同じ軽減策設定が適用されるようにすることができます。
- 
-  既存の EMET 構成 XML ファイルを変換して Exploit Protection 構成 XML にインポートすることもできます。
-
-- **悪用に対する保護のオーバーライドをブロックする**  
-  [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride) – *[はい]* に設定すると、Microsoft Defender Security Center 内の悪用に対する保護設定に対してユーザーは変更を加えることができなくなります。 この設定を無効にした場合、または構成しなかった場合、ローカルユーザーは悪用に対する保護設定の領域で変更を加えることができます。  
-  **既定値**:はい  
-
-## <a name="microsoft-defender-antivirus"></a>Microsoft Defender ウイルス対策  
-
-詳細については、Windows ドキュメントの「[Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender)」(ポリシー CSP - Defender) を参照してください。
-
-- **Microsoft Web ブラウザーに読み込まれたスクリプトをスキャンする**:  
-  [Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning) – *[はい]* に設定すると、Microsoft Defender のスクリプト スキャン機能が使用できるようになります。  
-
-  **既定値**:はい
-
-- **受信メール メッセージをスキャンする**  
-  [Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning) – *[はい]* に設定すると、Microsoft Defender で電子メールをスキャンできるようになります。  
-
-  **既定値**:はい
-
-- **Defender サンプル送信の同意**  
-  [Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) - Microsoft Defender でデータを送信するためのユーザーの同意レベルを確認します。 必要な同意が既に与えられている場合、Microsoft Defender からそれらが送信されます。 それ以外の場合 (かつユーザーが "確認しない" を指定した場合)、( *[クラウドによる保護]* が *[はい]* に設定されている場合は) データを送信する前にユーザーの同意を求める UI が起動します。  
-
-  **既定値**:安全なサンプルを自動的に送信します。
-
-- **ネットワーク検査システム (NIS)**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) -ネットワーク検査システム (NIS) 内のシグネチャによって検出された悪意のあるトラフィックをブロックします。  
- 
-  **既定値**:はい
-
-- **Signature update interval (in hours) (署名更新間隔 (時単位))**  
-  [Defender/SignatureUpdateInterval](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval) – デバイスが新しい Defender シグネチャ更新をチェックする頻度を時間単位で指定します。  
- 
-  **既定値**:4
-
-- **スケジュールされたスキャン用に低い CPU 優先度を構成**  
-  [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority) – *[はい]* に設定すると、スキャンに対する CPU 優先度は低く設定されます。 *[未構成]* の場合、スケジュールされたスキャンの CPU 優先度に変更は加えられません。  
-
-    **既定値**:はい
-
-- **アクセス保護に対する Defender のブロック**  
-  [Defender/AllowOnAccessProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection) – *[はい]* に設定すると、Microsoft Defender の常時保護が有効になります。  
-
-  **既定値**:はい
-
-- **実行するシステム スキャンの種類**  
-  [Defender/ScanParameter](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter) - Defender スキャンの種類。  
-
-  **既定値**:クイック スキャン
-
-- **すべてのダウンロードをスキャンする**  
-  [Defender/AllowIOAVProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection) - *[はい]* に設定すると、すべてのダウンロードされたファイルと添付ファイルが Defender によってスキャンされます。  
-
-  **既定値**:はい
-
-- **検疫済みマルウェアを削除するまでの日数**  
-  [Defender/DaysToRetainCleanedMalware](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware) - 検疫アイテムを自動的に削除する前に、システム上で保持する日数を指定します。 0 に設定すると、検疫内のアイテムが自動的に削除されることはありません。  
-
-  **既定値**:0
-
-- **スケジュールされたスキャンの開始時間**  
-  [Defender/ScheduleScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime) – Defender がデバイスをスキャンする時刻をスケジュールします。 
-  
-  このリスト内の関連オプション: *Defender/ScheduleScanDay*   
-
-  **既定値**:午前 2 時
-
-- **Cloud-delivered protection (クラウドによる保護)**  
-  [Defender/AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection) – *[はい]* に設定すると、検出された問題に関する情報が Microsoft Defender から Microsoft に送信されます。 Microsoft は、その情報を分析し、報告者や他の顧客に影響する問題について詳細に把握して、強化されたソリューションを提供します。
-
-  このポリシーを *[はい]* に設定すると、 *[Defender のサンプル送信の同意の種類]* を使用して、ユーザーに自分のデバイスからの情報の送信を制御させることができます。  
-
-  **既定値**:はい
-
-- **Defender potentially unwanted app action (Defender の望ましくないアプリに対するアクション)**  
-  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection) – Microsoft Defender ウイルス対策では、"*望ましくない可能性のあるアプリケーション*" (PUA) を識別し、それがご利用のネットワーク内のエンドポイント上にダウンロードされてインストールされるのをブロックすることができます。 
- 
-  - *[ブロック]* に設定すると、Microsoft Defender によって PUA がブロックされ、他の脅威と一緒に履歴内に一覧表示されます。
-  - *[監査]* に設定すると、Microsoft Defender によって PUA は検出されますが、ブロックされません。 Microsoft Defender によってアクションが実行されたアプリケーションに関する情報は、Microsoft Defender によって作成されたイベントをイベント ビューアーで検索することで確認できます。  
-  - *[デバイスの既定値]* に設定すると、PUA 保護はオフになります。  
- 
-  **既定値**:ブロックする
-
-- **Defender クラウド延長タイムアウト**  
-  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout) - Microsoft Defender ウイルス対策がクラウドからの結果を待機している間にファイルをブロックする最大追加時間を指定します。 Microsoft Defender が待機する基本的な時間の長さは 10 秒です。 ここで指定した追加の時間 (最大 50 秒) は、それらの 10 秒に追加されます。 ほとんどの場合、スキャンにかかる時間は最大値より短くなります。 時間を延長すると、クラウドは疑わしいファイルを徹底的に調査できます。  
-
-  既定では、延長時間の値は 0 (無効) です。 Intune では、この設定を有効にし、少なくとも 20 秒の追加を指定することが推奨されています。  
- 
-  **既定値**:0
-
-- **アーカイブ ファイルをスキャンする**  
-  [Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning) – *[はい]* に設定すると、Microsoft Defender でアーカイブ ファイルがスキャンされます。  
-
-  **既定値**:はい
-
-- **Defender システム スキャンのスケジュール**  
-  [Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday) - Defender がデバイスをスキャンする日をスケジュールします。 
- 
-  このリスト内の関連オプション: *Defender/ScheduleScanTime*
-
-  **既定値**:ユーザー定義
-
-- **動作の監視**  
-  [Defender/AllowBehaviorMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring) – *[はい]* に設定すると、Microsoft Defender の動作監視機能がオンになります。 Windows 10 に内蔵されている Microsoft Defender の動作監視機能センサーでは、オペレーティング システムから動作信号を収集して処理され、プライベート クラウドに他から切り離されて存在する Microsoft Defender ATP インスタンスにこのセンサー データが送信されます。  
-
-  **既定値**:はい
-
-- **ネットワーク フォルダーから開いたファイルをスキャンする**  
-  [Defender/AllowScanningNetworkFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles) – *[はい]* に設定すると、Microsoft Defender によってネットワーク上のファイルがスキャンされます。 ユーザーは、読み取り専用のファイルから検出されたマルウェアを削除することはできません。  
-
-  **既定値**:はい
-
-- **Defender cloud block level (Defender クラウド ブロック レベル)**  
-  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) – このポリシーを使用すると、Microsoft Defender ウイルス対策で悪意のあるファイルをブロックおよびスキャンする際にどの程度積極的に行うかを決定できます。 次のオプションがあります。
-
-  - 高 - クライアントのパフォーマンスの最適化中に不明なファイルを積極的にブロックします (誤検知の可能性が高くなります)
-  - \+ 高 - 不明なファイルを積極的にブロックし、追加の保護策を適用します (クライアントのパフォーマンスに影響を及ぼす可能性があります)
-  - ゼロ トレランス - 不明な実行可能ファイルをすべてブロックします。
-
-  **既定値**:未構成
-
-- **リアルタイム監視**:  
-  [Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring) – *[はい]* に設定すると、Microsoft Defender リアルタイム監視が許可されます。  
-
-  **既定値**:はい
-
-- **スキャン中の CPU 使用率の制限**  
-  [Defender/AvgCPULoadFactor](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor) – Microsoft Defender がスキャン中に使用できる最大平均 CPU 使用率を指定します。  
-
-  **既定値**:50
-
-- **フル スキャン中に、マップされたネットワーク ドライブをスキャンする**  
-  [Defender/AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives) - *[はい]* に設定すると、Microsoft Defender によってネットワーク上のファイルがスキャンされます。 ユーザーは読み取り専用ファイルから検出されたマルウェアを削除することはできません。
-
-  このリスト内の関連設定: *Defender/AllowScanningNetworkFiles*
-
-  **既定値**:はい
-
-- **エンドユーザーによる Defender へのアクセスをブロックする**  
-  [Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess) – *[はい]* に設定すると、エンドユーザーは自分のデバイス上での Microsoft Defender UI へのアクセスをブロックされます。  
-
-  **既定値**:はい
-
-- **クイック スキャン開始日時**  
-  [Defender/ScheduleQuickScanTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime) - Defender がクイック スキャンを実行する時刻をスケジュールします。  
-
-  **既定値**:午前 2 時
-
-## <a name="microsoft-defender-firewall"></a>Microsoft Defender ファイアウォール
 詳細については、Windows のドキュメントの「[Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)」 (ファイアウォール CSP) を参照してください。
 
-- **セキュリティ アソシエーションが削除されるまでのアイドル時間** - *MdmStore/Global/SaIdleTime*   
-  この秒数の間、ネットワーク トラフィックが確認されなかった場合は、セキュリティ アソシエーションが削除されます。  
-  **既定値**:300
+- **ステートフル ファイル転送プロトコル (FTP) を無効にする**  
+  CSP:[MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
 
-- **ファイル転送プロトコル** - *MdmStore/Global/DisableStatefulFtp*   
-  ステートフル ファイル転送プロトコル (FTP) をブロックします。  
-  **既定値**:はい
+  - **はい** (*既定値*):
+  - **未構成** - ファイアウォールでは FTP を使用して、セカンダリ ネットワーク接続が検査およびフィルター処理されます。これにより、ご利用のファイアウォール規則は無視される可能性があります。
 
-- **パケット キュー** - *MdmStore/Global/EnablePacketQueue*    
-  IPsec トンネル ゲートウェイのシナリオで、暗号化された受信とクリア テキストの転送について受信側のソフトウェアのスケーリングを有効にする方法を指定します。 これにより、パケットの順序が確実に保持されます。  
-  **既定値**:デバイスの既定値
+- **セキュリティ アソシエーションが削除されるまでのアイドル状態の秒数**  
+CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
 
-- **ファイアウォール プロファイル ドメイン** - *FirewallRules/FirewallRuleName/Profiles*  
-  ルールが属するプロファイルを指定します: ドメイン、プライベート、パブリック。 この値は、ドメインに接続されているネットワークのプロファイルを表します。  
+  ネットワーク トラフィックが表示されなくなった後に、セキュリティ アソシエーションを保持する期間を指定します。 構成しない場合、*300* 秒 (既定値) のアイドル期間を経て、セキュリティアソシエーションはシステムによって削除されます。
+  
+  数値は、**300** から **3600** 秒とする必要があります。
 
-  利用可能な設定:  
-  - **マルチキャスト ブロードキャストへのユニキャスト応答が必要**  
-    **既定値**:はい
+- **事前共有キーのエンコード**  
+  CSP:[MdmStore/Global/PresharedKeyEncoding](https://go.microsoft.com/fwlink/?linkid=872541)
 
-  - **グループ ポリシーからの承認されたアプリケーション ルールをマージ**  
-    **既定値**:はい
+   UTF-8 を必要としない場合、事前共有キーが最初に UTF-8 を使用してエンコードされます。 その後、デバイス ユーザーは別のエンコード方法を選択できます。
 
-  - **着信通知をブロック**  
-    **既定値**:はい
+  - **未構成**
+  - **なし**
+  - **UTF8** (*既定値*)
 
-  - **グループ ポリシーからのグローバル ポート ルールをマージ**  
-    **既定値**:はい
+- **証明書失効リスト (CRL) の検証**  
+  CSP:[MdmStore/Global/CRLcheck](https://go.microsoft.com/fwlink/?linkid=872548)
 
-  - **ステルス モードをブロック**  
-    **既定値**:はい
+  証明書失効リスト (CRL) の検証をどのように適用するかを指定します。  
 
-  - **ファイアウォールの有効化**  
-    **既定値**:許可されます。
+  - **未構成** (*既定値*) - CRL 検証は無効にされます。
+  - **なし**
+  - **試行回数**
+  - **必要**
 
-  - **グループ ポリシーからの接続セキュリティ ルールをマージしない**  
-    **既定値**:はい
+- **[パケット キュー]**  
+  CSP:[MdmStore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)
 
-  - **グループ ポリシーからのポリシー ルールをマージしない**  
-    **既定値**:はい
+  IPsec トンネル ゲートウェイのシナリオで、暗号化された受信とクリア テキストの転送について受信側のソフトウェアのスケーリングを有効にする方法を指定します。 この設定により、パケットの順序が確実に保持されます。
 
-- **ファイアウォール プロファイル パブリック** - *FirewallRules/FirewallRuleName/Profiles*  
-  ルールが属するプロファイルを指定します: ドメイン、プライベート、パブリック。 この値は、パブリック ネットワークのプロファイルを表します。 これらのネットワークは、サーバー ホストで管理者によってパブリックとして分類されます。 分類は、ホストが初めてネットワークに接続したときに行われます。 通常、これらのネットワークは空港や喫茶店など、ネットワーク内のピアまたはネットワーク管理者が信頼されていない公共の場所にあります。  
+  - **未構成** (*既定値*) - パケット キューはクライアントの既定値に戻され、無効になります。
+  - **[無効]**
+  - **インバウンドをキューに入れる**
+  - **アウトバウンドをキューに入れる**
+  - **両方をキューに入れる**
 
-  利用可能な設定:
+- **ファイアウォール プロファイル プライベート**  
+  [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067041)
 
-  - **受信接続をブロック**  
-    **既定値**:はい 
+  - **構成** (*既定値*)
+  - **未構成**
 
-  - **マルチキャスト ブロードキャストへのユニキャスト応答が必要**  
-    **既定値**:はい  
-
-  - **ステルス モードが必要**  
-    **既定値**:はい 
- 
-  - **送信接続が必要**  
-    **既定値**:はい  
-
-  - **グループ ポリシーからの承認されたアプリケーション ルールをマージ**  
-    **既定値**:はい  
-
-  - **着信通知をブロック**  
-    **既定値**:はい  
-
-  - **グループ ポリシーからのグローバル ポート ルールをマージ**  
-    **既定値**:はい
-
-  - **ステルス モードをブロック**  
-    **既定値**:はい
-
-  - **ファイアウォールの有効化**  
-    **既定値**:許可されます。  
-
-  - **グループ ポリシーからの接続セキュリティ ルールをマージしない**  
-    **既定値**:はい  
-
-  - **着信トラフィックが必要**  
-    **既定値**:はい
-
-  - **グループ ポリシーからのポリシー ルールをマージしない**  
-    **既定値**:はい  
-
-- **ファイアウォール プロファイル プライベート** - *FirewallRules/FirewallRuleName/Profiles*  
-  ルールが属するプロファイルを指定します: ドメイン、プライベート、パブリック。 この値は、プライベート ネットワークのプロファイルを表します。  
-
-  利用可能な設定: 
+  *[構成]* に設定すると、次の追加設定を構成できます。
 
   - **受信接続をブロック**  
-    **既定値**:はい
+    CSP: [/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    - **はい** (*既定値*):
+    - **未構成**
 
   - **マルチキャスト ブロードキャストへのユニキャスト応答が必要**  
-    **既定値**:はい
+    CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **はい** (*既定値*):
+    - **未構成**
 
   - **ステルス モードが必要**  
-    **既定値**:はい
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **はい** (*既定値*):
+    - **未構成**
 
   - **送信接続が必要**  
-    **既定値**:はい
+    CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
+
+    - **はい** (*既定値*):
+    - **未構成**
 
   - **着信通知をブロック**  
-    **既定値**:はい
+    CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **はい** (*既定値*):
+    - **未構成**
 
   - **グループ ポリシーからのグローバル ポート ルールをマージ**  
-    **既定値**:はい
+    CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **はい** (*既定値*):
+    - **未構成**
 
   - **ステルス モードをブロック**  
-    **既定値**:はい  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **はい** (*既定値*):
+    - **未構成**
 
   - **ファイアウォールの有効化**  
-    **既定値**:許可されます。
+    CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **未構成**
+    - **［ブロック済み］**
+    - **許可** (*既定値*)
 
   - **グループ ポリシーからの承認されたアプリケーション ルールをマージしない**  
-    **既定値**:はい
+    CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **はい** (*既定値*):
+    - **未構成**
 
   - **グループ ポリシーからの接続セキュリティ ルールをマージしない**  
-    **既定値**:はい
+    CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **はい** (*既定値*):
+    - **未構成**
 
   - **着信トラフィックが必要**  
-    **既定値**:はい
+    CSP: [/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **はい** (*既定値*):
+    - **未構成**
 
   - **グループ ポリシーからのポリシー ルールをマージしない**  
-    **既定値**:はい  
+    CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
 
-- **ファイアウォール事前共有キー エンコード方式**  
-  **既定値**:UTF8
+    - **はい** (*既定値*):
+    - **未構成**
 
-- **証明書失効リストの検証**  
-  **既定値**:デバイスの既定値
+- **ファイアウォール プロファイル パブリック**  
+  [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067143)
 
-## <a name="web--network-protection"></a>Web とネットワークの保護  
+  - **構成** (*既定値*)
+  - **未構成**
 
-- **Network protection type (ネットワーク保護タイプ)**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)  - このポリシーでは、Microsoft Defender Exploit Guard 内でネットワーク保護をオンまたはオフにすることができます。 ネットワーク保護は Microsoft Defender Exploit Guard の機能であり、任意のアプリを使用する従業員がインターネット上のフィッシング詐欺、悪用ホスティング サイト、悪意のあるコンテンツにアクセスするのを防ぎます。 これには、サード パーティ製のブラウザーが危険なサイトに接続するのを防ぐことが含まれます。  
+  *[構成]* に設定すると、次の追加設定を構成できます。
 
-  *[有効]* または *[監査モード]* のいずれかに設定すると、ユーザーはネットワーク保護を無効にできなくなります。Microsoft Defender セキュリティ センターを使用して、接続の試行に関する情報を表示できます。  
- 
-  - *[有効]* に設定すると、ユーザーおよびアプリが危険なドメインに接続するのをブロックできます。  
-  - *[監査モード]* に設定した場合、ユーザーおよびアプリが危険なドメインに接続するのを防ぐことはできません。  
+  - **受信接続をブロック**  
+    CSP: [/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
 
-  *[ユーザー定義]* に設定すると、ユーザーとアプリが危険なドメインに接続するのをブロックすることはできず、接続に関する情報は Microsoft Defender セキュリティ センターに提供されません。  
+    - **はい** (*既定値*):
+    - **未構成**
 
-  **既定値**:監査モード
+  - **マルチキャスト ブロードキャストへのユニキャスト応答が必要**  
+    CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
 
-- **Require SmartScreen for Microsoft Edge (Microsoft Edge で SmartScreen が必要)**  
-  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) - Microsoft Edge では、(有効に設定された) Microsoft Defender SmartScreen を使用して、フィッシング詐欺にあう可能性や悪意のあるソフトウェアから既定でユーザーを保護しています。 既定では、このポリシーは有効になっています ( *[はい]* に設定されています)。有効になっている場合、ユーザーが Microsoft Defender SmartScreen をオフにすることができません。  デバイス用の有効なポリシーが [未構成] に相当する場合、ユーザーは Microsoft Defender SmartScreen を無効にして、デバイスを保護されていない状態にすることができます。  
+    - **はい** (*既定値*):
+    - **未構成**
 
-  **既定値**:はい
+  - **ステルス モードが必要**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **はい** (*既定値*):
+    - **未構成**
+
+  - **送信接続が必要**  
+    CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
+
+    - **はい** (*既定値*):
+    - **未構成**
+
+  - **グループ ポリシーからの承認されたアプリケーション ルールをマージしない**  
+    CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **はい** (*既定値*):
+    - **未構成**
+
+  - **着信通知をブロック**  
+    CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **はい** (*既定値*):
+    - **未構成**
+
+  - **グループ ポリシーからのグローバル ポート ルールをマージ**  
+    CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **はい** (*既定値*):
+    - **未構成**
+
+  - **ステルス モードをブロック**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **はい** (*既定値*):
+    - **未構成**
+
+  - **ファイアウォールの有効化**  
+    CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **未構成**
+    - **［ブロック済み］**
+    - **許可** (*既定値*)
+
+  - **グループ ポリシーからの接続セキュリティ ルールをマージしない**  
+    CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **はい** (*既定値*):
+    - **未構成**
+
+  - **着信トラフィックが必要**  
+    CSP: [/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **はい** (*既定値*):
+    - **未構成**
+
+  - **グループ ポリシーからのポリシー ルールをマージしない**  
+    CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **はい** (*既定値*):
+    - **未構成**
+
+- **ファイアウォール プロファイル ドメイン**  
+  CSP: [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2066796)
+
+  - **マルチキャスト ブロードキャストへのユニキャスト応答が必要**  
+    CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+  - **グループ ポリシーからの承認されたアプリケーション ルールをマージしない**  
+    CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **はい** (*既定値*):
+    - **未構成**  
+
+  - **着信通知をブロック**  
+    CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+
+    - **はい** (*既定値*):
+    - **未構成**
+
+  - **グループ ポリシーからのグローバル ポート ルールをマージ**  
+    CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **はい** (*既定値*):
+    - **未構成**
+
+  - **ステルス モードをブロック**  
+    CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **はい** (*既定値*):
+    - **未構成**
+
+  - **ファイアウォールの有効化**  
+    CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
+
+    - **未構成**
+    - **［ブロック済み］**
+    - **許可** (*既定値*)
+
+  - **グループ ポリシーからの接続セキュリティ ルールをマージしない**  
+    CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **はい** (*既定値*):
+    - **未構成**
+
+  - **グループ ポリシーからのポリシー ルールをマージしない**  
+    CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **はい** (*既定値*):
+    - **未構成**
+
+## <a name="microsoft-defender"></a>Microsoft Defender
+
+- **Run daily quick scan at (毎日スキャンを実行する時刻)**  
+  CSP: [Defender/ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
   
-- **Block malicious site access (悪意のあるサイトへのアクセスをブロックする)**  
-  [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) - 既定では、Microsoft Edge では、ユーザーは悪意のある可能性があるサイトに関する Windows Defender SmartScreen の警告をバイパス (無視) してそのサイトへのアクセスを続行できます。 このポリシーを有効にした場合 ( *[はい]* に設定)、Microsoft Edge を使用しているユーザーは警告を無視してサイトへのアクセスを続行することはできません。  
+   毎日のクイック スキャンを実行する時刻を構成します。 既定では、スキャンの実行は **[午前 2:00]** に設定されます。
 
-  **既定値**:はい
+- **スケジュールされたスキャンの開始時間**  
+  
+  既定では、これは **[午前 2:00]** に設定されます。
 
-- **Block unverified file download (確認されていないファイルのダウンロードをブロックする)**  
-  [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) - 既定では、Microsoft Edge では、ユーザーが悪意のある可能性があるファイルに関する Windows Defender SmartScreen の警告を無視して、確認されていないファイルのダウンロードを続行することができます。 このポリシーを有効にすると ( *[はい]* に設定)、ユーザーは警告を無視して確認されていないファイルをダウンロードすることはできません。  
+- **スケジュールされたスキャン用に低い CPU 優先度を構成**  
+  CSP: [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
-  **既定値**:はい
+  -**はい** (*既定値*)
+  - **未構成**
 
-## <a name="windows-hello-for-business"></a>Windows Hello for Business  
+- **Office 通信アプリによる子プロセスの作成をブロックする**  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=874499)  
+
+  この ASR 規則は、次の GUID を使用して制御されます。26190899-1602-49e8-8b27-eb1d0a1ce869。
+  - **未構成** - Windows の既定値が復元され、子プロセスの作成がブロックされることはありません。
+  - **ユーザー定義**
+  - **有効** (*既定値*) - Office 通信アプリケーションによる子プロセスの作成がブロックされます。
+  - **監査モード** - 子プロセスをブロックするのでなく、Windows イベントが発生します。
+
+- **Adobe Reader による子プロセスの作成をブロックする**  
+  [攻撃の回避規則を使用した攻撃の回避](https://go.microsoft.com/fwlink/?linkid=853979)  
+
+  - **未構成** - Windows の既定値が復元され、子プロセスの作成がブロックされることはありません。
+  - **ユーザー定義**
+  - **有効** (*既定値*) - Adobe Reader による子プロセスの作成がブロックされます。
+  - **監査モード** - 子プロセスをブロックするのでなく、Windows イベントが発生します。
+
+- **受信メール メッセージをスキャンする**  
+  CSP: [Defender/AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
+
+  - **はい** (*既定値*) - メールのメールボックスとメール ファイル (PST、DBX、MNX、MIME、BINHEX など) がスキャンされます。
+  - **未構成** - 設定はクライアントの既定値に戻され、メール ファイルはスキャンされません。
+
+- **リアルタイム保護を有効にする**  
+  CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050&clcid=0x409)
+
+  - **はい** (*既定値*) - リアルタイム監視が適用されます。ユーザーはこれを無効にすることはできません。
+  - **未構成** - 設定はクライアントの既定値 (有効) に戻されますが、ユーザーはこれを変更できます。 リアルタイム監視を無効にするには、カスタム URI を使用します。
+
+- **Number of days (0-90) to keep quarantined malware (検査されたマルウェアを保持する日数 (0-90))**  
+  CSP: [Defender/DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
+
+  項目が削除されるまでの [検疫] フォルダーでの保管日数を構成します。 既定値はゼロ (**0**) です。この場合、検疫されたファイルは削除されません。
+
+- **Defender システム スキャンのスケジュール**  
+  CSP:[Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+
+  Defender がデバイスをスキャンする曜日をスケジュールします。 既定では、スキャンは **[ユーザー定義]** になっています。その設定は *[毎日]* にすることも、曜日にすることも、 *[スケジュールされたスキャンはありません]* とすることもできます。
+
+- **クラウド保護のタイムアウトを延長する追加の時間 (0 から 50 秒)**  
+  CSP: [Defender/CloudExtendedTimeout](https://go.microsoft.com/fwlink/?linkid=2113940&clcid=0x409)
+
+  Defender ウイルス対策を使用すると、疑わしいファイルが 10 秒間自動的にブロックされ、クラウド内のファイルがスキャンされ、安全であることを確認されます。 この設定では、このタイムアウトに最大 50 秒を追加できます。  既定では、タイムアウトはゼロ (**0**) に設定されます。
+
+- **フル スキャン中に、マップされたネットワーク ドライブをスキャンする**  
+  CSP:[Defender/AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+
+  - **はい** (*既定値*) - フルスキャン時に、マップされたネットワーク ドライブが含められます。
+  - **未構成** - クライアントはその既定値に戻されます。これにより、マップされたネットワーク ドライブに対するスキャンは無効にされます。
+
+- **Turn on network protection (ネットワーク保護を有効にする)**  
+  CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
+  
+  - **はい** (*既定値*) - Network Inspection System (NIS) で署名によって検出された悪意のあるトラフィックをブロックします。
+  - **未構成**
+
+- **すべてのダウンロード ファイルと添付ファイルをスキャンする**  
+  CSP:[Defender/AllowIOAVProtection](https://go.microsoft.com/fwlink/?linkid=2113934&clcid=0x409)
+
+  - **はい** (*既定値*) - ダウンロードされたファイルと添付ファイルがすべてスキャンされます。 設定はクライアントの既定値 (有効) に戻されますが、ユーザーはこれを変更できます。 この設定を無効にするには、カスタム URI を使用します。
+  - **未構成** - 設定はクライアントの既定値 (有効) に戻されますが、ユーザーはこれを変更できます。 この設定を無効にするには、カスタム URI を使用します。
+
+- **アクセス保護をブロックする**  
+  CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **はい** (*既定値*):
+  - **未構成**
+
+- **ブラウザー スクリプトをスキャンする**  
+  CSP: [Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
+
+  - **はい** (*既定値*) - Microsoft Defender のスクリプト スキャン機能が適用され、ユーザーはこれを無効にすることはできません。
+  - **未構成** - この設定は、クライアントの既定値 (スクリプト スキャンを有効にする) に戻されます。ただし、ユーザーはこれを無効にすることができます。
+
+- **Microsoft Defender アプリへのユーザー アクセスをブロックする**  
+  CSP: [Defender/AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)
+
+  - **はい** (*既定値*) - Microsoft Defender ユーザー インターフェイス (UI) にアクセスできず、通知は抑制されます。
+  - **未構成** [はい] に設定すると、Windows Defender ユーザー インターフェイス (UI) にアクセスできなくなり、通知は抑制されます。 [未構成] に設定すると、設定はクライアントの既定値に戻され、通知は許可されます。
+
+- **スキャンあたりの最大許容 CPU 使用率 (0 から 100%)**  
+  CSP: [Defender/AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046&clcid=0x409)
+
+  スキャンに対する CPU の最大使用量をパーセントで指定します。 既定値は **50** です。
+
+- **スキャンの種類**  
+  CSP: [Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+
+  - **ユーザー定義**
+  - **[無効]**
+  - **クイック スキャン** (*既定値*)
+  - **フル スキャン**
+
+- **Enter how often (0-24 hours) to check for security intelligence updates (セキュリティ インテリジェンスの更新を確認する頻度 (0-24 時間) の入力)**  
+  CSP: [Defender/SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
+
+  署名の更新を確認する頻度を時間単位で指定します。 たとえば、値を 1 とすると 1 時間ごとに確認されます。 値が 2 の場合、2 時間ごとに確認されます。
+
+  値が定義されていない場合、デバイスでは、クライアントの既定値である **8** 時間が使用されます。
+
+- **Defender サンプル送信の同意**  
+  CSP: [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  Microsoft Defender でデータを送信するためのユーザーの同意レベルを確認します。 必要な同意が既に与えられている場合、Microsoft Defender からそれらが送信されます。 それ以外の場合 (かつユーザーが "確認しない" を指定した場合)、( *[クラウドによる保護]* が *[はい]* に設定されている場合は) データを送信する前にユーザーの同意を求める UI が起動します。
+
+  - **安全なサンプルを自動的に送信する** (*既定値*)
+  - **[常に確認する]**
+  - **送信しない**
+  - **すべてのサンプルを自動的に送信する**
+
+- **Cloud-delivered protection level (クラウドによる保護レベル)**  
+  CSP:[CloudBlockLevel](https://go.microsoft.com/fwlink/?linkid=2113942)
+
+  疑わしいファイルのブロック時とスキャン時に適用する Defender ウイルス対策の度合いを構成します。
+  - **未構成** (*既定値*) - 既定の Defender のブロック レベル。
+  - **高** - クライアントのパフォーマンスを最適化しながら未知のものを積極的にブロックします。この場合、誤検知の可能性が高くなります。
+  - **高+** - 不明なファイルを積極的にブロックし、追加の保護策を適用します。これはクライアントのパフォーマンスに影響を及ぼす可能性があります。
+  - **ゼロ トレランス** - 不明な実行可能ファイルをすべてブロックします。
+
+- **アーカイブ ファイルをスキャンする**  
+  CSP: [Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
+
+  - **はい** (*既定値*) - ZIP ファイルや CAB ファイルなどのアーカイブ ファイルのスキャンが適用されます。
+  - **未構成** - 設定はクライアントの既定値 (アーカイブされたファイルをスキャン) に戻されますが、ユーザーはスキャンを無効にすることができます。
+
+- **動作の監視を有効にする**  
+  CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
+
+  - **はい** (*既定値*) - 動作の監視が適用され、ユーザーはこれを無効にすることはできません。
+  - **未構成** - 設定はクライアントの既定値 (有効) に戻されますが、ユーザーはこれを変更できます。 リアルタイム監視を無効にするには、カスタム URI を使用します。
+  
+- **フル スキャン中にリムーバブル ドライブをスキャンする**  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946&clcid=0x409)
+
+  - **はい** (*既定値*) - フル スキャン中に、リムーバブル ドライブ (USB フラッシュ ドライブなど) がスキャンされます。
+  - **未構成** - 設定は、クライアントの既定値 (リムーバブル ドライブをスキャン) に戻されますが、ユーザーはこのスキャンを無効にすることができます。
+  
+- **ネットワーク ファイルをスキャンする**  
+  CSP:[Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
+
+  - **はい** (*既定値*) - Microsoft Defender によってネットワーク ファイルがスキャンされます。
+  - **未構成** - クライアントはその既定値に戻されます。これにより、ネットワーク ファイルのスキャンが無効にされます。
+  
+- **Defender potentially unwanted app action (Defender の望ましくないアプリに対するアクション)**  
+  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+  望ましくない可能性のあるアプリケーション (PUA) の検出レベルを指定します。 望ましくない可能性のあるソフトウェアをダウンロードするか、デバイスにインストールしようとすると、Defender からユーザーに警告されます。
+  - **デバイスの既定**
+  - **ブロック** (*既定値*) - 検出された項目はブロックされ、履歴に他の脅威と共に表示されます。
+  - **監査** - Defender で、望ましくない可能性のあるアプリケーションが検出されますが、対策は何も行われません。 イベント ビューアーで Defender によって作成されたイベントを検索することで、Defender でアプリケーションに対して実行されたアクションに関する情報を確認できます。
+
+- **Turn on cloud-delivered protection (クラウドによる保護を有効にする)**  
+  CSP:[AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+
+  既定では、Windows 10 デスクトップ デバイス上の Defender から、検出された問題に関する情報が Microsoft に送信されます。 Microsoft ではその情報を分析し、お客様や他のユーザーに影響する問題の詳細を把握して、改善されたソリューションを提供しています。
+
+  - **はい** (*既定値*) - クラウドで提供される保護が有効になります。  デバイス ユーザーはこの設定を変更できません。
+  - **未構成** - 設定はシステムの既定値に復元されます
+
+- **Office アプリケーションによる他のプロセスへのコード挿入をブロックする**  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  この ASR 規則は、次の GUID を使用して制御されます。75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
+  - **未構成** - 設定は Windows の既定値 (無効) に戻されます。
+  - **ブロック** (*既定値*) - Office アプリケーションは、その他のプロセスへのコードの挿入をブロックされます。
+  - **監査モード** - ブロックするのでなく Windows イベントが発生します。
+
+- **Office アプリケーションによる実行可能なコンテンツの作成をブロックする**  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  この ASR 規則は、次の GUID を使用して制御されます。3B576869-A4EC-4529-8536-B80A7769E899
+  - **未構成** - 設定は Windows の既定値 (無効) に戻されます。
+  - **ブロック** (*既定値*) - Office アプリケーションは実行可能なコンテンツの作成をブロックされます。
+  - **監査モード** - ブロックするのでなく Windows イベントが発生します。
+  
+- **JavaScript または VBScript による、ダウンロードされた実行可能なコンテンツの起動をブロックする**  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=872979)
+
+   この ASR 規則は、次の GUID を使用して制御されます。D3E037E1-3EB8-44C8-A917-57927947596D
+  - **未構成** - 設定は Windows の既定値 (無効) に戻されます。
+  - **ブロック** (*既定値*) - Defender は、インターネットからダウンロードされた JavaScript または VBScript ファイルの実行をブロックされます。
+  - **監査モード** - ブロックするのでなく Windows イベントが発生します。
+  
+- **ネットワーク保護を有効にする**  
+  CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  - **未構成** - 設定は Windows の既定値に戻され、無効になります。
+  - **ユーザー定義**
+  - **有効** - システム上のすべてのユーザーを対象にネットワーク保護が有効にされます。
+  - **監査モード** (*既定値*) - 危険なドメインからユーザーがブロックされるのでなく、Windows イベントが発生します。
+
+- **USB から実行された信頼されていない署名なしのプロセスをブロックする**  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=874502)
+
+  この ASR 規則は、次の GUID を使用して制御されます: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
+  - **未構成** - 設定は Windows の既定値 (無効) に戻されます。
+  - **ブロック** (*既定値*) - USB ドライブから実行される信頼されていないプロセスおよび無署名プロセスがブロックされます。
+  - **監査モード** - ブロックするのでなく Windows イベントが発生します。
+
+- **Windows ローカル セキュリティ機関サブシステム (lsass.exe) からの資格情報の盗難をブロックする**  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=874499)
+
+  この ASR 規則は、次の GUID を使用して制御されます。9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+  - **未構成** - 設定は Windows の既定値 (無効) に戻されます。
+  - **ユーザー定義**
+  - **有効** (*既定値*) - lsass.exe を介して資格情報を盗もうとする試みがブロックされます。
+  - **監査モード** - 危険なドメインからユーザーはブロックされず、代わりに Windows イベントが発生します。
+
+- **電子メールおよび Web メールのクライアントからの実行可能なコンテンツをブロックする**  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  - **未構成** - 設定は Windows の既定値 (無効) に戻されます。
+  - **ブロック** (*既定値*) - 電子メールおよび Web メールのクライアントからダウンロードした実行可能なコンテンツはブロックされます。
+  - **監査モード** - ブロックするのでなく Windows イベントが発生します。
+
+- **すべての Office アプリケーションによる子プロセスの作成をブロックする**  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  この ASR 規則は、次の GUID を使用して制御されます。D4F940AB-401B-4EFC-AADC-AD5F3C50688A
+  - **未構成** - 設定は Windows の既定値 (無効) に戻されます。
+  - **ブロック** (*既定値*)
+  - **監査モード** - ブロックするのでなく Windows イベントが発生します。
+
+- **難読化されている可能性のあるスクリプト (js/vbs/ps) の実行をブロックする**  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=872978)
+
+  この ASR 規則は、次の GUID を使用して制御されます。5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  - **未構成** - 設定は Windows の既定値 (無効) に戻されます。
+  - **ブロック** (*既定値*) - 難読化されたスクリプトの実行が Defender によってブロックされます。
+  - **監査モード** - ブロックするのでなく Windows イベントが発生します。
+
+- **Office マクロからの Win32 API 呼び出しをブロックする**  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=872977)
+
+  この ASR 規則は、次の GUID を使用して制御されます。92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  - **未構成** - 設定は Windows の既定値 (無効) に戻されます。
+  - **ブロック** (*既定値*) - Office マクロは Win32 API 呼び出しの使用をブロックされます。
+  - **監査モード** - ブロックするのでなく Windows イベントが発生します。
+
+## <a name="microsoft-defender-security-center"></a>Microsoft Defender セキュリティ センター
+
+- **ユーザーが Exploit Guard 保護インターフェイスを編集することをブロックする**  
+  CSP:[WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://go.microsoft.com/fwlink/?linkid=2067239)
+
+  - **はい** (*既定値*) - Microsoft Defender Security Center 内の悪用に対する保護設定の領域に対してユーザーは変更を加えることができなくなります。
+  - **未構成** - ローカル ユーザーは悪用に対する保護設定の領域に対して変更を加えることができます。
+
+## <a name="smart-screen"></a>スマート スクリーン
+
+- **ユーザーが SmartScreen 警告を無視できないようにする**  
+  CSP:[SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+   この設定を使用するには、[アプリとファイルに対して SmartScreen を適用する] の設定を有効にする必要があります。
+  - **はい** (*既定値*) - SmartScreen では、警告を無視してアプリを実行するオプションがユーザーに提示されません。 警告が表示されますが、ユーザーはそれをバイパスすることができます。
+  - **未構成** - 設定が Windows の既定値に戻されます。これにより、ユーザーはオーバーライドできるようになります。
+
+- **ストアからのアプリのみを要求する**  
+
+  - **はい** (*既定値*):
+  - **未構成**
+
+- **Windows SmartScreen を有効にする**  
+  CSP:[SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  - **はい** (*既定値*) - SmartScreen の使用をすべてのユーザーに強制します。
+  - **未構成** - 設定を Windows の既定値に戻します。これにより、SmartScreen は有効にされますが、ユーザーはこの設定を変更できます。 SmartScreen を無効にするには、カスタム URI を使用します。
+
+## <a name="windows-hello-for-business"></a>Windows Hello for Business
 
 詳細については、Windows のドキュメントの「[PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp)」を参照してください。
 
-- **Windows Hello for Business を構成する** - *TenantId/Policies/UsePassportForWork*    
-  Windows Hello for Business は、パスワード、スマート カード、および仮想スマート カードを置き換えることで Windows にサインインする代替方法です。  
+- **Windows Hello for Business をブロックする**  
 
+   Windows Hello for Business は、パスワード、スマート カード、および仮想スマート カードを置き換えることで Windows にサインインする代替方法です。
 
-  > [!IMPORTANT]
-  > この設定のオプションは、暗黙的な意味とは逆になります。 逆のときは、値が "*はい*" の場合は、Windows Hello は有効にならず、"*未構成*" として扱われます。 この設定が "*未構成*" に設定されていると、このベースラインを受け取ったデバイスで Windows Hello が有効になります。
-  >
-  > 以下の説明は、この動作を反映するために変更されています。 設定の反転は、このセキュリティ ベースラインの今後の更新で修正される予定です。
+  - **未構成** - デバイスによって Windows Hello for Business がデバイス プロビジョニングされます。これは Windows の既定値です。
+  - **無効** (*既定値*) - デバイスによって Windows Hello for Business がプロビジョニングされます。
+  - **有効** - デバイスでは、どのユーザーに対しても Windows Hello for Business がプロビジョニングされません。
 
-  - "*未構成*" に設定すると、Windows Hello は有効になり、デバイスで Windows Hello for Business がプロビジョニングされます。
-  - "*はい*" に設定すると、ベースラインはデバイスのポリシー設定に影響しません。 これは、Windows Hello for Business がデバイスで無効になっている場合、無効のままになることを意味します。 有効になっている場合は、有効のままになります。
-  <!-- expected behavior 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
-  -->
+  *[無効]* に設定すると、次の設定を構成できます。
 
-  このベースラインを使用して、Windows Hello for Business を無効にすることはできません。 [Windows の登録](windows-hello.md)を構成するときに、または [ID 保護](identity-protection-configure.md)のデバイス構成プロファイルの一部として、Windows Hello for Business を無効にすることができます。  
+  - **[PIN での小文字の使用]**  
+    - **許可しない**
+    - **必須**
+    - **許可** (*既定値*)
 
-Windows Hello for Business は、パスワード、スマート カード、および仮想スマート カードを置き換えることで Windows にサインインする代替方法です。  
+  - **[PIN での特殊文字の使用]**
+    - **許可しない**
+    - **必須**
+    - **許可** (*既定値*)
 
-  このポリシー設定を有効にした場合、または構成しなかった場合、デバイスでは Windows Hello for Business がプロビジョニングされます。 このポリシー設定を無効にした場合、デバイスではどのユーザーに対しても Windows Hello for Business をプロビジョニングが行われません。
-
-  Intune では Windows Hello の無効化はサポートされていません。 その代わり、Windows Hello for Business を有効にする (Yes) ように、または Windows Hello を直接設定しない (未構成) ようにポリシーを構成できます。 未構成の場合、デバイスでは他のポリシーを介して、この機能を有効または無効にする構成を受信することができます。  
-
-  **既定値**:はい  
-
-- **PIN に小文字が必要** - *TenantId/Policies/PINComplexity/LowercaseLetters*  
-  **既定値**:許可されます。  
-
-- **PIN に特殊文字が必要** - *TenantId/Policies/PINComplexity/SpecialCharacters*  
-  **既定値**:許可されます。  
-
-- **PIN に大文字が必要** - *TenantId/Policies/PINComplexity/UppercaseLetters*   
-  **既定値**:許可されます。  
-
+  - **[PIN での大文字の使用]**
+    - **許可しない**
+    - **必須**
+    - **許可** (*既定値*)

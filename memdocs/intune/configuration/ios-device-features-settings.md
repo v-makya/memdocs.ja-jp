@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/17/2020
+ms.date: 03/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fafca25fb0e374d281f8ef593cb5fa7f35d82979
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 69ca92125728ec8fdac27c229f8aacc5c0ef29c0
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086958"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359385"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune で一般的な iOS および iPadOS 機能を使用するための iOS および iPadOS デバイスの設定
 
@@ -33,7 +33,7 @@ Intune には、iOS および iPadOS ユーザーが自分のデバイスでさ�
 
 ## <a name="before-you-begin"></a>始める前に
 
-[iOS および iPadOS デバイス構成プロファイルを作成します](device-features-configure.md)。
+[iOS または iPadOS のデバイス機能プロファイルを作成します](device-features-configure.md)。
 
 > [!NOTE]
 > これらの設定はさまざまな登録の種類に適用され、一部の設定はすべての登録オプションに適用されます。 さまざまな登録の種類の詳細については、[iOS および iPadOS の登録](../enrollment/ios-enroll.md)に関するページを参照してください。
@@ -81,11 +81,11 @@ AirPrinter サーバーを追加するには、プリンターの IP アドレ�
 
 ### <a name="dock"></a>ドッキング
 
-**[ドッキング]** 設定で、画面のドックに最大 6 つのアイテムまたはフォルダーを追加できます。 多くのデバイスではより少ないアイテムがサポートされています。 たとえば iPhone では最大で 4 つのアイテムがサポートされます。 この場合、追加した最初の 4 つのアイテムのみがデバイスに表示されます。
+**[ドッキング]** 設定で、画面のドックに最大 6 つのアイテムまたはフォルダーを追加できます。 多くのデバイスではより少ないアイテムがサポートされています。 たとえば iPhone では最大で 4 つのアイテムがサポートされます。 この場合、最初に追加した 4 つのアイテムのみがデバイスに表示されます。
 
 デバイスの Dock には最大 **6** つのアイテム (アプリとフォルダーの合計) を追加できます。
 
-- **[追加]** :デバイスのドックにアプリまたはフォルダーを追加します。
+- **[追加]** :デバイスの Dock にアプリまたはフォルダーを追加します。
 - **種類**: **[アプリ]** または **[フォルダー]** を追加します。
 
   - **[アプリ]** :画面のドックにアプリを追加するには、このオプションを選択します。 次を入力します。
@@ -113,11 +113,13 @@ AirPrinter サーバーを追加するには、プリンターの IP アドレ�
 
 次の例では、Dock 画面に "Safari"、"メール"、および "株価" アプリのみが表示されています。 "メール" アプリを選択すると、そのプロパティが表示されます。
 
-![iOS および iPadOS の Dock 設定のサンプル](./media/ios-device-features-settings/FfFiUcP.png)
+> [!div class="mx-imgBorder"]
+> ![iOS および iPadOS の Dock 設定のサンプル](./media/ios-device-features-settings/FfFiUcP.png)
 
 iPhone にポリシーを割り当てると、ドックは次の画像のようになります。
 
-![iPhone での iOS および iPadOS の Dock レイアウトのサンプル](./media/ios-device-features-settings/bAgCe8F.png)
+> [!div class="mx-imgBorder"]
+> ![iPhone での iOS および iPadOS の Dock レイアウトのサンプル](./media/ios-device-features-settings/bAgCe8F.png)
 
 ### <a name="pages"></a>ページ
 
@@ -158,11 +160,13 @@ iPhone にポリシーを割り当てると、ドックは次の画像のよう�
 
 次の例では、**Contoso** という新しいページが追加されます。 ページには、"友達を探す" と "設定" アプリが表示されています。 "設定" アプリを選択すると、そのプロパティが表示されます。
 
-![Intune の iOS および iPadOS のホーム画面設定の例](./media/ios-device-features-settings/Jc2OxyX.png)
+> [!div class="mx-imgBorder"]
+> ![Intune の iOS および iPadOS のホーム画面設定の例](./media/ios-device-features-settings/Jc2OxyX.png)
 
 iPhone にポリシーを割り当てると、ページは次の画像のようになります。
 
-![Intune のホーム画面が変更された iOS および iPadOS デバイス](./media/ios-device-features-settings/Bd37PHa.png)
+> [!div class="mx-imgBorder"]
+> ![Intune のホーム画面が変更された iOS および iPadOS デバイス](./media/ios-device-features-settings/Bd37PHa.png)
 
 ## <a name="app-notifications"></a>アプリの通知
 
@@ -170,14 +174,15 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 
 - **[追加]** :アプリの通知を追加します。
 
-    ![Intune の iOS および iPadOS プロファイルでアプリの通知を追加する](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > [!div class="mx-imgBorder"]
+  > ![Intune の iOS および iPadOS プロファイルでアプリの通知を追加する](./media/ios-device-features-settings/ios-macos-app-notifications.png)
 
   - **[アプリ バンドル ID]** :追加するアプリの **[アプリ バンドル ID]** を入力します。 例については、[組み込み iOS および iPadOS アプリのバンドル ID](bundle-ids-built-in-ios-apps.md) に関する記事を参照してください。
   - **[アプリ名]** :追加するアプリの名前を入力します。 この名前は、Microsoft Endpoint Manager admin center での参照用に使用されます。 デバイスには "*表示されません*"。
   - **[発行元]** : 追加するアプリの発行元を入力します。 この名前は、Microsoft Endpoint Manager admin center での参照用に使用されます。 デバイスには "*表示されません*"。
   - **[通知]** :アプリからデバイスへの通知送信を **[有効]** または **[無効]** にします。
     - **[通知センターに表示する]** : **[有効]** にすると、アプリがデバイスの通知センターに通知を表示することを許可します。 **[無効]** にすると、アプリが通知センターに通知を表示することを禁止します。
-    - **[ロック画面に表示する]** : **[有効]** を選択すると、アプリからの通知がデバイスのロック画面に表示されます。 **[無効]** にすると、アプリがロック画面に通知を表示することを禁止します。
+    - **[ロック画面に表示する]** : **[有効]** にすると、デバイスのロック画面にアプリの通知を表示します。 **[無効]** にすると、アプリがロック画面に通知を表示することを禁止します。
     - **[アラートの種類]** :デバイスのロックが解除されているときの通知の表示方法を選択します。 次のようなオプションがあります。
       - **なし**: 通知は表示されません。
       - **[バナー]** :通知を示すバナーが短時間表示されます。
@@ -198,7 +203,7 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 
   入力したテキストは、デバイスのサインイン ウィンドウとロック画面に表示されます。
 
-- **ロック画面の脚注**:デバイスの紛失または盗難時に、返却に役立つようなメモを入力します。 必要な任意のテキストを入力できます。 たとえば、`If found, call Contoso at ...` のようなものを入力します。
+- **ロック画面の脚注**:デバイスの紛失または盗難時に、デバイスの返却に役立つようなメモを入力します。 必要な任意のテキストを入力できます。 たとえば、`If found, call Contoso at ...` のようなものを入力します。
 
   デバイス トークンを使用して、このようなフィールドにデバイス固有の情報を追加することもできます。 たとえば、シリアル番号を表示するには、`Serial Number: {{serialnumber}}` と入力します。 ロック画面には、`Serial Number 123456789ABC` のようにテキストが表示されます。 変数を入力するときは、必ず中かっこ `{{ }}` を使用してください。 [アプリの構成トークン](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list)に関する記事には、使用できる変数の一覧が掲載されています。 `deviceName` または他のデバイス固有の値を使用することもできます。
 
@@ -209,15 +214,16 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>これらの設定は次に適用されます。デバイスの登録、デバイスの自動登録 (監視)
 
-- **[AAD からのユーザー名の属性]** :Intune によって、Azure AD で各ユーザーに対してこの属性が検索されます。 次に Intune によって個々のフィールド (UPN など) にデータが入力され、その後で、デバイスにインストールされる XML が生成されます。 次のようなオプションがあります。
+- **[AAD からのユーザー名の属性]** :Intune によって、Azure AD で各ユーザーに対してこの属性が検索されます。 次に Intune によって個々のフィールド (UPN など) にデータが入力され、その後、デバイスにインストールされる XML が生成されます。 次のようなオプションがあります。
 
   - **[ユーザー プリンシパル名]** :UPN は次のように解析されます。
 
-    ![Intune の iOS および iPadOS のユーザー名 SSO 属性](./media/ios-device-features-settings/User-name-attribute.png)
+    > [!div class="mx-imgBorder"]
+    > ![Intune の iOS および iPadOS のユーザー名 SSO 属性](./media/ios-device-features-settings/User-name-attribute.png)
 
     **[領域]** テキスト ボックスに入力したテキストを使用して領域を上書きすることもできます。
 
-    たとえば、Contoso にはヨーロッパ、アジア、北米などいくつかの領域があります。 Contoso は、アジアのユーザーが SSO を使用できるようにしたいと考えており、このアプリには `username@asia.contoso.com` 形式の UPN が必要です。 **[ユーザー プリンシパル名]** を選択すると、各ユーザーの領域は Azure AD から取得されます。これが `contoso.com` です。 そのため、アジアのユーザーの場合は、 **[ユーザー プリンシパル名]** を選択し、「`asia.contoso.com`」と入力します。 エンド ユーザーの UPN は `username@contoso.com` ではなく、`username@asia.contoso.com` になります。
+    たとえば、Contoso にはヨーロッパ、アジア、北米などいくつかの領域があります。 Contoso は、アジアのユーザーが SSO を使用できるようにしたいと考えており、このアプリには `username@asia.contoso.com` 形式の UPN が必要です。 **[ユーザー プリンシパル名]** を選択すると、各ユーザーの領域は Azure AD から取得されます。これが `contoso.com` です。 そのため、アジアのユーザーの場合は、 **[ユーザー プリンシパル名]** を選択し、「`asia.contoso.com`」と入力します。 ユーザーの UPN は `username@contoso.com` ではなく、`username@asia.contoso.com` になります。
 
   - **[Intune デバイス ID]** :Intune によって Intune デバイス ID が自動的に選択されます。
 
@@ -231,7 +237,7 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 - **[領域]** :URL のドメイン部分を入力します。 たとえば、「`contoso.com`」と入力します。
 - **[シングル サインオンを使用する URL プレフィックス]** :ユーザーのシングル サインオン認証を必要とする組織の URL をすべて**追加**します。
 
-  たとえば、ユーザーがそのようなサイトに接続すると、iOS および iPadOS デバイスによってシングル サインオンの資格情報が使用されます。 ユーザーはいかなる追加の資格情報も入力する必要がありません。 多要素認証が有効な場合、ユーザーは第 2 の認証情報を入力する必要があります。
+  たとえば、ユーザーがそのようなサイトに接続すると、iOS および iPadOS デバイスによってシングル サインオンの資格情報が使用されます。 ユーザーはいかなる追加の資格情報も入力する必要はありません。 多要素認証が有効な場合、ユーザーは第 2 の認証情報を入力する必要があります。
 
   > [!NOTE]
   > これらの URL は、適切な形式の FQDN である必要があります。 Apple で要求されている形式は `http://<yourURL.domain>` です。
@@ -240,7 +246,7 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 
   パターン `http://.com` はすべての HTTP URL と一致し、`https://.com` はすべての HTTPS URL と一致します。
 
-- **[シングル サインオンを使用するアプリ]** :シングル サインオンを使用できるエンド ユーザーのデバイスにアプリを**追加**します。
+- **[シングル サインオンを使用するアプリ]** :シングル サインオンを使用できるユーザーのデバイスにアプリを**追加**します。
 
   `AppIdentifierMatches` 配列には、アプリ バンドル ID と一致する文字列が含まれる必要があります。 これらの文字列では、完全に一致する値 (`com.contoso.myapp` など) を指定するか、\* ワイルドカード文字を使用してバンドル ID のプレフィックス一致を入力できます。 ワイルドカード文字は、ピリオド文字 (.) の後に指定する必要があり、文字列の最後で 1 回だけ使えます (`com.contoso.*` など)。 ワイルドカードが含まれる場合は、バンドル ID がプレフィックスで始まるすべてのアプリが、アカウントへのアクセスを許可されます。
 
@@ -269,7 +275,7 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
     - **[ブックマークのパス]** :この設定は Apple によって変更されました。 すべてのブックマークは、 **[サイトの許可]** フォルダーに格納されます。 ブックマークは、入力したブックマーク パスには格納されません。
     - **[タイトル]** :ブックマークのわかりやすいタイトルを入力します。
 
-    URL を入力しないと、エンド ユーザーは `microsoft.com`、`microsoft.net`、および `apple.com` 以外の Web サイトにアクセスできません。 これらの URL は Intune によって自動的に許可されます。
+    URL を入力しないと、ユーザーは `microsoft.com`、`microsoft.net`、`apple.com` 以外の Web サイトにアクセスできません。 これらの URL は Intune によって自動的に許可されます。
 
 ## <a name="single-sign-on-app-extension"></a>シングル サインオン アプリの拡張機能
 
@@ -282,10 +288,10 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 
 - **[SSO アプリ拡張機能の種類]** : SSO アプリ拡張機能の種類を選択します。 次のようなオプションがあります。
 
-  - **[未構成]** :アプリの拡張機能は使用されません。 アプリの拡張機能を無効にするには、SSO アプリの拡張機能の種類を **[未構成]** に切り替えます。
+  - **[未構成]** :Intune では、この設定は変更または更新されません。 既定では、OS によって、アプリ拡張機能が使用されない可能性があります。 アプリの拡張機能を無効にするには、SSO アプリの拡張機能の種類を **[未構成]** に切り替えます。
   - **[リダイレクト]** : 最新の認証フローで SSO を使用するには、汎用のカスタマイズ可能なリダイレクト アプリ拡張機能を使用します。 組織のアプリ拡張機能の拡張機能 ID を確認しておきます。
 
-    iOS/iPadOS 13.0 以降のデバイスでは、このリダイレクト SSO アプリ拡張機能の種類を使用して、**Microsoft Azure AD SSO アプリ拡張機能**を構成できます。 Microsoft Azure AD 拡張機能を使用すると、Microsoft のアプリと、認証に Azure AD を使用する組織のアプリの間で、シングル サインオンを使用できるようになります。 Azure AD 拡張機能は、高度な認証ブローカーとして機能し、セキュリティとエンド ユーザー エクスペリエンスの向上を提供します。 以前に Microsoft Authenticator アプリで仲介型認証を使用していたすべてのアプリは、引き続き SSO 拡張機能で SSO を取得します。 Azure AD SSO 拡張機能では、ブラウザー SSO はまだサポートされていません。 SSO および iOS/iPadOS 認証ブローカーの詳細については、[macOS および iOS/iPadOS での SSO の構成](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios)に関する記事を参照してください。  
+    iOS/iPadOS 13.0 以降のデバイスでは、このリダイレクト SSO アプリ拡張機能の種類を使用して、**Microsoft Azure AD SSO アプリ拡張機能**を構成できます。 Microsoft Azure AD 拡張機能を使用すると、Microsoft のアプリと、認証に Azure AD を使用する組織のアプリの間で、シングル サインオンを使用できるようになります。 Azure AD 拡張機能は、高度な認証ブローカーとして機能し、セキュリティとユーザー エクスペリエンスの向上を提供します。 以前に Microsoft Authenticator アプリで仲介型認証を使用していたすべてのアプリは、引き続き SSO 拡張機能で SSO を取得します。 Azure AD SSO 拡張機能では、ブラウザー SSO はまだサポートされていません。 SSO および iOS/iPadOS 認証ブローカーの詳細については、[macOS および iOS/iPadOS での SSO の構成](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios)に関する記事を参照してください。  
 
     **iOS の Microsoft Azure AD 拡張機能を構成するには:**
 
@@ -306,7 +312,7 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
         - `https://login-us.microsoftonline.com`
 
     > [!IMPORTANT]
-    > iOS/iPadOS Microsoft Azure AD 拡張機能で SSO を実現するには、最初に iOS/iPadOS Microsoft Authenticator アプリをデバイスにインストールします。 Authenticator によりデバイスに Azure AD 拡張機能が提供され、MDM SSO アプリ拡張機能の設定によって Azure AD 拡張機能がアクティブ化されます。 Authenticator と SSO アプリ拡張機能プロファイルをデバイスにインストールすると、ユーザーは資格情報を入力してサインインし、セッションを確立する必要があります。 その後、このセッションは、ユーザーの再認証を必要とせずに、さまざまなアプリケーションで使用されます。
+    > iOS または iPadOS の Microsoft Azure AD 拡張機能で SSO を実現するには、まず iOS または iPadOS の Microsoft Authenticator アプリをデバイスにインストールします。 Authenticator により、デバイスに Azure AD 拡張機能が提供され、MDM SSO アプリ拡張機能の設定によって Azure AD 拡張機能がアクティブ化されます。 Authenticator と SSO アプリ拡張機能プロファイルをデバイスにインストールすると、ユーザーは資格情報を入力してサインインし、セッションを確立する必要があります。 その後、このセッションは、ユーザーの再認証を必要とせずに、さまざまなアプリケーションで使用されます。
 
   - **[資格情報]** : 汎用のカスタマイズ可能な資格情報アプリ拡張機能を使用し、チャレンジと応答の認証フローで SSO を使用します。 組織のアプリ拡張機能の拡張機能 ID を確認しておきます。
   - **Kerberos**: iOS 13.0 以降と iPadOS 13.0 以降に含まれる、Apple の組み込みの Kerberos 拡張機能を使用します。 このオプションは、 **[資格情報]** アプリ拡張機能の Kerberos 固有のバージョンです。
@@ -344,9 +350,9 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 
   - **[追加]** :選択すると、構成キーが追加されます。
 
-- **[キーチェーンの使用法]** (Kerberos のみ): パスワードがキーチェーンに保存および格納されないようにするには、 **[ブロック]** を選択します。 ブロックした場合、ユーザーはパスワードの保存を求められず、Kerberos チケットの有効期限が切れたらパスワードを再入力する必要があります。 **[未構成]** (既定) を選択すると、パスワードをキーチェーンに保存および格納できます。 チケットの有効期限が切れても、ユーザーはパスワードの再入力を求められません。
-- **[Face ID、Touch ID、パスコード]** (Kerberos のみ): **[必要]** にすると、Kerberos チケットを更新するために資格情報が必要なとき、ユーザーに Face ID、Touch ID、またはデバイスのパスコードの入力が強制されます。 **[未構成]** (既定) にすると、ユーザーは Kerberos チケットを更新するために生体認証やデバイスのパスコードを使用する必要がありません。 **[キーチェーンの使用法]** がブロックされている場合、この設定は適用されません。
-- **[既定の領域]** (Kerberos のみ): **[有効]** を選択して、既定の領域として入力した **[領域]** 値を設定します。 **[未構成]** (既定) を選択すると、既定の領域は設定されません。
+- **[キーチェーンの使用法]** (Kerberos のみ): **[ブロック]** にすると、パスワードはキーチェーンに保存および格納されません。 ブロックした場合、ユーザーはパスワードの保存を求められず、Kerberos チケットの有効期限が切れたらパスワードを再入力する必要があります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、パスワードのキーチェーンへの保存および格納が許可される可能性があります。 チケットの有効期限が切れても、ユーザーはパスワードの再入力を求められません。
+- **[Face ID、Touch ID、パスコード]** (Kerberos のみ): **[必要]** にすると、Kerberos チケットを更新するために資格情報が必要なとき、ユーザーに Face ID、Touch ID、またはデバイスのパスコードの入力が強制されます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、ユーザーは Kerberos チケットを更新するために生体認証やデバイスのパスコードを使用する必要がない場合があります。 **[キーチェーンの使用法]** がブロックされている場合、この設定は適用されません。
+- **[既定の領域]** (Kerberos のみ): **[有効]** にすると、入力した **[領域]** 値が既定の領域として設定されます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS によって、既定の領域が設定されない可能性があります。
 
   > [!TIP]
   > - 組織で複数の Kerberos SSO アプリ拡張機能を構成している場合は、この設定を **[有効]** にします。
@@ -372,7 +378,7 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>これらの設定は次に適用されます。デバイスの自動登録 (監視)
 
 - **[壁紙の表示場所]** :画像を表示するデバイス上の場所を選択します。 次のようなオプションがあります。
-  - **[未構成]** :カスタムの画像はデバイスに追加されません。 デバイスにはオペレーティング システムの既定値が使用されます。
+  - **[未構成]** :Intune では、この設定は変更または更新されません。 カスタムの画像はデバイスに追加されません。 既定では、OS によって独自のイメージが設定される場合があります。
   - **[ロック画面]** :ロック画面に画像を追加します。
   - **[ホーム画面]** :ホーム画面に画像を追加します。
   - **[ロック画面とホーム画面]** :ロック画面とホーム画面に同じ画像を使用します。

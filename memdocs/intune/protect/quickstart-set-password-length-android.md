@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7330f50c61679ab91b5f364f718cefcc456435f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b2e2d5fb2f698d7e0b544dbdbd4ab05f2b94b7ea
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351267"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325450"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>クイック スタート:Android デバイス用のパスワード コンプライアンス ポリシーを作成する
 
@@ -38,7 +38,7 @@ Intune サブスクリプションがない場合は、[無料試用版アカウ
 
 ## <a name="sign-in-to-intune"></a>Intune にサインインする
 
-[全体管理者](../fundamentals/users-add.md#types-of-administrators)または Intune [サービス管理者](../fundamentals/users-add.md#types-of-administrators)として、[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+[全体管理者](../fundamentals/users-add.md#types-of-administrators)または Intune [サービス管理者](../fundamentals/users-add.md#types-of-administrators)として、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインします。
 
 ## <a name="create-a-device-compliance-policy"></a>デバイス コンプライアンス ポリシーを作成する
 

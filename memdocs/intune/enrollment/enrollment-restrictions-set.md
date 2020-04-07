@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f68278e936a85ab21407e55c8d5c18529457938a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b05d89c40f274a7cacc29634fcf60433019c7e1f
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359301"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327083"
 ---
 # <a name="set-enrollment-restrictions"></a>登録制限を設定する
 
@@ -59,7 +59,7 @@ ms.locfileid: "79359301"
 
 ## <a name="create-a-device-type-restriction"></a>デバイスの種類の制限を作成する
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[デバイス]**  >  **[登録制限]**  >  **[制限の作成]**  >  **[デバイスの種類の制限]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[デバイス]**  >  **[登録制限]**  >  **[制限の作成]**  >  **[デバイスの種類の制限]** を選択します。
 2. **[基本]** ページで、制限の **[名前]** を入力します。 **[説明]** の入力は省略できます。
 3. **[次へ]** を選択して、 **[プラットフォームの設定]** ページに移動します。
 4. **[プラットフォーム]** で、この制限を許可するプラットフォームに対して **[許可]** を選択します。
@@ -93,7 +93,7 @@ ms.locfileid: "79359301"
 
 ## <a name="create-a-device-limit-restriction"></a>デバイスの上限数の制限を作成する
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[デバイス]**  >  **[登録制限]**  >  **[制限の作成]**  >  **[デバイスの上限数の制限]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[デバイス]**  >  **[登録制限]**  >  **[制限の作成]**  >  **[デバイスの上限数の制限]** を選択します。
 2. **[基本]** ページで、制限の **[名前]** を入力します。 **[説明]** の入力は省略できます。
 3. **[次へ]** を選択して、 **[デバイスの上限数]** ページにアクセスします。
 4. **[デバイスの上限数]** で、ユーザーが登録できるデバイスの最大数を選択します。
@@ -126,7 +126,7 @@ BYOD の登録中にユーザーがデバイス登録の上限に達すると、
 
 登録制限に対する設定は、以下の手順で変更できます。 これらの制限は、既に登録されているデバイスには適用されません。 [Intune PC エージェント](../fundamentals/manage-windows-pcs-with-microsoft-intune.md)で登録されているデバイスはこの機能でブロックできません。
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[デバイス]**  >  **[登録制限]** の順に選択し、変更する制限を選択してから **[プロパティ]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[デバイス]**  >  **[登録制限]** を選択し、変更する制限を選択してから **[プロパティ]** を選択します。
 2. 変更する設定の横にある **[編集]** を選択します。
 3. **[編集]** ページで、必要な変更を行い、 **[レビューと保存]** ページに進み、 **[保存]** を選択します。
 

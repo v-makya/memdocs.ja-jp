@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a49c71705755f82dcf33c63971ed6f11ffc849f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: b808e34e6b44641902daddcee3a47f7273756b2d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084986"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323285"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Intune でインポートした PKCS 証明書を構成して使用する
 
@@ -89,7 +89,7 @@ Intune を使用して、**インポートした PFX 証明書**をユーザー�
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
-2. **[テナント管理]** 、 **[コネクタとトークン]** 、 **[証明書のコネクタ]** 、 **[追加]** の順に選択します。
+2. **[テナント管理]**  >  **[コネクタとトークン]**  >  **[証明書のコネクタ]**  >  **[追加]** の順に選択します。
 
    ![PFX Certificate Connector for Microsoft Intune のダウンロード](./media/certificates-imported-pfx-configure/download-imported-pfxconnector.png)
 
@@ -106,7 +106,7 @@ Intune を使用して、**インポートした PFX 証明書**をユーザー�
 
 6. ウィンドウを閉じます。
 
-7. Microsoft Endpoint Manager 管理センターで、 **[テナント管理]** 、 **[コネクタとトークン]** 、 **[証明書コネクタ]** の順に移動します。 しばらくすると、緑のチェック マークが表示され、接続状態が更新されます。 これでコネクタ サーバーは Intune と通信できます。
+7. Microsoft Endpoint Manager admin center で、 **[テナント管理]**  >  **[コネクタとトークン]**  >  **[証明書のコネクタ]** に戻ります。 しばらくすると、緑のチェック マークが表示され、接続状態が更新されます。 これでコネクタ サーバーは Intune と通信できます。
 
 ## <a name="import-pfx-certificates-to-intune"></a>Intune への PFX 証明書のインポート
 

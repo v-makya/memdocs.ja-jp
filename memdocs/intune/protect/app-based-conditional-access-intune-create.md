@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2883add5a3dbba274201bfeebb7960a312e33da
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 73b471d7eefa8e696b17a949756ce1395530c5f7
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354231"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323188"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Intune を使用してアプリベースの条件付きアクセス ポリシーを設定する
 
@@ -38,11 +38,11 @@ ms.locfileid: "79354231"
 
 条件付きアクセスは、Azure Active Directory (Azure AD) テクノロジです。 *Intune* からアクセスされる条件付きアクセス ノードは、*Azure AD* からアクセスされるものと同じノードです。 同じノードであるため、ポリシーを構成するために、Intune と Azure AD の間を切り替える必要はありません。
 
-Microsoft Endpoint Manager 管理センターから条件付きアクセスポリシーを作成するには、その前に Azure AD Premium ライセンスを用意する必要があります。
+Microsoft Endpoint Manager admin center から条件付きアクセス ポリシーを作成するには、その前に Azure AD Premium ライセンスを用意する必要があります。
 
 ### <a name="to-create-an-app-based-conditional-access-policy"></a>アプリベースの条件付きアクセス ポリシーを作成するには
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインします。
 
 2. **[エンドポイント セキュリティ]** 、 **[条件付きアクセス]** 、 **[新しいポリシー]** の順に選択します。
 

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93fba17973571a9981269eb0b9fc98dae20cb920
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085860"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327010"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune でのデバイス登録に関するトラブルシューティング
 
@@ -63,9 +63,9 @@ ms.locfileid: "80085860"
 
 次の手順に従って、割り当てられているユーザーの数が最大デバイス数を超えていないことを確認します。
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[登録制限]**  >  **[デバイスの上限数の制限]** の順に選択します。 **[デバイス制限]** 列の値に注目してください。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[登録制限]**  >  **[デバイスの上限数の制限]** を選択します。 **[デバイス制限]** 列の値に注目してください。
 
-2. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[ユーザー]** 、 **[すべてのユーザー]** の順に選択し、ユーザーを選択し、 **[デバイス]** を選択します。 デバイス数に注目してください。
+2. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[ユーザー]**  >  **[すべてのユーザー]** を選択し、ユーザーを選択し、 **[デバイス]** を選択します。 デバイス数に注目してください。
 
 3. ユーザーの登録済みデバイス数が既にデバイス数の上限に達している場合、以下の操作が行われるまでユーザーはそれ以上の登録を実行することができません。
     - [既存のデバイスが削除される](../remote-actions/devices-wipe.md)、または
@@ -286,9 +286,9 @@ Android デバイスでは、[SSL のサーバー ハロー](https://technet.mic
 登録後、デバイスは正常な状態に戻り、会社リソースへのアクセスが回復します。
 
 ### <a name="verify-ws-trust-13-is-enabled"></a>WS-Trust 1.3 が有効になっていることを確認する
-**問題** Device Enrollment Program (DEP) iOS/iPadOS デバイスを登録できません
+**問題** 自動デバイス登録 (ADE) iOS/iPadOS デバイスを登録できません
 
-ユーザー アフィニティが設定された DEP デバイスを登録するには、ユーザー トークンを要求するよう WS-Trust 1.3 Username/Mixed エンドポイントを有効にする必要があります。 Active Directory は既定でこのエンドポイントを有効にします。 有効なエンドポイントの一覧を表示するには、Get-AdfsEndpoint PowerShell コマンドレットを使用し、trust/13/UsernameMixed エンドポイントを探します。 次に例を示します。
+ユーザー アフィニティがある ADE デバイスを登録するには、ユーザー トークンを要求するよう WS-Trust 1.3 Username/Mixed エンドポイントを有効にする必要があります。 Active Directory は既定でこのエンドポイントを有効にします。 有効なエンドポイントの一覧を表示するには、Get-AdfsEndpoint PowerShell コマンドレットを使用し、trust/13/UsernameMixed エンドポイントを探します。 次に例を示します。
 
       Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 
@@ -339,7 +339,7 @@ Android デバイスでは、[SSL のサーバー ハロー](https://technet.mic
 4. 登録プロセスを再起動するようユーザーに通知します。
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>VPP トークンに問題があるかどうかを判断する
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS]**  >  **[iOS 登録]**  >  **[Enrollment Program トークン]** > トークン名 > **[プロファイル]** > プロファイル名 > **[管理]**  >  **[プロパティ]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS 登録]**  >  **[Enrollment Program トークン]** > トークン名 > **[プロファイル]** > プロファイル名 > **[管理]**  >  **[プロパティ]** を選択します。
 2. プロパティを参照して、次のようなエラーが表示されているかどうかを確認します。
     - このトークンは期限切れになっています。
     - このトークンは、ポータル サイトのライセンスが不足しています。
@@ -349,13 +349,13 @@ Android デバイスでは、[SSL のサーバー ハロー](https://technet.mic
 3. トークンの問題を修正します。
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>VPP トークンを使用して、ブロックされているデバイスを特定する
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS]** > **[iOS 登録]**  >  **[Enrollment Program トークン]** > トークン名 > **[デバイス]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]** > **[iOS 登録]**  >  **[Enrollment Program トークン]** > トークン名 > **[デバイス]** を選択します。
 2. **[プロファイルの状態]** 列を **[ブロック]** でフィルターします。
 3. **ブロック**されているすべてのデバイスのシリアル番号をメモしておきます。
 
 #### <a name="remotely-wipe-the-blocked-devices"></a>ブロックされているデバイスをリモートでワイプする
 VPP トークンを使用して問題を修正した後は、ブロックされているデバイスをワイプする必要があります。
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインして、 **[デバイス]**  >  **[すべてのデバイス]**  >  **[列]**  >  **[シリアル番号]**  >  **[適用]** の順に選択します。 
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインして、 **[デバイス]**  >  **[すべてのデバイス]**  >  **[列]**  >  **[シリアル番号]**  >  **[適用]** を選択します。 
 2. ブロックされているデバイスごとに、 **[すべてのデバイス]** の一覧で選択し、 **[ワイプ]**  >  **[はい]** を選択します。
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>登録プロセスを再起動するようユーザーに通知する
@@ -379,7 +379,7 @@ VPP トークンを使用して問題を修正した後は、ブロックされ�
 - 組織で個人の macOS デバイスをブロックする登録制限が有効になっている場合は、手動で Intune に[個人デバイスのシリアル番号を追加する](corporate-identifiers-add.md#manually-enter-corporate-identifiers)必要があります。  
 - デバイスが Intune でまだ別のユーザーに割り当てられている場合は、前の所有者が Intune ポータル サイト アプリを使用してデバイスを削除またはリセットしませんでした。 Intune から古いデバイス レコードをクリーンアップするには:  
 
-    1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、自分の管理者資格情報でサインインします。
+    1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、自分の管理者資格情報を使ってサインインします。
     2. **[デバイス]**  >  **[すべてのデバイス]** を選択します。  
     3. 登録に問題があるデバイスを探します。 デバイス名または MAC/HW アドレスで検索して結果を絞り込みます。
     4. デバイスを選択し、 **[削除]** を選択します。 デバイスに関連付けられている他のすべてのエントリを削除します。  
