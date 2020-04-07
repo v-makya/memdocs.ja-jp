@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ab840653d7090ed925af0db08f410e236392234
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: ba902cca39db44c20c79ae7b960b13966c1a09d9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80219845"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323085"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Jamf Pro で管理された Mac にコンプライアンスを適用します
 
@@ -114,7 +114,7 @@ Jamf Pro コンソールからの接続テストが失敗する場合は、Jamf 
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>Intune から Jamf で管理されたデバイスを削除する
 
-Jamf で管理されているデバイスを削除するには、Microsoft Endpoint Manager 管理センターを開き、 **[デバイス]**  >  **[すべてのデバイス]** の順に選択してそのデバイスを選択した後、 **[削除]** を選択します。  複数のデバイスを選択し、 **[削除]** をクリックすることで、デバイスの一括削除を有効にすることができます。
+Jamf で管理されているデバイスを削除するには、Microsoft Endpoint Manager admin center を開き、 **[デバイス]**  >  **[すべてのデバイス]** を選択してそのデバイスを選択した後、 **[削除]** を選択します。  複数のデバイスを選択し、 **[削除]** をクリックすることで、デバイスの一括削除を有効にすることができます。
 
 Jamf で管理されるデバイスの削除方法については、[Jamf Pro のドキュメント](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information)を参照してください。[Jamf サポート](https://www.jamf.com/support/)にサポート チケットを提出して、さらなる支援を受けることもができます。 
 

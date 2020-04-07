@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe5fce47d6a0480596bc09d82456c7636fe84d51
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 04bc86ff697ed7083cacd552cbf9ebe5096a228c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526276"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326866"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune での Windows デバイスの登録に関する問題のトラブルシューティング
 
@@ -41,7 +41,7 @@ ms.locfileid: "79526276"
 - 影響を受けているユーザーの数はどれくらいですか? すべてのユーザーに影響がありますか、それとも一部だけですか?
 - 影響を受けているデバイスの数はどれくらいですか? すべてのデバイスですか、一部だけですか?
 - MDM 機関は何ですか?
-- 登録はどのように実行されますか? "Bring Your Own Device" (BYOD) ですか、または登録プロファイルを使用する Apple Device Enrollment Program (DEP) ですか?
+- 登録はどのように実行されますか? "Bring Your Own Device" (BYOD) ですか、または登録プロファイルを使用する Apple 自動デバイス登録 (ADE) ですか?
 
 ## <a name="error-messages"></a>エラー メッセージ
 
@@ -75,7 +75,7 @@ ms.locfileid: "79526276"
  
 
 ##### <a name="check-device-type-restrictions"></a>デバイスの種類の制限を確認する
-1. グローバル管理者アカウントを使用して、[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+1. グローバル管理者アカウントを使用して、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインします。
 2. **[デバイス]**  >  **[登録制限]** に移動し、 **[デバイスの種類の制限]** で **[既定値]** の制限を選択します。    
 3. **[プラットフォーム]** を選択し、 **[Windows (MDM)]** に対して **[許可]** を選択します。
 
@@ -141,7 +141,7 @@ ms.locfileid: "79526276"
 この問題を解決するには、次のいずれかの方法を使用します。 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>ユーザーに有効なライセンスを割り当てる
-[Microsoft 365 管理センター](https://portal.office.com/adminportal/home)にアクセスし、Intune または Office 365 のライセンスをユーザーに割り当てます。
+[Microsoft 365 管理センター](https://admin.microsoft.com)にアクセスし、Intune または Office 365 のライセンスをユーザーに割り当てます。
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>MDM 利用規約 URL を修正する
   1. [Azure portal](https://portal.azure.com/) にサインインしてから、 **[Azure Active Directory]** を選択します。    
@@ -201,7 +201,7 @@ ms.locfileid: "79526276"
 #### <a name="resolution"></a>解決策
 スタンドアロンの Intune 環境でこの問題を解決するには、次の手順のようにします。 
  
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[登録制限]** を選択し、デバイスの種類の制限を選択します。    
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[登録制限]** を選択し、デバイスの種類の制限を選択します。    
 2. **[プロパティ]** を選択し、 **[プラットフォームの設定**] の横にある [ > ] **をクリックして**、[Windows に対して**許可** **(MDM)** ] > ます    
 3. **[レビューと保存]** をクリックします。    
 
@@ -326,7 +326,7 @@ Autopilot を使用してキオスク モードで Windows デバイスを展開
 
 #### <a name="resolution"></a>解決策
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[Windows]**  >  **[Windows デバイス]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows デバイス]** を選択します。
 2. 問題が発生しているデバイスを選択し、右端にある省略記号 [...] をクリックします。
 3. **[ユーザーの割り当て解除]** を選択し、プロセスが終了するまで待ちます。
 4. Hybrid Azure AD Autopilot プロファイルが割り当てられていることを確認してから、OOBE を再試行します。

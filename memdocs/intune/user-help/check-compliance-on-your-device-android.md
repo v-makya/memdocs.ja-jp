@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/28/2019
+ms.date: 03/25/2020
 ms.topic: article
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,19 +18,29 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2806ca94b474ddea35d286fa9ee9a2ca626100a8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5078f41e08f78063fac3e355301d285d1bdf6ff2
+ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337851"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80274967"
 ---
-# <a name="check-compliance-on-your-android-device"></a>Android デバイスでコンプライアンス対応を確認する
+# <a name="check-compliance-on-your-android-device"></a>Android デバイスでコンプライアンス対応を確認する  
+ポータル サイトからデバイス チェックインを手動で開始し、次のことを行います。
 
-ご使用のデバイスでしばらくの間、Intune にチェックインしていない場合、会社または学校のリソースにアクセスすることができない可能性があります。 アクセスを回復するには、次の手順を実行します。  
+* デバイスのステータスを更新する 
+* 職場または学校のリソースへのアクセス権を再取得する 
+
+チェックイン時に、ポータル サイトによって、デバイスの設定が組織のポリシー要件を満たしているかどうかが確認されます。  組織は、ユーザーがチェックインするまで、職場または学校のリソースへのアクセスを制限することができます。  
+
+デバイスの設定を最近変更した場合は、手動でチェックインして、これらの変更をポータル サイトに登録しなければならないことがあります。 
 
 1. お使いのデバイスで Android 用のポータル サイト アプリを開きます。  
 
-2. **[デバイス設定の確認]** をタップします。   
+2. **[デバイス]** をタップして、ご利用のデバイスを選択します。  
 
-紛失したまたは盗難にあったデバイスを自分でリセットできない場合は、会社のサポートに依頼してください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。  
+3. **[デバイスの設定状態]** で、 **[デバイス設定の確認]** をタップします。 ポータル サイトによって、デバイスが組織のポリシー要件を満たしているかどうかが確認されます。 
+
+4. 確認後、デバイスの設定状態は **[準拠しています]** または **[準拠していません]** のいずれかになります。 変更を加える必要がある場合は、画面の上部にメッセージが表示されます。 タップすると、詳細が表示されます。 
+
+連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。  

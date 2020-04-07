@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e51e969abcc4e8ab1b37796df72381fa3bdbe335
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6f7118fbbf05c7793d93faf2aa4c9a4bb1af821c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351098"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322612"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Microsoft Intune でセキュリティのベースラインとプロファイルを監視する
 
@@ -35,7 +35,7 @@ Microsoft Intune のセキュリティのベースライン機能の詳細につ
 
 ベースラインを監視すると、Microsoft の推奨事項に基づいて、デバイスのセキュリティ状態に関する分析情報が得られます。 このような分析情報は、Intune コンソールのセキュリティ ベースラインの [概要] ウィンドウから表示できます。  最初にベースラインを割り当ててからデータが表示されるまで最大 24 時間かかります。 その後の変更は、表示されるまで最大 6 時間かかります。
 
-ベースラインとデバイスの監視データを表示するには、[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。 次に、 **[エンドポイント セキュリティ]**  >  **[セキュリティ ベースライン]** の順に選択して、ベースラインを選択し、 **[概要]** ウィンドウを表示します。
+ベースラインとデバイスの監視データを表示するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインします。 次に、 **[エンドポイント セキュリティ]**  >  **[セキュリティ ベースライン]** の順に選択して、ベースラインを選択し、 **[概要]** ウィンドウを表示します。
 
 **[概要]** ウィンドウには、状態を監視する方法が 2 つあります。
 
@@ -110,7 +110,7 @@ Microsoft Intune のセキュリティのベースライン機能の詳細につ
 
 個々のデバイスに適用されるセキュリティ構成の詳細を表示します。これは、正しく構成されていない設定を特定するのに役立ちます。
 
-1. [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインします。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインします。
 
 2. **[デバイス]**  >  **[すべてのデバイス]** の順に移動し、表示するデバイスを選択します。
 

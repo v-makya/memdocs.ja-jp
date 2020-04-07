@@ -18,37 +18,41 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af4dce0d2bb7ef150d5332a9c58357513425cf50
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 82b9dd1db3bd625f21dcdbf2df375f5b8612e74a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220202"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327223"
 ---
-# <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Apple の Device Enrollment Program を使用して iOS/iPadOS デバイスを自動登録する
+# <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Apple の自動デバイス登録を使用して iOS または iPadOS デバイスを自動登録する
 
-Apple の [Device Enrollment Program (DEP)](https://deploy.apple.com) を使用して購入した iOS/iPadOS デバイスを登録するように Intune を設定できます。 DEP によって、多数のデバイスを自動で登録できます。 iPhone、iPad、MacBook などのデバイスは、ユーザーに直接配布できます。 ユーザーがデバイスの電源をオンにすると、Apple 製品の一般的な out-of-box-experience が含まれるセットアップ アシスタントが構成済み設定で実行され、デバイスが管理対象として登録されます。
+> [!IMPORTANT]
+> Apple は、Apple Device Enrollment Program (DEP) の使用から Apple の自動デバイス登録 (ADE) に最近変更しました。 Intune では、それを反映するために Intune のユーザー インターフェイスを更新しています。 このような変更が完了するまで、Intune ポータルでは *[Device Enrollment Program]* が引き続き表示されます。 表示される場所では、自動デバイス登録が使用されるようになっています。
 
-DEP 登録を有効にするには、Intune と Apple Business Manager (ABM) または Apple School Manager (ASM) のポータルの両方を使用します。 ABM/ASM で管理するために Intune にデバイスを割り当てられるように、シリアル番号のリストまたは注文番号が必要になります。 登録時にデバイスに適用された設定を含む DEP 登録プロファイルを Intune で作成します。 DEP 登録は、[デバイス登録マネージャー](device-enrollment-manager-enroll.md) アカウントと同時には使用できないことに注意してください。
+Apple の[自動デバイス登録 (ADE)](https://deploy.apple.com) (以前の Device Enrollment Program) を使用して購入した iOS または iPadOS デバイスを登録するように Intune を設定できます。 自動デバイス登録によって、多数のデバイスをそれに触れることなく登録できます。 iPhone、iPad、MacBook などのデバイスは、ユーザーに直接配布できます。 ユーザーがデバイスの電源をオンにすると、Apple 製品の一般的な out-of-box-experience が含まれるセットアップ アシスタントが構成済み設定で実行され、デバイスが管理対象として登録されます。
+
+ADE 登録を有効にするには、Intune と [Apple Business Manager (ABM)](https://business.apple.com/) または [Apple School Manager (ASM)](https://school.apple.com/) のポータルの両方を使用します。 いずれかの Apple ポータルで管理するために Intune にデバイスを割り当てられるように、シリアル番号のリストまたは注文番号が必要になります。 登録時にデバイスに適用された設定を含む ADE 登録プロファイルを Intune で作成します。 ADE は、[デバイス登録マネージャー](device-enrollment-manager-enroll.md) アカウントと共には使用できないことに注意してください。
 
 > [!NOTE]
-> DEP で設定されるデバイス構成は、エンド ユーザーが必ずしも削除できるわけではありません。 そのため、[DEP に移行する](../fundamentals/migration-guide-considerations.md)前に、デバイスをワイプして出荷時 (新品) の状態に戻す必要があります。
+> ADE で設定されるデバイス構成は、エンド ユーザーが必ずしも削除できるわけではありません。 そのため、[ADE に移行する](../fundamentals/migration-guide-considerations.md)前に、デバイスをワイプして既定 (新規) の状態に戻す必要があります。
 
-## <a name="dep-and-the-company-portal"></a>DEP とポータル サイト
+## <a name="automated-device-enrollment-and-the-company-portal"></a>自動デバイス登録とポータル サイト
 
-DEP 登録には、アプリ ストア バージョンのポータル サイト アプリとの互換性はありません。 DEP デバイス上のポータル サイト アプリへのアクセス権をユーザーに付与することが可能です。 デバイスで使用する会社のアプリをユーザーが選択できるようにする場合や、最新の認証を使用して登録プロセスを完了する場合に、このアクセス権を付与することができます。 
+ADE 登録には、App Store バージョンのポータル サイト アプリとの互換性はありません。 ADE デバイス上のポータル サイト アプリへのアクセス権をユーザーに付与することが可能です。 デバイスで使用する会社のアプリをユーザーが選択できるようにする場合や、最新の認証を使用して登録プロセスを完了する場合に、このアクセス権を付与することができます。 
 
-登録中に最新の認証を有効にするには、DEP プロファイル内で **[VPP によるポータル サイトのインストール]** (Volume Purchase Program) を使用して、アプリをデバイスにプッシュします。 詳細については、[Apple の Device Enrollment Program を使用して iOS/iPadOS デバイスを自動登録する方法](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile)に関する記事をご覧ください。
+登録中に最新の認証を有効にするには、ADE プロファイル内で **[VPP によるポータル サイトのインストール]** (Volume Purchase Program) を使用して、アプリをデバイスにプッシュします。 詳細については、[Apple の ADE を使用した iOS または iPadOS デバイスの自動登録](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile)に関する記事を参照してください。
 
-ポータル サイトが自動的に更新され、DEP に登録されているデバイスでポータル サイト アプリを提供できるようにするには、Intune を使用して、そのポータル サイト アプリを[アプリケーション構成ポリシー](../apps/app-configuration-policies-use-ios.md)が適用された必要な Volume Purchase Program (VPP) アプリとして展開します。
+ポータル サイトが自動的に更新され、ADE に既に登録されているデバイスでポータル サイト アプリを提供できるようにするには、Intune を使用して、そのポータル サイト アプリを[アプリケーション構成ポリシー](../apps/app-configuration-policies-use-ios.md)が適用された必要な Volume Purchase Program (VPP) アプリとして展開します。
 
-注:デバイスの自動登録中の、ポータル サイトがシングル アプリモードで実行されているときに [詳細情報] リンクをクリックすると、シングル プリ モードが原因のエラー メッセージが表示されます。 登録が完了し、デバイスがシングル アプリ モードでなくなると、CP に詳細情報を表示できます。 
+> [!NOTE]
+> デバイスの自動登録中の、ポータル サイトがシングル アプリ モードで実行されているときに **[詳細情報]** リンクをクリックすると、シングル アプリ モードが原因のエラー メッセージが表示されます。 登録が完了し、デバイスがシングル アプリ モードでなくなると、CP に詳細情報を表示できます。 
 
 ## <a name="what-is-supervised-mode"></a>監視モードとは何か。
 
-Apple では、iOS/iPadOS 5 において監視モードが導入されました。 監視モードの iOS/iPadOS デバイスは、画面キャプチャのブロックや App Store からのアプリのインストールのブロックなど、より多くの制御を使用して管理できます。 そのため、企業所有のデバイスでは特に役立ちます。 Intune は Apple Device Enrollment Program (DEP) の一部としてデバイスの監視モードを設定できます。
+Apple では、iOS/iPadOS 5 において監視モードが導入されました。 監視モードの iOS/iPadOS デバイスは、画面キャプチャのブロックや App Store からのアプリのインストールのブロックなど、より多くの制御を使用して管理できます。 そのため、企業所有のデバイスでは特に役立ちます。 Intune では、ADE の一部として監視モードのデバイスを構成できます。
 
-監視されていない DEP デバイスのサポートは、iOS/iPadOS 11 で非推奨となりました。 iOS/iPadOS 11 以降では、DEP 構成済みデバイスを常に監視する必要があります。 DEP の is_supervised フラグは、iOS/iPadOS の将来のリリースでは無視されます。
+監視されていない ADE デバイスのサポートは、iOS または iPadOS 11 で非推奨となりました。 iOS または iPadOS 11 以降では、ADE 構成済みデバイスを常に監視する必要があります。 ADE の *is_supervised* フラグは、iOS または iPadOS の将来のリリースでは無視されます。
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -59,39 +63,39 @@ Apple では、iOS/iPadOS 5 において監視モードが導入されました�
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
 ## <a name="prerequisites"></a>[前提条件]
-- [Apple の Device Enrollment Program](https://deploy.apple.com) で購入したデバイス
+- [Apple の ADE](https://deploy.apple.com) で購入したデバイス
 - [モバイル デバイス管理 (MDM) 機関](../fundamentals/mdm-authority-set.md)
 - [Apple MDM プッシュ証明書](apple-mdm-push-certificate-get.md)
 
-## <a name="get-an-apple-dep-token"></a>Apple DEP トークンを取得する
+## <a name="get-an-apple-ade-token"></a>Apple ADE トークンの取得
 
-DEP に iOS/iPadOS デバイスを登録するには、Apple の DEP トークン (.p7m) ファイルが必要です。 このトークンにより、Intune は企業所有の DEP デバイスに関する情報を同期できるようになります。 また、Intune は Apple に登録プロファイルをアップロードして、デバイスをそれらのプロファイルに割り当てられるようになります。
+ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE トークン (.p7m) ファイルが必要です。 このトークンにより、Intune は企業所有の ADE デバイスに関する情報を同期できるようになります。 また、Intune は Apple に登録プロファイルをアップロードして、デバイスをそれらのプロファイルに割り当てられるようになります。
 
-Apple Business Manager または Apple School Manager のポータルを使用して、トークンを作成します。 また、管理のためにデバイスを Intune に割り当てる場合にも ABM/ASM のポータルを使用します。
+[Apple Business Manager (ABM)](https://business.apple.com/) または [Apple School Manager (ASM)](https://school.apple.com/) のポータルを使用して、トークンを作成します。 また、管理のためにデバイスを Intune に割り当てる場合にも ABM/ASM のポータルを使用します。
 
 > [!NOTE]
-> Azure に移行する前に Intune クラシック ポータルからトークンを削除すると、削除された Apple DEP トークンが Intune で復元される場合があります。 Azure Portal から DEP トークンを再び削除できます。
+> Azure に移行する前に Intune クラシック ポータルからトークンを削除すると、削除された Apple ADE トークンが Intune で復元される場合があります。 Azure portal から ADE トークンを再び削除できます。
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>手順 1. トークンを作成するために必要な Intune 公開キー証明書をダウンロードする
 
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]**  >  **[追加]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]**  >  **[追加]** を選択します。
 
     ![Enrollment Program トークンを取得します。](./media/device-enrollment-program-enroll-ios/image01.png)
 
 2. **[同意する]** を選択して、Microsoft がユーザーとデバイスの情報を Apple に送信できるようにします。
 
 > [!NOTE]
-> 手順 2 以降に進んで Intune 公開キー証明書をダウンロードしたら、ウィザードを閉じたり、このページから移動したりしないでください。 そうすると、ダウンロードした証明書が無効になるため、このプロセスを再度繰り返す必要があります。 このような状況が発生した場合、通常は [Review + Create]\(確認および作成\) タブの [作成] ボタンがグレー表示され、プロセスを完了できなくなります。
+> 手順 2 以降に進んで Intune 公開キー証明書をダウンロードしたら、ウィザードを閉じたり、このページから移動したりしないでください。 そうすると、ダウンロードした証明書が無効になるため、このプロセスを再度繰り返す必要があります。 このような状況が発生した場合、通常は **[確認および作成]** タブの **[作成]** ボタンが灰色表示され、プロセスを完了できなくなります。
 
    ![公開キーをダウンロードするための [Apple 証明書] ワークスペースの [Enrollment Program トークン] のスクリーンショット。](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. **[公開キーをダウンロードします]** を選択し、暗号化キー (.pem) ファイルをダウンロードしてローカルに保存します。 .pem ファイルは、Apple Device Enrollment Program ポータルから信頼関係証明書を要求するために使用します。
+3. **[公開キーをダウンロードします]** を選択し、暗号化キー (.pem) ファイルをダウンロードしてローカルに保存します。 .pem ファイルは、Apple ポータルから信頼関係証明書を要求するために使用します。
 
 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>手順 2. キーを使用して Apple からトークンをダウンロードする
 
-1. **[Create a token for Apple's Device Enrollment Program]\(Apple Device Enrollment Program 用のトークンを作成します\)** を選択して Apple の Deployment Program ポータルを開き、会社の Apple ID でサインインします。 この Apple ID を使って、DEP トークンを更新できます。
-2. Apple の [Deployment Programs ポータル](https://deploy.apple.com) で、 **[Device Enrollment Program]** の **[開始]** を選択します。
+1. **[Apple Device Enrollment Program 用のトークンを作成します]** を選択して Apple の Business ポータルを開き、会社の Apple ID でサインインします。 この Apple ID を使って、ADE トークンを更新できます。
+2. Apple の [Business ポータル](https://business.apple.com)で、 **[Device Enrollment Program]** の **[開始]** を選択します。
 
 3. **[Manage Servers\(サーバーの管理\)]** ページで、 **[Add MDM Server\(MDM サーバーの追加\)]** を選びます。
 4. **MDM サーバー名**を入力し、 **[Next]** (次へ) をクリックします。 サーバー名は、自分がモバイル デバイス管理 (MDM) サーバーを識別できるようにするための名前です。 Microsoft Intune サーバーの名前または URL ではありません。
@@ -112,7 +116,7 @@ Apple Business Manager または Apple School Manager のポータルを使用�
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>手順 3. このトークンの作成に使用した Apple ID を保存する
 
-[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、今後の参照用に Apple ID を指定します。
+[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、今後の参照用に Apple ID を指定します。
 
 ![Enrollment Program トークンの作成に使った Apple ID の指定と、Enrollment Program トークンの参照のスクリーンショット。](./media/device-enrollment-program-enroll-ios/image03.png)
 
@@ -126,13 +130,13 @@ Apple Business Manager または Apple School Manager のポータルを使用�
 
 ## <a name="create-an-apple-enrollment-profile"></a>Apple 登録プロファイルの作成
 
-これでトークンがインストールされました。DEP デバイスの登録プロファイルを作成することができます。 デバイス登録プロファイルで、デバイス グループに対して登録時に適用する設定を定義します。 DEP トークンあたり 100 個の登録プロファイルという制限があります。
+これでトークンがインストールされました。ADE デバイスの登録プロファイルを作成することができます。 デバイス登録プロファイルで、デバイス グループに対して登録時に適用する設定を定義します。 ADE トークンあたり 100 個の登録プロファイルという制限があります。
 
 > [!NOTE]
 > VPP トークンに十分なポータル サイト ライセンスがない場合、またはトークンの有効期限が切れている場合は、デバイスがブロックされます。 トークンの有効期限が近づいている場合、またはライセンスが不足している場合は、Intune でアラートが表示されます。
  
 
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択します。
 2. トークンを選択して、 **[プロファイル]**  >  **[プロファイルの作成]**  >  **[iOS]** の順に選択します。
 
     ![プロファイルの作成のスクリーンショット。](./media/device-enrollment-program-enroll-ios/image04.png)
@@ -163,7 +167,7 @@ Apple Business Manager または Apple School Manager のポータルを使用�
 6. **[ユーザーが認証する必要がある場所を選択する]** に **[ポータル サイト]** を選択した場合は、VPP トークンを使用してデバイス上にポータル サイトを自動的にインストールできます。 この場合、ユーザーは Apple ID を指定する必要はありません。 VPP トークンを使用して Intune ポータル サイトをインストールするには、 **[VPP によるポータル サイトのインストール]** でトークンを選択します。 ポータル サイトが既に VPP トークンに追加されている必要があります。 登録後もポータル サイト アプリが引き続き更新されるようにするには、Intune でアプリの展開を構成していることを確認してください ([Intune] > [クライアント アプリ])。 ユーザー操作を不要にするためには、ほとんどの場合、ポータル サイトを iOS/iPadOS VPP アプリとして取得し、これを必須アプリにして、割り当てにデバイス ライセンスを使用する必要があります。 トークンの期限が切れていないことと、ポータル サイト アプリの十分なデバイス ライセンスがあることを確認してください。 トークンの期限が切れているか、ライセンスがなくなっている場合、Intune では代わりに App Store ポータル サイトをインストールして、Apple ID の入力を求めます。 
 
     > [!NOTE]
-    > **[ユーザーが認証する必要がある場所を選択する]** が **[ポータル サイト]** になっている場合、ポータル サイトが DEP デバイスにダウンロードされる最初の24時間以内に、必ずデバイス登録プロセスが実行されるようにします。 そうでないと、登録に失敗して、デバイスを登録するために工場出荷時の設定にリセットする必要が生じます。
+    > **[ユーザーが認証する必要がある場所を選択する]** が **[ポータル サイト]** になっている場合、ポータル サイトが ADE デバイスにダウンロードされる最初の 24 時間以内に、必ずデバイス登録プロセスが実行されるようにします。 そうでないと、登録に失敗して、デバイスを登録するために工場出荷時の設定にリセットする必要が生じます。
     
     ![[VPP によるポータル サイトのインストール] のスクリーンショット。](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
@@ -181,7 +185,7 @@ Apple Business Manager または Apple School Manager のポータルを使用�
 
     ![[デバイス管理の設定] のスクリーンショット。](./media/device-enrollment-program-enroll-ios/supervisedmode.png)
 
-    **[監視下]** デバイスでは、より多くの管理オプションを使用できるようになり、既定で [アクティベーション ロック] は無効になります。 Microsoft では、特に多数の iOS/iPadOS デバイスを展開している場合に、監視モードを有効にするメカニズムとして DPE の利用を推奨しています。
+    **[監視下]** デバイスでは、より多くの管理オプションを使用できるようになり、既定で [アクティベーション ロック] は無効になります。 Microsoft では、特に多数の iOS または iPadOS デバイスを展開している場合に、監視モードを有効にするメカニズムとして ADE の利用をお勧めしています。
 
     デバイスが監視対象であることは次の 2 つの方法でユーザーに通知されます。
 
@@ -251,10 +255,10 @@ Apple Business Manager または Apple School Manager のポータルを使用�
 ## <a name="sync-managed-devices"></a>マネージド デバイスを同期する
 デバイスを管理するアクセス許可を Intune に割り当てたので、Intune と Apple を同期して、マネージド デバイスを Azure ポータルの Intune に表示できます。
 
-1. [Microsoft Endpoint Manage 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]** > **[iOS]** > **[iOS の登録]** > **[Enrollment Program トークン]** を選択します。一覧からトークンを選択し、 **[デバイス]** > **[同期]** を選択します。![Enrollment Program デバイス ノードと同期リンクのスクリーンショット。](./media/device-enrollment-program-enroll-ios/image06.png)
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]** > **[iOS]** > **[iOS の登録]** > **[Enrollment Program トークン]** を選択しし、一覧からトークンを選択して、 **[デバイス]** > **[同期]** を選択します。![Enrollment Program デバイス ノードと同期リンクのスクリーンショット。](./media/device-enrollment-program-enroll-ios/image06.png)
 
    許容される Enrollment Program トラフィックについての Apple の規約に準拠するために、Intune では次の制限が課せられています。
-   - 完全な同期は 7 日に 1 回だけ実行できます。 完全な同期中に、Intune に接続された Apple MDM サーバーに割り当てられているシリアル番号の完全な最新の一覧を Intune がフェッチします。 DEP デバイスが Intune ポータルから削除された場合、DEP ポータルでは Apple MDM サーバーからの割り当てを解除する必要があります。 割り当てが解除されていない場合、完全な同期が実行されるまでは Intune に再インポートされません。   
+   - 完全な同期は 7 日に 1 回だけ実行できます。 完全な同期中に、Intune に接続された Apple MDM サーバーに割り当てられているシリアル番号の完全な最新の一覧を Intune がフェッチします。 ADE デバイスが Intune ポータルから削除された場合、ADE ポータルでは Apple MDM サーバーからの割り当てを解除する必要があります。 割り当てが解除されていない場合、完全な同期が実行されるまでは Intune に再インポートされません。   
    - 同期は 24 時間ごとに自動的に実行されます。 **[同期]** ボタンをクリックして同期することもできます (15 分以内に 2 回以上は同期できません)。 すべての同期要求は、完了までに 15 分与えられます。 同期が完了するまで、 **[同期]** ボタンは無効になっています。 この同期により、既存のデバイスの状態が更新され、Apple MDM サーバーに割り当てられている新しいデバイスがインポートされます。   
 
 
@@ -264,7 +268,7 @@ Apple Business Manager または Apple School Manager のポータルを使用�
 >[!NOTE]
 >**[Apple Serial Numbers\(Apple シリアル番号\)]** ブレードでプロファイルにシリアル番号を割り当てることもできます。
 
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択し、一覧からトークンを選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択し、一覧からトークンを選択します。
 2. **[デバイス]** を選択し、リスト内でデバイスを選択し、 **[プロファイルの割り当て]** を選択します。
 3. **[プロファイルの割り当て]** の下でデバイス用のプロファイルを選択し、 **[割り当て]** を選択します。
 
@@ -272,27 +276,27 @@ Apple Business Manager または Apple School Manager のポータルを使用�
 
 特定のトークンを使用して登録するすべてのデバイスに適用される既定のプロファイルを選択することができます。
 
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択し、一覧からトークンを選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択し、一覧からトークンを選択します。
 2. **[既定のプロファイルの設定]** を選択し、ドロップダウン リストでプロファイルを選択し、 **[保存]** を選択します。 このプロファイルは、トークンに登録されたすべてのデバイスに適用されます。
 
 ## <a name="distribute-devices"></a>デバイスを配布する
-Apple と Intune の間の同期と管理を有効にし、DEP デバイスを登録できるようにプロファイルを割り当てました。 ユーザーにデバイスを配布できるようになりました。 ユーザー アフィニティがあるデバイスでは、各ユーザーに Intune ライセンスを割り当てる必要があります。 ユーザー アフィニティがないデバイスでは、デバイスのライセンスが必要です。 デバイスがワイプされるまで、アクティブ化されたデバイスでは登録プロファイルを適用できません。
+Apple と Intune の間の管理と同期を有効にし、ADE デバイスを登録できるようにプロファイルを割り当てました。 ユーザーにデバイスを配布できるようになりました。 ユーザー アフィニティがあるデバイスでは、各ユーザーに Intune ライセンスを割り当てる必要があります。 ユーザー アフィニティがないデバイスでは、デバイスのライセンスが必要です。 デバイスがワイプされるまで、アクティブ化されたデバイスでは登録プロファイルを適用できません。
 
 [Device Enrollment Program を使用して Intune に iOS/iPadOS デバイスを登録する方法](../user-help/enroll-your-device-dep-ios.md)に関する記事をご覧ください。
 
-## <a name="renew-a-dep-token"></a>DEP トークンを更新する  
+## <a name="renew-an-ade-token"></a>ADE トークンの更新  
 
 > [!NOTE]
-> DEP トークンの毎年の更新に加えて、Apple Business Manager でトークンを設定したユーザーの管理対象の Apple ID のパスワードが変更された場合、またはそのユーザーが Apple Business Manager 組織を脱退した場合に、Intune および Apple Business Manager 内の Enrollment Program トークンを更新する必要があります。
+> ADE トークンの毎年の更新に加えて、Apple Business Manager でトークンを設定したユーザーの管理対象 Apple ID のパスワードが変更された場合、またはそのユーザーが Apple Business Manager 組織を脱退した場合に、Intune および Apple Business Manager 内の Enrollment Program トークンを更新する必要があります。
 
-1. deploy.apple.com に移動します。  
+1. business.apple.com に移動します。  
 2. **[サーバーの管理]** で、更新するトークン ファイルに関連付けられた MDM サーバーを選択します。
 3. **[新しいトークンの生成]** を選択します。
 
     ![生成された新しいトークンのスクリーンショット。](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
 4. **[Your Server Token]\(サーバー トークン\)** を選択します。  
-5. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択して、トークンを選択します。
+5. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択して、トークンを選択します。
     ![Enrollment Program トークンのスクリーンショット。](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
 6. **[トークンを更新する]** を選択し、元のトークンの作成に使用した Apple ID を入力します。  

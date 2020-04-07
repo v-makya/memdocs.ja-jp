@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2814c1a7cc4dcb111e3454a6d359679df09c57b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 53f95c83cecbfce68b2370c0c0d4f8e98f856e12
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354764"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326692"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Intune にユーザーを追加して管理アクセス許可を付与する
 
@@ -57,7 +57,7 @@ ms.locfileid: "79354764"
 
 ### <a name="add-intune-users-in-the-azure-portal"></a>Azure Portal で Intune ユーザーを追加する
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[ユーザー]**  >  **[すべてのユーザー]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[ユーザー]**  >  **[すべてのユーザー]** を選択します。
 2. 管理センターで、 **[新しいユーザー]** を選びます。
 3. 次のユーザー詳細を指定します。
    - **名前**

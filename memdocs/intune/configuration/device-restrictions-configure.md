@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,22 +15,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f1e421a344122dbd4cf59a49ea56ef0ba2bb125
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 470ca47aa92b30acacc8a251c6d7d1741513bdf1
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087079"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359216"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Microsoft Intune でデバイスの制限設定を構成する
 
 Intune には、管理者が Android、iOS/iPadOS、macOS、および Windows の各デバイスを制御するのに役立つデバイス制限ポリシーが含まれています。 これらの制限を使用して、組織のリソースを保護するための幅広い設定と機能を制御できます。 たとえば、管理者には次の機能があります。
 
-- デバイス カメラを許可またはブロックする
-- Google Play、アプリ ストア、ドキュメントの表示、およびゲームへのアクセスを制御する
-- 組み込みアプリをブロックするか、許可または禁止するアプリの一覧を作成する
-- クラウドとストレージ アカウントへのファイルのバックアップを許可または禁止する
-- パスワードの最小文字数を設定し、単純なパスワードをブロックする
+- デバイス カメラを許可またはブロックします。
+- Google Play、アプリ ストア、ドキュメントの表示、ゲームへのアクセスを制御します。
+- 組み込みアプリをブロックするか、許可または禁止するアプリの一覧を作成します。
+- クラウドとストレージ アカウントへのファイルのバックアップを許可または禁止します。
+- パスワードの最小文字数を設定し、単純なパスワードをブロックします。
 
 これらの機能は Intune で使用できます。また、管理者が構成できます。 Intune では、"構成プロファイル" を使用して、お客様の組織のニーズに合わせてこのような設定を作成およびカスタマイズします。 これらの機能をプロファイルに追加した後、そのプロファイルをお客様の組織のデバイスにプッシュまたは展開できます。
 
@@ -42,37 +42,50 @@ Intune には、管理者が Android、iOS/iPadOS、macOS、および Windows �
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 3. 次のプロパティを入力します。
 
-    - **名前**:ポリシーのわかりやすい名前を入力します。 後で簡単に識別できるよう、ポリシーに名前を付けます。 たとえば、適切なポリシー名は **iOS/iPadOS:デバイスのカメラをブロックする**です。
-    - **説明**:ポリシーの説明を入力します。 この設定は省略可能ですが、推奨されます。
     - **[プラットフォーム]** :デバイスのプラットフォームを選択します。 次のようなオプションがあります。  
 
         - **Android デバイス管理者**
         - **Android エンタープライズ**
         - **iOS/iPadOS**
         - **macOS**
-        - **Windows Phone 8.1**
-        - **Windows 8.1 以降**
         - **Windows 10 以降**
+        - **Windows 8.1 以降**
+        - **Windows Phone 8.1**
 
-    - **[プロファイルの種類]** : **[デバイスの制限]** を選択します。
+    - **[プロファイル]** : **[デバイスの制限]** を選択します。
 
         Surface Hub などの Windows 10 Team デバイス用のデバイスの制限プロファイルを作成するには、 **[デバイスの制限 (Windows 10 Team)]** を選択します。
 
-4. 選択したプラットフォームによって構成できる設定が異なります。 詳細な設定については、お使いのプラットフォームを選択してください。
+4. **[作成]** を選択します。
+5. **[Basics]\(基本\)** で次のプロパティを入力します。
 
-    - [Android デバイス管理者の設定](device-restrictions-android.md)
-    - [Android エンタープライズの設定](device-restrictions-android-for-work.md)
-    - [iOS/iPadOS の設定](device-restrictions-ios.md)
-    - [macOS の設定](device-restrictions-macos.md)
-    - [Windows Phone 8.1 の設定](device-restrictions-windows-phone-8-1.md)
+    - **名前**:ポリシーのわかりやすい名前を入力します。 後で簡単に識別できるよう、ポリシーに名前を付けます。 たとえば、適切なポリシー名は **iOS/iPadOS:デバイスのカメラをブロックする**です。
+    - **説明**:ポリシーの説明を入力します。 この設定は省略可能ですが、推奨されます。
+
+6. **[次へ]** を選択します。
+
+7. **[構成設定]** では、選択したプラットフォームによって構成できる設定が変わります。 詳細な設定については、お使いのプラットフォームを選択してください。
+
+    - [Android デバイス管理者](device-restrictions-android.md)
+    - [Android エンタープライズ](device-restrictions-android-for-work.md)
+    - [iOS/iPadOS](device-restrictions-ios.md)
+    - [macOS](device-restrictions-macos.md)
+    - [Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
-    - [Windows 10 の設定](device-restrictions-windows-10.md)
-    - [Windows 10 Team の設定](device-restrictions-windows-10-teams.md)
-    - [Windows Holographic for Business の設定](device-restrictions-windows-holographic.md)
+    - [Windows 10 以降](device-restrictions-windows-10.md)
+    - [Windows 10 Team](device-restrictions-windows-10-teams.md)
+    - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
-5. 完了したら、 **[OK]**  >  **[作成]** を選択して変更を保存します。
+8. **[次へ]** を選択します。
+9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。
 
-プロファイルが作成され、プロファイル一覧に表示されます。
+    **[次へ]** を選択します。
+
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](device-profile-assign.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+11. **[確認と作成]** で、設定を確認します。 **[作成]** を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
 
 ## <a name="next-steps"></a>次のステップ
 

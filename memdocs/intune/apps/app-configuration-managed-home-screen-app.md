@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b81246598fce3c03c95d9fd052e058749932bff4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0d596a0a43c17243431fa47bcac996868fd38066
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342778"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80358694"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Android Enterprise 用 Microsoft Managed Home Screen アプリを構成する
 
@@ -34,9 +34,9 @@ Managed Home Screen は、Intune 経由で登録され、マルチアプリ キ�
 通常、デバイス構成から設定が使用できる場合は、ここで設定を構成します。 これにより時間が節約され、エラーを最小限にし、Intune サポート エクスペリエンスの向上が可能になります。 ただし、Managed Home Screen の設定の中には、現在、Intune コンソールの **[アプリ構成ポリシー]** ウィンドウ経由でしか利用できないものがあります。 このドキュメントを使用して、構成デザイナーまたは JSON スクリプトのいずれかを使用して、さまざまな設定を構成する方法について学習します。 
 
 > [!NOTE]
-> 現在、 **[アプリ]** と **[デバイス構成]** を使用して許可リストに登録されたアプリケーションとピン留めされた Web リンクを設定することが可能であり、また推奨されます。 Managed Home Screen に影響を与える**デバイス構成**で使用可能な設定の完全なリストについては、「[専用のデバイス設定](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings)」を参照してください。  
+> 現在、 **[アプリ]** と **[デバイス構成]** を使用して許可リストに登録されたアプリケーションとピン留めされた Web リンクを設定することが可能であり、また推奨されます。 Managed Home Screen に影響を与える**デバイス構成**で使用可能な設定の完全なリストについては、「[専用のデバイス設定](../configuration/device-restrictions-android-for-work.md#dedicated-devices)」を参照してください。  
 
-最初に、[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)に移動し、 **[アプリ]**  >  **[アプリ構成ポリシー]** を選択します。 **Android** を実行している**マネージド デバイス**に構成ポリシーを追加し、関連付けられているアプリとして **[Managed Home Screen]** を選択します。 **[構成設定]** をクリックして、利用可能なさまざまな Managed Home Screen 設定を構成します。 
+最初に、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) に移動し、 **[アプリ]**  >  **[アプリ構成ポリシー]** を選択します。 **Android** を実行している**マネージド デバイス**に構成ポリシーを追加し、関連付けられているアプリとして **[Managed Home Screen]** を選択します。 **[構成設定]** をクリックして、利用可能なさまざまな Managed Home Screen 設定を構成します。 
 
 ## <a name="choosing-a-configuration-settings-format"></a>構成設定の形式を選択する
 
@@ -136,7 +136,7 @@ JSON データを入力して、Managed Home Screen で使用可能なすべて�
                     "managedProperty": [
                         {
                             "key": "package",
-                            "valueString": “app package name here”
+                            "valueString": "app package name here"
                         }
                     ]
                 }
@@ -149,11 +149,11 @@ JSON データを入力して、Managed Home Screen で使用可能なすべて�
                     "managedProperty": [
                         {
                             "key": "link",
-                            "valueString": “link here”
+                            "valueString": "link here"
                         },
                         {
                             "key": "label",
-                            "valueString": “weblink label here”
+                            "valueString": "weblink label here"
                         }
                     ]
                 }
@@ -335,7 +335,7 @@ JSON データを入力して、Managed Home Screen で使用可能なすべて�
 マネージド ホーム スクリーン アプリで、Google の Android デバイス ポリシー アプリにアクセスできるようになりました。 マネージド ホーム スクリーン アプリは、マルチアプリ キオスク モードを使用する Android Enterprise (AE) 専用デバイスとして Intune に登録されているデバイスで使用されるカスタム ランチャーです。 Android デバイス ポリシー アプリにアクセスしたり、ユーザーを Android デバイス ポリシー アプリに案内したりして、サポートとデバッグを行うことができます。 この起動機能は、デバイスが登録され、マネージド ホーム スクリーンにロックされているときに使用できます。 この機能を使用するために追加のインストールは必要ありません。
 
 ## <a name="managed-home-screen-debug-screen"></a>Managed Home Screen のデバッグ画面
-Managed Home Screen のデバッグ画面にアクセスするには、デバッグ画面が表示されるまで**戻る**ボタンをクリックします (**戻る**ボタンを 15 回以上クリックします)。 このデバッグ画面から、Android デバイス ポリシー アプリケーションを起動したり、ログの表示とアップロードを行ったり、キオスク モードを一時的に停止してデバイスを更新したりできます。 キオスク モードの一時停止について詳しくは、Android Enterprise の「[専用デバイスの設定](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings)」に記載されている **[キオスク モードを終了する]** 項目をご覧ください。
+Managed Home Screen のデバッグ画面にアクセスするには、デバッグ画面が表示されるまで**戻る**ボタンをクリックします (**戻る**ボタンを 15 回以上クリックします)。 このデバッグ画面から、Android デバイス ポリシー アプリケーションを起動したり、ログの表示とアップロードを行ったり、キオスク モードを一時的に停止してデバイスを更新したりできます。 キオスク モードの一時停止について詳しくは、Android Enterprise の「[専用デバイスの設定](../configuration/device-restrictions-android-for-work.md#dedicated-devices)」に記載されている **[キオスク モードを終了する]** 項目をご覧ください。
 
 ## <a name="next-steps"></a>次のステップ
 

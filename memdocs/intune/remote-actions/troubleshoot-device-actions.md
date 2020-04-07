@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6eefc9f07a6c0cf442468b14d6d74567b8c15861
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 78dec649f5486e0dcf56f92b8ac16d176d119653
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348823"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322335"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Intune でのデバイス アクションのトラブルシューティング
 
@@ -54,7 +54,7 @@ Graph Explorer では、次のクエリを使用してコードを確認でき�
 ## <a name="remove-devices-action"></a>デバイスの削除アクション
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>インベントリから削除またはワイプを開始したユーザーを特定するにはどうすればよいですか?
-[Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[テナント管理]**  >  **[監査ログ]** に移動し、 **[開始者]** 列を確認します。
+[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[テナント管理]**  >  **[監査ログ]** に移動し、 **[開始者]** 列を確認します。
 エントリが表示されない場合、アクションを開始した可能性が最も高いユーザーは、デバイスのユーザーです。 ポータル サイト アプリまたは portal.manage.microsoft.com を使用した可能性があります。
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>[インベントリから削除] の使用後にアプリケーションがアンインストールされなかったのはなぜですか?
@@ -69,7 +69,7 @@ Graph Explorer では、次のクエリを使用してコードを確認でき�
 デバイスをインベントリから削除しても、アクセス トークンは失効しないためです。 条件付きアクセス ポリシーを使用して、この状況を軽減できます。
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>発行後のインベントリから削除またはワイプ アクションを監視するにはどうすればよいですか?
-[Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[テナントの管理]**  >  **[監査ログ]** に移動します。
+[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[テナント管理]**  >  **[監査ログ]** に移動します。
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>ワイプを実行すると "保留中" といつまでも表示されることがあるのはなぜですか?
 リセットが開始される前に、常にデバイスから Intune サービスに状態が報告されるとは限りません。 そのため、アクションは "保留中" と表示されます。 アクションが成功したことを確認したら、デバイスをサービスから削除してください。

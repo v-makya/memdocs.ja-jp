@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81bfa4d593f723aae46c2af63d550662e35b4017
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c156e0d1b627d285c6654994d6114920f86b2bab
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349213"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488045"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Intune で Windows 10 ソフトウェア更新プログラムを管理する
 
@@ -209,7 +209,7 @@ Windows Update のポリシーの詳細については、Windows クライアン
 
 Intune で Windows 10 の機能更新プログラムを使用するには、次の前提条件を満たしている必要があります。
 
-- デバイスを Intune MDM に登録する、Azure AD に参加させる、または Azure AD に登録する必要があります。
+- デバイスを Intune MDM に登録し、Hybrid AD に参加させるか、Azure AD に参加させるか、Azure AD に登録する必要があります。
 - Intune で機能更新プログラムのポリシーを使用するには、デバイスでテレメトリが、[ *[基本]* ](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry) 設定以上で有効になっている必要があります。 テレメトリは、[デバイス制限ポリシー](../configuration/device-restrictions-configure.md)の一部として *[レポートとテレメトリ]* 下で構成されます。
   
   機能更新プログラムのポリシーを受信したデバイスのテレメトリが *[未構成]* (つまり、オフ) に設定されていた場合、機能更新プログラムのポリシーで定義されているよりも新しいバージョンの Windows がデバイスにインストールされる可能性があります。 この機能が一般公開に移行されるとき、テレメトリを必要とする前提条件は再検討されます。

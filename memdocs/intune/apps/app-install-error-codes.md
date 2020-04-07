@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98567612b31604f79339a550275e274a2c90c3a4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 431d2753b04269e9aacd7ef951ef3f45a076df60
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79342414"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407901"
 ---
 # <a name="intune-app-installation-error-reference"></a>Intune アプリのインストール エラーのリファレンス
 
@@ -92,6 +92,8 @@ ms.locfileid: "79342414"
 | 0x87D13B77 | -2016330889 | セキュリティで保護された接続に失敗しました。  | ネットワーク接続が原因のアプリ マニフェストの検証エラー (セキュリティで保護された接続に失敗しました) |
 | 0x87D13B80 | -2016330880 | CannotConnectToITunesStoreError | ITunes Store への接続に失敗したため、アプリのインストールに失敗しました |
 | 0x87D13B9F  | -2016330849 | VPP アプリに利用可能な更新プログラムがあります | このコードは、VPP アプリがインストールされているが、新しいバージョンが使用可能な場合に返されます。 |
+| 0x87D13B9E | 2016330850 | アプリのアンインストール設定を適用できません。 アプリのインストールを再試行してください。 | アプリはデバイスに既にインストールされていますが、"削除時にアンインストールする" 設定が構成されている値と一致しません。 "削除時にアンインストールする" 設定を再度適用するため、ポータル サイトから app-install を要求するようにユーザーにアドバイスします。 |
+
 
 ## <a name="other-installation-errors"></a>その他のインストール エラー
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ef60333b53e03b3a6a8d736817ef27df9a182f1
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352073"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359463"
 ---
-# <a name="macos-endpoint-protection-settings-in-intune"></a>Intune での MacOS エンドポイント保護設定  
+# <a name="macos-endpoint-protection-settings-in-intune"></a>Intune の macOS エンドポイント保護設定  
 
 この記事では、macOS を稼働しているデバイスに対して構成できるすべてのエンドポイント保護設定について説明します。 これらの設定を構成するには、Intune の[エンドポイント保護](endpoint-protection-configure.md)用の macOS デバイス構成プロファイルを使用します。  
+
+## <a name="before-you-begin"></a>始める前に
+
+[macOS Endpoint Protection プロファイルを作成します](endpoint-protection-configure.md)。
 
 ## <a name="gatekeeper"></a>ゲートキーパー  
 
@@ -97,7 +101,7 @@ Apple FileVault の設定の詳細については、Apple Developer コンテン
     "*個人用キー*" 回復キーがデバイスに対して作成されます。 個人用キーに関する次の設定を構成します。  
 
     - **[個人用回復キーの場所]** - 個人用回復キーを取得できる方法と場所をユーザーに対して説明する短いメッセージを指定します。 このテキストは、ユーザーがログイン画面でパスワードを忘れた場合に表示される個人用回復キーの入力をユーザーに求めるメッセージに挿入されます。  
-      
+
     - **[個人用回復キーの交換]** - デバイスの個人用回復キーを交換する頻度を指定します。 既定値の **[未構成]** または **1** から **12** か月の値を選択できます。  
 
   - **サインアウト時のプロンプトを無効にする**  
@@ -118,3 +122,8 @@ Apple FileVault の設定の詳細については、Apple Developer コンテン
 
 Intune での FileVault の詳細については、「[FileVault 回復キー](encryption-monitor.md#filevault-recovery-keys)」を参照してください。
 
+## <a name="next-steps"></a>次のステップ
+
+[プロファイルを割り当て](../configuration/device-profile-assign.md)、[その状態を監視](../configuration/device-profile-monitor.md)します。
+
+[Windows 10 以降のデバイス](endpoint-protection-windows-10.md)で Endpoint Protection を構成することもできます。

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79bb7e627043e439c7438c2fc4afcfdee5a44406
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086125"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256455"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Intune に iOS/iPadOS デバイスを登録する
 
@@ -52,23 +52,23 @@ Intune 管理のために、ユーザーに個人用デバイスを登録させ�
 
 Intune では、ユーザーのデバイスを購入する組織のために、次の会社所有の iOS/iPadOS デバイスの登録方法がサポートされています。
 
-- Apple の Device Enrollment Program (DEP)
+- Apple の自動デバイス登録 (ADE)
 - Apple School Manager
 - Apple Configurator セットアップ アシスタントでの登録
 - Apple Configurator の直接登録
 
 [デバイス登録マネージャー](device-enrollment-manager-enroll.md)のアカウントで会社所有の iOS/iPadOS デバイスを登録することもできます。
 
-## <a name="device-enrollment-program"></a>デバイス登録プログラム
+## <a name="automated-device-enrollment"></a>デバイスの自動登録
 
-組織は、Apple の Device Enrollment Program (DEP) を通して iOS/iPadOS デバイスを購入できます。 DEP では、登録プロファイルを "無線で" 展開して、デバイスを管理対象として登録できます。 詳細については、[Device Enrollment Program](device-enrollment-program-enroll-ios.md) に関する記事を参照してください。
+組織は、Apple の自動デバイス登録 (ADE) を通して iOS または iPadOS デバイスを購入できます。 ADE では、登録プロファイルを "無線で" 展開して、デバイスを管理対象にすることができます。 詳細については、[Device Enrollment Program](device-enrollment-program-enroll-ios.md) に関する記事を参照してください。
 
 ## <a name="user-enrollment"></a>ユーザー登録
 ユーザー登録により、管理者は他の登録方法と比較して少ない数の管理オプションを使用できるようになります。 詳細については、[ユーザー登録でサポートされるアクション、パスワード、およびその他のオプション](ios-user-enrollment-supported-actions.md)と [iOS/iPadOS と iPadOS のユーザー登録の設定](ios-user-enrollment.md)に関する記事を参照してください。
 
 ## <a name="apple-school-manager"></a>Apple School Manager
 
-Apple School Manager は、学校向けのデバイス購入と登録プログラムです。 DEP と同様に、プロファイルを展開して管理にデバイスを登録できます。 詳細については、[Apple School Manager](apple-school-manager-set-up-ios.md) に関するページを参照してください。
+Apple School Manager は、学校向けのデバイス購入と登録プログラムです。 ADE と同様に、プロファイルを展開して管理にデバイスを登録できます。 詳細については、[Apple School Manager](apple-school-manager-set-up-ios.md) に関するページを参照してください。
 
 ## <a name="apple-configurator"></a>Apple Configurator
 
@@ -79,7 +79,7 @@ Mac コンピューターで実行している Apple Configurator を使って�
 
 詳細については、[Apple Configurator の登録](apple-configurator-enroll-ios.md)に関するページを参照してください。
 
-## <a name="use-the-company-portal-on-dep-enrolled-or-apple-configurator-enrolled-devices"></a>DEP または Apple Configurator で登録されたデバイスでのポータル サイトの使用
+## <a name="use-the-company-portal-on-ade-enrolled-or-apple-configurator-enrolled-devices"></a>ADE または Apple Configurator で登録されたデバイスでのポータル サイトの使用
 
 ユーザー アフィニティが構成されているデバイスは、会社のポータル アプリをインストールして実行することにより、アプリをダウンロードしてデバイスを管理できるようになります。 ユーザーは、デバイスを受け取った後、セットアップ アシスタントを完了してポータル サイト アプリをインストールするために、いくつもの追加の手順を完了する必要があります。
 

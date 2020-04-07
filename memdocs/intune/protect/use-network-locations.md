@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de27a5b9f6862bac024af83f748debb8eea6e962
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4da3a8e9e59f1f6a4d1c38354f14163c4773fd7d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349668"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325302"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Intune で場所 (ネットワーク フェンス) を使用する
 
@@ -50,7 +50,7 @@ ms.locfileid: "79349668"
 
 ## <a name="create-a-location"></a>場所を作成する
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[コンプライアンス ポリシー]**  >  **[場所]**  >  **[作成]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[コンプライアンス ポリシー]**  >  **[場所]**  >  **[作成]** を選択します。
 
 2. 次のプロパティを入力します。  
 

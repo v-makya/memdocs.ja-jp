@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 03/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d226888c3d710a7b80357ebb92130b34ab2fef94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e83077561ec4492feaf14789cf339e0b3ee86e2
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79360757"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359329"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Microsoft Intune を使用してプロパティ リスト ファイルを macOS デバイスに追加する
 
@@ -29,17 +29,13 @@ Microsoft Intune を使用すると、macOS デバイス用のプロパティ �
 
 この機能は、以下に適用されます。
 
-- 10.7 以降を実行している macOS デバイス
+- macOS 10.7 以降
 
-通常、プロパティ リスト ファイルには、macOS アプリケーションに関する情報が含まれています。 詳細については、「[情報プロパティ リスト ファイルについて](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html)」 (Apple の Web サイト) および「[カスタム ペイロードの設定](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1)」を参照してください。
+プロパティ リスト ファイルには、macOS アプリケーションに関する情報が含まれています。 詳細については、「[情報プロパティ リスト ファイルについて](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html)」 (Apple の Web サイト) および「[カスタム ペイロードの設定](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1)」を参照してください。
 
-この記事では、macOS デバイスに追加できるプロパティ リスト ファイルのさまざまな設定の一覧を示して説明します。 モバイル デバイス管理 (MDM) ソリューションの一部として、これらの設定を使用してアプリ バンドル ID (`com.company.application`) とその .plist ファイルを追加します。
+この記事では、macOS デバイスに追加できるプロパティ リスト ファイルのさまざまな設定の一覧を示して説明します。 モバイル デバイス管理 (MDM) ソリューションの一部として、これらの設定を使用してアプリ バンドル ID (`com.company.application`) を追加し、そのアプリの .plist ファイルを追加します。
 
 これらの設定は、Intune でデバイスの構成プロファイルに追加した後、ご使用の macOS デバイスに割り当てたり展開したりします。
-
-## <a name="before-you-begin"></a>始める前に
-
-[プロファイルを作成します](device-profile-create.md)。
 
 ## <a name="what-you-need-to-know"></a>知っておく必要がある情報
 
@@ -48,23 +44,49 @@ Microsoft Intune を使用すると、macOS デバイス用のプロパティ �
 - 管理された設定で動作するのは一部のアプリのみであり、すべての設定を管理できるとは限りません。
 - ユーザー チャネルの設定ではなく、デバイス チャネルの設定を対象とするプロパティ リスト ファイルを必ずアップロードしてください。 プロパティ リスト ファイルの対象はデバイス全体です。
 
-## <a name="preference-file"></a>設定ファイル
+## <a name="create-the-profile"></a>プロファイルの作成
 
-- **[優先ドメイン名]** : 通常、プロパティ リスト ファイルは、Web ブラウザー (Microsoft Edge)、[Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)、およびカスタム アプリに使用されます。 優先ドメインを作成すると、バンドル ID も作成されます。 バンドル ID を入力します (`com.company.application` など)。 たとえば、「`com.Contoso.applicationName`」、「`com.Microsoft.Edge`」、または「`com.microsoft.wdav`」と入力します。
-- **[プロパティ リスト ファイル]** : アプリに関連付けられているプロパティ リスト ファイルを選択します。 `.plist` ファイルまたは `.xml` ファイルであることを確認してください。 たとえば、`YourApp-Manifest.plist` ファイルまたは `YourApp-Manifest.xml` ファイルをアップロードします。
-- **[ファイルの内容]** :プロパティ リスト ファイル内のキー情報が表示されます。 キー情報を変更する必要がある場合は、別のエディターでリスト ファイルを開いてから、Intune でファイルを再度アップロードします。
+1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
+3. 次のプロパティを入力します。
 
-ファイルの形式が正しく設定されていることを確認してください。 このファイルではキーと値のペアのみを指定し、`<dict>`、`<plist>`、または `<xml>` タグでラップしないでください。 たとえば、プロパティ リスト ファイルは次のファイルのようになります。
+    - **[プラットフォーム]** : **[macOS]** を選択します
+    - **[プロファイル]** : **[設定ファイル]** を選択します。
 
-```xml
-<key>SomeKey</key>
-<string>someString</string>
-<key>AnotherKey</key>
-<false/>
-...
-```
+4. **[作成]** を選択します。
+5. **[Basics]\(基本\)** で次のプロパティを入力します。
 
-**[OK]**  >  **[作成]** を選択して変更を保存します。 プロファイルが作成されて、プロファイル一覧に表示されます。
+    - **名前**:ポリシーのわかりやすい名前を入力します。 後で簡単に識別できるよう、ポリシーに名前を付けます。 たとえば、適切なポリシー名は **macOS: デバイスで Microsoft Defender ATP を構成する設定ファイルの追加**になります。
+    - **説明**:ポリシーの説明を入力します。 この設定は省略可能ですが、推奨されます。
+
+6. **[次へ]** を選択します。
+
+7. **[構成設定]** で、次の設定を構成します。
+
+    - **[優先ドメイン名]** : 通常、プロパティ リスト ファイルは、Web ブラウザー (Microsoft Edge)、[Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)、およびカスタム アプリに使用されます。 優先ドメインを作成すると、バンドル ID も作成されます。 バンドル ID を入力します (`com.company.application` など)。 たとえば、「`com.Contoso.applicationName`」、「`com.Microsoft.Edge`」、または「`com.microsoft.wdav`」と入力します。
+    - **[プロパティ リスト ファイル]** : アプリに関連付けられているプロパティ リスト ファイルを選択します。 `.plist` ファイルまたは `.xml` ファイルであることを確認してください。 たとえば、`YourApp-Manifest.plist` ファイルまたは `YourApp-Manifest.xml` ファイルをアップロードします。
+    - **[ファイルの内容]** :プロパティ リスト ファイル内のキー情報が表示されます。 キー情報を変更する必要がある場合は、別のエディターでリスト ファイルを開いてから、Intune でファイルを再度アップロードします。
+
+    ファイルの形式が正しく設定されていることを確認してください。 このファイルではキーと値のペアのみを指定し、`<dict>`、`<plist>`、または `<xml>` タグでラップしないでください。 たとえば、プロパティ リスト ファイルは次のファイルのようになります。
+
+    ```xml
+    <key>SomeKey</key>
+    <string>someString</string>
+    <key>AnotherKey</key>
+    <false/>
+    ...
+    ```
+
+8. **[次へ]** を選択します。
+9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](device-profile-assign.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+11. **[確認と作成]** で、設定を確認します。 **[作成]** を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
 
 ## <a name="next-steps"></a>次のステップ
 

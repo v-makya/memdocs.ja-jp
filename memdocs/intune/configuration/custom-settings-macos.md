@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c6f57bd12713135244b2096f9eda4d8a802f32
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e900252392f1e6f057561d8d07f6e764dc0aafc
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361134"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359353"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Microsoft Intune で macOS デバイス用のカスタム設定を使用する
 
@@ -38,7 +39,7 @@ macOS デバイスを使用するとき、Intune にカスタム設定を取り�
 
 ## <a name="before-you-begin"></a>始める前に
 
-[プロファイルを作成します](device-profile-create.md)。
+[プロファイルを作成します](custom-settings-configure.md)。
 
 ## <a name="what-you-need-to-know"></a>知っておく必要がある情報
 
@@ -64,10 +65,8 @@ macOS デバイスを使用するとき、Intune にカスタム設定を取り�
   > [!NOTE]
   > 変数は UI で検証されず、大文字と小文字が区別されます。 その結果、不適切な入力で保存されたプロファイルが表示される場合があります。 たとえば、`{{deviceid}}` の代わりに `{{DeviceID}}` を入力した場合、リテラル文字列がデバイスの一意の ID の代わりに表示されます。 必ず、正しい情報を入力してください。
 
-**[OK]**  >  **[作成]** を選択して変更を保存します。 プロファイルが作成されて、プロファイル一覧に表示されます。
-
 ## <a name="next-steps"></a>次のステップ
 
-プロファイルは作成されましたが、まだ何も行われていません。 次に、[プロファイルを割り当てます](device-profile-assign.md)。
+プロファイルは作成されましたが、まだ何も実行できない可能性があります。 次に、[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
 
-[iOS/iPadOS デバイスに対するプロファイルを作成する](custom-settings-ios.md)方法を確認してください。
+[iOS または iPadOS デバイス上でカスタム プロファイル](custom-settings-ios.md)を作成します。

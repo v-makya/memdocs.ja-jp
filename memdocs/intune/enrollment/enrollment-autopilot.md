@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f566361eab24ee93e8b332eeb3e005c8555ece0d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b6512aa01a55a3a1ed949b634b97eb891e9459a9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363747"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327121"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Windows Autopilot を使用して Intune に Windows デバイスを登録する  
 Windows Autopilot を使用すると、Intune でのデバイスの登録が簡単になります。 カスタマイズされたオペレーティング システム イメージのビルドおよび維持は、時間のかかるプロセスです。 また、これらのカスタム オペレーティング システム イメージを新しいデバイスに適用し、エンド ユーザーに提供する前に使用の準備を行う場合にも、時間がかかることがあります。 Microsoft Intune と Autopilot を使用すれば、カスタム オペレーティング システム イメージのビルド、維持、および新しいデバイスへの適用を行わなくてもデバイスをエンド ユーザーに提供することができます。 Intune を使用して Autopilot デバイスを管理する場合、デバイスの登録後にポリシー、プロファイル、アプリなどを管理することができます。 利点、シナリオ、および前提条件の概要については、「[Overview of Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)」 (Windows Autopilot の概要) を参照してください。
@@ -51,7 +51,7 @@ Autopilot の展開の種類には次の 4 種類があります。
 
 CSV ファイルの情報をインポートすることにより、Windows Autopilot デバイスを追加できます。
 
-1. [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[デバイス]** ( **[Windows Autopilot Deployment プログラム]** の下)  >  **[インポート]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[デバイス]** ( **[Windows Autopilot Deployment プログラム]** の下)  >  **[インポート]** を選択します。
 
     ![Windows Autopilot デバイスのスクリーンショット](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -73,7 +73,7 @@ CSV ファイルの情報をインポートすることにより、Windows Autop
 
 ## <a name="create-an-autopilot-device-group"></a>Autopilot デバイス グループを作成する
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[グループ]** を選択し、 >  **[新しいグループ]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[グループ]**  >  **[新しいグループ]** を選択します。
 2. **[グループ]** ブレードで、次の手順を実行します。
     1. **[グループの種類]** で、 **[セキュリティ]** を選択します。
     2. **[グループ名]** と **[グループ テキスト]** を入力します。
@@ -90,7 +90,7 @@ CSV ファイルの情報をインポートすることにより、Windows Autop
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Autopilot Deployment プロファイルを作成する
 Autopilot Deployment プロファイルは、Autopilot デバイスを構成する場合に使用されます。 テナントごとに最大 350 個のプロファイルを作成できます。
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[デプロイ プロファイル]**  >  **[プロファイルの作成]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[デプロイ プロファイル]**  >  **[プロファイルの作成]** を選択します。
 2. **[基本]** ページ上で、 **[名前]** と省略可能な **[説明]** に入力します。
 
     ![基本ページのスクリーンショット](./media/enrollment-autopilot/create-profile-basics.png)
@@ -139,7 +139,7 @@ Autopilot Deployment プロファイルは、Autopilot デバイスを構成す�
 ## <a name="edit-an-autopilot-deployment-profile"></a>Autopilot Deployment プロファイルを編集する
 Autopilot Deployment プロファイルを作成したら、そのデプロイ プロファイルの特定の部分を編集することができます。   
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[デプロイ プロファイル]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[デプロイ プロファイル]** を選択します。
 2. 編集するプロファイルを選択します。
 3. 左側の **[プロパティ]** を選択して、デプロイ プロファイルの名前または説明を変更します。 変更したら、 **[保存]** をクリックします。
 5. **[設定]** をクリックして、OOBE 設定を変更します。 変更したら、 **[保存]** をクリックします。
@@ -150,7 +150,7 @@ Autopilot Deployment プロファイルを作成したら、そのデプロイ �
 ## <a name="edit-autopilot-device-attributes"></a>オートパイロット デバイス属性の編集
 オートパイロット デバイスをアップロードしたら、デバイスの特定の属性を編集できます。
 
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[デバイス]** ( **[Windows Autopilot Deployment プログラム]** の下) を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[デバイス]** ( **[Windows Autopilot Deployment プログラム]** の下) を選択します。
 2. 編集するデバイスを選択します。
 3. 画面の右側のウィンドウで、デバイス名、グループ タグ、またはユーザー フレンドリ名 (ユーザーを割り当てている場合) を編集できます。
 4. **[保存]** を選択します。
@@ -162,11 +162,11 @@ Autopilot Deployment プロファイルを作成したら、そのデプロイ �
 
 アラートには、Autopilot Deployment プロファイルを備えていない Autopilot プログラム デバイスの数が示されます。 アラート内の情報を利用してプロファイルを作成し、未割り当てデバイスに割り当てます。 アラートをクリックすると、Windows Autopilot デバイスの完全な一覧とそれらに関する詳細が表示されます。
 
-未割り当てデバイスのアラートを表示するには、[Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[概要]**  >  **[登録のアラート]**  >  **[割り当てられていないデバイス]** を選択します。  
+割り当てられていないデバイスのアラートを表示するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[概要]**  >  **[登録のアラート]**  >  **[割り当てられていないデバイス]** を選択します。  
 
 ## <a name="autopilot-deployments-report"></a>Autopilot 展開レポート
 Windows Autopilot によって展開された各デバイスについての詳細を見ることができます。
-レポートを表示するには、[Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にアクセスし、 **[デバイス]**  >  **[監視]**  >  **[Autopilot Deployment]** を選択します。
+レポートを表示するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にアクセスし、 **[デバイス]**  >  **[監視]**  >  **[Autopilot Deployment]** を選択します。
 データは、展開後 30 日間使用できます。
 
 このレポートはプレビュー段階です。 現時点では、デバイス展開のレコードは、新しい Intune 登録イベントによってのみトリガーされます。 つまり、新しい Intune 登録をトリガーしない展開は、このレポートの対象にはなりません。 これには、Autopilot White Glove の登録とユーザー部分が維持されるあらゆる種類のリセットが含まれます。
@@ -180,7 +180,7 @@ Windows Autopilot によって展開された各デバイスについての詳�
 > [!NOTE]
 > ADFS を使用している場合、特定の Autopilot デバイスにユーザーを割り当てることはできません。
 
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[デバイス]** ( **[Windows Autopilot Deployment プログラム]** の下でデバイスを選択して **[ユーザーの割り当て]** の下) を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[デバイス]** ( **[Windows Autopilot Deployment プログラム]** の下) を選択し、デバイスを選択して **[ユーザーの割り当て]** を選択します。
 
     ![ユーザー割り当てのスクリーンショット](./media/enrollment-autopilot/assign-user.png)
 
@@ -223,9 +223,9 @@ Intune に登録されていない Windows Autopilot デバイスは削除する
 Configuration Manager で[既存のデバイス向け Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) を使用することにより登録を行う場合は、correlator ID で Windows デバイスをグループ化することができます。 correlator ID は、Autopilot 構成ファイルのパラメーターです。 [Azure AD デバイス属性 enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) は等しい "OfflineAutopilotprofile-\<correlator ID\>" に自動的に設定されます。 これにより、enrollmentprofileName 属性を使用して correlator ID に基づく任意の Azure AD 動的グループを作成することができます。
 
 >[!WARNING] 
-> correlator ID は Intune 内にあらかじめリストされていないので、デバイスで必要な correlator ID がレポートされる場合があります。 ユーザーが Autopilot または Apple DEP プロファイル名と一致する correlator ID を作成した場合、デバイスは enrollmentProfileName 属性に基づいて任意の動的 Azure AD デバイス グループに追加されます。 この競合を避けるには:
+> correlator ID は Intune 内にあらかじめリストされていないので、デバイスで必要な correlator ID がレポートされる場合があります。 ユーザーが Autopilot または Apple ADE プロファイル名と一致する correlator ID を作成した場合、デバイスは enrollmentProfileName 属性に基づいて任意の動的 Azure AD デバイス グループに追加されます。 この競合を避けるには:
 > - 常に enrollmentProfileName 値 "*全体*" と照合する動的グループ ルールを作成します。
-> - Autopilot または Apple DEP プロファイルには "OfflineAutopilotprofile-" で始まる名前を決して付けないでください。
+> - Autopilot または Apple ADE プロファイルには "OfflineAutopilotprofile-" で始まる名前を決して付けないでください。
 
 ## <a name="next-steps"></a>次のステップ
 登録済み Windows 10 デバイス用に Windows Autopilot を構成したら、これらのデバイスを管理する方法を学習します。 詳細については、「[Microsoft Intune デバイスの管理とは](../remote-actions/device-management.md)」をご覧ください。

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,21 +15,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3821017b0fe15df8a0329000aa74272e4d9477e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086899"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359161"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Intune を使用して専用キオスクとして実行するための Windows 10 および Windows Holographic for Business デバイスの設定
 
 Windows 10 デバイスで Intune を使用して、専用デバイスとも呼ばれるキオスクとしてデバイスを実行します。 キオスク モードのデバイスでは、1 つのアプリも、複数のアプリも実行できます。 スタート メニューの表示とカスタマイズ、Win32 アプリを含むさまざまなアプリの追加、特定のホーム ページの Web ブラウザーへの追加などを行うことができます。 
 
-この機能は、次を実行しているデバイスに適用されます。
+この機能は、以下に適用されます。
 
 - Windows 10 以降
 - Windows Holographic for Business
+
+他のプラットフォーム用のキオスク プロファイルを作成するには、[Android デバイス管理者](device-restrictions-android.md#kiosk)、[Android エンタープライズ](device-restrictions-android-for-work.md#dedicated-devices)、[iOS または iPadOS](device-restrictions-ios.md#kiosk) を参照してください。
 
 Intune では、デバイスごとに 1 つのキオスク プロファイルをサポートします。 1 台のデバイスに複数のキオスク プロファイルが必要な場合は、[カスタム OMA-URI](custom-settings-windows-10.md) を使用することができます。
 
@@ -69,7 +71,8 @@ Intune では、"構成プロファイル" を使用して、お客様の組織�
 [プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
 
 次のプラットフォームを実行するデバイス用のキオスク プロファイルを作成できます。
+
 - [Android デバイス管理者](device-restrictions-android.md#kiosk)
-- [Android エンタープライズ](device-restrictions-android-for-work.md#dedicated-device-settings)
+- [Android エンタープライズ](device-restrictions-android-for-work.md#dedicated-devices)
 - [Windows 10 以降](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

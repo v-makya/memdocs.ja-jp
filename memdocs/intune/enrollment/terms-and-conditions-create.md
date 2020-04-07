@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26c30c947c6db1d44d8438aa63972fd5a3f663cd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 37eff19d940ef02cec0d2d0204644c46ef0742a2
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363435"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326987"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>ユーザー アクセスに関する使用条件
 
@@ -46,7 +46,7 @@ Intune 管理者は、ユーザーがポータル サイトを使用して以下
 ## <a name="create-terms-and-conditions"></a>使用条件を作成する
 次の手順で使用条件を作成します。 表示名と説明は管理目的で使用されます。条件のプロパティはポータル サイトでユーザーに表示されます。
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[テナント管理]**  >  **[使用条件]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[テナント管理]**  >  **[使用条件]** を選択します。
 2. **[作成]** を選択します。
 3. **[基本]** ページで、次の情報を指定します。
 
@@ -83,7 +83,7 @@ Intune 管理者は、ユーザーがポータル サイトを使用して以下
 
 ## <a name="monitor-terms-and-conditions"></a>使用条件の監視
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[テナント管理]**  >  **[使用条件]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[テナント管理]**  >  **[使用条件]** を選択します。
 2. 使用条件の一覧で、承諾を表示する条件を選択し、 **[Acceptance Reporting]\(承諾報告\)** を選択します。
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>使用条件の複数のバージョンを使用する
@@ -93,7 +93,7 @@ Intune 管理者は、ユーザーがポータル サイトを使用して以下
 
 誤植の修正や書式設定の変更などを行った場合は、現在のバージョン番号をそのまま保持します。
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[テナント管理]**  >  **[使用条件]** の順に選択し、変更する使用条件を選択してから、 **[プロパティ]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[テナント管理]**  >  **[使用条件]** を選択し、変更する使用条件を選択してから、 **[プロパティ]** を選択します。
 
 2. **[プロパティ]** ウィンドウで、 **[使用条件]** を選択し、必要に応じて **[タイトル]** 、 **[使用条件の概要]** 、 **[使用条件]** を変更します。 変更を加えた結果、ユーザーが新しい条件を承諾する必要が生じた場合は、 **[ユーザーに対してもう一度同意を求めて、バージョン番号を <番号> に上げます。]** を選択します。
 

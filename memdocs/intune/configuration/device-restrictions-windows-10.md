@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71e8b874e50fc1300124d748dfb70963acae089b
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220100"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407834"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限するように Windows 10 (以降) のデバイスを設定する
 
@@ -208,7 +208,9 @@ GDI DPI スケールでは、DPI 対応でないアプリケーションをモ�
   コンピューターが Azure AD に参加していて、自動登録が有効になっている場合、このポリシー設定は適用されません。
 
 - **[ルート証明書の手動インストール** (モバイルのみ)]: **[ブロック]** に設定すると、エンド ユーザーは、ルート証明書と中間 CAP 証明書を手動でインストールできなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。
-- **[カメラ]** : **[ブロック]** に設定すると、エンド ユーザーはデバイスでカメラを使用できなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。
+- **[カメラ]** : **[ブロック]** に設定すると、エンド ユーザーはデバイスでカメラを使用できなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、デバイスのカメラへのアクセスが許可される場合があります。
+
+  Intune では、デバイス カメラへのアクセスのみが管理されます。 画像やビデオにアクセスすることはできません。
 
   [カメラ CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 

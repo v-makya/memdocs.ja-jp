@@ -18,16 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 427907b3b24556be15958707bf55f4dc9b190d94
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1070c7b396ac3c19c340a69b6e2eb8db9d6707b6
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363825"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327197"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Apple Business Manager または Apple School Manager を使用して macOS デバイスを自動登録する
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+> [!IMPORTANT]
+> Apple は、Apple Device Enrollment Program (DEP) の使用から Apple の自動デバイス登録 (ADE) に最近変更しました。 Intune では、それを反映するために Intune のユーザー インターフェイスを更新しています。 このような変更が完了するまで、Intune ポータルでは *[Device Enrollment Program]* が引き続き表示されます。 表示される場所では、自動デバイス登録が使用されるようになっています。
 
 Apple の [Apple Business Manager](https://business.apple.com/) または [Apple School Manager](https://school.apple.com/) で購入した macOS デバイス用に Intune の登録を設定できます。 これらの登録方法を使用すると、デバイスに触れることなく、多数のデバイスを登録できます。 ユーザーに直接 macOS デバイスを出荷できます。 ユーザーがデバイスの電源をオンにすると、セットアップ アシスタントが構成済み設定で実行され、デバイスが Intune の管理として登録されます。
 
@@ -50,9 +51,9 @@ Apple Business Manager 登録と Apple School Manager はどちらも、[デバ�
 - [MDM 機関](../fundamentals/mdm-authority-set.md)
 - [Apple MDM プッシュ証明書](../enrollment/apple-mdm-push-certificate-get.md)
 
-## <a name="get-an-apple-dep-token"></a>Apple DEP トークンを取得する
+## <a name="get-an-apple-ade-token"></a>Apple ADE トークンの取得
 
-DEP または Apple School Manager に macOS デバイスを登録するには、Apple の DEP トークン (.p7m) ファイルが必要です。 このトークンにより、Intune は組織所有のデバイスに関する情報を同期できるようになります。 また、これによって Intune では、Apple およびデバイスに対するそれらのプロファイルに登録プロファイルをアップロードできるようになります。
+ADE または Apple School Manager に macOS デバイスを登録するには、Apple のトークン (.p7m) ファイルが必要です。 このトークンにより、Intune は組織所有のデバイスに関する情報を同期できるようになります。 また、これによって Intune では、Apple およびデバイスに対するそれらのプロファイルに登録プロファイルをアップロードできるようになります。
 
 トークンを作成するには、Apple ポータルを使用します。 また、管理のためにデバイスを Intune に割り当てる場合にも Apple ポータルを使用します。
 
@@ -61,7 +62,7 @@ DEP または Apple School Manager に macOS デバイスを登録するには�
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>手順 1. トークンを作成するために必要な Intune 公開キー証明書をダウンロードする
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[macOS]**  >  **[macOS enrollment]\(macOS の登録\)**  >  **[Enrollment Program トークン]**  >  **[追加]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[macOS]**  >  **[macOS enrollment]\(macOS の登録\)**  >  **[Enrollment Program トークン]**  >  **[追加]** を選択します。
 
     ![Enrollment Program トークンを取得します。](./media/device-enrollment-program-enroll-macos/image01.png)
 
@@ -92,7 +93,7 @@ DEP または Apple School Manager に macOS デバイスを登録するには�
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>手順 3. このトークンの作成に使用した Apple ID を保存する
 
-[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、今後の参照用に Apple ID を指定します。
+[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、今後の参照用に Apple ID を指定します。
 
 ![Enrollment Program トークンの作成に使った Apple ID の指定と、Enrollment Program トークンの参照のスクリーンショット。](./media/device-enrollment-program-enroll-macos/image03.png)
 
@@ -103,7 +104,7 @@ DEP または Apple School Manager に macOS デバイスを登録するには�
 
 これでトークンがインストールされました。デバイスの登録プロファイルを作成することができます。 デバイス登録プロファイルで、デバイス グループに対して登録時に適用する設定を定義します。
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[macOS]**  >  **[macOS enrollment]\(macOS の登録\)**  >  **[Enrollment Program トークン]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[macOS]**  >  **[macOS enrollment]\(macOS の登録\)**  >  **[Enrollment Program トークン]** を選択します。
 2. トークンを選択し、 **[プロファイル]** を選択し、 **[プロファイルの作成]** を選択します。
 
     ![プロファイルの作成のスクリーンショット。](./media/device-enrollment-program-enroll-macos/image04.png)
@@ -115,7 +116,7 @@ DEP または Apple School Manager に macOS デバイスを登録するには�
 4. **[プラットフォーム]** で **[macOS]** を選びます。
 
 5. **[ユーザー アフィニティ]** で、このプロファイルに対応するデバイスを割り当て済みユーザーとともに登録する必要があるかどうかを選択します。
-    - **[ユーザー アフィニティとともに登録する]** - このオプションは、ユーザーに属しているデバイスであって、かつアプリのインストールなどのサービスにポータル サイトのアプリを使用する必要があるデバイスの場合に選択します。 ADFS を使用している場合、ユーザー アフィニティには [WS-Trust 1.3 Username/Mixed エンドポイント](https://technet.microsoft.com/library/adfs2-help-endpoints)が必要です。 [詳細情報](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。多要素認証は、ユーザー アフィニティが有効な macOS DEP デバイスではサポートされません。
+    - **[ユーザー アフィニティとともに登録する]** - このオプションは、ユーザーに属しているデバイスであって、かつアプリのインストールなどのサービスにポータル サイトのアプリを使用する必要があるデバイスの場合に選択します。 ADFS を使用している場合、ユーザー アフィニティには [WS-Trust 1.3 Username/Mixed エンドポイント](https://technet.microsoft.com/library/adfs2-help-endpoints)が必要です。 [詳細情報](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。多要素認証は、ユーザー アフィニティがある macOS ADE デバイスではサポートされません。
 
     - **[ユーザー アフィニティなしで登録する]** - このオプションは、1 人のユーザーに関連付けられていないデバイスの場合に選択します。 ローカルのユーザー データにアクセスせずにタスクを実行するデバイスで使用します。 ポータル サイト アプリなどのアプリは動作しません。
 
@@ -165,17 +166,17 @@ DEP または Apple School Manager に macOS デバイスを登録するには�
 
 デバイスを管理するアクセス許可を Intune に割り当てたので、Intune と Apple を同期して、マネージド デバイスを Azure ポータルの Intune に表示できます。
 
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]** > **[macOS]** > **[macOS の登録]** > **[Enrollment Program トークン]** を選択します。一覧からトークンを選択し、 **[デバイス]** > **[同期]** を選択します。![[Enrollment Program デバイス] ノードと [同期] リンクが選ばれているスクリーンショット。](./media/device-enrollment-program-enroll-macos/image06.png)
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]** > **[macOS]** > **[macOS enrollment]\(macOS の登録\)** > **[Enrollment Program トークン]** を選択し、一覧からトークンを選択して、 **[デバイス]** > **[同期]** を選択します。![[Enrollment Program デバイス] ノードと [同期] リンクが選ばれているスクリーンショット。](./media/device-enrollment-program-enroll-macos/image06.png)
 
    許容される Enrollment Program トラフィックについての Apple の規約に準拠するため、Intune では次の制限が課せられます。
-   - 完全な同期は 7 日に 1 回だけ実行できます。 完全な同期中に、Intune に接続された Apple MDM サーバーに割り当てられているシリアル番号の完全な最新の一覧を Intune がフェッチします。 DEP ポータルで Apple MDM サーバーからの割り当てを解除せずに Intune ポータルから Enrollment Program デバイスが削除されると、完全同期が実行されるまで Intune に再インポートされません。   
+   - 完全な同期は 7 日に 1 回だけ実行できます。 完全な同期中に、Intune に接続された Apple MDM サーバーに割り当てられているシリアル番号の完全な最新の一覧を Intune がフェッチします。 Apple ポータルで Apple MDM サーバーからの割り当てを解除せずに Intune ポータルから Enrollment Program デバイスが削除されると、完全同期が実行されるまで Intune に再インポートされません。   
    - 同期は 24 時間ごとに自動的に実行されます。 **[同期]** ボタンをクリックして同期することもできます (15 分以内に 2 回以上は同期できません)。 すべての同期要求は、完了までに 15 分与えられます。 同期が完了するまで、 **[同期]** ボタンは無効になっています。 この同期により、既存のデバイスの状態が更新され、Apple MDM サーバーに割り当てられている新しいデバイスがインポートされます。
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>登録プロファイルをデバイスに割り当てる
 
 登録する前に、Enrollment Program プロファイルをデバイスに割り当てる必要があります。
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[macOS]**  >  **[macOS enrollment]\(macOS の登録\)**  >  **[Enrollment Program トークン]** の順に選択し、一覧からトークンを選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[macOS]**  >  **[macOS enrollment]\(macOS の登録\)**  >  **[Enrollment Program トークン]** を選択し、一覧からトークンを選択します。
 2. **[デバイス]** を選択し、リスト内でデバイスを選択し、 **[プロファイルの割り当て]** を選択します。
 3. **[プロファイルの割り当て]** の下でデバイス用のプロファイルを選択し、 **[割り当て]** を選択します。
 
@@ -183,14 +184,14 @@ DEP または Apple School Manager に macOS デバイスを登録するには�
 
 特定のトークンを使用して登録するすべてのデバイスに適用される、macOS と iOS/iPadOS の既定のプロファイルを選択することができます。 
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[macOS]**  >  **[macOS enrollment]\(macOS の登録\)**  >  **[Enrollment Program トークン]** の順に選択し、一覧からトークンを選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[macOS]**  >  **[macOS enrollment]\(macOS の登録\)**  >  **[Enrollment Program トークン]** を選択し、一覧からトークンを選択します。
 2. **[既定のプロファイルの設定]** を選択し、ドロップダウン リストでプロファイルを選択し、 **[保存]** を選択します。 このプロファイルは、トークンに登録されたすべてのデバイスに適用されます。
 
 ## <a name="distribute-devices"></a>デバイスを配布する
 
 Apple と Intune の間の同期と管理を有効にし、デバイスを登録できるようにプロファイルを割り当てました。 ユーザーにデバイスを配布できるようになりました。 ユーザー アフィニティがあるデバイスでは、各ユーザーに Intune ライセンスを割り当てる必要があります。 ユーザー アフィニティがないデバイスでは、デバイスのライセンスが必要です。 デバイスがワイプされるまで、アクティブ化されたデバイスは登録プロファイルを適用できません。
 
-## <a name="renew-a-dep-token"></a>DEP トークンを更新する
+## <a name="renew-an-ade-token"></a>ADE トークンの更新
 
 1. deploy.apple.com に移動します。  
 2. **[サーバーの管理]** で、更新するトークン ファイルに関連付けられた MDM サーバーを選択します。
@@ -199,7 +200,7 @@ Apple と Intune の間の同期と管理を有効にし、デバイスを登録
     ![生成された新しいトークンのスクリーンショット。](./media/device-enrollment-program-enroll-macos/generatenewtoken.png)
 
 4. **[Your Server Token]\(サーバー トークン\)** を選択します。  
-5. [Microsoft Endpoint Manage 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイスの登録]**  >  **[Apple の登録]**  >  **[Enrollment Program トークン]** の順に選択し、トークンを選択します。
+5. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイスの登録]**  >  **[Apple の登録]**  >  **[Enrollment Program トークン]** を選択し、トークンを選択します。
     ![Enrollment Program トークンのスクリーンショット。](./media/device-enrollment-program-enroll-macos/enrollmentprogramtokens.png)
 
 6. **[トークンを更新する]** を選択し、元のトークンの作成に使用した Apple ID を入力します。  

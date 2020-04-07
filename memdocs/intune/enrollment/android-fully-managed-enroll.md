@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4fb6adadb4e0dbf593bbbe3d9ee51ed5783e152
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 89d299edfb9542591eaabcf42d0b2069bbde4331
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339593"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327307"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Android Enterprise フル マネージド デバイスの Intune 登録を設定する 
 
@@ -56,7 +56,7 @@ Android Enterprise フル マネージド デバイスの管理を設定する�
 
 ### <a name="enable-corporate-owned-user-devices"></a>会社所有ユーザー デバイスを有効にする
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[デバイス]**  >  **[Android]**  >  **[Android の登録]**   >  **[会社が所有する完全に管理されたユーザー デバイス]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[デバイス]**  >  **[Android]**  >  **[Android の登録]**   >  **[会社が所有する完全に管理されたユーザー デバイス]** を選択します。
 2. **[会社が所有するユーザー デバイスの登録をユーザーに許可する]** で **[はい]** を選択します。
 
 > [!NOTE]

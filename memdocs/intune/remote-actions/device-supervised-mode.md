@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d9b147a9a2c201cde798abcee30a212176cf268
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: da03bb3fdf1f0d67639f7719215d756b7d598d7c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338046"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325080"
 ---
 # <a name="turn-on-iosipados-supervised-mode"></a>iOS/iPadOS の監視モードを有効にする
 
@@ -37,7 +37,7 @@ Intune は Apple [Device Enrollment Program (DEP)](../enrollment/device-enrollme
 
 ## <a name="turn-on-supervised-mode-during-enrollment"></a>登録時に監視モードで有効にする
 
-[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)では、[DEP で Apple 登録プロファイルを作成](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile)するときに、デバイスの監視モードを有効にすることができます。 **[デバイス管理の設定]** で、 **[監督下]** チェック ボックスをオンにします。
+[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) では、[DEP で Apple 登録プロファイルを作成](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile)するときに、デバイスの監視モードを有効にすることができます。 **[デバイス管理の設定]** で、 **[監督下]** チェック ボックスをオンにします。
 
 ## <a name="turn-on-supervised-mode-after-enrollment"></a>登録後に監視モードで有効にする
 

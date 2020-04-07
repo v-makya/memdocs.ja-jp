@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0ffd06d86106b07224edc40aefc7407673a0391
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: eea973ec936ce41578754cb1a68d1b9128895b76
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526259"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326677"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>分散 IT にロールベースのアクセス制御 (RBAC) とスコープのタグを使用する
 
@@ -43,14 +43,14 @@ ms.locfileid: "79526259"
 
 ## <a name="to-create-a-scope-tag"></a>スコープのタグを作成するには
 
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[テナント管理]**  >  **[ロール]**  >  **[スコープ (タグ)]**  >  **[作成]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[テナント管理]**  >  **[ロール]**  >  **[スコープ (タグ)]**  >  **[作成]** を選択します。
 2. **[基本]** ページ上で、 **[名前]** を指定し、必要に応じて **[説明]** に入力します。 **[次へ]** を選択します。
 3. **[割り当て]** ページで、このスコープ タグを割り当てるデバイスを含むグループを選択します。 **[次へ]** を選択します。
 4. **[確認と作成]** ページで、 **[作成]** を選択します。
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>スコープのタグをロールに割り当てるには
 
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[テナント管理]**  >  **[ロール]**  >  **[すべてのロール]** の順に選択し、ロールを選択して、 **[割り当て]**  >  **[割り当てる]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[テナント管理]**  >  **[ロール]**  >  **[すべてのロール]** を選択し、ロールを選択して、 **[割り当て]**  >  **[割り当て]** を選択します。
 2. **[基本]** ページ上で、 **[割り当て名]** と **[説明]** に入力します。 **[次へ]** を選択します。
 3. **[管理者グループ]** ページで、 **[含めるグループを選択]** を選択し、この割り当てに含めるグループを選択します。 これらのグループのユーザーには、スコープ (グループ) 内のユーザーまたはデバイスを管理するためのアクセス許可が付与されます。 **[次へ]** を選択します。
 
@@ -70,7 +70,7 @@ ms.locfileid: "79526259"
 
 スコープ タグをサポートするオブジェクトの場合、通常、スコープ タグは、 **[プロパティ]** の下に表示されます。 たとえば、構成プロファイルにスコープ タグを割り当てるには、次の手順を行います。
 
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[構成プロファイル]** の順に選択してプロファイルを選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[構成プロファイル]** を選択して、プロファイルを選択します。
 
 2. **[プロパティ]**  >  **[スコープ (タグ)]**  >  **[編集]**  >  **[スコープ タグを選択]** の順に選択して、プロファイルに追加するタグを選択します。 1 つのオブジェクトに最大で 100 個のスコープ タグを割り当てることができます。
 4. **[選択]**  >  **[Review + save]\(確認と保存\)** の順に選択します。

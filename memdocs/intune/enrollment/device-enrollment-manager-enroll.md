@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14bc0be97a2e74c4666603feb2a4832c6a1e2011
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: e6b0c901cd52edcd674a2d787bc703c371dcf519
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339463"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327141"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>デバイス登録マネージャー アカウントを使用してデバイスを Intune に登録する
 
@@ -37,7 +37,7 @@ DEM ユーザー アカウントと DEM ユーザー アカウントを使用し
 - ポータル サイトからはワイプできません。 DEM ユーザー アカウントで登録されたデバイスは、Azure portal で Intune からワイプできます。
 - ポータル サイト アプリまたは Web サイトには、ローカルのデバイスのみが表示されます。
 - アプリ管理のための Apple ID 要件がユーザー単位になるため、DEM ユーザー アカウントでは Apple ID ユーザー ライセンスで Apple Volume Purchase Program (VPP) アプリを利用することはできません。
-- Apple の Device Enrollment Program (DEP) を使用してデバイスを登録するときに、DEM アカウントを使用することはできません。
+- Apple の自動デバイス登録 (ADE) を使用してデバイスを登録するときに、DEM アカウントを使用することはできません。
 - デバイスでは、Apple ID デバイス ライセンスがある場合に VPP アプリをインストールすることができます。
 - Windows 10 1803+ 以降の例外と共にデバイスが条件付きアクセスをブロックされます
 - DEM アカウントに登録されているすべてのデバイスを Intune で管理するには、適切にライセンスする必要があります。 ライセンスは、Intune ユーザー ライセンスまたは Intune デバイス ライセンスにすることができます。
@@ -46,7 +46,7 @@ DEM ユーザー アカウントと DEM ユーザー アカウントを使用し
 
 ## <a name="add-a-device-enrollment-manager"></a>デバイス登録マネージャーの追加
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[デバイス]** 、 **[デバイスの登録]** 、 **[デバイス登録マネージャー]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[デバイス]**  >  **[デバイスの登録]**  >  **[デバイス登録マネージャー]** を選択します。
 
 2. **[追加]** を選択します。
 
@@ -67,6 +67,6 @@ DEM ユーザー アカウントと DEM ユーザー アカウントを使用し
 
 **デバイス登録マネージャーを削除するには**
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[デバイス]** 、 **[デバイスの登録]** 、 **[デバイス登録マネージャー]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[デバイス]**  >  **[デバイスの登録]**  >  **[デバイス登録マネージャー]** を選択します。
 2. **[デバイス登録マネージャー]** ブレードで、DEM ユーザーを選択し、 **[削除]** を選択します。
 

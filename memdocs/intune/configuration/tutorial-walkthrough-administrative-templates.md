@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/31/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5988da854eecd528119a7e2591fc083dcdbc29bf
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220229"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488204"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>チュートリアル:クラウドを使用して、ADMX テンプレートと Microsoft Intune で Windows 10 デバイスにグループ ポリシーを構成する
 
@@ -39,7 +39,7 @@ ADMX テンプレートは次のサービスで使用できます。
 
 ADMX ポリシーの詳細については、「[ADMX ベースのポリシーについて](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)」を参照してください。
 
-Microsoft Intune では、これらのテンプレートは Intune サービスに組み込まれており、**管理用テンプレート** プロファイルとして使用できます。 このプロファイル内に、含めたい設定を構成します。その後、このプロファイルをデバイスに "割り当て" ます。
+これらのテンプレートは Microsoft Intune に組み込まれており、**管理用テンプレート** プロファイルとして使用できます。 このプロファイル内に、含めたい設定を構成します。その後、このプロファイルをデバイスに "割り当て" ます。
 
 このチュートリアルでは次のことを行います。
 
@@ -78,7 +78,9 @@ Microsoft Intune では、これらのテンプレートは Intune サービス�
       - これらのテンプレートを使用して作成したグループ ポリシーは **OfficeandEdge** と呼ばれます。 この名前が画像に表示されます。
       - 使用する Windows 10 Enterprise 管理者コンピューターは、**管理者コンピューター**と呼ばれます。
 
-      一部の組織では、ドメイン管理者には 2 つのアカウントがあります。一般的なドメイン職場アカウントと、グループ ポリシーなどのドメイン管理者タスク専用に使用されるドメイン管理者アカウントです。
+      一部の組織では、ドメイン管理者に次の 2 つのアカウントがあります。  
+        - 一般的なドメイン職場アカウント
+        - グループ ポリシーなど、ドメイン管理者のタスクにのみ使用される別のドメイン管理者アカウント
 
       この**管理者コンピューター**の目的は、管理者がドメイン管理者アカウントでサインインすることと、グループ ポリシーを管理するために設計されたツールにアクセスすることです。
 
@@ -123,7 +125,7 @@ Microsoft Intune では、これらのテンプレートは Intune サービス�
 
 Intune では、作成したユーザーとグループにポリシーが適用されます。 階層はありません。 2 つのポリシーによって同じ設定が更新された場合、設定は競合として表示されます。 2 つのコンプライアンス ポリシーが競合している場合は、最も制限の厳しいポリシーが適用されます。 2 つの構成プロファイルが競合している場合、設定は適用されません。 詳細については、[デバイス ポリシーとプロファイルの一般的な質問、問題と解決策](device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied)のページを参照してください。
 
-次に示す手順では、セキュリティ グループを作成し、ユーザーをグループに追加します。 1 人のユーザーを複数のグループに追加できます。 たとえば、1 人のユーザーが複数のデバイス (職場用の Surface Pro、個人用の Android モバイル デバイスなど) を持っていることは普通のことです。 そして、ユーザーはそれら複数のデバイスから電子メールやその他の組織リソースにアクセスします。
+次に示す手順では、セキュリティ グループを作成し、ユーザーをこれらのグループに追加します。 1 人のユーザーを複数のグループに追加できます。 たとえば、1 人のユーザーが複数のデバイス (職場用の Surface Pro、個人用の Android モバイル デバイスなど) を持っていることは普通のことです。 そして、ユーザーはそれら複数のデバイスから電子メールやその他の組織リソースにアクセスします。
 
 1. Endpoint Manager admin center で、 **[グループ]**  >  **[新しいグループ]** を選択します。
 
@@ -235,10 +237,20 @@ Endpoint Manager admin center で、新しいセキュリティ グループを�
     - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
 
 5. **[次へ]** を選択します。
-6. **[構成設定]** のドロップダウン リストで、 **[すべての製品]** を選択します。 すべての設定が表示されます。 これらの設定では、次のプロパティに注意してください。
+6. **[構成設定]** で、設定がデバイス ( **[コンピューターの構成]** ) に適用され、設定がユーザー ( **[ユーザーの構成]** ) に適用されます。
 
-    - ポリシーの**パス**はグループ ポリシーの管理または GPEdit と同じです。
-    - 設定は、ユーザーまたはデバイスに適用されます。
+    > [!div class="mx-imgBorder"]
+    > ![Microsoft Intune エンドポイント マネージャーでユーザーとデバイスに ADMX テンプレート設定を適用する](./media/tutorial-walkthrough-administrative-templates/administrative-templates-choose-computer-user-configuration.png)
+
+7. **[コンピューターの構成]**  >  **[Microsoft Edge]** を展開し、 **[SmartScreen の設定]** を選択します。 ポリシーへのパスと使用可能なすべての設定を確認します。
+
+    > [!div class="mx-imgBorder"]
+    > ![Microsoft Intune の ADMX テンプレートで Microsoft Edge SmartScreen ポリシー設定を参照する](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-path.png)
+
+8. [検索] に「**ダウンロード**」と入力します。 ポリシー設定がフィルター処理されています。
+
+    > [!div class="mx-imgBorder"]
+    > ![Microsoft Intune ADMX テンプレートで Microsoft Edge SmartScreen ポリシー設定をフィルター処理する](./media/tutorial-walkthrough-administrative-templates/computer-configuration-microsoft-edge-smartscreen-search-download.png)
 
 ### <a name="open-group-policy-management"></a>グループ ポリシーの管理を開く
 
@@ -269,18 +281,18 @@ Endpoint Manager admin center で、新しいセキュリティ グループを�
     > ![グループ ポリシーの [コンピューターの構成] の設定オプションを確認する](./media/tutorial-walkthrough-administrative-templates/prevent-enabling-lock-screen-camera-admx-policy.png)
 
 5. Endpoint Manager admin center で、**Admin template - Windows 10 student devices** テンプレートに移動します。
-6. ドロップダウン リストから **[すべての製品]** を選択し、**個人用設定**を検索します。
+6. **[コンピューターの構成]**  >  **[コントロール パネル]**  >  **[個人用設定]** を選択します。 利用可能な設定は次のとおりです。
 
     > [!div class="mx-imgBorder"]
-    > ![Microsoft Intune の管理用テンプレートで個人用設定を検索する](./media/tutorial-walkthrough-administrative-templates/search-personalization-administrative-template.png)
+    > ![Microsoft Intune での個人用設定のポリシー設定のパス](./media/tutorial-walkthrough-administrative-templates/computer-configuration-control-panel-personalization-path.png)
 
-    利用可能な設定は次のとおりです。
-
-    設定の種類は **[デバイス]** で、パスは **\コントロール パネル\個人用設定**です。 このパスはグループ ポリシー管理エディターで見たものと似ています。 設定を開くと、グループ ポリシー管理エディターで見たのと同じ **[未構成]** 、 **[有効]** 、 **[無効]** のオプションが表示されます。
+    設定の種類は **[デバイス]** で、パスは " **/コントロール パス/個人用設定**" です。 このパスはグループ ポリシー管理エディターで見たものと似ています。 **[ロック画面でカメラを有効にできないようにする]** 設定を開くと、グループ ポリシー管理エディターで見たのと同じ **[未構成]** 、 **[有効]** 、 **[無効]** のオプションが表示されます。
 
 #### <a name="compare-a-user-policy"></a>ユーザー ポリシーの比較
 
-1. 管理用テンプレートで、**inprivate ブラウズ**を検索します。 パスを確認し、設定がユーザーとデバイスに適用されることを確認します。
+1. 管理者テンプレートで、 **[コンピューターの構成]**  >  **[すべての設定]** を選択して、**InPrivate ブラウズ**を検索します。 パスに注意してください。
+
+    **[ユーザーの構成]** に対しても同じ操作を行います。 **[すべての設定]** を選択し、**InPrivate ブラウズ**を検索します。
 
 2. **グループ ポリシー管理エディター**で、対応するユーザーとデバイスの設定を見つけます。
 
@@ -296,9 +308,11 @@ Endpoint Manager admin center で、新しいセキュリティ グループを�
 #### <a name="compare-an-edge-policy"></a>Microsoft Edge ポリシーの比較
 
 1. Endpoint Manager admin center で、**Admin template - Windows 10 student devices** テンプレートに移動します。
-2. ドロップダウン リストから **[Edge version 77 and later]\(Microsoft Edge バージョン 77 以降\)** を選択します。
-3. **スタートアップ**を検索します。 利用可能な設定は次のとおりです。
-4. グループ ポリシー管理エディターで、次の設定を見つけます。
+2. **[コンピューターの構成]**  >  **[Microsoft Edge]**  >  **[Startup, homepage and new tab page]\(スタートアップ、ホームページ、新しいタブ ページ\)** の順に展開します。 利用可能な設定は次のとおりです。
+
+    **[ユーザーの構成]** に対しても同じ操作を行います。
+
+3. グループ ポリシー管理エディターで、次の設定を見つけます。
 
     - デバイス: **[コンピューターの構成]**  >  **[ポリシー]**  >  **[管理用テンプレート]**  >  **[Microsoft Edge]**  >  **[Startup, homepage and new tab page]\(スタートアップ、ホームページ、新しいタブ ページ\)** の順に展開します。
     - ユーザー: **[ユーザーの構成]**  >  **[ポリシー]**  >  **[管理用テンプレート]**  >  **[Microsoft Edge]**  >  **[Startup, homepage and new tab page]\(スタートアップ、ホームページ、新しいタブ ページ\)** の順に展開します。
@@ -311,12 +325,12 @@ Intune で管理用テンプレートを作成しました。 このテンプレ
 
 このテンプレートでは、いくつかの Internet Explorer 設定を構成して、複数の学生が共有するデバイスをロックダウンします。
 
-1. **Admin template - Windows 10 student devices** で、**InPrivate ブラウズを無効にする**を検索し、デバイス ポリシーを選択します。
+1. **Admin template - Windows 10 student devices** で、 **[コンピューターの構成]** を展開して **[すべての設定]** を選択し、"**InPrivate ブラウズを無効にする**" を検索します。
 
     > [!div class="mx-imgBorder"]
     > ![Microsoft Intune の管理用テンプレートで InPrivate ブラウズを無効にするデバイス ポリシー](./media/tutorial-walkthrough-administrative-templates/turn-off-inprivate-browsing-administrative-template.png)
 
-2. このウィンドウで、説明と設定できる値を確認します。 これらのオプションは、グループ ポリシーに表示されるものと似ています。
+2. **[InPrivate ブラウズを無効にする]** 設定を選択します。 このウィンドウで、説明と設定できる値を確認します。 これらのオプションは、グループ ポリシーに表示されるものと似ています。
 3. **[有効]**  >  **[OK]** を選択して変更を保存します。
 4. また、次の Internet Explorer の設定も構成します。 必ず **[OK]** を選択して変更を保存してください。
 
@@ -343,7 +357,7 @@ Intune で管理用テンプレートを作成しました。 このテンプレ
 
 ### <a name="assign-your-template"></a>テンプレートの割り当て
 
-1. 使用するテンプレートで、 **[割り当て]**  >  **[含めるグループを選択]** の順に選択します。
+1. テンプレートで、 **[割り当て]** に移動するまで **[次へ]** を選択します。 **[含めるグループを選択]** を選択します。
 
     > [!div class="mx-imgBorder"]
     > ![Microsoft Intune のデバイス構成プロファイルの一覧から管理用テンプレート プロファイルを選択する](./media/tutorial-walkthrough-administrative-templates/filter-administrative-template-device-configuration-profiles-list.png)
@@ -352,7 +366,7 @@ Intune で管理用テンプレートを作成しました。 このテンプレ
 
     このチュートリアルを運用環境で使用している場合は、空のグループを追加することを検討してください。 目標は、テンプレートの割り当てを練習することです。
 
-3. **[次へ]** を選択して、 **[確認と作成]** タブに移動します。 **[作成]** を選択して、変更を保存します。
+3. **[次へ]** を選択します。 **[確認および作成]** で **[作成]** を選択し、変更内容を保存します。
 
 プロファイルを保存するとすぐに、デバイスの Intune へのチェックイン時にプロファイルがデバイスに適用されるようになります。 デバイスがインターネットに接続されている場合、これはすぐに実行されます。 ポリシー更新時間の詳細については、「[デバイスへのポリシー、プロファイル、アプリの割り当て後にそれらが取得されるまでどれくらいの時間がかかりますか?](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)」を参照してください。
 
@@ -380,11 +394,20 @@ Endpoint Manager admin center で、管理用テンプレートのデバイス�
     - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
 
 5. **[次へ]** を選択します。
-6. **[構成設定]** のドロップダウン リストから、 **[Office]** を選択します。 以下の設定を**有効**にします。 必ず **[OK]** を選択して変更を保存してください。
+6. **[構成設定]** で、次の設定を構成します。 必ず **[OK]** を選択して変更を保存してください。
 
-    - **Windows 資格情報を使用して OneDrive 同期クライアントにユーザーをサイレント モードでサインインする**
-    - **OneDrive ファイル オンデマンドを使用する**
-    - **ユーザーが個人用の OneDrive アカウントを同期できないようにする**
+    - **[コンピューターの構成]**  >  **[すべての設定]** :
+      - **Windows 資格情報を使用して OneDrive 同期クライアントにユーザーをサイレント モードでサインインする**
+        - **種類**:デバイス
+        - **値**:Enabled
+      - **OneDrive ファイル オンデマンドを使用する**
+        - **種類**:デバイス
+        - **値**:Enabled
+
+    - **[ユーザーの構成]**  >  **[すべての設定]** :
+      - **ユーザーが個人用の OneDrive アカウントを同期できないようにする**
+        - **種類**:ユーザー
+        - **値**:Enabled
 
 設定は次のようになります。
 
@@ -395,12 +418,12 @@ OneDrive クライアント設定の詳細については、「[グループ ポ
 
 ### <a name="assign-your-template"></a>テンプレートの割り当て
 
-1. 使用するテンプレートで、 **[割り当て]**  >  **[含めるグループを選択]** の順に選択します
+1. テンプレートで、 **[割り当て]** に移動するまで **[次へ]** を選択します。 **[含めるグループを選択]** を選択します。
 2. 既存のユーザーとグループの一覧が表示されます。 前の手順で作成した **All Windows devices** グループ > **[選択]** を選択します。
 
     このチュートリアルを運用環境で使用している場合は、空のグループを追加することを検討してください。 目標は、テンプレートの割り当てを練習することです。
 
-3. **[次へ]** を選択して、 **[確認と作成]** タブに移動します。 **[作成]** を選択して、変更を保存します。
+3. **[次へ]** を選択します。 **[確認および作成]** で **[作成]** を選択し、変更内容を保存します。
 
 この時点で、管理用テンプレートをいくつか作成し、作成したグループにそれらのテンプレートを割り当てました。 次の手順では、Windows PowerShell と Microsoft Graph API for Intune を使用して、管理用テンプレートを作成します。
 

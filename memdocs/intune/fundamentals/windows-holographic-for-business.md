@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f8a15199f599cf0fd4f90ea965bcc3e668f3b27
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 44cae6e1e7fdd310a6053cbcb6f19371263d0161
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79354413"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326636"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Intune を使用して Windows Holographic デバイスと HoloLens デバイスのさまざまなデバイス管理機能を管理および使用する
 
@@ -58,7 +58,7 @@ Intune には、ポータル サイト アプリが含まれています。こ�
 
 **[デバイス コンプライアンス ポリシーの作成](../protect/compliance-policy-create-windows.md)**
 
-コンプライアンス ポリシーは、デバイスで準拠する必要があるルールや設定です。 このようなポリシーと条件付きアクセスを利用し、非準拠のデバイスが会社のリソースにアクセスするのを阻止します。 Intune では、Windows Holographic for Business を実行しているデバイスのアクセスを許可したり、禁止したりするためのコンプライアンス ポリシーを作成します。 たとえば、Bitlocker を有効にすることを要求するポリシーを作成できます。
+コンプライアンス ポリシーは、デバイスで準拠する必要があるルールや設定です。 このようなポリシーと条件付きアクセスを利用し、非準拠のデバイスが会社のリソースにアクセスするのを阻止します。 Intune では、Windows Holographic for Business を実行しているデバイスのアクセスを許可したり、禁止したりするためのコンプライアンス ポリシーを作成します。 たとえば、BitLocker を有効にすることを要求するポリシーを作成できます。
 
 **[コンプライアンス ポリシーの概要](../protect/device-compliance-get-started.md)** に関するページも参照してください。
 
@@ -107,7 +107,7 @@ Intune を使用してデバイスのカテゴリを作成し、営業、経理�
 
 ## <a name="device-configuration-profiles"></a>デバイスの構成プロファイル
 
-**[構成プロファイルの概要](../configuration/device-profiles.md)と[独自のプロファイルの作成](../configuration/device-profile-create.md)**
+**[構成プロファイルの概要](../configuration/device-profiles.md)と[プロファイルの概要](../configuration/device-profile-create.md)**
 
 Intune には、組織内のさまざまなデバイスで有効または無効にできる設定と機能が含まれています。 これらの設定と機能は、プロファイルを使用して管理されます。 たとえば、Cortana を有効にするプロファイルや、Windows Holographic for Business を実行しているデバイスで Microsoft Defender SmartScreen を使用するプロファイルを作成できます。
 

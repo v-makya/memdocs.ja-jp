@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d391bf08d963e26dd91607d7dad0347e77d130ed
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 52d69b851b67d0a230e71d8aaa6b60b5cb7b2b8d
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361940"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80325689"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Apple Volume Purchase Program で購入した iOS アプリと macOS アプリを Microsoft Intune で管理する方法
 
@@ -88,7 +88,7 @@ Apple Business Manager を使用して、パブリック アプリおよびプ�
 2. 続行する前に、組織内のすべての VPP 購入者が手順 1 を完了していることを確認します。
 3. 購入したすべてのアプリとライセンスが Apple Business Manager または Apple School Manager の [Appとブック] に移行されたことを確認します。
 4. **[Apple Business (または School) Manager]**  >  **[設定]**  >  **[Appとブック]**  >  **[サーバトークン]** に移動して、新しい場所のトークンをダウンロードします。
-5. Microsoft エンドポイント マネージャー管理センターで場所のトークンを更新します。それには、 **[テナント管理]**  >  **[コネクタとトークン]**  >  **[Apple VPP トークン]** に移動してトークンを同期します。
+5. Microsoft Endpoint Manager admin center で **[テナント管理]**  >  **[コネクタとトークン]**  >  **[Apple VPP トークン]** に移動することで、場所のトークンを更新し、トークンを同期します。
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>Apple VPP または場所のトークンをアップロードする
 

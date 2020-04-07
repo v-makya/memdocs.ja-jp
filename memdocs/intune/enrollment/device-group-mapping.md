@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff94f0b628fb20c063ef77ccb061f33eb0199195
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b10d56e9eb915273d5be9a5b14ca4528a64a2057
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363682"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327100"
 ---
 # <a name="categorize-devices-into-groups"></a>デバイスをグループに分類する
 
@@ -45,7 +45,7 @@ ms.locfileid: "79363682"
 ## <a name="how-to-configure-device-categories"></a>デバイス カテゴリを構成する方法
 
 ### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>手順 1:Azure portal の [Intune] ブレードでデバイス カテゴリを作成する
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインして、 **[デバイス]** 、 **[デバイス カテゴリ]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインして、 **[デバイス]**  >  **[デバイス カテゴリ]** を選択します。
 2. **[デバイス カテゴリ]** ページで、 **[作成]** を選択して、新しいカテゴリを追加します。
 3. **[デバイス カテゴリの作成]** ブレードで、新しいカテゴリの**名前**と省略可能な**説明**を入力します。
 4. 完了したら、 **[作成]** を選択します。 カテゴリの一覧に、この新しいカテゴリが表示されます。
@@ -63,7 +63,7 @@ ms.locfileid: "79363682"
 
 ### <a name="view-the-categories-of-devices-that-you-manage"></a>管理対象デバイスのカテゴリを表示する
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインして、 **[デバイス]** 、 **[すべてのデバイス]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインして、 **[デバイス]**  >  **[すべてのデバイス]** を選択します。
 
 2. デバイスの一覧の **[デバイス カテゴリ]** 列を確認します。
 
@@ -71,7 +71,7 @@ ms.locfileid: "79363682"
 
 ### <a name="change-the-category-of-a-device"></a>デバイスのカテゴリを変更する
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[デバイス]** 、 **[すべてのデバイス]** の順に選択し、必要なデバイスを選択し、 **[プロパティ]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[デバイス]**  >  **[すべてのデバイス]** を選択し、必要なデバイスを選択し、 **[プロパティ]** を選択します。
 2. 次のブレードで、選択したデバイスの **[デバイス カテゴリ]** を、以前に構成したカテゴリ名のいずれかに変更できます。
 
 ## <a name="after-you-configure-device-groups"></a>デバイス グループの構成後

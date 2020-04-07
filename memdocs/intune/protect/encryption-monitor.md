@@ -17,18 +17,18 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c07fc8102504a9ca3ee5694e8cb9b1d5f8b568bc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 81864c207cec560ca8b42041f9248560ebcf3b04
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352242"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322453"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Intune でデバイスの暗号化を監視する
 
 Microsoft Intune の暗号化レポートは、デバイスの暗号化状態に関する詳細を表示し、デバイス回復キーを管理するためのオプションを検索するための、一元的な場所です。 使用できる回復キー オプションは、表示するデバイスの種類によって異なります。
 
-レポートを見つけるには、[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。 **[デバイス]**  >  **[監視]** の順に選択した後、 *[構成]* の下で **[暗号化レポート]** を選択します。
+レポートを見つけるには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインします。 **[デバイス]**  >  **[監視]** の順に選択した後、 *[構成]* の下で **[暗号化レポート]** を選択します。
 
 ## <a name="view-encryption-details"></a>暗号化の詳細を表示する
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 420340e18eb4e638ed7bde049e6b548037c54f87
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80087093"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359313"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune でデバイス プロファイルを使用してデバイスに機能と設定を適用する
 
@@ -53,7 +53,7 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 
 [証明書](../protect/certificates-configure.md)では、デバイスに割り当てられる、信頼された証明書、SCEP 証明書、および PKCS 証明書を構成します。 これらの証明書により、WiFi プロファイル、VPN プロファイル、および電子メール プロファイルが認証されます。
 
-この機能では以下をサポートします。 
+この機能では以下をサポートします。
 
 - Android デバイス管理者
 - Android エンタープライズ
@@ -84,6 +84,15 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 この機能では以下をサポートします。
 
 - Windows 10 以降
+
+## <a name="derived-credential"></a>派生資格情報
+
+[派生資格情報](../protect/derived-credentials.md)は、認証、署名、暗号化が可能なスマート カード上の証明書です。 Intune では、これらの資格情報を使用して、アプリ、電子メール プロファイル、VPN、S/MIME、Wi-Fi への接続に使用するためのプロファイルを作成できます。
+
+この機能では以下をサポートします。
+
+- Android エンタープライズ
+- iOS/iPadOS
 
 ## <a name="device-features"></a>デバイスの機能
 
@@ -133,7 +142,7 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 
 ## <a name="education"></a>Education
 
-[教育設定 - Windows 10](education-settings-configure.md) では、[Windows テスト アプリ](https://education.microsoft.com/gettrained/win10takeatest)のオプションを構成します。 これらのオプションを構成するとき、テストが完了するまで他のアプリをデバイスで実行できません。
+[教育設定 - Windows 10](education-settings-configure.md) では、[Windows テスト アプリ](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)のオプションを構成します。 これらのオプションを構成するとき、テストが完了するまで他のアプリをデバイスで実行できません。
 
 [教育設定 - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) では、iOS/iPadOS Classroom アプリを使用し、教室で学習を指導し、生徒のデバイスを操作します。 多数の学生が 1 台のデバイスを共有できるように iPad デバイスを構成できます。
 
@@ -141,7 +150,7 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 
 [電子メールの設定](email-settings-configure.md)では、デバイス上の Exchange ActiveSync 電子メール設定の作成、割り当て、監視を行います。 電子メール プロファイルにより、一貫性の確保とサポート負荷の軽減が可能になり、エンド ユーザーは自分では何の設定もせずに個人デバイスで会社の電子メールにアクセスできるようになります。 
 
-この機能では以下をサポートします。 
+この機能では以下をサポートします。
 
 - Android デバイス管理者
 - Android エンタープライズ
@@ -151,12 +160,13 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 
 ## <a name="endpoint-protection"></a>エンドポイント保護
 
-[Windows 10 用の Endpoint Protection 設定](../protect/endpoint-protection-windows-10.md)では、Windows 10 デバイス用の BitLocker および Microsoft Defender の設定が構成されます。
+[Endpoint Protection](../protect/endpoint-protection-configure.md) では、Windows 10 デバイス用の BitLocker および Microsoft Defender の設定が構成されます。 また、macOS デバイスでファイアウォール、ゲートウェイ、その他のリソースを構成します。
 
 Microsoft Defender Advanced Threat Protection (WDATP) と Microsoft Intune をオンボードするには、[モバイル デバイス管理ツール (MDM) を使用したエンドポイントの構成](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm)に関する記事を参照してください。
 
 この機能では以下をサポートします。
 
+- macOS
 - Windows 10 以降
 
 ## <a name="esim-cellular---public-preview"></a>eSIM 携帯ネットワーク - パブリック プレビュー
@@ -192,7 +202,15 @@ Microsoft Defender Advanced Threat Protection (WDATP) と Microsoft Intune を�
 
 - Windows 10 以降
 
-キオスク設定は、[Android](device-restrictions-android.md#kiosk)、[Android エンタープライズ](device-restrictions-android-for-work.md#dedicated-device-settings)、および [iOS/iPadOS](device-restrictions-ios.md#kiosk) 用のデバイス制限としても使用できます。
+キオスク設定は、[Android](device-restrictions-android.md#kiosk)、[Android エンタープライズ](device-restrictions-android-for-work.md#dedicated-devices)、および [iOS/iPadOS](device-restrictions-ios.md#kiosk) 用のデバイス制限としても使用できます。
+
+## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+
+[Microsoft Defender Advanced Threat Protection (ATP)](../protect/advanced-threat-protection.md) は、デバイスを監視し、保護できるように Intune と統合されています。 リスク レベルを設定し、デバイスがそのレベルを超えた場合の動作を決定します。 条件付きアクセスと組み合わせると、組織内の悪意のあるアクティビティを防ぐことができます。
+
+この機能では以下をサポートします。
+
+- Windows 10 以降
 
 ## <a name="oemconfig"></a>OEMConfig
 
@@ -206,11 +224,18 @@ Microsoft Defender Advanced Threat Protection (WDATP) と Microsoft Intune を�
 
 [Windows 10 デバイス上の PowerShell スクリプト](../apps/intune-management-extension.md)では、Intune 管理拡張機能を使用して PowerShell スクリプトが Intune にアップロードされた後、それらのスクリプトがデバイス上で実行されます。 この拡張機能を使用するために必要なもの、それらを Intune に追加する方法、およびその他の重要な情報も確認してください。
 
-
 この機能では以下をサポートします。
 
 - Windows 10 以降
 - Windows Holographic for Business
+
+## <a name="preference-file"></a>設定ファイル
+
+macOS デバイスの[設定ファイル](preference-file-settings-macos.md)には、アプリに関する情報が含まれます。 たとえば、設定ファイルを使用して、Web ブラウザーの設定の制御、アプリのカスタマイズなどを行うことができます。
+
+この機能では以下をサポートします。
+
+- macOS
 
 ## <a name="shared-multi-user-device"></a>共有のマルチ ユーザー デバイス
 
@@ -260,14 +285,6 @@ Windows デバイスの更新プログラム ポリシーについては、[配�
 - iOS/iPadOS
 - macOS
 - Windows 8.1 (インポートのみ)
-- Windows 10 以降
-
-## <a name="windows-information-protection-profile"></a>Windows 情報保護プロファイル
-
-[Windows 情報保護](../protect/windows-information-protection-configure.md)は、従業員のエクスペリエンスを妨げることなく、データ漏えいの防止に役立ちます。 また、企業が所有するデバイスと従業員が作業のために持ち込む個人用デバイスでもエンタープライズ アプリとデータを偶発的なデータ漏えいから保護します。 Windows Information Protection は、環境やその他のアプリを変更しなくても使用できます。
-
-この機能では以下をサポートします。
-
 - Windows 10 以降
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra モビリティ拡張 (MX)

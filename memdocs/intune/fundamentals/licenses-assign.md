@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03f3e89b8fe1872b323459e3c0da34f3029a7e9c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: ad0964eafccc5bf007b1569762e4cea4d0ee691a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79358794"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326787"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Intune にデバイスを登録できるようにライセンスをユーザーに割り当てる
 
@@ -30,11 +30,11 @@ ms.locfileid: "79358794"
 > [!NOTE]
 > Intune アプリ保護ポリシーを割り当てられていて、Microsoft Intune にデバイスを登録していないユーザーも、ポリシーを受け取るには Intune ライセンスが必要です。
 
-## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>Microsoft Endpoint Manager Admin Center で Intune のライセンスを割り当てる
+## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>Microsoft Endpoint Manager admin center で Intune のライセンスを割り当てる
 
-[Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) を使用して、手動でクラウドベースのユーザーを追加し、クラウドベースのユーザー アカウントと、オンプレミスの Active Directory から Azure AD に同期されているアカウントの両方にライセンスを割り当てることができます。
+[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) を使用して、手動でクラウドベースのユーザーを追加し、クラウドベースのユーザー アカウントと、オンプレミスの Active Directory から Azure AD に同期されているアカウントの両方にライセンスを割り当てることができます。
 
-1. [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[ユーザー]**  >  **[すべてのユーザー]** を選択し、ユーザーを選択して、 **[ライセンス]**  >  **[割り当て]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[ユーザー]**  >  **[すべてのユーザー]** を選択し、ユーザーを選択して、 **[ライセンス]**  >  **[割り当て]** を選択します。
 
 2. **[Intune]**  >  **[保存]** を選択します。
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d42e532f02d74ff776d392d634d60fd0b4d0ebba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: a731769a7fa3118170119ae935478eb7dd67e06b
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79338163"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326561"
 ---
 # <a name="logout-the-current-user-on-intune-managed-iosipados-devices"></a>Intune で管理されている iOS/iPadOS デバイスの現在のユーザーをログアウトする
 
@@ -41,7 +41,7 @@ ms.locfileid: "79338163"
 
 ## <a name="how-to-log-out-the-current-user"></a>現在のユーザーをログアウトする
 
-1. [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[デバイス]**  >  **[すべてのデバイス]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[デバイス]**  >  **[すべてのデバイス]** を選択します。
 2. iOS/iPadOS デバイス > **[...]**  >  **[現在のユーザーのログアウト]** の順に選択します。
 
 ## <a name="next-steps"></a>次のステップ

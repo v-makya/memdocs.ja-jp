@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ac81ceced473eacc32a3fca566f7c36eb7a262e2
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d79f97da88a939d95b68a9ef747da87cf3844598
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084875"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80322467"
 ---
 # <a name="use-device-encryption-with-intune"></a>Intune でデバイスの暗号化を使用する
 
@@ -43,7 +43,7 @@ Intune を使用して、macOS を実行するデバイスで FileVault のデ�
 
 FileVault は、macOS に含まれるディスク全体の暗号化プログラムです。 Intune を使用して、**macOS 10.13 以降**を実行するデバイスで FileVault を構成することができます。
 
-FileVault を構成するには、macOS プラットフォームのエンドポイント保護用の[デバイス構成プロファイル](../configuration/device-profile-create.md)を作成します。 FileVault 設定は、macOS エンドポイント保護で使用可能な設定カテゴリの 1 つです。
+FileVault を構成するには、macOS プラットフォームのエンドポイント保護用の[デバイス構成プロファイル](endpoint-protection-configure.md)を作成します。 FileVault 設定は、macOS エンドポイント保護で使用可能な設定カテゴリの 1 つです。
 
 FileVault を使用してデバイスを暗号化するポリシーを作成すると、そのポリシーは 2 段階でデバイスに適用されます。 まず、Intune が回復キーを取得してバックアップできるようにデバイスが準備されます。 このアクションはエスクローと呼ばれます。 キーがエスクローされると、ディスクの暗号化が開始されます。
 
@@ -105,7 +105,7 @@ Intune を使用して、Windows 10 を実行するデバイスで BitLocker ド
 
 BitLocker は、**Windows 10 以降**を実行しているデバイスで使用できます。
 
-Windows 10 以降のプラットフォームのエンドポイント保護用の[デバイス構成プロファイル](../configuration/device-profile-create.md)を作成するときに、BitLocker を構成します。 BitLocker 設定は、Windows 10 エンドポイント保護の Windows 暗号化設定カテゴリに含まれています。
+Windows 10 以降のプラットフォームのエンドポイント保護用の[デバイス構成プロファイル](endpoint-protection-configure.md)を作成するときに、BitLocker を構成します。 BitLocker 設定は、Windows 10 エンドポイント保護の Windows 暗号化設定カテゴリに含まれています。
 
 ![BitLocker 設定](./media/encrypt-devices/bitlocker-settings.png)
 

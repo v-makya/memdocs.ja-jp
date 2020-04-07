@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf732907b9123dfe8cbd72970556ecfbb5380733
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086022"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326958"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Microsoft Intune のサポートを受ける方法
 
@@ -38,7 +38,7 @@ Intune 管理者は、 **[ヘルプとサポート]** オプションを使用�
 
 ## <a name="help-and-support-experience"></a>ヘルプとサポート エクスペリエンス
 
-Intune のヘルプとサポート エクスペリエンスは、[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)、および Azure portal の Intune のすべてのブレード (またはページ) から使用できます。
+Intune のヘルプとサポート エクスペリエンスは、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)、および Azure portal の Intune のすべてのブレード (またはページ) から使用できます。
 
 "*ヘルプとサポート*" のエクスペリエンスは、[Microsoft 365 管理センター](https://admin.microsoft.com/)で表示されるエクスペリエンスと似ており、Azure の他のサービスには残っている以前の "*ヘルプとサポート*" に代わるものです。
 
@@ -64,9 +64,9 @@ Intune 用に新しく作成されたテナントを使用するとき、*ヘル
   > [!NOTE]  
   > お使いの Intune のインスタンスが、Azure Government のような政府機関向けのプライベート クラウド (ソブリン クラウドとも呼ばれます) でホストされている場合は、この記事で後述する「[Intune での政府機関向けのプライベート クラウドのサポート](#intune-support-for-private-cloud-for-government)」を参照してください。 Intune の *[ヘルプとサポート]* エクスペリエンスは、来年まで、政府機関向けのプライベート クラウドでは利用できません。
 
-- **Microsoft Endpoint Manager 管理センターから**
+- **Microsoft Endpoint Manager admin center から**
 
-  - Microsoft Endpoint Manager 管理センターの任意のノードで **?** を選択します。 アイコン (ポータルの右上隅) を選択し、ドロップダウンを使用してヘルプの必要な管理の種類を選択します。 Microsoft Endpoint Manager admin center は次の管理の種類をサポートしているため、Intune など、サポートが必要な管理の種類を選択する必要があります。
+  - Microsoft Endpoint Manager admin center の任意のノードで **[?]** を選択します。 アイコン (ポータルの右上隅) を選択し、ドロップダウンを使用してヘルプの必要な管理の種類を選択します。 Microsoft Endpoint Manager admin center では、次の管理の種類をサポートしているため、Intune など、サポートが必要なものを選択する必要があります。
 
     - マネージャーの構成 (Desktop Analytics を含む)
     - Intune

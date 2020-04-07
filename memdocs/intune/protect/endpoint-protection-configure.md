@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 64a11cf9dca110a4a802ddff3e9176ec1ce88345
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 4071614c7cb93194eef00f49aa2e1759ba1028f6
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79352177"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359256"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Intune でエンドポイント保護設定を追加する
 
@@ -45,23 +45,38 @@ Intune でデバイスの構成プロファイルを使用し、次などのデ�
 
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 
-3. エンドポイント保護プロファイルの **[名前]** と **[説明]** を入力します。
+3. 次のプロパティを入力します。
 
-4. **[プラットフォーム]** ドロップダウン リストで、カスタム設定を適用するデバイス プラットフォームを選択します。 現時点では、デバイスの制限設定に対応している次のいずれかのプラットフォームを選択できます。
+    - **[プラットフォーム]** :デバイスのプラットフォームを選択します。 次のようなオプションがあります。
 
-   - **macOS**
-   - **Windows 10 以降**
+        - **macOS**
+        - **Windows 10 以降**
 
-5. **[プロファイルの種類]** ドロップダウン リストで、 **[Endpoint Protection]** を選択します。
+    - **[プロファイル]** : **[Endpoint Protection]** を選択します。
 
-6. 選択したプラットフォームによって構成できる設定が異なります。 関連項目
+4. **[作成]** を選択します。
+5. **[Basics]\(基本\)** で次のプロパティを入力します。
+
+    - **名前**:ポリシーのわかりやすい名前を入力します。 後で簡単に識別できるよう、ポリシーに名前を付けます。 たとえば、適切なポリシー名は **macOS: すべての macOS デバイス用のファイアウォールを構成する Endpoint Protection プロファイル**になります。
+    - **説明**:ポリシーの説明を入力します。 この設定は省略可能ですが、推奨されます。
+
+6. **[次へ]** を選択します。
+
+7. **[構成設定]** では、選択したプラットフォームによって構成できる設定が変わります。 詳細な設定については、お使いのプラットフォームを選択してください。
 
    - [macOS の設定](endpoint-protection-macos.md)
    - [Windows 10 の設定](endpoint-protection-windows-10.md)
 
-7. 適切な設定を構成したら、 **[プロファイルの作成]** ページで **[作成]** を選択します。
+8. **[次へ]** を選択します。
+9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。
 
-   プロファイルが作成され、プロファイルの一覧ページに表示されます。 このプロファイルをグループに割り当てる場合は、[デバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+    **[次へ]** を選択します。
+
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+11. **[確認と作成]** で、設定を確認します。 **[作成]** を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
 
 ## <a name="add-custom-firewall-rules-for-windows-10-devices"></a>Windows 10 デバイスのカスタム ファイアウォール規則を追加する
 
@@ -75,7 +90,7 @@ Windows 10 のエンドポイント保護規則を含むプロファイルの一
 
 - 規則を適用できなかったときは、プロファイル内のすべての規則が失敗として報告されます。 Intune では、失敗した個々の規則を識別することはできません。  
 
-Intune で管理できるファイアウォール規則については、Windows の[ファイアウォール構成サービス プロバイダー]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP) に関するページで詳しく説明されています。 Intune でサポートされる Windows 10 デバイスのカスタム ファイアウォール設定のリストを確認する場合は、[カスタム ファイアウォール規則](endpoint-protection-windows-10.md#firewall-rules)に関するセクションを参照してください。
+Intune で管理できるファイアウォール規則については、Windows の[ファイアウォール構成サービス プロバイダー](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP) に関するページで詳しく説明されています。 Intune でサポートされる Windows 10 デバイスのカスタム ファイアウォール設定のリストを確認する場合は、[カスタム ファイアウォール規則](endpoint-protection-windows-10.md#firewall-rules)に関するセクションを参照してください。
 
 ### <a name="to-add-custom-firewall-rules-to-an-endpoint-protection-profile"></a>Endpoint Protection プロファイルにカスタム ファイアウォール規則を追加するには
 
@@ -83,20 +98,22 @@ Intune で管理できるファイアウォール規則については、Windows
 
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 
-3. *[プラットフォーム]* では **[Windows 10 以降]** を選択し、 *[プロファイルの種類]* では **[Endpoint protection]** を選択します。
+3. *[プラットフォーム]* には **[Windows 10 以降]** を選択し、 *[プロファイル]* には **[Endpoint Protection]** を選択します。
 
-4. **[Microsoft Defender ファイアウォール]** を選択して構成ページを開き、 *[ファイアウォール規則]* に対して **[追加]** を選択して、 **[規則の作成]** ページを開きます。
+    **[作成]** を選択します。
 
-5. ファイアウォール規則の設定を指定し、 **[OK]** を選択して保存します。 ドキュメントで利用可能なカスタム ファイアウォール規則のオプションを確認する場合は、[カスタム ファイアウォール規則](endpoint-protection-windows-10.md#firewall-rules)に関するセクションを参照してください。
+4. プロファイルの **[名前]** を入力して、 **[次へ]** を選択します。
+5. **[構成設定]** で、 **[Microsoft Defender ファイアウォール]** を選択します。 *[ファイアウォール規則]* では、 **[追加]** を選択して **[ルールの作成]** ページを開きます。
 
-6. 保存した規則は、 *[Microsoft Defender ファイアウォール]* ページの規則の一覧に表示されます。
+6. ファイアウォール規則の設定を指定し、 **[OK]** を選択して保存します。 ドキュメントで利用可能なカスタム ファイアウォール規則のオプションを確認する場合は、[カスタム ファイアウォール規則](endpoint-protection-windows-10.md#firewall-rules)に関するセクションを参照してください。
 
-7. 規則を変更するには、リストから規則を選択して **[規則の編集]** ページを開きます。
+    1. 規則は、 *[Microsoft Defender ファイアウォール]* ページの規則の一覧に表示されます。
+    2. 規則を変更するには、リストから規則を選択して **[規則の編集]** ページを開きます。
+    3. プロファイルから規則を削除するには、その規則の省略記号 **(...)** を選択し、 **[削除]** を選びます。
+    4. 規則の表示順序を変更するには、規則リストの上部にある*上矢印、下矢印* アイコンを選択します。
 
-8. プロファイルから規則を削除するには、その規則の省略記号 **(...)** を選択し、 **[削除]** を選びます。
-
-9. 規則の表示順序を変更するには、規則リストの上部にある*上矢印、下矢印* アイコンを選択します。
+7. **[確認および作成]** になるまで **[次へ]** を選択します。 **[作成]** を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
 
 ## <a name="next-steps"></a>次のステップ
 
-プロファイルをグループに割り当てる場合は、[デバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+プロファイルは作成されましたが、まだ何も実行できない可能性があります。 次に、[プロファイルを割り当て](../configuration/device-profile-assign.md)、[その状態を監視](../configuration/device-profile-monitor.md)します。

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1ef0c2c4b7fdd7bb25fcb0237eb68485f1be701
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 687ef14791d1ae0df60d28802d27b99dd9547423
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79340178"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401334"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Microsoft Edge for Windows 10 を Microsoft Intune に追加する
 
@@ -38,7 +38,7 @@ ms.locfileid: "79340178"
 
 ## <a name="prerequisites"></a>[前提条件]
 
-- Windows 10 RS2 以上が必要です。
+- Windows 10 バージョン 1703 以降
 - すべてのチャネル向けにユーザー コンテキストでプレインストールされた Microsoft Edge *バージョン 77 以降*のバージョンはすべて、システム コンテキストでインストールされた Edge で上書きされます。
 
 ## <a name="configure-the-app-in-intune"></a>Intune でアプリを構成する

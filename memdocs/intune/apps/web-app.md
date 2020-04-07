@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b30d2a3ef7c85557222aa39740417a1a6fd463f1
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e6d4fd6022e7d772c70a2147e0e25bd7dad0775c
+ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084126"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80407707"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Web アプリを Microsoft Intune に追加する
 
@@ -41,6 +41,8 @@ Intune によって、ユーザーのデバイスに Web アプリへのショ�
 > Android Enterprise デバイスについては、[マネージド Google Play の Web リンク](apps-add-android-for-work.md#managed-google-play-web-links)を参照してください。
 > 
 > iOS デバイスの場合、新しい web クリップ (ピン留めされた web アプリ) は、保護されたブラウザーで開く必要があるときに、Intune Managed Browser ではなく Microsoft Edge で開きます。 以前の iOS Web クリップの場合は、これらの Web クリップのターゲットを再設定して、Managed Browser ではなく Microsoft Edge で開くようにする必要があります。
+>
+> レガシ デバイスを管理する Android デバイスの場合、ポータル サイト ウィジェットで固定された Web リンクは、ユーザーのポータル サイト バージョンが 5.0.4737.0 より古い場合にのみ、Intune Managed Browser で開くことができます。 
 
 ## <a name="add-a-web-app-to-intune"></a>Web アプリを Intune に追加する
 Web 上のアプリへのショートカットとしてアプリを Intune に追加するには、次の操作を行います。

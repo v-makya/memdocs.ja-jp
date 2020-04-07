@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4aaa8bcee3684c73fa5ec3d488fd3107585dfc61
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 8f91b71d96c936e9808973df145862654f0e516a
+ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086166"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256642"
 ---
 # <a name="what-is-device-enrollment"></a>デバイス登録とは
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -40,7 +40,7 @@ Intune では、従業員のデバイスやアプリ、従業員が会社のデ�
 | | 登録時にデバイスがワイプされます。 | 各デバイスをユーザーに関連付ける。| "はい" の場合、ユーザーはデバイスの登録を解除できません。 | |
 |**[BYOD](#bring-your-own-device)** | いいえ| はい | いいえ | [詳細情報](apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| いいえ |いいえ |いいえ | [詳細情報](device-enrollment-manager-enroll.md)|
-|**[DEP](#apple-device-enrollment-program)**| はい | 省略可能 | 省略可能|[詳細情報](device-enrollment-program-enroll-ios.md)|
+|**[ADE](#apple-automated-device-enrollment)**| はい | 省略可能 | 省略可能|[詳細情報](device-enrollment-program-enroll-ios.md)|
 |**[USB-SA](#usb-sa)**| はい | 省略可能 | いいえ| [詳細情報](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| いいえ | いいえ | いいえ|[詳細情報](apple-configurator-enroll-ios.md)|
 
@@ -49,7 +49,7 @@ Intune では、従業員のデバイスやアプリ、従業員が会社のデ�
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | いいえ| はい | いいえ | [詳細情報](macos-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| いいえ |いいえ |いいえ  | [詳細情報](device-enrollment-manager-enroll.md)|
-|**[DEP](#apple-device-enrollment-program)**| はい | 省略可能 | 省略可能|[詳細情報](device-enrollment-program-enroll-macos.md)|
+|**[ADE](#apple-automated-device-enrollment)**| はい | 省略可能 | 省略可能|[詳細情報](device-enrollment-program-enroll-macos.md)|
 
 ## <a name="windows-enrollment-methods"></a>Windows の登録方法
 
@@ -84,15 +84,15 @@ Intune では、従業員のデバイスやアプリ、従業員が会社のデ�
 BYOD (私物デバイスの業務利用) デバイスには、個人所有の電話、タブレット、および PC が含まれます。 ユーザーは、ポータル サイト アプリをインストール、および実行して、BYOD デバイスを登録します。 このプログラムによって、ユーザーは電子メールなどの会社のリソースにアクセスできます。
 
 ## <a name="corporate-owned-device"></a>企業所有のデバイス
-[企業所有のデバイス (COD) ](corporate-identifiers-add.md)には、組織が所有し、従業員に配布されている電話、タブレット、PC があります。 COD 登録では、自動登録、共有デバイス、事前承認された登録要件などのシナリオがサポートされます。 管理者やマネージャーによる COD の一般的な登録方法は、デバイス登録マネージャー (DEM) を使用することです。 iOS/iPadOS デバイスは、Apple から提供される Device Enrollment Program (DEP) ツールから直接登録できます。 IMEI 番号を持つデバイスも、会社所有として識別して、タグを付けることができます。
+[企業所有のデバイス (COD) ](corporate-identifiers-add.md)には、組織が所有し、従業員に配布されている電話、タブレット、PC があります。 COD 登録では、自動登録、共有デバイス、事前承認された登録要件などのシナリオがサポートされます。 管理者やマネージャーによる COD の一般的な登録方法は、デバイス登録マネージャー (DEM) を使用することです。 iOS または iPadOS デバイスは、Apple が提供する ADE ツールを利用して直接登録できます。 IMEI 番号を持つデバイスも、会社所有として識別して、タグを付けることができます。
 
 ### <a name="device-enrollment-manager"></a>デバイス登録マネージャー
 デバイス登録マネージャー (DEM) は、複数の会社所有のデバイスを登録して管理するために使用される特別なユーザー アカウントです。 作成後は、マネージャーがポータル サイトをインストールし、ユーザーがいない多数のデバイスを登録できます。 この種のデバイスは、POS アプリやユーティリティ アプリなどには適していますが、電子メールや会社のリソースにアクセスする必要があるユーザーには適していません。 [DEM の詳細はこちらをご覧ください](device-enrollment-manager-enroll.md)。
 
-### <a name="apple-device-enrollment-program"></a>Apple Device Enrollment Program
-Apple Device Enrollment Program (DEP) 管理では、ポリシーを作成し、DEP で購入および管理されている iOS/iPadOS および macOS デバイスに "無線で" 展開できます。 ユーザーが初めてデバイスの電源を入れて Setup Assistant を実行した際に、デバイスが登録されます。 この方法は、iOS/iPadOS 監視対象モードをサポートしているため、特定の機能でデバイスを構成することができます。
+### <a name="apple-automated-device-enrollment"></a>Apple 自動デバイス登録
+Apple 自動デバイス登録 (ADE) 管理では、ポリシーを作成し、ADE で購入および管理されている iOS または iPadOS および macOS デバイスに "無線で" 展開できます。 ユーザーが初めてデバイスの電源を入れて Setup Assistant を実行した際に、デバイスが登録されます。 この方法は、iOS/iPadOS 監視対象モードをサポートしているため、特定の機能でデバイスを構成することができます。
 
-iOS/iPadOS DEP 登録の詳細については、以下をご覧ください。
+iOS または iPadOS の ADE 登録についての詳細をご確認ください。
 
 - [iOS/iPadOS デバイスの登録方法を選択する](ios-enroll.md)
 - [Device Enrollment Program を使用して iOS/iPadOS デバイスを登録する](device-enrollment-program-enroll-ios.md)

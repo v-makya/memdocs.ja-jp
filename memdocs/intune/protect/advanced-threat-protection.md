@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc3bb23097a26753a9e54b0b520e6fc22be3a69
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: d7398ec523796dbbff5f01aee6ce69fe6e8ce13a
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085192"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80323305"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Intune で条件付きアクセスによる Microsoft Defender ATP のコンプライアンスを強制する
 
@@ -86,7 +86,7 @@ Defender ATP を有効にする必要があるのは、テナントごとに 1 �
 
     3. **[環境設定の保存]** を選択します。
 
-4. Microsoft Endpoint Manager 管理センターで **Microsoft Defender ATP** に戻ります。 **[MDM コンプライアンス ポリシー設定]** の下で **[Connect Windows devices version 10.0.15063 and above to Microsoft Defender ATP]\(Windows デバイス バージョン 10.0.15063 以上を Microsoft Defender ATP に接続する\)** を **[オン]** に設定します。
+4. Microsoft Endpoint Manager admin center で **[Microsoft Defender ATP]** に戻ります。 **[MDM コンプライアンス ポリシー設定]** の下で **[Connect Windows devices version 10.0.15063 and above to Microsoft Defender ATP]\(Windows デバイス バージョン 10.0.15063 以上を Microsoft Defender ATP に接続する\)** を **[オン]** に設定します。
 
 5. **[保存]** を選択します。
 
@@ -162,7 +162,7 @@ Microsoft Defender ATP への接続を確立したときに、Intune は Microso
 条件付きアクセス ポリシーによって、コンプライアンス ポリシーで設定した脅威レベルを超えたデバイスによるリソースへのアクセスがブロックされます。 デバイスから企業リソース (SharePoint や Exchange Online など) へのアクセスをブロックできます。
 
 > [!TIP]
-> 条件付きアクセスは、Azure Active Directory (Azure AD) テクノロジです。 Microsoft Endpoint Manager 管理センターからアクセスされる条件付きアクセス ノードは、*Azure AD* からアクセスされるものと同じノードです。
+> 条件付きアクセスは、Azure Active Directory (Azure AD) テクノロジです。 Microsoft Endpoint Manager admin center からアクセスされる条件付きアクセス ノードは、*Azure AD* からアクセスされるものと同じノードです。
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 

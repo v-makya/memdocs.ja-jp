@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a62b87861bbe2f1d9e498756aedb0acd28bbff5a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79349993"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488069"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Intune でのセキュリティ ベースラインを使用した Windows 10 デバイスの構成
 
@@ -31,7 +31,7 @@ Intune のセキュリティ ベースラインを使うと、お客様のユー
 
 - Windows 10 バージョン 1809 以降
 
-Intune でユーザーやデバイスのグループに対してセキュリティ ベースラインを展開すると、Windows 10 以降を稼働しているデバイスにその設定が適用されます。 たとえば、"*MDM セキュリティ ベースライン*" を使うと、リムーバブル ドライブに対する BitLocker の自動的な有効化、デバイスのロック解除のための自動的なパスワード要求、基本認証の自動的な無効化などが実行されます。 既定値がご自分の環境でうまく機能しない場合は、必要な設定が適用されるようベースラインをカスタマイズします。
+Intune でユーザーやデバイスのグループに対してセキュリティ ベースラインを展開すると、Windows 10 以降を稼働しているデバイスにその設定が適用されます。 たとえば、"*MDM セキュリティ ベースライン*" を使うと、リムーバブル ドライブに対する BitLocker の自動的な有効化、デバイスのロック解除のための自動的なパスワード要求、基本認証の自動的な無効化などが実行されます。 既定値がご利用の環境でうまく機能しない場合は、必要な設定が適用されるようベースラインをカスタマイズします。
 
 個別のベースラインの種類には、同じ設定が含まれていても、その設定に対して異なる既定値が使われていることがあります。 使用することを選んだベースラインに含まれている規定値について理解し、その後ご自分の組織のニーズに合うように各ベースラインを変更することが重要です。
 
@@ -60,7 +60,7 @@ Intune コンソールでは、各ベースラインのタイルに、ベース�
 
 セキュリティ ベースラインの "*プロファイル*" を作成する場合、そのプロファイルでは自動的に一番最近リリースされたセキュリティ ベースラインのインスタンスが使われます。  お客様が前に作成した、以前のバージョンのベースラインのインスタンスが使われているプロファイルは、継続して使用および編集できます。これにはプレビュー バージョンを使って作成したベースラインも含まれます。
 
-指定したプロファイルで使用されているベースラインの[バージョンを変更する](#change-the-baseline-version-for-a-profile)こともできます。 つまり、新しいバージョンが登場したとき、それを活用するために新しいベースラインのプロファイルを作成する必要はありません。 代わりに、準備が整い次第、ベースラインのプロファイルを選択して、そのプロファイルのインスタンスのバージョンを新しいものに変更する、組み込みのオプションを使うことができます。
+指定したプロファイルで使用されているベースラインの[バージョンを変更する](#change-the-baseline-version-for-a-profile)こともできます。 つまり、新しいバージョンが登場したとき、それを活用するために新しいベースラインのプロファイルを作成する必要はありません。 代わりに、準備ができたら、ベースラインのプロファイルを選択して、そのプロファイルのインスタンスのバージョンを新しいものに変更する、組み込みオプションを使うことができます。
 
 ## <a name="available-security-baselines"></a>使用可能なセキュリティ ベースライン
 
@@ -76,7 +76,7 @@ Intune では、次のセキュリティ ベースラインのインスタンス
 
 - **Microsoft Defender ATP ベースライン**
   " *(このベースラインを使用するには、ご使用の環境が [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites) を使用するための前提条件を満たしている必要があります)* "。
-  - [Microsoft Defender ATP ベースライン](security-baseline-settings-defender-atp.md)
+  - [Microsoft Defender ATP ベースライン バージョン 3](security-baseline-settings-defender-atp.md)
 
   > [!NOTE]
   > Microsoft Defender ATP のセキュリティ ベースラインは、物理デバイス用に最適化されており、現在は仮想マシン (VM) や VDI エンドポイントでの使用は推奨されていません。 特定のベースライン設定が、仮想化された環境でのリモート対話型セッションに影響を与える可能性があります。  詳細については、Windows ドキュメントの「[Increase compliance to the Microsoft Defender ATP security baseline (Microsoft Defender ATP のセキュリティ ベースラインに対するコンプライアンスの強化)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)」をご覧ください。
@@ -186,7 +186,7 @@ Intune では、次のセキュリティ ベースラインのインスタンス
 
 ### <a name="remove-a-security-baseline-assignment"></a>セキュリティ ベースラインの割り当てを削除する
 
-セキュリティ ベースラインの設定がデバイスに適用されなくなったとき、またはベースラインの設定が *[未構成]* に設定されたとき、デバイス上のこのような設定が管理前の構成に戻ることはありません。 代わりに、デバイス上の前に管理していた設定では、他のなんらかのプロセスによりデバイス上のそれらの設定が更新されるまで、ベースラインから受け取ったその最後の構成が保持されます。
+セキュリティ ベースラインの設定がデバイスに適用されなくなったとき、またはベースラインの設定が *[未構成]* に設定されているとき、デバイス上のこのような設定が管理前の構成に戻ることはありません。 代わりに、デバイス上の前に管理していた設定では、他のなんらかのプロセスによりデバイス上のそれらの設定が更新されるまで、ベースラインから受け取ったその最後の構成が保持されます。
 
 デバイス上の設定を後から変更する可能性があるその他のプロセスには、別の、または新しいセキュリティ ベースライン、デバイス構成プロファイル、グループ ポリシー構成、デバイス上での設定の手動編集などがあります。
 
@@ -208,13 +208,13 @@ Microsoft セキュリティ チームは、これらの推奨事項を作成す
 
 ### <a name="are-the-intune-security-baselines-cis-or-nsit-compliant"></a>Intune のセキュリティのベースラインは CIS または NSIT に準拠していますか。
 
-厳密に言えば、"いいえ" です。 Microsoft セキュリティ チームは、CIS などの組織に、その推奨事項をまとめるように依頼しています。 ただし、"CIS 準拠" と Microsoft のベースラインは 1 対 1 で対応していません。
+厳密に言えば、"いいえ" です。 Microsoft セキュリティ チームは、CIS などの組織に、その推奨事項をまとめるように依頼しています。 しかし、"CIS 準拠" と Microsoft のベースラインのマッピングは 1 対 1 ではありません。
 
-### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Microsoft のセキュリティのベースラインにはどのような認定資格がありますか。 
+### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Microsoft のセキュリティのベースラインにはどのような認定資格がありますか? 
 
 - Microsoft は、グループ ポリシー (GPO) および [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) 用のセキュリティのベースラインを長年にわたって公開し続けています。 これらのベースラインは多くの組織で使用されています。 これらのベースラインの推奨事項は、Microsoft セキュリティ チームと、米国国防総省 (DoD)、National Institute of Standards and Technology (NIST) などの企業のお客様および外部機関との関わりから得られたものです。 Microsoft の推奨事項とベースラインは、これらの組織と共有しています。 また、これらの組織には、Microsoft の推奨事項を厳密に反映した独自の推奨事項もあります。 モバイル デバイス管理 (MDM) がクラウドへと成長を続けた過程で、Microsoft はこのようなグループ ポリシーのベースラインと同等の MDM の推奨事項を作成しました。 このような追加のベースラインは Microsoft Intune に組み込まれており、ベースラインに準拠している (または準拠していない) ユーザー、グループ、およびデバイスに関するコンプライアンス レポートが含まれています。
 
-- 多くのお客様は、Intune のベースラインの推奨事項を出発点として使用し、お客様の IT とセキュリティの要求を満たすようにカスタマイズしています。 Microsoft の Windows 10 RS5 **MDM のセキュリティのベースライン**が最初にリリースされました。 このベースラインは、CIS、NIST などの標準に基づいて、お客様が他のセキュリティのベースラインを最終的にインポートできるようにするための汎用のインフラストラクチャとして構築されています。 現在、これは Windows で利用できます。最終的には iOS/iPadOS および Android が含まれる予定です。
+- 多くのお客様は、Intune のベースラインの推奨事項を出発点として使用し、お客様の IT とセキュリティの要求を満たすようにカスタマイズしています。 Microsoft の Windows 10 RS5 **MDM セキュリティ ベースライン**が、最初にリリースされたベースラインです。 このベースラインは、CIS、NIST などの標準に基づいて、お客様が他のセキュリティのベースラインを最終的にインポートできるようにするための汎用のインフラストラクチャとして構築されています。 現在、これは Windows で利用できます。最終的には iOS/iPadOS および Android が含まれる予定です。
 
 - Microsoft Intune と共に Azure Active Directory (AD) を使用して、オンプレミスの Active Directory グループ ポリシーから純粋なクラウド ソリューションに移行することは、1 つの旅です。 サポートのために、[Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) にはグループ ポリシー テンプレートが含まれています。これは、ハイブリッド AD と Azure AD 参加済みデバイスの管理に役立ちます。 このようなデバイスは、必要に応じてクラウド (Intune) から MDM 設定を取得し、オンプレミス ドメイン コントローラーからグループ ポリシー設定を取得できます。
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 969dbcbe3fe1b1a155769bec6403b889b3d326bc
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c3b66c0fd88910dc192af10a1b5ad701304c885e
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086100"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327069"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>iOS/iPadOS と iPadOS のユーザー登録を設定する (プレビュー)
 
@@ -43,7 +43,7 @@ Apple のユーザー登録プロセスを使用して、iOS/iPadOS デバイス
 
 登録プロファイルで、デバイス グループに対して登録時に適用する設定を定義します。 
 
-1. [Microsoft Endpoint Manage 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[登録の種類 (プレビュー)]**  >  **[プロファイルの作成]**  >  **[iOS/iPadOS]** を選択します。 このプロファイルでは、iOS/iPadOS および iPadOS のエンド ユーザーが、会社の Apple メソッドで登録されていないデバイスでどのような登録エクスペリエンスを利用できるかを指定します。 変更が必要な場合は、作成後にこのプロファイルを編集できます。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[登録の種類 (プレビュー)]**  >  **[プロファイルの作成]**  >  **[iOS/iPadOS]** を選択します。 このプロファイルでは、iOS/iPadOS および iPadOS のエンド ユーザーが、会社の Apple メソッドで登録されていないデバイスでどのような登録エクスペリエンスを利用できるかを指定します。 変更が必要な場合は、作成後にこのプロファイルを編集できます。
 
     ![Apple 登録プロファイルを作成する](./media/ios-user-enrollment/create-profile.png)
 
@@ -78,7 +78,7 @@ Apple のユーザー登録プロセスを使用して、iOS/iPadOS デバイス
 
 複数の登録の種類のプロファイルを作成した後は、適用される優先順位を変更できます。
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[登録の種類 (プレビュー)]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[登録の種類 (プレビュー)]** を選択します。
 2. 一覧のプロファイルを、適用する順序でドラッグ アンド ドロップします。
 
 ユーザーのプロファイル間で競合が生じた場合は、優先順位の高いプロファイルがユーザーに適用されます。

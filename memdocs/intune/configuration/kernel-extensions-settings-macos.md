@@ -6,26 +6,25 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 03/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa471beb5929a6c5b39267871518f560fe6978f6
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 2e18fad8f1112681a62bcdacd63c652cfd4ad3ac
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79343428"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359286"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>Intune でカーネル拡張機能を構成して使用するための macOS デバイスの設定
-
-
 
 この記事では、macOS デバイスで制御できるさまざまなカーネル拡張機能の設定の一覧を示して説明します。 モバイル デバイス管理 (MDM) ソリューションの一部として、これらの設定を使用してデバイスでカーネル拡張機能を追加および管理します。
 
@@ -44,7 +43,7 @@ Intune でのカーネル拡張機能と前提条件について詳しくは、[
 
 ### <a name="settings-apply-to-user-approved-automated-device-enrollment"></a>これらの設定は次に適用されます。ユーザーが承認したデバイス登録と、自動化されたデバイス登録
 
-- **[ユーザーによる上書きを許可]** : **[許可]** を選択すると、ユーザーは構成プロファイルに含まれていないカーネル拡張機能を承認できます。 **[未構成]** (既定) では、ユーザーは構成プロファイルに含まれていない拡張機能を許可できません。 つまり、構成プロファイルに含まれている拡張機能のみが許可されます。
+- **[ユーザーによる上書きを許可]** : **[許可]** を選択すると、ユーザーは構成プロファイルに含まれていないカーネル拡張機能を承認できます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、ユーザーは構成プロファイルに含まれていない拡張機能を許可されない可能性があります。 つまり、構成プロファイルに含まれている拡張機能のみが許可されます。
 
   この機能について詳しくは、「[ユーザーが承認したカーネル拡張機能の読み込み](https://developer.apple.com/library/archive/technotes/tn2459/_index.html)」(Apple の Web サイトが開きます) をご覧ください。
 

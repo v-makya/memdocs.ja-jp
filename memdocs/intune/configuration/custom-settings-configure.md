@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6122f4624cc40152184c1c460afa6a7a39976063
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c96de75557a4817f4e5f034689faecf7374cfe3f
+ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083999"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80359428"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Intune でカスタム設定を持つプロファイルを作成する
 
@@ -38,20 +38,26 @@ Microsoft Intune には、デバイスのさまざまな機能を制御する多
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 3. 次のプロパティを入力します。
 
+    - **[プラットフォーム]** :デバイスのプラットフォームを選択します。 次のようなオプションがあります。  
+
+        - **Android デバイス管理者**
+        - **Android エンタープライズ**
+        - **iOS/iPadOS**
+        - **macOS**
+        - **Windows 10 以降**
+        - **Windows Phone 8.1**
+
+    - **[プロファイル]** : **[カスタム]** を選択します。
+
+4. **[作成]** を選択します。
+5. **[Basics]\(基本\)** で次のプロパティを入力します。
+
     - **名前**:ポリシーのわかりやすい名前を入力します。 後で簡単に識別できるよう、ポリシーに名前を付けます。 適切なポリシー名の例:「**Windows 10:AllowVPNOverCellular カスタム OMA-URI を有効にするカスタム プロファイル**」。
-    - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
-    - **[プラットフォーム]** :デバイスのプラットフォームを選択します。 次のようなオプションがあります。
+    - **説明**:ポリシーの説明を入力します。 この設定は省略可能ですが、推奨されます。
 
-      - **Android デバイス管理者**
-      - **Android エンタープライズ**
-      - **iOS/iPadOS**
-      - **macOS**
-      - **Windows 10 以降**
-      - **Windows 8.1 以降**
+6. **[次へ]** を選択します。
 
-    - **[プロファイルの種類]** : **[カスタム]** を選択します。
-
-4. 設定はプラットフォームごとに異なります。 特定のプラットフォーム向けの設定を確認するには、プラットフォームを選択します。
+7. **[構成設定]** では、選択したプラットフォームによって構成できる設定が変わります。 詳細な設定については、お使いのプラットフォームを選択してください。
 
     - [Android デバイス管理者](custom-settings-android.md)
     - [Android エンタープライズ](custom-settings-android-for-work.md)
@@ -61,10 +67,24 @@ Microsoft Intune には、デバイスのさまざまな機能を制御する多
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
     - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
-5. 完了したら、 **[プロファイルの作成]**  >  **[作成]** の順に選択します。
+8. **[次へ]** を選択します。
+9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。
 
-プロファイルが作成され、プロファイル一覧に表示されます ( **[デバイス構成]**  >  **[プロファイル]** )。
+    **[次へ]** を選択します。
+
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](device-profile-assign.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+11. **[確認と作成]** で、設定を確認します。 **[作成]** を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
+
+## <a name="example"></a>例
+
+次の例では、**Connectivity/AllowVPNOverCellular** 設定が有効です。 この設定により、移動体通信ネットワーク上の Windows 10 デバイスで VPN 接続が利用できるようになります。
+
+> [!div class="mx-imgBorder"]
+> ![Intune とエンドポイント マネージャーの VPN 設定を含むカスタム ポリシーの例](./media/custom-settings-configure/custom-policy-example.png)
 
 ## <a name="next-steps"></a>次のステップ
 
-プロファイルが作成されると、割り当てることができます。 次に、[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
+プロファイルは作成されましたが、まだ何も実行できない可能性があります。 次に、[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。

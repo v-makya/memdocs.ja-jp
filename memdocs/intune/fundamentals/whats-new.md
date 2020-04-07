@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 03/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d8ff51b8b20c5f6505cb341f666ce043b086b3b
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
+ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220185"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438809"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
-週ごとの Microsoft Intune の新機能について説明します。 また、[重要なお知らせ](#notices)、[過去のリリース](whats-new-archive.md)、および [Intune サービスの更新プログラムのリリース方法](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)に関する情報もあります。 
+[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で Microsoft Intune の週ごとの新機能について説明します。 また、[重要なお知らせ](#notices)、[過去のリリース](whats-new-archive.md)、および [Intune サービスの更新プログラムのリリース方法](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)に関する情報もあります。 
 
 > [!Note]
 > 個々の[マンスリー更新プログラム](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728)は、展開に最大 3 日かかることがあります。順序は次のとおりです。
@@ -55,6 +55,59 @@ ms.locfileid: "80220185"
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-march-30-2020"></a>2020 年 3 月 30 日の週
+
+### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Microsoft Endpoint Manager admin center の新しい URL<!-- 3704810 -->
+昨年の Ignite での Microsoft エンドポイント マネージャーの発表に合わせて、Microsoft Endpoint Manager admin center (旧称 Microsoft 365 デバイス管理) の URL を [https://endpoint.microsoft.com](https://endpoint.microsoft.com) に変更しました。 古い管理センターの URL ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) は引き続き機能しますが、新しい URL を使用して Microsoft Endpoint Manager admin center へのアクセスを開始することをお勧めします。
+
+詳細については、「[Microsoft Endpoint Manager admin center を使用して IT タスクを簡略化する](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center)」を参照してください。
+
+### <a name="app-management"></a>アプリ管理
+
+#### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>macOS デバイスのスクリプト サポート (パブリック プレビュー)<!-- 4280361 wnready -->
+macOS デバイスにスクリプトを追加して展開できます。 このサポートにより、macOS デバイスを構成する機能が拡張され、macOS デバイスでネイティブの MDM 機能を使用してできること以上のことが可能になります。 詳細については、「[Intune で macOS デバイスに対してシェル スクリプトを使用する](../apps/macos-shell-scripts.md)」を参照してください。
+
+<!-- ########################## -->
+## <a name="week-of-march-24-2020"></a>2020 年 3 月 24 日の週
+
+### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Android および Android Enterprise デバイスでデバイス制限プロファイルを作成するときのユーザー インターフェイス エクスペリエンスの向上<!-- 5841361 -->
+
+Android または Android Enterprise デバイス用のプロファイルを作成するときの、Endpoint Management 管理センターのエクスペリエンスが更新されます。 この変更は、次のデバイス構成プロファイルに影響します ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  > **プラットフォームの [Android デバイス管理者]** または **[Android Enterprise]** )。
+
+- デバイスの制限:Android デバイス管理者
+- デバイスの制限:Android Enterprise デバイス所有者
+- デバイスの制限:Android Enterprise 仕事用プロファイル
+
+構成できるデバイスの制限の詳細については、[Android デバイス管理者](../configuration/device-restrictions-android.md)と [Android Enterprise](../configuration/device-restrictions-android-for-work.md) に関するページを参照してください。
+
+### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>iOS/iPadOS および macOS デバイスで構成プロファイルを作成するときのユーザー インターフェイス エクスペリエンスの向上<!-- 5569002 5568997 -->
+
+iOS または macOS デバイス用のプロファイルを作成するときの、エンドポイント管理センターのエクスペリエンスが更新されます。 この変更は、次のデバイス構成プロファイルに影響します ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  プラットフォームの **[iOS/iPadOS]** または **[macOS]** ):
+
+- カスタム: iOS/iPadOS、macOS
+- デバイスの機能: iOS/iPadOS、macOS
+- デバイスの制限: iOS/iPadOS、macOS
+- エンドポイント保護: macOS
+- 拡張機能: macOS
+- 設定ファイル: macOS
+
+### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>macOS デバイスのデバイス機能でユーザー構成設定を非表示にする<!-- 6524869 -->
+
+macOS デバイスでデバイス機能の構成プロファイルを作成するときに、新しい設定 **[ユーザーの構成を非表示にします]** があります ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  プラットフォームに **[macOS]** > プロファイルに **[デバイスの機能]** > **[ログイン項目]** )。
+
+この機能では、macOS デバイスの **[ユーザーとグループ]** ログイン項目アプリのリストに、アプリの非表示のチェックマークが設定されます。 既存のプロファイルでは、この設定が未構成としてリスト内に表示されます。 この設定を構成するために、管理者は既存のプロファイルを更新できます。
+
+**[非表示]** に設定すると、アプリの [非表示] チェックボックスがオンになり、ユーザーは変更することはできません。 また、ユーザーが自分のデバイスにサインインした後に、ユーザーに対してアプリを非表示にします。
+
+> [!div class="mx-imgBorder"]
+> ![Microsoft Intune とエンドポイント マネージャーでユーザーがデバイスにサインインした後に macOS デバイスでアプリを非表示にする](./media/whats-new/macos-hide-checkmark-users-groups-login-items-apps-list.png)
+
+構成できる設定の詳細については、[macOS デバイスの機能設定](../configuration/macos-device-features-settings.md)に関する記事を参照してください。
+
+この機能は、以下に適用されます。
+
+- macOS
+
 ## <a name="week-of-march-16-2020-2003-service-release"></a>2020 年 3 月 16 日の週 (2003 サービス リリース)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -183,7 +236,7 @@ Android デバイス管理者プラットフォーム用の新しいコンプラ
 2. 仕事用プロファイルの管理への登録
 3. コンプライアンスに関する問題の解決 
  
-Google では、Android Enterprise を使用した最新のより豊富で安全なデバイス管理に移行するための取り組みの一環として、新しい Android リリースでのデバイス管理者サポートを縮小しています。  Intune では、Android 10 以降を実行している、デバイス管理者が管理する Android デバイスのフル サポートを 2020 年第 2 四半期までのみ提供できます。 これを過ぎると、Android 10 以降を実行している、デバイス管理者が管理するデバイス (Samsung を除く) は、完全には管理できなくなります。 具体的には、影響を受けるデバイスが新しいパスワード要件を受け取ることはありません。 詳細については、この[通知](#decreasing-support-for-android-device-administrator)を参照してください。
+Google では、Android Enterprise を使用した最新のより豊富で安全なデバイス管理に移行するための取り組みの一環として、新しい Android リリースでのデバイス管理者サポートを縮小しています。  Intune では、Android 10 以降を実行している、デバイス管理者が管理する Android デバイスのフル サポートを 2020 年第 2 四半期までのみ提供できます。 これを過ぎると、Android 10 以降を実行している、デバイス管理者が管理するデバイス (Samsung を除く) は、完全には管理できなくなります。 具体的には、影響を受けるデバイスが新しいパスワード要件を受け取ることはありません。
 
 この設定の詳細については、「[Android デバイスをデバイス管理者から仕事用プロファイル管理に移動する](../enrollment/android-move-device-admin-work-profile.md)」をご覧ください。 
 
@@ -295,7 +348,11 @@ Microsoft Endpoint Manager によって、Configuration Manager と Intune が 1
 次のリモート操作に対して、一括コマンドを発行できるようになりました: 再起動、名前変更、Autopilot リセット、ワイプ、削除。 新しい一括操作を表示するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) >  **[デバイス]**  >  **[すべてのデバイス]**  >  **[Bulk actions]\(一括操作\)** の順に移動します。
 
 #### <a name="all-devices-list-improved-search-sort-and-filter--6179023--"></a>すべてのデバイス リストで検索、並べ替え、フィルターが改善<!--6179023-->
-[すべてのデバイス] リストが改善され、パフォーマンスが上がり、検索、並べ替え、フィルター処理の各種機能が強化されました。 詳細については、[こちらのサポート ヒント](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946)に関する記事をご覧ください。
+[すべてのデバイス] リストが改善され、パフォーマンスが上がり、検索、並べ替え、フィルター処理の各種機能が強化されました。 詳細については、[こちらのサポート ヒント](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-changes-in-all-devices-list-and-reporting-in-intune/ba-p/1220946)に関する記事をご覧ください。  
+
+### <a name="app-management"></a>アプリ管理  
+####  <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Android 用ポータル サイトでのサインイン エクスペリエンスの向上    
+エクスペリエンスをユーザーにとってより新しく、シンプルでクリーンなものにするために、Android 用ポータル サイト アプリのいくつかのサインイン画面のレイアウトを更新しました。 機能強化の詳細については、「[アプリの UI の新機能](https://docs.microsoft.com/mem/intune/fundamentals/whats-new-app-ui)」を参照してください。
 
 <!-- ########################## -->
 ## <a name="week-of-february-24-2020"></a>2020 年 2 月 24 日の週
@@ -405,7 +462,7 @@ Intune では、新しいレポートの種類、より優れたレポート編�
 ### <a name="role-based-access-control"></a>ロール ベースのアクセス制御
 
 #### <a name="intune-roles-user-interface-changes-coming--5801612-----"></a>Intune ロールのユーザー インターフェイスが変更予定<!--5801612   -->
-[Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) >  **[テナント管理]**  >  **[ロール]** のユーザー インターフェイスが改善され、ユーザーにとって使いやすく、直観的なデザインになりました。 このエクスペリエンスでは、現在使用しているのと同じ設定と詳細が提供されます。ただし、新しいエクスペリエンスでは、ウィザードに似たプロセスが採用されています。
+[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) >  **[テナント管理]**  >  **[ロール]** のユーザー インターフェイスが改善され、ユーザーにとって使いやすく、直観的なデザインになりました。 このエクスペリエンスでは、現在使用しているのと同じ設定と詳細が提供されます。ただし、新しいエクスペリエンスでは、ウィザードに似たプロセスが採用されています。
 
 <!-- ########################## -->
 ## <a name="week-of-february-17-2020"></a>2020 年 2 月 17 日の週
@@ -487,10 +544,10 @@ Android Enterprise 仕事用プロファイル デバイスで、Wi-Fi プロフ
 ### <a name="device-enrollment"></a>デバイスの登録
 
 #### <a name="block-android-enrollments-by-device-manufacturer--5197392----"></a>デバイスの製造元で Android の登録をブロックする<!--5197392  -->
-デバイスの製造元に基づいてデバイスの登録をブロックすることができます。 この機能は、Android デバイス管理者と Android Enterprise 仕事用プロファイル デバイスに適用されます。 登録制限を確認するには、[[Microsoft Endpoint Manager admin center]](https://go.microsoft.com/fwlink/?linkid=2109431) >  **[デバイス]**  >  **[登録制限]** の順に移動します。
+デバイスの製造元に基づいてデバイスの登録をブロックすることができます。 この機能は、Android デバイス管理者と Android Enterprise 仕事用プロファイル デバイスに適用されます。 登録制限を確認するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) >  **[デバイス]**  >  **[登録制限]** の順に移動します。
 
 #### <a name="improvements-to-the-iosipados-create-enrollment-type-profile-ui---6055005---"></a>iOS、iPadOS の [登録の種類のプロファイルの作成] UI の機能強化<!-- 6055005 -->
-iOS、iPadOS のユーザー登録に関して、 **[登録の種類のプロファイルの作成]** の **[設定]** ページが合理化され、 **[登録の種類]** の選択プロセスが強化されました (機能は同じです)。 新しい UI を確認するには、[[Microsoft Endpoint Manager admin center]](https://go.microsoft.com/fwlink/?linkid=2109431) >  **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[登録の種類]**  >  **[プロファイルの作成]**  >  **[設定]** の順に移動します。 詳細については、「[Intune でユーザー登録プロファイルを作成する](../enrollment/ios-user-enrollment.md#create-a-user-enrollment-profile-in-intune)」を参照してください。
+iOS、iPadOS のユーザー登録に関して、 **[登録の種類のプロファイルの作成]** の **[設定]** ページが合理化され、 **[登録の種類]** の選択プロセスが強化されました (機能は同じです)。 新しい UI を確認するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) >  **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[登録の種類]**  >  **[プロファイルの作成]**  >  **[設定]** の順に移動します。 詳細については、「[Intune でユーザー登録プロファイルを作成する](../enrollment/ios-user-enrollment.md#create-a-user-enrollment-profile-in-intune)」を参照してください。
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>デバイス管理

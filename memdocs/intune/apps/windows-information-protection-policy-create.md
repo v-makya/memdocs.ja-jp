@@ -1,12 +1,12 @@
 ---
 title: Windows 情報保護 (WIP) アプリ保護ポリシー
 titleSuffix: Microsoft Intune
-description: Microsoft Intune で Windows 情報保護 (WIP) アプリ保護ポリシーを作成して展開する
+description: Microsoft Intune で Windows 情報保護 (WIP) ポリシーを作成して展開する
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 03/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ea664594744facd36f3f92900a1e80c48053904
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 6e7305d33b1c40c2624c5c860f59922a5817c818
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79345690"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326100"
 ---
-# <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Intune で Windows 情報保護 (WIP) アプリ保護ポリシーを作成して展開する
+# <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Intune で Windows 情報保護 (WIP) ポリシーを作成して展開する
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Windows 10 アプリでアプリ保護ポリシーを使用して、デバイスを登録せずにアプリを保護できます。
+Windows 10 アプリで Windows 情報保護 (WIP) ポリシーを使用して、デバイスを登録せずにアプリを保護できます。
 
 ## <a name="before-you-begin"></a>始める前に
 
@@ -49,10 +49,10 @@ WIP ポリシーを追加するときのいくつかの概念について理解�
 
 ## <a name="prerequisites"></a>[前提条件]
 
-WIP アプリ保護ポリシーを作成する前に、MAM プロバイダーを構成する必要があります。 [Intune で MAM プロバイダーを構成する方法](app-protection-policies-configure-windows-10.md)を理解します。  
+WIP ポリシーを作成する前に、MAM プロバイダーを構成する必要があります。 [Intune で MAM プロバイダーを構成する方法](app-protection-policies-configure-windows-10.md)を理解します。  
 
 > [!IMPORTANT]
-> WIP は複数の ID をサポートしていません。存在できる管理対象 ID は一度に 1 つだけです。
+> WIP は複数の ID をサポートしていません。存在できる管理対象 ID は一度に 1 つだけです。 WIP の機能と制限の詳細については、「[Windows 情報保護 (WIP) を使用した企業データの保護](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)」を参照してください。
 
 さらに、次のライセンスと更新プログラムが必要です。
 
@@ -63,7 +63,7 @@ WIP アプリ保護ポリシーを作成する前に、MAM プロバイダーを
 
 
 
-## <a name="to-add-a-wip-app-protection-policy"></a>WIP アプリ保護ポリシーを追加するには
+## <a name="to-add-a-wip-policy"></a>WIP ポリシーを追加するには
 
 組織で Intune を設定した後は、WIP 固有のポリシーを作成できます。
 
@@ -76,7 +76,7 @@ WIP アプリ保護ポリシーを作成する前に、MAM プロバイダーを
 3. 次の値を追加します。
     - **[名前]:** (必須) 新しいポリシーの名前を入力します。
     - **説明:** (省略可能) 説明を入力します。
-    - **[プラットフォーム]:** アプリ保護ポリシーのサポート対象プラットフォームとして **[Windows 10]** を選択します。
+    - **[プラットフォーム]:** WIP ポリシーのサポート対象プラットフォームとして **[Windows 10]** を選択します。
     - **[登録の状態]:** ポリシーの登録状態として、 **[未登録]** を選択します。
 4. **[作成]** を選択します。 ポリシーが作成され、 **[アプリ保護ポリシー]** ウィンドウ上の表に表示されます。
 

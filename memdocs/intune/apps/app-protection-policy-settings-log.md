@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f58c20731395c95e532e28165553743fdef701e9
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 7686be29b819d29aa39ed12d558780dde9bf4159
+ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083568"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80401365"
 ---
 # <a name="review-client-app-protection-logs"></a>クライアント アプリの保護ログのレビュー
 
@@ -33,6 +33,9 @@ ms.locfileid: "80083568"
 - **iOS/iPadOS デバイス** - iOS/iPadOS 用 Microsoft Edge を使用してログを収集します。 詳細については、「[Microsoft Edge と Microsoft Intune を使用して Web アクセスを管理する](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)」を参照してください。 
 - **Windows 10 デバイス** - *MDMDiag* とイベント ログを使用します。 Windows クライアント管理コンテンツの「[Windows 10 での MDM エラーの診断](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)」と、ブログ「[Windows 10 Intune ポリシー エラーのトラブルシューティング](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/)」を参照してください。
 - **Android デバイス** - Android 用 Microsoft Edge を使用してログを収集します。 詳細については、「[Microsoft Edge と Microsoft Intune を使用して Web アクセスを管理する](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)」を参照してください。 
+
+  > [!Note]
+  > Android フル マネージド デバイスでは、場合によっては、Intune ポータル サイト アプリがすべてのアプリの下に表示される可能性があります。 これは、アプリ保護ポリシーに関連付けられているアプリがインストールされていないか、起動されていない場合に発生する可能性があります。 
 
 次の表に、アプリ保護ポリシー設定の名前と、ログに記録されるサポートされている値を示します。 また、各設定により、Microsoft Endpoint Manager ポータル内にあるポリシー設定が特定されます。 各設定の詳細については、[iOS/iPadOS アプリ保護ポリシー設定](app-protection-policy-settings-ios.md)に関する記事をご覧ください。
 

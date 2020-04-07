@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f102daeab975bbbf0a618d1a5d642c84f52edba
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 077d7c4dd345b9b16677d61269b9f331dedb4dbb
+ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344494"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80488080"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows デバイスの一括登録
 
@@ -61,11 +61,13 @@ Azure AD ユーザーはこれらのデバイス上の標準ユーザーであ�
 7. 一括トークンを取得するための Azure AD の資格情報を入力します。
    ![Windows Configuration Designer アプリへのサインインのスクリーンショット](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
-8. **一括トークン**が正常にフェッチされたら、 **[次へ]** をクリックします。
+8. **[このデバイスではどこでもこのアカウントを使用する]** ページで、 **[このアプリのみ]** を選択します。
 
-9. 必要に応じて **[アプリケーションの追加]** や **[証明書の追加]** ができます。 これらのアプリと証明書がデバイスでプロビジョニングされます。
+9. **一括トークン**が正常にフェッチされたら、 **[次へ]** をクリックします。
 
-10. 必要に応じて、プロビジョニング パッケージをパスワードで保護できます。  **[作成]** をクリックします。
+10. 必要に応じて **[アプリケーションの追加]** や **[証明書の追加]** ができます。 これらのアプリと証明書がデバイスでプロビジョニングされます。
+
+11. 必要に応じて、プロビジョニング パッケージをパスワードで保護できます。  **[作成]** をクリックします。
     ![Windows Configuration Designer アプリでのパッケージ保護のスクリーンショット](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>デバイスのプロビジョニング

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
+ms.date: 03/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 462f9ca9618d16c0291792f86d00c46f641c6cc8
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084060"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327452"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Microsoft Intune でのデバイス プロファイルの作成
 
@@ -37,73 +37,64 @@ ms.locfileid: "80084060"
 
 ## <a name="create-the-profile"></a>プロファイルの作成
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+プロファイルは、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で作成されます。 この管理センターで、 **[デバイス]** を選択します。 次のオプションがあります。
 
-2. **[デバイス]**  >  **[構成プロファイル]** の順に選択します。 次のオプションがあります。
+- **概要**:プロファイルの状態を一覧表示し、ユーザーとデバイスに割り当てたプロファイルに関する追加の詳細を提供します。
+- **監視**:プロファイルの状態が成功か失敗かを確認し、プロファイルのログも表示します。
+- **プラットフォーム別**: プラットフォーム別にポリシーとプロファイルを作成して表示します。 このビューには、プラットフォームに固有の機能が表示される場合もあります。 たとえば、 **[Windows]** を選択します。 **Windows 10 更新リング**や **PowerShell スクリプト**など、Windows 固有の機能が表示されます。
+- **ポリシー**: デバイス プロファイルを作成し、カスタムの [PowerShell スクリプト](../apps/intune-management-extension.md)をアップロードしてデバイス上で実行し、[eSIM](esim-device-configuration.md) を使用してデバイスにデータ プランを追加します。
 
-    - **概要**:プロファイルの状態を一覧表示し、ユーザーとデバイスに割り当てたプロファイルに関する追加の詳細を提供します。
-    - **管理**:デバイス プロファイルを作成し、カスタムの [PowerShell スクリプト](../apps/intune-management-extension.md)をアップロードしてプロファイル内で実行し、[eSIM](esim-device-configuration.md) を使用してデバイスにデータ プランを追加します。
-    - **監視**:プロファイルの状態が成功か失敗かを確認し、プロファイルのログも表示します。
-    - **セットアップ**:SCEP または PFX 証明書機関を追加するか、プロファイルで[通信費管理サービス](telecom-expenses-monitor.md)を有効にします。
+プロファイルを作成する場合 ( **[構成プロファイル]** ** > [プロファイルの作成]** )、ご利用のプラットフォームを選択します。
 
-3. **[プロファイルの作成]** を選択します。 次のプロパティを入力します。
+- **Android デバイス管理者**
+- **Android エンタープライズ**
+- **iOS/iPadOS**
+- **macOS**
+- **Windows 10 以降**
+- **Windows 8.1 以降**
+- **Windows Phone 8.1**
 
-   - **名前**:プロファイルのわかりやすい名前を入力します。 後で簡単に識別できるよう、プロファイルに名前を付けます。 たとえば、適切なプロファイル名は、**会社全体の WP 電子メール プロファイル**などです。
-   - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
-   - **[プラットフォーム]** :デバイスのプラットフォームを選択します。 次のようなオプションがあります。  
+次に、プロファイルの種類を選択します。 選択したプラットフォームによって構成できる設定が異なります。 次の記事では、さまざまなファイルの種類の設定について説明します。
 
-       - **Android デバイス管理者**
-       - **Android エンタープライズ**
-       - **iOS/iPadOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 以降**
-       - **Windows 10 以降**
+- [管理用テンプレート (Windows)](administrative-templates-windows.md)
+- [カスタム](custom-settings-configure.md)
+- [配信の最適化 (Windows)](delivery-optimization-windows.md)
+- [派生資格情報 (Android エンタープライズ、iOS、iPadOS)](../protect/derived-credentials.md)
+- [デバイスの機能 (macOS、iOS、iPadOS)](device-features-configure.md)
+- [デバイスのファームウェア (Windows)](device-firmware-configuration-interface-windows.md)
+- [デバイスの制限](device-restrictions-configure.md)
+- [ドメイン参加 (Windows)](domain-join-configure.md)
+- [エディションのアップグレードとモードの切り替え (Windows)](edition-upgrade-configure-windows-10.md)
+- [教育 (iOS、iPadOS)](../fundamentals/education-settings-configure-ios.md)
+- [電子メール](email-settings-configure.md)
+- [Endpoint Protection (macOS、Windows)](../protect/endpoint-protection-configure.md)
+- [拡張機能 (macOS)](kernel-extensions-overview-macos.md)
+- [ID 保護 (Windows)](../protect/identity-protection-configure.md)
+- [キオスク](kiosk-settings.md)
+- [Microsoft Defender ATP (Windows)](../protect/advanced-threat-protection.md)
+- [モビリティ拡張 (MX) プロファイル (Android デバイス管理者)](android-zebra-mx-overview.md)
+- [OEMConfig (Android エンタープライズ)](android-oem-configuration-overview.md)
+- [PKCS 証明書](../protect/certficates-pfx-configure.md)
+- [PKCS のインポートされた証明書](../protect/certificates-imported-pfx-configure.md)
+- [設定ファイル (macOS)](preference-file-settings-macos.md)
+- [SCEP 証明書](../protect/certificates-scep-configure.md)
+- [セキュリティで保護された評価 (教育) (Windows)](education-settings-configure.md)
+- [共有のマルチユーザーのデバイス (Windows)](shared-user-device-settings.md)
+- [通信費 (Android デバイス管理者、iOS、iPadOS)](telecom-expenses-monitor.md)
+- [信頼された証明書](../protect/certificates-configure.md)
+- [VPN](vpn-settings-configure.md)
+- [Wi-Fi](wi-fi-settings-configure.md)
 
-   - **[プロファイルの種類]** :作成する設定の種類を選択します。 表示される一覧は、選択した**プラットフォーム**によって異なります。
-   - **設定**:次の記事では、ファイルの種類ごとの設定について説明します。
+たとえば、プラットフォームとして **iOS/iPadOS** を選択した場合、プロファイルの種類のオプションは次のプロファイルのようになります。
 
-       - [管理用テンプレート](administrative-templates-windows.md)
-       - [カスタム](custom-settings-configure.md)
-       - [配信の最適化](delivery-optimization-windows.md)
-       - [デバイスの機能](device-features-configure.md)
-       - [デバイスの制限](device-restrictions-configure.md)
-       - [ドメイン参加](domain-join-configure.md)
-       - [エディションのアップグレードとモードの切り替え](edition-upgrade-configure-windows-10.md)
-       - [教育](education-settings-configure.md)
-       - [電子メール](email-settings-configure.md)
-       - [Endpoint Protection](../protect/endpoint-protection-configure.md)
-       - [ID 保護](../protect/identity-protection-configure.md)  
-       - [キオスク](kiosk-settings.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
-       - [PKCS 証明書](../protect/certficates-pfx-configure.md)
-       - [PKCS のインポートされた証明書](../protect/certificates-imported-pfx-configure.md)
-       - [設定ファイル](preference-file-settings-macos.md)
-       - [SCEP 証明書](../protect/certificates-scep-configure.md)
-       - [信頼された証明書](../protect/certificates-configure.md)
-       - [更新ポリシー](../protect/software-updates-ios.md)
-       - [VPN](vpn-settings-configure.md)
-       - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Windows 情報保護](../protect/windows-information-protection-configure.md)
-
-     たとえば、プラットフォームとして **iOS/iPadOS** を選択した場合、プロファイルの種類のオプションは次のプロファイルのようになります。
-
-     > [!div class="mx-imgBorder"]
-     > ![Intune で iOS/iPadOS プロファイルを作成する](./media/device-profile-create/create-device-profile.png)
-
-4. 完了したら、 **[OK]**  >  **[作成]** の順に選択して変更を保存します。 プロファイルが作成され、一覧に表示されます。
+> [!div class="mx-imgBorder"]
+> ![Intune で iOS/iPadOS プロファイルを作成する](./media/device-profile-create/create-device-profile.png)
 
 ## <a name="scope-tags"></a>スコープのタグ
 
-設定を追加したら、プロファイルにスコープのタグを追加することもできます。 スコープ タグを使うと、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理することができます。
+設定を追加したら、プロファイルにスコープのタグを追加することもできます。 スコープ タグを使うと、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理することができます。 また、分散 IT で使用されます。
 
 スコープのタグと可能な操作の詳細については、[分散 IT での RBAC とスコープのタグの使用](../fundamentals/scope-tags.md)に関するページを参照してください。
-
-### <a name="add-a-scope-tag"></a>スコープのタグを追加する
-
-1. **[スコープ (タグ)]** を選択します。
-2. **[追加]** を選択して、新しいスコープのタグを作成します。 または、一覧から既存のスコープのタグを選択します。
-3. **[OK]** を選択して変更を保存します。
 
 ## <a name="applicability-rules"></a>適用性ルール
 

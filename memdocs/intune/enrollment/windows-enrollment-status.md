@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bbb8738acbfdfa2317d754797dbb171c6a5d8ac
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0efaaf94f969e0b1b27582027a68b9e59c944b0c
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79344390"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326845"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>登録ステータス ページを設定する
  
@@ -64,14 +64,14 @@ ms.locfileid: "79344390"
 
 登録ステータス ページを有効にするには、以下の手順のようにします。
  
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[登録状態ページ]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[登録ステータス ページ]** を選択します。
 2. **[登録ステータス ページ]** ブレードで、 **[既定]**  >  **[設定]** の順に選択します。
 3. **[Show app and profile installation progress]\(アプリとプロファイルのインストールの進行状況を表示する\)** で、 **[はい]** を選択します。
 4. 有効にするその他の設定を選択してから、 **[保存]** を選びます。
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>登録ステータス ページのプロファイルを作成してグループに割り当てる
 
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[登録状態ページ]**  >  **[プロファイルの作成]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[登録ステータス ページ]**  >  **[プロファイルの作成]** を選択します。
 2. **名前**と**説明**を入力します。
 3. **[作成]** を選択します。
 4. **[登録ステータス ページ]** リストで新しいプロファイルを選択します。
@@ -82,7 +82,7 @@ ms.locfileid: "79344390"
 
 1 人のユーザーが、複数のグループに属し、多くの登録ステータス ページ プロファイルを使用することができます。 そのような競合に対処するため、プロファイルごとに優先順位を設定することができます。 登録時に、ユーザーが複数の登録ステータス ページ プロファイルを持っている場合は、優先順位の最も高いプロファイルのみがデバイスの登録に適用されます。
 
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[登録状態ページ]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[登録ステータス ページ]** を選択します。
 2. 一覧内のプロファイルにカーソルを合わせます。
 3. 3 つの縦向きドットを使用して、そのプロファイルを一覧上の目的の位置にドラッグします。
 
@@ -90,7 +90,7 @@ ms.locfileid: "79344390"
 
 ユーザーがデスクトップにアクセスするためにインストールしておく必要があるアプリを指定できます。
 
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[登録状態ページ]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[登録ステータス ページ]** を選択します。
 2. プロファイルを選択して、 **[設定]** を選択します。
 3. **[アプリとプロファイルのインストールの進行状況を表示する]** で、 **[はい]** を選択します。
 4. **[すべてのアプリとプロファイルがインストールされるまでデバイスの使用をブロックする]** で **[はい]** を選択します。

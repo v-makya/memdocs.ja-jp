@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f062f27dfd19f8bde58c86d8bd782aae91dded3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 97024c641be4c61561e762751cfabfab2732e4c1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79339476"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327180"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>managed Google Play アカウントに Intune アカウントを接続する
 
@@ -42,7 +42,7 @@ Android Enterprise 管理をより簡単に構成して使用できるように�
 > Google ドメインと Microsoft ドメインの間の相互作用のため、この手順では、ブラウザー設定の調整が必要な場合があります。  "portal.azure.com" と "play.google.com" がブラウザーの同じセキュリティ ゾーンにあることを確認してください。
 
 1. **Microsoft Intune** を[モバイル デバイス管理機関](../fundamentals/mdm-authority-set.md)に設定し、モバイル デバイス管理の準備をします (この作業をまだ行っていない場合)。
-2. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[デバイス]**  >  **[Android]**  >  **[Android の登録]**  >  **[マネージド Google Play]** の順に選択します。  カスタム Intune 管理者ロールを使用している場合、このアクセスには組織の読み取りと更新のアクセス許可が必要です。
+2. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[デバイス]**  >  **[Android]**  >  **[Android の登録]**  >  **[マネージド Google Play]** を選択します。  カスタム Intune 管理者ロールを使用している場合、このアクセスには組織の読み取りと更新のアクセス許可が必要です。
    
    ![Android エンタープライズの登録画面](./media/connect-intune-android-enterprise/android-work-bind.png)
 
@@ -63,7 +63,7 @@ Android Enterprise 管理をより簡単に構成して使用できるように�
 
 Android Enterprise の登録と管理を無効にすることができます。 これを行うには、まず、登録済みの Android Enterprise デバイス (仕事用プロファイル デバイス、専用デバイス、フル マネージド デバイスが含まれます) をインベントリから削除する必要があります。 次に、Intune 管理コンソールで **[切断]** を選択します。登録済みのすべての Android Enterprise 仕事用プロファイル デバイス、専用デバイス、およびフル マネージド デバイスが登録から削除されます。 また、managed Google Play アカウントと Intune 間のリレーションシップも削除されます。
 
-1. Intune 管理者として [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+1. Intune 管理者として [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインします。
 2. **[デバイス]**  >  **[Android]**  >  **[Android の登録]**  >  **[マネージド Google Play]**  >  **[切断]** の順に選択します。
 3. **[はい]** を選択して、Intune からすべての Android エンタープライズ デバイスを切断し、登録を解除します。
 

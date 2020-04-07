@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad456ef7cc88ccb24079010479bd8f27292eb73d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79363266"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80326929"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune での iOS/iPadOS デバイスの登録に関する問題のトラブルシューティング
 
@@ -41,7 +41,7 @@ ms.locfileid: "79363266"
 - 影響を受けているユーザーの数はどれくらいですか? すべてのユーザーに影響がありますか、それとも一部だけですか?
 - 影響を受けているデバイスの数はどれくらいですか? すべてのデバイスですか、一部だけですか?
 - MDM 機関は何ですか?
-- 登録はどのように実行されますか? "Bring Your Own Device" (BYOD) ですか、または登録プロファイルを使用する Apple Device Enrollment Program (DEP) ですか?
+- 登録はどのように実行されますか? "Bring Your Own Device" (BYOD) ですか、または登録プロファイルを使用する Apple 自動デバイス登録 (ADE) ですか?
 
 ## <a name="error-messages"></a>エラー メッセージ
 
@@ -106,7 +106,7 @@ CNAME DNS エントリの作成は省略可能ですが、CNAME レコードに�
 **原因:** デバイスを登録しようとしているユーザーに、Microsoft Intune ライセンスがありません。
 
 #### <a name="resolution"></a>解決策
-1. [Office 365 管理センター](https://portal.office.com/adminportal/home#/homepage)にアクセスし、 **[ユーザー] > [アクティブなユーザー]** を選択します。
+1. [Office 365 管理センター](https://admin.microsoft.com)にアクセスし、 **[ユーザー] > [アクティブなユーザー]** を選択します。
 2. Intune ユーザー ライセンスを割り当てるユーザー アカウントを選択し、 **[製品ライセンス] > [編集]** の順に選択します。
 3. このユーザーに割り当てるライセンスのトグルを **[オン]** 位置に切り替え、 **[保存]** を選択します。
 4. デバイスを再度登録します。
@@ -136,10 +136,10 @@ CNAME DNS エントリの作成は省略可能ですが、CNAME レコードに�
 **原因:** ユーザーは、デバイス登録制限より多くのデバイスを登録しようとしています。
 
 #### <a name="resolution"></a>解決策
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[すべてのデバイス]** を選択し、ユーザーが登録したデバイスの数を確認します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[すべてのデバイス]** を選択し、ユーザーが登録したデバイスの数を確認します。
     > [!NOTE]
     > また、影響を受けたユーザーを [Intune ユーザーポータル](https://portal.manage.microsoft.com/)にログオンさせ、登録したデバイスを確認させる必要もあります。 [Intune ユーザー ポータル](https://portal.manage.microsoft.com/)には表示され、[Intune 管理ポータル](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)には表示されないデバイスが存在する可能性があります。そのようなデバイスも、デバイス登録制限にカウントされます。
-2. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[登録制限]** を選択して、デバイスの登録制限を確認します。 既定では、制限は 15 に設定されています。 
+2. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[登録制限]** を選択して、デバイスの登録制限を確認します。 既定では、制限は 15 に設定されています。 
 3. 登録済みのデバイスの数が制限に達している場合は、不要なデバイスを削除するか、デバイスの登録制限を増やします。 すべての登録済みデバイスによって Intune ライセンスが消費されるため、必ず最初に不要なデバイスを削除することをお勧めします。
 4. デバイスを再度登録します。
 
@@ -157,7 +157,7 @@ CNAME DNS エントリの作成は省略可能ですが、CNAME レコードに�
 **原因:** デバイスを登録しようとしているユーザーに、有効な Intune ライセンスがありません。
 
 #### <a name="resolution"></a>解決策
-1. [Microsoft 365 管理センター](https://portal.office.com/adminportal/home#/homepage)にアクセスし、 **[ユーザー]**  >  **[アクティブなユーザー]** の順に選択します。
+1. [Microsoft 365 管理センター](https://admin.microsoft.com)にアクセスし、 **[ユーザー]**  >  **[アクティブなユーザー]** の順に選択します。
 2. 影響を受けているユーザー アカウントを選択し、 **[製品ライセンス]**  >  **[編集]** を選択します。
 3. 有効な Intune ライセンスがこのユーザーに割り当てられていることを確認します。
 4. デバイスを再度登録します。
@@ -166,7 +166,7 @@ CNAME DNS エントリの作成は省略可能ですが、CNAME レコードに�
 
 **原因:** デバイスを登録しようとしているユーザーに、有効な Intune ライセンスがありません。
 
-1. [Microsoft 365 管理センター](https://portal.office.com/adminportal/home#/homepage)にアクセスし、 **[ユーザー]**  >  **[アクティブなユーザー]** の順に選択します。
+1. [Microsoft 365 管理センター](https://admin.microsoft.com)にアクセスし、 **[ユーザー]**  >  **[アクティブなユーザー]** の順に選択します。
 2. 影響を受けているユーザー アカウントを選択し、 **[製品ライセンス]**  >  **[編集]** を選択します。
 3. 有効な Intune ライセンスがこのユーザーに割り当てられていることを確認します。
 4. デバイスを再度登録します。
@@ -203,7 +203,7 @@ APNs 証明書を更新してから、デバイスを再登録します。
 
 ### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR 接続が無効です
 
-登録プロファイルが割り当てられている DEP で管理されたデバイスの電源を入れると、登録が失敗し、次のエラー メッセージが表示されます。
+登録プロファイルが割り当てられている ADE で管理されたデバイスの電源を入れると、登録が失敗し、次のエラー メッセージを受け取ります。
 
 ```
 asciidoc
@@ -213,7 +213,7 @@ iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset)[288] <Notice>:
 iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" }
 ```
 
-**原因:** デバイスと Apple DEP サービスの間の接続に問題があります。
+**原因:** デバイスと Apple ADE サービスの間の接続に問題があります。
 
 #### <a name="resolution"></a>解決策
 接続の問題を修正するか、別のネットワーク接続を使用してデバイスを登録します。 問題が解決しない場合は、Apple への問い合わせが必要になる場合もあります。
@@ -221,20 +221,20 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 
 ## <a name="other-issues"></a>その他の問題
 
-### <a name="dep-enrollment-doesnt-start"></a>DEP の登録が開始しない
-登録プロファイルが割り当てられている DEP で管理されたデバイスの電源を入れても、Intune の登録プロセスが開始されません。
+### <a name="ade-enrollment-doesnt-start"></a>ADE の登録が開始しない
+登録プロファイルが割り当てられている ADE で管理されたデバイスの電源を入れても、Intune の登録プロセスが開始されません。
 
-**原因:** DEP トークンが Intune にアップロードされる前に、登録プロファイルが作成されています。
+**原因:** ADE トークンが Intune にアップロードされる前に、登録プロファイルが作成されています。
 
 #### <a name="resolution"></a>解決策
 
 1. 登録プロファイルを編集します。 プロファイルの変更はどのようなものでもかまいません。 目的は、プロファイルの変更時刻を更新することです。
-2. DEP マネージド デバイスを同期する:[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** の順に選択し、トークンを選択して **[今すぐ同期]** を選択します。 同期要求が Apple に送信されます。
+2. ADE マネージド デバイスを同期する: [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択し、トークンを選択して **[今すぐ同期]** を選択します。 同期要求が Apple に送信されます。
 
-### <a name="dep-enrollment-stuck-at-user-login"></a>ユーザー ログインで DEP の登録がスタックする
-登録プロファイルが割り当てられている DEP で管理されたデバイスの電源を入れると、資格情報を入力した後で初期セットアップが停止します。
+### <a name="ade-enrollment-stuck-at-user-login"></a>ユーザー ログインで ADE の登録が停止する
+登録プロファイルが割り当てられている ADE で管理されたデバイスの電源を入れると、資格情報を入力した後で初期セットアップが停止します。
 
-**原因:** 多要素認証 (MFA) が有効になっています。 現在、DEP デバイスでの登録時に MFA は機能しません。
+**原因:** 多要素認証 (MFA) が有効になっています。 現在、ADE デバイスでの登録時に MFA は機能しません。
 
 #### <a name="resolution"></a>解決策
 MFA を無効にしてから、デバイスを再登録します。

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5e64996a1d586d332a3732ca68076c654a56c1e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: dd1bea64bbde5c7da7579471f93f659b71dffa87
+ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79359678"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80327208"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Apple MDM プッシュ証明書を取得する
 
@@ -41,7 +41,7 @@ Intune で iOS/iPadOS および macOS デバイスを管理するには、Apple 
 
 
 ## <a name="steps-to-get-your-certificate"></a>証明書を取得する手順
-[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[デバイス]**  >  **[デバイスの登録]**  >  **[Apple の登録]**  >  **[Apple MDM プッシュ通知証明書]** の順に選択してから、次の手順を実行します。
+[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[デバイス]**  >  **[デバイスの登録]**  >  **[Apple の登録]**  >  **[Apple MDM プッシュ通知証明書]** を選択してから、次の手順を行います。
 
 ### <a name="step-1-grant-microsoft-permission-to-send-user-and-device-information-to-apple"></a>手順 1. Microsoft がユーザーとデバイスの情報を Apple に送信できるようにする
 **[同意する。]** を選択し、 Microsoft がデータを Apple に送信できるようにします。
@@ -68,7 +68,7 @@ Apple MDM プッシュ証明書の有効期間は 1 年間です。iOS/iPadOS �
 
 証明書は、証明書の作成に使用した Apple ID と関連付けられています。 MDM プッシュ証明書を更新するには、作成時と同じ Apple ID を使用してください。
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[デバイス]**  >  **[デバイスの登録]**  >  **[Apple の登録]**  >  **[Apple MDM プッシュ通知証明書]** の順に選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[デバイス]**  >  **[デバイスの登録]**  >  **[Apple の登録]**  >  **[Apple MDM プッシュ通知証明書]** を選択します。
 2. **[CSR のダウンロード]** を選び、要求ファイルをダウンロードしてローカルに保存します。 このファイルは、Apple Push Certificates Portal からの信頼関係証明書を要求するために使用します。
 3. **[MDM プッシュ証明書を作成する]** を選択して、Apple Push Certificates Portal に移動します。 更新する証明書を検索し、 **[更新]** を選択します。
 4. **[Renew Push Certificate]\(プッシュ証明書の更新\)** 画面で、今後証明書を識別しやすいようにメモを入力し、 **[ファイルの選択]** を選んで、ダウンロードした新しい要求ファイルを参照し、 **[アップロード]** を選びます。
