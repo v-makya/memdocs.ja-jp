@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b25d5439aa9d0842cbbee24b5e8759d00f371d4b
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407718"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696541"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Microsoft Edge と Microsoft Intune を使用して Web アクセスを管理する
 
@@ -367,14 +367,14 @@ Microsoft Edge 内の拡張機能フレームワークを無効にして、ユ�
 
 |    キー    |    値    |
 |-----------|-------------|
-|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    **inprivate** にすると、InPrivate ブラウズが無効になります。   |
+|    `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    **inprivate** にすると、InPrivate ブラウズが無効になります。   |
 
 ### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>Microsoft Edge の使用を許可されたアカウントのみに制限する
 
 InPrivate および MSA ブラウズをブロックするだけでなく、ユーザーが AAD アカウントでログインしている場合に限って Microsoft Edge の使用を許可できます。 この機能は、MDM に登録されたユーザーのみが使用できます。 この設定の構成に関する詳細については、次を参照してください。
 
 >[!NOTE]
-> `com.microsoft.intune.mam.managedbrowser.disableFeatures` を使用すると、複数の機能を同時に無効にすることができます。 たとえば、InPrivate とパスワードの両方を無効にするには、`inprivate| password` を使用します。
+> `com.microsoft.intune.mam.managedbrowser.disabledFeatures` を使用すると、複数の機能を同時に無効にすることができます。 たとえば、InPrivate とパスワードの両方を無効にするには、`inprivate|password` を使用します。
 
 ## <a name="configure-microsoft-edge-as-a-kiosk-app-on-android-devices"></a>Android デバイスで Microsoft Edge をキオスク アプリとして構成する
 
