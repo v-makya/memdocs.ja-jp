@@ -6,31 +6,32 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.assetid: 7954a686-25dc-4fce-b395-324816f46d3b
+ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99a34167f8616c6bbf2e441628de0d73aba080c3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79355895"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696431"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Intune の [テナントの状態] ページを使用する
 Microsoft Intune の [テナントの状態] ページは、ご利用のテナントに関する現在の重要な詳細を表示できる一元的なハブです。 詳細には、ライセンスの可用性と使用、コネクタの状態、および Intune サービスに関する重要な連絡が含まれます。  
 
-ダッシュボードを表示するには、[Intune](https://go.microsoft.com/fwlink/?linkid=2090973) にサインインし、 **[テナントの状態]** を選択します。  **[ヘルプとサポート]** の下に *[テナントの状態]* が表示されます。  
+ダッシュボードを表示するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[テナント管理]** に移動して、 **[テナントの状態]** を選択します。
 
 このページは、次の 3 つのタブに分かれています。
 
 ## <a name="tenant-details"></a>テナントの詳細
-テナントの詳細では、テナントに関する概要情報が提供されます。 テナント名と場所、MDM 機関、およびテナント サービスのリリース番号などの詳細を表示します。 サービスのリリース番号はリンクになっており、Microsoft docs 上の "*Intune の新機能*" に関する記事が開かれます。"*新機能*" に関する記事では、Intune サービスの最新機能と更新プログラムを確認することができます。  
+テナントの詳細では、テナントに関する概要情報が提供されます。 テナント名と場所、MDM 機関、およびテナント サービスのリリース番号などの詳細を表示します。 サービスのリリース番号はリンクになっており、Microsoft docs 上の "*Intune の新機能*" に関する記事が開きます。"*新機能*" に関する記事では、Intune サービスの最新機能と更新プログラムを確認することができます。  
 
 このタブでは、利用可能なライセンスに関する基本情報と、ユーザーに割り当てられている数を確認することもできます。 デバイス用のライセンスは表示されません。
 

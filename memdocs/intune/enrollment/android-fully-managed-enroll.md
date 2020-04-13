@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89d299edfb9542591eaabcf42d0b2069bbde4331
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: d768859d65fff18d6ce94a26b48bb28f57417af6
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327307"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808068"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Android Enterprise フル マネージド デバイスの Intune 登録を設定する 
 
@@ -65,7 +65,7 @@ Android Enterprise フル マネージド デバイスの管理を設定する�
 **[はい]** に設定すると、登録トークン (無作為の文字列) と Intune テナントの QR コードが与えられます。 この 1 個の登録トークンは登録するすべてのユーザーに対して有効であり、有効期限はありません。 デバイスの Android OS とバージョンに基づき、トークンと QR コードのいずれかを利用してデバイスを登録できます。
 
 ## <a name="enroll-the-fully-managed-devices"></a>フル マネージド デバイスを登録する
-これで[フル マネージド デバイスを登録](android-dedicated-devices-fully-managed-enroll.md)できるようになりました。
+これで、[フル マネージド デバイスの登録](android-dedicated-devices-fully-managed-enroll.md)を行えるようになりました (DEM アカウントを使用する場合は除く)。
 
 ## <a name="next-steps"></a>次のステップ
 - [Android Enterprise フル マネージド デバイス構成ポリシーを追加する](../configuration/device-restrictions-android-for-work.md#device-owner-only)

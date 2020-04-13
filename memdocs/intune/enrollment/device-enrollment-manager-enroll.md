@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6b0c901cd52edcd674a2d787bc703c371dcf519
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 27ec9e4c407dd8ef1a94e9c443f62ea5456866dc
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327141"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808142"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>デバイス登録マネージャー アカウントを使用してデバイスを Intune に登録する
 
@@ -42,7 +42,7 @@ DEM ユーザー アカウントと DEM ユーザー アカウントを使用し
 - Windows 10 1803+ 以降の例外と共にデバイスが条件付きアクセスをブロックされます
 - DEM アカウントに登録されているすべてのデバイスを Intune で管理するには、適切にライセンスする必要があります。 ライセンスは、Intune ユーザー ライセンスまたは Intune デバイス ライセンスにすることができます。
 - DEM アカウントを使用して [Android Enterprise 仕事用プロファイル デバイスを登録](android-work-profile-enroll.md)する場合、アカウントあたりの登録可能なデバイスは 10 台に制限されます。
-
+- DEM アカウントを使用した [Android Enterprise フル マネージド デバイスの登録](android-fully-managed-enroll.md)はサポートされていません。
 
 ## <a name="add-a-device-enrollment-manager"></a>デバイス登録マネージャーの追加
 

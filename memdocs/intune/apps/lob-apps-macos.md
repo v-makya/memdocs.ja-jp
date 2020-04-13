@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e798d579341a841d25bea9abb416367fac15c2b
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6dad4dffba0efadcca0ea5eb7d61960bec1b3f8e
+ms.sourcegitcommit: 0907ee1137773f0482b1d2b9bb344e206d05aede
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324046"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80536829"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>macOS の基幹業務 (LOB) アプリを Microsoft Intune に追加する方法
 
@@ -65,8 +65,8 @@ ms.locfileid: "80324046"
     - `IntuneAppUtil -h`<br>
     このコマンドでは、ツールの使用情報が表示されます。
     
-    - `IntuneAppUtil -c <source_file> -o <output_file> [-v]`<br>
-    このコマンドは、 *.pkg* LOB アプリ ファイルを *.intunemac* ファイルにラッピングします。
+    - `IntuneAppUtil -c <source_file> -o <output_directory_path> [-v]`<br>
+    このコマンドを実行すると、`<source_file>` で指定した *.pkg* LOB アプリ ファイルが、同じ名前の *.intunemac* ファイルにラップされ、`<output_directory_path>` によって示したフォルダーに配置されます。
     
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     このコマンドは、作成された *.intunemac* ファイルで検出されたパラメーターとバージョンを抽出します。

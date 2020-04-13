@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c08e0a967d18aaa7defb8e7b180a60f68c1b92c
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: ee632901162042f7d777043e6700b796b4badf58
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407798"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620611"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune スタンドアロン - Win32 アプリ管理
 
@@ -33,7 +33,7 @@ ms.locfileid: "80407798"
 > このアプリの管理機能では、Windows アプリケーションの 32 ビットと 64 ビットの両方のオペレーティング システム アーキテクチャがサポートされます。
 
 > [!IMPORTANT]
-> Win32 アプリを展開する場合、特にマルチファイルの Win32 アプリ インストーラーがある場合は、[Intune 管理拡張機能](../apps/intune-management-extension.md)を排他的に使用することを検討してください。 AutoPilot 登録中に Win32 アプリと基幹業務アプリのインストールを混在させると、アプリのインストールが失敗する場合があります。  
+> Win32 アプリを展開する場合、特にマルチファイルの Win32 アプリ インストーラーがある場合は、[Intune 管理拡張機能](../apps/intune-management-extension.md)の方法を排他的に使用することを検討してください。 AutoPilot 登録中に Win32 アプリと基幹業務アプリのインストールを混在させると、アプリのインストールが失敗する場合があります。 PowerShell スクリプトまたは Win32 アプリがユーザーまたはデバイスに割り当てられると、Intune 管理拡張機能が自動的にインストールされます。
 
 ## <a name="prerequisites"></a>[前提条件]
 

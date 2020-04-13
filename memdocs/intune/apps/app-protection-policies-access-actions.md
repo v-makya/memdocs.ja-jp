@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b877587e8eb50019086e2296d7cc5b7e900da62a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323783"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551347"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Intune でアプリ保護ポリシーの条件付き起動アクションを使用してデータを選択的にワイプする
 
@@ -59,7 +59,7 @@ iOS/iPadOS の場合、 **[設定]** ドロップダウンを利用して次の�
 - [デバイス モデル]
 - 許容される最大デバイス脅威レベル
 
-**[デバイス モデル]** 設定を使用するには、iOS/iPadOS モデル識別子の一覧をセミコロンで区切って入力します。 これらの値では大文字と小文字が区別されません。 [デバイス モデル] 入力に関する Intune からの報告に加え、[HockeyApp のサポート ドキュメント](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types)やこちらの[サード パーティの GitHub リポジトリ](https://gist.github.com/adamawolf/3048717)で、[デバイスの種類] 列の下にある iOS/iPadOS モデル識別子を見つけることができます。<br>
+**[デバイス モデル]** 設定を使用するには、iOS/iPadOS モデル識別子の一覧をセミコロンで区切って入力します。 これらの値では大文字と小文字が区別されません。 [デバイス モデル] 入力に関する Intune からの報告に加え、こちらの[サード パーティの GitHub リポジトリ](https://gist.github.com/adamawolf/3048717)で、iOS/iPadOS モデル識別子を見つけることができます。<br>
 入力例: *iPhone5,2;iPhone5,3*
 
 エンド ユーザー デバイスの Intune クライアントは、アプリケーション保護ポリシーに対して Intune で指定されている、デバイス モデルの文字列の単純一致に基づいてアクションを実行します。 一致は、デバイスの報告に完全に依存します。 ユーザー (IT 管理者) は、動作が意図したものであるか確認することを推奨されます。それには、さまざまなデバイスの製造元とモデルをベースとし、小規模なユーザー グループを対象として、この設定をテストします。 既定値は **[未構成]** です。<br>

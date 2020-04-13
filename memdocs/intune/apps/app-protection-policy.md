@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c57a201d71d3a8278499636c6ca794b437e11e9a
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 672c978a7e590e8e26f676733bd2903d3684e978
+ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083805"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80611735"
 ---
 # <a name="app-protection-policies-overview"></a>アプリ保護ポリシーの概要
 
@@ -135,7 +135,7 @@ MDM ソリューションに登録されていない BYOD デバイスでは、�
 
 [Intune SDK](../developer/app-sdk.md) と統合されているアプリや [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md) によってラップされているすべてのアプリは、Intune アプリ保護ポリシーを使用して管理できます。 これらのツールを使用して構築されている一般使用が可能な [Microsoft Intune による保護アプリ](apps-supported-intune-apps.md)の公式一覧を参照してください。
 
-Intune SDK 開発チームは、ネイティブの Android、iOS/iPadOS (Obj-C、Swift)、Xamarin、Xamarin.Forms、および Cordova プラットフォームを使ってビルドされたアプリに対するサポートを、積極的にテストして管理しています。 一部のお客様は、Intune SDK とその他のプラットフォーム (React Native や NativeScript など) の統合に成功されていますが、Microsoft では、サポートされているプラットフォーム以外を使うアプリ開発者に向けた明示的なガイダンスやプラグインは提供されません。
+Intune SDK 開発チームは、ネイティブの Android、iOS/iPadOS (Obj-C、Swift)、Xamarin、および Xamarin.Forms プラットフォームを使ってビルドされたアプリに対するサポートを、積極的にテストして管理しています。 一部のお客様は、Intune SDK とその他のプラットフォーム (React Native や NativeScript など) の統合に成功されていますが、Microsoft では、サポートされているプラットフォーム以外を使うアプリ開発者に向けた明示的なガイダンスやプラグインは提供されません。
 
 [Intune SDK](../developer/app-sdk.md) では、ファースト パーティおよびサード パーティ両方のバージョンの SDK に対して、[Azure Active Directory 認証ライブラリ](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) による最新の高度な認証機能がいくつか利用されています。 そのため、[Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (MSAL) は、Intune App Protection サービスへの認証や条件付き起動などの主要なシナリオの多くで、正常に機能しません。 すべての Microsoft Office アプリについて MSAL に切り替えることが Microsoft の ID チームの全体的な指針であり、[Intune SDK](../developer/app-sdk.md) では最終的にそれがサポートされる必要がありますが、今のところその計画はありません。
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5937cd09a5224933004233b8d4efe8a0e47155f3
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 8f9212d275b17db6a40e3133b5363cd13c9d13d6
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359375"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551417"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>Intune で macOS カーネル拡張機能を追加する
 
@@ -68,6 +68,9 @@ Intune では、"構成プロファイル" を使用して、お客様の組織�
 >
 > - [配布の前にアプリを公証する](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (Apple の Web サイトが開きます) 
 > - [macOS High Sierra のカーネル機能拡張の変更点について準備を進める](https://support.apple.com/en-us/HT208019) (Apple の Web サイトが開きます)
+
+> [!NOTE]
+> Intune ユーザー インターフェイス (UI) は全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、この記事で説明する設定を作成または編集する際のワークフローが若干異なります。
 
 ## <a name="create-the-profile"></a>プロファイルの作成
 

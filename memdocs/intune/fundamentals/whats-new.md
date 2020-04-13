@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 677f85874ddf206b716e70a0cc6c659e10b99fef
-ms.sourcegitcommit: 6a6a713fc1090e03893d80f4259dc7300fb1d5ff
+ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438809"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808216"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
@@ -55,14 +55,29 @@ ms.locfileid: "80438809"
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-april-6-2020"></a>2020 年 4 月 6 日の週
+
+#### <a name="new-shell-script-settings-for-macos-devices---6884363---"></a>macOS デバイス向けの新しいシェル スクリプト設定<!-- 6884363 -->
+macOS デバイス向けのシェル スクリプトを構成するときに、次の新しい設定を構成できるようになりました。 
+- デバイスでスクリプトの通知を非表示にする
+- スクリプトの頻度
+- スクリプトが失敗した場合の再試行回数の最大値
+
+詳細については、「[Intune で macOS デバイスに対してシェル スクリプトを使用する](../apps/macos-shell-scripts.md)」を参照してください。
+
+<!-- ########################## -->
 ## <a name="week-of-march-30-2020"></a>2020 年 3 月 30 日の週
 
 ### <a name="new-url-for-the-microsoft-endpoint-manager-admin-center---3704810---"></a>Microsoft Endpoint Manager admin center の新しい URL<!-- 3704810 -->
 昨年の Ignite での Microsoft エンドポイント マネージャーの発表に合わせて、Microsoft Endpoint Manager admin center (旧称 Microsoft 365 デバイス管理) の URL を [https://endpoint.microsoft.com](https://endpoint.microsoft.com) に変更しました。 古い管理センターの URL ([https://devicemanagement.microsoft.com](https://devicemanagement.microsoft.com)) は引き続き機能しますが、新しい URL を使用して Microsoft Endpoint Manager admin center へのアクセスを開始することをお勧めします。
 
-詳細については、「[Microsoft Endpoint Manager admin center を使用して IT タスクを簡略化する](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center)」を参照してください。
+詳細については、「[Microsoft Endpoint Manager admin center を使用して IT タスクを簡略化する](what-is-device-management.md#simplify-it-tasks-using-the-device-management-admin-center)」を参照してください。  
 
-### <a name="app-management"></a>アプリ管理
+
+### <a name="app-management"></a>アプリ管理  
+
+#### <a name="company-portal-for-ios-supports-landscape-mode--6048329-wnready---"></a>iOS 用ポータル サイトでの横向きモードのサポート<!--6048329 wnready -->   
+ユーザーは、好みの画面の向きを使用して、デバイスを登録したり、アプリを検索したり、IT サポートを受けたりできるようになりました。 ユーザーが縦向きモードで画面をロックしない限り、アプリでは画面を縦向きまたは横向きモードに合わせて自動的に検出して調整します。  
 
 #### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>macOS デバイスのスクリプト サポート (パブリック プレビュー)<!-- 4280361 wnready -->
 macOS デバイスにスクリプトを追加して展開できます。 このサポートにより、macOS デバイスを構成する機能が拡張され、macOS デバイスでネイティブの MDM 機能を使用してできること以上のことが可能になります。 詳細については、「[Intune で macOS デバイスに対してシェル スクリプトを使用する](../apps/macos-shell-scripts.md)」を参照してください。
@@ -71,6 +86,9 @@ macOS デバイスにスクリプトを追加して展開できます。 この�
 ## <a name="week-of-march-24-2020"></a>2020 年 3 月 24 日の週
 
 ### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Android および Android Enterprise デバイスでデバイス制限プロファイルを作成するときのユーザー インターフェイス エクスペリエンスの向上<!-- 5841361 -->
+
+> [!NOTE] 
+> Intune ユーザー インターフェイスは全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、設定を作成または編集する際のワークフローが若干異なります。
 
 Android または Android Enterprise デバイス用のプロファイルを作成するときの、Endpoint Management 管理センターのエクスペリエンスが更新されます。 この変更は、次のデバイス構成プロファイルに影響します ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  > **プラットフォームの [Android デバイス管理者]** または **[Android Enterprise]** )。
 
@@ -82,6 +100,9 @@ Android または Android Enterprise デバイス用のプロファイルを作�
 
 ### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>iOS/iPadOS および macOS デバイスで構成プロファイルを作成するときのユーザー インターフェイス エクスペリエンスの向上<!-- 5569002 5568997 -->
 
+> [!NOTE]
+> Intune ユーザー インターフェイスは全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、設定を作成または編集する際のワークフローが若干異なります。
+
 iOS または macOS デバイス用のプロファイルを作成するときの、エンドポイント管理センターのエクスペリエンスが更新されます。 この変更は、次のデバイス構成プロファイルに影響します ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  プラットフォームの **[iOS/iPadOS]** または **[macOS]** ):
 
 - カスタム: iOS/iPadOS、macOS
@@ -92,6 +113,9 @@ iOS または macOS デバイス用のプロファイルを作成するときの
 - 設定ファイル: macOS
 
 ### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>macOS デバイスのデバイス機能でユーザー構成設定を非表示にする<!-- 6524869 -->
+
+> [!NOTE]
+> この変更は、今後数週間にわたってすべてのお客様にロールアウトされます。
 
 macOS デバイスでデバイス機能の構成プロファイルを作成するときに、新しい設定 **[ユーザーの構成を非表示にします]** があります ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  プラットフォームに **[macOS]** > プロファイルに **[デバイスの機能]** > **[ログイン項目]** )。
 
@@ -187,6 +211,10 @@ iOS/iPadOS デバイス上に、デバイスの制限プロファイルを作成
 トラブルシューティング ブレードでの保留中の MAM ポリシーの通知アイコンが、情報アイコンに変更されました。
 
 ####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>コンプライアンス ポリシーを構成するときの UI の更新<!-- 3961639    -->
+
+> [!NOTE]
+> Intune ユーザー インターフェイスは全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、設定を作成または編集する際のワークフローが若干異なります。
+
 Microsoft Endpoint Manager で[コンプライアンス ポリシーを作成する](../protect/create-compliance-policy.md#create-the-policy)ための UI が更新されました ( **[デバイス]**  >  **[コンプライアンス ポリシー]**  >  **[ポリシー]**  >  **[ポリシーの作成]** )。 以前に使用していたのと同じ設定と詳細情報を含む新しいユーザー エクスペリエンスが提供されます。 新しいエクスペリエンスでは、ウィザードのようなプロセスに従ってコンプライアンス ポリシーを作成することができ、ポリシーの *[割り当て]* を追加できるページと、ポリシーを作成する前に構成を確認できる *[確認および作成]* ページが含まれます。
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>非準拠デバイスをインベントリから削除する<!-- 1827291       -->

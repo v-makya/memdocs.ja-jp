@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c96de75557a4817f4e5f034689faecf7374cfe3f
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359428"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551360"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Intune でカスタム設定を持つプロファイルを作成する
 
@@ -31,6 +31,9 @@ Microsoft Intune には、デバイスのさまざまな機能を制御する多
 構成プロファイルの詳細については、「[Microsoft Intune のデバイス プロファイルとは](device-profiles.md)」をご覧ください。
 
 この記事では、Android デバイス管理者、Android Enterprise、iOS/iPadOS、macOS、Windows 用のカスタム プロファイルを作成する方法について説明します。 さまざまなプラットフォームで使用できるすべての設定を確認することもできます。
+
+> [!NOTE]
+> Intune ユーザー インターフェイス (UI) は全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、この記事で説明する設定を作成または編集する際のワークフローが若干異なります。
 
 ## <a name="create-the-profile"></a>プロファイルの作成
 

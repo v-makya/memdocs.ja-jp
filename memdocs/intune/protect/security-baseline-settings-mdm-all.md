@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 388630712b398ef82e78e55efa63418e95187681
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 5b40ed9dff0d83639015e70889bf7008e8e68173
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79351189"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696487"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Intune 用の Windows MDM セキュリティ ベースラインの設定
 
@@ -1583,6 +1583,9 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 ::: zone pivot="mdm-may-2019"
 
 - **[子プロセスでの Adobe Reader の起動]** :  
+このルールでは、Adobe Reader による追加のプロセス作成をブロックすることで攻撃を防ぎます。 マルウェアは、ソーシャル エンジニアリングまたは悪用によって、追加のペイロードをダウンロードして起動し、Adobe Reader から抜け出すことができます。 Adobe Reader による子プロセスの生成をブロックすることで、それをベクトルとして使用しようとしているマルウェアの拡散を防ぎます。
+[詳細情報](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+
   **既定値**:[ウェイクアップ時間 (デスクトップ コンピューター)] を有効にして、デスクトップ コンピューターが、スケジュールされた更新またはソフトウェアのインストールを実行するために、スリープ状態または休止状態から復帰する時刻を指定します。
 
 ::: zone-end
@@ -2162,3 +2165,9 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 - **PIN に大文字が必要**
 
 ::: zone-end
+
+## <a name="next-steps"></a>次のステップ
+
+- [セキュリティ ベースラインに関する詳細](security-baselines.md)
+- [競合を回避する](security-baselines.md#avoid-conflicts)
+- [Intune でのポリシーとプロファイルのトラブルシューティング](../configuration/troubleshoot-policies-in-microsoft-intune.md)

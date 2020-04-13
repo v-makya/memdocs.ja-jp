@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19660a8b2dc6b804a1ee1a1eaf407261ca9af2b1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327233"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696551"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Apple School Manager での iOS/iPadOS デバイス登録の設定
 
@@ -38,7 +38,6 @@ Apple School Manager 登録を、[Apple の Device Enrollment Program](device-en
 **必要条件**
 - [Apple モバイル デバイス管理 (MDM) プッシュ証明書](apple-mdm-push-certificate-get.md)
 - [MDM 機関](../fundamentals/mdm-authority-set.md)
-- [Apple MDM プッシュ証明書](apple-mdm-push-certificate-get.md)
 - ADFS を使用している場合、ユーザー アフィニティには [WS-Trust 1.3 Username/Mixed エンドポイント](https://technet.microsoft.com/library/adfs2-help-endpoints)が必要です。 [詳細については、こちらを参照してください](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。
 - [Apple School Management](http://school.apple.com) プログラムで購入されたデバイス
 
@@ -120,7 +119,7 @@ Apple School Manager で企業所有の iOS/iPadOS デバイスを登録する�
 
 8. 管理された Apple ID を使用して、複数のユーザーが登録済みの iPad にサインオンすることを許可できます。 これを行うには、 **[共有 iPad]** で **[はい]** を選択します (このオプションを使用するには、 **[ユーザー アフィニティなしで登録する]** と **[監視下]** モードで **[はい]** が設定されている必要があります。)管理された Apple ID は、Apple School Manager ポータルで作成されます。 [共有 iPad](../fundamentals/education-settings-configure-ios-shared.md) と [Apple の共有 iPad の要件](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56)についての詳細をご覧ください。
 
-9. このプロファイルを使用するデバイスを**コンピューターと同期**できるようにするかどうかを選択します。 **[証明書による Apple Configurator の許可]** を選択した場合は、 **[Apple Configurator の証明書]** で証明書を選択する必要があります。
+9. このプロファイルを使用するデバイスを**コンピューターと同期**できるようにするかどうかを選択します。 **[すべて拒否]** を選択すると、このプロファイルを使用しているすべてのデバイスでは、どのコンピューターのどのデータとも同期できなくなります。 **[証明書による Apple Configurator の許可]** を選択した場合は、 **[Apple Configurator の証明書]** で証明書を選択する必要があります。
 
 10. 前の手順で **[証明書による Apple Configurator の許可]** を選択した場合は、インポートする Apple Configurator の証明書を選択します。
 

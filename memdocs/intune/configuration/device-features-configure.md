@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30bf5ba078029e35988d3531ee510d9db6c6cdb8
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: cb8d5b53e136ea22d1edbad7755e198fd4155285
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359483"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551404"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Intune での iOS、iPadOS、または macOS デバイスの機能設定の追加
 
@@ -37,6 +37,9 @@ Intune には、管理者が iOS、iPadOS、macOS デバイスを制御するた
 Intune では、"構成プロファイル" を使用して、お客様の組織のニーズに合わせてこのような設定を作成およびカスタマイズします。 これらの機能をプロファイルに追加した後は、そのプロファイルをお客様の組織内の iOS/iPadOS および macOS デバイスにプッシュまたは展開します。
 
 この記事では、構成できるさまざまな機能について説明し、デバイス構成プロファイルを作成する方法を示します。 また、[iOS/iPadOS](ios-device-features-settings.md) および [macOS](macos-device-features-settings.md) デバイスで使用できるすべての設定を確認することもできます。
+
+> [!NOTE]
+> Intune ユーザー インターフェイス (UI) は全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、この記事で説明する設定を作成または編集する際のワークフローが若干異なります。
 
 ## <a name="airprint"></a>AirPrint
 

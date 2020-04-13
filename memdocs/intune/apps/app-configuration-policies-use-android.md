@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 691da0c74ceddb34a48bfdf01e19dadaed444e45
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.openlocfilehash: 2e5a9db094163bcf4f987b881c83d98be655acfd
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80233469"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808092"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>マネージド Android Enterprise デバイス用にアプリ構成ポリシーを追加する
 
@@ -47,7 +47,7 @@ Microsoft Intune でのアプリ構成ポリシーによって、マネージド
 8. **[追加]** をクリックして **[アクセス許可の追加]** ペインを表示しします。
 9. 上書きするアクセス許可をクリックします。 付与するアクセス許可により、選択したアプリの "既定のアプリのアクセス許可" ポリシーがオーバーライドされます。
 10. 各アクセス許可に対して **[アクセス許可の状態]** を設定します。 **[プロンプト]** 、 **[自動許可]** 、または **[自動拒否]** から選択できます。 アクセス許可の詳細については、「[Intune を使用してデバイスを準拠または非準拠としてマークするための Android エンタープライズ設定](../protect/compliance-policy-create-android-for-work.md)」を参照してください。
-11. ドロップダウン ボックスで、 **[構成設定の形式]** を選択します。 次のいずれかの方法を選択して、構成情報を追加します。
+11. マネージド アプリで構成設定がサポートされている場合は、ドロップダウン ボックスで **[構成設定の形式]** を選択します。 次のいずれかの方法を選択して、構成情報を追加します。
     - **構成デザイナーを使用する**
     - **JSON データの入力**<br><br>
     構成デザイナーの使用の詳細については、「[構成デザイナーの使用](#use-the-configuration-designer)」を参照してください。 XML データの入力の詳細については、「[JSON データの入力](#enter-json-data)」を参照してください。

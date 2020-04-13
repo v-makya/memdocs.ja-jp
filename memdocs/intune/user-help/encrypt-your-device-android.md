@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 03/31/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,63 +15,79 @@ ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: arnab
+ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ee2d220e308b406251f049e1c17422f89ee36534
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: d9e074def368927504c3f3c1761ec21b3ab62d22
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348784"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696275"
 ---
 # <a name="encrypting-your-android-device"></a>Android デバイスの暗号化
 
-デバイスを暗号化すると、デバイスをなくしたり盗まれたりした場合に、ファイルとフォルダーが不正アクセスから保護されます。 デバイスの暗号化を有効にすると、正しいパスワードまたは PIN を持つユーザーのみが、デバイスにサインインできるようになります。 
+デバイスを暗号化すると、デバイスをなくしたり盗まれたりした場合に、ファイルとフォルダーが不正アクセスから保護されます。 これにより、パスコードを持たない人物がデバイス上のデータにアクセスしたり、読み取ったりできなくなります。 
 
-学校や職場のリソースにアクセスするための前提条件として、Android デバイスの暗号化が組織で要求されている場合があります。 一部の新しい Android デバイスは、何もしなくても既定で暗号化されます。  
+学校や職場のリソースにアクセスするための前提条件として、組織から次を求められる場合があります。
 
-## <a name="turn-on-encryption"></a>暗号化を有効にする
-
-Intune ポータル サイトまたは Microsoft Intune アプリで、デバイスの暗号化を求められた場合は、次の手順のようにします。 
+* [デバイスを暗号化する](#encrypt-device)
+* [安全な起動を有効にする](#enable-secure-startup)
+* [スタートアップ パスコード、PIN、またはその他の認証方法を設定する](#set-startup-passcode)  
 
 > [!Note]
-> Huawei、Vivo、OPPO 製の特定の Android デバイスは暗号化できません。 詳細については、[こちら](your-device-appears-encrypted-but-cp-says-otherwise-android.md)を参照してください。  
+> Huawei、Vivo、OPPO 製の特定の Android デバイスは暗号化できません。 詳細については、「[デバイスの暗号化がアプリに認識されない](your-device-appears-encrypted-but-cp-says-otherwise-android.md)」をご覧ください。  
 
-1. デバイスの画面のロックを設定します。  
-    」を参照します。 **[設定]**  >  **[ロック画面とセキュリティ]**  >  **[Screen lock type]\(画面のロックの種類\)** に移動します。  
-    b. **[暗証番号 (PIN)]** 、 **[パスワード]** 、 **[パターン]** のいずれかを選択します。  
-    c. 表示される指示に従って、画面のロックを構成します。  
+## <a name="encrypt-device"></a>デバイスの暗号化
 
-2. **[Lock screen and security]\(ロック画面とセキュリティ\)** に戻り、 **[Secure startup]\(安全なスタートアップ\)** を選択します。
-3. **[Require PIN when device turns on]\(デバイスの電源をオンにするときに PIN を要求する\)**  >  **[OK]** を選択 ます。
-4. PIN を入力して確認し、デバイスを暗号化します。
-5. Intune ポータル サイトまたは Microsoft Intune アプリを開きます。
+デバイスを暗号化するには、次の手順に従います。 デバイスが数回再起動される場合があります。 
+
+暗号化オプションに関する名前と場所は、お使いのデバイスの製造元と Android のバージョンによって異なります。 
+
+1. **[設定]** アプリを開きます。
+2. アプリの検索バーに「**セキュリティ**」または「**暗号化**」と入力し、関連する設定を検索します。
+3. デバイスを暗号化するオプションをタップします。 画面の指示に従います。  
+4. プロンプトが表示されたら、ロック画面のパスワード、PIN、またはその他の認証方法 (組織で許可されている場合) を設定してください。 
+5. 設定を再確認するには、ポータル サイトまたは Microsoft Intune アプリを開きます。
+    * ポータル サイトのユーザー:デバイスを選択し、 **[デバイス設定の確認]** をタップします。 
+    * Microsoft Intune のユーザー: ページが更新されるまで待つ必要がありますが、更新されると、暗号化の状態が準拠に変わっているはずです。 
+
+## <a name="enable-secure-startup"></a>安全な起動を有効にする
+
+暗号化ポリシーの一環として、安全な起動を有効にするように組織から求められる場合があります。 この機能を使用すると、電話を起動する前にパスワードまたは PIN の入力を要求することで、デバイスをさらに保護することができます。 さらなる認証オプションを利用できる場合もありますが、それらは組織で何が許可されているかによって異なります。 
+
+安全な起動オプションに関する名前と場所は、お使いのデバイスの製造元と Android のバージョンによって異なります。 一部のデバイス上では、この設定は **[Strong protection]\(強力な保護\)** と呼ばれる場合があります。 
+
+1. **[設定]** アプリを開きます。
+2. アプリの検索バーに「**安全な起動**」と入力します。
+3. **[安全な起動]**  >  **[Require PIN when device turns on]\(デバイスの電源をオンにするときに PIN を要求する\)** の順にタップします。
+4. プロンプトが表示されたら、お使いのデバイスの PIN を入力します。   
+5. 設定を再確認するには、ポータル サイトまたは Microsoft Intune アプリを開きます。
     * ポータル サイトのユーザー:デバイスを選択し、 **[デバイス設定の確認]** をタップします。 
     * Microsoft Intune のユーザー: ページが更新されるまで待つ必要がありますが、更新されると、暗号化の状態が準拠に変わっているはずです。  
 
-Android 4.4 以前が実行されているデバイスには、 **[Secure startup]\(安全なスタートアップ\)** オプションがない可能性があります。 その場合は、次の手順のようにしてデバイスを暗号化します。
 
-1. **[Settings]\(設定\)**  >  **[Security]\(セキュリティ\)**  >  **[Encrypt Device]\(デバイスの暗号化\)** に移動します。 表示されるラベルは、Android デバイスによって異なります。 **[Encrypt Device]\(デバイスの暗号化\)** オプションが表示されない場合は、以下の場所を調べます。
-    * **[Storage]\(ストレージ\)**  >  **[Storage encryption]\(ストレージの暗号化\)**
-    * **[Storage]\(ストレージ\)**  >  **[Lock screen and security]\(ロック画面とセキュリティ\)**  >  **[Other security settings]\(その他のセキュリティ設定\)** 
+## <a name="set-startup-passcode"></a>スタートアップ パスコードを設定する   
+[デバイスの暗号化](#encrypt-device)と[安全な起動の有効化](#enable-secure-startup)を行うと、デバイスの PIN、パスワード、またはその他の認証方法 (組織で許可されている場合) を設定するように求められます。 必要な手順はこれで終了です。 
 
-2. 画面の指示に従います。 暗号化中、デバイスが何度か再起動する可能性があります。
-3. Intune ポータル サイトまたは Microsoft Intune アプリを開きます。
-    * ポータル サイトのユーザー:デバイスを選択し、 **[デバイス設定の確認]** をタップします。  
-    * Microsoft Intune のユーザー: ページが更新されるまで待つ必要がありますが、更新されると、暗号化の状態が準拠に変わっているはずです。
+ロック画面の種類を選択または変更するには:
 
-## <a name="troubleshoot"></a>トラブルシューティング  
-**問題**:デバイスを既に暗号化してあるのに、次のようになります
+1. **[設定]** アプリを開きます。
+2. アプリの検索バーに「**画面のロック**」と入力します。
+3. **[Screen lock type]\(画面のロックの種類\)** をタップします。
+4. 使用する画面のロックの種類をタップし、画面上の指示に従って確認します。  
 
-- 暗号化ボタンが無効です。
-- 暗号化が必要であるというメッセージが引き続き表示されます。
-- Intune ポータル サイトまたは Microsoft Intune アプリを使用しようとすると、エラーが表示されます。
+## <a name="troubleshoot"></a>トラブルシューティング    
+**問題**:暗号化ボタンが無効です。   
 
-**対処方法**
+**やってみること**: 
+* デバイスが完全に充電され、電源に接続されていることを確認します。 暗号化には時間がかかる場合があるため、完全なバッテリが必要です。   
 
-- デバイスが課金され、接続されていることを確認します。  
-- デバイスで PIN やパスワードが設定されていることを確認します。  
+**問題**:デバイスの暗号化が必要であるというメッセージが引き続き表示されます。  
+
+**対処方法**:
+   *  デバイスで[ロック画面を設定](#set-startup-passcode)します。 
+   * [安全な起動を有効にします](#enable-secure-startup)。
 
 サポートが必要な場合は、 会社のサポートに問い合わせるか (連絡先情報については[ポータル Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください)、または <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">Microsoft Android チーム</a>にご連絡ください。  

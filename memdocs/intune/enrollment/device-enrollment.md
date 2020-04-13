@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f91b71d96c936e9808973df145862654f0e516a
-ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
+ms.openlocfilehash: e3636314ee21823b76a09120f92aca45965437d3
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256642"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808198"
 ---
 # <a name="what-is-device-enrollment"></a>デバイス登録とは
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -77,7 +77,7 @@ Intune では、従業員のデバイスやアプリ、従業員が会社のデ�
 |**Android のデバイス管理**|**(事前に宣言されている IMEI または SN) ポータル サイトからユーザーが開始**| いいえ | はい | いいえ | [詳細情報](corporate-identifiers-add.md)|
 |**Zebra モビリティ拡張が装備された Android デバイス管理**|**ポータル サイトからユーザーまたは[DEM](#device-enrollment-manager) が開始**| いいえ | ユーザーが開始した場合は [はい]、[DEM](#device-enrollment-manager) が開始した場合は [いいえ] | いいえ | [詳細情報](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise 専用**|**NFC、トークン、QR コード、ゼロ タッチ**| はい | いいえ | ポリシーで構成可能 | [詳細情報](android-kiosk-enroll.md)|
-|**Android Enterprise フル マネージド**|**NFC、トークン、QR コード、ゼロ タッチ**| はい | はい | ポリシーで構成可能 | [詳細情報](android-dedicated-devices-fully-managed-enroll.md)|
+|**Android Enterprise フル マネージド**|**NFC、トークン、QR コード、ゼロ タッチ**| はい | はい ([DEM](device-enrollment.md#device-enrollment-manager) が開始した場合は、いいえ) | ポリシーで構成可能 | [詳細情報](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device

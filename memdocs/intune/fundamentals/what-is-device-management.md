@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 756d835a54a9b020be50a83d95d1925334fda8f1
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326645"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696460"
 ---
 # <a name="device-management-overview"></a>デバイス管理の概要
 
@@ -76,7 +76,7 @@ Intune の詳細については、[Intune の概要](what-is-intune.md)に関す
 
 デバイス管理にアプローチする方法はいくつかあります。 1 つ目は、Intune に組み込まれている機能を使用してデバイスのさまざまな側面を管理できます。 このアプローチは、**モバイル デバイス管理 (MDM)** と呼ばれます。 ユーザーは自分のデバイスを "登録" し、証明書を使用して Intune と通信します。 IT 管理者は、デバイス上のアプリをプッシュする、デバイスを特定のオペレーティング システムに限定する、個人のデバイスをブロックするなどを行います。 デバイスの紛失や盗難時は、デバイスからすべてのデータを削除することもできます。
 
-2 つ目のアプローチとして、デバイス上のアプリを管理します。 このアプローチは、**モバイル アプリケーション管理 (MAM)** と呼ばれます。 ユーザーは、個人のデバイスを使用して組織のリソースにアクセスにできます。 電子メールや SharePoint などのアプリを開くときに、ユーザーは追加の認証を求められます。 デバイスの紛失や盗難時には、デバイスからすべての組織のデータを削除できます。
+2 つ目のアプローチとして、デバイス上のアプリを管理します。 このアプローチは、**モバイル アプリケーション管理 (MAM)** と呼ばれます。 ユーザーは、個人のデバイスを使用して組織のリソースにアクセスにできます。 電子メールや SharePoint などのアプリを開くときに、ユーザーは追加の認証を求められます。 デバイスが紛失したり盗難にあった場合は、Intune マネージド アプリケーションからすべての組織のデータを削除できます。
 
 [MDM と MAM](byod-technology-decisions.md) を組み合わせて使用することもできます。
 

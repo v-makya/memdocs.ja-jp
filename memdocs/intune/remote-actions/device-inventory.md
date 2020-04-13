@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 03/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5f32ffb864f40d8cb5402f7d4488b3870686d1a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ed5ff548d28a5bc973c43c84861b9b256b41a203
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322515"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696280"
 ---
 # <a name="see-device-details-in-intune"></a>Intune でデバイスの詳細を確認する
 
@@ -48,13 +48,19 @@ ms.locfileid: "80322515"
       - [Autopilot リセット](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (Windows のみ)
       - [クイック スキャン](../configuration/device-restrictions-windows-10.md) (Windows 10 のみ)
       - [フル スキャン](../configuration/device-restrictions-windows-10.md) (Windows 10 のみ)
-       - [デバイス名の変更](device-rename.md)
-      - リモート アシスタンス セッションの開始
+      - Windows Defender のセキュリティ インテリジェンスの更新
+      - [BitLocker キーの交換](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [デバイス名の変更](device-rename.md)
+      - [新しいリモート アシスタンス セッション](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
    - **[プロパティ]** を使用して、[作成するデバイス カテゴリ](../enrollment/device-group-mapping.md)を割り当て、デバイスの所有権を個人のデバイス、または会社のデバイスに変更します。
    - **[ハードウェア]** には、デバイス ID、オペレーティング システムおよびバージョン、記憶域などの詳細に関して、多くの詳しい情報が含まれます。
    - **[検出されたアプリ]** には、Intune でデバイスにインストールされていると判断されたすべてのアプリと、アプリのバージョンが一覧表示されます。 詳細については、「[Intune discovered apps (Intune で検出されたアプリ)](../apps/app-discovered-apps.md)」を参照してください。
    - **[デバイスのポリシー準拠]** には、割り当てられているコンプライアンス ポリシーがすべて一覧表示され、デバイスがポリシーに準拠しているかどうかが示されます。
    - **[デバイス構成]** には、デバイスに割り当てられているデバイス構成ポリシーがすべて表示され、ポリシーが成功したか失敗したかが示されます。
+   - **アプリ構成** 
+   - **エンドポイントのセキュリティ構成**
+   - **[回復キー]** には、デバイスに対して見つかった使用可能な BitLocker キーが表示されます
+   - **[マネージド アプリ]** には、Intune によって構成され、デバイスに展開されているすべてのマネージド アプリが一覧表示されます。 
 
 ## <a name="hardware-device-details"></a>ハードウェア デバイスの詳細
 デバイスで使用される通信事業者によっては、一部の詳細が収集されない場合があります

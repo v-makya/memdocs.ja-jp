@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba5aebca04a93198e7694d52085225284c88027c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: a6855abaf09a89303bfadd1a973dd1e1761346af
+ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325010"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624899"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Intune を使ってマネージド Google Play アプリを Android Enterprise デバイスに追加する
 
@@ -224,6 +224,8 @@ Android エンタープライズ仕事用プロファイル デバイスに展�
 
 > [!NOTE]
 > アプリが承認されていなくても、マネージド Google Play ストアから削除されていても、Intune クライアント アプリの一覧から削除されることはありません。 それにより、アプリが承認されていない場合でも、アンインストール ポリシーの対象をユーザーに設定できます。
+> 
+> Android Enterprise の登録と管理を無効にするには、「[Android Enterprise 管理者アカウントの接続を解除する](../enrollment/connect-intune-android-enterprise.md#disconnect-your-android-enterprise-administrative-account)」をご覧ください。
 
 ## <a name="android-enterprise-system-apps"></a>Android エンタープライズ システム アプリ
 

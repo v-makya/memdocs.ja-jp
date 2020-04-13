@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd6956a9bdb19f25e39dd8cfb8e7e685d60f7b8c
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 635804a9ad5cd76d104f16bcd204df1daa28b114
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80083554"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696498"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>アプリ保護ポリシーを使用するデータ保護フレームワーク 
 
@@ -62,6 +62,9 @@ Edge と URL *about:Intunehelp* を使用して、各アプリに対する個々
 次のアプリ保護ポリシーの設定を、該当するアプリに対して有効にし、すべてのモバイル ユーザーに割り当てる必要があります。 各ポリシー設定について詳しくは、「[iOS アプリ保護ポリシー設定](app-protection-policy-settings-ios.md)」と「[Android アプリ保護ポリシー設定](app-protection-policy-settings-android.md)」をご覧ください。
 
 使用シナリオを確認して分類してから、そのレベルの規範的なガイダンスを使用してユーザーを構成することをお勧めします。 どのようなフレームワークでも同じように、データ保護では脅威環境、リスク選好度、使いやすさに与える影響を評価する必要があるため、対応するレベルでの設定を、組織のニーズに基づいて調整する必要があります。  
+
+### <a name="conditional-access-policies"></a>条件付きアクセス ポリシー
+アプリ保護ポリシーをサポートしているアプリのみが職場または学校アカウントのデータにアクセスできるようにするには、Azure Active Directory の条件付きアクセス ポリシーが必要です。 次を参照してください: 「**シナリオ 1:Office 365 アプリで、承認済みアプリとアプリ保護ポリシーの使用を必須にする**」([条件付きアクセスを使用してクラウド アプリへのアクセスにアプリ保護ポリシーを必須にする方法](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)に関する記事)。この特定のポリシーを実装する手順が記載されています。
 
 ### <a name="apps-to-include-in-the-app-protection-policies"></a>アプリ保護ポリシーに含めるアプリ  
 

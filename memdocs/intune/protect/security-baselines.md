@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c810b6caa47596967cf9e1f2ad4cb3f772064f30
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488069"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551684"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Intune でのセキュリティ ベースラインを使用した Windows 10 デバイスの構成
 
@@ -62,11 +62,20 @@ Intune コンソールでは、各ベースラインのタイルに、ベース�
 
 指定したプロファイルで使用されているベースラインの[バージョンを変更する](#change-the-baseline-version-for-a-profile)こともできます。 つまり、新しいバージョンが登場したとき、それを活用するために新しいベースラインのプロファイルを作成する必要はありません。 代わりに、準備ができたら、ベースラインのプロファイルを選択して、そのプロファイルのインスタンスのバージョンを新しいものに変更する、組み込みオプションを使うことができます。
 
+## <a name="avoid-conflicts"></a>競合を回避する
+
+お使いの Intune 環境で、1 つ以上の使用可能なベースラインを同時に使用することができます。 また、同じセキュリティ ベースラインの、カスタマイズが異なる複数のインスタンスを使用することもできます。
+
+複数のセキュリティ ベースラインを使用するときは、それぞれの設定を確認し、異なるベースライン構成によって同じ設定に対して競合する値が発生する場合を特定してください。 異なる目的のために設計された複数のセキュリティ ベースラインを展開したり、同じベースラインのカスタマイズされた設定を含む複数のインスタンスを展開したりすることができます。そのため、調査して解決する必要のある、デバイスに対して競合した構成を作成する可能性があります。
+
+また、セキュリティ ベースラインでは、[デバイス構成プロファイル](../configuration/device-profiles.md)またはその他の種類のポリシーを使用して設定する場合がある同じ設定を管理することがよくあります。 したがって、競合を回避または解決する必要がある場合は、設定のための追加のポリシーおよびプロファイルに注意し、これを検討してください。
+
+次のリンク先の情報を使用して、競合の特定と解決にお役立てください。
+
+- [Intune でのポリシーとプロファイルのトラブルシューティング](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+- [セキュリティ ベースラインの監視](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
+
 ## <a name="available-security-baselines"></a>使用可能なセキュリティ ベースライン
-
- お使いの Intune 環境で、1 つ以上の使用可能なベースラインを同時に使用することができます。 また、同じセキュリティ ベースラインの、カスタマイズが異なる複数のインスタンスを使用することもできます。
-
-複数のセキュリティ ベースラインを使用するときは、それぞれの設定を確認し、同じ設定に対して異なるベースラインで競合する値が発生する場合を特定します。 異なる目的のために設計された複数のセキュリティ ベースラインを展開したり、同じベースラインのカスタマイズされた設定を含む複数のインスタンスを展開したりすることができます。そのため、[調査して解決する必要のある、デバイスに対して競合した](security-baselines-monitor.md#troubleshoot-using-per-setting-status)構成を作成する可能性があります。  また、[デバイス構成プロファイル](../configuration/device-profiles.md)にも注意してください。これを使って、セキュリティ ベースラインと同じ設定の多くを構成できます。
 
 Intune では、次のセキュリティ ベースラインのインスタンスを使用できます。 リンクを使用して、各ベースラインの最新インスタンスに関する設定を確認してください。
 

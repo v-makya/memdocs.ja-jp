@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59ec9f899991e63b9a652e55e3253a07dee0cc15
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 7a533344b72952098403fae0ebcabbcad473684a
+ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79361212"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80611723"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>MAM とアプリの保護に関してよく寄せられる質問
 
@@ -75,7 +75,7 @@ Intune アプリ保護ポリシーでは、[Intune アプリ SDK](../developer/a
 
 **Intune App Protection を備えたアプリを有効にしたいのですが、サポートされているアプリの開発プラットフォームが使われていない場合は、どうすればよいですか。**
 
-Intune SDK 開発チームは、ネイティブの Android、iOS/iPadOS (Obj-C、Swift)、Xamarin、Xamarin.Forms、および Cordova プラットフォームを使ってビルドされたアプリに対するサポートを、積極的にテストして管理しています。 一部のお客様は、Intune SDK とその他のプラットフォーム (React Native や NativeScript など) の統合に成功されていますが、Microsoft では、サポートされているプラットフォーム以外を使うアプリ開発者に向けた明示的なガイダンスやプラグインは提供されません。
+Intune SDK 開発チームは、ネイティブの Android、iOS/iPadOS (Obj-C、Swift)、Xamarin、および Xamarin.Forms プラットフォームを使ってビルドされたアプリに対するサポートを、積極的にテストして管理しています。 一部のお客様は、Intune SDK とその他のプラットフォーム (React Native や NativeScript など) の統合に成功されていますが、Microsoft では、サポートされているプラットフォーム以外を使うアプリ開発者に向けた明示的なガイダンスやプラグインは提供されません。
 
 **Intune APP SDK は、Microsoft 認証ライブラリ (MSAL) またはソーシャル アカウントをサポートしますか。**<br></br>
 Intune APP SDK は、ファーストパーティとサードパーティの両方のバージョンの SDK でいくつかの高度な ADAL 機能を使用します。 そのため、MSAL は、Intune アプリ保護サービスへの認証や条件付き起動などの主要なシナリオの多くで正常に機能しません。 すべての Microsoft Office アプリに対して MSAL に切り替えることが Microsoft の ID チームからの全体的なガイダンスであり、Intune SDK では最終的にそれがサポートされる必要がありますが、今のところ計画はありません。

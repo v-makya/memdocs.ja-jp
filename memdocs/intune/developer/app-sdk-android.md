@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/19/2020
+ms.date: 04/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,17 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 367a632b082ad5d58221f33ca9a191fb229f8f66
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 71d5efbf8b61c08e9a2edbc5312c61279571339e
+ms.sourcegitcommit: 9145a5b3b39c111993e8399a4333dd82d3fe413c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80086328"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80620565"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Android 用 Microsoft Intune アプリ SDK 開発者ガイド
 
 > [!NOTE]
 > まず、[Intune アプリ SDK の概要](app-sdk.md)に目を通すことをお勧めします。このガイドでは、SDK の最新機能と、サポートされる各プラットフォームで統合のための準備をする方法について説明しています。
+>
+> SDK をダウンロードするには、「[SDK ファイルをダウンロードする](../developer/app-sdk-get-started.md#download-the-sdk-files)」をご覧ください。
 
 Android 用 Microsoft Intune アプリ SDK を使用すると、ネイティブ Android アプリに Intune アプリ保護ポリシー (**APP** または MAM ポリシー) を組み込むことができます。 Intune の管理対象アプリケーションは、Intune App SDK に統合されています。 Intune で積極的にアプリを管理している場合、Intune 管理者は Intune の管理対象アプリにアプリ保護ポリシーを簡単に展開できます。
 

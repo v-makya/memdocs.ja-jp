@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 4071614c7cb93194eef00f49aa2e1759ba1028f6
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 6b5d0f88222c8d48da4f91ff3cf8d4628ccb179d
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359256"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551591"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Intune でエンドポイント保護設定を追加する
 
@@ -38,6 +38,9 @@ Intune でデバイスの構成プロファイルを使用し、次などのデ�
 
 - [macOS の設定](endpoint-protection-macos.md)
 - [Windows 10 の設定](endpoint-protection-windows-10.md)
+
+> [!NOTE]
+> Intune ユーザー インターフェイス (UI) は全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、この記事で説明する設定を作成または編集する際のワークフローが若干異なります。
 
 ## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>エンドポイント保護設定を含むデバイス プロファイルを作成する
 

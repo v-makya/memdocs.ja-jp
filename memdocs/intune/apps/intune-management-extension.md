@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d424163df07dbe6add74bbdab9ec36a7b220b655
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
+ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324224"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80808108"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Intune で Windows 10 デバイスに対して PowerShell スクリプトを使用する
 
@@ -31,6 +31,9 @@ Windows 10 デバイスで実行するために Intune に PowerShell スクリ�
 この機能は、以下に適用されます。
 
 - Windows 10 以降
+
+> [!NOTE]
+> Intune 管理拡張機能の前提条件が満たされると、PowerShell スクリプトまたは Win32 アプリがユーザーやデバイスに割り当てられたときに、Intune 管理拡張機能が自動的にインストールされます。 詳細については、Intune 管理拡張機能の[前提条件](../apps/intune-management-extension.md#prerequisites)を参照してください。
 
 ## <a name="move-to-modern-management"></a>最新の管理への移行
 
@@ -121,7 +124,34 @@ Intune 管理拡張機能には次の前提条件があります。 前提条件
 
 - エンド ユーザーは、PowerShell スクリプトを実行するためにデバイスにサインインする必要はありません。
 
-- Intune 管理拡張機能のクライアントでは、Intune で 1 時間ごと、および再起動のたびに、新しいスクリプトまたは変更がないか確認されます。 ポリシーを Azure AD グループに割り当てた後に、PowerShell スクリプトを実行すると、実行結果がレポートされます。 スクリプトは一度実行されると、スクリプトまたはポリシーに変更が発生するまで、再実行されません。
+- Intune 管理拡張機能のエージェントにより、Intune で 1 時間ごと、および再起動のたびに、新しいスクリプトまたは変更がないか確認されます。 ポリシーを Azure AD グループに割り当てた後に、PowerShell スクリプトを実行すると、実行結果がレポートされます。 スクリプトは一度実行されると、スクリプトまたはポリシーに変更が発生するまで、再実行されません。 スクリプトが失敗した場合、Intune 管理拡張機能エージェントでは、次の 3 つの連続する Intune 管理拡張機能エージェントのチェックインに対して、スクリプトの再試行が 3 回試行されます。
+
+### <a name="failure-to-run-script-example"></a>スクリプトの実行の失敗例
+午前 8 時
+  -  チェックイン
+  -  スクリプト **ConfigScript01** を実行
+  -  スクリプト失敗
+
+午前 9 時
+  -  チェックイン
+  -  スクリプト **ConfigScript01** を実行
+  -  スクリプト失敗 (再試行回数 = 1)
+
+午前 10 時
+  -  チェックイン
+  -  スクリプト **ConfigScript01** を実行
+  -  スクリプト失敗 (再試行回数 = 2)
+  
+午前 11 時
+  -  チェックイン
+  -  スクリプト **ConfigScript01** を実行
+  -  スクリプト失敗 (再試行回数 = 3)
+
+午後 12 時
+  -  チェックイン
+  - **ConfigScript01** スクリプトの実行のために、さらなる試行が行われることはありません。
+  - 今後、このスクリプトに対して追加の変更が行われない場合は、スクリプトを実行するための追加の試行は行われません。
+
 
 ## <a name="monitor-run-status"></a>実行状態を監視する
 

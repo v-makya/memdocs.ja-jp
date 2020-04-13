@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2020
+ms.date: 04/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f7118fbbf05c7793d93faf2aa4c9a4bb1af821c
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 53187f7795eee07a62a83c1fb17a289451b32ee2
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322612"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551661"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Microsoft Intune でセキュリティのベースラインとプロファイルを監視する
 
@@ -153,4 +153,8 @@ Windows 10 デバイスには、組み込みの MDM 診断情報レポートが�
 
 ## <a name="next-steps"></a>次のステップ
 
-[デバイス プロファイルを監視](../configuration/device-profile-monitor.md)し、[いくつかの一般的な問題と解決策を確認](../configuration/device-profile-troubleshoot.md)します。
+- [セキュリティ ベースラインに関する詳細](security-baselines.md)
+- [競合を回避する](security-baselines.md#avoid-conflicts)
+- [デバイス プロファイルを監視する](../configuration/device-profile-monitor.md) 
+- [よくある問題と解決策](../configuration/device-profile-troubleshoot.md)。
+- [Intune でのポリシーとプロファイルのトラブルシューティング](../configuration/troubleshoot-policies-in-microsoft-intune.md)

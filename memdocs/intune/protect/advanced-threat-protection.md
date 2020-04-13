@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7398ec523796dbbff5f01aee6ce69fe6e8ce13a
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 7c5528e5de99e599c968f0c006aa98545b2004e2
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323305"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551546"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Intune で条件付きアクセスによる Microsoft Defender ATP のコンプライアンスを強制する
 
@@ -35,6 +35,9 @@ Mobile Threat Defense ソリューションとして Microsoft Defender Advanced
 - **条件付きアクセス ポリシーを使用**して、ユーザーが非準拠のデバイスから企業リソースにアクセスできないようにします。
 
 Intune を Microsoft Defender ATP と統合する場合、ATP の脅威と脆弱性の管理 (TVM) を利用し、[Intune を使って TVM によって検出されたエンドポイントの脆弱性を修復](atp-manage-vulnerabilities.md)できます。
+
+> [!NOTE]
+> Intune ユーザー インターフェイス (UI) は全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、この記事で説明する設定を作成または編集する際のワークフローが若干異なります。
 
 ## <a name="example-of-using-microsoft-defender-atp-with-intune"></a>Intune で Microsoft Defender ATP を使用する例
 

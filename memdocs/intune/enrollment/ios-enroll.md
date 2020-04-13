@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7d7f35d6d6b11875c722d4969f5776040ca0dfc
-ms.sourcegitcommit: 71f26a0756fd40c1a06f885f3d31e49734fe97fe
+ms.openlocfilehash: 1f3964ec67c9c78e5aedc70ff4f328a66c59c04b
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80256455"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696525"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Intune に iOS/iPadOS デバイスを登録する
 
@@ -37,7 +37,7 @@ iOS/iPadOS デバイスを有効にする前に、次の手順を完了する必
 
 - [デバイスが Apple デバイス登録の対象であることを確認します](https://support.apple.com/en-us/HT204142#eligibility)。
 - [Intune のセットアップ](../fundamentals/setup-steps.md) - この手順で、Intune インフラストラクチャをセットアップします。 特に、デバイスの登録には [MDM 機関を設定する](../fundamentals/mdm-authority-set.md)必要があります。
-- [Apple MDM プッシュ通知証明書の取得](apple-mdm-push-certificate-get.md) - Apple では、iOiOS/iPadOS および macOS デバイスの管理を有効にするために証明書が必要です。
+- [Apple MDM プッシュ通知証明書の取得](apple-mdm-push-certificate-get.md) - Apple では、iOS/iPadOS および macOS デバイスの管理を有効にするために証明書が必要です。
 
 ## <a name="user-owned-iosipados-and-ipados-devices-byod"></a>ユーザー所有の iOS/iPadOS および iPadOS デバイス (BYOD)
 

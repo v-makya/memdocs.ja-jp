@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 04/01/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0f6efa6d026879a3231c21662e799bf8ba7ada09
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 0c9bf96188e27afeaf66e7b2897f8cda19f9df37
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337747"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551646"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Intune ポータル サイトでデバイスを登録する  
 自分個人または会社所有の Android デバイスを登録して、会社のメール、アプリ、データにアクセスします。 Intune ポータル サイトでは、Android 4.4 以降が実行されている Samsung Knox などの Android デバイスがサポートされています。  
@@ -35,7 +35,7 @@ ms.locfileid: "79337747"
 > Samsung KNOX は、ネイティブ Android に用意されている以外の追加保護のために特定の Samsung 製のデバイスで使用されるセキュリティの一種です。 Samsung KNOX デバイスかどうかを確認するには、 **[設定]**  >  **[About device]\(デバイス情報\)** を選択します。 そこに **[KNOX version]\(KNOX バージョン\)** と表示されない場合は、ネイティブ Android デバイスです。
 
 ## <a name="enroll-device"></a>デバイスを登録する  
-必ず、[無料の Intune ポータル サイト アプリを Google Play からインストール](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)します。 
+[Google Play から](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) Intune ポータル サイト アプリをインストールしてください。 中国大陸でアプリを提供するストアの一覧については、「[中国大陸でポータル サイト アプリをインストールする](install-company-portal-android-china.md)」をご覧ください。    
 
 登録中に、デバイスの使用方法に適したカテゴリを選ぶように求められる場合があります。 会社のサポートは、その回答を使用して、ユーザーがアクセスできるアプリを確認します。  
 
