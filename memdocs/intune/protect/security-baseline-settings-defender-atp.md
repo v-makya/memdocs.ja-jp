@@ -5,7 +5,7 @@ description: Microsoft Defender Advanced Threat Protection を管理するため
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 04/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 897b232e841c59fd85d132d1fa9b720c24ac1c9a
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80488032"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551751"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Intune 向けの Microsoft Defender Advanced Threat Protection ベースライン設定
 
@@ -133,7 +133,7 @@ Microsoft Edge を使用しているとき、ご利用の環境は Windows Defen
     - **はい** - Windows では、BitLocker で保護されていない固定ドライブにデータを書き込むことはできません。 固定ドライブが暗号化されていない場合、書き込みアクセス権が付与される前に、ユーザーはドライブに対して BitLocker セットアップ ウィザードを完了する必要があります。
 
   - **固定データドライブの暗号化方法の構成**  
-    CSP:[EncryptionMethodByDriveType](h https://go.microsoft.com/fwlink/?linkid=872526)  
+    CSP:[EncryptionMethodByDriveType](hhttps://go.microsoft.com/fwlink/?linkid=872526)  
     この設定は、 *[BitLocker 固定ドライブ ポリシー]* が *[構成]* に設定されている場合に使用できます。
 
     固定データドライブ ディスクの暗号化の方法と暗号強度を構成します。 *XTS - AES 128 ビット* は Windows の既定の暗号化方法であり、推奨される値です。
@@ -215,7 +215,7 @@ Microsoft Edge を使用しているとき、ご利用の環境は Windows Defen
 ## <a name="device-installation"></a>デバイスのインストール
 
 - **Hardware device installation by device identifiers (デバイス識別子を使用してハードウェア デバイスをインストールする)**  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](h https://go.microsoft.com/fwlink/?linkid=2066794)  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](hhttps://go.microsoft.com/fwlink/?linkid=2066794)  
   
   このポリシー設定を使用すると、Windows によるインストールが禁止されているデバイスのプラグ アンド プレイ ハードウェア ID と互換 ID の一覧を指定できます。 このポリシー設定は、Windows がデバイスをインストールできるようにするその他のポリシー設定よりも優先されます。  リモート デスクトップ サーバーでこのポリシー設定を有効にした場合、ポリシー設定は、リモート デスクトップ クライアントからリモート デスクトップ サーバーへの指定されたデバイスのリダイレクトに影響します。
 
@@ -863,3 +863,9 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
     - **許可しない**
     - **必須**
     - **許可** (*既定値*)
+
+## <a name="next-steps"></a>次のステップ
+
+- [セキュリティ ベースラインに関する詳細](security-baselines.md)
+- [競合を回避する](security-baselines.md#avoid-conflicts)
+- [Intune でのポリシーとプロファイルのトラブルシューティング](../configuration/troubleshoot-policies-in-microsoft-intune.md)

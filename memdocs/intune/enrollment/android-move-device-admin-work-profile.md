@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c8c521dc0899b3429de85e95116a6277d724771
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
+ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327274"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624911"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Android デバイスをデバイス管理者から仕事用プロファイル管理に移動する
 
@@ -65,8 +65,8 @@ ms.locfileid: "80327274"
 
 
     メールでは、ユーザーへのメッセージに以下の URL を含めることができます。 この URL を選択すると、Android ポータル サイトが起動し、 **[デバイス設定の更新]** ページが表示されます。 このページから、仕事用プロファイルの管理に移動するフローを開始します。
-    - [https://portal.manage.microsoft.com/UpdateSettings.aspx](https://portal.manage.microsoft.com/UpdateSettings.aspx)。
-    - 米国政府の場合は、代わりに [https://portal.manage.microsoft.us/UpdateSettings.aspx](https://portal.manage.microsoft.us/UpdateSettings.aspx) のリンクを使用することができます。
+    - `https://portal.manage.microsoft.com/UpdateSettings.aspx` にする必要があります。
+    - 米国政府の場合は、代わりに次のリンクを使用することができます: `https://portal.manage.microsoft.us/UpdateSettings.aspx`。
   
     > [!NOTE]
     > - もちろん、ユーザーへの連絡には、ユーザーにわかりやすいハイパーテキストをリンクに使用できます。 ただし、URL 短縮サービスを使用しないでください。このように変更するとリンクが機能しなくなる可能性があります。

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73b471d7eefa8e696b17a949756ce1395530c5f7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: fadd5817ccd4e591fe92c11cb30041296ac85d61
+ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323188"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696474"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Intune を使用してアプリベースの条件付きアクセス ポリシーを設定する
 
@@ -32,7 +32,7 @@ ms.locfileid: "80323188"
 アプリベースの条件付きアクセス ポリシーを使用する前に、[Intune アプリ保護ポリシー](../apps/app-protection-policies.md)をアプリに適用する必要があります。
 
 > [!IMPORTANT]
-> この記事では、アプリベースの条件付きアクセス ポリシーを追加する手順について説明します。 承認済みアプリのリストから SharePoint Online、Microsoft Teams、Microsoft Exchange Online などのアプリを追加するときと同じ手順を使用できます。
+> この記事では、シンプルなアプリベースの条件付きアクセス ポリシーを追加する手順について説明します。 他のクラウド アプリに対しても同じ手順を使用できます。 詳細については、[条件付きアクセスの展開を計画する方法](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access)に関する記事をご覧ください
 
 ## <a name="create-app-based-conditional-access-policies"></a>アプリベースの条件付きアクセス ポリシーを作成する
 
@@ -48,7 +48,7 @@ Microsoft Endpoint Manager admin center から条件付きアクセス ポリシ
 
 3. ポリシーの**名前**を入力し、 *[割り当て]* で **[ユーザーとグループ]** を選択します。 含めるオプションまたは除外するオプションを使用して、ポリシーのグループを追加し、 **[完了]** を選択します。
 
-4. **[クラウド アプリまたは操作]** を選択し、保護するアプリを選びます。 たとえば、 **[アプリを選択]** を選び、 **[Office 365 SharePoint Online]** と **[Office 365 Exchange Online]** を選択します。
+4. **[クラウド アプリまたは操作]** を選択し、保護するアプリを選びます。 たとえば、 **[アプリを選択]** を選択し、 **[Office 365 (プレビュー)]** を選択します。
 
    **[完了]** を選択して変更を保存します。
 
@@ -56,7 +56,7 @@ Microsoft Endpoint Manager admin center から条件付きアクセス ポリシ
 
    **[完了]** を選択して変更を保存します。
 
-6. *[アクセスの制御]* で **[許可]** を選択し、デバイスのコンプライアンスに基づいて条件付きアクセスを適用します。 たとえば、 **[アクセスの許可]**  >  **[デバイスは準拠しているとしてマーク済みである必要があります]** の順に選択します。
+6. *[アクセスの制御]* で **[許可]** を選択し、デバイスのコンプライアンスに基づいて条件付きアクセスを適用します。 たとえば、 **[アクセス権の付与]**  >  **[承認されたクライアント アプリが必要です]** および **[アプリの保護ポリシーが必要 (プレビュー)]** の順に選択した後、 **[選択したコントロールのいずれかが必要]** を選択します
 
    **[選択]** を選んで変更を保存します。
 

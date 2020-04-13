@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4ed859078f7cc6be5a91b303de45f7247248203
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: 7c6c8b9d964355b1c08756fc2026a87e30bc7297
+ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359192"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80551523"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune での macOS デバイスの機能設定
 
@@ -82,6 +82,9 @@ AirPrinter サーバーを追加するには、プリンターの IP アドレ�
   アプリ、フォルダー、またはファイルを追加するときは、正しいパスを入力してください。 `Applications` フォルダーにすべての項目が含まれているわけではありません。 ユーザーがある場所から別の場所に項目を移動すると、パスは変わります。 この移動した項目は、ユーザーがサインインしても開かれません。
 
 - **[ユーザーの構成を非表示にします]** : **[非表示]** にすると、ユーザーとグループのログイン項目の一覧にアプリが表示されません。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS によって、[非表示] オプションがオフにされたユーザーとグループのログイン項目の一覧に、ログイン時に開始した項目が表示されます。
+
+  > [!NOTE]
+  > この設定は、今後数週間にわたってすべてのお客様にロールアウトされます。
 
 ## <a name="login-window"></a>ログイン ウィンドウ
 
@@ -221,7 +224,7 @@ Intune では、次のことができます。
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **ドメイン**: アプリに関連付ける Web サイト ドメインを入力します。 ドメインには、サービスの種類と完全修飾ホスト名 (`webcredentials: www.contoso.com`など) が含まれています。
+- **ドメイン**: アプリに関連付ける Web サイト ドメインを入力します。 ドメインには、サービスの種類と完全修飾ホスト名 (`webcredentials:www.contoso.com`など) が含まれています。
 
   ドメインの先頭の前に `*.` (アスタリスクのワイルドカードとピリオド) を入力することで、関連付けられているすべてのドメインのサブドメインと一致させることができます。 ピリオドは必須です。 正確なドメインは、ワイルドカードのドメインよりも優先度が高くなります。 そのため、完全修飾サブドメインで一致が見つからない "*場合*" に、親ドメインのパターンが照合されます。
 
