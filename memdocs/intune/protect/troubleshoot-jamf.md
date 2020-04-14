@@ -118,7 +118,7 @@ Mac デバイスの登録が失敗する場合、一般的な原因がいくつ�
 
 #### <a name="cause-2"></a>原因 2  
 
-****Jamf Native macOS Connector** アプリが Azure AD テナントに作成されていないか、コネクタに対する同意がグローバル管理者権限のないアカウントによって署名されました**  
+**Jamf Native macOS Connector **アプリが Azure AD テナントに作成されていないか、コネクタに対する同意がグローバル管理者権限のないアカウントによって署名されました****  
 
   **解決方法**  
   docs.jamf.com の「[Microsoft Intune との統合](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html)」の「*macOS Intune 統合の構成*」セクションを参照してください。 
