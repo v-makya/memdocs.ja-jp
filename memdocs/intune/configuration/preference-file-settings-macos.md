@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9cb8cea30b53c5619580b289f73529668d71e909
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551504"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Microsoft Intune を使用してプロパティ リスト ファイルを macOS デバイスに追加する

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2bf2ceae88ed775ff53324f007567a4677832805
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.openlocfilehash: 39331a7ab4a512e449770179af4b04f4c52bec73
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80658126"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81668228"
 ---
 <!-- 
 - Feature 1357546
@@ -113,4 +113,4 @@ Configuration Manager のコンポーネントと機能のトラブルシュー�
 - [KB 4552181 Configuration Manager Current Branch バージョン 1910 でコンテンツ配布が停止する](https://support.microsoft.com/help/4552181)
 - [KB 4550023 Windows 10 の一括アップグレードのロールバック後に Configuration Manager の一括アップグレード タスク シーケンスが続行しない](https://support.microsoft.com/help/4550023)
 
-新規 Configuration Manager サポート記事の Atom または RSS 通知をサブスクライブするには、「[サポート コンテンツの更新情報](https://support.microsoft.com/help/4089498/)」を参照して、**Microsoft Endpoint Configuration Manager** を選択します。
+新規 Configuration Manager サポート記事の Atom または RSS 通知をサブスクライブするには、「[サポート コンテンツの更新情報](https://support.microsoft.com/help/4089498/)」を参照して、**Microsoft Endpoint Configuration Manager** を選択します。  

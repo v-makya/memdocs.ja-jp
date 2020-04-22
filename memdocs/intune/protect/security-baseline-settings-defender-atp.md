@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a431ad92c285e1a2912e0f387ee5ea514e876ef
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 67f4d3c08cbad08464d488073c574babcc77dc61
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551751"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397511"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Intune 向けの Microsoft Defender Advanced Threat Protection ベースライン設定
 
@@ -133,7 +133,7 @@ Microsoft Edge を使用しているとき、ご利用の環境は Windows Defen
     - **はい** - Windows では、BitLocker で保護されていない固定ドライブにデータを書き込むことはできません。 固定ドライブが暗号化されていない場合、書き込みアクセス権が付与される前に、ユーザーはドライブに対して BitLocker セットアップ ウィザードを完了する必要があります。
 
   - **固定データドライブの暗号化方法の構成**  
-    CSP:[EncryptionMethodByDriveType](hhttps://go.microsoft.com/fwlink/?linkid=872526)  
+    CSP:[EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
     この設定は、 *[BitLocker 固定ドライブ ポリシー]* が *[構成]* に設定されている場合に使用できます。
 
     固定データドライブ ディスクの暗号化の方法と暗号強度を構成します。 *XTS - AES 128 ビット* は Windows の既定の暗号化方法であり、推奨される値です。
@@ -215,7 +215,7 @@ Microsoft Edge を使用しているとき、ご利用の環境は Windows Defen
 ## <a name="device-installation"></a>デバイスのインストール
 
 - **Hardware device installation by device identifiers (デバイス識別子を使用してハードウェア デバイスをインストールする)**  
-  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](hhttps://go.microsoft.com/fwlink/?linkid=2066794)  
+  [DeviceInstallation/PreventInstallationOfMatchingDeviceIDs](https://go.microsoft.com/fwlink/?linkid=2066794)  
   
   このポリシー設定を使用すると、Windows によるインストールが禁止されているデバイスのプラグ アンド プレイ ハードウェア ID と互換 ID の一覧を指定できます。 このポリシー設定は、Windows がデバイスをインストールできるようにするその他のポリシー設定よりも優先されます。  リモート デスクトップ サーバーでこのポリシー設定を有効にした場合、ポリシー設定は、リモート デスクトップ クライアントからリモート デスクトップ サーバーへの指定されたデバイスのリダイレクトに影響します。
 

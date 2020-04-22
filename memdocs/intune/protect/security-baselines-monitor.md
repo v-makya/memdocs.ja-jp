@@ -17,10 +17,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 53187f7795eee07a62a83c1fb17a289451b32ee2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80551661"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Microsoft Intune でセキュリティのベースラインとプロファイルを監視する

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80488204"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>チュートリアル:クラウドを使用して、ADMX テンプレートと Microsoft Intune で Windows 10 デバイスにグループ ポリシーを構成する

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55660497751f1961c9c579ba1d800900189db782
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.openlocfilehash: 934e2283fec0cd68ea5b72f092fb6dcac6f3fe4c
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79526463"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81379633"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Microsoft Intune で SCEP 証明書プロファイルのためのデバイスから NDES サーバーへの通信をトラブルシューティングする
 
@@ -298,7 +298,7 @@ Azure AD アプリケーション プロキシを構成しました。 SCEP サ�
 
 `This page can't be displayed`
 
-- **原因**:この問題は、アプリケーション プロキシ構成の SCEP の外部 URL が正しくない場合に発生します。 この URL の例は、 https://contoso.com/certsrv/mscep/mscep.dll などです。
+- **原因**:この問題は、アプリケーション プロキシ構成の SCEP の外部 URL が正しくない場合に発生します。 この URL の例は、`https://contoso.com/certsrv/mscep/mscep.dll` などです。
 
   **解決方法**:アプリケーション プロキシ構成で、SCEP の外部 URL に対して規定のドメイン *yourtenant.msappproxy.net* を使用します。
 
