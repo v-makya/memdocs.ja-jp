@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dc536d4c2c0d06a768d42d4a796ec56cf80c0d66
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80401440"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Intune のガイド付きシナリオの概要 
@@ -64,7 +64,7 @@ ms.locfileid: "80401440"
 
 ガイド付きシナリオを使用して既存のリソースを編集することはできません。 作成したら、すべてのリソース、グループ、および割り当ては、既存のワークロードを使用して編集する必要があります。
 
-### <a name="monitoring"></a>監視 
+### <a name="monitoring"></a>モニタリング 
 
 ガイド付きシナリオは、最初の作成プロセスを除き、既存のリソースを監視するために使用することはできません。 作成したら、すべてのリソース、グループ、および割り当ては、既存のワークロードを使用して監視する必要があります。 
 

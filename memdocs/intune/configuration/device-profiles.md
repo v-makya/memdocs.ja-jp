@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 386e59fe3a7156a8bb74ed39a1b2fcad6ad91dad
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80359313"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune でデバイス プロファイルを使用してデバイスに機能と設定を適用する
@@ -59,7 +59,7 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 - Android エンタープライズ
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
+- WVPNdows Phone 8.1
 - Windows 8.1
 - Windows 10 以降
 
@@ -73,7 +73,7 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 - Android エンタープライズ
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
+- WVPNdows Phone 8.1
 
 ## <a name="delivery-optimization"></a>配信の最適化
 
@@ -140,13 +140,13 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 
 - Windows 10 以降
 
-## <a name="education"></a>Education
+## <a name="education"></a>教育
 
 [教育設定 - Windows 10](education-settings-configure.md) では、[Windows テスト アプリ](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)のオプションを構成します。 これらのオプションを構成するとき、テストが完了するまで他のアプリをデバイスで実行できません。
 
 [教育設定 - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) では、iOS/iPadOS Classroom アプリを使用し、教室で学習を指導し、生徒のデバイスを操作します。 多数の学生が 1 台のデバイスを共有できるように iPad デバイスを構成できます。
 
-## <a name="email"></a>電子メール
+## <a name="email"></a>Email
 
 [電子メールの設定](email-settings-configure.md)では、デバイス上の Exchange ActiveSync 電子メール設定の作成、割り当て、監視を行います。 電子メール プロファイルにより、一貫性の確保とサポート負荷の軽減が可能になり、エンド ユーザーは自分では何の設定もせずに個人デバイスで会社の電子メールにアクセスできるようになります。 
 
@@ -155,10 +155,10 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 - Android デバイス管理者
 - Android エンタープライズ
 - iOS/iPadOS
-- Windows Phone 8.1
+- WVPNdows Phone 8.1
 - Windows 10 以降
 
-## <a name="endpoint-protection"></a>エンドポイント保護
+## <a name="endpoint-protection"></a>Endpoint Protection
 
 [Endpoint Protection](../protect/endpoint-protection-configure.md) では、Windows 10 デバイス用の BitLocker および Microsoft Defender の設定が構成されます。 また、macOS デバイスでファイアウォール、ゲートウェイ、その他のリソースを構成します。
 
@@ -177,7 +177,7 @@ Microsoft Defender Advanced Threat Protection (WDATP) と Microsoft Intune を�
 
 - Windows 10 Fall Creators Update 以降
 
-## <a name="extensions"></a>の拡張
+## <a name="extensions"></a>拡張機能
 
 管理者は、[カーネル拡張機能](kernel-extensions-overview-macos.md)を使用して、macOS デバイスにカーネルレベルで機能またはプログラムを追加できます。 これらの設定を、特定の開発者またはパートナーからのすべての拡張機能を信頼するように構成するか、特定のカーネル拡張機能を許可するように構成します。
 
@@ -270,7 +270,7 @@ Windows デバイスの更新プログラム ポリシーについては、[配�
 - Android エンタープライズ
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
+- WVPNdows Phone 8.1
 - Windows 8.1
 - Windows 10 以降
 

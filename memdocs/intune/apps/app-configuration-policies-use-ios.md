@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 28ce4e7d80e79f752bded8f0cdf03494aa629e1b
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233460"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>管理対象の iOS/iPadOS デバイス用アプリ構成ポリシーを追加する
@@ -110,7 +110,7 @@ Microsoft Intune 管理者は、マネージド デバイス上の Microsoft ア
 
 | **Key** | **値** |
 |----|----|
-| IntuneMAMAllowedAccountsOnly | <ul><li>**有効**: [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) キーによって定義されたマネージド ユーザー アカウントのみが許可されます。</li><li>**[無効]** ( **[有効]** と大文字小文字を問わず一致しないすべての値): すべてのアカウントが許可されます。</li></ul> |
+| IntuneMAMAllowedAccountsOnly | <ul><li>**[有効]** : [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) キーによって定義された管理対象のユーザー アカウントのみが許可されます。</li><li>**[無効]** ( **[有効]** と大文字小文字を問わず一致しないすべての値): すべてのアカウントが許可されます。</li></ul> |
 | IntuneMAMUPN | <ul><li>アプリへのサインインが許可されているアカウントの UPN。</li><li> Intune に登録されているデバイスでは、<code>{{userprincipalname}}</code> のトークンを使用して登録済みのユーザー アカウントを表すことができます。</li></ul>  |
 
    > [!NOTE]
@@ -173,7 +173,7 @@ Intune は、プロパティ リストの次のデータ型をサポートして
 
 ### <a name="tokens-used-in-the-property-list"></a>プロパティ リストで使用されるトークン
 
-さらに、Intune では、プロパティ リストに次の種類のトークンを利用できます。
+また、Intune は次のトークンの種類をプロパティ リストでサポートしています。
 - \{\{userprincipalname\}\} — たとえば、**John\@contoso.com**
 - \{\{mail\}\} — たとえば、**John\@contoso.com**
 - \{\{partialupn\}\} — たとえば、**John**

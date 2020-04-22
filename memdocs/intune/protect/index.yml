@@ -12,12 +12,12 @@ metadata:
   author: brenduns
   ms.author: brenduns
   ms.date: 08/20/2019
-  ms.openlocfilehash: 9d5c1c95cd5247f32fd32a77c774ec787d052e16
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.openlocfilehash: be6460b9faa9dea44ea14c7198dbdfd8af539d46
+  ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79333704"
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81525676"
 landingContent:
 - title: リソースへのアクセスを許可するデバイスのルールを設定する
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
       url: device-compliance-get-started.md
   - linkListType: quickstart
     links:
-    - text: デバイス コンプライアンス ポリシーを作成する
+    - text: デバイス コンプライアンス ポリシーの作成
       url: quickstart-set-password-length-android.md
   - linkListType: tutorial
     links:
@@ -79,7 +79,7 @@ landingContent:
       url: mtd-apps-ios-app-configuration-policy-add-assign.md
     - text: セキュリティ ベースライン
       url: security-baselines.md
-    - text: エンドポイント保護
+    - text: Endpoint Protection
       url: endpoint-protection-configure.md
     - text: ネットワーク アクセス制御
       url: network-access-control-integrate.md
@@ -134,4 +134,4 @@ landingContent:
     - text: 条件付きアクセスの一般的な使用方法
       url: conditional-access-intune-common-ways-use.md
     - text: macOS 用 Jamf Pro
-      url: conditional-access-integrate-jamf.md
+      url: conditional-access-jamf-cloud-connector.md

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b10d56e9eb915273d5be9a5b14ca4528a64a2057
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327100"
 ---
 # <a name="categorize-devices-into-groups"></a>デバイスをグループに分類する
@@ -35,7 +35,7 @@ ms.locfileid: "80327100"
 2. iOS/iPadOS デバイスと Android デバイスのユーザーがデバイスを登録する場合、構成されているカテゴリの一覧からカテゴリを選択する必要があります。 Windows デバイスにカテゴリを割り当てる場合、ユーザーはポータル Web サイトを使用する必要があります。
 3. 次に、ポリシーとアプリをグループに展開します。
 
-任意のデバイス カテゴリを作成できます。 次に例を示します。
+任意のデバイス カテゴリを作成できます。 例:
 - POS デバイス
 - デモンストレーション デバイス
 - 営業
@@ -44,7 +44,7 @@ ms.locfileid: "80327100"
 
 ## <a name="how-to-configure-device-categories"></a>デバイス カテゴリを構成する方法
 
-### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>手順 1:Azure portal の [Intune] ブレードでデバイス カテゴリを作成する
+### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>手順 1: Azure Portal の [Intune] ブレードでデバイス カテゴリを作成する
 1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインして、 **[デバイス]**  >  **[デバイス カテゴリ]** を選択します。
 2. **[デバイス カテゴリ]** ページで、 **[作成]** を選択して、新しいカテゴリを追加します。
 3. **[デバイス カテゴリの作成]** ブレードで、新しいカテゴリの**名前**と省略可能な**説明**を入力します。
@@ -52,7 +52,7 @@ ms.locfileid: "80327100"
 
 デバイス カテゴリ名は、手順 2 で Azure Active Directory (Azure AD) セキュリティ グループを作成するときに使用します。
 
-### <a name="step-2-create-azure-active-directory-security-groups"></a>手順 2:Azure Active Directory セキュリティ グループを作成する
+### <a name="step-2-create-azure-active-directory-security-groups"></a>手順 2: Azure Active Directory セキュリティ グループを作成する
 この手順では、デバイス カテゴリとデバイス カテゴリ名に基づいて、Azure Portal で動的グループを作成します。
 
 次に進む前に、Azure AD ドキュメントの「[属性を利用した高度なルールの作成](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects)」を参照してください。

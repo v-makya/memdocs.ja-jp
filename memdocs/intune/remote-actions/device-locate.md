@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 433bea6442ef52cd970513213d1623faf8aae2ca
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327473"
 ---
 # <a name="locate-lost-or-stolen-iosipados-devices-with-intune"></a>紛失した、または盗難にあった iOS/iPadOS デバイスを Intune で検索する
@@ -29,7 +29,7 @@ ms.locfileid: "80327473"
 
 紛失した、または盗難にあった iOS/iPadOS デバイスの位置をマップに表示するには、 **[デバイスを検索する]** アクションを使用します。 デバイスが監視モードである必要があります。 このアクションを使用する前に、デバイスが[紛失モード](device-lost-mode.md)になっていることを確認してください。
 
-## <a name="supported-platforms"></a>サポートされているプラットフォーム
+## <a name="supported-platforms"></a>[サポートされているプラットフォーム]
 
 - iOS/iPadOS 9.3 以降
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d6f8f3cf9ced5b613323093ed2baafcf65667997
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80275086"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Symantec Endpoint Protection Mobile コネクタ
@@ -42,7 +42,7 @@ Intune デバイス コンプライアンス ポリシーで SEP Mobile のリ�
 > [!NOTE]
 > この Mobile Threat Defense ベンダーは、未登録のデバイスではサポートされていません。
 
-## <a name="supported-platforms"></a>サポートされているプラットフォーム
+## <a name="supported-platforms"></a>[サポートされているプラットフォーム]
 
 - **Android 4.1 以降**
 
@@ -90,7 +90,7 @@ Intune では、SEP Mobile との統合に 2 つのモードがあります。
 
 ![検出された悪意のあるアプリの概念図](./media/skycure-mobile-threat-defense-connector/symantec-arch-1.png)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 ![悪意のあるアプリが検出された後、修復時に付与されるアクセス権の画像](./media/skycure-mobile-threat-defense-connector/symantec-arch-2.png)
 
@@ -102,11 +102,11 @@ Intune では、SEP Mobile との統合に 2 つのモードがあります。
 
 ![Wi-Fi 経由のネットワーク アクセスをブロックする](./media/skycure-mobile-threat-defense-connector/symantec-arch-3.png)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 ![修復するとアクセス権が付与される](./media/skycure-mobile-threat-defense-connector/symantec-arch-4.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークへの脅威に基づいて SharePoint Online へのアクセスを制御する
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークに対する脅威に基づいて SharePoint Online へのアクセスを制御する
 
 ネットワークで **Man-in-the-middle** のような脅威を検出し、デバイスのリスクに基づいて会社内のファイルの同期を阻止します。
 
@@ -114,7 +114,7 @@ Intune では、SEP Mobile との統合に 2 つのモードがあります。
 
 ![ネットワークの脅威が検出されたときに SharePoint Online をブロック](./media/skycure-mobile-threat-defense-connector/symantec-arch-5.png)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 ![SharePoint で修復時にアクセス権を付与する例](./media/skycure-mobile-threat-defense-connector/symantec-arch-6.png)
 

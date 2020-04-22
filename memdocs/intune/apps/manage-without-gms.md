@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b9f5a560b0f44b8ff256034b51cb9057faf0ec2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: ce61f7af7c11fb579e34890700231ca2e59fb5cd
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80576855"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81267685"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>Google Mobile Services のない環境で Intune を使用する方法
 
@@ -33,7 +33,7 @@ Microsoft Intune では、Android デバイスを管理するときに、Google 
 
 ### <a name="for-users-outside-of-mainland-china"></a>中国大陸以外のユーザーの場合 
 
-Google Play を使用できない場合、Android デバイスでは、 [Android 用 Microsoft Intune ポータル サイト](../user-help/install-the-company-portal-app-android.md)をダウンロードし、そのアプリをサイドロードすることができます。 この方法でインストールした場合、アプリに更新プログラムまたは修正プログラムは自動的に提供されません。 ユーザーは、定期的に手動でアプリを更新し、修正プログラムを適用する必要があります。 
+Google Play を使用できない場合、Android デバイスでは、 [Android 用 Microsoft Intune ポータル サイト](https://www.microsoft.com/en-us/download/details.aspx?id=49140)をダウンロードし、そのアプリをサイドロードすることができます。 この方法でインストールした場合、アプリに更新プログラムまたは修正プログラムは自動的に提供されません。 ユーザーは、定期的に手動でアプリを更新し、修正プログラムを適用する必要があります。 
 
 ### <a name="for-users-in-mainland-china"></a>中国大陸のユーザーの場合 
 
@@ -61,7 +61,7 @@ GMS を利用できる環境の場合、Intune では、タスクの完了を高
 次のタスクは、完了までに最大 8 時間かかることがあります。 
 
 **Intune コンソール**:
-- 完全なワイプ
+- フル ワイプ
 - 選択的ワイプ
 - 新規アプリまたは更新アプリの展開
 - リモート ロック

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 95f9677b95dc9dde4b12e60e3006b4cee5081471
-ms.sourcegitcommit: 670c90a2e2d3106048f53580af76cabf40fd9197
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80233415"
 ---
 # <a name="what-is-device-enrollment"></a>デバイス登録とは
@@ -61,9 +61,9 @@ Microsoft Intune アプリは、企業所有の Android デバイス用であり
 Intune ポータル サイトを使用すると、次のデバイスを登録できます。  
 
 - Windows デバイス
-  - Windows 10 Mobile
-  - [Windows] 10 Desktop
-  - Windows Phone 8.1
+  - [Windows] 10 Mobile
+  - Windows 10 Desktop
+  - WVPNdows Phone 8.1
   - Windows 8.1
 - Apple デバイス
     - iOS

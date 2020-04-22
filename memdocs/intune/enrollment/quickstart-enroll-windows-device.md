@@ -18,13 +18,13 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4f70c8487d9cb30b2a7cced63e6e019541f73704
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80327054"
 ---
-# <a name="quickstart-enroll-your-windows-10-device"></a>クイック スタート:Windows 10 デバイスを登録する
+# <a name="quickstart-enroll-your-windows-10-device"></a>クイック スタート: Windows 10 デバイスを登録する
 
 このクイック スタートでは、最初に Intune ユーザーのロールで、Microsoft Intune に Windows 10 デバイスを登録します。 次に、Intune に戻って、登録したデバイスを確認します。
 

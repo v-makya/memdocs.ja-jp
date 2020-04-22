@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 02f90fc0cd249062f878b5a18481f6a6a73228af
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323381"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>ビジネス向け Microsoft Store のボリューム購入アプリを Microsoft Intune で管理する方法
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-[ビジネス向け Microsoft ストア](https://www.microsoft.com/business-store)では、組織用のアプリを見つけて、個別または大量に購入することができます。 Microsoft Intune にストアを接続することで、Azure Portal からボリューム購入アプリを管理することができます。 次に例を示します。
+[ビジネス向け Microsoft ストア](https://www.microsoft.com/business-store)では、組織用のアプリを見つけて、個別または大量に購入することができます。 Microsoft Intune にストアを接続することで、Azure Portal からボリューム購入アプリを管理することができます。 例:
 
 * ストアから購入した (または無料の) アプリの一覧を Intune に同期することができます。
 * 同期されているアプリは Intune 管理コンソールに表示され、他のアプリと同様に割り当てることができます。
@@ -38,7 +38,7 @@ ms.locfileid: "80323381"
 * 使用可能なライセンス数が不足している場合、Intune はアプリの割り当てとインストールをブロックします。
 * ユーザーが企業を退社したとき、または管理者がユーザーとユーザー デバイスを削除したときに、ビジネス向け Microsoft ストアによって管理されているアプリはライセンスを自動的に取り消します。
 
-## <a name="before-you-start"></a>開始する前に
+## <a name="before-you-start"></a>アップグレードを開始する前に
 
 ビジネス向け Microsoft ストアのアプリを同期して割り当てる前に、以下のことを確認してください。
 
@@ -64,7 +64,7 @@ Intune コンソールで同期を有効にする前に、以下の手順に従�
 3. モバイル デバイス管理ツールとして特に **Microsoft Intune** を使用できない場合は、 **[Add management tool]\(管理ツールの追加\)** を選択し、 **[Microsoft Intune]** を追加します。 モバイル デバイス管理ツールとして **Microsoft Intune** をアクティブにしていない場合は、 **[Microsoft Intune]** の横にある **[アクティブ化]** をクリックします。 **[Microsoft Intune Enrollment]\(Microsoft Intune 登録\)** ではなく **[Microsoft Intune]** を有効にする必要があります。
 
 > [!NOTE]
-> これまでは、アプリを割り当てるための管理ツールをビジネス向け Microsoft ストアに 1 つしか関連付けることができませんでした。 これからは、複数のツール (Intune や Configuration Manager など) をストアに関連付けることができます。
+> これまでは、アプリを割り当てるための管理ツールをビジネス向け Microsoft ストアに 1 つしか関連付けることができませんでした。 今では Intune や Configuration Manager など、複数の管理ツールをストアと関連付けることができます。
 
 これで、作業を続行し、Intune コンソールで同期を設定することができます。
 

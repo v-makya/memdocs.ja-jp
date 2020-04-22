@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 32e5d053b6dd579aad25a268604248d4fb5a6072
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80696460"
 ---
 # <a name="device-management-overview"></a>デバイス管理の概要
@@ -59,7 +59,7 @@ Intune の詳細については、[Intune の概要](what-is-intune.md)に関す
 
 ## <a name="integration-with-secure-and-protect-services"></a>セキュリティおよび保護サービスとの統合
 
-すべてのデバイス管理ソリューションの主要なタスクは、セキュリティと保護を実現することです。 このタスクを実現するために、Intune は他のサービスとの統合に大きな役割を果たします。 次に例を示します。
+すべてのデバイス管理ソリューションの主要なタスクは、セキュリティと保護を実現することです。 このタスクを実現するために、Intune は他のサービスとの統合に大きな役割を果たします。 例:
 
 - **Microsoft 365** は一般的な IT タスクを簡略化する重要なコンポーネントです。 Microsoft 365 管理センターでは、ユーザーを作成し、グループを管理します。 また、Intune、Azure AD などの他のサービスにもアクセスできます。
 

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4ff0e650a3eccf057158d3faf28875e42ed90a4d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325027"
 ---
 # <a name="rename-a-device-in-intune"></a>Intune 上でデバイスの名前を変更する
@@ -46,7 +46,7 @@ ms.locfileid: "80325027"
 Windows デバイスの名前を変更する場合、次の規則に従って新しい名前を指定する必要があります。
 - 15 文字以下 (後続の NULL を除き、63 バイト以下にする必要があります)
 - null または空の文字列にしない
-- 許可される ASCII: 文字 (a-z、A-Z)、数字 (0-9)、ハイフン
+- 使用できる ASCII: 文字 (a-z、a-z)、数字 (0-9)、およびハイフン
 - 許可される Unicode: 文字数 >= 0x80、有効な UTF8 であることが必須、IDN マッピング可能であることが必須 (つまり、RtlIdnToNameprepUnicode は合格です。RFC 3492 参照)
 - 名前は数字だけにすることができない
 - 名前にスペースを使用できない

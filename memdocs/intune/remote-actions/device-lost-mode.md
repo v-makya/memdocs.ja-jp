@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3cf638ba82d1b6e91e3c4c24d5cfd3433df3b010
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326528"
 ---
 # <a name="enable-lost-mode-on-iosipados-devices-with-intune"></a>Intune を使って iOS/iPadOS デバイスの紛失モードを有効にする
@@ -29,7 +29,7 @@ ms.locfileid: "80326528"
 
 **紛失モード**のデバイス アクションを使用すると、紛失した、または盗難にあった iOS/iPadOS デバイスの紛失モードを有効にできます。 このモードでは、デバイスのロック画面に表示されるメッセージと電話番号を入力できます。 紛失モードを使用するには、デバイスが監視モードにある企業所有の iOS/iPadOS デバイスである必要があります。
 
-## <a name="supported-platforms"></a>サポートされているプラットフォーム
+## <a name="supported-platforms"></a>[サポートされているプラットフォーム]
 
 - iOS 9.3 以降
 - iPadOS 13.0 以降

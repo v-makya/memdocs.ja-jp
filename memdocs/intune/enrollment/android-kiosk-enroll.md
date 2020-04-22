@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae24c8cad5ccee06444ffec6a4cd8b39b3371b49
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: b8872efe661f01d2cc286282c38953739711982b
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327289"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397698"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Android Enterprise 専用デバイスの Intune 登録を設定する
 
@@ -39,7 +39,7 @@ Intune では、Android Enterprise 専用デバイスにアプリや設定を展
 
 デバイスを Android Enterprise 専用デバイスとして管理するには、以下の要件を満たす必要があります。
 
-- Android OS バージョン 5.1 以降。
+- Android OS バージョン 6.0 以降。
 - デバイスは、Google Mobile Services (GMS) に接続できる Android ディストリビューションを実行する必要があります。 デバイスで GMS が利用できて、GMS に接続できる必要があります。
 
 ## <a name="set-up-android-enterprise-dedicated-device-management"></a>Android Enterprise 専用デバイスの管理を設定する
@@ -61,8 +61,8 @@ Android Enterprise 専用デバイスの管理を設定するには、次の手�
 
 1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[デバイス]**  >  **[Android]**  >  **[Android の登録]**  >  **[会社が所有する専用デバイス]** を選択します。
 2. **[作成]** を選択し、必須フィールドに入力します。
-    - **名前**:動的デバイス グループにプロファイルを割り当てるときに使用する名前を入力します。
-    - **[トークンの有効期限]** :トークンの有効期限が切れる日付。 Google は最大 90 日間を強制します。
+    - **[名前]** : 動的デバイス グループにプロファイルを割り当てるときに使用する名前を入力します。
+    - **[トークンの有効期限]** : トークンの有効期限が切れる日付。 Google は最大 90 日間を強制します。
 3. **[作成]** を選択してプロファイルを保存します。
 
 ### <a name="create-a-device-group"></a>デバイス グループを作成する
@@ -71,12 +71,12 @@ Android Enterprise 専用デバイスの管理を設定するには、次の手�
 
 1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[グループ]**  >  **[すべてのグループ]**  >  **[新しいグループ]** を選択します。
 2. **[グループ]** ブレードで、次のように必須フィールドに入力します。
-    - **[グループの種類]** :セキュリティ
-    - **[グループ名]** :わかりやすい名前を入力します (Factory 1 デバイスなど)
-    - **[メンバーシップの種類]** :動的デバイス
+    - **[グループの種類]** : セキュリティ
+    - **[グループ名]** : わかりやすい名前を入力します (Factory 1 デバイスなど)
+    - **[メンバーシップの種類]** : 動的デバイス
 3. **[動的クエリの追加]** を選択します。
 4. **[動的メンバーシップ ルール]** ブレードで、次のようにフィールドに入力します。
-    - **[動的メンバーシップ ルールの追加]** :簡易ルール
+    - **[動的メンバーシップ ルールの追加]** : 簡易ルール
     - **[追加するデバイスの場所]** : enrollmentProfileName
     - 中央のボックスで **[等しい]** を選択します。
     - 最後のフィールドには、先ほど作成した登録プロファイル名を入力します。
@@ -85,8 +85,8 @@ Android Enterprise 専用デバイスの管理を設定するには、次の手�
 
 ### <a name="replace-or-remove-tokens"></a>トークンを置換または削除する
 
-- **[トークンの置換]** :[トークンの置換] を利用することで、有効期限が近づいたとき、新しいトークン/QR コードを生成できます。
-- **[トークンの取り消し]** :トークン/QR コードをただちに失効させることができます。 取り消した時点から、トークンまたは QR コードは使用できなくなります。 次の場合にこのオプションを使用できます。
+- **トークンの置換**: [トークンの置換] を利用することで、有効期限が近づいたとき、新しいトークン/QR コードを生成できます。
+- **トークンの取り消し**: トークン/QR コードをただちに失効させることができます。 取り消した時点から、トークンまたは QR コードは使用できなくなります。 次の場合にこのオプションを使用できます。
   - 認められていない団体と誤ってトークン/QR コードを共有した
   - 登録がすべて完了し、トークン/QR コードが不要になった
 

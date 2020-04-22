@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7d193e067a752e89377b4bec903ff4f890add230
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325619"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Microsoft Intune での BitLocker ポリシーのトラブルシューティング
@@ -33,7 +33,7 @@ BitLocker ドライブ暗号化は、Microsoft Windows オペレーティング 
 
 Microsoft Intune を使用して Windows 10 デバイスの BitLocker を管理するには、次の方法があります。
 
-- **デバイス構成ポリシー** - エンドポイント保護を管理するためのデバイス構成プロファイルを作成するときに、Intune で特定の組み込みポリシー オプションを使用できます。 これらのオプションを見つけるには、[エンドポイント保護のデバイス プロファイルを作成](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings)し、 *[プラットフォーム]* に **[Windows 10 以降]** を選択し、 *[設定]* で **[Windows 暗号化]** カテゴリを選択します。 
+- **デバイス構成ポリシー** - エンドポイント保護を管理するためのデバイス構成プロファイルを作成するときに、Intune で特定の組み込みポリシー オプションを使用できます。 これらのオプションを見つけるには、[エンドポイント保護のデバイス プロファイルを作成](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings)し、 **[プラットフォーム]** に *[Windows 10 以降]* を選択し、 **[設定]** で *[Windows 暗号化]* カテゴリを選択します。 
 
    使用可能なオプションと機能については、「[Windows の暗号化](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption)」を参照してください。
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 548174cfa891e832f9392604cca8347493db3dab
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80323563"
 ---
 # <a name="how-to-manage-iosipados-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Volume Purchase Program で購入した iOS/iPadOS 電子ブックを Microsoft Intune で管理する方法
@@ -39,7 +39,7 @@ Microsoft Intune では、このプログラムを通して購入したブック
 ## <a name="manage-volume-purchased-books-for-ios-devices"></a>iOS デバイス用のボリューム購入ブックの管理
 iOS/iPadOS ブックの複数のライセンスを購入するには、[ビジネス向け Apple Volume Purchase Program](https://www.apple.com/business/vpp/) または [教育向け Apple Volume Purchase Program](https://volume.itunes.apple.com/us/store) を利用します。 このためには、Apple Web サイトから Apple VPP アカウントをセットアップし、Apple VPP トークンを Intune にアップロードする必要があります。  その後、ボリューム購入情報を Intune に同期し、ボリューム購入ブックの使用状況を追跡することができます。
 
-## <a name="before-you-start"></a>開始する前に
+## <a name="before-you-start"></a>アップグレードを開始する前に
 開始する前に、Apple から VPP トークンを取得し、これを Intune アカウントにアップロードします。 補足:
 
 * 以前に異なる製品で VPP トークンを使用していた場合は、Intune で使用するための新しい VPP トークンを生成する必要があります。
@@ -75,7 +75,7 @@ iOS/iPadOS ブックの複数のライセンスを購入するには、[ビジ�
 
 1. **[アプリ]**  >  **[電子ブック]**  >  **[すべての電子ブック]** を選択します。
 2. ブックの一覧ウィンドウで、割り当てるブックを選択し、 **[...]** 、 **[グループの割り当て]** の順に選択します。
-3. **[<*ブック名*> - 割り当てられたグループ]** ウィンドウで、 **[管理]**  >  **[割り当てられたグループ]** の順に選択します。
+3. *[<* ブック名 **> - 割り当てられたグループ]** ウィンドウで、 **[管理]**  >  **[割り当てられたグループ]** の順に選択します。
 4. **[グループの割り当て]** を選択し、 **[グループの選択]** ウィンドウで、ブックを割り当てる Azure AD ユーザー グループを選択します。 現時点では、デバイス グループはサポートされていません。
 割り当て操作として **[利用可能]** または **[必須]** を選択します。 
 5. 完了したら、 **[保存]** を選択します。

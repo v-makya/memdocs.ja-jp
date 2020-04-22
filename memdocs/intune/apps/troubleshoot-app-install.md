@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 18fc3a70a89451deebe074ad8b5b8dc3a4a837f7
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325815"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>アプリのインストールに関する問題のトラブルシューティング
@@ -122,4 +122,4 @@ Win32 アプリのインストール ログを収集するには、まずセク�
 
 - Intune のトラブルシューティングに関する追加情報については、「[トラブルシューティング ポータルを使用して社内のユーザーをサポートする](../fundamentals/help-desk-operators.md)」をご覧ください。 
 - Microsoft Intune の既知の問題について学習します。 詳細については、[Intune のお客様の成功事例](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)に関するページを参照してください。
-- さらに支援が必要ですか? 「[Microsoft Intune のサポートを受ける方法](../fundamentals/get-support.md)」を参照してください。
+- さらに支援が必要ですか。 「[Microsoft Intune のサポートを受ける方法](../fundamentals/get-support.md)」を参照してください。

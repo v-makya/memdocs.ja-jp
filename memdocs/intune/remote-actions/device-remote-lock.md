@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 29b30d46fc5998c69059c743c3f469e198cee1ef
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80325133"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>デバイスを Intune でリモートからロックする
@@ -29,7 +29,7 @@ ms.locfileid: "80325133"
 
 **リモート ロック** デバイス アクションは、デバイスをロックします。 デバイスのロックを解除するには、そのデバイスの所有者がパスコードを入力する必要があります。 PIN またはパスワードが設定されているデバイスをリモートでロックすることができます。 PIN またはパスワードがないデバイスは、リモートでロックできません。
 
-## <a name="supported-platforms"></a>サポートされているプラットフォーム
+## <a name="supported-platforms"></a>[サポートされているプラットフォーム]
 
 **リモート ロック**は、次のプラットフォームでサポートされます。
 
@@ -38,7 +38,7 @@ ms.locfileid: "80325133"
 - Android エンタープライズ仕事用プロファイル デバイス
 - iOS
 - macOS
-- Windows 10 Mobile
+- [Windows] 10 Mobile
 - Windows Phone 8.1 以降
 
 **リモート ロック**は、以下ではサポートされません。

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dc4580c1debec3f8583a68305438443a211f9243
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326195"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Intune デバイスのプライマリ ユーザーを確認する
@@ -79,13 +79,13 @@ Intune では、登録時または登録直後に、プライマリ ユーザー
 | Windows | MDM のみへの登録 | 登録ユーザー | 登録時 | 
 | Windows | ハイブリッド AADJ + 自動登録 GPO | Windows にサインインする最初のユーザー | Windows に最初のユーザーがサインインするとき| 
 | Windows | 共同管理 | Windows にサインインする最初のユーザー | Windows に最初のユーザーがサインインするとき | 
-| Windows | Azure AD 参加 (一括登録トークン) | なし | 適用できません | 
-| Windows | Azure AD 参加 (Autopilot の自己展開モード) | なし | 適用できません | 
+| Windows | Azure AD 参加 (一括登録トークン) | None | 適用なし | 
+| Windows | Azure AD 参加 (Autopilot の自己展開モード) | None | 適用なし | 
 | クロスプラット フォーム | ポータル サイト アプリへのユーザー主導の登録 | 登録ユーザー | 登録時 |
 | クロスプラット フォーム | デバイス登録マネージャー (DEM) | DEM ユーザーの登録 | 登録時 |
 | iOS/iPadOS、macOS | Apple Automated Device Enrollment (ユーザー アフィニティありの DEP) | 登録ユーザー | 登録時 |
-| iOS/iPadOS、macOS | Apple Automated Device Enrollment (ユーザー アフィニティなしの DEP) | なし | 適用できません |
-| Android | 会社所有の専用の Android デバイス | なし | 適用できません |
+| iOS/iPadOS、macOS | Apple Automated Device Enrollment (ユーザー アフィニティなしの DEP) | None | 適用なし |
+| Android | 会社所有の専用の Android デバイス | None | 適用なし |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>プライマリ ユーザーと Azure AD デバイス所有者
 場合によっては、Intune プライマリ ユーザーが Azure AD デバイスの **[所有者]** プロパティとは異なる場合があります ( **[デバイス]**  >  **[Azure AD デバイス]** で表示できます)。 Azure AD デバイスの所有者は、デバイスの Azure Active Directory への登録時に追加されます。

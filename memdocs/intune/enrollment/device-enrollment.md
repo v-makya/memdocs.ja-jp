@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e3636314ee21823b76a09120f92aca45965437d3
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80808198"
 ---
 # <a name="what-is-device-enrollment"></a>デバイス登録とは
@@ -38,46 +38,46 @@ Intune では、従業員のデバイスやアプリ、従業員が会社のデ�
 | **方法** | **リセットが必要** | [**ユーザー アフィニティ**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Locked** | **詳細** |
 |:---:|:---:|:---:|:---:|:---:|
 | | 登録時にデバイスがワイプされます。 | 各デバイスをユーザーに関連付ける。| "はい" の場合、ユーザーはデバイスの登録を解除できません。 | |
-|**[BYOD](#bring-your-own-device)** | いいえ| はい | いいえ | [詳細情報](apple-mdm-push-certificate-get.md)|
-|**[DEM](#device-enrollment-manager)**| いいえ |いいえ |いいえ | [詳細情報](device-enrollment-manager-enroll.md)|
-|**[ADE](#apple-automated-device-enrollment)**| はい | 省略可能 | 省略可能|[詳細情報](device-enrollment-program-enroll-ios.md)|
-|**[USB-SA](#usb-sa)**| はい | 省略可能 | いいえ| [詳細情報](apple-configurator-enroll-ios.md)|
-|**[USB-Direct](#usb-direct)**| いいえ | いいえ | いいえ|[詳細情報](apple-configurator-enroll-ios.md)|
+|**[BYOD](#bring-your-own-device)** | ×| [はい] | × | [詳細情報](apple-mdm-push-certificate-get.md)|
+|**[DEM](#device-enrollment-manager)**| × |× |× | [詳細情報](device-enrollment-manager-enroll.md)|
+|**[ADE](#apple-automated-device-enrollment)**| [はい] | 省略可能 | 省略可能|[詳細情報](device-enrollment-program-enroll-ios.md)|
+|**[USB-SA](#usb-sa)**| [はい] | 省略可能 | ×| [詳細情報](apple-configurator-enroll-ios.md)|
+|**[USB-Direct](#usb-direct)**| × | × | ×|[詳細情報](apple-configurator-enroll-ios.md)|
 
 ## <a name="macos-enrollment-methods"></a>macOS の登録方法
-| **方法** |  **リセットが必要** |  **ユーザー アフィニティ** | **ロック済み** | **詳細**|
+| **方法** |  **リセットが必要** |  **ユーザー アフィニティ** | **Locked** | **詳細**|
 |:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#bring-your-own-device)** | いいえ| はい | いいえ | [詳細情報](macos-enroll.md)|
-|**[DEM](#device-enrollment-manager)**| いいえ |いいえ |いいえ  | [詳細情報](device-enrollment-manager-enroll.md)|
-|**[ADE](#apple-automated-device-enrollment)**| はい | 省略可能 | 省略可能|[詳細情報](device-enrollment-program-enroll-macos.md)|
+|**[BYOD](#bring-your-own-device)** | ×| [はい] | × | [詳細情報](macos-enroll.md)|
+|**[DEM](#device-enrollment-manager)**| × |× |×  | [詳細情報](device-enrollment-manager-enroll.md)|
+|**[ADE](#apple-automated-device-enrollment)**| [はい] | 省略可能 | 省略可能|[詳細情報](device-enrollment-program-enroll-macos.md)|
 
 ## <a name="windows-enrollment-methods"></a>Windows の登録方法
 
-| **方法** | **リセットが必要** | **ユーザー アフィニティ** | **ロック済み** | **詳細**|
+| **方法** | **リセットが必要** | **ユーザー アフィニティ** | **Locked** | **詳細**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#bring-your-own-device)** | いいえ | はい | いいえ | [詳細情報](windows-enroll.md)|
-|**[DEM](#device-enrollment-manager)**| いいえ |いいえ |いいえ |[詳細情報](device-enrollment-manager-enroll.md)|
-|**自動登録** | いいえ |はい |いいえ | [詳細情報](windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Autopilot** |はい |はい |いいえ | [詳細情報](enrollment-autopilot.md)
-|**一括登録** |いいえ |いいえ |いいえ | [詳細情報](windows-bulk-enroll.md) |
-|**共同管理** |いいえ |はい |いいえ | [詳細情報](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
-|**GPO** |いいえ |はい |いいえ | [詳細情報](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+|**[BYOD](#bring-your-own-device)** | × | [はい] | × | [詳細情報](windows-enroll.md)|
+|**[DEM](#device-enrollment-manager)**| × |× |× |[詳細情報](device-enrollment-manager-enroll.md)|
+|**自動登録** | × |[はい] |× | [詳細情報](windows-enroll.md#enable-windows-10-automatic-enrollment)|
+|**Autopilot** |[はい] |[はい] |× | [詳細情報](enrollment-autopilot.md)
+|**一括登録** |× |× |× | [詳細情報](windows-bulk-enroll.md) |
+|**共同管理** |× |[はい] |× | [詳細情報](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
+|**GPO** |× |[はい] |× | [詳細情報](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## <a name="android-enrollment-methods"></a>Android の登録方法
 
-| **個人用** | **登録方法** | **リセットが必要** | **ユーザー アフィニティ** | **ロック済み** | **詳細**|
+| **個人** | **登録方法** | **リセットが必要** | **ユーザー アフィニティ** | **Locked** | **詳細**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android のデバイス管理**|**ポータル サイトからユーザーが開始** | いいえ | はい | いいえ | [詳細情報](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
-|**Android エンタープライズの仕事用プロファイル**|**ポータル サイトからユーザーが開始**| いいえ | はい | いいえ | [詳細情報](android-work-profile-enroll.md)|
+|**Android のデバイス管理**|**ポータル サイトからユーザーが開始** | × | [はい] | × | [詳細情報](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
+|**Android エンタープライズの仕事用プロファイル**|**ポータル サイトからユーザーが開始**| × | [はい] | × | [詳細情報](android-work-profile-enroll.md)|
 
 
-| **企業** | **登録方法** | **リセットが必要** | **ユーザー アフィニティ** | **ロック済み** | **詳細**|
+| **企業** | **登録方法** | **リセットが必要** | **ユーザー アフィニティ** | **Locked** | **詳細**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android のデバイス管理**|**ポータル サイトから [DEM](#device-enrollment-manager) が開始**| いいえ | いいえ | いいえ |[詳細情報](device-enrollment-manager-enroll.md)|
-|**Android のデバイス管理**|**(事前に宣言されている IMEI または SN) ポータル サイトからユーザーが開始**| いいえ | はい | いいえ | [詳細情報](corporate-identifiers-add.md)|
-|**Zebra モビリティ拡張が装備された Android デバイス管理**|**ポータル サイトからユーザーまたは[DEM](#device-enrollment-manager) が開始**| いいえ | ユーザーが開始した場合は [はい]、[DEM](#device-enrollment-manager) が開始した場合は [いいえ] | いいえ | [詳細情報](../configuration/android-zebra-mx-overview.md)|
-|**Android Enterprise 専用**|**NFC、トークン、QR コード、ゼロ タッチ**| はい | いいえ | ポリシーで構成可能 | [詳細情報](android-kiosk-enroll.md)|
-|**Android Enterprise フル マネージド**|**NFC、トークン、QR コード、ゼロ タッチ**| はい | はい ([DEM](device-enrollment.md#device-enrollment-manager) が開始した場合は、いいえ) | ポリシーで構成可能 | [詳細情報](android-dedicated-devices-fully-managed-enroll.md)|
+|**Android のデバイス管理**|**ポータル サイトから [DEM](#device-enrollment-manager) が開始**| × | × | × |[詳細情報](device-enrollment-manager-enroll.md)|
+|**Android のデバイス管理**|**(事前に宣言されている IMEI または SN) ポータル サイトからユーザーが開始**| × | [はい] | × | [詳細情報](corporate-identifiers-add.md)|
+|**Zebra モビリティ拡張が装備された Android デバイス管理**|**ポータル サイトからユーザーまたは[DEM](#device-enrollment-manager) が開始**| × | ユーザーが開始した場合は [はい]、[DEM](#device-enrollment-manager) が開始した場合は [いいえ] | × | [詳細情報](../configuration/android-zebra-mx-overview.md)|
+|**Android Enterprise 専用**|**NFC、トークン、QR コード、ゼロ タッチ**| [はい] | × | ポリシーで構成可能 | [詳細情報](android-kiosk-enroll.md)|
+|**Android Enterprise フル マネージド**|**NFC、トークン、QR コード、ゼロ タッチ**| [はい] | はい ([DEM](device-enrollment.md#device-enrollment-manager) が開始した場合は、いいえ) | ポリシーで構成可能 | [詳細情報](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device
@@ -99,7 +99,7 @@ iOS または iPadOS の ADE 登録についての詳細をご確認ください
 
 ### <a name="usb-sa"></a>USB-SA
 IT 管理者は、セットアップ アシスタントを使用した登録を行うため、USB 経由で Apple Configurator を使用して、会社が所有するデバイスを手動で準備します。 IT 管理者は登録プロファイルを作成して、Apple Configurator にエクスポートします。 ユーザーは、自分のデバイスを受け取ったときに、セットアップ アシスタントを実行してデバイスを登録するように求められます。 この方法は、**iOS 監視対象**モードをサポートしているため、以下の機能が有効になります。
-- ロック登録
+- 登録のロック
 - キオスク モード、およびその他の高度な構成および制限
 
 セットアップ アシスタントを使用した iOS/iPadOS Apple Configurator 登録については、以下をご覧ください。

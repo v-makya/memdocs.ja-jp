@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 763d67c393eede1920f356e54d6ab422bc75a480
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 1e1f1c04bed91de3ac193ea3b6a07bde4e8658ba
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79348498"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81638243"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>Intune ポータル サイトと Entrust Datacard を使用して iOS または iPadOS デバイスを設定する
 
@@ -79,7 +80,7 @@ ms.locfileid: "79348498"
     ![デバイスのホーム画面に Intune ポータル サイトのプッシュ通知が表示されたスクリーンショットの例。](./media/action-required-in-app-intercede.png)  
 
 8. **[モバイル スマート カード アクセスのセットアップ]** 画面で次のようにします。   
-    」を参照します。 組織のセットアップ手順へのリンクをタップします。 組織で追加の手順が提供されていない場合は、この記事が表示されます。  
+    a. 組織のセットアップ手順へのリンクをタップします。 組織で追加の手順が提供されていない場合は、この記事が表示されます。  
     b. **[開始]** をタップします。  
 
     ![Intune ポータル サイトの [モバイル スマート カード アクセスのセットアップ] 画面のスクリーンショットの例。](./media/smart-card-info-intercede.png)
@@ -91,7 +92,7 @@ ms.locfileid: "79348498"
 13. アクションの一覧から選択するように求められます。 派生バイル スマート資格情報に登録できるものを選択します。 リンクまたはボタンに、 **[I'd like to enroll for a derived mobile smart card credential]\(派生モバイル スマート カード資格情報で登録する\)** と表示される場合があります。  
 14. スマート資格情報対応のアプリケーションを正常にダウンロードしてインストールしたことを選択します。 次の画面に進みます。   
 15. 派生スマート カード資格情報に関する情報を入力します。  
-    」を参照します。 ID 名には任意の名前を入力します (例: *Entrust Derived Cred*)。  
+    a. ID 名には任意の名前を入力します (例: *Entrust Derived Cred*)。  
     b. ドロップダウン メニューで、 **[Entrust IdentityGudard Mobile Smart Credential]\(Entrust IdentityGudard モバイル スマート資格情報\)** を選択します。  
     c. 次の画面に進みます。 その下に、数値のパスワードを含む QR コードが表示されます。  
 

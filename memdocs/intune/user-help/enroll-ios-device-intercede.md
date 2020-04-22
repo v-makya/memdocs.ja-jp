@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1bd216049c5dbda7c044949f9fa39c3b7bd56f9d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 8caf05a2869088fd4f8206d1306d82c696f527a2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337240"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81638206"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>Intune ポータル サイトと Intercede を使用して iOS または iPadOS デバイスをセットアップする
 
@@ -86,11 +87,11 @@ ms.locfileid: "79337240"
 6. スマート カード対応デバイスまたはセルフサービス キオスクに切り替え、MyID アプリを開きます。 職場の資格情報を使用してサインインします。  
 7. ID を要求するオプションを選択します。 
 8. 使用するプロファイルの確認を求めるメッセージが表示されたら、モバイル資格情報でアクティブ化するためのオプションを選択します。 QR コードが表示されます。  
-9. モバイル デバイスに戻ります。 Intune ポータル サイトの **[QR コードの取得]** 画面で、**[続行]** をタップします。  
+9. モバイル デバイスに戻ります。 Intune ポータル サイトの **[QR コードの取得]** 画面で、 **[続行]** をタップします。  
 
     ![Intune ポータル サイトの [QR コードの取得] 画面のスクリーンショットの例。](./media/get-qr-code-intercede.png) 
  
-10. **[カメラを使用する]** > **[OK]** をタップします。  
+10. **[カメラを使用する]**  >  **[OK]** をタップします。  
 
     ![Intune ポータル サイトでカメラのアクセス許可を求めるメッセージのスクリーンショットの例。](./media/allow-cp-camera-access-intercede.png)  
 

@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 893981700ede9587a980faa0e4d6b0384c24e3d4
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80401481"
 ---
-# <a name="quickstart-try-microsoft-intune-for-free"></a>クイック スタート:Microsoft Intune を無料で試す
+# <a name="quickstart-try-microsoft-intune-for-free"></a>クイック スタート: Microsoft Intune を無料で試す
 
 Microsoft Intune でデバイスやアプリケーションを管理すると、従業員の会社データを保護できます。 このクイック スタートでは、Intune をテスト環境で試用する無料のサブスクリプションを作成します。
 

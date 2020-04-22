@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326926"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Windows デバイスの登録をセットアップする
@@ -37,7 +37,7 @@ Intune 管理者は次の方法で登録を簡略化できます。
 - [CNAME の登録](#simplify-windows-enrollment-without-azure-ad-premium)
 - [一括登録を有効にする](windows-bulk-enroll.md) (Azure AD Premium と Windows Configuration Designer が必須)
 
-Windows デバイスの登録を簡単にする方法は次の 2 つの要素で決まります。
+Windows デバイスの登録を簡略化する方法は、次の 2 つの要素によって決まります。
 
 - **Azure Active Directory Premium を使用していますか?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) は、Enterprise Mobility + Security およびその他のライセンス プランに付属します。
 - **ユーザーはどのバージョンの Windows クライアントを登録しますか?** <br>Windows 10 デバイスは、職場または学校のアカウントを追加すると自動的に登録できます。 以前のバージョンでは、会社ポータル アプリを使用して登録する必要があります。
@@ -67,7 +67,7 @@ Intune では、次の両方のデバイスで、複数のユーザーがサポ�
 ## <a name="simplify-windows-enrollment-without-azure-ad-premium"></a>Azure AD Premium なしで Windows 登録を簡略化する
 Intune サーバーに登録要求をリダイレクトする、ドメイン ネーム サーバー (DNS) エイリアス (CNAME レコード タイプ) を作成することで、登録を簡略化できます。 それ以外の場合、Intune に接続を試行するユーザーは、登録時に Intune のサーバー名を入力する必要があります。
 
-**手順 1:CNAME を作成する** (省略可能)<br>
+**手順 1: CNAME を作成する** (省略可能)<br>
 会社のドメインの CNAME DNS リソース レコードを作成します。 たとえば、会社の Web サイトが contoso.com の場合、EnterpriseEnrollment.contoso.com を enterpriseenrollment-s.manage.microsoft.com にリダイレクトする CNAME を DNS に作成します。
 
 CNAME DNS エントリの作成は省略可能ですが、CNAME レコードにより、ユーザーによる登録が簡単になります。 CNAME レコードの登録が見つからない場合、ユーザーは手動で MDM サーバー名 enrollment.manage.microsoft.com を入力するように求められます。

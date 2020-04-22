@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 077d7c4dd345b9b16677d61269b9f331dedb4dbb
-ms.sourcegitcommit: d601f4e08268d139028f720c0a96dadecc7496d5
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80488080"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows デバイスの一括登録
@@ -44,7 +44,7 @@ Azure AD ユーザーはこれらのデバイス上の標準ユーザーであ�
    ![Windows Configuration Designer アプリでデスクトップ デバイスのプロビジョニングを選択するスクリーン ショット](./media/windows-bulk-enroll/bulk-enroll-select.png)
 
 3. **[新しいプロジェクト]** ウィンドウが開くので、そこで次の情報を指定します。
-   - **名前** - プロジェクトの名前
+   - **[名前]** - プロジェクトの名前
    - **プロジェクト フォルダー** - プロジェクトの保存場所
    - **説明**-プロジェクトの説明 (オプション) ![Windows Configuration Designer アプリで、名前、プロジェクト フォルダー、説明を指定するスクリーン ショット](./media/windows-bulk-enroll/bulk-enroll-name.png)
 
@@ -99,5 +99,5 @@ Azure AD ユーザーはこれらのデバイス上の標準ユーザーであ�
 
 オープン ネットワークを使用していない場合は、[デバイス レベルの証明書](../protect/certificates-configure.md)を使用して接続を開始する必要があります。 一括登録されたデバイスは、ネットワーク アクセスのためにユーザー対象の証明書に使用することはできません。 
 
-### <a name="conditional-access"></a>条件付きアクセス
+### <a name="conditional-access"></a>Conditional Access
 条件付きアクセスは、一括登録を使用して登録された Windows デバイスでは使用できません。

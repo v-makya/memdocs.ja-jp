@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 237f2e5d1a0d6ae6a58ceb8e5f4afb5a27031195
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326417"
 ---
 # <a name="remove-a-user-from-a-shared-iosipados-device"></a>共有の iOS/iPadOS デバイスからユーザーを削除する
@@ -31,7 +31,7 @@ ms.locfileid: "80326417"
 
 **ユーザーの削除**アクションでは、共有の iPad デバイス上のローカル キャッシュから選択したユーザーを削除します。 iPad デバイスは、[iOS/iPadOS 教育プロファイル](../fundamentals/education-settings-configure-ios.md)を使用して iOS/iPadOS Classroom アプリを管理するように設定する必要があります。 
 
-## <a name="supported-platforms"></a>サポートされているプラットフォーム
+## <a name="supported-platforms"></a>[サポートされているプラットフォーム]
 
 - Windows - サポートされていません
 - Windows Phone - サポートされていません

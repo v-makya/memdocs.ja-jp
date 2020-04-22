@@ -17,6 +17,9 @@
 #### [Android デバイスを登録する](enroll-device-android-company-portal.md)  
 #### [Android 仕事用プロファイルを使用して登録する](enroll-device-android-work-profile.md)
 #### [Microsoft Intune アプリを使用して登録する](enroll-device-android-microsoft-intune-app.md)
+#### 派生した資格情報で登録する
+##### [Entrust Datacard で登録する](enroll-android-device-entrust-datacard.md)
+##### [Intercede に登録する](enroll-android-device-intercede.md)
 ### [新しいデバイス管理のセットアップに移動する](move-to-new-device-management-setup.md)
 ### [デバイスで管理対象アプリを使用する](use-managed-apps-on-your-device-android.md)
 ### [デバイスを暗号化する](encrypt-your-device-android.md)
@@ -34,7 +37,7 @@
 #### [Samsung KNOX に関する一般的な問題の解決](samsung-knox-errors-android.md)
 #### [Outlook をインストールするデバイスを更新する](update-device-outlook-android.md)
 
-#### ログの記録
+#### ログ記録
 ##### [詳細ログ記録を有効にする](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 ##### [アップロードとメールのログ](send-logs-to-your-it-admin-by-email-android.md)
 ##### [USB ケーブルを使用してログを送信する](send-logs-to-your-it-admin-using-cable-android.md)

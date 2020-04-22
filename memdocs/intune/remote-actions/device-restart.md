@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: adbc96dade5b6da134fa8a22f2cb613fc0baa923
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80326317"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Intune でデバイスをリモートで再起動する
@@ -30,7 +30,7 @@ ms.locfileid: "80326317"
 
 **[再起動]** デバイス アクションでは、選択したデバイスが (5 分以内に) 再起動されます。 デバイスの所有者に再起動の自動通知が行われないため、作業内容が失われる可能性があります。
 
-## <a name="supported-platforms"></a>サポートされているプラットフォーム
+## <a name="supported-platforms"></a>[サポートされているプラットフォーム]
 
 - Windows - Windows 8.1 以降でサポートされています
 - Windows Phone - Windows Phone 8.1 以降でサポートされています

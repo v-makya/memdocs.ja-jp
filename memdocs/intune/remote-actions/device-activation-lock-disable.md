@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b23fbed8f12c4df90ff2136434e21f3eba369c9e
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80322563"
 ---
 # <a name="disable-activation-lock-on-supervised-iosipados-devices-with-intune"></a>Intune を使用して監視されている iOS/iPadOS デバイス上のアクティベーション ロックを無効にする
@@ -38,7 +38,7 @@ Microsoft Intune は、iOS/iPadOS 8.0 以降のデバイスの [iPhone を探す
 
 ## <a name="how-activation-lock-affects-you"></a>アクティブ化ロックの影響
 
-アクティベーション ロックにより、iOS/iPadOS デバイスをセキュリティで保護でき、紛失や盗難にあったデバイスが戻ってくる可能性が高まりますが、この機能は IT 管理者にさまざまな課題をもたらすことがあります。 次に例を示します。
+アクティベーション ロックにより、iOS/iPadOS デバイスをセキュリティで保護でき、紛失や盗難にあったデバイスが戻ってくる可能性が高まりますが、この機能は IT 管理者にさまざまな課題をもたらすことがあります。 例:
 
 - あるユーザーがデバイスでアクティブ化ロックを設定します。 その後、そのユーザーが退職し、デバイスを返却します。 ユーザーの Apple ID とパスワードがわからなければ、デバイスを再アクティブ化する方法がありません。
 - アクティベーション ロックが有効になっているすべてのデバイスのレポートが必要です。
@@ -59,7 +59,7 @@ Intune では、iOS/iPadOS 8.0 以降を実行している監視対象デバイ�
 - ユーザーが iPhone を探すアプリのセキュリティ上のメリットを受けることができる。
 - デバイスを再利用する必要がある場合に、デバイスをインベントリから削除することや、ロック解除できることを把握したうえで、ユーザーが業務を遂行できるようにすることができる。
 
-## <a name="before-you-start"></a>開始する前に
+## <a name="before-you-start"></a>アップグレードを開始する前に
 デバイスのアクティベーション ロックを無効にするには、次の手順に従って先にそれを有効にする必要があります。
 
 1. [デバイスの制限設定を構成する方法](../configuration/device-restrictions-configure.md)に関する記事に記載されている情報を使用して、iOS/iPadOS 用の Intune デバイス制限プロファイルを構成します。
@@ -84,7 +84,7 @@ Intune の **[アクティベーション ロックの無効化]** リモート 
     >デバイスをワイプする前にバイパス コードをコピーします。 コードをコピーする前にデバイスの設定をリセットすると、Azure からコードが削除されます。
 
 7. デバイスの **[概要]** ブレードに移動し、 **[ワイプ]** を選択します。
-8. デバイスをリセットすると、*Apple ID* と *パスワード*を入力するように求められます。 *[ID]* フィールドは空白のままとし、"*パスワード*" の**バイパス コード**を入力します。 これにより、デバイスからアカウントが削除されます。 
+8. デバイスをリセットすると、*Apple ID* と *パスワード*を入力するように求められます。 *[ID]* フィールドは空白のままとし、"**パスワード**" の*バイパス コード*を入力します。 これにより、デバイスからアカウントが削除されます。 
 
 
 ## <a name="next-steps"></a>次のステップ
