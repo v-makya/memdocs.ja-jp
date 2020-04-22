@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 535c9b6384c30473a0e4d6e849d41404acfea043
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346379"
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Lookout for Work が検出した脅威を解決する  
@@ -52,7 +52,7 @@ Lookout for Work アプリでセキュリティ上の脅威やウイルスが検
 
 Lookout for Work で脅威として識別されたアプリをインストールする場合、以下のスクリーンショットに示すようなメッセージが表示されます。  
 
-![Lookout for Work アプリ インターフェイスに Lookout for Work のアラート メッセージが表示されているスクリーンショット例。 3 つのボタンが表示されます:[閉じる]、[詳細情報]、[アンインストール]。](./media/lookout-virus-alert-android.png)  
+![Lookout for Work アプリ インターフェイスに Lookout for Work のアラート メッセージが表示されているスクリーンショット例。 [閉じる]、[詳細情報]、[アンインストール] という 3 つのボタンが表示されます。](./media/lookout-virus-alert-android.png)  
 
 会社の電子メールやデータに対する、失ったアクセスを回復するには、問題のあるアプリをアンインストールします。 そのアプリがデバイス上にある限り、会社のリソースにはアクセスできません。    
 

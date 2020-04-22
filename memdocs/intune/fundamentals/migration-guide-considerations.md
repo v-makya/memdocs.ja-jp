@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5a954732b2df5824d7116dc10e035b10290c0290
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358326"
 ---
 # <a name="special-migration-considerations"></a>移行において特に考慮すべき事項
@@ -36,4 +36,4 @@ DEP の使用を続行して Intune でデバイスを管理するには、[Devi
 
 ## <a name="next-steps"></a>次のステップ
 
-[フェーズ 2:移行のキャンペーン](migration-guide-campaign.md)
+[フェーズ 2: 移行のキャンペーン](migration-guide-campaign.md)

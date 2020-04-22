@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 07aceda512163513632d124d3e17d1041069b229
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80085809"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>トラブルシューティング ポータルを使用して社内のユーザーをサポートする
@@ -66,7 +66,7 @@ ms.locfileid: "80085809"
 | 1.   | アカウントの状態  | 現在の Intune テナントの状態が**アクティブ**または**非アクティブ**として表示されます。       |
 | 2.   | ユーザー選択  | 現在選択されているユーザーの名前。 **[ユーザーの変更]** をクリックして、新しいユーザーを選択します。       |
 | 3.   | ユーザーの状態  | ユーザーの Intune ライセンスの状態、デバイスの数、および各デバイスのコンプライアンスが表示されます。       |
-| 4.   | ユーザー情報  | 一覧を使用して、ウィンドウで確認する詳細を選択します。 <br>以下を選択できます。 <ul><li>クライアント アプリ<li>コンプライアンス ポリシー<li> 構成ポリシー<li>アプリ保護ポリシー <li>登録制限</ul>      |
+| 4.   | ユーザー情報  | 一覧を使用して、ウィンドウで確認する詳細を選択します。 <br>以下を選択できます。 <ul><li>クライアント アプリ<li>Compliance ポリシー<li> 構成ポリシー<li>アプリ保護ポリシー <li>登録制限</ul>      |
 | 5.   | グループのメンバーシップ  | 選択したユーザーがメンバーになっている現在のグループが表示されます。       |
 
 <!-- this section needs to be updated
@@ -252,7 +252,7 @@ An app protection policy is available to mobile apps that integrate with EMS tec
 |-------------|----------|
 | 登録の開始 | ユーザーが最初に登録を開始した時間。 |
 | OS | デバイスのオペレーティング システム。 |
-| OS のバージョン | デバイスのオペレーティング システムのバージョン。 |
+| OS バージョン | デバイスのオペレーティング システムのバージョン。 |
 | 失敗 | エラーの理由。 |
 
 ### <a name="failure-details"></a>エラーの詳細

@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0189fea7f73b70286a6daf844a10806d4c1e8a5d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79353204"
 ---
 # <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune を使用してデバイスを準拠または非準拠としてマークするための Windows 8.1 設定
@@ -28,10 +28,10 @@ ms.locfileid: "79353204"
 
 この機能は、以下に適用されます。
 
-- Windows Phone 8.1
+- WVPNdows Phone 8.1
 - Windows 8.1 以降
 
-Intune サービス管理者は、組織のリソースの保護に役立てるために、これらのコンプライアンス設定を使用します。 コンプライアンス ポリシーの詳細およびその機能については、[デバイス コンプライアンスの概要](device-compliance-get-started.md)に関するページを参照してください。
+Intune 管理者は、組織のリソースの保護に役立てるためにこれらのコンプライアンス設定を使用します。 コンプライアンス ポリシーの詳細およびその機能については、[デバイス コンプライアンスの概要](device-compliance-get-started.md)に関するページを参照してください。
 
 ## <a name="before-you-begin"></a>始める前に
 
@@ -88,7 +88,7 @@ Windows 8.1 PC の場合、バージョン **3** が返されます。 Windows �
     - 小文字
     - 大文字
     - 記号
-    - 数字
+    - 数値
 
     大きな数値を設定すると、ユーザーはより複雑なパスワードを作成する必要があります。 Microsoft アカウントでアクセスされるデバイスについては、次のいずれかの条件が満たされる場合、コンプライアンス ポリシーは正常に評価されません。
 
@@ -118,5 +118,5 @@ Windows 8.1 PC の場合、バージョン **3** が返されます。 Windows �
 ## <a name="next-steps"></a>次のステップ
 
 - [非準拠デバイスに対するアクションを追加](actions-for-noncompliance.md)し、[スコープのタグを使用してポリシーをフィルター処理する](../fundamentals/scope-tags.md)
-- [コンプライアンス ポリシーを監視する](compliance-policy-monitor.md)
+- [コンプライアンス ポリシーを監視します](compliance-policy-monitor.md)。
 - [Windows 10 以降のデバイス向けのコンプライアンス ポリシー設定](compliance-policy-create-windows.md)を確認する

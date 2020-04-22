@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8b43b9671767a2d67bb98db6150799d266fe9fa6
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086549"
 ---
 # <a name="android-device-settings-to-configure-vpn-in-intune"></a>Intune で VPN を構成するための Android デバイスの設定
@@ -36,15 +36,15 @@ Intune での VPN プロファイルの詳細については、[VPN プロファ
 
 ## <a name="base-vpn"></a>基本 VPN
 
-- **[接続名]** :この接続の名前を入力します。 エンド ユーザーがデバイスで利用可能な VPN 接続を参照するときに、この名前が表示されます。 たとえば、「`Contoso VPN`」と入力します。
-- **[IP アドレスまたは FQDN]** :デバイスが接続する VPN サーバーの IP アドレスまたは完全修飾ドメイン名 (FQDN) を入力します。 たとえば、「**192.168.1.1**」や「**vpn.contoso.com**」などと入力します。
+- **[接続名]** : この接続の名前を入力します。 エンド ユーザーがデバイスで利用可能な VPN 接続を参照するときに、この名前が表示されます。 たとえば、「`Contoso VPN`」と入力します。
+- **[IP アドレスまたは FQDN]** : デバイスが接続する VPN サーバーの IP アドレスまたは完全修飾ドメイン名 (FQDN) を入力します。 たとえば、「**192.168.1.1**」や「**vpn.contoso.com**」などと入力します。
 
-  - **[認証方法]** :VPN サーバーに対するデバイスの認証方法として、以下のいずれかを選択します。 次のようなオプションがあります。
+  - **[認証方法]** : VPN サーバーに対するデバイスの認証方法として、以下のいずれかを選択します。 次のようなオプションがあります。
 
-    - **証明書**:接続を認証するための既存の SCEP または PKCS 証明書プロファイルを選択します。 証明書プロファイルを作成する手順については、[証明書の構成](../protect/certificates-configure.md)に関するページを参照してください。
-    - **[ユーザー名とパスワード]** :VPN サーバーにサインインするときに、エンド ユーザーはユーザー名とパスワードの入力を求められます。
+    - **[証明書]** : 接続を認証するための既存の SCEP または PKCS 証明書プロファイルを選択します。 証明書プロファイルを作成する手順については、[証明書の構成](../protect/certificates-configure.md)に関するページを参照してください。
+    - **[ユーザー名とパスワード]** : VPN サーバーにサインインするときに、エンド ユーザーはユーザー名とパスワードの入力を求められます。
 
-- **接続の種類**:VPN 接続の種類を選択します。 次のようなオプションがあります。
+- **[接続の種類]** : VPN 接続の種類を選択します。 次のようなオプションがあります。
 
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
@@ -53,8 +53,8 @@ Intune での VPN プロファイルの詳細については、[VPN プロファ
   - **Pulse Secure**
   - **Citrix SSO**
 
-- **[指紋]** (Check Point Capsule VPN のみ):信頼できる VPN サーバーであることを確認するために文字列 (たとえば、「**Contoso 指紋コード**」) を入力します。 指紋がクライアントに送信されるので、クライアントでは同じ指紋を持つすべてのサーバーを信頼することができます。 デバイスに指紋が設定されていない場合、デバイスは指紋を表示すると共に、VPN サーバーを信頼するようにユーザーを促します ユーザーは手動で指紋を検証し、[信頼する] を選択して接続します。
-- **[Citrix VPN 属性に対してキーと値を入力します]** (Citrix のみ):Citrix から提供されたキーと値のペアを入力します。 これらの値で、VPN 接続のプロパティを構成します。 
+- **[指紋]** (Check Point Capsule VPN のみ): 信頼できる VPN サーバーであることを確認するために文字列 (たとえば、「**Contoso 指紋コード**」) を入力します。 指紋がクライアントに送信されるので、クライアントでは同じ指紋を持つすべてのサーバーを信頼することができます。 デバイスに指紋が設定されていない場合、デバイスは指紋を表示すると共に、VPN サーバーを信頼するようにユーザーを促します ユーザーは手動で指紋を検証し、[信頼する] を選択して接続します。
+- **[Citrix VPN 属性に対してキーと値を入力します]** (Citrix のみ): Citrix から提供されたキーと値のペアを入力します。 これらの値で、VPN 接続のプロパティを構成します。 
 
   また、キーと値のペアを含むコンマ区切り値ファイル (.csv) を **[インポート]** することもできます。 **[個人用データにヘッダーがあります]** と **[キー]** プロパティを必ず確認してください。
 
@@ -62,6 +62,6 @@ Intune での VPN プロファイルの詳細については、[VPN プロファ
 
 ## <a name="next-steps"></a>次のステップ
 
-[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
+[プロファイルを割り当てて](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
 
 また、[Android エンタープライズ](vpn-settings-android-enterprise.md)、[iOS/iPadOS](vpn-settings-ios.md)、[macOS](vpn-settings-macos.md)、[Windows 10 以降](vpn-settings-windows-10.md)、[Windows 8.1](vpn-settings-windows-8-1.md)、および [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md) デバイス用の VPN プロファイルを作成することもできます。

@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e762106a13bb42be11771276f38a37e46ae24662
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79338904"
 ---
 # <a name="software-update-agent-error-codes-and-descriptions-in-microsoft-intune"></a>Microsoft Intune のソフトウェア更新エージェントのエラー コードと説明
 
 次の表に、Intune **更新エージェント**のエラー コードを示します。 この表に記載されていないエラー コードについては、[Windows Update のエラー コード一覧](https://support.microsoft.com/help/938205/windows-update-error-code-list)に関するページを参照してください。
 
-|エラー コード|シンボリック名|説明|
+|エラー コード|シンボリック名|詳細情報|
 |--------------|-----------------|--------------------|
 |**0x00cf0001**|OM_S_SERVICE_STOP|エージェントが正常に停止されました。|
 |**0x00cf0003**|OM_S_UPDATE_ERROR|処理は完了しましたが、更新プログラムの適用中にエラーが発生しました。|

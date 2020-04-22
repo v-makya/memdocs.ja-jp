@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 06747035f2d04be01dad12a9c89b712a4baae6b4
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79338813"
 ---
 # <a name="integrate-sophos-mobile-with-intune"></a>Sophos Mobile を Intune と統合する  
@@ -61,7 +61,7 @@ Sophos Mobile アプリの承認プロセスは以下で構成されます。
    ![Sophos のセットアップ](./media/sophos-mtd-connector-integration/sophos-setup.png) 
  
 7. **[Bind]** \(バインド\)、 **[はい]** の順に選択します。 Sophos が Intune に接続し、お使いの Intune サブスクリプションへのサインインを求めます。 
-8. Microsoft Intune の認証ウィンドウで Intune の資格情報を入力し、*Sophos Mobile Thread Defense* に対するアクセス許可に **[同意する]** を選択します。  
+8. Microsoft Intune の認証ウィンドウで Intune の資格情報を入力し、**Sophos Mobile Thread Defense** に対するアクセス許可に *[同意する]* を選択します。  
    ![Intune の認証](./media/sophos-mtd-connector-integration/intune-authentication.png)
 
 9. **[Sophos setup]** \(Sophos のセットアップ\) ページで **[保存]** を選択し、Intune の構成を完了します。  

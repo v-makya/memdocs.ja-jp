@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f9bf88dd3a30caeb57b10e0c88c6954d1479d4f2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79349408"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Wandera Mobile Threat Defense コネクタと Intune  
@@ -43,7 +43,7 @@ Intune のコンプライアンス ポリシーには、Wandera のリスク評�
 
 非準拠のデバイスについては、Office 365 などのリソースへのアクセスをブロックできます。 ブロックされたデバイスを使っているユーザーには、問題を解決してアクセスを回復するためのガイダンスが Wandera アプリから届きます。
 
-## <a name="supported-platforms"></a>サポートされているプラットフォーム  
+## <a name="supported-platforms"></a>[サポートされているプラットフォーム]  
 
 Intune に登録したとき、Wandera では次のプラットフォームがサポートされます。
 
@@ -90,11 +90,11 @@ Intune で Wandera MTD を使用する場合の一般的なシナリオを次に
 
 *修復するとアクセス権が付与される*:  
 
-![修復後に許可されるアクセス](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
+![修復するとアクセス権が付与される](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
 
-## <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークへの脅威に基づいて SharePoint Online へのアクセスを制御する
+## <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークに対する脅威に基づいて SharePoint Online へのアクセスを制御する
 
-Man-in-the-middle 攻撃のようなネットワークの脅威を検出し、デバイス リスクに基づき、企業ファイルの同期を制限します。
+Man-in-the-middle 攻撃など、ネットワークに対する脅威を検出し、デバイスのリスクに基づいて会社内のファイルの同期を阻止します。
 
 *ネットワークの脅威が検出されたときに SharePoint Online をブロック*:  
 

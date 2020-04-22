@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5bb106e482beb7894c84f11d0994b43ba43eb302
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79338384"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Zimperium を Intune と統合する
@@ -39,7 +39,7 @@ Zimperium と Intune の統合を始める前に、次のサブスクリプシ�
 
 - 次のアクセス許可を付与する、Azure Active Directory グローバル管理者の管理者資格情報:
 
-  - サインインし、ユーザー プロファイルを読む
+  - サインインしてユーザー プロファイルを読み取る
 
   - サインインしたユーザーとしてディレクトリにアクセスする
 
@@ -61,7 +61,7 @@ Zimperium アプリ承認プロセスは以下で構成されます。
 
 - Zimperium アプリが Azure AD SSO を使用してサインインできるようにします。
 
-同意と Azure Active Directory アプリケーションの詳細については、Azure Active Directory の記事「*Azure Active Directory v2.0 エンドポイントでのアクセス許可と同意*」の「[ディレクトリ管理者にアクセス許可を要求する](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin)」をご覧ください。
+同意と Azure Active Directory アプリケーションの詳細については、Azure Active Directory の記事「[Azure Active Directory v2.0 エンドポイントでのアクセス許可と同意](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin)」の「*ディレクトリ管理者にアクセス許可を要求する*」をご覧ください。
 
 
 ## <a name="to-set-up-zimperium-integration"></a>Zimperium の統合を設定するには
@@ -74,7 +74,7 @@ Zimperium アプリ承認プロセスは以下で構成されます。
 
 4. **[Add MDM]\(MDM の追加\)** を選択し、 **[MDM provider]\(MDM プロバイダー\)** 一覧から **[Microsoft Intune]** を選択します。
 
-5. Microsoft Intune を MDM サービスとして設定すると、 **[Microsoft Intune Configuration]\(Microsoft Intune の構成\)** ウィンドウが開くので、各オプションについて **[Azure Active Directory を追加する]** を選択します。 **[Zimperium zConsole]** と **[zIPS iOS and Android apps]\(zIPS iOS および Android アプリ\)** オプションのそれぞれで選択します。これらのオプションは Zimperium が Azure AD シングル サインオンを使用して Intune および Azure AD と通信することを承認するものです。
+5. Microsoft Intune を MDM サービスとして設定すると、 **[Microsoft Intune Configuration]\(Microsoft Intune 構成\)** ウィンドウが開くので、 **[Zimperium zConsole]** と **[zIPS iOS and Android apps]\(zIPS iOS および Android アプリ\)** オプションのそれぞれに **[Azure Active Directory を追加する]** を選択します。これらのオプションは Zimperium が Azure AD シングル サインオンを使用して Intune および Azure AD と通信することを承認するものです。
 
     > [!IMPORTANT]  
     > Intune との統合プロセスを完了するには、[Zimperium zConsole] と [zIPS iOS and Android apps]\(zIPS iOS および Android アプリ\) を追加する必要があります。

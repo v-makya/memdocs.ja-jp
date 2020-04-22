@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a9975ffb8ce56659016680304c936fc8bb7d0774
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79344195"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Microsoft Intune の一般的な使用方法
@@ -57,7 +57,7 @@ Intune と Microsoft Enterprise Mobility + Security によって提供される�
 
 それぞれのアプリ ストアの Office モバイル アプリは Intune で構成できるデータ封じ込めポリシーに対応しています。 そのため、IT 部門で管理されていないアプリ (ネイティブの電子メール アプリなど) や記憶域の場所 (Dropbox など) とのデータの共有を防ぐことができます。 こうした機能はすべて Office 365 と EMS に組み込まれているので、 新たにインフラストラクチャを展開する必要はありません。
 
-Office 365 の一般的な展開方法では、デバイスを企業のアプリ、証明書、Wi-Fi、VPN 構成を使用して完全にセットアップする必要がある場合 (通常は会社所有のデバイスの場合)、そのデバイスを管理システムに登録する必要があります。  
+Office 365 の一般的な展開方法では、デバイスを企業のアプリ、証明書、Wi-Fi、VPN 構成を使用して完全にセットアップする必要がある場合 (通常は企業所有のデバイスの場合)、そのデバイスを管理システムに登録する必要があります。  
 
 ただし、個人的に所有しているデバイスなどで、ユーザーが会社の電子メールとドキュメントへのアクセスのみ必要な場合は、[アプリ保護ポリシー](../apps/app-protection-policies.md)を適用してある Office モバイル アプリを使用すれば、デバイスの登録を省略できます。  
 

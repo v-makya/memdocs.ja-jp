@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 72b816938e803b28a06d3975f062f105d4c6a1cc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358742"
 ---
 # <a name="manage-user-device-linking-for-windows-pcs"></a>Windows PC に対するユーザー デバイスの関連付けを管理する
@@ -42,7 +42,7 @@ PC にユーザーを関連付けるには:
 
    **[ユーザーの関連付け]** ダイアログ ボックスには、関連付けることができるユーザーの表示名とユーザー ID、および現在関連付けられている PC の台数が表示されます。 選択した PC に既にユーザーが関連付けられている場合は、そのユーザーの名前とユーザー ID が **[現在のユーザー]** の下に表示されます。 PC がどのユーザーにも関連付けられていない場合、 **[現在のユーザー]** の下に **[ユーザーなし]** と表示されます。
 
-3. 以下のいずれかを実行します。
+3. 次のいずれかの操作を行います。
 
    - PC と現在のユーザーの関連付けをそのままにするには、 **[キャンセル]** を選択します。
 

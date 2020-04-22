@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 627fb13554f8f379f75f08c27d18cdd0b1106028
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084840"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Intune で Mobile Threat Defense (MTD) アプリを追加して割り当てる
@@ -47,7 +47,7 @@ Intune で次の手順を実行します。 次のプロセスをよく理解し
 
 iOS デバイスでは、Azure AD によってチェックされた ID がユーザーに与えられるように、[Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) が必要です。 さらに、Intune で使用する MTD の iOS アプリを設定する iOS アプリ構成ポリシーも必要です。
 
-iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 **[アプリ情報]** を構成するときに、こちらの [Microsoft Authenticator のアプリ ストア URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) を使用してください。
+iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 [[アプリ情報]](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) を構成するときに、こちらの **Microsoft Authenticator のアプリ ストア URL** を使用してください。
 
 ## <a name="configure-mtd-applications"></a>MTD アプリケーションの構成
 
@@ -64,11 +64,11 @@ MTD プロバイダーに対応するセクションを選択します。
 
 ### <a name="configure-lookout-for-work-apps"></a>Lookout for Work アプリを構成する
 
-- **Android**
-  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [Lookout for work の Google アプリ ストア URL](https://play.google.com/store/apps/details?id=com.lookout.enterprise) を使用してください。
+- **Outlook Web Access (OWA)**
+  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 [[アプリ ストアの URL]](https://play.google.com/store/apps/details?id=com.lookout.enterprise) には、こちらの **Lookout for work の Google アプリ ストア URL** を使用してください。
 
-- **Android**
-  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [Lookout for Work の iOS アプリ ストア URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) を使用してください。
+- **iOS**
+  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 [[アプリ ストアの URL]](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) には、こちらの **Lookout for Work の iOS アプリ ストア URL** を使用してください。
 
 - **Apple ストア以外の Lookout for Work アプリ**
   - Lookout for Work iOS アプリに再署名する必要があります。 Lookout により、その Lookout for Work iOS アプリが the iOS App Store の外部で配布されます。 アプリを配布する前に、iOS Enterprise Developer Certificate でアプリに再署名する必要があります。  
@@ -84,7 +84,7 @@ MTD プロバイダーに対応するセクションを選択します。
 
     4. リダイレクト URI を追加します。 **&lt;companyportal://code/>** の後に、元のリダイレクト URI を URL エンコードしたバージョンを続けます。
 
-    5. アプリに**デリゲートされたアクセス許可**を追加します。
+    5. アプリに**委任されたアクセス許可**を追加します。
 
     > [!NOTE]
     > 詳細については、「[ネイティブ クライアント アプリケーションの構成](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application)」を参照してください。
@@ -95,59 +95,59 @@ MTD プロバイダーに対応するセクションを選択します。
 
 ### <a name="configure-symantec-endpoint-protection-mobile-apps"></a>Symantec Endpoint Protection Mobile アプリを構成する
 
-- **Android**
-  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [SEP Mobile の アプリ ストア URL](https://play.google.com/store/apps/details?id=com.skycure.skycure) を使用してください。  **[Minimum operating system]\(最小オペレーティング システム\)** では、**Android 4.0 (Ice Cream Sandwich)** を選びます。
+- **Outlook Web Access (OWA)**
+  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 [[アプリ ストアの URL]](https://play.google.com/store/apps/details?id=com.skycure.skycure) には、こちらの **SEP Mobile の アプリ ストア URL** を使用してください。  **[Minimum operating system]\(最小オペレーティング システム\)** では、**Android 4.0 (Ice Cream Sandwich)** を選びます。
 
-- **Android**
-  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [SEP Mobile の アプリ ストア URL](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) を使用してください。
+- **iOS**
+  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 [[アプリ ストアの URL]](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) には、こちらの **SEP Mobile の アプリ ストア URL** を使用してください。
 
 ### <a name="configure-check-point-sandblast-mobile-apps"></a>Check Point SandBlast Mobile アプリを構成する
 
-- **Android**  
-  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [Check Point SandBlast Mobile の アプリ ストア URL](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) を使用してください。
+- **Outlook Web Access (OWA)**  
+  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 [[アプリ ストアの URL]](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) には、こちらの **Check Point SandBlast Mobile の アプリ ストア URL** を使用してください。
 
-- **Android**
-  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [Check Point SandBlast Mobile の アプリ ストア URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) を使用してください。  
+- **iOS**
+  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 [[アプリ ストアの URL]](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) には、こちらの **Check Point SandBlast Mobile の アプリ ストア URL** を使用してください。  
 
 ### <a name="configure-zimperium-apps"></a>Zimperium アプリを構成する
 
-- **Android**
-  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [Zimperium の アプリ ストア URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) を使用してください。
+- **Outlook Web Access (OWA)**
+  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 [[アプリ ストアの URL]](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) には、こちらの **Zimperium の アプリ ストア URL** を使用してください。
 
-- **Android**
-  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [Zimperium の アプリ ストア URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) を使用してください。  
+- **iOS**
+  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 [[アプリ ストアの URL]](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) には、こちらの **Zimperium の アプリ ストア URL** を使用してください。  
  
 ### <a name="configure-pradeo-apps"></a>Pradeo アプリを構成する
 
-- **Android**
-  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [Pradeo の アプリ ストア URL](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) を使用してください。
+- **Outlook Web Access (OWA)**
+  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 [[アプリ ストアの URL]](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) には、こちらの **Pradeo の アプリ ストア URL** を使用してください。
 
-- **Android**
-  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [Pradeo の アプリ ストア URL](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) を使用してください。
+- **iOS**
+  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 [[アプリ ストアの URL]](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) には、こちらの **Pradeo の アプリ ストア URL** を使用してください。
 
 ### <a name="configure-better-mobile-apps"></a>Better Mobile アプリを構成する
 
-- **Android**
-  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [Active Shield の アプリ ストア URL](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) を使用してください。
+- **Outlook Web Access (OWA)**
+  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 [[アプリ ストアの URL]](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) には、こちらの **Active Shield の アプリ ストア URL** を使用してください。
 
-- **Android**
-  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [ActiveShield の アプリ ストア URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) を使用してください。
+- **iOS**
+  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 [[アプリ ストアの URL]](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) には、こちらの **ActiveShield の アプリ ストア URL** を使用してください。
 
 ### <a name="configure-sophos-apps"></a>Sophos アプリを構成する
 
-- **Android**
-  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [Sophos の アプリ ストア URL](https://play.google.com/store/apps/details?id=com.sophos.smsec) を使用してください。
+- **Outlook Web Access (OWA)**
+  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 [[アプリ ストアの URL]](https://play.google.com/store/apps/details?id=com.sophos.smsec) には、こちらの **Sophos の アプリ ストア URL** を使用してください。
 
-- **Android**
-  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [ActiveShield の アプリ ストア URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) を使用してください。
+- **iOS**
+  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 [[アプリ ストアの URL]](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) には、こちらの **ActiveShield の アプリ ストア URL** を使用してください。
 
 ### <a name="configure-wandera-apps"></a>Wandera アプリを構成する
 
-- **Android**
-  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [Wandera Mobile の アプリ ストア URL](https://play.google.com/store/apps/details?id=com.wandera.android) を使用してください。 **[Minimum operating system]\(最小オペレーティング システム\)** では、 **[Android 5.0]** を選びます。
+- **Outlook Web Access (OWA)**
+  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 [[アプリ ストアの URL]](https://play.google.com/store/apps/details?id=com.wandera.android) には、こちらの **Wandera Mobile の アプリ ストア URL** を使用してください。 **[Minimum operating system]\(最小オペレーティング システム\)** では、 **[Android 5.0]** を選びます。
 
-- **Android**
-  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 **[アプリ ストアの URL]** には、こちらの [Wandera Mobile の アプリ ストア URL](https://itunes.apple.com/app/wandera/id605469330) を使用してください。
+- **iOS**
+  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 [[アプリ ストアの URL]](https://itunes.apple.com/app/wandera/id605469330) には、こちらの **Wandera Mobile の アプリ ストア URL** を使用してください。
 
 ## <a name="configure-your-mtd-apps-with-an-ios-app-configuration-policy"></a>MTD アプリに iOS アプリ構成ポリシーを構成する
 

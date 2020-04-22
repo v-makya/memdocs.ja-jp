@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c7de0b978c24f28988c62854a249505a0598db95
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80084073"
 ---
 # <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>Intune で使用できる組み込み iOS および iPadOS アプリ用のバンドル ID
@@ -29,12 +29,12 @@ iOS および iPadOS デバイス上で機能を構成すると、iOS および 
 
 ## <a name="bundle-ids"></a>バンドル ID
 
-| バンドル ID                   | アプリ名     | 発行者 |
+| バンドル ID                   | アプリ名     | 発行元 |
 |-----------------------------|--------------|-----------|
 | com.apple.AppStore          | アプリ ストア    | Apple     |
 | com.apple.store.Jolly       | Apple ストア  | Apple     |
 | com.apple.calculator        | 計算機   | Apple     |
-| com.apple.mobilecal         | 予定表     | Apple     |
+| com.apple.mobilecal         | カレンダー     | Apple     |
 | com.apple.camera            | カメラ       | Apple     |
 | com.apple.mobiletimer       | 時計        | Apple     |
 | com.apple.clips             | Clips        | Apple     |
@@ -47,7 +47,7 @@ iOS および iPadOS デバイス上で機能を構成すると、iOS および 
 | com.apple.gamecenter        | Game Center  | Apple     |
 | com.apple.mobilegarageband  | GarageBand   | Apple     |
 | com.apple.Health            | 正常性       | Apple     |
-| com.apple.Home              | Home         | Apple     |
+| com.apple.Home              | ホーム         | Apple     |
 | com.apple.iBooks            | iBooks       | Apple     |
 | com.apple.iMovie            | iMovie       | Apple     |
 | com.apple.itunesconnect.mobile | iTunes Connect | Apple |
@@ -56,12 +56,12 @@ iOS および iPadOS デバイス上で機能を構成すると、iOS および 
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | メール         | Apple     |
 | com.apple.Maps              | マップ         | Apple     |
-| com.apple.measure           | 基準      | Apple     |
+| com.apple.measure           | Measure      | Apple     |
 | com.apple.MobileSMS         | メッセージ     | Apple     |
 | com.apple.Music             | ミュージック        | Apple     |
 | com.apple.news              | News         | Apple     |
 | com.apple.mobilenotes       | 注        | Apple     |
-| com.apple.Numbers           | 数字      | Apple     |
+| com.apple.Numbers           | 数値      | Apple     |
 | com.apple.Pages             | ページ        | Apple     |
 | com.apple.mobilephone       | 電話        | Apple     |
 | com.apple.Photo-Booth       | Photo Booth  | Apple     |
@@ -69,7 +69,7 @@ iOS および iPadOS デバイス上で機能を構成すると、iOS および 
 | com.apple.podcasts          | Podcast     | Apple     |
 | com.apple.reminders         | リマインダー    | Apple     |
 | com.apple.mobilesafari      | Safari       | Apple     |
-| com.apple.Preferences       | Settings     | Apple     |
+| com.apple.Preferences       | 設定     | Apple     |
 | com.apple.shortcuts         | ショートカット    | Apple     |
 | com.apple.SiriViewService   | Siri         | Apple     |
 | com.apple.stocks            | 株価       | Apple     |

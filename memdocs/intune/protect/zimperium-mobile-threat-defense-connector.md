@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ed623abeb602e599866af7b7249756edd87d5a29
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79349200"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Zimperium Mobile Threat Defense コネクタと Intune
@@ -31,7 +31,7 @@ Microsoft Intune に統合された Mobile Threat Defense (MTD) ソリューシ�
 
 Intune デバイス コンプライアンス ポリシーで有効にした Zimperium リスク評価に基づき、条件付きアクセスのポリシーを構成できます。登録済みデバイスの Intune デバイス コンプライアンス ポリシーは、検出された脅威に基づき、非準拠デバイスから企業リソースへのアクセスを許可したり、拒否したりするために利用できます。 登録されていないデバイスの場合、アプリ保護ポリシーを使用して、検出された脅威に基づいてブロックまたは選択的ワイプを強制することができます。
 
-## <a name="supported-platforms"></a>サポートされているプラットフォーム
+## <a name="supported-platforms"></a>[サポートされているプラットフォーム]
 
 - **Android 4.1 以降**
 
@@ -80,7 +80,7 @@ Intune と Zimperium を統合する場合のシナリオのいくつかを、�
 > [!div class="mx-imgBorder"]
 > ![検出された悪意のあるアプリの概念図](./media/zimperium-mobile-threat-defense-connector/Maliciousapps-blocked-zimperium.png)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 > [!div class="mx-imgBorder"]
 > ![修復後に付与されたアクセス権の概念図](./media/zimperium-mobile-threat-defense-connector/maliciousapps-unblocked-zimperium.png)
@@ -94,12 +94,12 @@ Intune と Zimperium を統合する場合のシナリオのいくつかを、�
 > [!div class="mx-imgBorder"]
 > ![Wi-Fi 経由のネットワーク アクセスをブロックする](./media/zimperium-mobile-threat-defense-connector/network-wifi-blocked-zimperium.png)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 > [!div class="mx-imgBorder"]
 > ![修復するとアクセス権が付与される](./media/zimperium-mobile-threat-defense-connector/network-wifi-unblocked-zimperium.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークへの脅威に基づいて SharePoint Online へのアクセスを制御する
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークに対する脅威に基づいて SharePoint Online へのアクセスを制御する
 
 ネットワークで **Man-in-the-middle** のような脅威を検出し、デバイスのリスクに基づいて会社内のファイルの同期を阻止します。
 
@@ -108,7 +108,7 @@ Intune と Zimperium を統合する場合のシナリオのいくつかを、�
 > [!div class="mx-imgBorder"]
 > ![ネットワークの脅威が検出されたときに SharePoint Online をブロック](./media/zimperium-mobile-threat-defense-connector/network-spo-blocked-zimperium.png)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 > [!div class="mx-imgBorder"]
 > ![SharePoint で修復時にアクセス権を付与する例](./media/zimperium-mobile-threat-defense-connector/network-spo-unblocked-zimperium.png)

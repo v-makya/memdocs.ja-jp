@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8bc627e7b9efb68e8d5cb777b5d8e659b06cab92
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "80086805"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Intune で VPN を構成するための Android エンタープライズ デバイスの設定
@@ -39,15 +39,15 @@ Intune での VPN プロファイルの詳細については、[VPN プロファ
 
 ## <a name="device-owner-only"></a>デバイスの所有者のみ
 
-- **[接続名]** :この接続の名前を入力します。 エンド ユーザーがデバイスで利用可能な VPN 接続を参照するときに、この名前が表示されます。 たとえば、「`Contoso VPN`」と入力します。
-- **[IP アドレスまたは FQDN]** :デバイスが接続する VPN サーバーの IP アドレスまたは完全修飾ドメイン名 (FQDN) を入力します。 たとえば、「**192.168.1.1**」や「**vpn.contoso.com**」などと入力します。
+- **[接続名]** : この接続の名前を入力します。 エンド ユーザーがデバイスで利用可能な VPN 接続を参照するときに、この名前が表示されます。 たとえば、「`Contoso VPN`」と入力します。
+- **[IP アドレスまたは FQDN]** : デバイスが接続する VPN サーバーの IP アドレスまたは完全修飾ドメイン名 (FQDN) を入力します。 たとえば、「**192.168.1.1**」や「**vpn.contoso.com**」などと入力します。
 
-  - **[認証方法]** :VPN サーバーに対するデバイスの認証方法として、以下のいずれかを選択します。 次のようなオプションがあります。
+  - **[認証方法]** : VPN サーバーに対するデバイスの認証方法として、以下のいずれかを選択します。 次のようなオプションがあります。
   
-    - **証明書**:接続を認証するための既存の SCEP または PKCS 証明書プロファイルを選択します。 証明書プロファイルを作成する手順については、[証明書の構成](../protect/certificates-configure.md)に関するページを参照してください。
-    - **[ユーザー名とパスワード]** :VPN サーバーにサインインするときに、エンド ユーザーはユーザー名とパスワードの入力を求められます。
+    - **[証明書]** : 接続を認証するための既存の SCEP または PKCS 証明書プロファイルを選択します。 証明書プロファイルを作成する手順については、[証明書の構成](../protect/certificates-configure.md)に関するページを参照してください。
+    - **[ユーザー名とパスワード]** : VPN サーバーにサインインするときに、エンド ユーザーはユーザー名とパスワードの入力を求められます。
 
-- **接続の種類**:VPN 接続の種類を選択します。 次のようなオプションがあります。
+- **[接続の種類]** : VPN 接続の種類を選択します。 次のようなオプションがあります。
 
   - **Cisco AnyConnect**
   - **F5 Access**
@@ -55,15 +55,15 @@ Intune での VPN プロファイルの詳細については、[VPN プロファ
 
 ## <a name="work-profile-only"></a>仕事用プロファイルのみ
 
-- **[接続名]** :この接続の名前を入力します。 エンド ユーザーがデバイスで利用可能な VPN 接続を参照するときに、この名前が表示されます。 たとえば、「`Contoso VPN`」と入力します。
-- **[IP アドレスまたは FQDN]** :デバイスが接続する VPN サーバーの IP アドレスまたは完全修飾ドメイン名 (FQDN) を入力します。 たとえば、「**192.168.1.1**」や「**vpn.contoso.com**」などと入力します。
+- **[接続名]** : この接続の名前を入力します。 エンド ユーザーがデバイスで利用可能な VPN 接続を参照するときに、この名前が表示されます。 たとえば、「`Contoso VPN`」と入力します。
+- **[IP アドレスまたは FQDN]** : デバイスが接続する VPN サーバーの IP アドレスまたは完全修飾ドメイン名 (FQDN) を入力します。 たとえば、「**192.168.1.1**」や「**vpn.contoso.com**」などと入力します。
 
-  - **[認証方法]** :VPN サーバーに対するデバイスの認証方法として、以下のいずれかを選択します。 次のようなオプションがあります。
+  - **[認証方法]** : VPN サーバーに対するデバイスの認証方法として、以下のいずれかを選択します。 次のようなオプションがあります。
   
-    - **証明書**:接続を認証するための既存の SCEP または PKCS 証明書プロファイルを選択します。 証明書プロファイルを作成する手順については、[証明書の構成](../protect/certificates-configure.md)に関するページを参照してください。
-    - **[ユーザー名とパスワード]** :VPN サーバーにサインインするときに、エンド ユーザーはユーザー名とパスワードの入力を求められます。
+    - **[証明書]** : 接続を認証するための既存の SCEP または PKCS 証明書プロファイルを選択します。 証明書プロファイルを作成する手順については、[証明書の構成](../protect/certificates-configure.md)に関するページを参照してください。
+    - **[ユーザー名とパスワード]** : VPN サーバーにサインインするときに、エンド ユーザーはユーザー名とパスワードの入力を求められます。
 
-- **接続の種類**:VPN 接続の種類を選択します。 次のようなオプションがあります。
+- **[接続の種類]** : VPN 接続の種類を選択します。 次のようなオプションがあります。
 
   - **Cisco AnyConnect**
   - **F5 Access**
@@ -73,6 +73,6 @@ Intune での VPN プロファイルの詳細については、[VPN プロファ
 
 ## <a name="next-steps"></a>次のステップ
 
-[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
+[プロファイルを割り当てて](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
 
 また、[Android](vpn-settings-android.md)、[iOS/iPadOS](vpn-settings-ios.md)、[macOS](vpn-settings-macos.md)、[Windows 10 以降](vpn-settings-windows-10.md)、[Windows 8.1](vpn-settings-windows-8-1.md)、および [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md) デバイス用の VPN プロファイルを作成することもできます。

@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 54e81a7b9614e1633fe9061fd13d1b99810ce43c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79351748"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Intout と Lookout Mobile Endpoint Security の統合を設定する
 [前提条件](lookout-mobile-threat-defense-connector.md#prerequisites)を満たす環境であれば、Lookout Mobile Endpoint Security と Intune を統合できます。 この記事の情報では、統合の設定と、Intune で使用するための Lookout の重要な設定の構成について案内します。  
 
 > [!IMPORTANT]
-> Azure AD テナントとまだ関連付けられていない既存の Lookout Mobile Endpoint Security テナントは、Azure AD および Intune との統合に使用できません。 新しい Lookout Mobile Endpoint Security テナントの作成については、Lookout のサポートに問い合わせてください。 Azure AD ユーザーの追加にはこの新しいテナントを使用してください。
+> Azure AD と Intune の統合に、Azure AD と関連付けられていない既存の Lookout Mobile Endpoint Security テナントを使用することはできません。 新しい Lookout Mobile Endpoint Security テナントの作成については、Lookout のサポートに問い合わせてください。 Azure AD ユーザーの追加にはこの新しいテナントを使用してください。
 
 ## <a name="collect-azure-ad-information"></a>Azure AD の情報を収集する  
 Lookout と Intune を統合するには、Lookout Mobility Endpoint Security テナントを Azure Active Directory (AD) サブスクリプションに関連付けます。
@@ -39,13 +39,13 @@ Lookout Mobile Endpoint Security サブスクリプションと Intune の統合
 - **Azure AD テナントのディレクトリ ID**  
 
 - Lookout Mobile Endpoint Security (MES) Console の**フル** アクセスを持つグループの **Azure AD グループ オブジェクト ID**。  
-  **Lookout Console** にサインインできる*フル アクセス*を持つユーザーを含めるには、Azure AD でこのユーザー グループを作成します。 ユーザーが Lookout Console にサインインするには、このグループ、またはオプションの*制限付きアクセス* グループのメンバーである必要があります。 
+  *Lookout Console* にサインインできる**フル アクセス**を持つユーザーを含めるには、Azure AD でこのユーザー グループを作成します。 ユーザーが Lookout Console にサインインするには、このグループ、またはオプションの*制限付きアクセス* グループのメンバーである必要があります。 
 
 - Lookout MES Console へのアクセスが**制限されている**グループの **Azure AD グループ オブジェクト ID** *(省略可能なグループ)* 
   このオプションのユーザー グループを Azure AD で作成し、Lookout Console のいくつかの構成および登録関連のモジュールにアクセスできないユーザーを含めるようにします。 代わりに、これらのユーザーは Lookout Console の **セキュリティ ポリシー** モジュールへの読み取り専用アクセス権を持っています。 ユーザーが Lookout Console にサインインするには、このオプションのグループ、または必須の*フル アクセス* グループのメンバーである必要があります。
 
  > [!TIP] 
- > アクセス許可の詳細については、Lookout の Web サイトの[こちらの記事](https://personal.support.lookout.com/hc/articles/114094105653)をご覧ください。
+ > アクセス許可の詳細については、Lookout Web サイトの[こちらの記事](https://personal.support.lookout.com/hc/articles/114094105653)をご覧ください。
 
 ### <a name="collect-information-from-azure-ad"></a>Azure AD から情報を収集する 
 
@@ -77,7 +77,7 @@ Lookout のサポート担当者が Lookout Enterprise アカウントを作成�
 ### <a name="initial-sign-in"></a>初回サインイン  
 Lookout MES Console に初めてサインインすると、同意ページ (https://aad.lookout.com/les?action=consent) が表示されます。 Azure AD グローバル管理者は、サインインして **[Accept]\(同意\)** するだけです。 それ以降のサインインでは、ユーザーがこのレベルの Azure AD 権限を持つ必要はありません。 
 
- 同意ページが表示されます。 **[同意する]** を選んで登録を完了します。 
+ 同意ページが表示されます。 **[同意]** を選んで登録を完了します。 
    ![Lookout Console の初回サインイン ページのスクリーンショット](./media/lookout-mtd-connector-integration/lookout_mtp_initial_login.png)
 
 受け入れて同意すると、Lookout Console にリダイレクトされます。
@@ -95,7 +95,7 @@ Lookout MES Console に初めてサインインすると、同意ページ (http
 
    ![ハートビート頻度が構成された [Connection Settings]\(接続設定\) タブの画像](./media/lookout-mtd-connector-integration/lookout-mtp-connection-settings.png)
 
-3. **[Enrollment Management]\(登録管理\)** を選択し、Lookout に使う Azure AD グループの "*グループ名*" を **[Use the following Azure AD security groups to identify devices that should be enrolled in Lookout for Work]\(次の Azure AD セキュリティ グループを使用して Lookout for Work に登録する必要があるデバイスを特定する\)** に指定してから、 **[Save changes]\(変更の保存\)** を選択します。
+3. **[Enrollment Management]\(登録管理\)** を選択し、Lookout に使う Azure AD グループの "**グループ名**" を *[Use the following Azure AD security groups to identify devices that should be enrolled in Lookout for Work]\(次の Azure AD セキュリティ グループを使用して Lookout for Work に登録する必要があるデバイスを特定する\)* に指定してから、 **[Save changes]\(変更の保存\)** を選択します。
 
     ![Intune コネクタ登録ページのスクリーンショット](./media/lookout-mtd-connector-integration/lookout-mtp-enrollment.png)  
 
@@ -144,7 +144,7 @@ Lookout Mobile Endpoint Security によって、さまざまな種類のモバ�
 >[!IMPORTANT]
 > リスク レベルは、Mobile Endpoint Security で重要な要素の 1 つです。デバイスのコンプライアンスは、これらのリスク レベルに従って実行時に計算されるためです。  
 > 
-> Intune 管理者は、デバイスにアクティブな脅威がある場合にデバイスを非準拠として特定するルールをポリシーに設定します。脅威には、**高**、**中**、**低**の最小レベルがあります。 Lookout Mobile Endpoint Security での脅威分類ポリシーは、Intune でのデバイスのコンプライアンス計算に直接影響を与えます。  
+> Intune 管理者が設定するポリシーのルールに従って、デバイスはアクティブな脅威の最低レベルが**高**、**中**、または**低**の場合に非準拠と判断されます。 Lookout Mobile Endpoint Security での脅威分類ポリシーは、Intune でのデバイスのコンプライアンス計算に直接影響を与えます。  
 
 ## <a name="monitor-enrollment"></a>モニターの登録
 セットアップが完了すると、Lookout Mobile Endpoint Security は Azure AD のポーリングを開始し、指定された登録グループに対応するデバイスを探します。  登録済みのデバイスに関する情報は、Lookout MES Console の **[Devices]\(デバイス\)** で確認できます。  

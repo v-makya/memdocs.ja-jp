@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 88f30f10af5969d202dd8eb252cc82d03d3d921e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358066"
 ---
 # <a name="intune-migration-guide"></a>Intune 移行ガイド
@@ -36,7 +36,7 @@ Microsoft Intune への移行を成功させるには、まず現在のモバイ
 
 このガイドは移行を 2 つのフェーズに分けます。各フェーズには、Intune MDM への移行プロセス全体を理解するうえで役立つタスク、戦略、および戦術的ガイダンスが含まれます。
 
-- [フェーズ 1: モバイル デバイス管理のために Intune を準備する](migration-guide-prepare.md)
+- [フェーズ 1: モバイル デバイス管理の Intune を準備する](migration-guide-prepare.md)
 
   - [MDM 移行要件を評価する](migration-guide-prepare.md#assess-mdm-requirements)
 
@@ -72,4 +72,4 @@ Microsoft Intune への移行を成功させるには、まず現在のモバイ
 
 ## <a name="next-steps"></a>次のステップ
 
-[フェーズ 1: モバイル デバイス管理のために Intune を準備する](migration-guide-prepare.md)
+[フェーズ 1: モバイル デバイス管理の Intune を準備する](migration-guide-prepare.md)

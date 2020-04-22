@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cf5ab63f72484ddbbf311810e232404ab643d2d2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359847"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Microsoft Intune データ ウェアハウスのデータ モデル
@@ -40,7 +40,7 @@ Intune データ ウェアハウスは、データを毎日サンプリングし
 
 これらの領域には、お使いの Intune 環境にとって重要なエンティティが含まれます。 エンティティ セットの詳細については、次の各トピックをご覧ください。
 
-- [アプリケーション](reports-ref-application.md)。
+- [アプリケーション](reports-ref-application.md)
 - [日付](reports-ref-date.md)
 - [デバイス](reports-ref-devices.md)
 - [Intune の管理拡張](reports-ref-intunemanagementextension.md)
@@ -49,7 +49,7 @@ Intune データ ウェアハウスは、データを毎日サンプリングし
 - [ユーザー](reports-ref-user.md)
 - [ユーザー デバイスの関連付け](reports-ref-user-device.md)
 
-## <a name="relationships-star-schema-model"></a>リレーションシップ:スタースキーマ モデル
+## <a name="relationships-star-schema-model"></a>リレーションシップ: スタースキーマ モデル
 
 このウェアハウスでは、エンティティがリレーションシップに分類されます。リレーションシップは、尋ねる質問の種類に応じたものです。 たとえば、社内で開発された Android アプリケーションのインストールの数を確認できます。 データ ウェアハウスの構造を使用して、モバイル環境を分析できます。 また、Microsoft Power BI などの分析ツールでデータ ウェアハウス データ モデルを使用して、視覚化と動的ダッシュボードを作成できます。
 
@@ -57,7 +57,7 @@ Intune データ ウェアハウスは、データを毎日サンプリングし
 
 スタースキーマ モデルは、柔軟性とデータ分析に合わせて最適化されているため、進化するモバイル環境を理解するために必要なレポートを作成できます。
 
-## <a name="time-daily-snapshots"></a>時刻: 毎日のスナップショット
+## <a name="time-daily-snapshots"></a>時間: 毎日のスナップショット
 
 このウェアハウスは、Intune データのダウンストリームです。 Intune では、午前 0 時 (UTC) に毎日のスナップショットを取得し、ウェアハウスにスナップショットを保存します。 スナップショットの保有期間はファクト テーブルによって異なります。 7 日間や 30 日間、またはさらに長い期間のものもあります。
 

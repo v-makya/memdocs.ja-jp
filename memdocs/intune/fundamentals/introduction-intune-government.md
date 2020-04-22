@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 65459953fab0faed3e0c64b2097dd2a41e795111
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79372570"
 ---
 # <a name="what-is-intune-for-government"></a>政府機関向け Intune とは

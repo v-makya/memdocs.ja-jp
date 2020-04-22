@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e4e917ca63bb671e8dfa46b280a4130051e75ef0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79342908"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Intune ソフトウェア クライアントを使用して Windows PC をコンピューターとして管理する
@@ -49,7 +49,7 @@ Intune は、ソフトウェア クライアントを使って、最大 7,000 �
 **ハードウェア**:  
 Intune クライアント ソフトウェアをインストールするハードウェアの最小要件を次に示します。
 
-|要件|説明|
+|要件|詳細情報|
 |---------------|--------------------|
 |ネットワーク|クライアントでは、PC がインターネット接続できる必要があります。|
 |プロセッサとメモリ|PC のオペレーティング システムに対するプロセッサ要件と RAM 要件を参照してください。|
@@ -58,11 +58,11 @@ Intune クライアント ソフトウェアをインストールするハード
 **ソフトウェア**:  
 クライアント ソフトウェアをインストールするソフトウェアの要件を次に示します。
 
-|要件|説明|
+|要件|詳細情報|
 |---------------|--------------------|
 |オペレーティング システム | Windows 7 SP1 および Windows 8.1 以降を実行している Windows デバイスであること。 </br></br>**Home エディションのバージョンはサポートされていません。**|
 |管理者のアクセス許可|クライアント ソフトウェアをインストールするアカウントは、そのデバイスのローカル管理者のアクセス許可を持っている必要があります。|
-|Windows Installer 3.1|PC には Windows インストーラー 3.1 以降がインストールされている必要があります。<br /><br />PC で Windows インストーラーのバージョンを確認するには<br /><br />  PC で、 **%windir%\System32\msiexec.exe** を右クリックし、 **[プロパティ]** をクリックします。<br /><br />最新バージョンの Windows インストーラーは、Microsoft Developer Network Web サイトの「 [Windows Installer Redistributables (Windows インストーラー再頒布可能パッケージ)](https://go.microsoft.com/fwlink/?LinkID=234258) 」からダウンロードできます。|
+|Windows インストーラー 3.1|PC には Windows インストーラー 3.1 以降がインストールされている必要があります。<br /><br />PC で Windows インストーラーのバージョンを確認するには<br /><br />  PC で、 **%windir%\System32\msiexec.exe** を右クリックし、 **[プロパティ]** をクリックします。<br /><br />最新バージョンの Windows インストーラーは、Microsoft Developer Network Web サイトの「 [Windows Installer Redistributables (Windows インストーラー再頒布可能パッケージ)](https://go.microsoft.com/fwlink/?LinkID=234258) 」からダウンロードできます。|
 |互換性のないクライアント ソフトウェアを削除する|Intune クライアント ソフトウェアをインストールする前に、その PC から Configuration Manager、Operations Manager、および Service Manager のクライアント ソフトウェアをアンインストールします。|
 
 ## <a name="deploying-the-intune-software-client"></a>Intune ソフトウェア クライアントの展開
@@ -115,7 +115,7 @@ Intune 管理コンソールを使って、クライアントがインストー�
 PC をモバイル デバイスとして管理するために使うことができる一部の管理オプションは、Intune クライアント ソフトウェアで管理されている PC には使えません。
 
 - フル ワイプ (選択的ワイプは使用可能)
-- 条件付きアクセス
+- Conditional Access
 
 また、 **[更新]** 、 **[保護]** 、 **[ライセンス]** などの特定のセクションは、Intune クライアント ソフトウェアを使ってデバイスを登録した場合にのみ Intune 管理コンソールに表示されることにも注意してください。
 

@@ -16,10 +16,10 @@ ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a23155c31586992c82781998bb664bf2ce6a0889
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339177"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Mobile Threat Defense コネクタと Intune
@@ -31,7 +31,7 @@ Intune デバイス コンプライアンス ポリシーで有効にした Prad
 > [!NOTE]
 > この Mobile Threat Defense ベンダーは、未登録のデバイスではサポートされていません。
 
-## <a name="supported-platforms"></a>サポートされているプラットフォーム
+## <a name="supported-platforms"></a>[サポートされているプラットフォーム]
 
 - **Android 4.0.3 以降**
 
@@ -71,7 +71,7 @@ Intune デバイス コンプライアンス ポリシーには、Pradeo リス�
 
 ![検出された悪意のあるアプリの概念図](./media/pradeo-mobile-threat-defense-connector/pradeo-maliciousapps-blocked.png)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 ![悪意のあるアプリの検出、アクセス権](./media/pradeo-mobile-threat-defense-connector/pradeo-maliciousapps-unblocked.png)
 
@@ -83,11 +83,11 @@ Intune デバイス コンプライアンス ポリシーには、Pradeo リス�
 
 ![Wi-Fi 経由のネットワーク アクセスをブロックする](./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-blocked.png)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 ![修復時に付与されたアクセス権の概念図](./media/pradeo-mobile-threat-defense-connector/pradeo-network-wifi-unblocked.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークへの脅威に基づいて SharePoint Online へのアクセスを制御する
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークに対する脅威に基づいて SharePoint Online へのアクセスを制御する
 
 **Man-in-the-middle** 攻撃など、ネットワークに対する脅威を検出し、デバイスのリスクに基づいて会社内のファイルの同期を阻止します。
 
@@ -95,7 +95,7 @@ Intune デバイス コンプライアンス ポリシーには、Pradeo リス�
 
 ![ネットワークの脅威が検出されたときに SharePoint Online をブロック](./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-blocked.png)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 ![SharePoint で修復時にアクセス権を付与する例の概念図](./media/pradeo-mobile-threat-defense-connector/pradeo-network-spo-unblocked.png)
 

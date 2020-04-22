@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: df5cb910d38deaca76ee92246badcebf02a7e4de
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79339606"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Intune で Android 仕事用プロファイルのデバイスを管理する
@@ -65,7 +65,7 @@ Android Enterprise 仕事用プロファイル デバイスで Exchange ActiveSy
 
 適用されているアプリ保護ポリシーは、仕事用プロファイルと個人用プロファイルで完全にサポートされています。 Android アプリ公開コンソール (https://play.google.com/apps/publish ) で基幹業務アプリを公開できます。 このコンソールには、アプリを組織にのみ制限するオプションもあります。 詳細については、[Intune で Android Enterprise 仕事用プロファイル デバイス用のデバイス コンプライアンス ポリシーを追加する](../protect/compliance-policy-create-android-for-work.md)に関する記事を参照してください。 アプリ保護ポリシーについて詳しくは、「[アプリ保護ポリシーとは](../apps/app-protection-policy.md)」を参照してください。
 
-## <a name="vpn-profiles"></a>VPN プロファイル
+## <a name="vpn-profiles"></a>で組織内のユーザーとデバイスに VPN 設定を展開するには、
 
 VPN のサポートは、Android VPN プロファイルに似ています。 Android Enterprise 管理では同じ VPN プロバイダーと基本構成オプションを使用できますが、次の 2 つの違いがあります。
 

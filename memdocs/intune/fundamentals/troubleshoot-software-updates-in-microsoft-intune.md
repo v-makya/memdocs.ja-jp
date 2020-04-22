@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 851fea24f101d313dba3426e5d65c60c5f31fdb5
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355583"
 ---
 # <a name="troubleshoot-software-updates-in-microsoft-intune"></a>Microsoft Intune でのソフトウェア更新のトラブルシューティング
@@ -48,7 +48,7 @@ Microsoft Intune クライアントでは、次下の現象が 1 つ以上発生
 3. 影響を受けているクライアントにインストールされている Windows 7 またはアプリケーション (Microsoft Office など) に適用される置き換えられた更新プログラムをすべて拒否します。
 4. 影響を受けているクライアントを再起動します。
 
-Windows 7 を実行している場合は、次の更新プログラムがインストールされていることを確認します: [3050265 Windows Update Client for Windows 7: June 2015](https://support.microsoft.com/kb/3050265)。
+Windows 7 を実行している場合は、[3050265 Windows Update Client for Windows 7: June 2015](https://support.microsoft.com/kb/3050265) の更新プログラムがインストールされていることを確認します。
 
 ## <a name="next-steps"></a>次のステップ
 

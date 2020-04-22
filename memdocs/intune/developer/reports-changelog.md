@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 632f3bf16fd062acf05c7bd4e269069468df42a3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360211"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune データ ウェアハウス API の変更ログ
@@ -43,7 +43,7 @@ _リリース日: 2019 年 4 月_
 |    mobileAppDeviceUserInstallStatus    |    削除済み    |    代わりに [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts) を使用します。                                                                                                                                                                                                                                                                     |
 |    enrollmentTypes                     |    削除済み    |    代わりに [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes) を使用します。                                                                                                                                                                                                                                                                                      |
 |    mdmStatuses                         |    削除済み    |    代わりに [complianceStates](intune-data-warehouse-collections.md#compliancestates) を使用します。                                                                                                                                                                                                                                                                                               |
-|    workPlaceJoinStateTypes             |    削除済み    |    代わりに [devices](intune-data-warehouse-collections.md#devices) と [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) コレクションの `azureAdRegistered` プロパティを使用します。                                                                                                                                                                                                             |
+|    workPlaceJoinStateTypes             |    削除済み    |    代わりに `azureAdRegistered`devices[ と ](intune-data-warehouse-collections.md#devices)devicePropertyHistories[ コレクションの ](intune-data-warehouse-collections.md#devicepropertyhistories) プロパティを使用します。                                                                                                                                                                                                             |
 |    clientRegistrationStateTypes        |    削除済み    |    代わりに [deviceRegistrationStates](intune-data-warehouse-collections.md#deviceregistrationstates) を使用します。                                                                                                                                                                                                                                                                             |
 |    currentUser                         |    削除済み    |    代わりに [users](intune-data-warehouse-collections.md#users) コレクションを使用します。                                                                                                                                                                                                                                                                                                      |
 |    mdmDeviceInventoryHistories         |    削除済み    |    多くのプロパティは冗長であったか、[devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) または [devices](intune-data-warehouse-collections.md#devices) コレクションで見つけることができるようになりました。 これらの 2 つのプロパティと共に、まだ一覧にない任意の **mdmDeviceInventoryHistories** プロパティは、利用できなくなりました。 以下の詳細を参照してください。    |

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 17b120faa0021a1fc044d7831b4b81ea88f404a7
-ms.sourcegitcommit: bbb63f69ff8a755a2f2d86f2ea0c5984ffda4970
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79526582"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Lookout Mobile Endpoint Security コネクタと Intune
@@ -48,7 +48,7 @@ Lookout のモバイル アプリ **Lookout for work** は、モバイル デバ
   - [Mobile Threat Defense アプリ保護ポリシーを作成する](../protect/mtd-app-protection-policy.md)
   - [登録されていないデバイスに対して Intune で MTD コネクタを有効にする](../protect/mtd-enable-unenrolled-devices.md)
 
-## <a name="supported-platforms"></a>サポートされているプラットフォーム
+## <a name="supported-platforms"></a>[サポートされているプラットフォーム]
 
 Intune に登録するとき、Lookout では次のプラットフォームがサポートされます。
 
@@ -83,7 +83,7 @@ Intune で Mobile Endpoint Security を使用する場合の一般的なシナ�
 > [!div class="mx-imgBorder"]
 > ![悪意のあるアプリによるアクセスをブロックするポリシーの概念図](./media/lookout-mobile-threat-defense-connector/malicious-apps-blocked.png)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 > [!div class="mx-imgBorder"]
 > ![修復後にデバイスに付与されるアクセスを示す概念図](./media/lookout-mobile-threat-defense-connector/malicious-apps-unblocked.png)
@@ -97,21 +97,21 @@ Man-in-the-middle 攻撃など、ネットワークに対する脅威を検出�
 > [!div class="mx-imgBorder"]
 > ![ネットワークの脅威に基づいた WiFi アクセスのブロックを示す画像](./media/lookout-mobile-threat-defense-connector/network-wifi-blocked.png)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 > [!div class="mx-imgBorder"]
 > ![修復後にアクセスを許可する条件付きアクセスの概念図](./media/lookout-mobile-threat-defense-connector/network-wifi-unblocked.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークへの脅威に基づいて SharePoint Online へのアクセスを制御する
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークに対する脅威に基づいて SharePoint Online へのアクセスを制御する
 
-Man-in-the-middle 攻撃のようなネットワークの脅威を検出し、デバイス リスクに基づき、企業ファイルの同期を制限します。
+Man-in-the-middle 攻撃など、ネットワークに対する脅威を検出し、デバイスのリスクに基づいて会社内のファイルの同期を阻止します。
 
 *ネットワークの脅威が検出されたときに SharePoint Online をブロック:*
 
 > [!div class="mx-imgBorder"]
 > ![SharePoint Online へのアクセスをブロックする概念図](./media/lookout-mobile-threat-defense-connector/network-spo-blocked.png)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 > [!div class="mx-imgBorder"]
 > ![ネットワークの脅威の修復後にアクセスを許可する概念図](./media/lookout-mobile-threat-defense-connector/network-spo-unblocked.png)

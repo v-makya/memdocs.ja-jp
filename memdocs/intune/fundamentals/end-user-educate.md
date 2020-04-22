@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: de046af66989551a58d6f4f549a71a7c33e6fad8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79362759"
 ---
 # <a name="how-to-educate-your-end-users-about-microsoft-intune"></a>Microsoft Intune に関してエンド ユーザーを教育する方法
@@ -63,11 +63,11 @@ __ユーザーにとって Intune が不便な点__  ユーザーによるアプ
 
 * __意識する。__ Intune ユーザーの経験は生産性にも影響します。 ユーザーの経験を理解することで、デバイスおよびユーザーの問題のトラブルシューティングをより簡単に行うことができます。 たとえば、ユーザーがアプリを取得する方法を学習し理解することができます。 この情報を前もって把握しておくことにより、問題の診断および解決をより簡単かつ迅速に行うことができます。
 
-* **Android**
+* **Outlook Web Access (OWA)**
   * [Android デバイスを Intune で使用する](../user-help/why-enroll-android-device.md)
   * [Android ユーザーがアプリを入手する方法](end-user-apps-android.md)
 
-* **Android**
+* **iOS**
   * [iOS/iPadOS デバイスを Intune で使用する](../user-help/using-your-ios-device-with-intune.md)
   * [iOS/iPadOS のユーザーがアプリを入手する方法](end-user-apps-ios.md)
 

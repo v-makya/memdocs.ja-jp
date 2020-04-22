@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f218ffd5d11e800588000e8b24aa81a7554b7051
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79352541"
 ---
 # <a name="data-google-sends-to-intune"></a>Google から Intune に送られるデータ
@@ -36,9 +36,9 @@ ms.locfileid: "79352541"
 
 | Google から Intune に送られるデータ | 詳細 | 使用目的 | 例 |
 |:---:|:---:|:---:|:---:|
-| エンタープライズ データ | Google の顧客のエンタープライズ ID | Intune と Google 間で顧客の情報をリンクします。 | **enterpriseId** の例:LC04eik8a6。<br>**名前**。 Android エンタープライズを設定するときに入力した管理者名。 例:Joe Smith。<br>**管理者の電子メール**。 Android エンタープライズの構成時に使用した YourAdmin@gmail.com。 |
-| アプリケーション データ | 管理されている Play ストア アプリケーションのデータ。 | 利用可能または必要なユーザーまたはデバイスへのアプリケーションのターゲット設定。 | **アプリケーション名**の例:Contoso Warehouse Inventory Application。<br>**アプリケーションを表す一意の識別子**の例: app: com.Contoso.Warehouse.InventoryTracking |
-| サービス アカウント | 特定の顧客の通話に使用する固有の内部 Google サービス アカウント。 | 顧客の代わりに Google に電話をかけるために使用します (アプリ、端末などを表示するため) | **名前**の例: InternalAccount@InternalService.com。<br>**キー**の例:ServiceAccountPassword |
+| エンタープライズ データ | Google の顧客のエンタープライズ ID | Intune と Google 間で顧客の情報をリンクします。 | **enterpriseId** の例: LC04eik8a6。<br>**名前**。 Android エンタープライズを設定するときに入力した管理者名。 例: Joe Smith。<br>**管理者の電子メール**。 Android エンタープライズの構成時に使用した YourAdmin@gmail.com。 |
+| アプリケーション データ | 管理されている Play ストア アプリケーションのデータ。 | 利用可能または必要なユーザーまたはデバイスへのアプリケーションのターゲット設定。 | **アプリケーション名**の例: Contoso Warehouse Inventory Application。<br>**アプリケーションを表す一意の識別子**の例: app: com.Contoso.Warehouse.InventoryTracking |
+| サービス アカウント | 特定の顧客の通話に使用する固有の内部 Google サービス アカウント。 | 顧客の代わりに Google に電話をかけるために使用します (アプリ、端末などを表示するため) | **名前**の例: InternalAccount@InternalService.com。<br>**キー**の例: ServiceAccountPassword |
 
 
 Microsoft Intune で Android エンタープライズ デバイス管理の使用を停止してデータを削除するには、Microsoft Intune の Android エンタープライズ デバイス管理を無効にし、Google アカウントも削除する必要があります。 詳細については、Google アカウントのアカウントの管理方法を参照してください。

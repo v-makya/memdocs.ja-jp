@@ -1,6 +1,6 @@
 - name: 開発者ガイド
   href: index.yml
-- name: 攻略ガイド
+- name: 操作方法ガイド
   expanded: true
   items:
     - name: Intune App SDK によるアプリの保護

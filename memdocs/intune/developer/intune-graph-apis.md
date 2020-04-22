@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b6306f89f1e8ed2aefadd2691df4b3b21e2edafe
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79345157"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Azure AD を使用して Microsoft Graph の Intune API にアクセスする方法
@@ -140,7 +140,7 @@ Azure AD と Microsoft Graph では、アクセス許可スコープを使用し
 - [Azure AD 認証](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
 - [アプリケーションのアクセス許可スコープ](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
 
-Microsoft Graph にアクセス許可を付与する場合は、次のスコープを指定して Intune の機能へのアクセスを制御できます。次の表では、Intune API のアクセス許可のスコープをまとめています。  1 番目の列には Azure Portal に表示される機能名を示し、2 番目の列にはアクセス許可スコープ名を掲載しています。
+Microsoft Graph へのアクセス許可を付与する場合は、次のスコープを指定して Intune の機能へのアクセスを制御できます。次の表に、Intune API のアクセス許可スコープをまとめています。  1 番目の列には Azure Portal に表示される機能名を示し、2 番目の列にはアクセス許可スコープ名を掲載しています。
 
 _[アクセスを有効にする]_ 設定 | スコープ名
 :--|:--
@@ -160,9 +160,9 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 この時点では、Intune のすべてのアクセス許可スコープに管理者のアクセス権が必要です。  つまり、Intune API のリソースにアクセスするアプリまたはスクリプトを実行する場合は、対応する資格情報が必要になります。
 
-### <a name="app-ro"></a>DeviceManagementApps.Read.All
+### <a name="devicemanagementappsreadall"></a><a name="app-ro"></a>DeviceManagementApps.Read.All
 
-- **[アクセスを有効にする]** 設定:__Microsoft Intune アプリの読み取り__
+- **[アクセスを有効にする]** 設定: __Microsoft Intune アプリの読み取り__
 
 - 次のエンティティのプロパティとステータスへの読み取りアクセスを許可します。
   - クライアント アプリ
@@ -170,9 +170,9 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
   - アプリ保護ポリシー
   - アプリの構成
 
-### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
+### <a name="devicemanagementappsreadwriteall"></a><a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
-- **[アクセスを有効にする]** 設定:__Microsoft Intune アプリの読み取りおよび書き込み__
+- **[アクセスを有効にする]** 設定: __Microsoft Intune アプリの読み取りおよび書き込み__
 
 - __DeviceManagementApps.Read.All__ と同じ操作を許可します。
 
@@ -183,18 +183,18 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
   - アプリ保護ポリシー
   - アプリの構成
 
-### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
+### <a name="devicemanagementconfigurationreadall"></a><a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
-- **[アクセスを有効にする]** 設定:__Microsoft Intune デバイスの構成とポリシーの読み取り__
+- **[アクセスを有効にする]** 設定: __Microsoft Intune のデバイスの構成とポリシーの読み取り__
 
 - 次のエンティティのプロパティとステータスへの読み取りアクセスを許可します。
   - デバイス構成
   - デバイス コンプライアンス ポリシー
   - 通知メッセージ
 
-### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
+### <a name="devicemanagementconfigurationreadwriteall"></a><a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
-- **[アクセスを有効にする]** 設定:__Microsoft Intune のデバイスの構成とポリシーの読み取りおよび書き込み__
+- **[アクセスを有効にする]** 設定: __Microsoft Intune のデバイスの構成とポリシーの読み取りおよび書き込み__
 
 - __DeviceManagementConfiguration.Read.All__ と同じ操作を許可します。
 
@@ -203,9 +203,9 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
   - デバイス コンプライアンス ポリシー
   - 通知メッセージ
 
-### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
+### <a name="devicemanagementmanageddevicesprivilegedoperationsall"></a><a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
-- **[アクセスを有効にする]** 設定:__Microsoft Intune デバイスでユーザーに影響を与えるリモート操作を実行する__
+- **[アクセスを有効にする]** 設定: __Microsoft Intune デバイスでユーザーに影響を与えるリモート操作を実行する__
 
 - マネージド デバイスへの次のリモート操作を許可します。
   - インベントリから削除
@@ -217,9 +217,9 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
   - 再起動
   - 共有デバイスからのユーザーの削除
 
-### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
+### <a name="devicemanagementmanageddevicesreadall"></a><a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
-- **[アクセスを有効にする]** 設定:__Microsoft Intune デバイスの読み取り__
+- **[アクセスを有効にする]** 設定: __Microsoft Intune デバイスの読み取り__
 
 - 次のエンティティのプロパティとステータスへの読み取りアクセスを許可します。
   - マネージド デバイス
@@ -228,9 +228,9 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
   - リモート操作
   - マルウェア情報
 
-### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
+### <a name="devicemanagementmanageddevicesreadwriteall"></a><a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
-- **[アクセスを有効にする]** 設定:__Microsoft Intune デバイスの読み取りおよび書き込み__
+- **[アクセスを有効にする]** 設定: __Microsoft Intune デバイスの読み取りおよび書き込み__
 
 - __DeviceManagementManagedDevices.Read.All__ と同じ操作を許可します。
 
@@ -243,18 +243,18 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
   - アクティベーション ロックを無効にする
   - リモート アシスタンスの要求
 
-### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
+### <a name="devicemanagementrbacreadall"></a><a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
-- **[アクセスを有効にする]** 設定:__Microsoft Intune RBAC の設定の読み取り__
+- **[アクセスを有効にする]** 設定: __Microsoft Intune RBAC の設定の読み取り__
 
 - 次のエンティティのプロパティとステータスへの読み取りアクセスを許可します。
   - ロールの割り当て
   - ロールの定義
   - リソースの操作
 
-### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
+### <a name="devicemanagementrbacreadwriteall"></a><a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
-- **[アクセスを有効にする]** 設定:__Microsoft Intune RBAC の設定の読み取りおよび書き込み__
+- **[アクセスを有効にする]** 設定: __Microsoft Intune RBAC の設定の読み取りおよび書き込み__
 
 - __DeviceManagementRBAC.Read.All__ と同じ操作を許可します。
 
@@ -262,9 +262,9 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
   - ロールの割り当て
   - ロールの定義
 
-### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
+### <a name="devicemanagementserviceconfigreadall"></a><a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
-- **[アクセスを有効にする]** 設定:__Microsoft Intune の構成の読み取り__
+- **[アクセスを有効にする]** 設定: __Microsoft Intune の構成の読み取り__
 
 - 次のエンティティのプロパティとステータスへの読み取りアクセスを許可します。
   - デバイスの登録
@@ -278,9 +278,9 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
   - ブランド化
   - Mobile Threat Defense
 
-### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
+### <a name="devicemanagementserviceconfigreadwriteall"></a><a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
-- **[アクセスを有効にする]** 設定:__Microsoft Intune の構成の読み取りおよび書き込み__
+- **[アクセスを有効にする]** 設定: __Microsoft Intune の構成の読み取りおよび書き込み__
 
 - DeviceManagementServiceConfig.Read.All と同じ操作を許可します。
 
@@ -562,7 +562,7 @@ catch {
 
     そのためには、次のいずれかを実行します。
 
-    」を参照します。 [Microsoft Partner Center](https://partnercenter.microsoft.com/) を使用して、クライアントとそのメール アドレスのリレーションシップを定義します。
+    a. [Microsoft Partner Center](https://partnercenter.microsoft.com/) を使用して、クライアントとそのメール アドレスのリレーションシップを定義します。
 
     b. ユーザーを招待して、テナントのゲストにします。
 

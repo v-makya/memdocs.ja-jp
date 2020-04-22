@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d9da6870caed61917d8093e2dd25882cec72d987
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79353256"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune を使用してデバイスを準拠または非準拠としてマークするための iOS および iPadOS 設定
@@ -33,13 +33,13 @@ ms.locfileid: "79353256"
 - iOS
 - iPadOS
 
-Intune サービス管理者は、組織のリソースの保護に役立てるために、これらのコンプライアンス設定を使用します。 コンプライアンス ポリシーの詳細およびその機能については、[デバイス コンプライアンスの概要](device-compliance-get-started.md)に関するページを参照してください。
+Intune 管理者は、組織のリソースの保護に役立てるためにこれらのコンプライアンス設定を使用します。 コンプライアンス ポリシーの詳細およびその機能については、[デバイス コンプライアンスの概要](device-compliance-get-started.md)に関するページを参照してください。
 
 ## <a name="before-you-begin"></a>始める前に
 
 [コンプライアンス ポリシーの作成](create-compliance-policy.md#create-the-policy)。 **[プラットフォーム]** で **[iOS/iPadOS]** を選択します。
 
-## <a name="email"></a>電子メール
+## <a name="email"></a>Email
 
 - **[モバイル デバイスは管理されているメール プロファイルを持つことが必要]** :  
   - **[未構成]** ("*既定値*") - この設定に対して準拠であるか非準拠であるかの評価は行われません。
@@ -61,7 +61,7 @@ Intune サービス管理者は、組織のリソースの保護に役立てる�
   この設定を使用して、リスク評価をコンプライアンスの条件として実行します。 許容される脅威レベルを選択してください:  
   - **[未構成]** ("*既定値*") - この設定に対して準拠であるか非準拠であるかの評価は行われません。
   - **[セキュリティ保護]** - これはセキュリティ上最も安全なオプションであり、デバイスにはいかなる脅威も存在してはならないことを意味します。 デバイスでいずれかのレベルの脅威が検出された場合、非準拠と評価されます。
-  - **[低]** - 存在する脅威が低レベルの場合のみ、デバイスは準拠として評価されます。 中レベル以上の脅威が存在する場合、デバイスは非準拠のステータスに分類されます。
+  - **[低]** - 存在する脅威が低レベルの場合のみ、デバイスは準拠として評価されます。 低レベルより高い脅威が存在する場合、デバイスは非準拠状態になります。
   - **[中]** - デバイスに存在する脅威が低レベルまたは中レベルの場合、デバイスは準拠として評価されます。 デバイスで高レベルの脅威が検出された場合は、非準拠と判定されます。
   - **[高]** - すべての脅威レベルが許容されるため、最も安全性の低いオプションとなります。 このソリューションをレポート目的のみで使用した場合、役立つ場合があります。
 
@@ -130,5 +130,5 @@ Intune サービス管理者は、組織のリソースの保護に役立てる�
 ## <a name="next-steps"></a>次のステップ
 
 - [非準拠デバイスに対するアクションを追加](actions-for-noncompliance.md)し、[スコープのタグを使用してポリシーをフィルター処理する](../fundamentals/scope-tags.md)
-- [コンプライアンス ポリシーを監視する](compliance-policy-monitor.md)
+- [コンプライアンス ポリシーを監視します](compliance-policy-monitor.md)。
 - [macOS デバイス向けのコンプライアンス ポリシー設定](compliance-policy-create-mac-os.md)を確認します。

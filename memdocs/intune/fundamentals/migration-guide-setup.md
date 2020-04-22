@@ -17,10 +17,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3b7784d4ad86e3418259f85ca1c4577d2289dc86
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358157"
 ---
 # <a name="basic-setup"></a>基本的なセットアップ
@@ -76,6 +76,6 @@ MDM 機関を **Intune** に設定します。 異なる MDM 機関を使用す�
 
 モバイル管理機関を設定する方法については、[こちら](mdm-authority-set.md)を参照してください。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 [デバイスおよびアプリの管理ポリシー](migration-guide-configure-policies.md)を構成します。

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6327de8fd4543f60d66eedc3ac6b86b8275f2ca2
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357221"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Intune の展開計画、設計および実装ガイド
@@ -33,27 +33,27 @@ Microsoft Intune を正常に展開するには、まず、適切に計画し、
 
 このガイドには、Intune の展開のエンド ツー エンド プロセスを説明するセクションが含まれています。 最初にセクション 1 で、目標、目的、課題を確認します。 次に、お客様のニーズに最適な順で、セクション 2 から 7 を実行します。 セクション 2 から 7 は順に実行する必要はなく、並行して実行できます。
 
-- [セクション 1:展開の目標、目的、課題を判別する](planning-guide-deployment-goals.md)
+- [セクション 1: 展開の目標、目的、課題を決定する](planning-guide-deployment-goals.md)
 
-- [セクション 2:ユース ケース シナリオを特定する](planning-guide-scenarios.md)
+- [セクション 2: ユース ケース シナリオを特定する](planning-guide-scenarios.md)
 
-- [セクション 3:ユース ケースの要件を決定する](planning-guide-requirements.md)
+- [セクション 3: ユース ケースの要件を決定する](planning-guide-requirements.md)
 
-- [セクション 4:ロールアウト計画を作成する](planning-guide-rollout-plan.md)
+- [セクション 4: ロールアウト計画を作成する](planning-guide-rollout-plan.md)
 
-- [セクション 5:ロールアウト コミュニケーション計画を作成する](planning-guide-communication-plan.md)
+- [セクション 5: ロールアウト コミュニケーション計画を作成する](planning-guide-communication-plan.md)
 
-- [セクション 6:サポート計画を作成する](planning-guide-support-plan.md)
+- [セクション 6: サポート計画を作成する](planning-guide-support-plan.md)
 
-- [セクション 7:Intune の設計を作成する](planning-guide-design.md)
+- [セクション 7: Intune の設計を作成する](planning-guide-design.md)
 
-- [セクション 8:Intune を実装する](planning-guide-onboarding.md)
+- [セクション 8: Intune を実装する](planning-guide-onboarding.md)
 
-- [セクション 9:テストして検証する](planning-guide-test-validation.md)
+- [セクション 9: テストと検証](planning-guide-test-validation.md)
 
 このガイドでは、Intune の展開計画、設計および実装プロセスを支援するために使用可能な追加の技術情報とテーブル テンプレートも提供されます。
 
-- [その他のリソース:リンクとテーブル テンプレート](planning-guide-resources.md)
+- [その他のリソース: リンクとテーブル テンプレート](planning-guide-resources.md)
 
 ## <a name="assumptions"></a>前提条件
 
@@ -63,4 +63,4 @@ Microsoft Intune を正常に展開するには、まず、適切に計画し、
 
 ## <a name="next-steps"></a>次のステップ
 
-最初のセクションから始めましょう。[展開の目標、目的、課題を判別する](planning-guide-deployment-goals.md)。
+最初のセクションの「[展開の目標、目的、課題を決定する](planning-guide-deployment-goals.md)」に取りかかりましょう。

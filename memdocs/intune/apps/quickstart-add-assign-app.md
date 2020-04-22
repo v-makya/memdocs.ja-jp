@@ -19,13 +19,13 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c5b6762669e4d816010982c63a119bffdec2f055
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79334276"
 ---
-# <a name="quickstart-add-and-assign-a-client-app"></a>クイック スタート:クライアント アプリの追加および割り当て
+# <a name="quickstart-add-and-assign-a-client-app"></a>クイック スタート: クライアント アプリを追加して割り当てる
 
 このクイック スタートでは、Intune を使用して、会社の従業員にクライアント アプリを追加して割り当てます。 管理者の優先事項の 1 つは、エンド ユーザーが仕事を行う上で必要なアプリに確実にアクセスできるようにすることです。
 
@@ -37,7 +37,7 @@ Intune サブスクリプションがない場合は、[無料試用版アカウ
 
 ## <a name="sign-in-to-intune"></a>Intune にサインインする
 
-[グローバル管理者または Intune サービス管理者](../fundamentals/users-add.md#types-of-administrators)として [Intune](https://aka.ms/intuneportal) にサインインします。 Intune の試用版サブスクリプションを作成した場合、サブスクリプションを作成したアカウントがグローバル管理者になります。
+[グローバル管理者または Intune サービス管理者](https://aka.ms/intuneportal)として [Intune](../fundamentals/users-add.md#types-of-administrators) にサインインします。 Intune の試用版サブスクリプションを作成した場合、サブスクリプションを作成したアカウントがグローバル管理者になります。
 
 ## <a name="add-the-client-app-to-intune"></a>Intune にクライアント アプリを追加する
 
@@ -91,7 +91,7 @@ Intune にアプリを追加するには、次の手順に従います。
 4. Intune を使用して追加したアプリをクリックします。 このクイック スタートでは、**Microsoft Office 365 アプリ スイート** アプリを追加しました。
 
     > [!NOTE]
-    > Intune ユーザーに何らかのアプリを正しく割り当てることができなかった場合、「*IT 管理者が用意した利用可能なアプリはありません*」というメッセージが表示されます。
+    > Intune ユーザーに何らかのアプリを正しく割り当てることができなかった場合、「*Your IT administrator did not make any apps available to you.* 」\(IT 管理者によりどのアプリも利用可能にされていません\) というメッセージが表示されます。
 
 5. **[インストール]** をクリックします。
 
@@ -104,4 +104,4 @@ Intune にアプリを追加するには、次の手順に従います。
 この一連の Intune のクイック スタートに従うには、次のクイック スタートに進んでください。
 
 > [!div class="nextstepaction"]
-> [クイック スタート: アプリ保護ポリシーの作成および割り当て](quickstart-create-assign-app-policy.md)
+> [クイック スタート: アプリ保護ポリシーを作成して割り当てる](quickstart-create-assign-app-policy.md)

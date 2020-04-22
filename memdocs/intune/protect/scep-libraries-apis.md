@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9a915ffc908c985b38533a362f2a17ec561ddf6f
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79351241"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>SCEP 用のサード パーティ CA を Intune に追加するための API の使用
@@ -100,7 +100,7 @@ SCEP サーバーの管理者がこのデータを取得するには、Azure Por
 
 ### <a name="java-library-api"></a>Java ライブラリ API
 
-Java ライブラリは、ビルド時にその依存関係のプルする Maven プロジェクトとして実装されます。 この API は、`IntuneScepServiceClient` クラスにより、`com.microsoft.intune.scepvalidation` 名前空間下で実装されます。
+Java ライブラリは、ビルド時にその依存関係のプルする Maven プロジェクトとして実装されます。 この API は、`com.microsoft.intune.scepvalidation` クラスにより、`IntuneScepServiceClient` 名前空間下で実装されます。
 
 #### <a name="intunescepserviceclient-class"></a>IntuneScepServiceClient クラス
 
@@ -115,7 +115,7 @@ IntuneScepServiceClient(
     Properties configProperties)
 ```
 
-説明 :
+説明:
 
 `IntuneScepServiceClient` オブジェクトをインスタンス化し構成します。
 
@@ -157,7 +157,7 @@ void ValidateRequest(
     String certificateRequest)
 ```
 
-説明 :
+説明:
 
 SCEP 証明書要求を検証します。
 
@@ -194,7 +194,7 @@ void SendSuccessNotification(
     String certIssuingAuthority)
 ```
 
-説明 :
+説明:
 
 証明書が SCEP 要求の処理の一環として作成されたことを Intune に通知します。
 
@@ -233,7 +233,7 @@ void SendFailureNotification(
     String errorDescription)
 ```
 
-説明 :
+説明:
 
 SCEP 要求の処理中にエラーが発生したことを Intune に通知します。 このメソッドは、このクラスのメソッドによってスローされる例外に対して呼び出すことはできません。
 
@@ -267,7 +267,7 @@ void SetSslSocketFactory(
     SSLSocketFactory factory)
 ```
 
-説明 :
+説明:
 
 このメソッドは、Intune との通信時、(既定ではなく) 指定された SSL ソケット ファクトリを使用する必要があることをクライアントに通知するために使用します。
 
@@ -289,7 +289,7 @@ void SetSslSocketFactory(
 1. [Intune 試用版アカウント](../fundamentals/account-sign-up.md)を設定します。
 2. [Azure Portal に SCEP サーバーを](#onboard-scep-server-in-azure) (この記事) オンボードします。
 3. SCEP サーバーのオンボード時に作成した ID とキーを使用して [SCEP サーバーを構成](certificates-scep-configure.md)します。
-4. 「[scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv)」 (シナリオのテスト マトリックス) のシナリオをテストするために[デバイスを登録](../enrollment/device-enrollment.md)します。
+4. 「[scenario testing matrix](../enrollment/device-enrollment.md)」 (シナリオのテスト マトリックス) のシナリオをテストするために[デバイスを登録](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv)します。
 5. 証明機関をテストするために、[信頼されたルート証明書プロファイルを作成](certificates-scep-configure.md)します。
 6. 「[scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv)」 (シナリオのテスト マトリックス) で列挙されたシナリオをテストするための SCEP プロファイルを作成します。
 7. デバイスを登録したユーザーに[プロファイルを割り当て](../configuration/device-profile-assign.md)ます。

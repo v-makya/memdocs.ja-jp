@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e1d18a423242300b6c2b66c01c59404cef42ebd9
-ms.sourcegitcommit: b5a9ce31de743879d2a6306cea76be3a093976bb
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79372553"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Android ユーザーがアプリを入手する方法  

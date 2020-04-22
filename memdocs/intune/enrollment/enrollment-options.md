@@ -17,17 +17,17 @@ search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3a769b1f1a0f11a4dd98c2f38e313012a7e2590b
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79363578"
 ---
 # <a name="enrollment-options-for-devices-managed-by-intune"></a>Intune によって管理されるデバイスの登録オプション
 
 Intune 管理者は、ユーザーのためにデバイスを登録して Intune の機能を有効にすることができます。  Intune には次の登録オプションが含まれています。
 
-## <a name="terms-and-conditions"></a>Intune の登録および会社アクセスに関する使用条件
+## <a name="terms-and-conditions"></a>Terms and conditions
 
 ユーザーが会社の使用条件に同意しないと、ポータル サイトで自分のデバイスの登録や会社のアプリや電子メールなどのリソースへのアクセスができないという要件を設定できます。 使用条件の構成は任意です。 [使用条件](terms-and-conditions-create.md)について詳しくはこちらをご覧ください。
 

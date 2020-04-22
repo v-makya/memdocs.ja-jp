@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2ab94c3cc8bb9009d49a6b301d9a67fa6ffc5f1a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79364306"
 ---
 # <a name="windows-10-and-newer-device-settings-to-upgrade-editions-or-enable-s-mode-in-intune"></a>Intune でエディションのアップグレードや S モードの有効化に使用する Windows 10 (以降の) デバイス設定
@@ -38,15 +38,15 @@ Microsoft Intune には、デバイスの管理と保護に役立つ多くの設
 
 ## <a name="edition-upgrade"></a>エディションのアップグレード
 
-- **アップグレード後のエディション**:アップグレード後の Windows 10 エディションを選択します。 このポリシーで対象となるデバイスが選択したエディションにアップグレードされます。
-- **プロダクト キー**:Microsoft から受け取ったプロダクト キーを入力します。 プロダクト キーを含むポリシーの作成後、キーは更新できなくなり、セキュリティ上の理由から非表示になります。 プロダクト キーを変更するには、キー全体を再入力します。
+- **アップグレード後のエディション**: アップグレード後の Windows 10 エディションを選択します。 このポリシーで対象となるデバイスが選択したエディションにアップグレードされます。
+- **プロダクト キー**: Microsoft から受け取ったプロダクト キーを入力します。 プロダクト キーを含むポリシーの作成後、キーは更新できなくなり、セキュリティ上の理由から非表示になります。 プロダクト キーを変更するには、キー全体を再入力します。
 - **ライセンス ファイル**: **[Windows 10 Holographic for Business]** または **[Windows 10 Mobile エディション]** については、 **[参照]** を選択し、Microsoft から受け取ったライセンス ファイルを選択します。 このライセンス ファイルには、デバイスをアップグレードするエディションのライセンス情報が含まれています。
 
 ## <a name="mode-switch"></a>モード切り替え
 
-- **No configuration (構成なし)** :S モード デバイスは S モードのままです。 エンドユーザーはデバイスを S モードから抜けさせることができます。
-- **S モードのままにする**:エンド ユーザーはデバイスを S モードから抜けさせることができなくなります。
-- **切り替え**:デバイスを S モードから切り替えます。
+- **構成なし**: S モード デバイスは S モードのままになります。 エンドユーザーはデバイスを S モードから抜けさせることができます。
+- **S モードを維持する**: エンド ユーザーはデバイスを S モードから抜けさせることができなくなります。
+- **切り替える**: デバイスを S モードから抜けさせます。
 
 ## <a name="next-steps"></a>次のステップ
 

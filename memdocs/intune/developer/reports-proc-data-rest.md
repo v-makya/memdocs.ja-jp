@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2e036e139e97ce033b3269ba0b8d5cf202fad773
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360029"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>REST クライアントを使用して Intune データ ウェアハウス API からデータを取得する
@@ -88,7 +88,7 @@ Postman を使用して REST 呼び出しを行うには、次の情報が必要
 | 認証 URL         | これは認証に使用する URL です。 | https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/ |
 | アクセス トークン URL | これはトークンの付与に使用する URL です。                                                                                                                                              | https://login.microsoftonline.com/common/oauth2/token |
 | クライアント ID        | Azure でネイティブ アプリを作成したとき、これを作成し、メモしました。                                                                                               | 4184c61a-e324-4f51-83d7-022b6a81b991                                                          |
-| スコープ (省略可能) | 新規                                                                                                                                                                               | このフィールドは空白にできます。                                                                     |
+| スコープ (省略可能) | [新規]                                                                                                                                                                               | このフィールドは空白にできます。                                                                     |
 | 付与タイプ       | このトークンは認証コードです。                                                                                                                                                  | 認証コード                                                                            |
 
 ### <a name="odata-endpoint"></a>OData エンドポイント
@@ -127,7 +127,7 @@ Postman のために新しいアクセス トークンを取得するには、Az
 
      `https://login.microsoftonline.com/common/oauth2/token`
 
-10. Azure で作成し、`Intune Data Warehouse Client` という名前を付けたネイティブ アプリから **[クライアント ID]** を追加します。 次のようになります。  
+10. Azure で作成し、**という名前を付けたネイティブ アプリから**[クライアント ID]`Intune Data Warehouse Client` を追加します。 次のようになります。  
 
      `88C8527B-59CB-4679-A9C8-324941748BB4`
 

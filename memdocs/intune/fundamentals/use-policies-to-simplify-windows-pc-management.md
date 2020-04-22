@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 275939c4c97b25f7e9b2ab179a7491d47801e48e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355063"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>ポリシーを使用して Windows PC 管理を簡略化する
@@ -48,12 +48,12 @@ Microsoft Intune Center は、すべてのマネージド コンピューター�
 
 |ポリシー設定|詳細|
 |------------------|--------------------|
-|**名前**|コンピューターを管理する管理者の名前。<br />最大長: 40 文字|
-|**電話番号**|コンピューターを管理する管理者の電話番号。<br />最大長: 20 文字|
-|**電子メール アドレス**|コンピューターを管理する管理者の電子メール アドレス。<br />最大長: 40 文字|
-|**Web サイト名**|ユーザー向けのサポート Web サイトの名前。<br />最大長: 40 文字|
-|**Web サイトの URL**|サポート Web サイトの URL。<br />最大長: 150 文字|
-|**注**|ユーザーに表示されるメモ。<br />最大長: 120 文字|
+|**名前**|コンピューターを管理する管理者の名前。<br />最大文字数:40 字|
+|**電話番号**|コンピューターを管理する管理者の電話番号。<br />最大文字数:20 字|
+|**電子メール アドレス**|コンピューターを管理する管理者の電子メール アドレス。<br />最大文字数:40 字|
+|**Web サイト名**|ユーザー向けのサポート Web サイトの名前。<br />最大文字数:40 字|
+|**Web サイトの URL**|サポート Web サイトの URL。<br />最大文字数:150 字|
+|**注**|ユーザーに表示されるメモ。<br />最大文字数:120 字|
 
 Windows PC で構成できるポリシーと設定の詳細については、以下のリソースを参照してください。
 

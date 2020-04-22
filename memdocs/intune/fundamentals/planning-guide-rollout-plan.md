@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7aa18316ad1b4473ac70399e1370bfececadbfaf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79357442"
 ---
 # <a name="develop-a-rollout-plan"></a>ロールアウト計画を作成する
@@ -37,14 +37,14 @@ ms.locfileid: "79357442"
 * 変更に対するグループの意思
 * ユーザーとデバイスの数
 * デバイス プラットフォームの種類
-* 要件
+* ［要件］
 * 地理的な場所
 * ビジネス リスク
 
 ## <a name="rollout-phases"></a>ロールアウト フェーズ
 一般的に、組織では、まず IT 部門の少数のユーザー グループを対象にしたパイロット運用として Intune ロールアウトを開始します。 パイロット運用の対象を拡大して、さらに多くの IT 部門や他の組織グループのユーザーを加えてもかまいません。
 
-### <a name="pilot"></a>パイロット運用
+### <a name="pilot"></a>パイロット
 ロールアウトの最初のフェーズはパイロット ユーザーです。 パイロット ユーザーは、新しいソリューションの最初のユーザーであることを理解する必要があります。 構成、ドキュメント、通知を改善するためのフィードバックを提供し、その後のロールアウト フェーズで対象となる他のすべてのユーザーの負担を軽減できるよう積極的に取り組む必要があります。 幹部や重要な人物はパイロット ユーザーにしないでください。
 
 パイロット運用は、[課題](planning-guide-deployment-goals.md)をテストしたり、それまでに集めた[要件](planning-guide-requirements.md)を詳細化したりする良い機会になります。

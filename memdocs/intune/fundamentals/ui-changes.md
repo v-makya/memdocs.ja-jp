@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9fbf58b7ae035bbd7da15814787f283c7b80e13e
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355115"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Azure での Intune の機能の移動先
@@ -52,7 +52,7 @@ Azure Portal の Intune では、[Azure Active Directory (AD)](https://docs.micr
 
 ![従来のモバイル デバイスの登録ルールの画像](./media/ui-changes/01-classic-rules.png)
 
-これらのルールは例外なくすべてのユーザーの Intune アカウントに適用されました。 Azure portal では、これらのルールは次の 2 つのポリシーの種類に表示されます: [デバイスの種類の制限] と [デバイスの上限数の制限]。
+これらのルールは例外なくすべてのユーザーの Intune アカウントに適用されました。 Azure portal では、これらのルールは [デバイスの種類の制限] と [デバイス数の制限] という 2 つのポリシーの種類に表示されます。
 
 ![Azure のモバイル デバイス登録制限の画像](./media/ui-changes/02-azure-enroll-restrictions.png)
 

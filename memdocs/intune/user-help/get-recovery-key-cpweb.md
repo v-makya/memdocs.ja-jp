@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 5a15f3a05f96333eba19cf69c5778e6c8bd04f59
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79336759"
 ---
 # <a name="get-a-recovery-key-for-a-macos-device"></a>macOS デバイスの回復キーを取得する
@@ -34,7 +34,7 @@ ms.locfileid: "79336759"
 
 このオプションは、FileVault を使用して組織によって暗号化されたデバイスで使用できます。 個人が暗号化したデバイスでは使用できません。
 
-1. 任意のデバイス上で、**ポータル サイト Web サイト**にサインインし、 **[メニュー]** ボタン、[[デバイス]](https://portal.manage.microsoft.com) の順に選択します。  
+1. 任意のデバイス上で、[ポータル サイト Web サイト](https://portal.manage.microsoft.com)にサインインし、 **[メニュー]** ボタン、 **[デバイス]** の順に選択します。  
 2. 暗号化された macOS デバイスを選択します。  
 3. **[回復キーを取得する]** を選択します。  
 

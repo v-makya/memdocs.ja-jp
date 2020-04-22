@@ -1,11 +1,11 @@
 - name: リモート操作
   href: index.yml
-- name: 概要
+- name: '[概要]'
   expanded: true
   items:
     - name: デバイス管理の概要
       href: device-management.md
-- name: 攻略ガイド
+- name: 操作方法ガイド
   items:
     - name: ロックとパスワード
       items:
@@ -17,7 +17,7 @@
           href: device-windows-pin-reset.md
     - name: 削除と再起動
       items:
-        - name: デバイスを削除する
+        - name: デバイスの削除
           href: devices-wipe.md
         - name: Windows の新たに開始機能の管理
           href: device-fresh-start.md

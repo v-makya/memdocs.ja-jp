@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d6dfba55c8e516e2e689513f063d56f5a43d52d9
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359886"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Power BI でデータ ウェアハウスに接続する
@@ -53,7 +53,7 @@ Power BI ファイルをダウンロードする方法と、Power BI で OData �
 
 Power BI の [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) アプリには、テナントの接続情報と、データ ウェアハウス データ モデルに基づいた構築済みのレポートのセットが含まれています。
 
-1. インストール プロセスを開始するには、[Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) アプリの **[AppSource]** ページに移動します。
+1. インストール プロセスを開始するには、**Intune Compliance (Data Warehouse)** アプリの [[AppSource]](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) ページに移動します。
 2. **[今すぐ入手]** ボタンをクリックしてから、 **[続行]** をクリックします。
 3. Power BI アプリをインストールするように求められたら、 **[インストール]** をクリックします。
 4. インストールが完了した後、 **[Intune Compliance (Data Warehouse)]\(Intune コンプライアンス (Data Warehouse)\)** アプリ タイルをクリックします。

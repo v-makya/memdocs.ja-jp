@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 4fd08ba190654db5678766e34e3340330dcf3ca8
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346093"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>デバイスは暗号化されているが、アプリではそうなっていない
@@ -34,7 +34,7 @@ Intune ポータル サイトまたは Microsoft Intune アプリではデバイ
 
 いくつかの Android デバイスでは、デバイスがセキュリティ保護されていることを確認するためにスタートアップ PIN を作成する必要があります。 この設定の場所は、デバイスの**設定**アプリです。 設定の名前と場所は異なる場合があります。 たとえば、Samsung Galaxy S7 では、この設定は **[Secure Startup]\(安全なスタートアップ\)** という名前です。 それを有効にしてパスコードを作成するには、 **[Settings]\(設定\)**  >  **[Lock Screen and Security]\(ロック画面とセキュリティ\)**  >  **[Secure Startup]\(安全なスタートアップ\)** に移動します。  
 
-## <a name="encrypt-the-entire-device"></a>デバイス全体を暗号化します
+## <a name="encrypt-the-entire-device"></a>デバイス全体を暗号化する
 
 このセクションは、Intune ポータル サイト アプリにのみ適用されます。 一部のデバイスでは、デバイス全体と使用済み領域のみのどちらを暗号化するかを選ぶことができます。 デバイス全体を暗号化するオプションを選択します。 使用済みの領域のみを暗号化するように選択した場合は、次のようにします。
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: afd3f7a7c92fba23fc28903b328bc95f8555ba3d
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79353490"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Intune との Check Point SandBlast Mobile Threat Defense コネクタ
@@ -34,7 +34,7 @@ Intune デバイス コンプライアンス ポリシーで有効にした Chec
 > [!NOTE]
 > この Mobile Threat Defense ベンダーは、未登録のデバイスではサポートされていません。
 
-## <a name="supported-platforms"></a>サポートされているプラットフォーム
+## <a name="supported-platforms"></a>[サポートされているプラットフォーム]
 
 - **Android 4.1 以降**
 
@@ -72,7 +72,7 @@ Intune デバイス コンプライアンス ポリシーには、Check Point Sa
 > [!div class="mx-imgBorder"]
 > ![Check Point MTD - 悪意のあるアプリが検出されたときにブロック](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-2.PNG)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 > [!div class="mx-imgBorder"]
 > ![Check Point MTD - アクセスを許可](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.PNG)
@@ -86,12 +86,12 @@ Intune デバイス コンプライアンス ポリシーには、Check Point Sa
 > [!div class="mx-imgBorder"]
 > ![Check Point MTD - Wi-Fi 経由のネットワーク アクセスをブロック](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-4.PNG)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 > [!div class="mx-imgBorder"]
 > ![Check Point MTD - Wi-Fi アクセスを許可](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-5.PNG)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークへの脅威に基づいて SharePoint Online へのアクセスを制御する
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークに対する脅威に基づいて SharePoint Online へのアクセスを制御する
 
 ネットワークで **Man-in-the-middle** のような脅威を検出し、デバイスのリスクに基づいて会社内のファイルの同期を阻止します。
 
@@ -100,7 +100,7 @@ Intune デバイス コンプライアンス ポリシーには、Check Point Sa
 > [!div class="mx-imgBorder"]
 > ![Check Point MTD - SharePoint Online アクセスをブロック](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-6.PNG)
 
-*修復後、アクセスが与えられる:*
+*修復時に付与されるアクセス権:*
 
 > [!div class="mx-imgBorder"]
 > ![Check Point MTD - SharePoint Online アクセスを許可](./media/checkpoint-sandblast-mobile-mobile-threat-defense-connector/checkpoint-mtd-7.PNG)

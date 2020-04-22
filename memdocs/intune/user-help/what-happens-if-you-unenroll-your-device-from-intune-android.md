@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
 ms.openlocfilehash: 368972acc1b3380b1adf9b21939adbca0dc1434c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79346860"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Intune から Android デバイスの登録を解除するとどうなりますか。
@@ -42,6 +42,6 @@ Intune から Android デバイスの登録を解除すると次のようにな�
 
 会社のメールだけを受信するようデバイスが設定されている場合にデバイスの登録を解除すると、そのデバイスが会社のポータルに表示されなくなります。
 
-登録を解除する手順については、「[Intune の会社のポータル アプリを使用してデバイスの登録を解除する](unenroll-your-device-from-intune-android.md)」を参照してください。
+登録を解除する手順については、「[Intune の会社のポータル アプリを使用してデバイスの登録を解除する](unenroll-your-device-from-intune-android.md)」をご覧ください。
 
 サポートが必要な場合は、 会社のサポートに問い合わせるか (連絡先情報については[ポータル Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください)、または <a href="mailto:wintunedroidfbk@microsoft.com?subject=I have questions about unenrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android チーム</a>にご連絡ください。

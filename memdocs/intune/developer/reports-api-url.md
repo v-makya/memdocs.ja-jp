@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 04521681ee6e262f4634cfc96560a5922ce1b8c0
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79360237"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Intune データ ウェアハウス API エンドポイント
@@ -70,7 +70,7 @@ URL には、次の要素が含まれています。
 
 `DateKey` 範囲のフィルターは、キー プロパティとして `dateKey` を使用して一部のコレクションをダウンロードするデータ量を制限するために使用できます。 `DateKey` フィルターを使用すると、次の `$filter` クエリ パラメーターを指定することによって、サービス パフォーマンスを最適化できます。
 
-1. `$filter` 内で単独の `DateKey` は、`lt/le/eq/ge/gt` 演算子をサポートし、論理演算子 `and` と結合されます。これらは開始日や終了日にマッピングされることがあります。
+1. `DateKey` 内で単独の `$filter` は、`lt/le/eq/ge/gt` 演算子をサポートし、論理演算子 `and` と結合されます。これらは開始日や終了日にマッピングされることがあります。
 2. `maxhistorydays` は、カスタム クエリ オプションとして提供されます。<br>
 
 ## <a name="filter-examples"></a>フィルターの例

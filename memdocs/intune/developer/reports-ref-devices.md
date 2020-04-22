@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ae1f0117f6dbf186b3a4bdddb393d053c33c914a
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79359795"
 ---
 # <a name="reference-for-devices-entities"></a>デバイス エンティティの参照
@@ -100,7 +100,7 @@ ms.locfileid: "79359795"
 | enrollmentEventStatusName  | [説明]                            |
 |----------------------------|----------------------------------------|
 | 成功                    | 成功したデバイスの登録         |
-| Failed                     | 失敗したデバイスの登録             |
+| 失敗                     | 失敗したデバイスの登録             |
 | 利用不可              | 登録状態は利用できません。  |
 
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
@@ -115,7 +115,7 @@ ms.locfileid: "79359795"
 
 | enrollmentFailureCategoryName   | [説明]                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
-| 適用しない                  | 登録エラーのカテゴリは適用されません。                                                            |
+| 適用できません                  | 登録エラーのカテゴリは適用されません。                                                            |
 | 利用不可                   | 登録エラーのカテゴリは利用できません。                                                             |
 | Unknown                         | 不明なエラー。                                                                                                |
 | 認証                  | 認証に失敗しました。                                                                                        |
@@ -142,7 +142,7 @@ ms.locfileid: "79359795"
 
 | enrollmentFailureReasonName      | [説明]                                                                                                                                                                                            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 適用しない                   | 登録エラーの理由は適用されません。                                                                                                                                                       |
+| 適用できません                   | 登録エラーの理由は適用されません。                                                                                                                                                       |
 | 利用不可                    | 登録エラーの理由は利用できません。                                                                                                                                                        |
 | Unknown                          | 不明なエラー。                                                                                                                                                                                         |
 | UserNotLicensed                  | ユーザーが Intune で見つからなかったか、有効なライセンスを持っていません。                                                                                                                                     |

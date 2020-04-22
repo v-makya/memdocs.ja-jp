@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 16b7cc65ae043fb48b7f500bfcd65195c7ff7561
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79355700"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Microsoft Intune のエンドポイント保護の問題と考えられる解決方法
@@ -58,7 +58,7 @@ ms.locfileid: "79355700"
 `Script scanning disabled`  
 `Network Inspection System disabled`  
 
-**考えられる解決方法**:これらの機能を有効にします。 ガイダンスについては、以下を参照してください。
+**考えられる解決方法**: これらの機能を有効にします。 ガイダンスについては、以下を参照してください。
 
 - [エンドポイント保護設定を追加する](../protect/endpoint-protection-configure.md)
 - [Microsoft Defender ウイルス対策](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)
@@ -68,19 +68,19 @@ ms.locfileid: "79355700"
 
 このメッセージは、デバイスのマルウェア定義の更新が 14 日以上遅れた場合に表示されます。 たとえば、デバイスがインターネットから切断されているか、マルウェア定義が古くなっているかを示すメッセージが表示されることがあります。
 
-**考えられる解決方法**:マルウェア定義が古い場合は、[Microsoft Defender ウイルス対策](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)を使用して定義を更新することができます。
+**考えられる解決方法**: マルウェア定義が古い場合は、[Microsoft Defender ウイルス対策](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)を使用して定義を更新することができます。
 
 ### <a name="full-scan-overdue-or-quick-scan-overdue"></a>フル スキャンの期限が過ぎています、またクイック スキャンの期限が過ぎています
 
 フル スキャンまたはクイック スキャンが 14 日間完了していません。 このシナリオは、フル スキャン中にデバイスが再起動した場合に発生する可能性があります。
 
-**考えられる解決方法**:スキャンの期限が過ぎている場合は、1 回限りのスキャンを実行するか、定期的なスキャンのスケジュールを設定することができます。 「[Microsoft Defender ウイルス対策](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)」を参照してください。
+**考えられる解決方法**: スキャンの期限が過ぎている場合は、1 回限りのスキャンを実行するか、定期的なスキャンのスケジュールを設定することができます。 「[Microsoft Defender ウイルス対策](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)」を参照してください。
 
 ### <a name="another-endpoint-protection-application-running"></a>別のエンドポイント保護アプリケーションが実行されています。
 
 別のエンドポイント保護アプリケーションが実行されており、デバイスの状態は正常です。
 
-**考えられる解決方法**:別のエンドポイント保護アプリケーションがインストールされていて、Intune がそのアプリケーションを検出した場合、デバイスが不安定になる可能性があります。
+**考えられる解決方法**: 別のエンドポイント保護アプリケーションがインストールされていて、Intune がそのアプリケーションを検出した場合、デバイスが不安定になる可能性があります。
 
 ## <a name="next-steps"></a>次のステップ
 

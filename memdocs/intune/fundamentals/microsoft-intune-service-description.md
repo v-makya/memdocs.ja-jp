@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1a37971928ab2aef8c5e78e9d0eefb748ecf5f04
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79358638"
 ---
 # <a name="microsoft-intune-service-description"></a>Microsoft Intune サービスの説明
@@ -100,7 +100,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 --->
 
 ## <a name="language-support"></a>言語サポート
-Intune は Azure portal で実行されていますが、Azure portal によりサポートされている言語は、簡体中国語、繁体中国語、チェコ語、オランダ語、英語、ドイツ語、ハンガリー語、イタリア語、日本語、ポルトガル (ブラジル) 語、ポルトガル (ポルトガル) 語、ロシア語、スペイン語、英語、フランス語、韓国語、ポーランド語、スウェーデン語、トルコ語です。
+Intune は Azure Portal で実行されていますが、Azure Portal がサポートしている言語は、簡体中国語、繁体中国語、チェコ語、オランダ語、英語、ドイツ語、ハンガリー語、イタリア語、日本語、ポルトガル (ブラジル) 語、ポルトガル (ポルトガル) 語、ロシア語、スペイン語、英語、フランス語、韓国語、ポーランド語、スウェーデン語、およびトルコ語です。
 
 Intune 管理コンソールとユーザーが対面するモバイル エクスペリエンスでは、Azure ポータルでサポートされている言語だけでなくデンマーク語、ギリシャ語、フィンランド語、ノルウェー語、およびルーマニア語もサポートしています。
 
