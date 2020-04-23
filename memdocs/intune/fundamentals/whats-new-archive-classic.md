@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e838ab0123058b90f06814d5a1266072bd95385e
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: e3c939b2b21bc8bfbf82a997c05f24d91c487a9e
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80085776"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81681983"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Intune クラシック ポータルの新機能 (過去数か月)
 
@@ -361,9 +361,9 @@ __Windows 10 デバイスで使用可能な新しい Microsoft Intune ポータ�
 > [!IMPORTANT]
 > __Intune と Android for Work の更新プログラム__ __[必須]__ の操作を使用して Android for Work アプリを展開できますが、Intune グループが新しい Azure AD グループ エクスペリエンスに移行された場合、 __[利用可能]__ としてのみアプリを展開できます。
 
-__Cordova プラグイン用 Intune アプリ SDK で登録なしの MAM をサポート開始__ アプリ開発者は、Cordova プラグイン用 Intune アプリ SDK を使用して、Android および iOS/iPadOS 用の Cordova ベースのアプリでデバイス登録を行わずに MAM 機能を有効化できるようになりました。 Cordova プラグイン用の Intune アプリ SDK は[こちら](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam)にあります。
+__Cordova プラグイン用 Intune アプリ SDK で登録なしの MAM をサポート開始__ アプリ開発者は、Cordova プラグイン用 Intune アプリ SDK を使用して、Android および iOS/iPadOS 用の Cordova ベースのアプリでデバイス登録を行わずに MAM 機能を有効化できるようになりました。
 
-__Intune アプリ SDK Xamarin コンポーネントで登録なしの MAM のサポート開始__ アプリ開発者は、Intune アプリ SDK Xamarin コンポーネントを使用して、Android および iOS/iPadOS 用の Xamarin ベースのアプリでデバイス登録を行わずに MAM 機能を有効化できるようになりました。 Intune アプリ SDK Xamarin コンポーネントは[こちら](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)にあります。
+__Intune アプリ SDK Xamarin コンポーネントで登録なしの MAM のサポート開始__ アプリ開発者は、Intune アプリ SDK Xamarin コンポーネントを使用して、Android および iOS/iPadOS 用の Xamarin ベースのアプリでデバイス登録を行わずに MAM 機能を有効化できるようになりました。 Intune アプリ SDK Xamarin コンポーネントは[こちら](https://www.npmjs.com/package/cordova-plugin-ms-intune-mam)にあります。
 
 ### <a name="notices"></a>通知
 
