@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bcc524a69d0fb41da84a2e882b81a205fe7192cc
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "79363331"
 ---
 # <a name="troubleshoot-android-enterprise-device-problems-in-microsoft-intune"></a>Microsoft Intune での Android Enterprise デバイスの問題解決
@@ -59,7 +59,7 @@ ms.locfileid: "79363331"
 
   ポータル サイト ログは次の手順で集めます。
 
-  1. バッジが付いたポータル サイト アプリで、 **[メニュー]** 、 **[ヘルプ]** 、 **[メール サポート]** の順にタップし、 **[Send Email & Upload Logs]\(メールの送信 & ログのアップロード\)** をタップします。 
+  1. バッジが付いたポータル サイト アプリで、 **[メニュー]**  >  **[ヘルプ]**  >  **[メール サポート]** の順にタップし、 **[Send Email & Upload Logs]\(メールの送信 & ログのアップロード\)** をタップします。 
   2. **[ヘルプ要求の送信に使用するアプリ]** を選択するように求められたら、いずれかのメール アプリを選択します。
   3. IT 管理者宛の電子メールが作成されますが、そのメールには Microsoft 製品サポートに提供できるインシデント ID が含まれています。
 
