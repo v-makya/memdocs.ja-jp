@@ -1,0 +1,60 @@
+- name: Desktop Analytics のドキュメント
+  href: index.yml
+- name: 概要
+  items:
+    - name: Desktop Analytics とは
+      href: overview.md
+    - name: 新機能
+      href: whats-new.md
+- name: チュートリアル
+  items:
+    - name: パイロット Windows 10
+      href: tutorial-windows10.md
+- name: 概念
+  items:
+    - name: 展開計画
+      href: about-deployment-plans.md
+    - name: 資産
+      href: about-assets.md
+    - name: 品質と機能に関する更新プログラム
+      href: about-updates.md
+    - name: 互換性の評価
+      href: compat-assessment.md
+    - name: 正常性状態の監視
+      href: health-status-monitoring.md
+- name: 攻略ガイド
+  items:
+    - name: Desktop Analytics の設定
+      href: set-up.md
+    - name: Configuration Manager を接続する
+      href: connect-configmgr.md
+    - name: デバイスの登録
+      href: enroll-devices.md
+    - name: 展開計画を作成する
+      href: create-deployment-plans.md
+    - name: パイロットに展開する
+      href: deploy-pilot.md
+    - name: 運用環境に展開する
+      href: deploy-prod.md
+    - name: アカウントをリセットする
+      href: account-reset.md
+    - name: アカウントを削除する
+      href: account-close.md
+- name: 参照先
+  items:
+    - name: データ共有を有効にする
+      href: enable-data-sharing.md
+    - name: プライバシー
+      href: privacy.md
+    - name: トラブルシューティング
+      href: troubleshooting.md
+    - name: ログ コレクター
+      href: log-collector.md
+    - name: 接続の正常性の監視
+      href: monitor-connection-health.md
+    - name: グループ ポリシー設定
+      href: group-policy-settings.md
+    - name: よく寄せられる質問
+      href: faq.md
+    - name: サポートを受ける
+      href: get-support.md

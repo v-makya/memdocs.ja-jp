@@ -12,12 +12,12 @@ metadata:
   ms.author: dougeby
   manager: dougeby
   ms.date: 08/07/2019
-  ms.openlocfilehash: be5cae95460064287fa347d1ca42626ab75a2809
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.openlocfilehash: 468bf56722f17fded75c18a722b15e5e55113eec
+  ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79333942"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82077956"
 landingContent:
 - title: 登録の詳細
   linkLists:
@@ -87,7 +87,7 @@ landingContent:
     links:
     - text: iOS/iPadOS の登録を設定する
       url: ios-enroll.md
-    - text: Apple の Device Enrollment Program を使用して iOS/iPadOS デバイスを自動登録する
+    - text: Apple の自動デバイス登録を使用して iOS または iPadOS デバイスを自動登録する
       url: device-enrollment-program-enroll-ios.md
     - text: iOS/iPadOS と iPadOS のユーザー登録を設定する
       url: ios-user-enrollment.md
@@ -111,7 +111,7 @@ landingContent:
     links:
     - text: macOS の登録を設定する
       url: macos-enroll.md
-    - text: Device Enrollment Program または Apple School Manager を使用して macOS デバイスを自動登録する
+    - text: Automated Device Enrollment または Apple School Manager を使用して macOS デバイスを自動登録する
       url: device-enrollment-program-enroll-macos.md
     - text: Apple Configurator を使用した iOS/iPadOS デバイス登録の設定
       url: apple-configurator-enroll-ios.md
