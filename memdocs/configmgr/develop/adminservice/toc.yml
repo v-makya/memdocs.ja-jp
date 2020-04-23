@@ -1,0 +1,16 @@
+- name: 管理サービスのドキュメント
+  href: index.yml
+- name: 管理サービスとは何ですか
+  href: overview.md
+- name: 操作方法ガイド
+  items:
+    - name: セットアップ方法
+      href: set-up.md
+    - name: 使用方法
+      href: usage.md
+- name: リファレンス
+  items:
+    - name: よく寄せられる質問
+      href: faq.md
+    - name: リリース ノート
+      href: release-notes.md

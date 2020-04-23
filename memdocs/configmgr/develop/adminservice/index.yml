@@ -1,0 +1,32 @@
+### YamlMime:Landing
+title: 管理サービスのドキュメント
+summary: Configuration Manager REST API の開発者向けドキュメント
+metadata:
+  title: 管理サービスのドキュメント
+  titleSuffix: Configuration Manager
+  description: Configuration Manager デバイスをクラウド サービスにアップロードし、それらに対してアクションを実行します。
+  ms.product: configuration-manager
+  ms.technology: configmgr-sdk
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 04/01/2020
+  ms.openlocfilehash: c6c2e97491982f39db4c149ac0bc38266bc2ea27
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741682"
+landingContent:
+- title: 管理サービスについて
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 管理サービスとは何ですか
+      url: overview.md
+  - linkListType: how-to-guide
+    links:
+    - text: セットアップ方法
+      url: set-up.md
+    - text: 使用方法
+      url: usage.md

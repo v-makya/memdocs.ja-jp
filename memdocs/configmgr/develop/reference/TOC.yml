@@ -1,0 +1,2532 @@
+- name: Configuration Manager API リファレンス
+  href: configuration-manager-reference.md
+- name: クラスおよびプロパティ修飾子
+  href: misc/class-and-property-qualifiers.md
+- name: SMS_WhatsNewFeature サーバー WMI クラス
+  href: misc/sms_whatsnewfeature-server-wmi-class.md
+  items:
+    - name: GetFeatures メソッド
+      href: misc/getfeatures-method-in-class-sms_whatsnewfeature.md
+- name: SMS_WhatsNewScenario サーバー WMI クラス
+  href: misc/sms_whatsnewscenario-server-wmi-class.md
+- name: 警告システム サーバー WMI クラス
+  items:
+    - name: SMS_Alert サーバー WMI クラス
+      href: core/servers/manage/sms_alert-server-wmi-class.md
+      items:
+        - name: Close メソッド
+          href: core/servers/manage/close-method-in-class-sms_alert.md
+    - name: SMS_AlertBase サーバー WMI クラス
+      href: core/servers/manage/sms_alertbase-server-wmi-class.md
+    - name: SMS_AlertEmailTemplate サーバー WMI クラス
+      href: core/servers/manage/sms_alertemailtemplate-server-wmi-class.md
+    - name: SMS_AlertEvent サーバー WMI クラス
+      href: core/servers/manage/sms_alertevent-server-wmi-class.md
+    - name: SMS_CHAlert サーバー WMI クラス
+      href: core/servers/manage/sms_chalert-server-wmi-class.md
+      items:
+        - name: Close メソッド
+          href: core/servers/manage/close-method-in-class-sms_chalert.md
+    - name: SMS_EPAlert サーバー WMI クラス
+      href: core/servers/manage/sms_epalert-server-wmi-class.md
+      items:
+        - name: Close メソッド
+          href: core/servers/manage/close-method-in-class-sms_epalert.md
+    - name: SMS_Subscription サーバー WMI クラス
+      href: core/servers/manage/sms_subscription-server-wmi-class.md
+      items:
+        - name: GetAvailableLanguages メソッド
+          href: core/servers/manage/getavailablelanguages-method-in-class-sms_subscription.md
+        - name: GetTestSmtpConnectionResult メソッド
+          href: core/servers/manage/gettestsmtpconnectionresult-method-in-class-sms_subscription.md
+        - name: TestSmtpConnection メソッド
+          href: core/servers/manage/testsmtpconnection-method-in-class-sms_subscription.md
+- name: 代替コンテンツ プロバイダー (ACP) クラス
+  items:
+    - name: CCM_CONTENTFLAG 列挙型
+      href: core/servers/configure/ccm_contentflag-enumeration.md
+    - name: CCM_DTS_PRIORITY 列挙型
+      href: core/servers/configure/ccm_dts_priority-enumeration.md
+    - name: CCM_DTS_FLAG 列挙型
+      href: core/servers/configure/ccm_dts_flag-enumeration.md
+    - name: 進行状況の種類
+      href: core/servers/configure/progress-types.md
+    - name: CCM_CTM_JobStateEx4 クラス
+      href: core/servers/configure/ccm_ctm_jobstateex4-class.md
+    - name: CCM_Download_Provider WMI クラス
+      href: core/servers/configure/ccm_download_provider-wmi-class.md
+    - name: SendNotifyErrorToCTM メソッド
+      href: core/servers/configure/sendnotifyerrortoctm-method.md
+    - name: SendNotifyProgressToCTM メソッド
+      href: core/servers/configure/sendnotifyprogresstoctm-method.md
+    - name: SendNotifySuccessToCTM メソッド
+      href: core/servers/configure/sendnotifysuccesstoctm-method.md
+    - name: ICcmAlternateDowloadProvider インターフェイス
+      href: core/servers/configure/iccmalternatedowloadprovider-interface.md
+      items:
+        - name: CancelJob メソッド
+          href: core/servers/configure/iccmalternatedownloadprovider---canceljob-method.md
+        - name: DownloadContent メソッド
+          href: core/servers/configure/iccmalternatedownloadprovider---downloadcontent-method.md
+        - name: ModifyJobPriority メソッド
+          href: core/servers/configure/iccmalternatedownloadprovider---modifyjobpriority-method.md
+        - name: ModifyJobSource メソッド
+          href: core/servers/configure/iccmalternatedownloadprovider---modifyjobsource-method.md
+        - name: ModifyJobTimeout メソッド
+          href: core/servers/configure/iccmalternatedownloadprovider---modifyjobtimeout-method.md
+        - name: メソッド名の変更
+          href: core/servers/configure/iccmalternatedownloadprovider---resume-method.md
+        - name: Suspend メソッド
+          href: core/servers/configure/iccmalternatedownloadprovider---suspend-method.md
+    - name: ICcmContentTransferManager4 インターフェイス
+      href: core/servers/configure/iccmcontenttransfermanager4-interface.md
+- name: アプリケーション管理サーバー WMI クラス
+  items:
+    - name: SMS_AppConflictsData サーバー WMI クラス
+      href: apps/sms_appconflictsdata-server-wmi-class.md
+    - name: SMS_AppDependencyData サーバー WMI クラス
+      href: apps/sms_appdependencydata-server-wmi-class.md
+    - name: SMS_AppDeploymentAssetDetails サーバー WMI クラス
+      href: apps/sms_appdeploymentassetdetails-server-wmi-class.md
+    - name: SMS_AppDeploymentErrorAssetDetails サーバー WMI クラス
+      href: apps/sms_appdeploymenterrorassetdetails-server-wmi-class.md
+    - name: SMS_AppDeploymentErrorStatus サーバー WMI クラス
+      href: apps/sms_appdeploymenterrorstatus-server-wmi-class.md
+    - name: SMS_AppDeploymentRequirementsNotMetAssetDetails サーバー WMI クラス
+      href: apps/sms_appdeploymentrequirementsnotmetassetdetails-server-wmi-class.md
+    - name: SMS_AppDeploymentRequirementsNotMetStatus サーバー WMI クラス
+      href: apps/sms_appdeploymentrequirementsnotmetstatus-server-wmi-class.md
+    - name: SMS_AppDeploymentStatus サーバー WMI クラス
+      href: apps/sms_appdeploymentstatus-server-wmi-class.md
+    - name: SMS_AppDTDeploymentSummary サーバー WMI クラス
+      href: apps/sms_appdtdeploymentsummary-server-wmi-class.md
+    - name: SMS_AppFailedVEsData サーバー WMI クラス
+      href: apps/sms_appfailedvesdata-server-wmi-class.md
+    - name: SMS_Application サーバー WMI クラス
+      href: apps/sms_application-server-wmi-class.md
+      items:
+        - name: GetCIDocumentBody メソッド
+          href: apps/getcidocumentbody-method-in-class-sms_application.md
+        - name: GetCIDocuments メソッド
+          href: apps/getcidocuments-method-in-class-sms_application.md
+        - name: InitiateUserInstall メソッド
+          href: apps/initiateuserinstall-method-in-class-sms_application.md
+        - name: ManageDeploymentForDevice メソッド
+          href: apps/managedeploymentfordevice-method-in-class-sms_application.md
+        - name: Restore メソッド
+          href: apps/restore-method-in-class-sms_application.md
+        - name: SetIsExpired メソッド
+          href: apps/setisexpired-method-in-class-sms_application.md
+        - name: UpdateStats メソッド
+          href: apps/updatestats-method-in-class-sms_application.md
+    - name: SMS_ApplicationAssignment サーバー WMI クラス
+      href: apps/sms_applicationassignment-server-wmi-class.md
+    - name: SMS_ApplicationCondition サーバー WMI クラス
+      href: apps/sms_applicationcondition-server-wmi-class.md
+    - name: SMS_ApplicationLatest サーバー WMI クラス
+      href: apps/sms_applicationlatest-server-wmi-class.md
+      items:
+        - name: SetIsExpired methodLatest
+          href: apps/setisexpired-method-in-class-sms_applicationlatest.md
+        - name: UpdateStats methodLatest
+          href: apps/updatestats-method-in-class-sms_applicationlatest.md
+    - name: SMS_ApplicationPublishingItem サーバー WMI クラス
+      href: apps/sms_applicationpublishingitem-server-wmi-class.md
+    - name: SMS_ApplicationTechnology サーバー WMI クラス
+      href: apps/sms_applicationtechnology-server-wmi-class.md
+    - name: SMS_AppRelation_Flat サーバー WMI クラス
+      href: apps/sms_apprelation_flat-server-wmi-class.md
+    - name: SMS_AppRequirementsData サーバー WMI クラス
+      href: apps/sms_apprequirementsdata-server-wmi-class.md
+    - name: SMS_CIDeploymentUnknownAssetDetails サーバー WMI クラス
+      href: apps/sms_cideploymentunknownassetdetails-server-wmi-class.md
+    - name: SMS_CIDeploymentUnknownStatus サーバー WMI クラス
+      href: apps/sms_cideploymentunknownstatus-server-wmi-class.md
+    - name: SMS_DeploymentInfo サーバー WMI クラス
+      href: apps/sms_deploymentinfo-server-wmi-class.md
+      items:
+        - name: GetDeployments メソッド
+          href: apps/getdeployments-method-in-class-sms_deployment_info.md
+    - name: SMS_DeploymentInfoFlat サーバー WMI クラス
+      href: apps/sms_deploymentinfoflat-server-wmi-class.md
+    - name: SMS_DeploymentSummary サーバー WMI クラス
+      href: apps/sms_deploymentsummary-server-wmi-class.md
+      items:
+        - name: UpdateClassicDeployment メソッド
+          href: apps/updateclassicdeployment-method-in-class-sms_deploymentsummary.md
+        - name: UpdateDeployment メソッド
+          href: apps/updatedeployment-method-in-class-sms_deploymentsummary.md
+    - name: SMS_DeploymentType サーバー WMI クラス
+      href: apps/sms_deploymenttype-server-wmi-class.md
+      items:
+        - name: DistributeDeploymentTypeExtension メソッド
+          href: apps/distributedeploymenttypeextension-method-in-class-sms_deploymenttype.md
+    - name: SMS_DeploymentTypeLicenseAssociation サーバー WMI クラス
+      href: apps/sms_deploymenttypelicenseassociation-server-wmi-class.md
+      items:
+        - name: AddLicense メソッド
+          href: apps/addlicense-method-in-class-sms_deploymenttypelicenseassociation.md
+    - name: SMS_G_System_AppClientState サーバー WMI クラス
+      href: apps/sms_g_system_appclientstate-server-wmi-class.md
+    - name: SMS_G_SYSTEM_DCMDeploymentCompliantAssetDetails サーバー WMI クラス
+      href: apps/sms_g_system_dcmdeploymentcompliantassetdetails-server-wmi-class.md
+    - name: SMS_G_SYSTEM_DCMDeploymentErrorAssetDetails サーバー WMI クラス
+      href: apps/sms_g_system_dcmdeploymenterrorassetdetails-server-wmi-class.md
+    - name: SMS_G_SYSTEM_DCMDeploymentNonCompliantAssetDetails サーバー WMI クラス
+      href: apps/sms_g_system_dcmdeploymentnoncompliantassetdetails-server-wmi-class.md
+    - name: SMS_G_USER_DCMDeploymentCompliantAssetDetails サーバー WMI クラス
+      href: apps/sms_g_user_dcmdeploymentcompliantassetdetails-server-wmi-class.md
+    - name: SMS_G_USER_DCMDeploymentErrorAssetDetails サーバー WMI クラス
+      href: apps/sms_g_user_dcmdeploymenterrorassetdetails-server-wmi-class.md
+    - name: SMS_G_USER_DCMDeploymentNonCompliantAssetDetails サーバー WMI クラス
+      href: apps/sms_g_user_dcmdeploymentnoncompliantassetdetails-server-wmi-class.md
+    - name: SMS_GlobalCondition サーバー WMI クラス
+      href: apps/sms_globalcondition-server-wmi-class.md
+    - name: SMS_LicensedVppApps サーバー WMI クラス
+      href: apps/sms_licensedvppapps-server-wmi-class.md
+    - name: SMS_MAMStoreApplication サーバー WMI クラス
+      href: apps/sms_mamstoreapplication-server-wmi-class.md
+    - name: SMS_UnManagedApps サーバー WMI クラス
+      href: apps/sms_unmanagedapps-server-wmi-class.md
+    - name: SMS_UserApplicationRequest サーバー WMI クラス
+      href: apps/sms_userapplicationrequest-server-wmi-class.md
+      items:
+        - name: Approve メソッド
+          href: apps/approve-method-in-class-sms_userapplicationrequest.md
+        - name: Deny メソッド
+          href: apps/deny-method-in-class-sms_userapplicationrequest.md
+    - name: SMS_UserApplicationRequestHistoryItem サーバー WMI クラス
+      href: apps/sms_userapplicationrequesthistoryitem-server-wmi-class.md
+    - name: SMS_VirtualEnvironment サーバー WMI クラス
+      href: apps/sms_virtualenvironment-server-wmi-classes.md
+- name: 資産インテリジェンス サーバー WMI クラス
+  items:
+    - name: SMS_AICategory サーバー WMI クラス
+      href: core/clients/asset-intelligence/sms_aicategory-server-wmi-class.md
+      items:
+        - name: GetSummary メソッド
+          href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aicategory.md
+    - name: SMS_AIHardwareRequirements サーバー WMI クラス
+      href: core/clients/asset-intelligence/sms_aihardwarerequirements-server-wmi-class.md
+      items:
+        - name: GetSummary メソッド
+          href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aihardwarerequirements.md
+    - name: SMS_AIMLSParser サーバー WMI クラス
+      href: core/clients/asset-intelligence/sms_aimlsparser-server-wmi-class.md
+      items:
+        - name: GetStatus メソッド
+          href: core/clients/asset-intelligence/getstatus-method-in-class-sms_aimlsparser.md
+        - name: GetSummary メソッド
+          href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aimlsparser.md
+        - name: インポート方法
+          href: core/clients/asset-intelligence/import-method-in-class-sms_aimlsparser.md
+    - name: SMS_AIProxy サーバー WMI クラス
+      href: core/clients/asset-intelligence/sms_aiproxy-server-wmi-class.md
+      items:
+        - name: RequestCatalogUpdate メソッド
+          href: core/clients/asset-intelligence/requestcatalogupdate-method-in-class-sms_aiproxy.md
+    - name: SMS_AISoftwareList サーバー WMI クラス
+      href: core/clients/asset-intelligence/sms_aisoftwarelist-server-wmi-class.md
+      items:
+        - name: AddSoftwareHashData メソッド
+          href: core/clients/asset-intelligence/addsoftwarehashdata-method-in-class-sms_aisoftwarelist.md
+        - name: GetCategorizationRequestText メソッド
+          href: core/clients/asset-intelligence/getcategorizationrequesttext-method-in-class-sms_aisoftwarelist.md
+        - name: GetSummary メソッド
+          href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aisoftwarelist.md
+        - name: ResolveConflict メソッド
+          href: core/clients/asset-intelligence/resolveconflict-method-in-class-sms_aisoftwarelist.md
+        - name: SetCategorizationRequest メソッド
+          href: core/clients/asset-intelligence/setcategorizationrequest-method-in-class-sms_aisoftwarelist.md
+- name: クライアント クラス
+  items:
+    - name: アプリケーション管理のクライアント インターフェイス
+      href: core/clients/client-classes/application-management-client-interfaces.md
+      items:
+        - name: AppDetectState 列挙型
+          href: core/clients/client-classes/appdetectstate-enumeration.md
+        - name: AppContentInfo 構造体
+          href: core/clients/client-classes/appcontentinfo-structure.md
+        - name: AppDeploymentTypeData 構造体
+          href: core/clients/client-classes/appdeploymenttypedata-structure.md
+        - name: AppDeploymentTypeItem 構造体
+          href: core/clients/client-classes/appdeploymenttypeitem-structure.md
+        - name: IAppContentExt インターフェイス
+          href: core/clients/client-classes/iappcontentext-interface.md
+          items:
+            - name: IAppContentExt GetExcludedFileList
+              href: core/clients/client-classes/iappcontentext--getexcludedfilelist.md
+        - name: IAppManagementHandler インターフェイス
+          href: core/clients/client-classes/iappmanagementhandler-interface.md
+          items:
+            - name: IAppManagementHandler CheckReconnectData メソッド
+              href: core/clients/client-classes/iappmanagementhandler--checkreconnectdata-method.md
+            - name: IAppManagementHandler CompleteEnforcement メソッド
+              href: core/clients/client-classes/iappmanagementhandler--completeenforcement-method.md
+            - name: IAppManagementHandler DiscoverApp メソッド
+              href: core/clients/client-classes/iappmanagementhandler--discoverapp-method.md
+            - name: IAppManagementHandler EnforceApp メソッド
+              href: core/clients/client-classes/iappmanagementhandler--enforceapp-method.md
+            - name: IAppManagementHandler EnumerateApps メソッド
+              href: core/clients/client-classes/iappmanagementhandler--enumerateapps-method.md
+            - name: IAppManagementHandler GetPendingComponentList メソッド
+              href: core/clients/client-classes/iappmanagementhandler--getpendingcomponentlist-method.md
+        - name: IAppManagementTypes インターフェイス
+          href: core/clients/client-classes/iappmanagementtypes-interface.md
+          items:
+            - name: AppAction 列挙型
+              href: core/clients/client-classes/appaction-enumeration.md
+    - name: 資産インテリジェンス クライアント WMI クラス
+      href: core/clients/client-classes/asset-intelligence-client-wmi-classes.md
+      items:
+        - name: SMS_AutoStartSoftware クライアント WMI クラス
+          href: core/clients/client-classes/sms_autostartsoftware-client-wmi-class.md
+        - name: SMS_BrowserHelperObject クライアント WMI クラス
+          href: core/clients/client-classes/sms_browserhelperobject-client-wmi-class.md
+        - name: SMS_InstalledExecutable クライアント WMI クラス
+          href: core/clients/client-classes/sms_installedexecutable-client-wmi-class.md
+        - name: SMS_InstalledSoftware クライアント WMI クラス
+          href: core/clients/client-classes/sms_installedsoftware-client-wmi-class.md
+        - name: SMS_InstalledSoftwareMS クライアント WMI クラス
+          href: core/clients/client-classes/sms_installedsoftwarems-client-wmi-class.md
+        - name: SMS_Processor クライアント WMI クラス
+          href: core/clients/client-classes/sms_processor-client-wmi-class.md
+        - name: SMS_SoftwareShortcut クライアント WMI クラス
+          href: core/clients/client-classes/sms_softwareshortcut-client-wmi-class.md
+        - name: SMS_SoftwareTag クライアント WMI クラス
+          href: core/clients/client-classes/sms_softwaretag-client-wmi-class.md
+        - name: SMS_SystemConsoleUsage クライアント WMI クラス
+          href: core/clients/client-classes/sms_systemconsoleusage-client-wmi-class.md
+        - name: SMS_SystemConsoleUser クライアント WMI クラス
+          href: core/clients/client-classes/sms_systemconsoleuser-client-wmi-class.md
+    - name: 構成マネージャー クライアント インフラストラクチャ
+      href: core/clients/client-classes/client-infrastructure.md
+      items:
+        - name: CCM_Messaging_Configuration クライアント WMI クラス
+          href: core/clients/client-classes/ccm_messaging_configuration-client-wmi-class.md
+        - name: CCM_Service_BITSConfiguration クライアント WMI クラス
+          href: core/clients/client-classes/ccm_service_bitsconfiguration-client-wmi-class.md
+        - name: CCM_Service_EndpointConfiguration クライアント WMI クラス
+          href: core/clients/client-classes/ccm_service_endpointconfiguration-client-wmi-class.md
+        - name: CCM_Service_GlobalConfiguration クライアント WMI クラス
+          href: core/clients/client-classes/ccm_service_globalconfiguration-client-wmi-class.md
+        - name: CCM_Service_HostedClass クライアント WMI クラス
+          href: core/clients/client-classes/ccm_service_hostedclass-client-wmi-class.md
+        - name: CCM_Service_IISConfiguration クライアント WMI クラス
+          href: core/clients/client-classes/ccm_service_iisconfiguration-client-wmi-class.md
+        - name: CCM_Service_SystemTaskConfiguration クライアント WMI クラス
+          href: core/clients/client-classes/ccm_service_systemtaskconfiguration-client-wmi-class.md
+        - name: SMS_Authority クライアント WMI クラス
+          href: core/clients/client-classes/sms_authority-client-wmi-class.md
+        - name: SMS_Client クライアント WMI クラス
+          href: core/clients/client-classes/sms_client-client-wmi-class.md
+          items:
+            - name: EvaluateMachinePolicy メソッド
+              href: core/clients/client-classes/evaluatemachinepolicy-method-in-class-sms_client.md
+            - name: GetAssignedSite メソッド
+              href: core/clients/client-classes/getassignedsite-method-in-class-sms_client.md
+            - name: RequestMachinePolicy メソッド
+              href: core/clients/client-classes/requestmachinepolicy-method-in-class-sms_client.md
+            - name: ResetPolicy メソッド
+              href: core/clients/client-classes/resetpolicy-method-in-class-sms_client.md
+            - name: SetAssignedSite メソッド
+              href: core/clients/client-classes/setassignedsite-method-in-class-sms_client.md
+            - name: SetGlobalLoggingConfiguration メソッド
+              href: core/clients/client-classes/setgloballoggingconfiguration-method-in-class-sms_client.md
+            - name: TriggerSchedule メソッド
+              href: core/clients/client-classes/triggerschedule-method-in-class-sms_client.md
+        - name: SMS_LocalMP クライアント WMI クラス
+          href: core/clients/client-classes/sms_localmp-client-wmi-class.md
+        - name: SMS_MPProxyInformation クライアント WMI クラス
+          href: core/clients/client-classes/sms_mpproxyinformation-client-wmi-class.md
+        - name: SMS_PendingReRegistrationOnSiteReAssignment クライアント WMI クラス
+          href: core/clients/client-classes/sms_pendingreregistrationonsitereassignment-client-wmi-class.md
+        - name: CCM_Policy クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policy-client-wmi-class.md
+        - name: CCM_Policy_Action クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policy_action-client-wmi-class.md
+        - name: CCM_Policy_ActionHandlerRegistration クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policy_actionhandlerregistration-client-wmi-class.md
+        - name: CCM_Policy_Assignment クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policy_assignment-client-wmi-class.md
+        - name: CCM_Policy_Assignment2 クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policy_assignment2-client-wmi-class.md
+        - name: CCM_Policy_AuthorityData クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policy_authoritydata-client-wmi-class.md
+        - name: CCM_Policy_Condition クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policy_condition-client-wmi-class.md
+        - name: CCM_Policy_Config クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policy_config-client-wmi-class.md
+        - name: CCM_Policy_EmbeddedObject クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policy_embeddedobject-client-wmi-class.md
+        - name: CCM_Policy_Expression クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policy_expression-client-wmi-class.md
+        - name: CCM_Policy_ExpressionHandlerRegistration クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policy_expressionhandlerregistration-client-wmi-class.md
+        - name: CCM_Policy_Operator クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policy_operator-client-wmi-class.md
+        - name: CCM_Policy_Policy クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policy_policy-client-wmi-class.md
+        - name: CCM_Policy_Rule クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policy_rule-client-wmi-class.md
+        - name: CCM_PolicyAgent_Configuration クライアント WMI クラス
+          href: core/clients/client-classes/ccm_policyagent_configuration-client-wmi-class.md
+    - name: コンプライアンス設定クライアント インターフェイス
+      href: core/clients/client-classes/compliance-settings--dcm--client-interfaces.md
+      items:
+        - name: ICIINFO インターフェイス
+          href: core/clients/client-classes/iciinfo-interface.md
+          items:
+            - name: ICIINFO GetCategory メソッド
+              href: core/clients/client-classes/iciinfo--getcategory-method.md
+            - name: ICIINFO GetCategoryCount メソッド
+              href: core/clients/client-classes/iciinfo--getcategorycount-method.md
+            - name: ICIINFO GetCIPresence メソッド
+              href: core/clients/client-classes/iciinfo--getcipresence-method.md
+            - name: ICIINFO GetContextInfo メソッド
+              href: core/clients/client-classes/iciinfo--getcontextinfo-method.md
+            - name: ICIINFO GetDependantPackages メソッド
+              href: core/clients/client-classes/iciinfo--getdependantpackages-method.md
+            - name: ICIINFO GetDetailedComplianceInfo メソッド
+              href: core/clients/client-classes/iciinfo--getdetailedcomplianceinfo-method.md
+            - name: ICIINFO GetEvalState メソッド
+              href: core/clients/client-classes/iciinfo--getevalstate-method.md
+            - name: ICIINFO GetId メソッド
+              href: core/clients/client-classes/iciinfo--getid-method.md
+            - name: ICIINFO GetJobState メソッド
+              href: core/clients/client-classes/iciinfo--getjobstate-method.md
+            - name: ICIINFO GetLastEvalTime メソッド
+              href: core/clients/client-classes/iciinfo--getlastevaltime-method.md
+            - name: ICIINFO GetProperty メソッド
+              href: core/clients/client-classes/iciinfo--getproperty-method.md
+            - name: ICIINFO GetSdmTypeName メソッド
+              href: core/clients/client-classes/iciinfo--getsdmtypename-method.md
+            - name: ICIINFO GetVersion メソッド
+              href: core/clients/client-classes/iciinfo--getversion-method.md
+        - name: IDCMAgentCallback インターフェイス
+          href: core/clients/client-classes/idcmagentcallback-interface.md
+          items:
+            - name: IDCMAgentCallback NotifyComplete メソッド
+              href: core/clients/client-classes/idcmagentcallback--notifycomplete-method.md
+            - name: IDCMAgentCallback NotifyError メソッド
+              href: core/clients/client-classes/idcmagentcallback--notifyerror-method.md
+            - name: IDCMAgentCallback NotifyProgress メソッド
+              href: core/clients/client-classes/idcmagentcallback--notifyprogress-method.md
+        - name: IDCMSDK インターフェイス
+          href: core/clients/client-classes/idcmsdk-interface.md
+          items:
+            - name: IDCMSDK EvaluateBaseline メソッド
+              href: core/clients/client-classes/idcmsdk--evaluatebaseline-method.md
+            - name: IDCMSDK GetAssignedBaselines メソッド
+              href: core/clients/client-classes/idcmsdk--getassignedbaselines-method.md
+            - name: IDCMSDK GetBaselineComplianceReport メソッド
+              href: core/clients/client-classes/idcmsdk--getbaselinecompliancereport-method.md
+            - name: IDCMSDK GetBaselineInfo メソッド
+              href: core/clients/client-classes/idcmsdk--getbaselineinfo-method.md
+            - name: IDCMSDK SetEvaluationCallback メソッド
+              href: core/clients/client-classes/idcmsdk--setevaluationcallback-method.md
+        - name: CIDetectInfo 構造体
+          href: core/clients/client-classes/cidetectinfo-structure.md
+        - name: CIPackageInfo 構造体
+          href: core/clients/client-classes/cipackageinfo-structure.md
+        - name: CIEvalState 列挙型
+          href: core/clients/client-classes/cievalstate-enumeration.md
+        - name: CIJobState 列挙型
+          href: core/clients/client-classes/cijobstate-enumeration.md
+        - name: CIPresence 列挙型
+          href: core/clients/client-classes/cipresence-enumeration.md
+    - name: デバイス管理クライアント WMI クラス
+      href: core/clients/client-classes/device-management-client-wmi-classes.md
+      items:
+        - name: SMS_DmInvVersion クライアント WMI クラス
+          href: core/clients/client-classes/sms_dminvversion-client-wmi-class.md
+        - name: SMS_ActiveSyncConnectedDevice クライアント WMI クラス
+          href: core/clients/client-classes/sms_activesyncconnecteddevice-client-wmi-class.md
+        - name: SMS_ActiveSyncService クライアント WMI クラス
+          href: core/clients/client-classes/sms_activesyncservice-client-wmi-class.md
+    - name: インベントリ エージェント クライアント WMI クラス
+      href: core/clients/client-classes/inventory-agent-client-wmi-classes.md
+      items:
+        - name: CollectableFileItem クライアント WMI クラス
+          href: core/clients/client-classes/collectablefileitem-client-wmi-class.md
+        - name: FileCollectionAction クライアント WMI クラス
+          href: core/clients/client-classes/filecollectionaction-client-wmi-class.md
+        - name: FileSystemFile クライアント WMI クラス
+          href: core/clients/client-classes/filesystemfile-client-wmi-class.md
+        - name: InventoryAction クライアント WMI クラス
+          href: core/clients/client-classes/inventoryaction-client-wmi-class.md
+        - name: InventoryActionStatus クライアント WMI クラス
+          href: core/clients/client-classes/inventoryactionstatus-client-wmi-class.md
+        - name: InventoryDataContext クライアント WMI クラス
+          href: core/clients/client-classes/inventorydatacontext-client-wmi-class.md
+        - name: InventoryDataItem クライアント WMI クラス
+          href: core/clients/client-classes/inventorydataitem-client-wmi-class.md
+        - name: SMS_MIFGroup クライアント WMI クラス
+          href: core/clients/client-classes/sms_mifgroup-client-wmi-class.md
+        - name: SMS_Windows8Application クライアント WMI クラス
+          href: core/clients/client-classes/sms_windows8application-client-wmi-class.md
+        - name: SMS_Windows8ApplicationUserInfo クライアント WMI クラス
+          href: core/clients/client-classes/sms_windows8applicationuserinfo-client-wmi-class.md
+    - name: OS 展開クライアント COM オートメーション クラス
+      href: core/clients/client-classes/operating-system-deployment-client-com-automation-classes.md
+      items:
+        - name: ProgressUI クライアント COM オートメーション クラス
+          href: core/clients/client-classes/progressui-client-com-automation-class.md
+          items:
+            - name: IProgressUI インターフェイス
+              href: core/clients/client-classes/iprogressui-interface.md
+              items:
+                - name: IProgressUI CloseProgressDialog メソッド
+                  href: core/clients/client-classes/iprogressui--closeprogressdialog-method.md
+                - name: IProgressUI ShowActionProgress メソッド
+                  href: core/clients/client-classes/iprogressui--showactionprogress-method.md
+                - name: IProgressUI ShowErrorDialog メソッド
+                  href: core/clients/client-classes/iprogressui--showerrordialog-method.md
+                - name: IProgressUI ShowMessage メソッド
+                  href: core/clients/client-classes/iprogressui--showmessage-method.md
+                - name: IProgressUI ShowRebootDialog メソッド
+                  href: core/clients/client-classes/iprogressui--showrebootdialog-method.md
+                - name: IProgressUI ShowSwapMediaDialog メソッド
+                  href: core/clients/client-classes/iprogressui--showswapmediadialog-method.md
+                - name: IProgressUI ShowTSProgress メソッド
+                  href: core/clients/client-classes/iprogressui--showtsprogress-method.md
+        - name: PxeAuthClass クライアント COM オートメーション クラス
+          href: core/clients/client-classes/pxeauthclass-client-com-automation-class.md
+          items:
+            - name: IPxeAuthClass インターフェイス
+              href: core/clients/client-classes/ipxeauthclass-interface.md
+              items:
+                - name: IPxeAuthClass CreateIdentity メソッド
+                  href: core/clients/client-classes/ipxeauthclass--createidentity-method.md
+                - name: IPxeAuthClass ReadIdentity メソッド
+                  href: core/clients/client-classes/ipxeauthclass--readidentity-method.md
+        - name: ITSEnvClass インターフェイス
+          href: core/clients/client-classes/itsenvclass-interface.md
+          items:
+            - name: ITSEnvClass Clear メソッド
+              href: core/clients/client-classes/itsenvclass--clear-method.md
+            - name: ITSEnvClass Create メソッド
+              href: core/clients/client-classes/itsenvclass--create-method.md
+            - name: ITSEnvClass GetVariables メソッド
+              href: core/clients/client-classes/itsenvclass--getvariables-method.md
+            - name: ITSEnvClass Value プロパティ
+              href: core/clients/client-classes/itsenvclass--value-property.md
+    - name: スケジューリング クライアント WMI クラス
+      href: core/clients/client-classes/scheduling-client-wmi-classes.md
+      items:
+        - name: CCM_Scheduler_History クライアント WMI クラス
+          href: core/clients/client-classes/ccm_scheduler_history-client-wmi-class.md
+        - name: CCM_Scheduler_ScheduledMessage クライアント WMI クラス
+          href: core/clients/client-classes/ccm_scheduler_scheduledmessage-client-wmi-class.md
+- name: クライアント構成サーバー WMI クラス
+  items:
+    - name: SMS_AdvancedAntimalwareSettings サーバー WMI クラス
+      href: core/clients/config/sms_advancedantimalwaresettings-server-wmi-class.md
+    - name: SMS_AntimalwareAdvancedSettingsConfig サーバー WMI クラス
+      href: core/clients/config/sms_antimalwareadvancedsettingsconfig-server-wmi-class.md
+    - name: SMS_AntimalwareConfig サーバー WMI クラス
+      href: core/clients/config/sms_antimalwareconfig-server-wmi-class.md
+    - name: SMS_AntimalwareExcludedSettingsConfig サーバー WMI クラス
+      href: core/clients/config/sms_antimalwareexcludedsettingsconfig-server-wmi-class.md
+    - name: SMS_AntimalwareRealtimeSettingsConfig サーバー WMI クラス
+      href: core/clients/config/sms_antimalwarerealtimesettingsconfig-server-wmi-class.md
+    - name: SMS_AntimalwareScanConfig サーバー WMI クラス
+      href: core/clients/config/sms_antimalwarescanconfig-server-wmi-class.md
+    - name: SMS_AntimalwareScanScheduleConfig サーバー WMI クラス
+      href: core/clients/config/sms_antimalwarescanscheduleconfig-server-wmi-class.md
+    - name: SMS_AntimalwareSettings サーバー WMI クラス
+      href: core/clients/config/sms_antimalwaresettings-server-wmi-class.md
+    - name: SMS_AntimalwareSettingsDefault サーバー WMI クラス
+      href: core/clients/config/sms_antimalwaresettingsdefault-server-wmi-class.md
+    - name: SMS_AntimalwareSignatureUpdateConfig サーバー WMI クラス
+      href: core/clients/config/sms_antimalwaresignatureupdateconfig-server-wmi-class.md
+    - name: SMS_AntimalwareSpynetConfig サーバー WMI クラス
+      href: core/clients/config/sms_antimalwarespynetconfig-server-wmi-class.md
+    - name: SMS_AntimalwareThreatDefaultActionConfig サーバー WMI クラス
+      href: core/clients/config/sms_antimalwarethreatdefaultactionconfig-server-wmi-class.md
+    - name: SMS_AntimalwareThreatOverrideActionConfig サーバー WMI クラス
+      href: core/clients/config/sms_antimalwarethreatoverrideactionconfig-server-wmi-class.md
+    - name: SMS_ApplicationManagementAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_applicationmanagementagentconfig-server-wmi-class.md
+    - name: SMS_BigGreenButtonConfig サーバー WMI クラス
+      href: core/clients/config/sms_biggreenbuttonconfig-server-wmi-class.md
+    - name: SMS_BITS2Config サーバー WMI クラス
+      href: core/clients/config/sms_bits2config-server-wmi-class.md
+    - name: SMS_ClientCommunicationConfig サーバー WMI クラス
+      href: core/clients/config/sms_clientcommunicationconfig-server-wmi-class.md
+    - name: SMS_ClientResourcesConfig サーバー WMI クラス
+      href: core/clients/config/sms_clientresourcesconfig-server-wmi-class.md
+    - name: SMS_ClientRestartAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_clientrestartagentconfig-server-wmi-class.md
+    - name: SMS_ClientSettings サーバー WMI クラス
+      href: core/clients/config/sms_clientsettings-server-wmi-class.md
+      items:
+        - name: CheckPortalUrl メソッド
+          href: core/clients/config/checkportalurl-method-for-class-sms_clientsettings.md
+    - name: SMS_ClientSettingsAssignment サーバー WMI クラス
+      href: core/clients/config/sms_clientsettingsassignment-server-wmi-class.md
+    - name: SMS_ClientSettingsBase サーバー WMI クラス
+      href: core/clients/config/sms_clientsettingsbase-server-wmi-class.md
+    - name: SMS_ClientSettingsDefault サーバー WMI クラス
+      href: core/clients/config/sms_clientsettingsdefault-server-wmi-class.md
+    - name: SMS_CloudAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_cloudagentconfig-server-wmi-class.md
+    - name: SMS_ConfigMgrClientAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_configmgrclientagentconfig-server-wmi-class.md
+    - name: SMS_DCMAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_dcmagentconfig-server-wmi-class.md
+    - name: SMS_EndpointProtectionAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_endpointprotectionagentconfig-server-wmi-class.md
+    - name: SMS_HardwareInventoryAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_hardwareinventoryagentconfig-server-wmi-class.md
+    - name: SMS_MobileDeviceAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_mobiledeviceagentconfig-server-wmi-class.md
+    - name: SMS_NetworkAccessAccountConfig サーバー WMI クラス
+      href: core/clients/config/sms_networkaccessaccountconfig-server-wmi-class.md
+    - name: SMS_PolicyAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_policyagentconfig-server-wmi-class.md
+    - name: SMS_PowerAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_poweragentconfig-server-wmi-class.md
+    - name: SMS_RemoteToolsAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_remotetoolsagentconfig-server-wmi-class.md
+    - name: SMS_SoftwareDistributionAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_softwaredistributionagentconfig-server-wmi-class.md
+    - name: SMS_SoftwareInventoryAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_softwareinventoryagentconfig-server-wmi-class.md
+    - name: SMS_SoftwareMeteringAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_softwaremeteringagentconfig-server-wmi-class.md
+    - name: SMS_SoftwareUpdatesAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_softwareupdatesagentconfig-server-wmi-class.md
+    - name: SMS_StateSystemConfig サーバー WMI クラス
+      href: core/clients/config/sms_statesystemconfig-server-wmi-class.md
+    - name: SMS_TargetingAgentConfig サーバー WMI クラス
+      href: core/clients/config/sms_targetingagentconfig-server-wmi-class.md
+- name: クライアント展開サーバー WMI クラス
+  items:
+    - name: SMS_ClientBaseline サーバー WMI クラス
+      href: core/clients/deploy/sms_clientbaseline-server-wmi-class.md
+    - name: SMS_ClientBaselineItem サーバー WMI クラス
+      href: core/clients/deploy/sms_clientbaselineitem-server-wmi-class.md
+    - name: SMS_ClientBaselineStatus サーバー WMI クラス
+      href: core/clients/deploy/sms_clientbaselinestatus-server-wmi-class.md
+      items:
+        - name: GetClientBaselineStatusSummary メソッド
+          href: core/clients/deploy/getclientbaselinestatussummary-method-in-class-sms_clientbaselinestatus.md
+    - name: SMS_ClientDataSourcesContent サーバー WMI クラス
+      href: core/clients/deploy/sms_clientdatasourcescontent-server-wmi-class.md
+    - name: SMS_ClientDataSourcesContentStats サーバー WMI クラス
+      href: core/clients/deploy/sms_clientdatasourcescontentstats-server-wmi-class.md
+    - name: SMS_ClientDataSourcesDeviceCounts サーバー WMI クラス
+      href: core/clients/deploy/sms_clientdatasourcesdevicecounts-server-wmi-class.md
+    - name: SMS_ClientDataSourcesPolicy サーバー WMI クラス
+      href: core/clients/deploy/sms_clientdatasourcespolicy-server-wmi-class.md
+    - name: SMS_ClientDeploymentCollectionBucket サーバー WMI クラス
+      href: core/clients/deploy/sms_clientdeploymentcollectionbucket-server-wmi-class.md
+    - name: SMS_ClientDeploymentFailureBucket サーバー WMI クラス
+      href: core/clients/deploy/sms_clientdeploymentfailurebucket-server-wmi-class.md
+    - name: SMS_ClientDeploymentStateDetailsView サーバー WMI クラス
+      href: core/clients/deploy/sms_clientdeploymentstatedetailsview-server-wmi-class.md
+    - name: SMS_ClientPfxCertificate サーバー WMI クラス
+      href: core/clients/deploy/sms_clientpfxcertificate-server-wmi-class.md
+      items:
+        - name: ImportForUser メソッド
+          href: core/clients/deploy/importforuser-method-in-class-sms_clientpfxcertificate.md
+        - name: DeleteForUser メソッド
+          href: core/clients/deploy/deleteforuser-method-in-class-sms_clientpfxcertificate.md
+- name: クライアント SDK の WMI クラス
+  items:
+    - name: CCM_AppDeploymentType クライアント WMI クラス
+      href: core/clients/sdk/ccm_appdeploymenttype-client-wmi-class.md
+      items:
+        - name: GetDeploymentTypeForUser メソッド
+          href: core/clients/sdk/getdeploymenttypeforuser-method-in-class-ccm_appdeploymenttype.md
+        - name: GetProperty メソッド
+          href: core/clients/sdk/getproperty-method-in-class-ccm_appdeploymenttype.md
+        - name: GetTargetedUsers メソッド
+          href: core/clients/sdk/gettargetedusers-method-in-class-ccm_appdeploymenttype.md
+    - name: CCM_Application クライアント WMI クラス
+      href: core/clients/sdk/ccm_application-client-wmi-class.md
+      items:
+        - name: Cancel メソッド
+          href: core/clients/sdk/cancel-method-in-class-ccm_application.md
+        - name: DownloadContents メソッド
+          href: core/clients/sdk/downloadcontents-method-in-class-ccm_application.md
+        - name: GetPendingComponentList メソッド
+          href: core/clients/sdk/getpendingcomponentlist-method-in-class-ccm_application.md
+        - name: GetProperty メソッド
+          href: core/clients/sdk/getproperty-method-in-class-ccm_application.md
+        - name: Install メソッド
+          href: core/clients/sdk/install-method-in-class-ccm_application.md
+        - name: Uninstall メソッド
+          href: core/clients/sdk/uninstall-method-in-class-ccm_application.md
+    - name: CCM_ApplicationActions クライアント WMI クラス
+      href: core/clients/sdk/ccm_applicationactions-client-wmi-class.md
+    - name: CCM_ApplicationPolicy クライアント WMI クラス
+      href: core/clients/sdk/ccm_applicationpolicy-client-wmi-class.md
+      items:
+        - name: EvaluateAllPolicies メソッド
+          href: core/clients/sdk/evaluateallpolicies-method-in-class-ccm_applicationpolicy.md
+        - name: EvaluateAppPolicy メソッド
+          href: core/clients/sdk/evaluateapppolicy-method-in-class-ccm_applicationpolicy.md
+        - name: GetEvaluationState メソッド
+          href: core/clients/sdk/getevaluationstate-method-in-class-ccm_applicationpolicy.md
+    - name: CCM_CIEvaluationJob クライアント WMI クラス
+      href: core/clients/sdk/ccm_cievaluationjob-client-wmi-class.md
+    - name: CCM_ClientAgentSettings クライアント WMI クラス
+      href: core/clients/sdk/ccm_clientagentsettings-client-wmi-class.md
+    - name: CCM_ClientEvents クライアント WMI クラス
+      href: core/clients/sdk/ccm_clientevents-client-wmi-class.md
+      items:
+        - name: StoreEvent メソッド
+          href: core/clients/sdk/storeevent-method-in-class-ccm_clientevents.md
+    - name: CCM_ClientUtilities クライアント WMI クラス
+      href: core/clients/sdk/ccm_clientutilities-client-wmi-class.md
+      items:
+        - name: DetermineIfRebootPending メソッド
+          href: core/clients/sdk/determineifrebootpending-method-in-class-ccm_clientutilities.md
+        - name: GetMachinePolicy メソッド
+          href: core/clients/sdk/getmachinepolicy-method-in-class-ccm_clientutilities.md
+        - name: GetNetworkCost メソッド
+          href: core/clients/sdk/getnetworkcost-method-in-class-ccm_clientutilities.md
+        - name: GetUserCapability メソッド
+          href: core/clients/sdk/getusercapability-method-in-class-ccm_clientutilities.md
+        - name: GetUserPolicy メソッド
+          href: core/clients/sdk/getuserpolicy-method-in-class-ccm_clientutilities.md
+        - name: RestartComputer メソッド
+          href: core/clients/sdk/restartcomputer-method-in-class-ccm_clientutilities.md
+    - name: CCM_ClientUXSettings クライアント WMI クラス
+      href: core/clients/sdk/ccm_clientuxsettings-client-wmi-class.md
+      items:
+        - name: GetAutoInstallRequiredSoftwaretoNonBusinessHours メソッド
+          href: core/clients/sdk/getautoinstallrequiredsoftwaretononbusinesshours-method.md
+        - name: GetBusinessHours メソッド
+          href: core/clients/sdk/getbusinesshours-method-in-class-ccm_clientuxsettings.md
+        - name: GetSuppressComputerActivityInPresentationMode メソッド
+          href: core/clients/sdk/getsuppresscomputeractivityinpresentationmode-method.md
+        - name: SetAutoInstallRequiredSoftwaretoNonBusinessHours メソッド
+          href: core/clients/sdk/setautoinstallrequiredsoftwaretononbusinesshours-method.md
+        - name: SetBusinessHours メソッド
+          href: core/clients/sdk/setbusinesshours-method-in-class-ccm_clientuxsettings.md
+        - name: SetSuppressComputerActivityInPresentationMode メソッド
+          href: core/clients/sdk/setsuppresscomputeractivityinpresentationmode-method.md
+    - name: CCM_EvaluationState クライアント WMI クラス
+      href: core/clients/sdk/ccm_evaluationstate-client-wmi-class.md
+    - name: CCM_InstalledDeploymentType クライアント WMI クラス
+      href: core/clients/sdk/ccm_installeddeploymenttype-client-wmi-class.md
+    - name: CCM_InstanceEvent クライアント WMI クラス
+      href: core/clients/sdk/ccm_instanceevent-client-wmi-class.md
+    - name: CCM_NetworkSettings クライアント WMI クラス
+      href: core/clients/sdk/ccm_networksettings-client-wmi-class.md
+    - name: CCM_PowerManagementClientOptoutSetting Client クライアント WMI クラス
+      href: core/clients/sdk/ccm_powermanagementclientoptoutsetting-client-wmi-class.md
+    - name: CCM_PowerManagementSettings クライアント WMI クラス
+      href: core/clients/sdk/ccm_powermanagementsettings-client-wmi-class.md
+      items:
+        - name: SetPowerManagementSettings メソッド
+          href: core/clients/sdk/setpowermanagementsettings-method-in-class-ccm_powermanagementsettings.md
+    - name: CCM_Program クライアント WMI クラス
+      href: core/clients/sdk/ccm_program-client-wmi-class.md
+    - name: CCM_ProgramsManager クライアント WMI クラス
+      href: core/clients/sdk/ccm_programsmanager-client-wmi-class.md
+      items:
+        - name: CancelDownload メソッド
+          href: core/clients/sdk/canceldownload-method-in-class-ccm_programsmanager.md
+        - name: ExecuteProgram メソッド
+          href: core/clients/sdk/executeprogram-method-in-class-ccm_programsmanager.md
+        - name: ExecutePrograms メソッド
+          href: core/clients/sdk/executeprograms-method-in-class-ccm_programsmanager.md
+        - name: PostponeProgramsToNonBusinessHours メソッド
+          href: core/clients/sdk/postponeprogramstononbusinesshours-method-in-class-ccm_programsmanager.md
+    - name: CCM_RemoteControlManager クライアント WMI クラス
+      href: core/clients/sdk/ccm_remotecontrolmanager-client-wmi-class.md
+      items:
+        - name: GetRemCtrlSettings メソッド
+          href: core/clients/sdk/getremctrlsettings-method-in-class-ccm_remotecontrolmanager.md
+        - name: SetRemCtrlSettings メソッド
+          href: core/clients/sdk/setremctrlsettings-method-in-class-ccm_remotecontrolmanager.md
+    - name: CCM_RequestedAppPolicy クライアント WMI クラス
+      href: core/clients/sdk/ccm_requested-apppolicy-client-wmi-class.md
+      items:
+        - name: QueueRequestedAppPolicy メソッド
+          href: core/clients/sdk/queuerequestedapppolicy-method-in-class-ccm_requestedapppolicy.md
+    - name: CCM_RequestedAppPolicyActivation クライアント WMI クラス
+      href: core/clients/sdk/ccm_requestedapppolicyactivation-client-wmi-class.md
+      items:
+        - name: QueueAppPolicyActivationAction メソッド
+          href: core/clients/sdk/queueapppolicyactivationaction-method-in-class-ccm_requestedapppolicyactivation.md
+    - name: CCM_ServiceWindow クライアント WMI クラス
+      href: core/clients/sdk/ccm_servicewindow-client-wmi-class.md
+    - name: CCM_ServiceWindowManager クライアント WMI クラス
+      href: core/clients/sdk/ccm_servicewindowmanager-client-wmi-class.md
+      items:
+        - name: GetCurrentWindowAvailableTime メソッド
+          href: core/clients/sdk/getcurrentwindowavailabletime-method-in-class-ccm_servicewindowmanager.md
+        - name: GetNextServiceWindowID メソッド
+          href: core/clients/sdk/getnextservicewindowid-method-in-class-ccm_servicewindowmanager.md
+        - name: IsFutureWindowAvailable メソッド
+          href: core/clients/sdk/isfuturewindowavailable-method-in-class-ccm_servicewindowmanager.md
+        - name: IsWindowAvailableNow メソッド
+          href: core/clients/sdk/iswindowavailablenow-method-in-class-ccm_servicewindowmanager.md
+    - name: CCM_SoftwareBase クライアント WMI クラス
+      href: core/clients/sdk/ccm_softwarebase-client-wmi-class.md
+    - name: CCM_SoftwareCatalogUtilities クライアント WMI クラス
+      href: core/clients/sdk/ccm_softwarecatalogutilities-client-wmi-class.md
+      items:
+        - name: ApplyPolicyEx メソッド
+          href: core/clients/sdk/applypolicyex-method-in-class-ccm_softwarecatalogutilities.md
+        - name: GetClientVersion メソッド
+          href: core/clients/sdk/getclientversion-method-in-class-ccm_softwarecatalogutilities.md
+        - name: GetDeviceId メソッド
+          href: core/clients/sdk/getdeviceid-method-in-class-ccm_softwarecatalogutilities.md
+        - name: GetPolicyState メソッド
+          href: core/clients/sdk/getpolicystate-method-in-class-ccm_softwarecatalogutilities.md
+        - name: GetPortalUrlValue メソッド
+          href: core/clients/sdk/getportalurlvalue-method-in-class-ccm_softwarecatalogutilities.md
+        - name: VerifySignature メソッド
+          href: core/clients/sdk/verifysignature-method-in-class-ccm_softwarecatalogutilities.md
+    - name: CCM_SoftwareUpdate クライアント WMI クラス
+      href: core/clients/sdk/ccm_softwareupdate-client-wmi-class.md
+    - name: CCM_SoftwareUpdatesManager クライアント WMI クラス
+      href: core/clients/sdk/ccm_softwareupdatesmanager-client-wmi-class.md
+      items:
+        - name: CancelDownload メソッド
+          href: core/clients/sdk/canceldownload-method-in-class-ccm_softwareupdatesmanager.md
+        - name: GetAllUpdatesUserExperience メソッド
+          href: core/clients/sdk/getallupdatesuserexperience-method-in-class-ccm_softwareupdatesmanager.md
+        - name: InstallUpdates メソッド
+          href: core/clients/sdk/installupdates-method-in-class-ccm_softwareupdatesmanager.md
+        - name: PostponeUpdatesToNonBusinessHours メソッド
+          href: core/clients/sdk/postponeupdatestononbusinesshours-method-in-class-ccm_softwareupdatesmanager.md
+        - name: SetAllUpdatesUserExperience メソッド
+          href: core/clients/sdk/setallupdatesuserexperience-method-in-class-ccm_softwareupdatesmanager.md
+    - name: CCM_UserLogonEvents クライアント WMI クラス
+      href: core/clients/sdk/ccm_userlogonevents-client-wmi-class.md
+- name: クライアント ステータス サーバー WMI クラス
+  items:
+    - name: SMS_CH_CheckSummary サーバー WMI クラス
+      href: core/clients/status/sms_ch_checksummary-server-wmi-class.md
+    - name: SMS_CH_EvalResult サーバー WMI クラス
+      href: core/clients/status/sms_ch_evalresult-server-wmi-class.md
+    - name: SMS_CH_Settings サーバー WMI クラス
+      href: core/clients/status/sms_ch_settings-server-wmi-class.md
+    - name: SMS_CH_SummaryCurrent サーバー WMI クラス
+      href: core/clients/status/sms_ch_summarycurrent-server-wmi-class.md
+    - name: SMS_CH_SummaryHistory サーバー WMI クラス
+      href: core/clients/status/sms_ch_summaryhistory-server-wmi-class.md
+    - name: SMS_CN_ClientStatus サーバー WMI クラス
+      href: core/clients/status/sms_cn_clientstatus-server-wmi-class.md
+      items:
+        - name: GetOnlineCount メソッド
+          href: core/clients/status/getonlinecount-method-in-class-sms_cn_clientstatus.md
+- name: Collections サーバー WMI クラス
+  items:
+    - name: SMS_CM_RES_COLL_CollectionID サーバー WMI クラス
+      href: core/clients/collections/sms_cm_res_coll_collectionid-server-wmi-class.md
+    - name: SMS_Collection サーバー WMI クラス
+      href: core/clients/collections/sms_collection-server-wmi-class.md
+      items:
+        - name: AddMembershipRule メソッド
+          href: core/clients/collections/addmembershiprule-method-in-class-sms_collection.md
+        - name: AddMembershipRules メソッド
+          href: core/clients/collections/addmembershiprules-method-in-class-sms_collection.md
+        - name: ApproveClients メソッド
+          href: core/clients/collections/approveclients-method-in-class-sms_collection.md
+        - name: BlockClients メソッド
+          href: core/clients/collections/blockclients-method-in-class-sms_collection.md
+        - name: ChangeOwnership メソッド
+          href: core/clients/collections/changeownership-method-in-class-sms_collection.md
+        - name: ClearDeploymentLocksForCollection メソッド
+          href: core/clients/collections/cleardeploymentlocksforcollection-method-in-class-sms_collection.md
+        - name: ClearDeviceCategory メソッド
+          href: core/clients/collections/cleardevicecategory-method-in-class-sms_collection.md
+        - name: ClearLastNBSAdvForCollection メソッド
+          href: core/clients/collections/clearlastnbsadvforcollection-method-in-class-sms_collection.md
+        - name: ClearLastNBSAdvForMachines メソッド
+          href: core/clients/collections/clearlastnbsadvformachines-method-in-class-sms_collection.md
+        - name: ClientEditions メソッド
+          href: core/clients/collections/clienteditions-method-in-class-sms_collection.md
+        - name: CreateCCR メソッド
+          href: core/clients/collections/createccr-method-in-class-sms_collection.md
+        - name: CreateCCRs メソッド
+          href: core/clients/collections/createccrs-method-in-class-sms_collection.md
+        - name: DeleteAllMembers メソッド
+          href: core/clients/collections/deleteallmembers-method-in-class-sms_collection.md
+        - name: DeleteMembershipRule メソッド
+          href: core/clients/collections/deletemembershiprule-method-in-class-sms_collection.md
+        - name: DeleteMembershipRules メソッド
+          href: core/clients/collections/deletemembershiprules-method-in-class-sms_collection.md
+        - name: FindResourceSite メソッド
+          href: core/clients/collections/findresourcesite-method-in-class-sms_collection.md
+        - name: FindMachineSite メソッド
+          href: core/clients/collections/findmachinesite-method-in-class-sms_collection.md
+        - name: GetNumResults メソッド
+          href: core/clients/collections/getnumresults-method-in-class-sms_collection.md
+        - name: GenerateCCRByName メソッド
+          href: core/clients/collections/generateccrbyname-method-in-class-sms_collecton.md
+        - name: GetTotalNumResults メソッド
+          href: core/clients/collections/gettotalnumresults-method-in-class-sms_collection.md
+        - name: ReassignClientsToSite メソッド
+          href: core/clients/collections/reassignclientstosite-method-in-class-sms_collection.md
+        - name: RequestRefresh メソッド
+          href: core/clients/collections/requestrefresh-method-in-class-sms_collection.md
+        - name: SetDeviceCategory メソッド
+          href: core/clients/collections/setdevicecategory-method-in-class-sms_collection.md
+        - name: SetMemberOrder メソッド
+          href: core/clients/collections/setmemberorder-method-in-class-sms_collection.md
+        - name: UpdateVisibilityInEPDashBoard
+          href: core/clients/collections/updatevisibilityinepdashboard-in-class-sms_collection.md
+        - name: VerifyNoCircularDependencies メソッド
+          href: core/clients/collections/verifynocirculardependencies-method-in-class-sms_collection.md
+    - name: SMS_CollectionBucket サーバー WMI クラス
+      href: core/clients/collections/sms_collectionbucket-server-wmi-class.md
+    - name: SMS_CollectionDependencies サーバー WMI クラス
+      href: core/clients/collections/sms_collectiondependencies-server-wmi-class.md
+    - name: SMS_CollectionMember サーバー WMI クラス
+      href: core/clients/collections/sms_collectionmember-server-wmi-class.md
+    - name: SMS_CollectionMember_a サーバー WMI クラス
+      href: core/clients/collections/sms_collectionmember_a-server-wmi-class.md
+    - name: SMS_CollectionPermission サーバー WMI クラス
+      href: core/clients/collections/sms_collectionpermission-server-wmi-class.md
+    - name: SMS_CollectionRule サーバー WMI クラス
+      href: core/clients/collections/sms_collectionrule-server-wmi-class.md
+    - name: SMS_CollectionRuleDirect サーバー WMI クラス
+      href: core/clients/collections/sms_collectionruledirect-server-wmi-class.md
+    - name: SMS_CollectionRuleExcludeCollection サーバー WMI クラス
+      href: core/clients/collections/sms_collectionruleexcludecollection-server-wmi-class.md
+    - name: SMS_CollectionRuleIncludeCollection サーバー WMI クラス
+      href: core/clients/collections/sms_collectionruleincludecollection-server-wmi-class.md
+    - name: SMS_CollectionRuleQuery サーバー WMI クラス
+      href: core/clients/collections/sms_collectionrulequery-server-wmi-class.md
+      items:
+        - name: ValidateQuery メソッド
+          href: core/clients/collections/validatequery-method-in-class-sms_collectionrulequery.md
+    - name: SMS_CollectionSettings サーバー WMI クラス
+      href: core/clients/collections/sms_collectionsettings-server-wmi-class.md
+    - name: SMS_CollectionToPkgAdvert_a サーバー WMI クラス
+      href: core/clients/collections/sms_collectiontopkgadvert_a-server-wmi-class.md
+    - name: SMS_CombinedDeviceResources サーバー WMI クラス
+      href: core/clients/collections/sms_combineddeviceresources-server-wmi-class.md
+    - name: SMS_CombinedResources サーバー WMI クラス
+      href: core/clients/collections/sms_combinedresources-server-wmi-class.md
+    - name: SMS_CombinedUserResources サーバー WMI クラス
+      href: core/clients/collections/sms_combineduserresources-server-wmi-class.md
+    - name: SMS_DirFullCollMem サーバー WMI クラス
+      href: core/clients/collections/sms_dirfullcollmem-server-wmi-class.md
+    - name: SMS_FullCollectionMembership サーバー WMI クラス
+      href: core/clients/collections/sms_fullcollectionmembership-server-wmi-class.md
+- name: コンプライアンス設定サーバー WMI クラス
+  items:
+    - name: コンプライアンス設定サーバー WMI クラスについて
+      href: compliance/compliance-settings-dcm-server-wmi-classes.md
+    - name: SMS_AdvancedThreatProtectionSettings サーバー WMI クラス
+      href: compliance/sms_advancedthreatprotectionsettings-server-wmi-class.md
+    - name: SMS_BaselineAssignment サーバー WMI クラス
+      href: compliance/sms_baselineassignment-server-wmi-class.md
+    - name: SMS_Category_LocalizedProperties サーバー WMI クラス
+      href: compliance/sms_category_localizedproperties-server-wmi-class.md
+    - name: SMS_CategoryInstance サーバー WMI クラス
+      href: compliance/sms_categoryinstance-server-wmi-class.md
+    - name: SMS_CategoryInstanceBase サーバー WMI クラス
+      href: compliance/sms_categoryinstancebase-server-wmi-class.md
+    - name: SMS_CategoryInstanceMembership サーバー WMI クラス
+      href: compliance/sms_categoryinstancemembership-server-wmi-class.md
+    - name: SMS_CI_ComplianceHistory サーバー WMI クラス
+      href: compliance/sms_ci_compliancehistory-server-wmi-class.md
+    - name: SMS_CI_ComplianceSummary サーバー WMI クラス
+      href: compliance/sms_ci_compliancesummary-server-wmi-class.md
+    - name: SMS_CI_CurrentComplianceStatus サーバー WMI クラス
+      href: compliance/sms_ci_currentcompliancestatus-server-wmi-class.md
+    - name: SMS_CI_LocalizedEulas サーバー WMI クラス
+      href: compliance/sms_ci_localizedeulas-server-wmi-class.md
+    - name: SMS_CI_LocalizedProperties サーバー WMI クラス
+      href: compliance/sms_ci_localizedproperties-server-wmi-class.md
+    - name: SMS_CIAssignmentBaseClass サーバー WMI クラス
+      href: compliance/sms_ciassignmentbaseclass-server-wmi-class.md
+    - name: SMS_CIAssignmentToCI サーバー WMI クラス
+      href: compliance/sms_ciassignmenttoci-server-wmi-class.md
+    - name: SMS_CIRelation_Flat サーバー WMI クラス
+      href: compliance/sms_cirelation_flat-server-wmi-class.md
+    - name: SMS_CIContentPackage サーバー WMI クラス
+      href: compliance/sms_cicontentpackage-server-wmi-class.md
+    - name: SMS_CompliancePolicySettings サーバー WMI クラス
+      href: compliance/sms_compliancepolicysettings-server-wmi-class.md
+    - name: SMS_ConfigurationBaselineInfo サーバー WMI クラス
+      href: compliance/sms_configurationbaselineinfo-server-wmi-class.md
+    - name: SMS_ConfigurationItem サーバー WMI クラス
+      href: compliance/sms_configurationitem-server-wmi-class.md
+      items:
+        - name: AcceptEULA メソッド
+          href: compliance/accepteula-method-in-class-sms_configurationitem.md
+        - name: GetEULA メソッド
+          href: compliance/geteula-method-in-class-sms_configurationitem.md
+        - name: GetSDMDefinition メソッド
+          href: compliance/getsdmdefinition-method-in-class-sms_configurationitem.md
+        - name: SetEnforcement メソッド
+          href: compliance/setenforcement-method-in-class-sms_configurationitem.md
+    - name: SMS_ConfigurationItemBaseClass サーバー WMI クラス
+      href: compliance/sms_configurationitembaseclass-server-wmi-class.md
+    - name: SMS_ConfigurationItemLatestBaseClass サーバー WMI クラス
+      href: compliance/sms_configurationitemlatestbaseclass-server-wmi-class.md
+    - name: SMS_ConfigurationItemRules サーバー WMI クラス
+      href: compliance/sms_configurationitemrules-server-wmi-class.md
+    - name: SMS_ConfigurationItemSettings サーバー WMI クラス
+      href: compliance/sms_configurationitemsettings-server-wmi-class.md
+    - name: SMS_ConfigurationItemSettingReference サーバー WMI クラス
+      href: compliance/sms_configurationitemsettingreference-server-wmi-class.md
+    - name: SMS_ConfigurationPlatform サーバー WMI クラス
+      href: compliance/sms_configurationplatform-server-wmi-class.md
+    - name: SMS_ConfigurationPolicy サーバー WMI クラス
+      href: compliance/sms_configurationpolicy-server-wmi-class.md
+      items:
+        - name: AcceptEULA メソッド
+          href: compliance/accepteula-method-in-class-sms_configurationpolicy.md
+        - name: GetEULA メソッド
+          href: compliance/geteula-method-in-class-sms_configurationpolicy.md
+    - name: SMS_ConfigurationPolicyAssignment サーバー WMI クラス
+      href: compliance/sms_configurationpolicyassignment-server-wmi-class.md
+    - name: SMS_ConfigurationPolicyBase サーバー WMI クラス
+      href: compliance/sms_configurationpolicybase-server-wmi-class.md
+      items:
+        - name: AcceptEULA メソッド
+          href: compliance/accepteula-method-in-class-sms_configurationpolicybase.md
+        - name: GetEULA メソッド
+          href: compliance/geteula-method-in-class-sms_configurationpolicybase.md
+    - name: SMS_DCMDeploymentCompliantAssetDetails サーバー WMI クラス
+      href: compliance/sms_dcmdeploymentcompliantassetdetails-server-wmi-class.md
+    - name: SMS_DCMDeploymentCompliantDetailsPerAsset サーバー WMI クラス
+      href: compliance/sms_dcmdeploymentcompliantdetailsperasset-server-wmi-class.md
+    - name: SMS_DCMDeploymentCompliantStatus サーバー WMI クラス
+      href: compliance/sms_dcmdeploymentcompliantstatus-server-wmi-class.md
+    - name: SMS_DCMDeploymentErrorAssetDetails サーバー WMI クラス
+      href: compliance/sms_dcmdeploymenterrorassetdetails-server-wmi-class.md
+    - name: SMS_DCMDeploymentErrorDetailsPerAsset サーバー WMI クラス
+      href: compliance/sms_dcmdeploymenterrordetailsperasset-server-wmi-class.md
+    - name: SMS_DCMDeploymentErrorStatus サーバー WMI クラス
+      href: compliance/sms_dcmdeploymenterrorstatus-server-wmi-class.md
+    - name: SMS_DCMDeploymentNonCompliantAssetDetails サーバー WMI クラス
+      href: compliance/sms_dcmdeploymentnoncompliantassetdetails-server-wmi-class.md
+    - name: SMS_DCMDeploymentNonCompliantStatus サーバー WMI クラス
+      href: compliance/sms_dcmdeploymentnoncompliantstatus-server-wmi-class.md
+    - name: SMS_G_System_CI_ComplianceState サーバー WMI クラス
+      href: compliance/sms_g_system_ci_compliancestate-server-wmi-class.md
+    - name: SMS_HealthAttestationDetails サーバー WMI クラス
+      href: compliance/sms_healthattestationdetails-server-wmi-class.md
+    - name: SMS_MAMPolicyTemplate サーバー WMI クラス
+      href: compliance/sms_mampolicytemplate-server-wmi-class.md
+    - name: SMS_PassportForWorkProfileSettings サーバー WMI クラス
+      href: compliance/sms_passportforworkprofilesettings-server-wmi-class.md
+    - name: SMS_PfxCertificateSettings サーバー WMI クラス
+      href: compliance/sms_pfxcertificatesettings-server-wmi-class.md
+    - name: SMS_SDMPackageLocalizedData サーバー WMI クラス
+      href: compliance/sms_sdmpackagelocalizeddata-server-wmi-class.md
+    - name: SMS_SettingsDefinitionBase サーバー WMI クラス
+      href: compliance/sms_settingsdefinitionbase-server-wmi-class.md
+      items:
+        - name: AcceptEULA メソッド
+          href: compliance/accepteula-method-in-class-sms_settingsdefinitionbase.md
+        - name: GetEULA メソッド
+          href: compliance/geteula-method-in-class-sms_settingsdefinitionbase.md
+    - name: SMS_TermsAndConditionsSettings サーバー WMI クラス
+      href: compliance/sms_termsandconditionssettings-server-wmi-class.md
+    - name: SMS_UserStateManagementSettings サーバー WMI クラス
+      href: compliance/sms_userstatemanagementsettings-server-wmi-class.md
+      items:
+        - name: AcceptEULA メソッド
+          href: compliance/accepteula-method-in-class-sms_userstatemanagementsettings.md
+        - name: GetEULA メソッド
+          href: compliance/geteula-method-in-class-sms_userstatemanagementsettings.md
+    - name: SMS_WSfBConfigurationData サーバー WMI クラス
+      href: compliance/sms_wsfbconfigurationdata-server-wmi-class.md
+- name: コンソール拡張機能サーバー WMI クラス
+  items:
+    - name: Configuration Manager コンソール フォルダー サーバー WMI クラス
+      items:
+        - name: SMS_InstanceChangeNotification サーバー WMI クラス
+          href: core/servers/console/sms_instancechangenotification-server-wmi-class.md
+        - name: SMS_ObjectContainerItem サーバー WMI クラス
+          href: core/servers/console/sms_objectcontaineritem-server-wmi-class.md
+          items:
+            - name: MoveMembers メソッド
+              href: core/servers/console/movemembers-method-in-class-sms_objectcontaineritem.md
+            - name: MoveMembersEx メソッド
+              href: core/servers/console/movemembersex-method-in-class-sms_objectcontaineritem.md
+        - name: SMS_ObjectContainerNode サーバー WMI クラス
+          href: core/servers/console/sms_objectcontainernode-server-wmi-class.md
+          items:
+            - name: MoveFolders メソッド
+              href: core/servers/console/movefolders-method-in-class-sms_objectcontainernode.md
+        - name: SMS_ObjectContentExtraInfo サーバー WMI クラス
+          href: core/servers/console/sms_objectcontentextrainfo-server-wmi-class.md
+        - name: SMS_ObjectContentInfo サーバー WMI クラス
+          href: core/servers/console/sms_objectcontentinfo-server-wmi-class.md
+        - name: SMS_RoleInObjectType サーバー WMI クラス
+          href: core/servers/console/sms_roleinobjecttype-server-wmi-class.md
+        - name: SMS_SearchFolder サーバー WMI クラス
+          href: core/servers/console/sms_searchfolder-server-wmi-class.md
+- name: コンテンツ サーバー WMI クラス
+  items:
+    - name: SMS_Content サーバー WMI クラス
+      href: core/servers/configure/sms_content-server-wmi-class.md
+      items:
+        - name: IsOfficeContent メソッド
+          href: core/servers/configure/isofficecontent-method-in-class-sms_content.md
+    - name: SMS_ContentPackage サーバー WMI クラス
+      href: core/servers/configure/sms_contentpackage-server-wmi-class.md
+      items:
+        - name: AddChangeNotification メソッド
+          href: core/servers/configure/addchangenotification-method-in-class-sms_contentpackage.md
+        - name: AddContent メソッド
+          href: core/servers/configure/addcontent-method-in-class-sms_contentpackage.md
+        - name: AddDistributionPointGroup メソッド
+          href: core/servers/configure/adddistributionpointgroup-method-in-class-sms_contentpackage.md
+        - name: AddDistributionPoints メソッド
+          href: core/servers/configure/adddistributionpoints-method-in-class-sms_contentpackage.md
+        - name: Commit メソッド
+          href: core/servers/configure/commit-method-in-class-sms_contentpackage.md
+        - name: RefreshPkgSource メソッド
+          href: core/servers/configure/refreshpkgsource-method-in-class-sms_contentpackage.md
+        - name: RemoveContent メソッド
+          href: core/servers/configure/removecontent-method-in-class-sms_contentpackage.md
+        - name: SetSourceSite メソッド
+          href: core/servers/configure/setsourcesite-method-in-class-sms_contentpackage.md
+        - name: Unlock メソッド
+          href: core/servers/configure/unlock-method-in-class-sms_contentpackage.md
+    - name: SMS_DPContentInfo サーバー WMI クラス
+      href: core/servers/configure/sms_dpcontentinfo-server-wmi-class.md
+    - name: SMS_DPGroupCollections サーバー WMI クラス
+      href: core/servers/configure/sms_dpgroupcollections-server-wmi-class.md
+    - name: SMS_DPGroupContentInfo サーバー WMI クラス
+      href: core/servers/configure/sms_dpgroupcontentinfo-server-wmi-class.md
+    - name: SMS_DPGroupDistributionStatus サーバー WMI クラス
+      href: core/servers/configure/sms_dpgroupdistributionstatus-server-wmi-class.md
+    - name: SMS_DPGroupDistributionStatusDetails サーバー WMI クラス
+      href: core/servers/configure/sms_dpgroupdistributionstatusdetails-server-wmi-class.md
+    - name: SMS_DPGroupInfo サーバー WMI クラス
+      href: core/servers/configure/sms_dpgroupinfo-server-wmi-class.md
+    - name: SMS_DPGroupMembers サーバー WMI クラス
+      href: core/servers/configure/sms_dpgroupmembers-server-wmi-class.md
+    - name: SMS_DPGroupPackages サーバー WMI クラス
+      href: core/servers/configure/sms_dpgrouppackages-server-wmi-class.md
+    - name: SMS_DPStatusDetails サーバー WMI クラス
+      href: core/servers/configure/sms_dpstatusdetails-server-wmi-class.md
+    - name: SMS_DPStatusInfo サーバー WMI クラス
+      href: core/servers/configure/sms_dpstatusinfo-server-wmi-class.md
+    - name: SMS_PackageContentServerInfo サーバー WMI クラス
+      href: core/servers/configure/sms_packagecontentserverinfo-server-wmi-class.md
+- name: 非推奨の関数
+  href: misc/deprecated-functions.md
+- name: デバイス管理サーバー WMI クラス
+  href: mdm/device-management-server-wmi-classes.md
+  items:
+    - name: SMS_DeviceEnrollmentProfile サーバー WMI クラス
+      href: mdm/sms_deviceenrollmentprofile-server-wmi-class.md
+    - name: SMS_DeviceMethods サーバー WMI クラス
+      href: mdm/sms_devicemethods-server-wmi-class.md
+      items:
+        - name: AllowAccess メソッド
+          href: mdm/allowaccess-method-in-class-sms_devicemethods.md
+        - name: BlockAccess メソッド
+          href: mdm/blockaccess-method-in-class-sms_devicemethods.md
+        - name: CancelRetire メソッド
+          href: mdm/cancelretire-method-in-class-sms_devicemethods.md
+        - name: CancelWipe メソッド
+          href: mdm/cancelwipe-method-in-class-sms_devicemethods.md
+        - name: RequestRetire メソッド
+          href: mdm/requestretire-method-in-class-sms_devicemethods.md
+        - name: RequestWipe メソッド
+          href: mdm/requestwipe-method-in-class-sms_devicemethods.md
+    - name: SMS_DeviceSettingItem サーバー WMI クラス
+      href: mdm/sms_devicesettingitem-server-wmi-class.md
+    - name: SMS_DeviceSettingPackage サーバー WMI クラス
+      href: mdm/sms_devicesettingpackage-server-wmi-class.md
+      items:
+        - name: AddChangeNotification メソッド
+          href: mdm/addchangenotification-method-in-class-sms_devicesettingpackage.md
+        - name: AddDistributionPoints メソッド
+          href: mdm/adddistributionpoints-method-in-class-sms_devicesettingpackage.md
+        - name: RefreshPkgSource メソッド
+          href: mdm/refreshpkgsource-method-in-class-sms_devicesettingpackage.md
+        - name: SetSourceSite メソッド
+          href: mdm/setsourcesite-method-in-class-sms_devicesettingpackage.md
+        - name: Unlock メソッド
+          href: mdm/unlock-method-in-class-sms_devicesettingpackage.md
+    - name: SMS_DeviceSettingPackageItem サーバー WMI クラス
+      href: mdm/sms_devicesettingpackageitem-server-wmi-class.md
+- name: 検出クラス
+  items:
+    - name: 検出サーバー WMI クラス
+      items:
+        - name: SMS_ADDomain サーバー WMI クラス
+          href: core/servers/configure/sms_addomain-server-wmi-class.md
+        - name: SMS_ADForest サーバー WMI クラス
+          href: core/servers/configure/sms_adforest-server-wmi-class.md
+          items:
+            - name: DeleteDiscoveryData メソッド
+              href: core/servers/configure/deletediscoverydata-method-in-class-sms_adforest.md
+        - name: SMS_ADForestDiscoveryStatus サーバー WMI クラス
+          href: core/servers/configure/sms_adforestdiscoverystatus-server-wmi-class.md
+        - name: SMS_ADSite サーバー WMI クラス
+          href: core/servers/configure/sms_adsite-server-wmi-class.md
+        - name: SMS_ADSubnet サーバー WMI クラス
+          href: core/servers/configure/sms_adsubnet-server-wmi-class.md
+    - name: SMSResGen COM オートメーション クラス
+      href: core/servers/configure/smsresgen-com-automation-class.md
+      items:
+        - name: ISMSResGen インターフェイス
+          href: core/servers/configure/ismsresgen-interface.md
+          items:
+            - name: DDRAddStringArray
+              href: core/servers/configure/ddraddstringarray.md
+            - name: DDRAddIntegerArray
+              href: core/servers/configure/ddraddintegerarray.md
+            - name: DDRAddInteger
+              href: core/servers/configure/ddraddinteger.md
+            - name: DDRNew
+              href: core/servers/configure/ddrnew.md
+            - name: DDRWrite
+              href: core/servers/configure/ddrwrite.md
+            - name: DDRAddString
+              href: core/servers/configure/ddraddstring.md
+            - name: DDRPropertyFlagsEnum 列挙型
+              href: core/servers/configure/ddrpropertyflagsenum-enumeration.md
+- name: Endpoint Protection サーバー WMI クラス
+  items:
+    - name: SMS_AmPolicySummary サーバー WMI クラス
+      href: protect/sms_ampolicysummary-server-wmi-class.md
+    - name: SMS_ClientAction サーバー WMI クラス
+      href: protect/sms_clientaction-server-wmi-class.md
+    - name: SMS_ClientActionStatus サーバー WMI クラス
+      href: protect/sms_clientactionstatus-server-wmi-class.md
+    - name: SMS_ClientOperation サーバー WMI クラス
+      href: protect/sms_clientoperation-server-wmi-class.md
+      items:
+        - name: AllowThreat メソッド
+          href: protect/allowthreat-method-in-class-sms_clientoperation.md
+        - name: CancelClientOperation メソッド
+          href: protect/cancelclientoperation-method-in-class-sms_clientoperation.md
+        - name: DeleteClientOperation メソッド
+          href: protect/deleteclientoperation-method-in-class-sms_clientoperation.md
+        - name: ExcludeScanPaths メソッド
+          href: protect/excludescanpaths-method-in-class-sms_clientoperation.md
+        - name: IsClientOperationAllowed メソッド
+          href: protect/isclientoperationallowed-method-in-class-sms_clientoperation.md
+        - name: IsClientOperationUpdateAllowed メソッド
+          href: protect/isclientoperationupdateallowed-method-in-class-sms_clientoperation.md
+        - name: InitiateClientOperation メソッド
+          href: protect/initiateclientoperation-method-in-class-sms_clientoperation.md
+        - name: RestoreQuarantinedItem メソッド
+          href: protect/restorequarantineditem-method-in-class-sms_clientoperation.md
+    - name: SMS_ClientOperationStatus サーバー WMI クラス
+      href: protect/sms_clientoperationstatus-server-wmi-class.md
+    - name: SMS_EndpointProtectionDashboardBucket サーバー WMI クラス
+      href: protect/sms_endpointprotectiondashboardbucket-server-wmi-class.md
+    - name: SMS_EndpointProtectionHealthStatus サーバー WMI クラス
+      href: protect/sms_endpointprotectionhealthstatus-server-wmi-class.md
+    - name: SMS_EndpointProtectionThreatData サーバー WMI クラス
+      href: protect/sms_endpointprotectionthreatdata-server-wmi-class.md
+    - name: SMS_FirewallSettings サーバー WMI クラス
+      href: protect/sms_firewallsettings-server-wmi-class.md
+    - name: SMS_FirewallPolicy サーバー WMI クラス
+      href: protect/sms_firewallpolicy-server-wmi-class.md
+    - name: SMS_G_SYSTEM_AmPolicyStatus サーバー WMI クラス
+      href: protect/sms_g_system_ampolicystatus-server-wmi-class.md
+    - name: SMS_G_System_EndpointProtectionStatus サーバー WMI クラス
+      href: protect/sms_g_system_endpointprotectionstatus-server-wmi-class.md
+    - name: SMS_TopThreatsDetected サーバー WMI クラス
+      href: protect/sms_topthreatsdetected-server-wmi-class.md
+    - name: SMS_TopThreatPath サーバー WMI クラス
+      href: protect/sms_topthreatpath-server-wmi-class.md
+    - name: SMS_TopThreatSummary サーバー WMI クラス
+      href: protect/sms_topthreatsummary-server-wmi-class.md
+- name: ハイブリッド サーバー WMI クラス
+  items:
+    - name: モバイル デバイス管理サーバー WMI クラス
+      items:
+        - name: MDM_GenericAppConfiguration サーバー WMI クラス
+          href: mdm/mdm_genericappconfiguration-server-wmi-class.md
+        - name: SMS_BulkEnrollmentProfiles サーバー WMI クラス
+          href: mdm/sms_bulkenrollmentprofiles-server-wmi-class.md
+          items:
+            - name: GenerateProvisioningXML メソッド
+              href: mdm/generateprovisioningxml-method-in-class-sms_bulkenrollmentprofiles.md
+        - name: SMS_IntuneAccountInfo サーバー WMI クラス
+          href: mdm/sms_intuneaccountinfo-server-wmi-class.md
+        - name: SMS_MDMAppleVppLicense サーバー WMI クラス
+          href: mdm/sms_mdmapplevpplicense-server-wmi-class.md
+        - name: SMS_MDMAppleVppToken サーバー WMI クラス
+          href: mdm/sms_mdmapplevpptoken-server-wmi-class.md
+          items:
+            - name: SyncToken メソッド
+              href: mdm/synctoken-method-in-class-sms_mdmapplevpptoken.md
+            - name: UploadToken メソッド
+              href: mdm/uploadtoken-method-in-class-sms_mdmapplevpptoken.md
+        - name: SMS_MDMBulkEnrollmentPackages サーバー WMI クラス
+          href: mdm/sms_mdmbulkenrollmentpackages-server-wmi-class.md
+          items:
+            - name: ImportForProfile メソッド
+              href: mdm/importforprofile-method-in-class-sms_mdmbulkenrollmentpackages.md
+        - name: SMS_MDMBulkEnrollmentProfiles サーバー WMI クラス
+          href: mdm/sms_mdmbulkenrollmentprofiles-server-wmi-class.md
+        - name: SMS_MDMCorpEnrollmentProfiles サーバー WMI クラス
+          href: mdm/sms_mdmcorpenrollmentprofiles-server-wmi-class.md
+        - name: SMS_MDMCorpOwnedDevices サーバー WMI クラス
+          href: mdm/sms_mdmcorpowneddevices-server-wmi-class.md
+          items:
+            - name: UpdateProfileIDForDevices メソッド
+              href: mdm/updateprofileidfordevices-method-in-class-sms_mdmcorpowneddevices.md
+        - name: SMS_MDMDeviceCategory サーバー WMI クラス
+          href: mdm/sms_mdmdevicecategory-server-wmi-class.md
+        - name: SMS_MDMDeviceEnrollmentManagers サーバー WMI クラス
+          href: mdm/sms_mdmdeviceenrollmentmanagers-server-wmi-class.md
+          items:
+            - name: InsertMultipleResourceIds メソッド
+              href: mdm/insertmultipleresourceids-method-in-class-sms_mdmdeviceenrollmentmanagers.md
+            - name: RemoveMultipleResourceIds メソッド
+              href: mdm/removemultipleresourceids-method-in-class-sms_mdmdeviceenrollmentmanagers.md
+    - name: SMS_WinRTSideLoadingKey サーバー WMI クラス
+      href: mdm/sms_winrtsideloadingkey-server-wmi-class.md
+- name: 移行サーバー WMI クラス
+  items:
+    - name: SMS_MigrationCollectionInfo サーバー WMI クラス
+      href: core/migration/sms_migrationcollectioninfo-server-wmi-class.md
+      items:
+        - name: GetClientsCountByCollections メソッド
+          href: core/migration/getclientscountbycollections-method-in-class-sms_migrationcollectioninfo.md
+    - name: SMS_MigrationDashboard サーバー WMI クラス
+      href: core/migration/sms_migrationdashboard-server-wmi-class.md
+    - name: SMS_MigrationDP サーバー WMI クラス
+      href: core/migration/sms_migrationdp-server-wmi-class.md
+    - name: SMS_MigrationEntity サーバー WMI クラス
+      href: core/migration/sms_migrationentity-server-wmi-class.md
+      items:
+        - name: ExcludeAndInclude メソッド
+          href: core/migration/excludeandinclude-method-in-class-sms_migrationentity.md
+        - name: GetEntityReferences メソッド
+          href: core/migration/getentityreferences-method-in-class-sms_migrationentity.md
+    - name: SMS_MigrationEntityDependency サーバー WMI クラス
+      href: core/migration/sms_migrationentitydependency-server-wmi-class.md
+    - name: SMS_MigrationExpandingScope サーバー WMI クラス
+      href: core/migration/sms_migrationexpandingscope-server-wmi-class.md
+    - name: SMS_MigrationJob サーバー WMI クラス
+      href: core/migration/sms_migrationjob-server-wmi-class.md
+      items:
+        - name: Start メソッド
+          href: core/migration/start-method-in-class-sms_migrationjob.md
+        - name: Stop メソッド
+          href: core/migration/stop-method-in-class-sms_migrationjob.md
+    - name: SMS_MigrationJobEntityRelation サーバー WMI クラス
+      href: core/migration/sms_migrationjobentityrelation-server-wmi-class.md
+    - name: SMS_MigrationSiteMapping サーバー WMI クラス
+      href: core/migration/sms_migrationsitemapping-server-wmi-class.md
+      items:
+        - name: ActivateHierarchy メソッド
+          href: core/migration/activatehierarchy-method-in-class-sms_migrationsitemapping.md
+        - name: CheckDecommissionState メソッド
+          href: core/migration/checkdecommissionstate-method-in-class-sms_migrationsitemapping.md
+        - name: CleanupHierarchyData メソッド
+          href: core/migration/cleanuphierarchydata-method-in-class-sms_migrationsitemapping.md
+        - name: Decommission メソッド
+          href: core/migration/decommission-method-in-class-sms_migrationsitemapping.md
+        - name: Resuscitate メソッド
+          href: core/migration/resuscitate-method-in-class-sms_migrationsitemapping.md
+        - name: Sync メソッド
+          href: core/migration/sync-method-in-class-sms_migrationsitemapping.md
+    - name: SMS_MigrationSourceSite サーバー WMI クラス
+      href: core/migration/sms_migrationsourcesite-server-wmi-class.md
+- name: 非推奨クラス
+  href: misc/obsolete-classes.md
+- name: OS 展開クラス
+  items:
+    - name: OS 展開ドライバーによりサポートされるプラットフォームのスキーマ
+      href: osd/operating-system-deployment-driver-supported-platforms-schema.md
+      items:
+        - name: PlatformApplicabilityCondition
+          href: osd/platformapplicabilitycondition.md
+        - name: PlatformApplicabilityConditions
+          href: osd/platformapplicabilityconditions.md
+        - name: Query1
+          href: osd/query1.md
+        - name: Query2
+          href: osd/query2.md
+    - name: OS 展開サーバー WMI クラス
+      items:
+        - name: SMS_BootImagePackage サーバー WMI クラス
+          href: osd/sms_bootimagepackage-server-wmi-class.md
+          items:
+            - name: AddChangeNotification メソッド
+              href: osd/addchangenotification-method-in-class-sms_bootimagepackage.md
+            - name: AddDistributionPoints メソッド
+              href: osd/adddistributionpoints-method-in-class-sms_bootimagepackage.md
+            - name: DeleteContextID メソッド
+              href: osd/deletecontextid-method-in-class-sms_bootimagepackage.md
+            - name: ExportDefaultBootImage メソッド
+              href: osd/exportdefaultbootimage-method-in-class-sms_bootimagepackage.md
+            - name: GetImageProperties メソッド
+              href: osd/getimageproperties-method-in-class-sms_bootimagepackage.md
+            - name: QueryOSDBinaryInjectionStatus メソッド
+              href: osd/queryosdbinaryinjectionstatus-method-in-class-sms_bootimagepackage.md
+            - name: RefreshPkgSource メソッド
+              href: osd/refreshpkgsource-method-in-class-sms_bootimagepackage.md
+            - name: ReloadImageProperties メソッド
+              href: osd/reloadimageproperties-method-in-class-sms_bootimagepackage.md
+            - name: SetSourceSite メソッド
+              href: osd/setsourcesite-method-in-class-sms_bootimagepackage.md
+            - name: Unlock メソッド
+              href: osd/unlock-method-in-class-sms_bootimagepackage.md
+            - name: UpdateDefaultImage メソッド
+              href: osd/updatedefaultimage-method-in-class-sms_bootimagepackage.md
+            - name: UpdateImage メソッド
+              href: osd/updateimage-method-in-class-sms_bootimagepackage.md
+            - name: UpdateOptionalComponents メソッド
+              href: osd/updateoptionalcomponents-method-in-class-sms_bootimagepackage.md
+        - name: SMS_BootImagePackage_DriverRef サーバー WMI クラス
+          href: osd/sms_bootimagepackage_driverref-server-wmi-class.md
+        - name: SMS_Certificate サーバー WMI クラス
+          href: osd/sms_certificate-server-wmi-class.md
+        - name: SMS_CertificateData サーバー WMI クラス
+          href: osd/sms_certificatedata-server-wmi-class.md
+          items:
+            - name: SubmitCertificate メソッド
+              href: osd/submitcertificate-method-in-class-sms_certificatedata.md
+            - name: DeleteCertificate メソッド
+              href: osd/deletecertificate-method-in-class-sms_certificatedata.md
+        - name: SMS_CertificateInfo サーバー WMI クラス
+          href: osd/sms_certificateinfo-server-wmi-class.md
+          items:
+            - name: BlockCertificate メソッド
+              href: osd/blockcertificate-method-in-class-sms_certificateinfo.md
+        - name: SMS_CollectionVariable サーバー WMI クラス
+          href: osd/sms_collectionvariable-server-wmi-class.md
+        - name: SMS_Driver サーバー WMI クラス
+          href: osd/sms_driver-server-wmi-class.md
+          items:
+            - name: CreateFromINF メソッド
+              href: osd/createfrominf-method-in-class-sms_driver.md
+            - name: CreateFromINFs メソッド
+              href: osd/createfrominfs-method-in-class-sms_driver.md
+            - name: CreateFromOEM メソッド
+              href: osd/createfromoem-method-in-class-sms_driver.md
+        - name: SMS_DriverContainer サーバー WMI クラス
+          href: osd/sms_drivercontainer-server-wmi-class.md
+        - name: SMS_Driver_Details サーバー WMI クラス
+          href: osd/sms_driver_details-server-wmi-class.md
+        - name: SMS_DriverPackage サーバー WMI クラス
+          href: osd/sms_driverpackage-server-wmi-class.md
+          items:
+            - name: AddChangeNotification メソッド
+              href: osd/addchangenotification-method-in-class-sms_driverpackage.md
+            - name: AddDistributionPoints メソッド
+              href: osd/adddistributionpoints-method-in-class-sms_driverpackage.md
+            - name: AddDriverContent メソッド
+              href: osd/adddrivercontent-method-in-class-sms_driverpackage.md
+            - name: CheckSourceFolder メソッド
+              href: osd/checksourcefolder-method-in-class-sms_driverpackage.md
+            - name: RebuildPackage メソッド
+              href: osd/rebuildpackage-method-in-class-sms_driverpackage.md
+            - name: RefreshPkgSource メソッド
+              href: osd/refreshpkgsource-method-in-class-sms_driverpackage.md
+            - name: RemoveDriverContent メソッド
+              href: osd/removedrivercontent-method-in-class-sms_driverpackage.md
+            - name: SetSourceSite メソッド
+              href: osd/setsourcesite-method-in-class-sms_driverpackage.md
+            - name: Unlock メソッド
+              href: osd/unlock-method-in-class-sms_driverpackage.md
+            - name: ValidateNewPackageSource メソッド
+              href: osd/validatenewpackagesource-method-in-class-sms_driverpackage.md
+        - name: SMS_DriverModel サーバー WMI クラス
+          href: osd/sms_drivermodel-server-wmi-class.md
+        - name: SMS_FailedImageUpdateView サーバー WMI クラス
+          href: osd/sms_failedimageupdateview-server-wmi-class.md
+        - name: SMS_ImageDiskInformation サーバー WMI クラス
+          href: osd/sms_imagediskinformation-server-wmi-class.md
+        - name: SMS_ImageInformation サーバー WMI クラス
+          href: osd/sms_imageinformation-server-wmi-class.md
+        - name: SMS_ImagePackage サーバー WMI クラス
+          href: osd/sms_imagepackage-server-wmi-class.md
+          items:
+            - name: AddChangeNotification メソッド
+              href: osd/addchangenotification-method-in-class-sms_imagepackage.md
+            - name: AddDistributionPoints メソッド
+              href: osd/adddistributionpoints-method-in-class-sms_imagepackage.md
+            - name: GetImageProperties メソッド
+              href: osd/getimageproperties-method-in-class-sms_imagepackage.md
+            - name: RefreshPkgSource メソッド
+              href: osd/refreshpkgsource-method-in-class-sms_imagepackage.md
+            - name: ReloadImageProperties メソッド
+              href: osd/reloadimageproperties-method-in-class-sms_imagepackage.md
+            - name: RunOfflineServicingManager メソッド
+              href: osd/runofflineservicingmanager-method-in-class-sms_imagepackage.md
+            - name: SetSourceSite メソッド
+              href: osd/setsourcesite-method-in-class-sms_imagepackage.md
+            - name: Unlock メソッド
+              href: osd/unlock-method-in-class-sms_imagepackage.md
+        - name: SMS_ImageServicingProgress サーバー WMI クラス
+          href: osd/sms_imageservicingprogress-server-wmi-class.md
+        - name: SMS_ImageServicingSchedule サーバー WMI クラス
+          href: osd/sms_imageservicingschedule-server-wmi-class.md
+        - name: SMS_ImageServicingScanRequest サーバー WMI クラス
+          href: osd/sms_imageservicingscanrequest-server-wmi-class.md
+        - name: SMS_ImageServicingScheduledImage サーバー WMI クラス
+          href: osd/sms_imageservicingscheduledimage-server-wmi-class.md
+        - name: SMS_ImageServicingScheduledUpdate サーバー WMI クラス
+          href: osd/sms_imageservicingscheduledupdate-server-wmi-class.md
+        - name: SMS_ImageUpdateHistory サーバー WMI クラス
+          href: osd/sms_imageupdatehistory-server-wmi-class.md
+        - name: SMS_ImageUpdateStatus サーバー WMI クラス
+          href: osd/sms_imageupdatestatus-server-wmi-class.md
+        - name: SMS_ImageUpdateStatusView サーバー WMI クラス
+          href: osd/sms_imageupdatestatusview-server-wmi-class.md
+        - name: SMS_MachineSettings サーバー WMI クラス
+          href: osd/sms_machinesettings-server-wmi-class.md
+        - name: SMS_MachineVariable サーバー WMI クラス
+          href: osd/sms_machinevariable-server-wmi-class.md
+        - name: SMS_OperatingSystemInstallPackage サーバー WMI クラス
+          href: osd/sms_operatingsysteminstallpackage-server-wmi-class.md
+          items:
+            - name: AddChangeNotification メソッド
+              href: osd/addchangenotification-method-in-class-sms_operatingsysteminstallpackage.md
+            - name: AddDistributionPoints メソッド
+              href: osd/adddistributionpoints-method-in-class-sms_operatingsysteminstallpackage.md
+            - name: GetImageProperties メソッド
+              href: osd/getimageproperties-method-in-class-sms_operatingsysteminstallpackage.md
+            - name: RefreshPkgSource メソッド
+              href: osd/refreshpkgsource-method-in-class-sms_operatingsysteminstallpackage.md
+            - name: ReloadImageProperties メソッド
+              href: osd/reloadimageproperties-method-in-class-sms_operatingsysteminstallpackage.md
+            - name: SetSourceSite メソッド
+              href: osd/setsourcesite-method-in-class-sms_operatingsysteminstallpackage.md
+            - name: Unlock メソッド
+              href: osd/unlock-method-in-class-sms_operatingsysteminstallpackage.md
+        - name: SMS_OSDeploymentConfig サーバー WMI クラス
+          href: osd/sms_osdeploymentconfig-server-wmi-class.md
+        - name: SMS_OSDeploymentKitInstalledVersion サーバー WMI クラス
+          href: osd/sms_osdeploymentkitinstalledversion-server-wmi-class.md
+        - name: SMS_OSDeploymentKitSupportedPlatforms サーバー WMI クラス
+          href: osd/sms_osdeploymentkitsupportedplatforms-server-wmi-class.md
+        - name: SMS_OSDeploymentKitWinPEOptionalComponent サーバー WMI クラス
+          href: osd/sms_osdeploymentkitwinpeoptionalcomponent-server-wmi-class.md
+        - name: SMS_PXECertificateInfo サーバー WMI クラス
+          href: osd/sms_pxecertificateinfo-server-wmi-class.md
+        - name: SMS_StateInformation サーバー WMI クラス
+          href: osd/sms_stateinformation-server-wmi-class.md
+        - name: SMS_StateMigration サーバー WMI クラス
+          href: osd/sms_statemigration-server-wmi-class.md
+          items:
+            - name: AddAssociation メソッド
+              href: osd/addassociation-method-in-class-sms_statemigration.md
+            - name: AddAssociationEx メソッド
+              href: osd/addassociationex-method-in-class-sms_statemigration.md
+            - name: DeleteAssociation メソッド
+              href: osd/deleteassociation-method-in-class-sms_statemigration.md
+            - name: GetEncryptDecryptKey メソッド
+              href: osd/getencryptdecryptkey-method-in-class-sms_statemigration.md
+        - name: SMS_StateMigrationUserNames サーバー WMI クラス
+          href: osd/sms_statemigrationusernames-server-wmi-class.md
+        - name: SMS_TaskSequence サーバー WMI クラス
+          href: osd/sms_tasksequence-server-wmi-class.md
+          items:
+            - name: ExportXml メソッド
+              href: osd/exportxml-method-in-class-sms_tasksequence.md
+            - name: LoadFromXml メソッド
+              href: osd/loadfromxml-method-in-class-sms_tasksequence.md
+            - name: SaveToXml メソッド
+              href: osd/savetoxml-method-in-class-sms_tasksequence.md
+        - name: SMS_TaskSequence_Action サーバー WMI クラス
+          href: osd/sms_tasksequence_action-server-wmi-class.md
+        - name: SMS_TaskSequence_ApplicationInfo サーバー WMI クラス
+          href: osd/sms_tasksequence_applicationinfo-server-wmi-class.md
+        - name: SMS_TaskSequence_ApplyDataImageAction サーバー WMI クラス
+          href: osd/sms_tasksequence_applydataimageaction-server-wmi-class.md
+        - name: SMS_TaskSequence_ApplyDriverPackageAction サーバー WMI クラス
+          href: osd/sms_tasksequence_applydriverpackageaction-server-wmi-class.md
+        - name: SMS_TaskSequence_ApplyNetworkSettingsAction サーバー WMI クラス
+          href: osd/sms_tasksequence_applynetworksettingsaction-server-wmi-class.md
+        - name: SMS_TaskSequence_ApplyOperatingSystemAction サーバー WMI クラス
+          href: osd/sms_tasksequence_applyoperatingsystemaction-server-wmi-class.md
+        - name: SMS_TaskSequence_ApplyWindowsSettingsAction サーバー WMI クラス
+          href: osd/sms_tasksequence_applywindowssettingsaction-server-wmi-class.md
+        - name: SMS_TaskSequence_AutoApplyAction サーバー WMI クラス
+          href: osd/sms_tasksequence_autoapplyaction-server-wmi-class.md
+        - name: SMS_TaskSequence_CaptureNetworkSettingsAction サーバー WMI クラス
+          href: osd/sms_tasksequence_capturenetworksettingsaction-server-wmi-class.md
+        - name: SMS_TaskSequence_CaptureSystemImageAction サーバー WMI クラス
+          href: osd/sms_tasksequence_capturesystemimageaction-server-wmi-class.md
+        - name: SMS_TaskSequence_CaptureUserStateAction サーバー WMI クラス
+          href: osd/sms_tasksequence_captureuserstateaction-server-wmi-class.md
+        - name: SMS_TaskSequence_CaptureWindowsSettingsAction サーバー WMI クラス
+          href: osd/sms_tasksequence_capturewindowssettingsaction-server-wmi-class.md
+        - name: SMS_TaskSequence_Condition サーバー WMI クラス
+          href: osd/sms_tasksequence_condition-server-wmi-class.md
+        - name: SMS_TaskSequence_ConditionExpression サーバー WMI クラス
+          href: osd/sms_tasksequence_conditionexpression-server-wmi-class.md
+        - name: SMS_TaskSequence_ConditionOperand サーバー WMI クラス
+          href: osd/sms_tasksequence_conditionoperand-server-wmi-class.md
+        - name: SMS_TaskSequence_ConditionOperator サーバー WMI クラス
+          href: osd/sms_tasksequence_conditionoperator-server-wmi-class.md
+        - name: SMS_TaskSequence_ConnectNetworkFolderAction サーバー WMI クラス
+          href: osd/sms_tasksequence_connectnetworkfolderaction-server-wmi-class.md
+        - name: SMS_TaskSequence_ConvertDiskAction サーバー WMI クラス
+          href: osd/sms_tasksequence_convertdiskaction-server-wmi-class.md
+        - name: SMS_TaskSequence_DisableBitLockerAction サーバー WMI クラス
+          href: osd/sms_tasksequence_disablebitlockeraction-server-wmi-class.md
+        - name: SMS_TaskSequence_DownloadPackageContentAction サーバー WMI クラス
+          href: osd/sms_tasksequence_downloadpackagecontentaction-server-wmi-class.md
+        - name: SMS_TaskSequence_EnableBitLockerAction サーバー WMI クラス
+          href: osd/sms_tasksequence_enablebitlockeraction-server-wmi-class.md
+        - name: SMS_TaskSequence_FileConditionExpression サーバー WMI クラス
+          href: osd/sms_tasksequence_fileconditionexpression-server-wmi-class.md
+        - name: SMS_TaskSequence_FolderConditionExpression サーバー WMI クラス
+          href: osd/sms_tasksequence_folderconditionexpression-server-wmi-class.md
+        - name: SMS_TaskSequence_Group サーバー WMI クラス
+          href: osd/sms_tasksequence_group-server-wmi-class.md
+        - name: SMS_TaskSequence_InstallApplicationAction サーバー WMI クラス
+          href: osd/sms_tasksequence_installapplicationaction-server-wmi-class.md
+        - name: SMS_TaskSequence_InstallDeployToolsAction サーバー WMI クラス
+          href: osd/sms_tasksequence_installdeploytoolsaction-server-wmi-class.md
+        - name: SMS_TaskSequence_InstallSoftwareAction サーバー WMI クラス
+          href: osd/sms_tasksequence_installsoftwareaction-server-wmi-class.md
+        - name: SMS_TaskSequence_InstallUpdateAction サーバー WMI クラス
+          href: osd/sms_tasksequence_installupdateaction-server-wmi-class.md
+        - name: SMS_TaskSequence_JoinDomainWorkgroupAction サーバー WMI クラス
+          href: osd/sms_tasksequence_joindomainworkgroupaction-server-wmi-class.md
+        - name: SMS_TaskSequence_NetworkAdapterSettings サーバー WMI クラス
+          href: osd/sms_tasksequence_networkadaptersettings-server-wmi-class.md
+        - name: SMS_TaskSequence_OfflineEnableBitLockerAction
+          href: osd/sms_tasksequence_offlineenablebitlockeraction.md
+        - name: SMS_TaskSequence_OSConditionGroup サーバー WMI クラス
+          href: osd/sms_tasksequence_osconditiongroup-server-wmi-class.md
+        - name: SMS_TaskSequence_OSExpressionGroup サーバー WMI クラス
+          href: osd/sms_tasksequence_osexpressiongroup-server-wmi-class.md
+        - name: SMS_TaskSequence_PackageInfo サーバー WMI クラス
+          href: osd/sms_tasksequence_packageinfo-server-wmi-class.md
+        - name: SMS_TaskSequence_PartitionDiskAction サーバー WMI クラス
+          href: osd/sms_tasksequence_partitiondiskaction-server-wmi-class.md
+        - name: SMS_TaskSequence_PartitionSettings サーバー WMI クラス
+          href: osd/sms_tasksequence_partitionsettings-server-wmi-class.md
+        - name: SMS_TaskSequence_Pointer サーバー WMI クラス
+          href: osd/sms_tasksequence_pointer-server-wmi-class.md
+        - name: SMS_TaskSequence_PrepareOSAction サーバー WMI クラス
+          href: osd/sms_tasksequence_prepareosaction-server-wmi-class.md
+        - name: SMS_TaskSequence_PrepareSMSClientAction サーバー WMI クラス
+          href: osd/sms_tasksequence_preparesmsclientaction-server-wmi-class.md
+        - name: SMS_TaskSequence_RebootAction サーバー WMI クラス
+          href: osd/sms_tasksequence_rebootaction-server-wmi-class.md
+        - name: SMS_TaskSequence_Reference サーバー WMI クラス
+          href: osd/sms_tasksequence_reference-server-wmi-class.md
+        - name: SMS_TaskSequence_RegistryConditionExpression サーバー WMI クラス
+          href: osd/sms_tasksequence_registryconditionexpression-server-wmi-class.md
+        - name: SMS_TaskSequence_ReleaseStateStoreAction サーバー WMI クラス
+          href: osd/sms_tasksequence_releasestatestoreaction-server-wmi-class.md
+        - name: SMS_TaskSequence_RequestStateStoreAction サーバー WMI クラス
+          href: osd/sms_tasksequence_requeststatestoreaction-server-wmi-class.md
+        - name: SMS_TaskSequence_RestoreUserStateAction サーバー WMI クラス
+          href: osd/sms_tasksequence_restoreuserstateaction-server-wmi-class.md
+        - name: SMS_TaskSequence_RunCommandLineAction サーバー WMI クラス
+          href: osd/sms_tasksequence_runcommandlineaction-server-wmi-class.md
+        - name: SMS_TaskSequence_SetupWindowsAndSMSAction サーバー WMI クラス
+          href: osd/sms_tasksequence_setupwindowsandsmsaction-server-wmi-class.md
+        - name: SMS_TaskSequence_SetVariableAction サーバー WMI クラス
+          href: osd/sms_tasksequence_setvariableaction-server-wmi-class.md
+        - name: SMS_TaskSequence_SoftwareConditionExpression サーバー WMI クラス
+          href: osd/sms_tasksequence_softwareconditionexpression-server-wmi-class.md
+        - name: SMS_TaskSequence_Step サーバー WMI クラス
+          href: osd/sms_tasksequence_step-server-wmi-class.md
+        - name: SMS_TaskSequence_UpgradeOperatingSystemAction サーバー WMI クラス
+          href: osd/sms_tasksequence_upgradeoperatingsystemaction-server-wmi-class.md
+        - name: SMS_TaskSequence_VariableConditionExpression サーバー WMI クラス
+          href: osd/sms_tasksequence_variableconditionexpression-server-wmi-class.md
+        - name: SMS_TaskSequence_WMIConditionExpression サーバー WMI クラス
+          href: osd/sms_tasksequence_wmiconditionexpression-server-wmi-class.md
+        - name: SMS_TaskSequenceAppReferenceDps サーバー WMI クラス
+          href: osd/sms_tasksequenceappreferencedps-server-wmi-class.md
+        - name: SMS_TaskSequenceAppReferencesInfo サーバー WMI クラス
+          href: osd/sms_tasksequenceappreferencesinfo-server-wmi-class.md
+        - name: SMS_TaskSequencePackage サーバー WMI クラス
+          href: osd/sms_tasksequencepackage-server-wmi-class.md
+          items:
+            - name: AddChangeNotification メソッド
+              href: osd/addchangenotification-method-in-class-sms_tasksequencepackage.md
+            - name: AddDistributionPoints メソッド
+              href: osd/adddistributionpoints-method-in-class-sms_tasksequencepackage.md
+            - name: CheckReferencesShareType メソッド
+              href: osd/checkreferencessharetype-method-in-class-sms_tasksequencepackage.md
+            - name: GetClientConfigPolicies メソッド
+              href: osd/getclientconfigpolicies-method-in-class-sms_tasksequencepackage.md
+            - name: GetContentHash メソッド
+              href: osd/getcontenthash-method-in-class-sms_tasksequencepackage.md
+            - name: GetPackageDefaultHash メソッド
+              href: osd/getpackagedefaulthash-method-in-class-sms_tasksequencepackage.md
+            - name: GetPackageHash メソッド
+              href: osd/getpackagehash-method-in-class-sms_tasksequencepackage.md
+            - name: GetSequence メソッド
+              href: osd/getsequence-method-in-class-sms_tasksequencepackage.md
+            - name: GetTsPolicies メソッド
+              href: osd/gettspolicies-method-in-class-sms_tasksequencepackage.md
+            - name: GetTsPoliciesSaMedia メソッド
+              href: osd/gettspoliciessamedia-method-in-class-sms_tasksequencepackage.md
+            - name: GetTSRelatedToDriverCategory メソッド
+              href: osd/gettsrelatedtodrivercategory-method-in-class-sms_tasksequencepackage.md
+            - name: ImportSequence メソッド
+              href: osd/importsequence-method-in-class-sms_tasksequencepackage.md
+            - name: RefreshPkgSource メソッド
+              href: osd/refreshpkgsource-method-in-class-sms_tasksequencepackage.md
+            - name: SetSequence メソッド
+              href: osd/setsequence-method-in-class-sms_tasksequencepackage.md
+            - name: SetSourceSite メソッド
+              href: osd/setsourcesite-method-in-class-sms_tasksequencepackage.md
+            - name: Unlock メソッド
+              href: osd/unlock-method-in-class-sms_tasksequencepackage.md
+        - name: SMS_TaskSequencePackageReference サーバー WMI クラス
+          href: osd/sms_tasksequencepackagereference-server-wmi-class.md
+        - name: SMS_TaskSequenceReferenceDps サーバー WMI クラス
+          href: osd/sms_tasksequencereferencedps-server-wmi-class.md
+        - name: SMS_TaskSequenceReferencesInfo サーバー WMI クラス
+          href: osd/sms_tasksequencereferencesinfo-server-wmi-class.md
+        - name: SMS_TaskSequencePackageReference_All サーバー WMI クラス
+          href: osd/sms_tasksequencepackagereference_all-server-wmi-class.md
+        - name: SMS_TaskSequencePackageReference_Flat サーバー WMI クラス
+          href: osd/sms_tasksequencepackagereference_flat-server-wmi-class.md
+        - name: SMS_TaskSequenceExecutionStatus サーバー WMI クラス
+          href: osd/sms_tasksequenceexecutionstatus-server-wmi-class.md
+        - name: SMS_UserSettings サーバー WMI クラス
+          href: osd/sms_usersettings-server-wmi-class.md
+        - name: SMS_UserVariable サーバー WMI クラス
+          href: osd/sms_uservariable-server-wmi-class.md
+        - name: SMS_WinPEOptionalComponentInBootImage サーバー WMI クラス
+          href: osd/sms_winpeoptionalcomponentinbootimage-server-wmi-class.md
+        - name: SMS_WinPEOptionalComponentInfo サーバー WMI クラス
+          href: osd/sms_winpeoptionalcomponentinfo-server-wmi-class.md
+        - name: OS 展開用 CreateMedia.exe
+          href: osd/operating-system-deployment-createmedia.exe.md
+- name: レポート サーバー WMI クラス
+  items:
+    - name: SMS_ReportViewSchema サーバー WMI クラス
+      href: core/servers/reporting/sms_reportviewschema-server-wmi-class.md
+      items:
+        - name: GetSampleValues メソッド
+          href: core/servers/reporting/getsamplevalues-method-in-class-sms_reportviewschema.md
+- name: リソース管理サーバー WMI クラス
+  items:
+    - name: ハードウェア インベントリ サーバー WMI クラス
+      href: core/clients/manage/hardware-inventory-server-wmi-classes.md
+      items:
+        - name: SMS_G_System_SYSTEM サーバー WMI クラス
+          href: core/clients/manage/sms_g_system_system-server-wmi-class.md
+        - name: SMS_G_Sysetm_WORKSTATION_STATUS サーバー WMI クラス
+          href: core/clients/manage/sms_g_system_workstation_status-server-wmi-class.md
+        - name: SMS_InventoryClass サーバー WMI クラス
+          href: core/clients/manage/sms_inventoryclass-server-wmi-class.md
+        - name: SMS_InventoryClassProperty サーバー WMI クラス
+          href: core/clients/manage/sms_inventoryclassproperty-server-wmi-class.md
+        - name: SMS_InventoryReport サーバー WMI クラス
+          href: core/clients/manage/sms_inventoryreport-server-wmi-class.md
+          items:
+            - name: ImportInventoryReport メソッド
+              href: core/clients/manage/importinventoryreport-method-in-class-sms_inventoryreport.md
+        - name: SMSInventoryReportClass サーバー WMI クラス
+          href: core/clients/manage/sms_inventoryreportclass-server-wmi-class.md
+    - name: SMS_G_System サーバー WMI クラス
+      href: core/clients/manage/sms_g_system-server-wmi-class.md
+    - name: SMS_G_System_AdvancedThreatProtectionHealthStatus サーバー WMI クラス
+      href: core/clients/manage/sms_g_system_advancedthreatprotectionhealthstatus-server-wmi-class.md
+    - name: SMS_G_System_CollectedFile サーバー WMI クラス
+      href: core/clients/manage/sms_g_system_collectedfile-server-wmi-class.md
+    - name: SMS_G_System_Current サーバー WMI クラス
+      href: core/clients/manage/sms_g_system_current-server-wmi-class.md
+    - name: SMS_G_System_ExHistory サーバー WMI クラス
+      href: core/clients/manage/sms_g_system_exthistory-server-wmi-class.md
+    - name: SMS_G_System_History サーバー WMI クラス
+      href: core/clients/manage/sms_g_system_history-server-wmi-class.md
+    - name: SMS_G_System_LastSoftwareScan サーバー WMI クラス
+      href: core/clients/manage/sms_g_system_lastsoftwarescan-server-wmi-class.md
+    - name: SMS_G_SYSTEM_ResourceClientSettingsAssignment サーバー WMI クラス
+      href: core/clients/manage/sms_g_system_resourceclientsettingsassignment-server-wmi-class.md
+    - name: SMS_G_System_SoftwareFile サーバー WMI クラス
+      href: core/clients/manage/sms_g_system_softwarefile-server-wmi-class.md
+    - name: SMS_G_System_SoftwareProduct サーバー WMI クラス
+      href: core/clients/manage/sms_g_system_softwareproduct-server-wmi-class.md
+    - name: SMS_G_System_UnknownFile サーバー WMI クラス
+      href: core/clients/manage/sms_g_system_unknownfile-server-wmi-class.md
+    - name: SMS_Group サーバー WMI クラス
+      href: core/clients/manage/sms_group-server-wmi-class.md
+    - name: SMS_PendingRegistrationRecord サーバー WMI クラス
+      href: core/clients/manage/sms_pendingregistrationrecord-server-wmi-class.md
+      items:
+        - name: ResolvePendingRegistrationRecord メソッド
+          href: core/clients/manage/resolvependingregistrationrecord-method-in-class-sms_pendingregistrationrecord.md
+    - name: SMS_Query サーバー WMI クラス
+      href: core/clients/manage/sms_query-server-wmi-class.md
+      items:
+        - name: CreateCCRs メソッド
+          href: core/clients/manage/createccrs-method-in-class-sms_query.md
+        - name: FindResourceSite メソッド
+          href: core/clients/manage/findresourcesite-method-in-class-sms_query.md
+    - name: SMS_R_IPNetwork サーバー WMI クラス
+      href: core/clients/manage/sms_r_ipnetwork-server-wmi-class.md
+    - name: SMS_R_System サーバー WMI クラス
+      href: core/clients/manage/sms_r_system-server-wmi-class.md
+    - name: SMS_R_User サーバー WMI クラス
+      href: core/clients/manage/sms_r_user-server-wmi-class.md
+    - name: SMS_R_UserGroup サーバー WMI クラス
+      href: core/clients/manage/sms_r_usergroup-server-wmi-class.md
+    - name: SMS_ResIDValueLookup サーバー WMI クラス
+      href: core/clients/manage/sms_residvaluelookup-server-wmi-class.md
+    - name: SMS_Resource サーバー WMI クラス
+      href: core/clients/manage/sms_resource-server-wmi-class.md
+    - name: SMS_ResourceMap サーバー WMI クラス
+      href: core/clients/manage/sms_resourcemap-server-wmi-class.md
+      items:
+        - name: GetClassesWithData メソッド
+          href: core/clients/manage/getclasseswithdata-method-in-class-sms_resourcemap.md
+        - name: Refresh メソッド
+          href: core/clients/manage/refresh-method-in-class-sms_resourcemap.md
+    - name: SMS_SoftwareConversionRules サーバー WMI クラス
+      href: core/clients/manage/sms_softwareconversionrules-server-wmi-class.md
+    - name: SMS_UserMachineRelationship サーバー WMI クラス
+      href: core/clients/manage/sms_usermachinerelationship-server-wmi-class.md
+      items:
+        - name: AddSource メソッド
+          href: core/clients/manage/addsource-method-in-class-sms_usermachinerelationship.md
+        - name: AddType メソッド
+          href: core/clients/manage/addtype-method-in-class-sms_usermachinerelationship.md
+        - name: CreateRelationship メソッド
+          href: core/clients/manage/createrelationship-method-in-class-sms_usermachinerelationship.md
+        - name: RemoveSource メソッド
+          href: core/clients/manage/removesource-method-in-class-sms_usermachinerelationship.md
+        - name: RemoveType メソッド
+          href: core/clients/manage/removetype-method-in-class-sms_usermachinerelationship.md
+- name: ロール ベース管理サーバー WMI クラス
+  items:
+    - name: SMS_Admin サーバー WMI クラス
+      href: core/servers/configure/sms_admin-server-wmi-class.md
+      items:
+        - name: GetAdminExtendedData メソッド
+          href: core/servers/configure/getadminextendeddata-method-in-class-sms_admin.md
+    - name: SMS_AdminCategory サーバー WMI クラス
+      href: core/servers/configure/sms_admincategory-server-wmi-class.md
+    - name: SMS_AdminRole サーバー WMI クラス
+      href: core/servers/configure/sms_adminrole-server-wmi-class.md
+    - name: SMS_APermission サーバー WMI クラス
+      href: core/servers/configure/sms_apermission-server-wmi-class.md
+    - name: SMS_ARoleOperation サーバー WMI クラス
+      href: core/servers/configure/sms_aroleoperation-server-wmi-class.md
+    - name: SMS_AssociatedSecuredCategory サーバー WMI クラス
+      href: core/servers/configure/sms_associatedsecuredcategory-server-wmi-class.md
+    - name: SMS_InitSettableSecuredCategory サーバー WMI クラス
+      href: core/servers/configure/sms_initsettablesecuredcategory-server-wmi-class.md
+    - name: SMS_LastCategoryObject サーバー WMI クラス
+      href: core/servers/configure/sms_lastcategoryobject-server-wmi-class.md
+    - name: SMS_Operation サーバー WMI クラス
+      href: core/servers/configure/sms_operation-server-wmi-class.md
+    - name: SMS_Permission サーバー WMI クラス
+      href: core/servers/configure/sms_permission-server-wmi-class.md
+    - name: SMS_RbacSecuredObject サーバー WMI クラス
+      href: core/servers/configure/sms_rbacsecuredobject-server-wmi-class.md
+      items:
+        - name: GetAvailableScopes メソッド
+          href: core/servers/configure/getavailablescopes-method-in-class-sms_rbacsecuredobject.md
+        - name: GetCollectionsWithResourcePermissions メソッド
+          href: core/servers/configure/getcollectionswithresourcepermissions-method-in-class-sms_rbacsecuredobject.md
+        - name: GetUserList メソッド
+          href: core/servers/configure/getuserlist-method-in-class-sms_rbacsecuredobject.md
+        - name: UserHasPermissions メソッド
+          href: core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md
+    - name: SMS_Role サーバー WMI クラス
+      href: core/servers/configure/sms_role-server-wmi-class.md
+      items:
+        - name: ExportRole メソッド
+          href: core/servers/configure/exportrole-method-in-class-sms_role.md
+        - name: ImportRole メソッド
+          href: core/servers/configure/importrole-method-in-class-sms_role.md
+    - name: WMI クラスの SMS_SecuredCategory サーバー
+      href: core/servers/configure/sms_securedcategory-server-wmi-class.md
+    - name: SMS_SecuredCategoryMembership サーバー WMI クラス
+      href: core/servers/configure/sms_securedcategorymembership-server-wmi-class.md
+      items:
+        - name: AddMemberships メソッド
+          href: core/servers/configure/addmemberships-method-in-class-sms_securedcategorymembership.md
+        - name: RemoveMemberships メソッド
+          href: core/servers/configure/removememberships-method-in-class-sms_securedcategorymembership.md
+    - name: SMS_SettableSecuredCategory サーバー WMI クラス
+      href: core/servers/configure/sms_settablesecuredcategory-server-wmi-class.md
+- name: スケジューリング サーバー WMI クラス
+  items:
+    - name: SMS_ScheduleMethods サーバー WMI クラス
+      href: core/servers/configure/sms_schedulemethods-server-wmi-class.md
+      items:
+        - name: ReadFromString メソッド
+          href: core/servers/configure/readfromstring-method-in-class-sms_schedulemethods.md
+        - name: WriteToString メソッド
+          href: core/servers/configure/writetostring-method-in-class-sms_schedulemethods.md
+    - name: SMS_ScheduleToken サーバー WMI クラス
+      href: core/servers/configure/sms_scheduletoken-server-wmi-class.md
+    - name: SMS_ST_NonRecurring サーバー WMI クラス
+      href: core/servers/configure/sms_st_nonrecurring-server-wmi-class.md
+    - name: SMS_ST_RecurInterval サーバー WMI クラス
+      href: core/servers/configure/sms_st_recurinterval-server-wmi-class.md
+    - name: SMS_ST_RecurMonthlyByDate サーバー WMI クラス
+      href: core/servers/configure/sms_st_recurmonthlybydate-server-wmi-class.md
+    - name: SMS_ST_RecurMonthlyByWeekday サーバー WMI クラス
+      href: core/servers/configure/sms_st_recurmonthlybyweekday-server-wmi-class.md
+    - name: SMS_ST_RecurWeekly サーバー WMI クラス
+      href: core/servers/configure/sms_st_recurweekly-server-wmi-class.md
+- name: SEDO サーバー WMI クラス
+  items:
+    - name: SMS_ObjectLock サーバー WMI クラス
+      href: misc/sms_objectlock-server-wmi-class.md
+      items:
+        - name: CancelLockRequest メソッド
+          href: misc/cancellockrequest-method-in-class-sms_objectlock.md
+        - name: CancelLockRequests メソッド
+          href: misc/cancellockrequests-method-in-class-sms_objectlock.md
+        - name: CheckLockRequest メソッド
+          href: misc/checklockrequest-method-in-class-sms_objectlock.md
+        - name: CheckLockRequests メソッド
+          href: misc/checklockrequests-method-in-class-sms_objectlock.md
+        - name: GetLockInformation メソッド
+          href: misc/getlockinformation-method-in-class-sms_objectlock.md
+        - name: ReleaseAllLocks メソッド
+          href: misc/releasealllocks-method-in-class-sms_objectlock.md
+        - name: ReleaseLock メソッド
+          href: misc/releaselock-method-in-class-sms_objectlock.md
+        - name: ReleaseLocks メソッド
+          href: misc/releaselocks-method-in-class-sms_objectlock.md
+        - name: RequestLock メソッド
+          href: misc/requestlock-method-in-class-sms_objectlock.md
+        - name: RequestLockAsync メソッド
+          href: misc/requestlockasync-method-in-class-sms_objectlock.md
+        - name: RequestLocks メソッド
+          href: misc/requestlocks-method-in-class-sms_objectlock.md
+        - name: RequestLocksAsync メソッド
+          href: misc/requestlocksasync-method-in-class-sms_objectlock.md
+    - name: SMS_ObjectLockRequest サーバー WMI クラス
+      href: misc/sms_objectlockrequest-server-wmi-class.md
+- name: サイト構成サーバー WMI クラス
+  href: core/servers/configure/site-configuration-server-wmi-classes.md
+  items:
+    - name: SMS_Boundary サーバー WMI クラス
+      href: core/servers/configure/sms_boundary-server-wmi-class.md
+    - name: SMS_BoundaryGroup サーバー WMI クラス
+      href: core/servers/configure/sms_boundarygroup-server-wmi-class.md
+      items:
+        - name: AddBoundary メソッド
+          href: core/servers/configure/addboundary-method-in-class-sms_boundarygroup.md
+        - name: AddSiteSystem メソッド
+          href: core/servers/configure/addsitesystem-method-in-class-sms_boundarygroup.md
+        - name: RemoveBoundary メソッド
+          href: core/servers/configure/removeboundary-method-in-class-sms_boundarygroup.md
+        - name: RemoveSiteSystem メソッド
+          href: core/servers/configure/removesitesystem-method-in-class-sms_boundarygroup.md
+    - name: SMS_BoundaryGroupMembers サーバー WMI クラス
+      href: core/servers/configure/sms_boundarygroupmembers-server-wmi-class.md
+    - name: SMS_BoundaryGroupRelationships サーバー WMI クラス
+      href: core/servers/configure/sms-boundarygrouprelationships-server-wmi-class.md
+      items:
+        - name: FallbackDP メソッド
+          href: core/servers/configure/fallbackdp-method-in-class-sms-boundarygrouprelationships.md
+        - name: FallbackMP メソッド
+          href: core/servers/configure/fallbackmp-method-in-class-sms-boundarygrouprelationships.md
+        - name: FallbackSMP メソッド
+          href: core/servers/configure/fallbacksmp-method-in-class-sms-boundarygrouprelationships.md
+        - name: FallbackSUP メソッド
+          href: core/servers/configure/fallbacksup-method-in-class-sms-boundarygrouprelationships.md
+    - name: SMS_BoundaryGroupSiteSystems サーバー WMI クラス
+      href: core/servers/configure/sms_boundarygroupsitesystems-server-wmi-class.md
+    - name: SMS_Client_Reg_MultiString_List サーバー WMI クラス
+      href: core/servers/configure/sms_client_reg_multistring_list-server-wmi-class.md
+    - name: SMS_CMSiteConfiguration サーバー WMI クラス
+      href: core/servers/configure/sms_cmsiteconfiguration-server-wmi-class.md
+    - name: SMS_DefaultBoundaryGroup サーバー WMI クラス
+      href: core/servers/configure/sms-defaultboundarygroup-server-wmi-class.md
+      items:
+        - name: AddBoundary メソッド
+          href: core/servers/configure/addboundary-method-in-class-sms-defaultboundarygroup.md
+        - name: AddSiteSystem メソッド
+          href: core/servers/configure/addsitesystem-method-in-class-sms-defaultboundarygroup.md
+        - name: RemoveBoundary メソッド
+          href: core/servers/configure/removeboundary-method-in-class-sms-defaultboundarygroup.md
+        - name: RemoveSiteSystem メソッド
+          href: core/servers/configure/removesitesystem-method-in-class-sms-defaultboundarygroup.md
+    - name: SMS_EmbeddedProperty サーバー WMI クラス
+      href: core/servers/configure/sms_embeddedproperty-server-wmi-class.md
+    - name: SMS_EmbeddedPropertyList サーバー WMI クラス
+      href: core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md
+    - name: SMS_Identification サーバー WMI クラス
+      href: core/servers/configure/sms_identification-server-wmi-class.md
+      items:
+        - name: GetCurrentUser メソッド
+          href: core/servers/configure/getcurrentuser-method-in-class-sms_identification.md
+        - name: GetFileBinary メソッド
+          href: core/servers/configure/getfilebinary-method-in-class-sms_identification.md
+        - name: GetProviderVersion メソッド
+          href: core/servers/configure/getproviderversion-method-in-class-sms_identification.md
+        - name: GetSiteID メソッド
+          href: core/servers/configure/getsiteid-method-in-class-sms_identification.md
+    - name: SMS_RcmSqlControl サーバー WMI クラス
+      href: core/servers/configure/sms_rcmsqlcontrol-server-wmi-class.md
+    - name: SMS_RcmSqlControlProperty サーバー WMI クラス
+      href: core/servers/configure/sms_rcmsqlcontrolproperty-server-wmi-class.md
+    - name: SMS_ReplicationGroup サーバー WMI クラス
+      href: core/servers/configure/sms_replicationgroup-server-wmi-class.md
+      items:
+        - name: InitializeData メソッド
+          href: core/servers/configure/initializedata-method-in-class-sms_replicationgroup.md
+    - name: SMS_ReplicationLinkStatus サーバー WMI クラス
+      href: core/servers/configure/sms_replicationlinkstatus-server-wmi-class.md
+    - name: SMS_ReplicationLinkSummary サーバー WMI クラス
+      href: core/servers/configure/sms_replicationlinksummary-server-wmi-class.md
+    - name: SMS_SCI_Address サーバー WMI クラス
+      href: core/servers/configure/sms_sci_address-server-wmi-class.md
+    - name: SMS_SCI_ClientComp サーバー WMI クラス
+      href: core/servers/configure/sms_sci_clientcomp-server-wmi-class.md
+    - name: SMS_SCI_ClientConfig サーバー WMI クラス
+      href: core/servers/configure/sms_sci_clientconfig-server-wmi-class.md
+    - name: SMS_SCI_Component サーバー WMI クラス
+      href: core/servers/configure/sms_sci_component-server-wmi-class.md
+    - name: SMS_SCI_Configuration サーバー WMI クラス
+      href: core/servers/configure/sms_sci_configuration-server-wmi-class.md
+    - name: SMS_SCI_FileDefinition サーバー WMI クラス
+      href: core/servers/configure/sms_sci_filedefinition-server-wmi-class.md
+    - name: SMS_SCI_MaintenanceTask サーバー WMI クラス
+      href: core/servers/configure/sms_sci_maintenancetask-server-wmi-class.md
+    - name: SMS_SCI_SiteDefinition サーバー WMI クラス
+      href: core/servers/configure/sms_sci_sitedefinition-server-wmi-class.md
+    - name: SMS_SCI_SQLTask サーバー WMI クラス
+      href: core/servers/configure/sms_sci_sqltask-server-wmi-class.md
+    - name: SMS_SCI_SysResUse サーバー WMI クラス
+      href: core/servers/configure/sms_sci_sysresuse-server-wmi-class.md
+    - name: SMS_SII_Property サーバー WMI クラス
+      href: core/servers/configure/sms_sii_property-server-wmi-class.md
+    - name: SMS_SII_PropertyList サーバー WMI クラス
+      href: core/servers/configure/sms_sii_propertylist-server-wmi-class.md
+    - name: SMS_SIIB_AddressType サーバー WMI クラス
+      href: core/servers/configure/sms_siib_addresstype-server-wmi-class.md
+    - name: SMS_SIIB_Component_FileList サーバー WMI クラス
+      href: core/servers/configure/sms_siib_component_filelist-server-wmi-class.md
+    - name: SMS_SIIB_Configuration サーバー WMI クラス
+      href: core/servers/configure/sms_siib_configuration-server-wmi-class.md
+    - name: SMS_SIIB_Generic_Configuration サーバー WMI クラス
+      href: core/servers/configure/sms_siib_generic_configuration-server-wmi-class.md
+    - name: SMS_SIIB_SenderType サーバー WMI クラス
+      href: core/servers/configure/sms_siib_sendertype-server-wmi-class.md
+    - name: SMS_SIIB_SysResRole サーバー WMI クラス
+      href: core/servers/configure/sms_siib_sysresrole-server-wmi-class.md
+    - name: SMS_Site サーバー WMI クラス
+      href: core/servers/configure/sms_site-server-wmi-class.md
+      items:
+        - name: EncryptDataEx メソッド
+          href: core/servers/configure/encryptdataex-method-in-class-sms_site.md
+        - name: GetAutoUpgradeConfigs メソッド
+          href: core/servers/configure/getautoupgradeconfigs-method-in-class-sms_site.md
+        - name: GetClientInfo メソッド
+          href: core/servers/configure/getclientinfo-method-in-class-sms_site.md
+        - name: GetClientPilotingConfigs メソッド
+          href: core/servers/configure/getclientpilotingconfigs-method-in-class-sms_site.md
+        - name: GetFeatureState メソッド
+          href: core/servers/configure/getfeaturestate-method-in-class-sms_site.md
+        - name: GetSiteADInfo メソッド
+          href: core/servers/configure/getsiteadinfo-method-in-class-sms_site.md
+        - name: ImportGlobalUserAccount メソッド
+          href: core/servers/configure/importglobaluseraccount-method-in-class-sms_site.md
+        - name: ImportGlobalUserAccountEx メソッド
+          href: core/servers/configure/importglobaluseraccountex-method-in-class-sms_site.md
+        - name: ImportMachineEntry メソッド
+          href: core/servers/configure/importmachineentry-method-in-class-sms_site.md
+        - name: ImportMachineEntryToMultipleCollections メソッド
+          href: core/servers/configure/importmachineentrytomultiplecollections-method-in-class-sms_site.md
+        - name: IsUsedCert メソッド
+          href: core/servers/configure/isusedcert-method-in-class-sms_site.md
+        - name: RedistributeAutoUpgradeClientContent メソッド
+          href: core/servers/configure/redistributeautoupgradeclientcontent-method-in-class-sms_site.md
+        - name: SubmitRegistrationRecord メソッド
+          href: core/servers/configure/submitregistrationrecord-method-in-class-sms_site.md
+        - name: UpdateAutoUpgradeClientContent メソッド
+          href: core/servers/configure/updateautoupgradeclientcontent-method-in-class-sms_site.md
+        - name: UpdateAutoUpgradeConfigs メソッド
+          href: core/servers/configure/updateautoupgradeconfigs-method-in-class-sms_site.md
+        - name: UpdateClientPilotingConfigs メソッド
+          href: core/servers/configure/updateclientpilotingconfigs-method-in-class-sms_site.md
+        - name: UpdateConsoleUsageData メソッド
+          href: core/servers/configure/updateconsoleusagedata-method-in-class-sms_site.md
+        - name: UpdateFeatureState メソッド
+          href: core/servers/configure/updatefeaturestate-method-in-class-sms_site.md
+        - name: VerifyNoLoops メソッド
+          href: core/servers/configure/verifynoloops-method-in-class-sms_site.md
+    - name: SMS_SiteAndSubsites サーバー WMI クラス
+      href: core/servers/configure/sms_siteandsubsites-server-wmi-class.md
+    - name: SMS_SiteControlDaySchedule サーバー WMI クラス
+      href: core/servers/configure/sms_sitecontroldayschedule-server-wmi-class.md
+    - name: SMS_SiteControlFile サーバー WMI クラス
+      href: core/servers/configure/sms_sitecontrolfile-server-wmi-class.md
+    - name: SMS_SiteControlItem サーバー WMI クラス
+      href: core/servers/configure/sms_sitecontrolitem-server-wmi-class.md
+    - name: SMS_SiteInstallItem サーバー WMI クラス
+      href: core/servers/configure/sms_siteinstallitem-server-wmi-class.md
+    - name: SMS_SiteInstallItemBase サーバー WMI クラス
+      href: core/servers/configure/sms_siteinstallitembase-server-wmi-class.md
+    - name: SMS_SiteInstallMap サーバー WMI クラス
+      href: core/servers/configure/sms_siteinstallmap-server-wmi-class.md
+      items:
+        - name: Refresh メソッド
+          href: core/servers/configure/refresh-method-in-class-sms_siteinstallmap.md
+    - name: SMS_SystemResourceList サーバー WMI クラス
+      href: core/servers/configure/sms_systemresourcelist-server-wmi-class.md
+    - name: SMS_SCFToSCI_a サーバー WMI クラス
+      href: core/servers/configure/sms_scftosci_a-server-wmi-class.md
+    - name: SMS_SCFToSite_a サーバー WMI クラス
+      href: core/servers/configure/sms_scftosite_a-server-wmi-class.md
+    - name: SMS_SiteToSubSite_a サーバー WMI クラス
+      href: core/servers/configure/sms_sitetosubsite_a-server-wmi-class.md
+    - name: SMS_SiteToSiteID_a サーバー WMI クラス
+      href: core/servers/configure/sms_sitetositeid_a-server-wmi-class.md
+- name: ソフトウェア配布サーバー WMI クラス
+  items:
+    - name: SMS_Advertisement サーバー WMI クラス
+      href: core/servers/configure/sms_advertisement-server-wmi-class.md
+      items:
+        - name: GetAdvertisements メソッド
+          href: core/servers/configure/getadvertisements-method-in-class-sms_advertisement.md
+        - name: GetNextID メソッド
+          href: core/servers/configure/getnextid-method-in-class-sms_advertisement.md
+        - name: RiskyDeploymentStatusMessage メソッド
+          href: core/servers/configure/riskydeploymentstatusmessage-method-in-class-sms_advertisement.md
+        - name: SetNextID メソッド
+          href: core/servers/configure/setnextid-method-in-class-sms_advertisement.md
+        - name: SetSourceSite メソッド
+          href: core/servers/configure/setsourcesite-method-in-class-sms_advertisement.md
+        - name: Unlock メソッド
+          href: core/servers/configure/unlock-method-in-class-sms_advertisement.md
+    - name: SMS_AdvertisementInfo サーバー WMI クラス
+      href: core/servers/configure/sms_advertisementinfo-server-wmi-class.md
+    - name: SMS_AdvertisementStatusInformation サーバー WMI クラス
+      href: core/servers/configure/sms_advertisementstatusinformation-server-wmi-class.md
+    - name: SMS_AdvertToSourceSite_a サーバー WMI クラス
+      href: core/servers/configure/sms_adverttosourcesite_a-server-wmi-class.md
+    - name: SMS_ClassicDeploymentAssetDetails サーバー WMI クラス
+      href: core/servers/configure/sms_classicdeploymentassetdetails-server-wmi-class.md
+    - name: SMS_ClassicDeploymentStatus サーバー WMI クラス
+      href: core/servers/configure/sms_classicdeploymentstatus-server-wmi-class.md
+    - name: SMS_ClientAdvertisementStatus サーバー WMI クラス
+      href: core/servers/configure/sms_clientadvertisementstatus-server-wmi-class.md
+    - name: SMS_ClientAdvertisementSummary サーバー WMI クラス
+      href: core/servers/configure/sms_clientadvertisementsummary-server-wmi-class.md
+    - name: SMS_DistributionDPStatus サーバー WMI クラス
+      href: core/servers/configure/sms_distributiondpstatus-server-wmi-class.md
+    - name: SMS_DistributionJob サーバー WMI クラス
+      href: core/servers/configure/sms_distributionjob-server-wmi-class.md
+    - name: SMS_DistributionPoint サーバー WMI クラス
+      href: core/servers/configure/sms_distributionpoint-server-wmi-class.md
+      items:
+        - name: VerifyPackage メソッド
+          href: core/servers/configure/verifypackage-method-in-class-sms_distributionpoint.md
+        - name: CancelDistribution メソッド
+          href: core/servers/configure/canceldistribution-method-in-class-sms_distributionpoint.md
+    - name: SMS_DistributionPointDriveInfo サーバー WMI クラス
+      href: core/servers/configure/sms_distributionpointdriveinfo-server-wmi-class.md
+    - name: SMS_DistributionPointGroup サーバー WMI クラス
+      href: core/servers/configure/sms_distributionpointgroup-server-wmi-class.md
+      items:
+        - name: AddDistributionPoints メソッド
+          href: core/servers/configure/adddistributionpoints-method-in-class-sms_distributionpointgroup.md
+        - name: AddPackages メソッド
+          href: core/servers/configure/addpackages-method-in-class-sms_distributionpointgroup.md
+        - name: AssociateCollections メソッド
+          href: core/servers/configure/associatecollections-method-in-class-sms_distributionpointgroup.md
+        - name: DisassociateCollections メソッド
+          href: core/servers/configure/disassociatecollections-method-in-class-sms_distributionpointgroup.md
+        - name: ReDistributePackage メソッド
+          href: core/servers/configure/redistributepackage-method-in-class-sms_distributionpointgroup.md
+        - name: RefreshDPGroup メソッド
+          href: core/servers/configure/refreshdpgroup-method-in-class-sms_distributionpointgroup.md
+        - name: RemoveDistributionPoints メソッド
+          href: core/servers/configure/removedistributionpoints-method-in-class-sms_distributionpointgroup.md
+        - name: RemovePackages メソッド
+          href: core/servers/configure/removepackages-method-in-class-sms_distributionpointgroup.md
+    - name: SMS_DistributionPointInfo サーバー WMI クラス
+      href: core/servers/configure/sms_distributionpointinfo-server-wmi-class.md
+      items:
+        - name: GetChainedPullDPs メソッド
+          href: core/servers/configure/getchainedpulldps-method-in-class-smsdistributionpointinfo.md
+        - name: SetDPMaintenanceMode メソッド
+          href: core/servers/configure/setdpmaintenancemode-method-in-class-sms-distributionpointinfo.md
+    - name: SMS_DistributionStatus サーバー WMI クラス
+      href: core/servers/configure/sms_distributionstatus-server-wmi-class.md
+    - name: SMS_LastPXEAdvertisement サーバー WMI クラス
+      href: core/servers/configure/sms_lastpxeadvertisement-server-wmi-class.md
+    - name: SMS_OS_Details サーバー WMI クラス
+      href: core/servers/configure/sms_os_details-server-wmi-class.md
+    - name: SMS_Package サーバー WMI クラス
+      href: core/servers/configure/sms_package-server-wmi-class.md
+      items:
+        - name: AddChangeNotification メソッド
+          href: core/servers/configure/addchangenotification-method-in-class-sms_package.md
+        - name: AddDistributionPoints メソッド
+          href: core/servers/configure/adddistributionpoints-method-in-class-sms_package.md
+        - name: CheckDuplicateShareName メソッド
+          href: core/servers/configure/checkduplicatesharename-method-in-class-sms_package.md
+        - name: CheckDuplicateSourceName メソッド
+          href: core/servers/configure/checkduplicatesourcename-method-in-class-sms_package.md
+        - name: CheckPackageShareForTaskSequenceDeployment メソッド
+          href: core/servers/configure/checkpackagesharefortasksequencedeployment-method-in-class-sms_package.md
+        - name: RefreshPkgSource メソッド
+          href: core/servers/configure/refreshpkgsource-method-in-class-sms_package.md
+        - name: SetSourceSite メソッド
+          href: core/servers/configure/setsourcesite-method-in-class-sms_package.md
+        - name: Unlock メソッド
+          href: core/servers/configure/unlock-method-in-class-sms_package.md
+    - name: SMS_PackageAccessByUsers サーバー WMI クラス
+      href: core/servers/configure/sms_packageaccessbyusers-server-wmi-class.md
+    - name: SMS_PackageBaseclass サーバー WMI クラス
+      href: core/servers/configure/sms_packagebaseclass-server-wmi-class.md
+    - name: SMS_PackageStatus サーバー WMI クラス
+      href: core/servers/configure/sms_packagestatus-server-wmi-class.md
+    - name: SMS_PackageStatusDetailSummarizer サーバー WMI クラス
+      href: core/servers/configure/sms_packagestatusdetailsummarizer-server-wmi-class.md
+    - name: SMS_PackageStatusDistPointsSummarizer サーバー WMI クラス
+      href: core/servers/configure/sms_packagestatusdistpointssummarizer-server-wmi-class.md
+    - name: SMS_PackageStatusRootSummarizer サーバー WMI クラス
+      href: core/servers/configure/sms_packagestatusrootsummarizer-server-wmi-class.md
+    - name: SMS_PackageToAdvert_a サーバー WMI クラス
+      href: core/servers/configure/sms_packagetoadvert_a-server-wmi-class.md
+    - name: SMS_PackageToContent サーバー WMI クラス
+      href: core/servers/configure/sms_packagetocontent-server-wmi-class.md
+      items:
+        - name: IsContentValid メソッド
+          href: core/servers/configure/iscontentvalid-method-in-class-sms_packagetocontent.md
+    - name: SMS_PackageToSourceSite_a サーバー WMI クラス
+      href: core/servers/configure/sms_packagetosourcesite_a-server-wmi-class.md
+    - name: SMS_PDF_Package サーバー WMI クラス
+      href: core/servers/configure/sms_pdf_package-server-wmi-class.md
+      items:
+        - name: GetPDFData メソッド
+          href: core/servers/configure/getpdfdata-method-in-class-sms_pdf_package.md
+        - name: LoadIconForPDF メソッド
+          href: core/servers/configure/loadiconforpdf-method-in-class-sms_pdf_package.md
+        - name: LoadPDF メソッド
+          href: core/servers/configure/loadpdf-method-in-class-sms_pdf_package.md
+        - name: ProcessInBox メソッド
+          href: core/servers/configure/processinbox-method-in-class-sms_pdf_package.md
+    - name: SMS_PDF_Program サーバー WMI クラス
+      href: core/servers/configure/sms_pdf_program-server-wmi-class.md
+    - name: SMS_PDFPkgToPDFProgram_a サーバー WMI クラス
+      href: core/servers/configure/sms_pdfpkgtopdfprogram_a-server-wmi-class.md
+    - name: SMS_PkgToPkgAccess_a サーバー WMI クラス
+      href: core/servers/configure/sms_pkgtopkgaccess_a-server-wmi-class.md
+    - name: SMS_PkgToPkgProgram_a サーバー WMI クラス
+      href: core/servers/configure/sms_pkgtopkgprogram_a-server-wmi-class.md
+    - name: SMS_PkgToPkgServer_a サーバー WMI クラス
+      href: core/servers/configure/sms_pkgtopkgserver_a-server-wmi-class.md
+    - name: SMS_Program サーバー WMI クラス
+      href: core/servers/configure/sms_program-server-wmi-class.md
+    - name: SMS_ServiceWindow サーバー WMI クラス
+      href: core/servers/configure/sms_servicewindow-server-wmi-class.md
+    - name: SMS_SupportedPlatforms サーバー WMI クラス
+      href: core/servers/configure/sms_supportedplatforms-server-wmi-class.md
+      items:
+        - name: Enable メソッド
+          href: core/servers/configure/enable-method-in-class-sms_supportedplatforms.md
+    - name: SMS_SupportedPlatformsOfflineServicing サーバー WMI クラス
+      href: core/servers/configure/sms_supportedplatformsofflineservicing-server-wmi-class.md
+- name: ソフトウェア メータリング サーバー WMI クラス
+  items:
+    - name: SMS_FileUsageSummary サーバー WMI クラス
+      href: apps/sms_fileusagesummary-server-wmi-class.md
+    - name: SMS_G_System_SoftwareUsageData サーバー WMI クラス
+      href: apps/sms_g_system_softwareusagedata-server-wmi-class.md
+    - name: SMS_MeterData サーバー WMI クラス
+      href: apps/sms_meterdata-server-wmi-class.md
+    - name: SMS_MeteredFiles サーバー WMI クラス
+      href: apps/sms_meteredfiles-server-wmi-class.md
+    - name: SMS_MeteredProductRule サーバー WMI クラス
+      href: apps/sms_meteredproductrule-server-wmi-class.md
+    - name: SMS_MeteredUser サーバー WMI クラス
+      href: apps/sms_metereduser-server-wmi-class.md
+    - name: SMS_MonthlyUsageSummary サーバー WMI クラス
+      href: apps/sms_monthlyusagesummary-server-wmi-class.md
+    - name: SMS_ProductFileInfo サーバー WMI クラス
+      href: apps/sms_productfileinfo-server-wmi-class.md
+    - name: SMS_SummarizationInterval サーバー WMI クラス
+      href: apps/sms_summarizationinterval-server-wmi-class.md
+- name: ソフトウェア更新サーバー WMI クラス
+  items:
+    - name: SMS_ADRDeploymentSettings サーバー WMI クラス
+      href: sum/sms_adrdeploymentsettings-server-wmi-class.md
+    - name: SMS_AutoDeployment サーバー WMI クラス
+      href: sum/sms_autodeployment-server-wmi-class.md
+      items:
+        - name: EvaluateAllAutoDeployment メソッド
+          href: sum/evaluateallautodeployment-method-in-class-sms_autodeployment.md
+        - name: EvaluateAutoDeployment メソッド
+          href: sum/evaluateautodeployment-method-in-class-sms_autodeployment.md
+    - name: SMS_AuthorizationList サーバー WMI クラス
+      href: sum/sms_authorizationlist-server-wmi-class.md
+      items:
+        - name: RunAuthListStatusSummarization メソッド
+          href: sum/runauthliststatussummarization-method-in-class-sms_authorizationlist.md
+    - name: SMS_CIAllCategories サーバー WMI クラス
+      href: sum/sms_ciallcategories-server-wmi-class.md
+    - name: SMS_CIContentFiles サーバー WMI クラス
+      href: sum/sms_cicontentfiles-server-wmi-class.md
+    - name: SMS_CIRelation サーバー WMI クラス
+      href: sum/sms_cirelation-server-wmi-class.md
+    - name: SMS_CIToContent サーバー WMI クラス
+      href: sum/sms_citocontent-server-wmi-class.md
+    - name: SMS_CIUpdateSources サーバー WMI クラス
+      href: sum/sms_ciupdatesources-server-wmi-class.md
+    - name: SMS_CM_UpdateFeatures サーバー WMI クラス
+      href: sum/sms_cm_updatefeatures-server-wmi-class.md
+      items:
+        - name: UpdateFeatureExposureStatus メソッド
+          href: sum/updatefeatureexposurestatus-method-in-class-sms_cm_updatefeatures.md
+    - name: SMS_CM_UpdatePackageFeatures サーバー WMI クラス
+      href: sum/sms_cm_updatepackagefeatures-server-wmi-class.md
+      items:
+        - name: UpdateFeatureExposureStatus メソッド
+          href: sum/updatefeatureexposurestatus-method-in-class-sms_cm_updatepackagefeatures.md
+    - name: SMS_CM_UpdatePackages サーバー WMI クラス
+      href: sum/sms_cm_updatepackages-server-wmi-class.md
+      items:
+        - name: IsCurrentWorkingUpdatePackage メソッド
+          href: sum/iscurrentworkingupdatepackage-method-in-class-sms_cm_updatepackages.md
+        - name: RetryContentReplication メソッド
+          href: sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md
+        - name: SetIgnorePrereqWarning メソッド
+          href: sum/setignoreprereqwarning-method-in-class-sms_cm_updatepackages.md
+        - name: UpdatePrereqAndStateFlags メソッド
+          href: sum/updateprereqandstateflags-method-in-class-sms_cm_updatepackages.md
+    - name: SMS_CM_UpdatePackagesHistory サーバー WMI クラス
+      href: sum/sms_cm_updatepackageshistory-server-wmi-class.md
+    - name: SMS_CM_UpdatePackageSiteStatus サーバー WMI クラス
+      href: sum/sms_cm_updatepackagesitestatus-server-wmi-class.md
+      items:
+        - name: UpdatePackageSiteState メソッド
+          href: sum/updatepackagesitestate-method-in-class-sms_cm_updatepackagesitestatus.md
+    - name: SMS_CM_UpdatePackDetailedMonitoring サーバー WMI クラス
+      href: sum/sms_cm_updatepackdetailedmonitoring-server-wmi-class.md
+    - name: SMS_CM_UpdatePackDetailedPrereqMonitoring サーバー WMI クラス
+      href: sum/sms_cm_updatepackdetailedprereqmonitoring-server-wmi-class.md
+    - name: SMS_CM_UpdatePackDetailedSiteStatus サーバー WMI クラス
+      href: sum/sms_cm_updatepackdetailedsitestatus-server-wmi-class.md
+    - name: SMS_CM_UpdatePackDownloadMonitoring サーバー WMI クラス
+      href: sum/sms_cm_updatepackdownloadmonitoring-server-wmi-class.md
+    - name: SMS_CM_UpdatePackTopLevelMonitoring サーバー WMI クラス
+      href: sum/sms_cm_updatepacktoplevelmonitoring-server-wmi-class.md
+    - name: SMS_EULAContent サーバー WMI クラス
+      href: sum/sms_eulacontent-server-wmi-class.md
+    - name: SMS_FeatureExtension サーバー WMI クラス
+      href: sum/sms_featureextension-server-wmi-class.md
+    - name: SMS_ServicePlan サーバー WMI クラス
+      href: sum/sms_serviceplan-server-wmi-class.md
+    - name: SMS_SoftwareUpdate サーバー WMI クラス
+      href: sum/sms_softwareupdate-server-wmi-class.md
+      items:
+        - name: AcceptEULA メソッド
+          href: sum/accepteula-method-in-class-sms_softwareupdate.md
+        - name: GetEULA メソッド
+          href: sum/geteula-method-in-class-sms_softwareupdate.md
+        - name: SetEnforcement メソッド
+          href: sum/setenforcement-method-in-class-sms_softwareupdate.md
+        - name: SyncNow メソッド
+          href: sum/syncnow-method-in-class-sms_softwareupdate.md
+    - name: SMS_SoftwareUpdateBase サーバー WMI クラス
+      href: sum/sms_softwareupdatebase-server-wmi-class.md
+    - name: SMS_SoftwareUpdateSource サーバー WMI クラス
+      href: sum/sms_softwareupdatesource-server-wmi-class.md
+    - name: SMS_SoftwareUpdatesPackage サーバー WMI クラス
+      href: sum/sms_softwareupdatespackage-server-wmi-class.md
+      items:
+        - name: AddChangeNotification メソッド
+          href: sum/addchangenotification-method-in-class-sms_softwareupdatespackage.md
+        - name: AddDistributionPoints メソッド
+          href: sum/adddistributionpoints-method-in-class-sms_softwareupdatespackage.md
+        - name: AddUpdateContent メソッド
+          href: sum/addupdatecontent-method-in-class-sms_softwareupdatespackage.md
+        - name: RebuildPackage メソッド
+          href: sum/rebuildpackage-method-in-class-sms_softwareupdatespackage.md
+        - name: RefreshPkgSource メソッド
+          href: sum/refreshpkgsource-method-in-class-sms_softwareupdatespackage.md
+        - name: RemoveContent メソッド
+          href: sum/removecontent-method-in-class-sms_softwareupdatespackage.md
+        - name: SetSourceSite メソッド
+          href: sum/setsourcesite-method-in-class-sms_softwareupdatespackage.md
+        - name: Unlock メソッド
+          href: sum/unlock-method-in-class-sms_softwareupdatespackage.md
+        - name: ValidateNewPackageSource メソッド
+          href: sum/validatenewpackagesource-method-in-class-sms_softwareupdatespackage.md
+    - name: SMS_SUMDeploymentAssetDetails サーバー WMI クラス
+      href: sum/sms_sumdeploymentassetdetails-server-wmi-class.md
+    - name: SMS_SUMDeploymentStatistics サーバー WMI クラス
+      href: sum/sms_sumdeploymentstatistics-server-wmi-class.md
+    - name: SMS_SUMDeploymentStatus サーバー WMI クラス
+      href: sum/sms_sumdeploymentstatus-server-wmi-class.md
+    - name: SMS_SUPSyncStatus サーバー WMI クラス
+      href: sum/sms_supsyncstatus-server-wmi-class.md
+    - name: SMS_Template サーバー WMI クラス
+      href: sum/sms_template-server-wmi-class.md
+    - name: SMS_UpdateCategoryInstance サーバー WMI クラス
+      href: sum/sms_updatecategoryinstance-server-wmi-class.md
+    - name: SMS_UpdateComplianceStatus サーバー WMI クラス
+      href: sum/sms_updatecompliancestatus-server-wmi-class.md
+    - name: SMS_UpdateDeploymentSummary サーバー WMI クラス
+      href: sum/sms_updatedeploymentsummary-server-wmi-class.md
+    - name: SMS_UpdateGroupAssignment サーバー WMI クラス
+      href: sum/sms_updategroupassignment-server-wmi-class.md
+    - name: SMS_UpdatesAssignment サーバー WMI クラス
+      href: sum/sms_updatesassignment-server-wmi-class.md
+- name: サポート対象のサーバー WMI クラス
+  items:
+    - name: SMS_ContextMethods サーバー WMI クラス
+      href: misc/sms_contextmethods-server-wmi-class.md
+      items:
+        - name: ClearContextHandle メソッド
+          href: misc/clearcontexthandle-method-in-class-sms_contextmethods.md
+        - name: GetContextHandle メソッド
+          href: misc/getcontexthandle-method-in-class-sms_contextmethods.md
+    - name: SMS_ExtendedStatus サーバー WMI クラス
+      href: misc/sms_extendedstatus-server-wmi-class.md
+    - name: SMS_NAL_Methods サーバー WMI クラス
+      href: misc/sms_nal_methods-server-wmi-class.md
+      items:
+        - name: PackNALPath メソッド
+          href: misc/packnalpath-method-in-class-sms_nal_methods.md
+        - name: UnPackNALPath メソッド
+          href: misc/unpacknalpath-method-in-class-sms_nal_methods.md
+    - name: SMS_ProviderLocation サーバー WMI クラス
+      href: misc/sms_providerlocation-server-wmi-class.md
+- name: ステータス クラス
+  items:
+    - name: ステータス クライアント API
+      items:
+        - name: Smscstat.dll ステータス メッセージ関数
+          href: core/servers/manage/smscstat.dll-status-message-functions.md
+          items:
+            - name: AddAttributeToSMSStatusMessage 関数
+              href: core/servers/manage/addattributetosmsstatusmessage-function.md
+            - name: CreateSMSStatusMessage 関数
+              href: core/servers/manage/createsmsstatusmessage-function.md
+            - name: ReportSMSStatusMessage 関数
+              href: core/servers/manage/reportsmsstatusmessage-function.md
+        - name: SMSEvent クラス
+          href: core/servers/manage/smsevent-class.md
+          items:
+            - name: ICCMEvent EventType プロパティ
+              href: core/servers/manage/iccmevent--eventtype-property.md
+            - name: ICCMEvent RawEvent プロパティ
+              href: core/servers/manage/iccmevent--rawevent-property.md
+            - name: ICCMEvent SetProperty メソッド
+              href: core/servers/manage/iccmevent--setproperty-method.md
+            - name: ICCMEvent Submit メソッド
+              href: core/servers/manage/iccmevent--submit-method.md
+            - name: ICCMEvent SubmitPending メソッド
+              href: core/servers/manage/iccmevent--submitpending-method.md
+    - name: ステータス メッセージ型
+      items:
+        - name: SMS_SofwareDistribution_Event
+          href: core/servers/manage/sms_sofwaredistribution_event.md
+        - name: SoftDistDownloadFailedEvent
+          href: core/servers/manage/softdistdownloadfailedevent.md
+        - name: SoftDistProgramCompletedSuccessfullyEvent
+          href: core/servers/manage/softdistprogramcompletedsuccessfullyevent.md
+        - name: SoftwareDistributionPackageEvent
+          href: core/servers/manage/softwaredistributionpackageevent.md
+    - name: ステータス MIF 関数
+      href: core/servers/manage/status-mif-functions.md
+      items:
+        - name: Create 関数
+          href: core/servers/manage/create-function.md
+        - name: InstallStatusMIF 関数
+          href: core/servers/manage/installstatusmif-function.md
+        - name: InstallStatusMIFEx 関数
+          href: core/servers/manage/installstatusmifex-function.md
+    - name: ステータス サーバー API
+      items:
+        - name: SMSFormatMessageCtl クラス
+          href: core/servers/manage/smsformatmessagectl-class.md
+          items:
+            - name: FormatModuleMessage メソッド
+              href: core/servers/manage/formatmodulemessage-method.md
+            - name: FormatModuleString メソッド
+              href: core/servers/manage/formatmodulestring-method.md
+            - name: FormatSystemMessage メソッド
+              href: core/servers/manage/formatsystemmessage-method.md
+    - name: ステータス サーバー WMI クラス
+      items:
+        - name: SMS_ComponentSummarizer サーバー WMI クラス
+          href: core/servers/manage/sms_componentsummarizer-server-wmi-class.md
+          items:
+            - name: DeleteStatistics メソッド
+              href: core/servers/manage/deletestatistics-method-in-class-sms_componentsummarizer.md
+        - name: SMS_SecondarySiteStatus サーバー WMI クラス
+          href: core/servers/manage/sms_secondarysitestatus-server-wmi-class.md
+        - name: SMS_SiteDetailSummarizer サーバー WMI クラス
+          href: core/servers/manage/sms_sitedetailsummarizer-server-wmi-class.md
+        - name: SMS_SiteSystemSummarizer サーバー WMI クラス
+          href: core/servers/manage/sms_sitesystemsummarizer-server-wmi-class.md
+        - name: SMS_StatAttr サーバー WMI クラス
+          href: core/servers/manage/sms_statattr-server-wmi-class.md
+        - name: SMS_StatInsStr サーバー WMI クラス
+          href: core/servers/manage/sms_statinsstr-server-wmi-class.md
+        - name: SMS_StatMsg サーバー WMI クラス
+          href: core/servers/manage/sms_statmsg-server-wmi-class.md
+        - name: SMS_StatMsgAttributes サーバー WMI クラス
+          href: core/servers/manage/sms_statmsgattributes-server-wmi-class.md
+        - name: SMS_StatMsgInsStrings サーバー WMI クラス
+          href: core/servers/manage/sms_statmsginsstrings-server-wmi-class.md
+        - name: SMS_StatMsgModuleNames サーバー WMI クラス
+          href: core/servers/manage/sms_statmsgmodulenames-server-wmi-class.md
+        - name: SMS_StatMsgWithInsStrings サーバー WMI クラス
+          href: core/servers/manage/sms_statmsgwithinsstrings-server-wmi-class.md
+        - name: SMS_StatusMessage サーバー WMI クラス
+          href: core/servers/manage/sms_statusmessage-server-wmi-class.md
+          items:
+            - name: DeleteByID メソッド
+              href: core/servers/manage/deletebyid-method-in-class-sms_statusmessage.md
+            - name: DeleteByQuery メソッド
+              href: core/servers/manage/deletebyquery-method-in-class-sms_statusmessage.md
+            - name: RaiseErrorStatusMsg メソッド
+              href: core/servers/manage/raiseerrorstatusmsg-method-in-class-sms_statusmessage.md
+            - name: RaiseInformationalStatusMsg メソッド
+              href: core/servers/manage/raiseinformationalstatusmsg-method-in-class-sms_statusmessage.md
+            - name: RaiseRawStatusMsg メソッド
+              href: core/servers/manage/raiserawstatusmsg-method-in-class-sms_statusmessage.md
+            - name: RaiseWarningStatusMsg メソッド
+              href: core/servers/manage/raisewarningstatusmsg-method-in-class-sms_statusmessage.md
+        - name: SMS_SummarizerRootStatus サーバー WMI クラス
+          href: core/servers/manage/sms_summarizerrootstatus-server-wmi-class.md
+          items:
+            - name: GetTallyIntervals メソッド
+              href: core/servers/manage/gettallyintervals-method-in-class-sms_summarizerrootstatus.md
+        - name: SMS_SummarizationSettings サーバー WMI クラス
+          href: core/servers/manage/sms_summarizationsettings-server-wmi-class.md
+          items:
+            - name: GetSummarizationSettings メソッド
+              href: core/servers/manage/getsummarizationsettings-method-in-class-sms_summarizationsettings.md
+            - name: SetSummarizationSettings メソッド
+              href: core/servers/manage/setsummarizationsettings-method-in-class-sms_summarizationsettings.md
+        - name: SMS_SummarizerSiteStatus サーバー WMI クラス
+          href: core/servers/manage/sms_summarizersitestatus-server-wmi-class.md
+        - name: SMS_SummarizerStatus サーバー WMI クラス
+          href: core/servers/manage/sms_summarizerstatus-server-wmi-class.md
+- name: Microsoft Azure サーバー WMI クラス
+  items:
+    - name: SMS_AzureService サーバー WMI クラス
+      href: core/servers/configure/sms_azureservice-server-wmi-class.md
+      items:
+        - name: Start メソッド
+          href: core/servers/configure/start-method-in-class-sms_azureservice.md
+        - name: Stop メソッド
+          href: core/servers/configure/stop-method-in-class-sms_azureservice.md
+    - name: SMS_AzureServicesTask サーバー WMI クラス
+      href: core/servers/configure/sms_azureservicestask-server-wmi-class.md
+- name: Windows 10 サービス サーバー WMI クラス
+  items:
+    - name: SMS_AdminUIContent サーバー WMI クラス
+      href: misc/sms-adminuicontent-server-wmi-class.md
+    - name: SMS_Windows10Dashboard サーバー WMI クラス
+      href: misc/sms_windows10dashboard-server-wmi-class.md
+    - name: SMS_WindowsServicingBusinessReadyUpdates サーバー WMI クラス
+      href: misc/sms_windowsservicingbusinessreadyupdates-server-wmi-class.md
+    - name: SMS_WindowsServicingLocalizedNames サーバー WMI クラス
+      href: misc/sms_windowsservicinglocalizednames-server-wmi-class.md
+    - name: SMS_WindowsServicingStates サーバー WMI クラス
+      href: misc/sms_windowsservicingstates-server-wmi-class.md

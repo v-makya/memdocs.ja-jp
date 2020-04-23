@@ -1,0 +1,100 @@
+### YamlMime:Landing
+title: データとインフラストラクチャの保護に関するドキュメント
+summary: Configuration Manager を使用して、流出や悪意のある攻撃からインフラストラクチャとデータの両方を保護します。
+metadata:
+  title: データとインフラストラクチャの保護に関するドキュメント
+  titleSuffix: Configuration Manager
+  description: Configuration Manager を使用して、流出や悪意のある攻撃からインフラストラクチャとデータの両方を保護します。
+  ms.product: configuration-manager
+  ms.technology: configmgr-protect
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: 44481f1b0fb304ed12a40d100352a9f7a6d8dd39
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741852"
+landingContent:
+- title: BitLocker ドライブ暗号化 (BDE) の管理
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: BitLocker 管理の計画
+      url: plan-design/bitlocker-management.md
+  - linkListType: deploy
+    links:
+    - text: BitLocker 管理の展開
+      url: deploy-use/bitlocker/deploy-management-agent.md
+    - text: BitLocker ポータルのセットアップ
+      url: deploy-use/bitlocker/setup-websites.md
+  - linkListType: how-to-guide
+    links:
+    - text: BitLocker レポートの表示
+      url: deploy-use/bitlocker/view-reports.md
+    - text: BitLocker Administration and Monitoring Web サイトの使用
+      url: deploy-use/bitlocker/helpdesk-portal.md
+- title: 証明書プロファイル
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 証明書プロファイルの概要
+      url: deploy-use/introduction-to-certificate-profiles.md
+  - linkListType: get-started
+    links:
+    - text: 証明書プロファイルに関する証明書テンプレート アクセス許可の計画
+      url: plan-design/planning-for-certificate-template-permissions.md
+    - text: 証明書プロファイルの前提条件
+      url: plan-design/prerequisites-for-certificate-profiles.md
+  - linkListType: deploy
+    links:
+    - text: 証明書インフラストラクチャの構成
+      url: deploy-use/certificate-infrastructure.md
+    - text: 証明書プロファイルの作成
+      url: deploy-use/endpoint-configure-alerts.md
+    - text: リソース アクセス プロファイルの展開
+      url: deploy-use/endpoint-definition-updates.md
+- title: 上位のタスク
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Microsoft Defender Advanced Threat Protection のオンボーディング
+      url: deploy-use/windows-defender-advanced-threat-protection.md
+    - text: Windows Defender または Endpoint Protection クライアントのトラブルシューティング
+      url: deploy-use/troubleshoot-endpoint-client.md
+    - text: マルウェア対策ポリシーとファイアウォール設定の管理
+      url: deploy-use/endpoint-antimalware-firewall.md
+    - text: Windows Defender アプリケーション制御の管理
+      url: deploy-use/use-device-guard-with-configuration-manager.md
+    - text: Windows Defender Application Guard の作成と展開
+      url: deploy-use/create-deploy-application-guard-policy.md
+    - text: Windows Hello for Business の設定
+      url: deploy-use/windows-hello-for-business-settings.md
+- title: Endpoint Protection
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Endpoint Protection の概要
+      url: deploy-use/endpoint-protection.md
+  - linkListType: get-started
+    links:
+    - text: Endpoint Protection の計画
+      url: plan-design/planning-for-endpoint-protection.md
+  - linkListType: deploy
+    links:
+    - text: Endpoint Protection ポイント サイト システムの役割を作成する
+      url: deploy-use/endpoint-protection-site-role.md
+    - text: Endpoint Protection のアラートを構成する
+      url: deploy-use/endpoint-configure-alerts.md
+    - text: Endpoint Protection の定義ファイルの更新を構成する
+      url: deploy-use/endpoint-definition-updates.md
+  - linkListType: how-to-guide
+    links:
+    - text: Endpoint Protection 用マルウェア対策ポリシーの作成と展開
+      url: deploy-use/endpoint-antimalware-policies.md
+    - text: Endpoint Protection のカスタム クライアント設定を構成する
+      url: deploy-use/endpoint-protection-configure-client.md
+    - text: Endpoint Protection の状態を監視する
+      url: deploy-use/monitor-endpoint-protection.md

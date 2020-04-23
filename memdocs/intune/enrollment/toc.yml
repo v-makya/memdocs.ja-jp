@@ -89,7 +89,7 @@
     - name: iOS/iPadOS の登録を設定する
       href: ios-enroll.md
       items:
-        - name: デバイス登録プログラム
+        - name: デバイスの自動登録
           href: device-enrollment-program-enroll-ios.md
         - name: iOS/iPadOS と iPadOS のユーザー登録を設定する
           href: ios-user-enrollment.md

@@ -1,0 +1,144 @@
+- name: データとインフラストラクチャの保護に関するドキュメント
+  href: index.yml
+- name: 理解と調査
+  items:
+    - name: '[概要]'
+      href: understand\protect-data-and-site-infrastructure.md
+- name: 計画と設計
+  items:
+    - name: Endpoint Protection の計画
+      href: plan-design/planning-for-endpoint-protection.md
+    - name: BitLocker 管理の計画
+      href: plan-design/bitlocker-management.md
+    - name: 証明書プロファイルの計画
+      items:
+        - name: 証明書プロファイルの前提条件
+          href: plan-design/prerequisites-for-certificate-profiles.md
+        - name: 証明書プロファイルに関する証明書テンプレート アクセス許可
+          href: plan-design/planning-for-certificate-template-permissions.md
+    - name: Wi-Fi と VPN プロファイルの前提条件
+      href: plan-design/prerequisites-for-wifi-vpn-profiles.md
+    - name: セキュリティとプライバシー
+      items:
+        - name: Wi-Fi および VPN プロファイル
+          href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
+        - name: 証明書プロファイル
+          href: plan-design/security-and-privacy-for-certificate-profiles.md
+- name: 展開と使用
+  items:
+    - name: Endpoint Protection
+      items:
+        - name: Endpoint Protection の概要
+          href: deploy-use/endpoint-protection.md
+        - name: Endpoint Protection の構成
+          items:
+            - name: Endpoint Protection の構成方法
+              href: deploy-use/endpoint-protection-configure.md
+            - name: サイト システムの役割
+              href: deploy-use/endpoint-protection-site-role.md
+            - name: Alerts
+              href: deploy-use/endpoint-configure-alerts.md
+            - name: 定義の更新
+              items:
+                - name: 定義の更新の概要
+                  href: deploy-use/endpoint-definition-updates.md
+                - name: ConfigMgr の更新
+                  href: deploy-use/endpoint-definitions-configmgr.md
+                - name: WSUS の更新
+                  href: deploy-use/endpoint-definitions-wsus.md
+                - name: Microsoft 更新プログラム
+                  href: deploy-use/endpoint-definitions-microsoft-updates.md
+                - name: マルウェア プロテクション センター
+                  href: deploy-use/endpoint-definitions-protection-center.md
+                - name: ネットワーク共有の更新
+                  href: deploy-use/endpoint-definitions-network.md
+            - name: ポリシーの展開
+              href: deploy-use/endpoint-antimalware-policies.md
+            - name: クライアントの構成
+              href: deploy-use/endpoint-protection-configure-client.md
+        - name: Windows ファイアウォール ポリシー
+          href: deploy-use/create-windows-firewall-policies.md
+        - name: Microsoft Defender Advanced Threat Protection
+          href: deploy-use/windows-defender-advanced-threat-protection.md
+        - name: Exploit Guard ポリシーを作成し、展開する
+          href: deploy-use/create-deploy-exploit-guard-policy.md
+        - name: Application Guard ポリシーを作成し、展開する
+          href: deploy-use/create-deploy-application-guard-policy.md
+        - name: Windows Defender アプリケーション制御の設定
+          href: deploy-use/use-device-guard-with-configuration-manager.md
+        - name: マルウェア対策とファイアウォールのタスク
+          href: deploy-use/endpoint-antimalware-firewall.md
+        - name: Endpoint Protection のシナリオ
+          href: deploy-use/scenarios-endpoint-protection.md
+        - name: Endpoint Protection クライアント ヘルプ
+          href: deploy-use/endpoint-protection-client-help.md
+        - name: クライアントのトラブルシューティング
+          href: deploy-use/troubleshoot-endpoint-client.md
+        - name: Windows Defender FAQ
+          href: deploy-use/endpoint-protection-client-faq.md
+    - name: BitLocker の管理
+      items:
+        - name: 回復データの暗号化
+          href: deploy-use/bitlocker/encrypt-recovery-data.md
+        - name: BitLocker 管理の展開
+          href: deploy-use/bitlocker/deploy-management-agent.md
+        - name: BitLocker ポータルのセットアップ
+          href: deploy-use/bitlocker/setup-websites.md
+        - name: セルフサービス ポータルのカスタマイズ
+          href: deploy-use/bitlocker/customize-self-service-portal.md
+        - name: BitLocker レポートの表示
+          href: deploy-use/bitlocker/view-reports.md
+        - name: 管理と Web サイトの監視
+          href: deploy-use/bitlocker/helpdesk-portal.md
+        - name: セルフサービス ポータル
+          href: deploy-use/bitlocker/self-service-portal.md
+    - name: Windows Hello for Business の設定
+      href: deploy-use/windows-hello-for-business-settings.md
+    - name: 証明書プロファイル
+      items:
+        - name: 証明書プロファイルの概要
+          href: deploy-use/introduction-to-certificate-profiles.md
+        - name: 証明書プロファイルの作成
+          href: deploy-use/create-certificate-profiles.md
+        - name: 証明書インフラストラクチャの構成
+          href: deploy-use/certificate-infrastructure.md
+    - name: Wi-Fi プロファイル
+      items:
+        - name: Wi-Fi プロファイルの作成
+          href: deploy-use/create-wifi-profiles.md
+    - name: で組織内のユーザーとデバイスに VPN 設定を展開するには、
+      items:
+        - name: で組織内のユーザーとデバイスに VPN 設定を展開するには、
+          href: deploy-use/vpn-profiles.md
+        - name: VPN プロファイルの作成
+          href: deploy-use/create-vpn-profiles.md
+        - name: アプリごとの VPN のパッケージ ファミリ名 (PFN) の検索
+          href: deploy-use/find-a-pfn-for-per-app-vpn.md
+    - name: Wi-Fi、VPN、電子メール、および証明書プロファイルの展開
+      href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
+    - name: 使用条件の設定
+      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+    - name: モニターの保護
+      items:
+        - name: Wi-Fi、電子メール、VPN プロファイルの監視
+          href: deploy-use/monitor-wifi-email-vpn-profiles.md
+        - name: 証明書プロファイルを監視する
+          href: deploy-use/monitor-certificate-profiles.md
+        - name: エンドポイント保護の監視
+          href: deploy-use/monitor-endpoint-protection.md
+- name: テクニカル リファレンス
+  items:
+    - name: BitLocker の管理
+      items:
+        - name: 設定のリファレンス
+          href: tech-ref/bitlocker/settings.md
+        - name: BitLocker のトラブルシューティング
+          href: tech-ref/bitlocker/troubleshoot.md
+        - name: BitLocker イベント ログ
+          href: tech-ref/bitlocker/about-event-logs.md
+        - name: クライアント イベント ログ
+          href: tech-ref/bitlocker/client-event-logs.md
+        - name: サーバー イベント ログ
+          href: tech-ref/bitlocker/server-event-logs.md
+        - name: 非コンプライアンス コード
+          href: tech-ref/bitlocker/non-compliance-codes.md

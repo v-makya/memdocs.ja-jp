@@ -1,0 +1,8 @@
+- name: テナントのアタッチに関するドキュメント
+  href: index.yml
+- name: 展開と使用
+  items:
+    - name: テナントのアタッチを有効にする
+      href: device-sync-actions.md
+    - name: デバイス アクションに関するトラブルシューティング
+      href: technical-reference.md

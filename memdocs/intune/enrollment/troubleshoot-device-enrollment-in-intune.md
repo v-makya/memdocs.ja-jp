@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c91e52bcee643166729f3a3ac57ae232c4d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: ac29e27c85ad43ccc078c54dd9d5b8b659206f57
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80327010"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81397766"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune でのデバイス登録に関するトラブルシューティング
 
@@ -237,7 +237,7 @@ Android デバイスでは、[SSL のサーバー ハロー](https://technet.mic
 
 証明書が正しくインストールされていることを確認する方法とツールはたくさんあります。下記で紹介する手順はその 1 つです。
 
-1. [[無料の Digicert ツール]](ttps://www.digicert.com/help/) に進みます。
+1. [[無料の Digicert ツール]](https://www.digicert.com/help/) に進みます。
 2. AD FS サーバーの完全修飾ドメイン名 (例: sts.contoso.com) を入力し、 **[CHECK SERVER]\(サーバーの確認\)** を選択します。
 
 サーバー証明書が正しくインストールされている場合、結果にすべてのチェック マークが表示されます。 上記の問題が存在する場合、レポートの "Certificate Name Matches" (証明書名の一致) セクションと "SSL Certificate is correctly Installed" (SSL 証明書が正しくインストールされている) セクションに赤い X 印が付きます。

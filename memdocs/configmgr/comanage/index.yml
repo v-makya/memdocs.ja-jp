@@ -1,0 +1,56 @@
+### YamlMime:Landing
+title: 共同管理のドキュメント
+summary: 共同管理によって、Configuration Manager と Microsoft Intune の両方を使って Windows 10 デバイスを同時に管理することができます。
+metadata:
+  title: 共同管理のドキュメント
+  titleSuffix: Configuration Manager
+  description: 共同管理によって、Configuration Manager と Microsoft Intune の両方を使って Windows 10 デバイスを同時に管理することができます。
+  ms.product: configuration-manager
+  ms.technology: configmgr-comanage
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: bc1bf65ecaf77ded325fcdae19a0d318052b1cc9
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741002"
+landingContent:
+- title: 共同管理について
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 共同管理とは
+      url: overview.md
+    - text: 共同管理へのパス
+      url: quickstart-paths.md
+  - linkListType: video
+    links:
+    - text: 共同管理での条件付きアクセス
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/The-Security-Benefits-of-Conditional-Access/player
+- title: 作業開始
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 既存の Configuration Manager クライアントの共同管理を有効にする
+      url: tutorial-co-manage-clients.md
+    - text: 新しいインターネットベースのデバイスの共同管理を有効にする
+      url: tutorial-co-manage-new-devices.md
+  - linkListType: video
+    links:
+    - text: 共同管理のために Windows 10 にアップグレードする
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Upgrading-to-Windows-10-to-Enable-Co-Management/player
+- title: 上位のタスク
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configuration Manager のワークロードを Intune に切り替える
+      url: how-to-switch-workloads.md
+    - text: Configuration Manager で共同管理を監視する
+      url: how-to-monitor.md
+  - linkListType: video
+    links:
+    - text: Windows Autopilot と共同管理
+      url: https://channel9.msdn.com/Series/Endpoint-Zone/Using-Windows-Autopilot-with-Co-Management/player

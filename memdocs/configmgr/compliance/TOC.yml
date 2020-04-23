@@ -1,0 +1,62 @@
+- name: デバイス コンプライアンスのドキュメント
+  href: index.yml
+- name: 理解と調査
+  items:
+    - name: デバイス コンプライアンスの保証
+      href: understand/ensure-device-compliance.md
+- name: 作業開始
+  items:
+    - name: コンプライアンス設定を使ってみる
+      href: get-started/get-started-with-compliance-settings.md
+- name: 計画と設計
+  items:
+    - name: コンプライアンス設定の計画と構成
+      href: plan-design/plan-for-and-configure-compliance-settings.md
+    - name: コンプライアンスを管理するためのタスク
+      items:
+        - name: コンプライアンスを管理するための一般的なタスク
+          href: plan-design/common-tasks-for-managing-compliance.md
+        - name: Configuration Manager クライアントを使用したデバイス
+          href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+        - name: 構成基準を展開する
+          href: plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md
+    - name: セキュリティとプライバシー
+      href: plan-design/security-and-privacy-for-compliance-settings.md
+- name: 展開と使用
+  items:
+    - name: 構成アイテムの作成
+      items:
+        - name: 構成アイテムの作成の概要
+          href: deploy-use/create-configuration-items.md
+        - name: Configuration Manager クライアントを使用して管理されているデバイス
+          items:
+            - name: Windows 10
+              href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+            - name: Mac OS X
+              href: deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md
+            - name: Windows デスクトップおよびサーバー (カスタム)
+              href: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - name: 子構成項目を作成する
+      href: deploy-use/create-child-configuration-items.md
+    - name: 構成基準を作成する
+      href: deploy-use/create-configuration-baselines.md
+    - name: 構成基準を展開する
+      href: deploy-use/deploy-configuration-baselines.md
+    - name: 構成データを管理する
+      items:
+        - name: 構成データを管理する
+          href: deploy-use/management-tasks-for-configuration-data.md
+        - name: 構成データのインポート
+          href: deploy-use/import-configuration-data.md
+    - name: ユーザー データとプロファイル構成項目を作成する
+      href: deploy-use/create-user-data-and-profiles-configuration-items.md
+    - name: OneDrive for Business プロファイル
+      href: deploy-use/onedrive-profile.md
+    - name: リモート接続プロファイルを作成する
+      href: deploy-use/create-remote-connection-profiles.md
+    - name: Windows デバイスを新しいエディションにアップグレードする
+      href: deploy-use/upgrade-windows-version.md
+    - name: Microsoft Edge の設定の構成
+      href: deploy-use/browser-profiles.md
+    - name: コンプライアンス設定を監視する
+      href: deploy-use/monitor-compliance-settings.md

@@ -1,0 +1,54 @@
+### YamlMime:Landing
+title: Desktop Analytics のドキュメント
+summary: Desktop Analytics は、Configuration Manager に統合されているクラウドのサービスです。 Windows クライアントの更新に役立つ洞察を提供します。
+metadata:
+  title: Desktop Analytics のドキュメント
+  titleSuffix: Configuration Manager
+  description: Desktop Analytics は、Configuration Manager に統合されているクラウドのサービスです。 Windows クライアントの更新に役立つ洞察を提供します。
+  ms.prod: configuration-manager
+  ms.technology: configmgr-analytics
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 1c0aa1c481acb18fadeebbdecdcd4759568d2242
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741410"
+landingContent:
+- title: Desktop Analytics について
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Desktop Analytics とは
+      url: overview.md
+    - text: 新機能
+      url: whats-new.md
+  - linkListType: tutorial
+    links:
+    - text: パイロット Windows 10
+      url: tutorial-windows10.md
+- title: 作業開始
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Desktop Analytics の設定
+      url: set-up.md
+    - text: Configuration Manager を接続する
+      url: connect-configmgr.md
+    - text: デバイスを登録する
+      url: enroll-devices.md
+- title: リソース
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Desktop Analytics の FAQ
+      url: faq.md
+    - text: データ共有を有効にする
+      url: enable-data-sharing.md
+    - text: 接続の正常性の監視
+      url: monitor-connection-health.md
+    - text: Desktop Analytics のトラブルシューティング
+      url: troubleshooting.md

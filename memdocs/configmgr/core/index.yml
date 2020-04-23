@@ -1,0 +1,84 @@
+### YamlMime:Landing
+title: コア インフラストラクチャに関するドキュメント
+summary: サイト サーバーおよびクライアントを含む Configuration Manager 製品に関する基本情報について説明します。
+metadata:
+  title: コア インフラストラクチャに関するドキュメント
+  titleSuffix: Configuration Manager
+  description: サイト サーバーおよびクライアントを含む Configuration Manager 製品に関する基本情報について説明します。
+  ms.prod: configuration-manager
+  ms.technology: configmgr-core
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/30/2020
+  ms.openlocfilehash: 2816bb6b4685cdd6e7ce56b981fc9e0ffbd89ac3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741444"
+landingContent:
+- title: コア インフラストラクチャについて
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Configuration Manager とは
+      url: understand/introduction.md
+    - text: Microsoft Endpoint Configuration Manager の FAQ
+      url: understand/microsoft-endpoint-manager-faq.md
+    - text: 新機能
+      url: plan-design/changes/whats-new-incremental-versions.md
+    - text: テクニカル プレビュー
+      url: get-started/technical-preview.md
+  - linkListType: get-started
+    links:
+    - text: コンソールの使用
+      url: servers/manage/admin-console.md
+    - text: ソフトウェア センターの使用
+      url: understand/software-center.md
+    - text: ドキュメントの使用
+      url: understand/use-docs.md
+    - text: ヘルプの検索
+      url: understand/find-help.md
+- title: 作業開始
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: サポートされている構成
+      url: plan-design/configs/supported-configurations.md
+    - text: Windows 10 のサポート
+      url: plan-design/configs/support-for-windows-10.md
+    - text: サイトの前提条件
+      url: plan-design/configs/site-and-site-system-prerequisites.md
+  - linkListType: deploy
+    links:
+    - text: 更新プログラムとサービス
+      url: servers/manage/updates.md
+    - text: コンソール内の更新プログラムのインストール
+      url: servers/manage/install-in-console-updates.md
+    - text: クライアントの展開
+      url: clients/deploy/deploy-clients-to-windows-computers.md
+    - text: 階層間での移行
+      url: migration/migrate-data-between-hierarchies.md
+- title: 上位のタスク
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: TLS 1.2 の有効化
+      url: plan-design/security/enable-tls-1-2.md
+    - text: CMPivot
+      url: servers/manage/cmpivot.md
+    - text: CMG の計画
+      url: clients/manage/cmg/plan-cloud-management-gateway.md
+    - text: 拡張 HTTP
+      url: plan-design/hierarchy/enhanced-http.md
+  - linkListType: reference
+    links:
+    - text: ログ ファイル
+      url: plan-design/hierarchy/about-log-files.md
+    - text: ポート
+      url: plan-design/hierarchy/ports.md
+    - text: クライアント設定
+      url: clients/deploy/about-client-settings.md
+    - text: '[ツール]'
+      url: support/tools.md

@@ -1,0 +1,66 @@
+### YamlMime:Landing
+title: デバイス コンプライアンスのドキュメント
+summary: Configuration Manager は、組織内のデバイスの構成とコンプライアンスを管理するために必要なツールおよびリソースとなります。
+metadata:
+  title: デバイス コンプライアンスのドキュメント
+  titleSuffix: Configuration Manager
+  description: Configuration Manager は、組織内のデバイスの構成とコンプライアンスを管理するために必要なツールおよびリソースとなります。
+  ms.product: configuration-manager
+  ms.technology: configmgr-compliance
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/25/2020
+  ms.openlocfilehash: 7b66409e8f4082927225246bb5144efb8b65d567
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741104"
+landingContent:
+- title: デバイス コンプライアンスについて
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: デバイス コンプライアンスの概要
+      url: understand/ensure-device-compliance.md
+    - text: コンプライアンス設定を使ってみる
+      url: get-started/get-started-with-compliance-settings.md
+  - linkListType: architecture
+    links:
+    - text: コンプライアンス設定の計画と構成
+      url: plan-design/plan-for-and-configure-compliance-settings.md
+- title: 作業開始
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: コンプライアンスを管理するための一般的なタスク
+      url: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+    - text: Windows 10 デバイスの構成項目を作成する
+      url: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+    - text: 構成基準を作成する
+      url: deploy-use/create-configuration-baselines.md
+  - linkListType: deploy
+    links:
+    - text: 構成基準を展開する
+      url: deploy-use/deploy-configuration-baselines.md
+  - linkListType: how-to-guide
+    links:
+    - text: コンプライアンス設定を監視する
+      url: deploy-use/monitor-compliance-settings.md
+- title: 上位のタスク
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: カスタム構成項目の作成
+      url: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - text: リモート接続プロファイルを作成する
+      url: deploy-use/create-remote-connection-profiles.md
+    - text: ユーザー データとプロファイル構成項目を作成する
+      url: deploy-use/create-user-data-and-profiles-configuration-items.md
+  - linkListType: concept
+    links:
+    - text: OneDrive for Business プロファイル
+      url: deploy-use/onedrive-profile.md
+    - text: 構成データを管理する
+      url: deploy-use/management-tasks-for-configuration-data.md

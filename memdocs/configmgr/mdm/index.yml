@@ -1,0 +1,58 @@
+### YamlMime:Landing
+title: モバイル デバイス管理 (MDM) のドキュメント
+summary: Microsoft Endpoint Manager を使用して、組織内のモバイル デバイスをオンプレミスまたはクラウドベースで管理します。
+metadata:
+  title: モバイル デバイス管理
+  titleSuffix: Configuration Manager
+  description: Microsoft Endpoint Manager を使用して、組織内のモバイル デバイスをオンプレミスまたはクラウドベースで管理します。
+  ms.prod: configuration-manager
+  ms.technology: configmgr-mdm
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 12/31/2019
+  ms.openlocfilehash: d9e3c95272c9e0d6596d214f73ea53f572b54c6b
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741801"
+landingContent:
+- title: オンプレミス MDM について
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: オンプレミス MDM とは
+      url: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+    - text: オンプレミス MDM の計画
+      url: plan-design/plan-on-premises-mdm.md
+  - linkListType: how-to-guide
+    links:
+    - text: 役割のインストール
+      url: get-started/install-site-system-roles-for-on-premises-mdm.md
+    - text: デバイスを登録する
+      url: deploy-use/enroll-devices-on-premises-mdm.md
+    - text: デバイスの管理
+      url: deploy-use/wipe-lock-reset-devices.md
+- title: ConfigMgr と Exchange を接続する
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Exchange でのデバイスの管理
+      url: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+  - linkListType: how-to-guide
+    links:
+    - text: Exchange Connector をインストールする
+      url: deploy-use/install-configure-exchange-connector.md
+- title: クラウドベースの Intune を使用する
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Intune とは何か
+      url: https://docs.microsoft.com/intune/fundamentals/what-is-intune
+    - text: デバイス管理の概要
+      url: https://docs.microsoft.com/intune/fundamentals/what-is-device-management
+  - linkListType: tutorial
+    links:
+    - text: Microsoft Endpoint Manager の Intune のチュートリアル
+      url: https://docs.microsoft.com/intune/fundamentals/tutorial-walkthrough-endpoint-manager

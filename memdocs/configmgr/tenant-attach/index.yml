@@ -1,0 +1,30 @@
+### YamlMime:Landing
+title: テナントのアタッチに関するドキュメント
+summary: Configuration Manager デバイスをクラウド サービスにアップロードし、それらに対してアクションを実行します。
+metadata:
+  title: テナントのアタッチ ドキュメントのドキュメント
+  titleSuffix: Configuration Manager
+  description: Configuration Manager デバイスをクラウド サービスにアップロードし、それらに対してアクションを実行します。
+  ms.product: configuration-manager
+  ms.technology: configmgr-core
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 04/01/2020
+  ms.openlocfilehash: 282a213e680231ad1d88323f8a4e34380e58672d
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741359"
+landingContent:
+- title: テナントのアタッチについて
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: テナントのアタッチを有効にする
+      url: device-sync-actions.md
+  - linkListType: reference
+    links:
+    - text: テナントのアタッチのトラブルシューティング
+      url: technical-reference.md

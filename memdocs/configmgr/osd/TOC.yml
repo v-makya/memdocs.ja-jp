@@ -1,0 +1,148 @@
+- name: OS の展開に関するドキュメント
+  href: index.yml
+- name: 理解
+  items:
+    - name: OS の展開の概要
+      href: understand/introduction-to-operating-system-deployment.md
+- name: 計画と設計
+  items:
+    - name: OS の展開のインフラストラクチャ要件
+      href: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+    - name: タスクの自動化計画に関する考慮事項
+      href: plan-design/planning-considerations-for-automating-tasks.md
+    - name: エンタープライズ オペレーティング システムを展開するシナリオ
+      items:
+        - name: OS 展開シナリオの概要
+          href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+        - name: Windows を最新バージョンにアップグレードする
+          href: deploy-use/upgrade-windows-to-the-latest-version.md
+        - name: 既存のデバイス向け Windows Autopilot
+          href: deploy-use/windows-autopilot-for-existing-devices.md
+        - name: 新しいバージョンの Windows で既存のコンピューターを更新する
+          href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
+        - name: 新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする
+          href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
+        - name: 既存のコンピューターの置き換えと設定の転送
+          href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
+    - name: エンタープライズ オペレーティング システムを展開する方法
+      items:
+        - name: OS の展開方法
+          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+        - name: PXE を使用したネットワーク経由での Windows の展開
+          href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+        - name: ソフトウェア センターを使用したネットワーク経由での Windows の展開
+          href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+        - name: 起動可能なメディアを使用したネットワーク経由での Windows の展開
+          href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+        - name: ネットワークではなくスタンドアロン メディアを使用した Windows の展開
+          href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+        - name: マルチキャストを使用した、ネットワーク経由での Windows の展開
+          href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+        - name: 工場出荷時の OEM、または現地保管場所用のイメージの作成
+          href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
+    - name: OS の展開のセキュリティとプライバシー
+      href: plan-design/security-and-privacy-for-operating-system-deployment.md
+    - name: OS の展開の相互運用性に関する計画
+      href: plan-design/planning-for-operating-system-deployment-interoperability.md
+- name: 作業開始
+  items:
+    - name: オペレーティング システムの展開用のサイト システムの役割を準備する
+      href: get-started/prepare-site-system-roles-for-operating-system-deployments.md
+    - name: OS の展開の準備
+      items:
+        - name: オペレーティング システムの展開の準備
+          href: get-started/prepare-for-operating-system-deployment.md
+        - name: ブート イメージ
+          items:
+            - name: ブート イメージの管理
+              href: get-started/manage-boot-images.md
+            - name: ブート イメージのカスタマイズ
+              href: get-started/customize-boot-images.md
+        - name: OS イメージ
+          items:
+            - name: OS イメージの管理
+              href: get-started/manage-operating-system-images.md
+            - name: OS イメージのカスタマイズ
+              href: get-started/customize-operating-system-images.md
+        - name: OS アップグレード パッケージの管理
+          href: get-started/manage-operating-system-upgrade-packages.md
+        - name: ドライバーの管理
+          href: get-started/manage-drivers.md
+        - name: ユーザー状態の管理
+          href: get-started/manage-user-state.md
+        - name: 不明なコンピューターの展開の準備
+          href: get-started/prepare-for-unknown-computer-deployments.md
+        - name: 展開先のコンピューターにユーザーを関連付ける
+          href: get-started/associate-users-with-a-destination-computer.md
+    - name: WAN トラフィックを削減するための Windows PE ピア キャッシュの準備
+      href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
+- name: 展開と使用
+  items:
+    - name: タスク シーケンスの管理および作成方法
+      href: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - name: タスクを自動化するタスク シーケンスを作成する
+      items:
+        - name: OS をインストールするタスク シーケンスの作成
+          href: deploy-use/create-a-task-sequence-to-install-an-operating-system.md
+        - name: OS をアップグレードするタスク シーケンスの作成
+          href: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+        - name: BIOS からUEFI への変換を管理するためのタスク シーケンス手順
+          href: deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md
+        - name: OS をキャプチャするタスク シーケンスの作成
+          href: deploy-use/create-a-task-sequence-to-capture-an-operating-system.md
+        - name: ユーザー状態をキャプチャおよび復元するタスク シーケンスの作成
+          href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
+        - name: カスタム タスク シーケンスの作成
+          href: deploy-use/create-a-custom-task-sequence.md
+        - name: OS 以外の展開用タスク シーケンスの作成
+          href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
+    - name: タスク シーケンスの展開
+      href: deploy-use/deploy-a-task-sequence.md
+    - name: 段階的な展開を作成する
+      href: deploy-use/create-phased-deployment-for-task-sequence.md
+    - name: 段階的な展開の管理と監視
+      href: deploy-use/manage-monitor-phased-deployments.md
+    - name: サービスとしての Windows の管理
+      href: deploy-use/manage-windows-as-a-service.md
+    - name: Windows to Go の展開
+      href: deploy-use/deploy-windows-to-go.md
+    - name: OS の展開の監視
+      href: deploy-use/monitor-operating-system-deployments.md
+    - name: タスク シーケンスのデバッグ
+      href: deploy-use/debug-task-sequence.md
+    - name: コンテンツの事前キャッシュを構成する
+      href: deploy-use/configure-precache-content.md
+    - name: タスク シーケンス メディアの作成
+      items:
+        - name: タスク シーケンス メディアの概要
+          href: deploy-use/create-task-sequence-media.md
+        - name: スタンドアロン メディアの作成
+          href: deploy-use/create-stand-alone-media.md
+        - name: 事前設定されたメディアの作成
+          href: deploy-use/create-prestaged-media.md
+        - name: 起動可能なメディアの作成
+          href: deploy-use/create-bootable-media.md
+        - name: キャプチャ メディアを作成する
+          href: deploy-use/create-capture-media.md
+- name: テクニカル リファレンス
+  items:
+    - name: タスク シーケンス エディターを使用する
+      href: understand/task-sequence-editor.md
+    - name: OS 展開のユーザー エクスペリエンス
+      href: understand/user-experience.md
+    - name: タスク シーケンスのステップ
+      items:
+        - name: タスク シーケンスのステップについて
+          href: understand/task-sequence-steps.md
+        - name: ソフトウェア更新プログラムのインストール
+          href: understand/install-software-updates.md
+        - name: Windows PE での BitLocker の事前プロビジョニング
+          href: deploy-use/preprovision-bitlocker-in-windows-pe.md
+    - name: タスク シーケンス変数の使用方法
+      href: understand/using-task-sequence-variables.md
+    - name: タスク シーケンス変数
+      href: understand/task-sequence-variables.md
+    - name: タスク シーケンス メディアの起動前コマンド
+      href: understand/prestart-commands-for-task-sequence-media.md
+    - name: プロビジョニング モード
+      href: understand/provisioning-mode.md

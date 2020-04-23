@@ -1,0 +1,235 @@
+### YamlMime:Hub
+title: Microsoft Endpoint Configuration Manager のドキュメント
+summary: Microsoft Endpoint Manager の次のコンポーネントに関する公式製品ドキュメントです。Configuration Manager、共同管理、デスクトップ分析
+metadata:
+  ms.topic: hub-page
+  ms.openlocfilehash: b890572e652528e1446f1dd2e194d933c27938dd
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741478"
+highlightedContent:
+  items:
+  - title: 新機能
+    itemType: learn
+    url: ./core/plan-design/changes/whats-new-incremental-versions.md
+  - title: サポートされている構成
+    itemType: architecture
+    url: ./core/plan-design/configs/supported-configurations.md
+  - title: 更新プログラムとサービス
+    itemType: deploy
+    url: ./core/servers/manage/updates.md
+  - title: ログ ファイル
+    itemType: learn
+    url: ./core/plan-design/hierarchy/log-files.md
+  - title: ポート
+    itemType: learn
+    url: ./core/plan-design/hierarchy/ports.md
+  - title: テクニカル プレビュー
+    itemType: get-started
+    url: ./core/get-started/technical-preview.md
+conceptualContent:
+  items:
+  - title: クラウド接続の管理
+    links:
+    - text: インターネット上のクライアントを管理する
+      url: ./core/clients/manage/manage-clients-internet.md
+      itemType: overview
+    - text: Azure AD の計画
+      url: ./core/plan-design/security/plan-for-security.md#bkmk_planazuread
+      itemType: architecture
+    - text: Azure サービス
+      url: ./core/servers/deploy/configure/azure-services-wizard.md
+      itemType: how-to-guide
+  - title: 共同管理
+    links:
+    - text: クイックスタート
+      url: ./comanage/quickstarts.md
+      itemType: quickstart
+    - text: チュートリアル
+      url: ./comanage/tutorial-co-manage-clients.md
+      itemType: tutorial
+    - text: ワークロード
+      url: ./comanage/workloads.md
+      itemType: overview
+    footerLink:
+      text: 詳細表示
+      url: ./comanage/index.yml
+  - title: リアルタイムの管理
+    links:
+    - text: CMPivot
+      url: ./core/servers/manage/cmpivot.md
+      itemType: get-started
+    - text: PowerShell スクリプトの実行
+      url: ./apps/deploy-use/create-deploy-scripts.md
+      itemType: how-to-guide
+  - title: Desktop Analytics
+    links:
+    - text: 概要
+      url: ./desktop-analytics/overview.md
+      itemType: overview
+    - text: Windows 10 のパイロット展開
+      url: ./desktop-analytics/tutorial-windows10.md
+      itemType: tutorial
+    - text: Desktop Analytics の設定
+      url: ./desktop-analytics/set-up.md
+      itemType: how-to-guide
+    - text: Office 365 ダッシュボード
+      url: ./sum/deploy-use/office-365-dashboard.md
+      itemType: learn
+    footerLink:
+      text: 詳細表示
+      url: ./desktop-analytics/index.yml
+  - title: インフラストラクチャの簡略化
+    links:
+    - text: サイト サーバーの高可用性
+      url: ./core/servers/deploy/configure/site-server-high-availability.md
+      itemType: deploy
+    - text: 配布ポイントの再割り当て
+      url: ./core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_reassign
+      itemType: how-to-guide
+    - text: Azure での Configuration Manager
+      url: ./core/understand/configuration-manager-on-azure.md
+      itemType: learn
+  - title: コア インフラストラクチャ
+    links:
+    - text: コンソールの使用
+      url: ./core/servers/manage/admin-console.md
+      itemType: how-to-guide
+    - text: クライアントの展開
+      url: ./core/clients/deploy/deploy-clients-to-windows-computers.md
+      itemType: deploy
+    - text: ConfigMgr と Windows 10 の最新情報
+      url: ./core/understand/configuration-manager-and-windows-as-service.md
+      itemType: learn
+    footerLink:
+      text: 詳細表示
+      url: ./core/index.yml
+  - title: アプリ管理
+    links:
+    - text: アプリの作成
+      url: ./apps/get-started/create-and-deploy-an-application.md
+      itemType: how-to-guide
+    - text: アプリの展開
+      url: ./apps/deploy-use/deploy-applications.md
+      itemType: deploy
+    - text: ソフトウェア センターの計画
+      url: ./apps/plan-design/plan-for-software-center.md
+      itemType: architecture
+    - text: Microsoft Edge の管理
+      url: ./apps/deploy-use/deploy-edge.md
+      itemType: how-to-guide
+    footerLink:
+      text: 詳細表示
+      url: ./apps/index.yml
+  - title: OS の展開
+    links:
+    - text: Windows 10 へのアップグレード
+      url: ./osd/deploy-use/upgrade-windows-to-the-latest-version.md
+      itemType: overview
+    - text: 段階的展開
+      url: ./osd/deploy-use/create-phased-deployment-for-task-sequence.md
+      itemType: how-to-guide
+    - text: タスク シーケンスのステップ
+      url: ./osd/understand/task-sequence-steps.md
+      itemType: learn
+    footerLink:
+      text: 詳細表示
+      url: ./osd/index.yml
+  - title: ソフトウェア更新プログラム
+    links:
+    - text: ソフトウェア更新プログラムの計画
+      url: ./sum/plan-design/plan-for-software-updates.md
+      itemType: architecture
+    - text: ソフトウェアの更新を展開する
+      url: ./sum/deploy-use/deploy-software-updates.md
+      itemType: deploy
+    - text: Windows 10 更新プログラムの最適化
+      url: ./sum/deploy-use/optimize-windows-10-update-delivery.md
+      itemType: learn
+    - text: Office 365 の更新
+      url: ./sum/deploy-use/manage-office-365-proplus-updates.md
+      itemType: how-to-guide
+    footerLink:
+      text: 詳細表示
+      url: ./sum/index.yml
+  - title: デバイスのポリシー準拠
+    links:
+    - text: 構成アイテムの作成
+      url: ./compliance/deploy-use/create-configuration-items.md
+      itemType: how-to-guide
+    - text: Microsoft Edge の設定
+      url: ./compliance/deploy-use/browser-profiles.md
+      itemType: how-to-guide
+    - text: Windows のエディションのアップグレード
+      url: ./compliance/deploy-use/upgrade-windows-version.md
+      itemType: how-to-guide
+    footerLink:
+      text: 詳細表示
+      url: ./compliance/index.yml
+  - title: 保護
+    links:
+    - text: Windows Defender
+      url: ./protect/deploy-use/endpoint-protection.md
+      itemType: overview
+    - text: WDATP
+      url: ./protect/deploy-use/windows-defender-advanced-threat-protection.md
+      itemType: how-to-guide
+    - text: BitLocker の管理
+      url: ./protect/plan-design/bitlocker-management.md
+      itemType: overview
+    footerLink:
+      text: 詳細表示
+      url: ./protect/index.yml
+additionalContent:
+  sections:
+  - title: Configuration Manager コミュニティ & サポート
+    items:
+    - title: Configuration Manager ブログ
+      summary: ニュースとお知らせです
+      url: https://techcommunity.microsoft.com/t5/Configuration-Manager-Blog/bg-p/ConfigurationManagerBlog
+    - title: 'Twitter: #ConfigMgr'
+      summary: Twitter でアクティブなコミュニティを最新の状態に保つ
+      url: https://twitter.com/hashtag/configmgr
+    - title: Configuration Manager フォーラム
+      summary: 製品フォーラムに技術的な質問をします
+      url: https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc
+    - title: UserVoice 製品フィードバック
+      summary: エンジニアリング チームと製品アイデアを共有します
+      url: https://configurationmanager.uservoice.com/forums/300492-ideas
+    - title: 製品サポート
+      summary: Microsoft サポートから専門的なサポートを受けます
+      url: https://aka.ms/cmcbsupport
+    - title: System Center 2012 R2 Configuration Manager
+      summary: 以前のバージョンの Configuration Manager のドキュメント
+      url: https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144(v=technet.10)
+  - title: その他のコンテンツ
+    items:
+    - title: 開発
+      links:
+      - url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+        text: PowerShell
+      - url: ./develop/index.yml
+        text: ソフトウェア開発キット (SDK)
+      - url: ./develop/adminservice/index.yml
+        text: 管理サービスの REST API
+      - url: ./develop/core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
+        text: SQL ビュー
+    - title: ［ツール］
+      links:
+      - url: ./core/support/support-center.md
+        text: サポート センター
+      - url: ./mdt/index.yml
+        text: MDT
+      - url: ./apps/pcm/package-conversion-manager.md
+        text: Package Conversion Manager
+      - url: ./core/support/tools.md
+        text: 詳細表示 >
+    - title: 他のコミュニティ サイト
+      links:
+      - url: https://www.reddit.com/r/sccm
+        text: Reddit 上の ConfigMgr
+      - url: https://www.facebook.com/groups/ConfigMgr2012
+        text: Facebook での ConfigMgr プロフェッショナル グループ
+  footer: サイトで問題が見つかりましたか。 [報告](./core/understand/use-docs.md#bkmk_docfeedback)

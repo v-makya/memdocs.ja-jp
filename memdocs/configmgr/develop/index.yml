@@ -1,0 +1,62 @@
+### YamlMime:Landing
+title: Configuration Manager SDK のドキュメント
+summary: Configuration Manager SDK には、Configuration Manager データにアクセスしたり変更を行ったりするアプリケーションの開発に役立つ、ドキュメントとサンプルが含まれています。
+metadata:
+  title: SDK のドキュメント
+  titleSuffix: Configuration Manager
+  description: Configuration Manager SDK には、Configuration Manager データにアクセスしたり変更を行ったりするアプリケーションの開発に役立つ、ドキュメントとサンプルが含まれています。
+  ms.prod: configuration-manager
+  ms.technology: configmgr-sdk
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 04/01/2020
+  ms.openlocfilehash: 94ad699d6de55ffbbc77722b2e9e4063844f78a3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741716"
+landingContent:
+- title: Configuration Manager SDK について
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SDK の概要
+      url: core/misc/system-center-configuration-manager-sdk.md
+    - text: 新機能
+      url: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
+    - text: SDK の要件
+      url: core/reqs/about-configuration-manager-sdk-requirements.md
+  - linkListType: reference
+    links:
+    - text: Configuration Manager API リファレンス
+      url: reference/configuration-manager-reference.md
+    - text: 管理サービスの REST API
+      url: adminservice/index.yml
+- title: 作業開始
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: Configuration Manager のプログラミングを開始する
+      url: core/understand/getting-started-with-configuration-manager-programming.md
+    - text: アーキテクチャの概要
+      url: core/understand/architectural-overview.md
+    - text: PowerShell を使用して作業を開始する
+      url: core/understand/getting-started-with-configuration-manager-and-windows-powershell.md
+  - linkListType: reference
+    links:
+    - text: Configuration Manager の PowerShell コマンドレット
+      url: https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps
+- title: 上位のタスク
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: WBEMTEST の概要
+      url: core/understand/introduction-to-wbemtest.md
+  - linkListType: reference
+    links:
+    - text: Configuration Manager のスキーマ SQL ビュー
+      url: core/understand/configuration-manager-schema-sql-views.md
+    - text: SMS_R_System サーバー WMI クラス
+      url: reference/core/clients/manage/sms_r_system-server-wmi-class.md

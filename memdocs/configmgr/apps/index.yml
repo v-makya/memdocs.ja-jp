@@ -1,0 +1,68 @@
+### YamlMime:Landing
+title: アプリ管理のドキュメント
+summary: Configuration Manager を使用して、アプリケーション、スクリプト、パッケージを管理および展開します。 展開を自動化するか、ユーザーがソフトウェア センターからアプリをインストールできるようにします。
+metadata:
+  title: アプリ管理のドキュメント
+  titleSuffix: Configuration Manager
+  description: Configuration Manager を使用して、アプリケーション、スクリプト、パッケージを管理および展開します。 展開を自動化するか、ユーザーがソフトウェア センターからアプリをインストールできるようにします。
+  ms.prod: configuration-manager
+  ms.technology: configmgr-app
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 7fccbe98c6199543554b48f28325b6531d0092c3
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81740900"
+landingContent:
+- title: アプリ管理について
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: アプリ管理の概要
+      url: understand/introduction-to-application-management.md
+    - text: アプリ管理の計画
+      url: plan-design/plan-for-and-configure-application-management.md
+    - text: ソフトウェア センターの計画
+      url: plan-design/plan-for-software-center.md
+  - linkListType: tutorial
+    links:
+    - text: アプリを作成して展開する
+      url: get-started/create-and-deploy-an-application.md
+- title: 作業開始
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: アプリの作成
+      url: deploy-use/create-applications.md
+    - text: PowerShell スクリプトの作成と実行
+      url: deploy-use/create-deploy-scripts.md
+  - linkListType: deploy
+    links:
+    - text: アプリの展開
+      url: deploy-use/deploy-applications.md
+    - text: Microsoft Edge の展開と更新
+      url: deploy-use/deploy-edge.md
+- title: 上位のタスク
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: アプリ グループを作成する
+      url: deploy-use/create-app-groups.md
+    - text: アプリの承認
+      url: deploy-use/app-approval.md
+    - text: デバイスのアプリをインストールする
+      url: deploy-use/install-app-for-device.md
+    - text: ユーザーとデバイスのアフィニティ
+      url: deploy-use/link-users-and-devices-with-user-device-affinity.md
+    - text: ソフトウェア使用状況測定でアプリの使用状況を監視する
+      url: deploy-use/monitor-app-usage-with-software-metering.md
+  - linkListType: reference
+    links:
+    - text: アプリの展開のトラブルシューティング
+      url: understand/app-deployment-technical-reference.md
+    - text: パッケージとプログラム
+      url: deploy-use/packages-and-programs.md

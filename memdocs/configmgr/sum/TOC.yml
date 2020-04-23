@@ -1,0 +1,95 @@
+- name: ソフトウェア更新管理のドキュメント
+  href: index.yml
+- name: 理解と調査
+  items:
+    - name: ソフトウェア更新プログラムの概要
+      href: understand/software-updates-introduction.md
+    - name: ソフトウェア更新プログラムに使用されるアイコン
+      href: understand/software-updates-icons.md
+- name: 計画と設計
+  items:
+    - name: ソフトウェア更新プログラムの計画
+      href: plan-design/plan-for-software-updates.md
+    - name: ソフトウェア更新プログラムの前提条件
+      href: plan-design/prerequisites-for-software-updates.md
+    - name: ソフトウェア更新プログラムについて推奨する運用方法
+      href: plan-design/software-updates-best-practices.md
+    - name: ソフトウェア更新プログラムのセキュリティとプライバシー
+      href: plan-design/security-and-privacy-for-software-updates.md
+- name: 作業開始
+  items:
+    - name: ソフトウェア更新管理の準備
+      href: get-started/prepare-for-software-updates-management.md
+    - name: ソフトウェアの更新ポイントのインストール
+      href: get-started/install-a-software-update-point.md
+    - name: ソフトウェア更新プログラムの同期
+      href: get-started/synchronize-software-updates.md
+    - name: 分類と製品の構成
+      href: get-started/configure-classifications-and-products.md
+    - name: ソフトウェア更新の設定の管理
+      href: get-started/manage-settings-for-software-updates.md
+    - name: 切断された環境でのソフトウェア更新プログラムの同期
+      items:
+        - name: 切断されているソフトウェアの更新ポイントからのソフトウェア更新プログラムの同期
+          href: get-started/synchronize-software-updates-disconnected.md
+        - name: 切断されているソフトウェアの更新ポイントからの Office 365 の更新プログラムの同期
+          href: get-started/synchronize-office-updates-disconnected.md
+- name: 展開と使用
+  items:
+    - name: ソフトウェア更新プログラムのダウンロード
+      href: deploy-use/download-software-updates.md
+    - name: 更新グループへのソフトウェア更新プログラムの追加
+      href: deploy-use/add-software-updates-to-an-update-group.md
+    - name: ソフトウェアの更新を展開する
+      href: deploy-use/deploy-software-updates.md
+      items:
+        - name: ソフトウェア更新プログラムの手動展開
+          href: deploy-use/manually-deploy-software-updates.md
+        - name: ソフトウェア更新プログラムの自動展開
+          href: deploy-use/automatically-deploy-software-updates.md
+        - name: 段階的な展開を作成する
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+    - name: ソフトウェア更新プログラムの監視
+      href: deploy-use/monitor-software-updates.md
+      items:
+        - name: 段階的な展開の管理と監視
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+    - name: ソフトウェア更新プログラムのメンテナンス
+      href: deploy-use/software-updates-maintenance.md
+    - name: オーケストレーション グループ
+      href: deploy-use/orchestration-groups.md
+    - name: サーバー グループの提供
+      href: deploy-use/service-a-server-group.md
+    - name: Office 365 クライアント管理ダッシュボード
+      href: deploy-use/office-365-dashboard.md
+    - name: Office 365 ProPlus の更新プログラムの管理
+      href: deploy-use/manage-office-365-proplus-updates.md
+    - name: Windows 10 更新プログラムの配信の最適化
+      href: deploy-use/optimize-windows-10-update-delivery.md
+    - name: Windows 10 更新プログラムに対する高速インストール ファイルの管理
+      href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
+    - name: Windows 10 における Windows Update for Business との統合
+      href: deploy-use/integrate-windows-update-for-business-windows-10.md
+    - name: サード パーティ製ソフトウェアの更新プログラム
+      href: deploy-use/third-party-software-updates.md
+    - name: セキュリティ更新プログラムを展開するシナリオ例
+      href: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
+- name: System Center Updates Publisher
+  href: tools/updates-publisher.md
+  items:
+    - name: '[インストール]'
+      href: tools/install-updates-publisher.md
+    - name: オプションを構成する
+      href: tools/updates-publisher-options.md
+    - name: カタログの管理
+      href: tools/updates-publisher-catalogs.md
+    - name: 更新プログラムを管理する
+      href: tools/manage-updates-with-updates-publisher.md
+    - name: パブリケーションを管理する
+      href: tools/updates-publisher-publications.md
+    - name: 新しい更新プログラムの作成
+      href: tools/create-updates-with-updates-publisher.md
+    - name: 適用性ルール
+      href: tools/updates-publisher-applicability-rules.md
+    - name: 証明書とセキュリティ
+      href: tools/updates-publisher-security.md

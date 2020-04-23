@@ -1,0 +1,66 @@
+### YamlMime:Landing
+title: ソフトウェア更新管理のドキュメント
+summary: Configuration Manager は、組織内のクライアントに対するソフトウェア更新プログラムを追跡して適用する複雑なタスクを管理するのに役立ちます。
+metadata:
+  title: ソフトウェア更新管理のドキュメント
+  titleSuffix: Configuration Manager
+  description: Configuration Manager は、組織内のクライアントに対するソフトウェア更新プログラムを追跡して適用する複雑なタスクを管理するのに役立ちます。
+  ms.product: configuration-manager
+  ms.technology: configmgr-sum
+  ms.topic: landing-page
+  author: mestew
+  ms.author: mstewart
+  ms.date: 01/10/2020
+  ms.openlocfilehash: aa421de09ee69713097a5efe78b0a9b2a1a71856
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741172"
+landingContent:
+- title: ソフトウェア更新管理について
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ソフトウェア更新プログラムの概要
+      url: understand/software-updates-introduction.md
+    - text: 月次のソフトウェア更新プログラムの展開および監視の例
+      url: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
+  - linkListType: architecture
+    links:
+    - text: ソフトウェア更新プログラムの計画
+      url: plan-design/plan-for-software-updates.md
+    - text: ソフトウェア更新プログラムについて推奨する運用方法
+      url: plan-design/software-updates-best-practices.md
+- title: 作業開始
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: ソフトウェアの更新ポイントのインストール
+      url: get-started/install-a-software-update-point.md
+    - text: 分類と製品の構成
+      url: get-started/configure-classifications-and-products.md
+    - text: ソフトウェア更新プログラムの同期
+      url: get-started/synchronize-software-updates.md
+  - linkListType: how-to-guide
+    links:
+    - text: ソフトウェア更新プログラムの自動展開
+      url: deploy-use/automatically-deploy-software-updates.md
+    - text: ソフトウェア更新プログラムの監視
+      url: deploy-use/monitor-software-updates.md
+- title: 上位のタスク
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Office 365 ProPlus の更新プログラムの管理
+      url: deploy-use/manage-office-365-proplus-updates.md
+    - text: サード パーティの更新プログラムを有効にする
+      url: deploy-use/third-party-software-updates.md
+    - text: ソフトウェア更新の設定の管理
+      url: get-started/manage-settings-for-software-updates.md
+  - linkListType: concept
+    links:
+    - text: Windows 10 更新プログラムの配信の最適化
+      url: deploy-use/optimize-windows-10-update-delivery.md
+    - text: ソフトウェア更新プログラムのメンテナンス
+      url: deploy-use/software-updates-maintenance.md

@@ -1,0 +1,62 @@
+### YamlMime:Landing
+title: OS の展開に関するドキュメント
+summary: Configuration Manager を使用して、さまざまな方法で Windows を展開し、タスクを自動化します。
+metadata:
+  title: OS の展開に関するドキュメント
+  titleSuffix: Configuration Manager
+  description: Configuration Manager を使用して、さまざまな方法で Windows を展開し、タスクを自動化します。
+  ms.prod: configuration-manager
+  ms.technology: configmgr-osd
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 5c56cef287ee16a8899c16af72d4734c9d1f4bad
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81741954"
+landingContent:
+- title: OS の展開について
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: OS の展開の概要
+      url: understand/introduction-to-operating-system-deployment.md
+    - text: インフラストラクチャの要件
+      url: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+  - linkListType: concept
+    links:
+    - text: オペレーティング システムの展開の準備
+      url: get-started/prepare-for-operating-system-deployment.md
+    - text: OS の展開シナリオ
+      url: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+    - text: OS の展開方法
+      url: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+- title: 作業開始
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: タスク シーケンスの管理
+      url: deploy-use/manage-task-sequences-to-automate-tasks.md
+    - text: OS の更新タスク シーケンスを作成する
+      url: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+    - text: 段階的な展開を作成する
+      url: deploy-use/create-phased-deployment-for-task-sequence.md
+    - text: タスク シーケンスの展開
+      url: deploy-use/deploy-a-task-sequence.md
+    - text: タスク シーケンスのデバッグ
+      url: deploy-use/debug-task-sequence.md
+- title: テクニカル リファレンス
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: タスク シーケンス エディターを使用する
+      url: understand/task-sequence-editor.md
+    - text: タスク シーケンスのステップについて
+      url: understand/task-sequence-steps.md
+    - text: タスク シーケンス変数の使用方法
+      url: understand/using-task-sequence-variables.md
+    - text: タスク シーケンス変数リファレンス
+      url: understand/task-sequence-variables.md

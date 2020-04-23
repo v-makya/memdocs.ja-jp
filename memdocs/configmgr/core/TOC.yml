@@ -1,0 +1,879 @@
+- name: コア インフラストラクチャに関するドキュメント
+  href: index.yml
+- name: 理解と調査
+  items:
+    - name: Configuration Manager とは
+      href: understand/introduction.md
+    - name: Microsoft Endpoint Configuration Manager の FAQ
+      href: understand/microsoft-endpoint-manager-faq.md
+    - name: SCCM はどうなりましたか?
+      href: understand/what-happened-to-sccm.md
+    - name: 概要
+      items:
+        - name: Configuration Manager のヘルプの検索
+          href: understand/find-help.md
+        - name: ドキュメントの使用方法
+          href: understand/use-docs.md
+        - name: コンソールの使用方法
+          href: servers/manage/admin-console.md
+        - name: ユーザー補助機能
+          href: understand/accessibility-features.md
+        - name: ソフトウェア センターのユーザー ガイド
+          href: understand/software-center.md
+    - name: 基本要素
+      items:
+        - name: Configuration Manager の基礎
+          href: understand/fundamentals.md
+        - name: サイトと階層
+          href: understand/fundamentals-of-sites-and-hierarchies.md
+        - name: アップグレード、更新、およびインストールについて
+          href: understand/upgrade-update-install.md
+        - name: デバイスの管理
+          href: understand/fundamentals-of-managing-devices.md
+        - name: クライアント管理
+          href: understand/fundamentals-of-client-management-tasks.md
+        - name: '[セキュリティ]'
+          href: understand/fundamentals-of-security.md
+        - name: 役割に基づいた管理
+          href: understand/fundamentals-of-role-based-administration.md
+    - name: Configuration Manager とサービスとしての Windows
+      href: understand/configuration-manager-and-windows-as-service.md
+    - name: クラウド サービスの使用
+      items:
+        - name: クラウド サービスの概要
+          href: understand/use-cloud-services.md
+        - name: Azure での Configuration Manager
+          href: understand/configuration-manager-on-azure.md
+    - name: サイトのサイジングとパフォーマンスに関する FAQ
+      href: understand/site-size-performance-faq.md
+    - name: 製品とライセンスに関する FAQ
+      href: understand/product-and-licensing-faq.md
+    - name: 適切な Configuration Manager のブランチを選択する
+      href: understand/which-branch-should-i-use.md
+    - name: ライセンスとブランチ
+      href: understand/learn-more-editions.md
+    - name: 拡張相互運用性クライアント
+      href: understand/interoperability-client.md
+    - name: Long Term Servicing Branch
+      items:
+        - name: Long-Term Servicing Branch の概要
+          href: understand/introduction-to-the-ltsb.md
+        - name: LTSB でサポートされている構成
+          href: understand/supported-configurations-for-ltsb.md
+        - name: LTSB のインストール
+          href: understand/install-the-ltsb.md
+        - name: LTSB の管理
+          href: understand/manage-the-ltsb.md
+        - name: LTSB の Current Branch へのアップグレード
+          href: understand/convert-to-current-branch.md
+- name: 計画と設計
+  items:
+    - name: Configuration Manager の準備
+      href: plan-design/get-ready.md
+    - name: 製品の変更
+      items:
+        - name: 特徴と機能
+          href: plan-design/changes/features-and-capabilities.md
+        - name: 増分バージョンの新機能
+          href: plan-design/changes/whats-new-incremental-versions.md
+        - name: バージョン 2002 の新機能
+          href: plan-design/changes/whats-new-in-version-2002.md
+        - name: バージョン 1910 の新機能
+          href: plan-design/changes/whats-new-in-version-1910.md
+        - name: バージョン 1906 の新機能
+          href: plan-design/changes/whats-new-in-version-1906.md
+        - name: バージョン 1902 の新機能
+          href: plan-design/changes/whats-new-in-version-1902.md
+        - name: バージョン 1810 の新機能
+          href: plan-design/changes/whats-new-in-version-1810.md
+        - name: Configuration Manager 2012 からの変更点
+          href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
+        - name: 削除と非推奨
+          items:
+            - name: 削除と非推奨の概要
+              href: plan-design/changes/deprecated/removed-and-deprecated.md
+            - name: 削除された機能と非推奨の機能
+              href: plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md
+            - name: サイト サーバーの削除された機能と非推奨の機能
+              href: plan-design/changes/deprecated/removed-and-deprecated-server.md
+            - name: クライアントの削除された機能と非推奨の機能
+              href: plan-design/changes/deprecated/removed-and-deprecated-client.md
+    - name: サポートされている構成
+      items:
+        - name: サポートされている構成
+          href: plan-design/configs/supported-configurations.md
+        - name: サイジングとスケールの数値
+          href: plan-design/configs/size-and-scale-numbers.md
+        - name: サイトとサイト システムの前提条件
+          href: plan-design/configs/site-and-site-system-prerequisites.md
+        - name: サイトのサイズとパフォーマンスのガイドライン
+          href: plan-design/configs/site-size-performance-guidelines.md
+        - name: サイト システム サーバーのサポートされるオペレーティング システム
+          href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
+        - name: クライアントとデバイスのサポートされるオペレーティング システム
+          href: plan-design/configs/supported-operating-systems-for-clients-and-devices.md
+        - name: クライアントとしての Windows 10 のサポート
+          href: plan-design/configs/support-for-windows-10.md
+        - name: コンソールでサポートされているオペレーティング システム
+          href: plan-design/configs/supported-operating-systems-consoles.md
+        - name: 推奨ハードウェア
+          href: plan-design/configs/recommended-hardware.md
+        - name: SQL Server バージョンのサポート
+          href: plan-design/configs/support-for-sql-server-versions.md
+        - name: Active Directory ドメインのサポート
+          href: plan-design/configs/support-for-active-directory-domains.md
+        - name: Windows の機能とネットワークのサポート
+          href: plan-design/configs/support-for-windows-features-and-networks.md
+        - name: 仮想環境のサポート
+          href: plan-design/configs/support-for-virtualization-environments.md
+    - name: デバイス管理ソリューションの選択
+      href: plan-design/choose-a-device-management-solution.md
+    - name: サイト階層の設計
+      items:
+        - name: 階層の設計
+          href: plan-design/hierarchy/design-a-hierarchy-of-sites.md
+        - name: SMS プロバイダーの計画
+          href: plan-design/hierarchy/plan-for-the-sms-provider.md
+        - name: サイト データベースの計画
+          href: plan-design/hierarchy/plan-for-the-site-database.md
+        - name: サイト システム サーバーの計画
+          href: plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md
+        - name: コンテンツ管理の基本的な概念
+          items:
+            - name: コンテンツ管理の基礎
+              href: plan-design/hierarchy/fundamental-concepts-for-content-management.md
+            - name: クラウドベースの配布ポイントの使用
+              href: plan-design/hierarchy/use-a-cloud-based-distribution-point.md
+            - name: プル配布ポイントの使用
+              href: plan-design/hierarchy/use-a-pull-distribution-point.md
+            - name: コンテンツ ライブラリ
+              href: plan-design/hierarchy/the-content-library.md
+            - name: フローチャート - コンテンツ ライブラリの管理
+              href: plan-design/hierarchy/manage-content-library-flowchart.md
+            - name: コンテンツ ライブラリのクリーンアップ ツール
+              href: plan-design/hierarchy/content-library-cleanup-tool.md
+            - name: Configuration Manager クライアントのピア キャッシュ
+              href: plan-design/hierarchy/client-peer-cache.md
+            - name: Package Transfer Manager
+              href: plan-design/hierarchy/package-transfer-manager.md
+            - name: コンテンツ管理でのネットワーク帯域幅の管理
+              href: plan-design/hierarchy/manage-network-bandwidth.md
+            - name: コンテンツ管理のセキュリティとプライバシー
+              href: plan-design/hierarchy/security-and-privacy-for-content-management.md
+        - name: サイト間のデータ転送
+          items:
+            - name: データ転送の種類
+              href: plan-design/hierarchy/data-transfers-between-sites.md
+            - name: ファイルベースのレプリケーション
+              href: plan-design/hierarchy/file-based-replication.md
+            - name: データベース レプリケーション
+              href: plan-design/hierarchy/database-replication.md
+        - name: クライアントがリソースやサービスを検索する方法
+          href: plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md
+        - name: サイト管理のセキュリティとプライバシー
+          href: plan-design/hierarchy/security-and-privacy-for-site-administration.md
+    - name: ネットワーク インフラストラクチャの計画
+      items:
+        - name: ネットワーク インフラストラクチャの考慮事項
+          href: plan-design/network/configure-firewalls-ports-domains.md
+        - name: ポート
+          href: plan-design/hierarchy/ports.md
+        - name: プロキシ サーバーのサポート
+          href: plan-design/network/proxy-server-support.md
+        - name: インターネット アクセス要件
+          href: plan-design/network/internet-endpoints.md
+        - name: Active Directory スキーマ
+          items:
+            - name: Active Directory スキーマの準備
+              href: plan-design/network/extend-the-active-directory-schema.md
+            - name: スキーマ拡張
+              href: plan-design/network/schema-extensions.md
+        - name: サイト システムをサポートするための Windows Server の準備
+          href: plan-design/network/prepare-windows-servers.md
+        - name: サイト システム サーバーの Web サイト
+          href: plan-design/network/websites-for-site-system-servers.md
+        - name: CNG 証明書の概要
+          href: plan-design/network/cng-certificates-overview.md
+        - name: PKI 証明書の要件
+          href: plan-design/network/pki-certificate-requirements.md
+        - name: PKI 証明書の展開の例
+          href: plan-design/network/example-deployment-of-pki-certificates.md
+    - name: 診断結果と使用状況データ
+      items:
+        - name: 診断結果と使用状況データの概要
+          href: plan-design/diagnostics/diagnostics-and-usage-data.md
+        - name: Microsoft での診断結果と使用状況データの使用方法
+          href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+        - name: Configuration Manager でのデータの収集方法
+          href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
+        - name: 診断および使用状況データを使用する方法
+          href: plan-design/diagnostics/view-diagnostics-and-usage-data.md
+        - name: 診断結果と使用状況データのレベル
+          items:
+            - name: レベルの概要
+              href: plan-design/diagnostics/levels-overview.md
+            - name: バージョン 2002 のデータ
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
+            - name: バージョン 1910 のデータ
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910.md
+            - name: バージョン 1906 のデータ
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
+            - name: バージョン 1902 のデータ
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
+            - name: バージョン 1810 のデータ
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
+        - name: よく寄せられる質問 (FAQ)
+          href: plan-design/diagnostics/frequently-asked-questions.md
+    - name: Configuration Manager のセキュリティとプライバシー
+      items:
+        - name: セキュリティとプライバシーの概要
+          href: plan-design/security/security-and-privacy.md
+        - name: セキュリティの計画
+          href: plan-design/security/plan-for-security.md
+        - name: セキュリティのベスト プラクティスとプライバシー情報
+          href: plan-design/security/security-best-practices-and-privacy-information.md
+        - name: プライバシーに関する声明 - Configuration Manager Cmdlet Library
+          href: plan-design/security/privacy-statement-cmdlet-library.md
+        - name: 追加のプライバシー情報
+          href: plan-design/security/additional-privacy.md
+        - name: セキュリティの構成
+          href: plan-design/security/configure-security.md
+        - name: 暗号化コントロールのテクニカル リファレンス
+          href: plan-design/security/cryptographic-controls-technical-reference.md
+        - name: TLS 1.2 の有効化
+          items:
+            - name: TLS 1.2 の有効化について
+              href: plan-design/security/enable-tls-1-2.md
+            - name: クライアントで TLS 1.2 を有効にする
+              href: plan-design/security/enable-tls-1-2-client.md
+            - name: サイト サーバーとリモート サイト システムで TLS 1.2 を有効にする
+              href: plan-design/security/enable-tls-1-2-server.md
+            - name: TLS 1.2 を有効にするときの一般的な問題
+              href: plan-design/security/enable-tls-1-2-troubleshoot.md
+- name: 作業開始
+  items:
+    - name: ラボでの Configuration Manager の評価
+      items:
+        - name: ラボの概要
+          href: get-started/evaluate-with-lab-environment.md
+        - name: ラボのセットアップ
+          href: get-started/set-up-your-lab.md
+        - name: Azure でのラボの作成
+          href: get-started/azure-template.md
+    - name: Technical Preview
+      items:
+        - name: Technical Preview の概要
+          href: get-started/technical-preview.md
+        - name: 2003 の機能
+          href: get-started/2020/technical-preview-2003.md
+        - name: 2002.2 の機能
+          href: get-started/2020/technical-preview-2002-2.md
+        - name: 2002 の機能
+          href: get-started/2020/technical-preview-2002.md
+        - name: 2001.2 の機能
+          href: get-started/2020/technical-preview-2001-2.md
+        - name: 2001 の機能
+          href: get-started/2020/technical-preview-2001.md
+        - name: 1912 の機能
+          href: get-started/2019/technical-preview-1912.md
+    - name: 階層間でのデータの移行
+      items:
+        - name: 移行の概要
+          href: migration/migrate-data-between-hierarchies.md
+        - name: 移行の計画
+          items:
+            - name: 移行の計画
+              href: migration/planning-for-migration.md
+            - name: 移行の前提条件
+              href: migration/prerequisites-for-migration.md
+            - name: 移行のチェックリスト
+              href: migration/administrator-checklists-for-migration-planning.md
+            - name: データを移行するかどうかの判断
+              href: migration/determine-whether-to-migrate-data.md
+            - name: ソース階層の計画
+              href: migration/planning-a-source-hierarchy-strategy.md
+            - name: 移行ジョブの計画
+              href: migration/planning-a-migration-job-strategy.md
+            - name: クライアントの計画
+              href: migration/planning-a-client-migration-strategy.md
+            - name: クライアント展開の計画
+              href: migration/planning-a-content-deployment-migration-strategy.md
+            - name: オブジェクト移行の計画
+              href: migration/planning-for-the-migration-of-objects.md
+            - name: 移行の監視の計画
+              href: migration/planning-to-monitor-migration-activity.md
+            - name: 移行完了の計画
+              href: migration/planning-to-complete-migration.md
+        - name: ソース階層とソース サイトを構成する
+          href: migration/configuring-source-hierarchies-and-source-sites-for-migration.md
+        - name: 移行の操作
+          href: migration/operations-for-migration.md
+        - name: 移行のセキュリティとプライバシー
+          href: migration/security-and-privacy-for-migration.md
+- name: サーバーおよび役割の展開
+  items:
+    - name: サーバーおよび役割の展開
+      href: servers/deploy/start-using.md
+    - name: インストール インフラストラクチャ
+      items:
+        - name: インストール メディアを取得する
+          href: servers/deploy/install/get-install-media.md
+        - name: セットアップを実行する前に
+          items:
+            - name: セットアップのリファレンス
+              href: servers/deploy/install/setup-reference.md
+            - name: セットアップ ダウンローダー
+              href: servers/deploy/install/setup-downloader.md
+            - name: 前提条件チェッカー
+              href: servers/deploy/install/prerequisite-checker.md
+            - name: 前提条件の確認
+              href: servers/deploy/install/list-of-prerequisite-checks.md
+        - name: サイトのインストール
+          items:
+            - name: サイトのインストールの準備の概要
+              href: servers/deploy/install/installing-sites.md
+            - name: サイトのインストールの準備
+              href: servers/deploy/install/prepare-to-install-sites.md
+            - name: サイトをインストールするための前提条件
+              href: servers/deploy/install/prerequisites-for-installing-sites.md
+            - name: セットアップ ウィザードの使用
+              href: servers/deploy/install/use-the-setup-wizard-to-install-sites.md
+            - name: コマンドラインの使用
+              items:
+                - name: コマンドラインの概要
+                  href: servers/deploy/install/use-a-command-line-to-install-sites.md
+                - name: コマンド ライン オプション
+                  href: servers/deploy/install/command-line-options-for-setup.md
+            - name: コンソールのインストール
+              href: servers/deploy/install/install-consoles.md
+            - name: 評価版インストールのアップグレード
+              href: servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md
+            - name: Configuration Manager にアップグレードする
+              href: servers/deploy/install/upgrade-to-configuration-manager.md
+            - name: インストールを合理化するシナリオ
+              href: servers/deploy/install/scenarios-to-streamline-your-installation.md
+    - name: サイトと階層の構成
+      items:
+        - name: サイトと階層の構成の概要
+          href: servers/deploy/configure/configure-sites-and-hierarchies.md
+        - name: サイト システムの役割を追加する
+          items:
+            - name: サイト システムの役割の追加の概要
+              href: servers/deploy/configure/add-site-system-roles.md
+            - name: サイト システムの役割のインストール
+              href: servers/deploy/configure/install-site-system-roles.md
+            - name: クラウドベースの配布ポイントのインストール
+              href: servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md
+            - name: サービス接続ポイントについて
+              href: servers/deploy/configure/about-the-service-connection-point.md
+            - name: サイト システムの役割の構成オプション
+              href: servers/deploy/configure/configuration-options-for-site-system-roles.md
+            - name: 管理ポイントのデータベース レプリカ
+              href: servers/deploy/configure/database-replicas-for-management-points.md
+        - name: サイト コンポーネント
+          href: servers/deploy/configure/site-components.md
+        - name: サイト データの発行
+          href: servers/deploy/configure/publish-site-data.md
+        - name: Manage content and content infrastructure
+          items:
+            - name: コンテンツ インフラストラクチャの概要
+              href: servers/deploy/configure/manage-content-and-content-infrastructure.md
+            - name: 配布ポイントのインストールと構成
+              href: servers/deploy/configure/install-and-configure-distribution-points.md
+            - name: コンテンツの展開と管理
+              href: servers/deploy/configure/deploy-and-manage-content.md
+            - name: コンテンツの監視
+              href: servers/deploy/configure/monitor-content-you-have-distributed.md
+            - name: Microsoft 接続キャッシュ
+              href: plan-design/hierarchy/microsoft-connected-cache.md
+            - name: Microsoft 接続キャッシュのトラブルシューティング
+              href: servers/deploy/configure/troubleshoot-microsoft-connected-cache.md
+        - name: 探索を実行する
+          items:
+            - name: 探索方法の概要
+              href: servers/deploy/configure/run-discovery.md
+            - name: 探索方法について
+              href: servers/deploy/configure/about-discovery-methods.md
+            - name: 探索方法の選択
+              href: servers/deploy/configure/select-discovery-methods-to-use.md
+            - name: 探索方法を構成する
+              href: servers/deploy/configure/configure-discovery-methods.md
+        - name: サイト境界と境界グループ
+          items:
+            - name: サイト境界と境界グループの概要
+              href: servers/deploy/configure/define-site-boundaries-and-boundary-groups.md
+            - name: 境界
+              href: servers/deploy/configure/boundaries.md
+            - name: 境界グループ
+              href: servers/deploy/configure/boundary-groups.md
+            - name: 境界グループの手順
+              href: servers/deploy/configure/boundary-group-procedures.md
+        - name: 高可用性
+          items:
+            - name: 高可用性オプション
+              href: servers/deploy/configure/high-availability-options.md
+            - name: サイト サーバーの高可用性
+              href: servers/deploy/configure/site-server-high-availability.md
+            - name: フローチャート - パッシブ サイト サーバーのセットアップ
+              href: servers/deploy/configure/passive-site-server-flowchart.md
+            - name: フローチャート - サイト サーバーの昇格 (計画済み)
+              href: servers/deploy/configure/promote-site-server-flowchart.md
+            - name: フローチャート - サイト サーバーの昇格 (計画外)
+              href: servers/deploy/configure/promote-site-server-unplanned-flowchart.md
+            - name: SQL Server Always On を使用するための準備
+              href: servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md
+            - name: SQL Server Always On の構成
+              href: servers/deploy/configure/configure-aoag.md
+            - name: SQL Server クラスターの使用
+              href: servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md
+        - name: データベース ファイルのカスタムの場所
+          href: servers/deploy/configure/custom-locations-for-site-database-files.md
+        - name: ロール ベース管理の構成
+          href: servers/deploy/configure/configure-role-based-administration.md
+        - name: Azure サービスの構成
+          href: servers/deploy/configure/azure-services-wizard.md
+    - name: アンインストールと削除
+      items:
+        - name: 役割、サイト、および階層のアンインストール
+          href: servers/deploy/install/uninstall-sites-and-hierarchies.md
+        - name: CAS を削除する
+          href: servers/deploy/install/remove-central-administration-site.md
+    - name: テクニカル リファレンス
+      items:
+        - name: '[アカウント]'
+          href: plan-design/hierarchy/accounts.md
+        - name: エンドポイント間の通信
+          href: plan-design/hierarchy/communications-between-endpoints.md
+        - name: 拡張 HTTP サイト システム
+          href: plan-design/hierarchy/enhanced-http.md
+        - name: 階層のメンテナンス ツール
+          href: servers/manage/hierarchy-maintenance-tool-preinst.exe.md
+        - name: インターナショナル サポート
+          href: plan-design/hierarchy/international-support.md
+        - name: 異なるバージョンの相互運用性
+          href: plan-design/hierarchy/interoperability-between-different-versions.md
+        - name: 言語パック
+          href: servers/deploy/install/language-packs.md
+        - name: ログ ファイルについて
+          href: plan-design/hierarchy/about-log-files.md
+        - name: ログ ファイルのリファレンス
+          href: plan-design/hierarchy/log-files.md
+        - name: リリース ノート
+          href: servers/deploy/install/release-notes.md
+        - name: 状態メッセージ
+          href: plan-design/hierarchy/state-messaging-system-center-configuration-manager.md
+        - name: Unicode および ASCII のサポート
+          href: plan-design/hierarchy/unicode-and-ascii-support.md
+- name: 管理インフラストラクチャ
+  items:
+    - name: 管理分析情報
+      href: servers/manage/management-insights.md
+    - name: CMPivot
+      items:
+        - name: CMPivot を使う
+          href: servers/manage/cmpivot.md
+        - name: CMPivot のトラブルシューティング
+          href: servers/manage/cmpivot-tsg.md
+    - name: メンテナンス タスク
+      items:
+        - name: メンテナンス タスクの概要
+          href: servers/manage/maintenance-tasks.md
+        - name: メンテナンス タスクのリファレンス
+          href: servers/manage/reference-for-maintenance-tasks.md
+    - name: インフラストラクチャの変更
+      items:
+        - name: インフラストラクチャの変更
+          href: servers/manage/modify-your-infrastructure.md
+        - name: CD.Latest フォルダー
+          href: servers/manage/the-cd.latest-folder.md
+    - name: オンプレミス インフラストラクチャのアップグレード
+      href: servers/manage/upgrade-on-premises-infrastructure.md
+    - name: Configuration Manager の更新プログラムの概要
+      items:
+        - name: Configuration Manager の更新プログラム
+          href: servers/manage/updates.md
+        - name: コンソール内の更新プログラム
+          items:
+            - name: コンソール内の更新プログラムのインストール
+              href: servers/manage/install-in-console-updates.md
+            - name: 更新のリセット ツール
+              href: servers/manage/update-reset-tool.md
+            - name: データベース アップグレードのテスト
+              href: servers/manage/test-database-upgrade.md
+            - name: フローチャート - 更新プログラムのダウンロード
+              href: servers/manage/download-updates-flowchart.md
+            - name: フローチャート - レプリケーションの更新
+              href: servers/manage/update-replication-flowchart.md
+        - name: プレリリース機能
+          href: servers/manage/pre-release-features.md
+        - name: サイト サーバーのサービス ウィンドウ
+          href: servers/manage/service-windows.md
+        - name: サービス接続ツールの使用
+          href: servers/manage/use-the-service-connection-tool.md
+        - name: 更新登録ツールの使用
+          href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
+        - name: 修正プログラム インストーラーの使用
+          href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+        - name: 2002 に更新するためのチェックリスト
+          href: servers/manage/checklist-for-installing-update-2002.md
+        - name: 1910 に更新するためのチェックリスト
+          href: servers/manage/checklist-for-installing-update-1910.md
+        - name: 1906 に更新するためのチェックリスト
+          href: servers/manage/checklist-for-installing-update-1906.md
+        - name: 1902 に更新するためのチェックリスト
+          href: servers/manage/checklist-for-installing-update-1902.md
+        - name: 1810 に更新するためのチェックリスト
+          href: servers/manage/checklist-for-installing-update-1810.md
+        - name: Current Branch バージョンのサポート
+          href: servers/manage/current-branch-versions-supported.md
+    - name: バックアップと回復
+      items:
+        - name: サイトのバックアップ
+          href: servers/manage/backup-and-recovery.md
+        - name: サイトの回復
+          href: servers/manage/recover-sites.md
+        - name: サイトの無人回復
+          href: servers/manage/unattended-recovery.md
+    - name: サイト障害の影響
+      href: servers/manage/site-failure-impacts.md
+    - name: 監視インフラストラクチャ
+      items:
+        - name: 監視階層
+          href: servers/manage/monitor-hierarchy.md
+        - name: アラートとステータス システムの使用
+          href: servers/manage/use-alerts-and-the-status-system.md
+        - name: 正常性構成証明書
+          href: servers/manage/health-attestation.md
+        - name: レプリケーション インフラストラクチャ
+          items:
+            - name: レプリケーションの監視
+              href: servers/manage/monitor-replication.md
+            - name: SQL レプリケーションのトラブルシューティング
+              items:
+                - name: SQL レプリケーションのトラブルシューティング
+                  href: servers/manage/replication/overview.md
+                - name: SQL レプリケーション
+                  href: servers/manage/replication/sql-replication.md
+                - name: SQL の構成
+                  href: servers/manage/replication/sql-configuration.md
+                - name: SQL パフォーマンス
+                  href: servers/manage/replication/sql-performance.md
+                - name: SQL レプリケーションの再初期化
+                  href: servers/manage/replication/sql-replication-reinit.md
+                - name: グローバル データの再初期化
+                  href: servers/manage/replication/global-data-reinit.md
+                - name: サイト データの再初期化
+                  href: servers/manage/replication/site-data-reinit.md
+                - name: 再初期化の不明メッセージ
+                  href: servers/manage/replication/reinit-missing-message.md
+        - name: クエリ
+          items:
+            - name: クエリの概要
+              href: servers/manage/introduction-to-queries.md
+            - name: クエリを管理する方法
+              href: servers/manage/manage-queries.md
+            - name: クエリを作成する方法
+              href: servers/manage/create-queries.md
+            - name: クエリのセキュリティとプライバシー
+              href: servers/manage/security-and-privacy-for-queries.md
+        - name: レポート
+          items:
+            - name: レポートの概要
+              href: servers/manage/introduction-to-reporting.md
+            - name: Power BI Report Server との統合
+              href: servers/manage/powerbi-report-server.md
+            - name: レポートの計画
+              items:
+                - name: レポートの計画
+                  href: servers/manage/planning-for-reporting.md
+                - name: レポートの前提条件
+                  href: servers/manage/prerequisites-for-reporting.md
+                - name: レポートの一覧
+                  href: servers/manage/list-of-reports.md
+            - name: レポートの構成
+              href: servers/manage/configuring-reporting.md
+            - name: レポートの操作とメンテナンス
+              href: servers/manage/operations-and-maintenance-for-reporting.md
+            - name: カスタム レポート モデルの作成
+              href: servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md
+        - name: データ ウェアハウス
+          href: servers/manage/data-warehouse.md
+    - name: サポート センター
+      href: support/support-center.md
+      items:
+        - name: サポート センターの概要
+          href: support/support-center.md
+        - name: クイック スタート ガイド
+          href: support/support-center-quickstart.md
+        - name: アクセシビリティ
+          href: support/support-center-accessibility.md
+        - name: ユーザー インターフェイスのリファレンス
+          href: support/support-center-ui-reference.md
+        - name: カスタマイズ
+          href: support/support-center-customize.md
+        - name: サポート センターの OneTrace (プレビュー)
+          href: support/support-center-onetrace.md
+    - name: Configuration Manager ツール
+      items:
+        - name: ツールの概要
+          href: support/tools.md
+        - name: CMTrace
+          href: support/cmtrace.md
+        - name: Client Spy
+          href: support/clispy.md
+        - name: Deployment Monitoring Tool
+          href: support/deployment-monitoring-tool.md
+        - name: Policy Spy
+          href: support/policy-spy.md
+        - name: Power Viewer Tool
+          href: support/power-viewer-tool.md
+        - name: Send Schedule Tool
+          href: support/send-schedule-tool.md
+        - name: DP Job Queue Manager
+          href: support/dp-job-manager.md
+        - name: Collection Evaluation Viewer
+          href: support/ceviewer.md
+        - name: Content Library Explorer
+          href: support/content-library-explorer.md
+        - name: Content Library Transfer
+          href: support/content-library-transfer.md
+        - name: Content Ownership Tool
+          href: support/content-ownership-tool.md
+        - name: Microsoft Azure に拡張して移行する
+          href: support/azure-migration-tool.md
+        - name: Role-based Administration and Auditing Tool
+          href: support/rbaviewer.md
+        - name: Run Meter Summarization Tool
+          href: support/run-meter-summ.md
+    - name: 危険度の高い展開の管理
+      href: servers/manage/settings-to-manage-high-risk-deployments.md
+- name: クライアントの展開
+  items:
+    - name: クライアント展開の計画
+      items:
+        - name: クライアント インストール方法
+          href: clients/deploy/plan/client-installation-methods.md
+        - name: Windows コンピューターにクライアントを展開するための前提条件
+          items:
+            - name: クライアントを展開するための前提条件
+              href: clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md
+            - name: クライアントの Windows ファイアウォールとポートの設定
+              href: clients/deploy/windows-firewall-and-port-settings-for-clients.md
+        - name: クライアントのサイト システムの役割の決定
+          href: clients/deploy/plan/determine-the-site-system-roles-for-clients.md
+        - name: クライアントのセキュリティとプライバシー
+          href: clients/deploy/plan/security-and-privacy-for-clients.md
+        - name: クライアント展開のベスト プラクティス
+          href: clients/deploy/plan/best-practices-for-client-deployment.md
+        - name: クライアントをブロックするかどうかの判断
+          href: clients/deploy/plan/determine-whether-to-block-clients.md
+        - name: Linux および UNIX コンピューターへのクライアント展開の計画
+          href: clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md
+        - name: Mac コンピューターへのクライアント展開の計画
+          href: clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md
+        - name: Windows Embedded デバイスへのクライアント展開
+          items:
+            - name: Windows Embedded デバイスへのクライアント展開の計画
+              href: clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md
+            - name: シナリオ例
+              href: clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md
+        - name: クライアントをウェイクアップする方法の計画
+          href: clients/deploy/plan/plan-wake-up-clients.md
+        - name: VDI クライアントを管理する
+          href: clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md
+    - name: クライアント展開タスク
+      items:
+        - name: クライアント通信ポートを構成する方法
+          href: clients/deploy/configure-client-communication-ports.md
+        - name: DNS 発行を使用するようにクライアントを構成する
+          href: clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md
+        - name: クライアント設定を構成する
+          items:
+            - name: クライアント設定を構成する方法
+              href: clients/deploy/configure-client-settings.md
+            - name: クライアント設定について
+              href: clients/deploy/about-client-settings.md
+        - name: デバイスの再起動の通知
+          href: clients/deploy/device-restart-notifications.md
+        - name: Wake On LAN の構成方法
+          href: clients/deploy/configure-wake-on-lan.md
+        - name: Windows コンピューターにクライアントを展開する
+          items:
+            - name: Windows コンピューターにクライアントを展開する方法
+              href: clients/deploy/deploy-clients-to-windows-computers.md
+            - name: Azure AD を使用してのクライアントのインストール
+              href: clients/deploy/deploy-clients-cmg-azure.md
+            - name: CMG のトークンベースの認証
+              href: clients/deploy/deploy-clients-cmg-token.md
+            - name: クライアント インストール プロパティ
+              href: clients/deploy/about-client-installation-properties.md
+            - name: AD に発行されたクライアント インストールのプロパティ
+              href: clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md
+        - name: UNIX および Linux サーバーにクライアントを展開する
+          items:
+            - name: UNIX および Linux サーバーにクライアントを展開する方法
+              href: clients/deploy/deploy-clients-to-unix-and-linux-servers.md
+            - name: Linux および UNIX のクライアント コマンド
+              href: clients/deploy/linux-and-unix-clients-technical-reference.md
+        - name: Mac にクライアントを展開する準備
+          href: clients/deploy/prepare-to-deploy-mac-clients.md
+        - name: How to deploy clients to Macs
+          href: clients/deploy/deploy-clients-to-macs.md
+        - name: クライアントをサイトに割り当てる方法
+          href: clients/deploy/assign-clients-to-a-site.md
+        - name: クライアント ステータスを構成する方法
+          href: clients/deploy/configure-client-status.md
+        - name: クライアントの展開ステータスを監視する方法
+          href: clients/deploy/monitor-client-deployment-status.md
+- name: クライアントを管理する
+  items:
+    - name: クライアントの管理の概要
+      href: clients/manage/monitor-and-manage-clients.md
+    - name: クライアントの監視と管理
+      items:
+        - name: クライアントを監視する方法
+          href: clients/manage/monitor-clients.md
+        - name: Linux および UNIX クライアントを監視する方法
+          href: clients/manage/monitor-clients-for-linux-and-unix-servers.md
+        - name: クライアントを管理する方法
+          href: clients/manage/manage-clients.md
+        - name: クライアント通知
+          href: clients/manage/client-notification.md
+        - name: Linux および UNIX クライアントを管理する方法
+          href: clients/manage/manage-clients-for-linux-and-unix-servers.md
+        - name: Azure Monitor にデータを同期する
+          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context'
+        - name: Mac クライアントを維持する
+          href: clients/manage/maintain-mac-clients.md
+        - name: Surface デバイス ダッシュボード
+          href: clients/manage/surface-device-dashboard.md
+    - name: インターネット上のクライアントを管理する
+      items:
+        - name: インターネット上のクライアントの管理の概要
+          href: clients/manage/manage-clients-internet.md
+        - name: クラウド管理ゲートウェイ
+          items:
+            - name: クラウド管理ゲートウェイの計画
+              href: clients/manage/cmg/plan-cloud-management-gateway.md
+            - name: クラウド管理ゲートウェイのセキュリティとプライバシー
+              href: clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md
+            - name: クラウド管理ゲートウェイの FAQ
+              href: clients/manage/cmg/cloud-management-gateway-faq.md
+            - name: クラウド管理ゲートウェイの証明書
+              href: clients/manage/cmg/certificates-for-cloud-management-gateway.md
+            - name: クラウド管理ゲートウェイの設定
+              href: clients/manage/cmg/setup-cloud-management-gateway.md
+            - name: クラウド管理ゲートウェイでのクライアントの監視
+              href: clients/manage/cmg/monitor-clients-cloud-management-gateway.md
+        - name: インターネット ベースのクライアント管理の計画
+          href: clients/manage/plan-internet-based-client-management.md
+        - name: Azure AD の認証ワークフロー
+          href: clients/manage/azure-ccmsetup.md
+    - name: コレクション
+      items:
+        - name: コレクションの概要
+          href: clients/manage/collections/introduction-to-collections.md
+        - name: コレクションの前提条件
+          href: clients/manage/collections/prerequisites-for-collections.md
+        - name: コレクションのベスト プラクティス
+          href: clients/manage/collections/best-practices-for-collections.md
+        - name: コレクションを作成する方法
+          href: clients/manage/collections/create-collections.md
+        - name: コレクションを管理する方法
+          href: clients/manage/collections/manage-collections.md
+        - name: メンテナンス期間を使用する方法
+          href: clients/manage/collections/use-maintenance-windows.md
+        - name: デバイスを自動的にコレクションごとに分類する方法
+          href: clients/manage/collections/automatically-categorize-devices-into-collections.md
+        - name: コレクションのセキュリティとプライバシー
+          href: clients/manage/collections/security-and-privacy-for-collections.md
+    - name: ハードウェア インベントリ
+      items:
+        - name: ハードウェア インベントリの概要
+          href: clients/manage/inventory/introduction-to-hardware-inventory.md
+        - name: ハードウェア インベントリを拡張する方法
+          href: clients/manage/inventory/extend-hardware-inventory.md
+        - name: How to configure hardware inventory
+          href: clients/manage/inventory/configure-hardware-inventory.md
+        - name: リソース エクスプローラーを使用してハードウェア インベントリを表示する方法
+          href: clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md
+        - name: リソース エクスプローラーの既定のクラス
+          href: clients/manage/inventory/resource-explorer-classes.md
+        - name: Linux および UNIX のハードウェア インベントリ
+          href: clients/manage/inventory/hardware-inventory-for-linux-and-unix.md
+        - name: ハードウェア インベントリのセキュリティとプライバシー
+          href: clients/manage/inventory/security-and-privacy-for-hardware-inventory.md
+    - name: ソフトウェア インベントリ
+      items:
+        - name: ソフトウェア インベントリの概要
+          href: clients/manage/inventory/introduction-to-software-inventory.md
+        - name: ソフトウェア インベントリを構成する方法
+          href: clients/manage/inventory/configure-software-inventory.md
+        - name: リソース エクスプローラーを使用してソフトウェア インベントリを表示する方法
+          href: clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md
+        - name: ソフトウェア インベントリのセキュリティとプライバシー
+          href: clients/manage/inventory/security-and-privacy-for-software-inventory.md
+    - name: 資産インテリジェンス
+      items:
+        - name: 概要
+          href: clients/manage/asset-intelligence/introduction-to-asset-intelligence.md
+        - name: '[前提条件]'
+          href: clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md
+        - name: 資産インテリジェンスを構成する
+          href: clients/manage/asset-intelligence/configuring-asset-intelligence.md
+        - name: 資産インテリジェンスを使用する
+          href: clients/manage/asset-intelligence/operations-for-asset-intelligence.md
+        - name: セキュリティとプライバシー
+          href: clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md
+        - name: 検証状態遷移の例
+          href: clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md
+        - name: 一般的なライセンス インポート ファイルの例
+          href: clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md
+        - name: 製品ライフサイクル ダッシュボードの使用
+          href: clients/manage/asset-intelligence/product-lifecycle-dashboard.md
+    - name: リモート コントロール
+      items:
+        - name: リモート コントロールの概要
+          href: clients/manage/remote-control/introduction-to-remote-control.md
+        - name: リモート コントロールの前提条件
+          href: clients/manage/remote-control/prerequisites-for-remote-control.md
+        - name: リモート コントロールの構成
+          href: clients/manage/remote-control/configuring-remote-control.md
+        - name: Windows クライアント コンピューターをリモート管理する方法
+          href: clients/manage/remote-control/remotely-administer-a-windows-client-computer.md
+        - name: リモート コントロール使用状況を監査する方法
+          href: clients/manage/remote-control/audit-remote-control-usage.md
+        - name: リモート コントロールのセキュリティとプライバシー
+          href: clients/manage/remote-control/security-and-privacy-for-remote-control.md
+    - name: 電源管理
+      items:
+        - name: 電源管理の概要
+          href: clients/manage/power/introduction-to-power-management.md
+        - name: 電源管理の前提条件
+          href: clients/manage/power/prerequisites-for-power-management.md
+        - name: 電源管理のベスト プラクティス
+          href: clients/manage/power/best-practices-for-power-management.md
+        - name: 電源管理の管理者チェックリスト
+          href: clients/manage/power/administrator-checklist-for-power-management.md
+        - name: 電源管理の構成
+          href: clients/manage/power/configuring-power-management.md
+        - name: 電源プランを作成して適用する方法
+          href: clients/manage/power/create-and-apply-power-plans.md
+        - name: 電源管理を監視して計画する方法
+          href: clients/manage/power/monitor-and-plan-for-power-management.md
+        - name: 電源管理のセキュリティとプライバシー
+          href: clients/manage/power/security-and-privacy-for-power-management.md
+    - name: クライアントをアップグレードする
+      items:
+        - name: クライアントをアップグレードする方法
+          href: clients/manage/upgrade/upgrade-clients.md
+        - name: 実稼働前コレクションのクライアント アップグレードをテストする方法
+          href: clients/manage/upgrade/test-client-upgrades.md
+        - name: アップグレードから Windows クライアントを除外する
+          href: clients/manage/upgrade/exclude-clients-windows.md
+        - name: Windows クライアントのアップグレード
+          href: clients/manage/upgrade/upgrade-clients-for-windows-computers.md
+        - name: Linux および UNIX クライアントのアップグレード
+          href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
+        - name: Mac クライアントのアップグレード
+          href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md

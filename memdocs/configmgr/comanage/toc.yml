@@ -1,0 +1,54 @@
+- name: 共同管理のドキュメント
+  href: index.yml
+- name: 概要
+  items:
+    - name: 共同管理とは
+      href: overview.md
+- name: クイックスタート
+  items:
+    - name: クイックスタートの概要
+      href: quickstarts.md
+    - name: イミディエイト モード
+      items:
+        - name: 条件付きアクセス
+          href: quickstart-conditional-access.md
+        - name: Intune のリモート操作
+          href: quickstart-remote-actions.md
+        - name: クライアントのヘルス
+          href: quickstart-client-health.md
+        - name: Hybrid Azure AD
+          href: quickstart-hybrid-aad.md
+        - name: Windows Autopilot
+          href: quickstart-autopilot.md
+    - name: はじめに
+      items:
+        - name: 共同管理へのパス
+          href: quickstart-paths.md
+        - name: ハイブリッド Azure AD をセットアップする
+          href: quickstart-setup-hybrid-aad.md
+        - name: Windows 10 へのアップグレード
+          href: quickstart-upgrade-win10.md
+        - name: FastTrack からヘルプを表示する
+          href: quickstart-fasttrack.md
+- name: チュートリアル
+  items:
+    - name: 構成マネージャー クライアントの共同管理を有効にする
+      href: tutorial-co-manage-clients.md
+    - name: インターネット ベースのデバイスの共同管理を有効にする
+      href: tutorial-co-manage-new-devices.md
+- name: 概念
+  items:
+    - name: ワークロード
+      href: workloads.md
+    - name: サード パーティ製 MDM の共存
+      href: coexistence.md
+- name: 攻略ガイド
+  items:
+    - name: 共同管理を有効にする
+      href: how-to-enable.md
+    - name: インターネットベースのデバイスを準備する
+      href: how-to-prepare-Win10.md
+    - name: ワークロードを Intune に切り替える
+      href: how-to-switch-workloads.md
+    - name: 共同管理の監視
+      href: how-to-monitor.md
