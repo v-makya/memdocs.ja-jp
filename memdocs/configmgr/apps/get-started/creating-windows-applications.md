@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6b7ce4fd1ab09607f167696df35f3b5f19469b0d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3af6f2883ebf17ab19f57762b8b3bf26e3716262
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688990"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075729"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Configuration Manager で Windows アプリケーションを作成する
 
@@ -124,7 +124,7 @@ Configuration Manager では、Windows 10 のアプリ パッケージ (.msix) �
 
 - ローカライズされた情報を含むアプリ タスク シーケンスのメタデータを追加で定義する
 
-アプリには、OS 展開のタスク シーケンスを除く展開の種類しか追加できません。 影響の大きいタスク シーケンス、OS 展開のタスク シーケンス、OS アップグレード タスク シーケンスはサポートされていません。 ユーザーをターゲットとする展開は、ローカル システム アカウントのユーザー コンテキストで引き続き実行できます。
+アプリには、OS 展開のタスク シーケンスを除く展開の種類しか追加できません。 影響の大きいタスク シーケンス、OS 展開のタスク シーケンス、OS アップグレード タスク シーケンスはサポートされていません。 <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
 この展開の種類をアプリに追加するときには、 **[タスク シーケンス]** ページでプロパティを構成します。 詳細については、「[展開の種類の **[タスク シーケンス]** オプション](../deploy-use/create-applications.md#bkmk_dt-ts)」を参照してください。
 

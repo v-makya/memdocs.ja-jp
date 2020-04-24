@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 549940abdfd69f3998cab8f236a29b8fd097b705
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6a9770dca209669659abf6e4fc9c23d5e6972981
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702290"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073553"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1810 の新機能
 
@@ -418,7 +418,7 @@ SMS プロバイダーで、WMI over HTTPS に対する読み取り専用の API
 ### <a name="an-intune-connection-is-no-longer-required-for-new-on-premises-mdm-deployments"></a>新しいオンプレミスの MDM 展開に Intune 接続は不要になった
 
 <!--1359124-->
-新しい展開では、Microsoft Intune サブスクリプションを構成するというオンプレミス MDM の前提条件は必要なくなりました。 組織では、この機能を使用するにはまだ Intune ライセンスが必要です。 現在、既存のオンプレミス MDM 展開から、Intune 接続を削除することはできません。 詳細については、[Intune サポートのブログ投稿](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150)をご覧ください。
+新しい展開では、Microsoft Intune サブスクリプションを構成するというオンプレミス MDM の前提条件は必要なくなりました。 組織では、この機能を使用するにはまだ Intune ライセンスが必要です。 現時点では、既存のオンプレミスの MDM 展開から Intune 接続を削除することはできません。 詳細については、[Intune サポートのブログ投稿](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150)をご覧ください。
 
 
 
