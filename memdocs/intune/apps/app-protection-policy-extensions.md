@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7de306a7d4f632b3eedf321323e12c7ad95b713
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1dce45d0ad8d44d09345ebfe3fcd358b34a104d6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79341959"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078381"
 ---
 # <a name="protecting-application-extensions"></a>アプリケーション拡張機能の保護
 
@@ -77,5 +77,5 @@ Intune SDK と Intune アプリ保護ポリシーには、LinkedIn アカウン�
 - [Microsoft アプリの LinkedIn の情報と機能](https://go.microsoft.com/fwlink/?linkid=850740)について学習します。
 - [Office 365 ロードマップ ページ](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc)に示されている LinkedIn アカウント接続のリリースについて学習します。 
 - [LinkedIn アカウント接続の構成](https://docs.microsoft.com/azure/active-directory/linkedin-integration)について学習します。
-- ユーザーの LinkedIn および Microsoft の職場または学校アカウント間で共有されるデータの詳細については、[職場または学校の Microsoft アプリケーションの LinkedIn](https://www.linkedin.com/help/linkedin/answer/84077) に関するページを参照してください。
+- ユーザーの LinkedIn および Microsoft の職場または学校アカウント間で共有されるデータについて詳しくは、「[職場または学校のアカウントを使用した Microsoft アプリケーションの LinkedIn](https://www.linkedin.com/help/linkedin/answer/84077)」をご覧ください。
 

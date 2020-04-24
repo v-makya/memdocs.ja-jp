@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 934e2283fec0cd68ea5b72f092fb6dcac6f3fe4c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 53f33b659e45720dc84b7c38ca54fec0e3768a60
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81379633"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126096"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Microsoft Intune で SCEP 証明書プロファイルのためのデバイスから NDES サーバーへの通信をトラブルシューティングする
 
@@ -161,7 +161,7 @@ NDES に接続する Windows デバイスでは、デバイスの Windows イベ
 
 次の手順にしたがって、SCEP 証明書プロファイルで指定されている URL をテストします。
 
-1. Intune で、SCEP 証明書プロファイルを編集し、サーバーの URL をコピーします。 URL は *https://contoso.com/certsrv/mscep/msecp.dll* に似ています。
+1. Intune で、SCEP 証明書プロファイルを編集し、サーバーの URL をコピーします。 URL は *https://contoso.com/certsrv/mscep/mscep.dll* に似ています。
 
 2. Web ブラウザーを開き、その SCEP サーバーの URL に移動します。 結果は次のようになるはずです:**HTTP エラー 403.0 – Forbidden**。 この結果は、URL が正常に機能していることを示しています。
 

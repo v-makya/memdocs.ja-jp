@@ -19,18 +19,18 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 26fbc0fbc8c498df67d254895e71ef9a9ae6970f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b368fa0835e8779db5214d5372d97b72f76d906e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347146"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077548"
 ---
 # <a name="unable-to-get-macos-device-managed"></a>管理された macOS デバイスを取得できない
 
 管理された macOS デバイスを取得しようとすると、次のいずれかのメッセージが表示される場合は、会社のサポートにお問い合わせください。
 
-**メッセージ 1**:*We’re having trouble getting your device managed.This problem could be caused if you're using a virtual machine, have a restricted serial number, or if this device is already assigned to someone else.Learn how to resolve these problems or contact your company support.* (デバイスを管理されている状態にする際に問題が発生しました。この問題は、仮想マシンを使用している場合、シリアル番号が制限されている場合、またはこのデバイスが他のユーザーに既に割り当てられている場合に、発生することがあります。これらの問題の解決方法を確認するか、会社のサポートにお問い合わせください。)
+**メッセージ 1**:*We’re having trouble getting your device managed. This problem could be caused if you're using a virtual machine, have a restricted serial number, or if this device is already assigned to someone else.Learn how to resolve these problems or contact your company support.* (デバイスを管理されている状態にする際に問題が発生しました。この問題は、仮想マシンを使用している場合、シリアル番号が制限されている場合、またはこのデバイスが他のユーザーに既に割り当てられている場合に、発生することがあります。これらの問題の解決方法を確認するか、会社のサポートにお問い合わせください。)
 
 **メッセージ 2**:*It looks like you're using a virtual machine.Make sure you've fully configured your virtual machine, including serial number and hardware model.If this isn't a virtual machine, please contact support.* (仮想マシンを使用しているようです。シリアル番号やハードウェア モデルなど、仮想マシンを完全に構成したことを確認してください。仮想マシンではない場合は、サポートにお問い合わせください。)  
 
