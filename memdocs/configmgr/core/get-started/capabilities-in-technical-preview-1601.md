@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ea003aef949f5624591d87dd6105d3a1cff3b691
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2ae184400a3de0d7ab27fffc1ce1e6287593b1ae
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705730"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076307"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Configuration Manager の Technical Preview 1601 の機能
 
@@ -126,7 +126,7 @@ ms.locfileid: "81705730"
 ##  <a name="client-online-status"></a><a name="bkmk_clientStatus"></a> クライアントのオンライン状態  
 Technical Preview 1601 以降、Configuration Manager コンソールでクライアントがオンラインとオフラインのどちらであるかがすぐにわかるようになりました。 コンソール デバイス一覧の更新されたアイコンと列によって、環境内のクライアントの状態を把握し、問題の領域と、注意が必要なその他の問題を特定できます。  
 
-クライアントが Configuration Manager 管理ポイント サイト システムの役割に接続されている場合には、オンラインです。 管理ポイントが、クライアントから ping のようなメッセージを受信している場合には、状態はオンラインになります。 管理ポイントがメッセージを 5 分ほど何も受け取らないと、クライアントの状態はオフラインになります。  
+クライアントが Configuration Manager 管理ポイント サイト システムの役割に接続されている場合には、オンラインです。 管理ポイントが、クライアントから ping のようなメッセージを受信している場合には、状態はオンラインになります。 管理ポイントがメッセージを 5 分間ほど何も受け取らないと、クライアントの状態はオフラインになります。  
 
 ### <a name="icons-for-client-status"></a>クライアントの状態アイコン  
 

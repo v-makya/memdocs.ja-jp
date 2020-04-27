@@ -10,18 +10,18 @@ ms.assetid: a0bd093d-67a5-4f74-bf79-dd604889f5ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a0edf83c736c2737f4af2f040159a71bb0348aee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6b519d60be094bb7c39f738d04322009b36a409f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689310"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075865"
 ---
 # <a name="learn-more-about-powershell-script-security"></a>PowerShell スクリプトのセキュリティの詳細情報
 
 *適用対象:Configuration Manager (Current Branch)*
 
-環境内で提案された PowerShell および PowerShell パラメーターの使用方法を検証するのは管理者の責任です。 ここでは、PowerShell の機能と潜在的なリスク領域について管理者を教育するのに役立つリソースをいくつか示します。 これは、潜在的なリスク領域を減らし、安全なスクリプトを使用できるようにするためのものです。
+環境内で提案された PowerShell および PowerShell パラメーターの使用方法を検証するのは、管理者の責任です。 ここでは、PowerShell の機能と潜在的なリスク領域について管理者を教育するのに役立つリソースをいくつか示します。 これは、潜在的なリスク領域を減らし、安全なスクリプトを使用できるようにするためのものです。
 
 ## <a name="powershell-script-security"></a>PowerShell スクリプトのセキュリティ
 スクリプトの実行には、環境内で実行するように要求されるスクリプトを視覚的に確認して承認する機能が組み込まれています。 管理者は、PowerShell スクリプトに難読化されたスクリプトが含まれている可能性があることを認識する必要があります。このようなスクリプトは悪意があり、スクリプトの承認プロセス時の目視検査で検出するのは困難です。 PowerShell スクリプトを視覚的に確認することに加え、特定の検査ツールを使用することをお勧めします。これらは疑わしいスクリプトの問題を検出するのに役立ちます。 必ずしもこれらのツールで PowerShell の作成者の意図を判断し、疑わしいスクリプトに注意を向けさせることができるわけではありません。 ただし、ツールを使用する場合、悪意のある、または意図的なスクリプト構文があるかどうかを管理者が判断する必要があります。
@@ -62,7 +62,7 @@ ms.locfileid: "81689310"
 - PowerShell ギャラリーの PowerShell モジュール ["インジェクション ハンター"](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) を利用します。
     - 誤検知である可能性があるため、疑わしいものとしてフラグが設定されている場合は、その意図を探り、実際の問題であるかどうかを判断してください。 
 - Microsoft Visual Studio には Script Analyzer があります。これは、PowerShell 構文を確認するのに役立ちます。
-- 以下の"DEF CON 25 - Lee Holmes - Get $pwnd:Attacking Battle Hardened Windows Server" (堅牢な Windows Server で攻撃に対抗) というタイトルのビデオでは、保護できる問題の種類の概要が示されています (特に、セクション 12:20 から 17:50)。    <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+- 以下の"DEF CON 25 - Lee Holmes - Get $pwnd: Attacking Battle Hardened Windows Server" (堅牢な Windows Server で攻撃に対抗) というタイトルのビデオでは、保護できる問題の種類の概要が示されています (特に、セクション 12:20 から 17:50)。    <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## <a name="environment-recommendations"></a>環境の推奨事項
 PowerShell 管理者用の一般的な推奨事項です。

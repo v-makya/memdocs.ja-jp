@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1b9afc8c9cde94488908e4cd9737a58547326f9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c302e839c2a41ba27d160db24928f7e202de78dc
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703670"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110187"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>構成マネージャー クライアントのピア キャッシュ
 
@@ -41,7 +41,7 @@ ms.locfileid: "81703670"
 
 ピア キャッシュ ソースは、ピア キャッシュ クライアントの現在の境界グループのメンバーである必要があります。 管理ポイントがクライアントを提供するコンテンツのソースの一覧に、近隣境界グループのピア キャッシュ ソースが含まれることはありません。 近隣境界グループの配布ポイントのみが含まれます。 現在および近隣の境界グループの詳細については、「[境界グループ](../../servers/deploy/configure/boundary-groups.md)」を参照してください。<!--SCCMDocs issue 685-->  
 
-構成マネージャー クライアントは、ピア キャッシュを使用して、キャッシュ内のすべての種類のコンテンツを、他のクライアントに提供します。 このコンテンツには、Office 365 ファイルおよび高速インストール ファイルが含まれます。<!--SMS.500850-->  
+構成マネージャー クライアントは、ピア キャッシュを使用して、キャッシュ内のすべての種類のコンテンツを、他のクライアントに提供します。 このコンテンツには、Microsoft 365 Apps for enterprise ファイルおよび高速インストール ファイルが含まれます。<!--SMS.500850-->  
 
 ピア キャッシュによって、Windows BranchCache や配信の最適化などの他のソリューションが置き換えられることはありません。 ピア キャッシュは、他のソリューションと共に動作します。 これらのテクノロジにより、配布ポイントなどの従来のコンテンツ展開ソリューションを拡張するオプションが提供されます。 ピア キャッシュは、BranchCache に依存しないカスタム ソリューションです。 BranchCache を有効にしていない場合または使用していない場合でも、ピア キャッシュは正常に動作します。  
 

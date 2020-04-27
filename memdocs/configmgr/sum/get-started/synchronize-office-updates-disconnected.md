@@ -2,7 +2,7 @@
 title: インターネットに接続せずに Office 365 の更新プログラムを同期する
 titleSuffix: Configuration Manager
 description: インターネットから切断されている最上位のソフトウェアの更新ポイントで Office 365 の更新プログラムを同期します。
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,18 +10,21 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 78b97be755659fa06466dd1bb1f6920e2a7be330
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3627d2f7772b7b9e133d742b0ee4f94dba6e457a
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699470"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110357"
 ---
 # <a name="synchronize-office-365-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a>切断されているソフトウェアの更新ポイントからの Office 365 の更新プログラムの同期
 
 *適用対象:Configuration Manager (Current Branch)*
 <!--4065163-->
 Configuration Manager バージョン 2002 以降、ツールを使用して、インターネットに接続されている WSUS サーバーから、切断された Configuration Manager 環境に Office 365 更新プログラムをインポートすることができます。 以前は、更新されたソフトウェアのメタデータをエクスポートし、切断された環境にインポートした場合、Office 365 更新プログラムを展開できませんでした。 Office 365 更新プログラムには Office API と Office CDN からダウンロードした追加のメタデータが必要ですが、これは、切断された環境では不可能です。
+
+> [!Note]
+> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
 
 ## <a name="prerequisites"></a>[前提条件]
 

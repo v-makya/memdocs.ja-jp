@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ef37b5f99cda8022166972cdc015a3c60d0458a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1785880af8c7d0d106abfe3eea8ecd390f6ce6b1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705630"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074454"
 ---
 # <a name="capabilities-in-technical-preview-1604-for-configuration-manager"></a>Configuration Manager の Technical Preview 1604 の機能
 

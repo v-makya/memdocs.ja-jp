@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: c541c257d885ee5cba9e174a86a6859b078c8594
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 15735b015796d2cccfa9b0a24afc8f6eb0573df1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702410"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073621"
 ---
 # <a name="what39s-new-in-version-1710-of-configuration-manager"></a>Configuration Manager のバージョン 1710 の新機能
 

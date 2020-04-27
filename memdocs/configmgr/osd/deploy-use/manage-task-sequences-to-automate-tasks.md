@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5871ac29f8b5d4adb9866e091042300df1d64832
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b38b0c8f28645fa0aae66058b0c93bd8beffc470
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690530"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078483"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>タスクを自動化するためのタスク シーケンスの管理
 

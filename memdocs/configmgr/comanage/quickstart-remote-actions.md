@@ -10,12 +10,12 @@ ms.assetid: 4a877bed-f6c4-4048-9421-507dc848af5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e7dc4753a94dccf8a6a15751a436cecf8374e399
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0ca37a4e15f5da63ed743b541eeabc43708b0be1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691230"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075321"
 ---
 # <a name="remote-actions-with-co-management"></a>共同管理によるリモート アクション
 
@@ -51,7 +51,7 @@ ms.locfileid: "81691230"
 > *Intune のこの機能を導入したことですぐに現れた効果は、コンピューター上の Windows をリモート リセットできるようになったことでした。これは弊社にとって重要なことです。外回りの多い会社ではコンピューターの紛失や盗難が当たり前ですから。* 
 > *この機能がなかったら、カスタムの ConfigMgr パッケージを作成し、保守管理しなければならなかったはずです。*
 
-リモート アクションの利用方法については、「[行えるデバイス アクション](https://docs.microsoft.com/intune/device-management#available-device-actions)」を参照してください。
+リモート アクションの利用方法については、「[行えるデバイス アクション](../../intune/remote-actions/device-management.md#available-device-actions)」を参照してください。
 
 
 ## <a name="value-proposition"></a>価値提案
@@ -74,25 +74,25 @@ Configuration Manager で[共同管理を有効に](how-to-enable.md)したら�
 
 - **削除**:Azure portal で Intune からデバイスを削除する場合、特定のデバイス ウィンドウからそのデバイスを削除します。 次回、デバイスがチェックインしたとき、デバイスに組織データが格納されていれば、それが削除されます。  
 
-詳細については、「[ワイプ、インベントリからの削除、デバイス登録の手動解除を使用し、デバイスを削除する](https://docs.microsoft.com/intune/devices-wipe)」を参照してください。
+詳細については、「[ワイプ、インベントリからの削除、デバイス登録の手動解除を使用し、デバイスを削除する](../../intune/remote-actions/devices-wipe.md)」を参照してください。
 
 #### <a name="selective-wipe"></a>選択的ワイプ
 <!--SCCMDocs issue 973-->
 **[アプリの選択的ワイプ]** を選択すると、個人データを削除することなく会社のアプリ データが削除されます。 デバイスの紛失や盗難が報告されたとき、このアクションを使用します。 
 
-詳細については、「[Intune で管理されているアプリから会社のデータをワイプする方法](https://docs.microsoft.com/intune/apps-selective-wipe)」を参照してください。
+詳細については、「Intune で管理されているアプリから会社のデータをワイプする方法」 (../../intune/apps/apps-selective-wipe.md) を参照してください。
 
 #### <a name="sync"></a>同期
 デバイス アクション "**同期**" を実行すると、選択したデバイスが直後に Intune にチェックインします。 チェックインしたデバイスは、保留中のアクションやポリシーがデバイスに割り当てられている場合、それを直後に受信します。
 
 この機能により、割り当てたポリシーをすぐに検証し、問題を解決できます。スケジュールされている次のチェックインまで待つ必要がありません。
 
-詳細については、「[デバイスを Intune と同期して最新のポリシーとアクションを取得する](https://docs.microsoft.com/intune/device-sync)」を参照してください。
+詳細については、「[デバイスを Intune と同期して最新のポリシーとアクションを取得する](../../intune/remote-actions/device-sync.md)」を参照してください。
 
 #### <a name="restart"></a>再起動
 デバイス アクション "**再起動**" では、選択したデバイスが再起動されます。 このアクションは、再起動が保留になっているがユーザーがそれを実行できないときに便利です。
 
-詳細については、「[Intune でデバイスをリモートで再起動する](https://docs.microsoft.com/intune/device-restart)」を参照してください。
+詳細については、「[Intune でデバイスをリモートで再起動する](../../intune/remote-actions/device-restart.md)」を参照してください。
 
 #### <a name="fresh-start"></a>新たに開始
 デバイス アクション "**新たに開始**" では、Windows 10 バージョン 1703 以降で実行されているデバイスにアプリがインストールされていれば、そのアプリが削除されます。 "新たに開始" では、新しいデバイスに通常インストールされているプレインストール (OEM) アプリを削除できます。
@@ -101,12 +101,12 @@ Configuration Manager で[共同管理を有効に](how-to-enable.md)したら�
 
 デバイスに入れるアプリに関して基準を既に決定している場合、基準に一致しないアプリがこのアクションで消去されます。
 
-詳細については、「[[新たに開始] を使用して Intune が稼働する Windows 10 デバイスをリセットする](https://docs.microsoft.com/intune/device-fresh-start)」を参照してください。 
+詳細については、「[[新たに開始] を使用して Intune が稼働する Windows 10 デバイスをリセットする](../../intune/remote-actions/device-fresh-start.md)」を参照してください。 
 
 #### <a name="remote-control"></a>リモート コントロール
 Intune で管理されているデバイスは [TeamViewer](https://www.teamviewer.com/) でリモート管理できます。 TeamViewer はサードパーティ製のプログラムであり、別途入手する必要があります。
 
-詳細については、「[TeamViewer を使用して、Intune デバイスをリモートで管理する](https://docs.microsoft.com/intune/device-profile-android-teamviewer)」を参照してください。 
+詳細については、「[TeamViewer を使用して、Intune デバイスをリモートで管理する](../../intune/remote-actions/teamviewer-support.md)」を参照してください。
 
 
 
@@ -114,5 +114,4 @@ Intune で管理されているデバイスは [TeamViewer](https://www.teamview
 
 TeamViewer によるリモート コントロールを除き、[共同管理を有効に](how-to-enable.md)した後は、他に何も設定しなくても Intune で上記のリモート デバイス アクションを使用できます。
 
-TeamViewer によるリモート コントロールの詳細については、「[TeamViewer を使用して、Intune デバイスをリモートで管理する](https://docs.microsoft.com/intune/device-profile-android-teamviewer)」を参照してください。 
-
+TeamViewer によるリモート コントロールの詳細については、「[TeamViewer を使用して、Intune デバイスをリモートで管理する](../../intune/remote-actions/teamviewer-support.md)」を参照してください。

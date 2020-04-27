@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 65c8feb6381c59cc1fef3fb07a3ad8c33fc67e65
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 64d01598f3d5feb162898761645ac84b1c73b175
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705690"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074471"
 ---
 # <a name="capabilities-in-technical-preview-1602-for-configuration-manager"></a>Configuration Manager の Technical Preview 1602 の機能
 
@@ -42,7 +42,7 @@ ms.locfileid: "81705690"
 ##  <a name="improvements-to-software-center-in-version-1602"></a><a name="BKMK_SC1601"></a> バージョン 1602 でのソフトウェア センターの機能強化  
 
 ### <a name="refresh-pc-machine-and-user-policy-from-software-center"></a>ソフトウェア センターから PC コンピューターとユーザーのポリシーを更新する  
- 新しいオプションである **同期ポリシー** が、ソフトウェア センターの **[オプション]**  >  **[コンピューターのメンテナンス]** ページに追加されました。これにより、PC では Configuration Manager コンピューターとユーザーのポリシーが更新されます。  
+ 新しいオプションである**同期ポリシー**が、ソフトウェア センターの **[オプション]**  >  **[コンピューターのメンテナンス]** ページに追加されました。これにより、PC では Configuration Manager コンピューターとユーザーのポリシーが更新されます。  
 
 ##  <a name="improvements-to-windows-10-servicing"></a><a name="BKMK_Win10Servicing"></a> Windows 10 サービスの機能強化  
  1602 Technical Preview では、次の Windows 10 サービスの機能が追加されました。  

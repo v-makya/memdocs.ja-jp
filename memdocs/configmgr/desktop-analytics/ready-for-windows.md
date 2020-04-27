@@ -2,7 +2,7 @@
 title: Ready for Windows
 titleSuffix: Configuration Manager
 description: Ready for Windows Web サイトの提供終了
-ms.date: 10/30/2019
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: da56dbe1a363606e50569db8be10d65d10d1b422
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b3f378ce519085eb1d2714a901e20b29b62b0cd4
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695570"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82109983"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Ready for Modern Desktop の提供終了に関する FAQ
 
@@ -31,6 +31,9 @@ ms.locfileid: "81695570"
 *Ready for Modern Desktop* ディレクトリには、Windows 10 および Office 365 ProPlus を実行している商用デバイスでサポートされ、使用されているソフトウェア ソリューションが掲載されていました。 このディレクトリは、Windows 10 および Office 365 の最新バージョンの展開を検討している IT 管理者を支援するものです。
 
 IT 管理者からは、これらの分析情報を既に使用しているツールと統合して展開計画を立てたいというフィードバックをいただいています。 Windows 10 と Office 365 ProPlus のアップグレード プロジェクトを計画および管理するには、Configuration Manager で [Desktop Analytics](https://aka.ms/dadocs) と [Office 365 ProPlus の準備機能](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)を使用します。 
+
+> [!Note]
+> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
 
 ### <a name="what-is-desktop-analytics"></a>Desktop Analytics とは
 

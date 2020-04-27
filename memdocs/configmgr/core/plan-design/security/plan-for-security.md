@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4c10922bbe855bfbd89228d1887db06399c261ca
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 53a30f376bd288e8d50d88ea8f33af37f3cd599e
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695780"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110153"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Configuration Manager でのセキュリティの計画
 
@@ -392,7 +392,7 @@ Configuration Manager と Azure Active Directory (Azure AD) を統合するこ�
 
 - インフラストラクチャの要件を減らす。 たとえば、アプリケーション カタログではなく、[管理ポイントを使用するソフトウェア センター](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)  
 
-- [Office 365 アプリを管理する](../../../sum/deploy-use/manage-office-365-proplus-updates.md)  
+- [Microsoft 365 Apps for enterprise を管理する](../../../sum/deploy-use/manage-office-365-proplus-updates.md)  
 
 
 **サーバー**  

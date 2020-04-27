@@ -10,12 +10,12 @@ ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: b5f5ee5f8348a3d0a2d059c18edaa964826228e1
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2a99384772895ff2675ade671076163b74cecee2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692460"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075304"
 ---
 # <a name="create-user-data-and-profiles-configuration-items-in-configuration-manager"></a>Configuration Manager でユーザー データとプロファイル構成項目を作成する
 
@@ -25,9 +25,9 @@ Configuration Manager のユーザー データとプロファイル構成項目
 
 - ユーザーのドキュメント フォルダーをネットワーク共有にリダイレクトします。  
 
-- ネットワーク接続が使用できないときにネットワーク上に格納されている指定のファイルをユーザーのコンピューターで使用できるようにします。  
+- ネットワーク接続が使用できないときにネットワーク上に格納されている指定のファイルを、ユーザーのコンピューターで使用できるようにします。  
 
-- ユーザーがログオンおよびログオフするときにネットワーク共有と同期するユーザーのローミング プロファイル内のファイルの種類を構成します。  
+- ユーザーがログオンおよびログオフするときにネットワーク共有と同期する、ユーザーのローミング プロファイル内のファイルの種類を構成します。  
 
   Configuration Manager の他の構成項目とは異なり、ユーザー データとプロファイル構成項目を構成基準に追加したうえで、それを展開することはしません。 代わりに、 **[ユーザー データとプロファイル構成項目の展開]** ダイアログ ボックスを使用して、構成項目を直接展開します。  
 

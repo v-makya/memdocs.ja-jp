@@ -2,7 +2,7 @@
 title: インターネット アクセス要件
 titleSuffix: Configuration Manager
 description: Configuration Manager の機能をすべて利用するためのインターネット エンドポイントについて説明します。
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2edcff868a684d5e108626b7372241dd1ec47d1c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 58afaf564a8afaba4569755575fcc7c1757c5529
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701530"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110136"
 ---
 # <a name="internet-access-requirements"></a>インターネット アクセス要件
 
@@ -171,13 +171,16 @@ WSUS および自動更新が Microsoft Update クラウド サービスと通�
 
 ## <a name="manage-office-365"></a>Office 365 の管理
 
-Configuration Manager を使用して Office 365 を展開および更新する場合は、次のエンドポイントを許可します。
+> [!NOTE]
+> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
+
+Configuration Manager を使用して Microsoft 365 Apps for enterprise を展開および更新する場合は、次のエンドポイントを許可します。
 
 <!-- SCCMDocs#929 -->
 
-- Office 365 クライアント更新プログラムのソフトウェア更新ポイントを同期するための `officecdn.microsoft.com`
+- Microsoft 365 Apps for enterprise クライアント更新プログラムのソフトウェア更新ポイントを同期するための `officecdn.microsoft.com`
 
-- Office 365 の展開用にカスタム構成を作成するための `config.office.com`
+- Microsoft 365 Apps for enterprise の展開用にカスタム構成を作成するための `config.office.com`
 
 ## <a name="configuration-manager-console"></a>Configuration Manager コンソール
 

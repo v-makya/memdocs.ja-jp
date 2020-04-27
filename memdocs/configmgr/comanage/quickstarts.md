@@ -10,12 +10,12 @@ ms.assetid: 8d878443-90e7-46e4-9cd3-99e2a19b2ad0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebadb47ca67f331ac88f8947b396438893e12386
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5ca960ddd6a4057da10341063f0b14a7f1d104d1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690870"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075814"
 ---
 # <a name="cloud-connecting-with-co-management"></a>共同管理を使用したクラウドの接続
 
@@ -29,7 +29,7 @@ ms.locfileid: "81690870"
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Cloud-Connecting-with-Co-Management/player]
 
-| イミディエイト モード | 概要 |
+| イミディエイト モード | はじめに |
 |-----------------|-----------------|
 | - [条件付きアクセス](#bkmk_ca)<br> - [Intune からのリモート操作](#bkmk_remote)<br> - [クライアントの正常性](#bkmk_client-health)<br> - [ハイブリッド Azure AD](#bkmk_hybrid-aad)<br> - [Windows Autopilot](#bkmk_autopilot) | - [共同管理へのパス](#bkmk_paths)<br> - [ハイブリッド Azure AD の設定](#bkmk_setup-hybrid-aad)<br> - [Windows 10 へのアップグレード](#bkmk_upgrade-win10)<br> - [FastTrack のサポートを受ける](#bkmk_fasttrack) |
 
@@ -39,11 +39,11 @@ ms.locfileid: "81690870"
 |-|-|-|
 | <a name="bkmk_ca"></a>**条件付きアクセスとデバイス コンプライアンス** | Intune のコンプライアンス規則に基づいて企業リソースへのユーザー アクセスを制御します | [![条件付きアクセスのビデオのサムネイル](media/thumbnail-conditional-access.png)](quickstart-conditional-access.md) |
 | <a name="bkmk_remote"></a>**Intune からのリモート操作** | 共同管理対象デバイスに対して Intune からリモート操作を実行します。 たとえば、デバイスをワイプしてリセットし、登録とアカウントを維持します | [![リモート操作のビデオのサムネイル](media/thumbnail-remote-action.png)](quickstart-remote-actions.md) |
-| <a name="bkmk_client-health"></a>**Configuration Manager クライアントの正常性** | Azure portal 上の Intune から Configuration Manager クライアントの正常性を把握する | [![クライアントの正常性のビデオのサムネイル](media/thumbnail-client-health.png)](quickstart-client-health.md) |
+| <a name="bkmk_client-health"></a>**Configuration Manager クライアントの正常性** | Azure portal 上の Intune から Configuration Manager クライアントの正常性を把握します | [![クライアントの正常性のビデオのサムネイル](media/thumbnail-client-health.png)](quickstart-client-health.md) |
 | <a name="bkmk_hybrid-aad"></a>**Azure Active Directory (Azure AD)** | Azure AD を利用すれば、クラウド環境とオンプレミス環境の両方で、ユーザーの生産性とリソースのセキュリティを改善できます | [![ハイブリッド Azure AD のビデオのサムネイル](media/thumbnail-azure-ad.png)](quickstart-hybrid-aad.md) |
 | <a name="bkmk_autopilot"></a>**Windows Autopilot** | デバイスの展開、管理、廃止、またはリサイクルに関連する時間、リソース、および複雑さを軽減します。 また、Autopilot によって、エンド ユーザーのエクスペリエンスも向上します。 | [![Windows Autopilot のビデオのサムネイル](media/thumbnail-autopilot.png)](quickstart-autopilot.md) |
 
-## <a name="getting-started"></a>概要
+## <a name="getting-started"></a>はじめに
 
 共同管理を有効にするには、ここから始めて、技術的な懸念を解消してください。
 

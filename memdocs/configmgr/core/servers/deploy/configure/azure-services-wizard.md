@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3a4dee8af68fec8c08cc58b02520f53e13adfbb3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f36da59c6924f6d2f71d882f601c6dd563840d73
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704890"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022536"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configuration Manager と共に使用するように Azure サービスを構成する
 
@@ -273,3 +273,5 @@ Configuration Manager で Azure アプリをインポートした場合は、Azu
 4. Configuration Manager クライアントは Azure AD ユーザー トークンを要求します。 クライアントは Azure AD クライアント アプリのアプリケーション ID、および対象となるサーバー アプリを使用して要求を行います。 詳細については、「[Azure AD のセキュリティ トークンの要求](/azure/active-directory/develop/authentication-scenarios#security-tokens)」を参照してください。  
 
 5. クライアントは、Azure AD トークンをクラウド管理ゲートウェイおよびオンプレミスの HTTPS が有効な管理ポイントに提示して、サイトで認証を行います。  
+
+詳細については、「[Azure AD の認証ワークフロー](../../../clients/manage/azure-ccmsetup.md)」を参照してください。

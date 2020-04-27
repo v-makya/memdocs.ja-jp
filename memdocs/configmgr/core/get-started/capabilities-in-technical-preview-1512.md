@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 03a6e7cd49bbb5a65a4364be398961c048d2a1b9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f52d6956cf860de8e45ac4e532500d32bcf077ba
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705680"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074505"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-configuration-manager"></a>Configuration Manager の Technical Preview 1512 の機能
 
@@ -67,7 +67,7 @@ Technical Preview 1512 以降、Configuration Manager を Microsoft Intune と�
 
     -   この設定により、管理者はより詳細な操作ができるようになり、スケジュールされたフル スキャン中にマップされたネットワーク ドライブが必ずスキャンされるリスクなしに、ネットワーク ファイルのオンデマンド スキャンができるようになります。  
 
-    -   この設定を構成できるようにするには、設定 **ネットワーク ファイルをスキャンする** を最初に有効 (はい) にする必要があります。  
+    -   この設定を構成できるようにするには、設定 **[ネットワーク ファイルをスキャンする]** を最初に有効 ([はい]) にする必要があります。  
 
     -   既定で、この設定は [いいえ] になっており、マップされたネットワーク ドライブはフル スキャンでアクセスされません。  
 

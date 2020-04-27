@@ -10,12 +10,12 @@ ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cff249bf5289ebcf354851258b5c9d598314ce3b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 11045ff31dc3832ac97d62f491561b3cf989813c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709060"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079350"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>Configuration Manager で PXE を使用して Windows をネットワーク経由で展開する
 
@@ -105,6 +105,9 @@ PXE による OS の展開を使用するには、OS を PXE ブート要求か�
 - メディアと PXE のみ
 
 - メディアと PXE のみ (非表示)
+
+## <a name="option-82-during-pxe-dhcp-handshake"></a>PXE DHCP ハンドシェイク中のオプション 82
+バージョン 1906 以降では、PXE DHCP ハンドシェイク中のオプション 82 が、WDS を使用せずに PXE レスポンダーでサポートされます。 オプション 82 が必要な場合は、WDS を使用せずに PXE レスポンダーを使用するようにしてください。 オプション 82 は WDS ではサポートされません。
 
 ## <a name="deploy-the-task-sequence"></a><a name="BKMK_Deploy"></a> タスク シーケンスの展開
 

@@ -2,7 +2,7 @@
 title: Configuration Manager コンソール
 titleSuffix: Configuration Manager
 description: Configuration Manager コンソールでの移動について学習します。
-ms.date: 04/01/2020
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f6bcd0bc06721fbd6ea3ce1226867db522bb2560
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 58b66639094a602206114cd75a724504618ad38c
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700340"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110034"
 ---
 # <a name="how-to-use-the-configuration-manager-console"></a>Configuration Manager コンソールの使用方法
 
@@ -428,6 +428,8 @@ Configuration Manager コンソールのデバイス ビューで MAC アドレ�
 1. 円グラフの横にある **[View Required]\(必須の表示\)** ハイパーリンクを選択して、デバイスの一覧にドリルダウンします。
 1. このアクションによって、更新プログラムが必要なデバイスを確認できる **[デバイス]** の下の一時ノードに移動されます。 一覧から新しいコレクションを作成するなど、ノードに対して操作を行うこともできます。
 
+> [!NOTE]
+> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
 
 #### <a name="maximize-the-browse-registry-window"></a>[レジストリの参照] ウィンドウの最大化
 

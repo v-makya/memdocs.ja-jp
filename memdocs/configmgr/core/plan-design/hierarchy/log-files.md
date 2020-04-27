@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f203861e2f82aa7eb0942a22a7b16cf5dd49616c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6cd64d49abf7392c949a76ef198dabfc543dce7c
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706530"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110170"
 ---
 # <a name="log-file-reference"></a>ログ ファイルのリファレンス
 
@@ -828,7 +828,7 @@ Configuration Manager クライアント上のログ ファイルは、ディレ
 
 |ログの名前|[説明]|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|AlternateHandler.log|Office 365 クライアントの更新プログラムをダウンロードしてインストールするために、クライアントで Office クイック実行 COM インターフェイスが呼び出されたときに詳細を記録します。 Windows 更新プログラムをダウンロードしてインストールするために Windows Update エージェント API を呼び出すときの、WuaHandler の使用と似ています。<!-- SCCMDocs#888 -->|クライアント|
+|AlternateHandler.log|Microsoft 365 Apps for enterprise クライアントの更新プログラムをダウンロードしてインストールするために、クライアントで Office クイック実行 COM インターフェイスが呼び出されたときに詳細を記録します。 Windows 更新プログラムをダウンロードしてインストールするために Windows Update エージェント API を呼び出すときの、WuaHandler の使用と似ています。<!-- SCCMDocs#888 -->|クライアント|
 |Ccmperf.log|メンテナンス操作、およびクライアントのパフォーマンス カウンターに関連するデータの取得操作を記録します。|クライアント|
 |DeltaDownload.log|配信の最適化を使用してダウンロードされた高速更新プログラムと更新プログラムのダウンロードに関する情報が記録されます。|クライアント|  
 |PatchDownloader.log|更新プログラムのソースから、ソフトウェア更新プログラムをサイト サーバーにダウンロードするプロセスの詳細を記録します。|更新プログラムを手動でダウンロードする場合、このログ ファイルは、コンソールを実行しているコンピューターでコンソールを実行しているユーザーの %temp% ディレクトリに配置されます。 自動展開規則では、ConfigMgr クライアントがサイト サーバーにインストールされている場合、このログ ファイルはサイト サーバーの %windir%\CCM\Logs に配置されます。|  

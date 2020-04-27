@@ -10,12 +10,12 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fa36d3782f75605221c03b7c0791e9b75b68f6e5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 419b91365d80062baabc289d0dbcf064c89b71a0
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690560"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110476"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>段階的な展開の管理と監視
 
@@ -76,7 +76,10 @@ ms.locfileid: "81690560"
 
 3. 詳細ウィンドウで、 **[段階的な展開]** タブに切り替えます。  
 
-4. 段階的な展開を選択し、リボンの **[中断]** または **[再開]** をクリックします。  
+4. 段階的な展開を選択し、リボンの **[中断]** または **[再開]** をクリックします。 
+
+> [!NOTE]
+> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager 製品やドキュメントに古い名前が表示される場合があります。 
 
 <!-- Removed for 1806, need to clarify behavior with engineering
 When you suspend a phased deployment, it sets the available and deadline times on the active deployments to a future time. When you resume, it generates a new schedule based on when you resume the phased deployment. The new schedule helps to avoid problems if you resume after the original deadline. For example, the initial schedule has the required deadline seven days after the deployment is available. You suspend it on the second day. If you aren't ready to resume it until day eight, you don't want the deployment to be immediately past the deadline. So it generates a new deadline starting from when you resume the phased deployment on day eight. 

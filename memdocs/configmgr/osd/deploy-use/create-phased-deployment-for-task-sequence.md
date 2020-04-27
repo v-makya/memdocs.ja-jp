@@ -2,7 +2,7 @@
 title: 段階的展開の作成
 titleSuffix: Configuration Manager
 description: 複数コレクションへのソフトウェアのロールアウトを自動化するには、段階的展開を使用します。
-ms.date: 04/16/2019
+ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 75868250b1f35654e01065e7ff610beb293de727
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5af0b7c90225a1f42d55767a0296d7e2263f956f
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690730"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110459"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Configuration Manager で段階的展開を作成する
 
@@ -117,14 +117,12 @@ Include a timeline diagram
 
 4. **[設定]** ページで、スケジュール設定ごとに 1 つのオプションを選択します。 詳細については、「[フェーズの設定](#bkmk_settings)」をご覧ください。 完了したら **[次へ]** を選択します。  
 
-5. **[フェーズ]** ページで、指定したコレクションに対してウィザードが作成する 2 つのフェーズを確認します。 **[次へ]** を選択します。   
-
-    > [!Note]  
-    > このセクションでは、既定の 2 フェーズの展開を自動的に作成する手順について説明します。 ウィザードでは、段階的展開のフェーズの追加、削除、順序変更、編集、表示を行うことができます。 これらの追加アクションについて詳しくは、「[手動で構成したフェーズを使用して段階的展開を作成する](#bkmk_manual)」をご覧ください。  
+5. **[フェーズ]** ページで、指定したコレクションに対してウィザードが作成する 2 つのフェーズを確認します。 **[次へ]** を選択します。 これらの手順では、既定の 2 フェーズの展開を自動的に作成する手順について説明します。 ウィザードでは、段階的展開のフェーズの追加、削除、順序変更、編集、表示を行うことができます。 これらの追加アクションについて詳しくは、「[手動で構成したフェーズを使用して段階的展開を作成する](#bkmk_manual)」をご覧ください。  
 
 6. **[概要]** タブで選択内容を確認してから、 **[次へ]** を選択してウィザードを完了します。  
 
-
+> [!NOTE]
+> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager 製品やドキュメントに古い名前が表示される場合があります。  
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> 手動で構成したフェーズを使用して段階的展開を作成する
 <!--1358148--> 

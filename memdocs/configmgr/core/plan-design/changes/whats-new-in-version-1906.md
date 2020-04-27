@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 94ad19c2b405af75c7432bb4601098f980c1e821
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c7ad4e96d9afba7e52d2ff2e5dd3f4f6be0b9a98
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702330"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078704"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1906 の新機能
 
@@ -371,6 +371,10 @@ Configuration Manager コンソールが応答しなくなった場合は、タ�
 - タスク シーケンスでは、新しい読み取り専用変数 **_SMSTSLastContentDownloadLocation** が設定されます。 この変数には、タスク シーケンスがダウンロードされた、またはコンテンツのダウンロードが試行された最後の場所が含まれています。 クライアントのログを解析する代わりに、この変数を検査します。<!-- 2840337 -->
 
 - タスク シーケンス メディアを作成する場合、Configuration Manager によって autorun.inf ファイルが追加されることはありません。 通常、このファイルはマルウェア対策製品によってブロックされます。 自分のシナリオに必要な場合は、引き続きこのファイルを含めることができます。<!-- 4090666 -->
+
+### <a name="improvements-to-pxe"></a>PXE の改善
+
+PXE DHCP ハンドシェイク中のオプション 82 が、WDS を使用せずに PXE レスポンダーでサポートされるようになりました。 オプション 82 は WDS ではサポートされません。
 
 
 ## <a name="software-center"></a><a name="bkmk_userxp"></a> ソフトウェア センター

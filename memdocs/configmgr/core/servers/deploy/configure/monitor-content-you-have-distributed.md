@@ -10,12 +10,12 @@ ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 31edf096c57b726c3723d261db7a3103fcc311f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fafcbffe3231af78ae3a079061accc9f112a181c
+ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701130"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82110017"
 ---
 # <a name="monitor-content-you-distribute-with-configuration-manager"></a>Configuration Manager で配布するコンテンツを監視する
 
@@ -157,7 +157,7 @@ Configuration Manager コンソールで、 **[監視]** ワークスペース�
 - [BranchCache](../../../plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache)
 - [ピア キャッシュ](../../../plan-design/hierarchy/client-peer-cache.md)
 - [配信の最適化](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization) (バージョン 1906 以降)<sup>[注 1](#bkmk_note1)</sup>
-- Microsoft Update:このソースは、構成マネージャー クライアントが Microsoft クラウド サービスからソフトウェアの更新プログラムをダウンロードするとき、デバイスによって通知されます。 これらのサービスには、Microsoft Update と Office 365 が含まれます。
+- Microsoft Update:このソースは、構成マネージャー クライアントが Microsoft クラウド サービスからソフトウェアの更新プログラムをダウンロードするとき、デバイスによって通知されます。 これらのサービスには、Microsoft Update と Microsoft 365 Apps for enterprise が含まれます。
 
 ![ダッシュボードのクライアント コンテンツ ソース タイル](media/3555759-do-source.png)
 

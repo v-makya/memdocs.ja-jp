@@ -10,12 +10,12 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ced7d5347e4b8b9fbf0a3006063f507578a7b887
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c12372325573c6795396ff0832ca60cba68b8c29
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701230"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078500"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure の Configuration Manager - よく寄せられる質問
 

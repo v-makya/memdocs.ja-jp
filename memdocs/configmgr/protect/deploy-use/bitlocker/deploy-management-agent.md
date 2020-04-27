@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be5ecd02817d315da4a3bea1f21285eb5a77d77e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 96594731ef64577d30267376d3bcb93268e59a9e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709360"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075015"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker 管理の展開
 
@@ -194,6 +194,19 @@ Configuration Manager では BitLocker ドライブ暗号化で既に保護さ�
 たとえば、MBAM を使用して、PIN で保護されていないドライブを暗号化したが、Configuration Manager ポリシーには PIN が必要だとします。 このドライブは、暗号化されているけれども、ポリシーには準拠していません。
 
 この動作を回避するには、最初にデバイスで BitLocker を無効にします。 次に、新しいポリシーを新しい設定で展開します。
+
+## <a name="co-management-and-intune"></a>共同管理と Intune
+
+<!-- SCCMDocs#2321 -->
+
+BitLocker の Configuration Manager クライアント ハンドラーは、共同管理に対応しています。 デバイスが共同管理されており、[Endpoint Protection ワークロード](../../../comanage/workloads.md#endpoint-protection)を Intune に切り替える場合、Configuration Manager クライアントはその BitLocker ポリシーを無視します。 デバイスは、Intune から Windows 暗号化ポリシーを取得します。
+
+暗号化管理機関を切り替えるときは、[再暗号化](#re-encryption)を計画します。
+
+Intune での BitLocker の管理に関する詳細については、次の記事を参照してください。
+
+- [Intune でデバイスの暗号化を使用する](../../../../intune/protect/encrypt-devices.md#bitlocker-encryption-for-windows-10)
+- [Microsoft Intune での BitLocker ポリシーのトラブルシューティング](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
 
 ## <a name="next-steps"></a>次のステップ
 

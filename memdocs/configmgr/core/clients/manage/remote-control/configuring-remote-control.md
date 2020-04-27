@@ -10,12 +10,12 @@ ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1362f44c510fd34aebc6af77efc63e881c27688c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 78f74a9659a011defd50e6ab0e9e1cfe85eec16b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696470"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076732"
 ---
 # <a name="configuring-remote-control-in-configuration-manager"></a>Configuration Manager のリモート コントロールの構成
 

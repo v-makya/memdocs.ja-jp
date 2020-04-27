@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3a60134e33449f2de181dd2dd39f4783383a889d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 73e3e19df4ce545e4cbb36109da2710e848f1159
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705640"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076222"
 ---
 # <a name="capabilities-in-technical-preview-1603-for-configuration-manager"></a>Configuration Manager の Technical Preview 1603 の機能
 
@@ -47,7 +47,7 @@ ms.locfileid: "81705640"
 
  有効な場合、リモート セッションを共有しているエンドユーザーは、ビューア―が共有クリップボードを使用して、セッションからローカル コンピューターにファイルを転送できるように、そのセッションのビューア―にアクセス許可を与える必要があります。  
 
- 前述のように、これにより、ビューア―にエンドユーザーのコンピューターのフル コントロールが付与された場合、エンドユーザーに完全に透過的な方法で、共有クリップボードを使用してセッションからローカル コンピューターにファイルを転送できるように、エンドユーザーに保護レイヤーが追加されます。  
+ 前述のように、これにより、ビューアーにエンドユーザーのコンピューターのフル コントロールが付与された場合、エンド ユーザーに完全に透過的な方法で、共有クリップボードを使用してセッションからローカル コンピューターにファイルを転送できるように、エンド ユーザーに保護レイヤーが追加されます。  
 
 ##  <a name="customize-the-ramdisk-tftp-block-size-and-window-size-on-pxe-enabled-distribution-points"></a><a name="BKMK_RamDiskTFTP"></a> PXE 対応配布ポイント上の RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズ  
  1603 Technical Preview では、PXE 対応配布ポイントの RamDisk TFTP ブロック サイズとウィンドウ サイズをカスタマイズできます。 ネットワークをカスタマイズしている場合、ブロックまたはウィンドウのサイズが大きすぎるために、ブート イメージのダウンロードがタイムアウト エラーで失敗する可能性があります。 RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズにより、特定のネットワーク要件に対応する PXE を使用する場合に、TFTP トラフィックを最適化できます。   

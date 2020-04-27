@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c0cfc9ee0fe80aa39ba49b25c392334a01169a8a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a6808fed9fa9aaf894e3975066eb7707880b7948
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703770"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82073417"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager で使用されるアカウント
 
@@ -673,7 +673,7 @@ Configuration Manager によって、SQL の次のロール オブジェクト�
 
 ### <a name="smsdbrole_dmp"></a>smsdbrole_DMP
 
-デバイス管理ポイント。 ConfigMgr からは、MDM 登録デバイスのサポートを提供する [Allow mobile devices and Mac Computer to uses this management point]\(モバイル デバイスと Mac コンピューターにこの管理ポイントを使用することを許可する\) オプションがある管理ポイントのコンピューター アカウントにこのアクセス許可が与えられます。
+デバイス管理ポイント。 ConfigMgr からは、MDM 登録デバイスのサポートを提供する [モバイル デバイスおよび Mac コンピューターでこの管理ポイントを使用できるようにする] オプションがある管理ポイントのコンピューター アカウントに、このアクセス許可が与えられます。
 
 ### <a name="smsdbrole_dmpconnector"></a>smsdbrole_DmpConnector
 
