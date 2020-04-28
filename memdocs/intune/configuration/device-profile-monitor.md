@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23594bd1e728e20deba6d978fc2a1f678d692ff3
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: b1987783be15bbde704e34bbd21ecd70dc048935
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364475"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078262"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Microsoft Intune でデバイス プロファイルを監視する
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2ef5656c2608cee825dc294d87e661c7ad63634
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: dfa559a9c628dfc87c982023e350947d3e9bfeea
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322779"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771467"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Intune で PKCS 証明書を構成して使用する
 
@@ -151,7 +151,7 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
 3. PKCS #12 のコネクタの *[Certificate Connector ソフトウェアをネットワーク上のセキュリティで保護された場所にダウンロード]* をクリックし、コネクタのインストール先となるサーバーからアクセスできる場所にファイルを保存します。
 
    ![Microsoft Intune Certificate Connector のダウンロード](./media/certficates-pfx-configure/download-ndes-connector.png)
- 
+
 4. ダウンロードが完了したら、サーバーにサインインします。 次のことを行います。
 
     1. .NET Framework 4.5 以降がインストールされていることを確認します。NDES 証明書コネクタで必要となるからです。 .NET Framework 4.5 は、Windows Server 2012 R2 およびそれ以降の新しいバージョンには自動的に含められます。
@@ -175,7 +175,7 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
-2. **[デバイス]** 、 **[構成プロファイル]** 、 **[プロファイルの作成]** の順に移動します。
+2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に移動します。
 
 3. 次のプロパティを入力します。
    - **[プラットフォーム]** :このプロファイルを受信するデバイスのプラットフォームを選択します。
@@ -202,7 +202,7 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
 
    **[次へ]** を選択します。
 
-10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 この証明書プロファイルを、PKCS 証明書プロファイルを受信する同じグループに展開するようにします。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
 
     **[次へ]** を選択します。
 
@@ -216,7 +216,7 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
-2. **[デバイス]** 、 **[構成プロファイル]** 、 **[プロファイルの作成]** の順に移動します。
+2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に移動します。
 
 3. 次のプロパティを入力します。
    - **[プラットフォーム]** :デバイスのプラットフォームを選択します。 次のようなオプションがあります。
@@ -260,7 +260,7 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
 
    **[次へ]** を選択します。
 
-10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 この証明書プロファイルを、信頼された証明書プロファイルを受信する同じグループに展開するようにします。プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
 
     **[次へ]** を選択します。
 

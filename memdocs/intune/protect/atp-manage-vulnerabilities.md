@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3d0335274604519da82146cab8837459e190801
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 5464e70d915dceb9cf2c6a3b2385419cfc11e38b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322834"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077837"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Intune を使用して Microsoft Defender ATP によって検出された脆弱性を修復する
 
@@ -87,7 +87,7 @@ ATP セキュリティ管理者は、Microsoft Defender セキュリティ セ�
 
    セキュリティ タスクのリソース ウィンドウを表示している間に、追加のリンクを選択できます。
 
-   - [マネージド アプリ] - 脆弱であるアプリケーションが表示されます。 その脆弱性が複数のアプリに適用されるときは、アプリのフィルター処理された一覧が表示されます。
+   - [マネージド アプリ] - 脆弱であるアプリケーションが表示されます。 複数のアプリにその脆弱性がある場合、フィルター処理されたアプリ一覧が表示されます。
    - [デバイス] - "*脆弱性のあるデバイス*" の一覧が表示されます。そこから、リンクを介してそのデバイスでの脆弱性に関するさらに詳細なエントリに移動できます。
    - [要求元] - リンクを使って、このセキュリティ タスクを送信した管理者にメールを送ります。
    - [メモ] - セキュリティ タスクを開くときに、要求元によって送信されたカスタム メッセージを読みます。
@@ -96,7 +96,7 @@ ATP セキュリティ管理者は、Microsoft Defender セキュリティ セ�
 
 5. タスクに同意した後、セキュリティ タスクを再び開き (閉じてあった場合)、修復の詳細に従って脆弱性を修復します。 セキュリティ タスクの詳細で ATP によって提供される指示は、関係する脆弱性によって異なります。
 
-   可能な場合、修復手順には Intune コンソールで関連する構成オブジェクトを開くリンクが含まれます。
+   修復手順には、Intune コンソールに関連する構成オブジェクトを開くリンクが可能な場合に含まれます。
 
 6. 修復手順を完了した後、セキュリティ タスクを開き、 **[タスクの完了]** を選択します。  このアクションにより、Intune と ATP の両方でセキュリティ タスクの状態が更新されます。
 

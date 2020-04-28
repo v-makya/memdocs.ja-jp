@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0711b407b185b3a9621ff80a371bd3aaa5032ead
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: ac4a9797df1ea64a5ffbceca3ea204bd9ed13a6f
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407728"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075542"
 ---
 # <a name="configure-microsoft-launcher"></a>Microsoft Launcher の構成
 
@@ -49,6 +49,8 @@ Microsoft Launcher の構成設定を定義するのに使用できる 2 つの�
 
    > [!NOTE]
    > プロパティを構成デザイナーで構成すると、JSON データも、それらのプロパティを反映させる目的でのみ更新されます。 JSON データに構成キーを追加するには、[JSON スクリプト例](../apps/configure-microsoft-launcher.md#microsoft-launcher-configuration-example)を利用し、構成キーごとに必要な行をコピーします。 
+
+以前に作成したアプリ構成ポリシーを編集するとき、複合プロパティが構成されている場合は、編集プロセスで JSON データ エディターが表示されます。 以前に構成した設定はすべて保持され、構成デザイナーに切り替えると、サポートされている設定を変更することができます。
 
 ## <a name="using-configuration-designer"></a>構成デザイナーを使用する
 
