@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26576212f4df86681210956669320ed4b124025d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c1bb178c03682b9dd04902fecd50e5f2c9f01d0b
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80488204"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022859"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>チュートリアル:クラウドを使用して、ADMX テンプレートと Microsoft Intune で Windows 10 デバイスにグループ ポリシーを構成する
 
@@ -34,7 +34,7 @@ ms.locfileid: "80488204"
 ADMX テンプレートは次のサービスで使用できます。
 
 - **Microsoft Edge**:[Microsoft Edge ポリシー ファイル](https://www.microsoftedgeinsider.com/en-us/enterprise)でダウンロードします。
-- **Office**: [Office 365 ProPlus、Office 2019、Office 2016](https://www.microsoft.com/download/details.aspx?id=49030) でダウンロードします。
+- **Office**: [Microsoft 365 アプリ、Office 2019、Office 2016](https://www.microsoft.com/download/details.aspx?id=49030)でダウンロードします。
 - **Windows**: Windows 10 OS に組み込まれています。
 
 ADMX ポリシーの詳細については、「[ADMX ベースのポリシーについて](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)」を参照してください。

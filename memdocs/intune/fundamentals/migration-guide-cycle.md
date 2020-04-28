@@ -17,16 +17,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d5a9c1fab01393f45c877165230ae68118b1113
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cdef53672c46fe4e49a5d21a22e585654c504f03
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358222"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82075950"
 ---
 # <a name="typical-migration-cycle"></a>標準的な移行サイクル
 
-通常、組織は、IT 部門の一部のユーザーを対象とした、小規模なパイロットで Intune 移行を開始します。 また、組織で変更に対するグループの意志、ユーザー数、複雑さ、要件、場所、およびビジネス上のリスクなどの要因について話し合い、移行期間の決定に役立てる必要があります。
+通常、組織が Intune を移行する場合、IT 部門内の一部の対象ユーザーで小規模なパイロットを開始します。 また、グループの変更への意志、ユーザー数、複雑さ、要件、場所、およびビジネス上のリスクなどの要因を、組織で必要に応じて話し合い、移行期間を決定します。
 
 対象グループのスケジュール例を次に示します。
 

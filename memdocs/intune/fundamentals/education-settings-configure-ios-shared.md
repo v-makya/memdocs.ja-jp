@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8612640ec71075194af680535a988f2228bb66fd
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 21b1fb333ce77fdf358e268eb22db17708bbfe11
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362889"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076137"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>共有 iPad デバイスの Intune 教育設定を構成する
 
@@ -36,7 +36,7 @@ Intune は iOS/iPadOS Classroom をサポートしています。このアプリ
 
 専用 (1:1) iPad デバイスを構成し、Classroom アプリを使用する方法については、「[iOS/iPadOS Classroom アプリの Intune 設定を構成する方法](education-settings-configure-ios.md)」を参照してください。
 
-## <a name="before-you-start"></a>アップグレードを開始する前に
+## <a name="before-you-start"></a>開始する前に
 
 共有 iPad 機能を使用するための前提条件:
 
@@ -171,7 +171,7 @@ iOS 教育プロファイルは、PFX 証明書のみをサポートします。
 4. **[デバイス]** ウィンドウで、 **[すべてのデバイス]** を選択します。
 5. **[デバイス - すべてのデバイス]** ウィンドウで、デバイスを選択します。
 6. デバイスのウィンドウで、 **[プロパティ]** を選択します。
-7. デバイスのプロパティ ウィンドウで、 **[デバイス カテゴリ]** テキスト ボックスにデバイス カテゴリを入力します。
+7. デバイスのプロパティ ウィンドウの **[デバイス カテゴリ]** テキスト ボックスにデバイス カテゴリを入力します。
 8. デバイスのウィンドウで、 **[保存]** を選択します。
 
 これでデバイスがデバイス カテゴリに関連付けられます。 作成したデバイス カテゴリに関連付けるすべてのデバイスにこの過程を繰り返します。

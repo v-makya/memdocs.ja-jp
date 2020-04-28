@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e568a7700a6849993d24be4dd042195a95ab000
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8bb76dbb14fe2deb95c02a18ccc048fc6a4b2538
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79338423"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078959"
 ---
 # <a name="windows-update-settings-for-intune"></a>Intune での Windows Update の設定  
 
@@ -33,7 +33,7 @@ Intune 内で Windows 10 更新プログラム リングの設定を構成する
 Update の設定では、デバイスによってダウンロードされるものとそのタイミングを制御します。 各設定の動作について詳しくは、Windows リファレンス ドキュメントを参照してください。  
 
 - **サービス チャネル**  
-  **既定**: 半期チャネル  
+  **既定値**:半期チャネル  
   Windows Update の CSP: [Update/BranchReadinessLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
 
   デバイスが Windows 更新プログラムを受信するチャネル (ブランチ) を設定します。 異なるチャネルでは、更新プログラムが配信される前に異なる延期期間を使用できます。  
@@ -55,21 +55,21 @@ Update の設定では、デバイスによってダウンロードされるも�
   > Windows バージョン 1903 以降では、"*半期チャネル (対象指定)* " (SAC-T) の使用が廃止されました。 この変更により、SAC-T は "*半期チャネル*" とマージされます。 この変更およびそれが Windows Update for Business に与える影響について詳しくは、Windows IT Pro ブログの投稿「[Windows Update for Business and the retirement of SAC-T (Windows Update for Business と、SAC T の廃止)](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-Update-for-Business-and-the-retirement-of-SAC-T/ba-p/339523)」をご覧ください。  
  
 - **Microsoft 製品の更新**  
-  **既定値**: 許可  
+  **既定値**:Allow  
   Windows Update の CSP: [Update/AllowMUUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
 
   - **[許可]** - *[許可]* を選択した場合、Microsoft Update のアプリの更新プログラムがスキャンされます。  
   - **[ブロック]** - [ブロック] を選択した場合、アプリの更新プログラムはスキャンされません。  
 
 - **Windows ドライバー**  
-  **既定値**: 許可  
+  **既定値**:Allow  
   Windows Update の CSP: [Update/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)  
 
   - **[許可]** - *[許可]* を選択した場合、更新中に Windows Update ドライバーが含められます。  
   - **[ブロック]** - [ブロック] を選択した場合、ドライバーはスキャンされません。  
 
 - **品質更新プログラムの延期期間 (日数)**  
-  **既定値**: 0  
+  **既定値**:0  
   Windows Update の CSP: [Update/DeferQualityUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
 
   品質更新プログラムを延期する日数を 0 から 30 で指定します。 この期間は、選択したサービス チャネルの一部である延期期間に加算されます。 延期期間は、ポリシーがデバイスによって受信されたときに開始します。  
@@ -77,7 +77,7 @@ Update の設定では、デバイスによってダウンロードされるも�
   品質更新プログラムは通常、既存の Windows 機能の修正プログラムや機能強化です。  
 
 - **機能更新プログラムの延期期間 (日数)**  
-  **既定値**: 0  
+  **既定値**:0  
   Windows Update の CSP: [Update/PauseFeatureUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
 
   機能更新プログラムを延期する日数を指定します。 この期間は、選択したサービス チャネルの一部である延期期間に加算されます。 延期期間は、ポリシーがデバイスによって受信されたときに開始します。  
@@ -90,7 +90,7 @@ Update の設定では、デバイスによってダウンロードされるも�
   機能更新プログラムは、通常、Windows の新しい機能です。  
 
 - **機能更新プログラムのアンインストール期間 (2 から 60 日間) の設定**  
-  **既定値**: 10  
+  **既定値**:10  
   Windows Update の CSP: [Update/ConfigureFeatureUpdateUninstallPeriod](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
 
   経過後に機能更新プログラムをアンインストールできなくなる時間を構成します。  
@@ -104,7 +104,7 @@ Update の設定では、デバイスによってダウンロードされるも�
 ユーザー エクスペリエンスの設定は、デバイスの再起動とアラームに関するエンド ユーザー エクスペリエンスを制御します。 各設定の動作について詳しくは、Windows Update の CSP に関するドキュメントをご覧ください。  
 
 - **自動更新動作**  
-  **既定**: メンテナンス時刻に自動的にインストールする  
+  **既定値**:メンテナンス時刻に自動的にインストールする  
   Windows Update の CSP: [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
   自動更新プログラムをインストールする方法、また、必要に応じてデバイスを再起動する条件を選択します。  
@@ -118,11 +118,11 @@ Update の設定では、デバイスによってダウンロードされるも�
     このオプションでは、更新プログラムをインストールした後、デバイスを自動的に再起動できます。 **[アクティブ時間]** 設定を使用して、自動再起動がブロックされる期間を定義します。  
 
     - **[アクティブ時間の開始]** - 更新プログラムのインストールによる再起動を抑制する開始時刻を指定します。  
-      **既定値**: 午前 8 時  
+      **既定値**:午前 8 時  
       Windows Update の CSP: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **[アクティブ時間の終了]** - 更新プログラムのインストールによる再起動を抑制する終了時刻を指定します。  
-      **既定値**: 午後 5 時  
+      **既定値**:午後 5 時  
       Windows Update の CSP: [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
   - **[メンテナンス時に自動的にインストールおよび再起動する]** - 更新プログラムを自動的にダウンロードし、デバイスが使用中でもバッテリで実行中でもない自動メンテナンス中にインストールします。 再起動が必要な場合、デバイスは使用されていないときに再起動されます (これは、アンマネージド デバイスの既定値です)。  
@@ -130,11 +130,11 @@ Update の設定では、デバイスによってダウンロードされるも�
     このオプションでは、更新プログラムをインストールした後、デバイスを自動的に再起動できます。 **[アクティブ時間]** 設定の使用については Windows Update 設定で説明されていませんが、自動再起動がブロックされる期間を定義するために Intune によって使用されます。  
 
     - **[アクティブ時間の開始]** - 更新プログラムのインストールによる再起動を抑制する開始時刻を指定します。  
-      **既定値**: 午前 8 時  
+      **既定値**:午前 8 時  
       Windows Update の CSP: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **[アクティブ時間の終了]** - 更新プログラムのインストールによる再起動を抑制する終了時刻を指定します。  
-      **既定値**: 午後 5 時  
+      **既定値**:午後 5 時  
       Windows Update の CSP: [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
   - **[スケジュールした時刻に自動的にインストールおよび再起動する]** - インストールの日付と時刻を指定します。 指定しない場合、インストールは毎日午前 3 時に実行され、その後に再起動まで 15 分のカウントダウンが始まります。 ログオン中のユーザーは、カウントダウンと再起動を遅延させることができます。   
@@ -143,13 +143,13 @@ Update の設定では、デバイスによってダウンロードされるも�
     このオプションでは、追加の設定がサポートされます。  
 
     - **[自動動作の頻度]** - この設定を使用して、週、日、時刻など、更新プログラムをインストールするタイミングをスケジュールします。  
-      **既定値**: 毎週
+      **既定値**:毎週
 
     - **[スケジュールされたインストール日]** - 更新プログラムをインストールする曜日を指定します。  
-      **既定値**: 任意の日  
+      **既定値**:任意の日  
 
     - **[スケジュールされたインストール時刻]** - 更新プログラムをインストールする時刻を指定します。  
-      **既定値**: 午前 3 時  
+      **既定値**:午前 3 時  
 
   - **[エンド ユーザーによる制御なしで自動的にインストールおよび再起動する]** - 更新プログラムを自動的にダウンロードし、デバイスが使用中でもバッテリで動作中でもない自動メンテナンス中にインストールします。 再起動が必要な場合、デバイスは使用されていないときに再起動されます このオプションでは、エンドユーザーのコントロール ウィンドウが読み取り専用に設定されます。  
 
@@ -157,7 +157,7 @@ Update の設定では、デバイスによってダウンロードされるも�
 
 
 - **再起動チェック**  
-  **既定値**: 許可  
+  **既定値**:Allow  
   Windows Update の CSP: [Update/SetEDURestart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
 
   デバイスの再起動時にこれらのチェックをスキップするには、 **[スキップ]** を選択します。 
@@ -169,28 +169,28 @@ Update の設定では、デバイスによってダウンロードされるも�
   - "*Windows バージョン 1709 以降*" - アクティブ時間中は、更新プログラムに対するスキャン、ダウンロード、インストール、再起動のプロセスが実行されません。 アクティブ時間後は、更新プログラム プロセスが実行され、バッテリ チェックと電源チェックに合格していれば、デバイスのスリープ状態からの復帰、ダウンロード、インストール、再起動を実行できます。 
 
 - **ユーザーによる Windows Update の一時停止をブロックする**  
-  **既定値**: 許可  
+  **既定値**:Allow  
   Windows Update の CSP: [Update/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
 
   - **[許可]** - デバイス ユーザーが更新プログラムのインストールを一時停止できるようにします。  
   - **[ブロック]** - デバイス ユーザーが更新プログラムのインストールを一時停止できないようにします。  
 
 - **ユーザーによる Windows Update のスキャンをブロックする**  
-  **既定値**: 許可  
+  **既定値**:Allow  
   Windows Update の CSP: [Update/SetDisableUXWUAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
 
   - **[許可]** - デバイス ユーザーが、Windows Update スキャンを使用して更新プログラムを検索してダウンロードし、機能をインストールできるようにします。
   - **[ブロック]** - デバイス ユーザーが Windows Update スキャンにアクセスしたり、更新プログラムをダウンロードしたり、機能をインストールしたりできないようにします。  
 
 - **作業時間外に再起動するにはユーザーの承認が必要です**  
-  **既定値**: 未構成  
+  **既定値**:未構成  
   Windows Update の CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
   - **未構成**  
   - **[必須]** - 作業時間外のデバイスの再起動の承認をユーザーに要求します。  
    
 - **無視できるアラームを使用して必要な自動再起動の前にユーザーに通知する (時間)**  
-  **既定値**: 4  
+  **既定値**:4  
   Windows Update の CSP: [Update/ScheduleRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
 
   自動再起動の前にその再起動について無視できる通知をデバイスのユーザーに表示する時間の長さを指定します。 **2**、**4**、**8**、**12**、または **24** 時間の値がサポートされています。  
@@ -198,7 +198,7 @@ Update の設定では、デバイスによってダウンロードされるも�
   既定値をクリアすると、この設定は *[未構成]* になります。  
 
 - **固定アラームを使用して必要な自動再起動の前にユーザーに通知する (分)**  
-  **既定値**: 15  
+  **既定値**:15  
   Windows Update の CSP: [Update/ScheduleImminentRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)  
 
   自動再起動の前にその再起動について無視できない警告をデバイスのユーザーに表示する時間の長さを指定します。 **15**、**30** または **60** 分の値がサポートされています。  
@@ -206,7 +206,7 @@ Update の設定では、デバイスによってダウンロードされるも�
   既定値をクリアすると、この設定は *[未構成]* になります。  
 
 - **Update 通知レベルを変更する**  
-  **既定値**: 既定の Windows Update 通知を使用します  
+  **既定値**:既定の Windows Update 通知を使用する  
   Windows Update の CSP: [Update/UpdateNotificationLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
   
   ユーザーに表示される Windows Update 通知レベルを指定します。 この設定では、更新プログラムのダウンロードとインストールの方法とタイミングを管理することはできません。  
@@ -218,7 +218,7 @@ Update の設定では、デバイスによってダウンロードされるも�
   - **再起動の警告を含むすべての通知をオフする**  
 
 - **期限の設定を使用する**  
-  **既定値**: 未構成  
+  **既定値**:未構成  
  
   ユーザーが期限の設定を使用することを許可します。  
 
@@ -228,13 +228,13 @@ Update の設定では、デバイスによってダウンロードされるも�
   *[許可]* に設定すると、次の期限の設定を構成できるようになります。
 
   - **機能更新プログラムの期限**  
-    **既定値**: *[未構成]*  
+    **既定値**:*未構成*  
     Windows Update の CSP: [Update/ConfigureDeadlineForFeatureUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
 
     機能更新プログラムがデバイスに自動的にインストールされるまでにユーザーに与えられる日数を指定します (2-30)。
 
   - **品質更新プログラムの期限**  
-    **既定値**: *[未構成]*  
+    **既定値**:*未構成*  
     Windows Update の CSP: [Update/ConfigureDeadlineForQualityUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
 
     品質更新プログラムがデバイスに自動的にインストールされるまでにユーザーに与えられる日数を指定します (2-30)。
@@ -245,11 +245,11 @@ Update の設定では、デバイスによってダウンロードされるも�
     再起動が自動的に実行されるまでの、期限後の最小日数を指定します (2-7)。
 
   - **期限前に自動的に再起動する**  
-    **既定値**:  [はい] Windows Update の CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+    **既定値**:[はい] Windows Update の CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
 
     デバイスが期限前に自動的に再起動するかどうかを指定します。
-    - **はい**
-    - **×**
+    - **あり**
+    - **いいえ**
 
 ### <a name="delivery-optimization-download-mode"></a>配信の最適化ダウンロード モード  
 

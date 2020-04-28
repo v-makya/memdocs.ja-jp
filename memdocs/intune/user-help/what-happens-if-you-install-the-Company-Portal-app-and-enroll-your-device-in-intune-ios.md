@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 64a1a8484af537649fd618b5cfa718dc7dff5607
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: af748f91d47d6276b5590577079130e2be470e05
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335290"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077361"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-device-in-intune"></a>ポータル サイト アプリをインストールし、Intune に iOS デバイスを登録するとどうなるか
 
@@ -45,7 +45,7 @@ ms.locfileid: "79335290"
 
 デバイスが登録されると、会社のサポートは次のことができるようになります。
 
-- デバイスが紛失または盗難にあった場合にデバイスを製造元の既定設定にリセットする。
+- デバイスが紛失または盗難にあった場合、デバイスを製造元の既定設定にリセットします。
 
 - インストールされているすべての会社関連データとビジネス アプリケーションを削除する。 個人データや設定は削除されません。
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83b2f3952d0805237acf0fe71c4f0f1617618723
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7f88c352206d087ca6e79f25ec078fabc000de66
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351150"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079180"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Intune 用の MDM セキュリティ ベースラインの設定  
 
@@ -691,7 +691,7 @@ Intune でのセキュリティ ベースラインの使用方法については
   このポリシー設定では、VB スクリプトが特定の Internet Explorer のゾーンでページを実行できるかどうかを決定できます。 次のオプションがあります。 
   - "*有効*" - 対話式の操作を行くことなく、VB スクリプトが特定のゾーンのページ上で実行されます。 
   - "*プロンプト*" - 従業員は VB スクリプトをそのゾーンで実行できるようにするかどうかを確認されます。 
-  - "*無効*" - VB スクリプトはそのゾーンで実行できないようにされます。 このポリシー設定を無効にした場合、または構成しない場合は、VBScript は特定のゾーンで対話式の操作を行くことなく実行されます。    
+  - "*無効*" - VB スクリプトはそのゾーンで実行できないようにされます。 このポリシー設定を無効にした場合、または構成しない場合は、VBScript は特定のゾーンで対話式の操作なしで実行されます。    
 
   [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067119)  
   

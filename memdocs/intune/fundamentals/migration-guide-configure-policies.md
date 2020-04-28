@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f0f4106921f7b4ef1d33e72a217246543512bb5
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2cefc43aa4c1e5031bc1b755a244df54f6442137
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358287"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079996"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Microsoft Intune への移行時にデバイス コンプライアンス ポリシーとアプリ管理ポリシーを構成する
 
@@ -50,7 +50,7 @@ Intune 移行時の主な目標は、すべてのデバイスが Intune に登�
 
 デバイス グループは、専用ユーザーがいないデバイス (キオスク デバイス、交代勤務従業員が共有するデバイス、または特定の場所に割り当てられたデバイスなど) の管理に役立ちます。
 
-デバイスを登録する前にデバイス グループを構成しておくと、デバイス カテゴリを使って、登録時にデバイスをグループに自動的に参加させることができます。 その後、デバイスはグループのデバイス ポリシーを自動的に受け取ります。 「[グループの概要](groups-get-started.md)」をご覧ください。
+デバイスを登録する前にデバイス グループを構成しておくと、デバイス カテゴリを使って、登録時にデバイスをグループに自動的に参加させることができます。 その後、グループのデバイス ポリシーが自動的に受信されます。 「[グループの概要](groups-get-started.md)」をご覧ください。
 
 ### <a name="task-2-use-resource-access-profiles-wi-fi-vpn-and-email-certificates"></a>タスク 2: リソース アクセス プロファイル (Wi-Fi、VPN、および電子メールの証明書) を使用する
 

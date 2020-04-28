@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26204a36000b8c49b65effbfdb5f629fc092df64
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 373a5e55a28c6fab740a86a3ad2ad69c5fa08848
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79345547"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078143"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Intune アプリ ラッピング ツールでアプリ保護ポリシーを利用するために iOS アプリを準備する
 
@@ -101,7 +101,7 @@ Intune によってラップされたアプリを配布するには、次が必�
 
    ![Azure Developer ポータル - [Certificates, IDs & Profiles] (証明書、ID、プロファイル)](./media/app-wrapper-prepare-ios/iOS-signing-cert-1.png)
 
-5. をクリックして ![右上隅の Apple Developer ポータルのプラス記号、](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) iOS 証明書を追加します。
+5. をクリックして ![右上隅の Apple Developer ポータルのプラス記号をクリックして、](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) iOS 証明書を追加します。
 
 6. **[Production]** (運用) の下にある **[In-House and Ad Hoc]** (社内およびアドホック) 証明書の作成を選択します。
 
@@ -148,7 +148,7 @@ Intune によってラップされたアプリを配布するには、次が必�
 
 2. **[Certificates, IDs & Profiles]** (証明書、ID、プロファイル) をクリックします。
 
-3. をクリックして ![右上隅の Apple Developer ポータルのプラス記号、](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) iOS プロビジョニング プロファイルを追加します。
+3. をクリックして ![右上隅の Apple Developer ポータルのプラス記号をクリックして、](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) iOS プロビジョニング プロファイルを追加します。
 
 4. **[Distribution]** (配布) の下にある **[In House]** (社内) プロビジョニング ファイルの作成を選択します。
 
@@ -193,7 +193,7 @@ macOS ターミナルを開き、次のコマンドを実行します。
 
 |プロパティ|使用方法|
 |---------------|--------------------------------|
-|**-i**|`<Path of the input native iOS application file>`。 ファイル名は .app または .ipa で終わる必要があります。 |
+|**-i**|`<Path of the input native iOS application file>` にする必要があります。 ファイル名は .app または .ipa で終わる必要があります。 |
 |**-o**|`<Path of the wrapped output application>` |
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
@@ -269,7 +269,7 @@ iOS と iPadOS では、アプリへの署名に元々使用されたものと�
 
 アプリ ラッピング ツールが正常に完了できない場合、次のエラー メッセージのいずれかがコンソールに表示されます。
 
-|エラー メッセージ|詳細情報|
+|エラー メッセージ|説明|
 |-----------------|--------------------|
 |有効な iOS プロビジョニング プロファイルを指定する必要があります。|プロビジョニング プロファイルが有効ではない可能性があります。 デバイスのアクセス許可が与えられていることとプロファイルの目標が開発または配布であることを確認します。 プロビジョニング プロファイルが期限切れになっている可能性もあります。|
 |有効な入力アプリケーション名を指定します。|指定した入力アプリケーション名が正しいことを確認します。|
@@ -287,7 +287,7 @@ iOS と iPadOS では、アプリへの署名に元々使用されたものと�
 |指定した入力アプリケーションは署名されていません。 署名されている有効なアプリケーションを指定します。|アプリ ラッピング ツールでは、アプリに署名が必要です。 ラッピングされたアプリに署名する方法については、開発者ドキュメントを参照してください。|
 |指定した入力アプリケーションは .ipa または .app 形式である必要があります。|アプリ ラッピング ツールは .app 拡張子と .ipa 拡張子のみを受け取ります。 入力ファイルに有効な拡張子があり、.app または .ipa ファイルとしてコンパイルされていることを確認します。|
 |指定した入力アプリは既にラッピングされていて、最新のポリシー テンプレート バージョンです。|アプリ ラッピング ツールは、既にラッピングされ、ポリシー テンプレート バージョンが最新のアプリを再ラッピングしません。|
-|警告: SHA1 証明書ハッシュを指定しませんでした。 展開前にラッピングされたアプリケーションが署名されていることを確認します。|-c コマンドライン フラグの後に有効な SHA1 ハッシュを指定します。 |
+|警告:SHA1 証明書ハッシュを指定しませんでした。 展開前にラッピングされたアプリケーションが署名されていることを確認します。|-c コマンドライン フラグの後に有効な SHA1 ハッシュを指定します。 |
 
 ### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>ラッピングされたアプリケーションのログをデバイスから収集する
 トラブルシューティング時に、次の手順を使用して、ラッピングされたアプリケーションのログを取得します。
@@ -335,7 +335,7 @@ iOS 用アプリ ラッピング ツールには、すべての機能を保証�
 |アプリ内購入|アプリ内購入は、ストアへの接続を有効にしてアプリにストアを直接組み込み、ユーザーから支払いを安全に処理します。 アプリ内購入を使用すると、強化された機能で支払いを収集し、アプリから追加のコンテンツを使用できるようになります。||
 |キーチェーンの共有|キーチェーンの共有を有効にすると、同じチームで開発されたアプリ間でキーチェーン内のパスワードを共有できるようになります。|キーチェーンの共有を使用する場合は、次のように逆引き DNS 表記を使用します。<br /><br />*com.companyName.KeychainGroup*|
 |個人の VPN|個人の VPN を有効にすると、アプリでネットワーク拡張機能フレームワークを使用して、カスタム システム VPN 構成を作成および制御できるようになります。||
-|プッシュ通知|Apple Push Notification サービス (APNS) を使用すると、フォアグラウンドで実行されていないアプリでも、ユーザーに対する情報がある場合にユーザーに通知できます。|プッシュ通知を使用するには、アプリ固有のプロビジョニング プロファイルを使用する必要があります。<br /><br />[Apple 開発者ドキュメント](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html)の手順を実行してください。|
+|プッシュ通知|Apple Push Notification service (APNs) を使用すると、フォアグラウンドで実行されていないアプリでも、ユーザーに対する情報がある場合にユーザーに通知できます。|プッシュ通知を使用するには、アプリ固有のプロビジョニング プロファイルを使用する必要があります。<br /><br />[Apple 開発者ドキュメント](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html)の手順を実行してください。|
 |ワイヤレス アクセサリの構成|ワイヤレス アクセサリの構成を有効にすると、外部アクセサリ フレームワークをプロジェクトに追加し、アプリで MFi Wi-Fi アクセサリを設定できるようになります。||
 
 ### <a name="steps-to-enable-entitlements"></a>権利を有効にする手順
@@ -366,7 +366,7 @@ iOS 用アプリ ラッピング ツールには、すべての機能を保証�
 
 iOS 用アプリ ラッピング ツールで権利のエラーが表示される場合は、次のトラブルシューティング手順を実行します。
 
-|問題|原因|解決方法|
+|問題|原因|解決策|
 |---------|---------|--------------|
 |入力アプリケーションから生成された権利を解析できませんでした。|アプリ ラッピング ツールは、アプリから抽出された権利ファイルを読み取れません。 権利ファイルは、形式が正しくない可能性があります。|アプリの権利ファイルを調査します。 次の手順でこの方法について説明します。 権利ファイルを調査する場合、形式が正しくない構文がないかを確認します。 権利ファイルは、XML 形式である必要があります。|
 |プロビジョニング プロファイルに足りない権利があります (不足している権利が表示されます)。 不足している権利を含むプロビジョニング プロファイルを使用してアプリを再パッケージします。|プロビジョニング プロファイルで有効な権利と、アプリで有効な機能が一致していません。 この不一致は、一部の機能 (アプリ グループ、キーチェーンのアクセスなど) に関連付けられた ID にも適用されます。|通常、アプリと同じ機能を有効にした新しいプロビジョニング プロファイルを作成できます。 プロファイルとアプリ間で ID が一致しない場合、アプリ ラッピング ツールは可能であれば ID を置き換えます。 新しいプロビジョニング プロファイルを作成した後もこのエラーが発生する場合、–e パラメーターを使用して権利を削除できます (以下の「–e パラメーターを使用してアプリから権利を削除する」セクションを参照してください)。|
@@ -421,7 +421,7 @@ iOS 用アプリ ラッピング ツールで権利のエラーが表示され�
 
 この機能は iOS および iPadOS 用の Citrix MDX アプリ ラッパーとの統合です。 この統合は、コマンドライン フラグ `-citrix` を指定するだけで、通常の Intune アプリ ラッピング ツールに追加されます。
 
-### <a name="requirements"></a>［要件］
+### <a name="requirements"></a>要件
 
 `-citrix` フラグを使用するには、同じ macOS マシンに [iOS 用 Citrix MDX アプリ ラッパー](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html)をインストールする必要もあります。 ダウンロードは [Citrix XenMobile Downloads](https://www.citrix.com/downloads/xenmobile/) にあり、Citrix 顧客のみがサインインして利用できます。 これを既定の場所 `/Applications/Citrix/MDXToolkit` にインストールしてください。 
 

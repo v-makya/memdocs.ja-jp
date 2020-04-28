@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbf58b7ae035bbd7da15814787f283c7b80e13e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5ff2898f97bbef4cba0d14d4810a503d613cff18
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355115"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077922"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Azure での Intune の機能の移動先
 Intune から Azure Portal に移行する際に、いくつかのタスクがより論理的に整理されました。 しかし、このような改善を行えば、新しい構成を学ばなければなりません。 このリファレンス ガイドは、従来のポータルを使用した Intune の知識があり、Intune で行われていた内容を Azure portal ではどのように実行されるのかについて関心があるユーザーを対象にしています。 この記事にお探しの機能が記載されていない場合は、今後更新できるように記事の最後にコメントを残してください。
@@ -52,7 +52,7 @@ Azure Portal の Intune では、[Azure Active Directory (AD)](https://docs.micr
 
 ![従来のモバイル デバイスの登録ルールの画像](./media/ui-changes/01-classic-rules.png)
 
-これらのルールは例外なくすべてのユーザーの Intune アカウントに適用されました。 Azure portal では、これらのルールは [デバイスの種類の制限] と [デバイス数の制限] という 2 つのポリシーの種類に表示されます。
+これらのルールは例外なくすべてのユーザーの Intune アカウントに適用されました。 Azure portal では、これらのルールは次の 2 つのポリシーの種類に表示されます: [デバイスの種類の制限] と [デバイスの上限数の制限]。
 
 ![Azure のモバイル デバイス登録制限の画像](./media/ui-changes/02-azure-enroll-restrictions.png)
 
@@ -64,7 +64,7 @@ Azure Portal の Intune では、[Azure Active Directory (AD)](https://docs.micr
 
 ![Azure のデバイスの種類の制限の画像](./media/ui-changes/04-azure-platform-restrictions.png)
 
-個人所有のデバイスを許可またはブロックする機能を、[デバイスの種類の制限] の [プラットフォーム構成] で管理できるようになりました。
+個人所有のデバイスを許可またはブロックする機能は、[デバイスの種類の制限] の [プラットフォーム構成] で管理されるようになりました。
 
 ![Azure の個人用デバイスのブロック設定の画像](./media/ui-changes/05-azure-personal-block.png)
 
@@ -81,7 +81,7 @@ Azure portal から条件付きアクセス ポリシーを表示および変更
 Azure portal からコンプライアンス ポリシーを表示および変更したい場合は、クラシック ポータルから古いポリシーを削除することが必要になります。 次に、Azure portal でそれらを再度作成します。 デバイス コンプライアンス ポリシーの詳細については、[Intune でのデバイス コンプライアンス ポリシーの概要](../protect/device-compliance-get-started.md)に関するページを参照してください。 
 
 ## <a name="where-did-apple-dep-go"></a>Apple DEP の移動先
-従来のポータルでは、Intune が Apple のデバイス登録プログラムと統合されるように設定し、Apple サービスとの同期を手動で要求できました。
+従来のポータルでは、Apple のデバイス登録プログラムに Intune を統合する設定を行って、Apple サービスとの同期を手動で要求できました。
 
 ![従来の DEP トークンの画像](./media/ui-changes/06-classic-dep-token.png)
 

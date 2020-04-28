@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 556381337b225640f25d2e3adf86dde5ed428273
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 98ab8fd069b0542a29f61d9b0f5b69d7b82a8a1c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325675"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82074777"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>チュートリアル:EMM とアプリ構成に Intune を使用するように Slack を構成する
 
@@ -128,7 +128,7 @@ Slack のアプリ構成ポリシーを追加します。 マネージド デバ
 5. **[関連アプリ]** を選択します。
 6. 検索バーに「Slack」と入力し、アプリを選択します。
 7. **[OK]** を選択し、 **[構成設定]** を選択します。
-    - 構成キーとその値については、[Slack の AppConfig Web ページ](https://www.appconfig.org/company/slack/) の「Technical (技術)」タブにあるドキュメントを参照してください。
+    - 構成キーとその値については、[Slack の AppConfig に関する Web ページ](https://www.appconfig.org/company/slack/)の「Technical」 (技術) タブにあるドキュメントを参照してください。
 8. **[OK]** をクリックし、 **[追加]** を選択します。
 9. 検索バーに「Slack app configuration policy test」と入力して、先ほど追加したポリシーを選択します。
 10. [管理] から **[割り当て]** を選択します。

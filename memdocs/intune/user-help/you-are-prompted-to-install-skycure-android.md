@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2bd295b0dca016971c34997873994a4fe1bc2c0d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5c521740eb714ac6e80499dfb99d1e9de2df376e
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334939"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079639"
 ---
 # <a name="install-symantec-endpoint-protection-mobile-on-your-android-device"></a>Android デバイスに Symantec Endpoint Protection Mobile をインストールする
 
@@ -52,7 +52,7 @@ ms.locfileid: "79334939"
 
    * 脅威が検出されない場合は、3 つの脅威の種類はすべて緑色で表示されます。
 
-     * ポータル サイトの **[デバイスの詳細]** 画面には、このデバイスが会社のセキュリティ要件に準拠している状態であることが表示されます。
+     * ポータル サイトの **[デバイスの詳細]** 画面には、会社のセキュリティ要件に準拠している状態であることが表示されます。
 
      ![このデバイスはポリシーに準拠している状態になりました](./media/mtd-device-now-compliant-android.png)
 

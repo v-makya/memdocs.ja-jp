@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f77fb3b93c2600bf422aa95af267abc3e64ae7ee
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ba37abadc8571cee53b97877f4a8a6695f78acd2
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551347"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079333"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Intune でアプリ保護ポリシーの条件付き起動アクションを使用してデータを選択的にワイプする
 
@@ -88,10 +88,10 @@ Android の場合、 **[設定]** ドロップダウンを利用して次の設�
 **[ポータル サイトの最小バージョン]** を使用することにより、エンド ユーザーのデバイスに適用される、ポータル サイトの特定の定義済み最小バージョンを指定できます。 この条件付き起動の設定を使用すると、 **[アクセスのブロック]** 、 **[データのワイプ]** 、 **[警告]** に対して、各値が満たされなかった場合の実行可能なアクションとして値を設定できます。 この値に使用できる形式は、" *[メジャー].[マイナー]* "、" *[メジャー].[マイナー].[ビルド]* "、または " *[メジャー].[マイナー].[ビルド].[リビジョン]* " というパターンに従います。 一部のエンド ユーザーが、アプリをその場で強制的に更新されることを好まない場合は、この設定を構成するときに、[警告] オプションが最適となる場合があります。 Google Play ストアには、アプリの更新に対して差分バイトのみを送信する優れた機能が備わっていますが、これが更新時のデータに含まれる場合は、やはり、ユーザーが利用したいと思わないような大量のデータになる場合があります。 更新が強制され、その結果更新されたアプリがダウンロードされると、更新時に予期しないデータ料金が発生する可能性があります。 **[ポータル サイトの最小バージョン]** 設定を構成した場合、バージョン 5.0.4560.0 のポータル サイトおよび今後のバージョンのポータル サイトを取得したすべてのエンド ユーザーに影響があります。 この設定は、この機能がリリースされたバージョンより古いバージョンのポータル サイトを使用しているユーザーには影響しません。 デバイス上でアプリの自動更新を使用しているエンド ユーザーは、おそらく最新バージョンのポータル サイトを使用しているため、この機能のダイアログが表示されない可能性があります。 この設定は、登録済みのデバイスと未登録のデバイスのアプリ保護と共に、Android に対してのみ使用できます。
 
 **[デバイスの製造元]** 設定を使用するには、Android の製造元の一覧をセミコロンで区切って入力します。 これらの値では大文字と小文字が区別されません。 Intune からの報告に加え、デバイスの Android の製造元は、デバイスの設定で確認できます。 <br>
-入力例: *Manufacturer A;Manufacturer B* 
+入力例:*Manufacturer A;Manufacturer B* 
 
 >[!NOTE]
-> これらは、Intune を使用してデバイスから報告される一般的な製造元であり、次のような入力を使用できます: Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
+> これらは、Intune を使用してデバイスから報告される一般的な製造元であり、次のような入力を使用できます:Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
 
 エンド ユーザー デバイスの Intune クライアントは、アプリケーション保護ポリシーに対して Intune で指定されている、デバイス モデルの文字列の単純一致に基づいてアクションを実行します。 一致は、デバイスの報告に完全に依存します。 ユーザー (IT 管理者) は、動作が意図したものであるか確認することを推奨されます。それには、さまざまなデバイスの製造元とモデルをベースとし、小規模なユーザー グループを対象として、この設定をテストします。 既定値は **[未構成]** です。<br>
 次の操作のいずれかを選択します。 

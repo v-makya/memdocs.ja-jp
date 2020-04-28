@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 56a7b87f61c522eb7796d201be4b3100d57f8ca1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: bea6ab16baa923d4cc38dee421342636de9e1942
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346873"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076800"
 ---
 # <a name="what-happens-if-you-unenroll-your-windows-device-from-intune"></a>Intune から Windows デバイスの登録を解除するとどうなりますか。
 
@@ -50,7 +50,7 @@ ms.locfileid: "79346873"
 
 - お使いのデバイスで、会社のアプリと会社のデータを使用できなくなります。
 
-- Windows Mail など、一部のメール アプリケーションは、デバイスに保存されている会社の電子メールにアクセスできなくなります。
+- Windows Mail などの一部のメール アプリケーションが、お使いのデバイスに保存されている会社の電子メールにアクセスできなくなります。
 
 - Wi-Fi または仮想プライベート ネットワークを使用して、社内ネットワークに接続できなくなる可能性があります。
 
@@ -79,7 +79,7 @@ ms.locfileid: "79346873"
 
 - お使いのデバイスで、ファイルの共有または内部 Web サイトなど、一部の会社リソースにアクセスできなくなる可能性があります。
 
-- Windows Mail など、一部のメール アプリケーションは、デバイスに保存されている会社の電子メールにアクセスできなくなります。
+- Windows Mail などの一部のメール アプリケーションが、お使いのデバイスに保存されている会社の電子メールにアクセスできなくなります。
 
 Windows RT デバイスを削除すると、次のような結果になります。
 

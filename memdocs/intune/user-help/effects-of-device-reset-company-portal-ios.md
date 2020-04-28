@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 4cb9b22220e4c33aadd5b7c46f4274df44e3ec9c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 87b51d2df20f13ad29bca0b5961d59a41cbedf49
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79337812"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080064"
 ---
 # <a name="effects-of-company-portal-ios-device-reset"></a>Intune ポータル サイトでの iOS デバイスのリセットの影響 
 

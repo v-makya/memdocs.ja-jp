@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 671f80efb54f51cac410b37de6227e456d9316d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
+ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323124"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739909"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Intune の Exchange On-Premises アクセスを構成する
 
@@ -35,7 +35,7 @@ Exchange Online Dedicated 環境を使用していて、それが新しい構成
 
 条件付きアクセスを構成する前に、次の構成が存在することを確認します。
 
-- Exchange のバージョンが **Exchange 2010 SP1 以降**であること。 Exchange Server クライアント アクセス サーバー (CAS) アレイがサポートされています。
+- Exchange のバージョンが **Exchange 2010 SP3 以降**であること。 Exchange Server クライアント アクセス サーバー (CAS) アレイがサポートされています。
 
 - [Exchange ActiveSync On-Premises Exchange Connector](exchange-connector-install.md) をインストールして使用していること。これにより、Intune が Exchange On-Premises に接続されます。
 
@@ -124,7 +124,7 @@ Windows 8.1 以降用のネイティブ **メール** アプリケーション (
    > [!div class="mx-imgBorder"]
    > ![通知の [組織の編集] ワークフローのスクリーンショットの例](./media/conditional-access-exchange-create/edit-organization-user-notification.png)
 
-   デバイスが準拠しておらず、Exchange On-Premises にアクセスした場合に、ユーザーに送信される既定のメール メッセージを変更します。 メッセージ テンプレートでは、マークアップ言語が使用されます。 また、入力しながら、メッセージがどのように表示されるかをプレビュー表示できます。
+   デバイスが準拠しておらず、オンプレミスの Exchange にアクセスした場合に、ユーザーに送信される既定のメール メッセージを変更します。 メッセージ テンプレートでは、マークアップ言語が使用されます。 また、入力しながら、メッセージがどのように表示されるかをプレビュー表示できます。
 
    **[レビューと保存]** 、 **[保存]** の順に選択して編集内容を保存し、Exchange On-Premises へのアクセスの構成を完了します。
 
@@ -142,7 +142,7 @@ Windows 8.1 以降用のネイティブ **メール** アプリケーション (
 
      - **[アクセスのブロック]** および **[検査]** - 最初はすべてのデバイスが Exchange On-Premises へのアクセスをすぐにブロックされます。 前の手順で含まれるように構成されたグループのユーザーのデバイスについては、デバイスが Intune に登録され、準拠として評価された後でアクセスできるようになります。
 
-       Samsung KNOX Standard が実行されて "*いない*" Android デバイスは、この設定がサポートされていないため、常にブロックされます。
+       Samsung KNOX Standard が実行されて*いない* Android デバイスは、この設定がサポートされていないため、常にブロックされます。
 
    - **[デバイス プラットフォームの例外]** では、 **[追加]** を選択し、環境の必要に応じて詳細を指定します。
 

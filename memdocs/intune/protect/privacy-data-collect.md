@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e986a6dcb598a11a0f2906d6d7be8e2e1abb6aba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1e2b5f39c9c0316239c2de6f353c73e7f80f743c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351423"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079571"
 ---
 # <a name="data-collection-in-intune"></a>Intune でのデータ収集
 
 ユーザーが Intune を使用して会社や個人のデバイスを登録すると、Intune で一部の個人データが収集および共有されます。 Intune では、次のソースから個人データが収集されます。
 
-- Azure portal で管理者の Intune の使用。
+- Azure portal での管理者の Intune の使用。
 - エンド ユーザーのデバイス (Intune 管理の登録時と使用中)。
 - (管理者の指示による) サード パーティ サービスでの顧客アカウント。
 - 診断、パフォーマンス、使用状況の情報。

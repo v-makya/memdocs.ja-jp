@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6aebd63cc0d0b1664b406ce07bfe6624b9384071
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 41b5b4116359864c4d1251515d29005b9d9af425
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79342934"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077939"
 ---
 # <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Azure コンソールと従来の Intune PC クライアントでの Intune
 
@@ -42,7 +42,7 @@ Intune PC クライアント管理ワークフローでは [Silverlight ベー�
 - Intune PC クライアントを使用する非グループ化管理タスクのすべてで Silverlight コンソールを使用する必要があります。
 - グループを管理する場合、[Azure Portal で Intune](https://portal.azure.com/) を使用する必要があります。 Intune では従来の Intune グループの代わりに Azure AD グループを使用するようになったため、この要件が存在します。 
 
-Azure AD グループへの切り替えのために、Silverlight コンソール ダッシュボード ビューで "グループ ベース" のフィルター処理が若干変わりました。 更新された Silverlight UI でフィルター処理を行うには、次の手順に従います。
+Azure AD グループに切り替わったことにより、Silverlight コンソール ダッシュボード ビューの "グループ ベース" でのフィルター処理が若干変わりました。 更新された Silverlight UI でフィルター処理を行うには、次の手順に従います。
 
 1. ビューを選択します。
 2. **[フィルター]** ボックスで、フィルター処理の基準となるグループの名前を入力して Enter キーを押します。 これにより、リスト ビューがその特定グループ内のデバイスにフィルターされます。
@@ -56,7 +56,7 @@ MDM を使用して管理できない Windows 7 では、Silverlight コンソ�
 
 ## <a name="mdm-capabilities"></a>MDM の機能
 
-PC クライアントと MDM 機能の詳細な比較については、[Windows PC をコンピューターやモバイル デバイスとして管理する場合の比較](pc-management-comparison.md)に関するページをご覧ください。 MDM の更新プログラムにより、MDM に登録されている Windows 10 デバイスに、Win 32 アプリ用のオプションの評価を含む新しい管理機能が引き続き組み込まれます。 サービスへの最新リリースの追加については、「[新機能](whats-new.md)」をご覧ください。
+PC クライアントと MDM 機能の詳細な比較については、[Windows PC をコンピューターやモバイル デバイスとして管理する場合の比較](pc-management-comparison.md)に関するページをご覧ください。 MDM の更新プログラムにより、MDM に登録されている Windows 10 デバイスに、Win 32 アプリ用のオプションの評価を含む新しい管理機能が引き続き組み込まれます。 このサービスへの最新リリースの追加については、「[新機能](whats-new.md)」をご覧ください。
 
 ## <a name="switch-from-pc-client-to-mdm"></a>PC クライアントから MDM への切り替え
 

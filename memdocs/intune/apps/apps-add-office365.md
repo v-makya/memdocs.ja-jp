@@ -18,19 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84e77a894e207d5dfb2ffe9247ef449050d46036
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d411950dce117aa9c99f806d2ef80796a2a2fc50
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324946"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023267"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Microsoft Intune を使用して Windows 10 デバイスに Office 365 アプリを追加する
 
 アプリの割り当て、監視、構成、または保護を行うには、対象のアプリを事前に Intune に追加しておく必要があります。 使用できる[種類のアプリ](apps-add.md#app-types-in-microsoft-intune)の 1 つに Windows 10 向け Office 365 アプリがあります。 Intune でこの種類のアプリを選択することで、Windows 10 を実行し、自分で管理しているデバイスに Office 365 アプリを割り当て、インストールできます。 ライセンスを所有している場合は、Microsoft Project Online デスクトップ クライアントおよび Microsoft Visio Online Plan 2 のアプリを割り当て、インストールすることもできます。 利用できる Office 365 は、Azure 内の Intune コンソールのアプリ一覧に単一のエントリとして表示されます。
 
 > [!NOTE]
-> Microsoft Intune で展開された Office 365 ProPlus アプリをアクティブ化するには、Office 365 ProPlus ライセンスを使用する必要があります。 Office 365 Business Edition は Intune でサポートされていますが、XML データを使用して Office 365 Business Edition のアプリ スイートを構成する必要があります。 詳しくは、「[XML データを使用してアプリ スイートを構成する](apps-add-office365.md#step-2---option-2-configure-app-suite-using-xml-data)」をご覧ください。
+> Microsoft Office 365 ProPlus は **Microsoft 365 Apps for enterprise** に名前変更されています。 このドキュメントでは、これを通例 **Microsoft 365 アプリ**と呼びます。
+> 
+> Microsoft Intune から展開した Microsoft 365 アプリをアクティブ化するには、Microsoft 365 アプリのライセンスを使用する必要があります。 Intune では Microsoft 365 Apps for business edition をサポートしていますが、Microsoft 365 Apps for business edition のアプリ スイートは XML データを使用して構成する必要があります。 詳しくは、「[XML データを使用してアプリ スイートを構成する](apps-add-office365.md#step-2---option-2-configure-app-suite-using-xml-data)」をご覧ください。
 
 ## <a name="before-you-start"></a>開始する前に
 
@@ -38,21 +40,21 @@ ms.locfileid: "80324946"
 > .msi Office アプリがエンド ユーザー デバイスにある場合、それらのアプリを安全にアンインストールするには **MSI 削除**機能を使用する必要があります。 そうしないと、Intune 配信の Office 365 アプリをインストールできません。
 
 - これらのアプリを展開するデバイスでは、Windows 10 Creators Update 以降を実行している必要があります。
-- Intune は、Office 365 スイートの Office アプリの追加のみをサポートします。
+- Intune では、Office アプリの追加を Microsoft 365 アプリ スイートからのみサポートしています。
 - Intune でアプリ スイートをインストールするときに、Office アプリが開いている場合は、インストールが失敗し、ユーザーは保存されていないファイルのデータを失う可能性があります。
 - このインストール方法は、Windows Home、Windows Team、Windows Holographic、または Windows Holographic for Business の各デバイスではサポートされていません。
 - Intune では、Intune を使用して Office 365 アプリを既に展開しているデバイス上の Microsoft Store から Office 365 デスクトップ アプリ (Office Centennial アプリとして知られる) をインストールすることをサポートしていません。 この構成をインストールすると、データが損失したり壊れたりする可能性があります。
 - 必須または使用可能なアプリを複数割り当てる場合、後の割り当ては前の割り当てに追加されるのではありません。 後のアプリ割り当ては、それより前にインストールされて存在するアプリの割り当てを上書きします。 たとえば、Office アプリの最初のセットに Word が含まれ、後のセットには含まれない場合、Word はアンインストールされます。 この条件は、Visio または Project アプリケーションには適用されません。
-- 複数の Office 365 の展開は、現在はサポートされていません。 1 つの展開だけが、デバイスに配信されます
+- 複数の Office 365 の展開は、現在はサポートされていません。 デバイスには、1 つの展開のみが配信されます
 - **[Office バージョン]** : Office の 32 ビットまたは 64 ビット バージョンのどちらを割り当てるかを選択します。 32 ビットと 64 ビットのどちらのデバイスでも 32 ビット バージョンをインストールできますが、64 ビットのデバイスには 64 ビット バージョンしかインストールできません。
-- **[Remove MSI from end-user devices]** \(エンドユーザーのデバイスから MSI を削除する\): エンドユーザーのデバイスから、既にある Office .MSI アプリを削除するかどうか選択します。 エンドユーザーのデバイスに、既に .MSI アプリがある場合、インストールは成功しません。 インストールされるアプリは、 **[アプリ スイートの構成]** でインストール対象として選択されたアプリに限りません。すべての Office (MSI) アプリがエンド ユーザー デバイスから削除されます。 詳細については、「[Remove existing MSI versions of Office when upgrading to Office 365 ProPlus](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version)」 (Office 365 ProPlus へのアップグレード時に Office の既存の MSI バージョンを削除する) を参照してください。 エンドユーザーのコンピューターに Office が Intune によって再インストールされる場合、エンド ユーザーには前の .MSI Office インストールで使用していたのと同じ言語パックが自動的に提供されます。
+- **[Remove MSI from end-user devices]** \(エンドユーザーのデバイスから MSI を削除する\): エンドユーザーのデバイスから、既にある Office .MSI アプリを削除するかどうか選択します。 エンドユーザーのデバイスに、既に .MSI アプリがある場合、インストールは成功しません。 インストールされるアプリは、 **[アプリ スイートの構成]** でインストール対象として選択されたアプリに限りません。すべての Office (MSI) アプリがエンド ユーザー デバイスから削除されます。 詳細については、「[Microsoft 365 アプリにアップグレードしたときに、既存の MSI バージョンの Office を削除する](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version)」を参照してください。 エンドユーザーのコンピューターに Office が Intune によって再インストールされる場合、エンド ユーザーには前の .MSI Office インストールで使用していたのと同じ言語パックが自動的に提供されます。
 
-## <a name="select-the-office-365-suite-app-type"></a>Office 365 スイート アプリの種類を選択する
+## <a name="select-microsoft-365-apps"></a>Microsoft 365 アプリの選択
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 2. **[アプリ]**  >  **[すべてのアプリ]**  >  **[追加]** の順に選択します。
-3. **[アプリケーションの種類の選択]** ペインの **[Office 365 スイート]** セクションで **[Windows 10]** を選択します。
-4. **[選択]** をクリックします。 **[Add Office 365 Suite]\(Office 365 スイートの追加 \)** ステップが表示されます。
+3. **[アプリケーションの種類の選択]** ウィンドウの **[Microsoft 365 アプリ]** セクションで **[Windows 10]** を選択します。
+4. **[選択]** をクリックします。 **[Add Microsoft 365 Apps]** \(Microsoft 365 アプリの追加\) 手順が表示されます。
 
 
 ## <a name="step-1---app-suite-information"></a>ステップ 1 - アプリ スイートの情報
@@ -70,7 +72,7 @@ ms.locfileid: "80324946"
     - **[開発者]** : Microsoft が開発者として表示されます。
     - **[所有者]** : Microsoft が所有者として表示されます。
     - **[メモ]** : このアプリに関連付けるメモを入力します。
-    - **[ロゴ]** : ユーザーがポータル サイトを閲覧するとき、アプリと一緒に Office 365 のロゴが表示されます。
+    - **[ロゴ]** : ユーザーが会社のポータルを閲覧するときにアプリに表示される、Microsoft 365 アプリのロゴです。
 2. **[次へ]** をクリックして、 **[アプリ スイートの構成]** ページを表示します。
 
 ## <a name="step-2---option-1-configure-app-suite-using-the-configuration-designer"></a>ステップ 2 - (**オプション 1**) 構成デザイナーを使用してアプリ スイートを構成する 
@@ -84,12 +86,12 @@ ms.locfileid: "80324946"
 - アプリ スイートの情報
 - プロパティ
 
-<img alt="Add Office 365 - Configuration designer" src="./media/apps-add-office365/apps-add-office365-02.png" width="700">
+<img alt="Add Microsoft 365 Apps - Configuration designer" src="./media/apps-add-office365/apps-add-office365-02.png" width="700">
 
 1. **[Configuration app suite]\(構成アプリ スイート\)** ページで、 **[構成デザイナー]** を選択します。
    - **[Select Office apps]\(Office アプリを選択する\)** : ドロップダウン リストでアプリを選択して、デバイスに割り当てる標準の Office アプリを選択します。
    - **[Select other Office apps (license required)]\(その他の Office アプリを選択する (ライセンスが必要)\)** : デバイスに割り当てる追加の Office アプリがあり、そのライセンスを持っている場合は、ドロップダウン リストからそのアプリを選択します。 このようなアプリには、Microsoft Project Online デスクトップ クライアントや Microsoft Visio Online プラン 2 などのライセンスされたアプリなどがあります。
-   - **[アーキテクチャ]** : Office ProPlus の **32 ビット**または **64 ビット** バージョンのどちらを割り当てるかを選択します。 32 ビットと 64 ビットのどちらのデバイスでも 32 ビット バージョンをインストールできますが、64 ビットのデバイスには 64 ビット バージョンしかインストールできません。
+   - **[アーキテクチャ]** : Microsoft 365 アプリの **32 ビット**または **64 ビット** バージョンのどちらを割り当てるか選択します。 32 ビットと 64 ビットのどちらのデバイスでも 32 ビット バージョンをインストールできますが、64 ビットのデバイスには 64 ビット バージョンしかインストールできません。
     - **[更新プログラム チャネル]** : デバイス上で Office を更新する方法を選択します。 さまざまな更新プログラム チャネルについて詳しくは、「[Office 365 ProPlus 更新プログラム チャネルの概要](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus)」をご覧ください。 次の中から選択します。
         - **毎月**
         - **Monthly (Targeted)** \(毎月 (対象指定)\)
@@ -97,7 +99,7 @@ ms.locfileid: "80324946"
         - **Semi-Annual (Targeted)** \(半期 (対象指定)\)
 
         チャネルを選択すると、以下を選択できるようになります。
-        - **[Remove other versions]\(その他のバージョンを削除する\)** : **[はい]** を選択すると、他のバージョンの Office (MSI) をユーザー デバイスから削除されます。 エンドユーザー デバイスから既存の Office .MSI アプリを削除する場合は、このオプションを選択します。 エンドユーザーのデバイスに、既に .MSI アプリがある場合、インストールは成功しません。 インストールされるアプリは、 **[アプリ スイートの構成]** でインストール対象として選択されたアプリに限りません。すべての Office (MSI) アプリがエンド ユーザー デバイスから削除されます。 詳細については、「[Remove existing MSI versions of Office when upgrading to Office 365 ProPlus](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version)」 (Office 365 ProPlus へのアップグレード時に Office の既存の MSI バージョンを削除する) を参照してください。 エンドユーザーのコンピューターに Office が Intune によって再インストールされる場合、エンド ユーザーには前の .MSI Office インストールで使用していたのと同じ言語パックが自動的に提供されます。 
+        - **[Remove other versions]\(その他のバージョンを削除する\)** : **[はい]** を選択すると、他のバージョンの Office (MSI) をユーザー デバイスから削除されます。 エンドユーザー デバイスから既存の Office .MSI アプリを削除する場合は、このオプションを選択します。 エンドユーザーのデバイスに、既に .MSI アプリがある場合、インストールは成功しません。 インストールされるアプリは、 **[アプリ スイートの構成]** でインストール対象として選択されたアプリに限りません。すべての Office (MSI) アプリがエンド ユーザー デバイスから削除されます。 詳細については、「[Microsoft 365 アプリにアップグレードしたときに、既存の MSI バージョンの Office を削除する](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version)」を参照してください。 エンドユーザーのコンピューターに Office が Intune によって再インストールされる場合、エンド ユーザーには前の .MSI Office インストールで使用していたのと同じ言語パックが自動的に提供されます。 
         - **[Version to install]\(インストールするバージョン\)** : インストールする Office のバージョンを選択します。
         - **[特定バージョン]** : 上記の設定の **[Version to install]\(インストールするバージョン\)** として **[特定]** を選択した場合は、選択したチャネルの特定のバージョンの Office をエンド ユーザー デバイスにインストールすることを選択できます。 
             
@@ -105,12 +107,12 @@ ms.locfileid: "80324946"
             
             デバイスのピン設定されているバージョンが更新される場合 (または他の任意のプロパティが更新される場合)、それが利用可能としてデプロイされる場合、デバイスのチェックインが発生するまでに前のバージョンがインストールされた場合は、インストール済みであるという状態が報告されます。 デバイスのチェックインが起こった場合、状態は一時的に不明に変わりますが、これはユーザーには表示されません。 ユーザーがより新しいバージョンのインストールを開始した場合、ユーザーには状態が [インストール済み] と変更され表示されます。
             
-            詳細については、「[Office 365 ProPlus 更新プログラム チャネルの概要](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus)」をご覧ください。
-    - **[共有コンピューターのライセンス認証を使用]** : 複数のユーザーでコンピューターを共有する場合は、このオプションを選びます。 詳細については、[Office 365 に対する共有コンピューターのライセンス認証の概要](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus)に関するページを参照してください。
+            詳細については、[Microsoft 365 アプリの更新チャネルの概要](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus)に関するページをご覧ください。
+    - **[共有コンピューターのライセンス認証を使用]** : 複数のユーザーでコンピューターを共有する場合は、このオプションを選びます。 詳細については、[共有コンピューターでの Microsoft 365 のライセンス認証の概要](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus)に関するページを参照してください。
     - **[アプリのソフトウェア ライセンス条項を自動的に受け入れる]** : エンド ユーザーにライセンス契約への承諾を要求しない場合は、このオプションを選びます。 その後、Intune で契約書を自動的に承諾します。
     - **[言語]** : Office は、エンド ユーザーのデバイス上の Windows にインストールされている任意のサポート言語で自動的にインストールされます。 アプリ スイートと共に追加の言語をインストールする場合は、このオプションを選択します。 <p></p>
-        Intune によって管理されている Office 365 Pro Plus アプリに追加の言語を展開することができます。 使用可能な言語のリストには、言語パックの **種類** (コア、部分、校正) が含まれます。 Azure portal で、 **[Microsoft Intune]**  >  **[アプリ]**  >  **[すべてのアプリ]**  >  **[追加]** を選択します。 **[アプリの追加]** ウィンドウの **[アプリの種類]** の一覧で、 **[Office 365 スイート]** の **[Windows 10]** を選びます。 **[アプリ スイートの設定]** ウィンドウで **[言語]** を選びます。 詳細については、「[Office 365 ProPlus での言語の展開の概要](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus)」を参照してください。
-2. **[次 へ]** をクリックして **[スコープ タグ]** ページを表示します。
+        Intune によって管理されている Office 365 Pro Plus アプリに追加の言語を展開することができます。 使用可能な言語のリストには、言語パックの **種類** (コア、部分、校正) が含まれます。 Azure portal で、 **[Microsoft Intune]**  >  **[アプリ]**  >  **[すべてのアプリ]**  >  **[追加]** を選択します。 **[アプリの追加]** ウィンドウの **[アプリの種類]** の一覧で、 **[Microsoft 365 アプリ]** の **[Windows 10]** を選びます。 **[アプリ スイートの設定]** ウィンドウで **[言語]** を選びます。 詳細については、[Microsoft 365 アプリでの言語の展開の概要](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus)に関するページを参照してください。
+2. **[次へ]** をクリックして **[スコープ タグ]** ページを表示します。
 
 ## <a name="step-2---option-2-configure-app-suite-using-xml-data"></a>ステップ 2 - (**オプション 2**) XML データを使用してアプリ スイートを構成する 
 
@@ -121,7 +123,7 @@ ms.locfileid: "80324946"
 1. 構成 XML が追加されます。
 
     > [!NOTE]
-    > 製品 ID には、Business (`O365BusinessRetail`) または Proplus (`O365ProPlusRetail`) のいずれかを指定できます。 ただし、XML データを使用して Office 365 Business Edition のアプリ スイートを構成することだけができます。 
+    > 製品 ID には、Business (`O365BusinessRetail`) または Proplus (`O365ProPlusRetail`) のいずれかを指定できます。 ただし、Microsoft 365 Apps for business edition のアプリ スイートは、XML データを使用してしか構成できません。 なお、Microsoft Office 365 ProPlus は **Microsoft 365 Apps for enterprise** に名前変更されています。
 
 2. **[次へ]** をクリックして **[スコープ タグ]** ページを表示します。
 
@@ -143,7 +145,7 @@ XML データの入力の詳細については、「[Office 展開ツールの�
 1. アプリ スイートに入力した値と設定を確認します。
 2. 完了したら、 **[作成]** をクリックしてアプリを Intune に追加します。
 
-    作成した Office 365 Window 10 アプリ スイートの **[概要]** ブレードが表示されます。
+    **[概要]** ブレードが表示されます。
 
 ## <a name="deployment-details"></a>展開の詳細
 
@@ -192,7 +194,7 @@ Intune とネットワーク インフラストラクチャの両方が想定ど
 - インストールの間に、Office インストールの詳細ログをキャプチャします。 この操作を行うには、次の手順に従います。<br>
     1. ターゲット コンピューターで Office インストールの詳細ログを有効にします。 これを行うには、次のコマンドを実行してレジストリを変更します。<br>
         `reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /t REG_DWORD /d 3`<br>
-    2. Office 365 スイートをターゲット デバイスにもう一度展開します。<br>
+    2. Microsoft 365 アプリをターゲット デバイスにもう一度展開します。<br>
     3. 約 15 から 20 分待ってから、 **%temp%** フォルダーおよび **%windir%\temp** フォルダーに移動し、**更新日時**で並べ替えて、再現時刻に従って変更された " *<コンピューター名>-<タイムスタンプ>.log*" ファイルを選択します。<br>
     4. 次のコマンドを実行して、詳細ログを無効にします。<br>
         `reg delete HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /f`<br>
@@ -200,7 +202,7 @@ Intune とネットワーク インフラストラクチャの両方が想定ど
 
 ## <a name="errors-during-installation-of-the-app-suite"></a>アプリ スイートのインストール中のエラー
 
-詳細なインストール ログを表示する方法については、「[How to enable Office 365 ProPlus ULS logging (Office 365 ProPlus ULS のログ記録を有効にする方法)](/office/troubleshoot/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging)」をご覧ください。
+詳細なインストール ログを表示する方法については、「[Microsoft 365 アプリで ULS ログを有効にする方法](/office/troubleshoot/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging)」をご覧ください。
 
 次の表は、発生する可能性がある一般的なエラー コードとその意味を一覧表示しています。
 

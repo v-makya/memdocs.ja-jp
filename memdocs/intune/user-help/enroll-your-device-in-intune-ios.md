@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aeb2e22348e7197f0abb62ee540c37079f8645f4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49e598f370669ed55688af6e6a570a932b5bf9d3
+ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084694"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82137968"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>iOS デバイスからの会社のリソースへのアクセスを設定する  
 
@@ -170,13 +170,13 @@ App Store に移動して、[Intune ポータル サイト アプリ](install-an
 
 8. **[サインイン]** 画面で、管理対象の Apple ID のパスワードを入力します。 ほとんどの場合、これらの資格情報は、組織が別の資格情報セットを提供していない限り、職場アカウントまたは学校アカウントへのサインインに使用するものと同じです。 
 9. **[サインイン]** をタップします。  
-10. プロファイルがインストールされた後、画面に成功メッセージが表示されます。 プロファイルがインストールされたことを確認するには、 **[プロファイルとデバイスの管理]**   設定に移動します。  **[モバイル デバイス管理]** の下にプロファイルが一覧表示されるはずです。  
+10. プロファイルがインストールされた後、画面に成功メッセージが表示されます。 プロファイルがインストールされていることを確認するには、 **[プロファイルとデバイスの管理]** 設定に移動します。 **[モバイル デバイス管理]** の下にプロファイルが一覧表示されるはずです。  
 
     ![管理プロファイルを示す設定アプリの [プロファイルとデバイスの管理] のスクリーンショット例](./media/ios-12-cp-enroll-1904.PNG)  
 
 11. ポータル サイト アプリに戻ります。 ポータル サイトでデバイスの同期と設定が開始されます。 ポータル サイトで追加のデバイス設定を更新するように求められる場合があります。 その場合は、 **[続行]** をタップします。    
 
-12. リスト内のすべての項目に緑色のチェックマークが表示されると、設定が完了したことがわかります。  **[完了]** をタップします。  
+12. リスト内のすべての項目に緑色のチェックマークが表示されると、設定が完了したことがわかります。 **[完了]** をタップします。  
 
 ## <a name="it-administrator-support"></a>IT 管理者のサポート  
 デバイス登録中に問題に遭遇した IT 管理者は、「[Troubleshooting iOS device enrollment problems in Microsoft Intune (Microsoft Intune の iOS デバイスの登録に関する問題のトラブルシューティング)](https://support.microsoft.com/en-us/help/4039809)」を参照してください。 この記事では、一般的なエラー、その原因、解決する手順の一覧が示されています。  

@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8720eec22c8e7fd8a9c8c2303b50e71db0e834ad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1fcd77774cb19a70ee02cab9d2d1e6a44dd9745a
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79362590"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023199"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>ガイド付きシナリオ - クラウド マネージド モダン デスクトップ
 
-モダン デスクトップは、インフォメーション ワーカー向けの最先端の生産性向上プラットフォームです。 Office 365 ProPlus および Windows 10 は、モダン デスクトップの主要なコンポーネントであり、Windows 10 および Microsoft Defender Advanced Threat Protection 用の最新のセキュリティ ベースラインと共に使用されます。
+モダン デスクトップは、インフォメーション ワーカー向けの最先端の生産性向上プラットフォームです。 Microsoft 365 アプリおよび Windows 10 は、Windows 10 および Microsoft Defender Advanced Threat Protection 用の最新のセキュリティ ベースラインと共に、モダン デスクトップの主要コンポーネントです。
 
 モダン デスクトップをクラウドから管理することで、インターネット全体でのリモート操作の利点を活用できます。 クラウド管理では、組み込みの Windows モバイル デバイス管理ポリシーが利用され、ローカルの Active Directory グループ ポリシーに対する依存関係が削除されます。
 
@@ -46,7 +46,7 @@ ms.locfileid: "79362590"
 
 ## <a name="step-1---introduction"></a>ステップ 1 - 概要
 
-Windows 10 および Office ProPlus と同様に、このガイド付きシナリオを使用して、テスト ユーザーを設定し、Intune にデバイスを登録し、Intune で推奨されている設定を使用してデバイスを展開します。 また、[Intune でこの保護を有効にする](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune)ことを選択した場合、ご利用のデバイスは Microsoft Defender Advanced Threat Protection 用に構成されます。 設定したユーザーおよび登録したデバイスは、新しいセキュリティ グループに追加され、さらにセキュリティと生産性のために推奨されている設定で構成されます。
+このガイド付きシナリオを使用すると、テスト ユーザーを設定し、Intune にデバイスを登録し、Windows 10 および Microsoft 365 アプリと共に Intune の推奨設定を使用してデバイスを展開できます。 また、[Intune でこの保護を有効にする](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune)ことを選択した場合、ご利用のデバイスは Microsoft Defender Advanced Threat Protection 用に構成されます。 設定したユーザーおよび登録したデバイスは、新しいセキュリティ グループに追加され、さらにセキュリティと生産性のために推奨されている設定で構成されます。
 
 ### <a name="what-you-will-need-to-continue"></a>続けるために必要なこと
 
@@ -121,7 +121,7 @@ Windows Autopilot では新しいデバイスの構成が自動化されてい�
 
 ユーザーがデバイスを Azure Active Directory に参加させると、デバイスには次の構成が適用されます。
 
-1. Office 365 ProPlus がクラウド マネージド PC に自動的にインストールされます。 これには、Access、Excel、OneNote、Outlook、PowerPoint、Publisher、Skype for Business、Word など、馴染みのあるアプリケーションが含まれます。 これらのアプリケーションを使用して、SharePoint Online、Exchange Online、Skype for Business Online などの Office 365 サービスに接続することができます。 Office 365 ProPlus は、サブスクリプション以外のバージョンの Office とは異なり、定期的に新しい機能で更新されます。 新機能の一覧については、「Office 365 の新機能」を参照してください。
+1. Microsoft 365 アプリがクラウド マネージド PC に自動的にインストールされます。 これには、Access、Excel、OneNote、Outlook、PowerPoint、Publisher、Skype for Business、Word など、馴染みのあるアプリケーションが含まれます。 これらのアプリケーションを使用して、SharePoint Online、Exchange Online、Skype for Business Online などの Office 365 サービスに接続することができます。 Microsoft 365 アプリは、サブスクリプション版ではない Office のバージョンとは異なり、新機能で定期的に更新されます。 新機能の一覧については、「Office 365 の新機能」を参照してください。
 2. Windows セキュリティ ベースラインがクラウド マネージド PC にインストールされます。 Microsoft Defender Advanced Threat Protection が設定されている場合、ガイド付きシナリオでは、Defender に対してベースライン設定も構成されます。 Defender Advanced Threat Protection により、Windows 10 セキュリティ スタックに新しい侵害後保護レイヤーが提供されます。 Windows 10 に組み込まれたクライアント テクノロジと堅牢なクラウド サービスとの組み合わせにより、他の防御を通過した脅威を容易に検出できるようになります。 
 
 ## <a name="next-steps"></a>次のステップ

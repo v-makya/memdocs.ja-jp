@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b808e34e6b44641902daddcee3a47f7273756b2d
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: d9a3e2c2a2c50f2d0fde264eedc2096d34f815a9
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323285"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023182"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Intune でインポートした PKCS 証明書を構成して使用する
 
@@ -211,9 +211,12 @@ PowerShell モジュールには、Windows 暗号化を使用してキーを作�
 
 証明書を Intune にインポートしたら、 **[PKCS のインポートされた証明書]** プロファイルを作成し、それを Azure Active Directory グループに割り当てます。
 
+> [!NOTE]
+> PKCS のインポートされた証明書プロファイルの作成後は、プロファイルの **[使用目的]** と **[キー記憶域プロバイダー]** (KSP) 値は読み取り専用になり、編集できなくなります。 これらのいずれかの設定に別の値が必要な場合は、新しいプロファイルを作成して展開します。 
+
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
-2. **[デバイス]** 、 **[構成プロファイル]** 、 **[プロファイルの作成]** の順に移動します。
+2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に移動します。
 
 3. 次のプロパティを入力します。
    - **[プラットフォーム]** :デバイスのプラットフォームを選択します。

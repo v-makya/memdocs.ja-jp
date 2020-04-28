@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 643c5713bdedce84def842ae06c00fb0e8c6d069
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 106c08b6e988c104858a06ef9843ebcb2e3ae93a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352554"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079775"
 ---
 # <a name="data-apple-sends-to-intune"></a>Apple から Intune に送られるデータ
 
@@ -43,7 +43,7 @@ Microsoft Intune が接続を確立する前に、各 Apple サービスの Appl
 
 次の表は、Apple デバイスから Intune に送られるデータの一覧です。 [Intune から Apple にもデータが送られます](data-intune-sends-to-apple.md)。 
 
-| [サービス] | メッセージ | Intune に送られるデータ | 使用目的 |
+| サービス | メッセージ | Intune に送られるデータ | 使用目的 |
 |:---:|:---:|:---:| ---|
 | [APNs](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | 認証 | MessageType | メッセージ型: 認証。 |
 | [APNs](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | 認証 | トピック | デバイスがリッスンするトピック。 |

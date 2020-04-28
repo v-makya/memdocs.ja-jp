@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682791256bf0ce40db1dedd1fa6b947efc85b729
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: aa8a18d24fb27b1d1ca7ea7dbe4fad532f85d662
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352385"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022723"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Microsoft Intune を使用して、会社のデータへの無許可のアクセスを防止する
 
@@ -36,7 +36,7 @@ Office 365 のドキュメントと電子メールを分類し、ラベル付け
 * 会社が Office 365 Exchange Online、SharePoint Online、OneDrive for Business、または Yammer を使用している。
 * 会社が Microsoft 365、Enterprise Mobility + Security (EMS)、または Azure Information Protection のライセンスを持っている。
 * 会社が Windows 7 Service Pack 1 またはそれ以降が実行されているデバイスを使用している。
-* 会社が Office 365 ProPlus の 2016 または 2013 アプリ、Office Professional Plus 2016、Office Professional Plus 2013 Service Pack 1 または Office Professional Plus 2010 を使用している。
+* 会社が Microsoft 365 アプリと 2016 アプリまたは 2013 アプリ、Office Professional Plus 2016、Office Professional Plus 2013 Service Pack 1 または Office Professional Plus 2010 を使用している。
 
 ## <a name="action-plan"></a>行動計画
 

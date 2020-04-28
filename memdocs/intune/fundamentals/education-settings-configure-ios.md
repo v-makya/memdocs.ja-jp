@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 104996e87c830701b1725129727c76d8c7a09ee3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cf4fc3017ccf3efcf93986544c8a60b60acbf3c8
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79344130"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82076120"
 ---
 # <a name="how-to-configure-intune-settings-for-the-iosipados-classroom-app"></a>iOS/iPadOS Classroom アプリの Intune 設定を構成する方法
 
@@ -41,7 +41,7 @@ ms.locfileid: "79344130"
 
 デバイスで Classroom を設定するには、Intune iOS/iPadOS 教育デバイス プロファイルを作成して設定する必要があります。
 
-## <a name="before-you-start"></a>アップグレードを開始する前に
+## <a name="before-you-start"></a>開始する前に
 
 以上の設定を構成する前に、次の事項について検討してください。
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a26e32d0a719df7c3982591042991ae760d9281
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 863e6e540fcb79ff18accc40142a8e50c1406943
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80611698"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078075"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>アプリ保護ポリシーを利用するために基幹業務アプリで準備を行う
 
@@ -104,7 +104,7 @@ Intune SDK の開発チームは、ネイティブの Android、iOS (Obj-C、Swi
 |デバイスの登録なしで MAM をサポート|○|○|
 |アプリ データのフル ワイプ|○|○|
 |複数 ID のシナリオにおける職場および学校のデータの選択的ワイプ <br><br>**注:** iOS と iPadOS では、管理プロファイルを削除するとアプリも削除されます。|○||
-|[[名前を付けて保存] を禁止する]|○||
+|[名前を付けて保存] を禁止する|○||
 |対象のアプリケーション構成 (または "MAM チャネル" を介したアプリ構成)|○|○|
 |[マルチ ID アプリのサポート]|○||
 |カスタマイズ可能なスタイル |○|||

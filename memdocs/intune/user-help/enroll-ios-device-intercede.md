@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8caf05a2869088fd4f8206d1306d82c696f527a2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b83092521f1ab0058d47d599e7fd9c10c2fd6d35
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81638206"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077769"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>Intune ポータル サイトと Intercede を使用して iOS または iPadOS デバイスをセットアップする
 
@@ -44,7 +44,7 @@ ms.locfileid: "81638206"
 
 
 ## <a name="what-are-derived-credentials"></a>派生資格情報とは  
-派生資格情報とは、スマート カードの資格情報から派生し、デバイスにインストールされる証明書です。 これにより、未承認ユーザーによる機密情報へのアクセスを防ぎながら、作業リソースへのリモート アクセスが許可されます。  
+派生資格情報とは、ご自分のスマート カードの資格情報から派生し、デバイスにインストールされる証明書です。 これにより、未承認ユーザーによる機密情報へのアクセスを防ぎながら、作業リソースへのリモート アクセスが許可されます。  
 
 派生資格情報は次の目的に使用されます。 
 * 学校または職場のアプリ、Wi-Fi、VPN にサインインする学生と従業員を認証する

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58203c09784f0d4a50472ff4ae9cd06957025a1c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324328"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079316"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Microsoft Intune を使用する Windows 10 アプリの展開 
 
@@ -97,9 +97,9 @@ Windows 10 LOB アプリに署名して、Intune 管理コンソールにアッ�
 - Win32 アプリ
 - オフライン ライセンスのビジネス向け Microsoft Store アプリ
 - LOB アプリ (MSI、APPX、および MSIX)
-- Office 365 ProPlus
+- Microsoft 365 Apps for enterprise
 
-デバイス コンテキストでインストール対象として選択した Windows LOB アプリ (具体的には APPX と MSIX) およびビジネス向け Microsoft Store アプリ (オフライン アプリ) は、デバイス グループに割り当てる必要があります。 これらのアプリのいずれかがユーザー コンテキストで展開されていると、インストールは失敗します。 管理コンソールには、次の状態とエラーが表示されます。
+デバイス コンテキストでインストール対象として選択した Windows LOB アプリ (具体的には appx と MSIX) およびビジネス向け Microsoft Store アプリ (オフライン アプリ) は、デバイス グループに割り当てる必要があります。 これらのアプリのいずれかがユーザー コンテキストで展開されていると、インストールは失敗します。 管理コンソールには、次の状態とエラーが表示されます。
   - 状態: 失敗。
   - エラー:デバイス コンテキストのインストールでユーザーを対象とすることはできません。
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a2dbd43ff5a8048286693dbfb417d6bb720a877
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 54e18ae8da6d534e26e37da8fba898e60f5a2986
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353035"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079843"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Intune デバイスのコンプライアンス対応ポリシーの監視
 
@@ -179,7 +179,7 @@ Intune には、そのデバイスに適用されているデバイス コンプ
     - **成功**:ポリシーが適用されます
     - **エラー**: ポリシーを適用できませんでした。 メッセージは通常、説明のリンクを含むエラー コードと共に表示されます。
     - **[競合]** :2 つの設定が同じデバイスに適用されます。Intune では競合に対処できません。 管理者が確認する必要があります。
-    - **Pending**:デバイスはまだ、ポリシーを受信するために Intune でチェックインしていません。
+    - **Pending**:デバイスはまだ、ポリシーを受信するために Intune にチェックインされていません。
     - **適用なし**:デバイスがポリシーを受信できません。 たとえば、ポリシーで iOS 11.1 に特有の設定が更新されるが、デバイスが iOS 10 を使用している場合です。
 
 3. このポリシーを使用してデバイスの詳細を表示するには、状態のいずれかを選択します。 たとえば、 **[成功]** を選択します。 次のウィンドウでは、デバイス名や展開状態など、特定のデバイスの詳細が一覧表示されます。

@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f7dc2fcf505890af1e24f8176bef653a6d5f1022
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0aff833df367cced712219fff0be85653ef79e89
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334978"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079656"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-android-device"></a>Android デバイスに SandBlast Mobile Protect をインストールする必要があります
 
@@ -52,7 +52,7 @@ ms.locfileid: "79334978"
 
 10. 脅威が検出されない場合は、3 つの脅威の種類はすべて緑色で表示されます。
 
-11. ポータル サイトの **[デバイスの詳細]** 画面には、このデバイスが会社のセキュリティ要件に準拠している状態であることが表示されます。
+11. ポータル サイトの **[デバイスの詳細]** 画面には、会社のセキュリティ要件に準拠している状態であることが表示されます。
 
     ![このデバイスはポリシーに準拠している状態になりました](./media/mtd-device-now-compliant-android.png)
 

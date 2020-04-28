@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a3fc8976c4799759088db4c4f28a9f50dff8e37
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d754076537fb8014b3e66a05413379637a67ba32
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79363552"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077973"
 ---
 # <a name="incomplete-user-enrollments-report"></a>不完全なユーザー登録レポート
 
@@ -80,7 +80,7 @@ ms.locfileid: "79363552"
 | EnrollmentWrapUp | **[会社のリソースを読み込んでいます]** が終わるまで [デバイスを登録しています] 画面 | iOS/Android | 30 分以上かかった |
 | DeviceCategory | **[完了]** をクリックするまで (管理者が構成している場合) デバイス カテゴリの選択 | iOS/Android | 30 分以上かかった |
 | PreEnrollmentWizard | 登録を開始したが [Set up access]\(アクセス設定\) に戻り [Set up access]\(アクセス設定\) 画面 | iOS/Android| **延期** |
-| PreEnrollmentWizard | **[次の手順]** 画面で **[次へ]** をクリックするまで [Set up access]\(アクセス設定\) 画面 | iOS/Android | 30 分以上かかった |
+| PreEnrollmentWizard | **[次の手順]** 画面で **[次へ]** をクリックするまでのアクセスの設定画面 | iOS/Android | 30 分以上かかった |
 
 #### <a name="platform-screens-section"></a>[プラットフォーム画面] セクション
 
@@ -88,7 +88,7 @@ ms.locfileid: "79363552"
 | ---- |---- |---- |---- |
 | iOSProfileLaunch | 構成プロファイルを表示するプロンプト | iOS/iPadOS | **無視** |
 | iOSProfileLaunch | [Installing profile]\(プロファイルのインストール\) 画面 | iOS/iPadOS | **キャンセル** |
-| iOSProfileLaunch | デバイスを登録するためにプロファイルのソースを信頼するプロンプト | iOS/iPadOS | **キャンセル** |
+| iOSProfileLaunch | デバイスを登録するためにプロファイルのソースを信頼するように求めるプロンプト | iOS/iPadOS | **キャンセル** |
 | iOSProfileLaunch | プロファイルがインストールされるまで [Installing profile]\(プロファイルのインストール\) 画面 | iOS/iPadOS | 30 分以上かかった |
 | AndroidPermissions | [Device administrator activation]\(デバイス管理者のアクティブ化\) 画面 | Android | **キャンセル** |
 | AndroidPermissions | デバイス管理者が **[アクティブ化]** されるまで電話をかけたり管理したりする承認のためのプロンプト | Android | 30 分以上かかった |

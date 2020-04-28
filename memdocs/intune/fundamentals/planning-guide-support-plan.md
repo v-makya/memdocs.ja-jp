@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8cb8107efa5961c74277afa84da861305d8b9484
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2368e27cbd5f98683a0b00e6b23c070236c84491
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357286"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080115"
 ---
 # <a name="develop-a-support-plan"></a>サポート計画を作成する
 
@@ -33,7 +33,7 @@ Intune サポート計画を用意すると、Intune 関連の問題をより効
 
 - Intune のサポートを提供するためにどのようなプロセスを使用しますか
 
-- Intune のサポート トレーニングの計画方法
+- Intune のサポート トレーニングはどのように計画しますか
 
 - Intune 展開プロセスの初期段階で、どのような機会にサポート チームが参加できるでしょうか
 
@@ -49,7 +49,7 @@ Intune サポート計画を用意すると、Intune 関連の問題をより効
 
 ## <a name="what-is-the-support-process"></a>サポート プロセスの内容
 
-運用ロールアウトの初期フェーズでは、3 つの階層すべてがブリッジまたは Skype 通話に参加するように指示することもあります。 次に、組織での IT サポート/ヘルプデスクのワークフローの実施例を示します。
+運用ロールアウトの初期フェーズでは、3 つの階層すべてがブリッジまたは Skype 通話に参加するように指示することもあります。 次に、組織での IT サポートまたはヘルプデスクのワークフローの実施例を示します。
 
 1. エンド ユーザーが、登録の問題について IT サポート/ヘルプデスク階層 1 に問い合わせます。
 
@@ -69,9 +69,9 @@ Intune サポート計画を用意すると、Intune 関連の問題をより効
 
 - 全体的なユーザー エクスペリエンスを改善する
 
-## <a name="how-you-plan-to-provide-intune-support-training"></a>Intune のサポート トレーニングの計画方法
+## <a name="how-you-plan-to-provide-intune-support-training"></a>Intune のサポート トレーニングはどのように計画しますか
 
-IT サポート/ヘルプデスク スタッフ向けに、適切なレベルで、各サポート階層とその責任内容に合わせた Intune 技術トレーニングを用意することが重要です。 Intune MDM チームがサポート リーダーに対してこのトレーニングを実施してから (トレーナーのトレーニング)、サポート リーダーがサポート チーム メンバーにトレーニングを実施する方法もあります。 このトレーニングの所要時間は、講義と演習を含めて一般的に 2 ～ 3 時間です。
+IT サポートまたはヘルプデスク スタッフ向けに、適切なレベルで、各サポート階層とその責任内容に合わせた Intune 技術トレーニングを用意することが重要です。 Intune MDM チームがサポート リーダーに対してこのトレーニングを実施してから (トレーナーのトレーニング)、サポート リーダーがサポート チーム メンバーにトレーニングを実施する方法もあります。 このトレーニングの所要時間は、講義と演習を含めて一般的に 2 ～ 3 時間です。
 
 Intune サポート トレーニングの課題例を次に示します。
 
@@ -91,6 +91,6 @@ Intune サポート トレーニングの課題例を次に示します。
 
 IT サポート/ヘルプデスク スタッフが Intune 展開計画やパイロット運用の初期段階に参加することは、Intune 展開の改善につながり、エンド ユーザーは効率的に Intune を導入できます。 初期段階から関与する場合、サポート スタッフに Intune を公開し、貴重な体験を始めから与えることになります。 IT サポート/ヘルプデスク スタッフが組織の本格的な運用ロールアウトのサポートに備えることができます。
 
-## <a name="next-step"></a>次のステップ
+## <a name="next-step"></a>次の手順
 
 次のセクションは、[Intune の設計](planning-guide-design.md)に関するガイダンスです。

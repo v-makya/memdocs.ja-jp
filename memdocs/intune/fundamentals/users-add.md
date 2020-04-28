@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53f95c83cecbfce68b2370c0c0d4f8e98f856e12
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b8239b750da0d04247608486ea7f3a11ca9c8f86
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326692"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077854"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Intune にユーザーを追加して管理アクセス許可を付与する
 
@@ -104,7 +104,7 @@ Intune サブスクリプションにユーザーを追加した後で、ごく�
 
 - **全体管理者** - (Office 365 と Intune) Intune のすべての管理機能にアクセスできます。 既定では、Intune にサインアップしたユーザーがグローバル管理者になります。他の管理者ロールを割り当てることができる管理者は、グローバル管理者だけです。 組織には複数のグローバル管理者を置くことができます。 ベスト プラクティスとしては、ビジネス リスクを軽減するため、社内の少数のユーザーのみがこのロールを持つようにすることをお勧めします。
 - **パスワード管理者** - (Office 365 と Intune) パスワードの再設定、サービス リクエストの管理、およびサービスの正常性の監視を行います。 パスワード管理者は、ユーザーのパスワードのリセットに制限されます。
-- **サービス管理者** - (Office 365 と Intune) Microsoft へのサポート要求を開き、サービス ダッシュボードとメッセージ センターを表示します。 サポート チケットを開いて読む場合を除き、"表示のみ" の権限です。
+- **サービス管理者** - (Office 365 と Intune) Microsoft へのサポート要求を開き、サービス ダッシュボードとメッセージ センターを表示します。 サポート チケットを開いて読むことはできますが、"表示のみ" のアクセス許可です。
 - **課金管理者** - (Office 365 と Intune) 購入、サブスクリプションの管理、サポート チケットの管理、サービスの正常性の監視を行います。
 - **ユーザー管理者** - (Office 365 と Intune) パスワードの再設定、サービスの正常性の監視、ユーザー アカウントの追加と削除、サービス要求の管理を行います。 ユーザー管理の管理者は、グローバル管理者の削除、他の管理者ロールの作成、または他の管理者のパスワードの再設定を行うことはできません。
 - **Intune サービス管理者** - **[ディレクトリ ロール]** オプションで管理者を作成するアクセス許可を除く、すべての Intune グローバル管理者アクセス許可。

@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 581ff7ec85cc85e41968a4ed3a7b2616d0dd7c28
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ed1399f10a7a806ed6404e596a93b7aa5538caa6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346899"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077344"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-macos-device-in-intune"></a>ポータル サイト アプリをインストールし、Intune に macOS デバイスを登録するとどうなるか
 
@@ -42,7 +42,7 @@ ms.locfileid: "79346899"
 
 デバイスが登録されると、会社のサポートは次のことができるようになります。
 
-- デバイスが紛失または盗難にあった場合にデバイスを製造元の既定設定にリセットする。
+- デバイスが紛失または盗難にあった場合、デバイスを製造元の既定設定にリセットします。
 
 - インストールされているすべての会社関連データとビジネス アプリケーションを削除する。 個人データや設定は削除されません。
 

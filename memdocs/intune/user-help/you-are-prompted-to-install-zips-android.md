@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ee2d862f29866ecaaa758983f847d0a1a598e2f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ee0cd575da83231723ea869d472da1be599ce477
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346470"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079622"
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>Android デバイスに Zimperium zIPS をインストールする
 
@@ -52,7 +52,7 @@ ms.locfileid: "79346470"
 
    * 脅威が検出されない場合は、3 つの脅威の種類はすべて緑色で表示されます。
 
-11. ポータル サイトの **[デバイスの詳細]** 画面には、このデバイスが会社のセキュリティ要件に準拠している状態であることが表示されます。
+11. ポータル サイトの **[デバイスの詳細]** 画面には、会社のセキュリティ要件に準拠している状態であることが表示されます。
 
     ![このデバイスはポリシーに準拠している状態になりました](./media/mtd-device-now-compliant-android.png)
 

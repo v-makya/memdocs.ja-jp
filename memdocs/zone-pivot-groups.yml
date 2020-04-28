@@ -1,0 +1,33 @@
+### YamlMime:ZonePivotGroups
+groups:
+- id: security-baseline-settings-one
+  title: セキュリティ ベースライン
+  prompt: セキュリティ ベースラインを選択する
+  pivots:
+  - id: windows-mdm
+    title: Windows MDM
+  - id: microsoft-defender-atp
+    title: Microsoft Defender Advanced Threat Protection
+- id: windows-mdm-versions
+  title: Windows MDM のベースライン バージョン
+  prompt: バージョンを選択する
+  pivots:
+  - id: mdm-may-2019
+    title: 2019 年 5 月
+  - id: mdm-preview
+    title: プレビュー - 2018 年 10 月
+- id: edge-baseline-versions
+  title: Edge ベースライン バージョン
+  prompt: バージョンを選択する
+  pivots:
+  - id: edge-october-2019
+    title: 2019 年 10 月
+  - id: edge-april-2020
+    title: 2020 年 4 月
+metadata:
+  ms.openlocfilehash: 2071c0b05d2ec5f8b5fb20f25436e0ec297613e6
+  ms.sourcegitcommit: 1eebe9ad283a048f166c9654a548485cac6a1b9b
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/17/2020
+  ms.locfileid: "82136016"

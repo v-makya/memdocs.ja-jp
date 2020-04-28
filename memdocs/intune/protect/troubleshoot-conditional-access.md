@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dc2c1d4f07e601d98bc2f26ec4766e21a8f1bc7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5d56d3982a036ace198ceae9bf2d01a8c12de6d5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350669"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079146"
 ---
 # <a name="troubleshoot-conditional-access"></a>条件付きアクセスに関するトラブルシューティング
 この記事では、条件付きアクセスで保護されているリソースにユーザーがアクセスできなかった場合、または保護されているリソースにユーザーがアクセスできるがブロックする必要がある場合の対処方法について説明します。
@@ -112,7 +112,7 @@ Intune と条件付きアクセスを使用すると、次のようなサービ�
 - Exchange で次のようにデバイスの存在とアクセスの状態を確認します。
   - メールボックスのすべてのモバイル デバイスの一覧を取得するには、PowerShell コマンドレット:'Get-ActiveSyncDeviceStatistics -mailbox mbx' を使用します。 デバイスが一覧に表示されない場合、デバイスは Exchange にアクセスしていません。
   
-  - デバイスが一覧に表示されている場合は、'Get-CASmailbox -identity:’upn’ | fl' コマンドレットを使ってそのアクセス状態に関する詳細情報を取得し、その情報を Microsoft サポートに提供します。
+  - デバイスが一覧に表示されている場合は、'Get-CASmailbox -identity:'upn' | fl' コマンドレットを使ってそのアクセス状態に関する詳細情報を取得し、その情報を Microsoft サポートに提供します。
 
 ## <a name="next-steps"></a>次のステップ
 この情報を使っても問題が解決しない場合は、[Microsoft Intune のサポートを受ける](../fundamentals/get-support.md)こともできます。

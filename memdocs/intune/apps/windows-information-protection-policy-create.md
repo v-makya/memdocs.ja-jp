@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e7305d33b1c40c2624c5c860f59922a5817c818
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8103e1a4946c0a325501b0d9f538c00d08a1e4cb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326100"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078313"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Intune で Windows 情報保護 (WIP) ポリシーを作成して展開する
 
@@ -144,7 +144,7 @@ WIP はサイレントで実行し、不適切なデータ共有をログに記�
 #### <a name="off-not-recommended"></a>オフ (非推奨)
 WIP は無効になり、データの保護または監査には役立ちません。
 
-WIP を無効にすると、ローカルに接続されたドライブ上の WIP でタグ付けされたファイルを復号化する試みが行われます。 WIP 保護を有効に戻しても、以前の復号化およびポリシーの情報は自動的に再適用されないことに注意してください。
+WIP を無効にすると、ローカルに接続されたドライブ上の WIP でタグ付けされたファイルを復号化する試みが行われます。 WIP 保護を有効に戻しても、以前の解読およびポリシーの情報は自動的に再適用されないことに注意してください。
 
 ### <a name="add-a-protection-mode"></a>保護モードを追加する
 

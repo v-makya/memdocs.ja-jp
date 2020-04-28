@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b530e4590d50190160695049e2b72f03a0384131
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7ba564ace6837f81fd6d6c1b0cc27620f0123de2
+ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80233587"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82149090"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Samsung の Knox Mobile Enrollment を使用して Android デバイスを自動的に登録する
 
@@ -78,7 +78,7 @@ KME を使って Intune に登録するには、最初に、次の手順に従�
 
 \* このフィールドは、Knox ポータルでプロファイルの作成を完了するためには必要ありません。 ただし、プロファイルで Intune にデバイスを正常に登録できるように、Intune でこのフィールドに入力する必要があります。
 
-### <a name="for-android"></a>Android の場合
+### <a name="for-android-device-administrator"></a>Android デバイス管理者向け 
 
 詳しい手順については、[Samsung のプロファイルの作成](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm)に関する説明をご覧ください。
 

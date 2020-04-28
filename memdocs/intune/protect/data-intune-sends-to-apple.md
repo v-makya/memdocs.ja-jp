@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da9ab5fe5a8716e3af0ae02122f51d06e6e55e6f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 424b835669986d1ede6e2300e9dfaba619034c30
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352502"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079741"
 ---
 # <a name="data-intune-sends-to-apple"></a>Intune から Apple に送られるデータ
 
@@ -40,7 +40,7 @@ Microsoft Intune が接続を確立する前に、各 Apple サービスの Appl
 
 次の表は、Microsoft Intune がデバイスから有効な Apple サービスに送信するデータの一覧です。 
 
-| [サービス] | Apple に送信されるデータ | 使用目的 |
+| サービス | Apple に送信されるデータ | 使用目的 |
 |---|---| ---|
 | [APNS](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | トークン、PushMagic | サーバーがデバイスを受け入れる場合、デバイスはプッシュ通知デバイス トークンをサーバーに提供します。 サーバーがプッシュ メッセージをデバイスに送信するには、このトークンを使用する必要があります。 このチェックイン メッセージには、PushMagic 文字列も含まれます。 サーバーはこの文字列を記憶し、それをデバイスに送信するすべてのプッシュ メッセージに含める必要があります。 |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | サーバー トークン | Apple サービスに対する認証に使用されるプッシュ通知デバイス トークン。 |
@@ -54,12 +54,12 @@ Microsoft Intune が接続を確立する前に、各 Apple サービスの Appl
 | ASM/DEP | org_id | DEP の顧客 ID このキーは、プロトコル バージョン 3 以降でのみ使用できます。 |
 | ASM/DEP | serial_number | デバイスのシリアル番号 (文字列)。 |
 | ASM/DEP | 対象となるのは、モデル | モデル名 (文字列)。 |
-| ASM/DEP | 説明 | デバイスの説明 (文字列)。 |
+| ASM/DEP | description | デバイスの説明 (文字列)。 |
 | ASM/DEP | asset_tag | デバイスの資産タグ (文字列)。 |
 | ASM/DEP | profile_status | プロファイルのインストールの状態。 使用可能な値: **空**、**assigned**、**pushed**、または **removed** |
 | ASM/DEP | profile_uuid | 割り当てられたプロファイルの一意の ID。 |
 | ASM/DEP | device_assigned_by | デバイスを割り当てた個人の電子メール アドレス。 |
-| ASM/DEP | os | デバイスのオペレーティング システム: iOS/iPadOS、OSX、または tvOS。 このキーは、X-Server-Protocol-Version 2 以降で有効です。 |
+| ASM/DEP | os | デバイスのオペレーティング システム: iOS、iPadOS、OSX、または tvOS。 このキーは、X-Server-Protocol-Version 2 以降で有効です。 |
 | ASM/DEP | device_family | デバイスの Apple 製品ファミリ: iPad、iPhone、iPod、Mac、または AppleTV。 このキーは、X-Server-Protocol-Version 2 以降で有効です。 |
 | ASM/DEP | profile_name | 文字列。 人が判読できるプロファイル名。 |
 | ASM/DEP | support_phone_number | 任意。 文字列。 組織のサポートの電話番号。 |

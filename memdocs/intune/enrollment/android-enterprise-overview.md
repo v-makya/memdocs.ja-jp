@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5cb910d38deaca76ee92246badcebf02a7e4de
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a2f8ccfccfdca26416b0da92e6f27425e13c90c6
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79339606"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078041"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Intune で Android 仕事用プロファイルのデバイスを管理する
 
@@ -55,7 +55,7 @@ Android Enterprise には、アプリの構成値を、そのアプリをサポ�
 
 ## <a name="email-configuration"></a>電子メールの構成
 
-Android Enterprise には、iOS/iPadOS で提供されているような既定の電子メール アプリまたはネイティブの電子メール プロファイル オブジェクトはありません。 その代わり、サポートする電子メール アプリにアプリ構成設定を適用することで、電子メール構成を設定できます。 Play ストアにある Gmail と Nine Work は、Android Enterprise アプリ構成による構成をサポートする 2 つの Exchange ActiveSync (EAS) クライアント アプリです。
+Android Enterprise には、iOS または iPadOS で提供されているような既定の電子メール アプリまたはネイティブの電子メール プロファイル オブジェクトはありません。 その代わり、サポートする電子メール アプリにアプリ構成設定を適用することで、電子メール構成を設定できます。 Play ストアにある Gmail と Nine Work は、Android Enterprise アプリ構成による構成をサポートする 2 つの Exchange ActiveSync (EAS) クライアント アプリです。
 
 Gmail アプリと Nine Work アプリを仕事用のアプリとして管理する場合、Intune には構成テンプレートがあります。 アプリ構成プロファイルをサポートするその他の電子メール アプリは、モバイル アプリ構成ポリシーを使用して構成することができます。
 
@@ -65,7 +65,7 @@ Android Enterprise 仕事用プロファイル デバイスで Exchange ActiveSy
 
 適用されているアプリ保護ポリシーは、仕事用プロファイルと個人用プロファイルで完全にサポートされています。 Android アプリ公開コンソール (https://play.google.com/apps/publish ) で基幹業務アプリを公開できます。 このコンソールには、アプリを組織にのみ制限するオプションもあります。 詳細については、[Intune で Android Enterprise 仕事用プロファイル デバイス用のデバイス コンプライアンス ポリシーを追加する](../protect/compliance-policy-create-android-for-work.md)に関する記事を参照してください。 アプリ保護ポリシーについて詳しくは、「[アプリ保護ポリシーとは](../apps/app-protection-policy.md)」を参照してください。
 
-## <a name="vpn-profiles"></a>で組織内のユーザーとデバイスに VPN 設定を展開するには、
+## <a name="vpn-profiles"></a>VPN プロファイル
 
 VPN のサポートは、Android VPN プロファイルに似ています。 Android Enterprise 管理では同じ VPN プロバイダーと基本構成オプションを使用できますが、次の 2 つの違いがあります。
 

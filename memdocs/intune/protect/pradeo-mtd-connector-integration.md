@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe58f7baf20903ade462430f4944d0f4555223af
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 10cda4126f709ddd0cb5cda40b36067bd078a3f0
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81725982"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079588"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>Pradeo Mobile Threat Defense を Intune と統合する
 
@@ -56,7 +56,7 @@ Pradeo アプリ承認プロセスは以下で構成されます。
 
 - Pradeo サービスがデバイスの正常性状態に関する情報を Intune に通知できるようにします。
 
-- Pradeo は、Azure AD 登録グループ メンバーシップと同期してデバイスのデータベースを設定します。
+- Pradeo が Azure AD 登録グループ メンバーシップと同期され、そのデバイスのデータベースに入力が行われます。
 
 - Pradeo 管理者コンソールが Azure AD シングル サインオン (SSO) を使用できるようにします。
 

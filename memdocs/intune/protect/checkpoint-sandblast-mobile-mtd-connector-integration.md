@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed468bfd9a16bb231d29f21c545cd27f121d22e7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 71dc3eed84f2f1a5a267740b5c1539b29f4c63bb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79353373"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079860"
 ---
 # <a name="integrate-check-point-sandblast-mobile-with-intune"></a>Check Point SandBlast Mobile と Intune を統合します
 
@@ -58,7 +58,7 @@ Check Point SandBlast アプリ承認プロセスは以下で構成されます�
 
 - Check Point SandBlast Mobile サービスがデバイスの正常性状態に関する情報を Intune に通知できるようにします。
 
-- Check Point SandBlast Mobile は、Azure AD 登録グループ メンバーシップと同期してデバイスのデータベースを設定します。
+- Check Point SandBlast Mobile が Azure AD 登録グループ メンバーシップと同期され、そのデバイスのデータベースに入力が行われます。
 
 - Check Point SandBlast 管理者コンソールが Azure AD シングル サインオン (SSO) を使用できるようにします。
 

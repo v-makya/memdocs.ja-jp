@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0a5d9c378e42b56c8d13f42877cca889726b7579
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 417932e046517f17481e2d6c5e91f24cb7ac2d7a
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79346457"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080047"
 ---
 # <a name="you-get-an-error-while-using-the-company-portal-app"></a>会社のポータル アプリの使用中にエラーが発生する
 

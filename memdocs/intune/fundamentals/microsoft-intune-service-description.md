@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a37971928ab2aef8c5e78e9d0eefb748ecf5f04
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 4ca133b1995769f1c4cdfdcaf6b3a8256d7e6d5c
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358638"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078849"
 ---
 # <a name="microsoft-intune-service-description"></a>Microsoft Intune サービスの説明
 
@@ -66,7 +66,7 @@ Microsoft では、Intune オンボーディング特典で、適格なプラン
 
   - Office 365 Admin Mobile アプリでは、すべてのメッセージを検索し、組織内の同僚と共有したい場合は通知を転送できます。
 
-  - [Edit message center preferences]\(メッセージ センターの設定の編集\) で最終的に **Intune** の切り替え機能を提供し、Intune サブスクリプションに投稿されたメッセージをユーザーが確認できるようにする予定です。 Office 365 の Mobile Device Management が表示されても、これは Intune ではなく別のサービスです。
+  - [メッセージ センターの設定の編集] で最終的に **Intune** の切り替え機能を提供し、Intune サブスクリプションに投稿されたメッセージをユーザーが確認できるようにする予定です。 Office 365 の Mobile Device Management が表示されても、これは Intune ではなく別のサービスです。
 
 - Microsoft では次の 2 つのブログを利用し、EMS のメッセージと Intune サポートのベスト プラクティスを共有しています。
 
@@ -81,7 +81,7 @@ Microsoft では、Intune オンボーディング特典で、適格なプラン
 
 サービスの変更に関する計画を立てられるように、サービスの変更が行われる少なくとも 7 ～ 90 日前に通知します。変更が及ぼす影響の大きさによって異なります。 これらの変更には、以下のようなものがあります。
 
-- ヘルプデスク スタッフまたはエンド ユーザーと共有する、エンド ユーザー エクスペリエンスの変更。 通常これらの変更が行われる 7 ～ 30 日前に通知します。変更は [Intune アプリ UI の新機能](whats-new-app-ui.md)に関するページに掲載されます。 スペル ミスの修正などは、通常ドキュメントでお知らせしません。 一方、エンド ユーザーの登録エクスペリエンスの変更は UI に大きな影響を及ぼすため、Microsoft では Office 365 メッセージ センターにお客様へのメッセージを投稿するとともに、Intune アプリ UI の新機能に関するページでも変更内容をお知らせします。これによりお客様は、実稼働環境に変更内容が適用される前に、エンド ユーザー向けガイダンスを評価し、更新する時間を持つことができます。
+- ヘルプデスク スタッフまたはエンド ユーザーと共有する、エンド ユーザー エクスペリエンスの変更。 通常これらの変更が行われる 7 日から 30 日前に通知します。変更は [Intune アプリ UI の新機能](whats-new-app-ui.md)に関するページに掲載されます。 スペル ミスの修正などは、通常ドキュメントでお知らせしません。 一方、エンド ユーザーの登録エクスペリエンスの変更は UI に大きな影響を及ぼすため、Microsoft では Office 365 メッセージ センターにお客様へのメッセージを投稿するとともに、Intune アプリ UI の新機能に関するページでも変更内容をお知らせします。これによりお客様は、実稼働環境に変更内容が適用される前に、エンド ユーザー向けガイダンスを評価し、更新する時間を持つことができます。
 
 - お客様にご対応いただく必要がある変更は**変更の計画**と呼ばれ、通常、変更が行われる約 30 日前にお知らせします。 Office 365 メッセージ センターでは、このカテゴリは特別に [変更の計画] と表示されます。実稼働環境に変更内容が適用される日付が確定している場合は、感嘆符 (!) 付きで **Act By (対応期限)** の日付も表示され、視覚的な目印が提供されます。
 
@@ -92,7 +92,7 @@ Microsoft では、Intune オンボーディング特典で、適格なプラン
 最後に、まれなケースですが、サービスを正常な状態に戻すためにインシデント後の措置が必要な場合や、ユーザーからのフィードバックに基づいたサービス中断の可能性がある大規模な変更については、Microsoft は [Office 365 の通信設定](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc)と、有効な電子メール アドレス (職場の電子メール アドレスが望ましい) が指定されているかに基づいて、サービス管理者にメールをお送りします。  
 
 
-<!--- ## Choose the management solution that’s right for you
+<!--- ## Choose the management solution that's right for you
 You can set up Intune in several ways to manage and help protect your company's mobile devices and computers (referred to as **devices** in this article).
 
 - **Intune stand-alone configuration.** Use the web-based admin console in Intune to manage devices in your organization. Intune can be used without any on-premises IT infrastructure. If you use Intune with Active Directory Domain Services, you can use domain user accounts that you manage with Domain Services with Intune.
@@ -100,7 +100,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 --->
 
 ## <a name="language-support"></a>言語サポート
-Intune は Azure Portal で実行されていますが、Azure Portal がサポートしている言語は、簡体中国語、繁体中国語、チェコ語、オランダ語、英語、ドイツ語、ハンガリー語、イタリア語、日本語、ポルトガル (ブラジル) 語、ポルトガル (ポルトガル) 語、ロシア語、スペイン語、英語、フランス語、韓国語、ポーランド語、スウェーデン語、およびトルコ語です。
+Intune は Azure portal で実行されていますが、Azure portal によりサポートされている言語は、簡体中国語、繁体中国語、チェコ語、オランダ語、英語、ドイツ語、ハンガリー語、イタリア語、日本語、ポルトガル (ブラジル) 語、ポルトガル (ポルトガル) 語、ロシア語、スペイン語、英語、フランス語、韓国語、ポーランド語、スウェーデン語、トルコ語です。
 
 Intune 管理コンソールとユーザーが対面するモバイル エクスペリエンスでは、Azure ポータルでサポートされている言語だけでなくデンマーク語、ギリシャ語、フィンランド語、ノルウェー語、およびルーマニア語もサポートしています。
 

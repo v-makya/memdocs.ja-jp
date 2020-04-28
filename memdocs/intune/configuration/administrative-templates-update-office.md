@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcf2139019b1f4d764b55ee31f5961711a71834c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6b0c673eb702e3e9f08209d04bf256c049b10ee6
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80219879"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82022689"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>更新プログラム チャネルとターゲット バージョンの設定を使用して、Microsoft Intune 管理用テンプレートで Office 365 を更新する
 
@@ -37,7 +37,7 @@ Intune では [Windows 10 テンプレートを使用してグループ ポリ�
 
 ## <a name="prerequisites"></a>[前提条件]
 
-Office アプリの [Office 365 ProPlus 自動更新を有効にする](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus)ようにしてください。 これは、グループ ポリシーまたは Intune Office 2016 ADMX テンプレートを使用して行うことができます。
+お使いの Office アプリで [Microsoft 365 アプリの自動更新を有効](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus)にしてください。 これは、グループ ポリシーまたは Intune Office 2016 ADMX テンプレートを使用して行うことができます。
 
 > [!div class="mx-imgBorder"]
 > ![Intune 管理用テンプレートで、Office の [自動更新を有効にする] 設定を設定する](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
@@ -78,7 +78,7 @@ Office アプリの [Office 365 ProPlus 自動更新を有効にする](https://
     > ![管理用テンプレート L_Updatebranch レジストリ キーの例](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
-    > [Configuration Manager を使用した Office 365 ProPlus の管理](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)で、値とその意味が一覧表示されます。 レジストリ値は、選択した配布チャネルに基づきます。
+    > [Configuration Manager を使用した Microsoft 365 アプリの管理](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)に関するページには、その値一覧とその意味が示されています。 レジストリ値は、選択した配布チャネルに基づきます。
     >
     >- 月次チャネル - value="Current"
     >- 月次チャネル (対象指定) - value="Current"
@@ -98,7 +98,7 @@ Office アプリの [Office 365 ProPlus 自動更新を有効にする](https://
     - `UpdateChannel`: 構成された設定に応じて変更される動的キー。
     - `CDNBaseUrl`: Office 365 をデバイスにインストールするときに設定します。
 
-3. `UpdateChannel` 値を確認します。 この値は、Office が更新される頻度を示します。 [Configuration Manager を使用した Office 365 ProPlus の管理](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)で、値と設定内容が一覧表示されます。
+3. `UpdateChannel` 値を確認します。 この値は、Office が更新される頻度を示します。 [Configuration Manager を使用した Microsoft 365 アプリの管理](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)に関するページには、その値とその設定値が示されています。
 
     次の例を見ると、`UpdateChannel` が `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60` に設定されていることがわかります。これは、**毎月**です。
 
@@ -141,7 +141,7 @@ Office アプリの [Office 365 ProPlus 自動更新を有効にする](https://
 
 ### <a name="step-1-force-the-office-version-to-update"></a>手順 1:Office のバージョンを強制的に更新する
 
-1. 選択している更新プログラム チャネルが Office バージョンでサポートされていることを確認します。 [Office 365 ProPlus の更新履歴](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date)では、さまざまな更新チャネルをサポートするビルド番号が一覧表示されます。
+1. 選択している更新プログラム チャネルが Office バージョンでサポートされていることを確認します。 「[Microsoft 365 アプリの更新履歴](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date)」には、さまざまな更新チャネルをサポートするビルド番号が一覧表示されています。
 
 2. [Intune 管理用テンプレート](administrative-templates-windows.md#create-the-template)で、 **[ターゲット バージョン]** 設定にアクセスして、必要なバージョンを入力します。
 
@@ -182,6 +182,6 @@ Office アプリの [Office 365 ProPlus 自動更新を有効にする](https://
 
 [Office 365 クライアントの更新プログラム チャネル値の更新](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
-[Office 365 ProPlus の Office クラウド ポリシー サービスの概要](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
+[Microsoft 365 アプリの Office クラウド ポリシー サービスの概要](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
 
 [Windows 10 テンプレートを使用し、Microsoft Intune でグループ ポリシー設定を構成する](administrative-templates-windows.md)

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e81a88ae3d6db37dfeece31a2e78a2243a9a6387
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a05e36a2da42bf88e2d9d7e94a67e2d81b8f1271
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364501"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078279"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Microsoft Intune でユーザーおよびデバイス プロファイルを割り当てる
 
@@ -89,7 +89,7 @@ Windows 10 デバイスでは、**適用性ルール**を追加して、特定�
 
 ### <a name="user-groups"></a>ユーザー グループ
 
-ユーザー グループに適用されたプロファイル設定は、常にユーザーに対して有効になり、ユーザーがさまざまなデバイスにサインインしたときに使用されます。 ユーザーは、職場用の Surface Pro と個人用の iOS/iPadOS デバイスなど、複数のデバイスを使用することが普通です。 そして、ユーザーはそれらのデバイスから電子メールやその他の組織リソースにアクセスします。
+ユーザー グループに適用されたプロファイル設定は、常にユーザーに対して有効になり、ユーザーがさまざまなデバイスにサインインしたときに使用されます。 ユーザーは、職場用の Surface Pro と個人用の iOS または iPadOS デバイスなど、複数のデバイスを使用することが普通です。 そして、ユーザーはそれらのデバイスから電子メールやその他の組織リソースにアクセスします。
 
 次に例を示します。
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e002b62fb00c4e2e8523848c4c64ad7a54ce024
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 257f717243e021e7fd643a6e7ca41644e4369bcd
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357650"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82080132"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>ユース ケース シナリオの要件の決定
 
@@ -35,7 +35,7 @@ ms.locfileid: "79357650"
 
 組織のユース ケースの要件の例を次に示します。ここでは、各ユース ケースとサブ ユース ケースのシナリオ、組織グループ、モバイル デバイス プラットフォームに対する異なる要件セットを示します。 次の表を使用して、組織のユース ケースの要件を入力することもできます。
 
-| **ユース ケース** | **サブ ユース ケース** | **グループ** | **デバイス プラットフォーム** | **要件** |
+| **ユース ケース** | **サブ ユース ケース** | **グループ** | **デバイス プラットフォーム** | **Requirements** |
 |:---:|:---:|:---:|:---:|:---:|
 | 企業 | インフォメーション ワーカー | 人事、財務 | iOS/iPadOS | 電子メールのセキュリティ保護、デバイスの設定、プロファイル、アプリ |                                                          
 | 企業 | 役員 | 人事、財務 | iOS/iPadOS | 電子メールのセキュリティ保護、デバイスの設定、プロファイル、アプリ |                                                         

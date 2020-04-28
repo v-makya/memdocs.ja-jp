@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7fd1a1567096f804b56c5f141fccfc825f4a02e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6c0dab3c84e3a87048a8071c591722c63d89ad69
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360315"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078126"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Intune アプリ ラッピング ツールでアプリ保護ポリシーを利用するために Android アプリを準備する
 
@@ -54,7 +54,7 @@ Android 用 Microsoft Intune アプリ ラッピング ツールを使用して�
     > [!NOTE]
     > Intune アプリ ラッピング ツールでは、アプリの署名で Google の v2 とまもなくリリースされる v3 の署名スキームはサポートされません。 Intune アプリ ラッピング ツールを使用して .apk ファイルをラッピングした後で、[Google 提供の Apksigner ツール]( https://developer.android.com/studio/command-line/apksigner)を使用することをお勧めします。 そうすると、アプリがエンド ユーザー デバイスで使用されるとき、Android 標準によって適切に起動されるようになります。 
 
-- (省略可能) ラッピング中に追加される Intune MAM SDK クラスにより、アプリが Dalvik Executable (DEX) サイズの上限に達する場合があります。 DEX ファイルは、Android アプリのコンパイルの一部です。 Intune アプリ ラッピング ツールでは、21 以上レベルの最小の API でアプリのラッピング中には、DEX ファイル オーバーフローを自動的に処理 (の[1.0.2501.1 v.](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases))。 最小 API レベルが 21 より小さいアプリでのベスト プラクティスは、ラッパーの `-UseMinAPILevelForNativeMultiDex` フラグを使用して最小 API レベルを上げることです。 アプリの最小 API レベルを上げることができないお客様の場合は、以下で説明する DEX オーバーフローの回避策を使用できます。 特定の組織では、アプリをコンパイルするユーザー (例: アプリのビルド チーム) と共同作業する必要がある場合があります。
+- (省略可能) ラッピング中に追加される Intune MAM SDK クラスにより、アプリが Dalvik Executable (DEX) サイズの上限に達する場合があります。 DEX ファイルは、Android アプリのコンパイルの一部です。 Intune アプリ ラッピング ツールでは、21 以上の最小 API レベルでのアプリのラッピング中に、DEX ファイル オーバーフローが自動的に処理されます ([v.1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases) 現在)。 最小 API レベルが 21 より小さいアプリでのベスト プラクティスは、ラッパーの `-UseMinAPILevelForNativeMultiDex` フラグを使用して最小 API レベルを上げることです。 アプリの最小 API レベルを上げることができないお客様の場合は、以下で説明する DEX オーバーフローの回避策を使用できます。 特定の組織では、アプリをコンパイルするユーザー (例: アプリのビルド チーム) と共同作業する必要がある場合があります。
 
   - ProGuard を使用して、アプリのプライマリ DEX ファイルから使用されていないクラス参照を除去します。
   - v3.1.0 以降の Android Gradle プラグインを使用しているお客様の場合は、[D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html) を無効にします。  
@@ -86,7 +86,7 @@ Android 用 Microsoft Intune アプリ ラッピング ツールを使用して�
 
    **invoke-AppWrappingTool** コマンドのプロパティの詳細を次の表に示します。
 
-|プロパティ|情報|例|
+|プロパティ|説明|例|
 |-------------|--------------------|---------|
 |**-InputPath**&lt;String&gt;|ソースの Android アプリ (.apk) のパス。| |
  |**-OutputPath**&lt;String&gt;|出力先の Android のアプリへのパス。 InputPath と同じディレクトリ パスを指定した場合、パッケージ化は失敗します。| |
@@ -94,7 +94,7 @@ Android 用 Microsoft Intune アプリ ラッピング ツールを使用して�
 |**-KeyStorePassword**&lt;SecureString&gt;|キーストアの暗号化を解除するために使用するパスワード。 Android では、すべてのアプリケーション パッケージ (.apk) に署名する必要があります。 Java キーツールを使用して KeyStorePassword を生成できます。 詳細については、こちらの Java [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) を参照してください。| |
 |**-KeyAlias**&lt;String&gt;|署名に使用するキーの名前。| |
 |**-KeyPassword**&lt;SecureString&gt;|署名に使用する秘密キーの暗号化を解除するために使用するパスワード。| |
-|**-SigAlg**&lt;SecureString&gt;| (省略可能) 署名に使用する署名アルゴリズムの名前。 アルゴリズムは秘密キーと互換性を持つ必要があります。|例: SHA256withRSA、SHA1withRSA|
+|**-SigAlg**&lt;SecureString&gt;| (省略可能) 署名に使用する署名アルゴリズムの名前。 アルゴリズムは秘密キーと互換性を持つ必要があります。|例:SHA256withRSA、SHA1withRSA|
 |**-UseMinAPILevelForNativeMultiDex**| (省略可能) このフラグを使用して、ソース Android アプリの最小 API レベルを 21 に上げます。 このフラグを指定すると、このアプリをインストールできるユーザーが制限されるため、確認のメッセージが表示されます。 ユーザーは、PowerShell コマンドにパラメーター "-Confirm:$false" を追加することで、確認ダイアログをスキップできます。 このフラグは、DEX オーバーフロー エラーのために正常にラップできない、最小 API が 21 未満のアプリのお客様だけが使用する必要があります。 | |
 | **&lt;CommonParameters&gt;** | (省略可能) コマンドは、verbose、debug などの一般的な PowerShell パラメーターをサポートします。 |
 
