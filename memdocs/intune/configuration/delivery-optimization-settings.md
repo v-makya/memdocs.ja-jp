@@ -16,12 +16,12 @@ ms.reviewer: kerimh
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08ed9df5f636ce014d5c9949a63bd06fb1c7c6f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d0b66b486025fa67d138f9ace09b78d4e894737e
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350188"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254930"
 ---
 # <a name="delivery-optimization-settings-for-intune"></a>Intune 用の配信最適化の設定
 
@@ -60,9 +60,9 @@ Intune を構成してこれらの設定を使用するには、[更新プログ
 
 |設定  |Windows Version  |詳細  |
 |---------|---------|---------|
-|[ピア キャッシュに必要な最小 RAM (GB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-ram-inclusive-allowed-to-use-peer-caching)      | 1703        | デバイスでピア キャッシュを使用するために必要な最小 RAM サイズを GB 単位で指定します。 <br><br>**既定値**: "*値の構成なし*"  <br><br>**推奨値**: 4 GB <br><br>ポリシー CSP: [DOMinRAMAllowedToPeer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominramallowedtopeer) <br><br>        |
-|[ピア キャッシュに必要な最小ディスク サイズ (GB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-disk-size-allowed-to-use-peer-caching)      | 1703        | デバイスでピア キャッシュを使用するために必要な最小ディスク サイズを GB 単位で指定します。 <br><br>**既定値**:"*値の構成なし*"  <br><br>**推奨値**: 32 GB   <br><br>ポリシー CSP: [DOMinDiskSizeAllowedToPeer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domindisksizeallowedtopeer) <br><br>    |
-|[ピア キャッシュの最小のコンテンツ ファイル サイズ (MB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-peer-caching-content-file-size)      | 1703        | ピア キャッシュを使用するためにファイルが満たす必要のある最小サイズを MB 単位で指定します。  <br><br>**既定値**:"*値の構成なし*"  <br><br>**推奨値**: 10 MB   <br><br>ポリシー CSP: [DOMinFileSizeToCache](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominfilesizetocache)  <br><br>      |
+|[ピア キャッシュに必要な最小 RAM (GB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-ram-inclusive-allowed-to-use-peer-caching)      | 1709        | デバイスでピア キャッシュを使用するために必要な最小 RAM サイズを GB 単位で指定します。 <br><br>**既定値**: "*値の構成なし*"  <br><br>**推奨値**: 4 GB <br><br>ポリシー CSP: [DOMinRAMAllowedToPeer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominramallowedtopeer) <br><br>        |
+|[ピア キャッシュに必要な最小ディスク サイズ (GB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-disk-size-allowed-to-use-peer-caching)      | 1709        | デバイスでピア キャッシュを使用するために必要な最小ディスク サイズを GB 単位で指定します。 <br><br>**既定値**:"*値の構成なし*"  <br><br>**推奨値**: 32 GB   <br><br>ポリシー CSP: [DOMinDiskSizeAllowedToPeer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domindisksizeallowedtopeer) <br><br>    |
+|[ピア キャッシュの最小のコンテンツ ファイル サイズ (MB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#minimum-peer-caching-content-file-size)      | 1709        | ピア キャッシュを使用するためにファイルが満たす必要のある最小サイズを MB 単位で指定します。  <br><br>**既定値**:"*値の構成なし*"  <br><br>**推奨値**: 10 MB   <br><br>ポリシー CSP: [DOMinFileSizeToCache](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominfilesizetocache)  <br><br>      |
 |[アップロードに必要な最小バッテリ レベル (%)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#allow-uploads-while-the-device-is-on-battery-while-under-set-battery-level)      | 1709        | ピアにデータをアップロードするためにデバイスで必要な最小バッテリ レベルを割合で指定します。 バッテリ レベルが指定した値まで低下した場合、アクティブなアップロードは自動的に一時停止します。   <br><br>**既定値**:"*値の構成なし*"  <br><br>**推奨値**: 40%   <br><br>ポリシー CSP: [DOMinBatteryPercentageAllowedToUpload](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominbatterypercentageallowedtoupload) <br><br>        |
 |[キャッシュ ドライブの変更](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#modify-cache-drive)        | 1607        | 配信最適化でキャッシュに使用するドライブを指定します。 環境変数、ドライブ文字、または完全なパスを使用できます。  <br><br>**既定値**: %SystemDrive% <br><br>ポリシー CSP: [DOModifyCacheDrive](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domodifycachedrive) <br><br>        |
 | [最大キャッシュ時間 (日数)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#max-cache-age)    | 1511         | 各ファイルが正常にダウンロードされた後、デバイス上の配信最適化キャッシュにファイルが保持されている期間を指定します。   <br><br>Intune では、キャッシュの期間を日数で構成します。 定義した日数は、この設定が Windows で定義されるときのように、適切な秒数に変換されます。 たとえば、Intune 構成での 3 日は、デバイスでは 259,200 秒 (3 日) に変換されます。  <br><br>**既定値**: "*値の構成なし*"     <br><br>**推奨値**: 7   <br><br>ポリシー CSP: [DOMaxCacheAge](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)  <br><br>          |

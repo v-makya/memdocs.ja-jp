@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bb76dbb14fe2deb95c02a18ccc048fc6a4b2538
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 0b18af35b0e741540637ecdde74877d1058a7915
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078959"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254709"
 ---
 # <a name="windows-update-settings-for-intune"></a>Intune での Windows Update の設定  
 
@@ -85,8 +85,7 @@ Update の設定では、デバイスによってダウンロードされるも�
   サポートされている延期期間:  
 
   - "*Windows バージョン 1709 以降*" - 0 日から 365 日まで  
-  - "*Windows バージョン 1703*" - 0 日から 180 日まで  
-
+  
   機能更新プログラムは、通常、Windows の新しい機能です。  
 
 - **機能更新プログラムのアンインストール期間 (2 から 60 日間) の設定**  
@@ -164,8 +163,6 @@ Update の設定では、デバイスによってダウンロードされるも�
   
   この設定の結果は、デバイスの Windows バージョンによって異なります:  
  
-  - "*Windows バージョン 1703 以前*" - デバイスの再起動時には、アクティブなユーザー、バッテリ レベル、実行中のゲームなどについて、いくつかのチェックが実行されます。  
-  
   - "*Windows バージョン 1709 以降*" - アクティブ時間中は、更新プログラムに対するスキャン、ダウンロード、インストール、再起動のプロセスが実行されません。 アクティブ時間後は、更新プログラム プロセスが実行され、バッテリ チェックと電源チェックに合格していれば、デバイスのスリープ状態からの復帰、ダウンロード、インストール、再起動を実行できます。 
 
 - **ユーザーによる Windows Update の一時停止をブロックする**  
