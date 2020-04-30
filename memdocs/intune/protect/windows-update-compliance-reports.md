@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,20 +16,20 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ad666f21b2ff271b99675486835357dfd071773
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 157c61e9f145295f5ef728d12385fa44697a88e2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326514"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725639"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>更新プログラムに関する Intune コンプライアンス レポート
 
-Intune を使用して Windows 10 デバイスに Windows の更新プログラムを展開する場合は、Intune を使用するか、または Microsoft Operations Management Suite (OMS) の一部であり、*Update Compliance* と呼ばれる無料のソリューションを使用することで、更新プログラムのコンプライアンスについて詳細を表示できます。
+Intune を使用して Windows 10 デバイスに Windows の更新プログラムを展開する場合は、Intune を使用するか、*Update Compliance* と呼ばれる無料のソリューションを使用して、更新プログラムのコンプライアンスについて詳細を表示できます。 Update Compliance は Microsoft Operations Management Suite (OMS) の一部です。
 
 ## <a name="use-intune"></a>Intune を使用する
 
-構成済みの Windows 10 更新プログラム リングの展開状態に関するポリシー レポートを確認するには:
+構成済みの Windows 10 更新プログラム リングの展開状態に関するポリシー レポートを確認するには、次の操作を行います。
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
@@ -43,17 +43,17 @@ Intune を使用して Windows 10 デバイスに Windows の更新プログラ�
 
    - **[ユーザーの状態]** - ユーザー名、状態、最終レポート日が表示されます。詳しくは、「[deviceConfigurationUserStatuses のリスト](https://docs.microsoft.com/graph/api/intune-deviceconfig-deviceconfigurationuserstatus-list?view=graph-rest-1.0)」をご覧ください。
 
-   - **[エンド ユーザー更新状態]** - Windows デバイスの更新状態が表示されます。詳しくは、[windowsUpdateState](https://docs.microsoft.com/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta) に関するページをご覧ください。
+   - **[End-user update status] (エンドユーザーの更新状態)** - Windows デバイスの更新状態が表示されます。詳しくは、[windowsUpdateState](https://docs.microsoft.com/graph/api/resources/intune-shared-windowsupdatestate?view=graph-rest-beta) に関するページをご覧ください。
 
 ## <a name="use-update-compliance"></a>Update Compliance を使用する
 
-Windows 10 更新プログラム ロールアウトを監視するには、Windows Analytics ソリューションである [Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor) を使用します。 Update Compliance は、Azure portal を介して提供され、[前提条件](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites)を満たすデバイスでは無料で使用できます。  
+Windows 10 更新プログラム ロールアウトを監視するには、[Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor) を使用します。 Update Compliance は、Azure portal を介して提供され、[前提条件](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites)を満たすデバイスでは無料で使用できます。  
 
 このソリューションを使用する場合は、更新プログラムのコンプライアンス対応を報告する任意の Intune マネージド Windows 10 デバイスに商用 ID を展開します。  
 
 Intune で、カスタム ポリシーの OMA-URI 設定を使用して、商用 ID を構成します。 「[Intune で Windows 10 デバイス用のカスタム設定を使用する](../configuration/custom-settings-windows-10.md)」を参照してください。
 
-商用 ID を構成するための OMA-URI (大文字と小文字を区別する) パスは、 *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID* です。  
+商用 ID を構成するための OMA-URI (大文字と小文字を区別する) パスは、 *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID* です。
 
 たとえば、 **[OMA-URI 設定の追加または編集]** で次の値を使用できます。
 

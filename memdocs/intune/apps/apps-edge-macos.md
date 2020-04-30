@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 002d8e8826fbc1420bf9deca6fb88a3468e8a2ad
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: c0d9267f989988ae33d56696d424de56a649bca2
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324519"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80900475"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Microsoft Intune を使用して Microsoft Edge を macOS デバイスに追加する
 
 アプリの展開、構成、監視、または保護を行うには、対象のアプリを事前に Intune に追加しておく必要があります。 使用可能な[アプリの種類](apps-add.md#app-types-in-microsoft-intune)の 1 つに、Microsoft Edge *バージョン 77 以降*があります。 Intune でこの種類のアプリを選択することで、macOS を実行し、自分で管理しているデバイスに Microsoft Edge *バージョン 77 以降*を割り当て、インストールできます。 このアプリの種類を使用すると、macOS アプリ ラッピング ツールを使用しなくても、macOS デバイスに Microsoft Edge を簡単に割り当てることができます。 アプリのセキュリティを強化し、最新の状態に保つために、これらのアプリには Microsoft AutoUpdate (MAU) が付属しています。
 
 > [!IMPORTANT]
-> このアプリの種類は**パブリック プレビュー**段階で、macOS 向けの Developer Channel と Beta Channel が提供されています。 展開は英語版 (EN) のみですが、エンド ユーザーはブラウザーの **[設定]**  >  **[言語]** で表示言語を変更することができます。 
+> このアプリの種類では、macOS 向けの Developer Channel と Beta Channel が提供されています。 展開は英語版 (EN) のみですが、エンド ユーザーはブラウザーの **[設定]**  >  **[言語]** で表示言語を変更することができます。 
 
 > [!NOTE]
 > Windows 10 では、Microsoft Edge *バージョン 77 以降*も利用できます。

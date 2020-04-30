@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a09b103f87b99e5ce7df3ec68760f1b55a9033bd
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: eda210408adbb15d82d6bfc31bef2f225f53bc6f
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79341855"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80863079"
 ---
 # <a name="ios-app-protection-policy-settings"></a>iOS アプリ保護ポリシー設定
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -31,6 +31,9 @@ ms.locfileid: "79341855"
 この記事では、iOS/iPadOS デバイスのアプリ保護ポリシーの設定について説明します。 新しいポリシーを作成する場合、説明されているポリシーの設定は、Azure portal の **[設定]** ウィンドウ上でアプリ保護ポリシー用に[構成](app-protection-policies.md)することができます。
 
 ポリシー設定にはカテゴリが 3 つあります。*データ再配置*、*アクセス要件*、および*条件付き起動*です。 この記事の "***ポリシーで管理されているアプリ***" という用語は、アプリ保護ポリシーで構成されるアプリを示します。
+
+> [!IMPORTANT]
+> Intune Managed Browser は廃止されました。 保護された Intune ブラウザー エクスペリエンスには [Microsoft Edge](../apps/manage-microsoft-edge.md) を使用してください。 
 
 ## <a name="data-protection"></a>データの保護
 

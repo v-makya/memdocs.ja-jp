@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e1a7c9665f142bf7dd7832e6bac0e016539ddea
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 86c90d8313cd9eed853ad438a5ea9a31f0d834ce
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79358729"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81725544"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune のネットワーク エンドポイント  
 
@@ -34,6 +34,9 @@ ms.locfileid: "79358729"
 
 ファイアウォールとプロキシ サーバーの背後にあるデバイスを管理するには、Intune に対する通信を有効にする必要があります。
 
+> [!NOTE]
+> セクションの情報は、Microsoft Intune Certificate Connector にも適用されます。 このコネクタのネットワーク要件は、マネージド デバイスと同じです
+
 - プロキシ サーバーでは **HTTP (80)** と **HTTPS (443)** の両方をサポートする必要があります。これは、Intune クライアントで両方のプロトコルが使用されるためです。 Windows Information Protection ではポート 444 が使用されます。
 - Intune では、一部のタスク (従来の PC エージェント用のソフトウェア更新プログラムのダウンロードなど) で、manage.microsoft.com への認証されていないプロキシ サーバー アクセスが必要です
 
@@ -44,6 +47,7 @@ ms.locfileid: "79358729"
 > [!NOTE] If Windows 8.1 devices haven't cached proxy server credentials, enrollment might fail because the request doesn't prompt for credentials. Enrollment fails without warning as the request wait for a connection. If users might experience this issue, instruct them to open their browser settings and save proxy server settings to enable a connection.   -->
 
 マネージド デバイスは、 **[すべてのユーザー]** がファイアウォール経由でサービスにアクセスできるように構成する必要があります。
+
 
 次の表は、Intune クライアントがアクセスするポートとサービスの一覧です。
 

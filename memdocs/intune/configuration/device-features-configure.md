@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb8d5b53e136ea22d1edbad7755e198fd4155285
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: 4ffa3d11b92c38373da22e53b96fe9cf9e520b5b
+ms.sourcegitcommit: af8a3efd361a7f3fa6e98e5126dfb1391966ff76
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551404"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82149181"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Intune での iOS、iPadOS、または macOS デバイスの機能設定の追加
 
@@ -37,9 +37,6 @@ Intune には、管理者が iOS、iPadOS、macOS デバイスを制御するた
 Intune では、"構成プロファイル" を使用して、お客様の組織のニーズに合わせてこのような設定を作成およびカスタマイズします。 これらの機能をプロファイルに追加した後は、そのプロファイルをお客様の組織内の iOS/iPadOS および macOS デバイスにプッシュまたは展開します。
 
 この記事では、構成できるさまざまな機能について説明し、デバイス構成プロファイルを作成する方法を示します。 また、[iOS/iPadOS](ios-device-features-settings.md) および [macOS](macos-device-features-settings.md) デバイスで使用できるすべての設定を確認することもできます。
-
-> [!NOTE]
-> Intune ユーザー インターフェイス (UI) は全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、この記事で説明する設定を作成または編集する際のワークフローが若干異なります。
 
 ## <a name="airprint"></a>AirPrint
 
@@ -136,12 +133,12 @@ Intune で構成できる設定の一覧については、[macOS でのログイ
 
 ほとんどの基幹業務 (LOB) アプリでは、セキュリティに対応するために、何らかのレベルのユーザー認証が必要です。 多くの場合、ユーザーは認証のために同じ資格情報を繰り返し入力する必要があります。 ユーザーの操作環境を改善するため、開発者はシングル サインオン (SSO) を使うアプリを作成できます。 シングル サインオンを使用すると、ユーザーが資格情報を入力する必要のある回数が減ります。
 
+シングル サインオン プロファイルは Kerberos に基づいています。 Kerberos とは、秘密鍵による暗号化を使用してクライアントとサーバー間でアプリケーションを認証するネットワーク認証プロトコルです。 Intune 設定では、サーバーまたは指定されたアプリにアクセスするときの Kerberos アカウント情報を定義したり、Web ページとネイティブ アプリへの Kerberos チャレンジを処理したりします。 Apple では、SSO 設定ではなく、(この記事の) [Kerberos SSO アプリ拡張機能](#single-sign-on-app-extension)設定の使用が推奨されています。  
+
 シングル サインオンを使用するには、次の条件を満たしている必要があります。
 
 - デバイス上のシングル サインオンでユーザー資格情報ストアを探すようにアプリがコーディングされていること。
 - iOS/iPadOS デバイスのシングル サインオン用に Intune が構成されていること。
-
-![[シングル サインオン] ウィンドウ](./media/device-features-configure/sso-blade.png)
 
 Intune で構成できる設定の一覧については、[iOS/iPadOS でのシングル サインオン](ios-device-features-settings.md#single-sign-on)に関する記事を参照してください。
 
@@ -156,8 +153,8 @@ Intune で構成できる設定の一覧については、[iOS/iPadOS でのシ�
 
 Intune では、これらの設定を使用して、組織、ID プロバイダー、Microsoft、または Apple によって作成された SSO アプリ拡張機能を構成します。 SSO アプリ拡張機能では、ユーザーの認証が処理されます。 これらの設定により、リダイレクトの種類と資格情報の種類の SSO アプリ拡張機能が構成されます。
 
-- このリダイレクトの種類は、OAuth や SAML2 などの最新の認証プロトコル向けに設計されています。 Microsoft には、シングル サインオン アプリ拡張機能の設定で有効にできる iOS/iPadOS Azure AD リダイレクト型の SSO アプリ拡張機能があります。
-- 資格情報の種類は、チャレンジと応答の認証フロー用に設計されています。 Apple で提供される Kerberos 固有の資格情報拡張機能または汎用的な資格情報拡張機能から選択できます。
+- リダイレクトの種類は、OAuth や SAML2 などの最新の認証プロトコル向けに設計されています。 macOS デバイスでは、汎用のリダイレクト拡張機能を使用できます。 iOS/iPadOS デバイスでは、Microsoft の Azure AD SSO 拡張機能 ([Microsoft Enterprise SSO プラグイン](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) と汎用のリダイレクト拡張機能から選択できます。
+- 資格情報の種類は、チャレンジと応答の認証フロー向けに設計されています。 Apple で提供される Kerberos 固有の資格情報拡張機能と汎用の資格情報拡張機能から選択できます。
 
 Intune で構成できる設定の一覧については、[iOS/iPadOS SSO アプリ拡張機能](ios-device-features-settings.md#single-sign-on-app-extension)と [macOS SSO アプリ拡張機能](macos-device-features-settings.md#single-sign-on-app-extension)の記事を参照してください。
 

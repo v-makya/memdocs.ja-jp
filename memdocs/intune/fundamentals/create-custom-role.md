@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07c29f45c2d9356bda78e021d3baf9647aa03397
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 6633682a9572ba36f41f42e77c5aa64403e0e209
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80326791"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81440579"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Intune でカスタム ロールを作成する
 
@@ -40,7 +40,7 @@ ms.locfileid: "80326791"
 
 3. **[アクセス許可]** ページで、このロールで使用するアクセス許可を選択します。
 
-4. **[スコープ (タグ)]** ページで、このロールのタグを選択します。 このロールでは、これらのタグも設定されているリソースにアクセスできます。 **[次へ]** を選択します。
+4. **[スコープ (タグ)]** ページで、このロールのタグを選択します。 このロールがユーザーに割り当てられると、そのユーザーはこれらのタグもあるリソースにアクセスできます。 **[次へ]** を選択します。
 
 5. **[確認および作成]** ページで、完了したら、 **[作成]** を選択します。 新しいロールが **[Intune の役割 - すべてのロール]** ブレード上の一覧に表示されます。
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5caa8b23950e3ce87f66d6804961a9a2a3e21c6
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 90f943c7eca95a5311023b03e769e4e18ada9249
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324074"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80863096"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>iOS の基幹業務アプリを Microsoft Intune に追加する
 
@@ -34,7 +34,7 @@ ms.locfileid: "80324074"
 > [!NOTE]
 > iOS デバイスのユーザーは Stocks や Maps などの一部の iOS 組み込みアプリを削除できます。 Intune を使用してこれらのアプリを再展開することはできません。 ユーザーがこれらのアプリを削除した場合は、アプリ ストアから手動で再インストールする必要があります。
 >
-> iOS の LOB アプリには、アプリごとに最大 4 GB のサイズ制限があります。
+> iOS の LOB アプリには、アプリごとに最大 2 GB のサイズ制限があります。
 
 > [!NOTE]
 > バンドル識別子 (*com.contoso.app* など) は、アプリを一意に識別するものでなければなりません。 たとえば、テスト目的で運用バージョンの隣に LOB アプリのベータ版をインストールするには、ベータ版に異なる一意の識別子を与える必要があります (*com.contoso.app-beta* など)。 そうしないと、ベータ版が運用版と重複し、アップグレードとして扱われます。 .ipa ファイルの名前を変更してもこの動作に影響はありません。
@@ -80,7 +80,7 @@ ms.locfileid: "80324074"
 
 ## <a name="step-3---assignments"></a>ステップ 3 - 割り当て
 
-1. アプリのグループ割り当てについて、 **[必須]** 、 **[登録済みデバイスで使用可能]** 、または **[アンインストール]** を選択します。 詳細については、「[ユーザーとデバイスを整理するためのグループを追加する](../fundamentals/groups-add.md)」と「[Microsoft Intune を使用してアプリをグループに割り当てる](apps-deploy.md)」を参照してください。
+1. アプリのグループ割り当てについて、 **[必須]** 、 **[登録済みデバイスで使用可能]** 、 **[登録の有無にかかわらず使用可能]** または **[アンインストール]** を選択します。 詳細については、「[ユーザーとデバイスを整理するためのグループを追加する](../fundamentals/groups-add.md)」と「[Microsoft Intune を使用してアプリをグループに割り当てる](apps-deploy.md)」を参照してください。
 2. **[次へ]** をクリックして、 **[確認と作成]** ページを表示します。
 
 ## <a name="step-4---review--create"></a>ステップ 4 - 確認と作成

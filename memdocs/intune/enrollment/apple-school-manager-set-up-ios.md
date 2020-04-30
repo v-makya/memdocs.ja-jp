@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bbca477b389b568d2aca1ab0f9394ec09fe2b24
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: 63a465e39e8a041c47b6748d9dacdebf3c6ea8a5
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696551"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078109"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Apple School Manager での iOS/iPadOS デバイス登録の設定
 
@@ -105,7 +105,7 @@ Apple School Manager で企業所有の iOS/iPadOS デバイスを登録する�
     > Apple セットアップ アシスタントによって認証している場合は、これらはサポートされません。
 
 6. **[デバイス管理の設定]** を選択し、このプロファイルを使用するデバイスを監視するかどうかを選択します。
-    **[監視下]** デバイスでは、より多くの管理オプションを使用できるようになり、既定で [アクティベーション ロック] は無効になります。 Microsoft では、多数の iOS または iPadOS デバイスを展開する組織に対して特に、監視モードを有効にするメカニズムとして ADE の利用をお勧めしています。
+    **[監視下]** デバイスでは、より多くの管理オプションを使用できるようになり、既定で [アクティベーション ロック] は無効になります。 Microsoft では、特に多数の iOS または iPadOS デバイスをデプロイする組織に対して、Intune の監視モードを有効にするメカニズムとして ADE の利用をお勧めしています。
 
     デバイスが監視対象であることは次の 2 つの方法でユーザーに通知されます。
 

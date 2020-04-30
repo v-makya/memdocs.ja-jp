@@ -6,28 +6,32 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
-ms.reviewer: jinyoon
+ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0a9f4d9195c68664f42570746ade6d924c8da62
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: e5b568a90d4077c32a88044beea746907613eb0e
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323008"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525735"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>コンプライアンスのために Jamf Pro を Intune と統合する
 
-組織で [Jamf Pro](https://www.jamf.com) を使用して macOS デバイスを管理している場合、Azure Active Directory (Azure AD) 条件付きアクセスと共に Microsoft Intune コンプライアンス ポリシーを使用することで、組織内のデバイスから会社のリソースにアクセスする前に、準拠していることを確認できるようになります。 この記事では、Jamf と Intune の統合を構成する方法について説明します。
+組織で [Jamf Pro](https://www.jamf.com) を使用して macOS デバイスを管理している場合、Azure Active Directory (Azure AD) 条件付きアクセスと共に Microsoft Intune コンプライアンス ポリシーを使用することで、組織内のデバイスから会社のリソースにアクセスする前に、準拠していることを確認できるようになります。 Jamf Pro を Intune と統合するには、次の 2 つの方法があります。
+
+- **統合を手動で構成する** - この記事の情報を使用して、Jamf と Intune の統合を手動で構成します。
+- **Jamf Cloud コネクタを使用する** (*推奨*) - [Microsoft Intune での Jamf Cloud コネクタの使用](../protect/conditional-access-jamf-cloud-connector.md)に関する記事に記載された情報を使用して、Jamf Cloud コネクタをインストールし、Jamf Pro を Microsoft Intune と統合します。 このクラウド コネクタでは、統合を手動で構成するときに必要となる手順の多くを自動化します。
+
 
 Jamf Pro を Intune と統合すると、Azure AD を使用して、macOS デバイスからのインベントリ データを Intune と同期できるようになります。 Intune のコンプライアンス エンジンでは、インベントリ データが分析され、レポートが生成されます。 Intune の分析がデバイス ユーザーの Azure AD ID に関するインテリジェンスと組み合わされ、条件付きアクセスによる適用が促進されます。 条件付きアクセス ポリシーに準拠しているデバイスは、保護された会社のリソースにアクセスできます。
 
@@ -154,7 +158,7 @@ Intune と Jamf の統合を構成したら、[Jamf で管理されたデバイ�
 
 ## <a name="disconnect-jamf-pro-and-intune"></a>Jamf Pro と Intune を切断する
 
-Jamf Pro を使用して組織内の Mac を管理しなくなった場合、ユーザーを Intune で管理するには、Jamf Pro と Intune 間の接続を削除する必要があります。 Jamf Pro コンソールを使用して接続を削除します。
+Jamf Pro と Intune の統合を解消する必要がある場合は、次の手順に従って、Jamf Pro コンソール内から接続を削除します。この情報は、手動で構成された統合と、クラウド コネクタを使用した統合の両方に適用されます。
 
 1. Jamf Pro で、 **[グローバル管理]**  >  **[条件付きアクセス]** に移動します。 **[macOS Intune Integration]\(macOS Intune 統合\)** タブで、 **[編集]** を選択します。
 

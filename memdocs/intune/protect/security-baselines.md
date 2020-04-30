@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 04/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: shpate
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 618ed802d33f2c50a567f1e18da4689855bbf016
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: faf117f3eedbfe7527606d7a0942cab644c700cb
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551684"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615654"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Intune でのセキュリティ ベースラインを使用した Windows 10 デバイスの構成
 
@@ -46,13 +46,34 @@ Intune でユーザーやデバイスのグループに対してセキュリテ�
 
 「[Windows セキュリティ基本計画](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines)」は、この機能の詳細を学ぶ際に役立つリソースです。 「[Mobile device management (モバイル デバイス管理)](https://docs.microsoft.com/windows/client-management/mdm/)」(MDM) は、MDM と、Windows デバイス上で実行できることに関する優れたリソースです。
 
+## <a name="available-security-baselines"></a>使用可能なセキュリティ ベースライン
+
+Intune では、次のセキュリティ ベースラインのインスタンスを使用できます。 リンクを使用して、各ベースラインの最新インスタンスに関する設定を確認してください。
+
+- **MDM セキュリティ ベースライン**
+  - [2019 年 5 月の MDM セキュリティ ベースライン](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
+  - [プレビュー:2018 年 10 月の MDM セキュリティ ベースライン](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
+
+- **Microsoft Defender ATP ベースライン**
+  " *(このベースラインを使用するには、ご使用の環境が [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites) を使用するための前提条件を満たしている必要があります)* "。
+  - [Microsoft Defender ATP ベースライン バージョン 3](security-baseline-settings-defender-atp.md)
+
+  > [!NOTE]
+  > Microsoft Defender ATP のセキュリティ ベースラインは、物理デバイス用に最適化されており、現在は仮想マシン (VM) や VDI エンドポイントでの使用は推奨されていません。 特定のベースライン設定が、仮想化された環境でのリモート対話型セッションに影響を与える可能性があります。  詳細については、Windows ドキュメントの「[Increase compliance to the Microsoft Defender ATP security baseline (Microsoft Defender ATP のセキュリティ ベースラインに対するコンプライアンスの強化)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)」をご覧ください。
+
+- **Microsoft Edge ベースライン**
+  - [2020 年 4 月 (Edge バージョン 80 以降) の Microsoft Edge ベースライン](security-baseline-settings-edge.md?pivots-edge-april-2020)
+  - [プレビュー:2019 年 10 月 (Edge バージョン 77 以降) の Microsoft Edge ベースライン](security-baseline-settings-edge.md?pivots=edge-october-2019)
+
+前にプレビュー テンプレートに基づいて作成したプロファイルは、そのプレビュー テンプレートが新しいプロファイルの作成にもう使えない場合であっても、引き続き使用および変更することができます。
+
+使用するベースラインの最新バージョンに移行する準備ができたら、この記事の「[プロファイルのベースラインのバージョンを変更する](#change-the-baseline-version-for-a-profile)」をご覧ください。 
+
 ## <a name="about-baseline-versions-and-instances"></a>ベースラインのバージョンとインスタンスについて
 
 ベースラインの新しいバージョンの各インスタンスでは、設定が追加または削除されたり、その他の変更が導入されたりする可能性があります。 たとえば、新しいバージョンの Windows 10 に伴って新しい Windows 10 の設定が利用可能になると、MDM セキュリティ ベースラインには最新の設定を含む新しいバージョンのインスタンスが追加されるかもしれません。
 
-Intune コンソールでは、各ベースラインのタイルに、ベースライン テンプレートの名前とそのベースラインに関する基本情報が表示されます。 その情報には、所有しているプロファイルのうちそのベースラインの種類が使われているものの数、そのベースラインの種類について利用可能な個別のインスタンス (バージョン) の数、およびそのベースライン テンプレートがテナントに追加された日付を特定する "*最終発行*" 日などが含まれます。 次の例では、よく使われる MDM セキュリティ ベースラインのタイルを示しています。
-
-![ベースラインのタイル](./media/security-baselines/baseline-tile.png)
+[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[エンドポイント セキュリティ]**  >  **[セキュリティ ベースライン]** の順に選択すると、利用可能なベースラインの一覧が表示されます。 一覧には、ベースライン テンプレート名、所有しているプロファイルのうちそのベースラインの種類が使われているものの数、そのベースラインの種類について利用可能な個別のインスタンス (バージョン) の数、そのベースライン テンプレートの最新バージョンが利用可能になった時期を特定する "*最終発行*" 日などが含まれています。
 
 使用するベースラインのバージョンに関する情報をさらに表示するには、ベースラインのタイルを選択してその *[概要]* ウィンドウを開いてから、 **[バージョン]** を選択します。 Intune によって、プロファイルで使用されているそのベースラインのバージョンに関する詳細が表示されます。 [バージョン] ウィンドウでは、1 つのバージョンを選択して、そのバージョンを使用している各プロファイルに関するより詳しい情報を確認できます。 また、2 つの異なるバージョンを選択してから **[Compare baselines]\(ベースラインの比較\)** を選択することで、その相違点が詳しく記載された CSV ファイルをダウンロードできます。
 
@@ -74,26 +95,6 @@ Intune コンソールでは、各ベースラインのタイルに、ベース�
 
 - [Intune でのポリシーとプロファイルのトラブルシューティング](../configuration/troubleshoot-policies-in-microsoft-intune.md)
 - [セキュリティ ベースラインの監視](security-baselines-monitor.md#troubleshoot-using-per-setting-status)
-
-## <a name="available-security-baselines"></a>使用可能なセキュリティ ベースライン
-
-Intune では、次のセキュリティ ベースラインのインスタンスを使用できます。 リンクを使用して、各ベースラインの最新インスタンスに関する設定を確認してください。
-
-- **MDM セキュリティ ベースライン**
-  - [2019 年 5 月の MDM セキュリティ ベースライン](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
-  - [プレビュー:2018 年 10 月の MDM セキュリティ ベースライン](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
-
-- **Microsoft Defender ATP ベースライン**
-  " *(このベースラインを使用するには、ご使用の環境が [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites) を使用するための前提条件を満たしている必要があります)* "。
-  - [Microsoft Defender ATP ベースライン バージョン 3](security-baseline-settings-defender-atp.md)
-
-  > [!NOTE]
-  > Microsoft Defender ATP のセキュリティ ベースラインは、物理デバイス用に最適化されており、現在は仮想マシン (VM) や VDI エンドポイントでの使用は推奨されていません。 特定のベースライン設定が、仮想化された環境でのリモート対話型セッションに影響を与える可能性があります。  詳細については、Windows ドキュメントの「[Increase compliance to the Microsoft Defender ATP security baseline (Microsoft Defender ATP のセキュリティ ベースラインに対するコンプライアンスの強化)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)」をご覧ください。
-
-- **Microsoft Edge ベースライン**
-  - [プレビュー:Microsoft Edge ベースライン](security-baseline-settings-edge.md)
-
-前にプレビュー テンプレートに基づいて作成したプロファイルは、そのプレビュー テンプレートが新しいプロファイルの作成にもう使えない場合であっても、引き続き使用および変更することができます。
 
 ## <a name="manage-baselines"></a>ベースラインの管理
 
@@ -219,7 +220,7 @@ Microsoft セキュリティ チームは、これらの推奨事項を作成す
 
 厳密に言えば、"いいえ" です。 Microsoft セキュリティ チームは、CIS などの組織に、その推奨事項をまとめるように依頼しています。 しかし、"CIS 準拠" と Microsoft のベースラインのマッピングは 1 対 1 ではありません。
 
-### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Microsoft のセキュリティのベースラインにはどのような認定資格がありますか? 
+### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Microsoft のセキュリティのベースラインにはどのような認定資格がありますか?  
 
 - Microsoft は、グループ ポリシー (GPO) および [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) 用のセキュリティのベースラインを長年にわたって公開し続けています。 これらのベースラインは多くの組織で使用されています。 これらのベースラインの推奨事項は、Microsoft セキュリティ チームと、米国国防総省 (DoD)、National Institute of Standards and Technology (NIST) などの企業のお客様および外部機関との関わりから得られたものです。 Microsoft の推奨事項とベースラインは、これらの組織と共有しています。 また、これらの組織には、Microsoft の推奨事項を厳密に反映した独自の推奨事項もあります。 モバイル デバイス管理 (MDM) がクラウドへと成長を続けた過程で、Microsoft はこのようなグループ ポリシーのベースラインと同等の MDM の推奨事項を作成しました。 このような追加のベースラインは Microsoft Intune に組み込まれており、ベースラインに準拠している (または準拠していない) ユーザー、グループ、およびデバイスに関するコンプライアンス レポートが含まれています。
 

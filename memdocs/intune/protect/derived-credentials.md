@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/17/2002
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebeb2c31b72ec10f4ce95b09e32b3e3c9accccfa
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 7b6940d191902627616501f192fc810363bee1a3
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323024"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81688227"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Microsoft Intune で派生資格情報を使用する
 
-*この記事は、iOS が実行されているデバイスに適用されます*
+*この記事は、iOS/iPadOS、バージョン 7.0 以降を実行する Android Enterprise のフル マネージド デバイスに適用されます*
 
 認証または暗号化と署名にスマート カードが必要な環境で、Intune を使用して、ユーザーのスマート カードから派生した証明書でモバイル デバイスをプロビジョニングできるようになりました。 この証明書は、*派生資格情報*と呼ばれます。 Intune では、[複数の派生資格情報の発行者がサポートされています](#supported-issuers)が、一度に使用できる発行者はテナントごとに 1 つだけです。
 
@@ -34,18 +34,19 @@ ms.locfileid: "80323024"
 **Intune の実装を使用して**:
 
 - Intune 管理者は、サポートされている派生資格情報の発行者と連携するように自身のテナントを構成します。 派生資格情報の発行者のシステムで Intune 固有の設定を構成する必要はありません。
-
 - Intune 管理者は、次のオブジェクトに対し、*認証方法*として**派生資格情報**を指定します。
-
+  
+  **iOS/iPadOS の場合**:
   - Wi-Fi、VPN、iOS/iPadOS ネイティブ メール アプリが含まれているメールなどの一般的なプロファイルの種類
-
   - アプリの認証
-
   - S/MIME 署名と暗号化
 
+  **Android Enterprise のフル マネージド デバイスの場合**:
+  - Wi-Fi や VPN などの一般的なプロファイルの種類
+  - アプリの認証
+  
 - ユーザーは、コンピューターで自身のスマート カードを使用して派生資格情報を取得し、派生資格情報の発行者に対して認証を行います。 その後、発行者が、スマート カードから派生した証明書をモバイル デバイスに発行します。
-
-- デバイスで受信された派生資格情報は、アプリまたはリソース アクセス プロファイルで派生資格情報が必要な場合に、認証および S/MIME 署名と暗号化に使用されます。 
+- デバイスで受信された派生資格情報は、アプリまたはリソース アクセス プロファイルで派生資格情報が必要な場合に、認証および S/MIME 署名と暗号化に使用されます。
 
 ## <a name="prerequisites"></a>[前提条件]
 
@@ -53,21 +54,22 @@ ms.locfileid: "80323024"
 
 ### <a name="supported-platforms"></a>サポートされているプラットフォーム
 
-Intune では、次の OS プラットフォームで派生資格情報がサポートされます。
+Intune では、次のプラットフォームで派生資格情報がサポートされます。
 
 - iOS/iPadOS
+- Android Enterprise - フル マネージド デバイス (バージョン 7.0 以降)
 
 ### <a name="supported-issuers"></a>サポートされている発行者
 
 Intune では、テナントごとに 1 つの派生資格情報の発行者がサポートされます。 次の発行者と連携するように Intune を構成することができます。
 
-- **DISA Purebred**: https://cyber.mil/pki-pke/purebred/
+- **DISA Purebred** (iOS のみ): https:\//cyber.mil/pki-pke/purebred/
 - **Entrust Datacard**: https://www.entrustdatacard.com/
 - **Intercede**: https://www.intercede.com/
 
-さまざまな発行者の使用に関する重要な詳細については、その発行者に関するガイダンスを確認してください<!-- , including the issuers end-user workflow-->。 詳細については、この記事の「[派生資格情報の計画](#plan-for-derived-credentials)」を参照してください。
+さまざまな発行者の使用に関する重要な詳細については、その発行者に関するガイダンスを確認してください。 詳細については、この記事の「[派生資格情報の計画](#plan-for-derived-credentials)」を参照してください。
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > テナントから派生資格情報の発行者を削除すると、その発行者によって設定された派生資格情報は機能しなくなります。
 >
 > この記事で後述する「[派生資格情報の発行者の変更](#change-the-derived-credential-issuer)」を参照してください。
@@ -76,23 +78,24 @@ Intune では、テナントごとに 1 つの派生資格情報の発行者が�
 
 派生資格情報に登録するデバイスに Intune ポータル サイト アプリを展開する計画を立てます。 デバイス ユーザーは、ポータル サイト アプリを使用して、資格情報の登録プロセスを開始します。
 
-iOS/iPadOS デバイスの場合は、[Microsoft Intune への iOS/iPadOS ストア アプリの追加](../apps/store-apps-ios.md)に関するページを参照してください。
+- iOS デバイスの場合は、「[iOS ストア アプリを Microsoft Intune に追加する](../apps/store-apps-ios.md)」を参照してください。
+- Android デバイスの場合は、「[Android ストア アプリを Microsoft Intune に追加する](../apps/store-apps-android.md)」を参照してください。
 
 ## <a name="plan-for-derived-credentials"></a>派生資格情報の計画
 
 派生資格情報の発行者を設定する前に、次の考慮事項を理解してください。
 
-### <a name="1-review-the-documentation-for-your-chosen-derived-credential-issuer"></a>1) 選択した派生資格情報の発行者のドキュメントを確認する  
+### <a name="1-review-the-documentation-for-your-chosen-derived-credential-issuer"></a>1) 選択した派生資格情報の発行者のドキュメントを確認する
 
 発行者を構成する前に、発行者のドキュメントを確認して、発行者のシステムが派生資格情報をデバイスに配布する方法を理解してください。
 
-選択した発行者によっては、ユーザーがプロセスを完了するのを支援するため、登録時にスタッフが対応できるようにする必要がある場合があります。 また、現在の Intune 構成を確認して、デバイスまたはユーザーが資格情報の要求を完了するために必要なアクセスがブロックされていないことを確認する必要があります。
+選択した発行者によっては、ユーザーがプロセスを完了するのを支援するため、登録時にスタッフが対応できるようにする必要がある場合があります。 また、現在の Intune 構成を確認して、デバイスまたはユーザーが資格情報の要求を完了するために必要なアクセスがブロックされていないことを確認します。
 
 たとえば、準拠していないデバイスのメールへのアクセスをブロックするため、条件付きアクセスを使用している場合があります。 派生資格情報の登録プロセスの開始をメール通知を使用してユーザーに知らせる場合、ユーザーはポリシーに準拠するまでそれらの指示を受信できない可能性があります。
 
 同様に、一部の派生資格情報要求ワークフローでは、画面上の QR コードをスキャンするためにデバイス カメラを使用する必要があります。 このコードによりそのデバイスが、ユーザーのスマート カード資格情報を持つ派生資格情報の発行者に対して発生した認証要求にリンクされます。 デバイス構成ポリシーでカメラの使用がブロックされている場合、ユーザーは派生資格情報の登録要求を完了できません。
 
-一般情報:
+**一般情報**:
 
 - 一度に構成できる発行者はテナントごとに 1 つだけです。この発行者を、テナント内のすべてのユーザーとサポートされているデバイスで使用できます。
 
@@ -106,39 +109,57 @@ iOS/iPadOS デバイスの場合は、[Microsoft Intune への iOS/iPadOS スト
 
 #### <a name="disa-purebred"></a>DISA Purebred
 
-[DISA Purebred のユーザー ワークフロー](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-disa-purebred)を確認します。 このワークフローの主な要件は次のとおりです。
+派生資格情報で使用するデバイスのプラットフォーム固有のユーザー ワークフローを確認します。
+
+- [iOS と iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
+
+**主な要件には次のものがあります**。
 
 - ユーザーは、自身のスマート カードを使用して発行者に対して認証することができるコンピューターまたはキオスクにアクセスする必要があります。
-
 - 派生資格情報に登録するデバイスに Intune ポータル サイト アプリをインストールする必要があります。
-
 - Intune を使用して、派生資格情報に登録するデバイスに [DISA Purebred アプリを展開](#deploy-the-disa-purebred-app)します。 このアプリは Intune を使用して展開する必要があります。これにより、アプリが管理され、Intune ポータル サイト アプリで使用できるようになります。 このアプリは、派生資格情報要求を完了するためにデバイス ユーザーによって使用されます。
-
 - DISA Purebred アプリでは、派生資格情報の登録時にアプリが DISA Purebred に確実にアクセスすることができるように、[アプリごとの VPN](../configuration/vpn-settings-configure.md) が必要です。
-
 - デバイス ユーザーは、登録プロセス中は、ライブ エージェントで作業する必要があります。 登録時に、ユーザーが登録プロセスを進める中で、時間制限のあるワンタイム パスコードがユーザーに提供されます。
+- 新しい Wi-Fi プロファイルの作成など、派生資格情報を使用するポリシーに変更が加えられると、iOS と iPadOS のユーザーにはポータル サイト アプリを開くように通知されます。
+- 派生資格情報を更新する必要がある場合、ユーザーにはポータル サイト アプリを開くように通知されます。
 
 DISA Purebred アプリの取得と構成の詳細については、この記事で後述する「[DISA Purebred アプリの展開](#deploy-the-disa-purebred-app)」を参照してください。
 
 #### <a name="entrust-datacard"></a>Entrust Datacard
 
-[Entrust Datacard のユーザー ワークフロー](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-entrust-datacard)を確認します。 このワークフローの主な要件は次のとおりです。
+派生資格情報で使用するデバイスのプラットフォーム固有のユーザー ワークフローを確認します。
+
+- [iOS と iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust-datacard)
+- [Android Enterprise のフル マネージド デバイス](../user-help/enroll-android-device-entrust-datacard.md)
+
+**主な要件には次のものがあります**。
 
 - ユーザーは、自身のスマート カードを使用して発行者に対して認証することができるコンピューターまたはキオスクにアクセスする必要があります。
-
 - 派生資格情報に登録するデバイスに Intune ポータル サイト アプリをインストールする必要があります。
-
 - デバイス カメラを使用して、認証要求をモバイル デバイスからの派生資格情報要求にリンクする QR コードをスキャンします。
+- ユーザーは、ポータル サイト アプリまたは電子メールを使用して、派生資格情報を登録するように求められます。
+- 新しい Wi-Fi プロファイルの作成など、派生資格情報を使用するポリシーに変更が加えられた場合:
+  - **iOS と iPadOS** - ユーザーはポータル サイト アプリを開くように通知されます。
+  - **Android Enterprise のフル マネージド デバイス** - ポータル サイト アプリを開く必要はありません。
+- 派生資格情報を更新する必要がある場合、ユーザーにはポータル サイト アプリを開くように通知されます。
 
 #### <a name="intercede"></a>Intercede
 
-[Intercede のユーザー ワークフロー](https://docs.microsoft.com/mem/intune/user-help/enroll-ios-device-intercede)を確認します。 このワークフローの主な要件は次のとおりです。
+派生資格情報で使用するデバイスのプラットフォーム固有のユーザー ワークフローを確認します。
+
+- [iOS と iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede)
+- [Android Enterprise のフル マネージド デバイス](../user-help/enroll-android-device-intercede.md)
+
+**主な要件には次のものがあります**。
 
 - ユーザーは、自身のスマート カードを使用して発行者に対して認証することができるコンピューターまたはキオスクにアクセスする必要があります。
-
 - 派生資格情報に登録するデバイスに Intune ポータル サイト アプリをインストールする必要があります。
-
 - デバイス カメラを使用して、認証要求をモバイル デバイスからの派生資格情報要求にリンクする QR コードをスキャンします。
+- ユーザーは、ポータル サイト アプリまたは電子メールを使用して、派生資格情報を登録するように求められます。
+- 新しい Wi-Fi プロファイルの作成など、派生資格情報を使用するポリシーに変更が加えられた場合:
+  - **iOS と iPadOS** - ユーザーはポータル サイト アプリを開くように通知されます。
+  - **Android Enterprise のフル マネージド デバイス** - ポータル サイト アプリを開く必要はありません。
+- 派生資格情報を更新する必要がある場合、ユーザーにはポータル サイト アプリを開くように通知されます。
 
 ### <a name="3-deploy-a-trusted-root-certificate-to-devices"></a>3) 信頼されたルート証明書をデバイスに展開する
 
@@ -150,9 +171,15 @@ DISA Purebred アプリの取得と構成の詳細については、この記事
 
 ガイダンスをホストする URL を提供することをお勧めします。 テナントの派生資格情報の発行者を構成するときにこの URL を指定すると、その URL がポータル サイト アプリ内から使用できるようになります。 独自の URL を指定しない場合、Intune によって一般的な詳細へのリンクが提供されます。 これらの詳細は、すべてのシナリオに対応しているわけではなく、環境によっては正確ではない可能性があります。
 
-### <a name="5-deploy-intune-policies-that-require-derived-credentials"></a>5) 派生資格情報を必要とする Intune ポリシーを展開する
+### <a name="dive-idsupported-objects-5-deploy-intune-policies-that-require-derived-credentials"></a><dive id="supported-objects"> 5) 派生資格情報を必要とする Intune ポリシーをデプロイする
 
-新しいポリシーを作成するか、既存のポリシーを編集して、派生資格情報を使用します。 派生資格情報は、アプリ認証、Wi-Fi、VPN、メール、S/MIME 署名と暗号化のための他の認証方法に取って代わります。
+新しいポリシーを作成するか、既存のポリシーを編集して、派生資格情報を使用します。 派生資格情報は、次のオブジェクトに対して、他の認証方法を置き換えます。
+
+- アプリの認証
+- Wi-Fi
+- VPN
+- 電子メール (iOS のみ)
+- S/MIME 署名と暗号化、Outlook を含む (iOS のみ)
 
 派生資格情報を取得するプロセスの一部として使用するプロセスにアクセスするために、派生資格情報を使用する必要がないようにします。ユーザーが要求を完了できなくなる可能性があるからです。
 
@@ -169,7 +196,7 @@ DISA Purebred アプリの取得と構成の詳細については、この記事
 3. 派生資格情報の発行者ポリシーにわかりやすい**表示名**を指定します。  この名前は、デバイス ユーザーには表示されません。
 
 4. **[派生資格情報の発行者]** には、テナントに選択した派生資格情報の発行者を選択します。
-   - DISA Purebred
+   - DISA Purebred (iOS のみ)
    - Entrust Datacard
    - Intercede  
 
@@ -181,7 +208,7 @@ DISA Purebred アプリの取得と構成の詳細については、この記事
 
    - 発行者にデバイスを登録して新しい派生資格情報を取得する。
    - 現在の資格情報の有効期限が近づいたときに新しい派生資格情報を取得する。
-   - Wi-Fi、VPN、メール、またはアプリ認証のポリシーと、S/MIME 署名と暗号化のポリシーと共に派生資格情報を使用する。
+   - [サポートされているオブジェクト](#supported-objects)で派生資格情報を使用する。
 
 7. 準備ができたら、 **[保存]** を選択して、派生資格情報の発行者の構成を完了します。
 
@@ -197,8 +224,10 @@ Intune を使用したアプリの展開に加えて、DISA Purebred アプリ�
 
 **次のタスクを実行します**。
   
-1. [DISA Purebred アプリケーション](https://cyber.mil/pki-pke/purebred/)をダウンロードします。
-2. DISA Purebred アプリケーションを Intune に展開します。  [Microsoft Intune への iOS/iPadOS 基幹業務アプリの追加](../apps/lob-apps-ios.md)に関するページを参照してください。
+1. DISA Purebred アプリケーションをダウンロードします (https:\//cyber.mil/pki-pke/purebred/)。
+
+2. DISA Purebred アプリケーションを Intune に展開します。 「[iOS の基幹業務アプリを Microsoft Intune に追加する](../apps/lob-apps-ios.md)」を参照してください。
+
 3. DISA Purebred アプリケーション用に[アプリごとの VPN を作成](../configuration/vpn-settings-configure.md)します。
 
 ## <a name="use-derived-credentials-for-authentication-and-smime-signing-and-encryption"></a>認証および S/MIME 署名と暗号化に対する派生資格情報の使用
@@ -206,10 +235,16 @@ Intune を使用したアプリの展開に加えて、DISA Purebred アプリ�
 次のプロファイルの種類と目的に対して、**派生資格情報**を指定できます。
 
 - [アプリケーション](#use-derived-credentials-for-app-authentication)
-- [電子メール](../configuration/email-settings-ios.md)
-- [VPN](../configuration/vpn-settings-ios.md)
+- 電子メール:
+  - [iOS と iPadOS](../configuration/email-settings-ios.md)
+  - [Android エンタープライズ](../configuration/email-settings-android-enterprise.md)
+- VPN:
+  - [iOS と iPadOS](../configuration/vpn-settings-ios.md)
+  - [Android エンタープライズ](../configuration/vpn-settings-android-enterprise.md)
 - [S/MIME 署名と暗号化](certificates-s-mime-encryption-sign.md)
-- [Wi-Fi](../configuration/wi-fi-settings-ios.md)
+- Wi-Fi:
+  - [iOS と iPadOS](../configuration/wi-fi-settings-ios.md)
+  - [Android エンタープライズ](../configuration/wi-fi-settings-android-enterprise.md)
 
   Wi-Fi プロファイルの場合、*認証方法*は、**EAP の種類**が次のいずれかの値に設定されている場合にのみ使用できます。
   - EAP – TLS
@@ -221,35 +256,25 @@ Intune を使用したアプリの展開に加えて、DISA Purebred アプリ�
 Web サイトおよびアプリケーションに対する証明書ベースの認証には、派生資格情報を使用します。 アプリ認証用の派生資格情報を提供するには:
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
-
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
+3. 次の設定を入力します。
 
-3. 次のプロパティを入力します。
-   - **[プラットフォーム]** :このプロファイルを受信するデバイスのプラットフォームを選択します。
-   - **[プロファイル]** : **[派生資格情報]** を選択します。
+   iOS と iPadOS の場合:
+   - **名前**:プロファイルのわかりやすい名前を入力します。 後で簡単に識別できるよう、プロファイルに名前を付けます。 たとえば、**iOS デバイス プロファイル用の派生資格情報**などは適切なプロファイル名です。
+   - **説明**:設定の概要および他の重要な詳細がわかる説明を入力します。
+   - **[プラットフォーム]** : **[iOS/iPadOS]** を選択します。
+   - **[プロファイルの種類]** : **[派生資格情報]** を選択します。
 
-4. **[作成]** を選択します。
+   Android Enterprise の場合:
+   - **名前**:プロファイルのわかりやすい名前を入力します。 後で簡単に識別できるよう、プロファイルに名前を付けます。 たとえば、**Android Enterprise デバイス プロファイル用の派生資格情報**は適切なプロファイル名です。
+   - **説明**:設定の概要および他の重要な詳細がわかる説明を入力します。
+   - **[プラットフォーム]** : **[Android エンタープライズ]** を選択します。
+   - **[プロファイルの種類]** : *[デバイスの所有者のみ]* で、 **[派生資格情報]** を選択します。
 
-5. **[Basics]\(基本\)** で次のプロパティを入力します。
+4. **[OK]** を選択して変更を保存します。
+5. 終わったら、 **[OK]**  >  **[作成]** の順に選択して Intune プロファイルを作成します。 完了すると、プロファイルが **[デバイス - 構成プロファイル]** の一覧に表示されます。
+6. 新しいプロファイルを選択し、 **[割り当て]** を選択します。 ポリシーを受け取る必要があるグループを選択します。
 
-   - **名前**:プロファイルのわかりやすい名前を入力します。 後で簡単に識別できるよう、プロファイルに名前を付けます。 たとえば、**iOS/iPadOS デバイス プロファイル用の派生資格情報**などは適切なプロファイル名です。
-   - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
-
-6. **[次へ]** を選択します。
-
-7. **[構成設定]** で、 **[アプリ認証の派生資格情報を使用する]** を **[はい]** に設定し、 **[次へ]** を選択します。
-
-8. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。
-
-   **[次へ]** を選択します。
-
-9. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
-
-    **[次へ]** を選択します。
-
-10. **[確認と作成]** で、設定を確認します。 [作成] を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
-
- 
 派生資格情報の発行者を設定するときに指定した設定に応じて、アプリまたはメールでユーザーに通知されます。 この通知は、派生資格情報ポリシーを処理できるように、ポータル サイトを起動することをユーザーに知らせます。
 
 ## <a name="renew-a-derived-credential"></a>派生資格情報の更新
@@ -260,7 +285,6 @@ Web サイトおよびアプリケーションに対する証明書ベースの�
 
 デバイスで新しい派生資格情報が受信されると、派生資格情報を使用するポリシーがそのデバイスに再度展開されます。
 
-
 ## <a name="change-the-derived-credential-issuer"></a>派生資格情報の発行者の変更
 
 テナント レベルでは、資格情報の発行者を変更することはできますが、テナントで一度にサポートされるのは 1 つの発行者だけです。
@@ -269,7 +293,7 @@ Web サイトおよびアプリケーションに対する証明書ベースの�
 
 ### <a name="change-the-issuer-for-your-tenant"></a>テナントの発行者を変更する
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > 発行者を削除し、同じ発行者をすぐに再構成する場合でも、その発行者からの派生資格情報を使用するようにプロファイルとデバイスを更新する必要があります。 発行者を削除する前に取得した派生資格情報は、有効ではなくなります。
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
@@ -287,4 +311,4 @@ Web サイトおよびアプリケーションに対する証明書ベースの�
 
 ## <a name="next-steps"></a>次のステップ
 
-[デバイス構成プロファイルの概要](../configuration/device-profile-create.md)
+[デバイス構成プロファイルを作成します](../configuration/device-profile-create.md)。

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 04/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f685f1f3d009d7ba7a1dc061ec3025b2f8c96b5f
-ms.sourcegitcommit: 017b93345d8d8de962debfe3db5fc1bda7719079
+ms.openlocfilehash: 49749ec3a839b11062b1cc2655a1cca4e3d6cfb0
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80084633"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525707"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Jamf Pro と Microsoft Intune の統合のトラブルシューティング
 
@@ -35,21 +35,22 @@ ms.locfileid: "80084633"
 
 トラブルシューティングを始める前に、いくつかの基本的な情報を収集して問題を明確にし、解決策を見つけるための時間を短縮します。 たとえば、Jamf と Intune の統合に関連する問題が発生した場合は、前提条件がすべて満たされていることを必ず確認します。 トラブルシューティングを始める前に、次の考慮事項を確認してください。
 
-- [Jamf Pro と Intune の統合](conditional-access-integrate-jamf.md#prerequisites)に関するページの前提条件を確認します。
-- すべてのユーザーが、 Microsoft Intune と Microsoft AAD Premium P1 のライセンスを持っている必要があります 
+- Jamf Pro と Intune の統合を構成する方法に応じて、次の記事の前提条件を確認してください。
+  - [Jamf Cloud コネクタを使用して Jamf Pro を Intune と統合する](conditional-access-jamf-cloud-connector.md)
+  - [Jamf Pro と Intune を統合する](conditional-access-integrate-jamf.md#prerequisites)
+- すべてのユーザーが、 Microsoft Intune と Microsoft AAD Premium P1 のライセンスを持っている必要があります
 - Jamf Pro コンソールで Microsoft Intune 統合アクセス許可を持つユーザー アカウントが必要です。
 - Azure でグローバル管理者のアクセス許可を持つユーザー アカウントが必要です。
 
+Jamf Pro と Intune の統合を調べるときは、次の情報を考慮してください。
 
-Jamf Pro と Intune の統合を調べるときは、次の情報を考慮してください。 
 - 正確なエラー メッセージは何ですか?
 - エラーメッセージはどこにありますか?
 - 問題が発生し始めたのはいつですか?  Jamf Pro と Intune の統合は動作していましたか?
 - 影響を受けているユーザーの数はどれくらいですか? すべてのユーザーに影響がありますか、それとも一部だけですか?
 - 影響を受けているデバイスの数はどれくらいですか? すべてのデバイスですか、一部だけですか?
  
-
-## <a name="common-problems"></a>一般的な問題 
+## <a name="common-problems"></a>一般的な問題
 
 次の情報は、Intune と Jamf Pro の統合を設定した後で、デバイスの一般的な問題を特定して解決するのに役立ちます。  
 
@@ -109,23 +110,23 @@ Mac デバイスの登録が失敗する場合、一般的な原因がいくつ�
 
 #### <a name="cause-1"></a>原因 1  
 
-**Azure の Jamf Pro エンタープライズ アプリケーションに、間違ったアクセス許可があるか、複数のアクセス許可があります**  
+**Azure の Jamf Pro エンタープライズ アプリケーションに、間違ったアクセス許可があるか、複数のアクセス許可があります**
 
   Azure でアプリを作成するときに、すべての既定の API アクセス許可を削除してから、Intune に 1 つのアクセス許可 *update_device_attributes* を割り当てる必要があります。 
 
   **解決方法**  
-  Azure AD で作成した Jamf アプリのアクセス許可を確認し、必要に応じて修正します。 [Azure AD で Jamf 用のアプリケーションを作成する](conditional-access-integrate-jamf.md#create-an-application-in-azure-active-directory)手順を参照してください。 
+  Jamf アプリのアクセス許可を確認し、必要に応じて修正します。 Jamf Pro Cloud Connector を使用している場合は、このアプリが自動的に作成されています。 統合を手動で構成した場合は、Azure AD でアプリを作成しています。 アプリのアクセス許可については、[Azure AD で Jamf 用のアプリケーションを作成する](conditional-access-integrate-jamf.md#create-an-application-in-azure-active-directory)手順を参照してください。
 
 #### <a name="cause-2"></a>原因 2  
 
 **Jamf Native macOS Connector **アプリが Azure AD テナントに作成されていないか、コネクタに対する同意がグローバル管理者権限のないアカウントによって署名されました****  
 
   **解決方法**  
-  docs.jamf.com の「[Microsoft Intune との統合](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html)」の「*macOS Intune 統合の構成*」セクションを参照してください。 
+  docs.jamf.com の「[Microsoft Intune との統合](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html)」の「*macOS Intune 統合の構成*」セクションを参照してください。
 
 #### <a name="cause-3"></a>原因 3
 
-**ユーザーに Intune または Jamf の有効なライセンスがありません**  
+**ユーザーに Intune または Jamf の有効なライセンスがありません**
 
   有効なライセンスがないと、Jamf ライセンスの有効期限が切れていることを示す次のエラーが発生する可能性があります。  
   ```
@@ -183,8 +184,10 @@ Intune の統合が無効になっていると、ユーザーがデバイスを�
 統合を無効にすると、統合が無効になっていることを Intune に通知するパルスが、Jamf Pro サーバーから Intune サーバーに送信されます。 
 
 **解決方法**  
-Jamf Pro で Intune の統合を再度有効にします。 「[Jamf Pro で Microsoft Intune 統合を構成する](conditional-access-integrate-jamf.md#enable-intune-to-integrate-with-jamf-pro)」を参照してください。
+Jamf Pro で Intune の統合を再度有効にします。 統合の構成方法に応じて、次を参照してください。
 
+- [Jamf Cloud コネクタを使用して Jamf Pro を Intune と統合する](conditional-access-jamf-cloud-connector.md)
+- [Jamf Pro で Microsoft Intune 統合を手動で構成する](conditional-access-integrate-jamf.md#enable-intune-to-integrate-with-jamf-pro)。
 
 #### <a name="cause-6"></a><a name="cause-6"></a>原因 6  
 
@@ -226,8 +229,8 @@ Jamf Pro で Intune の統合を再度有効にします。 「[Jamf Pro で Mic
    - 種類: アプリケーション パスワード ; アカウント: com.microsoft.workplacejoin.registeredUserPrincipalName
    - 種類: 証明書 ; 発行元: MS-Organization-Access
    - 種類: ID 基本設定 ; 名前 (存在する場合は ADFS STS URL): https://adfs\<DNSName>.com/adfs/ls
-   - 種類: ID 基本設定 ; 名前: https://enterpriseregistration.windows.net
-   - 種類: ID 基本設定 ; 名前: https://enterpriseregistration.windows.net/  
+   - 種類: ID 基本設定 ; 名前: `https://enterpriseregistration.windows.net`
+   - 種類: ID 基本設定 ; 名前: `https://enterpriseregistration.windows.net/`
 9. Mac を再起動します。
 10. デバイスから Intune ポータル サイトをアンインストールします。
 11. portal.manage.microsoft.com にアクセスし、Mac デバイスのすべてのインスタンスを削除します。 少なくとも 30 分待ってから、次の手順に進みます。
@@ -270,29 +273,27 @@ Jamf Pro で Intune の統合を再度有効にします。 「[Jamf Pro で Mic
 デバイスが Intune と Jamf Pro の統合から削除されると、一部のデータが残っている場合があり、これにより、連続した登録によってエントリが重複して作成される可能性があります。  
 
 **解決方法**  
-この問題を解決するには、前に説明した「*デバイスを登録できない*」の「[*原因 6*](#cause-6)」の解決策に従います。 
+この問題を解決するには、前に説明した「*デバイスを登録できない*」の「[*原因 6*](#cause-6)」の解決策に従います。
 
 ### <a name="compliance-policy-fails-to-evaluate-the-device"></a>コンプライアンス ポリシーでデバイスの評価が失敗する  
 
-**原因**:Jamf と Intune の統合では、デバイス グループを対象とするコンプライアンス ポリシーがサポートされません。 
+**原因**:Jamf と Intune の統合では、デバイス グループを対象とするコンプライアンス ポリシーがサポートされません。
 
 **解決方法**  
-ユーザー グループに割り当てられるように、macOS デバイスのコンプライアンス ポリシーを変更します。 
-
+ユーザー グループに割り当てられるように、macOS デバイスのコンプライアンス ポリシーを変更します。
 
 ### <a name="could-not-retrieve-the-access-token-for-microsoft-graph-api"></a>Microsoft Graph API のアクセス トークンを取得できない
 
 次のエラーが表示されます。
 
-```
-   Could not retrieve the access token for Microsoft Graph API. Check the configuration for Microsoft Intune Integration.
-```   
+`Could not retrieve the access token for Microsoft Graph API. Check the configuration for Microsoft Intune Integration.`
 
-このエラーの原因としては、次のいずれかが考えられます。 
+このエラーの原因としては、次のいずれかが考えられます。
 
 #### <a name="theres-a-permission-issue-with-the-jamf-pro-application-in-azure"></a>Azure で Jamf Pro アプリケーションにアクセス許可の問題が発生しています
 
-Azure で Jamf Pro アプリを登録するときに、次のいずれかの状態が発生しました。  
+Azure で Jamf Pro アプリを登録するときに、次のいずれかの状態が発生しました。
+
 - アプリが複数のアクセス許可を受け取りました。
 - [  ***\<your company >* ] オプションに対する管理者の同意**が選択されていません。  
 
@@ -301,12 +302,13 @@ Azure で Jamf Pro アプリを登録するときに、次のいずれかの状�
 
 #### <a name="a-license-required-for-jamf-intune-integration-has-expired"></a>Jamf と Intune の統合に必要なライセンスが期限切れになりました
 
-**解決方法**:「[デバイスを登録できない](#devices-fail-to-register)」の原因 3 の解決策を参照してください。 
+**解決方法**:「[デバイスを登録できない](#devices-fail-to-register)」の原因 3 の解決策を参照してください。
 
 #### <a name="the-required-ports-arent-open-on-your-network"></a>必要なポートがネットワーク上で開かれていません
 
-**解決方法**:Jamf Pro と Intune を統合するための「[前提条件](conditional-access-integrate-jamf.md#prerequisites)」で、ネットワークのポートに関する情報を確認してください。
-
+**解決方法**:  
+Jamf Pro と Intune を統合するための「[前提条件](conditional-access-jamf-cloud-connector.md#prerequisites)」で、ネットワークのポートに関する情報を確認してください。
 
 ## <a name="next-steps"></a>次のステップ
+
 [Jamf Pro と Intune の統合](conditional-access-integrate-jamf.md)についてさらに学習します。

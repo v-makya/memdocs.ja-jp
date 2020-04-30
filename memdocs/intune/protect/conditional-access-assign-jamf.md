@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 3/13/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,22 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba902cca39db44c20c79ae7b960b13966c1a09d9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 8b7ef62056fc85f7584d0d7fed3eab646d199476
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323085"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81525677"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Jamf Pro で管理された Mac にコンプライアンスを適用します
 
-[Jamf Pro を Intune と統合する](conditional-access-integrate-jamf.md)と、条件付きアクセス ポリシーを使用して、組織の要件に従って Mac デバイスにコンプライアンスを適用できるようになります。  この記事では、次のタスクについて説明します。  
+Jamf Pro を Intune と統合すると、条件付きアクセス ポリシーを使用して、組織の要件に従って Mac デバイスにコンプライアンスを適用できるようになります。 この記事では、次のタスクについて説明します。  
 
 - 条件付きアクセス ポリシーを作成する。
 - Jamf Pro を構成して、Jamf で管理するデバイスに Intune ポータル サイト アプリを展開します。
 - Jamf Self Service アプリ内から起動するポータル サイト アプリにデバイス ユーザーがサインインするときに、Azure AD に登録するようにデバイスを構成します。 デバイス登録によって Azure AD の ID が確立され、条件付きアクセス ポリシーによって、会社のリソースへのアクセスについてデバイスを評価できるようになります。  
  
 この記事の手順では、Intune と Jamf Pro の両方のコンソールにアクセスする必要があります。
+Intune では Jamf Pro を統合する 2 つの方法がサポートされており、それらの方法は、この記事の手順とは別に構成します。
+
+- 推奨: [Jamf Cloud コネクタを使用して Jamf Pro を Intune と統合する](conditional-access-jamf-cloud-connector.md)
+- [Jamf Pro と Intune の統合を手動で構成する](conditional-access-integrate-jamf.md)
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Intune のデバイス コンプライアンス ポリシーを設定する
 
@@ -41,7 +45,7 @@ ms.locfileid: "80323085"
 
 2. **[デバイス]**  >  **[コンプライアンス ポリシー]** の順に選択します。 以前に作成したポリシーを使用している場合は、コンソールでそのポリシーを選択し、この手順の次の手順に進みます。 新しいポリシーを作成する場合は、 **[ポリシーの作成]** を選択してから、**macOS** の *[プラットフォーム]* を含むポリシーの詳細を指定します。 組織の要件を満たすように *[設定]* と *[コンプライアンス非対応に対するアクション]* を構成してから、 **[作成]** を選択してポリシーを保存します。
 
-3. ポリシーの *[概要]* ウィンドウで **[割り当て]** を選択します。 使用できるオプションを使用して、このポリシーを受け取る Azure Active Directory (Azure AD) ユーザーとセキュリティ グループを構成します。 **Jamf と Intune の統合では、デバイス グループを対象とするコンプライアンス ポリシーがサポートされません。**
+3. ポリシーの *[概要]* ウィンドウで **[割り当て]** を選択します。 使用できるオプションを使用して、このポリシーを受け取る Azure Active Directory (Azure AD) ユーザーとセキュリティ グループを構成します。 **Jamf と Intune の統合では、デバイス グループを対象とするコンプライアンス ポリシーがサポートされていません。**
 
 > [!NOTE]
 > Jamf と Intune の統合では、AAD ユーザー グループのみがサポートされています。 デバイス グループを対象とするデバイス コンプライアンス ポリシーは適用されません。

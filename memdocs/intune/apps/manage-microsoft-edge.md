@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 04/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58e651849632fd06f962edfc90649ad14eeaeda0
-ms.sourcegitcommit: e17fc618d4c56c38a65c489b73ba27baa133ee7b
+ms.openlocfilehash: cc1b11fe533499ebe29101c09fb1355cd8d04243
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80696541"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183077"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Microsoft Edge と Microsoft Intune を使用して Web アクセスを管理する
 
@@ -39,8 +39,8 @@ Microsoft Edge の Microsoft Intune 保護ポリシーは、組織のデータ�
 ## <a name="getting-started"></a>はじめに
 
 ご自身とエンド ユーザーは、組織で使用するためにパブリック アプリ ストアから Microsoft Edge をダウンロードすることができます。 ブラウザー ポリシーに対するオペレーティング システムの要件は、次のいずれかです。
-- Android 4 以降
-- iOS 8.0 以降
+- Android 5 以降
+- iOS 12.0 以降
 
 ## <a name="application-protection-policies-for-microsoft-edge"></a>Microsoft Edge のアプリケーション保護ポリシー
 
@@ -129,7 +129,7 @@ Azure AD のユーザーのグループに設定を割り当てます。 ユー�
 
 ## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>ユーザーに Intune Managed Browser ではなく Microsoft Edge を指示する 
 
-Intune Managed Browser と Microsoft Edge のどちらも、ポリシーで保護されたブラウザーとして使用できます。 ユーザーが確実に適切なブラウザー アプリの使用を指示されるようにするには、以下の構成設定で、すべての Intune で管理されたアプリ (Outlook、OneDrive、SharePoint など) を対象にします。
+Microsoft Edge は、ポリシーで保護されたブラウザーとして使用できます。 ユーザーが確実に適切なブラウザー アプリの使用を指示されるようにするには、以下の構成設定で、すべての Intune で管理されたアプリ (Outlook、OneDrive、SharePoint など) を対象にします。
 
 |    キー    |    値    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -137,12 +137,12 @@ Intune Managed Browser と Microsoft Edge のどちらも、ポリシーで保�
 
 このアプリ構成の値が設定されて**いない**場合、次のロジックで、企業のリンクを開くために使用されるブラウザーが定義されます。
 
-Android 上の場合:
+Android 上の場合: 
 - ユーザーが Intune Managed Browser と Microsoft Edge の両方をデバイスにダウンロードしている場合は、Intune Managed Browser が起動されます。 
 - Microsoft Edge のみがデバイスにダウンロードされていて、Intune ポリシーの対象になっている場合は、Microsoft Edge が起動されます。
 - Managed Browser のみがデバイス上にあり、Intune ポリシーの対象になっている場合は、Managed Browser が起動されます。
 
-iOS/iPadOS 上で、iOS バージョン 9.0.9+ 用の Intune SDK を統合したアプリ向けの場合:
+iOS/iPadOS 上で、iOS バージョン  9.0.9+ 用の Intune SDK を統合したアプリ向けの場合: 
 - Managed Browser と Microsoft Edge の両方がデバイス上にある場合は、Intune Managed Browser が起動されます。  
 - Microsoft Edge のみがデバイス上にあり、Intune ポリシーの対象になっている場合は、Microsoft Edge が起動されます。
 - Managed Browser のみがデバイス上にあり、Intune ポリシーの対象になっている場合は、Managed Browser が起動されます。
@@ -194,7 +194,7 @@ Microsoft Edge と [Azure AD アプリケーション プロキシ](https://docs
 
 |    キー    |    値    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    値の URL のセットを指定します。 各トップ サイト ショートカットは、タイトルと URL で構成されます。 タイトルと URL は、`|` 文字で区切ります。 次に例を示します。 <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    値の URL のセットを指定します。 各トップ サイト ショートカットは、タイトルと URL で構成されます。 タイトルと URL は、`|` 文字で区切ります。 次に例を示します。 <br> `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 ## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Microsoft Edge 内の新しいタブ ページ用に組織のロゴとブランドの色を構成する
 
@@ -415,7 +415,7 @@ Android デバイスでログを表示する方法については、[メール�
 
 Microsoft Edge のセキュリティとプライバシーに関するその他の考慮事項を次に示します。
 
-- Microsoft Edge では、ユーザーが自分のデバイス上でネイティブ ブラウザーに対して行った設定は使用されません (https://docs.microsoft.com/en-us/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps )。これは、Microsoft Edge でこれらの設定にアクセスできないためです。
+- Microsoft Edge では、ユーザーがデバイス上でネイティブ ブラウザーに対して行った設定は使用されません。これは、Microsoft Edge でこれらの設定にアクセスできないためです。
 - Microsoft Edge に関連付けられているアプリ保護ポリシーで、オプション **[アクセスの際にシンプルな PIN を要求する]** または **[アクセスの際に会社の資格情報を要求する]** を構成できます。 ユーザーは、認証ページでヘルプのリンクを選択した場合、ポリシーのブロック リストに追加されているかどうかにかかわらず、インターネット サイトを参照できます。
 - Microsoft Edge では、直接アクセスされたときにのみ、サイトへのアクセスをブロックできます。 ユーザーがサイトへのアクセスに中間サービス (翻訳サービスなど) を使っている場合、アクセスはブロックされません。
 - 認証を許可し、Intune ドキュメントにアクセスするために、* **.microsoft.com** は許可またはブロック リスト設定の対象から除外されます。 常に許可されます。

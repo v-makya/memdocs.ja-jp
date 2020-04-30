@@ -16,10 +16,18 @@ groups:
     title: 2019 年 5 月
   - id: mdm-preview
     title: プレビュー - 2018 年 10 月
+- id: edge-baseline-versions
+  title: Edge のベースライン バージョン
+  prompt: バージョンを選択する
+  pivots:
+  - id: edge-october-2019
+    title: 2019 年 10 月
+  - id: edge-april-2020
+    title: 2020 年 4 月
 metadata:
-  ms.openlocfilehash: 1b1f0e7b28dfda7ba9b4867c9641154147aa4c1f
-  ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+  ms.openlocfilehash: 2071c0b05d2ec5f8b5fb20f25436e0ec297613e6
+  ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79345937"
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81615751"

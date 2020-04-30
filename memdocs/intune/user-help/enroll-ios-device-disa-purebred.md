@@ -9,6 +9,7 @@ ms.date: 10/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 38d1b40ecdeee5bfd872297a5fd4f0229cb48dcf
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 268ed874be65c9ade7f801b89528d1a23f176ee1
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79337591"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82077803"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-disa-purebred"></a>Intune ポータル サイトと DISA Purebred を使用して iOS または iPadOS デバイスをセットアップする  
 
@@ -39,10 +40,10 @@ ms.locfileid: "79337591"
 この記事では、次のことについて説明します。  
 
    * Intune ポータル サイトを使用してモバイルの iOS デバイスまたは iPadOS デバイスを登録する。  
-   * 組織の派生資格情報プロバイダー [DISA Purebred](https://cyber.mil/pki-pke/purebred/) から派生資格情報を取得する。  
+   * 組織の派生資格情報プロバイダー DISA Purebred (https:\//cyber.mil/pki-pke/purebred/) から派生資格情報を取得する。  
 
 ## <a name="what-are-derived-credentials"></a>派生資格情報とは  
-派生資格情報とは、スマート カードの資格情報から派生し、デバイスにインストールされる証明書です。 これにより、未承認ユーザーによる機密情報へのアクセスを防ぎながら、作業リソースへのリモート アクセスが許可されます。  
+派生資格情報とは、ご自分のスマート カードの資格情報から派生し、デバイスにインストールされる証明書です。 これにより、未承認ユーザーによる機密情報へのアクセスを防ぎながら、作業リソースへのリモート アクセスが許可されます。  
 
 派生資格情報は次の目的に使用されます。 
 * 学校または職場のアプリ、Wi-Fi、VPN にサインインする学生と従業員を認証する
@@ -78,7 +79,7 @@ ms.locfileid: "79337591"
 
     ![デバイスのホーム画面に Intune ポータル サイトのプッシュ通知が表示されたスクリーンショットの例。](./media/action-required-in-app-intercede.png)  
 8. **[モバイル スマート カード アクセスのセットアップ]** 画面で次のようにします。  
-    」を参照します。 組織のセットアップ手順へのリンクをタップします。 組織で追加の手順が提供されていない場合は、この記事が表示されます。  
+    a. 組織のセットアップ手順へのリンクをタップします。 組織で追加の手順が提供されていない場合は、この記事が表示されます。  
     b. **[開く]** をクリックして Purebred アプリを開きます。  
 
     ![Intune ポータル サイトの [モバイル スマート カード アクセスのセットアップ] 画面のスクリーンショットの例。](./media/smart-card-open-disa-purebred.png)  
@@ -99,7 +100,7 @@ ms.locfileid: "79337591"
 
 20. **[証明書のインポート]** 画面で、DISA Purebred から入手した派生資格情報を取得してインポートします。  
 
-    」を参照します。 **[続行]** をタップします。   
+    a. **[続行]** をタップします。   
 
     ![Intune ポータル サイトのインポート証明書設定画面のスクリーンショットの例。](./media/import-certificate-disa-purebred.png)  
     b. iCloud Drive で **[Browse]\(参照\)**  >  **[Locations]\(場所\)** に移動し、 **[More Locations]\(その他の場所\)** をタップします。  

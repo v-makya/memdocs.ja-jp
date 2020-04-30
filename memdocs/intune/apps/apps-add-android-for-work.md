@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 04/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6855abaf09a89303bfadd1a973dd1e1761346af
-ms.sourcegitcommit: 954b3aae7916ad14065e6e86a577c5205103a50e
+ms.openlocfilehash: 728fa69303760252068db454c04ed4431b89602a
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80624899"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81615517"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Intune を使ってマネージド Google Play アプリを Android Enterprise デバイスに追加する
 
@@ -141,8 +141,6 @@ FAQ を含むマネージド Google Play プライベート アプリの詳細�
 2. コンソールで、 **[Add new application]\(新しいアプリケーションの追加\)** を選択します。
 3. アプリをアップロードし、アプリに関する情報を提供する方法は、アプリを Google Play ストアに公開する方法と同じです。 ただし、 **[Only make this application available to my organization (<*organization name*>)]\(このアプリケーションを自分の組織 (<組織名>) のみが入手できるようにする\)** を選択する必要があります。
 
-    ![組織のみがアプリを入手できるようにする](./media/apps-add-android-for-work/restrict.png)
-
     この操作により、自分の組織のみがアプリを入手できるようにします。 これは一般の Google Play ストアでは使用できません。
 
     Android アプリのアップロードと公開の詳細については、[Google Developer Console のヘルプ](https://support.google.com/googleplay/android-developer/answer/113469)を参照してください。
@@ -218,6 +216,10 @@ Android Enterprise では、Intune にアプリを同期してユーザーに割
 ## <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices"></a>Android エンタープライズ仕事用プロファイル デバイスに関するマネージド Google Play アプリの追加レポート
 
 Android エンタープライズ仕事用プロファイル デバイスに展開されたマネージド Google Play アプリの場合は、Intune を使用して、デバイスにインストールされたアプリの状態とバージョン番号を表示できます。 
+
+## <a name="working-with-managed-google-play-closed-testing-tracks"></a>マネージド Google Play のクローズド テスト トラックの操作
+
+Android Enterprise シナリオに登録されているデバイス (**Android Enterprise 仕事用プロファイル**、**フル マネージド**、**専用**) に非運用バージョンのマネージド Google Play アプリをテスト用に配布できます。 Intune では、アプリに運用前のビルド テスト トラックが発行されているかどうかや、そのトラックを AAD ユーザー グループまたはデバイス グループに割り当てることができるかどうかを確認できます。 現在存在するグループに運用バージョンを割り当てるワークフローは、非運用チャネルを割り当てる場合と同じです。 展開後の各トラックのインストール状態は、マネージド Google Play でのトラックのバージョン番号に対応します。 詳細については、[アプリのプレリリース版のテスト用の Google Play のクローズド テスト トラック](https://support.google.com/googleplay/android-developer/answer/3131213)に関するページをご覧ください。
 
 ## <a name="delete-managed-google-play-apps"></a>managed Google Play アプリを削除する
 必要に応じて、Microsoft Intune から managed Google Play アプリを削除できます。 マネージド Google Play アプリを削除するには、Azure portal で Microsoft Intune を開き、 **[アプリ]**  >  **[すべてのアプリ]** を選択します。 アプリの一覧から、managed Google Play アプリの右側にある省略記号 (...) を選択し、表示された一覧で **[削除]** を選択します。 アプリの一覧からマネージド Google Play アプリを削除すると、そのマネージド Google Play アプリは自動的に未承認になります。

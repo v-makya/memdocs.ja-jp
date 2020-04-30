@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,28 +16,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c5528e5de99e599c968f0c006aa98545b2004e2
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: beea54b7ca244190ec0821d4ce8364369797590a
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551546"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166615"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Intune で条件付きアクセスによる Microsoft Defender ATP のコンプライアンスを強制する
 
-Mobile Threat Defense ソリューションとして Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) を Microsoft Intune と統合できます。 統合することで、セキュリティ侵害を防止し、組織内での侵害の影響を抑えることができます。 Microsoft Defender ATP は、Windows 10 以降を稼働しているデバイスで動作します。
+Mobile Threat Defense ソリューションとして Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) を Microsoft Intune と統合できます。 統合することで、セキュリティ侵害を防止し、組織内での侵害の影響を抑えることができます。 Microsoft Defender ATP は、Windows 10 以降を実行しているデバイスと Android デバイスで動作します。
 
 正しく設定するには、以下の構成を同時に使用します。
 
-- **Intune と Microsoft Defender ATP の間にサービス間接続を確立する**。 この接続により、Microsoft Defender ATP が Intune で管理する Windows 10 デバイスからコンピューターのリスクに関するデータを収集できるようになります。
+- **Intune と Microsoft Defender ATP の間にサービス間接続を確立する**。 この接続により、Microsoft Defender ATP が、Intune で管理する Windows 10 デバイスおよび Android デバイスからコンピューターのリスクに関するデータを収集できるようになります。
 - **デバイス構成プロファイルを使用して、デバイスを Microsoft Defender ATP にオンボードする**。 デバイスをオンボードして、Microsoft Defender ATP と通信を行い、そのリスク レベルを評価するのに役立つデータを提供するようにそれらを構成します。
 - **デバイス コンプライアンス ポリシーを使用して、許可するリスクのレベルを設定する**。 リスク レベルは Microsoft Defender ATP によって報告されます。 許可したリスク レベルを超えているデバイスは、非準拠として識別されます。
 - **条件付きアクセス ポリシーを使用**して、ユーザーが非準拠のデバイスから企業リソースにアクセスできないようにします。
 
 Intune を Microsoft Defender ATP と統合する場合、ATP の脅威と脆弱性の管理 (TVM) を利用し、[Intune を使って TVM によって検出されたエンドポイントの脆弱性を修復](atp-manage-vulnerabilities.md)できます。
-
-> [!NOTE]
-> Intune ユーザー インターフェイス (UI) は全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、この記事で説明する設定を作成または編集する際のワークフローが若干異なります。
 
 ## <a name="example-of-using-microsoft-defender-atp-with-intune"></a>Intune で Microsoft Defender ATP を使用する例
 
@@ -61,7 +58,7 @@ Microsoft Defender ATP は、このシナリオのようなセキュリティ �
 Intune で Microsoft Defender ATP を使用する場合は、以下が構成済みであり、使用できる状態であることを確認してください。
 
 - Enterprise Mobility + Security E3 および Windows E5 (または Microsoft 365 Enterprise E5) のライセンス済みテナント
-- [Intune で管理されている](../enrollment/windows-enroll.md) Windows 10 デバイス (Azure AD にも参加している) を含む Microsoft Intune 環境
+- [Intune で管理されている](../enrollment/windows-enroll.md) Windows 10 デバイスまたは Android デバイス (Azure AD にも参加している) を含む Microsoft Intune 環境
 - [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) および Microsoft Defender セキュリティ センター (ATP ポータル) へのアクセス
 
 > [!NOTE]
@@ -81,15 +78,17 @@ Defender ATP を有効にする必要があるのは、テナントごとに 1 �
 
    ![選択して Microsoft Defender セキュリティ センターを開く](./media/advanced-threat-protection/atp-device-compliance-open-microsoft-defender.png)
 
-4. **Microsoft Defender セキュリティ センター**で次の操作を行います。
-    1. **[設定]**  >  **[高度な機能]** の順に選択します。
-    2. **Microsoft Intune の接続**については、次のように **[オン]** を選択します。
+3. **Microsoft Defender セキュリティ センター**で次の操作を行います。
+   1. **[設定]**  >  **[高度な機能]** の順に選択します。
+   2. **Microsoft Intune の接続**については、次のように **[オン]** を選択します。
 
-        ![Intune への接続を有効にする](./media/advanced-threat-protection/atp-security-center-intune-toggle.png)
+      ![Intune への接続を有効にする](./media/advanced-threat-protection/atp-security-center-intune-toggle.png)
 
-    3. **[環境設定の保存]** を選択します。
+   3. **[環境設定の保存]** を選択します。
 
-4. Microsoft Endpoint Manager admin center で **[Microsoft Defender ATP]** に戻ります。 **[MDM コンプライアンス ポリシー設定]** の下で **[Connect Windows devices version 10.0.15063 and above to Microsoft Defender ATP]\(Windows デバイス バージョン 10.0.15063 以上を Microsoft Defender ATP に接続する\)** を **[オン]** に設定します。
+4. Microsoft Endpoint Manager admin center で **[Microsoft Defender ATP]** に戻ります。 組織のニーズに応じて、 **[MDM コンプライアンスポリシー設定]** で:
+   - **[バージョン 10.0.15063 以上の Windows デバイスを Microsoft Defender ATP に接続します]** を **[オン]** に設定し、および/または
+   - **[バージョン 6.0.0 以上の Android デバイスを Microsoft Defender ATP に接続します]** を **[オン]** に設定します。
 
 5. **[保存]** を選択します。
 
@@ -107,9 +106,9 @@ Defender ATP を有効にする必要があるのは、テナントごとに 1 �
 >
 > 従来の条件付きアクセス ポリシーを表示するには、[Azure](https://portal.azure.com/#home) で **[Azure Active Directory]**  >  **[条件付きアクセス]**  >  **[クラシック ポリシー]** の順に移動します。
 
-## <a name="onboard-devices-by-using-a-configuration-profile"></a>構成プロファイルを使用してデバイスをオンボードする
+## <a name="onboard-windows-devices-by-using-a-configuration-profile"></a>構成プロファイルを使用して Windows デバイスをオンボードする 
 
-Intune と Microsoft Defender ATP の間にサービス間接続を確立したら、Intune の管理対象デバイスを ATP にオンボードして、そのリスク レベルに関するデータを収集して使用できるようにします。 デバイスをオンボードするには、Microsoft Defender ATP のデバイス構成プロファイルを使用します。
+Windows プラットフォームでは、Intune と Microsoft Defender ATP の間にサービス間接続を確立したら、Intune の管理対象デバイスを ATP にオンボードして、そのリスク レベルに関するデータを収集して使用できるようにします。 デバイスをオンボードするには、Microsoft Defender ATP のデバイス構成プロファイルを使用します。
 
 Microsoft Defender ATP への接続を確立したときに、Intune は Microsoft Defender ATP から Microsoft Defender ATP のオンボード構成パッケージを受け取りました。 このパッケージは、デバイス構成プロファイルを使用してデバイスに展開されます。 この構成パッケージによってデバイスが構成され、[Microsoft Defender ATP サービス](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)と通信し、ファイルのスキャン、脅威の検出、Microsoft Defender ATP へのリスクの報告が行われるようになります。 構成パッケージを使用してデバイスをオンボードした後は、再度これを行う必要はありません。 [グループ ポリシーまたは Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints) を使用して、デバイスをオンボードすることもできます。
 
@@ -118,7 +117,7 @@ Microsoft Defender ATP への接続を確立したときに、Intune は Microso
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 3. **名前**と**説明**を入力します。
-4. **[プラットフォーム]** では、 **[Windows 10 以降]** を選択します。
+4. **[プラットフォーム]** では、 **[Windows 10 以降]** を選択します。 
 5. **[プロファイルの種類]** では、 **[Microsoft Defender ATP (Windows 10 デスクトップ)]** を選択します。
 6. 次のように設定を構成します。
 
@@ -137,7 +136,7 @@ Microsoft Defender ATP への接続を確立したときに、Intune は Microso
 
 ## <a name="create-and-assign-the-compliance-policy"></a>コンプライアンス ポリシーを作成して割り当てる
 
-コンプライアンス ポリシーによって、デバイスに対して許容可能と見なすリスク レベルが決まります。
+Windows デバイスと Android デバイスのどちらでも、コンプライアンス ポリシーによって、デバイスに対して許容可能と見なすリスク レベルが決まります。
 
 コンプライアンス ポリシーの作成に慣れていない場合は、「*Microsoft Intune でコンプライアンス ポリシーを作成する*」の記事の「[ポリシーを作成する](../protect/create-compliance-policy.md#create-the-policy)」の手順を参照してください。 次の情報は、コンプライアンス ポリシーの一部として Defender ATP を構成する場合に固有です。
 
@@ -145,9 +144,9 @@ Microsoft Defender ATP への接続を確立したときに、Intune は Microso
 
 2. **[デバイス]**  >  **[コンプライアンス ポリシー]**  >  **[ポリシー]**  >  **[ポリシーの作成]** を選択します。
 
-3. **[プラットフォーム]** には *[Windows 10 以降]* を選択し、 **[作成]** を選択して、 **[ポリシーの作成]** 構成ウィンドウを開きます。
+3. **プラットフォーム** については *Windows 10 以降*、**Android デバイス管理者**、および/または **Android Enterprise** を選択します。 次に、 **[作成]** を選択し、 **[ポリシーの作成]** 構成ウィンドウを開きます。
 
-4. **[基本]** タブで、後で識別しやすいように **[名前]** を指定します。 **[説明]** を指定することもできます。
+4. 後で識別しやすいように **[名前]** を指定します。 **[説明]** を指定することもできます。
   
 5. **[コンプライアンス設定]** タブで、 **[Microsoft Defender ATP]** グループを展開し、 **[デバイスは、次のマシン リスク スコア以下であることが必要]** を目的のレベルに設定します。
 
@@ -205,7 +204,7 @@ Microsoft Defender ATP への接続を確立したときに、Intune は Microso
 
 ## <a name="view-onboarding-status"></a>オンボードの状態を表示する
 
-Intune で管理されているすべての Windows 10 デバイスのオンボードの状態を確認するには、 **[デバイスのポリシー準拠]**  >  **[Microsoft Defender ATP]** に移動します。 このページから、さらに多くのデバイスを Microsoft Defender ATP にオンボードするためのデバイス構成プロファイルの作成を開始することもできます。
+Intune で管理されているすべての Windows 10 デバイスのオンボードの状態を確認するには、 **[テナント管理]**  >  **[Microsoft Defender ATP]** に移動します。 このページから、さらに多くのデバイスを Microsoft Defender ATP にオンボードするためのデバイス構成プロファイルの作成を開始することもできます。
 
 ## <a name="next-steps"></a>次のステップ
 

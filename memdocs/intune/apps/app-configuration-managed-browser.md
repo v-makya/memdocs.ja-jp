@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b62a717217daaffeca5480ac55d0ccef3b10136
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 47b6f624ba5c12cd68322bde5c1f85ad7f0a6430
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323404"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "80862841"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Microsoft Intune のポリシーで保護されたブラウザーを使用して Web アクセスを管理する
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune ポリシーで保護されているブラウザー (Microsoft Edge または Intune Managed Browser) を使用して、企業の Web サイトが常にインプレースの保護付きでアクセスされるようにすることができます。  Intune を使用して構成されている場合、保護ブラウザーでは以下を利用します。
+Intune ポリシーで保護されたブラウザー (Microsoft Edge など) を使用して、企業の Web サイトが常にインプレースの保護付きでアクセスされるようにすることができます。 Intune を使用して構成されている場合、保護ブラウザーでは以下を利用します。
 
 - アプリケーション保護ポリシー
 - 条件付きアクセス
@@ -38,11 +38,11 @@ Intune ポリシーで保護されているブラウザー (Microsoft Edge ま�
 - Azure アプリケーション プロキシの統合
 
 > [!IMPORTANT]
-> Intune Managed Browser は廃止予定です。 保護された Intune ブラウザー エクスペリエンスには Microsoft Edge を使用してください。 
+> Intune Managed Browser は廃止されました。 保護された Intune ブラウザー エクスペリエンスには [Microsoft Edge](../apps/manage-microsoft-edge.md) を使用してください。 
 
 ## <a name="microsoft-edge-support"></a>Microsoft Edge のサポート
 
-iOS/iPadOS および Android デバイスでエンタープライズ シナリオに Microsoft Edge を使用できます。 Microsoft Edge では、Intune Managed Browser と同じ管理シナリオがすべてサポートされ、エンド ユーザー エクスペリエンスの機能強化が追加されます。 Intune ポリシーによって有効化された次の Microsoft Edge エンタープライズ機能が含まれます。
+iOS/iPadOS および Android デバイスでエンタープライズ シナリオに Microsoft Edge を使用できます。 Intune ポリシーによって有効化された次の Microsoft Edge エンタープライズ機能が含まれます。
 
 - **デュアル ID** -ユーザーは、閲覧用に、個人アカウントに加えて、職場アカウントを追加できます。 2 つの ID の間は完全に分離されており、Office 365 と Outlook のアーキテクチャとエクスペリエンスに似ています。 Intune 管理者は、職場アカウント内に保護された閲覧エクスペリエンス用の必要なポリシーを設定できます。 
 - **Intune アプリ保護ポリシーの統合**- 管理者は、切り取り、コピー、貼り付けの制御、画面キャプチャの禁止、ユーザーが選択したリンクを他の管理対象アプリでのみ開けるようにするなどのアプリ保護ポリシーの対象として Microsoft Edge を指定できるようになりました。
@@ -53,7 +53,7 @@ Microsoft Edge の Microsoft Intune 保護ポリシーは、組織のデータ�
 
 ## <a name="getting-started"></a>はじめに
 
-Microsoft Edge および Intune Managed Browser は、公開アプリ ストアからダウンロードできる、組織内で使用するための Web ブラウザー アプリです。 
+Microsoft Edge は、ご自身とエンド ユーザーが組織で使用するためにパブリック アプリ ストアからダウンロードできる Web ブラウザー アプリです。 
 
 ブラウザー ポリシーに対するオペレーティング システムの要件:
 - Android 4 以降、または
@@ -189,7 +189,7 @@ SSO では、iOS/iPadOS 上の Microsoft Authenticator アプリまたは Androi
 
 ## <a name="how-to-configure-application-proxy-settings-for-protected-browsers"></a>保護ブラウザーのアプリケーション プロキシ設定を構成する方法
 
-Microsoft Edge および Intune Managed Browser と [Azure AD アプリケーション プロキシ]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)は、iOS/iPadOS および Android デバイスのユーザーに対して、次のシナリオをサポートするために一緒に使用することができます。
+Microsoft Edge と [Azure AD アプリケーション プロキシ]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)は、iOS/iPadOS および Android デバイスのユーザーに対して、次のシナリオをサポートするために一緒に使用することができます。
 
 - ユーザーがダウンロードして、Microsoft Outlook アプリにサインインします。 Intune アプリの保護ポリシーが自動的に適用されます。 保護ポリシーでは、保存されたデータを暗号化し、ユーザーが企業ファイルを管理されていないアプリまたはデバイス上の場所に転送できないようにします。 ユーザーが Outlook 内のイントラネット サイトへのリンクをクリックすると、そのリンクを別のブラウザーではなく、保護ブラウザー アプリ内で開くように指定することができます。 保護ブラウザーは、このイントラネット サイトがアプリケーション プロキシを使用してユーザーに公開されていることを認識します。 ユーザーは、イントラネット サイトに到達する前に、適用される多要素認証と条件付きアクセスを使って認証するために、アプリケーション プロキシを介して自動的にルーティングされます。 このサイトは、ユーザーがリモートにいるときに、以前は見つけることができませんでしたが、アクセスできるようになり、Outlook のリンクが期待どおりに動作するようになりました。
 - リモート ユーザーが保護ブラウザー アプリケーションを開き、内部 URL を使用してイントラネット サイトに移動します。 保護ブラウザーは、このイントラネット サイトがアプリケーション プロキシを使用してユーザーに公開されていることを認識します。 ユーザーは、イントラネット サイトに到達する前に、適用される多要素認証と条件付きアクセスを使って認証するために、アプリケーション プロキシを介して自動的にルーティングされます。 このサイトは、ユーザーがリモートにいるときに、以前は見つけることができませんでしたが、アクセスできるようになりました。
@@ -199,18 +199,17 @@ Microsoft Edge および Intune Managed Browser と [Azure AD アプリケーシ
 - Azure AD アプリケーション プロキシ経由の内部アプリケーションをセットアップします。
   - アプリケーション プロキシを構成し、アプリケーションを公開するには、[セットアップに関するドキュメント](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy)を参照してください。 
   - リダイレクトが行われるエンタープライズ アプリケーションに、[ユーザーが割り当てられる必要があります](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-add-on-premises-application#add-a-user-for-testing)。 これは、事前認証のためにアプリケーションがパススルー モードに設定されている場合や、アプリケーション プロキシ設定でユーザーの割り当て要件がオフになっている場合でも、実行する必要があります。
-- Managed Browser アプリの最小バージョン 1.2.0 を使用する必要があります。
-- Managed Browser または Microsoft Edge アプリのユーザーは、[Intune アプリの保護ポリシー](app-protection-policy.md)をアプリに割り当てています。
+- Microsoft Edge アプリのユーザーは、[Intune アプリの保護ポリシー](app-protection-policy.md)をアプリに割り当てておく必要があります。
 
     > [!NOTE]
-    > 更新されたアプリケーション プロキシのリダイレクト データが、Managed Browser や Microsoft Edge で有効になるまでには、最大で 24 時間かかる場合があります。
+    > 更新されたアプリケーション プロキシのリダイレクト データが Microsoft Edge で有効になるまでには、最大で 24 時間かかる場合があります。
 
 
 #### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>手順 1:Outlook から保護ブラウザーへの自動リダイレクトを有効にする
 Outlook は、アプリ保護ポリシーの **[Managed Browser に表示する Web コンテンツを制限する]** 設定を有効にして構成される必要があります。
 
 #### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>手順 2:保護されているブラウザーに割り当てられたアプリ構成ポリシーを割り当てる
-この手順では、アプリ プロキシのリダイレクトを使用するように、Managed Browser または Microsoft Edge アプリを構成します。 
+この手順では、アプリ プロキシのリダイレクトを使用するように、Microsoft Edge アプリを構成します。 
 
 ポリシーの構成設定にある **[Edge]** タブを開き、アプリケーション プロキシ リダイレクトの値に **[有効]** を選択します。 この設定を有効にすると、ユーザーは、Azure アプリケーション プロキシを通じて発行された企業リンクおよびオンプレミス Web アプリにアクセスできるようになります。
 
@@ -223,7 +222,7 @@ Outlook は、アプリ保護ポリシーの **[Managed Browser に表示する 
 - ホーム ページ ショートカット アイコンが、検索コントロールの下にアイコンとして表示されます。  編集または削除することはできません。
 - ホーム ページ ショートカットには、区別のために組織の名前が表示されます。  これは常に最初のアイコンとして表示されます。
 
-Microsoft Edge または Managed Browser アプリの構成を作成する手順に従い、以下のキーと値のペアを指定します。
+Microsoft Edge アプリの構成を作成する手順に従い、以下のキーと値のペアを指定します。
 
 |                                キー                                |                                                           値                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -237,7 +236,7 @@ Microsoft Edge または Managed Browser アプリの構成を作成する手順
 - これらのブックマークは、リストの上部に表示されます。 ユーザーが作成したブックマークは、これらのブックマークの下に表示されます。
 - アプリ プロキシのリダイレクトを有効にした場合は、内部 URL または外部 URL を使用してアプリ プロキシ Web アプリを追加できます。
 
-Microsoft Edge または Managed Browser アプリの構成を作成する手順に従い、以下のキーと値のペアを指定します。
+Microsoft Edge アプリの構成を作成する手順に従い、以下のキーと値のペアを指定します。
 
 |                                キー                                 |                                                                                                                                                                                                                                                         値                                                                                                                                                                                                                                                          |
 |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -245,7 +244,7 @@ Microsoft Edge または Managed Browser アプリの構成を作成する手順
 
 ## <a name="how-to-specify-allowed-and-blocked-urls-for-a-protected-browser"></a>保護ブラウザーで許可する URL とブロックする URL を指定する方法
 
-Microsoft Edge または Managed Browser アプリの構成を作成する手順に従い、以下のキーと値のペアを指定します。
+Microsoft Edge アプリの構成を作成する手順に従い、以下のキーと値のペアを指定します。
 
 |キー|値|
 |-|-|
@@ -311,13 +310,13 @@ Microsoft Edge モバイル エンタープライズ エクスペリエンスの
 
 このモデルの利点の 1 つは、ユーザーが組織では許可されていないサイトへのリンク (新聞記事など) を開こうとした場合、個人用コンテキストでは実行でき、仕事用コンテキストからの完全な分離が維持されることです。 このようなソフト移行は、既定で有効になっています。 
 
-Microsoft Edge または Managed Browser アプリの構成を作成する手順に従い、以下のキーと値のペアを指定します。
+Microsoft Edge アプリの構成を作成する手順に従い、以下のキーと値のペアを指定します。
 
 | キー                                                                | 値                                                 |
 |--------------------------------------------------------------------|-------------------------------------------------------|
 | **com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock** | **False** の場合、これらのソフト移行の実行がブロックされます。 |
 
-## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>iOS で Managed Browser を使用し、管理対象アプリ ログにアクセスする方法
+## <a name="how-to-access-managed-app-logs-using-the-managed-browser-on-ios"></a>iOS で Managed Browser を使用し、管理対象アプリ ログにアクセスする方法
 
 iOS/iPadOS デバイスに Managed Browser をインストールしているエンド ユーザーは、Microsoft が公開しているすべてのアプリの管理状態を表示できます。 管理対象 iOS/iPadOS アプリの問題を解決するためにログを送信できます。
 

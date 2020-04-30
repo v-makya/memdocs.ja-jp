@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b91f6b11df1b65176711df0ecd907a1764c2e692
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: 3892da4f3783e8b169bff576a9945f34cc47c356
+ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79355089"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81726043"
 ---
 # <a name="using-the-intune-docs"></a>Intune のドキュメントの使用
 
@@ -117,11 +117,11 @@ Intune のドキュメントに投稿する場合、次の一般的なガイド�
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Microsoft エンドポイント マネージャーのドキュメントの統合
 
-Intune と Configuration Manager の結合シナリオをより適切にサポートするため、このドキュメント ライブラリは [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) に移動されました。 Configuration Manager のドキュメント ライブラリは、後で `docs.microsoft.com/mem/configmgr` に移動されます。 すべてのリンクは自動的にリダイレクトされるため、このコンテンツを読むために変更を行う必要はありません。
+Intune と Configuration Manager の結合シナリオをより適切にサポートするために、Intune と Configuration Manager のドキュメントが Microsoft Endpoint Manager サイトに統合されました。 Intune のドキュメントは現在 [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) にあり、Configuration Manager のドキュメント ライブラリは [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr) で入手できます。 古い URL を使用している場合、すべてのリンクは自動的にリダイレクトされるため、このコンテンツを読むために変更を行う必要はありません。
 
 フィードバックを提供したり、記事に投稿したりする場合は、いくつかの変更が必要です。
 
-- 既存の GitHub のイシューは、元のリポジトリ [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues) にそのまま残ります。
+- 既存の GitHub のイシューは、元のリポジトリ [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues) または [https://github.com/MicrosoftDocs/sccmdocs/issues](https://github.com/MicrosoftDocs/sccmdocs/) にそのまま残ります。
 
   - これらのイシューは、リンク先の記事の「フィードバック」セクションでは、未解決または解決済みのイシューとしては表示されません。
 
