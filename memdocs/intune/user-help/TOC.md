@@ -37,7 +37,7 @@
 #### [Samsung KNOX に関する一般的な問題の解決](samsung-knox-errors-android.md)
 #### [Outlook をインストールするデバイスを更新する](update-device-outlook-android.md)
 
-#### ログ記録
+#### ログの記録
 ##### [詳細ログ記録を有効にする](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
 ##### [アップロードとメールのログ](send-logs-to-your-it-admin-by-email-android.md)
 ##### [USB ケーブルを使用してログを送信する](send-logs-to-your-it-admin-using-cable-android.md)
@@ -54,12 +54,11 @@
 #### [サポートされていないセキュリティ パッチ](you-need-to-update-your-device-OS-security-patch-android.md)
 #### [暗号化エラーのあるデバイス](your-device-appears-encrypted-but-cp-says-otherwise-android.md)
 
-### Mobile Threat Defense
-#### [Mobile Threat Defense アプリのインストール](you-are-prompted-to-install-mtd-android.md)
-##### [Lookout for Work をインストールする](you-are-prompted-to-install-lookout-for-work-android.md)
-##### [Symantec Endpoint Protection Mobile をインストールする](you-are-prompted-to-install-skycure-android.md)
-##### [SandBlast Mobile Protect をインストールする](you-are-prompted-to-install-sandblast-android.md)
-##### [Zimperium zIPS をインストールする](you-are-prompted-to-install-zips-android.md)
+### Mobile Threat Defense アプリ 
+#### [Lookout for Work をインストールする](you-are-prompted-to-install-lookout-for-work-android.md)
+#### [Symantec Endpoint Protection Mobile をインストールする](you-are-prompted-to-install-skycure-android.md)
+#### [SandBlast Mobile Protect をインストールする](you-are-prompted-to-install-sandblast-android.md)
+#### [Zimperium zIPS をインストールする](you-are-prompted-to-install-zips-android.md)
 #### [脅威の解決](you-need-to-resolve-a-threat-found-by-mtd-android.md)
 ##### [Lookout for Work を使用する](you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md)
 ##### [Symantec Endpoint Protection Mobile を使用する](you-need-to-resolve-a-threat-found-by-skycure-android.md)
@@ -99,12 +98,11 @@
 #### [Outlook をインストールするデバイスを更新する](update-device-outlook-ios.md)
 #### [使用しているバージョンの iOS がまだサポートされていない](your-ios-version-isnt-yet-supported.md)
 
-### Mobile Threat Defense
-#### [Mobile Threat Defense アプリのインストール](you-are-prompted-to-install-mtd-ios.md)
-##### [Lookout for Work をインストールする](you-are-prompted-to-install-lookout-for-work-ios.md)
-##### [Symantec Endpoint Protection Mobile をインストールする](you-are-prompted-to-install-skycure-ios.md)
-##### [SandBlast Mobile Protect をインストールする](you-are-prompted-to-install-sandblast-ios.md)
-##### [Zimperium zIPS をインストールする](you-are-prompted-to-install-zips-ios.md)
+### Mobile Threat Defense アプリ
+#### [Lookout for Work をインストールする](you-are-prompted-to-install-lookout-for-work-ios.md)
+#### [Symantec Endpoint Protection Mobile をインストールする](you-are-prompted-to-install-skycure-ios.md)
+#### [SandBlast Mobile Protect をインストールする](you-are-prompted-to-install-sandblast-ios.md)
+#### [Zimperium zIPS をインストールする](you-are-prompted-to-install-zips-ios.md)
 #### [脅威の解決](you-need-to-resolve-a-threat-found-by-mtd-ios.md)
 ##### [Lookout for Work を使用する](you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md)
 ##### [Symantec Endpoint Protection Mobile を使用する](you-need-to-resolve-a-threat-found-by-skycure-ios.md)
