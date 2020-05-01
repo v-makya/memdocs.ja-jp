@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 647eba601cbfa5304bf02f8bcf059fe6e851cbf0
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 522e01b0d811d768d4f239bc917c2e3db08e05ef
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074063"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210079"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager の Technical Preview 1806 の機能
 
@@ -163,10 +163,10 @@ SCUP では引き続き、他のカタログとシナリオがサポートされ
 
 ## <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>Microsoft Edge 用に Windows Defender SmartScreen 設定を構成する
 <!--1353701-->
-このリリースでは、[Microsoft Edge ブラウザー コンプライアンスの設定ポリシー](../../compliance/deploy-use/browser-profiles.md)に、[Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) の 3 つの設定が追加されています。 ポリシーには、 **[SmartScreen の設定]** ページの次の追加設定が含まれるようになりました。
-- **SmartScreen を許可する**:Windows Defender SmartScreen を許可するかどうかを指定します。 詳細については、[AllowSmartScreen ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)に関するページを参照してください。
-- **サイトの SmartScreen プロンプトをユーザーがオーバーライドできる**:悪意のある可能性がある Web サイトに関する Windows Defender SmartScreen フィルターの警告をユーザーがオーバーライドできるかどうかを指定します。 詳細については、[PreventSmartScreenPromptOverride ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)に関するページを参照してください。
-- **ファイルの SmartScreen プロンプトをユーザーがオーバーライドできる**:確認されていないファイルのダウンロードに関する Windows Defender SmartScreen フィルターの警告をユーザーがオーバーライドできるかどうかを指定します。 詳細については、[PreventSmartScreenPromptOverrideForFiles ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)に関するページを参照してください。
+このリリースでは、[Microsoft Edge ブラウザー コンプライアンスの設定ポリシー](../../compliance/deploy-use/browser-profiles.md)に、[Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) の 3 つの設定が追加されています。 ポリシーには、 **[SmartScreen の設定]** ページの次の追加設定が含まれるようになりました。
+- **SmartScreen を許可する**:Windows Defender SmartScreen を許可するかどうかを指定します。 詳細については、[AllowSmartScreen ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)に関するページを参照してください。
+- **サイトの SmartScreen プロンプトをユーザーがオーバーライドできる**:悪意のある可能性がある Web サイトに関する Windows Defender SmartScreen フィルターの警告をユーザーがオーバーライドできるかどうかを指定します。 詳細については、[PreventSmartScreenPromptOverride ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)に関するページを参照してください。
+- **ファイルの SmartScreen プロンプトをユーザーがオーバーライドできる**:確認されていないファイルのダウンロードに関する Windows Defender SmartScreen フィルターの警告をユーザーがオーバーライドできるかどうかを指定します。 詳細については、[PreventSmartScreenPromptOverrideForFiles ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)に関するページを参照してください。
 
 
 
