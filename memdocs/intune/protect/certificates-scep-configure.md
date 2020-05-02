@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 04/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4698c0bf286fab855b0067899c5347b643ee6ce9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 2163f420089dcd8936d6dc64b8ce02c5ff268b53
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325750"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079894"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Intune を使用して SCEP をサポートするようにインフラストラクチャを構成する
 
@@ -53,6 +53,7 @@ Intune では、[アプリと企業リソースへの接続を認証する](cert
 - **Microsoft Intune Certificate Connector** – Intune で SCEP 証明書プロファイルを使用するには、Microsoft Intune Certificate Connector が必要です。 この記事では、[このコネクタをインストールする](#install-the-intune-certificate-connector)手順について説明します。
 
   コネクタでは、Federal Information Processing Standards (FIPS) モードがサポートされています。 FIPS は必須ではありませんが、有効になっている場合は、証明書の発行および失効を行うことができます。
+  - このコネクタのネットワーク要件は、[マネージド デバイス](../fundamentals/intune-endpoints.md#access-for-managed-devices)と同じです。
   - コネクタは、NDES サーバー ロールと同じサーバー (Windows Server 2012 R2 以降が実行されているサーバー) 上で実行する必要があります。
   - コネクタで必要な .NET 4.5 Framework は、Windows Server 2012 R2 に自動的に含まれます。
   - Internet Explorer セキュリティ強化の構成は、[NDES と Microsoft Intune Certificate Connector をホストするサーバーで無効にする必要があります](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx)。
@@ -135,7 +136,7 @@ SCEP を使用する場合は、次の証明書とテンプレートが使用さ
      - **[Active Directory で証明書を発行する]** をオフにします。
      - 後でこのテンプレートを識別できるように、わかりやすい**テンプレート表示名**を指定します。
 
-   - **サブジェクト名**:
+   - **サブジェクト名**: 
 
      - **[要求に含まれる]** を選択します。 セキュリティは、NDES の Intune ポリシー モジュールによって適用されます。
 

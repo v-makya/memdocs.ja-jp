@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 897366ba9b7bae15050c0aa5e392ba5255a90b24
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 2640107a4a3b17e2c544041445c8c797ef40b01e
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407819"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166554"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用した機能を許可または制限するための iOS および iPadOS デバイスの設定
 
@@ -324,17 +324,20 @@ ms.locfileid: "80407819"
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>これらの設定は次に適用されます。デバイスの登録、デバイスの自動登録 (監視)
 
+
 - **[インターネットからの結果を返すスポットライト検索]** : **[ブロック]** を選択すると、スポットライトによってインターネット検索から値が返されません。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、スポットライト検索がインターネットに接続して検索結果を提供することが許可される場合があります。
+
+  この設定は UI で重複しているため、今後のリリースで修正される予定です。 現在、この設定は監視対象デバイスに適用されます。 今後のリリースで、この設定はデバイス登録デバイスと自動デバイス登録デバイスに適用され、監視を必要としなくなります。
 
 - **[Safari の Cookie]** :デバイスで Cookie を処理する方法を選択します。 次のようなオプションがあります。
   - Allow
   - すべての Cookie をブロックする
   - アクセスした Web サイトからの Cookie を許可する
-  - 現在の Web サイトからの Cookie を許可する
+  - 現在の Web サイトからの Cookie を許可する 
 
 - **[Safari の JavaScript]** : **[ブロック]** では、ブラウザー内の Java スクリプトがデバイス上で実行されなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、Java スクリプトが許可される場合があります。
 
-- **[Safari のポップアップ]** : **[ブロック]** を選択すると、Web ブラウザーでポップアップ ブロックが無効になります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、ポップアップ ブロックが許可される場合があります。
+- **[Safari のポップアップ]** : **[ブロック]** を選択すると、Safari Web ブラウザーですべてのポップアップがブロックされます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、ポップアップ ブロックが許可される場合があります。
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>これらの設定は次に適用されます。デバイスの自動登録 (監視)
 
@@ -386,6 +389,8 @@ ms.locfileid: "80407819"
 - **["友達を探す" アプリの設定の変更]** : **[ブロック]** では、"友達を探す" アプリの設定を変更できなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定 では、OS により、ユーザーは "友達を探す" アプリの設定の変更を許可される場合があります。
 
 - **[インターネットからの結果を返すスポットライト検索]** : **[ブロック]** を選択すると、スポットライトによってインターネット検索から値が返されません。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、スポットライト検索がインターネットに接続して検索結果を提供することが許可される場合があります。
+
+  この設定は UI で重複しているため、今後のリリースで修正される予定です。 現在、この設定は監視対象デバイスに適用されます。 今後のリリースで、この設定はデバイス登録デバイスと自動デバイス登録デバイスに適用され、監視を必要としなくなります。
 
 - **[デバイスからのシステム アプリの削除をブロックする]** : **[ブロック]** にすると、デバイスからシステム アプリを削除できなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、ユーザーはシステム アプリの削除を許可される場合があります。
 
@@ -667,7 +672,6 @@ ms.locfileid: "80407819"
 iOS および iPadOS の監視モードは、Apple の Device Enrollment Program または Apple Configurator を使用し、デバイスの初期セットアップ中にのみ有効にすることができます。 監視モードを有効にすると、Intune では、次の機能でデバイスを構成できます。
 
 - アプリ ロック (シングル アプリ モード) 
-- グローバル HTTP プロキシ 
 - アクティベーション ロックを無効にする 
 - 自律的シングル App モード 
 - Web コンテンツ フィルター 

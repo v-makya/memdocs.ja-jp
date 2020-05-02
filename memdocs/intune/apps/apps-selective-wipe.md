@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a063baf405c9f9886718242f48a47e1e5fe68f5
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 1640928bfb1ca27d4ee72e014adad88db0976a2d
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324496"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078341"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Intune で管理されているアプリから会社のデータをワイプする方法
 
@@ -40,9 +40,9 @@ ms.locfileid: "80324496"
 > アプリケーションからネイティブ アドレス帳に直接同期された連絡先が削除されます。 ネイティブ アドレス帳から別の外部ソースに同期された連絡先はワイプできません。 現在、これは Microsoft Outlook アプリにのみ適用されます。
 
 ## <a name="deployed-wip-policies-without-user-enrollment"></a>ユーザー登録なしでの WIP ポリシーの展開
-使用している Windows 10 デバイスを登録することを MDM ユーザーに求めることなく、Windows 情報保護 (WIP) ポリシーを展開できるようになります。 この構成により、会社は WIP 構成に基づいて会社のドキュメントを保護することができ、一方、ユーザーは独自の Windows デバイスの管理を維持することができます。 WIP ポリシーを使用してドキュメントが保護されると、Intune 管理者は保護されたデータを選択的にワイプすることができます。 ユーザーとデバイスを選択してワイプ要求を送信することにより、WIP ポリシーを介して保護されたデータはすべて使用できなくなります。 Azure portal 内で Intune から、 **[クライアント アプリ]**  >  **[アプリの選択的ワイプ]** の順に選択します。 詳細については、「[Intune で Windows 情報保護 (WIP) アプリ保護ポリシーを作成して展開する](windows-information-protection-policy-create.md)」を参照してください。
+使用している Windows 10 デバイスを登録することを MDM ユーザーに求めることなく、Windows 情報保護 (WIP) ポリシーを展開できるようになります。 この構成により、会社は WIP 構成に基づいて会社のドキュメントを保護することができ、一方、ユーザーは独自の Windows デバイスの管理を維持することができます。 WIP ポリシーを使用してドキュメントが保護されると、Intune 管理者 ([グローバル管理者または Intune サービス管理者](../fundamentals/users-add.md#types-of-administrators)) は保護されたデータを選択的にワイプすることができます。 ユーザーとデバイスを選択してワイプ要求を送信することにより、WIP ポリシーを介して保護されたデータはすべて使用できなくなります。 Azure portal 内で Intune から、 **[クライアント アプリ]**  >  **[アプリの選択的ワイプ]** の順に選択します。 詳細については、「[Intune で Windows 情報保護 (WIP) アプリ保護ポリシーを作成して展開する](windows-information-protection-policy-create.md)」を参照してください。
 
-## <a name="create-a-wipe-request"></a>ワイプ要求の作成
+## <a name="create-a-device-based-wipe-request"></a>デバイス ベースのワイプ要求を作成する
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 2. **[アプリ]**  >  **[アプリの選択的ワイプ]**  >  **[ワイプ要求を作成します]** の順に選択します。<br>
@@ -61,6 +61,16 @@ ms.locfileid: "80324496"
 
    ![[クライアント アプリ] - [アプリの選択的ワイプ] ウィンドウのスクリーンショット](./media/apps-selective-wipe/apps-selective-wipe-03.png)
 
+## <a name="create-a-user-based-wipe-request"></a>ユーザー ベースのワイプ要求を作成する
+
+ユーザーレベルのワイプにユーザーを追加すると、そのユーザーのすべてのデバイス上のすべてのアプリにワイプ コマンドが自動的に発行されます。  ユーザーは、すべてのデバイスからのチェックインのたびにワイプ コマンドを受け取り続けることになります。  ユーザーを再有効化するには、一覧からユーザーを削除する必要があります。  
+
+1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+2. **[アプリ]**  >  **[アプリの選択的ワイプ]**  >  **[ワイプ要求を作成します]** の順に選択します。<br>
+   **[ユーザーレベルのワイプ]** を選択します
+3. **[追加]** をクリックすると、 **[ユーザーの選択]** ウィンドウが表示されます。
+4. アプリ データをワイプするユーザーを選択して、 **[選択]** をクリックします。
+
 ## <a name="monitor-your-wipe-requests"></a>ワイプ要求を監視する
 
 ワイプ要求の全体的状態、保留中の要求の数、失敗の数がまとめてある概要レポートを設定できます。 さらに詳しい情報が必要な場合、次の手順を実行します。
@@ -74,7 +84,7 @@ ms.locfileid: "80324496"
 >[!IMPORTANT]
 > ワイプを実行するにはユーザーがアプリを開く必要があるため、ワイプには要求後最大で 30 分かかる場合があります。
 
-## <a name="delete-a-wipe-request"></a>ワイプ要求の削除
+## <a name="delete-a-device-wipe-request"></a>デバイスのワイプ要求を削除する
 
 [保留中] 状態のワイプは、手動で削除するまで表示されます。 ワイプ要求を手動で削除するには、次の手順を実行します。
 
@@ -85,6 +95,14 @@ ms.locfileid: "80324496"
     ![[アプリの選択的ワイプ] ウィンドウでのワイプ要求の一覧のスクリーンショット](./media/apps-selective-wipe/delete-wipe-request.png)
 
 3. 削除を確認するメッセージが表示されたら、 **[はい]** または **[いいえ]** を選択し、 **[OK]** をクリックします。
+
+## <a name="delete-a-user-wipe-request"></a>ユーザーのワイプ要求を削除する
+
+ユーザーのワイプは、管理者によって削除されるまで一覧に残ります。 一覧からユーザーを削除するには、次の操作を行います。
+
+1. **[クライアント アプリ] - [アプリの選択的ワイプ]** ウィンドウで、 **[ユーザーレベルのワイプ]** を選択します
+2. 一覧で、削除するユーザーを右クリックして、 **[削除]** を選択します。 
+
 
 ## <a name="see-also"></a>関連項目
 [アプリ保護ポリシーとは](app-protection-policy.md)

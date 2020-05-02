@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2020
+ms.date: 04/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a3152966dee507cde690d9be8f5a7e210c7945
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 7e584019063c6af7f04f5666ba2c38d8199681c5
+ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407754"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81771426"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune ポータル サイト アプリ、ポータル サイト Web サイト、および Intune アプリをカスタマイズする方法
 
@@ -31,7 +31,7 @@ Android 上のポータル サイト アプリ、ポータル サイト Web サ�
 
 ## <a name="customizing-the-user-experience"></a>ユーザー エクスペリエンスのカスタマイズ
 
-エンドユーザー エクスペリエンスをカスタマイズすることで、エンド ユーザーに親しみやすく役立つエクスペリエンスを提供できます。 これを行うには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) に移動し、 **[テナント管理]**  >  **[カスタマイズ]** の順に選択し、必要な設定を構成します。 これらの設定は、Android 上のポータル サイト アプリ、ポータル サイト Web サイト、および Intune アプリに適用されます。
+エンドユーザー エクスペリエンスをカスタマイズすることで、エンド ユーザーに親しみやすく役立つエクスペリエンスを提供できます。 これを行うには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) に移動し、 **[テナント管理]**  >  **[カスタマイズ]** の順に選択します。ここでは、既定のポリシーを編集したり、最大 10 グループを対象にしたポリシーを作成したりできます。 これらの設定は、Android 上のポータル サイト アプリ、ポータル サイト Web サイト、および Intune アプリに適用されます。
 
 ## <a name="branding"></a>ブランド化
 
@@ -93,6 +93,7 @@ Android 用 Intune アプリのブランド イメージの例を次に示しま
 | プライバシーに関する声明の URL | 79 | ユーザーがプライバシー リンクをクリックしたときに表示されるように、組織のプライバシーに関する声明を設定します。 `https://www.contoso.com` の形式で有効な URL を入力する必要があります。 |
 | iOS/iPadOS のポータル サイトのプライバシー メッセージ | 520 | 既定値をそのまま使用するか、カスタム メッセージを設定し、組織で iOS/iPadOS のマネージド デバイス上に表示できるまたは表示できない項目を一覧表示します。 markdown を使用すると、箇条書き、太字、斜体、リンクを追加できます。 |
 | デバイスの登録 | 該当なし | ユーザーにモバイル デバイス管理への登録を求めるかどうかと、その方法を指定します。 詳細は以下を参照してください。 |
+| デバイスの所有権の通知 | 該当なし | Android と iOS の両方のポータル サイト ユーザーに、自身のデバイスの所有権の種類が個人用から企業所有に変更された場合にプッシュ通知を送信します。 既定では、このプッシュ通知はオフに設定されています。 デバイスの所有権が企業所有に設定されると、Intune でそのデバイスにアクセスできる範囲が拡大します。具体的には、完全なアプリ インベントリ、FileVault キーのローテーション、電話番号検索、特定のいくつかのリモート操作などにアクセスできます。 詳しくは、「[デバイス所有権を変更する](../enrollment/corporate-identifiers-add.md#change-device-ownership)」をご覧ください。  |
 
 ### <a name="device-enrollment-setting-options"></a>デバイス登録設定のオプション
 
@@ -188,8 +189,8 @@ Windows ポータル サイト アプリで使用できるキーボード ショ
 <sup>(4)</sup>**名前の変更**では、ポータル サイト アプリまたは Web ポータル内のデバイス名が変更されるだけで、デバイス上では変更されません。<br>
 <sup>(5)</sup>**ワイプ**は、ユーザーが登録した iOS/iPadOS デバイス上では利用できません。<br>
 <sup>(6)</sup>**パスコードのリセット**は、一部の Android および Android Enterprise の構成ではサポートされません。 詳しくは、「[Intune でデバイスのパスコードをリセットまたは削除する](../remote-actions/device-passcode-reset.md)」をご覧ください。<br>
-<sup>(7)</sup>**インベントリからの削除**と**ワイプ**は、Android Enterprise デバイス所有者のシナリオでは使用できません (COPE、COBO、COSU)。<br> 
-<sup>(8)</sup>**パスコードのリセット**は、ユーザーが登録した iOS/iPadOS デバイス上ではサポートされません。
+<sup>(7)</sup>**インベントリからの削除**と**ワイプ**は、Android Enterprise デバイス所有者のシナリオでは使用できません (COPE、COBO、COSU)。<br>
+<sup>(8)</sup> **パスコードのリセット**は、ユーザーが登録した iOS/iPadOS デバイス上ではサポートされません。
 
 ## <a name="next-steps"></a>次のステップ
 

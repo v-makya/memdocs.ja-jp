@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f4b50ac8df811a3e71070ebec979139b3ebbe62
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 0834ee2ac6cbd7460ed96024a9b30ab503fae9fb
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80325112"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078339"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Intune を使用して Windows デバイスに展開できるように基幹業務アプリに署名する
 
@@ -87,7 +87,7 @@ Microsoft Store へのアクセスを提供したくない場合は、Intune を
 2. アプリが取得されたら、 **[インベントリ]** ページでアプリを選択します。  
 3. **プラットフォーム**として **[Windows 10 all devices (Windows 10 のすべてのデバイス)]** を選択し、適切な**アーキテクチャ**を選択してダウンロードします。 このアプリは、アプリ ライセンス ファイルを必要としません。
    ![ダウンロード用 Windows 10 X86 パッケージの詳細の画像](./media/app-sideload-windows/Win10CP-all-devices.png)
-4. [必要なフレームワーク] の下のすべてのパッケージをダウンロードします。 x86、x64、および ARM アーキテクチャ用に実行する必要があります。次に示すように、合計 9 個のパッケージのダウンロードが必要になる場合があります。
+4. [必要なフレームワーク] の下のすべてのパッケージをダウンロードします。 これは、x86、x64、ARM、および ARM64 アーキテクチャ用に実行する必要があります (次に示すように、パッケージは合計で 9 個になります)。
 
    ![ダウンロードする依存関係ファイルのイメージ ](./media/app-sideload-windows/Win10CP-dependent-files.png)
 5. ポータル サイト アプリを Intune にアップロードする前に、パッケージを次のように構成してフォルダー (C:&#92;ポータル サイトなど) を作成します。

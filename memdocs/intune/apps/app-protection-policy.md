@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 672c978a7e590e8e26f676733bd2903d3684e978
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611735"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82078364"
 ---
 # <a name="app-protection-policies-overview"></a>アプリ保護ポリシーの概要
 
@@ -167,7 +167,7 @@ Microsoft Office アプリにアプリ保護ポリシーを利用する場合は
 ### <a name="word-excel-and-powerpoint"></a>Word、Excel、PowerPoint
 [Word、Excel、PowerPoint](https://products.office.com/business/office) アプリを使用するための追加要件には、以下が含まれます。
 
-- エンドユーザーに、Azure Active Directory アカウントにリンクされた [Office 365 Business または Office 365 Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) のライセンスが必要です。 サブスクリプションには、モバイル デバイスの Office アプリが含まれている必要があります。また、[OneDrive for Business](https://onedrive.live.com/about/business/) のクラウド ストレージ アカウントを含めることも可能です。 Office 365 ライセンスは、[Microsoft 365 管理センター](https://admin.microsoft.com)で割り当てることができます。[こちら](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)の手順に従ってください。
+- エンドユーザーに、Azure Active Directory アカウントにリンクされた [Microsoft 365 Apps for business または Microsoft 365 Apps for enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) のライセンスが必要です。 サブスクリプションには、モバイル デバイスの Office アプリが含まれている必要があります。また、[OneDrive for Business](https://onedrive.live.com/about/business/) のクラウド ストレージ アカウントを含めることも可能です。 Office 365 ライセンスは、[Microsoft 365 管理センター](https://admin.microsoft.com)で割り当てることができます。[こちら](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)の手順に従ってください。
 
 - エンド ユーザーは、[組織データのコピーを保存] アプリケーション保護ポリシー設定の機能として、詳細保存を使用して管理対象の場所を構成しておく必要があります。 たとえば、管理対象の場所が OneDrive の場合、[OneDrive](https://onedrive.live.com/about/) アプリは、エンド ユーザーの Word アプリ、Excel アプリ、または PowerPoint アプリ内で構成される必要があります。
 
@@ -300,7 +300,7 @@ MAM の選択的ワイプは、単にアプリから業務用アプリのデー�
 Intune アプリ保護は、アプリケーションと [Intune SDK](../developer/app-sdk.md) の間で一貫性を保つためにユーザーの ID に依存しています。 これを保証する唯一の方法は、最新の認証を使用することです。 アプリをオンプレミス構成と連携させるシナリオはありますが、一貫性がなく保証されていません。
 
 **マネージド アプリから Web リンクを開く安全な方法**<br>
-IT 管理者は、Microsoft Intune によって開発された、Intune で簡単に管理可能な Web ブラウザーである [Intune Managed Browser アプリ](app-configuration-managed-browser.md) のアプリ保護ポリシーを展開および設定することができます。 IT 管理者は、Intune 管理対象アプリ内のすべての Web リンクが Managed Browser アプリで開かれるように指定することができます。
+IT 管理者は、Intune で簡単に管理可能な Web ブラウザーである [Microsoft Edge](app-configuration-managed-browser.md) のアプリ保護ポリシーを展開および設定することができます。 IT 管理者は、Intune 管理対象アプリ内のすべての Web リンクが Managed Browser アプリで開かれるように指定することができます。
 
 ## <a name="app-protection-experience-for-ios-devices"></a>iOS デバイスでのアプリ保護のエクスペリエンス
 

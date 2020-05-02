@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82e02795dc9dbcbc0598218418404fe74fdf1226
-ms.sourcegitcommit: 0ad7cd842719887184510c6acd9cdfa290a3ca91
+ms.openlocfilehash: e6a3e2b9026024791ef1a9e4eb5aca08718d8573
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80551616"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023165"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>ポリシー セットを使用して管理オブジェクトのコレクションをグループ化する
 
@@ -89,7 +89,7 @@ ms.locfileid: "80551616"
   - Android ストア アプリ
   - Android 基幹業務アプリ
   - マネージド Android 基幹業務アプリ
-  - Office 365 ProPlus Suite (Windows 10)
+  - Microsoft 365 アプリ (Windows 10)
   - Web リンク
   - 組み込みの iOS/iPadOS アプリ
   - 組み込みの Android アプリ
@@ -121,6 +121,7 @@ ms.locfileid: "80551616"
     グループに展開されるポリシー セットにポリシーが追加される場合、そのグループは、ワークロード内では、"ポリシー セットによる割り当て" ではなく、直接割り当てとして表示されます。 その結果、MAM では、ポリシー セットからのグループ割り当ての削除は処理されません。
 
 - MAM では、すべてのポリシーの種類について、**すべてのユーザー**および**すべてのデバイス**仮想グループへの展開はサポートされていません。
+- 種類が "管理用テンプレート" のデバイス構成プロファイルは、ポリシー セットの一部として選択できません。
 
 ## <a name="next-steps"></a>次のステップ
 

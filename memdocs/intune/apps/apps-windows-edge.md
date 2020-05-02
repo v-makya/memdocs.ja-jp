@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/03/2020
+ms.date: 04/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 687ef14791d1ae0df60d28802d27b99dd9547423
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: 64cb05d6e031cfe08789d6b7c923d9e489d0e433
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401334"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254318"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Microsoft Edge for Windows 10 を Microsoft Intune に追加する
 
 アプリの展開、構成、監視、または保護を行うには、対象のアプリを事前に Intune に追加しておく必要があります。 使用可能な[アプリの種類](apps-add.md#app-types-in-microsoft-intune)の 1 つに、Microsoft Edge *バージョン 77 以降*があります。 Intune でこの種類のアプリを選択することで、Windows 10 を実行し、自分で管理しているデバイスに Microsoft Edge *バージョン 77 以降*を割り当て、インストールできます。
 
 > [!IMPORTANT]
-> このアプリの種類は**パブリック プレビュー**段階で、Windows 10 向けに安定版、ベータ版、開発者向けチャネルを提供しています。 展開は英語版 (EN) のみですが、エンド ユーザーはブラウザーの **[設定]**  >  **[言語]** で表示言語を変更することができます。 Microsoft Edge は、システム コンテキスト、およびアーキテクチャに合わせてインストールされる Win32 アプリです (x86 OS の場合は x86、x64 OS の場合は x64)。 Intune で既存の Microsoft Edge インストールが検出されます。 ユーザー コンテキストでインストールされている場合、システムのインストール時に上書きされます。 システム コンテキストでインストールされている場合、インストールの成功が報告されます。 さらに、Microsoft Edge の自動更新は既定で**オン**になっています。
+> このアプリの種類は、Windows 10 向けに安定版、ベータ版、開発者向けチャネルを提供しています。 展開は英語版 (EN) のみですが、エンド ユーザーはブラウザーの **[設定]**  >  **[言語]** で表示言語を変更することができます。 Microsoft Edge は、システム コンテキスト、およびアーキテクチャに合わせてインストールされる Win32 アプリです (x86 OS の場合は x86、x64 OS の場合は x64)。 Intune で既存の Microsoft Edge インストールが検出されます。 ユーザー コンテキストでインストールされている場合、システムのインストール時に上書きされます。 システム コンテキストでインストールされている場合、インストールの成功が報告されます。 さらに、Microsoft Edge の自動更新は既定で**オン**になっています。
 
 > [!NOTE]
 > macOS では、Microsoft Edge *バージョン 77 以降*も利用できます。
@@ -38,7 +38,7 @@ ms.locfileid: "80401334"
 
 ## <a name="prerequisites"></a>[前提条件]
 
-- Windows 10 バージョン 1703 以降
+- Windows 10 バージョン 1709 以降。
 - すべてのチャネル向けにユーザー コンテキストでプレインストールされた Microsoft Edge *バージョン 77 以降*のバージョンはすべて、システム コンテキストでインストールされた Edge で上書きされます。
 
 ## <a name="configure-the-app-in-intune"></a>Intune でアプリを構成する

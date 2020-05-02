@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 633adc8fa28f422c4b21958675efb53cb2571d39
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: a0cf2096b4a8862a29d47bc05aa29f0cbb48792b
+ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80324742"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82023250"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Microsoft Intune にアプリを追加する 
 
@@ -56,8 +56,8 @@ Intune では、広範囲に及ぶさまざまな種類のアプリをサポー�
 | Windows Phone 8.1 ストア アプリ  | ストア アプリ  | **[アプリの種類]** として **[Windows Phone 8.1]** を選択し、Microsoft ストアのアプリの URL を入力します。 |
 | Microsoft ストア アプリ  | ストア アプリ  | **[アプリの種類]** として **[Windows]** を選択し、Microsoft ストアのアプリの URL を入力します。 |
 | 管理対象の Google Play アプリ | ストア アプリ  | **[アプリの種類]** として **[managed Google Play]** を選択し、アプリを検索し、Intune でアプリを選択します。 |
-| Windows 10 用の Office 365 アプリ  | ストア アプリ (Office 365) | **[アプリの種類]** として **[Office 365 スイート]** の下から **[Windows 10]** を選択し、インストールする Office 365 アプリを選択します。  |
-| macOS 用の Office 365 アプリ | ストア アプリ (Office 365) | **[アプリの種類]** として **[Office 365 スイート]** の下から **[macOS]** を選択し、Office 365 アプリ スイートを選択します。 |
+| Windows 10 用の Office 365 アプリ  | ストア アプリ (Office 365) | **[アプリの種類]** として **[Microsoft 365 アプリ]** の下から **[Windows 10]** を選択し、インストールする Office 365 アプリを選択します。  |
+| macOS 用の Office 365 アプリ | ストア アプリ (Office 365) | **[アプリの種類]** として **[Microsoft 365 アプリ]** の下から **[macOS]** を選択し、Office 365 アプリ スイートを選択します。 |
 | Windows 10 向け Microsoft Edge バージョン 77 以降 | ストア アプリ | **[アプリの種類]** として、 **[Microsoft Edge バージョン 77 以降]** の **[Windows 10]** を選択します。 |
 | macOS 向け Microsoft Edge バージョン 77 以降 | ストア アプリ | **[アプリの種類]** として、 **[Microsoft Edge バージョン 77 以降]** の下の **[macOS]** を選択します。 |
 | Android 基幹業務 (LOB) アプリ | LOB アプリ | **[アプリの種類]** として **[基幹業務]** を選択し、 **[アプリのパッケージ ファイル]** を選択し、拡張子が **.apk** の Android のインストール ファイルを入力します。  |
@@ -121,7 +121,7 @@ Intune を使用して、デバイスの管理は行わずに MDM でアプリ�
 Intune を使用すると、展開するアプリの機能を変更することで、アプリが企業のコンプライアンスとセキュリティ ポリシーに従うようにすることができます。 この制御により、会社のデータを保護する方法を決定することができます。 Intune 管理対象アプリは、豊富な一連のモバイル アプリケーション保護ポリシーによって有効にされます。
 
 - コピーと貼り付け機能および名前を付けて保存機能を制限する。
-- Intune Managed Browser アプリ内で開くように Web リンクを構成する。
+- Microsoft Edge アプリ内で開くように Web リンクを構成する。
 - 複数の ID の使用と、アプリ レベルの条件付きアクセスを有効にする。
 
 また、Intune 管理対象アプリでは、登録を行わなくてもアプリの保護を有効にすることができます。このため、ユーザーのデバイスを管理することなくデータ損失防止ポリシーの適用を選択できます。 さらに、Intune App SDK とアプリ ラッピング ツールを使用して、モバイル アプリと基幹業務アプリにモバイル アプリ管理を組み込むことができます。 これらのツールの詳細情報については、「[Intune App SDK の概要](../developer/app-sdk.md)」を参照してください。

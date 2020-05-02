@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 04/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a533344b72952098403fae0ebcabbcad473684a
-ms.sourcegitcommit: db511e03f14e6120968b60def8990485eb42529b
+ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80611723"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82183013"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>MAM とアプリの保護に関してよく寄せられる質問
 
@@ -38,9 +38,9 @@ MAM は、アプリケーション内の組織のデータを保護します。 
 
 **MAM でサポートされるのはどのようなデバイス構成ですか。**<br></br>
 Intune MAM では次の 2 つの構成をサポートしています。
-- **Intune MDM + MAM**: IT 管理者は、Intune モバイル デバイス管理 (MDM) に登録されているデバイスで MAM とアプリ保護ポリシーを使用したアプリの管理のみを行うことができます。 MDM と MAM を使用してアプリを管理するには、Azure Portal (https://portal.azure.com ) の Intune コンソールを使用する必要があります。
+- **Intune MDM + MAM**: IT 管理者は、Intune モバイル デバイス管理 (MDM) に登録されているデバイスで MAM とアプリ保護ポリシーを使用したアプリの管理のみを行うことができます。 MDM + MAM を使用してアプリを管理するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) を使用する必要があります。
 
-- **デバイス登録なしの MAM**: デバイス登録がない MAM や MAM-WE では、IT 管理者は、Intune MDM に登録されていないデバイス上で MAM とアプリ保護ポリシーを使用してアプリの管理を行うことしかできません。 つまり、サードパーティ EMM プロバイダーに登録されているデバイスで Intune によりアプリを管理できます。 MAM-WE を使用してアプリを管理するには、Azure portal ([https://portal.azure.com](https://portal.azure.com)) の Intune コンソールを使用する必要があります。 また、Intune では、サードパーティ製エンタープライズ モビリティ管理 (EMM) プロバイダーに登録されているデバイス上でも、MDM に全く登録されていないデバイス上でもアプリを管理することができます。
+- **デバイス登録なしの MAM**: デバイス登録がない MAM や MAM-WE では、IT 管理者は、Intune MDM に登録されていないデバイス上で MAM とアプリ保護ポリシーを使用してアプリの管理を行うことしかできません。 つまり、サードパーティ EMM プロバイダーに登録されているデバイスで Intune によりアプリを管理できます。 MAM-WE を使用してアプリを管理するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) を使用する必要があります。 また、Intune では、サードパーティ製エンタープライズ モビリティ管理 (EMM) プロバイダーに登録されているデバイス上でも、MDM に全く登録されていないデバイス上でもアプリを管理することができます。
 
 
 ## <a name="app-protection-policies"></a>アプリ保護ポリシー
@@ -54,6 +54,7 @@ Intune MAM では次の 2 つの構成をサポートしています。
 **同じユーザーに同時に、MDM ポリシーと MAM ポリシーの両方を別のデバイスで適用できますか。たとえば、ユーザーは自分の MAM 対応のコンピューターから仕事のリソースにアクセスし、職場の Intune の MDM マネージド デバイスも使用します。このアイデアで何か注意することはありますか。**<br></br>
 デバイスの状態を設定せず、ユーザーに MAM ポリシーを適用する場合、ユーザーは、BYOD デバイスと Intune マネージド デバイスの両方で MAM ポリシーを取得します。 管理されている状態に基づいて、MAM ポリシーを適用することもできます。 したがって、アプリ保護ポリシーを作成する場合、[すべてのアプリの種類を対象にする] の横で [いいえ] を選択します。 次に以下のいずれかを実行します。
 - Intune マネージド デバイスに制限が緩い MAM ポリシーを適用し、MDM が登録されていないデバイスにより制限の厳しい MAM ポリシーを適用します。
+-   サードパーティ マネージド デバイスに対するように、Intune マネージド デバイスに対して、同様に厳格な MAM ポリシーを適用します。
 - 登録解除されたデバイスのみに MAM ポリシーを適用します。
 
 詳細については、「[アプリ保護ポリシーを監視する方法](app-protection-policies-monitor.md)」を参照してください。
@@ -69,7 +70,7 @@ Intune アプリ保護ポリシーでは、[Intune アプリ SDK](../developer/a
 
 - エンドユーザーに、Azure Active Directory アカウントに割り当てられた Microsoft Intune のライセンスが必要です。 Intune ライセンスをエンドユーザーに割り当てる方法については、「[Intune のライセンスを管理する](../fundamentals/licenses-assign.md)」を参照してください。
 
-- エンドユーザーは、アプリ保護ポリシーの対象となるセキュリティ グループに属している必要があります。 同一のアプリ保護ポリシーでは、使用中の特定のアプリを対象とする必要があります。 アプリ保護ポリシーは、[Azure Portal](https://portal.azure.com) の Intune コンソールで作成して展開できます。 セキュリティ グループは現在のところ、[Microsoft 365 管理センター](https://admin.microsoft.com)で作成できます。
+- エンドユーザーは、アプリ保護ポリシーの対象となるセキュリティ グループに属している必要があります。 同一のアプリ保護ポリシーでは、使用中の特定のアプリを対象とする必要があります。 アプリ保護ポリシーは、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で作成してデプロイできます。 セキュリティ グループは現在のところ、[Microsoft 365 管理センター](https://admin.microsoft.com)で作成できます。
 
 - エンドユーザーは、AAD アカウントを使用してアプリにサインインする必要があります。
 
@@ -78,7 +79,7 @@ Intune アプリ保護ポリシーでは、[Intune アプリ SDK](../developer/a
 Intune SDK 開発チームは、ネイティブの Android、iOS/iPadOS (Obj-C、Swift)、Xamarin、および Xamarin.Forms プラットフォームを使ってビルドされたアプリに対するサポートを、積極的にテストして管理しています。 一部のお客様は、Intune SDK とその他のプラットフォーム (React Native や NativeScript など) の統合に成功されていますが、Microsoft では、サポートされているプラットフォーム以外を使うアプリ開発者に向けた明示的なガイダンスやプラグインは提供されません。
 
 **Intune APP SDK は、Microsoft 認証ライブラリ (MSAL) またはソーシャル アカウントをサポートしますか。**<br></br>
-Intune APP SDK は、ファーストパーティとサードパーティの両方のバージョンの SDK でいくつかの高度な ADAL 機能を使用します。 そのため、MSAL は、Intune アプリ保護サービスへの認証や条件付き起動などの主要なシナリオの多くで正常に機能しません。 すべての Microsoft Office アプリに対して MSAL に切り替えることが Microsoft の ID チームからの全体的なガイダンスであり、Intune SDK では最終的にそれがサポートされる必要がありますが、今のところ計画はありません。
+Intune App SDK では、認証と条件付き起動のシナリオに対し、Azure Active Directory 認証ライブラリまたは Microsoft 認証ライブラリのいずれかを使用できます。 また、デバイスを登録しないで管理するために MAM サービスにユーザー ID を登録する場合も、ADAL/MSAL を利用します。
 
 **[Outlook モバイル アプリ](https://products.office.com/outlook)を使用するための追加要件は何ですか。**
 
@@ -91,7 +92,7 @@ Intune APP SDK は、ファーストパーティとサードパーティの両�
 
 **[Word、Excel、PowerPoint](https://products.office.com/business/office) のアプリを使用するための追加要件は何ですか。**
 
-- エンドユーザーに、Azure Active Directory アカウントにリンクされた [Office 365 Business または Office 365 Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) のライセンスが必要です。 サブスクリプションには、モバイル デバイスの Office アプリが含まれている必要があります。また、[OneDrive for Business](https://onedrive.live.com/about/business/) のクラウド ストレージ アカウントを含めることも可能です。 Office 365 ライセンスは、[Microsoft 365 管理センター](https://admin.microsoft.com)で割り当てることができます。[こちら](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)の手順に従ってください。
+- エンドユーザーに、Azure Active Directory アカウントにリンクされた [Microsoft 365 Apps for business または Microsoft 365 Apps for enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) のライセンスが必要です。 サブスクリプションには、モバイル デバイスの Office アプリが含まれている必要があります。また、[OneDrive for Business](https://onedrive.live.com/about/business/) のクラウド ストレージ アカウントを含めることも可能です。 Office 365 ライセンスは、[Microsoft 365 管理センター](https://admin.microsoft.com)で割り当てることができます。[こちら](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)の手順に従ってください。
 
 - エンド ユーザーは、[組織データのコピーを保存] アプリケーション保護ポリシー設定の機能として、詳細保存を使用して管理対象の場所を構成しておく必要があります。 たとえば、管理対象の場所が OneDrive の場合、[OneDrive](https://onedrive.live.com/about/) アプリは、エンド ユーザーの Word アプリ、Excel アプリ、または PowerPoint アプリ内で構成される必要があります。
 
@@ -161,7 +162,7 @@ Intune は、フル デバイス ワイプ、MDM の選択的ワイプ、およ�
 
 - **MDM の選択的ワイプとは何ですか。**<br></br> 会社データの削除については、[デバイスの削除 - インベントリからの削除](../remote-actions/devices-wipe.md#retire)に関するページを参照してください。
 
-- **MAM の選択的ワイプとは何ですか。**<br></br> MAM の選択的ワイプは、単にアプリから業務用アプリのデータを削除します。 要求は、Intune Azure Portal を使用して開始されます。 ワイプ要求を開始する方法については、[アプリから企業データのみをワイプする方法](apps-selective-wipe.md)に関するページを参照してください。
+- **MAM の選択的ワイプとは何ですか。**<br></br> MAM の選択的ワイプは、単にアプリから業務用アプリのデータを削除します。 要求は [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) を使用して開始されます。 ワイプ要求を開始する方法については、[アプリから企業データのみをワイプする方法](apps-selective-wipe.md)に関するページを参照してください。
 
 - **MAM の選択的ワイプはどれくらいの間隔で行われますか。**<br></br> 選択的ワイプの開始時にユーザーがアプリを使用している場合は、Intune アプリ SDK によって Intune MAM サービスからの選択的ワイプの要求が 30 分ごとにチェックされます。 ユーザーがアプリを初めて起動し職場または学校のアカウントを使ってサインインした場合も、選択的ワイプがチェックされます。
 

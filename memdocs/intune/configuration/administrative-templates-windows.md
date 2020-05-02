@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/23/2020
+ms.date: 04/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75ef2a03c9f42f0bda78af009f0fb563fbcedb75
-ms.sourcegitcommit: 795e8a6aca41e1a0690b3d0d55ba3862f8a683e7
+ms.openlocfilehash: f609ec62259deffb220c8ee935d0f10a98ae77b5
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80220035"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254896"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Windows 10 テンプレートを使用し、Microsoft Intune でグループ ポリシー設定を構成する
 
@@ -41,7 +41,7 @@ Windows の設定は、Active Directory (AD) のグループ ポリシー (GPO) 
 
 ## <a name="before-you-begin"></a>始める前に
 
-- これらの設定の一部は、Windows 10 バージョン 1703 (RS2/ビルド 15063) 以降で使用可能です。 すべての Windows エディションに含まれているわけではない設定もあります。 最適なエクスペリエンスを得るには、Windows 10 Enterprise バージョン 1903 (19H1/ビルド 18362) 以降を使用することをお勧めします。
+- これらの設定の一部は、Windows 10 バージョン 1709 (RS2/ビルド 15063) 以降で使用可能です。 すべての Windows エディションに含まれているわけではない設定もあります。 最適なエクスペリエンスを得るには、Windows 10 Enterprise バージョン 1903 (19H1/ビルド 18362) 以降を使用することをお勧めします。
 
 - Windows の設定では、[Windows ポリシー CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies) が使用されます。 CSP は、Home、Professional、Enterprise など、さまざまなエディションの Windows で動作します。 CSP が特定のエディションで動作するかどうかを確認するには、[Windows ポリシー CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies) に移動してください。
 
@@ -102,6 +102,10 @@ Windows の設定は、Active Directory (AD) のグループ ポリシー (GPO) 
     **[次へ]** を選択します。
 
 14. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](device-profile-assign.md)に関するページを参照してください。
+
+    プロファイルがユーザー グループに割り当てられている場合、ユーザーが登録し、サインインしたすべてのデバイスに、構成済みの ADMX 設定が適用されます。 プロファイルがデバイス グループに割り当てられている場合は、そのデバイスにサインインするすべてのユーザーに、構成済みの ADMX 設定が適用されます。 この割り当ては、ADMX 設定がコンピューター構成 (`HKEY_LOCAL_MACHINE`)、またはユーザー構成 (`HKEY_CURRENT_USER`) の場合に行われます。 一部の設定では、ユーザーに割り当てられたコンピューター設定が、そのデバイスの他のユーザーのエクスペリエンスに影響することもあります。
+    
+    詳細については、「[ユーザー グループとデバイス グループ](device-profile-assign.md#user-groups-vs-device-groups)」を参照してください。
 
     **[次へ]** を選択します。
 

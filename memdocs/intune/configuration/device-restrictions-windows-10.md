@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 04/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 237e281b88492ff7b7e1b5614600662e15761935
-ms.sourcegitcommit: e2877d21dfd70c4029c247275fa2b38e76bd22b8
+ms.openlocfilehash: 4babd715df08a905a5ceed6ec881cbfe07f5de19
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80407834"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209875"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限するように Windows 10 (以降) のデバイスを設定する
 
@@ -81,11 +81,13 @@ ms.locfileid: "80407834"
 
   [ApplicationManagement/AllowGameDVR CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
-- **[ストアのアプリのみ]** :この設定により、ユーザーが Microsoft Store 以外の場所からアプリをインストールするときのユーザー エクスペリエンスが決まります。 次のようなオプションがあります。
+- **[ストアのアプリのみ]** :この設定により、ユーザーが Microsoft Store 以外の場所からアプリをインストールするときのユーザー エクスペリエンスが決まります。 これによって、USB デバイス、ネットワーク共有、またはその他のインターネット以外のソースからのコンテンツのインストールが妨げられません。 信頼できるブラウザーを使用して、これらの保護が想定どおりに動作することを確認できます。
+
+  次のようなオプションがあります。
 
   - **[未構成]** (既定値):Intune では、この設定は変更または更新されません。 既定では、他のポリシー設定で定義されているアプリを含め、エンド ユーザーが Microsoft Store 以外の場所からアプリをインストールすることが OS によって許可されている可能性があります。  
   - **[どこでも]** :アプリの推奨設定がオフになり、ユーザーは任意の場所からアプリをインストールできます。  
-  - **[Microsoft Store のみ]** :エンド ユーザーに対して、Microsoft Store からのみアプリをインストールするように強制します。
+  - **[Microsoft Store のみ]** :目的は、インターネットから実行可能なコンテンツをダウンロードするときに、悪意のあるコンテンツによってユーザーのデバイスが影響を受けないようにすることです。 ユーザーがインターネットからアプリをインストールしようとすると、インストールがブロックされます。 ユーザーに Microsoft Store からアプリをダウンロードすることを推奨するメッセージが表示されます。
   - **[推奨事項]** :ユーザーが Microsoft Store から入手できるアプリを Web からインストールすると、ストアからダウンロードすることを推奨するメッセージが表示されます。  
   - **[Microsoft Store を優先する]** :ユーザーが Microsoft Store 以外の場所からアプリをインストールすると、警告が表示されます。
 
@@ -140,10 +142,14 @@ ms.locfileid: "80407834"
 
 これらの設定では、[アカウント ポリシー CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts) が使用されます。それには、サポートされる Windows のエディションも示されています。
 
+> [!IMPORTANT]
+> これらの Microsoft アカウント設定をブロックまたは無効にすると、ユーザーが Azure AD にサインインする必要がある登録シナリオに影響を与える可能性があります。 たとえば、[AutoPilot ホワイトグローブ](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove)を使用しているとします。 通常、ユーザーには Azure AD サインイン ウィンドウが表示されます。 これらの設定を **[ブロック]** または **[無効]** に設定した場合、Azure AD サインイン オプションが表示されないことがあります。 代わりに、ユーザーは使用許諾契約書に同意し、ローカル アカウントを作成するように求められますが、これは必要としていない場合があります。
+
 - **[Microsoft アカウント]** : **[ブロック]** に設定すると、エンド ユーザーは Microsoft アカウントをデバイスに関連付けることができなくなります。 **[未構成]** (既定値) にすると、Microsoft アカウントの追加と使用が許可されます。
+
 - **[Microsoft 以外のアカウント]** : **[ブロック]** に設定すると、エンドユーザーはユーザー インターフェイスを使用して Microsoft 以外のアカウントを追加できなくなります。 **[未構成]** (既定値) にすると、Microsoft アカウントに関連付けられていない電子メール アカウントのユーザーによる追加が許可されます。
 - **[Microsoft アカウントの設定の同期]** : **[未構成]** (既定値) に設定すると、Microsoft アカウントに関連付けられたデバイスとアプリの設定をデバイス間で同期できるようになります。 **[ブロック]** にすると、この同期が行われなくなります。
-- **[Microsoft アカウント サインイン アシスタント]** : **[未構成]** (既定値) に設定すると、エンドユーザーは、**Microsoft アカウント サインイン アシスタント** (wlidsvc) サービスの開始と停止を実行できます。 このオペレーティング システム サービスでは、ユーザーが自分の Microsoft アカウントにサインインすることが許可されます。 **[無効にする]** にすると、エンド ユーザーが Microsoft サインイン アシスタント サービス (wlidsvc) を制御できなくなります。
+- **[Microsoft アカウント サインイン アシスタント]** : **[未構成]** (既定値) に設定すると、エンドユーザーは、**Microsoft アカウント サインイン アシスタント** (wlidsvc) サービスの開始と停止を実行できます。 このオペレーティング システム サービスでは、ユーザーが自分の Microsoft アカウントにサインインすることが許可されます。 **[無効]** によって、Microsoft サインイン アシスタント サービス (wlidsvc) が無効に構成され、エンド ユーザーが手動でそれを開始できなくなります。
 
 ## <a name="cloud-printer"></a>クラウド プリンター
 
@@ -575,7 +581,7 @@ GDI DPI スケールでは、DPI 対応でないアプリケーションをモ�
 
 - **[テレメトリ プロキシ サーバー]** :Secure Sockets Layer (SSL) 接続を使用して、接続ユーザー エクスペリエンスとテレメトリ要求を転送するプロキシ サーバーの完全修飾ドメイン名 (FQDN) または IP アドレスを入力します。 この設定の形式は、*サーバー*:*ポート*です。 指定されたプロキシが失敗した場合、またはこのポリシーを有効にするときにプロキシが入力されなかった場合は、接続ユーザー エクスペリエンスとテレメトリ データが送信されず、ローカル デバイス上に残ります。
 
-  形式の例:
+  形式の例: 
 
   ```
   IPv4: 192.246.246.106:100
@@ -669,7 +675,7 @@ GDI DPI スケールでは、DPI 対応でないアプリケーションをモ�
 
 ## <a name="microsoft-defender-smart-screen"></a>Microsoft Defender SmartScreen
 
-- **[SmartScreen for Microsoft Edge]** : **[必須]** に設定すると、Microsoft Defender SmartScreen がオフになり、ユーザーはそれをオンにすることができなくなります。 **[未構成]** (既定値) にすると、SmartScreen がオンになります。 潜在的な脅威からユーザーを保護するために役立ち、ユーザーがそれをオフにすることはできなくなります。
+- **[SmartScreen for Microsoft Edge]** : **[必須]** に設定すると、Microsoft Defender SmartScreen がオンになり、ユーザーはそれをオフにすることができなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 OS の既定では、SmartScreen がオンになることがあります。ユーザーはそのオンとオフを切り替えることができます。
 
   Microsoft Edge では、(オンになった) Microsoft Defender SmartScreen を使用して、フィッシング詐欺にあう可能性や悪意のあるソフトウェアからユーザーを保護しています。
 
