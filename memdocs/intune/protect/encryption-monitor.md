@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 55c98368619338bb7018be0651f6cde4054cf9cf
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079707"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254998"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Intune でデバイスの暗号化を監視する
 
@@ -53,10 +53,10 @@ Microsoft Intune の暗号化レポートは、デバイスの暗号化状態に
   - **準備完了**:MDM ポリシーを使ってデバイスを暗号化できます。それには、デバイスで次の要件が満たされている必要があります。
 
     **macOS デバイスの場合**:
-    - MacOS バージョン 10.13 以降
+    - macOS バージョン 10.13 以降
 
     **Windows 10 デバイスの場合**:
-    - バージョン 1703 以降の *Business*、*Enterprise*、*Education*、またはバージョン 1809 以降の *Pro*
+    - バージョン 1709 以降の *Business*、*Enterprise*、*Education*、またはバージョン 1809 以降の *Pro*
     - デバイスには TPM チップが必要です
 
     詳細については、Windows ドキュメントの [BitLocker 構成サービス プロバイダー (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)に関するページを参照してください。
@@ -107,7 +107,7 @@ Microsoft Intune の暗号化レポートは、デバイスの暗号化状態に
 
   Intune から報告される状態の詳細の例を次に示します。
 
-  **macOS**:
+  **macOS**: 
   - 回復キーは取得されておらず、まだ保存されていません。 ほとんどの場合は、デバイスのロックが解除されていないか、またはチェックインされていません。
 
     *考慮事項:この結果は、必ずしもエラー状態を表しているわけではありませんが、暗号化要求がデバイスに送信される前に回復キーのエスクローを設定する必要があるデバイス上で、タイミングが原因で起こり得る一時的な状態を表します。また、この状態は、デバイスがロックされたままであるか、最近 Intune にチェックインされていないことを示している可能性があります。最後に、デバイスが接続 (充電) されるまで FileVault 暗号化は開始されないため、ユーザーは、まだ暗号化されていないデバイスの回復キーを受け取る可能性があります*。
@@ -120,9 +120,9 @@ Microsoft Intune の暗号化レポートは、デバイスの暗号化状態に
 
     *考慮事項:Intune では、既に暗号化されているデバイスで FileVault を設定することはできません。代わりに、デバイスをデバイス構成ポリシーと Intune で管理するために、ユーザーがデバイスを手動で暗号化解除する必要があります*。
 
-  - FileVault では、ユーザーは MacOS Catalina 以降で管理プロファイルを承認する必要があります。
+  - FileVault では、ユーザーは macOS Catalina 以降で管理プロファイルを承認する必要があります。
 
-    *考慮事項:MacOS バージョン 10.15 (Catalina) 以降では、ユーザー承認済み登録設定により、ユーザーは FileVault 暗号化を手動で承認することが必要になる可能性があります。詳細については、Intune ドキュメントの「[ユーザー承認済みの登録](../enrollment/macos-enroll.md)」を参照してください*。
+    *考慮事項:macOS バージョン 10.15 (Catalina) 以降では、ユーザー承認済み登録設定により、ユーザーは FileVault 暗号化を手動で承認することが必要になる可能性があります。詳細については、Intune ドキュメントの「[ユーザー承認済みの登録](../enrollment/macos-enroll.md)」を参照してください*。
 
   - 不明。
 
@@ -229,7 +229,7 @@ Intune では BitLocker 用の Azure AD ブレードにアクセスできます�
 
    キーが Azure AD 内に存在していない場合、Intune によって "*このデバイスの BitLocker キーが見つかりません*" が表示されます。
 
-BitLocker の情報については、[BitLocker 構成サービス プロバイダー](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP) に関するページを参照してください。 BitLocker CSP は、Windows 10 の場合、バージョン 1703 以降で、Windows 10 Pro の場合、バージョン 1809 以降でサポートされています。
+BitLocker の情報については、[BitLocker 構成サービス プロバイダー](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP) に関するページを参照してください。 BitLocker CSP は、Windows 10 の場合、バージョン 1709 以降で、Windows 10 Pro の場合、バージョン 1809 以降でサポートされています。
 
 ## <a name="next-steps"></a>次のステップ
 

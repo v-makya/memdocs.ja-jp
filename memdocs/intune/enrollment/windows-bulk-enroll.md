@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eabdae9fcc8bdc3b6c93d5b735a5b9fbf4dcf69a
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 54b26c2b7599906df29e5130b99dc38124e0b411
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078925"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254794"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows デバイスの一括登録
 
@@ -32,7 +32,7 @@ Azure AD ユーザーはこれらのデバイス上の標準ユーザーであ�
 
 ## <a name="prerequisites-for-windows-devices-bulk-enrollment"></a>Windows デバイスの一括登録の前提条件
 
-- Windows 10 Creator Update (ビルド 1703) 以降が動作しているデバイス
+- Windows 10 Creator Update (ビルド 1709) 以降が動作しているデバイス
 - [Windows 自動登録](windows-enroll.md#enable-windows-10-automatic-enrollment)
 
 ## <a name="create-a-provisioning-package"></a>プロビジョニング パッケージの作成

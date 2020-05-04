@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27ec9e4c407dd8ef1a94e9c443f62ea5456866dc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8710043244e0b6becebef60890ac1a0ec3105971
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80808142"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254641"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>デバイス登録マネージャー アカウントを使用してデバイスを Intune に登録する
 
@@ -43,6 +43,13 @@ DEM ユーザー アカウントと DEM ユーザー アカウントを使用し
 - DEM アカウントに登録されているすべてのデバイスを Intune で管理するには、適切にライセンスする必要があります。 ライセンスは、Intune ユーザー ライセンスまたは Intune デバイス ライセンスにすることができます。
 - DEM アカウントを使用して [Android Enterprise 仕事用プロファイル デバイスを登録](android-work-profile-enroll.md)する場合、アカウントあたりの登録可能なデバイスは 10 台に制限されます。
 - DEM アカウントを使用した [Android Enterprise フル マネージド デバイスの登録](android-fully-managed-enroll.md)はサポートされていません。
+- Azure AD デバイスの制限を DEM アカウントに適用すると、DEM アカウントが登録できるデバイス数の上限である 1,000 に到達しなくなります。
+
+## <a name="enrollment-methods-supported-by-dem-accounts"></a>DEM アカウントでサポートされている登録方法
+
+- [Windows Autopilot](enrollment-autopilot.md)
+- [Windows デバイスの一括登録](windows-bulk-enroll.md)
+- ポータル サイトから DEM が開始
 
 ## <a name="add-a-device-enrollment-manager"></a>デバイス登録マネージャーの追加
 
@@ -52,14 +59,13 @@ DEM ユーザー アカウントと DEM ユーザー アカウントを使用し
 
 3. **[ユーザーの追加]** ブレードで、DEM ユーザーのユーザー プリンシパル名を入力し、 **[追加]** を選択します。 DEM ユーザーが DEM ユーザーの一覧に追加されます。
 
-## <a name="permissions-for-dem"></a>DEM のアクセス許可
+## <a name="permissions-required-to-create-dem-accounts"></a>DEM アカウントを作成するために必要なアクセス許可
 
 次のために、グローバル管理者または Intune サービス管理者の Azure AD ロールが必要です。
 - Azure AD ユーザー アカウントに DEM アクセス許可を割り当てる
 - すべての DEM ユーザーを表示する
 
 ユーザーにグローバル管理者または Intune サービス管理者のロールが割り当てられていないが、デバイス登録マネージャー ロールが割り当てられていてその読み取りアクセス許可を持っているという場合は、そのユーザー自身が作成した DEM ユーザーのみを表示できます。
-
 
 ## <a name="remove-device-enrollment-manager-permissions"></a>デバイス登録マネージャーのアクセス許可の削除
 

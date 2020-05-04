@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba2b8e407b4c81f74df7c86e7101461b30a0d8e0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: fe95196da3e75dc50e585dc1c4508e8d20c7d5e3
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80087137"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255032"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune とエンド ユーザー アプリの UI の更新
 
@@ -477,7 +477,7 @@ __[別のデバイスからサインインする]__ リンクをタップしま�
 
 ### <a name="improvements-to-app-syncing-with-windows-10-creators-update---676505--"></a>Windows 10 Creators Update とアプリを同期する機能の強化 <!--676505-->
 
-Windows 10 用ポータル サイト アプリでは、Windows 10 Creators Update (バージョン 1703) がインストールされているデバイスのアプリ インストール要求の同期が自動的に開始されるようになりました。 "同期保留中" 状態中、アプリ インストールが止まる問題を減らします。 また、ユーザーは、アプリ内からの同期を手動で開始することができます。
+Windows 10 用ポータル サイト アプリでは、Windows 10 Creators Update (バージョン 1709) がインストールされているデバイスのアプリ インストール要求の同期が自動的に開始されるようになりました。 "同期保留中" 状態中、アプリ インストールが止まる問題を減らします。 また、ユーザーは、アプリ内からの同期を手動で開始することができます。
 
 ![Windows 10 ポータル サイト アプリの画像。ポータル サイト アプリ ストアからの Microsoft Word のダウンロードが保留になっています。](./media/whats-new-app-ui/w10_download_pending_after_1706.png)
 
@@ -603,7 +603,7 @@ __変更後__![変更後のバージョンの読み込み画面の画像。イ�
 ## <a name="january-2017"></a>2017 年 1 月
 
 ### <a name="modernizing-the-company-portal-website---753980-announced-1701--"></a>ポータル Web サイトの進化 <!--753980, announced 1701-->
-2 月から、ポータル Web サイトでマネージド デバイスを持っていないユーザーを対象とするアプリをサポートします。 この Web サイトは、新しいコントラストの配色パターン、動的な図、および "ハンバーガー メニュー" ![(ヘルプデスクの連絡先詳細や既存の管理対象デバイスに関する情報を含む、](./media/whats-new-app-ui/CP_hamburger_menu.png) ポータル Web サイトの左上隅に新たに追加されたハンバーガー メニューの小さなイメージ) を使用することで、Microsoft の他の製品やサービスと連携します。 ランディング ページはユーザーが利用できるアプリをわかりやすくするために再配置され、おすすめのアプリや最近更新されたアプリはカルーセル ビューで表示されます。
+2 月から、ポータル Web サイトでマネージド デバイスを持っていないユーザーを対象とするアプリをサポートします。 この Web サイトは、新しいコントラストの配色パターン、動的な図、および "ハンバーガー メニュー"  ![(ヘルプデスクの連絡先詳細や既存の管理対象デバイスに関する情報を含む、](./media/whats-new-app-ui/CP_hamburger_menu.png) ポータル Web サイトの左上隅に新たに追加されたハンバーガー メニューの小さなイメージ) を使用することで、Microsoft の他の製品やサービスと連携します。 ランディング ページはユーザーが利用できるアプリをわかりやすくするために再配置され、おすすめのアプリや最近更新されたアプリはカルーセル ビューで表示されます。
 
 ![左側は、以前のバージョンの [アプリ]、[デバイス]、[おすすめ] ビュー、[カテゴリ] ビューが表示された、会社のポータル Web サイトの現在のバージョンのイメージです。 右側は、更新されたアプリ カルーセル、[Recently Published apps (最近公開されたアプリ)] のリスト、更新された [カテゴリ] ビューが表示された、会社のポータル Web サイトの更新バージョンのイメージです。](./media/whats-new-app-ui/CP_Website_BeforeAfter_Feb2016.png)
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad0964eafccc5bf007b1569762e4cea4d0ee691a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b8552bd6bb570c91e84acd40cd2b654696eca972
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326787"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210351"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Intune にデバイスを登録できるようにライセンスをユーザーに割り当てる
 
@@ -36,7 +36,7 @@ ms.locfileid: "80326787"
 
 1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[ユーザー]**  >  **[すべてのユーザー]** を選択し、ユーザーを選択して、 **[ライセンス]**  >  **[割り当て]** を選択します。
 
-2. **[Intune]**  >  **[保存]** を選択します。
+2. **[Intune]**  >  **[保存]** を選択します。 Enterprise Mobility + Security E5 またはその他のライセンスを使用する場合は、代わりにそのボックスを選択します。
 
    ![Microsoft 365 管理センターの [製品ライセンス] セクションのスクリーンショット](./media/licenses-assign/mem-assign-license.png)
 

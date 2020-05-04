@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f9e62cd4c4034e4cf2eafaea56aa3e5175b1797e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cc2fbfac43916a8298646f6ff57c146c45966b1c
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335745"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254811"
 ---
 # <a name="sync-your-windows-device-manually"></a>Windows デバイスを手動で同期する
 
@@ -40,7 +40,7 @@ Intune では、ポータル サイト アプリから、デスクトップ タ�
 * [Windows Phone 8.1](#windows-phone-81)    
 
 ## <a name="sync-directly-from-company-portal-app-for-windows"></a>Windows 用 Intune ポータル サイト アプリから直接同期する
-Creators Update (バージョン 1703) 以降を実行する Windows 10 デバイスを手動で同期するには、次の手順のようにします。
+Creators Update (バージョン 1709) 以降を実行する Windows 10 デバイスを手動で同期するには、次の手順のようにします。
 
 1. デバイス上でポータル サイト アプリを開きます。
 
