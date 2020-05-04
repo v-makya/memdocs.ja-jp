@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e359b07669f45999ae3de4280d1eb65d5ca11064
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: cbcd54a56304df36c536e5a623f4e9da5ba3f15b
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023335"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82254692"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>ワイプ、インベントリからの削除、デバイス登録の手動解除を使用し、デバイスを削除する
 
@@ -69,7 +69,7 @@ MDM ポリシーは、デバイスが次に Intune に接続再したときに�
     |ユーザー プロファイル以外のユーザー データ||
     |ユーザー自動ログオン|| 
     
-7. **[Wipe device, and continue to wipe even if device loses power.]\(デバイスをワイプし、デバイスの電源が切れてもワイプを続行する。\)** オプションを選択すると、デバイスの電源をオフにすることによってワイプ操作を回避できないようになります。 このオプションを選択すると、デバイスのリセットが成功するまで繰り返し試行されます。 一部の構成では、このアクションによってデバイスを[再起動できなくなる](troubleshoot-device-actions.md#wipe-action)場合があります。        
+7. **[Wipe device, and continue to wipe even if device loses power.]\(デバイスをワイプし、デバイスの電源が切れてもワイプを続行する。\)**  オプションを選択すると、デバイスの電源をオフにすることによってワイプ操作を回避できないようになります。 このオプションを選択すると、デバイスのリセットが成功するまで繰り返し試行されます。 一部の構成では、このアクションによってデバイスを[再起動できなくなる](troubleshoot-device-actions.md#wipe-action)場合があります。        
 8. ワイプを確定するには、 **[はい]** を選択します。
 
 デバイスに電源が入っていて、接続されている場合、 **[ワイプ]** アクションは 15 分以内にすべてのデバイスの種類に伝達されます。
@@ -94,7 +94,7 @@ MDM ポリシーは、デバイスが次に Intune に接続再したときに�
 |電子メール|Intune を介してプロビジョニングされている電子メール プロファイルは削除されます。 デバイスにキャッシュされた電子メールは削除されます。|
 |Azure AD の参加解除|Azure AD レコードは削除されます。|
 
-### <a name="android"></a>Android
+### <a name="android-device-administrator"></a>Android デバイス管理者
 
 |データ型|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
@@ -110,11 +110,11 @@ MDM ポリシーは、デバイスが次に Intune に接続再したときに�
 |電子メール|該当なし (電子メール プロファイルは、Android デバイスではサポートされません)|Intune を介してプロビジョニングされている電子メール プロファイルは削除されます。 デバイスにキャッシュされた電子メールは削除されます。|
 |Azure AD の参加解除|Azure AD レコードは削除されます。|Azure AD レコードは削除されます。|
 
-### <a name="android-work-profile"></a>Android の仕事用プロファイル
+### <a name="android-enterprise-devices-with-a-work-profile"></a>仕事用プロファイルを使用した Android Enterprise デバイス
 
 Android の仕事用プロファイルのデバイスから会社データを削除すると、そのデバイスの仕事用プロファイルのすべてのデータ、アプリケーション、および設定が削除されます。 デバイスは Intune の管理対象ではなくなります。 Android の仕事用プロフィルについては、ワイプはサポートされていません。
 
-### <a name="android-enterprise-kiosk-devices"></a>Android エンタープライズ キオスク デバイス
+### <a name="android-enterprise-dedicated-devices"></a>Android Enterprise 専用デバイス
 
 キオスク デバイスのみワイプできます。 Android キオスク デバイスをインベントリから削除することはできません。
 
@@ -132,9 +132,9 @@ Android の仕事用プロファイルのデバイスから会社データを削
 
 ### <a name="windows"></a>Windows
 
-|データ型|Windows 8.1 (MDM) と Windows RT 8.1|Windows RT|Windows Phone 8.1 および Windows Phone 8|Windows 10|
+|データ型|Windows 8.1 (MDM) と Windows RT 8.1|Windows RT|Windows Phone 8.1 および Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Intune でインストールされた会社のアプリと関連するデータ。|EFS で保護されているファイルのキーは失効します。 ユーザーがファイルを開くことはできません。|会社のアプリは削除されません。|元々ポータル サイトでインストールされたアプリはアンインストールされます。 会社のアプリ データは削除されます。|アプリはアンインストールされます。 サイドローディング キーは削除されます。<br>Windows 10 バージョン 1703 (Creators Update) 以降の場合、Microsoft 365 アプリは削除されていません。 Intune 管理拡張機能がインストールされている Win32 アプリは、未登録デバイスではアンインストールされません。 管理者は、割り当ての除外を利用して、Win32 アプリを BYOD デバイスに提供しないようにすることができます。|
+|Intune でインストールされた会社のアプリと関連するデータ。|EFS で保護されているファイルのキーは失効します。 ユーザーがファイルを開くことはできません。|会社のアプリは削除されません。|元々ポータル サイトでインストールされたアプリはアンインストールされます。 会社のアプリ データは削除されます。|アプリはアンインストールされます。 サイドローディング キーは削除されます。<br>Windows 10 バージョン 1709 (Creators Update) 以降の場合、Microsoft 365 アプリは削除されていません。 Intune 管理拡張機能がインストールされている Win32 アプリは、未登録デバイスではアンインストールされません。 管理者は、割り当ての除外を利用して、Win32 アプリを BYOD デバイスに提供しないようにすることができます。|
 |Settings|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|
 |Wi-fi と VPN プロファイルの設定|削除されます。|削除されます。|サポートされていません。|削除されます。|
 |証明書プロファイルの設定|証明書は削除され、失効されます。|証明書は削除され、失効されます。|サポートされていません。|証明書は削除され、失効されます。|

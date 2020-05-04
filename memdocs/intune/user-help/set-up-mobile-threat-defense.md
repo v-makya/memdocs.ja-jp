@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/25/2019
+ms.date: 04/27/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b5df63a14f27b657c585eb43e09b02368d969939
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 676af3373acd399056a0ebdc77c9152442a72101
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084395"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182278"
 ---
 # <a name="install-mobile-threat-defense"></a>Mobile Threat Defense をインストールする   
 
@@ -30,7 +30,7 @@ ms.locfileid: "80084395"
 
 必要な MTD アプリがない場合は、職場または学校アカウントを使用して保護されたアプリにサインインできなくなります。 この記事では、[MTD アプリをインストール](set-up-mobile-threat-defense.md#install-app)して、ブロックを解除する方法について説明します。  
 
-さまざまな MTD ベンダー アプリをインストールできます。どれを使用するかは組織から通知されます。 
+インストールできるさまざまな MTD ベンダー アプリがあり、すべて名前が異なります。 いずれを使用するかは組織から通知されます。 アプリのインストールを求めるメッセージが表示されても、以降の手順やアプリを入手するためのリンクが表示されない場合は、IT サポート担当者にお問い合わせください。 
 
 
 ## <a name="information-your-organization-can-see"></a>組織が参照できる情報   
