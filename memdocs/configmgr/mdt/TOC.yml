@@ -1,0 +1,25 @@
+- name: Microsoft Deployment Toolkit (MDT) ドキュメント
+  href: index.yml
+  items:
+    - name: リリース ノート
+      href: release-notes.md
+    - name: MDT ユーザー ガイド
+      href: use-the-mdt.md
+    - name: サンプル ガイド
+      href: samples-guide.md
+    - name: クイックスタート
+      items:
+        - name: ライトタッチ インストール (LTI)
+          href: lite-touch-installation-guide.md
+        - name: ゼロタッチ インストール (ZTI)
+          href: configmgr-guide.md
+        - name: ユーザー駆動型インストール (UDI)
+          href: user-driven-installation-guide.md
+    - name: 参照先
+      items:
+        - name: ツールキットのリファレンス
+          href: toolkit-reference.md
+        - name: トラブルシューティングのリファレンス
+          href: troubleshooting-reference.md
+        - name: UDI 開発者ガイド
+          href: user-driven-installation-developers-guide.md

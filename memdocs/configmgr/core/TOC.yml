@@ -20,7 +20,7 @@
           href: understand/accessibility-features.md
         - name: ソフトウェア センターのユーザー ガイド
           href: understand/software-center.md
-    - name: 基本要素
+    - name: 基本
       items:
         - name: Configuration Manager の基礎
           href: understand/fundamentals.md
@@ -32,7 +32,7 @@
           href: understand/fundamentals-of-managing-devices.md
         - name: クライアント管理
           href: understand/fundamentals-of-client-management-tasks.md
-        - name: '[セキュリティ]'
+        - name: セキュリティ
           href: understand/fundamentals-of-security.md
         - name: 役割に基づいた管理
           href: understand/fundamentals-of-role-based-administration.md
@@ -166,7 +166,7 @@
               href: plan-design/hierarchy/data-transfers-between-sites.md
             - name: ファイルベースのレプリケーション
               href: plan-design/hierarchy/file-based-replication.md
-            - name: データベース レプリケーション
+            - name: データベースのレプリケーション
               href: plan-design/hierarchy/database-replication.md
         - name: クライアントがリソースやサービスを検索する方法
           href: plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md
@@ -264,6 +264,8 @@
       items:
         - name: Technical Preview の概要
           href: get-started/technical-preview.md
+        - name: 2004 の機能
+          href: get-started/2020/technical-preview-2004.md
         - name: 2003 の機能
           href: get-started/2020/technical-preview-2003.md
         - name: 2002.2 の機能
@@ -274,8 +276,6 @@
           href: get-started/2020/technical-preview-2001-2.md
         - name: 2001 の機能
           href: get-started/2020/technical-preview-2001.md
-        - name: 1912 の機能
-          href: get-started/2019/technical-preview-1912.md
     - name: 階層間でのデータの移行
       items:
         - name: 移行の概要
@@ -605,7 +605,7 @@
           href: support/support-center.md
         - name: クイック スタート ガイド
           href: support/support-center-quickstart.md
-        - name: アクセシビリティ
+        - name: ユーザー補助
           href: support/support-center-accessibility.md
         - name: ユーザー インターフェイスのリファレンス
           href: support/support-center-ui-reference.md
@@ -717,7 +717,7 @@
               href: clients/deploy/linux-and-unix-clients-technical-reference.md
         - name: Mac にクライアントを展開する準備
           href: clients/deploy/prepare-to-deploy-mac-clients.md
-        - name: How to deploy clients to Macs
+        - name: Mac にクライアントを展開する方法
           href: clients/deploy/deploy-clients-to-macs.md
         - name: クライアントをサイトに割り当てる方法
           href: clients/deploy/assign-clients-to-a-site.md

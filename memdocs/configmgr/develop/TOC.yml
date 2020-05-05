@@ -1,0 +1,1006 @@
+- name: Configuration Manager SDK のドキュメント
+  href: index.yml
+- name: 概要
+  items:
+    - name: Configuration Manager SDK の概要
+      href: core/misc/system-center-configuration-manager-sdk.md
+    - name: プライバシーに関する情報
+      href: core/misc/privacy/privacy-information.md
+    - name: SDK の新機能
+      href: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
+- name: 要件
+  items:
+    - name: SDK の要件について
+      href: core/reqs/about-configuration-manager-sdk-requirements.md
+    - name: クライアントのランタイム要件
+      href: core/reqs/client-runtime-requirements.md
+    - name: サーバーのランタイム要件
+      href: core/reqs/server-runtime-requirements.md
+    - name: クライアントの開発要件
+      href: core/reqs/client-development-requirements.md
+    - name: サーバーの開発要件
+      href: core/reqs/server-development-requirements.md
+    - name: SDK ライブラリとヘッダー ファイル
+      href: core/reqs/configuration-manager-sdk-libraries-and-header-files.md
+- name: SDK のサンプル
+  href: core/understand/configuration-manager-sdk-samples.md
+- name: プログラミングの基礎
+  items:
+    - name: Configuration Manager のプログラミングを開始する
+      items:
+        - name: Configuration Manager のプログラミングを開始する
+          href: core/understand/getting-started-with-configuration-manager-programming.md
+        - name: アーキテクチャの概要
+          href: core/understand/architectural-overview.md
+        - name: WBEMTEST の概要
+          href: core/understand/introduction-to-wbemtest.md
+        - name: リスト、作成、変更、および削除の簡単な例
+          href: core/understand/simple-example-of-list--create--modify--and-delete.md
+    - name: Configuration Manager および Windows PowerShell を開始する
+      items:
+        - name: Configuration Manager および Windows PowerShell を開始する
+          href: core/understand/getting-started-with-configuration-manager-and-windows-powershell.md
+        - name: Windows PowerShell の基礎
+          href: core/understand/windows-powershell-basics.md
+        - name: Windows PowerShell を使用して Configuration Manager に接続する
+          href: core/understand/connecting-to-configuration-manager-with-windows-powershell.md
+    - name: Configuration Manager のコード スニペットを呼び出す
+      href: core/understand/calling-code-snippets.md
+    - name: サイトのパスワードまたはデータを暗号化する
+      href: core/understand/how-to-encrypt-passwords-or-data-for-a-site.md
+    - name: エラー
+      items:
+        - name: エラーについて
+          href: core/understand/about-configuration-manager-errors.md
+        - name: マネージド コードを使用した非同期エラーの処理
+          href: core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-managed-code.md
+        - name: マネージド コードを使用した同期エラーの処理
+          href: core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-managed-code.md
+        - name: WMI を使用した非同期エラーの処理
+          href: core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-wmi.md
+        - name: WMI を使用した同期エラーの処理
+          href: core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-wmi.md
+    - name: オブジェクト
+      items:
+        - name: オブジェクトについて
+          items:
+            - name: オブジェクトの概要
+              href: core/understand/configuration-manager-objects-overview.md
+            - name: オブジェクト セキュリティ
+              href: core/understand/configuration-manager-object-security.md
+            - name: 埋め込みオブジェクト
+              href: core/understand/embedded-objects.md
+            - name: 関連付けクラス
+              href: core/understand/association-classes.md
+            - name: 日付と時刻の形式
+              href: core/understand/date-and-time-formats.md
+            - name: ビット フィールドのプロパティ
+              href: core/understand/configuration-manager-bit-field-properties.md
+            - name: 表示に時間のかかるプロパティ
+              href: core/understand/configuration-manager-lazy-properties.md
+            - name: 拡張 WMI クエリ言語
+              href: core/understand/extended-wmi-query-language.md
+            - name: 結果セット
+              href: core/understand/result-sets.md
+            - name: 特殊なクエリ
+              href: core/understand/special-queries.md
+        - name: マネージド コードによるオブジェクトの使用
+          items:
+            - name: オブジェクトの作成
+              href: core/understand/how-to-create-a-configuration-manager-object-by-using-managed-code.md
+            - name: オブジェクトの読み取り
+              href: core/understand/how-to-read-a-configuration-manager-object-by-using-managed-code.md
+            - name: オブジェクトの変更
+              href: core/understand/how-to-modify-a-configuration-manager-object-by-using-managed-code.md
+            - name: オブジェクトの削除
+              href: core/understand/how-to-delete-a-configuration-manager-object-by-using-managed-code.md
+            - name: 非同期クエリの実行
+              href: core/understand/how-to-perform-an-asynchronous-query-by-using-managed-code.md
+            - name: 同期クエリの実行
+              href: core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-managed-code.md
+            - name: 表示に時間のかかるプロパティの読み取り
+              href: core/understand/how-to-read-lazy-properties-by-using-managed-code.md
+            - name: オブジェクト クラス メソッドの呼び出し
+              href: core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-managed-code.md
+        - name: WMI によるオブジェクトの使用
+          items:
+            - name: オブジェクトの作成
+              href: core/understand/how-to-create-a-configuration-manager-object-by-using-wmi.md
+            - name: オブジェクトの読み取り
+              href: core/understand/how-to-read-a-configuration-manager-object-by-using-wmi.md
+            - name: オブジェクトの変更
+              href: core/understand/how-to-modify-a-configuration-manager-object-by-using-wmi.md
+            - name: オブジェクトの削除
+              href: core/understand/how-to-delete-a-configuration-manager-object-by-using-wmi.md
+            - name: 同期クエリの実行
+              href: core/understand/how-to-perform-a-synchronous-configuration-manager-query-by-using-wmi.md
+            - name: 非同期クエリの実行
+              href: core/understand/how-to-perform-an-asynchronous-configuration-manager-query-by-using-wmi.md
+            - name: 表示に時間のかかるプロパティの読み取り
+              href: core/understand/how-to-read-lazy-properties-by-using-wmi.md
+            - name: オブジェクト クラス メソッドの呼び出し
+              href: core/understand/how-to-call-a-configuration-manager-object-class-method-by-using-wmi.md
+    - name: クエリ
+      items:
+        - name: クエリについて
+          href: core/understand/about-configuration-manager-queries.md
+        - name: クエリの実行
+          href: core/understand/how-to-run-a-query.md
+        - name: クエリの作成
+          href: core/understand/how-to-create-a-configuration-manager-query.md
+    - name: SEDO
+      items:
+        - name: SEDO の概要
+          href: core/understand/sedo.md
+        - name: SEDO 対応オブジェクトのロックを取得する
+          href: core/understand/how-to-acquire-a-lock-on-a-sedo-enabled-object.md
+        - name: SEDO 対応オブジェクトのロックを解除する
+          href: core/understand/how-to-release-a-lock-on-a-sedo-enabled-object.md
+    - name: スケジュール
+      items:
+        - name: スケジュールについて
+          href: core/understand/about-configuration-manager-schedules.md
+        - name: スケジュール トークンの作成
+          href: core/understand/how-to-create-a-schedule-token.md
+    - name: サイト コントロール ファイル
+      items:
+        - name: サイト コントロール ファイルについて
+          href: core/understand/about-the-configuration-manager-site-control-file.md
+        - name: マネージド コードを使用した読み取りと書き込み
+          href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md
+        - name: WMI を使用した読み取りと書き込み
+          href: core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md
+        - name: サイト コントロール ファイルの埋め込みプロパティ リストの読み取り
+          href: core/understand/how-to-read-a-configuration-manager-site-control-file-embedded-property-list.md
+        - name: サイト システムの役割の展開
+          href: core/understand/how-to-deploy-a-site-system-role--example---fallback-status-point-.md
+    - name: クラス スキーマ
+      items:
+        - name: クラス スキーマの概要
+          href: core/understand/configuration-manager-class-schema.md
+        - name: 日付と時刻の形式
+          href: core/understand/date-and-time-formats.md
+        - name: ビットフィールド プロパティの解釈
+          href: core/understand/interpreting-bitfield-properties.md
+        - name: 表示に時間のかかるプロパティ
+          href: core/understand/lazy-properties.md
+        - name: SMS プロバイダー フィールドの長さの制限
+          href: core/understand/sms-provider-field-length-restrictions.md
+    - name: データベース スキーマとビュー
+      items:
+        - name: データベース スキーマについて
+          items:
+            - name: スキーマの概要
+              href: core/understand/configuration-manager-schema-overview.md
+            - name: スキーマ SQL ビュー
+              href: core/understand/configuration-manager-schema-sql-views.md
+            - name: スキーマ ビューのマッピング
+              href: core/understand/configuration-manager-schema-view-mapping.md
+            - name: SQL ビューのセキュリティ
+              href: core/understand/sql-view-security.md
+        - name: SQL Server を使用した Configuration Manager ビューの表示
+          href: core/understand/how-to-see-a-configuration-manager-view-by-using-sql-server.md
+        - name: SQL Server ビューを使用したカスタム レポートの作成
+          items:
+            - name: 概要
+              href: core/understand/sqlviews/create-custom-reports-using-sql-server-views.md
+            - name: SQL Server ビュー
+              items:
+                - name: 概要
+                  href: core/understand/sqlviews/sql-server-views-configuration-manager.md
+                - name: アプリケーション管理ビュー
+                  href: core/understand/sqlviews/application-management-views-configuration-manager.md
+                - name: クライアント展開ビュー
+                  href: core/understand/sqlviews/client-deployment-views-configuration-manager.md
+                - name: クライアント ステータス ビュー
+                  href: core/understand/sqlviews/client-status-views-configuration-manager.md
+                - name: コレクション ビュー
+                  href: core/understand/sqlviews/collection-views-configuration-manager.md
+                - name: コンプライアンス設定ビュー
+                  href: core/understand/sqlviews/compliance-settings-views-configuration-manager.md
+                - name: コンテンツ管理ビュー
+                  href: core/understand/sqlviews/content-management-views-configuration-manager.md
+                - name: 検出ビュー
+                  href: core/understand/sqlviews/discovery-views-configuration-manager.md
+                - name: Endpoint Protection ビュー
+                  href: core/understand/sqlviews/endpoint-protection-views-configuration-manager.md
+                - name: インベントリ ビュー
+                  items:
+                    - name: インベントリ ビューの概要
+                      href: core/understand/sqlviews/inventory-views-configuration-manager.md
+                    - name: ハードウェア インベントリ ビュー
+                      href: core/understand/sqlviews/hardware-inventory-views-configuration-manager.md
+                    - name: ソフトウェア インベントリ ビュー
+                      href: core/understand/sqlviews/software-inventory-views-configuration-manager.md
+                    - name: 資産インテリジェンス ビュー
+                      href: core/understand/sqlviews/asset-intelligence-views-configuration-manager.md
+                - name: 移行ビュー
+                  href: core/understand/sqlviews/migration-views-configuration-manager.md
+                - name: MDM ビュー
+                  href: core/understand/sqlviews/mobile-device-management-views-configuration-manager.md
+                - name: OS 展開ビュー
+                  href: core/understand/sqlviews/operating-system-deployment-views-configuration-manager.md
+                - name: 電源管理ビュー
+                  href: core/understand/sqlviews/power-management-views-configuration-manager.md
+                - name: クエリ ビュー
+                  href: core/understand/sqlviews/query-views-configuration-manager.md
+                - name: レポート ビュー
+                  href: core/understand/sqlviews/reporting-views-configuration-manager.md
+                - name: スキーマ ビュー
+                  href: core/understand/sqlviews/schema-views-configuration-manager.md
+                - name: セキュリティ ビュー
+                  href: core/understand/sqlviews/security-views-configuration-manager.md
+                - name: サイト管理ビュー
+                  href: core/understand/sqlviews/site-admin-views-configuration-manager.md
+                - name: ソフトウェア使用状況測定ビュー
+                  href: core/understand/sqlviews/software-metering-views-configuration-manager.md
+                - name: ソフトウェア更新プログラム ビュー
+                  href: core/understand/sqlviews/software-updates-views-configuration-manager.md
+                - name: 状態ビューとアラート ビュー
+                  href: core/understand/sqlviews/status-alert-views-configuration-manager.md
+                - name: Wake On LAN ビュー
+                  href: core/understand/sqlviews/wake-lan-views-configuration-manager.md
+            - name: レポートの操作
+              items:
+                - name: 既存レポートの評価
+                  items:
+                    - name: すべてのコレクション レポートの評価
+                      href: core/understand/sqlviews/evaluation-all-collections-report-configuration-manager.md
+                    - name: コンピューター情報レポートの評価
+                      href: core/understand/sqlviews/evaluation-computer-information-report-configuration-manager.md
+                - name: レポートの SQL ステートメントの表示
+                  href: core/understand/sqlviews/how-to-view-sql-statement-configuration-manager-reports.md
+                - name: レポートの変更
+                  href: core/understand/sqlviews/how-to-modify-configuration-manager-reports.md
+                - name: レポートの作成
+                  href: core/understand/sqlviews/how-to-create-configuration-manager-reports.md
+                - name: レポートの実行
+                  href: core/understand/sqlviews/how-to-run-configuration-manager-reports.md
+                - name: カスタム レポート作成の演習
+                  items:
+                    - name: 演習 1 - 既存レポートを実行する
+                      href: core/understand/sqlviews/exercise-1-run-existing-configuration-manager-report.md
+                    - name: 演習 2 - 既存レポートを変更する
+                      href: core/understand/sqlviews/exercise-2-modify-existing-configuration-manager-report.md
+                    - name: 演習 3 - 新しいレポートを作成する
+                      href: core/understand/sqlviews/exercise-3-create-new-configuration-manager-report.md
+                    - name: 高度な演習 1 - コンプライアンス設定の新しいレポートを作成する
+                      href: core/understand/sqlviews/advanced-exercise-1-create-new-report-compliance-settings-configuration-manager.md
+                    - name: 高度な演習 1 - 解答
+                      href: core/understand/sqlviews/advanced-exercise-1-solution-create-new-report-compliance-settings-configuration-manager.md
+                    - name: 高度な演習 2 - ハードウェア インベントリの新しいレポートを作成する
+                      href: core/understand/sqlviews/advanced-exercise-2-create-new-report-hardware-inventory-configuration-manager.md
+                    - name: 高度な演習 2 - 解答
+                      href: core/understand/sqlviews/advanced-exercise-2-solution-create-new-report-hardware-inventory-configuration-manager.md
+            - name: SQL Server ビューのテクニカル リファレンス
+              items:
+                - name: SQL ビューを使用したサンプル クエリ
+                  items:
+                    - name: アプリケーション管理
+                      href: core/understand/sqlviews/sample-queries-application-management-configuration-manager.md
+                    - name: クライアント展開
+                      href: core/understand/sqlviews/sample-queries-client-deployment-configuration-manager.md
+                    - name: クライアント ステータス
+                      href: core/understand/sqlviews/sample-queries-client-status-configuration-manager.md
+                    - name: コレクション
+                      href: core/understand/sqlviews/sample-queries-collections-configuration-manager.md
+                    - name: コンプライアンス設定
+                      href: core/understand/sqlviews/sample-queries-compliance-settings-configuration-manager.md
+                    - name: コンテンツ管理
+                      href: core/understand/sqlviews/sample-queries-content-management-configuration-manager.md
+                    - name: 検出
+                      href: core/understand/sqlviews/sample-queries-discovery-configuration-manager.md
+                    - name: Endpoint Protection
+                      href: core/understand/sqlviews/sample-queries-endpoint-protection-configuration-manager.md
+                    - name: インベントリ
+                      items:
+                        - name: ハードウェア インベントリ
+                          href: core/understand/sqlviews/sample-queries-hardware-inventory-configuration-manager.md
+                        - name: ソフトウェア インベントリ
+                          href: core/understand/sqlviews/sample-queries-software-inventory-configuration-manager.md
+                        - name: 資産インテリジェンス
+                          href: core/understand/sqlviews/sample-queries-asset-intelligence-configuration-manager.md
+                    - name: MDM
+                      href: core/understand/sqlviews/sample-queries-mobile-device-management-configuration-manager.md
+                    - name: OS の展開
+                      href: core/understand/sqlviews/sample-queries-operating-system-deployment-configuration-manager.md
+                    - name: 電源管理
+                      href: core/understand/sqlviews/sample-queries-power-management-configuration-manager.md
+                    - name: クエリ
+                      href: core/understand/sqlviews/sample-queries-for-queries-configuration-manager.md
+                    - name: セキュリティ
+                      href: core/understand/sqlviews/sample-queries-security-configuration-manager.md
+                    - name: サイト管理
+                      href: core/understand/sqlviews/sample-queries-site-administration-configuration-manager.md
+                    - name: ソフトウェア使用状況測定
+                      href: core/understand/sqlviews/sample-queries-software-metering-configuration-manager.md
+                    - name: ソフトウェア更新プログラム
+                      href: core/understand/sqlviews/sample-queries-software-updates-configuration-manager.md
+                    - name: 状態とアラート
+                      href: core/understand/sqlviews/sample-queries-status-alerts-configuration-manager.md
+                    - name: Wake On LAN
+                      href: core/understand/sqlviews/sample-queries-wake-lan-views-configuration-manager.md
+                - name: Configuration Manager レポートの SQL Server リファレンス
+                  items:
+                    - name: レポートの SQL ステートメント リファレンス
+                      href: core/understand/sqlviews/sql-statement-reference-configuration-manager-reports.md
+                    - name: クエリ デザイナーを使用してレポート SQL ステートメントを作成する
+                      href: core/understand/sqlviews/use-query-designer-write-configuration-manager-report-sql-statements.md
+                    - name: クエリ デザイナーを使用して SQL ステートメントを作成する
+                      href: core/understand/sqlviews/how-to-create-sql-statement-using-query-designer.md
+                - name: SMS プロバイダー WMI スキーマ リファレンス
+                  items:
+                    - name: 概要
+                      href: core/understand/sqlviews/sms-provider-wmi-schema-reference-configuration-manager.md
+                    - name: レポートの WMI 名前空間とクラス
+                      href: core/understand/sqlviews/wmi-namespaces-classes-configuration-manager-reports.md
+            - name: Configuration Manager のレポートの一覧
+              href: core/understand/sqlviews/reports-supplied-with-configuration-manager.md
+    - name: SMS プロバイダー
+      items:
+        - name: SMS プロバイダーについて
+          items:
+            - name: SMS プロバイダーの基礎
+              href: core/understand/sms-provider-fundamentals.md
+            - name: WMI プロバイダーの基礎
+              href: core/understand/wmi-configuration-manager-provider-fundamentals.md
+            - name: 管理対象の SMS プロバイダーの基礎
+              href: core/understand/managed-sms-provider-fundamentals-in-configuration-manager.md
+            - name: Configuration Manager のコンテキスト修飾子
+              href: core/understand/context-qualifiers.md
+            - name: SMS プロバイダー フィールドの長さの制限
+              href: core/understand/sms-provider-field-length-restrictions-in-configuration-manager.md
+        - name: マネージド コードを使用して SMS プロバイダーに接続する
+          href: core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md
+        - name: マネージド コードを使用してコンテキスト修飾子を追加する
+          href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-managed-code.md
+        - name: WMI を使用して SMS プロバイダーに接続する
+          href: core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md
+        - name: WMI を使用してコンテキスト修飾子を追加する
+          href: core/understand/how-to-add-a-configuration-manager-context-qualifier-by-using-wmi.md
+    - name: Configuration Manager アプリケーションをセキュリティで保護する
+      href: core/understand/securing-configuration-manager-applications.md
+- name: アプリケーション管理
+  items:
+    - name: スクリプト展開の種類を含むアプリケーションの作成
+      href: apps/how-to-create-an-application-with-the-script-deployment-type.md
+    - name: アプリケーションの承認プロセス
+      href: apps/application-approval-process.md
+    - name: アプリケーション管理の拡張
+      items:
+        - name: 展開の種類の拡張のバージョン管理
+          href: apps/deployment-type-extension-versioning.md
+        - name: シナリオ - アプリケーション管理の拡張
+          items:
+            - name: シナリオの概要
+              href: apps/extending-application-management-overview.md
+            - name: カスタム SDK アセンブリの作成
+              items:
+                - name: 展開テクノロジの定義
+                  href: apps/how-to-define-the-deployment-technology.md
+                - name: ホスト テクノロジの定義
+                  href: apps/how-to-define-the-hosting-technology.md
+                - name: インストーラー テクノロジの定義
+                  href: apps/how-to-define-the-installer-technology.md
+                - name: コンテンツ インポーターの定義
+                  href: apps/how-to-define-the-content-importer.md
+                - name: インストーラーの定義
+                  href: apps/how-to-define-the-installer.md
+                - name: リソースの定義
+                  href: apps/how-to-define-the-resources.md
+            - name: 登録 XML ファイルの作成
+              items:
+                - name: 展開テクノロジ登録ファイルの定義
+                  href: apps/how-to-define-the-deployment-technology-registration-file.md
+                - name: ホスト テクノロジ登録ファイルの定義
+                  href: apps/how-to-define-the-hosting-technology-registration-file.md
+                - name: インストーラー テクノロジ登録ファイルの定義
+                  href: apps/how-to-define-the-installer-technology-registration-file.md
+            - name: UI 拡張の作成
+              items:
+                - name: UI 拡張アセンブリの定義
+                  href: apps/how-to-define-the-ui-extension-assembly.md
+                - name: アプリケーションの作成ウィザード XML ファイルの定義
+                  href: apps/how-to-define-the-create-application-wizard-xml-file.md
+                - name: 展開の種類の作成ウィザード XML ファイルの定義
+                  href: apps/how-to-define-the-create-deployment-type-wizard-xml-file.md
+                - name: 展開の種類プロパティ シート XML ファイルの定義
+                  href: apps/how-to-define-the-deployment-type-property-sheet-xml-file.md
+            - name: クライアント ファイルの作成
+              items:
+                - name: AppSynclet MOF ファイルの定義
+                  href: apps/how-to-define-the-appsynclet-mof-file.md
+                - name: クライアント側のハンドラーの定義
+                  href: apps/how-to-define-the-client-side-handler.md
+            - name: アプリケーション管理拡張機能のインストール
+              items:
+                - name: 展開の種類の拡張ファイル (cmdtx) の作成
+                  href: apps/how-to-create-the-deployment-type-extension-file-cmdtx.md
+                - name: Windows インストーラー ファイル (msi) の作成
+                  href: apps/how-to-create-the-windows-installer-file-msi.md
+            - name: アプリケーション管理拡張機能の確認
+              href: apps/verifying-the-application-management-extension.md
+- name: クライアントのプログラミング
+  items:
+    - name: Configuration Manager クライアント WMI のプログラミング
+      items:
+        - name: WMI のプログラミングについて
+          href: core/clients/programming/about-configuration-manager-wmi-programming.md
+        - name: System.Management を使用してクライアント WMI 名前空間に接続する
+          href: core/clients/programming/how-to-connect-to-the-client-wmi-namespace.md
+        - name: System.Management を使用して WMI オブジェクトを読み取る
+          href: core/clients/programming/how-to-read-a-wmi-object-by-using-system.management.md
+        - name: System.Management を使用して同期クエリを実行する
+          href: core/clients/programming/how-to-perform-a-synchronous-query-by-using-system.management.md
+        - name: System.Management を使用して非同期クエリを実行する
+          href: core/clients/programming/how-to-perform-an-asynchronous-query-by-using-system.management.md
+        - name: System.Management を使用して WMI クラス メソッドを呼び出す
+          href: core/clients/programming/how-to-call-a-wmi-class-method-by-using-system.management.md
+    - name: クライアント リソースの条件
+      href: core/clients/programming/client-resource-conditions.md
+    - name: カスタム クライアント設定の適用
+      href: core/clients/programming/how-to-apply-custom-client-settings.md
+- name: コレクション
+  items:
+    - name: 動的コレクションの作成
+      href: core/clients/collections/how-to-create-a-dynamic-collection.md
+    - name: 静的コレクションの作成
+      href: core/clients/collections/how-to-create-a-static-collection.md
+    - name: コレクションのメンバーの列挙
+      href: core/clients/collections/how-to-enumerate-the-members-of-a-collection.md
+    - name: コレクションの変更
+      href: core/clients/collections/how-to-modify-a-collection.md
+    - name: コレクションの削除
+      href: core/clients/collections/how-to-delete-a-collection.md
+    - name: コレクションのプロパティの取得
+      href: core/clients/collections/how-to-get-the-properties-of-a-collection.md
+    - name: 1 回限りのメンバーシップ評価の開始
+      href: core/clients/collections/how-to-initiate-a-one-time-membership-evaluation-for-a-collection.md
+- name: コンプライアンス設定
+  items:
+    - name: セットアップと構成
+      items:
+        - name: セットアップと構成について
+          href: compliance/about-compliance-settings--dcm--setup-and-configuration.md
+        - name: コンプライアンス設定エージェントを有効または無効にする
+          href: compliance/how-to-enable-or-disable-the-compliance-settings--dcm--agent.md
+        - name: 既定のコンプライアンス評価スケジュールの構成
+          href: compliance/how-to-configure-the-default-compliance-evaluation-schedule.md
+    - name: 構成基準と構成アイテム
+      items:
+        - name: 構成基準と構成アイテムについて
+          href: compliance/about-configuration-baselines-and-configuration-items.md
+        - name: 構成基準と構成アイテムのインポート
+          href: compliance/how-to-import-configuration-baselines-and-configuration-items.md
+        - name: 構成基準と構成アイテムのエクスポート
+          href: compliance/how-to-export-configuration-baselines-and-configuration-items.md
+        - name: 構成基準の割り当て
+          href: compliance/how-to-assign-configuration-baselines.md
+        - name: 構成割り当てのリスト
+          href: compliance/how-to-list-configuration-assignments.md
+    - name: コンプライアンス設定の拡張
+      href: compliance/about-compliance-settings--dcm--extensibility.md
+    - name: 構成基準と構成アイテムの作成
+      items:
+        - name: 構成基準と構成アイテムの作成について
+          href: compliance/about-authoring-configuration-baselines-and-configuration-items.md
+        - name: 構成基準の例
+          items:
+            - name: 構成基準について
+              href: compliance/about-configuration-baselines.md
+            - name: 構成基準の例
+              href: compliance/configuration-baseline-example-1.md
+        - name: アプリケーション構成アイテムの例
+          items:
+            - name: アプリケーション構成アイテムについて
+              href: compliance/about-application-configuration-items.md
+            - name: アプリケーション構成アイテムの例 1
+              href: compliance/application-configuration-item-example-1.md
+            - name: アプリケーション構成項目の例 2
+              href: compliance/application-configuration-item-example-2.md
+        - name: OS 構成アイテムの例
+          items:
+            - name: OS 構成アイテムについて
+              href: compliance/about-operating-system-configuration-item-examples.md
+            - name: OS 構成アイテムの例
+              href: compliance/operating-system-configuration-item-example-1.md
+        - name: 一般構成アイテムの例
+          items:
+            - name: 一般構成アイテムについて
+              href: compliance/about-general-configuration-items.md
+            - name: 一般構成アイテムの例
+              href: compliance/general-configuration-item-example-1.md
+- name: コンソール拡張機能
+  items:
+    - name: コンソール拡張機能について
+      href: core/servers/console/about-configuration-manager-console-extension.md
+    - name: コンソール拡張拡張アーキテクチャ
+      href: core/servers/console/console-extension-architecture.md
+    - name: コンソール拡張機能の展開
+      href: core/servers/console/console-extension-deployment.md
+    - name: コンソール アクション
+      items:
+        - name: コンソール アクションについて
+          items:
+            - name: 操作
+              href: core/servers/console/configuration-manager-actions.md
+            - name: アクション XML
+              href: core/servers/console/configuration-manager-action-xml.md
+            - name: 条件付きアクション
+              href: core/servers/console/conditional-actions.md
+            - name: 実行可能なアクション
+              href: core/servers/console/executable-action.md
+            - name: ShowDialog アクション
+              href: core/servers/console/showdialog-action.md
+            - name: レポート アクション
+              href: core/servers/console/report-action.md
+            - name: AssemblyType アクション
+              href: core/servers/console/assemblytype-action.md
+            - name: グループ アクション
+              href: core/servers/console/group-action.md
+        - name: アクションの作成
+          href: core/servers/console/how-to-create-a-configuration-manager-action.md
+    - name: コンソール フォーム
+      items:
+        - name: コンソール フォームについて
+          href: core/servers/console/about-configuration-manager-console-forms.md
+        - name: プロパティ シートを作成する
+          href: core/servers/console/how-to-create-a-configuration-manager-property-sheet.md
+        - name: プロパティ シートのフォーム XML を作成する
+          href: core/servers/console/how-to-create-form-xml-for-a-configuration-manager-property-sheet.md
+        - name: 既存のプロパティ シートにプロパティ ページを追加する
+          href: core/servers/console/how-to-add-a-property-page-to-an-existing-configuration-manager-property-sheet.md
+        - name: プロパティ シートのアクション XML を作成する
+          href: core/servers/console/how-to-create-action-xml-for-a-configuration-manager-property-sheet.md
+        - name: ダイアログ ボックスを作成する
+          href: core/servers/console/how-to-create-a-configuration-manager-dialog-box.md
+        - name: ダイアログ ボックスのフォーム XML を作成する
+          href: core/servers/console/how-to-create-form-xml-for-a-configuration-manager-dialog-box.md
+        - name: ダイアログ ボックスのアクション XML を作成する
+          href: core/servers/console/how-to-create-action-xml-for-a-configuration-manager-dialog-box.md
+        - name: フォームに渡されるオブジェクトを使用する
+          href: core/servers/console/how-to-use-objects-passed-to-a-configuration-manager-form.md
+        - name: フォームにデータをバインドする
+          href: core/servers/console/how-to-bind-configuration-manager-data-to-a-form.md
+    - name: コンソール管理クラス
+      items:
+        - name: コンソール管理クラスについて
+          href: core/servers/console/about-configuration-manager-console-management-classes.md
+        - name: コンソール管理クラス XML
+          href: core/servers/console/console-management-class-xml.md
+    - name: コンソール ノード
+      items:
+        - name: コンソール ノードについて
+          href: core/servers/console/about-configuration-manager-console-nodes.md
+        - name: コンソールノード XML
+          href: core/servers/console/console-node-xml.md
+        - name: コンソールの RootNodes 要素
+          href: core/servers/console/console-rootnodes-element.md
+        - name: コンソールの ResourceAssembly 要素
+          href: core/servers/console/console-resourceassembly-element.md
+        - name: コンソール ノードの作成
+          href: core/servers/console/how-to-create-a-configuration-manager-console-node.md
+        - name: コンソール コード GUID の検索
+          href: core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md
+    - name: コンソール ビュー
+      items:
+        - name: コンソール ビューについて
+          href: core/servers/console/about-configuration-manager-console-views.md
+        - name: カスタム ビューを作成する
+          href: core/servers/console/how-to-create-a-configuration-manager-console-custom-view.md
+        - name: グリッド ビューのノード XML を作成する
+          href: core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md
+- name: 検出
+  items:
+    - name: 定期探索の構成
+      href: core/servers/configure/how-to-configure-heartbeat-discovery.md
+    - name: ネットワーク探索の構成
+      href: core/servers/configure/how-to-configure-network-discovery.md
+    - name: Active Directory グループ探索の構成
+      href: core/servers/configure/how-to-configure-active-directory-group-discovery.md
+    - name: Active Directory システム探索の構成
+      href: core/servers/configure/how-to-configure-active-directory-system-discovery.md
+    - name: Active Directory ユーザー探索の構成
+      href: core/servers/configure/how-to-configure-active-directory-user-discovery.md
+    - name: リソース探索の拡張
+      items:
+        - name: リソース探索の DDR を使用する
+          items:
+            - name: DDR プロパティについて
+              href: core/servers/configure/about-ddr-properties.md
+            - name: 既存のリソース インスタンスを更新する
+              href: core/servers/configure/about-updating-an-existing-resource-instance.md
+            - name: 探索データ レコード (DDR) を作成する
+              href: core/servers/configure/about-creating-a-data-discovery-record.md
+            - name: リソースの一意識別子の値について
+              href: core/servers/configure/about-the-unique-identifier-value-for-a-resource.md
+        - name: クライアントの一意識別子の値を取得する
+          href: core/servers/configure/how-to-get-the-unique-identifier-value-for-a-client.md
+        - name: 既存のリソースの種類に新しいプロパティを追加する
+          href: core/servers/configure/how-to-add-new-properties-to-an-existing-resource-type.md
+        - name: DDR を作成する
+          href: core/servers/configure/how-to-create-a-data-discovery-record.md
+- name: インベントリ
+  items:
+    - name: インベントリについて
+      href: core/clients/inventory/about-configuration-manager-inventory.md
+    - name: ハードウェア インベントリ
+      items:
+        - name: ハードウェア インベントリを有効にする
+          href: core/clients/inventory/how-to-enable-hardware-inventory.md
+        - name: ハードウェア インベントリ設定を構成する
+          href: core/clients/inventory/how-to-configure-hardware-inventory-settings.md
+        - name: IDMIF ファイルの要件
+          href: core/clients/inventory/requirements-of-idmif-files.md
+        - name: ハードウェア インベントリのキャッシュをリセットする
+          href: core/clients/inventory/how-to-reset-the-hardware-inventory-cache.md
+    - name: ソフトウェア インベントリ
+      items:
+        - name: ソフトウェア インベントリを有効にする
+          href: core/clients/inventory/how-to-enable-software-inventory.md
+        - name: ソフトウェア インベントリ設定を構成する
+          href: core/clients/inventory/how-to-configure-software-inventory-settings.md
+        - name: ソフトウェア インベントリのキャッシュをリセットする
+          href: core/clients/inventory/how-to-reset-the-software-inventory-cache.md
+    - name: MOF ファイルをインポートしてインベントリを拡張する
+      href: core/clients/inventory/how-to-import-a-mof-file-to-extend-inventory.md
+    - name: 資産インテリジェンス同期を開始する
+      href: core/clients/asset-intelligence/how-to-initiate-a-synchronization.md
+- name: MDM レガシ クライアント
+  items:
+    - name: モバイル デバイス クライアント エージェント設定を構成する
+      href: mdm/how-to-configure-mobile-device-client-agent-settings.md
+    - name: モバイル デバイスのソフトウェア配布パッケージ、プログラム、および公開通知を作成する
+      href: mdm/how-to-create-software-distribution-packages-for-mobile-devices.md
+- name: OS の展開
+  items:
+    - name: OS 展開サイトの役割の構成
+      items:
+        - name: OS 展開サイトの役割の構成について
+          href: osd/about-operating-system-deployment-site-role-configuration.md
+        - name: 状態移行ポイントの役割の作成
+          href: osd/how-to-create-a-state-migration-point-role.md
+        - name: 状態移行ポイントの役割の削除
+          href: osd/how-to-delete-a-state-migration-point-role.md
+        - name: 状態移行ポイント フォルダーの追加
+          href: osd/how-to-add-a-state-migration-point-folder.md
+        - name: 状態移行ポイントの復元専用モードの設定
+          href: osd/how-to-set-the-restore-only-mode-for-a-state-migration-point.md
+        - name: 状態移行ポイントの削除ポリシーの設定
+          href: osd/how-to-set-the-deletion-policy-for-a-state-migration-point.md
+        - name: PXE 対応配布ポイントの役割を有効にする
+          href: osd/how-to-enable-a-pxe-service-point-role.md
+        - name: PXE 対応配布ポイントの役割を無効にする
+          href: osd/how-to-disable-a-pxe-service-point-role.md
+        - name: 不明なコンピューターのサポートを有効にする
+          href: osd/how-to-enable-unknown-computer-support-for-a-pxe-service-point.md
+        - name: PXE 要求に対する応答を設定する
+          href: osd/how-to-set-the-pxe-service-point-response-to-pxe-requests.md
+        - name: PXE 応答待ち時間を設定する
+          href: osd/how-to-set-the-response-delay-for-a-pxe-service-point.md
+        - name: すべてのネットワーク インターフェイスに対する PXE 応答を設定する
+          href: osd/how-to-set-the-pxe-service-point-response-to-all-network-interfaces.md
+        - name: 特定のネットワーク インターフェイスの PXE 応答を設定する
+          href: osd/how-to-set-the-pxe-service-point-response-for-a-specific-network-interface.md
+        - name: OS 展開のブランド情報を設定する
+          href: osd/how-to-set-operating-system-deployment-branding-information.md
+    - name: OS 展開のタスク シーケンス
+      items:
+        - name: タスク シーケンスについて
+          items:
+            - name: タスク シーケンスの概要
+              href: osd/operating-system-deployment-task-sequences-overview.md
+            - name: タスク シーケンス オブジェクト モデル
+              href: osd/operating-system-deployment-task-sequence-object-model.md
+        - name: タスクシーケンスの作成
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence.md
+        - name: タスク シーケンス パッケージの作成
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence-package.md
+        - name: タスク シーケンス パッケージからタスク シーケンスを読み取る
+          href: osd/how-to-read-a-task-sequence-from-a-task-sequence-package.md
+        - name: 使用可能なタスク シーケンスを列挙する
+          href: osd/how-to-enumerate-the-available-operating-system-deployment-task-sequences.md
+        - name: タスク シーケンス アクションを追加する
+          href: osd/how-to-add-an-operating-system-deployment-task-sequence-action.md
+        - name: タスク シーケンス アクションを削除する
+          href: osd/how-to-delete-an-operating-system-deployment-task-sequence-action.md
+        - name: タスク シーケンス ステップに条件を追加する
+          href: osd/how-to-add-a-condition-to-an-operating-system-deployment-task-sequence-step.md
+        - name: タスクシーケンスのステップを列挙する
+          href: osd/how-to-enumerate-the-steps-in-an-operating-system-deployment-task-sequence.md
+        - name: タスク シーケンスの順序を変更する
+          href: osd/how-to-reorder-an-operating-system-deployment-task-sequence.md
+        - name: タスク シーケンス グループを作成する
+          href: osd/how-to-create-an-operating-system-deployment-task-sequence-group.md
+        - name: タスク シーケンス グループにステップを追加する
+          href: osd/how-to-add-a-step-to-an-operating-system-deployment-group.md
+        - name: タスク シーケンス グループからステップを削除する
+          href: osd/how-to-remove-a-step-from-an-operating-system-deployment-group.md
+        - name: ステップを別のタスク シーケンス グループに移動する
+          href: osd/how-to-move-a-step-to-a-different-task-sequence-group.md
+        - name: タスク シーケンス変数を使用する
+          href: osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md
+        - name: タスク シーケンス変数を設定する
+          href: osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md
+    - name: OS 展開のコンピューター管理
+      items:
+        - name: コンピューター管理について
+          href: osd/about-computer-management.md
+        - name: 新しいコンピューターをインポートする
+          href: osd/how-to-import-a-new-computer-into-configuration-manager.md
+        - name: 2 台のコンピューターの関連付けを作成する
+          href: osd/how-to-create-an-association-between-two-computers-in-configuration-manager.md
+        - name: コレクション変数を作成する
+          href: osd/how-to-create-a-collection-variable.md
+        - name: コンピューター変数を作成する
+          href: osd/how-to-create-a-computer-variable.md
+        - name: OS 展開の移行を追跡する
+          href: osd/how-to-track-operating-system-deployment-migrations.md
+    - name: OS 展開のイメージ管理
+      items:
+        - name: イメージ管理について
+          href: osd/about-operating-system-deployment-image-management.md
+        - name: OS イメージ パッケージを追加する
+          href: osd/how-to-add-an-operating-system-image-package-in-configuration-manager.md
+        - name: OS イメージ パッケージを更新する
+          href: osd/how-to-update-an-operating-system-image-package.md
+        - name: OS イメージのプロパティを表示する
+          href: osd/how-to-view-the-properties-for-an-operating-system-image.md
+        - name: WIM ファイルからブート イメージを追加する
+          href: osd/how-to-add-a-boot-image-from-a-wim-file.md
+        - name: OS アップグレード パッケージを追加する
+          href: osd/how-to-add-an-operating-system-install-package.md
+        - name: コレクションの PXE 公開通知をクリアする
+          href: osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-collection.md
+        - name: リソースの PXE 公開通知をクリアする
+          href: osd/how-to-clear-a-pxe-advertisement-for-a-configuration-manager-resource.md
+    - name: OS 展開のドライバー管理
+      items:
+        - name: ドライバー管理について
+          href: osd/about-operating-system-deployment-driver-management.md
+        - name: INF ファイルに記述されたドライバーをインポートする
+          href: osd/how-to-import-a-windows-driver-described-by-an-inf-file.md
+        - name: txtsetup.oem ファイルに記述されたドライバーをインポートする
+          href: osd/how-to-import-a-windows-driver-described-by-a-txtsetup-oem-file.md
+        - name: ドライバーのドライバー パッケージを作成する
+          href: osd/how-to-create-a-driver-package-for-a-windows-driver.md
+        - name: ブート イメージにドライバーを追加する
+          href: osd/how-to-add-a-windows-driver-to-a-configuration-manager-boot-image-package.md
+        - name: ブート イメージからドライバーを削除する
+          href: osd/how-to-remove-a-windows-driver-from-a-boot-image-package.md
+        - name: ドライブを有効または無効にする
+          href: osd/how-to-enable-or-disable-a-windows-driver.md
+        - name: ドライバーを削除する
+          href: osd/how-to-delete-a-windows-driver-from-configuration-manager.md
+        - name: ドライバー パッケージを作成する
+          href: osd/how-to-delete-a-driver-package-in-configuration-manager.md
+        - name: ドライバーのサポート対象プラットフォームを指定する
+          href: osd/how-to-specify-the-supported-platforms-for-a-driver.md
+        - name: ドライバーにカテゴリを追加する
+          href: osd/how-to-add-a-category-to-a-windows-driver.md
+        - name: ドライバーからカテゴリを削除する
+          href: osd/how-to-remove-a-category-from-a-windows-driver.md
+    - name: OS 展開の拡張
+      items:
+        - name: Configuration Manager のカスタム アクションについて
+          href: osd/about-configuration-manager-custom-actions.md
+        - name: カスタム アクションのクライアント アプリケーションについて
+          href: osd/about-configuration-manager-custom-action-client-applications.md
+        - name: カスタム アクションの MOF ファイルについて
+          href: osd/about-configuration-manager-custom-action-mof-files.md
+        - name: カスタム アクション進行状況のレポートについて
+          href: osd/about-reporting-configuration-manager-custom-action-progress.md
+        - name: カスタム アクション コントロールを作成する
+          href: osd/how-to-create-a-configuration-manager-custom-action-control.md
+        - name: カスタム アクションの MOF ファイルを作成する
+          href: osd/how-to-create-a-mof-file-for-a-configuration-manager-custom-action.md
+        - name: カスタム アクション コントロールを使用する
+          href: osd/how-to-use-a-configuration-manager-custom-action-control.md
+- name: 役割に基づいた管理
+  items:
+    - name: ロール ベース管理の概要
+      href: core/servers/configure/role-based-administration.md
+    - name: 管理ユーザーの管理
+      items:
+        - name: ユーザーにオブジェクトに対する権限があるかどうかを確認する
+          href: core/servers/configure/how-to-check-if-a-user-has-permissions-for-an-object.md
+        - name: ユーザーにリソースに対する権限があるかどうかを確認する
+          href: core/servers/configure/how-to-check-if-a-user-has-permissions-for-a-resource.md
+        - name: ユーザーまたはセキュリティ グループの管理割り当てを列挙する
+          href: core/servers/configure/how-to-enumerate-the-administrative-assignments-for-a-user-or-security-group.md
+        - name: 新しい管理者を作成する
+          href: core/servers/configure/how-to-create-a-new-administrator.md
+        - name: 新しいセキュリティ ロールを作成する
+          href: core/servers/configure/how-to-create-a-new-security-role.md
+    - name: セキュリティ スコープの管理
+      items:
+        - name: 新しいセキュリティ スコープを作成する
+          href: core/servers/configure/how-to-create-a-new-security-scope.md
+        - name: セキュリティ スコープを削除する
+          href: core/servers/configure/how-to-delete-a-security-scope.md
+        - name: オブジェクトをセキュリティ スコープに関連付ける
+          href: core/servers/configure/how-to-associate-an-object-with-a-security-scope.md
+        - name: オブジェクトとセキュリティ スコープの関連付けを削除する
+          href: core/servers/configure/how-to-remove-an-object-association-with-a-security-scope.md
+- name: ［リモート ツール］
+  items:
+    - name: リモート ツールを有効または無効にする
+      href: core/clients/remote-control/how-to-enable-and-disable-remote-tools.md
+    - name: リモート ツール設定を構成する
+      href: core/clients/remote-control/how-to-configure-remote-tools-settings.md
+- name: ソフトウェアの配布
+  items:
+    - name: ソフトウェアの配布の概要
+      href: core/servers/configure/software-distribution-overview.md
+    - name: パッケージ
+      items:
+        - name: パッケージ定義ファイルについて
+          href: core/servers/configure/about-package-definition-files.md
+        - name: パッケージを作成する
+          href: core/servers/configure/how-to-create-a-package.md
+        - name: パッケージ定義ファイル テンプレートを使用してパッケージを作成する
+          href: core/servers/configure/how-to-create-a-package-by-using-a-package-definition-file-template.md
+        - name: パッケージ プロパティを構成する
+          href: core/servers/configure/how-to-configure-package-properties.md
+        - name: バイナリ デルタ レプリケーションを使用するようにパッケージを構成する
+          href: core/servers/configure/how-to-configure-a-package-to-use-binary-delta-replication.md
+        - name: パッケージを削除する
+          href: core/servers/configure/how-to-delete-a-package.md
+        - name: パッケージを配布ポイントに割り当てる
+          href: core/servers/configure/how-to-assign-a-package-to-a-distribution-point.md
+    - name: プログラム
+      items:
+        - name: プログラムについて
+          href: core/servers/configure/about-software-distribution-programs.md
+        - name: プログラムを作成する
+          href: core/servers/configure/how-to-create-a-program.md
+        - name: プログラム プロパティを変更する
+          href: core/servers/configure/how-to-modify-program-properties.md
+        - name: プログラムの最長実行時間を変更する
+          href: core/servers/configure/how-to-change-the-maximum-run-time-for-a-program.md
+        - name: すべてのプログラムとその最長実行時間の値をリストする
+          href: core/servers/configure/how-to-list-all-programs-and-their-maximum-run-time-value.md
+        - name: プログラムのサポート対象プラットフォームを変更する
+          href: core/servers/configure/how-to-modify-the-supported-platforms-for-a-program.md
+    - name: 展開
+      items:
+        - name: 展開について
+          href: core/servers/configure/about-software-distribution-deployments.md
+        - name: 配置の作成
+          href: core/servers/configure/how-to-create-an-advertisement.md
+        - name: コンピューターのコレクションに展開を割り当てる
+          href: core/servers/configure/how-to-assign-an-advertisement-to-a-collection-of-computers.md
+        - name: 展開プロパティを変更する
+          href: core/servers/configure/how-to-modify-advertisement-properties.md
+        - name: メンテナンス期間外の再起動を許可するように展開を構成する
+          href: core/servers/configure/how-to-allow-reboots-outside-of-a-maintenance-window.md
+        - name: メンテナンス期間をオーバーライドするように展開を構成する
+          href: core/servers/configure/how-to-configure-an-advertisement-to-override-a-maintenance-window.md
+    - name: メンテナンス期間
+      items:
+        - name: メンテナンス期間について
+          href: core/servers/configure/about-maintenance-windows.md
+        - name: メンテナンス期間を作成する
+          href: core/servers/configure/how-to-create-a-maintenance-window-for-a-collection.md
+        - name: メンテナンス期間プロパティを変更する
+          href: core/servers/configure/how-to-change-the-maintenance-window-properties-for-a-collection.md
+        - name: メンテナンス期間を削除する
+          href: core/servers/configure/how-to-delete-a-maintenance-window-for-a-collection.md
+        - name: 特定のコレクションのメンテナンス期間とプロパティをリストする
+          href: core/servers/configure/how-to-list-the-maintenance-windows-and-properties-for-a-specific-collection.md
+    - name: セットアップと構成
+      items:
+        - name: ソフトウェアの配布のセットアップと構成について
+          href: core/servers/configure/about-software-distribution-setup-and-configuration.md
+        - name: 公開済みプログラムのクライアント エージェントを有効または無効にする
+          href: core/servers/configure/how-to-enable-or-disable-the-advertised-programs-client-agent.md
+        - name: 公開済みプログラムのクライアント エージェント設定を構成する
+          href: core/servers/configure/how-to-configure-advertised-programs-client-agent-settings.md
+        - name: 展開のブランド情報をカスタマイズする
+          href: core/servers/configure/how-to-customize-advertisement-branding-information.md
+    - name: Wake On LAN
+      items:
+        - name: Wake On LAN に必要な展開を構成する
+          href: core/servers/configure/how-to-configure-a-mandatory-advertisement-for-wake-on-lan.md
+        - name: パートナー通知 API を有効にする
+          href: core/servers/configure/how-to-enable-the-partner-notification-api.md
+    - name: 配布ポイント
+      items:
+        - name: サイトの配布ポイントをリストする
+          href: core/servers/configure/how-to-list-distribution-points-for-a-site.md
+        - name: オンデマンド配布フラグを設定する
+          href: core/servers/configure/how-to-set-the-distribute-on-demand-flag.md
+- name: ソフトウェア使用状況測定
+  items:
+    - name: ソフトウェア使用状況測定を有効または無効にする
+      href: apps/how-to-enable-or-disable-software-metering.md
+    - name: ソフトウェア使用状況測定規則の自動生成を構成する
+      href: apps/how-to-configure-automatic-software-metering-rule-generation.md
+    - name: ソフトウェア使用状況測定規則を作成する
+      href: apps/how-to-create-a-software-metering-rule.md
+    - name: ソフトウェア使用状況測定規則を削除する
+      href: apps/how-to-delete-a-software-metering-rule.md
+    - name: ソフトウェア使用状況測定規則を有効または無効にする
+      href: apps/how-to-enable-or-disable-a-software-metering-rule.md
+    - name: ファイルの使用状況の概要情報を表示する
+      href: apps/how-to-view-file-usage-summary-information.md
+    - name: 毎月の使用状況の概要情報を表示する
+      href: apps/how-to-view-monthly-usage-summary-information.md
+- name: ソフトウェア更新プログラム
+  items:
+    - name: セットアップと構成
+      items:
+        - name: ソフトウェア更新プログラムのセットアップと構成について
+          href: sum/about-software-updates-setup-and-configuration.md
+        - name: ソフトウェアの更新ポイントを構成する
+          href: sum/how-to-configure-the-software-update-point.md
+        - name: WSUS 設定を構成する
+          href: sum/how-to-configure-the-wsus-settings.md
+        - name: ソフトウェア更新プログラムのクライアント エージェントを有効または無効にする
+          href: sum/how-to-enable-or-disable-the-software-updates-client-agent.md
+        - name: ソフトウェア更新プログラムのブランド情報を設定する
+          href: sum/how-to-set-software-updates-branding-information.md
+    - name: 展開
+      items:
+        - name: ソフトウェア更新プログラムの展開について
+          href: sum/about-software-updates-deployments.md
+        - name: 特定の条件に一致する更新プログラムを列挙する
+          href: sum/how-to-enumerate-updates-matching-a-specific-criteria.md
+        - name: 更新リストを作成する
+          href: sum/how-to-create-an-update-list.md
+        - name: 展開テンプレートを作成する
+          href: sum/how-to-create-a-deployment-template.md
+        - name: 展開パッケージを作成する
+          href: sum/how-to-create-a-deployment-package.md
+        - name: 展開パッケージに更新プログラムを追加する
+          href: sum/how-to-add-updates-to-a-deployment-package.md
+        - name: 展開パッケージから更新プログラムを削除する
+          href: sum/how-to-delete-updates-from-a-deployment-package.md
+        - name: 更新プログラムの構成と展開
+          href: sum/how-to-configure-and-deploy-updates.md
+        - name: 展開パッケージ ソースを変更する
+          href: sum/how-to-change-the-deployment-package-source.md
+    - name: ソフトウェアの更新ポイントの同期
+      items:
+        - name: ソフトウェアの更新ポイントの同期について
+          href: sum/about-synchronizing-the-software-update-point.md
+        - name: ソフトウェアの更新ポイントを同期する
+          href: sum/how-to-synchronize-with-the-software-update-point.md
+    - name: メンテナンス期間をオーバーライドするようにソフトウェア更新プログラムを構成する
+      href: sum/how-to-configure-software-updates-to-override-maintenance-windows.md
+- name: ステータスとサマライザー
+  items:
+    - name: Configuration Manager ステータスについて
+      items:
+        - name: ステータス メッセージについて
+          href: core/servers/manage/about-configuration-manager-status-messages.md
+        - name: コンポーネントのステータス メッセージについて
+          href: core/servers/manage/about-configuration-manager-component-status-messages.md
+        - name: ステータス メッセージを作成するための SMSCSTAT.DLL の使用について
+          href: core/servers/manage/about-using-smscstat.dll-to-create-status-messages.md
+        - name: クライアントからのステータス メッセージのレポートについて
+          href: core/servers/manage/about-reporting-status-messages-from-configuration-manager-clients.md
+    - name: サマライザーについて
+      items:
+        - name: Configuration Manager ステータス サマライザーについて
+          href: core/servers/manage/about-configuration-manager-status-summarizers.md
+        - name: Configuration Manager 集計間隔について
+          href: core/servers/manage/about-configuration-manager-tally-intervals.md
+    - name: サイトの正常性を確認する
+      href: core/servers/manage/how-to-determine-the-health-of-a-configuration-manager-site.md
+    - name: サイトの集計間隔を読み取る
+      href: core/servers/manage/how-to-read-the-tally-intervals-for-a-configuration-manager-site.md
+    - name: ユーザー定義のステータス メッセージを読み取る
+      href: core/servers/manage/how-to-read-user-defined-status-messages.md
+    - name: ユーザー定義のステータス メッセージをレポートする
+      href: core/servers/manage/how-to-report-user-defined-status-messages.md
+    - name: ステータス メッセージを削除する
+      href: core/servers/manage/how-to-delete-status-messages.md
+    - name: パッケージ ステータスを確認する
+      href: core/servers/manage/how-to-determine-package-status.md
+    - name: 公開通知状態を確認する
+      href: core/servers/manage/how-to-determine-advertisement-status.md
+- name: Configuration Manager API リファレンス
+  href: reference/configuration-manager-reference.md
+- name: 管理サービスの REST API
+  href: adminservice/index.yml

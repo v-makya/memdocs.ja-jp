@@ -1,0 +1,53 @@
+### YamlMime:Landing
+title: Microsoft Deployment Toolkit ドキュメント
+summary: Microsoft Deployment Toolkit (MDT) では、デスクトップとサーバーの展開を自動化するためのツール、プロセス、ガイダンスがまとめて提供されています。
+metadata:
+  title: Microsoft Deployment Toolkit ドキュメント
+  description: Microsoft Deployment Toolkit (MDT) では、デスクトップとサーバーの展開を自動化するためのツール、プロセス、ガイダンスがまとめて提供されています。
+  ms.prod: configuration-manager
+  ms.technology: configmgr-mdt
+  ms.topic: landing-page
+  author: aczechowski
+  ms.author: aaroncz
+  ms.date: 01/28/2020
+  ms.openlocfilehash: 7647af8f5835c134d5f3847c4ec87188740a5076
+  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81740934"
+landingContent:
+- title: MDT を入手する
+  linkLists:
+  - linkListType: download
+    links:
+    - text: MDT のダウンロード
+      url: https://aka.ms/mdtdownload
+    - text: リリース ノート
+      url: release-notes.md
+  - linkListType: how-to-guide
+    links:
+    - text: MDT の使用方法
+      url: use-the-mdt.md
+    - text: サンプル ガイド
+      url: samples-guide.md
+- title: シナリオ ガイド
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: ライトタッチ (LTI)
+      url: lite-touch-installation-guide.md
+    - text: ゼロタッチ (ZTI)
+      url: configmgr-guide.md
+    - text: ユーザー駆動型 (UDI)
+      url: user-driven-installation-guide.md
+- title: 参考資料
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: ツールキットのリファレンス
+      url: toolkit-reference.md
+    - text: MDT のトラブルシューティング
+      url: troubleshooting-reference.md
+    - text: UDI 開発者ガイド
+      url: user-driven-installation-developers-guide.md
