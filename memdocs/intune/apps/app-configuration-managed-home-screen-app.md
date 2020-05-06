@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d596a0a43c17243431fa47bcac996868fd38066
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: ef8fb81b7be05d21eec5a4d1b544ee1a7d34bd07
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80358694"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693491"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Android Enterprise 用 Microsoft Managed Home Screen アプリを構成する
 
@@ -66,7 +66,6 @@ Managed Home Screen の構成設定を定義するのに使用できる 2 つの
 | アプリ アイコンのサイズの設定 | integer | 2 | ホーム画面に表示されるアプリのアイコンのサイズを設定することができます。 この構成では、サイズごとに次の値を選択できます - 0 (最小)、1 (小)、2 (標準)、3 (大)、4 (最大)。 |
 | アプリ フォルダー アイコンの設定 | integer | 0 | ホーム画面上のアプリ フォルダーの外観を定義することができます。 外観は、次の値から選択できます:濃色の正方形 (0)、濃色の円 (1)、淡色の正方形 (2)、淡色の円 (3)。 |
 | 画面の向きの設定 | integer | 1 | ホーム画面の向きを縦モード、横モード、または自動回転に設定することができます。 向きを設定するには、値 1 (縦モード)、2 (横モード)、3 (自動回転) を入力します。 |
-| デバイス テレメトリの有効化 | ブール | FALSE | Managed Home Screen 用にキャプチャされるすべてのテレメトリを有効にします。 これを有効にすると、このデバイスで特定のアプリが起動された回数など、Microsoft がデバイスの使用状況のテレメトリをキャプチャできるようになります。 |
 | 許可リストに登録されたアプリケーションの設定 | bundleArray | FALSE | デバイス上にインストールされているアプリの中から、ホーム画面に表示するアプリのセットを定義することができます。 表示できるようにするアプリのアプリ パッケージ名を入力することで、アプリを定義できます。たとえば、com.microsoft.emmx と入力すると、ホーム画面上で設定にアクセスできるようになります。 このセクション内で許可リストに登録するアプリは、ホーム画面上に表示するためには、デバイス上に既にインストールされている必要があります。 |
 | ピン留めされた Web リンクの設定 | bundleArray | FALSE | Web サイトをクイック起動アイコンとしてホーム画面にピン留めすることができます。 この構成では、エンド ユーザーがブラウザー内で 1 回のタップで起動できるように、URL を定義して、それをホーム画面に追加することができます。 |
 | スクリーン セーバーを有効にする | ブール | FALSE | スクリーン セーバー モードを有効または無効にします。 true に設定すると、**screen_saver_image**、**screen_saver_show_time**、**inactive_time_to_show_screen_saver**、**media_detect_screen_saver** を構成できます。 |
@@ -78,10 +77,17 @@ Managed Home Screen の構成設定を定義するのに使用できる 2 つの
 | 仮想ホーム ボタンの種類 | string | swipe_up | 上方向にスワイプのジェスチャでホーム ボタンにアクセスするには、**swipe_up** を使用します。 エンド ユーザーが画面を移動できる固定の永続的なホーム ボタンにアクセスするには、**float** を使用します。 |
 | バッテリと信号の強さのインジケーター バー | ブール | True  | この設定を `True` にすると、バッテリと信号の強さのインジケーター バーが表示されます。 |
 | ロック タスク モード終了のパスワード | string |   | トラブルシューティングのためにロック タスク モードを一時的に停止するために使用する 4 - 6 桁のコードを入力します。 |
+| Show Managed Setting (マネージド設定の表示) | ブール | TRUE | "マネージド設定" とは、 **[Wi-Fi 設定の表示]** 、 **[Bluetooth の設定の表示]** 、 **[Show volume setting]\(音量設定の表示\)** 、 **[Show flashlight setting]\(懐中電灯設定の表示\)** など、クイック アクセス用の設定を構成してある場合にのみ表示される Managed Home Screen アプリです。 画面を下方向にスワイプして、これらの設定にアクセスすることもできます。 このキーを `False` に設定すると、"マネージド設定" アプリが非表示になり、エンドユーザーが下方向にスワイプすることでのみ設定にアクセスできます。    |
+| Enable easy access debug menu (簡易アクセス デバッグ メニューの有効化) | ブール | FALSE | この設定を `True` にすると、Managed Home Screen の使用中に、マネージド設定アプリから、または下方向にスワイプすることで、デバッグ メニューにアクセスできます。 デバッグ メニューには現在、キオスク モードを終了する機能があり、戻るボタンを 15 回ほどクリックするとアクセスできます。 この設定を `False` に設定したままにすると、戻るボタンでのみアクセスできるデバッグ メニューへのエントリ ポイントが保持されます。   |
 | Wi-Fi 設定の表示 | ブール | FALSE | この設定を `True` にすると、エンド ユーザーが Wi-Fi をオン/オフにしたり、別の Wi-Fi ネットワークに接続できるようになります。  |
+| Enable Wi-Fi allow-list (Wi-Fi 許可リストの有効化) | ブール | FALSE | この設定を `True` にし、 **[Wi-Fi allow-list] (Wi-Fi 許可リスト)** キーに値を入力すると、Managed Home Screen 内に表示される Wi-Fi ネットワークを制限できます。 `False` に設定すると、デバイスによって検出された使用可能なすべての Wi-Fi ネットワークが表示されます。 この設定は、 **[Wi-Fi 設定の表示]** が `True` に設定され、 **[Wi-Fi allow-list] (Wi-Fi 許可リスト)** が入力されている場合にのみ関係することに注意してください。   |
+| Wi-Fi allow-list (Wi-Fi 許可リスト)| bundleArray | FALSE | デバイスで Managed Home Screen 内に表示させたい Wi-Fi ネットワークのすべての SSID を一覧表示できます。 この一覧は、**Wi-Fi 設定の表示** と **Enable Wi-Fi allow-list (Wi-Fi 許可リストの有効化)** が `True` に設定されている場合にのみ関係します。 それらのどちらかが `False` に設定されている場合は、この構成を変更する必要はありません。    |
 | Bluetooth の設定の表示 | ブール | FALSE | この設定を `True` にすると、エンド ユーザーが Bluetooth をオン/オフにしたり、別の Bluetooth 対応デバイスに接続できるようになります。   |
+| Show volume setting (音量設定の表示) | ブール | FALSE | この設定を `True` にすると、エンド ユーザーは音量スライダーを使用してメディアの音量を調整できます。   |
+| Show flashlight setting (懐中電灯設定の表示) | ブール | FALSE | この設定を `True` にすると、エンド ユーザーはデバイスの懐中電灯のオン/オフを切り替えることができます。 デバイスで懐中電灯がサポートされていない場合、この設定は `True` に構成されていても表示されません。   |
+| Show device info setting (デバイス情報設定の表示) | ブール | FALSE | この設定を `True` にすると、エンド ユーザーは、マネージド設定アプリから、または下方向にスワイプすることで、デバイスに関するクイック ヒントにアクセスできます。 アクセス可能な情報には、デバイスの製造元、モデル、シリアル番号などがあります。   |
 | フォルダー内のアプリケーションは、名前順に並べ替えられます | ブール | TRUE | この設定を `False` にすると、フォルダー内の項目を指定されている順序で表示できます。 それ以外の場合は、アルファベット順でフォルダーに表示されます。   |
-| Application order enabled (アプリケーションの順序の有効化) | ブール | FALSE | この設定を `True` にすると、Managed Home Screen でアプリケーション、Web リンク、フォルダーの順序を設定できるようになります。 有効にした後、**app_order** で順序を設定します。   |
+| Application order enabled (アプリケーションの順序の有効化) | ブール | FALSE | この設定を `True` にすると、Managed Home Screen でアプリケーション、Web リンク、フォルダーの順序を設定できるようになります。 有効になったら、**app_order** で順序を設定します。   |
 | Application order (アプリケーションの順序) | bundleArray | FALSE | Managed Home Screen でアプリケーション、Web リンク、フォルダーの順序を指定できます。 この設定を使うには、 **[Lock Home Screen]\(ホーム画面のロック\)** を有効にし、 **[Set grid size]\(グリッド サイズの設定\)** を定義し、 **[Application order enabled]\(アプリケーションの順序の有効化\)** を `True` に設定する必要があります。   |
 
 ## <a name="enter-json-data"></a>JSON データの入力
@@ -124,10 +130,6 @@ JSON データを入力して、Managed Home Screen で使用可能なすべて�
         {
             "key": "screen_orientation",
             "valueInteger": 1
-        },
-        {
-            "key": "enable_telemetry",
-            "valueBool": false
         },
         {
             "key": "applications",
@@ -182,6 +184,51 @@ JSON データを入力して、Managed Home Screen で使用可能なすべて�
         {
             "key": "show_bluetooth_setting",
             "valueBool": false
+        },
+        {
+            "key": "show_flashlight_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_volume_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_device_info_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_managed_setting",
+            "valueBool": false
+        },
+        {
+            "key": "enable_easy_access_debugmenu",
+            "valueBool": false
+        },
+        {
+            "key": "enable_wifi_allowlist",
+            "valueBool": false
+        },
+        {
+            "key": "wifi_allowlist",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 1 here"
+                        }
+                    ]
+                },   
+                {
+                    "managedProperty": [
+                        {
+                            "key": "SSID",
+                            "valueString": "name of Wi-Fi network 2 here"
+                        }
+                    ]
+                }  
+            ]
         },
         {
             "key": "grid_size",
@@ -335,7 +382,7 @@ JSON データを入力して、Managed Home Screen で使用可能なすべて�
 マネージド ホーム スクリーン アプリで、Google の Android デバイス ポリシー アプリにアクセスできるようになりました。 マネージド ホーム スクリーン アプリは、マルチアプリ キオスク モードを使用する Android Enterprise (AE) 専用デバイスとして Intune に登録されているデバイスで使用されるカスタム ランチャーです。 Android デバイス ポリシー アプリにアクセスしたり、ユーザーを Android デバイス ポリシー アプリに案内したりして、サポートとデバッグを行うことができます。 この起動機能は、デバイスが登録され、マネージド ホーム スクリーンにロックされているときに使用できます。 この機能を使用するために追加のインストールは必要ありません。
 
 ## <a name="managed-home-screen-debug-screen"></a>Managed Home Screen のデバッグ画面
-Managed Home Screen のデバッグ画面にアクセスするには、デバッグ画面が表示されるまで**戻る**ボタンをクリックします (**戻る**ボタンを 15 回以上クリックします)。 このデバッグ画面から、Android デバイス ポリシー アプリケーションを起動したり、ログの表示とアップロードを行ったり、キオスク モードを一時的に停止してデバイスを更新したりできます。 キオスク モードの一時停止について詳しくは、Android Enterprise の「[専用デバイスの設定](../configuration/device-restrictions-android-for-work.md#dedicated-devices)」に記載されている **[キオスク モードを終了する]** 項目をご覧ください。
+Managed Home Screen のデバッグ画面にアクセスするには、デバッグ画面が表示されるまで**戻る**ボタンをクリックします (**戻る**ボタンを 15 回以上クリックします)。 このデバッグ画面から、Android デバイス ポリシー アプリケーションを起動したり、ログの表示とアップロードを行ったり、キオスク モードを一時的に停止してデバイスを更新したりできます。 キオスク モードの一時停止について詳しくは、Android Enterprise の「[専用デバイスの設定](../configuration/device-restrictions-android-for-work.md#dedicated-devices)」に記載されている **[キオスク モードを終了する]** 項目をご覧ください。 Managed Home Screen のデバッグ画面に簡単にアクセスできるようにする場合は、アプリケーション構成ポリシーを使用して **[Enable easy access debug menu (簡易アクセス デバッグ メニューの有効化)]** を `True` に設定できます。 
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -2,7 +2,7 @@
 title: サイト管理のセキュリティとプライバシー
 titleSuffix: Configuration Manager
 description: Configuration Manager でのサイト管理のセキュリティとプライバシーを最適化する
-ms.date: 07/26/2019
+ms.date: 04/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35c2738b363895671528196e99b324fd2fe6f5a7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 923018e35fae1ec1f5e9c0869ef22d43b5de552b
+ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704580"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82182261"
 ---
 # <a name="security-and-privacy-for-site-administration-in-configuration-manager"></a>Configuration Manager でのサイト管理のセキュリティとプライバシー
 
@@ -169,7 +169,11 @@ Configuration Manager クライアント コンピューターでプロキシ We
 
 ### <a name="if-you-use-email-notification-configure-authenticated-access-to-the-smtp-mail-server"></a>電子メール通知を使用する場合は、SMTP メール サーバーへの認証済みアクセスを構成します
 
-可能な限り、認証済みアクセスをサポートするメール サーバーを使用してください。 認証でサイト サーバーのコンピューター アカウントを使用します。 認証でユーザー アカウントを指定する必要がある場合は、少なくとも特権のあるアカウントを使用します。  
+可能な限り、認証済みアクセスをサポートするメール サーバーを使用してください。 認証でサイト サーバーのコンピューター アカウントを使用します。 認証でユーザー アカウントを指定する必要がある場合は、少なくとも特権のあるアカウントを使用します。 
+
+### <a name="enforce-ldap-channel-binding-and-ldap-signing"></a>LDAP チャネル バインディングと LDAP 署名を適用する
+
+Active Directory ドメイン コントローラーのセキュリティは、署名を要求しない簡易認証およびセキュリティ層 (SASL) の LDAP バインドを拒否するように、またはクリア テキスト接続で実行された LDAP 単純バインドを拒否するように、サーバーを構成することにより、強化することができます。 バージョン 1910 以降の Configuration Manager では、LDAP チャネル バインディングと LDAP 署名の適用がサポートされています。 詳しくは、「[Windows の 2020 年 LDAP 署名と LDAP チャネル バインディングの要件](https://support.microsoft.com/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows)」をご覧ください。 <!--6244453-->
 
 
 ## <a name="security-guidance-for-the-site-server"></a><a name="BKMK_Security_SiteServer"></a> サイト サーバーのセキュリティ ガイダンス

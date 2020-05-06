@@ -5,17 +5,17 @@ description: 共同管理用に Windows 10 のインターネットベースの�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 32c148b695a47241c6646a2a7309f0a27f3b3070
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 59ca1006d8700e52b3f3fb703f8896ce9fa8b9b7
+ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691050"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82137917"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>共同管理用にインターネットベースのデバイスを準備する方法
 
@@ -65,7 +65,7 @@ Configuration Manager を使用して、Intune で必要なデバイス情報を
 
 3. **[有効化]** タブで、コマンド ラインをコピーします。 これを次のプロセスのためにメモ帳に貼り付けて保存します。  
 
-たとえば、次のようなコマンド ラインです。`CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC"`
+たとえば、次のようなコマンド ラインです。`CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
 
 <!--1358215-->
 環境に必要なコマンド ライン プロパティを決定します。  
@@ -91,14 +91,14 @@ Configuration Manager を使用して、Intune で必要なデバイス情報を
 
     詳しくは、[クライアント インストールのプロパティ - PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts) に関するページをご覧ください。
 
-サイトでは、クラウド管理ゲートウェイ (CMG) に対して Azure AD の追加情報が公開されます。 Azure AD に参加しているクライアントは、ccmsetup プロセスの間に、参加している同じテナントを使用して、CMG からこの情報を取得します。 この動作により、複数の Azure AD テナントがある環境での共同管理に対するデバイスの登録がさらに簡略化されます。 必要な ccmsetup プロパティは、**CCMHOSTNAME** と **SMSSiteCode** の 2 つだけです。<!--3607731-->
+サイトでは、クラウド管理ゲートウェイ (CMG) に対して Azure AD の追加情報が公開されます。 Azure AD に参加しているクライアントは、ccmsetup プロセスの間に、参加している同じテナントを使用して、CMG からこの情報を取得します。 この動作により、複数の Azure AD テナントがある環境での共同管理に対するデバイスの登録がさらに簡略化されます。 必要な ccmsetup プロパティは、**CCMHOSTNAME** と **SMSSITECODE** の 2 つだけです。<!--3607731-->
 
 > [!NOTE]
 > Intune から Configuration Manager クライアントを既に展開している場合は、新しいコマンド ラインと新しい MSI で Intune アプリを更新します。 <!-- SCCMDocs-pr issue 3084 -->
 
 次の例には、上記のプロパティのすべてが含まれます。
 
-`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com PROVISIONTS=PRI20001`
+`CCMSETUPCMD="CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com PROVISIONTS=PRI20001"`
 
 詳細については、「[クライアント インストールのプロパティ](../core/clients/deploy/about-client-installation-properties.md)」を参照してください。
 

@@ -10,12 +10,12 @@ ms.assetid: 3e82cd96-0ce0-474a-a597-d65fceadc95a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a13a22cc7e9ced580229306ab3680fca61319992
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2456f530444fa5d9514247edd77cbe7b02f62c38
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706390"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126018"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>チュートリアル:Windows 10 のパイロット展開
 
@@ -219,8 +219,7 @@ Configuration Manager によって、ターゲット コレクション内にデ
 
 Desktop Analytics 用のデバイスの構成を監視します。 Configuration Manager コンソールで、 **[ソフトウェア ライブラリ]** ワークスペースにアクセスし、 **[Desktop Analytics サービス]** ノードを展開し、 **[接続の正常性]** ダッシュボードを選択します。  
 
-接続の作成後、コレクションが、Configuration Manager によって 60 分以内に同期されます。 Desktop Analytics ポータルで、 **[グローバル パイロット]** にアクセスし、Configuration Manager デバイス コレクションを確認します。
-
+接続の作成後、コレクションが、Configuration Manager によって 60 分以内に同期されます。 Desktop Analytics ポータルで、 **[グローバル パイロット]** にアクセスし、Configuration Manager デバイス コレクションを確認します。 ポータルの残りの部分に完全なデータが表示されるまでには 2、3 日かかる場合があります。 詳細については、「[データ待機時間](troubleshooting.md#data-latency)」をご覧ください。
 
 ## <a name="create-a-desktop-analytics-deployment-plan"></a>Desktop Analytics 展開計画を作成する
 
@@ -365,11 +364,11 @@ Desktop Analytics 用のデバイスの構成を監視します。 Configuration
 
 5. **[コンテンツ]** ページで、 **[追加]** をクリックし、 **[配布ポイント]** をクリックします。 インストール コンテンツをホストするために使用できる配布ポイントを選択し、 **[OK]** を選択します。 その後、 **[次へ]** を選択します。  
 
-6. **[展開設定]** ページで、 **[次へ]** を選択して、既定の設定をそのまま使用します (利用可能なインストール)。  
+6. **[展開設定]** ページで、 **[次へ]** を選択して、既定の設定をそのまま使用します  (利用可能なインストール)。  
 
-7. **[Scheduling]\(スケジュール設定\)** ページで、 **[次へ]** を選択して、既定の設定をそのまま使用します (直ちに利用可能)。  
+7. **[Scheduling]\(スケジュール設定\)** ページで、 **[次へ]** を選択して、既定の設定をそのまま使用します  (直ちに利用可能)。  
 
-8. **[ユーザー エクスペリエンス]** ページで、 **[次へ]** を選択して、既定値をそのまま使用します (ソフトウェア センターに、コンピューターの再起動通知のみ表示されます)。  
+8. **[ユーザー エクスペリエンス]** ページで、 **[次へ]** を選択して、既定値をそのまま使用します  (ソフトウェア センターに、コンピューターの再起動通知のみ表示されます)。  
 
 9. **[アラート]** ページで、 **[次へ]** を選択して、既定の設定をそのまま使用します。  
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/13/2020
+ms.date: 04/23/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aaec456a5ff9864fedf5e95f317bc484ddfc4d82
-ms.sourcegitcommit: fe7484e86ec8a109fa5f54fe9cceef8aac94bd9f
+ms.openlocfilehash: fedca34aaf390dfec655e3166f3a153af93a7ce0
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80275069"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506592"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Intune を使用してデバイスを保護するための Windows 10 (以降) の設定
 
@@ -748,17 +748,6 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
     - **回復パスワードとキー パッケージをバックアップする**  
     - **回復パスワードのみバックアップする**  
 
-  - **クライアント主導の回復パスワードの交換**  
-    **既定値**: [Azure AD 参加済みデバイスに対して有効にされたキー交換]  
-    BitLocker CSP: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
-    
-    この設定では、OS ドライブの回復後 (bootmgr または WinRE のいずれかを使用) に、クライアント主導の回復パスワードのローテーションが開始されます。  
-
-    - 未構成  
-    - キーの回転が無効  
-    - Azure AD 参加済みデバイスに対して有効にされたキー交換  
-    - Azure AD とハイブリッド参加済みデバイスに対して有効にされたキー交換  
-
   - **[BitLocker を有効にする前に Azure Active Directory で回復情報を保存]**  
     **既定値**:未構成  
  
@@ -942,6 +931,9 @@ Office アプリによる次の操作をブロックします。
 > **X86 クライアント コンピューターの場合**:  
 > *C:\Program Files\Microsoft Intune Management Extension\Content*  
 > *C:\windows\IMECache*  
+>
+> 詳細については、「[現在サポートされているバージョンの Windows を搭載しているエンタープライズ コンピューターでウイルス スキャンを行う場合の推奨事項](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers)」を参照してください。
+
 
 ### <a name="controlled-folder-access"></a>フォルダー アクセスの制御  
 
@@ -1264,9 +1256,8 @@ Microsoft Defender セキュリティ センターのアプリとアプリ通知
   **既定値**:未構成  
   LocalPoliciesSecurityOptions CSP: [Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
-  
-  - **[ブロック]** - ユーザーは装着しているポータブル デバイス本体の取り出しボタンを押すことでデバイスを安全に取り外すことができます。  
-  - **[未構成]** - ユーザーはデバイスにサインインし、デバイスを取り外すアクセス許可を受ける必要があります。  
+  - **[ブロック]** - ユーザーはデバイスにサインインし、デバイスを取り外すアクセス許可を受ける必要があります。
+  - **[未構成]** - ユーザーは装着しているポータブル デバイス本体の取り出しボタンを押すことでデバイスを安全に取り外すことができます。
 
 - **[共有プリンターのプリンター ドライバーをインストールする]**  
   **既定値**:未構成  
@@ -1309,8 +1300,8 @@ Microsoft Defender セキュリティ センターのアプリとアプリ通知
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotRequireCTRLALTDEL](https://go.microsoft.com/fwlink/?linkid=867951)  
 
 
-  - **[有効]** - Ctrl + Alt + Del キーを押さなくても、ユーザーはサインインできます。  
-  - **[未構成]** - ユーザーが Windows にログオンするには、先に Ctrl + Alt + Del キーを押す必要があります。  
+  - **[有効]** - ユーザーが Windows にログオンするには、先に Ctrl + Alt + Del キーを押す必要があります。
+  - **[未構成]** - ユーザーがサインインするときに Ctrl + Alt + Del キーを押す必要はありません。
 
 - **スマート カードを取り外したときの動作**  
   **既定値**:ワークステーションをロックする   

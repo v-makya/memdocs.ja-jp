@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 716a69690c46e301354012272fc7d1f8be564df9
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: de7b96b5ad54a207b92221f7685f6c7f50942c46
+ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80322663"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82079877"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>DigiCert PKI Platform 用に Intune Certificate Connector をセットアップする
 
@@ -45,6 +45,7 @@ PKCS または System Center Endpoint Protection を使用して Microsoft CA �
 ## <a name="prerequisites"></a>[前提条件]
 
 - **DigiCert CA でのアクティブなサブスクリプション**: DigiCert CA から登録機関 (RA) 証明書を取得するには、サブスクリプションが必要です。
+- Microsoft Intune Certificate Connector のネットワーク要件は、[マネージド デバイス](../fundamentals/intune-endpoints.md#access-for-managed-devices)と同じです。
 
 ## <a name="install-the-digicert-ra-certificate"></a>DigiCert RA 証明書をインストールする
 
@@ -135,7 +136,7 @@ PKCS または System Center Endpoint Protection を使用して Microsoft CA �
 
    g. スペースを除いて RA 証明書のサムプリントのコピーを記録します。 次にサムプリントの例を示します。
 
-        RA Cert Thumbprint: “EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5”
+        RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"
 
     > [!NOTE]
     > DigiCert CA から RA 証明書を取得する方法については、[DigiCert のカスタマー サポート](mailto:enterprise-pkisupport@digicert.com)にお問い合わせください。
@@ -225,7 +226,7 @@ Intune 管理ポータルから Intune Certificate Connector の最新バージ�
 
 ## <a name="create-a-trusted-certificate-profile"></a>信頼済み証明書プロファイルを作成する
 
-Intune マネージド デバイスに展開する PKCS 証明書は、信頼されたルート証明書にチェーンされている必要があります。 このチェーンを確立するには、DigiCert CA からのルート証明書を使用して、Intune の信頼済み証明書プロファイルを作成する必要があります。
+Intune マネージド デバイスに展開する PKCS 証明書は、信頼されたルート証明書にチェーンされている必要があります。 このチェーンを確立するには、DigiCert CA のルート証明書を使用して Intune の信頼された証明書プロファイルを作成し、信頼された証明書プロファイルと PKCS 証明書プロファイルの両方を同じグループに展開します。
 
 1. DigiCert CA から信頼されたルート証明書を取得します。
 

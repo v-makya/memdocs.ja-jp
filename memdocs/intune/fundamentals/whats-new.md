@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 04/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 00faad5cccf8b2ed3198542868a36cb4699299b8
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: bf490c71fdc94b974e53a9d0f388a777e986f13c
+ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808216"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619578"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
@@ -51,8 +51,147 @@ ms.locfileid: "80808216"
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
-### Role-based access control
--->  
+
+<!-- ########################## -->
+## <a name="week-of-april-20-2020"></a>2020 年 4 月 20 日の週
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### <a name="device-management"></a>デバイス管理
+
+#### <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions---6317104-cm3555758-idready---"></a>Microsoft Endpoint Manager テナントのアタッチ:デバイスの同期とデバイスのアクション<!-- 6317104, CM3555758 idready -->
+Microsoft Endpoint Manager によって、Configuration Manager と Intune が 1 つのコンソールに統合されます。 Configuration Manager バージョン 2002 以降、ご利用の Configuration Manager デバイスをクラウド サービスにアップロードし、管理センターからそれらに対するアクションを実行できます。 詳細については、「[Microsoft Endpoint Manager テナントのアタッチ: デバイスの同期とデバイスのアクション](../../configmgr/tenant-attach/device-sync-actions.md)」を参照してください。 
+
+### <a name="app-management"></a>アプリ管理
+
+#### <a name="microsoft-office-365-proplus-rename---6368143---"></a>Microsoft Office 365 ProPlus 名前変更<!-- 6368143 -->
+Microsoft Office 365 ProPlus は **Microsoft 365 Apps for enterprise** に名前変更されています。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 このドキュメントでは、これを通例 Microsoft 365 アプリと呼びます。 [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[アプリ]** 、 **[Windows]** 、 **[追加]** の順に選択して、このアプリを見つけることができます。 アプリを追加する方法の詳細については、「[Microsoft Intune にアプリを追加する](../apps/apps-add.md)」を参照してください。
+
+<!-- ########################## -->
+## <a name="week-of-april-13-2020-2004-service-release"></a>2020 年 4 月 13 日の週 (2004 サービス リリース)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>アプリ管理
+
+#### <a name="manage-smime-settings-for-outlook-on-android-enterprise-devices---6517085-----"></a>Android Enterprise デバイスで Outlook の S/MIME 設定を管理する<!-- 6517085   -->
+アプリ構成ポリシーを使用して、Android Enterprise を実行するデバイス上で Outlook の S/MIME 設定を管理できます。 また、デバイスのユーザーが Outlook の設定で S/MIME を有効または無効にすることを許可するかどうかも選択できます。 Android 用のアプリ構成ポリシーを使用するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[アプリ]**  >  **[アプリ構成ポリシー]**  >  **[追加]**  >  **[マネージド デバイス]** の順に移動します。 Outlook の設定を構成する方法の詳細については、「[Microsoft Outlook の構成設定](../apps/app-configuration-policies-outlook.md)」を参照してください。
+
+#### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>マネージド Google Play アプリのプレリリース テスト<!-- 2681933  -->
+[アプリのプレリリース テストに Google Play のクローズド テスト トラック](https://support.google.com/googleplay/android-developer/answer/3131213)を使用している組織は、Intune でこれらのトラックを管理できます。 テストを実行するために、Google Play の実稼働前のトラックに発行されたアプリをパイロット グループに選択的に割り当てることができます。 Intune では、アプリに実稼働前のビルド テスト トラックが発行されているかどうかや、そのトラックを AAD ユーザーまたはデバイス グループに割り当てることができるかどうかを確認できます。 この機能は、現在サポートされているすべての Android Enterprise シナリオ (仕事用プロファイル、フル マネージド、および専用) で利用できます。 [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[アプリ]**  >  **[Android]**  >  **[追加]** を選択して、マネージド Google Play アプリを追加できます。 詳細については、「[マネージド Google Play のクローズド テスト トラックの操作](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks)」を参照してください。
+
+#### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft Teams が Office 365 Suite for macOS に含まれるようになりました<!-- 5903936  -->
+Microsoft エンドポイント マネージャーで Microsoft Office for macOS が割り当てられているユーザーは、既存の Microsoft Office アプリ (Word、Excel、PowerPoint、Outlook、OneNote) に加えて、Microsoft Teams を受け取るようになります。 Intune は、他の Office for macOS アプリがインストールされている既存の Mac デバイスを認識し、次回デバイスが Intune にチェックインするときに Microsoft Teams のインストールを試行します。 [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[アプリ]**  >  **[macOS]**  >  **[追加]** の順に選択して、**Office 365 Suite** for macOS を見つけることができます。 詳しくは、「[Microsoft Intune を使用して macOS デバイスに Office 365 を割り当てる](../apps/apps-add-office365-macos.md)」をご覧ください。
+
+#### <a name="update-to-android-app-configuration-policies---6113334----"></a>Android アプリ構成ポリシーの更新<!-- 6113334  -->
+Android アプリ構成ポリシーは、アプリ構成プロファイルを作成する前に、管理者がデバイス登録の種類を選択できるように更新されています。 この機能は、登録の種類 (仕事用プロファイルまたはデバイス所有者) に基づく証明書プロファイルのために追加されます。  この更新の内容は次のとおりです。
+
+1. 新しいプロファイルが作成され、デバイス登録の種類として [仕事用プロファイルとデバイス所有者プロファイル] が選択されている場合は、証明書プロファイルをアプリ構成ポリシーに関連付けることはできません。
+2. 新しいプロファイルが作成され、[仕事用プロファイルのみ] が選択されている場合は、[デバイスの構成] で作成された仕事用プロファイルの証明書ポリシーを利用できます。
+3. 新しいプロファイルが作成され、[デバイスの所有者のみ] が選択されている場合は、[デバイスの構成] で作成されたデバイスの所有者の証明書ポリシーを利用できます。 
+
+> [!IMPORTANT]
+> この機能がリリースされる前 (2020 年 4 月リリース- 2004 年) に作成され、ポリシーに関連付けられている証明書プロファイルがない既存のポリシーは、デバイス登録の種類の既定値が [仕事用プロファイルとデバイス所有者プロファイル] になります。 また、この機能がリリースされる前に作成され、関連付けられている証明書プロファイルがある既存のポリシーは、既定値が [仕事用プロファイルのみ] になります。
+
+さらに、仕事用プロファイルとデバイス所有者の両方の登録タイプに対して機能する、Gmail および Nine の電子メール構成プロファイルを追加しています。これには、両方の電子メール構成の種類での証明書プロファイルの使用が含まれます。  仕事用プロファイル用に [デバイスの構成] で作成した Gmail または Nine のポリシーはすべて、デバイスに引き続き適用されるため、アプリ構成ポリシーに移動する必要はありません。
+
+[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[アプリ]**  >  **[アプリ構成ポリシー]** を選択して、アプリ構成ポリシーを検索できます。 アプリ構成ポリシーの詳細については、「[Microsoft Intune 用アプリ構成ポリシー](../apps/app-configuration-policies-overview.md)」を参照してください。
+
+#### <a name="push-notification-when-device-ownership-type-is-changed---5575875---"></a>デバイスの所有権の種類が変更されたときのプッシュ通知<!-- 5575875 -->
+Android と iOS の両方のポータル サイト ユーザーに、自身のデバイスの所有権の種類が個人用から企業に変更されている場合に、プライバシーを尊重するため、プッシュ通知を送信するように構成できます。 既定では、このプッシュ通知はオフに設定されています。 この設定は、Microsoft エンドポイント マネージャーで **[テナント管理]**  >  **[カスタマイズ]** を選択すると見つかります。 デバイスの所有権がエンドユーザーに与える影響の詳細については、「[デバイス所有権を変更する](../enrollment/corporate-identifiers-add.md#change-device-ownership)」を参照してください。
+
+#### <a name="group-targeting-support-for-customization-pane---4722837----"></a>[カスタマイズ] ペインのグループのターゲット サポート<!-- 4722837  -->
+**[カスタマイズ]** ペインの設定をユーザー グループをターゲットにすることができます。 Intune でこれらの設定を見つけるには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) に移動し、 **[テナント管理]**  >  **[カスタマイズ]** の順に選択します。 カスタマイズに関する詳細については、「[Intune ポータル サイト アプリ、ポータル サイト Web サイト、および Intune アプリをカスタマイズする方法](../apps/company-portal-app.md)」を参照してください。
+
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>デバイスの構成
+
+#### <a name="multiple-evaluate-each-connection-attempt-on-demand-vpn-rules-supported-on-ios-ipados-and-macos---6424615----"></a>iOS、iPadOS、macOS でサポートされている、複数の "接続が試みられるたびに評価する" オンデマンド VPN 規則<!-- 6424615  -->
+Intune ユーザー エクスペリエンスでは、**接続が試みられるたびに評価する**アクションによって、同じ VPN プロファイル内で複数のオンデマンド VPN 規則を使用できます。( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  プラットフォームが **[iOS/iPadOS]** または **[macOS]** > プロファイルが **[VPN]** > **[自動 VPN]**  >  **[オンデマンド]** )。
+
+リスト内の最初の規則のみが受け入れられます。 この動作は固定で、Intune によってリスト内のすべての規則が評価されます。 各規則は、オンデマンド規則リストに表示されている順序で評価されます。
+
+> [!NOTE]
+> これらのオンデマンド VPN 規則を使用する既存の VPN プロファイルがある場合、次回 VPN プロファイルを変更したときに修正が適用されます。 たとえば、接続の名前を変更してから、プロファイルを保存するなど、小さな変更を行います。
+>
+> 認証に SCEP 証明書を使用している場合、この変更により、この VPN プロファイルの証明書が再発行されます。
+
+適用対象:
+- iOS/iPadOS
+- macOS
+
+VPN プロファイルの詳細については、「[VPN プロファイルの作成](../configuration/vpn-settings-configure.md)」を参照してください。
+
+#### <a name="additional-options-in-sso-and-sso-app-extension-profiles-on-iosipados-devices---6504155-----"></a>iOS/iPadOS デバイスでの SSO および SSO アプリ拡張機能プロファイルの追加オプション<!-- 6504155   -->
+
+iOS/iPadOS デバイスでは、次のことができます。
+- SSO プロファイル ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  > プラットフォームに **[iOS/iPadOS]** > プロファイルに **[デバイスの機能]** > **[シングル サインオン]** ) で、Kerberos プリンシパル名が SSO プロファイルのセキュリティ アカウント マネージャー (SAM) アカウント名になるように設定します。 
+- SSO アプリ拡張機能プロファイル ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  > プラットフォームに **[iOS/iPadOS]** > プロファイルに **[デバイスの機能]** > **[シングル サインオン アプリの拡張機能]** ) で、新しい SSO アプリ拡張機能の種類を使用して、より少ないクリック回数で iOS/iPadOS Microsoft Azure AD 拡張機能を構成します。 共有デバイス モードでデバイスの Azure AD 拡張機能を有効にし、拡張機能固有データを拡張機能に送信できます。
+
+適用対象:
+- iOS/iPadOS 13.0 以降
+
+iOS/iPadOS デバイスでのシングル サインオンの使用に関する詳細については、[シングル サインオン アプリの拡張機能の概要](../configuration/device-features-configure.md#single-sign-on-app-extension)と[シングル サインオンの設定リスト](../configuration/ios-device-features-settings.md#single-sign-on-app-extension)を参照してください。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>デバイスの登録
+
+#### <a name="delete-apple-automated-device-enrollment-token-when-default-profile-is-present--6393220---"></a>既定のプロファイルが存在する場合に、Apple 自動デバイス登録トークンを削除する<!--6393220 -->
+以前は、既定のプロファイルを削除できませんでした。これは、関連付けられている自動デバイス登録トークンを削除できなかったことを意味します。 次の場合にトークンを削除できるようになりました。
+- トークンに割り当てられているデバイスがない
+- 既定のプロファイルが存在する。それを行うには、既定のプロファイルを削除してから、関連付けられているトークンを削除します。
+詳細については、「[Intune から ADE トークンを削除する](../enrollment/device-enrollment-program-enroll-ios.md#delete-an-ade-token-from-intune)」を参照してください。
+
+#### <a name="scaled-up-support-for-apple-automated-device-enrollment-and-apple-configurator-2-devices-profiles-and-tokens--3542402---"></a>Apple 自動デバイス登録と Apple Configurator 2 デバイス、プロファイル、トークンの拡張されたサポート<!--3542402 -->
+分散した IT 部門と組織を支援するために、Intune では、トークンあたり最大 1000 の登録プロファイル、Intune アカウントあたり 2000 の自動デバイス登録 (旧称 DEP) トークン、およびトークンあたり 75000 のデバイスがサポートされるようになりました。 登録プロファイルあたりのデバイス数に特定の制限はなく、トークンあたりのデバイスの最大数未満です。
+
+Intune では、最大 1000 の Apple Configurator 2 プロファイルがサポートされるようになりました。
+
+詳細については、「[サポートされるボリューム](../enrollment/device-enrollment-program-enroll-ios.md#supported-volume)」を参照してください。
+
+#### <a name="all-devices-page-column-entry-changes--6967616---"></a>[すべてのデバイス] ページの列エントリの変更<!--6967616 -->
+**すべてのデバイス** ページで、**管理者** 列のエントリが変更されました。
+- *MDM* ではなく、*Intune* が 表示されるようになりました
+- *MDM/ConfigMgr エージェント*ではなく、* 共同管理*が表示されるようになりました
+
+エクスポート値は変更されていません。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>デバイス管理
+
+#### <a name="trusted-platform-manager-tpm-version-information-now-on-device-hardware-page--6224914-idmiss---"></a>トラステッド プラットフォーム マネージャー (TPM) のバージョン情報がデバイス ハードウェア ページに表示される<!--6224914 idmiss -->
+デバイスのハードウェア ページに TPM バージョン番号が表示されるようになりました ([Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) >  **[デバイス]** > デバイスの選択 > **[ハードウェア]** > **[システム格納装置]** の下を参照)。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>監視とトラブルシューティング
+
+#### <a name="collect-logs-to-better-troubleshoot-scripts-assigned-to-macos-devices---6359853----"></a>ログを収集して macOS デバイスに割り当てられているスクリプトのトラブルシューティングを改善する<!-- 6359853  -->
+macOS デバイスに割り当てられているスクリプトのトラブルシューティングを改善するために、ログを収集できるようになりました。 ログは、60 MB (圧縮) または 25 個のファイルのどちらか先に発生するまで収集できます。 詳細については、「[ログ収集を使用した macOS シェル スクリプト ポリシーのトラブルシューティング](../apps/macos-shell-scripts.md#troubleshoot-macos-shell-script-policies-using-log-collection)」を参照してください。
+ 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="security"></a>セキュリティ
+
+#### <a name="derived-credentials-to-provision-android-enterprise-fully-managed-devices-with-certificates--4839592------"></a>証明書によって Android Enterprise のフル マネージド デバイスをプロビジョニングするための派生資格情報<!--4839592    -->
+Intune では、Android デバイスの認証方法として、[派生資格情報](../protect/derived-credentials.md)の使用がサポートされるようになりました。 派生資格情報は、証明書をデバイスに展開するためのアメリカ国立標準技術研究所 (NIST) 800-157 標準を実装したものです。 Android のサポートは、iOS/iPadOS を実行するデバイスのサポートを拡張したものです。
+
+派生資格情報は、スマート カードのように、Personal Identity Verification (PIV) または Common Access Card (CAC) カードの使用に依存します。 モバイル デバイスのために派生資格情報を得るには、ユーザーは Microsoft Intune アプリから開始し、使用しているプロバイダーに固有の登録ワークフローに従います。 すべてのプロバイダーに共通することは、コンピューターのスマート カードを使用し、派生資格情報プロバイダーに対して認証するという要件です。 そのプロバイダーはその後、ユーザーのスマート カードから誘導されたデバイスに証明書を発行します。
+
+VPN および Wi-Fi のデバイス構成プロファイル用の認証方法として派生資格情報を使用できます。 それらは、アプリ認証や、それをサポートするアプリケーションの S/MIME 署名と暗号化にも使用できます。
+
+Intune では、Android で次の派生資格情報プロバイダーをサポートするようになりました。
+- Entrust Datacard
+- Intercede
+
+サードパーティ プロバイダーの DISA Purebred は、今後のリリースで Android で使用できるようになります。
+
+#### <a name="microsoft-edge-security-baseline-is-now-generally-available--6586139---"></a>Microsoft Edge のセキュリティ ベースラインの一般提供が開始<!--6586139 -->
+
+*この新しいベースラインはこれから数週間かけてテナントにロールアウトされます。5 月の早い段階でこの新しいベースラインがすべてのテナントに与えられるものと予想しています。*
+
+[Microsoft Edge のセキュリティ ベースライン](../protect/security-baselines.md#available-security-baselines)の新しいバージョンの提供が開始され、一般公開 (GA) としてリリースされました。 以前の Edge のベースラインはプレビュー段階でした。  新しいベースライン バージョンは 2020 年 4 月 (Edge バージョン 80 以降) に含まれます。 
+
+この新しいベースラインのリリースによって、以前のベースライン バージョンに基づいてプロファイルを作成できなくなりますが、それらのバージョンで作成したプロファイルは引き続き使用できます。 また、[最新のベースライン バージョンを使用するように、既存のプロファイルを更新する](../protect/security-baselines.md#change-the-baseline-version-for-a-profile)こともできます。 
 
 <!-- ########################## -->
 ## <a name="week-of-april-6-2020"></a>2020 年 4 月 6 日の週
@@ -76,20 +215,16 @@ macOS デバイス向けのシェル スクリプトを構成するときに、�
 
 ### <a name="app-management"></a>アプリ管理  
 
-#### <a name="company-portal-for-ios-supports-landscape-mode--6048329-wnready---"></a>iOS 用ポータル サイトでの横向きモードのサポート<!--6048329 wnready -->   
+#### <a name="company-portal-for-ios-supports-landscape-mode--6048329----"></a>iOS 用ポータル サイトでの横向きモードのサポート<!--6048329  -->   
 ユーザーは、好みの画面の向きを使用して、デバイスを登録したり、アプリを検索したり、IT サポートを受けたりできるようになりました。 ユーザーが縦向きモードで画面をロックしない限り、アプリでは画面を縦向きまたは横向きモードに合わせて自動的に検出して調整します。  
 
-#### <a name="script-support-for-macos-devices-public-preview---4280361-wnready---"></a>macOS デバイスのスクリプト サポート (パブリック プレビュー)<!-- 4280361 wnready -->
+#### <a name="script-support-for-macos-devices-public-preview---4280361----"></a>macOS デバイスのスクリプト サポート (パブリック プレビュー)<!-- 4280361  -->
 macOS デバイスにスクリプトを追加して展開できます。 このサポートにより、macOS デバイスを構成する機能が拡張され、macOS デバイスでネイティブの MDM 機能を使用してできること以上のことが可能になります。 詳細については、「[Intune で macOS デバイスに対してシェル スクリプトを使用する](../apps/macos-shell-scripts.md)」を参照してください。
 
 <!-- ########################## -->
 ## <a name="week-of-march-24-2020"></a>2020 年 3 月 24 日の週
 
 ### <a name="improved-user-interface-experience-when-creating-device-restrictions-profiles-on-android-and-android-enterprise-devices---5841361---"></a>Android および Android Enterprise デバイスでデバイス制限プロファイルを作成するときのユーザー インターフェイス エクスペリエンスの向上<!-- 5841361 -->
-
-> [!NOTE] 
-> Intune ユーザー インターフェイスは全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、設定を作成または編集する際のワークフローが若干異なります。
-
 Android または Android Enterprise デバイス用のプロファイルを作成するときの、Endpoint Management 管理センターのエクスペリエンスが更新されます。 この変更は、次のデバイス構成プロファイルに影響します ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  > **プラットフォームの [Android デバイス管理者]** または **[Android Enterprise]** )。
 
 - デバイスの制限:Android デバイス管理者
@@ -99,10 +234,6 @@ Android または Android Enterprise デバイス用のプロファイルを作�
 構成できるデバイスの制限の詳細については、[Android デバイス管理者](../configuration/device-restrictions-android.md)と [Android Enterprise](../configuration/device-restrictions-android-for-work.md) に関するページを参照してください。
 
 ### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569002-5568997---"></a>iOS/iPadOS および macOS デバイスで構成プロファイルを作成するときのユーザー インターフェイス エクスペリエンスの向上<!-- 5569002 5568997 -->
-
-> [!NOTE]
-> Intune ユーザー インターフェイスは全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、設定を作成または編集する際のワークフローが若干異なります。
-
 iOS または macOS デバイス用のプロファイルを作成するときの、エンドポイント管理センターのエクスペリエンスが更新されます。 この変更は、次のデバイス構成プロファイルに影響します ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  プラットフォームの **[iOS/iPadOS]** または **[macOS]** ):
 
 - カスタム: iOS/iPadOS、macOS
@@ -113,9 +244,6 @@ iOS または macOS デバイス用のプロファイルを作成するときの
 - 設定ファイル: macOS
 
 ### <a name="hide-from-user-configuration-setting-in-device-features-on-macos-devices---6524869---"></a>macOS デバイスのデバイス機能でユーザー構成設定を非表示にする<!-- 6524869 -->
-
-> [!NOTE]
-> この変更は、今後数週間にわたってすべてのお客様にロールアウトされます。
 
 macOS デバイスでデバイス機能の構成プロファイルを作成するときに、新しい設定 **[ユーザーの構成を非表示にします]** があります ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  プラットフォームに **[macOS]** > プロファイルに **[デバイスの機能]** > **[ログイン項目]** )。
 
@@ -158,7 +286,7 @@ Intune でこれらの設定を見つけるには、[Microsoft Endpoint Manager 
 #### <a name="users-personal-encrypted-recovery-key---6273943----"></a>ユーザーの個人用の暗号化された回復キー<!-- 6273943  -->
 ユーザーが Android ポータル サイト アプリケーションまたは Android Intune アプリケーションを介して、Mac デバイスの個人用の暗号化された **FileVault** 回復キーを取得できるようにする、新しい Intune 機能を使用できます。 ポータル サイト アプリケーションと Intune アプリケーションの両方にリンクが表示されます。これを使用すると、Chrome ブラウザーで Web ポータル サイトが開き、そこでユーザーは Mac デバイスにアクセスするために必要な **FileVault** 回復キーを確認できます。 暗号化の詳細については、「[Intune でデバイスの暗号化を使用する](../protect/encrypt-devices.md)」を参照してください。
 
-#### <a name="optimized-dedicated-device-enrollment----6114580-wnready---"></a>専用デバイスの登録の最適化 <!-- 6114580 wnready -->
+#### <a name="optimized-dedicated-device-enrollment----6114580----"></a>専用デバイスの登録の最適化 <!-- 6114580  -->
 Android エンタープライズ専用デバイスの登録を最適化し、Wi-Fi に関連付けられた SCEP 証明書を 2019 年 11 月 22 日より前に登録した専用デバイスに適用しやすくしています。 新しい登録の場合、Intune アプリは引き続きインストールされますが、エンド ユーザーは登録中に **Intune エージェントを有効にする**手順を実行する必要がなくなります。 インストールはバックグラウンドで自動的に行われ、Wi-Fi に関連付けられた SCEP 証明書はエンド ユーザーの介入なしで展開および設定できます。  
 
 これらの変更は、Intune サービス バックエンドの展開として 3 月中に段階的にロールアウトされます。 3 月の終わりまでに、すべてのテナントでこの新しい動作が実現されます。 関連情報については、「[Android エンタープライズ専用デバイスでの SCEP 証明書のサポート](https://techcommunity.microsoft.com/t5/intune-customer-success/support-for-scep-certificates-in-android-enterprise-dedicated/ba-p/928147)」をご覧ください。
@@ -212,9 +340,6 @@ iOS/iPadOS デバイス上に、デバイスの制限プロファイルを作成
 
 ####  <a name="ui-update-when-configuring-compliance-policy---3961639------"></a>コンプライアンス ポリシーを構成するときの UI の更新<!-- 3961639    -->
 
-> [!NOTE]
-> Intune ユーザー インターフェイスは全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、設定を作成または編集する際のワークフローが若干異なります。
-
 Microsoft Endpoint Manager で[コンプライアンス ポリシーを作成する](../protect/create-compliance-policy.md#create-the-policy)ための UI が更新されました ( **[デバイス]**  >  **[コンプライアンス ポリシー]**  >  **[ポリシー]**  >  **[ポリシーの作成]** )。 以前に使用していたのと同じ設定と詳細情報を含む新しいユーザー エクスペリエンスが提供されます。 新しいエクスペリエンスでは、ウィザードのようなプロセスに従ってコンプライアンス ポリシーを作成することができ、ポリシーの *[割り当て]* を追加できるページと、ポリシーを作成する前に構成を確認できる *[確認および作成]* ページが含まれます。
 
 #### <a name="retire-noncompliant-devices---1827291---------"></a>非準拠デバイスをインベントリから削除する<!-- 1827291       -->
@@ -255,7 +380,7 @@ Android および iOS デバイス上のポータル サイトでのデバイス
 #### <a name="new-android-report-on-android-devices-overview-page---5435435-----"></a>Android デバイスの概要ページの新しい Android レポート<!-- 5435435   -->
 Microsoft Endpoint Manager 管理コンソールの Android デバイスの概要ページに、各デバイス管理ソリューションに登録されている Android デバイスの数を表示するレポートが追加されました。 このグラフ (Azure コンソールに既にあるのと同じような) には、仕事用プロファイル、フル マネージド、専用、およびデバイス管理者が登録したデバイスの数が表示されます。 レポートを表示するには、 **[デバイス]**  >  **[Android]**  >  **[概要]** の順に選択します。
 
-#### <a name="guide-users-from-android-device-administrator-management-to-work-profile-management--5857738-idready-wnready-wnstaged--"></a>Android デバイス管理者の管理から仕事用プロファイルの管理にユーザーをガイドする<!--5857738 idready wnready wnstaged-->
+#### <a name="guide-users-from-android-device-administrator-management-to-work-profile-management--5857738---wnstaged--"></a>Android デバイス管理者の管理から仕事用プロファイルの管理にユーザーをガイドする<!--5857738   wnstaged-->
 Android デバイス管理者プラットフォーム用の新しいコンプライアンス設定をリリースしています。 この設定を使用すると、デバイス管理者によって管理される場合にデバイスを非準拠にすることができます。
 
 これらの非準拠デバイスでは、 **[デバイス設定の更新]** ページに、ユーザーに対して **[新しいデバイス管理セットアップに移動する]** メッセージが表示されます。 **[解決]** ボタンをタップすると、次のようにガイドされます。
@@ -532,7 +657,7 @@ Intune で、Windows 10 デバイスでの Microsoft Edge バージョン 77 以
 Microsoft Intune で、macOS 用 Microsoft Edge アプリの追加の **[安定]** 展開チャネルがサポートされるようになりました。 **[安定]** チャネルは、Microsoft Edge をエンタープライズ環境で幅広く展開する場合に推奨されるチャネルです。 これは 6 週間ごとに更新され、各リリースには **[Beta]** チャネルからの機能強化が組み込まれています。 **[安定]** および **[Beta]** チャネルに加えて、Intune では **[Dev]** チャネルもサポートされています。 パブリック プレビューでは、macOS 用の Microsoft Edge バージョン 77 以降の [安定] および [Dev] チャネルが提供されます。 ブラウザーの自動更新は、既定で有効になっています。 詳細については、[Microsoft Intune を使用した macOS デバイスへの Microsoft Edge の追加](../apps/apps-edge-macos.md)に関する記事をご覧ください。
 
 #### <a name="retirement-of-intune-managed-browser--5728447---"></a>Intune Managed Browser の提供終了<!--5728447 -->
-Intune Managed Browser の提供は終了します。 保護された Intune ブラウザー エクスペリエンスには Microsoft Edge を使用してください。 詳細については、「[アクションの実行:保護されている Intune ブラウザーエクスペリエンスに Microsoft Edge を使用する](whats-new.md#take-action-use-microsoft-edge-for-your-protected-intune-browser-experience)」エントリ (下の「[通知](whats-new.md#notices)」セクション内) をご覧ください。
+Intune Managed Browser の提供は終了します。 保護された Intune ブラウザー エクスペリエンスには Microsoft Edge を使用してください。 
 
 <!-- ########################## -->
 ## <a name="week-of-january-20-2020-2001-service-release"></a>2020 年 1 月 20 日の週 (2001 サービス リリース)

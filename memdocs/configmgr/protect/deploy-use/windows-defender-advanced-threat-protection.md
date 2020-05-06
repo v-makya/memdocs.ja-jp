@@ -2,7 +2,7 @@
 title: Microsoft Defender Advanced Threat Protection
 titleSuffix: Configuration Manager
 description: 企業が高度な攻撃に対応するための新しいサービスである Microsoft Defender Advanced Threat Protection を管理および監視する方法について説明します。
-ms.date: 04/01/2020
+ms.date: 04/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 186751bb8b1768b34573e2b614ce992b58fa9232
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a635ae36875984537c18c4850a3526d57ffceb31
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706240"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210147"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
@@ -29,7 +29,7 @@ Microsoft Defender ATP は、[Windows Defender セキュリティ センター](
 
 - Microsoft Defender Advanced Threat Protection オンライン サービスのサブスクリプション  
 - Configuration Manager クライアントが実行されているクライアント コンピューター
-- 以下の「[サポートされているクライアント オペレーティング システム](#bkmk_os)」セクションに記載されている OS を使用しているクライアント。 
+- 以下の「[サポートされているクライアント オペレーティング システム](#bkmk_os)」セクションに記載されている OS を使用しているクライアント。
 
 ### <a name="supported-client-operating-systems"></a><a name="bkmk_os"></a> サポートされているクライアント オペレーティング システム
 実行している Configuration Manager のバージョンに基づいて、次のクライアント オペレーティング システムをオンボードできます。
@@ -62,7 +62,7 @@ Microsoft Defender ATP は、[Windows Defender セキュリティ センター](
       1. プロセスが完了したら、 **[接続の構成]** セクションから **[ワークスペース キー]** と **[ワークスペース ID]** の値をコピーします。
 
 > [!IMPORTANT]
-> Microsoft Defender ATP 構成ファイルには、セキュリティで保護する必要がある機密情報が含まれています。
+> - Microsoft Defender ATP 構成ファイルには、セキュリティで保護する必要がある機密情報が含まれています。
 
 ## <a name="onboard-devices"></a>デバイスのオンボード
 
@@ -70,6 +70,7 @@ Microsoft Defender ATP は、[Windows Defender セキュリティ センター](
 1. Microsoft Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、 **[オンボード]** を選択します。
 1. 組織の Microsoft Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。
    - **Windows 7 と 8.1** または **Windows Server 2008 R2 SP1、2012 R2、および 2016**では、**ワークスペース キー** と **ワークスペース ID** を指定します。
+   - Configuration Manager バージョン 2002 では、Windows Server 2019 および Windows Server 1803 以降のデバイスのみをオンボードする場合でも、**ワークスペース キー**と**ワークスペース ID** が必要になります。 これらの値を取得するには、[Microsoft Defender ATP オンライン サービス](https://securitycenter.windows.com/)から **[設定]**  >  **[オンボード]**  >  **[Windows 7 と Windows 8.1]** を選択します。 <!--7054188-->
 1. マネージド デバイスから分析用に収集され共有されるファイルのサンプルを指定します。  
 
    - **なし**

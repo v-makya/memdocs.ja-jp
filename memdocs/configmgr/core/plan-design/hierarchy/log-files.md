@@ -2,7 +2,7 @@
 title: ログ ファイルのリファレンス
 titleSuffix: Configuration Manager
 description: Configuration Manager のクライアント、サーバー、および依存コンポーネントのすべてのログ ファイルのリファレンス。
-ms.date: 11/29/2019
+ms.date: 04/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6cd64d49abf7392c949a76ef198dabfc543dce7c
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 36ab89f1e9988adc167bf69ff7d9f53b02bbe10f
+ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110170"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166540"
 ---
 # <a name="log-file-reference"></a>ログ ファイルのリファレンス
 
@@ -29,86 +29,85 @@ Configuration Manager のログ ファイルに関するより一般的な情報
 
 - [クライアント ログ ファイル](#BKMK_ClientLogs)  
 
-    - [クライアントによる処理](#BKMK_ClientOpLogs)  
+  - [クライアントによる処理](#BKMK_ClientOpLogs)  
 
-    - [クライアントのインストール](#BKMK_ClientInstallLog)  
+  - [クライアントのインストール](#BKMK_ClientInstallLog)  
 
-    - [Linux および UNIX 用のクライアント](#BKMK_LogFilesforLnU)  
+  - [Linux および UNIX 用のクライアント](#BKMK_LogFilesforLnU)  
 
-    - [Mac コンピューター用のクライアント](#BKMK_LogfilesforMac)  
+  - [Mac コンピューター用のクライアント](#BKMK_LogfilesforMac)  
 
 - [サーバー ログ ファイル](#BKMK_ServerLogs)  
 
-    - [サイト サーバーとサイト システム](#BKMK_SiteSiteServerLog)  
+  - [サイト サーバーとサイト システム](#BKMK_SiteSiteServerLog)  
 
-    - [サイト サーバーのインストール](#BKMK_SiteInstallLog)
+  - [サイト サーバーのインストール](#BKMK_SiteInstallLog)
 
-    - [データ ウェアハウス サービス ポイント](#BKMK_DataWarehouse)
+  - [データ ウェアハウス サービス ポイント](#BKMK_DataWarehouse)
 
-    - [フォールバック ステータス ポイント](#BKMK_FSPLog)  
+  - [フォールバック ステータス ポイント](#BKMK_FSPLog)  
 
-    - [管理ポイント](#BKMK_MPLog)  
+  - [管理ポイント](#BKMK_MPLog)  
 
-    - [サービス接続ポイント](#BKMK_WITLog)  
+  - [サービス接続ポイント](#BKMK_WITLog)  
 
-    - [ソフトウェアの更新ポイント](#BKMK_SUPLog)  
+  - [ソフトウェアの更新ポイント](#BKMK_SUPLog)  
 
 - [機能別ログ ファイル](#BKMK_FunctionLogs)  
 
-    - [アプリケーション管理](#BKMK_AppManageLog)  
+  - [アプリケーション管理](#BKMK_AppManageLog)  
 
-    - [資産インテリジェンス](#BKMK_AILog)  
+  - [資産インテリジェンス](#BKMK_AILog)  
 
-    - [バックアップと回復](#BKMK_BnRLog)  
+  - [バックアップと回復](#BKMK_BnRLog)  
 
-    - [証明書の登録](#BKMK_CertificateEnrollment)
+  - [証明書の登録](#BKMK_CertificateEnrollment)
 
-    - [クライアント通知](#BKMK_BGB)
+  - [クライアント通知](#BKMK_BGB)
 
-    - [クラウド管理ゲートウェイ](#cloud-management-gateway)
+  - [クラウド管理ゲートウェイ](#cloud-management-gateway)
 
-    - [コンプライアンス設定と会社のリソースへのアクセス](#BKMK_CompSettingsLog)  
+  - [コンプライアンス設定と会社のリソースへのアクセス](#BKMK_CompSettingsLog)  
 
-    - [Configuration Manager コンソール](#BKMK_ConsoleLog)  
+  - [Configuration Manager コンソール](#BKMK_ConsoleLog)  
 
-    - [コンテンツ管理](#BKMK_ContentLog)  
+  - [コンテンツ管理](#BKMK_ContentLog)  
 
-    - [Desktop Analytics](#desktop-analytics)
+  - [Desktop Analytics](#desktop-analytics)
 
-    - [探索](#BKMK_DiscoveryLog)  
+  - [探索](#BKMK_DiscoveryLog)  
 
-    - [Endpoint Protection](#BKMK_EPLog)  
+  - [Endpoint Protection](#BKMK_EPLog)  
 
-    - [拡張機能](#BKMK_Extensions)  
+  - [拡張機能](#BKMK_Extensions)  
 
-    - [インベントリ](#BKMK_InventoryLog)  
+  - [インベントリ](#BKMK_InventoryLog)  
 
-    - [移行](#BKMK_MigrationLog)  
+  - [移行](#BKMK_MigrationLog)  
 
-    - [モバイル デバイス](#BKMK_MDMLog)  
+  - [モバイル デバイス](#BKMK_MDMLog)  
 
-    - [OS の展開](#BKMK_OSDLog)  
+  - [OS の展開](#BKMK_OSDLog)  
 
-    - [電源管理](#BKMK_PowerMgmtLog)  
+  - [電源管理](#BKMK_PowerMgmtLog)  
 
-    - [リモート コントロール](#BKMK_RCLog)  
+  - [リモート コントロール](#BKMK_RCLog)  
 
-    - [レポート](#BKMK_ReportLog)  
+  - [レポート](#BKMK_ReportLog)  
 
-    - [役割に基づいた管理](#BKMK_RBALog)  
+  - [役割に基づいた管理](#BKMK_RBALog)  
 
-    - [ソフトウェア使用状況測定](#BKMK_MeteringLog)  
+  - [ソフトウェア使用状況測定](#BKMK_MeteringLog)  
 
-    - [ソフトウェア更新プログラム](#BKMK_SU_NAPLog)  
+  - [ソフトウェア更新プログラム](#BKMK_SU_NAPLog)  
 
-    - [Wake On LAN](#BKMK_WOLLog)  
+  - [Wake On LAN](#BKMK_WOLLog)  
 
-    - [Windows 10 サービス](#BKMK_WindowsServicingLog)
+  - [Windows 10 サービス](#BKMK_WindowsServicingLog)
 
-    - [Windows 更新エージェント](#BKMK_WULog)  
+  - [Windows 更新エージェント](#BKMK_WULog)  
 
-    - [WSUS サーバー](#BKMK_WSUSLog)  
-
+  - [WSUS サーバー](#BKMK_WSUSLog)  
 
 ## <a name="client-log-files"></a><a name="BKMK_ClientLogs"></a> クライアント ログ ファイル
 
@@ -120,6 +119,7 @@ Configuration Manager のログ ファイルに関するより一般的な情報
 
 |ログの名前|[説明]|  
 |--------------|-----------------|  
+|ADALOperationProvider.log|Azure Active Directory (Azure AD) Authentication Library (ADAL) を使用したクライアント認証トークン要求に関する情報。|
 |BitLockerManagementHandler.log|BitLocker 管理ポリシーに関する情報を記録します。|
 |CAS.log|コンテンツ アクセス サービス。 クライアントのローカル パッケージのキャッシュを管理します。|  
 |Ccm32BitLauncher.log|クライアントにある *run as 32 bit* とマークされたアプリケーションの起動を記録します。|  
@@ -131,11 +131,12 @@ Configuration Manager のログ ファイルに関するより一般的な情報
 |Ccmperf.log|メンテナンス操作、およびクライアントのパフォーマンス カウンターに関連するデータの取得操作を記録します。|  
 |CcmRestart.log|クライアント サービスの再開を記録します。|  
 |CCMSDKProvider.log|クライアントの SDK インターフェイスで行われる処理を記録します。|  
+|ccmsqlce.log|クライアントに使用される SQL Compact Edition のアクティビティを記録します。 このログは、通常、デバッグ ログを有効にする場合またはコンポーネントに問題がある場合にのみ使用されます。 通常、クライアント正常性タスク (ccmeval) によってこのコンポーネントの問題は自己修正されます。|
 |CertificateMaintenance.log|Active Directory ドメイン サービスと管理ポイントの証明書を管理するときに使用します。|  
 |CIDownloader.log|構成項目の定義のダウンロードの詳細を記録します。|  
-|CITaskMgr.log|各アプリケーションと展開用に開始されたタスク (コンテンツのダウンロード、インストールとアンインストールなど) を記録します。|  
+|CITaskMgr.log|コンテンツのダウンロードとインストールや、アンインストール アクションなど、アプリケーションと展開の種類ごとにタスクを記録します。|  
 |ClientAuth.log|クライアントの署名と認証処理を記録します。|  
-|ClientIDManagerStartup.log|作成されたクライアント GUID、およびクライアントの登録と割り当て中に行われた操作を記録します。|  
+|ClientIDManagerStartup.log|クライアント GUID を作成して維持し、クライアントの登録および割り当て時にタスクを識別します。|  
 |ClientLocation.log|クライアント サイトの割り当てに関連する操作を記録します。|  
 |CMHttpsReadiness.log|Configuration Manager の HTTPS 使用準備ができているかどうかを評価するツールの実行結果を記録します。 このツールは、Configuration Manager で使用できる公開キー基盤 (PKI) クライアント認証証明書がコンピューターにあるかどうかをチェックします。|  
 |CmRcService.log|リモート コントロール サービスの情報を記録します。|  
@@ -192,7 +193,7 @@ Configuration Manager のログ ファイルに関するより一般的な情報
 |ccmsetup.log|クライアントのセットアップ、クライアントのアップグレード、およびクライアントの削除に関する ccmsetup.exe のタスクを記録します。 クライアントのインストールのトラブルシューティングに使用できます。|  
 |ccmsetup-ccmeval.log|クライアントのステータスと修復に関する ccmsetup.exe のタスクを記録します。|  
 |CcmRepair.log|クライアント エージェントの修復処理を記録します。|  
-|client.msi.log|client.msi で実行されるセットアップ タスクを記録します。 クライアントのインストールまたは削除に関する問題の解消に利用できます。|  
+|client.msi.log|client.msi によって行われた設定タスクを記録します。 クライアントのインストールまたは削除に関する問題の解消に利用できます。|  
 
 ### <a name="client-for-linux-and-unix"></a><a name="BKMK_LogFilesforLnU"></a> Linux および UNIX 用のクライアント
 
@@ -208,28 +209,28 @@ Linux および UNIX 用の Configuration Manager クライアントでは、次
 
 |ログの名前|詳細|
 |-------------------|-----------------------------------------------------------------|
-|Scxcm.log| Linux および UNIX 用の Configuration Manager クライアントのコア サービス (ccmexec.bin) のログ ファイルです。 このログ ファイルには、ccmexec.bin のインストールと実行中の処理に関する情報が含まれます。<br /><br /> 既定でこのログ ファイルは **/var/opt/microsoft/scxcm.log** にあります<br /><br /> ログ ファイルの場所を変更するには、 **/opt/microsoft/configmgr/etc/scxcm.conf** を編集して **[パス]** フィールドを変更します。 変更を有効にするために、クライアント コンピューターやサービスを再起動する必要はありません。<br /><br /> ログ レベルを 4 種類の設定のいずれかに設定できます。 |
-| Scxcmprovider.log |Linux および UNIX 用の Configuration Manager クライアントの CIM サービス (omiserver.bin) のログ ファイルです。 このログ ファイルには、nwserver.bin の実行中の処理に関する情報が含まれます。<br /><br /> このログは <strong>/var/opt/microsoft/configmgr/scxcmprovider.log</strong> にあります<br /><br /> ログ ファイルの場所を変更するには、 **/opt/microsoft/omi/etc/scxcmprovider.conf** を編集して **[パス]** フィールドを変更します。 変更を有効にするために、クライアント コンピューターやサービスを再起動する必要はありません。<br /><br /> ログ レベルを 3 つの設定のいずれかに設定できます。|
+|Scxcm.log| Linux および UNIX 用の Configuration Manager クライアントのコア サービス (ccmexec.bin) のログ ファイルです。 このログ ファイルには、ccmexec.bin のインストールと実行中の処理に関する情報が含まれます。 既定でこのログ ファイルは **/var/opt/microsoft/scxcm.log** にあります ログ ファイルの場所を変更するには、 **/opt/microsoft/configmgr/etc/scxcm.conf** を編集して **[パス]** フィールドを変更します。 変更を有効にするために、クライアント コンピューターやサービスを再起動する必要はありません。 ログ レベルを 4 種類の設定のいずれかに設定できます。 |
+| Scxcmprovider.log |Linux および UNIX 用の Configuration Manager クライアントの CIM サービス (omiserver.bin) のログ ファイルです。 このログ ファイルには、nwserver.bin の実行中の処理に関する情報が含まれます。 このログは `/var/opt/microsoft/configmgr/scxcmprovider.log` にあります。 ログ ファイルの場所を変更するには、 **/opt/microsoft/omi/etc/scxcmprovider.conf** を編集して **[パス]** フィールドを変更します。 変更を有効にするために、クライアント コンピューターやサービスを再起動する必要はありません。 ログ レベルを 3 つの設定のいずれかに設定できます。|
 
 両方のログ ファイルは、いくつかのレベルのログ記録をサポートします。  
 
 - **scxcm.log**。 ログ レベルを変更するには、 **/opt/microsoft/configmgr/etc/scxcm.conf** を編集し、 **[モジュール]** タグの各インスタンスを必要なログ レベルに変更します。  
 
-    - エラー:注意が必要な問題を示します。  
+  - エラー:注意が必要な問題を示します。  
 
-    - 警告:クライアントの処理で発生した可能性がある問題を示します。  
+  - 警告:クライアントの処理で発生した可能性がある問題を示します。  
 
-    - 情報:クライアントのさまざまなイベントのステータスを示す、さらに詳細なログ記録です。  
+  - 情報:クライアントのさまざまなイベントのステータスを示す、さらに詳細なログ記録です。  
 
-    - トレース: 問題の診断に通常使用する、詳細なログ記録です。  
+  - トレース: 問題の診断に通常使用する、詳細なログ記録です。  
 
 - **scxcmprovider.log**。 ログ レベルを変更するには、 **/opt/microsoft/omi/etc/scxcmprovider.conf** を編集し、タグ **[モジュール]** の各インスタンスを必要なログ レベルに変更します。  
 
-    - エラー:注意が必要な問題を示します。  
+  - エラー:注意が必要な問題を示します。  
 
-    - 警告:クライアントの処理で発生した可能性がある問題を示します。
+  - 警告:クライアントの処理で発生した可能性がある問題を示します。
 
-    - 情報:クライアントのさまざまなイベントのステータスを示す、さらに詳細なログ記録です。  
+  - 情報:クライアントのさまざまなイベントのステータスを示す、さらに詳細なログ記録です。  
 
 通常の動作条件では、エラーのログ レベルを使用します。 このログ レベルでは、最小限のログ ファイルが作成されます。 ログ レベルがエラーから警告、情報、トレースへと上がるにつれて、ログ ファイルにさらに多くのデータが書き込まれるため、作成されるログ ファイルが大きくなります。  
 
@@ -243,17 +244,16 @@ Linux および UNIX 用のクライアントでは、クライアント ログ 
 
 ### <a name="client-for-mac-computers"></a><a name="BKMK_LogfilesforMac"></a> Mac コンピューター用のクライアント
 
-Mac コンピューター用の Configuration Manager クライアントでは、次のログ ファイルに情報を記録します。  
+Mac コンピューター用の Configuration Manager クライアントでは、Mac コンピューター上の次のログ ファイルに情報が記録されます。  
 
-|ログの名前|詳細|  
-|--------------|-------------|  
-|CCMClient-&lt;*date_time*>.log|アプリケーション管理、インベントリ、エラー記録などの、Mac クライアントの操作に関連する処理が記録されます。<br /><br /> このログ ファイルは、Mac コンピューターの /Library/Application Support/Microsoft/CCM/Logs フォルダーに配置されます。|  
-|CCMAgent-&lt;*date_time*>.log|ユーザーのサインインとサインアウト操作、Mac コンピューターの処理など、クライアントの操作に関連する情報を記録します。<br /><br /> このログ ファイルは、Mac コンピューターの ~/Library/Logs フォルダーに配置されます。|  
-|CCMNotifications-&lt;*date_time*>.log|Mac コンピューターに表示された Configuration Manager の通知に関連する処理を記録します。<br /><br /> このログ ファイルは、Mac コンピューターの ~/Library/Logs フォルダーに配置されます。|  
-|CCMPrefPane-&lt;*date_time*>.log|全般的なステータスやエラー記録などの、Mac コンピューターの Configuration Manager の設定ダイアログ ボックスに関連する処理を記録します。<br /><br /> このログ ファイルは、Mac コンピューターの ~/Library/Logs フォルダーに配置されます。|  
+|ログの名前|詳細|場所|
+|--------------|-------------|-------------|
+|CCMClient-&lt;*date_time*>.log|アプリケーション管理、インベントリ、エラー記録などの、Mac クライアントの操作に関連する処理が記録されます。| `/Library/Application Support/Microsoft/CCM/Logs`|  
+|CCMAgent-&lt;*date_time*>.log|ユーザーのサインインとサインアウト操作、Mac コンピューターの処理など、クライアントの操作に関連する情報を記録します。| `~/Library/Logs`|  
+|CCMNotifications-&lt;*date_time*>.log|Mac コンピューターに表示された Configuration Manager の通知に関連する処理を記録します。| `~/Library/Logs`|  
+|CCMPrefPane-&lt;*date_time*>.log|全般的なステータスやエラー記録などの、Mac コンピューターの Configuration Manager の設定ダイアログ ボックスに関連する処理を記録します。| `~/Library/Logs`|  
 
 サイト システム サーバーのログ ファイル **SMS_DM.log** には、モバイル デバイスおよび Mac コンピューター用に設定された管理ポイントと Mac コンピューター間の通信も記録されます。  
-
 
 ## <a name="server-log-files"></a><a name="BKMK_ServerLogs"></a> サーバー ログ ファイル
 
@@ -277,6 +277,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |CertMgr.log|サイト内通信用の証明書に関する操作を記録します。|サイト システム サーバー|  
 |chmgr.log|クライアントの正常性マネージャーによる処理を記録します。|サイト サーバー|  
 |Cidm.log|クライアント インストール データ マネージャー (CIDM) によるクライアント設定の変更を記録します。|サイト サーバー|  
+|CollectionAADGroupSyncWorker.log | バージョン 2002 以降では、コレクション メンバーシップの結果を Azure Active Directory に同期するログ ファイルです。 バージョン 1910 以前では、この機能のログ記録は SMS_AZUREAD_DISCOVERY_AGENT.log に統合されていました。 | サイト サーバー|
 |colleval.log|コレクション エバリュエーターによるコレクションの生成、変更、削除の詳細を記録します。|サイト サーバー|  
 |compmon.log|サイト サーバーの監視されているコンポーネント スレッドのステータスを記録します。|サイト システム サーバー|  
 |compsumm.log|コンポーネントのステータスの要約操作を記録します。|サイト サーバー|  
@@ -284,7 +285,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |dataldr.log|Configuration Manager データベースの MIF ファイルとハードウェア インベントリの処理に関する情報を記録します。|サイト サーバー|  
 |ddm.log|探索データ マネージャーによる処理を記録します。|サイト サーバー|  
 |despool.log|他のサイトからの通信を受信したことを記録します。|サイト サーバー|  
-|distmgr.log|パッケージの作成、圧縮、差分レプリケーション、情報の更新を記録します。|サイト サーバー|  
+|distmgr.log|パッケージの作成、圧縮、差分レプリケーション、情報の更新を記録します。 また、配布マネージャー コンポーネントの他のアクティビティを含めることもできます。 たとえば、配布ポイントのインストール、接続試行、コンポーネントのインストールなどです。 このログを使用する他の機能の詳細については、「[サービス接続ポイント](#BKMK_WITLog)」と「[OS の展開](#BKMK_OSDLog)」を参照してください。|サイト サーバー|  
 |EPCtrlMgr.log|Endpoint Protection ポイントのサイト システムの役割のサーバーにあるマルウェア情報と Configuration Manager データベースの同期に関する情報を記録します。|サイト サーバー|  
 |EPMgr.log|Endpoint Protection ポイントのサイト システムの役割のステータスを記録します。|サイト システム サーバー|  
 |EPSetup.log|Endpoint Protection ポイントのサイト システムの役割のインストールに関する情報を含みます。|サイト システム サーバー|  
@@ -296,7 +297,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |inboxmgr.log|受信トレイ フォルダー間のファイルの移動を記録します。|サイト サーバー|  
 |inboxmon.log|受信トレイにあるファイルの処理とパフォーマンス カウンターの更新を記録します。|サイト サーバー|  
 |invproc.log|セカンダリ サイトから親サイトへの MIF ファイルの転送を記録します。|サイト サーバー|  
-|migmctrl.log|移行処理に関する情報 (移行ジョブ、共有配布ポイント、配布ポイントのアップグレード) を記録します。|Configuration Manager 階層の最上位サイトと、それぞれの子プライマリ サイト<br /><br /> 階層にプライマリ サイトが複数ある場合は、中央管理サイトで作成されたログ ファイルを使用してください。|  
+|migmctrl.log|移行処理に関する情報 (移行ジョブ、共有配布ポイント、配布ポイントのアップグレード) を記録します。|Configuration Manager 階層の最上位サイトと、それぞれの子プライマリ サイト 階層にプライマリ サイトが複数ある場合は、中央管理サイトで作成されたログ ファイルを使用してください。|  
 |mpcontrol.log|Windows インターネット ネーム サービス (WINS) に管理ポイントの登録を記録します。 管理ポイントの可用性を 10 分おきに記録します。|サイト システム サーバー|  
 |mpfdm.log|管理ポイント コンポーネントによる、クライアント ファイルの、サイト サーバーの対応する受信トレイ フォルダーへの移動処理を記録します。|サイト システム サーバー|  
 |mpMSI.log|管理ポイントのインストールの詳細を記録します。|サイト サーバー|  
@@ -323,7 +324,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |sitecomp.log|サイトのすべてのサイト システム サーバーにインストールされているサイト コンポーネントのメンテナンスに関する詳細を記録します。|サイト サーバー|  
 |sitectrl.log|データベースのサイト コントロール オブジェクトに加えられたサイト設定の変更を記録します。|サイト サーバー|  
 |sitestat.log|すべてのサイト システムの可用性とディスク領域の監視プロセスを記録します。|サイト サーバー|
-|SMS_AZUREAD_DISCOVERY_AGENT.log| コレクション メンバーシップの結果と Azure Active Directory との同期用ログファイル。 これは、Configuration Manager バージョン 1906 以降のプレリリース機能として初めて導入されました。| サイト サーバー|
+|SMS_AZUREAD_DISCOVERY_AGENT.log| Azure Active Directory (Azure AD) ユーザーとユーザー グループの探索のログ ファイル。 バージョン 1910 以前では、コレクション メンバーシップの結果の Azure AD への同期も含まれていました。| サイト サーバー|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|ビジネス向け Microsoft Store からアプリを同期するコンポーネントのログ ファイルです。|サイト サーバー|
 |SMS_ISVUPDATES_SYNCAGENT.log| サードパーティのソフトウェア更新プログラムを同期するためのログ ファイルです。| Configuration Manager 階層内の最上位のソフトウェア更新ポイント。|
 |SMS_OrchestrationGroup.log| オーケストレーション グループのログ ファイル|サイト サーバー|
@@ -355,7 +356,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |ConfigMgrSetup.log|サイト サーバーのセットアップからの詳しい出力を記録します。|サイト サーバー|  
 |ConfigMgrSetupWizard.log|セットアップ ウィザードによる処理に関係のある情報を記録します。|サイト サーバー|  
 |SMS_BOOTSTRAP.log|セカンダリ サイトのインストール プロセスの進行状況を記録します。 実際のセットアップ プロセスの詳細は、ConfigMgrSetup.log に記録されます。|サイト サーバー|  
-|smstsvc.log|サーバー間のネットワーク接続とアクセス許可 (接続元のサーバーのコンピューター アカウントを使用) のテスト用 Windows サービスのインストール、使用、削除に関する情報を記録します。|サイト サーバーとサイト システム サーバー|  
+|smstsvc.log|Windows サービスのインストール、使用、および削除に関する情報を記録します。 Windows では、サーバー間のネットワーク接続とアクセス許可をテストするためにこのサービスが使用されます。 接続を作成するサーバーのコンピューター アカウントが使用されます。|サイト サーバーとサイト システム サーバー|  
 
 ### <a name="data-warehouse-service-point"></a><a name="BKMK_DataWarehouse"></a> データ ウェアハウス サービス ポイント
 
@@ -426,7 +427,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |sitecomp.log|サービス接続ポイントのインストールの詳細を記録します。|サイト サーバー|  
 |SmsAdminUI.log|Configuration Manager コンソール アクティビティを記録します。|Configuration Manager コンソールを実行しているコンピューター|  
 |SMS_CLOUDCONNECTION.log|クラウド サービスに関する情報を記録します。|サービス接続ポイントのあるコンピューター|
-|SMSProv.log|SMS プロバイダーによる処理を記録します。 Configuration Manager コンソールの操作では、SMS プロバイダーが使用されます。|SMS プロバイダーのあるコンピューター|  
+|SMSProv.log|SMS プロバイダーのアクティビティを記録します。 Configuration Manager コンソールの操作では、SMS プロバイダーが使用されます。|SMS プロバイダーのあるコンピューター|  
 |SrvBoot.log|サービス接続ポイントのインストーラー サービスに関する詳細を記録します。|サービス接続ポイントのあるコンピューター|  
 |Statesys.log|モバイル デバイス管理メッセージの処理を記録します。|プライマリ サイトと中央管理サイト|  
 
@@ -527,7 +528,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |Crpmsi.log|証明書登録ポイントのインストールと構成に関する詳細を記録します。|証明書登録ポイント|  
 |NDESPlugin.log|チャレンジの検証と証明書登録の活動を記録します。|Configuration Manager ポリシー モジュールとネットワーク デバイス登録サービス|  
 
-Configuration Manager のログ ファイルに加えて、ネットワーク デバイス登録サービスを実行するサーバーと、証明書登録ポイントをホストするサーバーで、イベント ビューアーの Windows アプリケーションのログを確認します。 たとえば、 **NetworkDeviceEnrollmentService** ソースからのメッセージを探します。 
+Configuration Manager のログ ファイルに加えて、ネットワーク デバイス登録サービスを実行するサーバーと、証明書登録ポイントをホストするサーバーで、イベント ビューアーの Windows アプリケーションのログを確認します。 たとえば、 **NetworkDeviceEnrollmentService** ソースからのメッセージを探します。
 
 次のログ ファイルも使用できます。  
 
@@ -559,12 +560,11 @@ Configuration Manager のログ ファイルに加えて、ネットワーク �
 
 |ログの名前|[説明]|ログ ファイルのあるコンピューター|
 |--------------|-----------------|----------------------------|  
-|CloudMgr.log|クラウド管理ゲートウェイ サービスの展開、進行中のサービスの状態、およびサービスに関連する使用状況データについての情報を記録します。<br>レジストリ キー HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER で **Logging level** の値を編集することで、ログ レベルを構成することができます|プライマリ サイト サーバーまたは CAS の *installdir* フォルダー。|
-|CMGSetup.log<sup>[注 1](#bkmk_note1)</sup>|クラウド管理ゲートウェイ展開 (Azure のローカル展開) の 2 番目のフェーズに関する詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** ( **[情報]** (既定)、 **[詳細]** 、 **[エラー]** ) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]** 、またはサイト システム サーバーの [SMS/ログ] フォルダー|
-|CMGHttpHandler.log<sup>[注 1](#bkmk_note1)</sup>|Azure でのインターネット インフォメーション サービスに含まれるクラウド管理ゲートウェイの http ハンドラーに関する詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** ( **[情報]** (既定)、 **[詳細]** 、 **[エラー]** ) の設定を使用してログ レベルを構成できます。<br>バージョン 1806 以降では、このログは存在しません。 コンポーネントの機能は、CMG サービス コンポーネントにマージされます。 代わりに、CMGService.log を確認します。<!--SCCMDocs-pr issue #2822-->|Azure サーバーの **[%approot%\logs]** 、またはサイト システム サーバーの [SMS/ログ] フォルダー|
-|CMGService.log<sup>[注 1](#bkmk_note1)</sup>|Azure のクラウド管理ゲートウェイ サービスのコア コンポーネントの詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** ( **[情報]** (既定)、 **[詳細]** 、 **[エラー]** ) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]** 、またはサイト システム サーバーの [SMS/ログ] フォルダー|
-|SMS_Cloud_<br>ProxyConnector.log|クラウド管理ゲートウェイ サービスとクラウド管理ゲートウェイ接続ポイントの間の接続の設定に関する詳細を記録します。|サイト システム サーバー|
-|CMGContentService.log<sup>[注 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->Azure ストレージからコンテンツも提供するように CMG を有効にすると、このログにそのサービスの詳細が記録されます。|Azure サーバーの **[%approot%\logs]** 、またはサイト システム サーバーの [SMS/ログ] フォルダー|
+|CloudMgr.log|クラウド管理ゲートウェイ サービスの展開、進行中のサービスの状態、およびサービスに関連する使用状況データについての情報を記録します。 ログ レベルを構成するには、レジストリ キー `HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER` の **[ログ レベル]** 値を編集します。|プライマリ サイト サーバーまたは CAS の *installdir* フォルダー。|
+|CMGSetup.log <sup>[注 1](#bkmk_note1)</sup>|クラウド管理ゲートウェイ展開 (Azure のローカル展開) の 2 番目のフェーズに関する詳細を記録します。 ログ レベルを構成するには、 **[Azure portal] の [Cloud services configuration]\(クラウド サービスの構成\)** タブで **[トレース レベル]** ( **[情報]** (既定値)、 **[詳細]** 、 **[エラー]** ) の設定を使用します。|Azure サーバーの **[%approot%\logs]** 、またはサイト システム サーバーの [SMS/ログ] フォルダー|
+|CMGService.log <sup>[注 1](#bkmk_note1)</sup>|Azure のクラウド管理ゲートウェイ サービスのコア コンポーネントの詳細を記録します。 ログ レベルを構成するには、 **[Azure portal] の [Cloud services configuration]\(クラウド サービスの構成\)** タブで **[トレース レベル]** ( **[情報]** (既定値)、 **[詳細]** 、 **[エラー]** ) の設定を使用します。|Azure サーバーの **[%approot%\logs]** 、またはサイト システム サーバーの [SMS/ログ] フォルダー|
+|SMS_Cloud_ProxyConnector.log|クラウド管理ゲートウェイ サービスとクラウド管理ゲートウェイ接続ポイントの間の接続の設定に関する詳細を記録します。|サイト システム サーバー|
+|CMGContentService.log <sup>[注 1](#bkmk_note1)</sup>|<!--SCCMDocs-pr issue #2822-->Azure ストレージからコンテンツも提供するように CMG を有効にすると、このログにそのサービスの詳細が記録されます。|Azure サーバーの **[%approot%\logs]** 、またはサイト システム サーバーの [SMS/ログ] フォルダー|
 
 - 展開のトラブルシューティングの場合は、**CloudMgr.log** および **CMGSetup.log** を使用します。
 - サービス正常性のトラブルシューティングの場合は、**CMGService.log** および **SMS_Cloud_ProxyConnector.log** を使用します。
@@ -594,7 +594,7 @@ Configuration Manager のログ ファイルに加えて、ネットワーク �
 |--------------|-----------------|----------------------------|  
 |ConfigMgrAdminUISetup.log|Configuration Manager コンソールのインストールを記録します。|Configuration Manager コンソールを実行しているコンピューター|  
 |SmsAdminUI.log|Configuration Manager コンソールの操作に関する情報を記録します。|Configuration Manager コンソールを実行しているコンピューター|  
-|SMSProv.log|SMS プロバイダーによる処理を記録します。 Configuration Manager コンソールの操作では、SMS プロバイダーが使用されます。|サイト サーバーまたはサイト システム サーバー|  
+|SMSProv.log|SMS プロバイダーのアクティビティを記録します。 Configuration Manager コンソールの操作では、SMS プロバイダーが使用されます。|サイト サーバーまたはサイト システム サーバー|  
 
 ### <a name="content-management"></a><a name="BKMK_ContentLog"></a> コンテンツ管理
 
@@ -687,7 +687,7 @@ Configuration Manager クライアント上のログ ファイルは、ディレ
 
 |ログの名前|[説明]|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|migmctrl.log|移行処理に関する情報 (移行ジョブ、共有配布ポイント、配布ポイントのアップグレード) を記録します。|Configuration Manager 階層の最上位サイトと、それぞれの子プライマリ サイト<br /><br /> 階層にプライマリ サイトが複数ある場合は、中央管理サイトで作成されたログ ファイルを使用してください。|  
+|migmctrl.log|移行処理に関する情報 (移行ジョブ、共有配布ポイント、配布ポイントのアップグレード) を記録します。|Configuration Manager 階層の最上位サイトと、それぞれの子プライマリ サイト 階層にプライマリ サイトが複数ある場合は、中央管理サイトで作成されたログ ファイルを使用してください。|  
 
 ### <a name="mobile-devices"></a><a name="BKMK_MDMLog"></a> モバイル デバイス
 
@@ -772,7 +772,7 @@ Configuration Manager クライアント上のログ ファイルは、ディレ
 |smpperf.log|状態移行ポイントのパフォーマンス カウンターの更新を記録します。|サイト システム サーバー|  
 |smspxe.log|PXE ブートを使用するクライアントへの応答と、ブート イメージとブート ファイルの展開の詳細を記録します。|サイト システム サーバー|  
 |smssmpsetup.log|状態移行ポイントのインストールと構成の詳細を記録します。|サイト システム サーバー|
-| SMS_PhasedDeployment.log| 段階的展開のログ ファイル|Configuration Manager 階層の最上位サイト| 
+| SMS_PhasedDeployment.log| 段階的展開のログ ファイル|Configuration Manager 階層の最上位サイト|
 |Smsts.log|タスク シーケンスによる操作を記録します。|クライアント|  
 |TSAgent.log|タスク シーケンス開始前の依存関係の解決結果を記録します。|クライアント|  
 |TaskSequenceProvider.log|タスク シーケンスがインポート、エクスポート、または編集されたときの詳細を記録します。|サイト システム サーバー|  
@@ -835,10 +835,10 @@ Configuration Manager クライアント上のログ ファイルは、ディレ
 |PolicyEvaluator.log|ソフトウェア更新プログラムのポリシーを含む、クライアント コンピューターのポリシーの評価の詳細を記録します。|クライアント|  
 |RebootCoordinator.log|ソフトウェア更新プログラムがインストールされた後のシステムの再起動の調整に関する詳細を記録します。|クライアント|  
 |ScanAgent.log|ソフトウェア更新プログラムのスキャン要求、WSUS の場所、および関連する操作の詳細を記録します。|クライアント|  
-|SdmAgent.log|コンプライアンス対応状態と修復の追跡情報を記録します。 ただし、ソフトウェア更新プログラムのログ ファイル (Updateshandler.log) に、コンプライアンス対応に必要なソフトウェア更新プログラムのインストールのより詳しい情報が記録されます。<br /><br /> このログ ファイルは、コンプライアンス設定で共有されます。|クライアント|  
+|SdmAgent.log|コンプライアンス対応状態と修復の追跡情報を記録します。 ただし、ソフトウェア更新プログラムのログ ファイル (Updateshandler.log) に、コンプライアンス対応に必要なソフトウェア更新プログラムのインストールのより詳しい情報が記録されます。 このログ ファイルは、コンプライアンス設定で共有されます。|クライアント|  
 |ServiceWindowManager.log|メンテナンス期間の評価の詳細を記録します。|クライアント|
-|SMS_ISVUPDATES_SYNCAGENT.log| サードパーティのソフトウェア更新プログラムを同期するためのログ ファイルです。| Configuration Manager 階層内の最上位のソフトウェア更新ポイント。| 
-|SMS_OrchestrationGroup.log| オーケストレーション グループのログ ファイル|サイト サーバー| 
+|SMS_ISVUPDATES_SYNCAGENT.log| サードパーティのソフトウェア更新プログラムを同期するためのログ ファイルです。| Configuration Manager 階層内の最上位のソフトウェア更新ポイント。|
+|SMS_OrchestrationGroup.log| オーケストレーション グループのログ ファイル|サイト サーバー|
 |SmsWusHandler.log|Microsoft 更新プログラム用インベントリ ツールのスキャン プロセスの詳細を記録します。|クライアント|  
 |StateMessage.log|作成されて管理ポイントに送信されたソフトウェア更新プログラムの状態メッセージの詳細を記録します。|クライアント|  
 |SUPSetup.log|ソフトウェアの更新ポイントのインストールに関する詳細を記録します。 ソフトウェアの更新ポイントのインストールが完了すると、このログ ファイルに「 **Installation was successful** 」と書き込まれます。|サイト システム サーバー|  
@@ -895,7 +895,6 @@ Configuration Manager クライアント上のログ ファイルは、ディレ
 |SoftwareDistribution.log|構成済みの更新プログラムのソースから、WSUS サーバーのデータベースと同期された更新プログラムの詳細を記録します。|WSUS サーバー|  
 
 これらのログ ファイルは、`%ProgramFiles%\Update Services\LogFiles` フォルダーにあります。
-
 
 ## <a name="see-also"></a>関連項目
 

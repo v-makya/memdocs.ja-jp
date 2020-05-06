@@ -147,10 +147,10 @@
               href: apps-configure-chrome-android.md
         - name: ボリューム購入アプリとブック
           items:
-            - name: VPP アプリとブックの管理
+            - name: ボリューム購入の概要
               href: vpp-apps.md
               displayName: vpp; volume purchased
-            - name: iOS VPP アプリ
+            - name: ボリューム購入 iOS アプリ
               href: vpp-apps-ios.md
             - name: ビジネス向け Microsoft ストア アプリ
               href: windows-store-for-business.md
@@ -206,6 +206,10 @@
           href: app-install-error-codes.md
         - name: モバイル アプリケーション管理に関するトラブルシューティング
           href: troubleshoot-mam.md
+        - name: アプリの保護ログのレビュー
+          href: app-protection-policy-settings-log.md
+        - name: アプリ保護ポリシーのデプロイのトラブルシューティング
+          href: troubleshoot-app-protection-policy-deployment.md
 - name: 参照先
   items:
     - name: Intune App SDK によるアプリの保護

@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ca500ebbbbf8b2672492fec383feab49bfea0a52
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 590c6fd336ec19949b5f5b99b25b3104524a52d6
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074998"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210113"
 ---
 # <a name="configure-certificate-infrastructure"></a>証明書インフラストラクチャの構成
 
@@ -34,7 +34,7 @@ Configuration Manager の証明書インフラストラクチャについて説�
 
 ### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成するには  
 
-1. Windows Server 2012 R2 を実行しているサーバーに、ネットワーク デバイス登録サービスの役割サービスをインストールし、Active Directory 証明書サービス サーバーの役割用に構成します。 詳細については、TechNet の Active Directory 証明書サービスの「 [Network Device Enrollment Service Guidance (ネットワーク デバイス登録サービス ガイド)](https://go.microsoft.com/fwlink/p/?LinkId=309016) 」を参照してください。  
+1. Windows Server 2012 R2 を実行しているサーバーに、ネットワーク デバイス登録サービスの役割サービスをインストールし、Active Directory 証明書サービス サーバーの役割用に構成します。 詳しくは、「[ネットワーク デバイス登録サービス ガイダンス](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))」をご覧ください。
 
 2. 必要に応じて、ネットワーク デバイス登録サービスが使用している証明書テンプレートのセキュリティ アクセス許可を変更します。  
 
@@ -44,7 +44,7 @@ Configuration Manager の証明書インフラストラクチャについて説�
 
    -   ネットワーク デバイス登録サービスのアプリケーション プールで使用する SCEP サービス アカウントの場合: **[読み取り]** および **[登録]** のアクセス許可。  
 
-        この要件は Configuration Manager に固有ではありませんが、ネットワーク デバイス登録サービスの構成に含まれます。 詳細については、TechNet の Active Directory 証明書サービスの「 [Network Device Enrollment Service Guidance (ネットワーク デバイス登録サービス ガイド)](https://go.microsoft.com/fwlink/p/?LinkId=309016) 」を参照してください。  
+        この要件は Configuration Manager に固有ではありませんが、ネットワーク デバイス登録サービスの構成に含まれます。 詳しくは、「[ネットワーク デバイス登録サービス ガイダンス](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))」をご覧ください。  
 
    > [!TIP]  
    >  どの証明書テンプレートをネットワーク デバイス登録サービスで使用しているかを調べるには、ネットワーク デバイス登録サービスを実行しているサーバーの次のレジストリ キーを表示します。HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP  
@@ -69,7 +69,7 @@ Configuration Manager の証明書インフラストラクチャについて説�
 
    - **MaxRequestBytes** キーを **16777216**に設定します。  
 
-     詳細については、Microsoft サポート技術情報「[820129: Windows 用の Http.sys レジストリ設定](https://go.microsoft.com/fwlink/?LinkId=309013)」を参照してください。  
+     詳しくは、Microsoft サポート記事「[820129: Windows 用の Http.sys レジストリ設定](https://support.microsoft.com/help/820129)」をご覧ください。
 
 6. 同じサーバーでインターネット インフォーメーション サービス (IIS) マネージャーを開き、/certsrv/mscep アプリケーションの要求のフィルタリング設定を変更してサーバーを再起動します。 **[要求フィルター設定の編集]** ダイアログ ボックスの **[要求制限]** 設定は次のように設定されています。  
 
@@ -79,7 +79,7 @@ Configuration Manager の証明書インフラストラクチャについて説�
 
    - **クエリ文字列の最大長 (バイト)** : **65534**  
 
-     これらの設定とその構成方法の詳細については、IIS リファレンス ライブラリの「 [Requests Limits (要求の制限)](https://go.microsoft.com/fwlink/?LinkId=309014) 」を参照してください。  
+     これらの設定とその構成方法について詳しくは、[IIS 要求の制限](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)に関する記事をご覧ください。
 
 7. 使用している証明書テンプレートよりも有効期間が短い証明書を要求できるようにしたい場合があります。この設定は、エンタープライズ CA では既定で無効になっています。 エンタープライズ CA でこのオプションを有効にするには、次のように、Certutil コマンドライン ツールを使って設定を変更してから、証明書サービスをいったん停止して再開します。  
 
@@ -89,9 +89,9 @@ Configuration Manager の証明書インフラストラクチャについて説�
 
    3. **net start certsvc**  
 
-      詳細については、TechNet ライブラリの PKI Technologies セクションの「 [Certificate Services Tools and Settings (証明書サービスのツールと設定)](https://go.microsoft.com/fwlink/p/?LinkId=309015) 」を参照してください。  
+      詳しくは、「[証明書サービス ツールと設定](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\))」をご覧ください。
 
-8. **https://server.contoso.com/certsrv/mscep/mscep.dll** のようなリンクを使用して、ネットワーク デバイス登録サービスが動作していることを確認してください。 組み込まれているネットワーク デバイス登録サービスの Web ページが表示されるはずです。 この Web ページには、登録サービスの紹介と、ネットワーク デバイスが証明書要求を送信する URL の説明が記載されています。  
+8. `https://server.contoso.com/certsrv/mscep/mscep.dll` のようなリンクを使用して、ネットワーク デバイス登録サービスが動作していることを確認してください。 組み込まれているネットワーク デバイス登録サービスの Web ページが表示されるはずです。 この Web ページには、登録サービスの紹介と、ネットワーク デバイスが証明書要求を送信する URL の説明が記載されています。  
 
    ネットワーク デバイス登録サービスと依存する要素の構成が完了したら、証明書登録ポイントをインストールおよび構成することができます。
 
@@ -125,7 +125,7 @@ Configuration Manager の階層に少なくとも 1 つの証明書登録ポイ�
    - **[SCEP 証明書要求を処理する]** を選択した場合、次を構成します。
      -   証明書登録ポイントの **[Web サイト名]** 、 **[HTTPS ポート番号]** 、 **[仮想アプリケーション名]** 。 これらのフィールドには既定値が自動的に入力されます。 
      -   **ネットワーク デバイス登録サービスの URL とルート CA 証明書** - **[追加]** をクリックし、 **[URL とルート証明機関証明書の追加]** ダイアログ ボックスで次を指定します。
-         - **ネットワーク デバイス登録サービスの URL**: 次の形式で URL を指定します: https:// *<server_FQDN>* /certsrv/mscep/mscep.dll。 たとえば、ネットワーク デバイス登録サービスを実行しているサーバーの FQDN が server1.contoso.com の場合は、「 **https://server1.contoso.com/certsrv/mscep/mscep.dll** 」と入力します。
+         - **ネットワーク デバイス登録サービスの URL**: 次の形式で URL を指定します: https:// *<server_FQDN>* /certsrv/mscep/mscep.dll。 たとえば、ネットワーク デバイス登録サービスを実行しているサーバーの FQDN が server1.contoso.com の場合は、「`https://server1.contoso.com/certsrv/mscep/mscep.dll`」と入力します。
          - **ルート CA 証明書**: 「**手順 1: ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成する**」で保存した証明書 (.cer) ファイルを参照して選択します。 このルート CA 証明書を使用すると、Configuration Manager ポリシー モジュールで使用するクライアント認証証明書が、証明書登録ポイントによって検証されます。  
 
    - **[PFX 証明書要求を処理する]** を選択した場合、選択した証明書機関の接続詳細と資格情報を構成します。
@@ -157,7 +157,7 @@ Configuration Manager の階層に少なくとも 1 つの証明書登録ポイ�
 
     -   サイト システム サーバーで、 *<ConfigMgr インストール パス\>* \Logs\crpsetup.log ファイルおよび *<ConfigMgr インストール パス\>* \Logs\crpmsi.log ファイルを使用します。 インストールが成功した場合、0 の終了コードを返します。  
 
-    -   ブラウザーを使用して、証明書登録ポイントの URL (https://server1.contoso.com/CMCertificateRegistration など) に接続できることを確認します。 アプリケーション名の **サーバー エラー** ページが開き、 HTTP 404 の説明が表示されます。  
+    -   ブラウザーを使用して、証明書登録ポイントの URL に接続できることを確認します。 たとえば、`https://server1.contoso.com/CMCertificateRegistration` となります。 アプリケーション名の **サーバー エラー** ページが開き、 HTTP 404 の説明が表示されます。  
 
 11. 証明書登録ポイントが自動的に作成してエクスポートしたルート CA 証明書ファイルを、プライマリ サイト サーバー コンピューターの *<ConfigMgr Installation Path\>* \inboxes\certmgr.box フォルダーで見つけます。 ネットワーク デバイス登録サービスを実行しているサーバーに Configuration Manager ポリシー モジュールを後でインストールするときに安全にアクセスできる場所に、このファイルを保存します。  
 
@@ -185,7 +185,7 @@ Configuration Manager の階層に少なくとも 1 つの証明書登録ポイ�
 
 4. **[インストール先フォルダー]** ページで、ポリシー モジュールの既定のインストール先フォルダーをそのまま使用するか、別のフォルダーを指定し、 **[次へ]** をクリックします。  
 
-5. **[証明書登録ポイント]** ページで、サイト システム サーバーの FQDN と証明書登録ポイントのプロパティで指定した仮想アプリケーション名から成る、証明書登録ポイントの URL を指定します。 既定の仮想アプリケーション名は CMCertificateRegistration です。 たとえば、サイト システム サーバーの FQDN が server1.contoso.com で、既定の仮想アプリケーション名を使用した場合は、「 **https://server1.contoso.com/CMCertificateRegistration** 」と指定します。  
+5. **[証明書登録ポイント]** ページで、サイト システム サーバーの FQDN と証明書登録ポイントのプロパティで指定した仮想アプリケーション名から成る、証明書登録ポイントの URL を指定します。 既定の仮想アプリケーション名は CMCertificateRegistration です。 たとえば、サイト システム サーバーの FQDN が server1.contoso.com で、既定の仮想アプリケーション名を使用した場合は、「`https://server1.contoso.com/CMCertificateRegistration`」と指定します。
 
 6. **[443]** という既定のポートをそのまま使用するか、証明書登録ポイントが使用する別のポート番号を指定して、 **[次へ]** をクリックします。  
 

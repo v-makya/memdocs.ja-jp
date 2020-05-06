@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2020
+ms.date: 04/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69ca92125728ec8fdac27c229f8aacc5c0ef29c0
-ms.sourcegitcommit: 7687cf8fdecd225216f58b8113ad07a24e43d4a3
+ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
+ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80359385"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82210236"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune で一般的な iOS および iPadOS 機能を使用するための iOS および iPadOS デバイスの設定
 
@@ -97,7 +97,7 @@ AirPrinter サーバーを追加するには、プリンターの IP アドレ�
 
     フォルダー内のページに追加したアプリは、一覧と同じ順序で左から右に配置されます。 1 つのページに収まるよりも多くのアプリを追加すると、残りのアプリは別のページに移動します。
 
-    - **フォルダー名**:フォルダーの名前を入力します。 この名前は、ユーザーに対してデバイス上に表示されます。
+    - **フォルダー名**:フォルダーの名前を入力します。 この名前は、ユーザーのデバイス上に表示されます。
     - **[ページ一覧]** :ページを**追加**し、次のプロパティを入力します。
 
       - **[ページ名]** :ページの名前を入力します。 この名前は、Microsoft Endpoint Manager admin center での参照用に使用されます。 iOS および iPadOS デバイスでは表示 "*されません*"。
@@ -111,10 +111,10 @@ AirPrinter サーバーを追加するには、プリンターの IP アドレ�
 
 #### <a name="example"></a>例
 
-次の例では、Dock 画面に "Safari"、"メール"、および "株価" アプリのみが表示されています。 "メール" アプリを選択すると、そのプロパティが表示されます。
+次の例では、Dock 画面に Safari、Mail、Stocks アプリが表示されています。 "メール" アプリを選択すると、そのプロパティが表示されます。
 
 > [!div class="mx-imgBorder"]
-> ![iOS および iPadOS の Dock 設定のサンプル](./media/ios-device-features-settings/FfFiUcP.png)
+> ![Intune での iOS/iPadOS ホーム画面レイアウトのドック設定のサンプル](./media/ios-device-features-settings/dock-screen-mail-app.png)
 
 iPhone にポリシーを割り当てると、ドックは次の画像のようになります。
 
@@ -158,10 +158,15 @@ iPhone にポリシーを割り当てると、ドックは次の画像のよう�
 
 #### <a name="example"></a>例
 
-次の例では、**Contoso** という新しいページが追加されます。 ページには、"友達を探す" と "設定" アプリが表示されています。 "設定" アプリを選択すると、そのプロパティが表示されます。
+次の例では、**Contoso** という新しいページが追加されます。 ページには、Find Friends アプリと Settings アプリが表示されています。
 
 > [!div class="mx-imgBorder"]
-> ![Intune の iOS および iPadOS のホーム画面設定の例](./media/ios-device-features-settings/Jc2OxyX.png)
+> ![Intune での iOS/iPadOS ホーム画面レイアウトの新しいページの設定と例](./media/ios-device-features-settings/page-find-friends-settings-apps.png)
+
+"設定" アプリを選択すると、そのプロパティが表示されます。
+
+> [!div class="mx-imgBorder"]
+> ![Intune での iOS/iPadOS ホーム画面レイアウトの Settings アプリのプロパティの例](./media/ios-device-features-settings/page-settings-app-properties.png)
 
 iPhone にポリシーを割り当てると、ページは次の画像のようになります。
 
@@ -175,7 +180,7 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 - **[追加]** :アプリの通知を追加します。
 
   > [!div class="mx-imgBorder"]
-  > ![Intune の iOS および iPadOS プロファイルでアプリの通知を追加する](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+  > ![Intune の iOS および iPadOS プロファイルでアプリの通知を追加する](./media/ios-device-features-settings/ios-ipados-app-notifications.png)
 
   - **[アプリ バンドル ID]** :追加するアプリの **[アプリ バンドル ID]** を入力します。 例については、[組み込み iOS および iPadOS アプリのバンドル ID](bundle-ids-built-in-ios-apps.md) に関する記事を参照してください。
   - **[アプリ名]** :追加するアプリの名前を入力します。 この名前は、Microsoft Endpoint Manager admin center での参照用に使用されます。 デバイスには "*表示されません*"。
@@ -214,9 +219,11 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>これらの設定は次に適用されます。デバイスの登録、デバイスの自動登録 (監視)
 
-- **[AAD からのユーザー名の属性]** :Intune によって、Azure AD で各ユーザーに対してこの属性が検索されます。 次に Intune によって個々のフィールド (UPN など) にデータが入力され、その後、デバイスにインストールされる XML が生成されます。 次のようなオプションがあります。
+- **[領域]** :URL のドメイン部分を入力します。 たとえば、「`contoso.com`」と入力します。
+- **Kerberos プリンシパル名**:Intune によって、Azure AD で各ユーザーに対してこの属性が検索されます。 次に Intune によって個々のフィールド (UPN など) にデータが入力され、その後、デバイスにインストールされる XML が生成されます。 次のようなオプションがあります。
 
-  - **[ユーザー プリンシパル名]** :UPN は次のように解析されます。
+  - **[未構成]** :Intune では、この設定は変更または更新されません。 既定で、プロファイルがデバイスにデプロイされるときに、OS によってユーザーに Kerberos プリンシパル名の入力が求められます。 MDM では SSO プロファイルをインストールするために、プリンシパル名が必要です。
+  - **[ユーザー プリンシパル名]** :ユーザー プリンシパル名 (UPN) は次のように解析されます。
 
     > [!div class="mx-imgBorder"]
     > ![Intune の iOS および iPadOS のユーザー名 SSO 属性](./media/ios-device-features-settings/User-name-attribute.png)
@@ -227,15 +234,22 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 
   - **[Intune デバイス ID]** :Intune によって Intune デバイス ID が自動的に選択されます。
 
-    既定では、アプリで使う必要があるのはデバイス ID だけです。 ただし、アプリがデバイス ID と共に領域を使う場合は、[領域] テキスト ボックスに領域を入力できます。
+    既定では、アプリで使う必要があるのはデバイス ID だけです。 ただし、アプリでデバイス ID と共に領域を使う場合は、 **[領域]** テキスト ボックスに領域を入力できます。
 
     > [!NOTE]
     > 既定では、デバイス ID を使う場合は領域を空のままにします。
 
   - **[Azure AD デバイス ID]**
+  - **[SAM アカウント名]** :Intune によって、オンプレミスのセキュリティ アカウント マネージャー (SAM) アカウント名が設定されます。
 
-- **[領域]** :URL のドメイン部分を入力します。 たとえば、「`contoso.com`」と入力します。
-- **[シングル サインオンを使用する URL プレフィックス]** :ユーザーのシングル サインオン認証を必要とする組織の URL をすべて**追加**します。
+
+- **[アプリ]** :シングル サインオンを使用できるユーザーのデバイスにアプリを**追加**します。
+
+  `AppIdentifierMatches` 配列には、アプリ バンドル ID と一致する文字列が含まれる必要があります。 これらの文字列では、完全に一致する値 (`com.contoso.myapp` など) を指定するか、\* ワイルドカード文字を使用してバンドル ID のプレフィックス一致を入力できます。 ワイルドカード文字は、ピリオド文字 (.) の後に指定する必要があり、文字列の最後で 1 回だけ使えます (`com.contoso.*` など)。 ワイルドカードが含まれる場合は、バンドル ID がプレフィックスで始まるすべてのアプリが、アカウントへのアクセスを許可されます。
+
+  **[アプリ名]** を使用し、バンドル ID の識別に役立つわかりやすい名前を入力します。
+
+- **URL プレフィックス**:ユーザーのシングル サインオン認証を必要とする組織の URL をすべて**追加**します。
 
   たとえば、ユーザーがそのようなサイトに接続すると、iOS および iPadOS デバイスによってシングル サインオンの資格情報が使用されます。 ユーザーはいかなる追加の資格情報も入力する必要はありません。 多要素認証が有効な場合、ユーザーは第 2 の認証情報を入力する必要があります。
 
@@ -246,13 +260,7 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 
   パターン `http://.com` はすべての HTTP URL と一致し、`https://.com` はすべての HTTPS URL と一致します。
 
-- **[シングル サインオンを使用するアプリ]** :シングル サインオンを使用できるユーザーのデバイスにアプリを**追加**します。
-
-  `AppIdentifierMatches` 配列には、アプリ バンドル ID と一致する文字列が含まれる必要があります。 これらの文字列では、完全に一致する値 (`com.contoso.myapp` など) を指定するか、\* ワイルドカード文字を使用してバンドル ID のプレフィックス一致を入力できます。 ワイルドカード文字は、ピリオド文字 (.) の後に指定する必要があり、文字列の最後で 1 回だけ使えます (`com.contoso.*` など)。 ワイルドカードが含まれる場合は、バンドル ID がプレフィックスで始まるすべてのアプリが、アカウントへのアクセスを許可されます。
-
-  **[アプリ名]** を使用し、バンドル ID の識別に役立つわかりやすい名前を入力します。
-
-- **[資格情報更新証明書]** :認証に (パスワードではなく) 証明書を使用する場合は、認証証明書として既存の SCEP または PFX 証明書を選択します。 通常、この証明書は、VPN、Wi-Fi、メールなどの他のプロファイル用にユーザーに展開されるものと同じ証明書です。
+- **更新証明書**:認証に (パスワードではなく) 証明書を使用する場合は、認証証明書として既存の SCEP または PFX 証明書を選択します。 通常、この証明書は、VPN、Wi-Fi、メールなどの他のプロファイル用にユーザーに展開されるものと同じ証明書です。
 
 ## <a name="web-content-filter"></a>Web コンテンツ フィルター
 
@@ -288,37 +296,24 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 
 - **[SSO アプリ拡張機能の種類]** : SSO アプリ拡張機能の種類を選択します。 次のようなオプションがあります。
 
-  - **[未構成]** :Intune では、この設定は変更または更新されません。 既定では、OS によって、アプリ拡張機能が使用されない可能性があります。 アプリの拡張機能を無効にするには、SSO アプリの拡張機能の種類を **[未構成]** に切り替えます。
-  - **[リダイレクト]** : 最新の認証フローで SSO を使用するには、汎用のカスタマイズ可能なリダイレクト アプリ拡張機能を使用します。 組織のアプリ拡張機能の拡張機能 ID を確認しておきます。
+  - **[未構成]** :Intune では、この設定は変更または更新されません。 既定では、OS によって、アプリ拡張機能が使用されません。 アプリの拡張機能を無効にするには、SSO アプリの拡張機能の種類を **[未構成]** に切り替えます。
+  - **Microsoft Azure AD**:リダイレクト型 SSO アプリ拡張機能である Microsoft Enterprise SSO プラグインが使用されます。 このプラグインにより、[Apple の Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) 機能をサポートするすべてのアプリケーションで Active Directory アカウントの SSO が提供されます。 この SSO アプリ拡張機能の種類を使用して、Azure AD を使用して認証する Microsoft アプリ、組織アプリ、Web サイトで SSO を有効にします。
 
-    iOS/iPadOS 13.0 以降のデバイスでは、このリダイレクト SSO アプリ拡張機能の種類を使用して、**Microsoft Azure AD SSO アプリ拡張機能**を構成できます。 Microsoft Azure AD 拡張機能を使用すると、Microsoft のアプリと、認証に Azure AD を使用する組織のアプリの間で、シングル サインオンを使用できるようになります。 Azure AD 拡張機能は、高度な認証ブローカーとして機能し、セキュリティとユーザー エクスペリエンスの向上を提供します。 以前に Microsoft Authenticator アプリで仲介型認証を使用していたすべてのアプリは、引き続き SSO 拡張機能で SSO を取得します。 Azure AD SSO 拡張機能では、ブラウザー SSO はまだサポートされていません。 SSO および iOS/iPadOS 認証ブローカーの詳細については、[macOS および iOS/iPadOS での SSO の構成](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-macos-ios)に関する記事を参照してください。  
-
-    **iOS の Microsoft Azure AD 拡張機能を構成するには:**
-
-    1. **[SSO アプリ拡張機能の種類]** を **[リダイレクト]** に設定します。
-    2. **[拡張機能 ID]** を `com.microsoft.azureauthenticator.ssoextension` に設定します。
-    3. **[チーム ID]** を `SGGM6D27TK` に設定します。
-    4. **[URL]** の設定に、次の URL を入力します。
-
-        - `https://login.microsoftonline.com`
-        - `https://login.windows.net`
-        - `https://login.microsoft.com`
-        - `https://sts.windows.net`
-        - `https://login.partner.microsoftonline.cn`
-        - `https://login.chinacloudapi.cn`
-        - `https://login.microsoftonline.de`
-        - `https://login.microsoftonline.us`
-        - `https://login.usgovcloudapi.net`
-        - `https://login-us.microsoftonline.com`
+    SSO プラグインは、高度な認証ブローカーとして機能し、セキュリティとユーザー エクスペリエンスの向上を提供します。 以前に Microsoft Authenticator アプリで仲介型認証を使用していたすべてのアプリは、引き続き [Apple デバイス用の Microsoft Enterprise SSO プラグイン](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)で SSO を取得します。
 
     > [!IMPORTANT]
-    > iOS または iPadOS の Microsoft Azure AD 拡張機能で SSO を実現するには、まず iOS または iPadOS の Microsoft Authenticator アプリをデバイスにインストールします。 Authenticator により、デバイスに Azure AD 拡張機能が提供され、MDM SSO アプリ拡張機能の設定によって Azure AD 拡張機能がアクティブ化されます。 Authenticator と SSO アプリ拡張機能プロファイルをデバイスにインストールすると、ユーザーは資格情報を入力してサインインし、セッションを確立する必要があります。 その後、このセッションは、ユーザーの再認証を必要とせずに、さまざまなアプリケーションで使用されます。
+    > Microsoft Azure AD SSO アプリ拡張機能の種類で SSO を実現するには、まず iOS または iPadOS の Microsoft Authenticator アプリをデバイスにインストールします。 Authenticator アプリによって、Microsoft Enterprise SSO プラグインがデバイスに配信され、MDM SSO アプリ拡張機能の設定によってプラグインがアクティブ化されます。 Authenticator と SSO アプリ拡張機能プロファイルをデバイスにインストールすると、ユーザーは資格情報を入力してサインインし、自分のデバイスでセッションを確立する必要があります。 その後、このセッションは、ユーザーの再認証を必要とせずに、さまざまなアプリケーションで使用されます。 Authenticator の詳細については、「[Microsoft Authenticator アプリとは](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview)」を参照してください。
 
+  - **[リダイレクト]** : 最新の認証フローで SSO を使用するには、汎用のカスタマイズ可能なリダイレクト アプリ拡張機能を使用します。 組織のアプリ拡張機能の拡張機能 ID を確認しておきます。
   - **[資格情報]** : 汎用のカスタマイズ可能な資格情報アプリ拡張機能を使用し、チャレンジと応答の認証フローで SSO を使用します。 組織のアプリ拡張機能の拡張機能 ID を確認しておきます。
   - **Kerberos**: iOS 13.0 以降と iPadOS 13.0 以降に含まれる、Apple の組み込みの Kerberos 拡張機能を使用します。 このオプションは、 **[資格情報]** アプリ拡張機能の Kerberos 固有のバージョンです。
 
   > [!TIP]
   > **[リダイレクト]** と **[資格情報]** の種類の場合、拡張機能を通過させる自分の構成値を追加します。 **[資格情報]** を使用する場合は、 **[Kerberos]** の種類で Apple から提供されている組み込みの構成設定を使用することを検討してください。
+
+- **共有デバイス モード** (Microsoft Azure AD のみ):Azure AD の共有デバイス モード機能用に構成された iOS/iPadOS デバイスに Microsoft Enterprise SSO プラグインをデプロイする場合は、 **[有効]** を選択します。 共有モードのデバイスでは、多くのユーザーが、共有デバイス モードをサポートしているアプリケーションにグローバルにサインインおよびサインアウトすることができます。 **[未構成]** に設定すると、Intune では、この設定は変更または更新されません。 既定で、iOS/iPadOS デバイスは複数のユーザー間で共有されることを想定していません。
+
+  共有デバイス モードと、それを有効にする方法の詳細については、「[共有デバイス モードの概要](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices)」および「[iOS デバイスの共有デバイス モード](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices)」を参照してください。  
 
 - **[拡張機能 ID]** (リダイレクトと資格情報): SSO アプリの拡張機能を識別するバンドル識別子 (`com.apple.extensiblesso` など) を入力します。
 
@@ -336,16 +331,16 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 - **[URL]** (リダイレクトのみ): リダイレクト アプリ拡張機能の SSO を代理で使用する ID プロバイダーの URL プレフィックスを入力します。 ユーザーがこれらの URL にリダイレクトされると、SSO アプリ拡張機能が介入し、SSO のプロンプトが表示されます。
 
   - Intune シングル サインオン アプリ拡張機能プロファイル内のすべての URL は一意である必要があります。 さまざまな種類の SSO アプリ拡張機能を使用している場合でも、SSO アプリ拡張機能のプロファイルでドメインを繰り返し指定することはできません。
-  - URL は、 http:// または https:// で始まる必要があります。
+  - URL は、`http://` または `https://` で始まる必要があります。
 
-- **[追加の構成]** (リダイレクトと資格情報): SSO アプリ拡張機能に渡す追加の拡張機能固有のデータを入力します。
+- **追加の構成** (Microsoft Azure AD、リダイレクト、資格情報):SSO アプリ拡張機能に渡す追加の拡張機能固有のデータを入力します。
   - **キー**:追加する項目の名前 (`user name` など) を入力します。
   - **種類**:データの種類を入力します。 次のようなオプションがあります。
 
     - 文字列型
     - [ブール型]: **[構成値]** に `True` または`False` を入力します。
     - [整数]: **[構成値]** に数値を入力します。
-    
+
   - **値**:データを入力します。
 
   - **[追加]** :選択すると、構成キーが追加されます。

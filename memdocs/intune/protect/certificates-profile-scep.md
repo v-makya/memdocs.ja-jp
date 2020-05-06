@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,26 +16,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a775171a72de32af98d8089311b5fe467e560515
-ms.sourcegitcommit: e2567b5beaf6c5bf45a2d493b8ac05d996774cac
+ms.openlocfilehash: 3da418db81a315e4102b63c34ffc557646d36f70
+ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80323146"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82126056"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune で SCEP 証明書プロファイルを作成して割り当てる
 
 Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするように[インフラストラクチャを構成](certificates-scep-configure.md)したら、Intune で SCEP 証明書プロファイルを作成し、それをユーザーとデバイスに割り当てることができます。
 
-> [!IMPORTANT]  
-> SCEP 証明書プロファイルを作成する前に、SCEP 証明書プロファイルを使用するデバイスによって、ご利用の信頼されたルート証明機関 (CA) が信頼される必要があります。 Intune で*信頼された証明書プロファイル*を使用して、信頼されたルート CA 証明書をユーザーとデバイスに対してプロビジョニングします。信頼された証明書プロファイルについては、*Intune での認証に証明書を使用*に関するページの「[信頼されたルート CA 証明書をエクスポートする](certificates-configure.md#export-the-trusted-root-ca-certificate)」と「[信頼された証明書プロファイルを作成する](certificates-configure.md#create-trusted-certificate-profiles)」を参照してください。
-
+> [!IMPORTANT]
+> SCEP 証明書プロファイルを使用するデバイスの場合、デバイスで信頼されたルート証明機関 (CA) を信頼する必要があります。 ルート CA の信頼を確立するには、SCEP 証明書プロファイルを受信するものと同じグループに[信頼された証明書プロファイル](../protect/certificates-configure.md#create-trusted-certificate-profiles)を展開することをお勧めします。 信頼された証明書プロファイルによって、信頼されたルート CA 証明書がプロビジョニングされます。
 
 ## <a name="create-a-scep-certificate-profile"></a>SCEP 証明書プロファイルを作成する
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
-2. **[デバイス]** 、 **[構成プロファイル]** 、 **[プロファイルの作成]** の順に移動します。
+2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に移動します。
 
 3. 次のプロパティを入力します。
    - **[プラットフォーム]** :デバイスのプラットフォームを選択します。
@@ -61,7 +60,7 @@ Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするよ�
 
 7. **[構成設定]** で、次の構成を行います。
 
-   - **[証明書の種類]** :
+   - **[証明書の種類]** : 
 
      *(適用対象: Android、Android エンタープライズ、iOS/iPadOS、macOS、Windows 8.1 以降、Windows 10 以降。)*
 
@@ -72,7 +71,7 @@ Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするよ�
 
        キオスクのようなユーザーのいないデバイスなどのシナリオまたは Windows デバイスには、 **[デバイス]** を使用します。 Windows デバイスでは、ローカル コンピューターの証明書ストアに証明書が配置されます。
 
-   - **[サブジェクト名の形式]** :
+   - **[サブジェクト名の形式]** : 
 
      Intune が証明書要求のサブジェクト名をどのように自動生成するかを選択します。 サブジェクト名の形式のオプションは、選択した証明書の種類 ( **[ユーザー]** または **[デバイス]** ) によって異なります。
 
@@ -95,7 +94,8 @@ Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするよ�
        - **シリアル番号**
        - **[カスタム]** : このオプションを選択すると、 **[カスタム]** テキスト ボックスも表示されます。 このフィールドを使用して、変数など、カスタムのサブジェクト名の形式を入力します。 カスタムの形式では、2 つの変数 (**共通名 (CN)** と**電子メール (E)** ) をサポートしています。 **共通名 (CN)** は、次のいずれかの変数に設定できます。
 
-         - **CN={{UserName}}** : janedoe@contoso.com など、ユーザーのユーザー プリンシパル名。
+         - **CN={{UserName}}** : janedoe など、ユーザーのユーザー名。
+         - **CN={{UserPrincipalName}}** :janedoe@contoso.com など、ユーザーのユーザー プリンシパル名。\*
          - **CN={{AAD_Device_ID}}** : Azure Active Directory (AD) にデバイスを登録するときに割り当てられた ID。 通常、この ID は Azure AD での認証に使われます。
          - **CN={{SERIALNUMBER}}** : 一意のシリアル番号 (SN)。通常はデバイスを識別するために製造元によって使われます。
          - **CN={{IMEINumber}}** : 携帯電話の識別に使用される IMEI (International Mobile Equipment Identity) の一意の番号です。
@@ -111,6 +111,8 @@ Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするよ�
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
          その例には、CN 変数と E 変数に加えて、組織単位、組織、場所、州、国の各値を表す文字列を使用するサブジェクト名形式が含まれています。 [CertStrToName 関数](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx)の記事では、この関数とそのサポートされる文字列について説明されています。
+         
+         \* Android の "デバイスの所有者のみ" プロファイルでは、**CN={{UserPrincipalName}}** 設定は機能しません。 Android の "デバイスの所有者のみ" プロファイルは、"ユーザー" なしのデバイスに使用できるため、このプロファイルではユーザーのユーザー プリンシパル名を受け取れません。 ユーザーのいるデバイスに対してこのオプションが本当に必要な場合は、**CN={{UserName}}\@contoso.com** のような回避策を使用できます。これにより、手動で追加したユーザー名とドメイン (janedoe@contoso.com など) が指定されます
 
       - **デバイス証明書の種類**
 
@@ -176,7 +178,7 @@ Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするよ�
         > - デバイス証明書の "*サブジェクト*" または *SAN* で使用されるデバイス プロパティ (**IMEI**、**SerialNumber**、**FullyQualifiedDomainName** など) は、デバイスへのアクセス権を持つユーザーによってスプーフィングされる可能性のあるプロパティです。
         > - 証明書プロファイルをデバイスにインストールする場合は、そのプロファイルで指定されたすべての変数が該当するデバイスでサポートされている必要があります。  たとえば、 **{{IMEI}}** が SCEP プロファイルの SAN で使用されていて、IMEI 番号のないデバイスに割り当てられている場合、プロファイルのインストールに失敗します。
 
-   - **[証明書の有効期間]** :
+   - **[証明書の有効期間]** : 
 
      証明書テンプレートの有効期限よりも小さい値を入力できますが、大きい値は指定できません。 [Intune コンソール内から設定できるカスタム値をサポート](certificates-scep-configure.md#modify-the-validity-period-of-the-certificate-template)するように証明書テンプレートを構成した場合、この設定を使用して、証明書の有効期限が切れるまでの残り時間を指定します。
 
@@ -193,38 +195,38 @@ Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするよ�
      - **Passport に登録する、それ以外は失敗 (Windows 10 以降)**
      - **ソフトウェア KSP に登録する**
 
-   - **[キー使用法]** :
+   - **[キー使用法]** : 
 
      証明書のキー使用法のオプションを選択します。
 
      - **[デジタル署名]** : キーがデジタル署名で保護されている場合のみ、キーを交換できます。
      - **[キーの暗号化]** : キーが暗号化されている場合のみ、キーを交換できます。
 
-   - **[キー サイズ (ビット)]** :
+   - **[キー サイズ (ビット)]** : 
 
      キーに含めるビット数を選択します。
 
-   - **ハッシュ アルゴリズム**:
+   - **ハッシュ アルゴリズム**: 
 
      *(Android、Android エンタープライズ、Windows Phone 8.1、Windows 8.1 以降、Windows 10 以降に適用されます)*
 
      この証明書で使用するハッシュ アルゴリズムの種類を 1 つ選択します。 接続しているデバイスをサポートするセキュリティの最も強力なレベルを選択します。
 
-   - **[ルート証明書]** :
+   - **[ルート証明書]** : 
 
      構成済みであって、さらにこの SCEP 証明書プロファイルの適用対象のユーザーとデバイスに割り当ててある "*信頼された証明書プロファイル*" を選択します。 信頼された証明書プロファイルは、信頼されたルート CA 証明書でユーザーとデバイスをプロビジョニングするために使用されます。 信頼された証明書プロファイルの詳細については、*Intune での認証に証明書を使用*に関するページの「[信頼されたルート CA 証明書をエクスポートする](certificates-configure.md#export-the-trusted-root-ca-certificate)」と「[信頼された証明書プロファイルを作成する](certificates-configure.md#create-trusted-certificate-profiles)」を参照してください。 ルート証明機関と発行元の証明機関がある場合は、発行元の証明機関の検証に使用する信頼されたルート証明書プロファイルを選択します。
 
-   - **[拡張キー使用法]** :
+   - **[拡張キー使用法]** : 
 
      証明書の使用目的に対応する値を追加します。 ほとんどの場合、ユーザーまたはデバイスがサーバーに対して認証できるように、証明書には "*クライアント認証*" が必要です。 必要に応じて、追加のキー使用法を追加できます。
 
-   - **[更新しきい値 (%)]** :
+   - **[更新しきい値 (%)]** : 
 
      証明書の有効期間の残りがどの程度 (%) になったら、デバイスが更新を要求するかを入力します。 たとえば、「20」と入力した場合、証明書の更新は、証明書の有効期限が 80% 経過すると試行されます。 更新が成功するまで更新の試行は続行されます。 更新によって新しい証明書が生成され、その結果、公開キーと秘密キーのペアが新しくなります。
 
-   - **[SCEP サーバーの URL]** :
+   - **[SCEP サーバーの URL]** : 
 
-     SCEP 経由で証明書を発行する NDES サーバーの URL を 1 つまたは複数入力します。 たとえば、 *https://ndes.contoso.com/certsrv/mscep/mscep.dll* のようなものを入力します。 URL はプロファイルと共にデバイスにランダムにプッシュされるため、必要に応じて、負荷分散のためにさらに SCEP URL を追加することができます。 SCEP サーバーのいずれか 1 つが利用できない場合、SCEP 要求は失敗し、後でデバイス チェックインをするときに、ダウンしている同じサーバーに対して証明書要求が行われる可能性があります。
+     SCEP 経由で証明書を発行する NDES サーバーの URL を 1 つまたは複数入力します。 たとえば、`https://ndes.contoso.com/certsrv/mscep/mscep.dll` のようなものを入力します。 URL はプロファイルと共にデバイスにランダムにプッシュされるため、必要に応じて、負荷分散のためにさらに SCEP URL を追加することができます。 SCEP サーバーのいずれか 1 つが利用できない場合、SCEP 要求は失敗し、後でデバイス チェックインをするときに、ダウンしている同じサーバーに対して証明書要求が行われる可能性があります。
 
 8. **[次へ]** を選択します。
 
@@ -259,7 +261,7 @@ SCEP と PKCS 証明書要求に、以下の特殊文字をエスケープ文字
 
 **たとえば**、*Test user (TestCompany, LLC)* として表示される [サブジェクト名] があるとします。  *TestCompany* と *LLC* の間にコンマがある CN を含んでいる CSR で問題が発生します。  この問題を回避するには、CN 全体を引用符で囲むか、*TestCompany* と *LLC* の間のコンマを削除します。
 
-- **引用符を追加する**:*CN=* "Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **引用符を追加する**:*CN="Test User (TestCompany, LLC)",OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 - **コンマを削除する**:*CN=Test User (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
 
  ただし、バックスラッシュ文字を使ってコンマをエスケープしようとすると失敗し、CRP ログにエラーが記録されます。
@@ -282,7 +284,11 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 ## <a name="assign-the-certificate-profile"></a>証明書プロファイルを割り当てる
 
-他の目的で[デバイス プロファイルを展開](../configuration/device-profile-assign.md)する場合と同じ方法で、SCEP 証明書プロファイルを割り当てます。 ただし、続行する前に、次の点を考慮してください。
+他の目的で[デバイス プロファイルを展開](../configuration/device-profile-assign.md)する場合と同じ方法で、SCEP 証明書プロファイルを割り当てます。
+
+SCEP 証明書プロファイルを使用するには、信頼されたルート CA 証明書を使用してプロビジョニングする信頼された証明書プロファイルもデバイスで受信している必要があります。 信頼されたルート証明書プロファイルと SCEP 証明書プロファイルの両方を同じグループに展開することをお勧めします。
+
+続行する前に、次の点を考慮してください。
 
 - SCEP 証明書プロファイルをグループに割り当てると、信頼されたルート CA 証明書プロファイル (*信頼された証明書プロファイル*に指定されている) がデバイスにインストールされます。 デバイスでは、SCEP 証明書プロファイルを使用して、その信頼されたルート CA 証明書に対する証明書要求が作成されます。
 
@@ -293,8 +299,6 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 - デバイス登録後すぐに証明書をデバイスに公開するには、証明書プロファイルをデバイス グループではなくユーザー グループに割り当てます。 デバイス グループに割り当てた場合は、デバイスがポリシーを受け取る前に、デバイスの登録を完全に行う必要があります。
 
 - Intune と Configuration Manager に共同管理を使用する場合は、Configuration Manager でリソース アクセス ポリシーの[ワークロード スライダー](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)を **[Intune]** または **[パイロット Intune]** に設定します。 この設定により、Windows 10 クライアントは証明書を要求するプロセスを開始できます。
-
-- 信頼された証明書プロファイルと SCEP 証明書プロファイルを別々に作成して割り当てる場合でも、両方とも割り当てることが必要です。 両方ともデバイス上にインストールされていなければ、SCEP 証明書ポリシーは失敗します。 信頼されたルート証明書プロファイルも確実に SCEP プロファイルと同じグループに展開されるようにします。 たとえば、SCEP 証明書プロファイルをユーザー グループに展開する場合は、信頼されたルート (および中間) 証明書プロファイルも同じユーザー グループに展開する必要があります。
 
 > [!NOTE]
 > iOS/iPadOS デバイスでは、SCEP 証明書プロファイルまたは PKCS 証明書プロファイルが Wi-Fi プロファイルや VPN プロファイルなどの追加のプロファイルに関連付けられている場合、デバイスは、該当する追加のプロファイルの各々に対する証明書を受け取ります。 これにより、SCEP 証明書または PKCS 証明書の要求によって提供される複数の証明書を持つ iOS/iPadOS デバイスが存在するようになります。 

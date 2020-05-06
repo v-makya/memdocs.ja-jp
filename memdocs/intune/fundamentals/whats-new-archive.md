@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c047c0f54e64dbe17b6bd9e9082272e80fe7566c
-ms.sourcegitcommit: e7fb8cf2ffce29548b4a33b2a0c33a3a227c6bc4
+ms.openlocfilehash: 5657a26419280871e6739060509a72c4604fc3a7
+ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80401475"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255015"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune の新機能 (過去数か月)
 
@@ -222,7 +222,7 @@ VPN、Wi-Fi、電子メールのデバイス構成プロファイル用の認証
 
 この標準に関する詳細については、 www.nccoe.nist.gov にある「[Derived PIV Credentials](https://www.nccoe.nist.gov/projects/building-blocks/piv-credentials)」を参照してください。
 
-#### <a name="use-graph-api-to-specify-a-on-premises-user-principal-name-as-a-variable-for-scep-certificates----5437939----------"></a>Graph API を使用し、SCEP 証明書の変数としてオンプレミスのユーザー プリンシパル名を指定します。<!--  5437939        -->  
+#### <a name="use-graph-api-to-specify-an-on-premises-user-principal-name-as-a-variable-for-scep-certificates----5437939----------"></a>Graph API を使用し、SCEP 証明書の変数としてオンプレミスのユーザー プリンシパル名を指定します<!--  5437939        -->  
 [Intune Graph API](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0) を使用するとき、SCEP 証明書のサブジェクト代替名 (SAN) の変数として onPremisesUserPrincipalName を指定できます。
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->' を返します。
@@ -356,7 +356,7 @@ Intune では、監視対象の iOS デバイスをキオスクまたは専用�
 
 適用対象:
 
-- iOS 13 以降
+- iOS 13  以降
 - macOS 10.15 以降
 
 #### <a name="associate-domains-to-apps-on-macos-1015-devices---4898079-----"></a>macOS 10.15 以降のデバイス上のアプリにドメインを関連付ける<!-- 4898079   -->
@@ -963,7 +963,7 @@ App Store からポータル サイト アプリをインストールした後�
 既に登録されている DEP デバイス上にポータル サイトをインストールするには、Intune 上で [クライアント アプリ] に移動し、アプリ構成ポリシーを利用してマネージド アプリとしてプッシュする必要があります。 
 
 #### <a name="configure-how-end-users-update-a-line-of-business-lob-app-using-an-app-protection-policy---3568384---"></a>アプリ保護ポリシーを利用してエンド ユーザーが基幹業務 (LOB) アプリを更新する方法を構成する<!-- 3568384 -->
-エンド ユーザーが基幹業務 (LOB) アプリの更新バージョンを取得できる場所を構成できるようになりました。 この機能がエンド ユーザーに対して表示されるのは **[アプリの最小バージョン]** 条件付き起動ダイアログであり、エンド ユーザーは最小バージョンの LOB アプリに更新することを求められます。 LOB アプリ保護ポリシー (APP) の一部として、これらの更新の詳細を提供する必要があります。 この機能は iOS および Android 上で使用できます。 iOS の場合、この機能ではアプリを統合する (または、ラッピング ツールを使用しラップする) ことが必要になります。その際に利用するのは、iOS 用の Intune SDK 10.0.7 以降です。 Android の場合、この機能では最新のポータル サイトが必要になります。 エンド ユーザーが LOB アプリを更新する方法を構成するには、キー `com.microsoft.intune.myappstore` を含むマネージド アプリ構成ポリシーをアプリに送信する必要があります。 送信される値により、エンド ユーザーがアプリをダウンロードするストアが定義されます。 アプリがポータル サイト経由で展開される場合、値は `CompanyPortal` である必要があります。 他のストアの場合は、完全な URL を入力する必要があります。
+エンド ユーザーが基幹業務 (LOB) アプリの更新バージョンを取得できる場所を構成できるようになりました。 この機能がエンド ユーザーに対して表示されるのは **[アプリの最小バージョン]** 条件付き起動ダイアログであり、エンド ユーザーは最小バージョンの LOB アプリに更新することを求められます。 LOB アプリ保護ポリシー (APP) の一部として、これらの更新の詳細を提供する必要があります。 この機能は iOS および Android 上で使用できます。 iOS の場合、この機能ではアプリを統合する (または、ラッピング ツールを使用しラップする) ことが必要になります。その際に利用するのは、iOS 用の Intune SDK  10.0.7 以降です。 Android の場合、この機能では最新のポータル サイトが必要になります。 エンド ユーザーが LOB アプリを更新する方法を構成するには、キー `com.microsoft.intune.myappstore` を含むマネージド アプリ構成ポリシーをアプリに送信する必要があります。 送信される値により、エンド ユーザーがアプリをダウンロードするストアが定義されます。 アプリがポータル サイト経由で展開される場合、値は `CompanyPortal` である必要があります。 他のストアの場合は、完全な URL を入力する必要があります。
 
 #### <a name="intune-management-extension-powershell-scripts---3734186----"></a>Intune 管理拡張機能の PowerShell スクリプト<!-- 3734186  -->
 ユーザーの管理者特権を使用してデバイス上で実行するように、PowerShell スクリプトを構成できます。 詳しくは、「[Intune で Windows 10 デバイスに対して PowerShell スクリプトを使用する](../apps/intune-management-extension.md)」と、[Win32 アプリ管理](../apps/app-management.md)に関するページをご覧ください。
@@ -1241,7 +1241,7 @@ Apple の会社登録方法 (DEP/ABM/ASM) のいずれかを使用する場合�
 V1.0 が 1808 で初めて導入されたとき、ベータ API とはいくつかの重要な点で異なっていました。 1903 では、それらの変更がベータ API バージョンに反映されます。 ベータ API バージョンを使用する重要なレポートがある場合は、破壊的な変更を回避するためにそれらのレポートを V1.0 に切り替えることを強くお勧めします。 詳細については、「[Intune データ ウェアハウス API の変更ログ](../developer/reports-changelog.md#1903-part-2)」を参照してください。
 
 #### <a name="monitor-security-baseline-status-public-preview----3082047---"></a>セキュリティ ベースライン状態のモニター (パブリック プレビュー) <!-- 3082047 --> 
-セキュリティ ベースラインのモニタリングに[カテゴリごとのビュー](../protect/security-baselines-monitor.md#per-category-view)を追加しました (セキュリティ ベースラインは引き続きプレビュー段階です)。 カテゴリごとのビューには、ベースラインの各カテゴリと、そのカテゴリの各状態グループに分類されるデバイスの割合が表示されます。 個々のカテゴリに一致しない、構成が間違っている、または適用されないデバイスの数を把握できるようになりました。
+セキュリティ ベースラインのモニタリングに[カテゴリごとのビュー](../protect/security-baselines-monitor.md#per-category-view)を追加しました  (セキュリティ ベースラインは引き続きプレビュー段階です)。 カテゴリごとのビューには、ベースラインの各カテゴリと、そのカテゴリの各状態グループに分類されるデバイスの割合が表示されます。 個々のカテゴリに一致しない、構成が間違っている、または適用されないデバイスの数を把握できるようになりました。
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="role-based-access-control"></a>ロール ベースのアクセス制御
@@ -1580,7 +1580,7 @@ Android デバイスで PIN タイプが "数値" の Intune アプリ保護ポ�
 
 #### <a name="administrative-templates-are-in-public-preview-and-moved-to-their-own-configuration-profile----3322847---"></a>管理用テンプレートがパブリック プレビューになり、専用の構成プロファイルに移動される <!-- 3322847 -->
 
-Intune の管理用テンプレート ( **[デバイス構成]**  >  **[管理用テンプレート]** ) は現在、パブリック プレビュー段階です。 この更新プログラムでは:
+Intune の管理用テンプレート ( **[デバイス構成]**  >  **[管理用テンプレート]** ) は現在、パブリック プレビュー段階です。 この更新プログラムでは: 
 
 - 管理用テンプレートには、Intune で管理可能な約 300 の設定が含まれます。 以前は、これらの設定はグループ ポリシー エディターにのみ存在しました。
 - 管理用テンプレートはパブリック プレビューで使用できます。
@@ -1839,7 +1839,7 @@ Citrix によって Citrix ゲートウェイの更新プログラムがリリ�
 #### <a name="new-device-restriction-settings-added-to-ios-and-macos-devices---2827760---"></a>iOS および macOS デバイスに追加された新しいデバイス制限の設定<!-- 2827760 -->
 この更新プログラムには、iOS 12 と共にリリースされた iOS および macOS デバイス用の新しい設定が含まれています。
 
-**iOS の設定**: 
+**iOS の設定**:  
 - [全般]:アプリ削除をブロックする (監視モードのみ)
 - [全般]:USB 制限モードをブロックする (監視モードのみ)
 - [全般]:日付と時刻自動設定を強制する (監視モードのみ)
@@ -1847,7 +1847,7 @@ Citrix によって Citrix ゲートウェイの更新プログラムがリリ�
 - ［パスワード］:パスワード近接要求をブロックする (監視モードのみ)
 - ［パスワード］:パスワード共有をブロックする (監視モードのみ)
 
-**macOS の設定**: 
+**macOS の設定**:  
 - ［パスワード］:パスワード オートフィルをブロックする
 - ［パスワード］:パスワード近接要求をブロックする
 - ［パスワード］:パスワード共有をブロックする
@@ -2011,7 +2011,7 @@ iOS デバイス上での生体認証の変更後、ユーザーに PIN の入�
 この機能は iOS でのみ使用可能で、iOS 向け Intune App SDK のバージョン 9.0.1 以降を統合するアプリケーションの参加が必要です。 SDK の統合は、対象のアプリケーション上で動作を適用するために必要です。 この統合は、ローリング方式で行われ、特定のアプリケーション チームに依存します。 参加するアプリケーションには、WXP、Outlook、Managed Browser、Yammer などが含まれます。
 
 #### <a name="network-access-control-support-on-ios-vpn-clients---1333693---"></a>iOS VPN クライアントでのネットワーク アクセス制御のサポート<!-- 1333693 -->
-この更新では、Cisco AnyConnect、F5 Access、Citrix SSO for iOS 用の VPN 構成プロファイルを作成するときに、ネットワーク アクセス制御 (NAC) を有効にするための新しい設定があります。 この設定では、デバイスの NAC ID を VPN プロファイルに含めることができます。 現時点では、この新しい NAC ID をサポートする VPN クライアントまたは NAC パートナー ソリューションはありませんが、サポートされるようになったら[サポートのブログ投稿](ttps://aka.ms/iOS12_and_vpn)でお知らせします。
+この更新では、Cisco AnyConnect、F5 Access、Citrix SSO for iOS 用の VPN 構成プロファイルを作成するときに、ネットワーク アクセス制御 (NAC) を有効にするための新しい設定があります。 この設定では、デバイスの NAC ID を VPN プロファイルに含めることができます。 現時点では、この新しい NAC ID をサポートする VPN クライアントまたは NAC パートナー ソリューションはありませんが、サポートされるようになったら[サポートのブログ投稿](https://aka.ms/iOS12_and_vpn)でお知らせします。
 
 NAC を使用するには、以下のことが必要です。
 1. デバイス ID を VPN プロファイルに含めることを Intune に許可します
@@ -2200,7 +2200,7 @@ S モードの詳細は「[Windows 10 (S モード) について](https://www.mi
 適用対象: 一番新しい [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) ビルド (プレビュー段階)。
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile---2144658---"></a>構成プロファイルに自動的に追加される Windows Defender ATP 構成パッケージ<!-- 2144658 -->
-Intune で [Advanced Threat Protection を使用してデバイスをオンボードする](../protect/advanced-threat-protection.md#onboard-devices-by-using-a-configuration-profile)場合、前もって構成パッケージをダウンロードし、それを構成プロファイルに追加する必要があります。 この更新では、Intune で Windows Defender Security Center からパッケージを自動的に取得し、それをプロファイルに追加します。
+Intune で [Advanced Threat Protection を使用してデバイスをオンボードする](../protect/advanced-threat-protection.md#onboard-windows-devices-by-using-a-configuration-profile)場合、前もって構成パッケージをダウンロードし、それを構成プロファイルに追加する必要があります。 この更新では、Intune で Windows Defender Security Center からパッケージを自動的に取得し、それをプロファイルに追加します。
 Windows 10 以降に適用されます。
 
 #### <a name="require-users-to-connect-during-device-setup--2311457--"></a>デバイスのセットアップ中に接続するためのユーザーが必要<!--2311457-->
@@ -2530,7 +2530,7 @@ Windows 10 コンピューターで重大な問題が見つかった場合は、
 #### <a name="new-all-devices-filter-device-category---1878520---"></a>新しい [すべてのデバイス] フィルター処理: デバイスのカテゴリ<!-- 1878520 -->
 デバイスのカテゴリごとに **[すべてのデバイス]** リストをフィルター処理できるようになりました。 これを行うには、 **[デバイス]**  >  **[すべてのデバイス]**  >  **[フィルター]**  >  **[デバイスのカテゴリ]** の順に選択します。
 
-#### <a name="use-teamviewer-to-screen-share-ios-and-macos-devices---1985547---"></a>TeamViewer を使用して iOS デバイスと MacOS デバイスの画面を共有する<!-- 1985547 -->
+#### <a name="use-teamviewer-to-screen-share-ios-and-macos-devices---1985547---"></a>TeamViewer を使用して iOS デバイスと macOS デバイスの画面を共有する<!-- 1985547 -->
 管理者は [TeamViewer](../remote-actions/teamviewer-support.md) に接続し、iOS および macOS デバイスとの画面共有セッションを開始できるようになりました。 iPhone、iPad、macOS ユーザーは、他のデスクトップ デバイスまたはモバイル デバイスと画面をライブで共有できます。 
 
 #### <a name="multiple-exchange-connector-support---2070451---"></a>複数の Exchange Connector のサポート<!-- 2070451 -->
@@ -2935,7 +2935,7 @@ Azure Active Directory (Azure AD) を使用している場合、モバイル デ
 Android 用 Intune ポータル サイト アプリを、Android の[マテリアル デザイン](https://material.io/) ガイドラインに合わせて更新しています。 「[アプリ UI の新機能](whats-new-app-ui.md)」の記事で、新しいアイコンの画像を確認することができます。
 
 #### <a name="company-portal-enrollment-improved---1874230-eeready--"></a>ポータル サイトの登録の機能強化<!-- 1874230 eeready-->
-Windows 10 ビルド 1703 以降の Intune ポータル サイトを使ってデバイスを登録するユーザーは、アプリを離れることなく登録の最初の手順を完了できるようになりました。
+Windows 10 ビルド 1709 以降の Intune ポータル サイトを使ってデバイスを登録するユーザーは、アプリを離れることなく登録の最初の手順を完了できるようになりました。
 #### <a name="hololens-and-surface-hub-now-appear-in-device-lists--1725868---"></a>HoloLens と Surface Hub がデバイス リストに表示されるようになった<!--1725868 -->
 Intune に登録された HoloLens および Surface Hub のデバイスを Android 用ポータル サイト アプリに表示するためのサポートが追加されました。
 
@@ -3574,7 +3574,7 @@ Windows 10 デバイス用に Citrix VPN を構成できます。 Windows 10 以
 ### <a name="access-to-managed-app-logs-for-ios---1469920---"></a>iOS の管理対象アプリ ログにアクセス<!-- 1469920 -->
 Managed Browser をインストールしているエンド ユーザーは、Microsoft が公開したすべてのアプリの管理状態を表示し、管理対象 iOS アプリの問題を解消するためにログを送信できるようになりました。
 
-iOS デバイスの Managed Browser でトラブルシューティング モードを有効にする方法については、「[iOS で Managed Browser を使用し、管理対象アプリ ログにアクセスする方法](../apps/app-configuration-managed-browser.md#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios)」を参照してください。
+iOS デバイスの Managed Browser でトラブルシューティング モードを有効にする方法については、「[iOS で Managed Browser を使用し、管理対象アプリ ログにアクセスする方法](../apps/app-configuration-managed-browser.md)」を参照してください。
 
 ### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290---1417174---"></a>iOS 用ポータル サイト バージョン 2.9.0 でのデバイスのセットアップ ワークフローの機能強化<!-- 1417174 -->
 
@@ -4025,7 +4025,7 @@ Windows 10 の設定について詳しくは、「[Microsoft Intune での Windo
 Android 用ポータル サイト アプリでは、ユーザーからのフィードバックに基づき、デバイスからポータル サイトの削除を開始できる新しいアクション メニューが追加されました。 この操作は、ユーザーがデバイスからアプリを削除できるように、Intune の管理からデバイスを削除します。 これらの変更については、[Android エンド ユーザー向けドキュメント](../user-help/unenroll-your-device-from-intune-android.md)の[アプリ UI の新機能](whats-new-app-ui.md)に関するページで確認できます。
 
 ### <a name="improvements-to-app-syncing-with-windows-10-creators-update--676505--"></a>Windows 10 Creators Update とアプリを同期する機能の強化<!--676505-->
-Windows 10 用ポータル サイト アプリでは、Windows 10 Creators Update (バージョン 1703) がインストールされているデバイスのアプリ インストール要求の同期が自動的に開始されるようになりました。 "同期保留中" 状態中、アプリ インストールが止まる問題を減らします。 また、ユーザーは、アプリ内からの同期を手動で開始することができます。 これらの変更については、「[アプリ UI の新機能](whats-new-app-ui.md)」ページをご覧ください。
+Windows 10 用ポータル サイト アプリでは、Windows 10 Creators Update (バージョン 1709) がインストールされているデバイスのアプリ インストール要求の同期が自動的に開始されるようになりました。 "同期保留中" 状態中、アプリ インストールが止まる問題を減らします。 また、ユーザーは、アプリ内からの同期を手動で開始することができます。 これらの変更については、「[アプリ UI の新機能](whats-new-app-ui.md)」ページをご覧ください。
 
 ### <a name="new-guided-experience-for-windows-10-company-portal---1058938---"></a>Windows 10 ポータル サイトの新しいガイド機能<!---1058938--->
 Windows 10 用のポータル サイト アプリで、特定または登録されていないデバイス向けのガイド付き Intune チュートリアルを利用できるようになります。 ユーザーは新たな段階的手順に従って、Azure Active Directory (条件付きアクセス機能のために必要) と MDM (デバイス管理機能のために必要) に登録できます。 このガイドには、ポータル サイトのホーム ページからアクセスできます。 ユーザーは、これらの登録を完了していない場合でも引き続きアプリを使用できますが、機能が制限されます。

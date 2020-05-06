@@ -10,12 +10,12 @@ ms.assetid: 38b2bed2-20dd-4ce1-abc0-219343d2c4b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bf41f7de8aa719db054e7606daac4469edf61732
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6710170d6c86f59b1626285c618f3108f8947974
+ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695590"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619442"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics とは
 
@@ -131,7 +131,7 @@ Desktop Analytics を使用するには、環境が次の前提条件を満た�
 
 - このデバイスのユーザーには、次のライセンスのいずれかが必要です。
 
-  - Windows 10 Enterprise E3 または E5 (Microsoft 365 F1、E3、または E5 に含まれます)
+  - Windows 10 Enterprise E3 または E5 (Microsoft 365 F3、E3、または E5 に含まれます)
 
   - Windows 10 Education A3 または A5 (Microsoft 365 A3 または A5 に含まれます)
 

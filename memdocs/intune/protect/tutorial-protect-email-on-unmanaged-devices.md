@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 04/30/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70f6e3d3fcd0a5f65866e43198b499b321aab836
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4f32ced29b6bb53f8c091ba1a0f42261a2baa493
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079044"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605220"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>チュートリアル:アンマネージド デバイス上で Exchange Online の電子メールを保護する
 
@@ -95,7 +95,6 @@ Intune などのデバイス管理ソリューションにデバイスが登録�
    **[次へ]** をクリックして、続行します。
 
 8. **[割り当て]** ページを使用して、アプリ保護ポリシーをユーザーのグループに割り当てます。 このチュートリアルでは、グループにはこのポリシーを割り当てません。  
- これらの設定を構成する必要はありません。
 
    **[次へ]** をクリックして、続行します。
 
@@ -109,7 +108,7 @@ Outlook 用のアプリ保護ポリシーが作成されます。 次に、Outlo
 
 - 最初のポリシーでは、先進認証クライアントで承認済みの Outlook アプリと多要素認証 (MFA) を使用するように要求します。 先進認証クライアントには、iOS 用 Outlook と Android 用 Outlook が含まれます。  
 
-- 2 番目のポリシーでは、Exchange ActiveSync クライアントで承認済みの Outlook アプリを使用するように要求します (現時点では、Exchange Active Sync ではデバイス プラットフォーム以外の条件をサポートしていません)。 Azure AD ポータルまたは Intune ポータルのいずれかで、条件付きアクセス ポリシーを構成できます。 既に Intune ポータルにいるので、ここでポリシーを作成します。  
+- 2 番目のポリシーでは、Exchange ActiveSync クライアントで承認済みの Outlook アプリを使用するように要求します  (現時点では、Exchange Active Sync ではデバイス プラットフォーム以外の条件をサポートしていません)。 Azure AD ポータルまたは Intune ポータルのいずれかで、条件付きアクセス ポリシーを構成できます。 既に Intune ポータルにいるので、ここでポリシーを作成します。  
 
 ### <a name="create-an-mfa-policy-for-modern-authentication-clients"></a>先進認証クライアント用の MFA ポリシーを作成する  
 
