@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5657a26419280871e6739060509a72c4604fc3a7
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: c3adb6f1548c0b332aaa477014f07559ffc826c1
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255015"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842293"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune の新機能 (過去数か月)
 
@@ -4187,7 +4187,7 @@ Intune のデバイス制限プロファイルでは、iOS デバイスに対し
 - 通知サウンドを許可するかどうかを指定します。
 
 ### <a name="configure-ios-apps-to-run-in-single-app-mode-autonomously---737837---"></a>単一アプリ モードで自律的に実行するように iOS アプリを構成する<!-- 737837 -->
-Intune のデバイス プロファイルを使って、[自律的シングル App モード](../configuration/device-restrictions-ios.md#autonomous-single-app-mode)で指定したアプリを実行するように iOS デバイスを構成できるようになりました。 このモードを構成した場合、指定したアプリが実行されると、デバイスはそのアプリだけを実行できるようにロックされます。 たとえば、ユーザーがデバイスでテストを受けられるようにアプリを構成するような場合です。 アプリのアクションが完了した場合、または管理者がこのポリシーを削除した場合、デバイスは通常の状態に戻ります。
+Intune のデバイス プロファイルを使って、[自律的シングル App モード](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam)で指定したアプリを実行するように iOS デバイスを構成できるようになりました。 このモードを構成した場合、指定したアプリが実行されると、デバイスはそのアプリだけを実行できるようにロックされます。 たとえば、ユーザーがデバイスでテストを受けられるようにアプリを構成するような場合です。 アプリのアクションが完了した場合、または管理者がこのポリシーを削除した場合、デバイスは通常の状態に戻ります。
 
 ### <a name="configure-trusted-domains-for-email-and-web-browsing-on-ios-devices---723765---"></a>iOS デバイスでメールと Web ブラウザー用の信頼されたドメインを構成する<!-- 723765 -->
 iOS デバイス制限プロファイルから、次の[ドメイン設定](../configuration/device-restrictions-ios.md#domains)を構成できるようになりました。
