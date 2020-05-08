@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 04/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba099e3614c11e10ce4cd9ae94668a1648bfc150
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: c5839154ab0c884e933e8d11055e745d54503433
+ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808060"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619544"
 ---
 # <a name="use-shell-scripts-on-macos-devices-in-intune-public-preview"></a>Intune で macOS デバイスに対してシェル スクリプトを使用する (パブリック プレビュー)
 
@@ -39,7 +39,7 @@ ms.locfileid: "80808060"
  - 該当するシェルのコマンドライン インタープリターがインストールされています。
 
 ## <a name="important-considerations-before-using-shell-scripts"></a>シェル スクリプトを使用する前に考慮すべき重要な事項
- - シェル スクリプトでは、Microsoft Intune MDM Agent が macOS デバイスに正常にインストールされていることが必須となります。 詳細については、「[Microsoft Intune MDM Agent for macOS](macos-shell-scripts.md#microsoft-intune-mdm-agent-for-macos)」を参照してください。
+ - シェル スクリプトでは、Microsoft Intune 管理エージェントが macOS デバイスに正常にインストールされていることが必須となります。 詳細については、「[macOS 用の Microsoft Intune 管理エージェント](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos)」を参照してください。
  - シェル スクリプトは、別個のプロセスとしてデバイス上で並列実行されます。
  - サインイン ユーザーとして実行されているシェル スクリプトは、実行時、デバイス上で現在サインインしているすべてのユーザー アカウントに対して実行されます。
  - サインイン ユーザーとして実行するスクリプトを実行するには、エンド ユーザーはデバイスにサインインする必要があります。
@@ -62,7 +62,7 @@ ms.locfileid: "80808060"
 6. **[割り当て]**  >  **[含めるグループを選択]** の順に選択します。 Azure AD グループの既存のリストが表示されます。 スクリプトを受信する macOS デバイスを持つユーザーが属する 1 つまたは複数のデバイス グループを選択します。 **[選択]** を選択します。 選択したグループがリストに表示され、スクリプト ポリシーが与えられます。
    > [!NOTE]
    > - Intune 内のシェル スクリプトは、Azure AD デバイスのセキュリティ グループにのみ割り当てられます。 ユーザー グループ割り当てはプレビューではサポートされていません。 
-   > - シェル スクリプトの割り当て更新では、[Microsoft Intune MDM Agent for macOS](macos-shell-scripts.md#microsoft-intune-mdm-agent-for-macos) の割り当ても更新されます。
+   > - シェル スクリプトの割り当て更新では、[macOS 用の Microsoft Intune 管理エージェント](macos-shell-scripts.md#microsoft-intune-management-agent-for-macos)の割り当ても更新されます。
 7. **[確認 + 追加]** で、構成した設定の概要が表示されます。 **[追加]** を選択してスクリプトを保存します。 **[追加]** を選択すると、選択したグループにスクリプト ポリシーが展開されます。
 
 今作成したスクリプトがスクリプトの一覧に表示されます。 
@@ -78,6 +78,47 @@ ms.locfileid: "80808060"
 スクリプトを実行すると、次のいずれかの状態が返されます。
 - スクリプトの実行状態が**失敗**の場合、ゼロ以外の終了コードがスクリプトから返されたか、スクリプトの形式が正しくないことを示しています。 
 - スクリプトの実行状態が**成功**の場合、スクリプトから終了コードとして 0 が返されたことを示しています。 
+
+## <a name="troubleshoot-macos-shell-script-policies-using-log-collection"></a>ログ収集を使用して macOS シェル スクリプト ポリシーのトラブルシューティングを行う
+
+デバイスのログを収集すると、macOS デバイスでのスクリプトに関する問題のトラブルシューティングに役立てることができます。 
+
+### <a name="requirements-for-log-collection"></a>ログ収集の要件
+macOS デバイスでログを収集するには、次の項目が必要です。
+- ログ ファイルの完全な絶対パスを指定する必要があります。
+- ファイル パスはセミコロン (;) で区切る必要があります。
+- アップロードできるログ収集の最大サイズは、60 MB (圧縮後) または 25 ファイルのうち、どちらか早い方です。
+- ログ収集に使用できるファイルの種類には、 *.log、.zip、.gz、.tar、.txt、.xml、.crash、.rtf* などの拡張子があります。
+
+#### <a name="collect-device-logs"></a>デバイスのログを回収する
+1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+2. **[デバイスの状態]** または **[ユーザーの状態]** レポートで、デバイスを選択します。
+3. **[ログの収集]** を選択し、ログ ファイルのフォルダー パスをセミコロン (;) のみで区切って指定します (パスの間に空白や改行は入れません)。<br>たとえば、複数のパスは、`/Path/to/logfile1.zip;/Path/to/logfile2.log` のように記述する必要があります。 
+
+   >[!IMPORTANT]
+   > コンマ、ピリオド、改行、引用符を使用して区切られた複数のログ ファイル パスは、空白の有無にかかわらず、ログ収集エラーになります。 パス間の区切り文字として空白を使用することもできません。
+
+4. **[OK]** を選択します。 デバイス上の Intune 管理エージェントが次回 Intune にチェックインしたときに、ログが収集されます。 通常、このチェックインは 8 時間ごとに実行されます。
+
+   >[!NOTE]
+   > 
+   > - 収集されたログは、デバイス上で暗号化され、Microsoft Azure Storage に送信されて、30 日間保存されます。 保存されたログは、要求時に暗号化解除され、Microsoft Endpoint Manager admin center を使用してダウンロードされます。
+   > - 管理者指定のログに加えて、`/Library/Logs/Microsoft/Intune` と `~/Library/Logs/Microsoft/Intune` の各フォルダーから Intune 管理エージェント ログも収集されます。 エージェント ログのファイル名は `IntuneMDMDaemon date--time.log` と `IntuneMDMAgent date--time.log` です。 
+   > - 管理者指定のファイルが見つからなかったり、ファイル拡張子が間違っていたりする場合は、これらのファイル名が `LogCollectionInfo.txt` に一覧表示されます。     
+
+### <a name="log-collection-errors"></a>ログ収集エラー
+次の表に示すいずれかの理由により、ログの収集が正常に行われない可能性があります。 これらのエラーを解決するには、修復ステップに従います。
+
+| エラー コード (16 進) | エラー コード (10 進) | エラー メッセージ | 修復ステップ |
+|------------------|------------------|---------------|-------------------|
+| 0X87D300D1 | 2016214834 | ログ ファイルのサイズは、60 MB を超えることはできません。 | 圧縮後のログのサイズが 60 MB 未満であることを確認します。 |
+| 0X87D300D1 | 2016214831 | 指定されたログ ファイルのパスが存在する必要があります。 システム ユーザー フォルダーは、無効なログ ファイルの場所です。 | 指定されたファイル パスが有効で、アクセス可能であることを確認します。 |
+| 0X87D300D2 | 2016214830 | アップロード URL の有効期限が切れたため、ログ収集ファイルのアップロードに失敗しました。 | **[ログの収集]** アクションを再試行します。 |
+| 0X87D300D3、0X87D300D5、0X87D300D7 | 2016214829、2016214827、2016214825 | 暗号化エラーにより、ログ収集ファイルのアップロードに失敗しました。 ログのアップロードを再試行してください。 | **[ログの収集]** アクションを再試行します。 |
+| | 2016214828 | ログ ファイルの数が許可されている制限数 25 ファイルを超えました。 | 一度に収集できるログ ファイルの数は、最大 25 ファイルのみです。 |
+| 0X87D300D6 | 2016214826 | zip エラーにより、ログ収集ファイルのアップロードに失敗しました。 ログのアップロードを再試行してください。 | **[ログの収集]** アクションを再試行します。 |
+| | 2016214740 | 圧縮済みのログが見つからなかったため、ログを暗号化できませんでした。 | **[ログの収集]** アクションを再試行します。 |
+| | 2016214739 | ログが収集されましたが、保存できませんでした。 | **[ログの収集]** アクションを再試行します。 |
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 ### <a name="why-are-assigned-shell-scripts-not-running-on-the-device"></a>割り当てたシェル スクリプトがデバイスで実行されません。なぜですか。
@@ -95,9 +136,9 @@ ms.locfileid: "80808060"
 ### <a name="what-intune-role-permissions-are-required-for-shell-scripts"></a>シェル スクリプトにはどのような Intune ロールのアクセス許可が必要ですか。
 シェル スクリプトを削除、割り当て、作成、更新、読み取りするには、割り当てた Intune ロールに**デバイス構成アクセス許可**が必要です。
 
-## <a name="microsoft-intune-mdm-agent-for-macos"></a>Microsoft Intune MDM Agent for macOS
+## <a name="microsoft-intune-management-agent-for-macos"></a>macOS 用の Microsoft Intune 管理エージェント
  ### <a name="why-is-the-agent-required"></a>エージェントはなぜ必要ですか。
- ネイティブの macOS オペレーティング システムではサポートされていない高度なデバイス管理機能を有効にするには、Microsoft Intune MDM Agent を管理対象の macOS デバイスにインストールする必要があります。
+ネイティブの macOS オペレーティング システムではサポートされていない高度なデバイス管理機能を有効にするには、Microsoft Intune 管理エージェントをマネージド macOS デバイスにインストールする必要があります。
  
  ### <a name="how-is-the-agent-installed"></a>エージェントはどのようにインストールされますか。
  Microsoft Endpoint Manager Admin Center で少なくとも 1 つのシェル スクリプトを割り当てた Intune の管理対象 macOS デバイスにエージェントが通知なく、自動的にインストールされます。 エージェントは適切であれば `/Library/Intune/Microsoft Intune Agent.app` にインストールされ、macOS デバイスの **[Finder]** の **[アプリケーション]** には表示されません。 macOS デバイスで実行されているとき、エージェントは**アクティビティ モニター**に `IntuneMdmAgent` として表示されます。
@@ -125,7 +166,7 @@ ms.locfileid: "80808060"
  - エージェントが 24 時間 (デバイスの復帰時間) 以上、回復不可能な状態にあります。
 
  ### <a name="how-to-turn-off-usage-data-sent-to-microsoft-for-shell-scripts"></a>シェル スクリプト用として Microsoft に送信された使用状況データをオフにする方法はありますか。
- Intune MDM Agent から Microsoft に送信された使用状況データをオフにするには、ポータル サイトを開き、 **[メニュー]** 、 **[基本設定]** の順に選択し、"*使用状況データの収集を Microsoft に許可します*" のチェックを外します。 これで、Intune MDM エージェントとポータル サイトの両方に対して、送信された使用状況データがオフになります。
+ Intune 管理エージェントから Microsoft に送信された使用状況データをオフにするには、ポータル サイトを開き、 **[メニュー]**  >  **[基本設定]** の順に選択し >  *[使用状況データの収集を Microsoft に許可します]* をオフにします。 これで、エージェントとポータル サイトの両方に対して、送信された使用状況データがオフになります。
 
 ## <a name="known-issues"></a>既知の問題
 - **ユーザー グループの割り当て:** ユーザー グループに割り当てられたシェル スクリプトはデバイスに適用されません。 ユーザー グループ割り当ては現在、プレビューではサポートされていません。 デバイス グループ割り当てを使用し、スクリプトを割り当てます。

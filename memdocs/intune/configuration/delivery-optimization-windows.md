@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 71039737a74aebb3066c001536aaf677a0467696
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c37563dee40d776d352dec4e0b8ef11b1dc8f67b
+ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79345677"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506541"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Microsoft Intune での配信の最適化設定
 
@@ -39,22 +39,28 @@ Windows 10 での配信の最適化について学習するには、Windows ド�
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 
 3. 次のプロパティを入力します。
+   - **[プラットフォーム]** : **[Windows 10 以降]** を選択します。
+   - **[プロファイルの種類]** : **[配信の最適化]** を選択します。
 
-    - **名前**:新しいプロファイルのわかりやすい名前を入力します。
-    - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
-    - **[プラットフォーム]** : **[Windows 10 以降]** を選択します。
-    - **[プロファイルの種類]** : **[配信の最適化]** を選択します。
+4. **[作成]** を選択します。
 
-4. **[設定]** 、 **[構成]** の順に選択し、更新プログラムやアプリをダウンロードする方法を定義します。 使用可能な設定については、「[Intune の配信の最適化の設定](delivery-optimization-settings.md)」を参照してください。
+5. **[基本]** ページで、プロファイルに名前と説明を入力して、 **[次へ]** を選択します。
 
-5. 完了したら、 **[OK]**  >  **[作成]** の順に選択して変更を保存します。
+6. **[構成設定]** ページで、更新プログラムやアプリをダウンロードする方法を定義します。 使用可能な設定については、「[Intune の配信の最適化の設定](delivery-optimization-settings.md)」を参照してください。
 
-プロファイルが作成され、一覧に表示されます。 次に、[プロファイルを割り当て](device-profile-assign.md)てから、[その状態を監視](device-profile-monitor.md)します。
+   設定の構成が完了したら、 **[次へ]** を選択します。
 
-<!-- ## Move existing update rings to delivery optimization
+7. **[スコープ (タグ)]** タブで **[スコープ タグを選択]** を選択し、 *[タグを選択する]* ウィンドウを開いて、プロファイルにスコープ タグを割り当てます。
+  
+   **[次へ]** を選択して続行します。
 
-**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage. 
--->
+8. **[割り当て]** ページで、このプロファイルを受け取るグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+
+   **[次へ]** を選択します。
+
+9. **[適用性ルール]** ページで、 **[ルール]** 、 **[プロパティ]** 、 **[値]** オプションを使用して、割り当てられたグループ内でこのプロファイルを適用する方法を定義します。
+
+10. **[確認および作成]** ページで、完了したら、 **[作成]** を選択します。 プロファイルが作成され、一覧に表示されます。 次に、[プロファイルを割り当て](device-profile-assign.md)てから、[その状態を監視](device-profile-monitor.md)します。
 
 ## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>Windows 10 更新リングから配信の最適化を削除する
 
