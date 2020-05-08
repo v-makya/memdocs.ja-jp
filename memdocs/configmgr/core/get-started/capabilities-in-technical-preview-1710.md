@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 503bb6d2293b4b5efb1d84980225a9d7052e1656
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705110"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905320"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Configuration Manager の Technical Preview 1710 の機能
 
@@ -125,7 +125,7 @@ Exploit Guard ポリシーを作成したら、Deploy Exploit Guard Policy ウ�
 
 ## <a name="limited-support-for-cng-certificates"></a>CNG 証明書の制限付きサポート
 <!-- 1356191 -->
-このリリース以降では、次のシナリオに [Cryptography API:Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) 証明書テンプレートを使用できるようになりました。
+このリリース以降では、次のシナリオに [Cryptography API:Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) 証明書テンプレートを使用できるようになりました。
 
 - HTTPS 管理ポイントを使用したクライアントの登録と通信。   
 - HTTPS 配布ポイントを使用したソフトウェアの配布とアプリケーションの展開。   

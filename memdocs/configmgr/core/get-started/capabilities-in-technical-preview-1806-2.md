@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 426767b65e0fd770a9a41ce9463948007a524c41
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078755"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905215"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Configuration Manager の Technical Preview 1806.2 の機能
 
@@ -147,7 +147,7 @@ Configuration Manager コンソールで、 **[ソフトウェア ライブラ�
 <!--1357427-->
 Configuration Manager は、新しい Windows 10 アプリ パッケージ (.msix) とアプリ バンドル (.msixbundle) 形式の展開をサポートするようになりました。 現在、最新の [Windows Insider Preview](https://insider.windows.com/) のビルドでは、これらの新しい形式がサポートされています。
 
-MSIX の概要については、「[A closer look at MSIX](https://blogs.msdn.microsoft.com/sgern/2018/06/18/a-closer-look-at-msix/)」(MSIX を詳しく調べる) をご覧ください。
+MSIX の概要については、「[A closer look at MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix)」(MSIX を詳しく調べる) をご覧ください。
 
 新しい MSIX アプリを作成する方法については、「[MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376)」(Insider ビルド 17682 で導入された MSIX のサポート) をご覧ください。
 

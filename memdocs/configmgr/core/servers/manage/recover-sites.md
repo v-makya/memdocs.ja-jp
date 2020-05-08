@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 14f319cfa1d09cf21cc5da5ed4a9fde9b9b9799b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708530"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903954"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Configuration Manager サイトの回復
 
@@ -193,7 +193,7 @@ Configuration Manager サイト データベース サーバーのデータが�
 
 Configuration Manager は、SQL Server におけるサイト データベースの変更の追跡を有効にします。 そのため、過去のある時点以後にデータベース テーブルで行われた変更に関する情報を、Configuration Manager が照会することができます。 保有期間とは、この変更の追跡データを残しておく期間のことです。 既定では、サイト データベースの追跡データの保有期間は 5 日に構成されています。 サイト データベースを回復するときは、バックアップがこの保有期間内に作成されたかどうかによって、回復プロセスが異なります。 たとえば、SQL Server で障害が発生した時点で、最も新しいバックアップが作成後 7 日経過している場合は、保有期間外に作成されていることになります。
 
-SQL Server の変更追跡の内部構造については、SQL Server チームのブログ投稿「[Change Tracking Cleanup - part 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1/)」(変更追跡のクリーンアップ - パート 1) と「[Change Tracking Cleanup - part 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2)」(変更追跡のクリーンアップ - パート 2) を参照してください。
+SQL Server の変更追跡の内部構造については、SQL Server チームのブログ投稿「[Change Tracking Cleanup - part 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1)」(変更追跡のクリーンアップ - パート 1) と「[Change Tracking Cleanup - part 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2)」(変更追跡のクリーンアップ - パート 2) を参照してください。
 
 ### <a name="reinitialization-of-site-or-global-data"></a>サイト データまたはグローバル データの再初期化
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 522e01b0d811d768d4f239bc917c2e3db08e05ef
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210079"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905188"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager の Technical Preview 1806 の機能
 
@@ -81,10 +81,10 @@ SCUP では引き続き、他のカタログとシナリオがサポートされ
 
     > [!Tip]  
     > ソフトウェアの更新ポイントでは HTTPS が必要です。これは、署名証明書を処理するために使用される WSUS API の前提条件だからです。 クライアントが HTTPS 対応である必要はありません。 WSUS での HTTPS の有効化の詳細については、次の記事を参照してください。  
-    > - [Secure Sockets Layer (SSL) プロトコルを使用して WSUS をセキュリティで保護する](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [WSUS サポートのブログ記事](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
+    > - [Secure Sockets Layer (SSL) プロトコルを使用して WSUS をセキュリティで保護する](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [WSUS サポートのブログ記事](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- ソフトウェア更新ポイントの WSUSContent フォルダーに、サード パーティのソフトウェア更新プログラムのソース バイナリ コンテンツを格納するのに十分なディスク領域がある必要があります。 必要な記憶域の容量は、ベンダー、更新プログラムの種類、および展開のために発行する特定の更新プログラムによって異なります。 WSUSContent フォルダーを、空き領域がより多い別のドライブに移動する必要がある場合は、WSUS サポート チームのブログ記事「[How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/)」 (WSUS で更新プログラムをローカルに格納する場所を変更する方法) を参照してください。  
+- ソフトウェア更新ポイントの WSUSContent フォルダーに、サード パーティのソフトウェア更新プログラムのソース バイナリ コンテンツを格納するのに十分なディスク領域がある必要があります。 必要な記憶域の容量は、ベンダー、更新プログラムの種類、および展開のために発行する特定の更新プログラムによって異なります。 WSUSContent フォルダーを、空き領域がより多い別のドライブに移動する必要がある場合は、WSUS サポート チームのブログ記事「[How to change the location where WSUS stores updates locally](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally)」 (WSUS で更新プログラムをローカルに格納する場所を変更する方法) を参照してください。  
 
 - **[ソフトウェア更新プログラム]** グループのクライアント設定 [[サード パーティ製のソフトウェア更新プログラムを有効にする]](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) を有効化して展開している。  
 
@@ -191,9 +191,6 @@ SCUP では引き続き、他のカタログとシナリオがサポートされ
 <!--1357861-->
 Package Conversion Manager は統合ツールとなりました。これを使用して、従来の Configuration Manager 2007 パッケージを Configuration Manager の現在のブランチのアプリケーションに変換することができます。 その後、依存関係、要件の規則、およびユーザーとデバイスのアフィニティなど、アプリケーションの機能を使用することができます。
 
-> [!Tip]  
-> Package Conversion Manager の既存の機能に関する以前のドキュメントについては、[TechNet](https://technet.microsoft.com/library/hh531519.aspx) を参照してください。 関連する情報は docs.microsoft.com ライブラリに移行中です。
-
 ### <a name="try-it-out"></a>試してみましょう。
  タスクを実行してみます。 試した結果の[フィードバック](capabilities-in-technical-preview-1804.md#bkmk_feedback)をお送りください。
 
@@ -206,7 +203,6 @@ Package Conversion Manager は統合ツールとなりました。これを使�
      - **Convert Package\(パッケージ変換\)** :一部のパッケージは、この操作でアプリケーションに簡単に変換することができます。
      - **修正と変換**:一部のパッケージでは、アプリケーションに変換する前に問題を修正する必要があります。  
 
-   これらの操作の詳細については、[パッケージを分析および変換する方法](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846244%28v%3dtechnet.10%29)に関するページを参照してください。  
 
 3. **[監視]** ワークスペースに移動して、 **[Package Conversion Status]\(パッケージ変換の状態\)** を選択します。 この新しいダッシュボードには、サイトでのパッケージの全体的な分析と変換の状態が示されます。 新しいバックグラウンド タスクでは、分析データの概要が自動的に示されます。  
 

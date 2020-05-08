@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 24c3a72eacea6446fb82785a25b0318d8cad0471
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3c52008089a6d23d5c4efe44f0970bb186eb334a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691390"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904643"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager のサポートされている SQL Server バージョン
 
@@ -65,7 +65,7 @@ SQL Server のトランザクション レプリケーションは、[データ�
 - 使用する SQL Server のバージョンが、Microsoft によって引き続きサポートされていること。
 - SQL Server で、SQL Server の 2 つのバージョン間のレプリケーションをサポートしていること。 詳しくは、[SQL Serverレプリケーションの旧バージョンとの互換性](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility)に関する記事をご覧ください。
 
-SQL Server 2016 以前では、SQL の各バージョンと Service Pack は、[Microsoft ライフサイクル ポリシー](https://aka.ms/sqllifecycle)に従ってサポートされています。 特定の SQL Server Service Pack のサポートには、基本の Service Pack バージョンへの後方互換性が失われる場合を除き、累積的な更新プログラムが含まれます。 SQL Server 2017 以降では、Service Pack は[最新のサービス モデル](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server/)に従うようになるためリリースされません。 SQL Server チームは引き続き、利用可能になった[累積的な更新プログラムを事前にインストールする](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)ことをお勧めします。
+SQL Server 2016 以前では、SQL の各バージョンと Service Pack は、[Microsoft ライフサイクル ポリシー](https://aka.ms/sqllifecycle)に従ってサポートされています。 特定の SQL Server Service Pack のサポートには、基本の Service Pack バージョンへの後方互換性が失われる場合を除き、累積的な更新プログラムが含まれます。 SQL Server 2017 以降では、Service Pack は[最新のサービス モデル](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server)に従うようになるためリリースされません。 SQL Server チームは引き続き、利用可能になった[累積的な更新プログラムを事前にインストールする](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)ことをお勧めします。
 
 特に指定のない限り、次のバージョンの SQL Server はすべてのアクティブ バージョンの Configuration Manager でサポートされます。 SQL Server の新しいバージョンのサポートが追加されている場合、そのサポートが追加される Configuration Manager のバージョンが示されます。 同様に、サポートが非推奨とされる場合は、Configuration Manager の影響を受けるバージョンの詳細を確認してください。
 

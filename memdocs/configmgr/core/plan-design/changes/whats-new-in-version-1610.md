@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d154dc0ba681a37ebb2155bfa1bcdb6d8734965f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073961"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904815"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Configuration Manager のバージョン 1610 の新機能
 
@@ -29,8 +29,8 @@ Configuration Manager Current Branch の更新プログラム 1610 は、バー�
 > 新しいサイトをインストールするには、Configuration Manager の基準バージョンを使用する必要があります。  
 >
 > 詳細については、下記のリンクをクリックしてください。    
-> - [新しいサイトのインストール](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [サイトで更新プログラムをインストールする](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [新しいサイトのインストール](../../servers/deploy/install/installing-sites.md)  
+> - [サイトで更新プログラムをインストールする](../../servers/manage/updates.md)  
 > - [基準バージョンと更新プログラムのバージョン](../../servers/manage/updates.md#bkmk_Baselines)
 
 以降のセクションでは、Configuration Manager のバージョン 1610 の変更点および導入された新機能について詳しく説明します。  
@@ -168,7 +168,7 @@ Configuration Manager コンソールの構成項目を使用して、Intune に
 
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>自動展開規則でコンテンツのサイズでフィルター処理する
 自動展開規則でソフトウェア更新プログラムのコンテンツのサイズでフィルター処理できるようになりました。 たとえば、2 MB 未満のソフトウェア更新プログラムだけをダウンロードするには、 **[コンテンツ サイズ (KB)]** フィルターを **[< 2048]** に設定します。 ネットワーク帯域幅が制限されている場合に、下位レベルの簡素化された Windows サービスのよりよいサポートのため、このフィルターを使用して、サイズの大きいソフトウェア更新プログラムが自動的にダウンロードされるのを防止します。 詳細については、以下を参照してください。
-- [Configuration Manager と下位レベルのオペレーティング システムでの簡素化された Windows サービス](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)
+- [Configuration Manager と下位レベルのオペレーティング システムでの簡素化された Windows サービス](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056)
 - [ソフトウェア更新プログラムの自動展開](../../../sum/deploy-use/automatically-deploy-software-updates.md)
 
 **[コンテンツ サイズ (KB)]** フィールドを構成するには、次のいずれかを実行します。

@@ -10,12 +10,12 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2ff86df999ab744d590b1ca120a8b566d18f446b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f04b777f030f9e55e1d5b17ace9ec8b83d9f8679
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701260"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906112"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Configuration Manager でのユーザー補助機能
 
@@ -89,5 +89,5 @@ Configuration Manager ユーザー インターフェイスのナビゲーショ
 - [ソフトウェア センターのユーザー ガイド](software-center.md)
 
 > [!NOTE]  
-> この記事の情報は、米国内で Microsoft 製品のライセンスを入手したユーザーにのみ適用されることがあります。 米国以外でこの製品を入手した場合には、ソフトウェア パッケージに付属している子会社の情報カードを使用するか、または [Microsoft アクセシビリティ Web サイト](https://go.microsoft.com/fwlink/?LinkId=8431)で Microsoft サポート サービスの窓口を参照してください。 このセクションに記載されている製品とサービスが利用できるかどうかを確認するには、各地の子会社にお問い合わせください。 アクセシビリティに関する情報は、日本語やフランス語などの他の言語でも提供されています。  
+> この記事の情報は、米国内で Microsoft 製品のライセンスを入手したユーザーにのみ適用されることがあります。 米国以外でこの製品を入手した場合には、ソフトウェア パッケージに付属している子会社の情報カードを使用するか、または [Microsoft アクセシビリティ Web サイト](https://www.microsoft.com/accessibility/)で Microsoft サポート サービスの窓口を参照してください。 このセクションに記載されている製品とサービスが利用できるかどうかを確認するには、各地の子会社にお問い合わせください。 アクセシビリティに関する情報は、日本語やフランス語などの他の言語でも提供されています。  
 

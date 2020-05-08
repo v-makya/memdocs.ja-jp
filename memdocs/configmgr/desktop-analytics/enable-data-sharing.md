@@ -10,12 +10,12 @@ ms.assetid: be680198-4cea-4378-a686-d52f382ba483
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7610b0e60f3ea02918c9dd98858a3b2bfd7c712
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f8dd7c4c561ca22c679ee8ae03764ebb20b87664
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708200"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906079"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Desktop Analytics のためにデータ共有を有効にする
 
@@ -74,6 +74,9 @@ Desktop Analytics で**拡張 (制限付き)** 診断データレベルを有効
 > プライバシーとデータの整合性を確保するため、診断データ エンドポイントとの通信時に、Windows によって Microsoft SSL 証明書がチェックされます (証明書のピン留め)。 SSL を傍受および検査することはできません。 Desktop Analytics を使用するには、以下のエンドポイントを SSL の検査から除外します。<!-- BUG 4647542 -->
 
 バージョン 2002 以降、Configuration Manager サイトがクラウド サービスに必要なエンドポイントへの接続に失敗すると、クリティカルなステータス メッセージ ID 11488 が生成されます。 サービスに接続できない場合、SMS_SERVICE_CONNECTOR コンポーネントのステータスがクリティカルに変わります。 Configuration Manager コンソールの[コンポーネントのステータス](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) ノードに、詳細なステータスが表示されます。<!-- 5566763 -->
+
+> [!NOTE]
+> Microsoft IP アドレス範囲の詳細については、「[Microsoft Public IP Space (Microsoft のパブリック IP スペース)](https://www.microsoft.com/download/details.aspx?id=53602)」を参照してください。 これらのアドレスは定期的に更新されます。 サービス別に細かく分かれておらず、これらの範囲内の任意の IP アドレスを使用できます。
 
 ### <a name="server-connectivity-endpoints"></a>サーバー接続のエンドポイント
 

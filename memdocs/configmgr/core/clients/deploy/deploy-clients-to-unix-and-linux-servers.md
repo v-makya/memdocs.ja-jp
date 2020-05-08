@@ -10,12 +10,12 @@ ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4375867e70cb7f2989b78572c7fc8e005f95be73
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9e8e40a6bdfa129a03e6042985e4956ffb21b5c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694040"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906313"
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-configuration-manager"></a>Configuration Manager で UNIX および Linux サーバーにクライアントを展開する方法
 
@@ -36,7 +36,7 @@ Linux または UNIX サーバーを Configuration Manager で管理するには
  クライアントをインストールした後、Configuration Manager コンソールでクライアント設定を指定して、Windows ベースのクライアントと同じ方法でクライアント エージェントを構成します。 詳細については、「  [Linux および UNIX サーバーのクライアント設定](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU)」をご覧ください。  
 
 ##  <a name="about-client-installation-packages-and-the-universal-agent"></a><a name="BKMK_AboutInstallPackages"></a> クライアント インストール パッケージとユニバーサル エージェントについて  
- 特定のプラットフォーム上に Linux および UNIX 用クライアントをインストールするには、クライアントをインストールするコンピューターに適したクライアント インストール パッケージを使用する必要があります。 適切なクライアント インストール パッケージは、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=525184)から各クライアントにダウンロードされるデータの一部として含まれています。 クライアント インストール パッケージに加え、クライアント ダウンロードには、各コンピューター上でクライアントのインストールを管理する **install** スクリプトも含まれています。  
+ 特定のプラットフォーム上に Linux および UNIX 用クライアントをインストールするには、クライアントをインストールするコンピューターに適したクライアント インストール パッケージを使用する必要があります。 適切なクライアント インストール パッケージは、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=47719)から各クライアントにダウンロードされるデータの一部として含まれています。 クライアント インストール パッケージに加え、クライアント ダウンロードには、各コンピューター上でクライアントのインストールを管理する **install** スクリプトも含まれています。  
 
  クライアントをインストールする場合は、使用するクライアント インストール パッケージに関係なく同じプロセスとコマンド ライン プロパティを使用できます。  
 
@@ -69,7 +69,7 @@ Linux または UNIX サーバーを Configuration Manager で管理するには
 
 ###  <a name="to-install-the-configuration-manager-client-on-linux-and-unix-servers"></a><a name="BKMK_ToInstallLnUClinent"></a> Linux および UNIX サーバーに構成マネージャー クライアントをインストールするには  
 
-1.  Windows コンピューターで、管理する [Linux または UNIX サーバーの適切なクライアント ファイルをダウンロードします](https://go.microsoft.com/fwlink/?LinkID=525184) 。  
+1.  Windows コンピューターで、管理する [Linux または UNIX サーバーの適切なクライアント ファイルをダウンロードします](https://www.microsoft.com/download/details.aspx?id=47719) 。  
 
 2.  Windows コンピューターで自己解凍型の .exe ファイルを実行して、インストール スクリプトとクライアントのインストール .tar ファイルを抽出します。  
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b30386745244900e7f525f8f45b25a598628bf43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b709d6ec0c0cda188502c314d945a70e8de71288
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078738"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905247"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-configuration-manager"></a>Configuration Manager の Technical Preview 1804 の機能
 
@@ -134,8 +134,6 @@ HTTP 接続を使用して通信するようにアプリケーション カタ�
 
 クライアントの問題を解決する場合、リアルタイムのログを表示する場合、または後で分析するために Configuration Manager クライアント コンピューターの状態をキャプチャする場合は、サポート センターを使用します。 サポート センターは、多くの管理者用トラブルシューティング ツールを統合する 1 つのツールです。 バグの修正、改善、新しいログ ビューアーのプレビューを含む最新バージョンのサポート センターのプレビューは、Technical Preview で利用できます。 サイト サーバー上の **cd.latest\SMSSETUP\Tools\SupportCenter** フォルダー内にあるサポート センターのインストーラーを探します。
 
- > [!Tip]  
- > サポート センターの既存の機能に関する以前のドキュメントは、[TechNet](https://technet.microsoft.com/library/dn688621.aspx) を参照してください。 関連する情報は docs.microsoft.com ライブラリに移行中です。  
 
 ### <a name="new-support-center-features"></a>新しいサポート センターの機能  
 

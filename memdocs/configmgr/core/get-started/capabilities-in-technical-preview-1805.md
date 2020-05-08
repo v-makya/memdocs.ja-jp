@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 88234bb3117850bc3280242671ae459308a5262e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d8c1cd6610bd09b2714951d8a755770b6347b2f6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696030"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905226"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-configuration-manager"></a>Configuration Manager の Technical Preview 1805 の機能
 
@@ -164,8 +164,6 @@ Configuration Manager では、既存の従来のクラウド配布ポイント�
 
 Windows Low Extra Delay Background Transport (LEDBAT) は、バックグラウンド ネットワーク転送を管理するための Windows Server の機能です。 サポートされている Windows Server のバージョンで実行される配布ポイントに対して、ネットワーク トラフィックを調整するオプションを有効にできます。 クライアントは利用可能な場合のみ、ネットワーク帯域幅を使用します。 
 
-Windows LEDBAT の詳細については、「[New transport advancements](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/)」(新しいトランスポートの発展) ブログ投稿を参照してください。
-
 
 ### <a name="prerequisites"></a>[前提条件]
 - Windows Server、バージョン 1709 での配布ポイント。  
@@ -310,7 +308,7 @@ Azure AD に参加している、または[ハイブリッドの Azure AD デバ
 
     - 既にサイトでこの前提条件を満たしている場合は、Azure AD アプリケーションを更新する必要があります。 Configuration Manager コンソールで、 **[管理]** ワークスペースに移動し、 **[クラウド サービス]** を展開して **[Azure Active Directory テナント]** を選択します。 Azure AD テナントを選択し、 **[アプリケーション]** ウィンドウで Web アプリケーションを選択して、リボンにある **[Update application setting]\(アプリケーション設定の更新\)** をクリックします。  
 
-- Windows 10 バージョン 1803 を実行し、Azure AD に参加しているクライアント (この要件は技術上、[シナリオ 3](#bkmk_token3) のみに適用されます)。 
+- Windows 10 バージョン 1803 を実行し、Azure AD に参加しているクライアント  (この要件は技術上、[シナリオ 3](#bkmk_token3) のみに適用されます)。 
 
 
 ### <a name="try-it-out"></a>試してみましょう。

@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 91c11e133c74cd3b55db09e8bf80fd6c4df7774d
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 4ed49ed3623b34bfb51fd66fafa858ae3951a5af
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210096"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906354"
 ---
 # <a name="configure-microsoft-edge-settings-in-configuration-manager"></a>Configuration Manager で Microsoft Edge 設定を構成する
 
 *適用対象:Configuration Manager (Current Branch)*
 
 <!-- 1357310 -->
-バージョン 1802 以降、Windows 10 クライアントで [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web ブラウザーを使用する場合、Configuration Manager のコンプライアンス設定ポリシーを作成し、Microsoft Edge の一部の設定を構成します。 
+バージョン 1802 以降、Windows 10 クライアントで [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) Web ブラウザーを使用する場合、Configuration Manager のコンプライアンス設定ポリシーを作成し、Microsoft Edge の一部の設定を構成します。 
 
 このポリシーは、Windows 10 バージョン 1703 以降のクライアントにのみ適用されます。 <!--511552-->
 

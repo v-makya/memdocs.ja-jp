@@ -10,12 +10,12 @@ ms.assetid: be276b34-e283-4386-8b45-5629e431c50d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05aeca86071ea823d3ebc3cf493bea4d418bad27
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63f6c7321301e5705c4188012ba53b50f4c37b57
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706850"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906030"
 ---
 # <a name="microsoft-endpoint-configuration-manager-faq"></a>Microsoft Endpoint Configuration Manager の FAQ
 
@@ -41,7 +41,7 @@ Microsoft Endpoint Manager は、すべてのデバイスを管理するため�
 - [Intune](https://docs.microsoft.com/intune)
 - [Desktop Analytics](../../desktop-analytics/overview.md)
 - [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- [デバイス管理の管理コンソール](https://go.microsoft.com/fwlink/?linkid=2109094)に含まれるその他の機能
+- [デバイス管理の管理コンソール](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)に含まれるその他の機能
 
 詳細については、Microsoft 365 担当の Microsoft コーポレート バイス プレジデントである Brad Anderson による次の投稿を参照してください。
 

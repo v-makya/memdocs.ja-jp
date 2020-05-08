@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54e18ae8da6d534e26e37da8fba898e60f5a2986
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5f85a8ffc81aa91bce09d6a76eeb5a52335d8b23
+ms.sourcegitcommit: dda5e6f00f79737348e850d971f15fc3093d6431
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079843"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82745200"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Intune デバイスのコンプライアンス対応ポリシーの監視
 
@@ -102,6 +102,11 @@ ms.locfileid: "82079843"
 ![特定の状態にあるデバイスの詳細を示しているダッシュボードの画像](./media/compliance-policy-monitor/drill-down-details.png)
 
 特定のユーザーが所有しているすべてのデバイスを表示する場合、ユーザーの電子メールを入力してグラフ レポートをフィルタリングできます。
+
+> [!TIP]
+> デバイスにサインインしているユーザーがいない場合は、対象のデバイス コンプライアンス ポリシーが適用されているデバイスにより、ユーザー プリンシパル名として**システム アカウント**を示すコンプライアンス レポートが Intune に送信されます。 これは、デバイス コンプライアンス ポリシーがユーザーまたはデバイスのグループを対象としており、コンプライアンス ポリシーの評価時にデバイスにサインインしているユーザーがいないことが原因で発生します。
+>
+> また、同じデバイスにサインインしているユーザーが複数いる場合に、現在サインインしているすべてのユーザーを対象としたコンプライアンス ポリシーがデバイスに適用されていると、デバイスにサインインしているすべてのユーザーがデバイス コンプライアンス ポリシーを評価して Intune に報告する必要があるため、デバイス コンプライアンス レポートに同じデバイスが複数回表示される可能性があります。
 
 #### <a name="filter-and-columns"></a>フィルターと列
 

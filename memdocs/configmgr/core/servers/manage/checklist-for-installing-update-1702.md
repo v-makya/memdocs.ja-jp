@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d3ae44892cd46a438113fb54dad0e290b8fb148e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 556ddb10f0ba25fc1c3cf4b215d5058d3221c7fe
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707740"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906462"
 ---
 # <a name="checklist-for-installing-update-1702-for-configuration-manager"></a>Configuration Manager の更新プログラム 1702 をインストールするためのチェックリスト
 
@@ -89,7 +89,7 @@ Current Branch バージョンの詳細については、「[Configuration Manag
 
 **Windows 10 の Windows アセスメント & デプロイメント キット (ADK) のバージョンを確認する:** Windows 10 ADK は、バージョン 1607 以降である必要があります。 ADK を更新する必要がある場合は、Configuration Manager の更新を開始する前に行います。 これにより、既定のブート イメージが Windows PE の最新バージョンに自動的に更新されることが保証されます (カスタム ブート イメージは手動で更新する必要があります)。
 
-ADK を更新する前にサイトを更新する場合は、ブート イメージの再生成に使うことができるスクリプトについて、ブログ「[Configuration Manager and the Windows ADK for Windows 10, version 1607](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/)」(Windows 10 バージョン 1607 の Configuration Manager と Windows ADK) をご覧ください。
+ADK を更新する前にサイトを更新する場合は、ブート イメージの再生成に使うことができるスクリプトについて、ブログ「[Configuration Manager and the Windows ADK for Windows 10, version 1607](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-the-windows-adk-for-windows-10-version/ba-p/274047)」(Windows 10 バージョン 1607 の Configuration Manager と Windows ADK) をご覧ください。
 
 **サイトと階層の状態を確認して、未解決の問題がないことを確認する:** サイトを更新する前に、サイト サーバー、サイト データベース サーバー、およびリモート コンピューターにインストールされているサイト システムの役割で、運用上のすべての問題を解決します。 運用上の問題があると、サイトの更新が失敗する可能性があります。
 

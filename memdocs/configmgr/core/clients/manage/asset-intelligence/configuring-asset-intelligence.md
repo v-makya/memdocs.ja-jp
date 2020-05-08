@@ -10,12 +10,12 @@ ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 56a65a0a4e1dd9a96e5725ea8c68cc435947bb08
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a5c89d3fdd82bfa654f806c6931bde2621e714b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694760"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906606"
 ---
 # <a name="configure-asset-intelligence-in-configuration-manager"></a>Configuration Manager の資産インテリジェンスの構成
 
@@ -139,7 +139,7 @@ ms.locfileid: "81694760"
 4.  **[インポート]** ページで、Microsoft Volume Licensing Services (MVLS) ファイル (.xml または .csv) と標準ライセンス ステートメント ファイル (.csv) のどちらをインポートするのかを指定します。 一般的なライセンス ステートメント ファイル作成の詳細については、このトピックの「 [インポート用の標準ライセンス ステートメント情報ファイルの作成](#BKMK_CreateGeneralLicenseStatement) 」を参照してください。  
 
     > [!WARNING]  
-    >  資産インテリジェンスカタログにインポートできる .csv 形式のMVLS ファイルをダウンロードするには、「 [Microsoft Volume Licensing Service Center](https://go.microsoft.com/fwlink/p/?LinkId=226547)」を参照してください。 この情報にアクセスするには、Web サイトに登録済アカウントを持っている必要があります。 MVLS ファイルを .xml 形式にする方法の詳細については、Microsoft アカウント担当者に問い合わせる必要があります。  
+    >  資産インテリジェンスカタログにインポートできる .csv 形式のMVLS ファイルをダウンロードするには、「 [Microsoft Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx)」を参照してください。 この情報にアクセスするには、Web サイトに登録済アカウントを持っている必要があります。 MVLS ファイルを .xml 形式にする方法の詳細については、Microsoft アカウント担当者に問い合わせる必要があります。  
 
 5.  ライセンス ステートメント ファイルへの UNC パスを入力、または **[参照]** を選択してネットワークで共有されているフォルダーとファイルを選択します。  
 

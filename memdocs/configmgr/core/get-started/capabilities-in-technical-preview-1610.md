@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6402205ae694d719845492b1af37000a0b9335c5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cee161747d5c0b462836b7c3a44e1460173b124c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705360"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905655"
 ---
 # <a name="capabilities-in-technical-preview-1610-for-configuration-manager"></a>Configuration Manager の Technical Preview 1610 の機能
 
@@ -29,7 +29,7 @@ ms.locfileid: "81705360"
 
 **このバージョンでお試しいただける新機能を次に示します。**  
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>自動展開規則でコンテンツのサイズでフィルター処理する
-自動展開規則でソフトウェア更新プログラムのコンテンツのサイズでフィルター処理できるようになりました。 たとえば、**コンテンツ サイズ (KB)** フィルターを **< 2048** に設定して、2 MB 未満のソフトウェア更新プログラムだけをダウンロードできます。 ネットワーク帯域幅が制限されている場合に、下位レベルの簡素化された Windows サービスのよりよいサポートのため、このフィルターを使用して、サイズの大きいソフトウェア更新プログラムが自動的にダウンロードされるのを防止します。 詳細については、「[Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)」(Configuration Manager と下位レベルのオペレーティング システムでの簡素化された Windows サービス) を参照してください。
+自動展開規則でソフトウェア更新プログラムのコンテンツのサイズでフィルター処理できるようになりました。 たとえば、**コンテンツ サイズ (KB)** フィルターを **< 2048** に設定して、2 MB 未満のソフトウェア更新プログラムだけをダウンロードできます。 ネットワーク帯域幅が制限されている場合に、下位レベルの簡素化された Windows サービスのよりよいサポートのため、このフィルターを使用して、サイズの大きいソフトウェア更新プログラムが自動的にダウンロードされるのを防止します。 詳細については、「[Configuration Manager and Simplified Windows Servicing on Down Level Operating Systems](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056)」(Configuration Manager と下位レベルのオペレーティング システムでの簡素化された Windows サービス) を参照してください。
 
 #### <a name="to-configure-the-content-size-field"></a>[コンテンツ サイズ] フィールドを構成するには
 **[コンテンツ サイズ (KB)]** フィールドを構成するには、ADR を作成する際に、自動展開規則の作成ウィザードの **[ソフトウェアの更新]** ページに移動するか、既存の ADR のプロパティの **[ソフトウェアの更新]** タブに移動します。

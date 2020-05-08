@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7ec5802a8931bc4397eaf302920f09d8597802fe
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 73aac9e1bfb7b902a7db28ba4be00a2a02277324
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705560"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905690"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-configuration-manager"></a>Configuration Manager の Technical Preview 1607 の機能
 
@@ -62,7 +62,7 @@ Configuration Manager クライアントの設定で、**エディションの�
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>複数の PXE による展開に同一のネットワーク アダプターを使用する
 Technical Preview バージョン 1607 では、(複数のデバイスで使用する、USB イーサネット アダプターなど) イーサネット アダプターを使用して複数のデバイスのイメージを作成する際に、イーサネット アダプターにハードウェア識別子を入力できるようにする新しい設定を有効にすることができます。 Configuration Manager は、PXE インストールを実行する際やクライアントの登録で一覧のハードウェア識別子を無視します。
 
-この問題の詳細については、[Configuration Manager OSD サポート チームのブログ](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/)をご覧ください。  
+この問題の詳細については、[Configuration Manager OSD サポート チームのブログ](https://techcommunity.microsoft.com/t5/configuration-manager-archive/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in/ba-p/273721)をご覧ください。  
 
 ### <a name="enable-the-feature-to-manage-duplicate-hardware-identifiers"></a>重複するハードウェア識別子を管理する機能を有効にする  
 1. Configuration Manager コンソールで、 **[管理]**  >  **[概要]**  >  **[Cloud Services]**  >  **[更新とサービス]**  >  **[機能]** の順に移動します。

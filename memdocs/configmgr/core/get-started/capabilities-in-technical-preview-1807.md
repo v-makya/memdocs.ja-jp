@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 398f16b8f75d894030d76406807f74bdaa4be9d5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695950"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905197"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Configuration Manager Technical Preview バージョン 1807 の機能 
 
@@ -82,7 +82,7 @@ Technical Preview Branch バージョン 1806 および 1806.2 を使用して O
 
 - クライアント OD で Configuration Manager コンソールを使用します。  
 
-    - 推奨されない代替方法: サーバー OS で、[Internet Explorer のセキュリティ強化構成](https://go.microsoft.com/fwlink/?LinkId=253461)を無効にします。  
+    - 推奨されない代替方法: サーバー OS で、[Internet Explorer のセキュリティ強化構成](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10))を無効にします。
 
 - コンソールを使用するコンピューターは、インターネットにアクセスし、次のサイトに接続できる必要があります。  
     - `https://aka.ms`  

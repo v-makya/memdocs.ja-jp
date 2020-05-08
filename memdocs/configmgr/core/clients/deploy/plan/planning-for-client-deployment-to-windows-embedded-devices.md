@@ -10,12 +10,12 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623125ad64c7ed421ea209137eb68f17891d7a81
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7848e3c0c38391ab61d10ad46cbb772c812539c7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694850"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906638"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-configuration-manager"></a>Configuration Manager での Windows Embedded デバイスへのクライアント展開の計画
 
@@ -46,11 +46,11 @@ ms.locfileid: "81694850"
 
  Configuration Manager では、次の種類の書き込みフィルターの管理がサポートされています。  
 
-- ファイル ベースの書き込みフィルター (FBWF) - 詳細については、「[ファイル ベースの書き込みフィルター](https://go.microsoft.com/fwlink/?LinkID=204717)」を参照してください。  
+- ファイル ベースの書き込みフィルター (FBWF) - 詳細については、「[ファイル ベースの書き込みフィルター](https://docs.microsoft.com/previous-versions/windows/embedded/aa940926(v=winembedded.5))」を参照してください。  
 
-- 拡張書き込みフィルター (EWF) - 詳細については、「[拡張書き込みフィルター](https://go.microsoft.com/fwlink/?LinkId=204718)」を参照してください。  
+- 拡張書き込みフィルター (EWF) - 詳細については、「[拡張書き込みフィルター](https://docs.microsoft.com/previous-versions/windows/embedded/ms912906(v=winembedded.5))」を参照してください。  
 
-- 統合書き込みフィルター (UWF) - 詳細については、「[統合書き込みフィルター](https://go.microsoft.com/fwlink/?LinkId=309236)」を参照してください。  
+- 統合書き込みフィルター (UWF) - 詳細については、「[統合書き込みフィルター](https://docs.microsoft.com/windows-hardware/customize/enterprise/unified-write-filter)」を参照してください。  
 
   Configuration Manager では、Windows Embedded デバイスが EWF RAM Reg モードの場合の書き込みフィルター操作をサポートしていません。  
 

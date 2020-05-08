@@ -17,20 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8fce5e8d7a92922d6061c33655bc4e83b3a1a95
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 3a10709972b0387681d00c8fe848079807c6293a
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80233492"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538092"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune はデバイスの MDM および MAM プロバイダーです
 
 Microsoft Intune は、モバイル デバイス管理 (MDM) とモバイル アプリケーション管理 (MAM) を中心にしたクラウドベースのサービスです。 Intune は、Microsoft の [Enterprise Mobility + Security (EMS) スイート](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)に含まれており、組織のデータを保護したまま、ユーザーの生産性を高めることができます。 Microsoft 365 や Azure Active Directory (Azure AD) などの他のサービスと統合されており、誰がアクセスできるか、何にアクセスできるか、そしてデータ保護のために Azure Information Protection を制御します。 これを Microsoft 365 と共に使う場合、従業員が各自のデバイスを生産的に活用できるようにしながら、同時に組織の情報を保護することができます。
 
-![Intune アーキテクチャのイメージ](./media/what-is-intune/intunearch_sm.png)
-
-[ここ](./media/what-is-intune/intunearchitecture.svg)をクリックすると、Intune アーキテクチャ ダイアグラムが大きな画像で表示されます。
+[![Intune アーキテクチャのイメージ](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 
 Intune では次のことができます。
 
@@ -61,6 +59,11 @@ Intune にデバイスを登録して管理すると、管理者は次のこと�
 - [デバイス プロファイルを使用してデバイスに機能と設定を適用する](../configuration/device-profiles.md)
 
 - [Microsoft Intune でデバイスを保護する](../protect/device-protect.md)
+
+### <a name="try-the-interactive-guide"></a>対話型ガイドを試す
+「[Microsoft Endpoint Manager を使用してデバイスを管理する](https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager)」の対話型ガイドでは、Microsoft Endpoint Manager 管理センターを使用して、モバイル アプリケーションとデスクトップ アプリケーションを管理および保護する方法を説明します。</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="manage-apps"></a>アプリを管理する
 

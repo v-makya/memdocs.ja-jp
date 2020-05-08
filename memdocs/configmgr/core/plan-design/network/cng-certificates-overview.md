@@ -10,12 +10,12 @@ ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4574b7ae97e8200da248a0b798677eacadb6229f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: deb3108d492a955eb0ec6b1635e306dcb85e0062
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703080"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904211"
 ---
 # <a name="cng-certificates-overview"></a>CNG 証明書の概要
 <!-- 1356191 --> 
@@ -23,7 +23,7 @@ ms.locfileid: "81703080"
 Configuration Manager の Cryptography: Next Generation (CNG) 証明書のサポートは制限されています。 Configuration Manager クライアントは、PKI クライアント認証証明書と CNG キー格納プロバイダー (KSP) の秘密キーを使用できます。 Configuration Manager クライアントは KSP をサポートしているので、PKI クライアント認証証明書用の TPM KSP など、ハードウェアベースの秘密キーをサポートしています。
 
 ## <a name="supported-scenarios"></a>サポートされるシナリオ
-次のシナリオに [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) 証明書テンプレートを使用できます。
+次のシナリオに [Cryptography API: Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) 証明書テンプレートを使用できます。
 
 - HTTPS 管理ポイントを使用したクライアントの登録と通信   
 - HTTPS 配布ポイントを使用したソフトウェアの配布とアプリケーションの展開   

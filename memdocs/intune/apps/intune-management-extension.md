@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c8e1551b49fce5074bd2e88d1d8802f62cca2bb
-ms.sourcegitcommit: 252e718dc58da7d3e3d3a4bb5e1c2950757f50e2
+ms.openlocfilehash: 749377ceecf29d9b900cff108fc4b736d6b8d0f2
+ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80808108"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82605169"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Intune で Windows 10 デバイスに対して PowerShell スクリプトを使用する
 
@@ -30,7 +30,7 @@ Windows 10 デバイスで実行するために Intune に PowerShell スクリ�
 
 この機能は、以下に適用されます。
 
-- Windows 10 以降
+- Windows 10 以降 (Windows 10 Home を除く)
 
 > [!NOTE]
 > Intune 管理拡張機能の前提条件が満たされると、PowerShell スクリプトまたは Win32 アプリがユーザーやデバイスに割り当てられたときに、Intune 管理拡張機能が自動的にインストールされます。 詳細については、Intune 管理拡張機能の[前提条件](../apps/intune-management-extension.md#prerequisites)を参照してください。
@@ -47,11 +47,14 @@ Intune 管理拡張機能は、Windows 10 MDM の標準機能を補完するも�
 
 Intune 管理拡張機能には次の前提条件があります。 前提条件が満たされると、PowerShell スクリプトまたは Win32 アプリがユーザーやデバイスに割り当てられたときに、Intune 管理拡張機能が自動的にインストールされます。
 
-- Windows 10 バージョン 1607 以降を実行しているデバイス。 デバイスが[一括自動登録](../enrollment/windows-bulk-enroll.md)を使用して登録される場合は、Windows 10 バージョン 1703 以降でデバイスを実行する必要があります。 Intune 管理拡張機能は S モードの Windows 10 ではサポートされません。S モードではストア以外にあるアプリの実行が許可されないためです。 
+- Windows 10 バージョン 1607 以降を実行しているデバイス。 デバイスが[一括自動登録](../enrollment/windows-bulk-enroll.md)を使用して登録される場合は、Windows 10 バージョン 1709 以降でデバイスを実行する必要があります。 Intune 管理拡張機能は S モードの Windows 10 ではサポートされません。S モードではストア以外にあるアプリの実行が許可されないためです。 
   
 - 次を含む、Azure Active Directory (AD) に参加しているデバイス:  
   
   - Hybrid Azure AD 参加済み: Azure Active Directory (AD) だけでなく、オンプレミスの Active Directory (AD) にも参加しているデバイス。 [Hybrid Azure Active Directory 参加の実装の計画](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)について、ガイダンスを参照してください。
+  
+  > [!TIP]
+  > 必ずデバイスを Azure AD に[参加](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)させます。 Azure AD への[登録](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)のみが行われているデバイスは、スクリプトを受信しません。  
 
 - 次を含む、Intune に登録されたデバイス:
 
@@ -71,8 +74,8 @@ Intune 管理拡張機能には次の前提条件があります。 前提条件
     - [クライアント アプリ ワークロード](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
     - [Configuration Manager のワークロードを Intune に切り替える方法](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
   
-> [!TIP]
-> 必ずデバイスを Azure AD に[参加](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)させます。 Azure AD への[登録](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)のみが行われているデバイスは、スクリプトを受信しません。
+> [!NOTE]
+> Window 10 VM の使用の詳細については、「[Intune での Windows 10 仮想マシンの使用](../fundamentals/windows-10-virtual-machines.md)」を参照してください。
 
 ## <a name="create-a-script-policy-and-assign-it"></a>スクリプト ポリシーを作成して割り当てる
 
@@ -125,6 +128,8 @@ Intune 管理拡張機能には次の前提条件があります。 前提条件
 - エンド ユーザーは、PowerShell スクリプトを実行するためにデバイスにサインインする必要はありません。
 
 - Intune 管理拡張機能のエージェントにより、Intune で 1 時間ごと、および再起動のたびに、新しいスクリプトまたは変更がないか確認されます。 ポリシーを Azure AD グループに割り当てた後に、PowerShell スクリプトを実行すると、実行結果がレポートされます。 スクリプトは一度実行されると、スクリプトまたはポリシーに変更が発生するまで、再実行されません。 スクリプトが失敗した場合、Intune 管理拡張機能エージェントでは、次の 3 つの連続する Intune 管理拡張機能エージェントのチェックインに対して、スクリプトの再試行が 3 回試行されます。
+
+- 共有デバイスの場合、サインインするすべての新しいユーザーに対して PowerShell スクリプトが実行されます。
 
 ### <a name="failure-to-run-script-example"></a>スクリプトの実行の失敗例
 午前 8 時

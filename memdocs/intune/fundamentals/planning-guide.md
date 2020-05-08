@@ -13,17 +13,17 @@ ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a65efa6e-4a48-47f3-8f6e-34a85ca64ced
-ms.reviewer: jeffbu, cgerth
+ms.reviewer: andredm7
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65d4745580a4b0d733ffe14be03f0f9893074586
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 613bb0ddf935815a4022fa483e0aad615c64121a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080098"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802040"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Intune の展開計画、設計および実装ガイド
 
@@ -53,7 +53,10 @@ Microsoft Intune を正常に展開するには、まず、適切に計画し、
 
 このガイドでは、Intune の展開計画、設計および実装プロセスを支援するために使用可能な追加の技術情報とテーブル テンプレートも提供されます。
 
-- [その他のリソース:リンクとテーブル テンプレート](planning-guide-resources.md)
+### <a name="additional-resources"></a>その他のリソース
+
+- [Microsoft Endpoint Manager の概念実証 (PoC) ガイド:](https://www.microsoft.com/microsoft-365/partners/endpoint-manager-poc) これは、組織内で PoC を成功させるためのフレームワークと技術ガイダンスを提供することを目的としています。
+- [リンクとテーブル テンプレート](planning-guide-resources.md)
 
 ## <a name="assumptions"></a>前提条件
 

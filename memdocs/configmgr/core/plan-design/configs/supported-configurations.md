@@ -10,12 +10,12 @@ ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 09618acc1c0950c3eaae79cca59fcf71dc7ef61e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 66770ea14c3ae53bad8e6df61b54c7c5e2d2aaa0
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688520"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904578"
 ---
 # <a name="supported-configurations-for-configuration-manager"></a>Configuration Manager のサポートされている構成
 
@@ -27,12 +27,12 @@ ms.locfileid: "81688520"
 
 Configuration Manager 機能に、さらに明確な構成が必要な場合、その情報は機能固有のドキュメントに含められ、これらのより一般的な構成の詳細を補足します。  
 
- 次のトピックで説明する製品とテクノロジが、Configuration Manager でサポートされています。 ただし、このコンテンツにそれらが含まれていても、その製品の個別のサポート ライフサイクルを超える製品サポートの延長を表すものではありません。 サポート ライフサイクルの範囲を超えた製品は、[延長セキュリティ更新プログラム (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) の対象となるすべての製品も含め、Configuration Manager での使用がサポートされません。 マイクロソフト サポート ライフサイクルの詳細については、 [「マイクロソフト サポート ライフサイクル」](https://go.microsoft.com/fwlink/p/?LinkId=208270) Web サイトを参照してください。 Configuration Manager での延長セキュリティ更新プログラムの詳細については、「[Supported OS versions for clients and devices for Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU)」(Configuration Manager でクライアントとデバイスに対してサポートされる OS のバージョン) を参照してください。
+ 次のトピックで説明する製品とテクノロジが、Configuration Manager でサポートされています。 ただし、このコンテンツにそれらが含まれていても、その製品の個別のサポート ライフサイクルを超える製品サポートの延長を表すものではありません。 サポート ライフサイクルの範囲を超えた製品は、[延長セキュリティ更新プログラム (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) の対象となるすべての製品も含め、Configuration Manager での使用がサポートされません。 マイクロソフト サポート ライフサイクルの詳細については、 [「マイクロソフト サポート ライフサイクル」](https://support.microsoft.com/lifecycle) Web サイトを参照してください。 Configuration Manager での延長セキュリティ更新プログラムの詳細については、「[Supported OS versions for clients and devices for Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU)」(Configuration Manager でクライアントとデバイスに対してサポートされる OS のバージョン) を参照してください。
 
 > [!NOTE]  
->  マイクロソフトのサポート ライフサイクル ポリシーについては、[マイクロソフト サポートの「ライフサイクル ポリシー FAQ」](https://go.microsoft.com/fwlink/p/?LinkId=31976)Web サイトを参照してください。  
+>  マイクロソフトのサポート ライフサイクル ポリシーについては、[マイクロソフト サポートの「ライフサイクル ポリシー FAQ」](https://support.microsoft.com/lifecycle)Web サイトを参照してください。  
 
- さらに、次のトピックに示されていない製品および製品バージョンは、[Enterprise Mobility および Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/)で告知されていない限り、Configuration Manager ではサポートされません。  このブログのコンテンツは、このドキュメントの本文よりも先に更新される場合があります。
+ さらに、次のトピックに示されていない製品および製品バージョンは、[Enterprise Mobility および Security ブログ](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity)で告知されていない限り、Configuration Manager ではサポートされません。  このブログのコンテンツは、このドキュメントの本文よりも先に更新される場合があります。
 
 
 -  [サイジングとスケールの数値](../../../core/plan-design/configs/size-and-scale-numbers.md)  

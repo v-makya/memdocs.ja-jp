@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 50e05d07ec3e2612c170157c45f5e64abe3766de
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cf6980def8a4f61248bd676edc0ca93f2546816e
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701330"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905262"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-configuration-manager"></a>Configuration Manager の Technical Preview 1802 の機能
 
@@ -56,7 +56,7 @@ ms.locfileid: "81701330"
  
 ## <a name="configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups"></a>Configuration Manager 境界グループを使用するように Windows の配信の最適化を構成する
 <!-- 1324696 -->
-Configuration Manager の境界グループを使って、企業ネットワークおよびリモート オフィスへのコンテンツ配布を定義して調整します。 [Windows の配信最適化](/windows/deployment/update/waas-delivery-optimization)は、Windows 10 デバイス間でコンテンツを共有するための、クラウド ベースのピア ツー ピア テクノロジです。 このリリース以降、ピア間でコンテンツを共有するときは、境界グループを使うように配信の最適化を構成します。 新しいクライアント設定は、クライアントでの配信最適化グループ識別子として境界グループ識別子を適用します。 クライアントは、配信の最適化クラウド サービスと通信するとき、この識別子を使って目的のコンテンツを含むピアを探します。 
+Configuration Manager の境界グループを使って、企業ネットワークおよびリモート オフィスへのコンテンツ配布を定義して調整します。 [Windows の配信最適化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)は、Windows 10 デバイス間でコンテンツを共有するための、クラウド ベースのピア ツー ピア テクノロジです。 このリリース以降、ピア間でコンテンツを共有するときは、境界グループを使うように配信の最適化を構成します。 新しいクライアント設定は、クライアントでの配信最適化グループ識別子として境界グループ識別子を適用します。 クライアントは、配信の最適化クラウド サービスと通信するとき、この識別子を使って目的のコンテンツを含むピアを探します。 
 
 ### <a name="prerequisites"></a>[前提条件]
 - 配信の最適化は Windows 10 クライアントでのみ利用できます
@@ -68,7 +68,7 @@ Configuration Manager の境界グループを使って、企業ネットワー�
 2. 新しい**配信の最適化**グループを選びます。
 3. 設定 **[配信の最適化グループ ID の Configuration Manager 境界グループを使用します。]** を有効にします。
 
-詳細については、[配信の最適化のオプション](/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization)に関するページの**グループ**配信モード オプションを参照してください。
+詳細については、[配信の最適化のオプション](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#how-microsoft-uses-delivery-optimization)に関するページの**グループ**配信モード オプションを参照してください。
 
 
 
@@ -96,16 +96,16 @@ Windows 10 の一括アップグレード用の既定のタスク シーケン�
 - **互換性のないアプリケーションを削除する**:このグループにステップを追加して、この Windows 10 のバージョンと互換性のないすべてのアプリケーションを削除します。 アプリケーションをアンインストールする方法はさまざまです。 アプリケーションが Windows インストーラーを使っている場合は、アプリケーションの Windows インストーラー展開の種類プロパティの **[プログラム]** タブから、 **[アンインストール プログラム]** コマンド ラインをコピーします。 そして、アンインストール プログラムのコマンド ラインの **[コマンド ラインの実行]** ステップを、このグループに追加します。 次に例を示します。 </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
 - **互換性のないドライバーを削除する**:このグループにステップを追加して、この Windows 10 のバージョンと互換性のないすべてのドライバーを削除します。
 - **サード パーティ セキュリティの削除/停止**:このグループにステップを追加して、サード パーティ セキュリティ プログラム (ウイルス対策など) を削除または停止します。
-   - サード パーティのディスク暗号化プログラムを使っている場合は、 **/ReflectDrivers** [コマンド ライン オプション](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)で、Windows セットアップにその暗号化ドライバーを提供します。 [[タスク シーケンス変数の設定]](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) ステップを、このグループのタスク シーケンスに追加します。 タスク シーケンス変数を **OSDSetupAdditionalUpgradeOptions** に設定します。 値をドライバーへのパス **/ReflectDriver** に設定します。 この[タスク シーケンス アクション変数](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS)をタスク シーケンスで使われる Windows セットアップ コマンド ラインに追加します。 このプロセスの他のガイダンスについては、ソフトウェアの製造元にお問い合わせください。
+   - サード パーティのディスク暗号化プログラムを使っている場合は、 **/ReflectDrivers** [コマンド ライン オプション](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)で、Windows セットアップにその暗号化ドライバーを提供します。 [[タスク シーケンス変数の設定]](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) ステップを、このグループのタスク シーケンスに追加します。 タスク シーケンス変数を **OSDSetupAdditionalUpgradeOptions** に設定します。 値をドライバーへのパス **/ReflectDriver** に設定します。 この[タスク シーケンス アクション変数](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS)をタスク シーケンスで使われる Windows セットアップ コマンド ラインに追加します。 このプロセスの他のガイダンスについては、ソフトウェアの製造元にお問い合わせください。
 
 ### <a name="new-groups-under-post-processing"></a>**[後処理]** の新しいグループ
 - **セットアップ ベースのドライバーを適用する**:このグループにステップを追加して、パッケージからセットアップ ベースのドライバー (.exe) をインストールします。
 - **サード パーティ セキュリティのインストール/有効化**:このグループにステップを追加して、サード パーティ セキュリティ プログラム (ウイルス対策など) をインストールまたは有効にします。 
-- **Windows の既定のアプリと関連付けを設定する**このグループにステップを追加して、Windows の既定のアプリとファイルの関連付けを設定します。 最初に、必要なアプリの関連付けで参照コンピューターを準備します。 それから、次のコマンドを実行してエクスポートします。 </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>XML ファイルをパッケージに追加します。 [[コマンド ラインの実行]](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) ステップをこのグループに追加します。 XML ファイルを含むパッケージを指定し、次のコマンド ラインを指定します。 </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> 詳細については、「[Export or import default application associations](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)」(既定のアプリケーションの関連付けをエクスポートまたはインポートする) を参照してください。
-- **カスタマイズと個人用設定を適用する**:このグループにステップを追加して、[スタート] メニューのカスタマイズ (プログラム グループの整理など) を適用します。 詳細については、「[Customize the Start screen](/windows-hardware/manufacture/desktop/customize-the-start-screen)」(スタート画面をカスタマイズする) を参照してください。
+- **Windows の既定のアプリと関連付けを設定する**このグループにステップを追加して、Windows の既定のアプリとファイルの関連付けを設定します。 最初に、必要なアプリの関連付けで参照コンピューターを準備します。 それから、次のコマンドを実行してエクスポートします。 </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>XML ファイルをパッケージに追加します。 [[コマンド ラインの実行]](../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) ステップをこのグループに追加します。 XML ファイルを含むパッケージを指定し、次のコマンド ラインを指定します。 </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> 詳細については、「[Export or import default application associations](https://docs.microsoft.com/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)」(既定のアプリケーションの関連付けをエクスポートまたはインポートする) を参照してください。
+- **カスタマイズと個人用設定を適用する**:このグループにステップを追加して、[スタート] メニューのカスタマイズ (プログラム グループの整理など) を適用します。 詳細については、「[Customize the Start screen](https://docs.microsoft.com/windows-hardware/manufacture/desktop/customize-the-start-screen)」(スタート画面をカスタマイズする) を参照してください。
 
 ### <a name="additional-recommendations"></a>その他の推奨事項
-- Windows のドキュメント「[Windows 10 のアップグレード エラーの解決](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)」を参照してください。 この記事には、アップグレード プロセスに関する詳細情報も含まれています。
+- Windows のドキュメント「[Windows 10 のアップグレード エラーの解決](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)」を参照してください。 この記事には、アップグレード プロセスに関する詳細情報も含まれています。
 - 既定の **[準備の確認]** ステップで、 **[最小空きディスク容量 (MB) を満たすことを確認する]** を有効にします。 値を、32 ビット OS のアップグレード パッケージの場合は **16384** (16 GB) 以上、64 ビットの場合は **20480** (20 GB) 以上に設定します。 
 - **SMSTSDownloadRetryCount** [組み込みタスク シーケンス変数](../../osd/understand/task-sequence-variables.md)を使って、ポリシーのダウンロードを再試行します。 現在の既定では、クライアントは 2 回再試行します。この変数は 2 に設定されます。 クライアントが企業ネットワークに有線接続されていない場合は、再試行回数を増やすと、クライアントがポリシーを取得するのに役立ちます。 この変数を使っても、ポリシーをダウンロードできない場合の障害の遅延以外に、悪影響はありません。<!-- 501016 --> また、**SMSTSDownloadRetryDelay** 変数を既定値の 15 秒から増やします。
 - インラインの互換性評価を実行します。 
@@ -227,14 +227,14 @@ Configuration Manager (Current Branch) バージョン 1710 では、[Cryptograp
 
 ## <a name="cloud-management-gateway-support-for-azure-resource-manager"></a>Azure Resource Manager に対するクラウド管理ゲートウェイのサポート
 <!-- 1324735 -->
-[クラウド管理ゲートウェイ](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG) のインスタンスを作成するとき、**Azure Resource Manager の展開**を作成するためのオプションがウィザードで提供されるようになりました。 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager で CMG を展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
+[クラウド管理ゲートウェイ](../clients/manage/cmg/plan-cloud-management-gateway.md) (CMG) のインスタンスを作成するとき、**Azure Resource Manager の展開**を作成するためのオプションがウィザードで提供されるようになりました。 [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager で CMG を展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
 
 CMG ウィザードでは、Azure 管理証明書を使う**従来のサービス展開**のためのオプションがまだ提供されています。 リソースの展開と管理を簡単にするため、すべての新しい CMG インスタンスに Azure Resource Manager デプロイ モデルを使うことをお勧めします。 可能であれば、Resource Manager で既存の CMG インスタンスを再展開してください。
 
 Configuration Manager では、既存の従来の CMG インスタンスが Azure Resource Manager デプロイ モデルに移行されることはありません。 Azure Resource Manager の展開を使って新しい CMG インスタンスを作成した後、従来の CMG インスタンスを削除します。 
 
 > [!IMPORTANT]
-> この機能では、Azure クラウド サービス プロバイダー (CSP) のサポートは有効になりません。 Azure Resource Manager での CMG の展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、「[Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)」(Azure CSP で使用可能な Azure サービス) を参照してください。  
+> この機能では、Azure クラウド サービス プロバイダー (CSP) のサポートは有効になりません。 Azure Resource Manager での CMG の展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、「[Available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)」(Azure CSP で使用可能な Azure サービス) を参照してください。  
 
 ### <a name="prerequisites"></a>[前提条件]
 - [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md) との統合。 Azure AD のユーザー探索は必要ありません。
@@ -317,7 +317,7 @@ Windows AutoPilot は、最新の方法で新しい Windows 10 デバイスを�
 
 ## <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Windows Defender Exploit Guard に対する Configuration Manager ポリシーの機能強化
 <!-- 1356220 -->
-攻撃の回避およびフォルダー アクセスの制御コンポーネントに対する新しいポリシー設定が、[Windows Defender Exploit Guard](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) 用に Configuration Manager に追加されました。
+攻撃の回避およびフォルダー アクセスの制御コンポーネントに対する新しいポリシー設定が、[Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) 用に Configuration Manager に追加されました。
 
 **フォルダー アクセスの制御の新しい設定**<br/>
 フォルダー アクセスの制御を構成するときのオプションとして、 **[ディスク セクターのみをブロックする]** と **[ディスク セクターのみを監査する]** の 2 つが新しく追加されました。 これら 2 つの設定を使うと、ブート セクターに対してだけフォルダー アクセスの制御を有効にし、特定のフォルダーまたは既定の保護されたフォルダーの保護を有効にしないことができます。 
@@ -332,20 +332,20 @@ Windows AutoPilot は、最新の方法で新しい Windows 10 デバイスを�
 
 ## <a name="microsoft-edge-browser-policies"></a>Microsoft Edge ブラウザーのポリシー
 <!-- 1357310 -->
-Windows 10 クライアントで [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web ブラウザーを使うユーザーは、Configuration Manager のコンプライアンス設定ポリシーを作成して、Microsoft Edge の一部の設定を構成できるようになりました。 現在、このポリシーには次の設定が含まれます。
+Windows 10 クライアントで [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) Web ブラウザーを使うユーザーは、Configuration Manager のコンプライアンス設定ポリシーを作成して、Microsoft Edge の一部の設定を構成できるようになりました。 現在、このポリシーには次の設定が含まれます。
 - **[Set Microsoft Edge browser as default]\(Microsoft Edge ブラウザーを既定として設定する\)** : Windows 10 既定アプリの設定で、Web ブラウザーを Microsoft Edge に構成します
-- **アドレス バーのドロップダウンを許可する**:Windows 10 バージョン 1703 以降が必要です。 詳細については、[AllowAddressBarDropdown ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)に関する説明を参照してください。
-- **Microsoft のブラウザー間でお気に入りの同期を許可する**:Windows 10 バージョン 1703 以降が必要です。 詳細については、[SyncFavoritesBetweenIEAndMicrosoftEdge ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)に関する説明を参照してください。
-- **終了時に閲覧データをクリアすることを許可する**:Windows 10 バージョン 1703 以降が必要です。 詳細については、[ClearBrowsingDataOnExit ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)に関する説明を参照してください。
-- **トラッキング拒否ヘッダーを許可する**:詳細については、[AllowDoNotTrack ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)に関する記事を参照してください。
-- **オートコンプリートを使用する**:詳細については、[AllowAutofill ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill)に関する記事を参照してください。
-- **Cookie を使用する**:詳細については、[AllowCookies ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)に関する記事を参照してください。
-- **ポップアップ ブロックを許可する**:詳細については、[AllowPopups ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)に関する記事を参照してください。
-- **アドレス バーで検索候補を許可する**:詳細については、[AllowSearchSuggestionsinAddressBar ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)に関する記事を参照してください。
-- **Internet Explorer へのイントラネット トラフィックの送信を許可する**:詳細については、[SendIntranetTraffictoInternetExplorer ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer)に関する記事を参照してください。
-- **Password Manager を許可する**:詳細については、[AllowPasswordManager ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)に関する記事を参照してください。
-- **開発者ツールを許可する**:詳細については、[AllowDeveloperTools ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools)に関する記事を参照してください。
-- **拡張機能を許可する**:詳細については、[AllowExtensions ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)に関する記事を参照してください。
+- **アドレス バーのドロップダウンを許可する**:Windows 10 バージョン 1703 以降が必要です。 詳細については、[AllowAddressBarDropdown ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)に関する説明を参照してください。
+- **Microsoft のブラウザー間でお気に入りの同期を許可する**:Windows 10 バージョン 1703 以降が必要です。 詳細については、[SyncFavoritesBetweenIEAndMicrosoftEdge ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)に関する説明を参照してください。
+- **終了時に閲覧データをクリアすることを許可する**:Windows 10 バージョン 1703 以降が必要です。 詳細については、[ClearBrowsingDataOnExit ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)に関する説明を参照してください。
+- **トラッキング拒否ヘッダーを許可する**:詳細については、[AllowDoNotTrack ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)に関する記事を参照してください。
+- **オートコンプリートを使用する**:詳細については、[AllowAutofill ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowautofill)に関する記事を参照してください。
+- **Cookie を使用する**:詳細については、[AllowCookies ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)に関する記事を参照してください。
+- **ポップアップ ブロックを許可する**:詳細については、[AllowPopups ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)に関する記事を参照してください。
+- **アドレス バーで検索候補を許可する**:詳細については、[AllowSearchSuggestionsinAddressBar ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)に関する記事を参照してください。
+- **Internet Explorer へのイントラネット トラフィックの送信を許可する**:詳細については、[SendIntranetTraffictoInternetExplorer ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer)に関する記事を参照してください。
+- **Password Manager を許可する**:詳細については、[AllowPasswordManager ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)に関する記事を参照してください。
+- **開発者ツールを許可する**:詳細については、[AllowDeveloperTools ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools)に関する記事を参照してください。
+- **拡張機能を許可する**:詳細については、[AllowExtensions ブラウザー ポリシー](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)に関する記事を参照してください。
 
 ### <a name="prerequisites"></a>[前提条件]
 - Azure Active Directory に参加している Windows 10 クライアント。 

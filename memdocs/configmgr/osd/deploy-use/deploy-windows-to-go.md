@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0174cea761da15cc57eeb55fba26070fe664bb76
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: add0d17205cc82b30f3a88558c690a813239b92a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690510"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906928"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Configuration Manager を使用して Windows To Go を展開する
 
@@ -23,7 +23,7 @@ ms.locfileid: "81690510"
 
 このトピックでは、Configuration Manager で Windows To Go をプロビジョニングする手順について説明します。 Windows To Go は Windows 8 のエンタープライズ機能で、コンピューターに USB 接続された外部ドライブからブート可能な Windows To Go ワークスペースを作成できます。コンピューターは、Windows 7 または Windows 8 の認定要件を満たしている必要がありますが、コンピューターで実行されているオペレーティング システムは問いません。 Windows To Go では、企業のデスクトップ コンピューターとノート パソコンで使用しているものと同じイメージを使用でき、同じ方法で管理できます。  
 
- Windows To Go の詳細については、「[Windows To Go: 機能の概要](https://go.microsoft.com/fwlink/p/?LinkId=263433)」をご覧ください。  
+ Windows To Go の詳細については、「[Windows To Go: 機能の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11))」をご覧ください。  
 
 ## <a name="provision-windows-to-go"></a>Windows To Go の準備  
  Windows To Go は、USB 接続の外部ドライブに保存されるオペレーティング システムです。 Windows To Go ドライブは、その他のオペレーティング システムの展開と同じようにプロビジョニングできます。 ただし、Windows To Go はユーザー中心のモバイルに特化したソリューションとして設計されているため、ドライブをプロビジョニングするには、少し異なる方法で行う必要があります。  

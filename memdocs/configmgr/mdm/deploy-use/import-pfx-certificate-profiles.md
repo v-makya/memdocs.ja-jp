@@ -10,12 +10,12 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7f72dcba7e7f1e3af0bf168ca83deb958094879a
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 3304d480f0650191a784a9152ae464e81c2207a1
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724596"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906412"
 ---
 # <a name="import-pfx-certificate-profiles"></a>PFX 証明書プロファイルインポート
 
@@ -28,7 +28,7 @@ Configuration Manager は、さまざまな種類のデバイスと OS バージ
 Configuration Manager を使用して証明書の資格情報をインポートし、PFX ファイルをデバイスにプロビジョニングします。 これらのファイルを使用して、暗号化されたデータ交換をサポートするユーザー固有の証明書を生成できます。
 
 > [!TIP]  
-> このプロセスの詳細な手順については、 [Configuration Manager で PFX 証明書プロファイルを作成して展開する方法に](https://blogs.technet.microsoft.com/karanrustagi/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager/)関するブログ投稿を参照してください。  
+> このプロセスの詳細な手順については、 [Configuration Manager で PFX 証明書プロファイルを作成して展開する方法に](https://docs.microsoft.com/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager)関するブログ投稿を参照してください。  
 
 ## <a name="create-a-profile"></a>プロファイルを作成する
 

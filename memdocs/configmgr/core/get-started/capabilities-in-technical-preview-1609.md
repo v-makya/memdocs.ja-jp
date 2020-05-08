@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7e803dd1cbacbbd65a5f2968e217656b088d281
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705450"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905701"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Configuration Manager の Technical Preview 1609 の機能
 
@@ -51,7 +51,6 @@ Endpoint Protection マルウェア対策ポリシーの設定の改善: Endpoin
 
 Upgrade Analytics を使用すると、デバイスの準備と Windows 10 との互換性を評価および分析して、簡単かつスムーズなアップグレードが可能になります。 Upgrade Analytics と Configuration Manager の統合により、Configuration Manager 管理コンソールでアップグレードの互換性データにアクセスし、デバイス リストから対象デバイスのアップグレードまたは修復ができます。
 
-Upgrade Analytics の詳細については、「[Get started with Upgrade Analytics](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started)」(Upgrade Analytics の概要) をご覧ください。
 
 ## <a name="native-connection-types-for-windows-10-vpn-hybrid-profiles"></a>Windows 10 VPN ハイブリッド プロファイルのネイティブ接続の種類
 
@@ -348,7 +347,7 @@ Configuration Manager の Technical Preview 1609 では、新しいダッシュ�
 - Office 365 クライアントのバージョン
 - Office 365 クライアントの言語
 - Office 365 クライアントのチャネル     
-詳細については、「[Office 365 ProPlus 更新プログラム チャネルの概要](https://technet.microsoft.com/library/mt455210.aspx)」をご覧ください。
+詳細については、「[Office 365 ProPlus 更新プログラム チャネルの概要](https://docs.microsoft.com/deployoffice/overview-update-channels)」をご覧ください。
 - Office 365 クライアントが使用可能な製品のセットで選択した自動展開規則
 
 ダッシュボードでは、次の操作を実行できます。

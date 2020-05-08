@@ -10,12 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f18ed2180f1d526e2afa4872e8fa9018c7e18721
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 04ed335c65369840085fe44ba2f1b81d7806a0e3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706880"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906047"
 ---
 # <a name="licensing-and-branches-for-configuration-manager"></a>Configuration Manager のライセンスとブランチ
 
@@ -32,7 +32,7 @@ ms.locfileid: "81706880"
 
 2016 年 10 月 1 日の時点で Configuration Manager ライセンスに対してソフトウェア アシュアランス (SA) が有効になっているお客様または同等のサブスクリプション権限を持っているお客様には、2016 年 10 月リリースのバージョン 1606 の Configuration Manager を使用する権限があります。 2016 年 10 月 1 日以降、Configuration Manager に対する権限を持つお客様には、インストール時に Current Branch および Long-Term Servicing Branch (LTSB) の 2 つのライセンス オプションが表示されます。
 
-Microsoft ボリューム ライセンス プログラムを通してご購入いただいた製品の使用条件については、「[Licensing Terms and Documentation (ライセンス条項とドキュメント)](https://go.microsoft.com/fwlink/?LinkId=800052)」をご覧ください。
+Microsoft ボリューム ライセンス プログラムを通してご購入いただいた製品の使用条件については、「[Licensing Terms and Documentation (ライセンス条項とドキュメント)](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)」をご覧ください。
 
 
 ## <a name="licensed-branches"></a>ライセンスされたブランチ
@@ -117,7 +117,7 @@ LTSB は、Current Branch バージョン 1606 をベースにしており、次
 
 - [VLSC の概要](https://www.microsoft.com/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- [Microsoft ボリューム ライセンスでの製品の使用条件](https://go.microsoft.com/fwlink/?LinkId=800052)
+- [Microsoft ボリューム ライセンスでの製品の使用条件](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)
 
 - ボリューム ライセンスをお持ちのお客様は、ライセンスの概要を[ボリューム ライセンス サービス センター](https://www.microsoft.com/Licensing/servicecenter/default.aspx)で確認できます。 **[ライセンス]** メニューに移動して、 **[ライセンスの概要]** を選択します。
 

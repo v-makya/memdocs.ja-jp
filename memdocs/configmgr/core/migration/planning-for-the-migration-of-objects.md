@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9777fb12a2d63a990587386ac33cb2749bf19a4e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702820"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905131"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>Configuration Manager オブジェクトの Configuration Manager の現在のブランチへの移行を計画する
 
@@ -123,7 +123,7 @@ System Center 2012 Configuration Manager または Configuration Manager Current
 構成項目と構成基準を移行できます。  
 
 > [!NOTE]  
->  移行では、Configuration Manager 2007 ソース階層の解釈なしの構成項目はサポートされていません。 これらの構成項目は、移行先階層に移行もインポートもできません。 解釈なしの構成項目については、Configuration Manager 2007 ドキュメント ライブラリの「[必要な構成管理の構成項目について](https://go.microsoft.com/fwlink/?LinkId=103846)」トピックの「解釈なしの構成項目」セクションを参照してください。  
+>  移行では、Configuration Manager 2007 ソース階層の解釈なしの構成項目はサポートされていません。 これらの構成項目は、移行先階層に移行もインポートもできません。 解釈なしの構成項目については、Configuration Manager 2007 ドキュメント ライブラリの「[必要な構成管理の構成項目について](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item)」トピックの「解釈なしの構成項目」セクションを参照してください。  
 
 Configuration Manager 2007 構成パックをインポートすることができます。 インポート処理により、自動的に構成パックが Configuration Manager Current Branch と互換性を持つように変換されます。  
 

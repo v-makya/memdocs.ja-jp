@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/05/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 554bc09aa57306010069df4a85baa70fafdc41a6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 7d8ea221b6c1768055e3ca1839c20ed64e2e3838
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086677"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802023"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune の Windows 10 Microsoft Defender ウイルス対策ポリシーの設定
 
@@ -82,7 +82,7 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
   - **はい** - リアルタイム監視の使用を強制します。 デバイス ユーザーはこの設定を変更できません。
 
 - **Enable on access protection (常時保護を有効にする)**  
-  CSP:[AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+  CSP:[AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935)
 
   オンデマンドではなく、継続的にアクティブなウイルス対策を構成します。
 
@@ -90,8 +90,16 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
   - **いいえ** - デバイス上で常時保護をブロックします。 デバイス ユーザーはこの設定を変更できません。
   - **はい** - デバイス上で常時保護がアクティブになります。
 
+- **受信ファイルと送信ファイルの監視**  
+  CSP:[Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943)
+
+  この設定を構成して、どの NTFS ファイルとプログラムの動作を監視するかを決定します。
+  - **すべてのファイルを監視する** (*既定*)
+  - **受信ファイルのみを監視する**
+  - **送信ファイルのみを監視する**
+
 - **動作の監視を有効にする**  
-  CSP:[AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
+  CSP:[AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
 
   既定では、Windows 10 デスクトップ デバイス上の Defender には動作監視機能が使用されます。
 
@@ -109,7 +117,7 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
   - **はい** - ネットワーク保護は有効になります。 デバイス ユーザーはこの設定を変更できません。
 
 - **すべてのダウンロード ファイルと添付ファイルをスキャンする**  
-  CSP:[EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939&clcid=0x409)
+  CSP:[EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939)
 
   ダウンロードしたすべてのファイルと添付ファイルをスキャンするように Defender を構成します。
 
@@ -118,7 +126,7 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
   - **はい** - すべてのダウンロードされたファイルと添付ファイルが Defender によってスキャンされます。 デバイス ユーザーはこの設定を変更できません。
 
 - **Scan scripts that are used in Microsoft browsers (Microsoft のブラウザーで使用されているスクリプトをスキャンする)**  
-  CSP:[AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
+  CSP:[AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054)
 
   スクリプトをスキャンするように Defender を構成します。
 
@@ -127,7 +135,7 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
   - **はい** - Defender によってスクリプトがスキャンされます。 デバイス ユーザーはこの設定を変更できません。
 
 - **ネットワーク ファイルをスキャンする**  
-  CSP:[AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&clcid=0x409)
+  CSP:[AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&)
 
   ネットワーク ファイルをスキャンするように Defender を構成します。
 
@@ -136,7 +144,7 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
   - **はい** - ネットワーク ファイルのスキャンを有効にします。 デバイス ユーザーはこの設定を変更できません。
 
 - **Scan emails (メールをスキャンする)**  
-  CSP:[AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052&clcid=0x409)
+  CSP:[AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
 
   着信メールをスキャンするように Defender を構成します。
 
@@ -147,7 +155,7 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
 ## <a name="remediation"></a>修復
 
 - **Number of days (0-90) to keep quarantined malware (検査されたマルウェアを保持する日数 (0-90))**  
-  CSP:[DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055&clcid=0x409)
+  CSP:[DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
 
   検査された項目がシステムによって自動的に削除されるまで保持される日数を 0 から 90 の範囲で指定します。 値を 0 にすると、項目は隔離されたままになり、自動的に削除されません。
 
@@ -160,7 +168,7 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
   - **すべてのサンプルを自動的に送信する**
 
 - **Action to take on potentially unwanted apps (望ましくない可能性のあるアプリに対して実行するアクション)**  
-  CSP:[PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051&clcid=0x409)
+  CSP:[PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051)
 
   望ましくない可能性のあるアプリケーション (PUA) の検出レベルを指定します。 望ましくない可能性のあるソフトウェアをダウンロードするか、デバイスにインストールしようとすると、Defender からユーザーに警告されます。
 
@@ -170,7 +178,7 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
   - **監査モード** - Defender で、望ましくない可能性のあるアプリケーションが検出されますが、対策は何も行われません。 イベント ビューアーで Defender によって作成されたイベントを検索することで、Defender でアプリケーションに対して実行されたアクションに関する情報を確認できます。
 
 - **Actions for detected threats (検出された脅威に対するアクション)**  
-  CSP:[ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938&clcid=0x409)
+  CSP:[ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938)
 
   マルウェアの脅威レベルに基づいて、Defender で検出されたマルウェアに対して実行されるアクションを指定します。
   
@@ -193,7 +201,7 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
 ## <a name="scan"></a>スキャン
 
 - **アーカイブ ファイルをスキャンする**  
-  CSP:[AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047&clcid=0x409)
+  CSP:[AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
 
   ZIP ファイルや CAB ファイルなどのアーカイブ ファイルをスキャンするように Defender を構成します。
 
@@ -203,7 +211,7 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
   - **はい** - アーカイブ ファイルのスキャンを有効にします。 デバイス ユーザーはこの設定を変更できません。
 
 - **Use low CPU priority for scheduled scans (スケジュールされたスキャン用に低い CPU 優先度を使用する)**  
-  CSP:[EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944&clcid=0x409)
+  CSP:[EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944)
 
   スケジュールされたスキャン用に CPU 優先度を構成します。
   - **未構成** (*既定値*) - 設定はシステムの既定値に戻ります。つまり、CPU の優先度は変更されません。
@@ -211,7 +219,7 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
   - **はい** - スケジュールされたスキャン中に低い CPU 優先度が使用されます。 デバイス ユーザーはこの設定を変更できません。
 
 - **Disable catch-up full scan (キャッチアップ フル スキャンを無効にする)**  
-  CSP:[DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042&clcid=0x409)
+  CSP:[DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042)
 
   スケジュールされたフル スキャンのキャッチアップ スキャンを構成します。 キャッチアップ スキャンとは、定期的にスケジュールされたスキャンが実行されなかった場合に開始されるスキャンです。 スケジュールされたスキャンが実行されなかった理由は、通常、スキャンの予定時刻にコンピューターの電源が切られていたためです。
 
@@ -220,7 +228,7 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
   - **はい** - スケジュールされたフル スキャンのキャッチアップ スキャンが適用され、ユーザーがそれを無効にすることはできません。 2 回続けてスキャンの予定時刻にコンピューターがオフラインになっていた場合は、次回のコンピューターへのログオン時にキャッチアップ スキャンが開始されます。 スケジュールされたスキャンが構成されていない場合は、キャッチアップ スキャンは実行されません。 デバイス ユーザーはこの設定を変更できません。
 
 - **Disable catchup quick scan (キャッチアップ クイック スキャンを無効にする)**  
-  CSP:[DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941&clcid=0x409)
+  CSP:[DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941)
 
   スケジュールされたクイック スキャンのキャッチアップ スキャンを構成します。 キャッチアップ スキャンとは、定期的にスケジュールされたスキャンが実行されなかった場合に開始されるスキャンです。 スケジュールされたスキャンが実行されなかった理由は、通常、スキャンの予定時刻にコンピューターの電源が切られていたためです。
 
@@ -229,12 +237,12 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
   - **はい** - スケジュールされたクイック スキャンのキャッチアップ スキャンが適用され、ユーザーがそれを無効にすることはできません。 2 回続けてスキャンの予定時刻にコンピューターがオフラインになっていた場合は、次回のコンピューターへのログオン時にキャッチアップ スキャンが開始されます。 スケジュールされたスキャンが構成されていない場合は、キャッチアップ スキャンは実行されません。 デバイス ユーザーはこの設定を変更できません。
 
 - **CPU usage limit per scan (スキャンごとの CPU 使用率の制限)**  
-  CSP:[AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046&clcid=0x409)
+  CSP:[AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
 
   Defender スキャンの平均 CPU 負荷率を 0 から 100 の割合で指定します。
 
 - **フル スキャン中にマップされたネットワーク ドライブをスキャンする**  
-  CSP:[AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945&clcid=0x409)
+  CSP:[AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945)
 
   マップされたネットワーク ドライブをスキャンするように Defender を構成します。
 
@@ -243,13 +251,13 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
   - **はい** - マップされたネットワーク ドライブのスキャンを有効にします。 デバイス ユーザーはこの設定を変更できません。
 
 - **Run daily quick scan at (毎日スキャンを実行する時刻)**  
-  CSP:[ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
+  CSP:[ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   Defender クイック スキャンを実行する時刻を選択します。
   既定では、これは **[未構成]** です。
 
 - **スキャンの種類**  
-  CSP:[ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+  CSP:[ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
 
   Defender で実行するスキャンの種類を選択します。
 
@@ -271,14 +279,14 @@ Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プ�
 ## <a name="updates"></a>更新プログラム
 
 - **Enter how often (0-24 hours) to check for security intelligence updates (セキュリティ インテリジェンスの更新を確認する頻度 (0-24 時間) の入力)**  
-  CSP:[SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936&clcid=0x409)
+  CSP:[SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   署名の確認に使用する間隔を 0 から 24 (時間単位) の範囲で指定します。 値を 0 にすると、新しい署名は確認されなくなります。 値が 2 の場合、2 時間ごとに確認されます。
 
 ## <a name="user-experience"></a>ユーザー側の表示と操作
 
 - **Allow user access to Microsoft Defender app (Microsoft Defender アプリへのユーザー アクセスを許可する)**  
-  CSP:[AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043&clcid=0x409)  
+  CSP:[AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043)  
 
   - **未構成** (*既定値*) - この設定を選択すると、UI と通知が許可されるクライアントの既定値に戻ります。
   - **いいえ** - Defender ユーザー インターフェイス (UI) にアクセスできず、通知は抑制されます。

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: 138ff268f42dae1c15e11b34c92e6c7a3044705b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a870d2bf18b9e7f064e914f450aee0f5e3e2e545
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078449"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906712"
 ---
 # <a name="prerequisites-for-software-updates-in-configuration-manager"></a>Configuration Manager でのソフトウェア更新の前提条件
 
@@ -83,7 +83,7 @@ WSUS 6.2 および 6.3 で**アップグレード**分類を同期するには�
 
 - **アップグレード**分類を同期する前に、ソフトウェアの更新ポイントとサイト サーバーに、2015 年 10 月にリリースされた [KB 3095113](https://support.microsoft.com/kb/3095113) をインストールする必要があります。
   - この更新プログラムにより、**アップグレード**分類が有効になります。
-- Windows 10 バージョン 1607 以降をサービスするには、[KB 3159706](https://support.microsoft.com/en-us/help/3159706) をインストールして構成する必要があります。 KB 3159706 は、2016 年 5 月にリリースされました。
+- Windows 10 バージョン 1607 以降をサービスするには、[KB 3159706](https://support.microsoft.com/help/3159706) をインストールして構成する必要があります。 KB 3159706 は、2016 年 5 月にリリースされました。
   - この更新プログラムにより、WSUS が Windows 10 バージョン 1607 以降のアップグレードに使用されるファイルをネイティブに復号化できるようになります。
 
 >[!IMPORTANT]
@@ -95,7 +95,7 @@ WSUS 6.2 および 6.3 で**アップグレード**分類を同期するには�
 
 ### <a name="historical-information-about-kb-3095113"></a>KB 3095113 に関する履歴情報
 
- [KB 3095113](https://support.microsoft.com/kb/3095113) は、Windows 10 のアップグレードのサポートを WSUS に追加するために、2015 年 10 月に[修正プログラムとしてリリース](https://blogs.technet.microsoft.com/wsus/2015/12/03/important-update-for-wsus-4-0-kb-3095113/)されました。 この更新プログラムにより、WSUS は Windows 10 の**アップグレード**分類で更新プログラムを同期および配布できるようになりました。
+ [KB 3095113](https://support.microsoft.com/kb/3095113) は、Windows 10 のアップグレードのサポートを WSUS に追加するために、2015 年 10 月に[修正プログラムとしてリリース](https://docs.microsoft.com/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113)されました。 この更新プログラムにより、WSUS は Windows 10 の**アップグレード**分類で更新プログラムを同期および配布できるようになりました。
 
 [KB 3095113](https://support.microsoft.com/kb/3095113) を最初にインストールせずにアップグレードを同期する場合、WSUS データベース (SUSDB) に使用できないデータを読み込みます。 アップグレードを適切に展開するには、そのデータをクリアする必要があります。 この状態の Windows 10 アップグレードは、ソフトウェア更新プログラムのダウンロード ウィザードを使用してダウンロードすることはできません。
 
@@ -115,13 +115,13 @@ ERROR: DownloadContentFiles() failed with hr=0x80073633
 # This log is truncated for readability.
 ```
 
-以前は、これらのエラーが発生すると、[WSUS の解決手順](https://blogs.technet.microsoft.com/wsus/2016/01/29/how-to-delete-upgrades-in-wsus/)の変更されたバージョンを実行することで解決されました。 これらの手順は、KB 3159706 のインストール後に必要な手動の手順を実行しない場合の解決策に似ているため、両方の手順を 1 つの解決策として次のセクションにまとめました。
+以前は、これらのエラーが発生すると、[WSUS の解決手順](https://docs.microsoft.com/archive/blogs/wsus/how-to-delete-upgrades-in-wsus)の変更されたバージョンを実行することで解決されました。 これらの手順は、KB 3159706 のインストール後に必要な手動の手順を実行しない場合の解決策に似ているため、両方の手順を 1 つの解決策として次のセクションにまとめました。
 
 - [KB 3095113 または KB 3159706 をインストールする前にアップグレードの同期から回復するには](#bkmk_fix-upgrades)
 
 ### <a name="historical-information-about-kb-3159706"></a>KB 3159706 に関する履歴情報
 
-KB 3148812 は、WSUS が Windows 10 パッケージのアップグレードに使用される .esd ファイルをネイティブに復号化できるようにするため、2016 年 4 月に最初にリリースされました。 [KB 3148812 は、一部の顧客で問題が発生](https://blogs.technet.microsoft.com/wsus/2016/05/05/the-long-term-fix-for-kb3148812-issues/)したため、[KB 3159706](https://support.microsoft.com/en-us/help/3159706) に置き換えられました。 Windows 10 バージョン 1607 以降のデバイスをサービスするには、すべてのソフトウェアの更新ポイントとサイト サーバーに KB 3159706 をインストールする必要があります。 ただし、KB をインストールした後に次の手動の手順を実行する必要があることを理解していないと、問題が発生する可能性があります。
+KB 3148812 は、WSUS が Windows 10 パッケージのアップグレードに使用される .esd ファイルをネイティブに復号化できるようにするため、2016 年 4 月に最初にリリースされました。 [KB 3148812 は、一部の顧客で問題が発生](https://docs.microsoft.com/archive/blogs/wsus/the-long-term-fix-for-kb3148812-issues)したため、[KB 3159706](https://support.microsoft.com/help/3159706) に置き換えられました。 Windows 10 バージョン 1607 以降のデバイスをサービスするには、すべてのソフトウェアの更新ポイントとサイト サーバーに KB 3159706 をインストールする必要があります。 ただし、KB をインストールした後に次の手動の手順を実行する必要があることを理解していないと、問題が発生する可能性があります。
 
 1. 管理者特権でのコマンド プロンプトから `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing` を実行します。
 1. すべての WSUS サーバーで WSUS サービスを再起動します。

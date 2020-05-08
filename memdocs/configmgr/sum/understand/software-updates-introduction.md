@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: c857997bdbeed51286e874dcbecf00b414dfe6a0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bd384edafd6464073b33a593a56bc88ba2fb0b87
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81699960"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906763"
 ---
 # <a name="introduction-to-software-updates-in-configuration-manager"></a>Configuration Manager のソフトウェア更新プログラムの概要
 
@@ -275,7 +275,7 @@ Configuration Manager のソフトウェア更新プログラムには、企業�
  書き込みフィルターを使用する内蔵デバイスを Configuration Manager が管理するしくみの詳細については、「[Planning for client deployment to Windows Embedded devices](../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)」(Windows Embedded デバイスへのクライアント展開の計画) を参照してください。  
 
 ##  <a name="extend-software-updates-in-configuration-manager"></a><a name="BKMK_ExtendSoftwareUpdates"></a> Configuration Manager でのソフトウェア更新プログラムの拡張  
- Microsoft Update から利用できないソフトウェア更新プログラムを管理するには、System Center Updates Publisher を使用します。 ソフトウェア更新プログラムを更新サーバーに公開し、Configuration Manager でソフトウェア更新プログラムを同期した後で、そのソフトウェア更新プログラムを Configuration Manager クライアントに展開できます。 Updates Publisher の詳細については、「[Updates Publisher 2011](https://go.microsoft.com/fwlink/p/?LinkId=252947)」を参照してください。  
+ Microsoft Update から利用できないソフトウェア更新プログラムを管理するには、System Center Updates Publisher を使用します。 ソフトウェア更新プログラムを更新サーバーに公開し、Configuration Manager でソフトウェア更新プログラムを同期した後で、そのソフトウェア更新プログラムを Configuration Manager クライアントに展開できます。 Updates Publisher の詳細については、「[Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))」を参照してください。  
 
 ## <a name="next-steps"></a>次のステップ
 [ソフトウェア更新プログラムの計画](../plan-design/plan-for-software-updates.md)

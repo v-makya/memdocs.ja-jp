@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e97322fa8a126203bf6e4d1e7a3703b92ded339
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: baffa150b416b778e41a59fdf4e5a1b686cdae7b
+ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536845"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82538138"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Microsoft Intune アプリの管理とは
 
@@ -98,17 +98,22 @@ Intune では、アプリを実行するデバイス上で必要なアプリを�
     - iOS
     - macOS
     - Android
-- **ポリシー**:
+- **ポリシー**: 
     - **[アプリ保護ポリシー]** :このオプションを選択すると、アプリに設定を関連付けて、使用される会社のデータを保護できます。 たとえば、アプリの機能による他のアプリとの通信を制限することや、会社のアプリにアクセスしようとするユーザーに PIN の入力を求めることができます。 詳しくは、[アプリ保護ポリシー](app-protection-policies.md)に関するページをご覧ください。
     - **[アプリ構成ポリシー]** :ユーザーがアプリを実行するときに必要となる場合がある設定を指定するには、このオプションを選択します。 詳しくは、[アプリの構成ポリシー](app-configuration-policies-use-ios.md)、[iOS アプリ構成ポリシー](app-configuration-policies-use-ios.md)、および [Android アプリ構成ポリシー](app-configuration-policies-overview.md)に関するページをご覧ください。
     - **[iOS アプリ プロビジョニング プロファイル]** : iOS アプリには、プロビジョニング プロファイルと、証明書によって署名されたコードが含まれます。 証明書の期限が切れると、アプリを実行できなくなります。 Intune には、有効期限が近づいているアプリを持つデバイスに新しいプロビジョニング プロファイルのポリシーを事前に割り当てるツールが用意されています。 詳しくは、[iOS アプリ プロビジョニング プロファイル](app-provisioning-profile-ios.md)に関するページをご覧ください。
     - **[S モードの補足ポリシー]** : マネージド S モード デバイスでの追加アプリケーションの実行を承認するには、このオプションを選択します。 詳しくは、[S モードの補足ポリシー](apps-win32-s-mode.md)に関するページをご覧ください。
     - **[ポリシー セット]** : アプリ、ポリシー、および作成したその他の管理オブジェクトの割り当て可能なコレクションを作成するには、このオプションを選択します。 詳しくは、[ポリシー セット](../fundamentals/policy-sets.md)に関するページをご覧ください。
-- **[その他]** :   
+- **[その他]** :    
     - **[アプリの選択的ワイプ]** :このオプションを選択すると、選択したユーザーのデバイスから会社のデータのみを削除することができます。 詳しくは、[アプリの選択的ワイプ](apps-selective-wipe.md)に関するページをご覧ください。
     - **[アプリのカテゴリ]** :アプリのカテゴリ名を追加、ピン留め、削除します。
     - **[電子書籍]** : 一部のアプリ ストアでは、社内で使用するアプリやブックの複数のライセンスを購入できます。 詳細については、「[Microsoft Intune によるボリューム購入アプリとブックの管理](vpp-apps.md)」を参照してください。
 - **[ヘルプとサポート]** :トラブルシューティング、サポートの要求、または Intune の状態の表示を行います。 詳しくは、[問題のトラブルシューティング](../fundamentals/help-desk-operators.md)に関するページをご覧ください。
+
+### <a name="try-the-interactive-guide"></a>対話型ガイドを試す
+「[Microsoft Endpoint Manager を使用してモバイル アプリケーションとデスクトップ アプリケーションを管理および保護する](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager)」の対話型ガイドでは、Microsoft Endpoint Manager 管理センターを使用して、Intune での登録したデバイスの管理、ポリシー準拠の強制、組織のデータの保護を行う方法を説明します。</br></br>
+
+> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
 
 ## <a name="additional-information"></a>追加情報
 コンソール内の次の項目では、アプリに関連する機能が提供されます。

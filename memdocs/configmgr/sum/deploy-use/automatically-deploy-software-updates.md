@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: eca3227a023561a099804ef0928bfee7a7aff2c6
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: fc2f2644ff042598d3df0ddfc1fd9d4d1adcc34a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110442"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906785"
 ---
 #  <a name="automatically-deploy-software-updates"></a>ソフトウェア更新プログラムの自動展開  
 
@@ -85,7 +85,7 @@ ADR を使用して、ソフトウェア更新プログラムを自動的に承�
 
      - ADR におけるソフトウェア更新プログラムの上限数は 1000 です。  
 
-     - 必要に応じて、自動展開規則でソフトウェア更新プログラムのコンテンツのサイズでフィルター処理を行います。 詳細については、「[Configuration Manager と下位レベルのオペレーティング システムでの簡素化された Windows サービス](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)」をご覧ください。  
+     - 必要に応じて、自動展開規則でソフトウェア更新プログラムのコンテンツのサイズでフィルター処理を行います。 詳細については、「[Configuration Manager と下位レベルのオペレーティング システムでの簡素化された Windows サービス](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056)」をご覧ください。  
 
      - バージョン 1910 以降では、自動展開規則の更新フィルターとして **[展開済み]** を使用できます。 このフィルターは、パイロットまたはテスト コレクションへの展開が必要な可能性がある新しい更新プログラムを識別するのに役立ちます。 ソフトウェア更新プログラム フィルターは、古い更新プログラムの再展開を回避するのにも役立ちます。 
          - **[展開済み]** をフィルターとして使用する場合は、既に別のコレクション (パイロットやテストのコレクションなど) に更新プログラムを展開している可能性があることに注意してください。 <!--4852033-->

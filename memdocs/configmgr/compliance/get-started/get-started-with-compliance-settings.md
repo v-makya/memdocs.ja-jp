@@ -10,12 +10,12 @@ ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 59b0b799fd54e0e613f78b11b48b53b19d20ddbf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9143c224082f00b882d3cb557b47b737012393fa
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692290"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906336"
 ---
 # <a name="get-started-with-compliance-settings-in-configuration-manager"></a>Configuration Manager のコンプライアンス設定を使ってみる
 
@@ -107,7 +107,7 @@ Configuration Manager のコンプライアンス設定を作成する前に、�
 
 ## <a name="microsoft-edge-browser-profiles"></a>Microsoft Edge ブラウザーのポリシー
 <!-- 1357310 -->
-バージョン 1802 以降、Windows 10 クライアントで [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web ブラウザーを使用する場合、コンプライアンス設定ポリシーを作成し、Microsoft Edge の一部の設定を構成します。 
+バージョン 1802 以降、Windows 10 クライアントで [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) Web ブラウザーを使用する場合、コンプライアンス設定ポリシーを作成し、Microsoft Edge の一部の設定を構成します。 
 
 詳細については、[Microsoft Edge ブラウザー プロファイル](../deploy-use/browser-profiles.md)に関するページを参照してください。
 

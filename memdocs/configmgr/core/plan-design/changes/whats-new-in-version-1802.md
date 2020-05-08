@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 11066470347db0f3ffbfadda9897aed92baa645b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073604"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904657"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Configuration Manager のバージョン 1802 の新機能
 
@@ -169,7 +169,7 @@ Surface デバイス ダッシュボードには、お使いの環境内で見�
 
 ### <a name="microsoft-edge-browser-policies"></a>Microsoft Edge ブラウザーのポリシー
 <!-- 1357310 -->
-Windows 10 クライアントで [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web ブラウザーを使用する場合、Configuration Manager のコンプライアンス設定ポリシーを作成し、Microsoft Edge の一部の設定を構成します。 詳細については、[Microsoft Edge ブラウザー プロファイルの作成](../../../compliance/deploy-use/browser-profiles.md)に関するページを参照してください。 
+Windows 10 クライアントで [Microsoft Edge](https://www.microsoft.com/itpro/microsoft-edge) Web ブラウザーを使用する場合、Configuration Manager のコンプライアンス設定ポリシーを作成し、Microsoft Edge の一部の設定を構成します。 詳細については、[Microsoft Edge ブラウザー プロファイルの作成](../../../compliance/deploy-use/browser-profiles.md)に関するページを参照してください。 
 
 
 

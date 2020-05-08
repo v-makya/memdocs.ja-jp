@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f32eaffe673324699e20fc7c579ea1ac9b38c479
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 337b494bdce24463c19dd22ae975af5e99d6d895
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076341"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905843"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager の Technical Preview 1511 の機能
 
@@ -34,7 +34,7 @@ WUfB を介して接続されているコンピューターの場合、Configura
 
 -   Windows 10 Desktop Pro または Windows 10 Enterprise Edition バージョン 1511 以降  
 
--   [Windows Update for Business](https://technet.microsoft.com/library/mt622730\(v=vs.85\).aspx)を介して管理されているコンピューター  
+-   [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb)を介して管理されているコンピューター  
 
 ### <a name="try-it-out"></a>試してみましょう。  
  次のタスクを実行してから、このトピックの先頭付近にあるフィードバック情報を使用してその動作を報告してください。  
@@ -67,7 +67,7 @@ Microsoft から、Windows Server Updates Services (WSUS) に新しい Office 36
 
 4. コンソール内の監視機能またはレポートを使用して、Office 365 の更新プログラムのコンプライアンス対応を確認できます。  
 
-   詳しい手順については、「[Configuration Manager Technical Preview による Office 365 クライアント更新プログラムの管理](https://technet.microsoft.com/library/mt628083.aspx)」をご覧ください。  
+   詳しい手順については、「[Configuration Manager Technical Preview による Office 365 クライアント更新プログラムの管理](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)」をご覧ください。  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> 高可用性データベース用の SQL Server AlwaysOn のサポート  
  Configuration Manager は、SQL Server AlwaysOn 可用性グループを使用したサイト データベースのホスティングをサポートします。  新しいサイトをインストールするときに、SQL Server の通常のインスタンスではなく、可用性グループを使用するようにセットアップに指示できます。  
@@ -110,7 +110,7 @@ Microsoft から、Windows Server Updates Services (WSUS) に新しい Office 36
  次の手順を使用して、可用性グループを作成して構成してから、その可用性グループを使用する新しい Configuration Manager サイトをインストールします。  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>SQL Server AlwaysOn 可用性グループを作成するには  
-[SQL Server 可用性グループを作成する](https://technet.microsoft.com/library/ff878265\(v=sql.120\).aspx) プロセスは、SQL Server ドキュメント ライブラリに記載されています。  可用性グループを作成するときに、Configuration Manager で使用するための次の要件が満たされていることを確認します。  
+[SQL Server 可用性グループを作成する](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) プロセスは、SQL Server ドキュメント ライブラリに記載されています。  可用性グループを作成するときに、Configuration Manager で使用するための次の要件が満たされていることを確認します。  
 
 -   最大 3 つのメンバー:  
 
@@ -165,7 +165,7 @@ SQL Server 可用性グループを使用するサイトをインストールす
 
 #### <a name="to-create-a-collection-for-a-server-cluster"></a>サーバー クラスターのコレクションを作成するには  
 
-1.  クラスター内のサーバーを含む[デバイス コレクションを作成します](https://technet.microsoft.com/library/gg712295.aspx)。  
+1.  クラスター内のサーバーを含む[デバイス コレクションを作成します](../clients/manage/collections/create-collections.md)。  
 
 2.  **[資産とコンプライアンス]** ワークスペースで **[デバイス コレクション]** をクリックし、クラスター内のサーバーを含むコレクションを右クリックして、 **[プロパティ]** をクリックします。  
 
@@ -200,6 +200,6 @@ SQL Server 可用性グループを使用するサイトをインストールす
 
 #### <a name="to-deploy-software-updates-to-the-server-cluster"></a>ソフトウェア更新プログラムをサーバー クラスターに展開するには  
 
-1.  サーバー クラスター コレクションにソフトウェア[更新プログラムを展開します](https://technet.microsoft.com/library/gg712304.aspx)。  
+1.  サーバー クラスター コレクションにソフトウェア[更新プログラムを展開します](../../sum/deploy-use/deploy-software-updates.md)。  
 
-2.  [ソフトウェア更新プログラムの展開を監視します](https://technet.microsoft.com/library/gg712304.aspx)。  
+2.  [ソフトウェア更新プログラムの展開を監視します](../../sum/deploy-use/monitor-software-updates.md)。  

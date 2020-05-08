@@ -5,34 +5,58 @@ description: Microsoft Defender Advanced Threat Protection を管理するため
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 05/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67f4d3c08cbad08464d488073c574babcc77dc61
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+zone_pivot_groups: atp-baseline-versions
+ms.openlocfilehash: e1081395c733807c38dc940ebd1b7c2765da7a9a
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81397511"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693392"
 ---
+<!-- Pivots in use: 
+::: zone pivot="atp-april-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020,atp-april-2020"
+::: zone-end
+-->
+
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Intune 向けの Microsoft Defender Advanced Threat Protection ベースライン設定
 
 Microsoft Intune によってサポートされている Microsoft Defender Advanced Threat Protection ベースライン設定を表示します。 Advanced Threat Protection (ATP) ベースラインの既定値は、ATP の推奨される構成を表しており、他のセキュリティ ベースラインのベースラインの既定値と一致しない場合があります。
 
-この記事の詳細は、2020 年 3 月 1 日にリリースされた Microsoft Defender ATP ベースラインのバージョン 3 に適用されます。
+::: zone pivot="atp-april-2020"
+
+この記事の詳細は、2020 年 4 月 21 日にリリースされた Microsoft Defender ATP ベースラインのバージョン 4 に適用されます。 以前のバージョンからのこのバージョンのベースラインの変更点を確認するには、このベースラインの *[バージョン]* ウィンドウを表示すると使用可能になる [[ベースラインの比較]](../protect/security-baselines.md#compare-baseline-versions) 操作を使用します。
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
+この記事の詳細は、2020 年 3 月 1 日にリリースされた Microsoft Defender ATP ベースラインのバージョン 3 に適用されます。 以前のバージョンからのこのバージョンのベースラインの変更点を確認するには、このベースラインの *[バージョン]* ウィンドウを表示すると使用可能になる [[ベースラインの比較]](../protect/security-baselines.md#compare-baseline-versions) 操作を使用します。
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
 
 ご使用の環境が [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites) を使用するための前提条件を満たしている場合は、Microsoft Defender Advanced Threat Protection ベースラインを使用できます。
 
 このベースラインは、物理デバイス用に最適化されており、現在は仮想マシン (VM) や VDI エンドポイントでの使用は推奨されていません。 特定のベースライン設定が、仮想化された環境でのリモート対話型セッションに影響を与える可能性があります。 詳細については、Windows ドキュメントの「[Increase compliance to the Microsoft Defender ATP security baseline (Microsoft Defender ATP のセキュリティ ベースラインに対するコンプライアンスの強化)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)」をご覧ください。
+
 
 ## <a name="application-guard"></a>Application Guard
 
@@ -277,20 +301,20 @@ Microsoft Edge を使用しているとき、ご利用の環境は Windows Defen
 
 次の設定の詳細については、Windows ドキュメント内の「[WindowsAdvancedThreatProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)」を参照してください。
 
-- **すべてのファイルのサンプル共有**:  
+- **すべてのファイルのサンプル共有**:   
   CSP: [Configuration/SampleSharing](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Microsoft Defender Advanced Threat Protection サンプル共有の構成パラメーターを返すか設定します。  
   
-  - **はい** (*既定値*):
+  - **はい** (*既定値*): 
   - **未構成**
 
-- **テレメトリの報告頻度を早める**:  
+- **テレメトリの報告頻度を早める**:   
   CSP: [Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Microsoft Defender Advanced Threat Protection テレメトリの報告頻度を早めます。  
 
-  - **はい** (*既定値*):
+  - **はい** (*既定値*): 
   - **未構成**
 
 ## <a name="firewall"></a>ファイアウォール
@@ -300,7 +324,7 @@ Microsoft Edge を使用しているとき、ご利用の環境は Windows Defen
 - **ステートフル ファイル転送プロトコル (FTP) を無効にする**  
   CSP:[MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
 
-  - **はい** (*既定値*):
+  - **はい** (*既定値*): 
   - **未構成** - ファイアウォールでは FTP を使用して、セカンダリ ネットワーク接続が検査およびフィルター処理されます。これにより、ご利用のファイアウォール規則は無視される可能性があります。
 
 - **セキュリティ アソシエーションが削除されるまでのアイドル状態の秒数**  
@@ -351,43 +375,43 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
   - **受信接続をブロック**  
     CSP: [/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **マルチキャスト ブロードキャストへのユニキャスト応答が必要**  
     CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **ステルス モードが必要**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **送信接続が必要**  
     CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **着信通知をブロック**  
     CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **グループ ポリシーからのグローバル ポート ルールをマージ**  
     CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **ステルス モードをブロック**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **ファイアウォールの有効化**  
@@ -400,25 +424,25 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
   - **グループ ポリシーからの承認されたアプリケーション ルールをマージしない**  
     CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **グループ ポリシーからの接続セキュリティ ルールをマージしない**  
     CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **着信トラフィックが必要**  
     CSP: [/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **グループ ポリシーからのポリシー ルールをマージしない**  
     CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
 - **ファイアウォール プロファイル パブリック**  
@@ -432,49 +456,49 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
   - **受信接続をブロック**  
     CSP: [/DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **マルチキャスト ブロードキャストへのユニキャスト応答が必要**  
     CSP: [/DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **ステルス モードが必要**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **送信接続が必要**  
     CSP: [/DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **グループ ポリシーからの承認されたアプリケーション ルールをマージしない**  
     CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **着信通知をブロック**  
     CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **グループ ポリシーからのグローバル ポート ルールをマージ**  
     CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **ステルス モードをブロック**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **ファイアウォールの有効化**  
@@ -487,19 +511,19 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
   - **グループ ポリシーからの接続セキュリティ ルールをマージしない**  
     CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **着信トラフィックが必要**  
     CSP: [/Shielded](https://go.microsoft.com/fwlink/?linkid=872561)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **グループ ポリシーからのポリシー ルールをマージしない**  
     CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
 - **ファイアウォール プロファイル ドメイン**  
@@ -511,25 +535,25 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
   - **グループ ポリシーからの承認されたアプリケーション ルールをマージしない**  
     CSP: [/AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**  
 
   - **着信通知をブロック**  
     CSP: [/DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=872563)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **グループ ポリシーからのグローバル ポート ルールをマージ**  
     CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **ステルス モードをブロック**  
     CSP: [/DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **ファイアウォールの有効化**  
@@ -542,13 +566,13 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
   - **グループ ポリシーからの接続セキュリティ ルールをマージしない**  
     CSP: [/AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
   - **グループ ポリシーからのポリシー ルールをマージしない**  
     CSP: [/AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)
 
-    - **はい** (*既定値*):
+    - **はい** (*既定値*): 
     - **未構成**
 
 ## <a name="microsoft-defender"></a>Microsoft Defender
@@ -562,7 +586,7 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
   
   既定では、これは **[午前 2:00]** に設定されます。
 
-- **スケジュールされたスキャン用に低い CPU 優先度を構成**  
+- **スケジュールされたスキャン用に低い CPU 優先度を構成**   
   CSP: [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
   -**はい** (*既定値*)
@@ -630,11 +654,26 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
   - **はい** (*既定値*) - ダウンロードされたファイルと添付ファイルがすべてスキャンされます。 設定はクライアントの既定値 (有効) に戻されますが、ユーザーはこれを変更できます。 この設定を無効にするには、カスタム URI を使用します。
   - **未構成** - 設定はクライアントの既定値 (有効) に戻されますが、ユーザーはこれを変更できます。 この設定を無効にするには、カスタム URI を使用します。
 
+::: zone-end
+::: zone pivot="atp-april-2020"
+
 - **アクセス保護をブロックする**  
   CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
 
-  - **はい** (*既定値*):
+  - **あり**
+  - **[未構成]** ("*既定値*")
+
+::: zone-end
+::: zone pivot="atp-march-2020"
+
+- **アクセス保護をブロックする**  
+  CSP: [Defender/AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935&clcid=0x409)
+
+  - **はい** (*既定値*): 
   - **未構成**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **ブラウザー スクリプトをスキャンする**  
   CSP: [Defender/AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054&clcid=0x409)
@@ -826,7 +865,7 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
 
 - **ストアからのアプリのみを要求する**  
 
-  - **はい** (*既定値*):
+  - **はい** (*既定値*): 
   - **未構成**
 
 - **Windows SmartScreen を有効にする**  
@@ -863,6 +902,8 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
     - **許可しない**
     - **必須**
     - **許可** (*既定値*)
+
+::: zone-end
 
 ## <a name="next-steps"></a>次のステップ
 

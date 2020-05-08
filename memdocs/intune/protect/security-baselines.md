@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/01/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: aanavath
+ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: faf117f3eedbfe7527606d7a0942cab644c700cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 35e48be90b80d0c776087c95444f5f77f5ff547c
+ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615654"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693413"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Intune でのセキュリティ ベースラインを使用した Windows 10 デバイスの構成
 
@@ -56,7 +56,8 @@ Intune では、次のセキュリティ ベースラインのインスタンス
 
 - **Microsoft Defender ATP ベースライン**
   " *(このベースラインを使用するには、ご使用の環境が [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites) を使用するための前提条件を満たしている必要があります)* "。
-  - [Microsoft Defender ATP ベースライン バージョン 3](security-baseline-settings-defender-atp.md)
+  - [2020 年 4 月の Microsoft Defender ATP ベースライン - バージョン 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
+  - [2020 年 3 月の Microsoft Defender ATP ベースライン - バージョン 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
   > [!NOTE]
   > Microsoft Defender ATP のセキュリティ ベースラインは、物理デバイス用に最適化されており、現在は仮想マシン (VM) や VDI エンドポイントでの使用は推奨されていません。 特定のベースライン設定が、仮想化された環境でのリモート対話型セッションに影響を与える可能性があります。  詳細については、Windows ドキュメントの「[Increase compliance to the Microsoft Defender ATP security baseline (Microsoft Defender ATP のセキュリティ ベースラインに対するコンプライアンスの強化)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)」をご覧ください。
@@ -75,13 +76,19 @@ Intune では、次のセキュリティ ベースラインのインスタンス
 
 [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[エンドポイント セキュリティ]**  >  **[セキュリティ ベースライン]** の順に選択すると、利用可能なベースラインの一覧が表示されます。 一覧には、ベースライン テンプレート名、所有しているプロファイルのうちそのベースラインの種類が使われているものの数、そのベースラインの種類について利用可能な個別のインスタンス (バージョン) の数、そのベースライン テンプレートの最新バージョンが利用可能になった時期を特定する "*最終発行*" 日などが含まれています。
 
-使用するベースラインのバージョンに関する情報をさらに表示するには、ベースラインのタイルを選択してその *[概要]* ウィンドウを開いてから、 **[バージョン]** を選択します。 Intune によって、プロファイルで使用されているそのベースラインのバージョンに関する詳細が表示されます。 [バージョン] ウィンドウでは、1 つのバージョンを選択して、そのバージョンを使用している各プロファイルに関するより詳しい情報を確認できます。 また、2 つの異なるバージョンを選択してから **[Compare baselines]\(ベースラインの比較\)** を選択することで、その相違点が詳しく記載された CSV ファイルをダウンロードできます。
-
-![ベースラインの比較](./media/security-baselines/compare-baselines.png)
-
-セキュリティ ベースラインの "*プロファイル*" を作成する場合、そのプロファイルでは自動的に一番最近リリースされたセキュリティ ベースラインのインスタンスが使われます。  お客様が前に作成した、以前のバージョンのベースラインのインスタンスが使われているプロファイルは、継続して使用および編集できます。これにはプレビュー バージョンを使って作成したベースラインも含まれます。
+使用するベースラインのバージョンに関する情報をさらに表示するには、ベースラインのタイルを選択してその *[概要]* ウィンドウを開いてから、 **[バージョン]** を選択します。 Intune によって、プロファイルで使用されているそのベースラインのバージョン (最新の現行ベースライン バージョンを含む) に関する詳細が表示されます。  1 つのバージョンを選択して、そのバージョンを使用している各プロファイルに関するより詳しい情報を確認できます。
 
 指定したプロファイルで使用されているベースラインの[バージョンを変更する](#change-the-baseline-version-for-a-profile)こともできます。 つまり、新しいバージョンが登場したとき、それを活用するために新しいベースラインのプロファイルを作成する必要はありません。 代わりに、準備ができたら、ベースラインのプロファイルを選択して、そのプロファイルのインスタンスのバージョンを新しいものに変更する、組み込みオプションを使うことができます。
+
+### <a name="compare-baseline-versions"></a>ベースライン バージョンを比較する
+
+セキュリティ ベースラインの **[バージョン]** ウィンドウには、展開したこのベースラインの各バージョンの一覧が表示されます。 この一覧には、ベースラインの最新のアクティブ バージョンも含まれています。 新しいセキュリティ ベースライン *プロファイル*を作成すると、プロファイルでは最新バージョンのセキュリティ ベースラインが使用されます。  お客様が前に作成した、以前のバージョンのベースラインが使われているプロファイルは、継続して使用および編集できます。これにはプレビュー バージョンを使って作成したベースラインも含まれます。
+
+バージョン間の変更点を確認するには、2 つの異なるバージョンのチェックボックスをオンにし、 **[ベースラインの比較]** を選択して、これらの相違点を詳細に説明する CSV ファイルをダウンロードします。 
+
+このダウンロードでは、2 つのベースライン バージョンの各設定が識別され、この設定が変更された (*notEqual*) か、または同じままである (*equal*) かが確認されます。 詳細には、バージョン別の設定の既定値のほか、設定が新しいバージョンに*追加*されたか、または新しいバージョンから*削除*されたかも含まれます。
+
+![ベースラインの比較](./media/security-baselines/compare-baselines.png)
 
 ## <a name="avoid-conflicts"></a>競合を回避する
 
@@ -199,6 +206,14 @@ Intune では、次のセキュリティ ベースラインのインスタンス
 セキュリティ ベースラインの設定がデバイスに適用されなくなったとき、またはベースラインの設定が *[未構成]* に設定されているとき、デバイス上のこのような設定が管理前の構成に戻ることはありません。 代わりに、デバイス上の前に管理していた設定では、他のなんらかのプロセスによりデバイス上のそれらの設定が更新されるまで、ベースラインから受け取ったその最後の構成が保持されます。
 
 デバイス上の設定を後から変更する可能性があるその他のプロセスには、別の、または新しいセキュリティ ベースライン、デバイス構成プロファイル、グループ ポリシー構成、デバイス上での設定の手動編集などがあります。
+
+### <a name="older-baseline-versions"></a>古いベースライン バージョン
+
+Microsoft Endpoint Manager では、一般的な組織のニーズの変化に応じて、組み込みのセキュリティ ベースラインのバージョンが更新されます。 新しいリリースごとに、特定のベースラインのバージョンが更新されます。 顧客は、デバイス構成プロファイルの出発点として、最新のベースライン バージョンを使用することが想定されています。
+
+テナントに表示されている古いベースラインを使用するプロファイルがなくなった場合、Microsoft Endpoint Manager には、使用可能な最新のベースライン バージョンのみが表示されます。
+
+古いベースラインに関連付けられているプロファイルがある場合は、その古いベースラインが引き続き表示されます。
 
 ## <a name="co-managed-devices"></a>共同管理デバイス
 

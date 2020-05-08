@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df289c284774a4e0bb3a379853f31f8d6f5bd44d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 623a8dab52e13c4674b961e825033430d34a8f88
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704170"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906560"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>暗号化コントロールのテクニカル リファレンス
 
@@ -260,5 +260,5 @@ Configuration Manager クライアントとサーバーのセキュリティを�
 - SSL 3.0、TLS 1.0 および TLS 1.1 の無効化 
 - TLS 関連の暗号スイートを調整する 
 
-詳細については、「[Schannel.dll において特定の暗号化アルゴリズムおよびプロトコルの使用を制限する方法](https://support.microsoft.com/en-us/kb/245030/)」と「[Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx)」 (Schannel 暗号スイートの優先順位設定) を参照してください。 これらの操作は、Configuration Manager の機能には影響しません。
+詳細については、「[Schannel.dll において特定の暗号化アルゴリズムおよびプロトコルの使用を制限する方法](https://support.microsoft.com/help/245030/)」と「[Prioritizing Schannel Cipher Suites](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites)」 (Schannel 暗号スイートの優先順位設定) を参照してください。 これらの操作は、Configuration Manager の機能には影響しません。
 

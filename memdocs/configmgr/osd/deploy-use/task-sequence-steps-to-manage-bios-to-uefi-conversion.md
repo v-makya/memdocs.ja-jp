@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9183efd622cb425027500d3fe51ed7b86d3a94e4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b9bd8f8102cbf6c814956127fc95a5f3961779c0
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079367"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906942"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>BIOS からUEFI への変換を管理するためのタスク シーケンス手順
 Windows 10 では、UEFI 対応デバイスを必要とする新しいセキュリティ機能が多数提供されます。 最新の Windows PC では、UEFI がサポートされていても、従来の BIOS が使用されている場合があります。 デバイスを UEFI に変換する場合、各 PC に移動して、ハード ディスクのパーティションを再分割し、ファームウェアを再構成する必要がありました。 Configuration Manager でタスク シーケンスを使用すれば、BIOS から UEFI への変換のためにハード ドライブを準備し、インプレース アップグレード プロセスの一環として BIOS から UEFI への変換を行い、ハードウェア インベントリの一部として UEFI 情報を収集することができます。
@@ -57,7 +57,7 @@ Windows 10 Creators Update では、EFI 対応ハードウェアのハード デ
 ### <a name="to-convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>インプレース アップグレード時に BIOS から UEFI に変換するには
 1. Windows 10 Creators Update へのインプレース アップグレードを実行するオペレーティング システムのアップグレード タスク シーケンスを作成します。
 2. タスク シーケンスを編集します。 **後処理グループ**で、次のタスク シーケンス ステップを追加します。
-   1. [全般] から、**コマンド ラインを実行**ステップを追加します。 ディスクのデータを変更または削除せずに、ディスクを MBR から GPT に変換する MBR2GPT ツールのコマンド ラインを追加します。 コマンドラインで、次を入力します。**MBR2GPT /convert /disk:0 /AllowFullOS**. フル オペレーティング システムではなく、Windows PE で MBR2GPT.EXE ツールを実行することもできます。 その場合、MBR2GPT.EXE ツールを実行するステップの前にコンピューターを再起動するステップを WinPE に追加し、コマンド ラインから /AllowFullOS オプションを削除します。 ツールと使用可能なオプションの詳細については、「[MBR2GPT.EXE](https://technet.microsoft.com/itpro/windows/deploy/mbr-to-gpt)」を参照してください。
+   1. [全般] から、**コマンド ラインを実行**ステップを追加します。 ディスクのデータを変更または削除せずに、ディスクを MBR から GPT に変換する MBR2GPT ツールのコマンド ラインを追加します。 コマンドラインで、次を入力します。**MBR2GPT /convert /disk:0 /AllowFullOS**. フル オペレーティング システムではなく、Windows PE で MBR2GPT.EXE ツールを実行することもできます。 その場合、MBR2GPT.EXE ツールを実行するステップの前にコンピューターを再起動するステップを WinPE に追加し、コマンド ラインから /AllowFullOS オプションを削除します。 ツールと使用可能なオプションの詳細については、「[MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt)」を参照してください。
    2. ファームウェアを BIOS から UEFI に変換する OEM ツールを起動するステップを追加します。 これは一般に、OEM ツールを起動するコマンド ラインを含むコマンドラインの実行タスク シーケンスのステップになります。
    3. [全般] から、**コンピューターの再起動**ステップを追加します。 [再起動後に実行するものを指定してください] では、 **[現在インストールされている既定のオペレーティング システム]** を選択します。
 3. タスク シーケンスを展開します。

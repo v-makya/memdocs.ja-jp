@@ -10,12 +10,12 @@ ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ba1f41af778602fb95d268c071b5f0d1dde158c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ad92e4906c45b5c720ab35efc055449a27cc0850
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693390"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906214"
 ---
 # <a name="security-and-privacy-for-migration-to-configuration-manager-current-branch"></a>Configuration Manager Current Branch への移行のセキュリティとプライバシー
 
@@ -48,9 +48,9 @@ ms.locfileid: "81693390"
 
  セキュリティとプライバシー情報の詳細については、次のトピックのいずれかを参照してください。  
 
--   Configuration Manager 2007 のプライバシー情報の詳細については、Configuration Manager 2007 ドキュメント ライブラリの「[Configuration Manager 2007 のセキュリティとプライバシー](https://go.microsoft.com/fwlink/p/?LinkId=216450)」を参照してください。  
+-   Configuration Manager 2007 のプライバシー情報の詳細については、Configuration Manager 2007 ドキュメント ライブラリの「[Configuration Manager 2007 のセキュリティとプライバシー](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680768(v=technet.10))」を参照してください。  
 
--   System Center 2012 Configuration Manager のプライバシー情報の詳細については、System Center 2012 Configuration Manager ドキュメント ライブラリの「[System Center 2012 Configuration Manager のセキュリティとプライバシー](https://technet.microsoft.com/library/gg682033.aspx)」を参照してください。  
+-   System Center 2012 Configuration Manager のプライバシー情報の詳細については、System Center 2012 Configuration Manager ドキュメント ライブラリの「[System Center 2012 Configuration Manager のセキュリティとプライバシー](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033(v=technet.10))」を参照してください。  
 
 -   System Center Configuration Manager のプライバシー情報の詳細については、「[System Center Configuration Manager のセキュリティとプライバシー](../../core/plan-design/security/security-and-privacy.md)」を参照してください。  
 

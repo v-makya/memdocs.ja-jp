@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2ae184400a3de0d7ab27fffc1ce1e6287593b1ae
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076307"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905824"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Configuration Manager の Technical Preview 1601 の機能
 
@@ -164,7 +164,6 @@ Technical Preview 1601 以降、Configuration Manager コンソールでクラ�
 
  Configuration Manager は、このようなプログラムなどを通じて購入したアプリを、アプリ ストアからライセンス情報をインポートし、使用したライセンスの数を追跡することにより、管理できるようにします。  
 
- 詳しくは、「[ボリューム購入プログラムを通じて購入されたアプリの Configuration Manager での管理](https://technet.microsoft.com/library/mt627954.aspx)」をご覧ください。  
 
 ### <a name="ios---app-configuration-for-applicationsbr-hybrid"></a>iOS - アプリケーションのアプリ構成<br />ハイブリッド  
  一部の iOS アプリケーションでは、アプリケーションが接続する必要があるサーバーまたはデータベースなどの事前構成設定をサポートしています。 Configuration Manager は、デバイスに対するアプリ構成ポリシーの展開をサポートするようになりました。これにより、ユーザーは情報を知る必要なくアプリをすぐに使用できます。 開発者が対象アプリでこの機能を有効にする必要があります。  

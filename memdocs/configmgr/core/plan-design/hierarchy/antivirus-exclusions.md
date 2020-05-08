@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: df951bfb44313cfec8dacb8c0df34abb7beb0c56
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f3f38de1d7440ffd0293bde359deeb6be3bbeffb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703740"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906200"
 ---
 # <a name="recommended-antivirus-exclusions-for-configuration-manager"></a>Configuration Manager の推奨されるウイルス対策の除外
 
@@ -114,10 +114,10 @@ ms.locfileid: "81703740"
 
 ウイルス対策の除外について詳しくは、次の記事を参照してください。
 
-[Configuration Manager Current Branch のウイルス対策の除外 -System Center Premier Field Engineer のブログ](https://blogs.technet.microsoft.com/systemcenterpfe/2017/05/24/configuration-manager-current-branch-antivirus-update/)
+[Configuration Manager Current Branch のウイルス対策の除外 -System Center Premier Field Engineer のブログ](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/configuration-manager-current-branch-antivirus-exclusions/ba-p/884831)
 
-[OSD とブート イメージに関する詳細情報を含む、更新された System Center 2012 Configuration Manager のウイルス対策の除外](https://blogs.technet.microsoft.com/systemcenterpfe/2013/01/11/updated-system-center-2012-configuration-manager-antivirus-exclusions-with-more-details-on-osd-and-boot-images-etc/)
+[OSD とブート イメージに関する詳細情報を含む、更新された System Center 2012 Configuration Manager のウイルス対策の除外](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/updated-system-center-2012-configuration-manager-antivirus/ba-p/884371)
 
-[SQL Server を稼働しているコンピューター上で実行する、ウイルス対策ソフトウェアを選択する方法](https://support.microsoft.com/en-us/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
+[SQL Server を稼働しているコンピューター上で実行する、ウイルス対策ソフトウェアを選択する方法](https://support.microsoft.com/help/309422/how-to-choose-antivirus-software-to-run-on-computers-that-are-running-sql-server)
 
-[現在サポートされているバージョンの Windows を稼働している Enterprise コンピューター向けの、ウイルス スキャンに関する推奨事項](https://support.microsoft.com/en-us/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)
+[現在サポートされているバージョンの Windows を稼働している Enterprise コンピューター向けの、ウイルス スキャンに関する推奨事項](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers-that-are-running-currently-supported-versions-of-windows)

@@ -10,23 +10,23 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9917ec8a1ed2072903276de438f49d3f783a1284
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ed155fb61491a273732ed3b974b6ddb5ac29bc89
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692610"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904011"
 ---
 # <a name="health-attestation-for-configuration-manager"></a>Configuration Manager の正常性構成証明書
 
 *適用対象:Configuration Manager (Current Branch)*
 
-管理者は Configuration Manager コンソールで [Windows 10 デバイス正常性構成証明](https://technet.microsoft.com/library/mt592023.aspx)の状態を確認できます。  デバイスの正常性構成証明で、管理者はクライアント コンピューターで次の信頼できる BIOS、TPM、およびブート ソフトウェアの構成が有効になっていることを確認できます。  
+管理者は Configuration Manager コンソールで [Windows 10 デバイス正常性構成証明](https://docs.microsoft.com/windows/security/threat-protection/protect-high-value-assets-by-controlling-the-health-of-windows-10-based-devices)の状態を確認できます。  デバイスの正常性構成証明で、管理者はクライアント コンピューターで次の信頼できる BIOS、TPM、およびブート ソフトウェアの構成が有効になっていることを確認できます。  
 
 -   起動時マルウェア対策 - 起動時マルウェア対策 (ELAM) により、サードパーティのドライバーが初期化される前の起動時にコンピューターが保護されます。 [ELAM を有効にする方法](https://gallery.technet.microsoft.com/How-to-turn-on-Early-84552ec5)  
 -   BitLocker - Windows BitLocker ドライブ暗号化は、Windows オペレーティング システムのボリュームに格納されているすべてのデータを暗号化できるソフトウェアです。  [BitLocker を有効にする方法](https://gallery.technet.microsoft.com/How-to-turn-on-BitLocker-34294d3d)  
--   セキュア ブート - セキュア ブートは、PC 業界のメンバーによって開発されたセキュリティ標準で、PC の製造元によって信頼されているソフトウェアのみを使用して PC が起動されるようにするのに役立ちます。 [セキュア ブートの詳細](https://technet.microsoft.com/library/hh824987.aspx)  
--   コードの整合性 - コードの整合性は、メモリに読み込まれるたびに、ドライバーまたはシステム ファイルの整合性を検証することによって、オペレーティング システムのセキュリティを強化する機能です。 [コードの整合性の詳細](https://technet.microsoft.com/library/dd348642.aspx)  
+-   セキュア ブート - セキュア ブートは、PC 業界のメンバーによって開発されたセキュリティ標準で、PC の製造元によって信頼されているソフトウェアのみを使用して PC が起動されるようにするのに役立ちます。 [セキュア ブートの詳細](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824987(v=win.10))  
+-   コードの整合性 - コードの整合性は、メモリに読み込まれるたびに、ドライバーまたはシステム ファイルの整合性を検証することによって、オペレーティング システムのセキュリティを強化する機能です。 [コードの整合性の詳細](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd348642(v=ws.10))  
 
 この機能は、Configuration Manager によって管理されている PC と内部設置型リソース、および Microsoft Intune で管理されているモバイル デバイスで利用できます。 管理者は、報告がクラウドを使用して行われるか、内部設置型インフラストラクチャを使用して行われるかを指定できます。 オンプレミスのデバイス正常性構成証明書の監視により、インターネット アクセスがなくても管理者がクライアント PC を監視することができます。
 
@@ -34,7 +34,7 @@ ms.locfileid: "81692610"
 
  **要件:**  
 
--   [デバイス正常性構成証明書が有効になっている](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation)、Windows 10 バージョン 1607 または Windows Server 2016 バージョン 1607 を実行しているクライアント デバイス。
+-   [デバイス正常性構成証明書が有効になっている](https://docs.microsoft.com/windows-server/security/device-health-attestation)、Windows 10 バージョン 1607 または Windows Server 2016 バージョン 1607 を実行しているクライアント デバイス。
 -   TPM 1.2 または TPM 2 が有効になっているデバイス。
 -   クラウド管理を使用する場合は、Configuration Manager クライアント エージェントと、*has.spserv.microsoft.com* (ポート 443) 正常性構成証明書サービス (クラウド管理) の管理ポイントとの間の通信。 オンプレミスのときは、クライアントはデバイス正常性構成証明書が有効になっている管理ポイントと通信できる必要があります。
 

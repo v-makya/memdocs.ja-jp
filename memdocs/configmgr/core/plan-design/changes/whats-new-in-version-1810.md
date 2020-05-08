@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a9770dca209669659abf6e4fc9c23d5e6972981
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073553"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906249"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1810 の新機能
 
@@ -43,7 +43,7 @@ Configuration Manager の新機能を利用するには、最初にクライア�
 
 2018 年 8 月 14 日以降、ハイブリッド モバイル デバイス管理機能は非推奨です。 詳細については、「[ハイブリッド MDM はどうなりましたか?](../../../mdm/understand/what-happened-to-hybrid.md)」を参照してください。<!--Intune feature 2683117-->  
 
-Mac と Linux (すべてのバージョン) の System Center Endpoint Protection (SCEP) のサポートは 2018 年 12 月 31 日で終了します。 Mac 用の SCEP および Linux 用の SCEP の新しいウイルスの定義の可用性は、サポートの終了後に停止される可能性があります。 詳しくは、[サポートの終了ブログ投稿](https://go.microsoft.com/fwlink/?linkid=870182)をご覧ください。
+Mac と Linux (すべてのバージョン) の System Center Endpoint Protection (SCEP) のサポートは 2018 年 12 月 31 日で終了します。 Mac 用の SCEP および Linux 用の SCEP の新しいウイルスの定義の可用性は、サポートの終了後に停止される可能性があります。 詳しくは、[サポートの終了ブログ投稿](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257)をご覧ください。
 
 Configuration Manager において Azure の従来のサービスのデプロイは非推奨です。 クラウド管理ゲートウェイおよびクラウド配布ポイント用の Azure Resource Manager の展開の使用を開始します。 詳細については、[CMG の計画](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)に関するページを参照してください。
 
