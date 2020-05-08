@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eda58982094860ccf075bcd2d1d8ed9e3d3bb2df
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706920"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906100"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Configuration Manager の Long-Term Servicing Branch の概要
 
@@ -53,7 +53,7 @@ Configuration Manager の Current Branch では、LTSB を使用する場合に�
 
 ## <a name="find-ltsb-documentation"></a>LTSB のドキュメントを検索する
 
-LTSB は、Current Branch バージョン 1606 に基づいています。 LTSB 固有の注意事項と制限事項が記載された [Current Branch の ドキュメント](https://docs.microsoft.com/sccm/)を使用してください。 以下に関する記事で、これらの注意事項と制限事項を確認できます。
+LTSB は、Current Branch バージョン 1606 に基づいています。 LTSB 固有の注意事項と制限事項が記載された [Current Branch の ドキュメント](https://docs.microsoft.com/mem/configmgr/)を使用してください。 以下に関する記事で、これらの注意事項と制限事項を確認できます。
 
 - [LTSB のインストール](install-the-ltsb.md)
 - [LTSB の Current Branch へのアップグレード](convert-to-current-branch.md)
@@ -68,7 +68,7 @@ LTSB について Current Branch ドキュメントを参照する場合、バ�
 
 System Center Configuration Manager に対して永続的な権利を持つお客様または、10 月 1 日の後に SA またはサブスクリプションが期限切れになったお客様は、該当する時点で最新のバージョンである System Center Configuration Manager LTSB をインストールできます。
 
-これらのライセンスについて詳しくは、[Microsoft ボリューム ライセンス プログラムを通じて購入する製品の使用条件](https://go.microsoft.com/fwlink/?LinkId=800052)に関するページをご覧ください。
+これらのライセンスについて詳しくは、[Microsoft ボリューム ライセンス プログラムを通じて購入する製品の使用条件](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?mode=1)に関するページをご覧ください。
 
 Configuration Manager ブランチのライセンスについて詳しくは、[Configuration Manager のライセンスとブランチ](learn-more-editions.md)に関するページをご覧ください。
 

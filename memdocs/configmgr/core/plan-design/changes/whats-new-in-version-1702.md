@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bd9475a72ef8d2b25f026ab76e124c8217ed7ee9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 6c6ff51edbd04a6d68f2770af123b1ac431542d2
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073944"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904701"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Configuration Manager のバージョン 1702 の新機能
 
@@ -28,8 +28,8 @@ Configuration Manager Current Branch の更新プログラム 1702 は、バー�
 > 新しいサイトをインストールするには、Configuration Manager の基準バージョンを使用する必要があります。  
 >
 > 詳細については、下記のリンクをクリックしてください。    
-> - [新しいサイトのインストール](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [サイトで更新プログラムをインストールする](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [新しいサイトのインストール](../../servers/deploy/install/installing-sites.md)  
+> - [サイトで更新プログラムをインストールする](../../servers/manage/updates.md)  
 > - [基準バージョンと更新プログラムのバージョン](../../servers/manage/updates.md#bkmk_Baselines)
 
 次の各セクションでは、Configuration Manager のバージョン 1702 で導入された変更点および新機能について詳しく説明します。  
@@ -71,7 +71,7 @@ Configuration Manager コンソールでの検索機能の強化の内容を次�
 - コンソールのオブジェクトを右クリックしたとき。   
    ![右クリック オプション](./media/feedback-option.png)   
 
-  **[フィードバック]** を選択すると、ブラウザーが開いて [Configuration Manager UserVoice フィードバック Web サイト](https://go.microsoft.com/fwlink/?linkid=617029) が表示されます。
+  **[フィードバック]** を選択すると、ブラウザーが開いて [Configuration Manager UserVoice フィードバック Web サイト](https://configurationmanager.uservoice.com/forums/300492-ideas) が表示されます。
 
 
 ###  <a name="changes-for-updates-and-servicing"></a>更新プログラムとサービスの変更

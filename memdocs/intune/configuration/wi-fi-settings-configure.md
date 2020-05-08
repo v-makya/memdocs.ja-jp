@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235f5517c9968ba63b04fefa03d9486e5bd6e52d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d1ff20db13a87faea41d262da5742a428ec4d28f
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086404"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587292"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Microsoft Intune でデバイスに Wi-Fi 設定を追加して使用する
 
@@ -97,6 +97,10 @@ Wi-Fi プロファイルでは次のデバイス プラットフォームをサ�
     **[次へ]** を選択します。
 
 11. **[確認と作成]** で、設定を確認します。 **[作成]** を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
+
+> [!TIP]
+> Wi-Fi プロファイルに証明書ベースの認証を使用する場合は、各デバイスが証明機関の正当性を確実に認識できるように、Wi-Fi プロファイル、証明書プロファイル、信頼されたルートプロファイルを同じグループに展開します。  詳細については、[Microsoft Intune で証明書を構成する方法](../protect/certificates-configure.md)に関するページを参照してください。
+
 
 ## <a name="next-steps"></a>次のステップ
 

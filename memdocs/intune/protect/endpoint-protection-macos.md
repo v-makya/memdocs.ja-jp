@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 04/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e857cdd7028851f14f607739ba7e37c744fa2f1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 337f7608b4c75a5a2ce2c85774d2090d549ae1fe
+ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359463"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82587251"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Intune の macOS エンドポイント保護設定  
 
@@ -113,6 +113,18 @@ Apple FileVault の設定の詳細については、Apple Developer コンテン
 
   - **バイパスを許可する回数**  
   ユーザーのサインインに FileVault が必要となる前に、FileVault を有効にするプロンプトをユーザーが無視できる回数を設定します。 
+
+    > [!IMPORTANT]
+    >
+    > **[制限なし、常に通知]** の値には、既知の問題があります。 ユーザーがサインイン時に暗号化をバイパスできるようにするのではなく、この設定では次回のサインイン時にデバイスの暗号化が必要になります。 この問題は 6 月後半に修正される予定であり、MC210922 で報告されています。
+    >
+    > 修正されると、この設定には新しいゼロ (**0**) のオプションが含まれるようになります。この場合、ユーザーが次回デバイスにサインインするときに、デバイスを暗号化する必要があります。 さらに、Intune によってこの修正プログラムが更新された場合、 **[制限なし、常に通知]** に設定されているポリシーはすべて、新しい値の **0** を使用するように更新されます。これにより、暗号化を要求する現在の動作が維持されます。
+    >
+    > この問題が修正されたら、最初に想定したように設定が動作するように、 **[制限なし、常に通知]** を設定してこの設定を再構成することで、暗号化の要求を省略することができ、ユーザーはデバイスの暗号化をバイパスできます。
+    >
+    > macOS デバイスが登録されている場合、詳細情報を表示するには、[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[テナント管理]**  >  **[テナントの状態]** にアクセスして、 **[サービスの正常性とメッセージ センター]** を選択し、メッセージ ID **MC210922** を探します。
+
+    <br> 
 
     - **[未構成]** - 次のサインインが許可される前に、デバイスの暗号化が必要です。  
     - **1** から **10** - ユーザーは、デバイスの暗号化を要求する前に、1 から 10 回までプロンプトを無視できます。  

@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 04981e944b838f89af2383678c94e620aaefd7f0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 849dd0bdb0f6583d525df8af3f6d46f8a4a9aecf
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702350"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904668"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1910 の新機能
 
@@ -46,7 +46,7 @@ Microsoft Endpoint Manager は、すべてのデバイスを管理するため�
 - [Intune](https://docs.microsoft.com/intune)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
 - [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
-- [デバイス管理の管理コンソール](https://go.microsoft.com/fwlink/?linkid=2109094)に含まれるその他の機能
+- [デバイス管理の管理コンソール](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)に含まれるその他の機能
 
 詳細については、Microsoft 365 担当の Microsoft コーポレート バイス プレジデントである Brad Anderson による次の投稿を参照してください。
 

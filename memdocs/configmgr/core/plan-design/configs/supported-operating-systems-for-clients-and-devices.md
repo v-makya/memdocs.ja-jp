@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 57c60fcdadf3e58b59d33ecf2753789122a38ecc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078687"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904528"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager でクライアントとデバイスに対してサポートされる OS のバージョン
 
@@ -209,7 +209,7 @@ Configuration Manager メディアでは、macOS クライアント インスト
 > [!Important]  
 > Configuration Manager バージョン 1902 では、クライアントとして Linux および UNIX のサポートが削除されます。 廃止は[バージョン 1802](../changes/whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support) で発表されました。 Linux サーバーを管理するには、Microsoft Azure の管理を検討してください。 Azure ソリューションには広範囲な Linux サポートが含まれており、ほとんどの場合、Linux のエンドツーエンド パッチ管理など、Configuration Manager 以上の機能を備えています。
 
-Configuration Manager メディアでは、Linux および UNIX クライアント インストール パッケージは提供されません。 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=525184)から、**追加のオペレーティング システム用のクライアント**をダウンロードします。 クライアント インストール パッケージに加え、クライアント ダウンロードには、各コンピューター上でクライアントのインストールを管理するスクリプトも含まれています。  
+Configuration Manager メディアでは、Linux および UNIX クライアント インストール パッケージは提供されません。 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=47719)から、**追加のオペレーティング システム用のクライアント**をダウンロードします。 クライアント インストール パッケージに加え、クライアント ダウンロードには、各コンピューター上でクライアントのインストールを管理するスクリプトも含まれています。  
 
 ### <a name="requirements-and-limitations"></a>要件と制限事項
 

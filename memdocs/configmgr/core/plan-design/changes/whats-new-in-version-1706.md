@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a4fa056c9c0708d2cecc0ca5f244e134e22ad10b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073711"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904688"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Configuration Manager のバージョン 1706 の新機能
 
@@ -28,8 +28,8 @@ Configuration Manager Current Branch の更新プログラム 1706 は、バー�
 > 新しいサイトをインストールするには、Configuration Manager の基準バージョンを使用する必要があります。  
 >
 > 詳細については、下記のリンクをクリックしてください。    
-> - [新しいサイトのインストール](https://technet.microsoft.com/library/mt590197.aspx)  
-> - [サイトで更新プログラムをインストールする](https://technet.microsoft.com/library/mt607046.aspx)  
+> - [新しいサイトのインストール](../../servers/deploy/install/installing-sites.md)  
+> - [サイトで更新プログラムをインストールする](../../servers/manage/updates.md)  
 > - [基準バージョンと更新プログラムのバージョン](../../servers/manage/updates.md#bkmk_Baselines)  
 
 以降のセクションでは、Configuration Manager のバージョン 1706 の変更点および導入された新機能について詳しく説明します。  

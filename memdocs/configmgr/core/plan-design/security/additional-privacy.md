@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6891a46050bb83e54fb34b97d9129fcb5873785
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701420"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906569"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Configuration Manager のプライバシーに関する詳細
 
@@ -91,6 +91,6 @@ Microsoft Cloud Protection Service が意図的に個人情報を収集するこ
 
 Configuration Manager コンソールで、 **[監視]** ワークスペースに移動し、 **[サイト階層]** ノードを選択して、 **[地図]** に切り替えます。 この表示では、Microsoft Bing Maps の提供する地図を使って Configuration Manager 物理サーバー トポロジを表示できます。 この機能を実現するために、お客様の入力した場所情報が、サーバーから Bing Maps の Web サービスに送信されます。
 
-マイクロソフトではこの情報を、Microsoft Bing Maps およびその他の Microsoft のサイトとサービスを提供および向上するために役立てています。 詳細については、「[Microsoft のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=823548)」を参照してください。
+マイクロソフトではこの情報を、Microsoft Bing Maps およびその他の Microsoft のサイトとサービスを提供および向上するために役立てています。 詳細については、「[Microsoft のプライバシーに関する声明](https://privacy.microsoft.com/privacystatement)」を参照してください。
 
 サイト階層で地図を使用しないように選択できます。 既定の階層図では、Bing Maps サービスを使用せずに階層を表示することができます。

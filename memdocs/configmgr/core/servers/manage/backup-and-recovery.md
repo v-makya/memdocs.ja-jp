@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 824eaeb939249e1bcc2ed21d5815a0a72dc54797
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700270"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906475"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Configuration Manager サイトのバックアップ
 
@@ -231,7 +231,7 @@ SMS ライターのライター ID は、**03ba67dd-dc6d-4729-a038-251f7018463b*
 SMS ライターは、ローカル システム アカウントで実行する必要があります。  
 
 ### <a name="volume-shadow-copy-service"></a>ボリューム シャドウ コピー サービス  
-VSS は、システムのアプリケーションがボリュームに書き込んでいる間にボリュームをバックアップできるようにするフレームワークを実装する COM API のセットです。 VSS は、ディスクのデータを更新するユーザー アプリケーション (SMS ライター サービス) と、アプリケーションのバックアップを取るユーザー アプリケーション (Backup Manager サービス) を連携させるインターフェイスとして機能します。 詳細については、「[Volume Shadow Copy Service](https://go.microsoft.com/fwlink/p/?LinkId=241968)」 (ボリューム シャドウ コピー サービス) を参照してください。  
+VSS は、システムのアプリケーションがボリュームに書き込んでいる間にボリュームをバックアップできるようにするフレームワークを実装する COM API のセットです。 VSS は、ディスクのデータを更新するユーザー アプリケーション (SMS ライター サービス) と、アプリケーションのバックアップを取るユーザー アプリケーション (Backup Manager サービス) を連携させるインターフェイスとして機能します。 詳細については、「[Volume Shadow Copy Service](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service)」 (ボリューム シャドウ コピー サービス) を参照してください。  
 
 
 

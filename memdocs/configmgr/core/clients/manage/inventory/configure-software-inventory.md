@@ -10,12 +10,12 @@ ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 74436eb95166ae9bc78d7ae22881b709349bf847
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f6fcf4736c30d8743d0d26b52aac60ef12b5c9cd
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695440"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906310"
 ---
 # <a name="how-to-configure-software-inventory-in-configuration-manager"></a>Configuration Manager でソフトウェア インベントリを構成する方法
 
@@ -44,7 +44,7 @@ ms.locfileid: "81695440"
    > [!TIP]
    >   inventoryprovider.log 内のエラー コード 80041006 は、WMI プロバイダーのメモリ不足を意味します。 つまり、プロバイダーのメモリ クォータが上限に達しており、インベントリ プロバイダーを続行できません。
    > この場合、インベントリ エージェントがエントリ 0 のレポートを作成するため、インベントリ項目が報告されません。 <br/>
-   > このエラーの考えられる解決方法は、ソフトウェア インベントリ コレクションのスコープを縮小することです。 インベントリ スコープを制限した後もエラーが発生する場合は、[_ProviderHostQuotaConfiguration](https://msdn.microsoft.com/library/aa394671) クラスで定義されている [MemoryPerHost](https://blogs.technet.microsoft.com/askperf/2008/09/16/memory-and-handle-quotas-in-the-wmi-provider-service/) プロパティを増やすことが、解決策となります。
+   > このエラーの考えられる解決方法は、ソフトウェア インベントリ コレクションのスコープを縮小することです。 インベントリ スコープを制限した後もエラーが発生する場合は、[_ProviderHostQuotaConfiguration](https://docs.microsoft.com/windows/win32/wmisdk/--providerhostquotaconfiguration) クラスで定義されている [MemoryPerHost](https://techcommunity.microsoft.com/t5/ask-the-performance-team/memory-and-handle-quotas-in-the-wmi-provider-service/ba-p/373319) プロパティを増やすことが、解決策となります。
 
 <!--SMS.480648 include WMI Out of memory tip -->
 

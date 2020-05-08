@@ -10,12 +10,12 @@ ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1bdfb8c6d528c12581f05f86111a1a76d2259faa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f4b822475111352c5dcf23f4868a1fa43ec3a7
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695430"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906265"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-configuration-manager"></a>Configuration Manager における Linux および UNIX のハードウェア インベントリ
 
@@ -105,7 +105,7 @@ Linux または UNIX サーバー上のハードウェア インベントリは�
 ###  <a name="create-a-custom-hardware-inventory-provider-for-linux-and-unix-computers"></a><a name="BKMK_LinuxProvider"></a> Linux および UNIX コンピューターのカスタム ハードウェア インベントリを作成する:  
  Linux および UNIX 用の構成マネージャー クライアントのカスタム ハードウェア インベントリ プロバイダーを作成するには、**OMI ソース - v.1.0.6** を使用し、OMI 入門ガイドの指示に従います。 このプロセスには、新しいプロバイダーのスキーマを定義するマネージド オブジェクト フォーマット (MOF) ファイルの作成が含まれます。 後ほど、この MOF ファイルを Configuration Manager にインポートし、新しいカスタム インベントリ クラスのサポートを有効にします。  
 
- OMI ソース- v.1.0.6 およびソース OMI 入門ガイドはどちらも「 [Open Group](https://github.com/microsoft/omi/blob/master/README.md) 」Web サイトからダウンロードできます。 ダウンロードの場所は、OpenGroup.org の Web サイトの Web ページの **[Documents]** タブで見つけることができます ([Open Management Infrastructure (OMI)](https://go.microsoft.com/fwlink/p/?LinkId=286805))。  
+ OMI ソース- v.1.0.6 およびソース OMI 入門ガイドはどちらも「 [Open Group](https://github.com/microsoft/omi/blob/master/README.md) 」Web サイトからダウンロードできます。 ダウンロードの場所は、OpenGroup.org の Web サイトの Web ページの **[Documents]** タブで見つけることができます ([Open Management Infrastructure (OMI)](https://collaboration.opengroup.org/omi/))。  
 
 ###  <a name="configure-each-computer-that-runs-linux-or-unix-with-the-custom-hardware-inventory-provider"></a><a name="BKMK_AddProvidertoLinux"></a> カスタム ハードウェア インベントリ プロバイダーを使用して Linux または UNIX を実行する各コンピューターを次のように構成します。  
  カスタム インベントリ プロバイダーを作成した後、収集対象のインベントリが含まれる各コンピューターで、プロバイダー ライブラリ ファイルをコピーして登録する必要があります。  
