@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 08baf595199bdda121f897d507de97cb7e93e620
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f9b9c49bde16754b7a60112905f14da2cd5e48eb
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696350"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906294"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Configuration Manager の Surface デバイス ダッシュボード
 
@@ -57,11 +57,9 @@ Surface デバイス ダッシュボードには、ご利用の環境の 3 つ�
 
 ## <a name="more-information"></a>説明
 
-Surface デバイスの詳細については、以下を参照してください。
-- [Surface]( https://go.microsoft.com/fwlink/?linkid=861998) Web サイト。
+Surface デバイスの詳細については、[Surface](https://www.microsoft.com/surface) の Web サイトを参照してください。
 
-Configuration Manager に Surface のファームウェアの更新プログラムを配布する方法については、次を参照してください。
-- [Configuration Manager で Surface のドライバーの更新プログラムを管理する方法]( https://support.microsoft.com/help/4098906)
+Configuration Manager に Surface のファームウェアの更新プログラムを配布する方法については、[Surface ドライバーの更新プログラムを管理する方法](https://support.microsoft.com/help/4098906)に関するページを参照してください。
 
 
 

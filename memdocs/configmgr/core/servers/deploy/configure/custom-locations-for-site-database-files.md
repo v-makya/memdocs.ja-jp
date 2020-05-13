@@ -10,12 +10,12 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cc7eb1a8ba721545bdee50d45887ab9d3aa8e952
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d3f01e54ba196ee9c27295d8f970a7dbe352f63f
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704700"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906190"
 ---
 # <a name="custom-locations-for-configuration-manager-site-database-files"></a>Configuration Manager のサイト データベース ファイルのカスタムの場所
 
@@ -36,6 +36,6 @@ ms.locfileid: "81704700"
 
 -   Configuration Manager サイト サーバーで、**SMS_Executive** サービスを停止します。  
 
--   該当するバージョンの SQL Server のドキュメントを参照し、説明に従ってユーザー データベースを移動します。 たとえば、SQL Server 2014 を使用する場合は、TechNet の「 [ユーザー データベースの移動](https://technet.microsoft.com/library/ms345483\(v=sql.120\).aspx) 」をご覧ください。  
+-   ユーザー データベースを移動する方法の詳細については、[ユーザー データベースの移動](https://docs.microsoft.com/sql/relational-databases/databases/move-user-databases?view=sql-server-2014)に関するページを参照してください。  
 
 -   データベース ファイルの移動が完了したら、Configuration Manager サイト サーバーで **SMS_Executive** サービスを再起動します。  

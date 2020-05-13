@@ -10,12 +10,12 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 241e7ed9a2195e178cc1aac2ee2a146eea60b093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b691004742def4c126ba82b07cad1651cbe822f8
+ms.sourcegitcommit: 13ceb4e1cc8c2a10bfa199e301bf9bada8ceb268
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705750"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82923428"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Windows Defender Application Guard ポリシーの作成と展開
 
@@ -25,7 +25,7 @@ Configuration Manager Endpoint Protection を使用して [Windows Defender Appl
 
 ## <a name="prerequisites"></a>[前提条件]
 
-Windows Defender Application Guard ポリシーを作成して展開するには、Windows 10 Fall Creator (1709) の更新プログラムを使用する必要があります。 ネットワーク分離ポリシーを使用して、ポリシーを展開する Windows 10 デバイスを構成する必要があります。 詳細については、「[Windows Defender Application Guard の概要](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)」を参照してください。
+Windows Defender Application Guard ポリシーを作成して展開するには、Windows 10 Fall Creator (1709) の更新プログラムを使用する必要があります。 ポリシーを展開する Windows 10 デバイスは、[ネットワーク分離ポリシー](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard#network-isolation-settings)を使用して構成する必要があります。 詳細については、「[Windows Defender Application Guard の概要](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)」を参照してください。
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>ポリシーを作成し、使用可能な設定を参照する
 

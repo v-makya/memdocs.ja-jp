@@ -2,7 +2,7 @@
 title: プロキシ サーバーのサポート
 titleSuffix: Configuration Manager
 description: Configuration Manager サイト システム サーバーがプロキシ サーバーを使用する方法について説明します。
-ms.date: 04/01/2020
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5581214dd786bdefd29d0e4d2626de536ad26ace
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 89a2f76f394d3bdf8fd6785429ae0ae60302537a
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701480"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802091"
 ---
 # <a name="proxy-server-support-in-configuration-manager"></a>Configuration Manager でのプロキシ サーバーのサポート
 
@@ -50,6 +50,10 @@ Configuration Manager の一部のサイト システム サーバーでは、�
 - 既定では、コンピューターの**システム** アカウントを使用して接続を確立します。 必要に応じて、サイト システムのプロキシ サーバー アカウントも使用できます。  
 
 - Windows Web ブラウザー API を使用します。  
+
+### <a name="cloud-management-gateway-connection-point"></a>クラウド管理ゲートウェイ コネクション ポイント
+
+クラウド管理ゲートウェイ (CMG) 接続ポイントは、Azure の CMG サービスと通信するオンプレミスのロールです。 詳細については、[CMG の計画](../../clients/manage/cmg/plan-cloud-management-gateway.md)に関するページを参照してください。
 
 ### <a name="distribution-point"></a>配布ポイント
 
@@ -111,3 +115,7 @@ Configuration Manager バージョン 2002 以降、以下の機能は、[サー
     - **[資格情報を使用してプロキシ サーバーに接続する]** :多くのプロキシ サーバーでは、ユーザーの認証が必要です。 既定では、サイト システム サーバーはそのコンピューター アカウントを使用してプロキシ サーバーに接続します。 必要に応じて、このオプションを有効にし、 **[設定]** をクリックして、 **[既存のアカウント]** を選択するか、 **[新しいアカウント]** を指定します。 これらの資格情報は、**サイト システムのプロキシ サーバー アカウント**です。  詳細については、「[System Center Configuration Manager で使用されるアカウント](../hierarchy/accounts.md)」を参照してください。  
 
 4. **[OK]** をクリックして新しいプロキシ サーバー構成を保存します。  
+
+## <a name="next-steps"></a>次のステップ
+
+組織がファイアウォールまたはプロキシ デバイスを使用してインターネットとのネットワーク通信を制限している場合は、インターネット エンドポイントへのアクセスを許可する必要があります。 詳細については、[インターネット アクセスの要件](internet-endpoints.md)に関するページを参照してください。

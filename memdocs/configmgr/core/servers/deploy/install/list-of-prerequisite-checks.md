@@ -2,7 +2,7 @@
 title: 前提条件の確認
 titleSuffix: Configuration Manager
 description: Configuration Manager の更新プログラムに関する特定の前提条件の確認のリファレンス。
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d8fc9abfc9fc09bc3011a3fee30b258023d04c8a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700740"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943792"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager の前提条件の確認の一覧
 
@@ -771,9 +771,9 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 
 新しいサイトをインストールするときに、Configuration Manager によって SQL Server Native Client が再頒布可能コンポーネントとして自動的にインストールされます。 サイトをインストールした後は、Configuration Manager は SQL Server Native Client をアップグレードしません。 SQL Server Native Client を更新するには、再起動が必要な場合があります。これは、サイトのインストール プロセスに影響する可能性があります。
 
-このチェックでは、サイトに SQL Native Client のサポートされているバージョンがあることを確認します。 バージョン 1810 以降では、最小バージョンは SQL 2012 SP4 (`11.*.7001.0`) です。
+このチェックでは、サイト サーバーに SQL Native Client のサポートされているバージョンがあることを確認します。 前提条件の確認では、リモート サイト システムの SQL Native Client のバージョンは確認されません。
 
-この SQL Native Client のバージョンでは、TLS 1.2 をサポートします。 詳細については、以下の記事を参照してください。
+最小バージョンは SQL 2012 SP4 (`11.*.7001.0`) です。 この SQL Native Client のバージョンでは、TLS 1.2 をサポートします。 詳細については、以下の記事を参照してください。
 
 - [Microsoft SQL Server 用の TLS 1.2 のサポート](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
 

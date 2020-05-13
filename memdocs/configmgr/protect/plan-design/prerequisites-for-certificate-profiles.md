@@ -10,12 +10,12 @@ ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 396738fb854f859b1553bae02dd3709ef96b69ff
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eed68d976235dbd915c46bbd2d410d7953441bd3
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706100"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906861"
 ---
 # <a name="prerequisites-for-certificate-profiles-in-configuration-manager"></a>Configuration Manager の証明書プロファイルの前提条件
 
@@ -28,10 +28,9 @@ Configuration Manager の証明書プロファイルには、外部依存関係�
 
 |依存関係|説明|  
 |----------------|----------------------|  
-|Active Directory 証明書サービス (AD CS) を実行するエンタープライズ証明機関 (CA)<br /><br /> 証明書を失効させるには、階層の最上位のサイト サーバーのコンピューター アカウントに *証明書の発行と管理* の権限が、証明書管理者の証明書プロファイルが使用する各証明書テンプレートに対して必要となります。 または、証明書管理者に、その証明書管理者が使用するすべての証明書テンプレートに対するアクセス許可を付与します。<br /><br /> 証明書要求のCA マネージャーによる承認が必要になるように設定することもできます。 ただし、証明書の発行に使用する証明書テンプレートで、証明書のサブジェクトを **[要求に含まれる]** に設定して、Configuration Manager によってサブジェクトの値が自動的に含まれるようにする必要があります。|Active Directory 証明書サービスの詳細については、Windows Server のドキュメントを参照してください。<br /><br /> Windows Server 2012 の場合: [Active Directory 証明書サービスの概要](https://go.microsoft.com/fwlink/p/?LinkId=286744)<br /><br /> Windows Server 2008 の場合: [Windows Server 2008 の Active Directory 証明書サービス](https://go.microsoft.com/fwlink/p/?LinkId=115018)|  
+|Active Directory 証明書サービス (AD CS) を実行するエンタープライズ証明機関 (CA)<br /><br /> 証明書を失効させるには、階層の最上位のサイト サーバーのコンピューター アカウントに *証明書の発行と管理* の権限が、証明書管理者の証明書プロファイルが使用する各証明書テンプレートに対して必要となります。 または、証明書管理者に、その証明書管理者が使用するすべての証明書テンプレートに対するアクセス許可を付与します。<br /><br /> 証明書要求のCA マネージャーによる承認が必要になるように設定することもできます。 ただし、証明書の発行に使用する証明書テンプレートで、証明書のサブジェクトを **[要求に含まれる]** に設定して、Configuration Manager によってサブジェクトの値が自動的に含まれるようにする必要があります。|Active Directory 証明書サービスの詳細については、「[Active Directory 証明書サービスの概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11))」を参照してください。|  
 |PowerShell スクリプトを使用して検証し、必要に応じて、ネットワーク デバイス登録サービス (NDES) のロール サービスと Configuration Manager 証明書登録ポイントの前提条件をインストールします。 <br /><br />|指示ファイルの readme_crp.txt は、ConfigMgrInstallDir\cd.latest\SMSSETUP\POLICYMODULE\X64 にあります。<br /><br />PowerShell スクリプトの Test-NDES-CRP-Prereqs.ps1 は、指示と同じディレクトリにあります。 <br /><br /> PowerShell スクリプトは、NDES サーバーでローカルに実行する必要があります。|
-|Windows Server 2012 R2 で実行される、Active Directory 証明書サービス用のネットワーク デバイス登録サービス (NDES) の役割サービス。<br /><br /> さらに<br /><br /> クライアントとネットワーク デバイス登録サービス間の通信で、TCP 443 (HTTPS 用) と TCP 80 (HTTP 用) 以外のポート番号を使用することはできません。<br /><br /> ネットワーク デバイス登録サービスを実行するサーバーは、発行元 CA とは別のサーバーに配置する必要があります。|Configuration Manager は、Windows Server 2012 R2 のネットワーク デバイス登録サービスと通信して、Simple Certificate Enrollment Protocol (SCEP) 要求を生成および検証します。<br /><br /> インターネットから接続するユーザーやデバイス (Microsoft Intune で管理されているモバイル デバイスなど) に証明書を発行する場合は、これらのデバイスが、ネットワーク デバイス登録サービスを実行しているサーバーにインターネットからアクセスできる必要があります。 たとえば、このサーバーを境界ネットワーク (DMZ、非武装地帯、スクリーン サブネットともいいます) に設置します。<br /><br /> ネットワーク デバイス登録サービスを実行するサーバーと発行元 CA の間にファイアウォールがある場合は、この 2 つのサービス間の通信トラフィック (DCOM) を許可するようにファイアウォールを構成する必要があります。 Configuration Manager サイト サーバーを実行するサーバーと発行元 CA 間の通信も同様に設定して、Configuration Manager が証明書を失効できるようにします。<br /><br /> SSL を必要とするようにネットワーク デバイス登録サービスが構成されている場合は、セキュリティのベスト プラクティスに従って、接続するデバイスがサーバー証明書を検証するために証明書失効リスト (CRL) にアクセスできるようにしてください。<br /><br /> Windows Server 2012 R2 のネットワーク デバイス登録サービスの詳細については、「 [ポリシー モジュールとネットワーク デバイス登録サービスの使用](https://go.microsoft.com/fwlink/p/?LinkId=328657)」を参照してください。|  
-|発行元 CA で Windows Server 2008 R2 を実行している場合は、SCEP 証明書更新要求に必要な修正プログラムをこのサーバーにインストールする必要があります。|修正プログラムをまだインストールしていない場合は、必ず、インストールしてください。 詳細については、Microsoft サポート技術情報「[2483564: NDES を使用して、証明書が管理されている場合に Windows Server 2008 R2 の SCEP 証明書更新の要求が失敗しました](https://go.microsoft.com/fwlink/?LinkId=311945)」を参照してください。|  
+|Windows Server 2012 R2 で実行される、Active Directory 証明書サービス用のネットワーク デバイス登録サービス (NDES) の役割サービス。<br /><br /> さらに<br /><br /> クライアントとネットワーク デバイス登録サービス間の通信で、TCP 443 (HTTPS 用) と TCP 80 (HTTP 用) 以外のポート番号を使用することはできません。<br /><br /> ネットワーク デバイス登録サービスを実行するサーバーは、発行元 CA とは別のサーバーに配置する必要があります。|Configuration Manager は、Windows Server 2012 R2 のネットワーク デバイス登録サービスと通信して、Simple Certificate Enrollment Protocol (SCEP) 要求を生成および検証します。<br /><br /> インターネットから接続するユーザーやデバイス (Microsoft Intune で管理されているモバイル デバイスなど) に証明書を発行する場合は、これらのデバイスが、ネットワーク デバイス登録サービスを実行しているサーバーにインターネットからアクセスできる必要があります。 たとえば、このサーバーを境界ネットワーク (DMZ、非武装地帯、スクリーン サブネットともいいます) に設置します。<br /><br /> ネットワーク デバイス登録サービスを実行するサーバーと発行元 CA の間にファイアウォールがある場合は、この 2 つのサービス間の通信トラフィック (DCOM) を許可するようにファイアウォールを構成する必要があります。 Configuration Manager サイト サーバーを実行するサーバーと発行元 CA 間の通信も同様に設定して、Configuration Manager が証明書を失効できるようにします。<br /><br /> SSL を必要とするようにネットワーク デバイス登録サービスが構成されている場合は、セキュリティのベスト プラクティスに従って、接続するデバイスがサーバー証明書を検証するために証明書失効リスト (CRL) にアクセスできるようにしてください。<br /><br /> ネットワーク デバイス登録サービスの詳細については、「[ポリシー モジュールとネットワーク デバイス登録サービスの使用](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11))」を参照してください。|  
 |PKI クライアント認証証明書およびエクスポートされたルート CA 証明書|この証明書は、ネットワーク デバイス登録サービスを実行しているサーバーが Configuration Manager から認証を受けるための証明書です。<br /><br /> 詳細については、「[Configuration Manager での PKI 証明書の要件](../../core/plan-design/network/pki-certificate-requirements.md)」をご覧ください。|  
 |サポートされるデバイス オペレーティング システム|Windows 8.1、Windows RT 8.1、および Windows 10 を実行しているデバイスに証明書プロファイルを展開できます。|  
 

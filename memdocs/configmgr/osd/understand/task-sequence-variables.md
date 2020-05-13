@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 991b3e2ab654aff56d982c587ccc4bda53694294
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e99efed5d506ddf30e818243ad8b899e8f8b8aca
+ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703260"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82782122"
 ---
 # <a name="task-sequence-variables"></a>タスク シーケンス変数
 
@@ -177,7 +177,7 @@ Configuration Manager クライアント GUID の値を格納します。 タス
 
 ### <a name="_smstsmdatapath"></a><a name="SMSTSMDataPath"></a> _SMSTSMDataPath
 
-[SMSTSLocalDataDrive](#SMSTSLocalDataDrive) 変数で定義されているパスを指定します。 コレクション変数の設定などのように、タスク シーケンスが起動する前に SMSTSLocalDataDrive を定義すると、Configuration Manager はそのタスク シーケンスが起動された後で _SMSTSMDataPath 値を定義します。
+[SMSTSLocalDataDrive](#SMSTSLocalDataDrive) 変数で定義されているパスを指定します。 このパスは、タスク シーケンスの実行中に一時ファイルを対象コンピューターに格納する場所を指定します。 コレクション変数の設定などのように、タスク シーケンスが起動する前に SMSTSLocalDataDrive を定義すると、Configuration Manager はそのタスク シーケンスが起動された後で _SMSTSMDataPath 値を定義します。
 
 ### <a name="_smstsmediatype"></a><a name="SMSTSMediaType"></a> _SMSTSMediaType
 
@@ -1592,9 +1592,9 @@ Configuration Manager が配布ポイントからのコンテンツのダウン�
 
 ### <a name="smstslocaldatadrive"></a><a name="SMSTSLocalDataDrive"></a> SMSTSLocalDataDrive
 
-タスク シーケンスの実行中に一時ファイルを対象コンピューターに格納する場所を指定します。
+タスク シーケンスの実行中に一時キャッシュ ファイルを対象コンピューターに格納する場所を指定します。
 
-この変数は、コレクション変数の設定によって行うなど、タスク シーケンスが開始する前に設定します。 タスク シーケンスが開始された後で、Configuration Manager は [_SMSTSMDataPath](#SMSTSMDataPath) 変数を定義します。
+この変数は、コレクション変数の設定によって行うなど、タスク シーケンスが開始する前に設定します。 タスク シーケンスが開始された後で、Configuration Manager は、SMSTSLocalDataDrive 変数が定義されている内容に基づいて [_SMSTSMDataPath](#SMSTSMDataPath) 変数を定義します。
 
 ### <a name="smstsmp"></a><a name="SMSTSMP"></a> SMSTSMP
 
@@ -1638,7 +1638,7 @@ Windows PE ピア キャッシュで初期ブロードキャストに使用さ�
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
-タスク シーケンスの完了後に実行されるコマンドを指定します。 たとえば、タスク シーケンスが OS をデバイスに展開した後に、埋め込まれたデバイスで書き込みフィルターを有効にするスクリプトを指定します。
+タスク シーケンスの完了後に実行されるコマンドを指定します。 たとえば、タスク シーケンスが完了してから 30 秒後にコンピューターを再起動するには、`shutdown.exe /r /t 30 /f` と指定します。
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

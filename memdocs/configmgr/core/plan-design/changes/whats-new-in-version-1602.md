@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fc38d0cbd70faa23f67c7089944b8b4c2cd0f7fc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2e398795a14f5073141f103d93ccd82e61d4d7a8
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078721"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82904887"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Configuration Manager のバージョン 1602 の新機能
 
@@ -42,9 +42,9 @@ Configuration Manager の更新プログラム 1602 は、以前にインスト�
 > [!WARNING]  
 >  Windows Server 2012 R2 にアップグレードする前に、サーバーから WSUS 3.2 をアンインストールする必要があります。  
 >   
->  この重要な手順の詳細については、Windows Server ドキュメントの「[Windows Server Update Services の概要](https://technet.microsoft.com/library/hh852345.aspx)」の「新機能と変更された機能」セクションを参照してください。  
+>  この重要な手順について詳しくは、「[Windows Server Update Services の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)」の「新機能と変更された機能」セクションをご覧ください。  
 
- サーバーをアップグレードするには、Windows Server 2012 R2 のアップグレード手順を使用します。 アップグレード後に Configuration Manager サイト サーバーの復元を実行する必要はありません。 アップグレード手順については、Windows Server のドキュメントの「[Windows Server 2012 R2 のアップグレード オプション](https://technet.microsoft.com/library/dn303416.aspx)」をご覧ください。  
+ サーバーをアップグレードするには、Windows Server 2012 R2 のアップグレード手順を使用します。 アップグレード後に Configuration Manager サイト サーバーの復元を実行する必要はありません。 アップグレード手順については、Windows Server のドキュメントの「[Windows Server 2012 R2 のアップグレード オプション](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))」をご覧ください。  
 
 ###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a> SQL Server AlwaysOn 可用性グループ  
  高可用性と障害復旧ソリューションとして、SQL Server AlwaysOn 可用性グループを使用して、プライマリ サイトと中央管理サイトでサイト データベースをホストします。  

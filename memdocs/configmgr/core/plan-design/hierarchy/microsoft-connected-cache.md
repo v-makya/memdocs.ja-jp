@@ -2,7 +2,7 @@
 title: Microsoft 接続キャッシュ
 titleSuffix: Configuration Manager
 description: 配信の最適化のローカル キャッシュ サーバーとして Configuration Manager の配布ポイントを使用する
-ms.date: 03/20/2019
+ms.date: 05/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e718e62f097a9fec20d7b29deb9f03453931188a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ab54d278caaeeb29bbd8871819de10af97dcf830
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696210"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842208"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager における Microsoft 接続済みキャッシュ
 
@@ -108,6 +108,20 @@ ms.locfileid: "81696210"
 - 特定のドライブ文字を使用するように配布ポイントのプロパティを手動で構成します。
 
 - 自動に設定されている場合、最初に **no_sms_on_drive.sms** ファイルを作成します。 次に、構成変更をトリガーするように配布ポイントのプロパティにいくつかの変更を加えます。
+
+### <a name="automation"></a>オートメーション
+
+<!-- SCCMDocs#1911 -->
+
+Configuration Manager SDK を使用して、配布ポイントで Microsoft 接続キャッシュ設定の構成を自動化することができます。 すべてのサイトの役割の場合と同様に、[SMS_SCI_SysResUse WMI クラス](../../../develop/reference/core/servers/configure/sms_sci_sysresuse-server-wmi-class.md)を使用します。 詳しくは、[サイトの役割のプログラミング](../../../develop/osd/about-operating-system-deployment-site-role-configuration.md#programming-the-site-roles)に関するページを参照してください。
+
+配布ポイントの **SMS_SCI_SysResUse** インスタンスを更新する場合は、次のプロパティを設定します。
+
+- **AgreeDOINCLicense**: ライセンス条項に同意するには、`1` に設定します。
+- **Flags**: 有効 `|= 4`、無効 `&= ~4`
+- **DiskSpaceDOINC**: `Percentage` または `GB` に設定します
+- **RetainDOINCCache**: `0` または `1` に設定します
+- **LocalDriveDOINC**: `Automatic`、または特定ドライブのドライブ文字 (`C:` や `D:` など) に設定します
 
 ## <a name="verify"></a>確認事項
 

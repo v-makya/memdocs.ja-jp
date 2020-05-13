@@ -2,7 +2,7 @@
 title: SQL Server クラスター
 titleSuffix: Configuration Manager
 description: SQL Server クラスターを使用して Configuration Manager サイト データベースをホストします
-ms.date: 03/06/2019
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4e731ef2d133c2187eb9eaa98c07afeed37645fa
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d035e6fbd776a03ce38a4cd0fc12755100b60c91
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700850"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643240"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>サイト データベースに対して SQL Server クラスターを使用する
 
@@ -62,9 +62,12 @@ Configuration Manager のセットアップ中に、Microsoft Windows Server ク
 
 - Kerberos 認証をサポートするには、各 SQL Server クラスター ノードのネットワーク接続に対して **TCP/IP** ネットワーク通信プロトコルを有効にします。 **名前付きパイプ** プロトコルは不要ですが、Kerberos 認証の問題をトラブルシューティングするために使用できます。 ネットワーク プロトコルの設定は、 **[SQL Server ネットワークの構成]** にある **[SQL Server 構成マネージャー]** で構成します。  
 
-- 公開キー基盤 (PKI) を使用する場合は、「[PKI 証明書の要件](../../../plan-design/network/pki-certificate-requirements.md)」を参照してください。 サイト データベースに対して SQL Server クラスターを使用する場合の特定の証明書要件があります。  
+- サイト データベースに対して SQL Server クラスターを使用する場合の特定の証明書要件があります。 詳細については、以下の記事を参照してください。
+  - [SQL フェールオーバー クラスター構成に証明書をインストールする](https://docs.microsoft.com/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [Configuration Manager での PKI 証明書の要件](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
-
+  > [!NOTE]
+  > SQL で証明書を事前にプロビジョニングしていない場合、Configuration Manager は SQL の自己署名証明書を作成してプロビジョニングします。<!-- 7099499 -->
 
 ## <a name="limitations"></a>制限事項
 

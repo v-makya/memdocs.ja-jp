@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9a1dcd3528f4dbaacec81837150d6f8a1ad6c455
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 652a0c5e36ce7c4bacf40531a82fdf4e16197d95
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708960"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906914"
 ---
 # <a name="customize-operating-system-images-with-configuration-manager"></a>Configuration Manager を使用したオペレーティング システム イメージのカスタマイズ
 
@@ -95,7 +95,7 @@ Configuration Manager のオペレーティング システム イメージは�
     > [!IMPORTANT]  
     >  「 [Windows のキャプチャの準備](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) 」タスク シーケンス ステップは、Sysprep を実行する前に、参照コンピューターのローカル管理者のパスワードをリセットしようとします。 ローカルのセキュリティ ポリシー **[パスワードは、複雑さの要件を満たす必要がある]** が有効な場合、タスク シーケンス ステップは、管理者パスワードのリセットに失敗します。 この場合は、タスク シーケンスを実行する前にこのポリシーを無効にします。  
 
-     Sysprep について詳しくは、「 [システムの準備 (Sysprep) テクニカル リファレンス](https://go.microsoft.com/fwlink/?LinkId=280286)」をご覧ください。  
+     Sysprep について詳しくは、[Sysprep (システムの準備) の概要](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)に関するページを参照してください。  
 
 -   **インストールのシナリオを軽減するために必要な適切なツールおよびスクリプト**  
 

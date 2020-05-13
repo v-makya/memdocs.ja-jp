@@ -10,12 +10,12 @@ ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 0896204fa994643064676b55b20d63d349c4098b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3352f8aa719e93210124d164d89791214eb20bf5
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689300"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905857"
 ---
 # <a name="management-tasks-for-configuration-manager-applications"></a>Configuration Manager アプリケーションの管理タスク
 
@@ -40,7 +40,7 @@ ms.locfileid: "81689300"
 |**統計情報の更新**|**[監視]** ワークスペースの、 **[展開]** ノードに表示されるこのアプリケーションの展開に関する情報を更新します。<br /><br /> 「[Configuration Manager コンソールからのアプリケーションの監視](../../apps/deploy-use/monitor-applications-from-the-console.md)」を参照してください。|  
 |**復帰**|**[インベントリから削除]** 管理タスクを使ってインベントリから削除されたアプリケーションを元に戻します。|  
 |**削除**|アプリケーションをインベントリから削除すると、展開に使用することはできなくなりますが、このアプリケーション自体やその展開は削除されません。 クライアント コンピューターにインストールされたアプリケーションの既存のコピーが削除されることはありません。 アプリケーションのすべてのリビジョンは 60 日後に Configuration Manager から削除されます。 ただし、インストール済みのアプリケーションのコピーは削除されません。<br /><br /> アプリケーションを削除するには、まずインベントリから削除し、次にその展開をすべて削除し、さらに他の展開によるアプリケーションの参照を削除してから、アプリケーションのすべてのリビジョンを削除します。<br /><br /> 「[アプリケーションを修正して置き換える方法](../../apps/deploy-use/revise-and-supersede-applications.md)」を参照してください。|  
-|**エクスポート**|**アプリケーションのエクスポート ウィザード**が開きます。このウィザードは選択したアプリケーションを .zip ファイルにエクスポートするので、これをアーカイブしたり、別のサイトにインストールしたりできます。 アプリケーションのコンテンツをエクスポートすると、そのコンテンツを含むフォルダーが作成されます。<br /><br /> さらに、アプリケーションの依存関係や、置き換え関係、そのアプリケーションと依存関係の条件やコンテンツもエクスポートできます。<br /><br /> Windows PowerShell コマンドレットの **Export-CMApplication** は、同じ機能を実行します。 詳細については、Microsoft System Center 2012 Configuration Manager SP1 コマンドレット リファレンス ドキュメントの「[Export-CMApplication](https://go.microsoft.com/fwlink/p/?LinkID=258880)」を参照してください。|  
+|**エクスポート**|**アプリケーションのエクスポート ウィザード**が開きます。このウィザードは選択したアプリケーションを .zip ファイルにエクスポートするので、これをアーカイブしたり、別のサイトにインストールしたりできます。 アプリケーションのコンテンツをエクスポートすると、そのコンテンツを含むフォルダーが作成されます。<br /><br /> さらに、アプリケーションの依存関係や、置き換え関係、そのアプリケーションと依存関係の条件やコンテンツもエクスポートできます。<br /><br /> Windows PowerShell コマンドレットの **Export-CMApplication** は、同じ機能を実行します。 詳細については、「[Export-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmapplication?view=sccm-ps)」を参照してください。|  
 |**削除**|現在選択しているアプリケーションを削除します。<br /><br /> ほかのアプリケーションが依存している場合、アクティブな展開がある場合、または依存タスク シーケンスがある場合は、そのアプリケーションを削除できません。|  
 |**展開のシミュレート**|**アプリケーション展開のシミュレーション ウィザード**を開きます。このウィザードを使うと、アプリケーションをインストールしたり、アンインストールせずに、コンピューターへのアプリケーションの展開結果をテストできます。<br /><br /> 「[Simulate application deployments with System Center Configuration Manager](../../apps/deploy-use/simulate-application-deployments.md)」 (System Center Configuration Manager でアプリケーションの展開をシミュレーションする) を参照してください。|  
 |**展開**|**ソフトウェアの展開ウィザード** を開きます。このウィザードを使うと、階層内のコンピューターのグループに対して選択したアプリケーションを展開できます。<br /><br /> 「[Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md)」 (System Center Configuration Manager でアプリケーションを展開する) を参照してください。|  

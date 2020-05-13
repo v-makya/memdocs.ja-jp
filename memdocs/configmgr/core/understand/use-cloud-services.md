@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c191debd77502f7d594a77eb3bd0c50cd6854f66
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706700"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906419"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>Configuration Manager でのクラウド サービスの使用
 
@@ -36,7 +36,7 @@ Configuration Manager は、いくつかのクラウド ベースのオプショ
 
 -   クラウドベースの配布ポイントの詳細については、「[クラウドベースの配布ポイントのインストール](../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md)」を参照してください。
 
--   Azure の詳細については、MSDN ライブラリの [Azure](https://go.microsoft.com/fwlink/p/?LinkId=262965) を参照してください。  
+-   Azure の詳細については、「[Azure とは](https://azure.microsoft.com/overview/what-is-azure/)」を参照してください
 
 ### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Azure 仮想マシン (クラウドベースのインフラストラクチャ用)  
  Configuration Manager は、物理的な企業ネットワーク内でオンプレミスで実行されるコンピューターと同じように、Azure の仮想マシン内で動作するコンピューターの使用をサポートします。 次のシナリオで Azure 仮想マシンを使用することができます。  
@@ -78,12 +78,4 @@ Azure で配布ポイントをホストするには、Azure サブスクリプ�
 ##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a> クラウドベースのサービスのセキュリティ  
  Configuration Manager は証明書を使用して、Azure 内のコンテンツのプロビジョニングとアクセスを行い、使用するサービスを管理します。 Configuration Manager は Azure に保存されるデータを暗号化しますが、Azure が提供する機能以外のセキュリティ機能やデータ制御機能を提供しません。  
 
- 詳細については、クラウドベースのリソースの各種シナリオを参照してください。 Azure のセキュリティについては、次のトピックも参考になります。  
-
--   [Azure:Azure におけるセキュリティ アカウントの管理を理解する](https://go.microsoft.com/fwlink/p/?LinkId=262968)  
-
--   [Azure のセキュリティの概要](https://go.microsoft.com/fwlink/p/?LinkId=262970)  
-
--   [クラウド移行をセキュリティの問題で中断しない](https://go.microsoft.com/fwlink/p/?LinkId=262971)  
-
--   [Azure におけるデータのセキュリティ、パート 1/2](https://go.microsoft.com/fwlink/p/?LinkId=262974)  
+ 詳細については、クラウドベースのリソースの各種シナリオを参照してください。 「[Azure のセキュリティの概要](https://docs.microsoft.com/azure/security/fundamentals/overview)」も参照してください。

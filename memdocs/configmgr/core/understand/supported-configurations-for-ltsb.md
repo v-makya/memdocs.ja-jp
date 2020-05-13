@@ -10,24 +10,24 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39039347361076ae7c8491f95419187d0af9da85
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706750"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906432"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager の Long-Term Servicing Branch のサポートされている構成
 
-*適用対象: System Center Configuration Manager (Long-Term Servicing Branch)*
+*適用対象:System Center Configuration Manager (Long-Term Servicing Branch)*
 
 このトピックの情報を参照して、Configuration Manager の Long-Term Servicing Branch (LTSB) でサポートされるオペレーティング システムと製品の依存関係を理解します。
 このトピックまたは LTSB 特定のトピックで特に指定されていない限り、Current Branch バージョン 1606 に適用されるものと同じ構成および制限が、LTSB に適用されます。  競合が発生した場合、使用しているエディションに適用される情報が使用されます。 通常、LTSB は Current Branch よりも制限的です。
 
 ## <a name="general-statement-of-support"></a>サポートの概説
-この Configuration Manager のブランチでは、次の製品とテクノロジがサポートされています。 ただし、このコンテンツにそれらが含まれていても、その製品の個別のサポート ライフサイクルを超える製品やバージョンのサポートの延長を表すものではありません。 既にサポート ライフサイクルが終了している製品は、Configuration Manager ではサポートされません。 詳細については、[「マイクロソフト サポート ライフサイクル」](https://go.microsoft.com/fwlink/p/?LinkId=208270) Web サイトを参照し、[「サポート ライフサイクル ポリシーに関する FAQ」](https://go.microsoft.com/fwlink/p/?LinkId=31976)をお読みください。
+この Configuration Manager のブランチでは、次の製品とテクノロジがサポートされています。 ただし、このコンテンツにそれらが含まれていても、その製品の個別のサポート ライフサイクルを超える製品やバージョンのサポートの延長を表すものではありません。 既にサポート ライフサイクルが終了している製品は、Configuration Manager ではサポートされません。 詳細については、[Microsoft サポート ライフサイクル](https://support.microsoft.com/lifecycle)の Web サイトを参照し、「サポート ライフサイクル ポリシーに関する FAQ」をお読みください。
 
-さらに、次のトピックに示されていない製品および製品バージョンは、[Enterprise Mobility + Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/)で告知されていない限り、サポートされていません。
+さらに、次のトピックに示されていない製品および製品バージョンは、[Enterprise Mobility + Security ブログ](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/bg-p/enterprisemobilityandsecurity)で告知されていない限り、サポートされていません。
 
 **今後のサポートに関する制限事項:** LTSB の今後のサーバーとクライアントのオペレーティング システムおよび製品の依存関係は、制限付きでサポートされます。 LTSB のプラットフォーム一覧は、そのリリースの有効期間にわたって固定されます。
 
@@ -45,8 +45,8 @@ LTSB では、サイト システムとして次の Windows コンピュータ�
 
 **サポートされるオペレーティング システム:**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64): Standard、Datacenter
-- Windows Server 2012 (x64): Standard、Datacenter
+- Windows Server 2012 R2 (x64):Standard、Datacenter
+- Windows Server 2012 (x64):Standard、Datacenter
 - Windows 10 Enterprise 2015 LTSB (x86、x64)
 - Windows 10 Enterprise 2016 LTSB (x86、x64)
 - Windows 8.1 (x86、x64): Professional、Enterprise
@@ -61,8 +61,8 @@ LTSB を使用して、以下の Windows コンピューター オペレーテ�
 
 **サポートされるオペレーティング システム:**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64): Standard、Datacenter (注 1)
-- Windows Server 2012 (x64): Standard、Datacenter (注 1)
+- Windows Server 2012 R2 (x64):Standard、Datacenter (注 1)
+- Windows Server 2012 (x64):Standard、Datacenter (注 1)
 - Windows Storage Server 2012 R2 (x64)
 - Windows Storage Server 2012 (x64)
 - Windows 10 Enterprise 2015 LTSB (x86、x64)
@@ -72,7 +72,7 @@ LTSB を使用して、以下の Windows コンピューター オペレーテ�
 - Windows Server 2012 の Server Core のインストール (x64) (注 2)
 
 **(注 1)** Datacenter リリースは、Configuration Manager でサポートされますが動作は保障されません。  
-**(注 2)** クライアント プッシュ インストールをサポートするには、このオペレーティング システムのバージョンを実行するコンピューターで、ファイルおよびストレージ サービスのサーバーの役割のための、ファイル サーバーの役割サービスを実行する必要があります。 Server Core コンピューターに Windows の機能をインストールする詳細については、Windows Server 2012 TechNet ライブラリの「[Server Core サーバーへのサーバーの役割と機能のインストール](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)」を参照してください。
+**(注 2)** クライアント プッシュ インストールをサポートするには、このオペレーティング システムのバージョンを実行するコンピューターで、ファイルおよびストレージ サービスのサーバーの役割のための、ファイル サーバーの役割サービスを実行する必要があります。 Server Core コンピューターへの Windows 機能のインストールの詳細については、「[Server Core サーバーへのサーバーの役割と機能のインストール](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))」を参照してください。
 
 ### <a name="windows-embedded"></a>Windows Embedded
 デバイス上にクライアント ソフトウェアをインストールすることによって、LTSB を使用して以下の Windows Embedded デバイスを管理できます。  詳細については、「[Windows Embedded デバイスへのクライアント展開の計画](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)」を参照してください。
@@ -131,7 +131,7 @@ LTSB を使用して、以下の Windows コンピューター オペレーテ�
 ### <a name="mac-computers"></a>Mac コンピューター  
  LTSB を使用して、Mac OS X コンピューターを Mac 向けの Configuration Manager クライアントとともに管理できます。
 
-Configuration Manager メディアでは、Mac クライアント インストール パッケージは提供されません。 これは、[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=525184)から、"追加のオペレーティング システム用のクライアント" のダウンロードの一環としてダウンロードできます。  
+Configuration Manager メディアでは、Mac クライアント インストール パッケージは提供されません。 これは、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=47719)から、"追加のオペレーティング システム用のクライアント" のダウンロードの一環としてダウンロードできます。  
 
 サポートされている Mac オペレーティング システムは、このセクションに記載されているものに限定されています。 Current Branch の Mac クライアント インストール パッケージへの今後の更新プログラムによってサポートされる可能性のあるその他のオペレーティング システムは、サポート対象には含まれていません。
 
@@ -145,7 +145,7 @@ Configuration Manager メディアでは、Mac クライアント インスト�
 ## <a name="linux-and-unix-servers"></a>Linux および UNIX サーバー
 LTSB を使用して、Linux および UNIX サーバーを Linux および UNIX 用の Configuration Manager クライアントとともに管理できます。
 
-Configuration Manager メディアでは、Linux および UNIX クライアント インストール パッケージは提供されません。 これらは、[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=525184)から、追加のオペレーティング システム用のクライアントのダウンロードの一環としてダウンロードできます。 クライアント インストール パッケージに加え、クライアント ダウンロードには、各コンピューター上でクライアントのインストールを管理する install スクリプトも含まれています。
+Configuration Manager メディアでは、Linux および UNIX クライアント インストール パッケージは提供されません。 これらは、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=47719)から、追加のオペレーティング システム用のクライアントのダウンロードの一環としてダウンロードできます。 クライアント インストール パッケージに加え、クライアント ダウンロードには、各コンピューター上でクライアントのインストールを管理する install スクリプトも含まれています。
 
 サポートされている Linux および UNIX オペレーティング システムは、このセクションに記載されているものに限定されています。 Current Branch の Linux および UNIX クライアント インストール パッケージへの今後の更新プログラムによってサポートされる可能性のあるその他のオペレーティング システムは、サポート対象には含まれていません。
 
@@ -276,8 +276,8 @@ LTSB は、Configuration Manager コンソールを実行するために、次�
 
 **サポートされるオペレーティング システム:**
 - Windows Server 2016
-- Windows Server 2012 R2 (x64): Standard、Datacenter
-- Windows Server 2012 (x64): Standard、Datacenter
+- Windows Server 2012 R2 (x64):Standard、Datacenter
+- Windows Server 2012 (x64):Standard、Datacenter
 - Windows 10 Enterprise 2016 LTSB (x86、x64)
 - Windows 10 Enterprise 2015 LTSB (x86、x64)
 - Windows 8.1 (x86、x64): Professional、Enterprise

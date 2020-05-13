@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 8c91ba1c2b4b5ef7072c030eddd9b97dd69933e5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
+ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075712"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82842225"
 ---
 # <a name="co-management-workloads"></a>共同管理ワークロード
 
@@ -75,14 +75,13 @@ Endpoint Protection ワークロードには、マルウェア対策保護機能
 - Windows Defender Application Control  
 - Windows Defender セキュリティ センター  
 - Windows Defender Advanced Threat Protection (現在は Microsoft Defender Threat Protection という名称です)
-- Windows Information Protection  
 
 Intune 機能の詳細については、[Microsoft Intune のエンドポイント保護](https://docs.microsoft.com/intune/endpoint-protection-windows-10)に関するページを参照してください。
 
 > [!Note]  
 > このワークロードを切り替えると、Intune ポリシーによって上書きされるまで、Configuration Manager ポリシーはデバイスに残ります。 この動作により、移行中にデバイスが確実に保護ポリシーを保持することができます。
 >
-> Endpoint Protection ワークロードもデバイス構成の一部です。 [デバイス構成](#device-configuration)ワークロードを切り替えた場合も同じ動作が適用されます。<!-- SCCMDocs.nl-nl issue #4 -->
+> Endpoint Protection ワークロードもデバイス構成の一部です。 [デバイス構成](#device-configuration)ワークロードを切り替えた場合も同じ動作が適用されます。<!-- SCCMDocs.nl-nl issue #4 --> デバイス構成ワークロードを切り替えると、Endpoint Protection ワークロードには含まれていない Windows Information Protection 機能のポリシーも組み込まれます。<!-- 4184095 -->
 >
 > Intune デバイス構成のデバイス制限プロファイルの種類の一部である Microsoft Defender ウイルス対策の設定は、Endpoint Protection スライダーの範囲に含まれていません。 Endpoint Protection スライダーを有効にして共同管理デバイスの Microsoft Defender ウイルス対策を管理するには、 **[Microsoft Endpoint Manager 管理センター]**  >  **[エンドポイント セキュリティ]**  >  **[ウイルス対策]** で新しいウイルス対策ポリシーを使用します。 新しいポリシーの種類には、使用可能な新しいオプションと改善されたオプションがあり、デバイス制限プロファイルで使用できるのと同じ設定がすべてサポートされています。 <!--6609171-->
 >
@@ -97,6 +96,9 @@ Intune 機能の詳細については、[Microsoft Intune のエンドポイン�
 Intune がデバイス構成機関であっても、Configuration Manager から共同管理デバイスに引き続き設定を展開できます。 この例外は、組織で必要な設定を構成するために使用できるかもしれませんが、Intune ではまだ利用できません。 この例外は、[Configuration Manager の構成基準](../compliance/deploy-use/create-configuration-baselines.md)で指定します。 ベースラインを作成するときに、 **[Always apply this baseline even for co-managed clients]\(共同管理クライアントにもこのベースラインを常に適用する\)** のオプションを有効にします。 これは後で、既存のベースラインのプロパティの **[全般]** タブで変更することができます。  
 
 Intune 機能の詳細については、「[Microsoft Intune でのデバイス プロファイルの作成](https://docs.microsoft.com/intune/device-profile-create)」を参照してください。  
+
+> [!NOTE]
+> デバイス構成ワークロードを切り替えると、Endpoint Protection ワークロードには含まれていない Windows Information Protection 機能のポリシーも組み込まれます。<!-- 4184095 -->
 
 ## <a name="office-click-to-run-apps"></a>Office クイック実行アプリ
 

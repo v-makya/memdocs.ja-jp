@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2028974c166e060f445b255db6c5af707725a3f4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1365aec90093ee24ad967e1d68e7c414b4efa254
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693290"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906661"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Configuration Manager での構成基準の作成
 
@@ -23,6 +23,9 @@ ms.locfileid: "81693290"
 
 
 Configuration Manager の構成基準には、定義済みの構成項目と、場合によっては他の構成基準が含まれています。 構成基準を作成すると、構成基準をコレクションに展開できるようになります。それによって、そのコレクションに含まれるデバイスで構成基準をダウンロードしたり、そのデバイスが構成基準に対して対応しているかを評価できます。  
+
+> [!TIP]
+> Configuration Manager クライアントが構成基準に含まれる構成項目を評価する順序を指定する方法はありません。 これは非決定的です。<!-- MEMDocs#175 -->
 
 ## <a name="configuration-baselines"></a>構成基準
 

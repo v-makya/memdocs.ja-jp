@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: c38230b44f7f18e3f60cb4c88b31a03e10a37d30
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705600"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905750"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Configuration Manager の Technical Preview 1605 の機能
 
@@ -192,7 +192,7 @@ ms.locfileid: "81705600"
 
 #### <a name="general-prerequisites"></a>一般的な前提条件  
 
--   [オンプレミス モバイル デバイス管理の準備手順](https://technet.microsoft.com/library/mt613153.aspx)と[デバイスの登録](https://technet.microsoft.com/library/mt627870.aspx)が完了していることを確認します。  
+-   [オンプレミス MDM の準備手順](../../mdm/plan-design/plan-on-premises-mdm.md)と[デバイスの登録](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)が完了していることを確認します。  
 
 -   会社のポータルを使用した場合の最適なアプリケーションのインストール エクスペリエンスのため、Configuration Manager に Microsoft Intune へのアクティブな接続があることを確認します。  
 
@@ -284,7 +284,7 @@ ms.locfileid: "81705600"
 
 #### <a name="to-create-a-collection-for-a-server-group"></a>サーバー グループのコレクションを作成するには  
 
-1.  サーバー グループ内のコンピューターを含む[デバイス コレクションを作成](https://technet.microsoft.com/library/gg712295.aspx)します。  
+1.  サーバー グループ内のコンピューターを含む[デバイス コレクションを作成](../clients/manage/collections/create-collections.md)します。  
 
 2.  **[資産とコンプライアンス]** ワークスペースで **[デバイス コレクション]** をクリックし、サーバー グループ内のコンピューターを含むコレクションを右クリックして、 **[プロパティ]** をクリックします。  
 
@@ -325,9 +325,9 @@ ms.locfileid: "81705600"
 
 #### <a name="to-deploy-software-updates-to-the-server-group-and-monitor-status"></a>ソフトウェア更新プログラムをサーバー グループに展開して状態を監視するには  
 
-1.  サーバーグループ コレクションに[ソフトウェア更新プログラムを展開](https://technet.microsoft.com/library/gg712304.aspx)します。  
+1.  サーバーグループ コレクションに[ソフトウェア更新プログラムを展開](../../sum/deploy-use/deploy-software-updates.md)します。  
 
-2.  [ソフトウェア更新プログラムの展開を監視](https://technet.microsoft.com/library/gg712304.aspx)します。 ソフトウェア更新プログラムの展開の標準の監視ビューに加え、クライアントがソフトウェア更新プログラムをインストールする順番を待機している際に、新しい状態の説明が表示されるようになりました。 **[ロックを待っています]** がこの新しい状態に表示されます。  
+2.  [ソフトウェア更新プログラムの展開を監視](../../sum/deploy-use/monitor-software-updates.md)します。 ソフトウェア更新プログラムの展開の標準の監視ビューに加え、クライアントがソフトウェア更新プログラムをインストールする順番を待機している際に、新しい状態の説明が表示されるようになりました。 **[ロックを待っています]** がこの新しい状態に表示されます。  
 
 #### <a name="to-clear-the-deployment-locks-for-computers-in-a-server-group"></a>サーバー グループ内のコンピューターの展開のロックを解除するには  
 
@@ -451,7 +451,7 @@ ms.locfileid: "81705600"
 
    - 列 2: iOS シリアル番号: 事前宣言できるのは iOS シリアル番号だけです。 他のデバイス プラットフォームには IMEI 番号を使用します。  
 
-   - 列 3: デバイスのオペレーティング システム (大文字化が必要):   
+   - 列 3: デバイスのオペレーティング システム (大文字化が必要):  
 
      -   IOS: すべての iOS デバイス  
 

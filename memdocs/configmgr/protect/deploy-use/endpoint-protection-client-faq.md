@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8b89f2dd9f60b43db5c4ce8956f843429b47bc62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709250"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906833"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection クライアントのよく寄せられる質問
 
@@ -145,7 +145,7 @@ Windows Defender によって検出された望ましくない項目または有
 
 -   ご使用のウイルス対策とスパイウェア対策のソフトウェア、Windows Defender が潜在的な脅威に対する最新の更新を使用していることを確認します (「ウイルス定義とスパイウェア定義を最新の状態に保つ方法」を参照)。 また、最新バージョンの Windows Defender を常を使用していることも確認します。  
 
--   信頼できる発信元からのみ更新プログラムをダウンロードします。 Windows オペレーティング システムの場合、必ず [Microsoft Update](https://go.microsoft.com/fwlink/?LinkID=96304) (https://go.microsoft.com/fwlink/?LinkID=96304) にアクセスします。その他のソフトウェアの場合には、作成元の会社または個人の正式な Web サイトを常に使用します。  
+-   信頼できる発信元からのみ更新プログラムをダウンロードします。 Windows オペレーティング システムの場合は、常に [Microsoft Update カタログ](https://catalog.update.microsoft.com)にアクセスします。  その他のソフトウェアの場合には、作成元の会社または個人の正式な Web サイトを常に使用します。
 
 -   ファイルが添付された電子メールを受信し、発信元が不確かな場合には、すぐに削除してください。 不明な発信元のアプリケーションやファイルは決してダウンロードしないでください。また、他のユーザーとファイルをやり取りする場合にも注意を払ってください。  
 

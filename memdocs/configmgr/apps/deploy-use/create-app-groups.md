@@ -10,12 +10,12 @@ ms.assetid: e67c691e-62ef-4f43-9cfb-0e957d1e7a5f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a20ee62fefd401e56abbf86beed0c4685b19ea39
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f63c52fcd2aaccbfbe04160581318126bc53db12
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689740"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643124"
 ---
 # <a name="create-application-groups"></a>アプリケーション グループの作成
 
@@ -66,3 +66,4 @@ ms.locfileid: "81689740"
 - 再起動が必要なアプリをグループに含めないでください。そうしないと、グループの展開が失敗する可能性があります。
 - *バージョン 1906*:ユーザー コレクションにアプリ グループを展開できません。
 - *バージョン 1906*:ユーザーは、ソフトウェア センターでアプリ グループを**アンインストール**できません。
+- アプリ グループの一部であるアプリを削除すると、次にアプリ グループのプロパティを表示したときに次の警告が表示されます。"グループ内のすべてのアプリケーションに関する情報を読み込めませんでした。" アプリ グループに単純な変更を加えて保存します。 たとえば、 **[管理者コメント]** にスペースを追加します。 変更を保存すると、削除されたアプリがグループから削除されます。<!-- 7099542 -->

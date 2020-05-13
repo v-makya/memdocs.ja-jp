@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05e7bbe6373ed91de5a2bb8e99a8425e733274f2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705570"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905672"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Configuration Manager の Technical Preview 1606 の機能
 
@@ -80,9 +80,9 @@ Microsoft Intune と Configuration Manager を使用している場合に、デ�
 
 Device Guard は、ハードウェアとソフトウェアの機能を使用して、デバイスでの実行を許可する条件を厳密に制御する Windows 10 の機能です。
 
-Device Guard の詳細な概要とそのしくみについては、[この Technet の記事](https://technet.microsoft.com/itpro/windows/whats-new/device-guard-overview)をご覧ください。
+詳しくは、[Device Guard の概要](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)に関するページを参照してください。
 
-このリリースでは、Configuration Manager は Device Guard および [Windows AppLocker](https://technet.microsoft.com/library/dd723678(v=ws.10).aspx) と相互運用して、Configuration Manager で展開される実行可能ファイルや DLL ファイルが、管理されたインストーラーから提供されているものとして自動的に信頼されるようにすることができます。つまり、これらのファイルが対象のデバイス上で実行されることが許可され、その他のソフトウェアは他の AppLocker の規則によって明示的に実行が許可されない限り、実行することはできません。  
+このリリースでは、Configuration Manager は Device Guard および [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) と相互運用して、Configuration Manager で展開される実行可能ファイルや DLL ファイルが、管理されたインストーラーから提供されているものとして自動的に信頼されるようにすることができます。つまり、これらのファイルが対象のデバイス上で実行されることが許可され、その他のソフトウェアは他の AppLocker の規則によって明示的に実行が許可されない限り、実行することはできません。  
 
 現時点では、この機能は Configuration Manager コンソールから構成することはできません。 ポリシーを構成するには、クライアントごとにレジストリ キーを構成し、クライアントで Windows サービスを構成する必要があります。
 これが完了したら、AppLocker ポリシー ファイルを構成します。 ポリシー ファイルを構成したら、それを互換性のある任意のクライアント デバイスに展開できます。
@@ -93,13 +93,11 @@ Device Guard の詳細な概要とそのしくみについては、[この Techn
 - 監査モード: アプリケーションの実行は妨げられませんが、ブロックされたすべてのアプリケーションがログ ファイルに報告されます (これは今後の Configuration Manager のリリースでサポートされる予定です)。
 - 適用を有効にする: アプリケーションが実行できなくなります。
 
-Configuration Manager での Device Guard の詳しい使用方法は、[Enterprise Mobility and Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/2016/06/20/configmgr-as-a-managed-installer-with-win10)をご覧ください。
+詳細については、以下の記事を参照してください。
 
-参考資料:
+- [Device Guard の概要](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Device Guard の概要](https://technet.microsoft.com/itpro/windows/keep-secure/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies)
-- [Device Guard certification and compliance](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance) (Device Guard の証明書とコンプライアンス)
-- [Device Guard 展開ガイド](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
+- [Windows Defender Application Control の展開プロセスの計画と概要](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a> オンプレミス モバイル デバイス管理のための複数のデバイス管理ポイント  
   Technical Preview 1606 では、オンプレミスのモバイル デバイス管理 (MDM) で、複数のデバイス管理ポイントが使用できるように登録済みのデバイスを自動的に構成する Windows 10 Anniversary Update の新機能をサポートしています。 この機能により、通常使用しているデバイスの管理ポイントが使用できない場合に、デバイスが別のデバイス管理ポイントにフォールバックすることができます。 この機能は、Windows 10 Anniversary Update がインストールされている PC でのみ機能します。  
@@ -221,7 +219,7 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 
 Technical Preview 1606 を起動すると、グループ ポリシーの代わりに Configuration Manager クライアント エージェント設定を使用して、Office 365 クライアントが Configuration Manager から更新プログラムを受信できるようにすることができます。 この設定を構成し、Office 365 の更新プログラムを展開すると、Configuration Manager クライアント エージェントは、Office 365 のクライアント エージェントと通信して、配布ポイントから Office 365 の更新プログラムをダウンロードしてインストールします。 Configuration Manager は、クライアント エージェント設定のインベントリも取得します。
 
-詳細については、「[System Center Configuration Manager での Office 365 ProPlus の更新プログラムの管理](https://technet.microsoft.com/library/mt741983.aspx)」をご覧ください。
+詳細については、「[System Center Configuration Manager での Office 365 ProPlus の更新プログラムの管理](../../sum/deploy-use/manage-office-365-proplus-updates.md)」をご覧ください。
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Configuration Manager クライアント設定で Office 365 クライアント エージェントを管理するように設定する
 1.  Configuration Manager コンソールで、 **[管理]**  >  **[概要]**  >  **[クライアント設定]** の順にクリックします。

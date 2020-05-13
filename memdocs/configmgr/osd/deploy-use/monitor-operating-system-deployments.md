@@ -2,7 +2,7 @@
 title: オペレーティング システムの展開の監視
 titleSuffix: Configuration Manager
 description: オペレーティング システムの展開オブジェクトを監視するため、Configuration Manager コンソールにはアラート、レポート、およびさまざまなステータス インジケーターが用意されています。
-ms.date: 10/06/2016
+ms.date: 05/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9d0a430a1010611bc6a7e0871e8c59ca3d1f8de7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7afab9fbbb443b2f9fb4af15a3805c0b7df7a014
+ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708480"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82802168"
 ---
 # <a name="monitor-operating-system-deployments-in-configuration-manager"></a>Configuration Manager でオペレーティング システムの展開を監視する
 
@@ -45,6 +45,9 @@ Configuration Manager コンソールの次の機能を使用して、オペレ�
 3.  展開ステータスを監視するタスク シーケンスをクリックします。  
 
 4.  **[ホーム]** タブの **[展開]** グループで、 **[ステータスの表示]** をクリックします。  
+
+> [!NOTE]  
+> アップグレードが開始されると、ステータス メッセージ 52200 が生成されます。 これには、アップグレードを行ったユーザーが含まれます。  
 
 ##  <a name="operating-system-deployment-reports"></a><a name="BKMK_TSReports"></a> オペレーティング システムの展開レポート  
  使用可能な定義済みのオペレーティング システムの展開レポートが数多く用意されています。 レポートは複数のカテゴリに分類され、状態移行とタスク シーケンスの展開に関する特定の情報のレポートに使用できます。 事前に構成されたレポートを使用するだけでなく、企業のニーズに応じて、ソフトウェア更新プログラムのカスタム レポートを作成することもできます。 詳しくは、「[レポートの操作とメンテナンス](../../core/servers/manage/operations-and-maintenance-for-reporting.md)」を参照してください。  

@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a23f6106a8c922b3ff4e8306fb76aec4fd26b148
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 216c61a671d7d06e434fa399bb3bae12e12f7275
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691410"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905160"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>Configuration Manager ラボの設定
 
@@ -31,9 +31,9 @@ ms.locfileid: "81691410"
 
 -   **ラボ環境では Windows Server 2012 R2 が使用**されています。これに対して Configuration Manager のインストールをサポートするコア コンポーネントがいくつか必要です。  
 
-     Windows Server 2012 R2 の評価版は、[TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012) からダウンロードできます。  
+     Windows Server 2012 R2 の評価版は、[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012) からダウンロードできます。  
 
-     これらの演習で参照されている一部のダウンロードに簡単にアクセスできるように、Internet Explorer のセキュリティ強化の構成を変更または無効化することを検討してください。 詳細については、「[Internet Explorer:Enhanced Security Configuration](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx)」 (Internet Explorer: セキュリティ強化の構成) をご覧ください。  
+     これらの演習で参照されている一部のダウンロードに簡単にアクセスできるように、Internet Explorer のセキュリティ強化の構成を変更または無効化することを検討してください。 詳細については、[Internet Explorer のセキュリティ強化構成に関するページを参照してください。セキュリティ強化構成](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10))を無効にします。  
 
 -   **ラボ環境では SQL Server 2012 SP2 が使用** されています (サイト データベース用)。  
 
@@ -45,7 +45,7 @@ ms.locfileid: "81691410"
 
     -   **SQL 照合順序** クラスとしての **SQL_Latin1_General_CP1_CI_AS** 。  
 
-    -   **SQL 認証**ではなく、 [Windows 認証](https://technet.microsoft.com/library/ms144284.aspx)ではなく、 is required.  
+    -   **SQL 認証**ではなく、 [Windows 認証](https://docs.microsoft.com/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15)ではなく、 is required.  
 
     -   **専用の SQL Server インスタンス**が必要です。  
 
@@ -61,11 +61,11 @@ ms.locfileid: "81691410"
 
 -   ドメイン コントローラーは、**Active Directory Domain Services がインストールされた Windows Server 2008 R2** を使用します。 ドメイン コントローラーは、完全修飾ドメイン名で使用するための DHCP サーバーと DNS サーバーのホストとしても機能します。  
 
-     詳細については、「[overview of Active Directory Domain Services](https://technet.microsoft.com/library/hh831484)」 (Active Directory Domain Services の概要) を参照してください。  
+     詳細については、[Active Directory Domain Services の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11))に関するページを参照してください。  
 
 -   演習で実行する管理手順が意図したとおりに機能していることを確認するため、**Hyper-V がいくつかの仮想マシンで使用されます**。 Windows 10 がインストールされている 3 台以上の仮想マシンを使用することをお勧めします。  
 
-     詳細については、「[Hyper-V の概要](https://technet.microsoft.com/library/hh831531.aspx)」を参照してください。  
+     詳細については、[Hyper-V の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11))に関するページを参照してください。  
 
 -   **管理者のアクセス許可** が必要になります。  
 
@@ -95,7 +95,7 @@ ms.locfileid: "81691410"
 次の手順では、Configuration Manager クライアントが Active Directory Domain Services に対してクエリを実行して、サイトのリソースを見つける方法について説明します。  
 
 ##  <a name="create-the-system-management-container"></a><a name="BKMK_CreateSysMgmtLab"></a> System Management コンテナーの作成  
- Configuration Manager では、スキーマの拡張時に、必要な System Management コンテナーが Active Directory Domain Services に自動的に作成されません。 したがって、これをラボ向けに作成します。 この手順では、 [ADSI エディターをインストール](https://technet.microsoft.com/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)する必要があります。  
+ Configuration Manager では、スキーマの拡張時に、必要な System Management コンテナーが Active Directory Domain Services に自動的に作成されません。 したがって、これをラボ向けに作成します。 この手順では、[ADSI エディターをインストール](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10))する必要があります。
 
  Active Directory ドメイン サービス内の **System** コンテナーで **すべての子オブジェクトを作成する** アクセス許可を持つアカウントとしてログオンします。  
 
@@ -129,7 +129,7 @@ ms.locfileid: "81691410"
 
 5.  **[OK]** をクリックして **[ADSI エディター]** コンソールを閉じ、手順を完了します。  
 
-     この手順の詳細については、「[Configuration Manager 向けに Active Directory スキーマを拡張する](../../core/plan-design/network/extend-the-active-directory-schema.md)」を参照してください。  
+     詳細については、[Configuration Manager 向けの Active Directory スキーマの拡張](../../core/plan-design/network/extend-the-active-directory-schema.md)に関するページを参照してください  
 
 ##  <a name="extend-the-active-directory-schema-using-extadschexe"></a><a name="BKMK_ExtADSchLab"></a> extadsch.exe を使用した Active Directory スキーマの拡張  
  このラボの Active Directory スキーマを拡張します。これにより、最小限の管理オーバーヘッドですべての Configuration Manager 機能を使用できます。 Active Directory スキーマの拡張は、フォレストごとに 1 回実行されるフォレスト全体の構成です。 スキーマを完全に拡張すると、Active Directory の基本構成の一連のクラスと属性が変更されます。 この操作は、元に戻すことはできません。 スキーマを拡張すると、Configuration Manager がラボ環境内で最も効果的に機能できるように、コンポーネントにアクセスできます。  
@@ -139,7 +139,7 @@ ms.locfileid: "81691410"
 
 #### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>extadsch.exe を使用して Active Directory スキーマを拡張するには:  
 
-1.  スキーマ マスター ドメイン コントローラーのシステム状態のバックアップを作成します。 マスター ドメイン コント ローラーのバックアップの詳細については、「 [Windows Server バックアップ](https://technet.microsoft.com/library/cc770757.aspx)」を参照してください。  
+1.  スキーマ マスター ドメイン コントローラーのシステム状態のバックアップを作成します。 マスター ドメイン コントローラーのバックアップの詳細については、「[Windows Server バックアップ](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770757(v=ws.11))」を参照してください  
 
 2.  インストール メディアの **\SMSSETUP\BIN\X64** に移動します。  
 
@@ -147,7 +147,7 @@ ms.locfileid: "81691410"
 
 4.  システム ドライブのルート フォルダーにある **extadsch.log** を確認して、スキーマの拡張が成功したことを確かめます。  
 
-     この手順の詳細については、「[Configuration Manager 向けに Active Directory スキーマを拡張する](../../core/plan-design/network/extend-the-active-directory-schema.md)」を参照してください。  
+     詳細については、[Configuration Manager 向けの Active Directory スキーマの拡張](../../core/plan-design/network/extend-the-active-directory-schema.md)に関するページを参照してください。  
 
 ##  <a name="other-required-tasks"></a><a name="BKMK_OtherTasksLab"></a> その他の必要なタスク  
  インストールする前に、次のタスクも完了する必要があります。  
@@ -158,7 +158,7 @@ ms.locfileid: "81691410"
 
  **.NET をインストールし、Windows Communication Foundation をアクティブ化する**  
 
- 2 つの .NET Framework をインストールする必要があります。最初に .NET 3.5.1 をインストールしてから、.NET 4.5.2+ をインストールします。 また、Windows Communication Foundation (WCF) をアクティブ化する必要もあります。 WCF は、分散コンピューティング、広範な相互運用性、およびサービス指向の直接サポートに対する管理しやすいアプローチを提供するように設計されており、サービス指向のプログラミング モデルで接続アプリケーションの開発を簡略化します。 WCF の詳細については、「 [Windows Communication Foundation とは](https://technet.microsoft.com/subscriptions/ms731082\(v=vs.90\).aspx) 」を参照してください。  
+ 2 つの .NET Framework をインストールする必要があります。最初に .NET 3.5.1 をインストールしてから、.NET 4.5.2+ をインストールします。 また、Windows Communication Foundation (WCF) をアクティブ化する必要もあります。 WCF は、分散コンピューティング、広範な相互運用性、およびサービス指向の直接サポートに対する管理しやすいアプローチを提供するように設計されており、サービス指向のプログラミング モデルで接続アプリケーションの開発を簡略化します。 詳細については、[Windows Communication Foundation の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms731082(v=vs.90))に関するページを参照してください。
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>.NET をインストールし、Windows Communication Foundation をアクティブ化するには:  
 
@@ -198,27 +198,15 @@ ms.locfileid: "81691410"
 
 10. .NET の基本インストールの完了後、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=42643) に移動して、.NET Framework 4.5.2 の Web インストーラーを入手します。 **[ダウンロード]** をクリックし、インストーラーを **実行** します。 これにより、選択した言語の必要なコンポーネントが自動的に検出され、インストールされます。  
 
-これらの .NET Framework が必要な理由の詳細については、次の記事を参照してください。  
-
--   [.NET Framework のバージョンおよび依存関係](https://technet.microsoft.com/library/bb822049.aspx)  
-
--   [.NET Framework 4 RTM アプリケーションの互換性に関するチュートリアル](https://technet.microsoft.com/library/dd889541.aspx)  
-
--   [方法:ASP.NET Web アプリケーションを ASP.NET 4 にアップグレードする](https://technet.microsoft.com/library/dd483478\(VS.100\).aspx)  
-
--   [Microsoft .NET Framework のサポート ライフサイクル ポリシーに関する FAQ](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
-
--   [CLR 徹底解剖 - インプロセス サイドバイサイド](https://msdn.microsoft.com/magazine/ee819091.aspx)  
-
 **BITS、IIS、および RDC の有効化**  
 
-[バックグラウンド インテリジェント転送サービス (BITS)](https://technet.microsoft.com/library/dn282296.aspx) は、クライアントとサーバーの間でファイルを非同期的に転送する必要があるアプリケーションに使用します。 BITS では、フォアグラウンドとバックグラウンドの転送フローを測定することで、他のネットワーク アプリケーションの応答性を保持します。 また、転送セッションが中断した場合は、ファイル転送を自動的に再開します。  
+[バックグラウンド インテリジェント転送サービス (BITS)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282296(v=ws.11)) は、クライアントとサーバーの間でファイルを非同期的に転送する必要があるアプリケーションに使用します。 BITS では、フォアグラウンドとバックグラウンドの転送フローを測定することで、他のネットワーク アプリケーションの応答性を保持します。 また、転送セッションが中断した場合は、ファイル転送を自動的に再開します。  
 
 このサイト サーバーは管理ポイントとしても使用されるため、このラボでは BITS をインストールします。  
 
 インターネット インフォメーション サービス (IIS) は、柔軟でスケーラブルな Web サーバーです。これを使用すると、Web であらゆるものをホストできます。 IIS は、さまざまなサイト システムの役割に対して Configuration Manager によって使用されます。 IIS の詳細については、「[サイト システム サーバーの Web サイト](../../core/plan-design/network/websites-for-site-system-servers.md)」を参照してください。  
 
-[Remote Differential Compression (RDC)](https://technet.microsoft.com/library/cc754372.aspx) は、一連のファイルに変更が行われたかどうかをアプリケーションが判断するときに使用できる一連の API です。 RDC を使用すると、ファイルの変更された部分のみをレプリケートすることで、ネットワーク トラフィックを最小限に抑えることができます。  
+[Remote Differential Compression (RDC)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754372(v=ws.11)) は、一連のファイルに変更が行われたかどうかをアプリケーションが判断するときに使用できる一連の API です。 RDC を使用すると、ファイルの変更された部分のみをレプリケートすることで、ネットワーク トラフィックを最小限に抑えることができます。  
 
 #### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>BITS、IIS、および RDC サイト サーバーの役割を有効にするには:  
 

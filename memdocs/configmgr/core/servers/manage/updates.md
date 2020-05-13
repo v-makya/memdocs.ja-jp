@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f38b8662d4d7b5e7897d0c43560a5e2a4672eee6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704320"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903936"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Configuration Manager の更新とサービス
 
@@ -60,11 +60,13 @@ Configuration Manager の次のサポート対象バージョンは、現在、�
 
 | バージョン | 公開日 | [サポート終了日](current-branch-versions-supported.md) | Baseline | コンソール内の更新プログラム |  
 |-------------|-----------|------------|--------------|------------------------|  
-| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 2020 年 5 月 | 2021 年 10 月 1 日 | はい<sup>[注 1](#bkmk_note1)</sup> | はい |
+| [**2002**](../../plan-design/changes/whats-new-in-version-2002.md)<br /> (5.00.8968) | 2020 年 4 月 1 日 | 2021 年 10 月 1 日 | はい<sup>[注 1](#bkmk_note1)</sup> | はい |
 | [**1910**](../../plan-design/changes/whats-new-in-version-1910.md)<br /> (5.00.8913) | 2019 年 11 月 29 日 | 2021 年 5 月 29 日 | いいえ | はい |
 | [**1906**](../../plan-design/changes/whats-new-in-version-1906.md)<br /> (5.00.8853) | 2019 年 7 月 26 日 | 2021 年 1 月 26 日 | いいえ | はい |
 | [**1902**](../../plan-design/changes/whats-new-in-version-1902.md)<br /> (5.00.8790) | 2019 年 3 月 27 日 | 2020 年 9 月 27 日 | はい<sup>[注 1](#bkmk_note1)</sup> | はい |
 | [**1810**](../../plan-design/changes/whats-new-in-version-1810.md)<br /> (5.00.8740) | 2018 年 11 月 27 日 | 2020 年 12 月 1 日 | いいえ | はい |
+
+**公開日**は、[早期更新リング](checklist-for-installing-update-2002.md#early-update-ring)がリリースされる日です。 基準メディアは、更新プログラムが全世界で利用できるようになった後、ボリューム ライセンス サービス センターで利用できるようになります。
 
 <a name="bkmk_note1"></a>
 

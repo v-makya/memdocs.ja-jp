@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7a505296fe51aae996d429fe7da2033d3a787ff
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706670"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906022"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>適切な Configuration Manager のブランチを選択する
 
@@ -47,7 +47,7 @@ Microsoft は、Configuration Manager の Current Branch に対し、年に数�
 
 新しいサイトとして Current Branch をインストールするには、[構成基準メディア](../servers/manage/updates.md#bkmk_Baselines)を使います。 System Center 2012 Configuration Manager Service Pack 2 または System Center 2012 R2 Configuration Manager Service Pack 1 からアップグレードする場合も、構成基準メディアを使います。 このメディアへのアクセス方法は、組織の Configuration Manager のライセンス形態によって異なります。
 
-この基準メディアを使用して、Current Branch の評価版の新しいサイトをインストールすることもできます。 評価版にはライセンスは不要です。 評価版は 180 日間使用できます。 Current Branch の製品版へのアップグレードをサポートします。 評価版のみをインストールするには、[TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) から入手します。
+この基準メディアを使用して、Current Branch の評価版の新しいサイトをインストールすることもできます。 評価版にはライセンスは不要です。 評価版は 180 日間使用できます。 Current Branch の製品版へのアップグレードをサポートします。 評価版のみをインストールするには、[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) から入手します。
 
 > [!NOTE]
 > 新しい Configuration Manager 階層のサイトをインストールするには、基準メディアを使用します。 基準バージョンをインストール済みの場合は、コンソール内の更新プログラムを使用して、サイトを新しいバージョンに更新します。  
@@ -89,7 +89,7 @@ LTSB はバージョン 1606 に基づいています。 このブランチは�
 >  
 > ボリューム ライセンス サービス センター (VLSC) で Configuration Manager バージョン 1606 を見つけるには、[VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) の **[Downloads and Keys]\(ダウンロードとキー\)** タブに移動し、`System Center 2016` を検索して、**System Center 2016 Datacenter** または **System Center 2016 Standard** を選択します。  
 >  
-> System Center 2016 の評価版は、[TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview) から入手することもできます。  
+> System Center 2016 の評価版は、[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview) から入手することもできます。  
 
 ### <a name="features-of-the-ltsb"></a>LTSB の機能
 

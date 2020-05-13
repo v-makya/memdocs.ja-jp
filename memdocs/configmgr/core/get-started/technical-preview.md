@@ -2,7 +2,7 @@
 title: Technical Preview リリース
 titleSuffix: Configuration Manager
 description: Configuration Manager の新機能を体験する Technical Preview Branch について説明します。
-ms.date: 03/31/2020
+ms.date: 04/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec49f9931240e17218c125f1fa514088c83c55fd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bfcdd74b7b5c31e3f3ab6bb38a7ea96de9d05eec
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701840"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905152"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager の Technical Preview
 
@@ -69,17 +69,12 @@ Configuration Manager の *Current Branch* の新機能については、「[Sys
 
 Configuration Manager の Technical Preview Branch では、次の製品とテクノロジがサポートされています。
 
-- 次のバージョンの **SQL Server** のみをサポートします。
-
-  - SQL Server 2017 (累積的な更新プログラム 2 以降)
-  - SQL Server 2016 (Service Pack なし、またはそれ以降)
-  - SQL Server 2014 (Service Pack 1 以降)
-  - SQL Server 2012 (Service Pack 3 以降)
+- 特に明記されていない限り、Technical Preview Branch では、Current Branch と同じバージョンの SQL Server がサポートされます。 詳細については、[サポートされている SQL Server のバージョン](../plan-design/configs/support-for-sql-server-versions.md)に関するページを参照してください。
 
 - サイトでは最大 10 台のクライアントがサポートされ、これらでは任意の[サポートされているクライアントの OS バージョン](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md)を実行できます。<!-- SCCMDocs#1656 -->
 
 > [!Note]
-> ここに製品が記載されていても、そのサポート ライフサイクルを超えてサポートが延長されることを意味するものではありません。 Configuration Manager では、サポート ライフサイクルが終了している製品はサポートされません。 詳しくは、「[Microsoft ライフサイクル ポリシー](https://go.microsoft.com/fwlink/p/?LinkId=208270)」をご覧ください。
+> ここに製品が記載されていても、そのサポート ライフサイクルを超えてサポートが延長されることを意味するものではありません。 Configuration Manager では、サポート ライフサイクルが終了している製品はサポートされません。 詳しくは、「[Microsoft ライフサイクル ポリシー](https://support.microsoft.com/lifecycle)」をご覧ください。
 
 ## <a name="install-and-update"></a><a name="bkmk_install"></a> インストールと更新
 
@@ -100,7 +95,7 @@ Configuration Manager の Technical Preview Branch では、次の製品とテ�
 
 - **Technical Preview バージョン 2002**:Configuration Manager Technical Preview Branch バージョン 2002 は、コンソール内更新と、新しいベースライン バージョンの両方として使用できます。
 
-ベースライン バージョンは [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) からダウンロードします。
+ベースライン バージョンは [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) からダウンロードしてください。
 
 ## <a name="providing-feedback"></a><a name="BKMK_TPFeedback"></a> フィードバックについて
 
@@ -121,9 +116,36 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2003.md#bkmk_anchor) <!--ID-->
+<!-- - [title](2020/technical-preview-2003.md) <!--ID-->
 
 最新の Configuration Manager Technical Preview バージョンでは、以下の機能を使用できます。
+
+### <a name="technical-preview-version-2004"></a>Technical Preview バージョン 2004
+
+- [Microsoft Endpoint Manager テナントのアタッチ: ConfigMgr クライアントの詳細](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
+- [Microsoft からの通知](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
+- [コンソールからの探索データのコピー](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
+- [CMPivot の改善](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
+- [PowerShell バージョン 7 のサポート](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
+- [ディスクのフォーマットとパーティション作成タスク シーケンスのステップの改善](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
+- [OS 展開のマネジメント インサイト規則](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
+- [タスク シーケンスの展開の種類の PowerShell コマンドレット](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
+
+> [!NOTE]
+> Technical Preview の以前のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、Configuration Manager の Current Branch に追加された機能は、Technical Preview Branch でも引き続き利用できます。
+
+## <a name="features-in-recent-technical-previews"></a>最近の Technical Preview での機能
+
+<!-- (explanatory comment)
+This is the full list of new features in the past TP releases since the last CB release.
+Each month, add features from the list above to a new H3 section at the top of this section.
+When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
+-->
+
+以下の機能は、Current Branch バージョン 2002 以降の Configuration Manager Technical Preview Branch の以前のバージョンでリリースされました。
+
+> [!TIP]
+> 新しい Current Branch バージョンが利用できるようになると、そのバージョンで利用できる機能が最新の "*新機能*" 記事に記載されます。 詳しくは、[増分バージョンの新機能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)に関する記事をご覧ください。
 
 ### <a name="technical-preview-version-2003"></a>Technical Preview バージョン 2003
 
@@ -136,24 +158,6 @@ bullet format:
 - [Microsoft に送信されたフィードバックのクエリ](2020/technical-preview-2003.md#bkmk_smile) <!--6488450-->
 - [タスク シーケンスの進行状況用の新しい SDK メソッド](2020/technical-preview-2003.md#bkmk_tsapi) <!--6448458-->
 - [OS 展開の機能強化](2020/technical-preview-2003.md#bkmk_osd) <!--6452769-->
-
-> [!NOTE]
-> Technical Preview の以前のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、Configuration Manager の Current Branch に追加された機能は、Technical Preview Branch でも引き続き利用できます。
-
-<!-- temp remove for 2002 CB ## Features in recent technical previews -->
-
-<!-- (explanatory comment)
-This is the full list of new features in the past TP releases since the last CB release.
-Each month, add features from the list above to a new H3 section at the top of this section.
-When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
--->
-
-<!--temp remove for 2002 CB  The following features were released with previous versions of the Configuration Manager technical preview branch since current branch version 1910: -->
-
-> [!TIP]
-> 新しい Current Branch バージョンが利用できるようになると、そのバージョンで利用できる機能が最新の "*新機能*" 記事に記載されます。 詳しくは、[増分バージョンの新機能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)に関する記事をご覧ください。
-
-<!-- ### Technical preview version 2003 -->
 
 ## <a name="features-in-previous-technical-previews"></a>以前の Technical Preview の機能
 

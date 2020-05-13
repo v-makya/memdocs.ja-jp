@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 78fad6f17681fa9822a378844ea4838c50383c82
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ce77c43f49556b3a60e36f05127f82d4d135762a
+ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704820"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643261"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configuration Manager の境界グループの構成
 
@@ -211,6 +211,13 @@ Configuration Manager の境界グループを利用し、関連するネット�
 
 これらの設定の構成方法については、「[Configure a boundary group](boundary-group-procedures.md#bkmk_config)」(境界グループを構成する) を参照してください。
 
+デバイスが複数の境界グループにある場合、これらの設定には次の動作が適用されます。
+
+- **この境界グループのピアのダウンロードを許可する**: これが 1 つの境界グループで無効になっている場合、クライアントは配信の最適化を使用しません。
+- **ピアのダウンロード中に、同じサブネットのピアのみを使用する**: これが 1 つの境界グループで有効になっている場合、この設定は有効になります。
+- **同じサブネット内のピアの配布ポイントより優先**: これが 1 つの境界グループで有効になっている場合、この設定は有効になります。
+- **オンプレミスのソースよりクラウド ベースのソースを優先する**: これが 1 つの境界グループで有効になっている場合、この設定は有効になります。
+
 #### <a name="allow-peer-downloads-in-this-boundary-group"></a><a name="bkmk_bgoptions1"></a> この境界グループのピアのダウンロードを許可する
 
 既定では、この設定は有効になっています。 管理ポイントでは、ピア ソースを含むコンテンツの場所のリストがクライアントに提供されます。 この設定は、[配信の最適化](../../../plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)のグループ ID 適用にも反映されます。  
@@ -220,6 +227,9 @@ Configuration Manager の境界グループを利用し、関連するネット�
 - VPN など、地理的に分散した場所からの境界を含む境界グループがある場合。 VPN を介して接続されるため同じ境界グループ内にある 2 つのクライアントが、コンテンツのピアの共有に適さないほど遠く離れた場所に位置している可能性があります。  
 
 - サイトの割り当てに、配布ポイントを参照しない、1 つの大規模な境界グループを使用する場合。  
+
+> [!IMPORTANT]
+> デバイスが複数の境界グループに含まれる場合は、デバイスのすべての境界グループでこの設定を有効にします。 そうでない場合、クライアントは配信の最適化を使用しません。 たとえば、DOGroupID レジストリ キーが設定されません。
 
 #### <a name="during-peer-downloads-only-use-peers-within-the-same-subnet"></a><a name="bkmk_bgoptions2"></a> ピアのダウンロード中に、同じサブネット内のピアのみを使用する
 

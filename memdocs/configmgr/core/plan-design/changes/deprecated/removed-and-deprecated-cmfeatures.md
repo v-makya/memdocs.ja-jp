@@ -2,7 +2,7 @@
 title: 非推奨の機能
 titleSuffix: Configuration Manager
 description: Configuration Manager でサポートされなくなった機能について説明します。
-ms.date: 02/25/2020
+ms.date: 05/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 899471b03169f015caef058790b9f58200976c48
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702610"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82905055"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager から削除された機能と非推奨の機能
 
@@ -29,8 +29,9 @@ ms.locfileid: "81702610"
 
 次の機能は非推奨とされます。 今でも使用できますが、Microsoft は将来のサポート終了を計画しています。
 
-|機能|最初に非推奨と発表|削除されたサポート&nbsp;|  
-|-----------|---|--------------|  
+|機能|最初に非推奨と発表|削除されたサポート&nbsp;|
+|-----------|---|--------------|
+| デバイス登録とセキュリティ更新プログラムの **[最近のデータを表示]** の Desktop Analytics のオプション。<!-- 7080949 --> 詳細については、「[データ待機時間](../../../../desktop-analytics/troubleshooting.md#data-latency)」をご覧ください。|2020 年 5 月|2020 年 7 月|
 |Azure からコンテンツを共有するための実装が変更されました。 コンテンツが有効なクラウド管理ゲートウェイを使用します。 今後は、従来のクラウド配布ポイントを作成できなくなります。|2019 年 2 月|未定<sup>[注 1](#bkmk_note1)</sup>|
 |クラウド管理ゲートウェイとクラウドの配布ポイントのための Azure への従来のサービス展開。 詳細については、[CMG の計画](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)に関するページを参照してください。|2018 年 11 月|未定<sup>[注 1](#bkmk_note1)</sup>|
 
@@ -49,7 +50,7 @@ ms.locfileid: "81702610"
 | Configuration Manager ポータル サイト アプリ | 2019 年 5 月 21 日 | バージョン 1910 |
 | アプリケーション カタログ Web サイト ポイントとアプリケーション カタログ Web サービス ポイントというサイト システムの役割を両方含む、アプリケーション カタログ: 詳細については、「[アプリケーション カタログの削除](../../../../apps/plan-design/plan-for-and-configure-application-management.md#bkmk_remove-appcat)」を参照してください。 | 2019 年 5 月 21 日 | バージョン 1910 |
 |Configuration Manager で Windows Hello for Business 設定を使用した証明書ベースの認証<br>詳細については、[Windows Hello for Business の設定](../../../../protect/deploy-use/windows-hello-for-business-settings.md) に関するページを参照してください。|2017 年 12 月|バージョン 1910|
-|Mac および Linux 用 System Center Endpoint Protection<br>詳しくは、[サポートの終了ブログ投稿](https://go.microsoft.com/fwlink/?linkid=870182)をご覧ください。|2018 年 10 月|2018 年 12 月 31 日|
+|Mac および Linux 用 System Center Endpoint Protection<br>詳しくは、[サポートの終了ブログ投稿](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257)をご覧ください。|2018 年 10 月|2018 年 12 月 31 日|
 |オンプレミスの条件付きアクセス<br>詳細については、「[ハイブリッド MDM はどうなりましたか?](../../../../mdm/understand/what-happened-to-hybrid.md)」を参照してください。|2019 年 1 月 30 日|2019 年 9 月 1 日|
 |ハイブリッド モバイル デバイス管理 (MDM)<br>詳細については、「[ハイブリッド MDM はどうなりましたか?](../../../../mdm/understand/what-happened-to-hybrid.md)」を参照してください。<br><br>2019 年 2 月末に予定されている 1902 Intune サービス リリース以降、新規のお客様は新しいハイブリッド接続を作成できなくなります。<!--Intune feature 2683117-->|2018 年 8 月 14 日|2019 年 9 月 1 日|
 |Security Content Automation Protocol (SCAP) 拡張機能。 <!--3607889--><br>以前の認定バージョンは、引き続き [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=48741)でご利用いただけます。|2018 年 9 月|バージョン 1810|
@@ -79,7 +80,7 @@ Configuration Manager では、Configuration Manager コンソール内からの
 
 Configuration Manager では、ネットワーク アクセス保護のサポートが削除されました。 この機能は Windows Server 2012 R2 で非推奨となり、Windows 10 からは削除されています。  
 
-ネットワーク アクセス保護の代替方法については、「 *ネットワーク ポリシーとアクセス サービスの概要* 」で [非推奨の機能](https://technet.microsoft.com/library/hh831683.aspx)に関する説明を参照してください。
+ネットワーク アクセス保護の代替方法については、「 *ネットワーク ポリシーとアクセス サービスの概要* 」で [非推奨の機能](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11))に関する説明を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
