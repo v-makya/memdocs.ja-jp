@@ -5,7 +5,7 @@ description: Microsoft Intune で管理できる Windows MDM セキュリティ 
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/07/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -13,16 +13,17 @@ ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 zone_pivot_groups: windows-mdm-versions
+ms.reviewer: laarrizz
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b40ed9dff0d83639015e70889bf7008e8e68173
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 67bb805df6406226c67084ed832f5cc590b1664a
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696487"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943911"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Intune 用の Windows MDM セキュリティ ベースラインの設定
 
@@ -31,10 +32,13 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 - セキュリティ ベースラインを Intune で使用する方法と、セキュリティ ベースライン プロファイルでベースラインのバージョンをアップグレードする方法については、[セキュリティ ベースラインの使用](security-baselines.md)に関する記事をご覧ください。
 - ベースラインの最新のバージョンは、**2019 年 5 月の MDM セキュリティ ベースライン**です
 
+以前のバージョンからのこのバージョンのベースラインの変更点を確認するには、このベースラインの *[バージョン]* ウィンドウを表示すると使用可能になる [[ベースラインの比較]](../protect/security-baselines.md#compare-baseline-versions) 操作を使用します。
+
 表示するベースラインのバージョンを選択してください。
 <!-- Cookies might be required to enable some browsers to display the zone options -->
 
 ::: zone pivot="mdm-may-2019"
+
 **2019 年 5 月の MDM セキュリティ ベースライン**:  
 > [!NOTE]
 > "*2019 年 5 月の MDM セキュリティ ベースライン*" は、2019 年 6 月に、(プレビューではなく) 一般提供としてリリースされました。 このバージョンのセキュリティ ベースラインでは、前のベースラインである "*2018 年 10 月の MDM セキュリティ ベースライン*" が置き換えられます。  2019 年 5 月のベースラインが使用可能になる前に作成されたプロファイルは、2019 年 5 月のバージョンの設定と値を反映するように更新されることはありません。  プレビュー テンプレートを基にして新しいプロファイルを作成することはできませんが、プレビュー テンプレートを基にして以前に作成したプロファイルを編集し、引き続き使用することはできます。
@@ -43,6 +47,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
 **プレビュー - 2018 年 10 月の MDM セキュリティ ベースライン**:  
 > [!NOTE]
 > これは、2018 年 10 月にリリースされた MDM セキュリティ ベースラインのプレビュー バージョンです。 このプレビュー ベースラインは、(プレビューではなく) 一般提供の "*2019 年 5 月の MDM セキュリティ ベースライン*" テンプレートのリリースによって、2019 年 5 月に置き換えられました。 *2019 年 5 月の MDM セキュリティ ベースライン*が使用可能になる前に作成されたプロファイルは、2019 年 5 月の MDM セキュリティ ベースライン バージョンの設定と値を反映するように更新されることはありません。 プレビュー テンプレートを基にして新しいプロファイルを作成することはできませんが、プレビュー テンプレートを基にして以前に作成したプロファイルを編集し、引き続き使用することはできます。
@@ -143,11 +148,17 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
   BitLocker リムーバブル ドライブ ポリシーの場合は、次の設定を構成します。
 
-  - **[Require encryption for write access]\(書き込みアクセス用に暗号化が必要\)** :  
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+  - **[Block write access to removable data-drives not protected by BitLocker]\(BitLocker で保護されていないリムーバブル データドライブへの書き込みアクセスをブロックする\)** :  
     **既定値**:はい
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
+
+  - **[Require encryption for write access]\(書き込みアクセス用に暗号化が必要\)** :  
+    **既定値**:はい
 
 - **[BitLocker removable drive policy]/(Bitlocker のリムーバブル ドライブのポリシー\)**  
   このポリシー設定は、暗号化方法および暗号化強度を制御するために使用します。 このポリシーの値は、BitLocker が暗号化に使用する暗号化強度を決定します。 企業では、セキュリティを強化するために、暗号化のレベルを制御したい場合があります (AES-256 は AES-128 よりも強力です)。 この設定を有効にした場合は、固定データ ドライブやオペレーティング システム ドライブ、リムーバブル データ ドライブのそれぞれに、暗号化アルゴリズムとキーの暗号化強度を構成できます。 固定ドライブやオペレーティング システム ドライブには、XTS-AES アルゴリズムを使用することをお勧めします。 リムーバブル ドライブには、Windows 10 バージョン 1511 以降を実行していないその他のデバイスでドライブを使用する場合は、AES-CBC 128 ビットまたは AES-CBC 256 ビットを使用する必要があります。 ドライブが既に暗号化されているか、暗号化が進行中の場合は、暗号化の種類を変更しても影響はありません。 このような場合、このポリシー設定は無視されます。  
@@ -281,7 +292,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 詳細については、Windows の「[Policy CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard)」(ポリシー CSP - DeviceGuard) を参照してください。
 
-- **[Credential Guard]\(資格情報ガード\)** :  
+- **[Credential Guard を有効にする]** :  
   ユーザーはこの設定で、次回の再起動時に資格情報が保護されるよう、仮想化ベースのセキュリティで Credential Guard をオンにできます。  
   [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067044)
 
@@ -381,7 +392,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
     **既定値**:60
 
-  - **[必要なパスワードの種類]** :  
+  - **[必須のパスワード]** :  
     必要な PIN またはパスワードの種類を決定します。  
     [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067027)
 
@@ -463,24 +474,24 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 詳細については、Windows の「[Policy CSP - Experience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience)」(ポリシー CSP - Experience) を参照してください。
 
 - **[Block Windows Spotlight]\(Windows スポットライトをブロックする\)** :  
-  ロック画面上の Windows スポットライト、Windows のヒント、Microsoft のコンシューマー向け機能、その他の関連機能など、すべての Windows スポットライト機能を IT 管理者がオフにできるようにします。  
+  IT 管理者がすべての Windows スポットライト機能をオフ (ブロック) できるようにします。 これには、ロック画面、Windows ヒント、Microsoft のコンシューマー機能、およびその他の関連機能のウィンドウ スポットライトが含まれます。  
   [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067037)
 
   **既定値**:はい
 
-  *[Windows Spotlight をブロックする]* を *[はい]* に設定すると、次の設定が利用できるようになります。
+  *[Block Windows Spotlight]\(Windows スポットライトをブロックする\)* を *[未構成]* に設定すると、Windows スポットライトはデバイスでブロックされなくなります。次に Windows スポットライト用に選択した項目をブロックするように次の設定を構成することができます。
 
   - **[Block third-party suggestions in Windows Spotlight]\(Windows スポットライトでのサードパーティのおすすめをブロックする\)** :  
     ロック画面上のスポットライト、[スタート] メニューのおすすめのアプリ、Windows のヒントなど、Windows スポットライト機能でサードパーティのソフトウェア発行元からのアプリやコンテンツのおすすめを許可するかどうかを指定します。 ただし、Microsoft の機能、アプリ、およびサービスに関するおすすめはユーザーに表示されることがあります。  
     [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067045)
 
-    **既定値**:はい
+    **既定値**:未構成
 
   - **[Block consumer specific features]\(コンシューマー向け機能をブロックする\)** :  
     通常はコンシューマー向けのエクスペリエンスを IT 管理者がオンにできるようにします。たとえば、開始時の提案、メンバーシップ通知、OOBE 後のアプリ インストール、リダイレクト タイルなどです。  
     [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067054)
 
-    **既定値**:はい
+    **既定値**:未構成
 
 ## <a name="exploit-guard"></a>Exploit Guard
 
@@ -889,7 +900,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
   **既定値**:Enabled
 
-- **[Internet Explorer trusted zone don't run antimalware against Active X controls]\(Internet Explorer の信頼済みゾーンで Active X コントロールに対してマルウェア対策を実行しない\)** :  
+- **[Internet Explorer trusted zone do not run antimalware against Active X controls]\(Internet Explorer の信頼済みゾーンで Active X コントロールに対してマルウェア対策を実行しない\)** :  
   このポリシー設定では、Internet Explorer で ActiveX コントロールに対してマルウェア対策プログラムを実行し、ページを読み込んでも安全か確認するかどうかが決定されます。 このポリシー設定を有効にすると、Internet Explorer では、ActiveX コントロールのインスタンスを作成しても安全かどうかを確認するための、マルウェア対策プログラムでのチェックは行われません。 このポリシー設定を無効にすると、Internet Explorer では、ActiveX コントロールのインスタンスを作成しても安全かどうかを確認するための、マルウェア対策プログラムでのチェックが常に行われます。 このポリシー設定を構成しない場合、Internet Explorer では、ActiveX コントロールのインスタンスを作成しても安全かどうかを確認するための、マルウェア対策プログラムでのチェックが常に行われます。 ユーザーは、Internet Explorer の [セキュリティ] の設定を使用して、この動作を有効または無効に切り替えることができます。  
   [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067115)
 
@@ -1501,7 +1512,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
   **既定値**:はい
   
-- **[Allow UI access applications for secure locations ]\(セキュリティで保護された場所に対して UI アクセス アプリケーションを許可する\)** :  
+- **[セキュリティで保護された場所の UI アクセス アプリケーションのみを許可する]** :  
   このポリシー設定は、標準ユーザーに対して昇格がプロンプトされたときにセキュリティで保護されたデスクトップを、ユーザー インターフェイス アクセシビリティ (UIAccess または UIA) プログラムが自動的に無効にできるかどうかを制御します。
 
   - "*はい*" - Windows リモート アシスタンスなどの UIA プログラムは、昇格時のプロンプトに対してセキュリティで保護されたデスクトップを自動的に無効にします。 "ユーザー アカウント制御: 昇格のプロンプト時にセキュリティで保護されたデスクトップに切り替える" ポリシー設定を無効にしない場合、セキュリティで保護されたデスクトップではなく、対話ユーザーのデスクトップにプロンプトが表示されます。
@@ -1539,151 +1550,168 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 詳細については、Windows ドキュメントの「[Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender)」(ポリシー CSP - Defender) を参照してください。
 
-- **[受信メール メッセージをスキャンする]** :  
-  メールのスキャンを許可または禁止します。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067116)
-
-  **既定値**:はい
-
-- **[Office apps launch child process type]\(Office アプリの子プロセスの起動の種類\)** :  
-  Office アプリは子プロセスを作成できなくなります。 これには、Word、Excel、PowerPoint、OneNote、および Access が含まれます。 これは一般的なマルウェアの動作です。特に、Office アプリを使用して悪意のある実行可能ファイルを起動またはダウンロードしようとするマクロベースの攻撃の場合に一般的です。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067121)
-
-  **既定値**:ブロックする
-
-- **[Defender sample submission consent type]\(Defender のサンプル送信の同意の種類\)** :  
-  Microsoft Defender でデータを送信するためのユーザーの同意レベルを確認します。 必要な同意が既に与えられている場合、Microsoft Defender からそれらが送信されます。 それ以外の場合 (かつユーザーが "確認しない" を指定した場合)、(Defender/AllowCloudProtection が許可されている場合は) データを送信する前にユーザーの同意を求める UI が起動します。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067131)
-
-  **既定値**:安全なサンプルを自動的に送信します。
-
-- **[署名更新間隔 (時単位)]** :  
-  Defender の署名更新間隔 (時間)。
-
-  **既定値**:4
-
-- **[Script downloaded payload execution type]\(スクリプトでダウンロードされたペイロードの実行タイプ\)** :  
-  Defender スクリプトでダウンロードされたペイロードの実行タイプ。
-
-  **既定値**:ブロックする
-  
-- **[Prevent credential stealing type]\(資格情報盗難防止タイプ\)** :  
-  Microsoft Defender Credential Guard では、仮想化ベースのセキュリティを使用してシークレットを分離し、特権を持つシステム ソフトウェアだけがアクセスできるようにします。 これらのシークレットへの不正アクセスは、Pass-the-Hash や Pass-The-Ticket などの資格情報の盗難攻撃につながる可能性があります。 Microsoft Defender Credential Guard では、NTLM パスワード ハッシュ、Kerberos のチケット保証チケット、およびアプリケーションによってドメイン資格情報として格納された資格情報を保護することで、これらの攻撃を防ぎます。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067065)
-  
-  **既定値**:[ウェイクアップ時間 (デスクトップ コンピューター)] を有効にして、デスクトップ コンピューターが、スケジュールされた更新またはソフトウェアのインストールを実行するために、スリープ状態または休止状態から復帰する時刻を指定します。
-
-- **[Email content execution type]\(電子メール コンテンツ実行タイプ\)** :  
-  このルールは、次の種類のファイルが Microsoft Outlook または Web メール (Gmail.com や Outlook.com など) に表示された電子メールから実行または起動されるのをブロックします: 実行可能ファイル (例: .exe、.dll、.scr)、スクリプト ファイル (例: PowerShell .ps、VisualBasic .vbs、JavaScript .js)、スクリプト アーカイブ ファイル。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067063)
-
-  **既定値**:ブロックする
-
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **[子プロセスでの Adobe Reader の起動]** :  
+- **[Adobe Reader による子プロセスの作成をブロックする]** :  
 このルールでは、Adobe Reader による追加のプロセス作成をブロックすることで攻撃を防ぎます。 マルウェアは、ソーシャル エンジニアリングまたは悪用によって、追加のペイロードをダウンロードして起動し、Adobe Reader から抜け出すことができます。 Adobe Reader による子プロセスの生成をブロックすることで、それをベクトルとして使用しようとしているマルウェアの拡散を防ぎます。
 [詳細情報](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   **既定値**:[ウェイクアップ時間 (デスクトップ コンピューター)] を有効にして、デスクトップ コンピューターが、スケジュールされた更新またはソフトウェアのインストールを実行するために、スリープ状態または休止状態から復帰する時刻を指定します。
 
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **[ネットワークの保護]** :  
-  このポリシーを使うと、Microsoft Defender Exploit Guard でネットワーク保護 (ブロック/監査) をオンまたはオフにできるようになります。 ネットワーク保護は Microsoft Defender Exploit Guard の機能であり、任意のアプリを使用する従業員がインターネット上のフィッシング詐欺、悪用ホスティング サイト、悪意のあるコンテンツにアクセスするのを防ぎます。 これには、サード パーティ製のブラウザーが危険なサイトに接続するのを防ぐことが含まれます。 値の型は整数です。 この設定を有効にした場合、ネットワーク保護が有効になり、従業員では無効にできません。 その動作は次のオプションで制御できます:Block および Audit。 このポリシーを "ブロック" オプションで有効にした場合、ユーザーとアプリは危険なドメインに接続するのをブロックされます。 このアクティビティは、Microsoft Defender セキュリティ センターで表示することができます。 このポリシーを "監査" オプションで有効にした場合、ユーザー/アプリは危険なドメインに接続するのをブロックされません。 ただし、それでもこのアクティビティは Microsoft Defender セキュリティ センターで表示されます。 このポリシーを無効にした場合、ユーザー/アプリは危険なドメインに接続するのをブロックされません。 ネットワーク アクティビティは、Microsoft Defender セキュリティ センターに表示されません。 このポリシーを構成しない場合、ネットワーク ブロックは既定で無効になります。  
-  [詳細情報](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
+- **[子プロセスでの Office 通信アプリの起動]** :  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=874499)
 
   **既定値**:[ウェイクアップ時間 (デスクトップ コンピューター)] を有効にして、デスクトップ コンピューターが、スケジュールされた更新またはソフトウェアのインストールを実行するために、スリープ状態または休止状態から復帰する時刻を指定します。
+
+- **Enter how often (0-24 hours) to check for security intelligence updates (セキュリティ インテリジェンスの更新を確認する頻度 (0-24 時間) の入力)**  
+  CSP: [Defender/SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
+  
+  新しい署名を確認する頻度を指定します。 値 1 は 1 時間、2 は 2 時間です。
+
+  **既定値**:4
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 - **[Defender schedule scan day]\(Defender のスキャン日スケジュール\)** :  
   Defender のスキャン日スケジュール。
 
   **既定値**:毎日
 
-- **[Cloud-delivered protection]\(クラウドによる保護\)** :  
-  PC を最大限に保護するため、Microsoft Defender では検出した問題についての情報が Microsoft に送信されます。 Microsoft は、その情報を分析し、報告者や他の顧客に影響する問題について詳細に把握して、強化されたソリューションを提供します。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067039)
+- **[Turn on cloud-delivered protection]\(クラウドによる保護を有効にする\)** :  
+  CSP:[Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
+  
+  [はい] に設定すると、Defender によって検出された問題に関する情報が Microsoft に送信されます。 [未構成] に設定すると、クライアントは既定値に戻されます。これにより、この機能が有効になりますが、ユーザーはこの機能を無効にすることができます。
 
   **既定値**:はい  
 
-- **[Defender potentially unwanted app action]\(Defender の望ましくないアプリに対するアクション\)** :  
-  Microsoft Defender ウイルス対策に備わっている望ましくない可能性があるアプリケーション (PUA) 保護機能では、PUA を特定して、ご使用のネットワーク内のエンドポイントへのダウンロードやインストールをブロックできます。 これらのアプリケーションはウイルス、マルウェア、または他の種類の脅威とは見なされませんが、パフォーマンスや使用に悪影響を与えるアクションをエンドポイントで実行する可能性があります。 PUA は、評価が低いと考えられるアプリケーションを指すこともあります。 一般的な PUA の動作は次のとおりです。さまざまな種類のソフトウェア バンドル。Web ブラウザーへの広告挿入。問題を検出し、エラーの修正に対して支払いを要求するが、エンドポイント上に残っていて変更や最適化を何も行わないドライバーやレジストリのオプティマイザー ("偽装ウイルス対策" プログラムとも呼ばれます)。 これらのアプリケーションは、ネットワークがマルウェアに感染するリスクを高め、識別困難なマルウェア感染を引き起こし、アプリケーションのクリーンアップで IT リソースを浪費させる可能性があります。  
-  [詳細情報](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+- **リアルタイム保護を有効にする**  
+  CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050)
 
-  **既定値**:ブロックする  
-
-- **[Script obfuscated macro code type]\(スクリプト難読化マクロ コード タイプ\)** :  
-  マルウェアや他の脅威は、一部のスクリプト ファイルに悪意のあるコードを難読化または隠ぺいしようとすることがあります。 このルールは、難読化されているらしいスクリプトが実行するのを防ぎます。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067026)
-
-  **既定値**:ブロックする
-
-- **[フル スキャン中に、リムーバブル ドライブをスキャンする]** :  
-  Microsoft Defender が、フル スキャン中にリムーバブル ドライブ (フラッシュ ドライブなど) 内の悪意のあるソフトウェアや望ましくないソフトウェアをスキャンできるようにします。 Microsoft Defender ウイルス対策では、実行する前に USB デバイス上のすべてのファイルがスキャンされます。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067036)
+  この設定を [はい] に設定すると、リアルタイム監視が強制され、ユーザーがこの設定を無効にすることはできません。 [未構成] に設定すると、クライアントの既定値 (有効) に戻されますが、ユーザーはこの設定を変更できます。 リアルタイム監視を無効にするには、カスタム URI を使用します。
 
   **既定値**:はい  
 
 - **[アーカイブ ファイルをスキャンする]** :  
-  Defender はアーカイブ ファイルをスキャンします。
+  CSP: [Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
+  
+  [はい] に設定すると、ZIP ファイルや CAB ファイルのスキャンなどのアーカイブ ファイルが強制されます。 [未構成] に設定すると、設定はクライアントの既定値 (アーカイブされたファイルをスキャン) に戻されますが、ユーザーはこの設定を無効にすることができます。
 
   **既定値**:はい
 
-- **[動作の監視]** :  
-  Microsoft Defender の動作監視機能を許可または禁止します。 Windows 10 内蔵のこれらのセンサーでは、オペレーティング システムから動作信号を収集して処理し、プライベート クラウドに他から切り離されて存在する Microsoft Defender ATP インスタンスにこのセンサー データを送信します。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067111)
+- **[動作の監視を有効にする]** :  
+  CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
+
+  この設定を [はい] に設定すると、動作の監視が強制され、ユーザーはこの設定を無効にできなくなります。 [未構成] に設定すると、クライアントの既定値 (有効) に戻されますが、ユーザーはこの設定を変更できます。 リアルタイム監視を無効にするには、カスタム URI を使用します。
 
   **既定値**:はい
 
-- **[ネットワーク フォルダーから開いたファイルをスキャンする]** :  
-  ファイルが読み取り専用の場合、ユーザーは検出されたマルウェアを削除できません。
+- **[受信メール メッセージをスキャンする]** :  
+  CSP: [Defender/AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
+
+  [はい] に設定すると、メールボックスとメール ファイル (PST、DBX、MNX、MIME、BINHEX など) がスキャンされます。 [未構成] に設定すると、設定はクライアントの既定値に戻され、メール ファイルはスキャンされません。
 
   **既定値**:はい
 
-- **[Untrusted USB process type]\(信頼されていない USB 処理タイプ\)** :  
-  このルールでは、管理者は署名されていない実行可能ファイルまたは信頼されていない実行可能ファイルが SD カードも含む USB リムーバブル ドライブから実行されるのを防ぐことができます。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067100)
+- **[フル スキャン中に、リムーバブル ドライブをスキャンする]** :  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
+
+  [はい] に設定すると、フル スキャン中に、リムーバブル ドライブ (USB フラッシュ ドライブなど) がスキャンされます。 [未構成] に設定すると、クライアントの既定値 (リムーバブル ドライブをスキャン) に戻されますが、ユーザーはこの設定を無効にすることができます。
+  **既定値**:はい  
+
+- **[Office アプリケーションによる他のプロセスへのコード挿入をブロックする]** :  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  [はい] に設定すると、Office アプリケーションは、その他のプロセスへのコードの挿入をブロックされます。 [監査のみ] に設定すると、ブロックではなく Windows イベントが発生します。 [未構成] に設定すると、設定は Windows の既定値 (無効) に戻されます。 この ASR 規則は、次の GUID を使用して制御されます。75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
 
   **既定値**:ブロックする
 
-- **[Office apps other process injection type]\(Office アプリによる他のプロセスへの挿入タイプ\)** :  
-  Word、Excel、PowerPoint、OneNote などの Office アプリは、他のプロセスにコードを挿入できません。 これは通常、マルウェアがウイルス対策スキャン エンジンからアクティビティを隠ぺいする試みで、悪意のあるコードを実行するために使用されます。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067019)
+- **Office アプリケーションによる実行可能なコンテンツの作成をブロックする**  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  [はい] に設定すると、Office アプリケーションは実行可能なコンテンツの作成を許可されません。 [監査のみ] に設定すると、ブロックではなく Windows イベントが発生します。 [未構成] に設定すると、設定は Windows の既定値 (無効) に戻されます。 この ASR 規則は、次の GUID を使用して制御されます。3B576869-A4EC-4529-8536-B80A7769E899
 
   **既定値**:ブロックする
 
-- **[Office macro code allow Win32 imports type]\(Office のマクロ コードによる Win32 のインポートの許可タイプ\)** :  
-  マルウェアは、Office ファイルのマクロ コードを使用して、Win32 DLL をインポートして読み込んだ後、それを使用して API 呼び出しを行い、システム全体にさらに感染させる可能性があります。 このルールは、Win32 DLL をインポートできるマクロ コードが含まれる Office ファイルのブロックを試みます。 これには、Word、Excel、PowerPoint、OneNote が含まれます。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067130)
+- **すべての Office アプリケーションによる子プロセスの作成をブロックする**  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  [監査モード] に設定すると、ブロックではなく Windows イベントが発生します。 [未構成] に設定すると、設定は Windows の既定値 (無効) に戻されます。 この ASR 規則は、次の GUID を使用して制御されます。D4F940AB-401B-4EFC-AADC-AD5F3C50688A
 
   **既定値**:ブロックする
 
-- **[Defender cloud block level]\(Defender クラウド ブロック レベル\)** :  
-  Defender のクラウド ブロック レベルです。
+- **[Office マクロからの Win32 API 呼び出しをブロックする]** :  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=872977)
 
-  **既定値**:未構成
+  [はい] に設定すると、Office マクロの Win32 API 呼び出しの使用がブロックされます。 [監査のみ] に設定すると、ブロックではなく Windows イベントが発生します。 [未構成] に設定すると、設定は Windows の既定値 (無効) に戻されます。 この ASR 規則は、次の GUID を使用して制御されます。92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B
+  
+  **既定値**:ブロックする
 
-- **[リアルタイム監視]** :  
-  Defender では、リアルタイムの監視が必要です。
+- **[難読化されている可能性のあるスクリプト (js/vbs/ps) の実行をブロックする]** :  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=872978)
 
-  **既定値**:はい
+  [はい] に設定すると、難読化されたスクリプトの実行が Defender によってブロックされます。 [監査のみ] に設定すると、ブロックではなく Windows イベントが発生します。 [未構成] に設定すると、設定は Windows の既定値 (無効) に戻されます。 この ASR 規則は、次の GUID を使用して制御されます。5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  
+  **既定値**:ブロックする
+
+- **[Email content execution type]\(電子メール コンテンツ実行タイプ\)** :    
+  [電子メールおよび Web メールのクライアントからの実行可能なコンテンツをブロックする](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  [はい] に設定すると、電子メール クライアントおよび Web メール クライアントからダウンロードされた実行可能コンテンツがブロックされます。 [監査のみ] に設定すると、ブロックではなく Windows イベントが発生します。 [未構成] に設定すると、設定は Windows の既定値 (無効) に戻されます。
+
+  **既定値**:ブロックする
+
+- **[Prevent credential stealing type]\(資格情報盗難防止タイプ\)** :  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=874499)
+  
+  [はい] に設定すると、lsass.exe を使介して資格情報を盗もうとする試みがブロックされます。 [監査のみ] に設定すると、ブロックではなく Windows イベントが発生します。 [未構成] に設定すると、設定は Windows の既定値 (無効) に戻されます。 この ASR 規則は、次の GUID を使用して制御されます。9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+
+  **既定値**:[ウェイクアップ時間 (デスクトップ コンピューター)] を有効にして、デスクトップ コンピューターが、スケジュールされた更新またはソフトウェアのインストールを実行するために、スリープ状態または休止状態から復帰する時刻を指定します。
+
+- **[Defender potentially unwanted app action]\(Defender の望ましくないアプリに対するアクション\)** :  
+  CSP:[Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
+
+  Microsoft Defender ウイルス対策に備わっている望ましくない可能性があるアプリケーション (PUA) 保護機能では、PUA を特定して、ご使用のネットワーク内のエンドポイントへのダウンロードやインストールをブロックできます。 これらのアプリケーションはウイルス、マルウェア、または他の種類の脅威とは見なされませんが、パフォーマンスや使用に悪影響を与えるアクションをエンドポイントで実行する可能性があります。 PUA は、評価が低いと考えられるアプリケーションを指すこともあります。 一般的な PUA の動作は次のとおりです。さまざまな種類のソフトウェア バンドル。Web ブラウザーへの広告挿入。問題を検出し、エラーの修正に対して支払いを要求するが、エンドポイント上に残っていて変更や最適化を何も行わないドライバーやレジストリのオプティマイザー ("偽装ウイルス対策" プログラムとも呼ばれます)。 これらのアプリケーションは、ネットワークがマルウェアに感染するリスクを高め、識別困難なマルウェア感染を引き起こし、アプリケーションのクリーンアップで IT リソースを浪費させる可能性があります。
+
+  **既定値**:ブロックする
+
+- **[USB から実行される信頼されていないプロセスまたは署名されていないプロセスをブロックする]** :  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=874502)
+  
+  [はい] に設定すると、USB ドライブから実行されている信頼できないプロセスまたは署名のないプロセスがブロックされます。 [監査のみ] に設定すると、ブロックではなく Windows イベントが発生します。 [未構成] に設定すると、設定は Windows の既定値 (無効) に戻されます。 この ASR 規則は、次の GUID を使用して制御されます: b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4
+
+  **既定値**:ブロックする
+
+- **[ネットワークの保護]** :  
+  [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
+
+  [はい] に設定すると、システム上のすべてのユーザーに対してネットワーク保護が有効になります。 ネットワーク保護により、従業員はインターネット上のフィッシング詐欺や悪意のあるコンテンツにアクセスできません。 これには、サードパーティのブラウザーが含まれます。 [監査のみ] に設定すると、ユーザーは危険なドメインからブロックされなくなりますが、代わりに Windows イベントが発生します。 [未構成] に設定すると、設定は Windows の既定値 (無効) に戻されます。
+
+  **既定値**:[ウェイクアップ時間 (デスクトップ コンピューター)] を有効にして、デスクトップ コンピューターが、スケジュールされた更新またはソフトウェアのインストールを実行するために、スリープ状態または休止状態から復帰する時刻を指定します。
+
+- **[Defender sample submission consent type]\(Defender のサンプル送信の同意の種類\)** :  
+  [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  Microsoft Defender でデータを送信するためのユーザーの同意レベルを確認します。 必要な同意が既に与えられている場合、Microsoft Defender からそれらが送信されます。 それ以外の場合 (かつユーザーが "確認しない" を指定した場合)、(Defender/AllowCloudProtection が許可されている場合は) データを送信する前にユーザーの同意を求める UI が起動します。
+
+  **既定値**:安全なサンプルを自動的に送信します。
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **[子プロセスでの Office 通信アプリの起動]** :  
-  **既定値**:[ウェイクアップ時間 (デスクトップ コンピューター)] を有効にして、デスクトップ コンピューターが、スケジュールされた更新またはソフトウェアのインストールを実行するために、スリープ状態または休止状態から復帰する時刻を指定します。
+- **ネットワーク ファイルをスキャンする**  
+  [Defender/AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049)
+
+  - **既定値**:はい
+
+- **JavaScript または VBScript による、ダウンロードされた実行可能なコンテンツの起動をブロックする**  
+  [悪用からデバイスを保護する](https://go.microsoft.com/fwlink/?linkid=872979)
+
+  [はい] に設定すると、インターネットからダウンロードされた JavaScript ファイルまたは VBScript ファイルの実行が Defender によってブロックされます。 [監査のみ] に設定すると、ブロックではなく Windows イベントが発生します。 [未構成] に設定すると、設定は Windows の既定値 (無効) に戻されます。 この ASR 規則は、次の GUID を使用して制御されます。D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **[Office apps executable content creation or launch type]\(Office アプリの実行可能コンテンツの作成または起動タイプ\)** :  
-  このルールの対象は、実行可能ファイルを作成または起動する不審な悪意のあるアドオンとスクリプト (拡張機能) で使用される一般的な動作です。 これは、マルウェアの一般的な手法です。 拡張機能は、Office アプリによって使用されるのをブロックされます。 通常、これらの拡張機能では、特定のタスクを自動化したり、ユーザー作成のアドオン機能を提供したりするスクリプトを実行するために、Windows Scripting Host (.WSH ファイル) が使用されます。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067108)
-
-  **既定値**:ブロックする
+::: zone pivot="mdm-may-2019,mdm-preview"
 
 ## <a name="ms-security-guide"></a>MS Security Guide (MS セキュリティ ガイド)
 
@@ -1733,7 +1761,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
   **既定値**:Highest protection (最高の保護)
 
-- **[Network ICMP redirects override OSPF generated]\(ネットワーク ICMP が生成されたオーバーライド OSPF をリダイレクトする\)** :  
+- **[Network ICMP redirects override OSPF generated routes]\(ネットワーク ICMP が生成されたオーバーライド OSPF ルートをリダイレクトする\)** :  
   [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067326)
 
   **既定値**:無効
@@ -1787,19 +1815,21 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
   **既定値**:リモート アシスタンスを無効にする
 
-  *[リモート アシスタンスを有効にする]* に設定するとき、以下の追加設定を構成します:
+<!-- These settings are not available: 
+  When set to *Enable Remote Assistance*, configure the following additional settings:
 
-  - **[要請されたリモート アシスタンスのアクセス許可]** :  
-    **既定値**:表示
+  - **Remote Assistance solicited permission**:  
+    **Default**: View
 
-  - **[チケットの最大有効時間値]** :  
-    **既定値**:*未構成*
+  - **Maximum ticket time value**:  
+    **Default**: *Not configured*
 
-  - **[チケットの最大有効期間]** :  
-    **既定値**:分
+  - **Maximum ticket time period**:  
+    **Default**: Minutes
 
-  - **メール招待方法**:  
-    **既定値**:簡易 MAPI
+  - **E-Mail invitation method**:  
+    **Default**: Simple MAPI
+-->
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -1917,6 +1947,9 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 詳細については、Windows ドキュメントの「[Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen)」 (ポリシー CSP - SmartScreen) を参照してください。
 
+::: zone-end
+::: zone pivot="mdm-preview"
+
 - **[Block execution of unverified files]\(確認されていないファイルの実行をブロックする\)** :  
   確認されていないファイルをユーザーが実行しないようにします。
 
@@ -1933,6 +1966,26 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
   [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067168)
 
   **既定値**:はい
+
+::: zone-end
+::: zone pivot="mdm-may-201"
+
+- **Windows SmartScreen を有効にする**  
+  CSP:[SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  [はい] に設定すると、すべてのユーザーに対して SmartScreen の使用が強制されます。 [はい] に設定すると、設定は Windows の既定値に戻されます。これにより、SmartScreen は有効にされますが、ユーザーはこの設定を変更できます。 SmartScreen を無効にするには、カスタム URI を使用します。
+
+  **既定値**:はい
+
+- **ユーザーが SmartScreen 警告を無視できないようにする**  
+  CSP:[SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+  [はい] に設定すると、SmartScreen では、警告を無視してアプリを実行するオプションがユーザーに提示されません。 警告が表示されますが、ユーザーはそれをバイパスすることができます。 [未構成] に設定すると、ユーザーによるオーバーライドを許可する Windows の既定の設定が返されます。 この設定を使用するには、[アプリとファイルに対して SmartScreen を適用する] の設定を有効にする必要があります。
+
+  **既定値**:はい
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
 
 ## <a name="system"></a>System (システム)
 
@@ -1991,52 +2044,40 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="windows-hello-for-business"></a>Windows Hello for Business
 
-- **可能な場合、高度なスプーフィング対策の使用を有効にする**
+- **Windows Hello for Business をブロックする**  
+  Windows Hello for Business は、パスワード、スマート カード、および仮想スマート カードを置き換えることで Windows にサインインする代替方法です。 このポリシー設定を無効にした場合、または構成しなかった場合、デバイスでは Windows Hello for Business がプロビジョニングされます。 このポリシー設定を有効にした場合、デバイスではどのユーザーに対しても Windows Hello for Business をプロビジョニングが行われません。
 
-  "はい" にすると、デバイスでは拡張スプーフィング対策が使用されます (使用可能な場合)。 "いいえ" にすると、スプーフィング対策はブロックされます。 構成しない場合、クライアントでの構成が優先されます。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067192)
+  **既定値**:Enabled
+  
+  *[無効]* に設定すると、次の設定を構成できます。
 
-  **既定値**:はい
+  - **PIN の長さの最小値**  
+    PIN の長さの最小値は 4 から 127 文字にする必要があります。
 
-- **Windows Hello for Business の構成**
+    **既定値**:*未構成*
 
-  Windows Hello for Business は、パスワード、スマート カード、および仮想スマート カードを置き換えることで Windows にサインインする代替方法です。
+  - **可能な場合、高度なスプーフィング対策の使用を有効にする**  
+    [スプーフィング対策保護](https://go.microsoft.com/fwlink/?linkid=2067192)
 
-  > [!IMPORTANT]
-  > この設定のオプションは、暗黙的な意味とは逆になります。 逆のときは、値が "*はい*" の場合は、Windows Hello は有効にならず、"*未構成*" として扱われます。 この設定が "*未構成*" に設定されていると、このベースラインを受け取ったデバイスで Windows Hello が有効になります。
-  >
-  > 以下の説明は、この動作を反映するために変更されています。 設定の反転は、このセキュリティ ベースラインの今後の更新で修正される予定です。
+    有効にした場合、デバイスでは拡張スプーフィング対策が使用されます (使用可能な場合)。 構成しない場合、スプーフィング対策のクライアント構成が受け入れられます。
 
-  - "*未構成*" に設定すると、Windows Hello は有効になり、デバイスで Windows Hello for Business がプロビジョニングされます。
-  - "*はい*" に設定すると、ベースラインはデバイスのポリシー設定に影響しません。 これは、Windows Hello for Business がデバイスで無効になっている場合、無効のままになることを意味します。 有効になっている場合は、有効のままになります。
-  <!-- expected behavior 
-  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
-  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
-  -->
+    **既定値**:未構成
 
-  このベースラインを使用して、Windows Hello for Business を無効にすることはできません。 [Windows の登録](windows-hello.md)を構成するときに、または [ID 保護](identity-protection-configure.md)のデバイス構成プロファイルの一部として、Windows Hello for Business を無効にすることができます。  
+  - **[PIN での小文字の使用]** :  
+    必須にした場合、ユーザーの PIN には少なくとも 1 文字の小文字が含まれる必要があります。
 
-  **既定値**:はい
+    **既定値**:許可しない
 
-- **[PIN に小文字が必要]** :  
-  必須にした場合、ユーザーの PIN には少なくとも 1 文字の小文字が含まれる必要があります。
+  - **[PIN での特殊文字の使用]** :  
+    必須にした場合、ユーザーの PIN には少なくとも 1 文字の特殊文字が含まれる必要があります。
 
-  **既定値**:許可されます。
+    **既定値**:許可しない
+ 
 
-- **[PIN に特殊文字が必要]** :  
-  必須にした場合、ユーザーの PIN には少なくとも 1 文字の特殊文字が含まれる必要があります。
+  - **PIN での大文字の使用**:  
+    必須にした場合、ユーザーの PIN には少なくとも 1 文字の大文字が含まれる必要があります。
 
-  **既定値**:許可されます。
-
-- **[PIN の長さの最小値]** :  
-  PIN の長さの最小値は 4 から 127 文字にする必要があります。
-
-  **既定値**:6
-
-- **[PIN に大文字が必要]** :  
-  必須にした場合、ユーザーの PIN には少なくとも 1 文字の大文字が含まれる必要があります。
-
-  **既定値**:許可されます。
+    **既定値**:許可しない
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -2062,7 +2103,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 詳細については、Windows ドキュメントの「[Policy CSP - WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell)」 (ポリシー CSP - WindowsPowerShell) を参照してください。
 
-- **[Power shell shell script block logging]\(PowerShell シェル スクリプト ログ記録ブロック\)** :  
+- **[PowerShell script block logging]\(PowerShell スクリプト ブロックのログ記録\)** :  
   このポリシー設定は、Microsoft-Windows-PowerShell/Operational イベント ログへのすべての PowerShell スクリプト入力のログ記録を有効にします。 このポリシー設定を有効にした場合、Windows PowerShell は対話的に、またはオートメーションを介して呼び出された、コマンド、スクリプト ブロック、関数、およびスクリプトの処理をログに記録します。 このポリシー設定を無効にすると、PowerShell スクリプトの入力のログ記録は無効になります。 スクリプト ブロックの呼び出しのログ記録を有効にすると、PowerShell はさらに、コマンド、スクリプト ブロック、関数、またはスクリプトの呼び出しの開始時または停止時にイベントを記録します。 呼び出しのログ記録を有効にすると、大量のイベント ログが生成されます。 注:このポリシー設定は、グループ ポリシー エディターの [コンピューターの構成] と [ユーザーの構成] の両方の下にあります。 [コンピューターの構成] のポリシー設定は、[ユーザーの構成] のポリシー設定よりも優先されます。  
   [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067330)
 
