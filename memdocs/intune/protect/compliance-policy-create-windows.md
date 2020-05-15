@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed0194f0ace1ed1e962a8b993a4e93f7ef487bdc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dfcedebf32c8f08450e3eaa87c99f9bc11dd7431
+ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084923"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82906896"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune を使用してデバイスを準拠または非準拠としてマークするための Windows 10 以降の設定
 
@@ -33,7 +33,7 @@ ms.locfileid: "80084923"
 - Windows Holographic for Business
 - Surface Hub
 
-Intune 管理者は、組織のリソースの保護に役立てるためにこれらのコンプライアンス設定を使用します。 コンプライアンス ポリシーの詳細およびその機能については、[デバイス コンプライアンスの概要](device-compliance-get-started.md)に関するページを参照してください。
+Intune サービス管理者は、組織のリソースの保護に役立てるために、これらのコンプライアンス設定を使用します。 コンプライアンス ポリシーの詳細およびその機能については、[デバイス コンプライアンスの概要](device-compliance-get-started.md)に関するページを参照してください。
 
 ## <a name="before-you-begin"></a>始める前に
 
@@ -44,7 +44,7 @@ Intune 管理者は、組織のリソースの保護に役立てるためにこ�
 ### <a name="windows-health-attestation-service-evaluation-rules"></a>Windows 正常性構成証明サービスの評価規則
 
 - **[BitLocker が必要]** :  
-   BitLocker ドライブ暗号化は、Windows オペレーティング システムのボリュームに格納されているすべてのデータを暗号化します。 BitLocker は、Windows オペレーティング システムとユーザー データの保護のためにトラステッド プラットフォーム モジュール (TPM) を使用します。 また、コンピューターのそばに人がいなかった場合や、コンピューターを紛失したり、盗難されたりした場合でも、改ざんされていないことを確認するためにも役立ちます。 コンピューターに互換性のある TPM が装備されている場合、BitLocker は TPM を使用してデータを保護する暗号化キーをロックします。 その結果、TPM がコンピューターの状態を確認するまで、キーはアクセスできません。  
+   Windows BitLocker ドライブ暗号化により、Windows オペレーティング システム ボリューム上に格納されているすべてのデータが暗号化されます。 BitLocker は、Windows オペレーティング システムとユーザー データの保護のためにトラステッド プラットフォーム モジュール (TPM) を使用します。 また、コンピューターのそばに人がいなかった場合や、コンピューターを紛失したり、盗難されたりした場合でも、改ざんされていないことを確認するためにも役立ちます。 コンピューターに互換性のある TPM がインストールされている場合は、BitLocker は TPM を使用してデータを保護する暗号化キーをロックします。 その結果、TPM がコンピューターの状態を確認するまで、キーはアクセスできません。  
 
    - **[未構成]** ("*既定値*") - この設定に対して準拠であるか非準拠であるかの評価は行われません。
    - **[必須]** - システムがオフになっているとき、または休止状態のときに、デバイスがドライブに格納されているデータを不正アクセスから保護できます。  
@@ -65,7 +65,7 @@ Intune 管理者は、組織のリソースの保護に役立てるためにこ�
 その他のリソース:
 
 - 正常性構成証明サービスのしくみの詳細については、[HealthAttestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp) に関するページをご覧ください。
-- [サポートのヒント: Intune コンプライアンス ポリシーの一部としてデバイス正常性構成証明の設定を使用する](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643)。
+- [サポートのヒント:Intune コンプライアンス ポリシーの一部としてデバイス正常性構成証明の設定を使用する](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643)。
 
 ## <a name="device-properties"></a>デバイスのプロパティ
 
@@ -188,10 +188,20 @@ Windows 10 以降を実行している共同マネージド デバイスにの�
 - **[ウイルス対策]** :  
   - **[未構成]** ("*規定値*") - Intune により、デバイスにインストールされているスパイウェア対策ソリューションが確認されません。 
   - **[必須]** - [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/) に登録されている Symantec や Microsoft Defender などのウイルス対策ソリューションを使って、コンプライアンスを確認します。
+  
+  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+
+  > [!NOTE]
+  > ウイルス対策用 DeviceStatus CSP は *Windows 10 Home* ではサポートされておらず、 *[適用できません]* の状態が報告されます。 Intune チームは修正に取り組んでいます。 この制限を回避するには、デバイス コンプライアンス ポリシーで [Windows Defender](#defender) の設定を使用することを検討してください。 Windows Defender の設定は、Windows 10 Home でサポートされています。  
 
 - **[スパイウェア対策]** :  
   - **[未構成]** ("*規定値*") - Intune により、デバイスにインストールされているスパイウェア対策ソリューションが確認されません。
   - **[必須]** - [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/) に登録されている Symantec や Microsoft Defender などのスパイウェア対策ソリューションを使って、コンプライアンスを確認します。  
+  
+  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+
+  > [!NOTE]
+  > スパイウェア対策用 DeviceStatus CSP は *Windows 10 Home* ではサポートされておらず、 *[適用できません]* の状態が報告されます。 Intune チームは修正に取り組んでいます。 この制限を回避するには、デバイス コンプライアンス ポリシーで [Windows Defender](#defender) の設定を使用することを検討してください。 Windows Defender の設定は、Windows 10 Home でサポートされています。 
 
 ### <a name="defender"></a>Defender
 
@@ -229,7 +239,7 @@ Windows 10 以降を実行している共同マネージド デバイスにの�
   この設定は、脅威防御サービスからのリスク評価をコンプライアンスの条件とする場合に使用します。 許容される脅威の最大レベルを選択します。
   - **[未構成]** ("*既定値*")  
   - **[クリア]** - デバイスにはいかなる脅威も存在してはならないので、これはセキュリティ上最も安全なオプションです。 デバイスで何らかのレベルの脅威が検出された場合、非準拠と評価されます。
-  - **[低]** - 存在する脅威が低レベルの場合のみ、デバイスは準拠として評価されます。 低レベルより高い脅威が存在する場合、デバイスは非準拠状態になります。
+  - **[低]** - 存在する脅威が低レベルの場合のみ、デバイスは準拠として評価されます。 中レベル以上の脅威が存在する場合、デバイスは非準拠のステータスに分類されます。
   - **[中]** - デバイスに存在する脅威が低レベルまたは中レベルの場合、デバイスは準拠として評価されます。 デバイスで高レベルの脅威が検出された場合は、非準拠と判定されます。
   - **[高]** - 最も安全性の低いオプションであり、すべての脅威レベルが許容されます。 このソリューションをレポート目的のみで使用した場合、役立つ場合があります。
   
@@ -253,5 +263,5 @@ Surface Hub では **Windows 10 以降**のプラットフォームが使用さ�
 ## <a name="next-steps"></a>次のステップ
 
 - [非準拠デバイスに対するアクションを追加](actions-for-noncompliance.md)し、[スコープのタグを使用してポリシーをフィルター処理する](../fundamentals/scope-tags.md)
-- [コンプライアンス ポリシーを監視します](compliance-policy-monitor.md)。
+- [コンプライアンス ポリシーを監視する](compliance-policy-monitor.md)
 - [Windows 8.1 デバイス向けのコンプライアンス ポリシー設定](compliance-policy-create-windows-8-1.md)を確認します。

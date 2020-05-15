@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/30/2020
+ms.date: 05/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf490c71fdc94b974e53a9d0f388a777e986f13c
-ms.sourcegitcommit: 8a8378b685a674083bfb9fbc9c0662fb0c7dda97
+ms.openlocfilehash: 5b3c8287d9b5ca2d46094d04ee2179128bead4a8
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619578"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991740"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
@@ -51,6 +51,14 @@ ms.locfileid: "82619578"
 ### Device security
 ### Intune apps
 ### Monitor and troubleshoot
+
+<!-- ########################## -->
+## <a name="week-of-may-4-2020"></a>2020 年 5 月 4 日の週  
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->  
+
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>Android 用ポータル サイトで仕事用プロファイルの登録後にアプリを取得する方法がユーザーに示される <!-- 6103999 -->
+ユーザーがアプリをより簡単に見つけてインストールできるように、ポータル サイトのアプリ内ガイダンスが改善されました。 仕事用プロファイルの管理に登録した後、バッジ付きバージョンの Google Play でおすすめのアプリを見つける方法を説明するメッセージがユーザーに表示されます。 [Android のプロファイルでデバイスを登録する方法](../user-help/enroll-device-android-work-profile.md)に関する記事の最後の手順は、新しいメッセージを示すように更新されています。 また、ユーザーには、左側のポータル サイト ドロアーで新しい **[アプリの取得]** リンクが表示されます。 これらの新規および改善されたエクスペリエンスの場所を空けるために、 **[アプリ]** タブは削除されました。 更新された画面を確認するには、「[Intune エンド ユーザー アプリの UI 更新](./whats-new-app-ui.md)」を参照してください。 
 
 <!-- ########################## -->
 ## <a name="week-of-april-20-2020"></a>2020 年 4 月 20 日の週

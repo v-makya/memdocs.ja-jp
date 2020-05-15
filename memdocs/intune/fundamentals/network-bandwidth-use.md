@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 569a80d21efd82b6008c7aa7a613c089a10c6ff3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357897"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943843"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Intune のネットワーク構成の要件と帯域幅
 
@@ -48,7 +48,7 @@ ms.locfileid: "79357897"
 |Endpoint Protection のマルウェア定義の更新|不定<br /><br />通常 40 KB ～ 2 MB|**毎日**<br /><br />最大で 1 日に 3 回。|
 |Endpoint Protection エンジンの更新プログラム|5 MB|**毎月**|
 |ソフトウェア更新プログラム|不定<br /><br />サイズは、展開する更新プログラムによって異なります。|**毎月**<br /><br />通常、ソフトウェアの更新プログラムのリリースは、毎月の第 2 火曜日です。<br /><br />新しく登録された、または、展開されたコンピューターは、以前にリリースされた更新プログラムのフル セットをダウンロードする間、多くのネットワーク帯域幅を使用することがあります。|
-|Service Pack|不定<br /><br />サイズは、展開する各サービス パックによって異なります。|**場合により異なる**<br /><br />サービス パックを展開する時間に依存します。|
+|Service Pack|不定<br /><br />サイズは、展開する各サービス パックによって異なります。|**随時**<br /><br />サービス パックを展開する時間に依存します。|
 |ソフトウェアの配布|不定<br /><br />サイズは、展開するソフトウェアによって異なります。|**場合により異なる**<br /><br />ソフトウェアを展開する時間に依存します。|
 
 ## <a name="ways-to-reduce-network-bandwidth-use"></a>ネットワーク帯域幅の使用量を削減する方法
@@ -64,7 +64,7 @@ ms.locfileid: "79357897"
 Intune クライアント用にコンテンツをキャッシュするプロキシ サーバーの一般的な設定を以下に示します。
 
 
-|          Setting           |           推奨される値           |                                                                                                  詳細                                                                                                  |
+|          設定           |           推奨される値           |                                                                                                  詳細                                                                                                  |
 |----------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         キャッシュ サイズ         |             5 ～ 30 GB             | この値は、ネットワークにあるクライアント コンピューターの台数と、使用する構成によって異なります。 ファイルが短時間で削除されないようにするには、環境のキャッシュのサイズを調整します。 |
 | キャッシュする個々のファイルのサイズ |                950 MB                 |                                                                     この設定はすべてのキャッシュ プロキシ サーバーで使用できるとは限りません。                                                                     |
@@ -74,14 +74,6 @@ Intune クライアント用にコンテンツをキャッシュするプロキ�
 
 コンテンツをキャッシュするプロキシ サーバーの仕様に関する詳細については、使用するプロキシ サーバー ソリューションのドキュメントを参照してください。
 
-### <a name="use-background-intelligent-transfer-service-bits-on-computers"></a>コンピューターでバックグラウンド インテリジェント転送サービス (BITS) を使用する
-
-構成する時間中は、Windows コンピューター上で BITS を使用して、ネットワーク帯域幅を減らすことができます。 BITS のポリシーは、Intune エージェント ポリシーの **[ネットワーク帯域幅]** ページで構成できます。
-
-> [!NOTE]
-> Windows 上の MDM 管理については、MobileMSI アプリの種類用の OS の管理インターフェイスのみで、ダウンロードに BITS が使用されます。 AppX/MsiX では、BITS 以外の配信の最適化を使用する Intune エージェント経由で、独自の BITS 以外のダウンロード スタックと Win32 アプリを使用します。
-
-BITS と Windows コンピューターの詳細については、TechNet ライブラリの「[バックグラウンド インテリジェント転送サービス](https://technet.microsoft.com/library/bb968799.aspx)」を参照してください。
 
 ### <a name="delivery-optimization"></a>配信の最適化
 
@@ -91,7 +83,22 @@ BITS と Windows コンピューターの詳細については、TechNet ライ�
 
 デバイスの構成プロファイルの一部として、[配信の最適化を設定する](../configuration/delivery-optimization-settings.md)ことができます。
 
-### <a name="use-branchcache-on-computers"></a>コンピューターで BranchCache を使用する
+
+### <a name="background-intelligent-transfer-service-bits-and-branchcache"></a>バックグラウンド インテリジェント転送サービス (BITS) と BranchCache 
+
+Microsoft Intune を使用して、[モバイル デバイス管理 (MDM) によりモバイル デバイスとして](../enrollment/windows-enroll.md)、または Intune ソフトウェア クライアントによりコンピューターとして、Windows PC を管理できます。 Microsoft では、可能な場合は常に [MDM 管理ソリューションを使用する](../enrollment/windows-enroll.md)ことをお勧めします。 この方法で管理すると、BranchCache と BITS はサポートされません。 詳細については、「[Windows PC のコンピューターとしての管理とモバイル デバイスとしての管理の比較](pc-management-comparison.md)」をご覧ください。
+
+#### <a name="use-bits-on-computers-requires-intune-software-client"></a>コンピューターで (BITS) を使用する (Intune ソフトウェア クライアントが必要)
+
+構成する時間中は、Windows コンピューター上で BITS を使用して、ネットワーク帯域幅を減らすことができます。 BITS のポリシーは、Intune エージェント ポリシーの **[ネットワーク帯域幅]** ページで構成できます。
+
+> [!NOTE]
+> Windows 上の MDM 管理については、MobileMSI アプリの種類用の OS の管理インターフェイスのみで、ダウンロードに BITS が使用されます。 AppX/MsiX では、BITS 以外の配信の最適化を使用する Intune エージェント経由で、独自の BITS 以外のダウンロード スタックと Win32 アプリを使用します。
+
+BITS と Windows コンピューターの詳細については、TechNet ライブラリの「[バックグラウンド インテリジェント転送サービス](https://technet.microsoft.com/library/bb968799.aspx)」を参照してください。
+
+
+#### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>コンピューターで BranchCache を使用する (Intune ソフトウェア クライアントが必要)
 
 Intune クライアントは、BranchCache を使用してワイド エリア ネットワーク (WAN) トラフィックを削減できます。 次のオペレーティング システムでは、BranchCache をサポートします。
 
@@ -106,8 +113,6 @@ Intune クライアントをコンピューターにインストールすると�
 
 BranchCache を使用する場合、グループ ポリシーと Intune ファイアウォール ポリシーを管理する組織内の他の管理者と共同作業を行います。 他の管理者が、BranchCache を無効にするポリシーやファイアウォールの例外を展開しないようにしてください。 BranchCache の詳細については、「[BranchCache の概要](https://technet.microsoft.com/library/hh831696.aspx)」を参照してください。
 
-> [!NOTE]
-> Microsoft Intune を使用して、[モバイル デバイス管理 (MDM) によりモバイル デバイスとして](../enrollment/windows-enroll.md)、または Intune ソフトウェア クライアントによりコンピューターとして、Windows PC を管理できます。 Microsoft では、可能な場合は常に [MDM 管理ソリューションを使用する](../enrollment/windows-enroll.md)ことをお勧めします。 この方法で管理すると、BranchCache はサポートされません。 詳細については、「[Windows PC のコンピューターとしての管理とモバイル デバイスとしての管理の比較](pc-management-comparison.md)」をご覧ください。
 
 ## <a name="next-steps"></a>次のステップ
 

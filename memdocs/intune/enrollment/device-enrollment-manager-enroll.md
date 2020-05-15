@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8710043244e0b6becebef60890ac1a0ec3105971
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 80e15e78e270ae72bdf584e9db967cae81d3ac2b
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254641"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83342999"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>デバイス登録マネージャー アカウントを使用してデバイスを Intune に登録する
 
@@ -46,6 +46,8 @@ DEM ユーザー アカウントと DEM ユーザー アカウントを使用し
 - Azure AD デバイスの制限を DEM アカウントに適用すると、DEM アカウントが登録できるデバイス数の上限である 1,000 に到達しなくなります。
 
 ## <a name="enrollment-methods-supported-by-dem-accounts"></a>DEM アカウントでサポートされている登録方法
+
+DEM アカウントを使用してデバイスを登録する場合、次の方法を使用できます。
 
 - [Windows Autopilot](enrollment-autopilot.md)
 - [Windows デバイスの一括登録](windows-bulk-enroll.md)

@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/05/2020
+ms.date: 05/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe95196da3e75dc50e585dc1c4508e8d20c7d5e3
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255032"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991780"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune とエンド ユーザー アプリの UI の更新
 
@@ -36,6 +36,26 @@ Microsoft Intune アプリに対する最新の更新プログラムについて
 
 
 
+## <a name="week-of-may-4-2020"></a>2020 年 5 月 4 日の週  
+### <a name="company-portal-for-android-guides-users-to-get-apps-after-work-profile-enrollment----6103999---"></a>Android 用ポータル サイトで仕事用プロファイルの登録後にアプリを取得する方法がユーザーに示される <!-- 6103999 -->
+ユーザーがアプリをより簡単に見つけてインストールできるように、ポータル サイトのアプリ内ガイダンスが改善されました。 仕事用プロファイルの管理に登録した後、バッジ付きバージョンの Google Play でおすすめのアプリを見つける方法を説明するメッセージがユーザーに表示されます。 [Android のプロファイルでデバイスを登録する方法](../user-help/enroll-device-android-work-profile.md)に関する記事の最後の手順は、新しいメッセージを示すように更新されています。 
+
+![Google Play のバッジ付きバージョンを開くように求める、ポータル サイトの [デバイス] タブのプロンプトの画像例。](./media/whats-new-app-ui/updated-banner-android-2005.png)  
+
+また、ユーザーには、左側のポータル サイト ドロアーで新しい **[アプリの取得]** リンクが表示されます。 
+
+![[アプリの取得] メニュー項目が強調表示された、ポータル サイトの左側のドロアーの画像の例。](./media/whats-new-app-ui/updated-drawer-android-2005.png)  
+
+これらの新規および改善されたエクスペリエンスの場所を空けるために、次の画像に示す **[アプリ]** タブは削除されました。  
+
+![削除されたポータル サイトの [アプリ] タブの画像の例。](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
+
+
+
+
+
+
+
 ## <a name="week-of-march-2-2020"></a>2020 年 3 月 2 日の週   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Android 用ポータル サイトでのサインイン エクスペリエンスの向上   
 エクスペリエンスをユーザーにとってより新しく、シンプルでクリーンなものにするために、Android 用ポータル サイト アプリのいくつかのサインイン画面のレイアウトを更新しました。 Android 用ポータル サイトのすべての登録手順を確認するには、[Android デバイスの登録](../user-help/enroll-device-android-company-portal.md)と [Android の仕事用プロファイルを使用した登録](../user-help/enroll-device-android-work-profile.md)に関する記事をご覧ください。   
@@ -44,7 +64,7 @@ Microsoft Intune アプリに対する最新の更新プログラムについて
 |更新後|前へ|   
 |---|---|   
 |![新しいポータル サイトのサインイン画面の画像の例 (サインイン ボタン)。](./media/whats-new-app-ui/intune-company-portal-sign-in-2003.png)|![以前のポータル サイトのサインイン ページの画像の例 (より煩雑なデザイン)。](./media/whats-new-app-ui/intune-company-portal-sign-in-2002.png)| 
-|![新しいサインイン進行状況画面の画像の例 (1 つの進行状況バーを表示)。](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![以前のサインイン進行状況画面の画像の例 (より煩雑なデザイン)。](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|  
+|![新しいサインイン進行状況画面の画像の例 (1 つの進行状況バーを表示)。](./media/whats-new-app-ui/intune-company-portal-signing-in-2003.png)|![以前のサインイン進行状況画面の画像の例 (より煩雑なデザイン)。](./media/whats-new-app-ui/intune-company-portal-signing-in-2002.png)|
 ## <a name="week-of-february-3-2020"></a>2020 年 2 月 3 日の週
 
 ### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>ポータル サイトの Android 仕事用プロファイルの登録から削除される画面 <!--6103987 -->
@@ -603,7 +623,7 @@ __変更後__![変更後のバージョンの読み込み画面の画像。イ�
 ## <a name="january-2017"></a>2017 年 1 月
 
 ### <a name="modernizing-the-company-portal-website---753980-announced-1701--"></a>ポータル Web サイトの進化 <!--753980, announced 1701-->
-2 月から、ポータル Web サイトでマネージド デバイスを持っていないユーザーを対象とするアプリをサポートします。 この Web サイトは、新しいコントラストの配色パターン、動的な図、および "ハンバーガー メニュー"  ![(ヘルプデスクの連絡先詳細や既存の管理対象デバイスに関する情報を含む、](./media/whats-new-app-ui/CP_hamburger_menu.png) ポータル Web サイトの左上隅に新たに追加されたハンバーガー メニューの小さなイメージ) を使用することで、Microsoft の他の製品やサービスと連携します。 ランディング ページはユーザーが利用できるアプリをわかりやすくするために再配置され、おすすめのアプリや最近更新されたアプリはカルーセル ビューで表示されます。
+2 月から、ポータル Web サイトでマネージド デバイスを持っていないユーザーを対象とするアプリをサポートします。 この Web サイトは、新しいコントラストの配色パターン、動的な図、および "ハンバーガー メニュー" ![(ヘルプデスクの連絡先詳細や既存の管理対象デバイスに関する情報を含む、](./media/whats-new-app-ui/CP_hamburger_menu.png) ポータル Web サイトの左上隅に新たに追加されたハンバーガー メニューの小さなイメージ) を使用することで、Microsoft の他の製品やサービスと連携します。 ランディング ページはユーザーが利用できるアプリをわかりやすくするために再配置され、おすすめのアプリや最近更新されたアプリはカルーセル ビューで表示されます。
 
 ![左側は、以前のバージョンの [アプリ]、[デバイス]、[おすすめ] ビュー、[カテゴリ] ビューが表示された、会社のポータル Web サイトの現在のバージョンのイメージです。 右側は、更新されたアプリ カルーセル、[Recently Published apps (最近公開されたアプリ)] のリスト、更新された [カテゴリ] ビューが表示された、会社のポータル Web サイトの更新バージョンのイメージです。](./media/whats-new-app-ui/CP_Website_BeforeAfter_Feb2016.png)
 
@@ -615,6 +635,6 @@ __変更後__![変更後のバージョンの読み込み画面の画像。イ�
 
 
 ## <a name="see-also"></a>関連項目
-* [Microsoft Intune のブログ](https://go.microsoft.com/fwlink/?LinkID=273882)
+* [Microsoft Intune のブログ](https://www.microsoft.com/microsoft-365/blog/microsoft-intune/)
 * [クラウド プラットフォームのロードマップ](https://www.microsoft.com/cloud-platform/roadmap)
 * [Intune の新機能](whats-new.md)

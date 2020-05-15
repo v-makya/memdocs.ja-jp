@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 05/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af60c16c4a7c9d27409f82cfc53d5c345dfe1af0
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: fce26aab90989f31ee56a9abd58f617c780d9c4b
+ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210236"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82943877"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune で一般的な iOS および iPadOS 機能を使用するための iOS および iPadOS デバイスの設定
 
@@ -107,7 +107,7 @@ AirPrinter サーバーを追加するには、プリンターの IP アドレ�
       デバイスの Dock には最大 **20** ページまで追加できます。
 
 > [!NOTE]
-> [ドッキング] 設定を使用してアイコンを追加すると、ホーム画面と各ページ上のアイコンがロックされ、移動することができません。 これは iOS および iPadOS と Apple の MDM ポリシーのデザインに起因する可能性があります。
+> ホーム画面のレイアウト設定を使用してページを追加したり、ページやアプリをドックに追加したりすると、ホーム画面とページ上のアイコンがロックされます。 それらを移動または削除することはできません。 この動作は、iOS および iPadOS と Apple の MDM ポリシーの設計に起因する可能性があります。
 
 #### <a name="example"></a>例
 

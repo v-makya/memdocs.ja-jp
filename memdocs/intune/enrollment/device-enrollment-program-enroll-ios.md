@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db9164d68783356faf01fe4fc4e8d74f2a4b0869
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023352"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269067"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Apple の自動デバイス登録を使用して iOS または iPadOS デバイスを自動登録する
 
@@ -148,8 +148,7 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
 
     ![プロファイルの作成のスクリーンショット。](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. **[基本]** ページ上で、管理用にプロファイルの **[名前]** と **[説明]** を入力します。 ユーザーには、これらの詳細は表示されません。 この **[名前]** フィールドを使用して、Azure Active Directory で動的グループを作成できます。 この登録プロファイルに対応するデバイスを割り当てるために enrollmentProfileName パラメーターを定義する場合はプロファイル名を使用します。 自動化されたデバイス登録とユーザー アフィニティで登録されたデバイスについては、デバイス設定に先立って登録ユーザーがメンバーとなるターゲット AAD ユーザー グループによってデバイスにポリシーが最速で届けられます。 登録プロファイルに基づいてアプリケーションとポリシーの対象を動的グループに設定すると、登録フローの完了後、デバイスに適用されるまでいくらかの遅延が発生します。
-Azure Active Directory の動的グループの詳細については[こちら](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)を参照してください。
+3. **[基本]** ページ上で、管理用にプロファイルの **[名前]** と **[説明]** を入力します。 ユーザーには、これらの詳細は表示されません。 
 
     ![プロファイル名と説明。](./media/device-enrollment-program-enroll-ios/image05.png)
 
@@ -264,6 +263,17 @@ Azure Active Directory の動的グループの詳細については[こちら](
 16. **[次へ]** を選択して、 **[Review + Create]\(確認および作成\)** ページへ移動します。
 
 17. プロファイルを保存するには、 **[作成]** を選択します。
+
+### <a name="dynamic-groups-in-azure-active-directory"></a>Azure Active Directory の動的グループ
+
+登録の **[名前]** フィールドを使用して、Azure Active Directory で動的グループを作成できます。 詳細については、[Azure Active Directory の動的グループ](/azure/active-directory/users-groups-roles/groups-dynamic-membership)に関する記事をご覧ください。
+
+プロファイル名を使用して、この登録プロファイルに対応するデバイスを割り当てるために [enrollmentProfileName パラメーター](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)を定義できます。
+
+ユーザー アフィニティを使用して ADE デバイスで最速のポリシー配信を行うには、デバイスのセットアップの前に、登録ユーザーが AAD ユーザー グループのメンバーであることを確認してください。 
+
+動的グループを登録プロファイルに割り当てると、登録後にデバイスに対してアプリケーションとポリシーを配信する際に、遅延が発生する可能性があります。
+
 
 ## <a name="sync-managed-devices"></a>マネージド デバイスを同期する
 デバイスを管理するアクセス許可を Intune に割り当てたので、Intune と Apple を同期して、マネージド デバイスを Azure ポータルの Intune に表示できます。

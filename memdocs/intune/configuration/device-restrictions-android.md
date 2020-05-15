@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4afc27680c464f67756340ebcb0958887ae6f795
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5fc11d7302c30dd53314eb2312d37842b081a6b3
+ms.sourcegitcommit: 5f9d5d22114ae5aeb0270c7fb59c5dced5f48826
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407864"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82862362"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Android および Samsung KNOX Standard デバイスの制限設定一覧 - Intune
 
@@ -114,7 +114,7 @@ ms.locfileid: "80407864"
 - **[未構成]** (既定値):Intune では、この設定は変更または更新されません。
 - **[禁止されているアプリ]** :ユーザーによるインストールと実行が許可されていないアプリ (Intune で管理されていない) アプリを一覧表示します。 ユーザーがこの一覧のアプリをインストールすると、Intune によって通知されます。
 - **[承認済みアプリ]** :ユーザーによるインストールが許可されているアプリを一覧表示します。 準拠性を維持するため、ユーザーは他のアプリをインストールできません。  ポータル サイト アプリを含め、Intune で管理されるアプリが自動的に許可されます。
-- **アプリの一覧**:アプリを**追加**します。
+- **アプリの一覧**:アプリを **[追加]** します。
   - **[アプリ バンドル ID]** :アプリのバンドル ID を入力します。
   - **App Store の URL**:必要なアプリの Google Play ストア URL を入力します。 たとえば、Android 向けの Microsoft リモート デスクトップ アプリを追加する場合は、「`https://play.google.com/store/apps/details?id=com.microsoft.rdc.android`」と入力します。
 
