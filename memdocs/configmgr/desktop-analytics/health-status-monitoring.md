@@ -10,12 +10,13 @@ ms.assetid: 343dbe2a-597c-4719-b7ac-45b1f39b49ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 359fdec13ee6bfd43e66d4bf9cec70c5a3188a32
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 119f787f15b8c907d0c760a12b973ca984f4348c
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693050"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268540"
 ---
 # <a name="health-status-monitoring-in-desktop-analytics"></a>Desktop Analytics での正常性状態の監視
 

@@ -10,12 +10,13 @@ ms.assetid: 63e08f3f-9558-4ed7-9bf3-3a185ddaac5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96e9f7523ae8946b7756a8a39d1757e652eb3c8c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 69694fa39375daf436abf59fcd48edda41a9fc62
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696900"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268251"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Desktop Analytics のトラブルシューティング
 
@@ -217,3 +218,6 @@ Desktop Analytics ポータル内には、次の 2 種類のデータがあり�
 通常、このプロセスには 15 から 60 分かかります。 タイミングは、ワークスペースのサイズと、処理が必要な変更の範囲によって異なります。 オンデマンド データ更新を要求しても、診断データが変更されることはありません。  詳しくは、「[Desktop Analytics の FAQ](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal)」をご覧ください。
 
 上で示した時間内に変更が反映されない場合は、次の日次更新までさらに 24 時間待ってください。 それより長く遅れる場合は、サービス正常性ダッシュボードを確認します。 サービスは正常であると報告されている場合は、Microsoft サポートにお問い合わせください。<!-- 3896921 -->
+
+> [!IMPORTANT]
+> **[最近のデータを表示]** の Desktop Analytics のオプションは非推奨です。 このアクションは、Desktop Analytics サービスの今後のリリースで削除される予定です。 詳しくは、「[非推奨の機能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)」をご覧ください。<!--7080949-->  

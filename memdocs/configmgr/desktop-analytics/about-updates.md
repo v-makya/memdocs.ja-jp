@@ -2,7 +2,7 @@
 title: Desktop Analytics の更新プログラム
 titleSuffix: Configuration Manager
 description: Desktop Analytics のセキュリティおよび機能の更新プログラムについて説明します。
-ms.date: 08/21/2019
+ms.date: 04/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 14ae894c-26fb-4fe3-b51d-e80700122df4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec510414f11aa312e6c1a7d1d5bfa8126f473fe3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 1c79db413f8e37424b84d98d51fb584d168e3819
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706580"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268931"
 ---
 # <a name="updates-in-desktop-analytics"></a>Desktop Analytics の更新プログラム
 
@@ -46,8 +47,20 @@ Desktop Analytics ポータルで、セキュリティおよび機能の更新�
 
 Desktop Analytics でデバイスが評価されていません。 この状態には、Windows Insider プログラムに登録された Windows 7、Windows 8.1、または Windows 10 を実行しているデバイスが含まれます。  
 
-Windows 10 デバイスが Microsoft アカウントによる "*認証を受けていない*" 場合、Windows からはこのデータが報告されません。 通常、この認証は、Windows セットアップの組み込みエクスペリエンス (OOBE) の一部として完了しています。<!-- 5148153 -->
+セキュリティ更新プログラムの導入動向を確認するには、特定のバージョンの Windows について **[View More]\(詳細の表示\)** を選択します。 積み上げ面グラフでは、時間の経過と共にインストールされたセキュリティ更新プログラムごとにデバイスが分類されます。
 
+セキュリティ更新プログラムの展開状態を確認するには、 **[すべて表示]** を選択します。 このビューには、デバイスが次のカテゴリで一覧表示されます。
+
+- 未開始
+- 進行中
+- Completed
+- 要注意 - デバイス (デバイス名で並べ替え)
+- 要注意 - 問題 (問題の種類で並べ替え)
+
+新しい情報がサービスがまだ処理中であるデバイスを表示するには、 **[最近のデータを表示]** を選択します。 次の完全なデータ更新後に、Desktop Analytics にこの情報が表示されます。
+
+  > [!IMPORTANT]
+  > **[最近のデータを表示]** の Desktop Analytics のオプションは非推奨です。 このアクションは、Desktop Analytics サービスの今後のリリースで削除される予定です。 詳しくは、「[非推奨の機能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)」をご覧ください。<!--7080949-->  
 
 ## <a name="feature-updates"></a>機能更新プログラム
 
@@ -77,8 +90,7 @@ Windows 10 デバイスが Microsoft アカウントによる "*認証を受け�
 
 Desktop Analytics でデバイスが評価されていません。 この状態には、Windows Insider プログラムに登録された Windows 7、Windows 8.1、または Windows 10 を実行しているデバイスが含まれます。
 
-Windows 10 デバイスが Microsoft アカウントによる "*認証を受けていない*" 場合、Windows からはこのデータが報告されません。 通常、この認証は、Windows セットアップの組み込みエクスペリエンス (OOBE) の一部として完了しています。<!-- 5148153 -->
-
+タイルを選択すると、機能更新プログラムの導入動向が表示されます。 積み上げ面グラフでは、時間の経過と共にインストールされた機能更新プログラムごとにデバイスが分類されます。
 
 ## <a name="next-steps"></a>次のステップ
 

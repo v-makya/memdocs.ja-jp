@@ -10,12 +10,13 @@ ms.assetid: 1f4e26f7-42f2-40c8-80cf-efd405349c6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37555c6b60b0d2c18096c2778e9a077baeb9143f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 6eb0a99043eefcdb54c27a183fbc1e1eec8899bf
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695600"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268642"
 ---
 # <a name="monitor-connection-health"></a>接続の正常性の監視
 

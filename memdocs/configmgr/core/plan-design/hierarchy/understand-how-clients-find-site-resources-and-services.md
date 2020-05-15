@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a72ff9947f6ca31ce2158c5c763602b34948a15c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075661"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268999"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>クライアントが Configuration Manager のサイト リソースやサービスを検索する方法を理解する
 
@@ -62,7 +62,7 @@ Configuration Manager クライアントは、そのクライアントが使用�
 
 優先管理ポイントを使用できます。 優先管理ポイントは、クライアントの割り当て済みサイトの管理ポイントであり、クライアントがサイト システム サーバーを見つけるために使用している境界グループに関連付けられています。 優先管理ポイントは、配布ポイントや状態移行ポイントを境界グループに関連付けるのと同じような方法で、境界グループにサイト システム サーバーとして関連付けられています。 階層の優先管理ポイントを有効にすると、クライアントは、割り当て済みサイトの管理ポイントを使用するときに、割り当て済みサイトの他の管理ポイントを使用する前に優先管理ポイントを使用しようとします。  
 
-TechNet.com にある[管理ポイントのアフィニティ](https://blogs.technet.com/b/jchalfant/archive/2014/09/22/management-point-affinity-added-in-configmgr-2012-r2-cu3.aspx)に関するブログの情報を使用して、管理ポイントのアフィニティを構成することもできます。 管理ポイントのアフィニティは、割り当て済み管理ポイントの既定の動作をオーバーライドし、クライアントが特定の 1 つ以上の管理ポイントを使用できるようにします。  
+[管理ポイントのアフィニティ](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3)に関するブログの情報を使用して、管理ポイントのアフィニティを構成することもできます。 管理ポイントのアフィニティは、割り当て済み管理ポイントの既定の動作を上書きし、クライアントが特定の 1 つ以上の管理ポイントを使用できるようにします。  
 
 クライアントは、管理ポイントへの接続が必要になるたびに、Windows Management Instrumentation (WMI) にローカルに格納している管理ポイント リストを確認します。 クライアントは、インストール時に最初の管理ポイント リストを作成します。 その後、クライアントは階層内の各管理ポイントの詳細でリストを定期的に更新します。  
 
@@ -131,12 +131,12 @@ TechNet.com にある[管理ポイントのアフィニティ](https://blogs.tec
 その後、クライアントは使用する新しい管理ポイントをランダムに選択します。  
 
 ##  <a name="active-directory"></a><a name="bkmk_ad"></a> Active Directory  
-ドメインに参加しているクライアントは、サービスの場所として AD DS を使用できます。 この場合、 [データを Active Directory に発行する](https://technet.microsoft.com/library/hh696543.aspx)ためのサイトが必要になります。  
+ドメインに参加しているクライアントは、サービスの場所として AD DS を使用できます。 この場合、 [データを Active Directory に発行する](../../servers/deploy/configure/publish-site-data.md)ためのサイトが必要になります。  
 
 次のすべての条件に該当する場合、クライアントはサービスの場所として AD DS を使用できます。  
 
-- Active Directory [スキーマが拡張されている](https://technet.microsoft.com/library/mt345589.aspx)、または System Center 2012 Configuration Manager用に拡張された。  
-- [Active Directory フォレストが発行用に構成されており](https://technet.microsoft.com/library/hh696542.aspx)、Configuration Manager サイトが発行するように構成されている。  
+- Active Directory [スキーマが拡張されている](../network/extend-the-active-directory-schema.md)、または System Center 2012 Configuration Manager用に拡張された。  
+- [Active Directory フォレストが発行用に構成されており](../../servers/deploy/configure/publish-site-data.md)、Configuration Manager サイトが発行するように構成されている。  
 - クライアント コンピューターが Active Directory ドメインのメンバーであり、グローバル カタログ サーバーにアクセスできる。  
 
 クライアントは、AD DS からサービスの場所として使用する管理ポイントを見つけられない場合、DNS の使用を試みます。  
@@ -148,7 +148,7 @@ TechNet.com にある[管理ポイントのアフィニティ](https://blogs.tec
 - AD DS スキーマが Configuration Manager 用に拡張されていない。
 - イントラネットのクライアントが、Configuration Manager からデータを発行できないフォレストに配置されている。  
 - クライアントがワークグループ コンピューターにあり、インターネット専用クライアント管理向けに構成されていない。 (インターネット用に構成されたワークグループ クライアントはインターネットに接続する管理ポイントとのみ通信し、サービスの場所として DNS を使用しません。)  
-- [DNS から管理ポイントを検索するようにクライアントを構成](https://technet.microsoft.com/library/gg682055)できます。  
+- [DNS から管理ポイントを検索するようにクライアントを構成](../../clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md)できます。  
 
 サイトで DNS に管理ポイントのサービスの場所レコードを発行する場合:  
 

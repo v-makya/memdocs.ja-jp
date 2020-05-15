@@ -10,12 +10,13 @@ ms.assetid: 637fbd8e-b8ea-4c7e-95ee-a60a323c496e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c7a14da1505e89dfd61a3dc4f13385fbf5c21d41
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 0a7ffe8eea1048e696ce7dd254d58364226efc58
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708230"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268788"
 ---
 # <a name="how-to-deploy-to-production-with-desktop-analytics"></a>Desktop Analytics を使用して運用環境に展開する方法
 
