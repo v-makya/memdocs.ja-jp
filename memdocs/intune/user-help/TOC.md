@@ -20,6 +20,7 @@
 #### 派生した資格情報で登録する
 ##### [Entrust Datacard で登録する](enroll-android-device-entrust-datacard.md)
 ##### [Intercede に登録する](enroll-android-device-intercede.md)
+##### [Disa Purebred を使用して登録する](enroll-android-device-disa-purebred.md)
 ### [新しいデバイス管理のセットアップに移動する](move-to-new-device-management-setup.md)
 ### [デバイスで管理対象アプリを使用する](use-managed-apps-on-your-device-android.md)
 ### [デバイスを暗号化する](encrypt-your-device-android.md)
