@@ -2,7 +2,7 @@
 title: コンテンツを展開する
 titleSuffix: Configuration Manager
 description: Configuration Manager の配布ポイントをインストールした後に、その配布ポイントにコンテンツを展開する方法について説明します。
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7478eff1a14eeffd4d12b1539df7c5573c6a7cb6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: df26fe91f009a1a4f5d3c5a4f4adb5fe45bbd245
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707260"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343152"
 ---
 # <a name="deploy-and-manage-content-for-configuration-manager"></a>Configuration Manager でのコンテンツの展開および管理
 
@@ -24,7 +24,7 @@ ms.locfileid: "81707260"
 Configuration Manager の配布ポイントをインストールした後に、その配布ポイントにコンテンツを展開できます。 通常、コンテンツはネットワーク経由で配布ポイントに転送しますが、他の方法を使用して配布ポイントにコンテンツを転送することもできます。 コンテンツを配布ポイントに転送した後は、配布ポイントのコンテンツを更新、再配布、削除、および検証できます。  
 
 ##  <a name="distribute-content"></a><a name="bkmk_distribute"></a> コンテンツの配布  
-通常、コンテンツをクライアント コンピューターで使用できるようにするには、コンテンツを配布ポイントに配布します。 (特定の展開のオンデマンド コンテンツ配布を使用する場合は例外です。)コンテンツを配布するとき、Configuration Manager は、コンテンツ ファイルをパッケージに保存してから配布ポイントに配布します。 配布できるコンテンツには、次のような種類があります。  
+通常、コンテンツをクライアント コンピューターで使用できるようにするには、コンテンツを配布ポイントに配布します。 (特定の展開のオンデマンド コンテンツ配布を使用する場合は例外です。)コンテンツを配布するとき、Configuration Manager では、コンテンツ ファイルをパッケージに保存してから、そのパッケージを配布ポイントに配布します。 パッケージの内容は、サイト サーバーのコンテンツ ライブラリからプルされます。 配布できるコンテンツには、次のような種類があります。  
 
 - アプリケーションの展開の種類  
 
@@ -311,7 +311,7 @@ Extract Content コマンド ライン ツールを使用してコンテンツ �
 
 ### <a name="update-content"></a>コンテンツの更新
 新しいファイルを追加するか、既存のファイルを新しいバージョンに置き換えることによって展開のソース ファイルの場所が更新された場合は、 **[配布ポイントの更新]** 操作または **[コンテンツの更新]** 操作を使用して配布ポイントにあるコンテンツ ファイルを更新することができます。  
-- コンテンツ ファイルは、ソース ファイル パスからパッケージ コンテンツ ソースを所有するサイトのコンテンツ ライブラリにコピーされます。  
+- コンテンツ ファイルは、元のパッケージ ソースの場所から、パッケージ コンテンツ ソースを所有するサイト上のコンテンツ ライブラリにコピーされます
 - パッケージのバージョンがインクリメントされます。  
 - サイト サーバーと配布ポイントにあるコンテンツ ライブラリの各インスタンスは、変更されたファイルのみについて更新されます。  
 
@@ -409,7 +409,7 @@ Configuration Manager SDK の **RetryContentReplication** Windows Management Ins
 
 このメソッドを使用するのは、コンテンツの通常のレプリケーションに問題が発生した後にコンテンツを再配布する必要があり、レプリケーションを強制する場合のみです (通常、コンソールの監視ノードを使用して確認します)。   
 
-この SDK オプションの詳細については、MSDN.Microsoft.com の「[RetryContentReplication Method in Class SMS_CM_UpdatePackages](https://msdn.microsoft.com/library/mt762092(CMSDK.16).aspx)」(クラス SMS_CM_UpdatePackages の RetryContentReplication メソッド) を参照してください。
+この SDK オプションの詳細については、[クラス SMS_CM_UpdatePackages の RetryContentReplication メソッド](../../../../develop/reference/sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md)に関するページを参照してください。
 
 ### <a name="remove-content"></a>コンテンツの削除
 配布ポイントでコンテンツが不要になった場合は、コンテンツ ファイルを削除することができます。  

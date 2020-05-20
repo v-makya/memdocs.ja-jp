@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 36d256e674a0fe973eca4bc692a244af034d5cc1
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 783323c3e9218b34b1f2b7f3c7d9bb13eea44e2e
+ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076766"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83383730"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager のクラウド管理ゲートウェイを設定する
 
@@ -199,6 +199,43 @@ Configuration Manager クライアントは、イントラネット上にある�
 > [!Note]  
 > CMG クライアント トラフィックのトラブルシューティングを行うには、**CMGHttpHandler.log**、**CMGService.log**、**SMS_Cloud_ProxyConnector.log** を使用します。 詳細については、[ログ ファイル](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)に関するページを参照してください。
 
+### <a name="install-off-premises-clients-using-a-cmg"></a>CMG を使用してオフプレミスのクライアントをインストールする
+
+現在イントラネットに接続されていないシステムにクライアント エージェントをインストールするには、次のいずれかの条件が満たされている必要があります。 いずれの場合も、ターゲット システムのローカル管理者アカウントが必要です。
+
+1. Configuration Manager サイトが、クライアント認証に PKI 証明書を使用するように適切に構成されている。 さらに、各クライアント システムに、以前に発行された有効な一意の信頼されたクライアント認証証明書がある。
+
+2. システムが Azure AD ドメイン参加済みであるか、ハイブリッド Azure AD ドメイン参加済みである。
+
+3. サイトで Configuration Manager バージョン 2002 以降が実行されている。
+
+オプション 1 と 2 については、**ccmsetup.exe** を呼び出す際に、 **/mp** パラメーターを使用して CMG の URL を指定します。 詳しくは、[クライアント インストールのパラメーターとプロパティ](../../deploy/about-client-installation-properties.md#mp)に関するページをご覧ください。
+
+オプション 3 について、Configuration Manager バージョン 2002 以降では、一括登録トークンを使用して、イントラネットに接続されていないシステムにクライアント エージェントをインストールできます。 この方法の詳細については、「[一括登録トークンを作成する](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token)」をご覧ください。
+
+### <a name="configure-off-premises-clients-for-cmg"></a>CMG 用にオフプレミスのクライアントを構成する
+
+次の条件に該当する場合は、最近構成された CMG にシステムを接続できます。  
+
+- システムに既に Configuration Manager クライアント エージェントがインストールされている。
+
+- システムがイントラネットに接続されておらず、接続することもできない。
+
+- システムが次のいずれかの条件を満たしている。
+
+ - 以前に発行された有効な一意の信頼されたクライアント認証証明書がそれぞれにある。
+ 
+ - Azure AD ドメイン参加済み
+ 
+ - ハイブリッド Azure AD ドメイン参加済み。
+
+- 既存のクライアント エージェントを完全に再インストールしたくない、またはできない。
+
+- ローカル管理者アカウントを使用してコンピューターのレジストリ値を変更し、**SMS Agent Host** サービスを再起動する方法がある。
+
+これらのシステムで接続を強制するには、**HKLM\Software\Microsoft\CCM** の下にレジストリ値 **CMGFQDNs** (種類: REG_SZ) を作成します。 この値に CMG の URL (`https://contoso-cmg.contoso.com` など) を設定します。 設定が完了したら、クライアント システム上で **SMS Agent Host** サービスを再起動します。
+
+Configuration Manager クライアントで、現在の CMG またはインターネットに接続された管理ポイントがレジストリに設定されていない場合は、**CMGFQDNs** レジストリ値が自動的にチェックされます。 このチェックは、25 時間ごと、**SMS Agent Host** サービスの起動時、またはサービスによってネットワークの変更が検出されたときに実行されます。 クライアントがサイトに接続して CMG を認識すると、この値が自動的に更新されます。
 
 ## <a name="modify-a-cmg"></a>CMG を変更する
 

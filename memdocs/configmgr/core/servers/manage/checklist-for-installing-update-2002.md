@@ -2,7 +2,7 @@
 title: 2002 のチェックリスト
 titleSuffix: Configuration Manager
 description: Configuration Manager バージョン 2002 に更新する前に、実行するアクションについて説明します。
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2993032a-1204-4bd8-b5af-17a980bb0649
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a7f2abac1810b5ab40e3c253b6aee7aa970174d9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 63293c103cf8a19d006bd700cac6c370ba5e7391
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708060"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268948"
 ---
 # <a name="checklist-for-installing-update-2002-for-configuration-manager"></a>Configuration Manager の更新プログラム 2002 をインストールするためのチェックリスト
 
@@ -68,33 +68,35 @@ Configuration Manager の Current Branch を使用している場合、バージ
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
- -->
+2020 年 5 月 11 日以降、全世界のすべてのユーザーがバージョン 2002 をインストールできます。 事前に早期更新リングをオプトインしている場合は、この Current Branch バージョンに対する更新に注目してください。
 
-現時点では、バージョン 2002 は早期更新リングに対してリリースされます。 この更新プログラムをインストールするには、オプトインする必要があります。 次の PowerShell スクリプトでは、階層またはスタンドアロンのプライマリ サイトが、バージョン 2002 の早期更新リングに追加されます。
+<!--
+At this time, version 2002 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2002:
 
-[バージョン 2002 のオプトイン スクリプト](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2002 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-スクリプトは、Microsoft によってデジタル署名されて、署名された自己解凍形式の実行可能ファイル内にバンドルされます。
+<!--
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!Note]  
-> バージョン 2002 の更新プログラムは、バージョン 1810 以降が実行されているサイトにのみ適用されます。
+> The version 2002 update is only applicable to sites running version 1810 or later.
 
-早期更新リングにオプトインするには:
+To opt-in to the early update ring:
 
-1. Windows PowerShell を開き、 **、管理者として実行します**
-1. 次の構文を使って、**EnableEarlyUpdateRing2002.ps1** スクリプトを実行します。
+1. Open Windows PowerShell and **Run as administrator**
+1. Run the **EnableEarlyUpdateRing2002.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2002.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    `SiteServer` では、中央管理サイト サーバーまたはスタンドアロン プライマリ サイト サーバーが参照されています。 たとえば、 `EnableEarlyUpdateRing2002.ps1 cmprimary01` と記述します。
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2002.ps1 cmprimary01`
 
-1. 更新プログラムを確認します。 詳しくは、「[利用可能な更新プログラムの取得](install-in-console-updates.md#get-available-updates)」をご覧ください。
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-バージョン 2002 の更新プログラムが、コンソールで使用できるようになります。
+The version 2002 update should now be available in the console.
 
 > [!Important]  
-> このスクリプトでは、サイトはバージョン 2002 の早期更新リングに対してのみ追加されます。 永続的な変更ではありません。
+> This script only adds your site to the early update ring for version 2002. It's not a permanent change.
+ -->
 
 ## <a name="checklist"></a>チェックリスト
 

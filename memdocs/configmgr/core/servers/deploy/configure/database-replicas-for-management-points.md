@@ -2,7 +2,7 @@
 title: 管理ポイントのデータベース レプリカ
 titleSuffix: Configuration Manager
 description: 管理ポイントがサイト データベース サーバーに加えられた CPU 負荷を軽減するように、データベース レプリカを使用します。
-ms.date: 10/06/2016
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8d413221f7dc4ea905844ad3b2dbe08826314a54
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3daf23f17719e111dacd45e6176c5f697a3d3224
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704670"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343118"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Configuration Manager の管理ポイントのデータベース レプリカ
 
@@ -57,7 +57,7 @@ Configuration Manager プライマリ サイトでは、データベース レ�
 
     -   サイト データベースはデータベース レプリカを **発行** する必要があります。また、リモートの各データベース レプリカ サーバーは、発行されたデータを **サブスクライブ** する必要があります。  
 
-    -   サイト データベースをホストする SQL Server とデータベース レプリカをホストする SQL Server の両方を、2 GB の **テキスト レプリケーションの最大サイズ** をサポートするように構成する必要があります。 SQL Server 2012 でこれを構成する方法の例については、「 [max text repl size サーバー構成オプションの構成](https://go.microsoft.com/fwlink/p/?LinkId=273960)」をご覧ください。  
+    -   サイト データベースをホストする SQL Server とデータベース レプリカをホストする SQL Server の両方を、2 GB の **テキスト レプリケーションの最大サイズ** をサポートするように構成する必要があります。 SQL Server 2012 でこれを構成する方法の例については、「 [max text repl size サーバー構成オプションの構成](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15)」をご覧ください。  
 
 -   **自己署名証明書:** データベース レプリカを構成するには、データベース レプリカ サーバー上で自己署名証明書を作成して、そのデータベース レプリカ サーバーを使用する各管理ポイントでこの証明書を利用できるようにする必要があります。  
 
@@ -82,6 +82,8 @@ Configuration Manager プライマリ サイトでは、データベース レ�
 -   **Configuration Manager Current Branch にアップグレードする**:サイトを System Center 2012 Configuration Manager から Configuration Manager Current Branch にアップグレードする前、または Configuration Manager Current Branch を最新リリースに更新する前に、管理ポイントのデータベース レプリカを無効にする必要があります。  サイトをアップグレードしたら、管理ポイントのデータベース レプリカを再構成できます。  
 
 -   **単一 SQL Server 上の複数レプリカ:** 管理ポイントの複数のデータベース レプリカをホストするようにデータベース レプリカ サーバーを構成する場合 (各レプリカは別々のインスタンス上にある必要があります)、変更した構成スクリプト (次のセクションの手順 4 から) を使用して、そのサーバー上の以前に構成されたデータベース レプリカで使用されている自己署名入り証明書が上書きされないようにする必要があります。  
+
+- ソフトウェア センターでのユーザー展開は、SQL レプリカを使用する管理ポイントに対しては機能しません。 <!--sccmdocs-1011-->
 
 ##  <a name="configure-database-replicas"></a><a name="BKMK_DBReplica_Config"></a> データベース レプリカの構成  
 データベース レプリカを構成して使用するには、次の手順を実行する必要があります。  
@@ -172,7 +174,7 @@ Windows Server 2008 R2 コンピューターにデータベース レプリカ �
         -   SQL Server エージェントを別のアカウントを使用して実行する場合は、 **[次の Windows アカウントで実行する]** を選択して、そのアカウントを構成します。 Windows アカウントまたは SQL Server アカウントを指定できます。  
 
         > [!IMPORTANT]  
-        >  配布エージェントを実行するアカウントに、発行元へのアクセス許可をプル サブスクリプションとして付与する必要があります。 これらのアクセス許可の構成について詳しくは、SQL Server TechNet ライブラリの「 [ディストリビューション エージェント セキュリティ](https://go.microsoft.com/fwlink/p/?LinkId=238463) 」をご覧ください。  
+        >  配布エージェントを実行するアカウントに、発行元へのアクセス許可をプル サブスクリプションとして付与する必要があります。 これらのアクセス許可の構成について詳しくは、「[ディストリビューション エージェント セキュリティ](https://docs.microsoft.com/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15)」をご覧ください。  
 
       - **[ディストリビューターに接続]** で、 **[プロセスのアカウントを借用する]** を選択します。  
 
@@ -457,7 +459,7 @@ Windows Server 2008 R2 コンピューターにデータベース レプリカ �
 -   この証明書を使用して構成する後続のデータベース レプリカごとに、証明書のフレンドリ名を更新します。  これを行うには、 **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** の行を編集し、 **ConfigMgr SQL Server Identification Certificate** を新しい名前 (  **ConfigMgr SQL Server Identification Certificate1**など) に置き換えます。  
 
 ##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a> データベースのレプリカの構成の管理  
- サイトでデータベースのレプリカを使用する場合は、データベースのレプリカのアンインストール、データベースのレプリカを使用するサイトのアンインストール、または SQL Server の新しいインストールへのサイト データベースの移動を行うための補足する手順として、以下のセクションの情報を参照してください。 以下のセクションの情報を参照してパブリケーションを削除する場合は、データベースのレプリカに使用しているバージョンの SQL Server のトランザクション レプリケーションを削除する手順に従ってください。 たとえば、SQL Server 2008 R2 を使用する場合は、「[パブリケーションを削除する方法 (レプリケーション Transact-SQL プログラミング)](https://go.microsoft.com/fwlink/p/?LinkId=273934)」を参照してください。  
+ サイトでデータベースのレプリカを使用する場合は、データベースのレプリカのアンインストール、データベースのレプリカを使用するサイトのアンインストール、または SQL Server の新しいインストールへのサイト データベースの移動を行うための補足する手順として、以下のセクションの情報を参照してください。 以下のセクションの情報を参照してパブリケーションを削除する場合は、データベースのレプリカに使用しているバージョンの SQL Server のトランザクション レプリケーションを削除する手順に従ってください。 詳細については、「[パブリケーションの削除](https://docs.microsoft.com/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15)」を参照してください。  
 
 > [!NOTE]  
 >  データベースのレプリカ用に構成されたサイト データベースを復元した後で、データベースのレプリカを使用するためには、データベースの各レプリカを再構成して、パブリケーションとサブスクリプションの両方を再作成する必要があります。  

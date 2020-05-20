@@ -10,16 +10,16 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd2a8b3bfb7c4b8af277616c7eaed329bc143bb7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
+ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691400"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83406684"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>Configuration Manager ラボを Azure で作成する
 
-*適用対象:Configuration Manager (Technical Preview Branch)*
+*適用対象:Configuration Manager (Current Branch、Technical Preview Branch)*
 
 <!--3556017-->
 
@@ -35,12 +35,12 @@ ms.locfileid: "81691400"
 ## <a name="prerequisites"></a>[前提条件]
 
 このプロセスでは、次のオブジェクトを作成できる Azure サブスクリプションが必要です。 
-- ドメイン コントローラーと MP ロールと DP ロール用の 2 台の Standard_B2s 仮想マシン
-- プライマリ サイト サーバーと SQL データベース サーバー用の 1 台の Standard_B2ms 仮想マシン
+- ドメイン コントローラー、管理ポイント、および配布ポイント用の 2 台の Standard_B2s 仮想マシン。
+- プライマリ サイト サーバーと SQL データベース サーバー用の 1 台の Standard_B2ms 仮想マシン。
 - Standard_LRS ストレージ アカウント
 
 > [!Tip]  
-> 予想されるコストについては、「[Azure の料金計算ツール](https://azure.microsoft.com/pricing/calculator/)」を参照してください。  
+> 予想されるコストについては、[Azure 料金計算ツール](https://azure.microsoft.com/pricing/calculator/)を参照してください。  
 
 
 
@@ -102,7 +102,7 @@ VM に接続するには、まず、Azure ポータルから各 VM のパブリ�
 ### `<prefix>DC01`
 
 - Active Directory ドメイン コントローラー
-- Standard_B2s (CPU 2 個、メモリ 4 GB)
+- Standard_B2s (2 プロセッサ、4 GB のメモリ)
 - Windows Server 2019 Datacenter Edition
 
 #### <a name="windows-features-and-roles"></a>Windows の機能と役割
@@ -113,7 +113,7 @@ VM に接続するには、まず、Azure ポータルから各 VM のパブリ�
 
 ### `<prefix>PS01`
 
-- Standard_B2ms (CPU 2 個、メモリ 8 GB)
+- Standard_B2ms (2 プロセッサ、8 GB のメモリ)
 - Windows Server 2016 Datacenter Edition
 - SQL Server
 - Windows 10 ADK (Windows PE を含む) 
@@ -127,7 +127,7 @@ VM に接続するには、まず、Azure ポータルから各 VM のパブリ�
 
 ### `<prefix>DPMP01`
 
-- Standard_B2s (CPU 2 個、メモリ 4 GB)
+- Standard_B2s (2 プロセッサ、4 GB のメモリ)
 - Windows Server 2019 Datacenter Edition
 - 配布ポイント
 - 管理ポイント

@@ -2,7 +2,7 @@
 title: バージョン 2002 の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager Current Branch のバージョン 2002 で導入された変更点および新機能について説明します。
-ms.date: 04/01/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f760e70b1896700fa08bdb27c68794d2dec8c192
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
+ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702310"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83381555"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 2002 の新機能
 
 *適用対象:Configuration Manager (Current Branch)*
 
-Configuration Manager Current Branch の更新プログラム 2002 はコンソール内の更新プログラムとして利用できます。 バージョン 1806 以降が実行されているサイトで、この更新プログラムを適用します。 <!-- baseline only statement:-->新しいサイトをインストールするときにも基準のバージョンとしても利用できます。 この記事では、Configuration Manager バージョン 2002 での変更点と新機能をまとめます。
+Configuration Manager Current Branch の更新プログラム 2002 はコンソール内の更新プログラムとして利用できます。 バージョン 1810 以降が実行されているサイトで、この更新プログラムを適用します。 <!-- baseline only statement:-->新しいサイトをインストールするときにも基準のバージョンとしても利用できます。 この記事では、Configuration Manager バージョン 2002 での変更点と新機能をまとめます。
 
 この更新プログラムをインストールするための最新のチェックリストを常に確認してください。 詳細については「[更新プログラム 2002 をインストールするためのチェックリスト](../../servers/manage/checklist-for-installing-update-2002.md)」を参照してください。 サイトを更新した後は、[更新後のチェックリスト](../../servers/manage/checklist-for-installing-update-2002.md#post-update-checklist)に関するページも確認してください。
 
@@ -411,9 +411,9 @@ Configuration Manager 向け Windows PowerShell コマンドレットの変更�
 
 管理サービスの REST API の変更に関する詳細については、[管理サービスのリリース ノート](../../../develop/adminservice/release-notes.md#bkmk_2002)を参照してください。
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2002](https://support.microsoft.com/help/nnnnn).
+このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Configuration Manager Current Branch バージョン 2002 での変更の概要](https://support.microsoft.com/help/4556203)」を参照してください。
 
+<!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 
 -->
@@ -433,8 +433,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>次のステップ
 
-現時点では、バージョン 2002 は早期更新リングに対してリリースされます。 この更新プログラムをインストールするには、オプトインする必要があります。 詳しくは、「[早期更新リング](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring)」をご覧ください。
-<!-- As of December 20, 2019, version 2002 is globally available for all customers to install. -->
+<!-- At this time, version 2002 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2002.md#early-update-ring). -->
+
+2020 年 5 月 11 日以降、全世界のすべてのユーザーがバージョン 2002 をインストールできます。
 
 このバージョンをインストールする準備ができたら、[Configuration Manager の更新プログラムのインストール](../../servers/manage/updates.md)に関する記事および「[2002 に更新するためのチェックリスト](../../servers/manage/checklist-for-installing-update-2002.md)」をご覧ください。
 

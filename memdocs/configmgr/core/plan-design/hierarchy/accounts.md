@@ -2,20 +2,20 @@
 title: 使用されるアカウント
 titleSuffix: Configuration Manager
 description: Configuration Manager で使用されている Windows のグループ、アカウント、SQL オブジェクトを識別し、管理します。
-ms.date: 10/23/2019
+ms.date: 05/08/2020
 ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.technology: Configuration Manager-core
 ms.topic: conceptual
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6808fed9fa9aaf894e3975066eb7707880b7948
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5bd1284b96e1739126b8d6ee19f20699d47e5880
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82073417"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267991"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager で使用されるアカウント
 
@@ -24,9 +24,9 @@ ms.locfileid: "82073417"
 Configuration Manager で使用される Windows グループ、アカウント、SQL オブジェクト、それらの使用方法、要件を確認するには、以下の情報を参照してください。  
 
 - [Configuration Manager で作成および使用される Windows グループ](#bkmk_groups)  
-  - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
-  - [ConfigMgr_DViewAccess](#configmgr_dviewaccess)  
-  - [ConfigMgr リモート コントロール ユーザー](#configmgr-remote-control-users)  
+  - [Configuration Manager_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
+  - [Configuration Manager_DViewAccess](#configmgr_dviewaccess)  
+  - [Configuration Manager リモート コントロール ユーザー](#configmgr_rcusers)  
   - [SMS Admins](#sms-admins)  
   - [SMS_SiteSystemToSiteServerConnection_MP_&lt;sitecode\>](#bkmk_remotemp)  
   - [SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;sitecode\>](#bkmk_remoteprov)  
@@ -96,7 +96,7 @@ Configuration Manager は、次の Windows グループを自動的に作成し�
 > Configuration Manager でドメイン メンバーであるコンピューター上にグループが作成されるとき、グループはローカル セキュリティ グループになります。 コンピューターがドメイン コントローラーである場合、グループはローカル グループとして作成されます。 この種類のグループは、ドメイン内のすべてのドメイン コントローラー間で共有されます。  
 
 
-### <a name="configmgr_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a> ConfigMgr_CollectedFilesAccess
+### <a name="configuration-manager_collectedfilesaccess"></a><a name="configmgr_collectedfilesaccess"></a> Configuration Manager_CollectedFilesAccess
 
 Configuration Manager は、このグループを使用して、ソフトウェア インベントリで収集されたファイルを表示するためのアクセスを許可します。  
 
@@ -114,14 +114,14 @@ Configuration Manager は、グループ メンバーシップを自動的に管
 既定では、このグループには、サイト サーバーの `C:\Program Files\Microsoft Configuration Manager\sinv.box\FileCol` フォルダーに対する**読み取り**アクセス許可が与えられます。  
 
 
-### <a name="configmgr_dviewaccess"></a><a name="configmgr_dviewaccess"></a>ConfigMgr_DViewAccess  
+### <a name="configuration-manager_dviewaccess"></a><a name="configmgr_dviewaccess"></a>Configuration Manager_DViewAccess  
 
 このグループは、Configuration Manager がサイト データベース サーバー上または子プライマリ サイトのデータベース レプリカ サーバー上に作成するローカル セキュリティ グループです。 ユーザーが階層内のサイト間のデータベース レプリケーションに対する分散ビューを使用すると、サイトによって作成します。 中央管理サイトのサイト サーバー アカウントと SQL Server コンピューター アカウントが含まれています。
 
 詳しくは、「[サイト間のデータ転送](data-transfers-between-sites.md)」をご覧ください。
 
 
-### <a name="configmgr-remote-control-users"></a>ConfigMgr リモート コントロール ユーザー  
+### <a name="configuration-manager-remote-control-users"></a><a name="configmgr_rcusers"></a> Configuration Manager リモート コントロール ユーザー  
 
 Configuration Manager リモート ツールは、このグループを使用して、ユーザーが**アクセス許可のあるユーザー**の一覧で設定するアカウントとグループを格納します。 サイトでは各クライアントにこの一覧が割り当てられます。  
 
@@ -245,6 +245,8 @@ Configuration Manager は、このグループを使用して、階層内のサ�
 
 Configuration Manager に次のアカウントを設定できます。  
 
+> [!TIP]
+> Configuration Manager コンソールで指定するアカウントのパスワードには、パーセント記号 (`%`) を使用しないでください。 そのアカウントは認証に失敗します。<!-- SCCMDocs#1032 -->
 
 ### <a name="active-directory-group-discovery-account"></a>Active Directory グループ探索アカウント  
 
@@ -382,7 +384,7 @@ Windows でアカウントのパスワードを変更する場合は、新しい
 
 Configuration Manager クライアントでは、最初に、そのコンピューター アカウントを使用してコンテンツのダウンロードが試みられます。 それが失敗すると、ネットワーク アクセス アカウントが自動的に試みられます。  
 
-バージョン 1806 以降のワークグループまたは Azure AD 参加済みクライアントは、ネットワーク アクセス アカウントを必要とせずに、配布ポイントからコンテンツに安全にアクセスできます。 この動作には、タスク シーケンスがブート メディア、PXE、またはソフトウェア センターから実行されている OS 展開シナリオが含まれます。 詳細については、「[Enhanced HTTP](enhanced-http.md)」(拡張 HTTP) をご覧ください。<!--1358228,1358278-->
+HTTPS または[拡張 HTTP](enhanced-http.md) 用にサイトを構成する場合、ワークグループまたは Azure AD 参加済みクライアントは、ネットワーク アクセス アカウントを必要とせずに、配布ポイントからコンテンツに安全にアクセスできます。 この動作には、タスク シーケンスがブート メディア、PXE、またはソフトウェア センターから実行されている OS 展開シナリオが含まれます。<!--1358228,1358278--> 詳細については、「[クライアントから管理ポイントへの通信](communications-between-endpoints.md#bkmk_client2mp)」をご覧ください。<!-- SCCMDocs#1345 -->
 
 > [!Note]  
 > ネットワーク アクセス アカウントが必要ないように**拡張 HTTP** を有効にする場合は、配布ポイントで Windows Server 2012 以降が実行されている必要があります。 <!--SCCMDocs-pr issue #2696-->
@@ -458,7 +460,7 @@ SQL Server Reporting Services は、**レポート サービス ポイント ア
 > 指定するアカウントは、SQL Reporting Services データベースをホストするコンピューターに**ローカル ログオン**のアクセス許可がある必要があります。
 
 > [!NOTE]  
-> ConfigMgr データベースの smsschm_users SQL Database ロールに追加されることによって、このアカウントには必要なすべての権限が自動的に付与されます。
+> Configuration Manager データベースの smsschm_users SQL Database ロールに追加されることによって、このアカウントには必要なすべての権限が自動的に付与されます。
 
 詳細については、「[レポートの概要](../../servers/manage/introduction-to-reporting.md)」をご覧ください。
 
@@ -643,41 +645,41 @@ Configuration Manager によって、SQL の次のユーザー オブジェク�
 
 ## <a name="database-roles-that-configuration-manager-uses-in-sql"></a><a name="bkmk_sqlroles"></a>SQL で Configuration Manager によって使用されるデータベース ロール
 <!--SCCMDocs issue #1160-->
-Configuration Manager によって、SQL の次のロール オブジェクトが自動的に作成され、維持されます。 これらのロールからは、データを取得するか、ConfigMgr データベースにデータを挿入したり、このデータベースからデータを挿入したりするため、各ロールで必要となるアクションを実行する目的で、特定のストアド プロシージャ、テーブル、ビュー、関数へのアクセスが与えられます。 これらのオブジェクトは Configuration Manager データベース内の [セキュリティ/ロール/データベース ロール] にあります。
+Configuration Manager によって、SQL の次のロール オブジェクトが自動的に作成され、維持されます。 これらのロールからは、Configuration Manager データベースに対するデータの取得やデータの挿入を行うため、各ロールで必要となるアクションを実行する目的で、特定のストアド プロシージャ、テーブル、ビュー、関数へのアクセス権が与えられます。 これらのオブジェクトは Configuration Manager データベース内の [セキュリティ/ロール/データベース ロール] にあります。
 
 > [!IMPORTANT]  
-> これらのオブジェクトを変更したり、削除したりすると、Configuration Manager 環境内で大きな問題が引き起こされる可能性があります。  これらのオブジェクトは変更しないことをお勧めします。
+> これらのオブジェクトを変更したり、削除したりすると、Configuration Manager 環境内で大きな問題が引き起こされる可能性があります。 これらのオブジェクトは変更しないでください。 次の一覧は、情報を示すことだけが目的です。
 
 ### <a name="smsdbrole_aitool"></a>smsdbrole_AITool
 
-資産インテリジェンス ボリューム ライセンスのインポート。 ConfigMgr からは、資産インテリジェンスで使用されるボリューム ライセンスをインポートできるように、RBA に基づいてユーザー アカウントにこのアクセス許可が与えられます。  このアカウントは、完全な管理者ロールまたは Asset Manager ロールによって追加されることもあります。
+資産インテリジェンス ボリューム ライセンスのインポート。 Configuration Manager からは、資産インテリジェンスで使用されるボリューム ライセンスをインポートできるように、RBA アクセスに基づいてユーザー アカウントにこのアクセス許可が与えられます。  このアカウントは、完全な管理者ロールまたは Asset Manager ロールによって追加されることもあります。
 
 ### <a name="smsdbrole_aius"></a>smsdbrole_AIUS
 
-資産インテリジェンス更新同期 ConfigMgr からは、資産インテリジェンス同期ポイント アカウントをホストするコンピューター アカウントに、資産インテリジェンス プロキシ データを取得したり、アップロードが保留になっている AI データを表示したりするためのアクセスが与えられます。
+資産インテリジェンス更新同期 Configuration Manager からは、資産インテリジェンス同期ポイント アカウントをホストするコンピューター アカウントに、資産インテリジェンス プロキシ データを取得したり、アップロードが保留になっている AI データを表示したりするためのアクセス権が与えられます。
 
 ### <a name="smsdbrole_amtsp"></a>smsdbrole_AMTSP
 
 帯域外管理。 このロールは、Intel AMT をサポートするデバイス上でデータを取得する目的で、Configuration Manager AMT ロールによって使用されます。
 
 > [!NOTE]  
-> このロールは、ConfigMgr の新しいリリースで非推奨となります。
+> このロールは、Configuration Manager の新しいリリースでは非推奨となります。
 
 ### <a name="smsdbrole_crp"></a>smsdbrole_CRP
 
-証明書登録ポイント System Center Endpoint Protection (SCEP) サポート。 ConfigMgr からは、証明書の署名と更新のために、SCEP サポートの証明書登録ポイントをサポートするサイト システムのコンピューター アカウントにアクセス許可が与えられます。
+Simple Certificate Enrollment Protocol (SCEP) をサポートする証明書登録ポイント。 Configuration Manager からは、証明書の署名と更新のために、SCEP サポートの証明書登録ポイントをサポートするサイト システムのコンピューター アカウントにアクセス許可が与えられます。
 
 ### <a name="smsdbrole_crppfx"></a>smsdbrole_CRPPfx
 
-証明書登録ポイント PFX サポート。 ConfigMgr からは、署名と更新のために PFX サポートに構成されている証明書登録ポイントをサポートするサイト システムのコンピューター アカウントにアクセス許可が与えられます。
+証明書登録ポイント PFX サポート。 Configuration Manager からは、署名と更新のために PFX サポート用に構成されている証明書登録ポイントをサポートするサイト システムのコンピューター アカウントにアクセス許可が与えられます。
 
 ### <a name="smsdbrole_dmp"></a>smsdbrole_DMP
 
-デバイス管理ポイント。 ConfigMgr からは、MDM 登録デバイスのサポートを提供する [モバイル デバイスおよび Mac コンピューターでこの管理ポイントを使用できるようにする] オプションがある管理ポイントのコンピューター アカウントに、このアクセス許可が与えられます。
+デバイス管理ポイント。 Configuration Manager からは、MDM 登録デバイスのサポートを提供する [モバイル デバイスおよび Mac コンピューターでこの管理ポイントを使用できるようにする] オプションがある管理ポイントのコンピューター アカウントに、このアクセス許可が与えられます。
 
 ### <a name="smsdbrole_dmpconnector"></a>smsdbrole_DmpConnector
 
-サービス接続ポイント。 ConfigMgr からは、利用統計情報を取得し、提供し、クラウド サービスを管理し、サービス更新プログラムを取得する目的でサービス接続ポイントをホストするコンピューター アカウントにこのアクセス許可が与えられます。
+サービス接続ポイント。 Configuration Manager からは、テレメトリ データの取得と提供を行い、クラウド サービスを管理し、サービス更新プログラムを取得する目的でサービス接続ポイントをホストするコンピューター アカウントに、このアクセス許可が与えられます。
 
 ### <a name="smsdbrole_dviewaccess"></a>smsdbrole_DViewAccess
 
@@ -685,11 +687,11 @@ Configuration Manager によって、SQL の次のロール オブジェクト�
 
 ### <a name="smsdbrole_dwss"></a>smsdbrole_DWSS
 
-データ ウェアハウス。 ConfigMgr からは、データ ウェアハウス ロールをホストするコンピューター アカウントにこのアクセス許可が与えられます。
+データ ウェアハウス。 Configuration Manager からは、データ ウェアハウス ロールをホストするコンピューター アカウントにこのアクセス許可が与えられます。
 
 ### <a name="smsdbrole_enrollsvr"></a>smsdbrole_EnrollSvr
 
- 登録ポイント。 ConfigMgr からは、MDM 経由のデバイス登録を可能にする目的で、登録ポイントをホストするコンピューター アカウントにこのアクセス許可が与えられます。
+ 登録ポイント。 Configuration Manager からは、MDM 経由のデバイス登録を可能にする目的で、登録ポイントをホストするコンピューター アカウントにこのアクセス許可が与えられます。
 
 ### <a name="smsdbrole_extract"></a>smsdbrole_extract
 
@@ -697,26 +699,26 @@ Configuration Manager によって、SQL の次のロール オブジェクト�
 
 ### <a name="smsdbrole_hmsuser"></a>smsdbrole_HMSUser
 
-階層マネージャー サービス。 ConfigMgr からは、フェールオーバー状態メッセージと階層内サイト間の SQL Server Broker トランザクションを管理する目的で、このアカウントにアクセス許可が与えられます。
+階層マネージャー サービス。 Configuration Manager からは、フェールオーバー状態メッセージと階層内サイト間の SQL Server Broker トランザクションを管理する目的で、このアカウントにアクセス許可が与えられます。
 
 > [!NOTE]  
 > smdbrole_WebPortal ロールは既定でこのロールのメンバーになります。
 
 ### <a name="smsdbrole_mcs"></a>smsdbrole_MCS
 
-マルチキャスト サービス。 ConfigMgr からは、マルチキャストをサポートする配布ポイントのコンピューター アカウントにこのアクセス許可が与えられます。
+マルチキャスト サービス。 Configuration Manager からは、マルチキャストをサポートする配布ポイントのコンピューター アカウントにこのアクセス許可が与えられます。
 
 ### <a name="smsdbrole_mp"></a>smsdbrole_MP
 
-管理ポイント。 ConfigMgr からは、ConfigMgr クライアントのサポートを与える目的で、管理ポイント ロールをホストするコンピューター アカウントにこのアクセス許可が与えられます。
+管理ポイント。 Configuration Manager からは、Configuration Manager クライアントのサポートを提供する目的で、管理ポイント ロールをホストするコンピューター アカウントにこのアクセス許可が与えられます。
 
 ### <a name="smsdbrole_mpmbam"></a>smsdbrole_MPMBAM
 
-管理ポイント Microsoft BitLocker Administration and Monitoring。 ConfigMgr からは、登録のために MBAM を管理する管理ポイントをホストするコンピューター アカウントにこのアクセス許可が与えられます。
+管理ポイント Microsoft BitLocker Administration and Monitoring。 Configuration Manager からは、登録のために MBAM を管理する管理ポイントをホストするコンピューター アカウントにこのアクセス許可が与えられます。
 
 ### <a name="smsdbrole_mpusersvc"></a>smsdbrole_MPUserSvc
 
-管理ポイント アプリケーション要求。 ConfigMgr からは、ユーザーベース アプリケーション要求をサポートする目的で管理ポイントをホストするコンピューター アカウントにこのアクセス許可が与えられます。
+管理ポイント アプリケーション要求。 Configuration Manager からは、ユーザーベース アプリケーション要求をサポートする目的で管理ポイントをホストするコンピューター アカウントにこのアクセス許可が与えられます。
 
 ### <a name="smsdbrole_siteprovider"></a>smsdbrole_siteprovider
 
@@ -724,16 +726,37 @@ SMS プロバイダー。 Configuration Manager からは、SMS プロバイダ�
 
 ### <a name="smsdbrole_siteserver"></a>smsdbrole_siteserver
 
-サイト サーバー。 ConfigMgr からは、プライマリまたは CAS サイトをホストするコンピューター アカウントにこのアクセス許可が与えられます。
+サイト サーバー。 Configuration Manager からは、プライマリまたは CAS サイトをホストするコンピューター アカウントにこのアクセス許可が与えられます。
 
 ### <a name="smsdbrole_sup"></a>smsdbrole_SUP
 
-ソフトウェアの更新ポイント。 ConfigMgr からは、サードパーティ更新プログラムを使用するためにソフトウェア更新ポイントをホストするコンピューター アカウントにこのアクセス許可が与えられます。
+ソフトウェアの更新ポイント。 Configuration Manager からは、サード パーティ更新プログラムを使用するためにソフトウェアの更新ポイントをホストするコンピューター アカウントにこのアクセス許可が与えられます。
 
 ### <a name="smsdbrole_webportal"></a>smsdbrole_WebPortal
 
-アプリケーション カタログ Web サイト ポイント。 ConfigMgr からは、ユーザーベースでアプリケーションを展開する目的で、アプリケーション カタログ Web サイト ポイントをホストするコンピューター アカウントにアクセス許可が与えられます。
+アプリケーション カタログ Web サイト ポイント。 Configuration Manager からは、ユーザー ベースでアプリケーションを展開する目的で、アプリケーション カタログ Web サイト ポイントをホストするコンピューター アカウントにアクセス許可が与えられます。
 
 ### <a name="smsschm_users"></a>smsschm_users
 
-ユーザー レポート アクセス。 ConfigMgr からは、Configuration Manager レポート データを表示するために SMS レポート ビューへのアクセスを許可する目的で、レポート サービス ポイント アカウントに使用されるアカウントにアクセスが与えられます。  データは RBA の使用によりさらに制限されます。
+ユーザー レポート アクセス。 Configuration Manager からは、Configuration Manager レポート データを表示するために SMS レポート ビューへのアクセスを許可する目的で、レポート サービス ポイント アカウント用に使用されるアカウントにアクセス権が与えられます。  データは RBA の使用によりさらに制限されます。
+
+## <a name="elevated-permissions"></a>昇格されたアクセス許可
+
+<!-- SCCMDocs#405 -->
+
+Configuration Manager には、継続的な操作のために昇格されたアクセス許可を持ついくつかのアカウントが必要です。 たとえば、[プライマリ サイトをインストールするための前提条件](../../servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_PrereqPri)に関する記事をご覧ください。 このようなアクセス許可とそれらが必要な理由について、次の一覧にまとめます。
+
+- プライマリ サイト サーバーと中央管理サイト サーバーのコンピューター アカウントには、次のものが必要です。
+
+  - すべてのサイト システム サーバーでのローカルの管理者権限。 このアクセス許可は、システム サービスの管理、インストール、および削除を行うためのものです。 サイト サーバーでは、ロールの追加または削除を行ったときに、サイト システムのローカル グループも更新されます。
+
+  - サイト データベースの SQL インスタンスに対する sysadmin アクセス権。 このアクセス許可は、サイトの SQL の構成と管理を行うためのものです。 Configuration Manager は SQL と密接に統合されています。これは単なるデータベースではありません。
+
+- 完全な管理者ロールのユーザー アカウントには、次のものが必要です。
+
+  - すべてのサイト サーバーでのローカル管理者権限。 このアクセス許可は、システム サービス、レジストリ キーと値、および WMI オブジェクトの表示、編集、削除、およびインストールを行うためのものです。
+
+  - サイト データベースの SQL インスタンスに対する sysadmin アクセス権。 このアクセス許可は、セットアップまたは回復中にデータベースのインストールおよび更新を行うためのものです。 これは SQL のメンテナンスと操作にも必要になります。 たとえば、統計の再インデックス作成や更新などです。
+
+    > [!NOTE]
+    > 一部の組織では、sysadmin アクセス権を削除し、必要な場合にのみこれを付与する場合があります。 この動作は、"Just-In-Time (JIT) アクセス" と呼ばれることがあります。 この場合、完全な管理者ロールを持つユーザーは、Configuration Manager データベースでストアド プロシージャの読み取り、更新、および実行を行うためのアクセス権を引き続き持っている必要があります。 これらのアクセス許可により、完全な sysadmin アクセス権なしでほとんどの問題をトラブルシューティングすることができます。

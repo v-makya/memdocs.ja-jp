@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3a05c10d1f73fa0817febdd591190f6bc2ff0a0e
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: bdc98febbc96162b2abe6e666c9354c342e5e913
+ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587275"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83383729"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>クラウド管理ゲートウェイのトークン ベース認証
 
@@ -102,6 +102,28 @@ ms.locfileid: "82587275"
 `/new` パラメーターと共に使用して、トークンの有効期間を指定します。 分単位の整数値を指定してください。 既定値は 4,320 (3 日) です。 最大値は 10,080 (7 日) です。
 
 例: `BulkRegistrationTokenTool.exe /lifetime:4320`
+
+## <a name="bulk-registration-token-management"></a>一括登録トークンの管理
+
+Configuration Manager コンソールで以前に作成した一括登録トークンとその有効期間を確認し、必要に応じてその使用をブロックできます。 ただし、サイト データベースには一括登録トークンが保存されません。
+
+#### <a name="to-review-a-bulk-registration-token"></a>一括登録トークンを確認するには
+
+1. Configuration Manager コンソールで、 **[管理]** をクリックします。
+
+2. [管理] ワークスペースで、 **[セキュリティ]** を展開し、 **[証明書]** をクリックします。 コンソールでは、サイトに関連した証明書と一括登録トークンのすべてが、詳細ウィンドウに一覧表示されます。
+
+3. 確認する一括登録トークンを選択します。
+
+GUID に基づいて特定の一括登録トークンを識別できます。 一括登録トークンの GUID は、トークンの作成時に表示されます。 必要に応じて、 **[種類]** 列でフィルター処理または並べ替えを行うこともできます。
+
+#### <a name="to-block-a-bulk-registration-token"></a>一括登録トークンをブロックするには
+
+1. Configuration Manager コンソールで、 **[管理]** をクリックします。
+
+2. [管理] ワークスペースで **[セキュリティ]** を展開し、 **[証明書]** をクリックして、ブロックする一括登録トークンを選択します。
+
+3. リボン バーの **[ホーム]** タブか右クリックのコンテンツ メニューで、 **[ブロック]** を選択します。 逆に、以前にブロックした一括登録トークンのブロックを解除するには、リボン バーの **[ホーム]** タブか右クリックのコンテンツ メニューで **[ブロック解除]** を選択します。
 
 ## <a name="see-also"></a>関連項目
 

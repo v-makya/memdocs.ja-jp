@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1435c1ab6be8c80178566ae9d354084fddebb22a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 3374a912b8235f546ec551bd1a964f9fc957b96d
+ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771351"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82991685"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Configuration Manager のクライアント設定について
 
@@ -325,9 +325,9 @@ Configuration Manager クライアントで Windows PowerShell スクリプト�
 
 ### <a name="grace-period-for-enforcement-after-deployment-deadline-hours"></a>展開期限後の実施の猶予期間 (時間)
 
-必要なアプリケーションのインストール、またはソフトウェア更新プログラムの展開の期限が過ぎてからも、さらにユーザーに時間を与えられるようにする場合は、このオプションを **[はい]** に設定します。 この猶予期間は、ユーザーが、長い間コンピューターの電源を切っていて、多くのアプリケーションまたは更新プログラムの展開をインストールする必要がある場合のためのものです。 たとえば、ユーザーが休暇から戻ってきて、期限を過ぎたアプリケーションの展開をクライアントがインストールするのを長時間待たなければならないような場合に、この設定が役立ちます。
+必要なアプリケーションのインストール、またはソフトウェア更新プログラムの展開の期限が過ぎてからも、さらにユーザーに時間を与えられるようにする場合は、このオプションの値を設定します。 この猶予期間は、ユーザーが、長い間コンピューターの電源を切っていて、多くのアプリケーションまたは更新プログラムの展開をインストールする必要がある場合のためのものです。 たとえば、ユーザーが休暇から戻ってきて、期限を過ぎたアプリケーションの展開をクライアントがインストールするのを長時間待たなければならないような場合に、この設定が役立ちます。
 
-1 から 120 時間の間で猶予期間を設定します。 この設定は、展開プロパティ **[ユーザー設定に従い、この展開の実施を延期する]** と共に使います。 詳細については、「[アプリケーションの展開](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period)」をご覧ください。
+0 から 120 時間の間で猶予期間を設定します。 この設定は、展開プロパティ **[ユーザー設定に従い、この展開の実施を延期する]** と共に使います。 詳細については、「[アプリケーションの展開](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period)」をご覧ください。
 
 
 ## <a name="computer-restart"></a>コンピューターの再起動

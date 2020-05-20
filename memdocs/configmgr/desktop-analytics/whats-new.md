@@ -2,7 +2,7 @@
 title: Desktop Analytics の新機能
 titleSuffix: Configuration Manager
 description: Desktop Analytics クラウド サービスの最新のマンスリー リリースの新機能の概要です。
-ms.date: 03/12/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,22 +10,33 @@ ms.assetid: fa300181-86cb-4afe-8fbf-895a7572378d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be314aee43e93b5e3d264c70626e2f0b85e8e7f3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706380"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268166"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Desktop Analytics の新機能
 
 Desktop Analytics の各月の新機能について説明します。
 
 > [!TIP]
-> 各マンスリー更新プログラムのロールアウトには最大 3 日間かかることがあります。 いくつかの機能については、数週間にわたってロールアウトされ、一部のお客様は最初の週にご利用になれない可能性があります。
+> 各マンスリー更新プログラムのロールアウトには最大 3 日間かかることがあります。 一部の機能は数週間にわたってロールアウトされ、一部のお客様は最初の週にご利用になれない可能性があります。
 
 このページが更新されたときに通知を受け取るには、次の URL をコピーして RSS フィード リーダーに貼り付けます。`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="may-2020"></a>2020 年 5 月
+
+### <a name="reduce-the-number-of-apps-for-review"></a>確認用のアプリの数を減らす
+
+<!-- 5542186 -->
+
+ポータルの資産ページに表示されるアプリを統合してその数を減らすために、同じ名前と発行元を持つすべてのバージョンのアプリが結合されるようになりました。 **[注目すべきアプリ]** タイル内のアプリの数には、この設定が反映されます。 たとえば、Microsoft Edge の何百ものインスタンスを一覧表示する代わりに、すべてのバージョンに対する 1 つのインスタンスが表示されます。 すべてのバージョンに対して 1 回で決定を行うことができます。 アプリの特定のバージョンに関する決定を行う必要がある場合は、この動作を構成できます。
+
+詳細については、[資産の概要 - アプリ](about-assets.md#apps)に関する記事をご覧ください。
 
 ## <a name="march-2020"></a>2020 年 3 月
 
@@ -72,7 +83,7 @@ Desktop Analytics に関するフィードバックを共有するには、ポ�
 
 <!-- 3594545 -->
 
-Desktop Analytics では、Windows アップグレードによってアプリケーションまたはドライバーが完全にまたは部分的に削除されることが検出される場合に、さらに詳細な情報が提供されるようになりました。 詳細については、[互換性の評価](compat-assessment.md#asset-is-removed-during-upgrade)に関する記事を参照してください。
+Desktop Analytics では、Windows アップグレードによってアプリケーションまたはドライバーが完全にまたは部分的に削除されることが検出される場合に、さらに詳細な情報が提供されるようになりました。 詳細については、「[互換性の評価](compat-assessment.md#asset-is-removed-during-upgrade)」を参照してください。
 
 ### <a name="migrate-from-windows-analytics-to-existing-tenant"></a>Windows Analytics から既存のテナントに移行する
 
@@ -121,3 +132,7 @@ Desktop Analytics ドキュメントでは、常に最新バージョンの Conf
 <!-- - [What's new in version 1910](../core/plan-design/changes/whats-new-in-version-1910.md#bkmk_da) -->
 
 - [バージョン 1906 の新機能](../core/plan-design/changes/whats-new-in-version-1906.md#bkmk_da)
+
+## <a name="deprecated-features"></a>非推奨の機能
+
+Microsoft が Desktop Analytics サービスの重要な機能を削除する予定がある場合、その変更は Configuration Manager の非推奨の機能として事前に発表されます。 詳しくは、「[非推奨の機能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features)」をご覧ください。

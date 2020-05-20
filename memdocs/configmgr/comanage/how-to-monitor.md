@@ -2,7 +2,7 @@
 title: 共同管理の監視
 titleSuffix: Configuration Manager
 description: 共同管理ダッシュボードを使用して、共同管理デバイスに関する情報を確認します。
-ms.date: 07/26/2019
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 64d34cef57a3d5f141093d2b099c0b352604be42
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e4516ca9baa7398322c204908c25248921a69d25
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688700"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268064"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Configuration Manager で共同管理を監視する方法
 
@@ -173,7 +173,7 @@ OS ごとのクライアント デバイスの数がバージョン別に表示�
 
 ## <a name="wmi-device-data"></a>WMI デバイス データ
 
-**SMS_Client_ComanagementState** WMI クラスを照会します。 共同管理の展開状態を判断するカスタム コレクションを Configuration Manager に作成することができます。 カスタム コレクションの作成の詳細については、「[コレクションの作成方法](../core/clients/manage/collections/create-collections.md)」を参照してください。
+サイト サーバーの **ROOT\SMS\site_&lt;SITECODE>** 名前空間で **SMS_Client_ComanagementState** WMI クラスを照会します。 共同管理の展開状態を判断するカスタム コレクションを Configuration Manager に作成することができます。 カスタム コレクションの作成の詳細については、「[コレクションの作成方法](../core/clients/manage/collections/create-collections.md)」を参照してください。
 
 WMI クラスでは次のフィールドを使用できます。  
 

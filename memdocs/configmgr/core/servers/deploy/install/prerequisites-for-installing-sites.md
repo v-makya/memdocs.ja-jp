@@ -10,12 +10,12 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8362dbf5cf7264c19f683ce5a224f1e0ec348b36
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a7f7853b006d4ac8b11a30217d1b05b1eedd69dc
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700670"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268982"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>Configuration Manager サイトのインストールの前提条件
 
@@ -49,6 +49,9 @@ ms.locfileid: "81700670"
 
         > [!IMPORTANT]  
         > Configuration Manager のセットアップが完了したら、サイト サーバー コンピューター アカウントで SQL Server の sysadmin 権限を保持する必要があります。 このアカウントから SQL sysadmin 権限を削除しないでください。  
+
+    > [!NOTE]
+    > セットアップ完了後のこれらのアクセス許可の必要性について詳しくは、「[昇格されたアクセス許可](../../../plan-design/hierarchy/accounts.md#elevated-permissions)」をご覧ください。
 
 - プライマリ サイトをインストールする場合は、次の権限も必要です。  
 
@@ -134,7 +137,7 @@ Configuration Manager で、中央管理サイトとプライマリ サイト間
 - [ビジネス向け Microsoft ストア](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)  
 - [クラウド管理ゲートウェイ](../../../clients/manage/cmg/plan-cloud-management-gateway.md)
 
-バージョン 1806 以降では、Azure Active Directory テナントの秘密鍵を更新します。 詳細については、[秘密鍵の更新](../configure/azure-services-wizard.md#bkmk_renew)に関するページを参照してください。
+最も簡単な方法は、Azure Active Directory テナントの秘密鍵を更新することです。 詳細については、[秘密鍵の更新](../configure/azure-services-wizard.md#bkmk_renew)に関するページを参照してください。
 
 または、サービスへの接続を削除して再作成します。
 

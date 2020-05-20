@@ -2,7 +2,7 @@
 title: Windows 10 更新プログラムの配信の最適化
 titleSuffix: Configuration Manager
 description: Configuration Manager を使用して、Windows 10 を最新の状態に保つための更新プログラムのコンテンツを管理する方法について説明します。
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7edd05a7b1ce105e81fd4f594d95c9dfb45f472
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771368"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83267792"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Configuration Manager による Windows 10 更新プログラムの配信の最適化
 
@@ -131,7 +131,7 @@ Windows Update エージェント (WUA) は最初に高速コンテンツを要�
 
 3. 続いて、CBS は 1 つ以上の高速 .psf ファイルから必要な範囲のファイルをダウンロードするよう WUA に求めます。  
 
-4. 配信の最適化は Configuration Manager と連携して、ローカルの配布ポイントまたはピア (使用可能な場合) から必要な範囲のファイルをダウンロードします。 配信の最適化が無効な場合は、バックグラウンド インテリジェント転送サービス (BITS) が同じ方法で、ピア キャッシュ ソースを調整する Configuration Manager と連携します。 配信の最適化または BITS は必要な範囲のファイルを WUA に渡します。これらのファイルは CBS で適用およびインストールできるようになります。  
+4. 配信の最適化が有効になっていて、必要な範囲のピアが検出された場合、クライアントは、ConfigMgr クライアントとは無関係にピアからダウンロードします。 配信の最適化が無効になっている場合、または必要な範囲のピアがない場合、ConfigMgr クライアントによってこれらの範囲がローカルの配布ポイント (またはピア、または Microsoft Update) からダウンロードされます。 この範囲は Windows Update エージェントに渡されます。これにより、範囲を適用するために CBS で使用できるようになります。
 
 
 #### <a name="why-are-the-express-files-psf-so-large-when-stored-on-configuration-manager-peer-sources-in-the-ccmcache-folder"></a>Configuration Manager のピア ソースで ccmcache フォルダーに格納される際に高速ファイル (.psf) のサイズが大きくなるのはなぜですか?

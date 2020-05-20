@@ -2,7 +2,7 @@
 title: ヘルプの検索
 titleSuffix: Configuration Manager
 description: Configuration Manager の詳細情報に関するリソースを見つけます。
-ms.date: 04/01/2020
+ms.date: 05/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6610e86c12b6f7704b65dc11c476fa09e8f2ae63
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bae98a8df1d8b8ff843bd333083c4c6ad68848c
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707160"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343186"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>Configuration Manager の使用に関するヘルプの検索
 
@@ -127,6 +127,13 @@ Configuration Manager 2002 以降、**気に入った機能の報告**または*
         - `-s --silent` コンソールにログを記録しない (--verbose との組み合わせは不可)
         - `-v, --verbose` 詳細なログをコンソールに出力する (--silent との組み合わせは不可)
         - `--help` ヘルプ画面の表示
+    
+    - バージョン 1910 以降では、UploadOfflineFeedback ユーティリティでのプロキシ サーバーの使用がサポートされています。 次のパラメーターを指定できます。
+        - `-x, --proxy` インターネットに接続するプロキシ サーバーを指定します。
+        - `-o, --port` インターネットに接続するプロキシ サーバー用のポートを指定します。
+        - `-u, --user` インターネットに接続するプロキシ サーバー用のユーザー名を指定します。
+        - `-w, --password` インターネットに接続するプロキシ サーバー用のパスワードを指定します。 パスワード用のプロンプトを生成するには、アスタリスク (&#42;) を入力します。 パスワードは、パスワード用プロンプトで入力した場合は表示されません。 コマンド ライン上のプレーン テキストは安全性が低くなるため、アスタリスク (&#42;) を使用してパスワード入力用のプロンプトを生成することを強くお勧めします。
+        - `-i` 接続チェックのスキップ:ネットワークの接続チェックをスキップし、指定した設定でフィードバックのアップロードだけを行います。
 
 ## <a name="confirmation-of-console-feedback"></a><a name="bkmk_feedbackid"></a> コンソール フィードバックの確認
 

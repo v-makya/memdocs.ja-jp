@@ -2,7 +2,7 @@
 title: ソフトウェア更新プログラムの同期の管理
 titleSuffix: Configuration Manager
 description: ソフトウェア更新プログラムの同期のスケジュール、手動によるソフトウェア更新プログラムの同期の開始、ソフトウェア更新プログラムの同期の監視を行うには、次の手順を実行します。
-ms.date: 12/20/2018
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,12 +10,12 @@ ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d1b47965fa5cc36b0c0eb6d47c2214d1dceb8ee8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d36c6a02868b8ccde9538a286135b2ad1ce08f43
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692940"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269050"
 ---
 #  <a name="synchronize-software-updates"></a><a name="BKMK_SUMSync"></a> ソフトウェア更新プログラムの同期
 
@@ -56,7 +56,7 @@ Configuration Manager コンソールで **[ソフトウェア ライブラリ]*
 
 2. ソフトウェア ライブラリ ワークスペースで、 **ソフトウェア更新プログラム** を展開して、**すべてのソフトウェア更新プログラム** または **ソフトウェア更新プログラム グループ** をクリックします。  
 
-3. **[ホーム]** タブの **[作成]** グループで、 **[ソフトウェア更新プログラムの同期]** をクリックします。 ダイアログ ボックスで **[はい]** をクリックして、同期プロセスの開始を確定します。  
+3. **[ホーム]** タブの **[すべてのソフトウェア更新プログラム]** グループで、 **[ソフトウェア更新プログラムの同期]** をクリックします。 ダイアログ ボックスで **[はい]** をクリックして、同期プロセスの開始を確定します。  
 
    ソフトウェアの更新ポイントで同期プロセスを開始した後、階層内のすべてのソフトウェアの更新ポイントについて、Configuration Manager コンソールから同期プロセスを監視することができます。 ソフトウェア更新プログラムの同期プロセスを監視するには、次の手順に従います。  
 

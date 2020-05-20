@@ -2,7 +2,7 @@
 title: 互換性の評価
 titleSuffix: Configuration Manager
 description: Desktop Analytics での Windows アプリとドライバーの互換性評価について説明します。
-ms.date: 04/21/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: ea78f726-b1b3-49b0-8141-d916be48c458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eedd33999ce17417122b2403c777a0b560e5f197
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.reviewer: acabello
+ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110000"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268897"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Desktop Analytics での互換性評価
 
@@ -29,7 +30,7 @@ Desktop Analytics では、次の互換性評価カテゴリが使用されま�
 
 - **高**: ほぼ確実に、アプリケーションはアップグレード中またはアップグレード後に失敗します。 修復が必要な場合があります。
 
-- **不明**: アプリは評価されませんでした。 "*MS の既知のイシュー*" などの他の分析情報はありません。
+- **不明**: アプリは評価されませんでした。 "*MS の既知の問題*" や *Ready for Windows* などの他の分析情報はありません。
 
 展開計画のアプリまたはドライバー資産の一覧では、資産ごとに **[互換性リスク]** 列にこの値が表示されます。
 
@@ -40,9 +41,13 @@ Desktop Analytics では、次の互換性評価カテゴリが使用されま�
 Desktop Analytics では、アプリケーションの評価レーティングの生成に使用されるソースがいくつかあります。
 
 - [Microsoft の既知の問題](#microsoft-known-issues)
+- [Ready for Windows](#ready-for-windows)
 - [高度な分析情報](#advanced-insights)
 
 アプリでの各ソースに対する評価を Desktop Analytics で確認できます。 展開計画のアプリ資産の一覧で、個々のアプリを選択して、プロパティ ポップアップ ペインを開きます。 全体的な推奨事項と評価レベルが表示されます。 **[互換性リスクの要因]** セクションでは、これらの評価の詳細が示されています。
+
+> [!TIP]
+> アプリの詳細ウィンドウに互換性の評価が表示されない場合は、 **[App Versions Details]\(アプリのバージョンの詳細\)** 設定がオフになっていることが原因である可能性があります。 これは既定でオフになっており、同じ名前と発行元を持つアプリのすべてのバージョンが結合されます。 サービスでは、バージョンごとに互換性リスク評価が引き続き行われます。 特定のアプリのバージョンに関する互換性リスク評価を表示するには、 **[App versions details]\(アプリのバージョンの詳細\)** をオンにします。 詳細については、「[資産の計画](about-deployment-plans.md#plan-assets)」を参照してください。
 
 ## <a name="microsoft-known-issues"></a>Microsoft の既知の問題
 
@@ -130,6 +135,28 @@ Windows 互換性データは、一部のアプリとドライバーを*セー�
 1. 現在公開されている一覧と、環境内の資産の一覧を比較してください。 互換性のあるバージョンに更新して、問題となる可能性があるアプリまたはドライバーを修復します。
 
 [![Desktop Analytics のセーフガード アプリのスクリーンショット](media/5746559-safeguards.png)](media/5746559-safeguards.png#lightbox)
+
+## <a name="ready-for-windows"></a>Ready for Windows
+
+導入の状態は、Microsoft とデータを共有する商用デバイスの情報に基づいています。 この状態は、ソフトウェア ベンダーからのサポートに関する声明と統合されています。
+
+Desktop Analytics を使うと、商用デバイスで見つかった資産の各バージョンについて導入の状態が提供されます。 この状態には、コンシューマー デバイスまたはデータを共有していないデバイスからのデータは含まれません。 この状態は、すべての Windows 10 デバイスにおける導入率を表しているわけではありません。
+
+可能性のあるカテゴリは次のとおりです。
+
+- **多数導入済み**: 少なくとも 10 万個の商用 Windows 10 デバイスで、このアプリがインストールされています。
+
+- **導入済み**: 少なくとも 1 万個の商用 Windows 10 デバイスで、このアプリがインストールされています。
+
+- **データ不足**: このアプリに関して Microsoft と情報を共有している商用 Windows 10 デバイスが少なすぎるため、導入を分類できません。
+
+- **開発者にお問い合わせください**: このバージョンのアプリには互換性の問題がある可能性があります。 詳細について、ソフトウェア プロバイダーに問い合わせることをお勧めします。
+
+- **不明**: このアプリケーションのこのバージョンには、利用できる情報がありません。 アプリケーションの他のバージョンでは、情報を利用できる場合があります。
+
+### <a name="support-statement"></a>サポートに関する声明
+
+ソフトウェア プロバイダーにより、Windows 10 でこのアプリケーションの 1 つ以上のバージョンがサポートされている場合は、アプリのプロパティ ペインにこの声明が表示されます。 [互換性リスクの要因] セクションで、 **[サポートに関する声明]** を確認してください。
 
 ## <a name="advanced-insights"></a>高度な分析情報
 

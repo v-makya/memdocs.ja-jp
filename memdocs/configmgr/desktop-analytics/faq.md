@@ -10,12 +10,13 @@ ms.assetid: e0db3311-2303-4013-a906-76b408172d3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8c6b8df10a9a20c96cd2f8c1a0b6583c9c5f6e4f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: fb217a1e1ddf114155e43e8edef0c1b34842db64
+ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708160"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83381521"
 ---
 # <a name="desktop-analytics-faq"></a>Desktop Analytics の FAQ
 
@@ -36,6 +37,9 @@ Desktop Analytics ワークフローを活用しているお客様の大部分�
 - Azure AD で [Azure AD アプリケーション](troubleshooting.md#bkmk_AzureADApps)をプロビジョニングします。
 - 過去 7 日間に組織に関連付けたデバイスを確認します。 [Desktop Analytics ポータル](https://aka.ms/desktopanalytics)で、 **[接続済みサービス]** ペインにアクセスします。 **[デバイスの登録]** を選択し、 **[最近のデータを表示]** を選択します
 
+  > [!IMPORTANT]
+  > **[最近のデータを表示]** の Desktop Analytics のオプションは非推奨です。 このアクションは、Desktop Analytics サービスの今後のリリースで削除される予定です。 詳しくは、「[非推奨の機能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)」をご覧ください。<!--7080949-->  
+
 デバイスが正しく構成されていても、ワークスペースにデータが表示されない場合は、[Microsoft サポートにお問い合わせください](https://support.microsoft.com/hub/4343728/support-for-business)。
 
 ## <a name="connect-configuration-manager"></a>Configuration Manager を接続する
@@ -47,6 +51,10 @@ Desktop Analytics ワークフローを活用しているお客様の大部分�
 - Configuration Manager コンソールで、 **[管理]** ワークスペースに移動し、 **[Cloud Services]** を展開して **[Azure サービス]** ノードを選択します。 Desktop Analytics サービスに関連付けられているエントリのプロパティを開きます。
 
 - **[Desktop Analytics 接続]** タブで、 **[ターゲット コレクション]** を変更するか、追加のコレクションを管理します。
+
+<!-- 7130169 -->
+> [!Note]
+> 追加のコレクションの一覧には、20 個を超えるコレクションを含めないでください。 各コレクション内のデバイスの合計数に注意してください。 [グローバル パイロットの含めるコレクションと除外するコレクション](deploy-pilot.md#bkmk_GlobalPilot)を常に含めてください。  
 
 > [!IMPORTANT]  
 > Configuration Manager により、設定ポリシーを使用して、ターゲット コレクションのデバイスが構成されます。 このポリシーには、デバイスが Microsoft にデータを送信できるようにする診断データの設定が含まれています。 ターゲット コレクションを変更しても、ターゲット コレクションに存在しなくなったデバイスの設定ポリシーは元に戻されません。 デバイスによる診断データの送信を続行しない場合は、[デバイスを構成しなおします](account-close.md#reconfigure-clients)。

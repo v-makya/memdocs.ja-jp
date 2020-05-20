@@ -2,7 +2,7 @@
 title: 管理分析情報
 titleSuffix: Configuration Manager
 description: Configuration Manager コンソールで使用できるマネジメント インサイト機能について説明します。
-ms.date: 04/01/2020
+ms.date: 05/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9aae1da48deabd0cc339cd25055827caf07354b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 69b2533dd5c86124a6aff9feac7306ecf16c6e5a
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694450"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268965"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Configuration Manager でのマネジメント インサイト
 
@@ -146,13 +146,13 @@ Configuration Manager のマネジメント インサイトからは、環境の
 
 - **再評価開始時刻が同じコレクション**:これらのコレクションは、他のコレクションと再評価時刻が同じです。 競合しないように、再評価の時刻を変更します。  
 
-- **クエリ時間が 2 秒を超えるコレクション**:このコレクションのクエリ規則を確認します。 コレクションを変更または削除することを検討します。
+- **クエリ時間が 5 分を超えるコレクション**:このコレクションのクエリ規則を確認します。 コレクションを変更または削除することを検討します。
 
 - 次の規則には、サイトで不要な負荷を引き起こす可能性がある構成が含まれます。 これらのコレクションを確認し、それらを削除するか、または規則の評価を無効にします。  
 
   - **クエリ規則がなく、増分更新が有効になっているコレクション**  
 
-  - **クエリ規則がなく、スケジュールされた評価または増分評価が有効になっているコレクション**  
+  - **クエリ規則がなく、どんなスケジュールにも有効なコレクション**  
 
   - **クエリ規則がなく、完全な評価のスケジュールが選択されているコレクション**  
 

@@ -2,7 +2,7 @@
 title: アプリケーションを修正して置き換える
 titleSuffix: Configuration Manager
 description: Configuration Manager アプリケーションのバージョンを操作し、置き換える方法を学習します。
-ms.date: 10/06/2016
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 87804ee2a76dea918cebb964a3672ab61bf6de8d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6afed00b8207edb338b2a6dc62e083a5267fa47e
+ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689230"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343135"
 ---
 # <a name="revise-and-supersede-applications-in-configuration-manager"></a>Configuration Manager でアプリケーションを修正して置き換える
 
@@ -59,8 +59,8 @@ ms.locfileid: "81689230"
 >  現在のアプリケーションが既にインベントリから削除され、参照が含まれない場合にのみ、そのアプリケーション リビジョンを削除できます。  
 
 ##  <a name="application-supersedence"></a>アプリケーションの置き換え  
- Configuration Manager のアプリケーション管理では、置き換えの関係を使用して、既存のアプリケーションをアップグレードまたは置き換えできます。 アプリケーションを置き換える際、新しい展開の種類を指定して置換対象のアプリケーションの展開の種類を置き換えたり、置き換わるアプリケーションをインストールしたりする前に、置換対象のアプリケーションをアップグレードするのか置換対象のアプリケーションをアンインストールするのか決定することもできます。  
-
+ Configuration Manager のアプリケーション管理では、置き換えの関係を使用して、既存のアプリケーションをアップグレードまたは置き換えできます。 アプリケーションを置き換える際、新しい展開の種類を指定して置換対象のアプリケーションの展開の種類を置き換えたり、置き換わるアプリケーションをインストールしたりする前に、置換対象のアプリケーションをアップグレードするのか置換対象のアプリケーションをアンインストールするのか決定することもできます。 一般に、置き換えのチェーンを最大でも 5 レベルまでに制限することをお勧めします。
+ 
 > [!IMPORTANT]  
 >  置き換え対象の展開の種類をアンインストールするオプションを選択すると、別のコレクションの種類に展開された展開の種類で展開の種類を置き換えることはできません。  たとえば、置換対象の展開の種類をアンインストールするオプションが選択されている場合、デバイス コレクションに展開されている展開の種類を、ユーザー コレクションに展開されている展開の種類で置き換えることはできません。  
 

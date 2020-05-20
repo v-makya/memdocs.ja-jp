@@ -2,7 +2,7 @@
 title: コンソール内ドキュメント
 titleSuffix: Configuration Manager
 description: この記事は Configuration Manager コンソールにのみ表示されます。
-ms.date: 04/23/2020
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cd5c03b9b05bff253a93466eb27700685faea055
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: 1bd4ff4b25fcd4cf77366c93fcc1259ea2b5749f
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126045"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268183"
 ---
 <!-- 
 - Feature 1357546
@@ -27,7 +27,7 @@ ms.locfileid: "82126045"
 
 # <a name="microsoft-endpoint-configuration-manager-documentation"></a>Microsoft Endpoint Configuration Manager のドキュメント
 
-*最終更新日:2020 年 4 月 23 日*
+*最終更新日:2020 年 5 月 11 日*
 
 このコンテンツは、Configuration Manager の学習とサポートに役立ちます。
 
@@ -55,22 +55,22 @@ ms.locfileid: "82126045"
 
 ## <a name="trending"></a>トレンド
 
-2020 年 3 月 1 日から 3 月 30 日の期間で特に人気の高い記事です。
+2020 年 4 月 1 日から 4 月 30 日までの最も人気のある記事です。
 
 | ページ ビュー | タイトル |
 |------------|-------|
-| 22659 | [クラウド管理ゲートウェイの計画](https://docs.microsoft.com/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
-| 16797 | [ログ ファイルのリファレンス](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/log-files) |
-| 16142 | [接続に使用するポート](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/ports) |
-| 15907 | [ソフトウェア センターのユーザー ガイド](https://docs.microsoft.com/configmgr/core/understand/software-center) |
-| 14667 | [更新プログラムとサービス](https://docs.microsoft.com/configmgr/core/servers/manage/updates) |
-| 14455 | [トランスポート層セキュリティ (TLS) 1.2 の有効化の概要](https://docs.microsoft.com/configmgr/core/plan-design/security/enable-tls-1-2) |
-| 12292 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
-| 12062 | [Windows 10 デバイスの共同管理](https://docs.microsoft.com/configmgr/comanage/overview) |
-| 11741 | [Configuration Manager とは](https://docs.microsoft.com/configmgr/core/understand/introduction) |
-| 11282 | [バージョン 1910 の新機能](https://docs.microsoft.com/configmgr/core/plan-design/changes/whats-new-in-version-1910) |
+| 37071 | [クラウド管理ゲートウェイの計画](https://docs.microsoft.com/mem/configmgr/core/clients/manage/cmg/plan-cloud-management-gateway) |
+| 19105 | [ログ ファイルのリファレンス](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files) |
+| 17942 | [接続に使用するポート](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/ports) |
+| 15564 | [更新プログラムとサービス](https://docs.microsoft.com/mem/configmgr/core/servers/manage/updates) |
+| 15389 | [トランスポート層セキュリティ (TLS) 1.2 の有効化の概要](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2) |
+| 15316 | [Windows 10 デバイスの共同管理](https://docs.microsoft.com/mem/configmgr/comanage/overview) |
+| 15229 | [ソフトウェア センターのユーザー ガイド](https://docs.microsoft.com/mem/configmgr/core/understand/software-center) |
+| 14978 | [クライアントでトランスポート層セキュリティ (TLS) 1.2 を有効にする方法](https://docs.microsoft.com/mem/configmgr/core/plan-design/security/enable-tls-1-2-client) |
+| 13522 | [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/overview) |
+| 13017 | [クライアント設定](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/about-client-settings) |
 
-[Configuration Manager ハブ ページ](https://docs.microsoft.com/mem/configmgr/)では、この期間内に 36,258 回のページ ビューがありました。
+[Configuration Manager ハブ ページ](https://docs.microsoft.com/mem/configmgr/)では、この期間内に 41,479 回のページ ビューがありました。
 
 ## <a name="recently-updated"></a>最近更新
 
@@ -78,15 +78,16 @@ ms.locfileid: "82126045"
 
 | 最終確認 | タイトル |
 |---------------|-------|
-| 2020/3/30 | [メンテナンス タスクのリファレンス](https://docs.microsoft.com/configmgr/core/servers/manage/reference-for-maintenance-tasks) |
-| 2020/3/30 | [ソフトウェア更新の設定の管理](https://docs.microsoft.com/configmgr/sum/get-started/manage-settings-for-software-updates) |
-| 2020/3/25 | [Endpoint Protection のマルウェア対策ポリシー](https://docs.microsoft.com/configmgr/protect/deploy-use/endpoint-antimalware-policies) |
-| 2020/3/23 | [既存のデバイス向け Windows Autopilot](https://docs.microsoft.com/configmgr/osd/deploy-use/windows-autopilot-for-existing-devices) |
-| 2020/3/12 | [展開プランを作成する方法](https://docs.microsoft.com/configmgr/desktop-analytics/create-deployment-plans) |
-| 2020/3/12 | [パイロットに展開する方法](https://docs.microsoft.com/configmgr/desktop-analytics/deploy-pilot) |
-| 2020/3/12 | [Desktop Analytics の新機能](https://docs.microsoft.com/configmgr/desktop-analytics/whats-new) |
-| 2020/3/3 | [互換性の評価](https://docs.microsoft.com/configmgr/desktop-analytics/compat-assessment) |
-| 2020/3/3 | [Desktop Analytics](https://docs.microsoft.com/configmgr/desktop-analytics/overview) |
+| 2020/4/30 | [Technical Preview 2004](https://docs.microsoft.com/mem/configmgr/core/get-started/2020/technical-preview-2004) |
+| 2020/4/29 | [CMG のトークンベースの認証](https://docs.microsoft.com/mem/configmgr/core/clients/deploy/deploy-clients-cmg-token) |
+| 2020/4/28 | [オーケストレーション グループ](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/orchestration-groups) |
+| 2020/4/15 | [アプリケーションの承認プロセス](https://docs.microsoft.com/mem/configmgr/develop/apps/application-approval-process) |
+| 2020/4/15 | [Desktop Analytics でデバイスを登録する](https://docs.microsoft.com/mem/configmgr/desktop-analytics/enroll-devices) |
+| 2020/4/10 | [Microsoft Endpoint Manager テナントのアタッチ](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions) |
+| 2020/4/8 | [Power BI Report Server との統合](https://docs.microsoft.com/mem/configmgr/core/servers/manage/powerbi-report-server) |
+| 2020/4/8 | [リリース ノート](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/install/release-notes) |
+| 2020/4/1 | [管理サービスとは何ですか](https://docs.microsoft.com/mem/configmgr/develop/adminservice/overview) |
+| 2020/4/1 | [バージョン 2002 の新機能](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-in-version-2002) |
 
 ## <a name="troubleshooting-articles"></a>トラブルシューティングの記事
 

@@ -2,7 +2,7 @@
 title: Desktop Analytics の資産
 titleSuffix: Configuration Manager
 description: Desktop Analytics のデバイス、ドライバー、およびアプリについて説明します。
-ms.date: 01/16/2020
+ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: d07198cf-49bb-4712-8c63-063b4302cc11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe1338781cbb16a8485de050a294e34e487a2ecc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.reviewer: acabello
+ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
+ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706650"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83268914"
 ---
 # <a name="assets-in-desktop-analytics"></a>Desktop Analytics の資産
 
@@ -41,6 +42,10 @@ ms.locfileid: "81706650"
 
 **[注目]** アプリは、2% を超える登録済みアプリにインストールされています。
 
+**[App versions details]\(アプリのバージョンの詳細\)** 設定は既定でオフになっているため、このタブでは同じ名前と発行元を持つアプリのすべてのバージョンが結合されます。<!-- 5542186 --> この既定の動作は、表示されるアプリの合計数を減らすのに役立ちます。これにより、アプリに注釈を付ける作業を減らすことができます。 **[注目すべきアプリ]** タイル内のアプリの数にも、この設定が反映されます。 たとえば、Microsoft Edge の何百ものインスタンスを一覧表示する代わりに、すべてのバージョンに対する 1 つのインスタンスが表示されます。 すべてのバージョンに対して 1 回で決定を行うことができます。 アプリの特定のバージョンに関する決定を行う必要がある場合は、この設定を有効にします。 また、展開プランを使用するときにも、この設定を構成することができます。 詳細については、「[資産の計画](about-deployment-plans.md#plan-assets)」を参照してください。
+
+一覧からアプリを選択し、 **[編集]** を選択します。 この操作を行うと、アプリの詳細が表示されます。 **[重要度]** ドロップダウン メニューを選択し、値を設定します。 **[所有者]** を割り当てることもできます。 変更する場合は、 **[保存]** を選択します。
+
 次のカテゴリのいずれかを設定して、アプリの **[重要度]** を構成します。
 
 - 重要
@@ -49,7 +54,7 @@ ms.locfileid: "81706650"
 - 未レビュー
 - 重要でない<!-- 3587232 -->
 
-一覧からアプリを選択し、 **[編集]** を選択します。 この操作を行うと、アプリの詳細が表示されます。 **[重要度]** ドロップダウン メニューを選択し、値を設定します。 **[所有者]** を割り当てることもできます。 変更する場合は、 **[保存]** を選択します。
+**[App versions details]\(アプリのバージョンの詳細\)** 設定がオフの場合、アプリの詳細ウィンドウには、結合されているアプリのバージョンと言語の数が表示されます。 アプリの詳細に対する変更を保存すると、すべてのバージョンに適用されます。 たとえば、 **[重要度]** または **[所有者]** を設定します。 一部の値には [複数] と表示されます。これは、すべてのバージョン間に一貫した値が複数あるという意味です。
 
 ### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" /> システム アプリとストア アプリの自動アップグレード判定
 
