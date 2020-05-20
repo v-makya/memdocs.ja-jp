@@ -56,7 +56,7 @@ Intune App SDK Xamarin バインディングで開発された Xamarin アプリ
 
 [ライセンス条項](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf)を確認します。 記録用にライセンス条項を印刷し、保持します。 Intune App SDK Xamarin バインディングをダウンロードし、使用すると、このライセンス条項に同意したことになります。 本ライセンス条項に同意されない場合、お客様は本ソフトウェアを使用できません。
 
-Intune SDK では、その[認証](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)と条件付き起動シナリオを [Active Directory 認証ライブラリ (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) に依存しているため、[Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) を使用してアプリを構成する必要があります。 
+Intune SDK では、その[認証](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/)と条件付き起動シナリオを [Active Directory 認証ライブラリ (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) に依存しているため、[Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) を使用してアプリを構成する必要があります。 
 
 アプリケーションが ADAL または MSAL を使用するように既に構成されており、独自のカスタム クライアント ID が Azure Active Directory での認証に利用される場合は、Intune モバイル アプリケーション管理 (MAM) サービスへのアクセス許可を Xamarin アプリに付与するための手順に従っていることを確認します。 [Intune SDK の概要ガイド](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)の[アプリに対する Intune アプリ保護サービスへのアクセス権の付与](app-sdk-get-started.md)に関するセクションに記載されている手順を使用します。
 
@@ -120,7 +120,7 @@ Xamarin.iOS アプリの MAM 機能を強調表示したサンプル アプリ�
 Intune App SDK を統合するための完全な概要については、「[Microsoft Intune App SDK for Android developer guide](app-sdk-android.md)」 (Android 用 Microsoft Intune App SDK 開発者ガイド) を参照してください。 ガイドに目を通して、Intune App SDK をご利用の Xamarin アプリに統合するときに、Java で開発されたネイティブの Android アプリと、C# で開発された Xamarin アプリでは実装に違いがあり、以降のセクションは、それを明らかにすることを目的としています。 これらのセクションは、補足情報として扱うべきもので、ガイド全体に目を通すことの代わりとなるものではありません。
 
 #### <a name="remapper"></a>Remapper
-1\.4428.1 リリース以降、MAM クラス、メソッド、システム サービスの置換を実行するための`Microsoft.Intune.MAM.Remapper`ビルド ツール[として、](app-sdk-android.md#build-tooling) パッケージを Xamarin Android アプリケーションに追加できるようになりました。 Remapper が含まれている場合、「名前が変更されたメソッド」と「MAM アプリケーション」セクションの MAM に相当する置換部分は、アプリケーションのビルド時に自動的に実行されます。
+1.4428.1 リリース以降、MAM クラス、メソッド、システム サービスの置換を実行するための[ビルド ツール](app-sdk-android.md#build-tooling)として、`Microsoft.Intune.MAM.Remapper` パッケージを Xamarin Android アプリケーションに追加できるようになりました。 Remapper が含まれている場合、「名前が変更されたメソッド」と「MAM アプリケーション」セクションの MAM に相当する置換部分は、アプリケーションのビルド時に自動的に実行されます。
 
 Remapper によって MAM-ification からクラスを除外するには、次のプロパティを自分のプロジェクトの `.csproj` ファイルに追加します。
 
@@ -193,7 +193,7 @@ IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
 
 ### <a name="xamarinforms-integration"></a>Xamarin.Forms の統合
 
-`Xamarin.Forms` アプリケーションの場合、一般的に使用されている `Microsoft.Intune.MAM.Remapper` クラスのクラス階層に `MAM` クラスを挿入することで、`Xamarin.Forms` パッケージによって MAM クラスの置き換えが自動的に実行されます。 
+`Xamarin.Forms` アプリケーションの場合、一般的に使用されている `Xamarin.Forms` クラスのクラス階層に `MAM` クラスを挿入することで、`Microsoft.Intune.MAM.Remapper` パッケージによって MAM クラスの置き換えが自動的に実行されます。 
 
 > [!NOTE]
 > Xamarin.Forms の統合は、前述した Xamarin.Android 統合に加えて行われる必要があります。 Remapper の動作は、Xamarin.Forms アプリによって異なります。そのため、手動による MAM の置換を引き続き行う必要があります。

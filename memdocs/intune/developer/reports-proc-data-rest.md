@@ -41,7 +41,7 @@ RESTful エンドポイント経由で Intune データ ウェアハウスのデ
 
 Azure でネイティブ アプリを作成します。 このネイティブ アプリはクライアント アプリです。 ローカル コンピューターで実行されるクライアントは、ローカル クライアントが資格情報を要求するとき、Intune データ ウェアハウス API を参照します。
 
-1. テナントの Azure Portal にサインインします。 **[Azure Active Directory]** 、 >  **[アプリの登録]** の順に選択し、 **[アプリの登録]** ウィンドウを開きます。
+1. テナントの Azure Portal にサインインします。 **[Azure Active Directory]**、**[アプリの登録]** の順に選択し、**[アプリの登録]** ウィンドウを開きます。
 2. **[New app registration]\(新しいアプリの登録\)** を選択します。
 3. アプリの詳細を入力します。
     1. 「Intune データ ウェアハウス クライアント」など、わかりやすい名前を **[名前]** に入力します。
@@ -96,7 +96,7 @@ Postman を使用して REST 呼び出しを行うには、次の情報が必要
 エンドポイントも必要です。 データ ウェアハウス エンドポイントを取得するには、カスタム フィード URL が必要です。 OData エンドポイントはデータ ウェアハウス ウィンドウから取得できます。
 
 1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) にサインインします。
-3. **[Microsoft Intune - 概要]** ブレードの右側にある **[その他のタスク]** のデータ ウェアハウス リンクを選択して、 **[Intune データ ウェアハウス]** ウィンドウを開きます。
+3. **[Microsoft Intune - 概要]** ブレードの右側にある **[その他のタスク]** のデータ ウェアハウス リンクを選択して、**[Intune データ ウェアハウス]** ウィンドウを開きます。
 4. **[サード パーティのレポート サービスを使用する]** のカスタム フィード URL をコピーします。 これは次のようになります。`https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
 エンドポイントは次の形式に従います: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
@@ -116,7 +116,7 @@ Postman のために新しいアクセス トークンを取得するには、Az
 3. アドレスにエンドポイント URL を貼り付けます。 次のようになります。  
 
     `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
-4. **[認証]** タブを選択し、 **[種類]** 一覧から **[OAuth 2.0]** を選択します。
+4. **[認証]** タブを選択し、**[種類]** 一覧から **[OAuth 2.0]** を選択します。
 5. **[Get New Access Token]\(新しいアクセス トークンを取得する\)** を選択します。
 6. Azure でアプリにコールバック URL が追加されていることを確認します。 コールバック URL は `https://www.getpostman.com/oauth2/callback` です。
 7. **[トークン名]** のベアラーを入力します。
@@ -127,7 +127,7 @@ Postman のために新しいアクセス トークンを取得するには、Az
 
      `https://login.microsoftonline.com/common/oauth2/token`
 
-10. Azure で作成し、**という名前を付けたネイティブ アプリから**[クライアント ID]`Intune Data Warehouse Client` を追加します。 次のようになります。  
+10. Azure で作成し、`Intune Data Warehouse Client` という名前を付けたネイティブ アプリから **[クライアント ID]** を追加します。 次のようになります。  
 
      `88C8527B-59CB-4679-A9C8-324941748BB4`
 

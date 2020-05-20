@@ -100,7 +100,7 @@ SCEP サーバーの管理者がこのデータを取得するには、Azure Por
 
 ### <a name="java-library-api"></a>Java ライブラリ API
 
-Java ライブラリは、ビルド時にその依存関係のプルする Maven プロジェクトとして実装されます。 この API は、`com.microsoft.intune.scepvalidation` クラスにより、`IntuneScepServiceClient` 名前空間下で実装されます。
+Java ライブラリは、ビルド時にその依存関係のプルする Maven プロジェクトとして実装されます。 この API は、`IntuneScepServiceClient` クラスにより、`com.microsoft.intune.scepvalidation` 名前空間下で実装されます。
 
 #### <a name="intunescepserviceclient-class"></a>IntuneScepServiceClient クラス
 
@@ -289,7 +289,7 @@ void SetSslSocketFactory(
 1. [Intune 試用版アカウント](../fundamentals/account-sign-up.md)を設定します。
 2. [Azure Portal に SCEP サーバーを](#onboard-scep-server-in-azure) (この記事) オンボードします。
 3. SCEP サーバーのオンボード時に作成した ID とキーを使用して [SCEP サーバーを構成](certificates-scep-configure.md)します。
-4. 「[scenario testing matrix](../enrollment/device-enrollment.md)」 (シナリオのテスト マトリックス) のシナリオをテストするために[デバイスを登録](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv)します。
+4. 「[scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv)」 (シナリオのテスト マトリックス) のシナリオをテストするために[デバイスを登録](../enrollment/device-enrollment.md)します。
 5. 証明機関をテストするために、[信頼されたルート証明書プロファイルを作成](certificates-scep-configure.md)します。
 6. 「[scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv)」 (シナリオのテスト マトリックス) で列挙されたシナリオをテストするための SCEP プロファイルを作成します。
 7. デバイスを登録したユーザーに[プロファイルを割り当て](../configuration/device-profile-assign.md)ます。

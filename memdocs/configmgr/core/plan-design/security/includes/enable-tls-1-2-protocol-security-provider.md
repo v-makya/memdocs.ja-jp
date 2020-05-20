@@ -15,5 +15,5 @@ ms.locfileid: "81704080"
 
 TLS 1.2 は既定で有効です。 したがって、有効にするためにこれらのキーを変更する必要はありません。 これらの記事の残りのガイダンスに従い、TLS 1.2 のみを有効にして環境が機能することを確認した後、[`Protocols`] で TLS 1.0 と TLS 1.1 を無効にするように変更することができます。
 
-`\SecurityProviders\SCHANNEL\Protocols`.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス[に関するページの説明に従って、](https://docs.microsoft.com/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry) レジストリ サブキー設定を確認します。
+[.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス](https://docs.microsoft.com/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)に関するページの説明に従って、`\SecurityProviders\SCHANNEL\Protocols` レジストリ サブキー設定を確認します。
 

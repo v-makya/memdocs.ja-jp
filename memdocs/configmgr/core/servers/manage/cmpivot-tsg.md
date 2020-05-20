@@ -95,7 +95,7 @@ Put message succeeded for message id 22f00adf-181e-4bad-b35e-d18912f39f89
 CRelayMsgMgrHandler::HandleMessage(): ExecuteTask() succeeded
 </code></pre>
 
-[ で](../../plan-design/hierarchy/about-log-files.md#bkmk_logoptions)詳細ログ`SMS_MESSAGE_PROCESSING_ENGINE.log`が有効になっている場合、クライアントの結果は処理されます。 `MP_RelayMsgMgr.log` で見つかったメッセージ ID を使用します。 ログ エントリの処理は次の例のようになります。
+`SMS_MESSAGE_PROCESSING_ENGINE.log` で[詳細ログ](../../plan-design/hierarchy/about-log-files.md#bkmk_logoptions)が有効になっている場合、クライアントの結果は処理されます。 `MP_RelayMsgMgr.log` で見つかったメッセージ ID を使用します。 ログ エントリの処理は次の例のようになります。
 
 <pre><code lang="Log">Processing 2 messages with type Instant and IDs <b>22f00adf-181e-4bad-b35e-d18912f39f89[19]</b>, 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]...
 Processed 2 messages with type Instant. Failed to process 0 messages. All message IDs <b>22f00adf-181e-4bad-b35e-d18912f39f89[19]</b>, 434d80ae-09d4-4d84-aebf-28a4a29a9852[20]
@@ -167,7 +167,7 @@ g2ZDVjYTIwNzRjNmViZmQ1NTg5MDZlMWI5NDRmYTEzNmFiMDE0ZGNjPC9TY3JpcHRIYXNoPjxTY3Jp (
 State message: Task Id <b>{F8C7C37F-B42B-4C0A-B050-2BB44DF1098A}</b>
 </code></pre>
 
-`StateMessage.log` を調べます。 次の例では、メッセージの下部近くの `TaskID` の横に `<Param>` があることがわかります。
+`StateMessage.log` を調べます。 次の例では、メッセージの下部近くの `<Param>` の横に `TaskID` があることがわかります。
 
 ``` XML
 StateMessage body: <?xml version="1.0" encoding="UTF-16"?>
@@ -186,7 +186,7 @@ Successfully forwarded State Messages to the MP StateMessage 7/3/2018 11:44:47 A
 
 ### <a name="review-messages-on-the-site-server"></a>サイト サーバーでメッセージを確認する
 
-`statesys.log` を開いて、メッセージが受信され、処理されたかどうかを確認します。 次の例では、メッセージの下部近くの `TaskID` の横に `<Param>` が表示されています。 これらのログ エントリを表示するには、SMS_STATE_SYSTEM コンポーネントの[詳細ログ](../../plan-design/hierarchy/about-log-files.md#bkmk_logoptions)を有効にします。
+`statesys.log` を開いて、メッセージが受信され、処理されたかどうかを確認します。 次の例では、メッセージの下部近くの `<Param>` の横に `TaskID` が表示されています。 これらのログ エントリを表示するには、SMS_STATE_SYSTEM コンポーネントの[詳細ログ](../../plan-design/hierarchy/about-log-files.md#bkmk_logoptions)を有効にします。
 
 ``` XML
 CMessageProcessor - the cmdline to DB exec dbo.spProcessStateReport N'?<?xml version="1.0" encoding="UTF-
