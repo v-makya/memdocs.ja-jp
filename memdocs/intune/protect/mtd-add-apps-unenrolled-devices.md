@@ -46,7 +46,7 @@ ms.locfileid: "79339255"
 
 Mobile Threat Defense で Intune アプリ保護ポリシーを使用するとき、Intune では、Microsoft Authenticator (iOS) をインストールし、それにサインインし、それにデバイスを登録するようにエンド ユーザーが指示されます。
 
-ただし、エンド ユーザーが Intune ポータル サイト経由でアプリを入手できるようにする場合、「[iOS ストア アプリを Microsoft Intune に追加する](../apps/store-apps-ios.md)」の指示を参照してください。 「[アプリ情報を構成する](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8)」セクションで情報を入力するときは、この **Microsoft Authenticator - iOS アプリ ストア URL** を使用します。 最後の手順として、忘れずに [Intune でグループにアプリを割り当ててください](../apps/apps-deploy.md)。
+ただし、エンド ユーザーが Intune ポータル サイト経由でアプリを入手できるようにする場合、「[iOS ストア アプリを Microsoft Intune に追加する](../apps/store-apps-ios.md)」の指示を参照してください。 「**アプリ情報を構成する**」セクションで情報を入力するときは、この [Microsoft Authenticator - iOS アプリ ストア URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) を使用します。 最後の手順として、忘れずに [Intune でグループにアプリを割り当ててください](../apps/apps-deploy.md)。
 
 > [!NOTE]
 > iOS デバイスでは、Azure AD によってチェックされた ID がユーザーに与えられるように、[Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) が必要です。 Intune ポータル サイトは Android デバイスでブローカーとして機能するため、ユーザーに Azure AD によってチェックされた ID が与えられます。
@@ -63,10 +63,10 @@ Mobile Threat Defense で Intune アプリ保護ポリシーを使用すると�
 ### <a name="making-lookout-for-work-available-to-end-users"></a>Lookout for Work をエンド ユーザーが利用できるようにする
 
 - **Outlook Web Access (OWA)**  
-  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 「[アプリ情報を構成する](https://play.google.com/store/apps/details?id=com.lookout.enterprise)」セクションで情報を入力するときは、この **Lookout for Work - Play ストア URL** を使用します。
+  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 「**アプリ情報を構成する**」セクションで情報を入力するときは、この [Lookout for Work - Play ストア URL](https://play.google.com/store/apps/details?id=com.lookout.enterprise) を使用します。
 
 - **iOS**
-  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 「[アプリ情報を構成する](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8)」セクションで情報を入力するときは、この **Lookout for Work - iOS アプリ ストア URL** を使用します。
+  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 「**アプリ情報を構成する**」セクションで情報を入力するときは、この [Lookout for Work - iOS アプリ ストア URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) を使用します。
 
 <!-- ### Making Symantec Endpoint Protection Mobile available to end users
 - **Android**
@@ -85,9 +85,9 @@ Mobile Threat Defense で Intune アプリ保護ポリシーを使用すると�
 ### <a name="making-zimperium-available-to-end-users"></a>Zimperium をエンド ユーザーが入手できるようにする
 
 - **Outlook Web Access (OWA)**
-  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 「[アプリ情報を構成する](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en)」セクションで情報を入力するときは、この **Zimperium - Play ストア URL** を使用します。
+  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 「**アプリ情報を構成する**」セクションで情報を入力するときは、この [Zimperium - Play ストア URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) を使用します。
 - **iOS**
-  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 「[アプリ情報を構成する](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8)」セクションで情報を入力するときは、この **Zimperium - アプリ ストア URL** を使用します。
+  - iOS ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-ios.md)をご覧ください。 「**アプリ情報を構成する**」セクションで情報を入力するときは、この [Zimperium - アプリ ストア URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) を使用します。
 
 <!-- ### Making Pradeo available to end users
 - **Android**
@@ -99,7 +99,7 @@ Mobile Threat Defense で Intune アプリ保護ポリシーを使用すると�
 ### <a name="making-better-mobile-available-to-end-users"></a>Better Mobile をエンド ユーザーが入手できるようにする
 
 - **Outlook Web Access (OWA)**
-  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 「[アプリ情報を構成する](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise)」セクションで情報を入力するときは、この **Active Shield - Play ストア URL** を使用します。
+  - Android ストア アプリを Microsoft Intune に追加する方法については、[こちら](../apps/store-apps-android.md)をご覧ください。 「**アプリ情報を構成する**」セクションで情報を入力するときは、この [Active Shield - Play ストア URL](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) を使用します。
 
 <!-- - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) when completing the **Configure app information** section. -->

@@ -61,7 +61,7 @@ Sophos Mobile アプリの承認プロセスは以下で構成されます。
    ![Sophos のセットアップ](./media/sophos-mtd-connector-integration/sophos-setup.png) 
  
 7. **[Bind]** \(バインド\)、 **[はい]** の順に選択します。 Sophos が Intune に接続し、お使いの Intune サブスクリプションへのサインインを求めます。 
-8. Microsoft Intune の認証ウィンドウで Intune の資格情報を入力し、**Sophos Mobile Thread Defense** に対するアクセス許可に *[同意する]* を選択します。  
+8. Microsoft Intune の認証ウィンドウで Intune の資格情報を入力し、*Sophos Mobile Thread Defense* に対するアクセス許可に **[同意する]** を選択します。  
    ![Intune の認証](./media/sophos-mtd-connector-integration/intune-authentication.png)
 
 9. **[Sophos setup]** \(Sophos のセットアップ\) ページで **[保存]** を選択し、Intune の構成を完了します。  

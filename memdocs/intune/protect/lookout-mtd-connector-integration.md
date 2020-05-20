@@ -39,7 +39,7 @@ Lookout Mobile Endpoint Security サブスクリプションと Intune の統合
 - **Azure AD テナントのディレクトリ ID**  
 
 - Lookout Mobile Endpoint Security (MES) Console の**フル** アクセスを持つグループの **Azure AD グループ オブジェクト ID**。  
-  *Lookout Console* にサインインできる**フル アクセス**を持つユーザーを含めるには、Azure AD でこのユーザー グループを作成します。 ユーザーが Lookout Console にサインインするには、このグループ、またはオプションの*制限付きアクセス* グループのメンバーである必要があります。 
+  **Lookout Console** にサインインできる*フル アクセス*を持つユーザーを含めるには、Azure AD でこのユーザー グループを作成します。 ユーザーが Lookout Console にサインインするには、このグループ、またはオプションの*制限付きアクセス* グループのメンバーである必要があります。 
 
 - Lookout MES Console へのアクセスが**制限されている**グループの **Azure AD グループ オブジェクト ID** *(省略可能なグループ)* 
   このオプションのユーザー グループを Azure AD で作成し、Lookout Console のいくつかの構成および登録関連のモジュールにアクセスできないユーザーを含めるようにします。 代わりに、これらのユーザーは Lookout Console の **セキュリティ ポリシー** モジュールへの読み取り専用アクセス権を持っています。 ユーザーが Lookout Console にサインインするには、このオプションのグループ、または必須の*フル アクセス* グループのメンバーである必要があります。
@@ -95,7 +95,7 @@ Lookout MES Console に初めてサインインすると、同意ページ (http
 
    ![ハートビート頻度が構成された [Connection Settings]\(接続設定\) タブの画像](./media/lookout-mtd-connector-integration/lookout-mtp-connection-settings.png)
 
-3. **[Enrollment Management]\(登録管理\)** を選択し、Lookout に使う Azure AD グループの "**グループ名**" を *[Use the following Azure AD security groups to identify devices that should be enrolled in Lookout for Work]\(次の Azure AD セキュリティ グループを使用して Lookout for Work に登録する必要があるデバイスを特定する\)* に指定してから、 **[Save changes]\(変更の保存\)** を選択します。
+3. **[Enrollment Management]\(登録管理\)** を選択し、Lookout に使う Azure AD グループの "*グループ名*" を **[Use the following Azure AD security groups to identify devices that should be enrolled in Lookout for Work]\(次の Azure AD セキュリティ グループを使用して Lookout for Work に登録する必要があるデバイスを特定する\)** に指定してから、 **[Save changes]\(変更の保存\)** を選択します。
 
     ![Intune コネクタ登録ページのスクリーンショット](./media/lookout-mtd-connector-integration/lookout-mtp-enrollment.png)  
 

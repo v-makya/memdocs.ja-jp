@@ -61,7 +61,7 @@ Zimperium アプリ承認プロセスは以下で構成されます。
 
 - Zimperium アプリが Azure AD SSO を使用してサインインできるようにします。
 
-同意と Azure Active Directory アプリケーションの詳細については、Azure Active Directory の記事「[Azure Active Directory v2.0 エンドポイントでのアクセス許可と同意](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin)」の「*ディレクトリ管理者にアクセス許可を要求する*」をご覧ください。
+同意と Azure Active Directory アプリケーションの詳細については、Azure Active Directory の記事「*Azure Active Directory v2.0 エンドポイントでのアクセス許可と同意*」の「[ディレクトリ管理者にアクセス許可を要求する](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin)」をご覧ください。
 
 
 ## <a name="to-set-up-zimperium-integration"></a>Zimperium の統合を設定するには

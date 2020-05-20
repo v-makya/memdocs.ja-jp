@@ -38,7 +38,7 @@ ms.locfileid: "79343077"
 
 
 ## <a name="azure-portal-policy-configuration"></a>Azure Portal ポリシー構成
-[Azure portal の Intune ブレード](../apps/app-protection-policies.md)で[アプリ保護ポリシーを作成し、割り当てます](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview)。 Intune ブレードで[アプリ構成ポリシー](../apps/app-configuration-policies-overview.md)を作成し、割り当てることもできます。
+[Azure portal の Intune ブレード](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview)で[アプリ保護ポリシーを作成し、割り当てます](../apps/app-protection-policies.md)。 Intune ブレードで[アプリ構成ポリシー](../apps/app-configuration-policies-overview.md)を作成し、割り当てることもできます。
 
 > [!NOTE]
 > アプリが Azure portal で一覧表示されていない場合は、 **[その他のアプリ]** オプションを選択し、テキスト ボックスにパッケージ名を指定することで、ポリシーを使って対象とすることができます。

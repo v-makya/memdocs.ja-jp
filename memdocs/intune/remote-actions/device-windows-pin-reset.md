@@ -55,7 +55,7 @@ Windows デバイスのパスコードをリセットするには、PIN Reset Se
 
 **デバイス ポリシーを使う** - `./Device/Vendor/MSFT/PassportForWork/*tenant ID*/Policies/EnablePinRecovery`
 
-<*tenant ID*> をお使いの Azure AD ディレクトリ ID に置き換えます。この ID は、**Azure Portal** で Azure Active Directory の [[プロパティ]](https://portal.azure.com) に表示されます。
+<*tenant ID*> をお使いの Azure AD ディレクトリ ID に置き換えます。この ID は、[Azure Portal](https://portal.azure.com) で Azure Active Directory の **[プロパティ]** に表示されます。
 
 この CSP の値を **True** に設定します。
 

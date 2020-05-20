@@ -103,13 +103,13 @@ Updates Publisher で使用できる言語は英語のみですが、他言語�
 -   スペイン語
 
 ## <a name="install-updates-publisher"></a>Updates Publisher のインストール
-**Microsoft ダウンロード センター**から、System Center Updates Publisher をインストールするための [UpdatesPubliser.msi](https://www.microsoft.com/download/details.aspx?id=55543) を取得します。
+[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55543)から、System Center Updates Publisher をインストールするための **UpdatesPubliser.msi** を取得します。
 
-Updates Publisher をインストールするには、上記の**前提条件**を満たしているコンピューター上で *UpdatesPublisher.msi* を実行します。 インストーラーは、Updates Publisher を実行するために必要なファイルを格納する次のフォルダーを作成します: %PROGRAMFILES%\Microsoft\UpdatesPublisher*。
+Updates Publisher をインストールするには、上記の*前提条件*を満たしているコンピューター上で **UpdatesPublisher.msi** を実行します。 インストーラーは、Updates Publisher を実行するために必要なファイルを格納する次のフォルダーを作成します: %PROGRAMFILES%\Microsoft\UpdatesPublisher*。
 
 このフォルダーには Updates Publisher を使用するために必要なすべてのファイルが格納されるため、そのフォルダーとファイルを新しい場所またはコンピューターにコピーすれば、その場所から Updates Publisher を使用できます。 ただし、新しい場所またはコンピューターは、Updates Publisher を実行するための前提条件を満たしている必要があります。
 
-インストールが完了したら、**UpdatesPublisher** フォルダーにある *UpdatesPublisher.exe* を実行して、Updates Publisher を開始します。
+インストールが完了したら、*UpdatesPublisher* フォルダーにある **UpdatesPublisher.exe** を実行して、Updates Publisher を開始します。
 
 ## <a name="next-steps"></a>次のステップ
  Updates Publisher のインストールが完了したら、Updates Publisher の[オプションを構成する](updates-publisher-options.md)ことをお勧めします。 Updates Publisher の一部の機能を使用するためには、オプションを構成する必要があります。

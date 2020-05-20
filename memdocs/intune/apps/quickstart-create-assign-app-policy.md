@@ -37,7 +37,7 @@ Intune サブスクリプションがない場合は、[無料試用版アカウ
 
 ## <a name="sign-in-to-intune"></a>Intune にサインインする
 
-[グローバル管理者または Intune サービス管理者](https://aka.ms/intuneportal)として [Intune](../fundamentals/users-add.md#types-of-administrators) にサインインします。 Intune の試用版サブスクリプションを作成した場合、サブスクリプションを作成したアカウントがグローバル管理者になります。
+[グローバル管理者または Intune サービス管理者](../fundamentals/users-add.md#types-of-administrators)として [Intune](https://aka.ms/intuneportal) にサインインします。 Intune の試用版サブスクリプションを作成した場合、サブスクリプションを作成したアカウントがグローバル管理者になります。
 
 ## <a name="create-an-app-protection-policy"></a>アプリ保護ポリシーを作成する
 
