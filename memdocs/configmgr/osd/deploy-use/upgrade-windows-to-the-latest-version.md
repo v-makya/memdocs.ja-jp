@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d604095ec3097581289a05cd306b865dbd7da99a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8bfb45ba835851c33d6017f7f0a884bd2c1e9421
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703330"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429335"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>Windows を最新バージョンの Configuration Manager にアップグレードする
 
@@ -85,7 +85,7 @@ OS をアップグレードするタスク シーケンスの次の要件と制�
 
   - ディスク パーティションを変更する
   - x86 から x64 にシステム アーキテクチャを変更する
-  - UEFI を実装する (使用できるオプションの詳細については、「[インプレース アップグレード時に BIOS から UEFI に変換する](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade)」を参照してください)。
+  - UEFI を実装する (使用できるオプションの詳細については、「[インプレース アップグレード時に BIOS から UEFI に変換する](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu)」を参照してください)。
   - 基本の OS 言語を変更する  
 
 - カスタム基本イメージの使用、サードパーティ ディスク暗号化の使用、WinPE オフライン操作の採用などのカスタム要件があります。  

@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b11e0a1747cb8303c14f5971b98d337ae7b2a834
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8d87b2cde9a9fadb7326939b7fe473ba2a757e91
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707300"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430134"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Configuration Manager で OS をアップグレードするタスク シーケンスを作成する
 
@@ -261,7 +261,7 @@ Windows のドキュメント「[Windows 10 のアップグレード エラー�
 
 ### <a name="convert-from-bios-to-uefi"></a>BIOS から UEFI に変換する
 
-このタスク シーケンスの間にデバイスを BIOS から UEFI に変更する場合は、「[インプレース アップグレード時に BIOS から UEFI に変換する](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade)」を参照してください。  
+このタスク シーケンスの間にデバイスを BIOS から UEFI に変更する場合は、「[インプレース アップグレード時に BIOS から UEFI に変換する](task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu)」を参照してください。  
 
 ### <a name="manage-bitlocker"></a>BitLocker の管理
 

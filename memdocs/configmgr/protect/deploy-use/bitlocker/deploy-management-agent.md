@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96594731ef64577d30267376d3bcb93268e59a9e
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075015"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428590"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker 管理の展開
 
@@ -205,7 +205,7 @@ BitLocker の Configuration Manager クライアント ハンドラーは、共�
 
 Intune での BitLocker の管理に関する詳細については、次の記事を参照してください。
 
-- [Intune でデバイスの暗号化を使用する](../../../../intune/protect/encrypt-devices.md#bitlocker-encryption-for-windows-10)
+- [Intune でデバイスの暗号化を使用する](../../../../intune/protect/encrypt-devices.md)
 - [Microsoft Intune での BitLocker ポリシーのトラブルシューティング](../../../../intune/protect/troubleshoot-bitlocker-policies.md)
 
 ## <a name="next-steps"></a>次のステップ

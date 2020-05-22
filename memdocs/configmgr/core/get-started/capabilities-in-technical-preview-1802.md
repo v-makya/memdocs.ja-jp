@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: cf6980def8a4f61248bd676edc0ca93f2546816e
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 94208da3eda33cba69f04bbbf42edd08b585c1c4
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905262"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428186"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-configuration-manager"></a>Configuration Manager の Technical Preview 1802 の機能
 
@@ -112,7 +112,7 @@ Windows 10 の一括アップグレード用の既定のタスク シーケン�
    - **[アップグレードの準備]** グループの早い段階に、第 2 の **[オペレーティング システムのアップグレード]** ステップを追加します。 その名前を "*アップグレード評価*" にします。 同じアップグレード パッケージを指定し、 **[アップグレードを開始せずに Windows セットアップの互換性スキャンを実行する]** オプションを有効にします。 [オプション] タブで **[エラー時に続行する]** を有効にします。 
    - この "*アップグレード評価*" ステップの直後に、 **[コマンド ラインの実行]** ステップを追加します。 次のコマンド ラインを指定します。</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>**[オプション]** タブで、次の条件を追加します。 </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>このリターン コードは MOSETUP_E_COMPAT_SCANONLY (0xC1900210) に相当する 10 進数で、互換性スキャンが成功して問題がなかったことを示します。 "*アップグレード評価*" ステップが成功してこのコードを返した場合、このステップはスキップされます。 評価ステップが他のリターン コードを返した場合、このステップは Windows セットアップ互換性スキャンからのリターン コードでタスク シーケンスを失敗させます。
    - 詳細については、「[オペレーティング システムのアップグレード](../../osd/understand/task-sequence-steps.md#BKMK_UpgradeOS)」を参照してください。
-- このタスク シーケンスの間にデバイスを BIOS から UEFI に変更する場合は、「[インプレース アップグレード時に BIOS から UEFI に変換する](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#convert-from-bios-to-uefi-during-an-in-place-upgrade)」を参照してください。
+- このタスク シーケンスの間にデバイスを BIOS から UEFI に変更する場合は、「[インプレース アップグレード時に BIOS から UEFI に変換する](../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md#bkmk_ipu)」を参照してください。
 
 これら以外に推奨事項や提案がある場合は、リボンの **[ホーム]** タブから**フィードバック**をお送りください。
 
