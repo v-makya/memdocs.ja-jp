@@ -28,6 +28,8 @@
       href: terms-and-conditions-create.md
     - name: 制限事項
       href: enrollment-restrictions-set.md
+    - name: Intune と Azure AD のデバイスの上限数について
+      href: device-limit-intune-azure.md
     - name: Apple MDM プッシュ通知証明書
       href: apple-mdm-push-certificate-get.md
     - name: 企業 ID

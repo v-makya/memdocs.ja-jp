@@ -18,8 +18,12 @@
     - name: プロファイルの概要
       href: device-profile-create.md
     - name: カスタム設定
-      href: custom-settings-configure.md
-      displayName: oma-uri
+      displayName: 'oma-uri, csp'
+      items:
+        - name: カスタム プロファイルの作成
+          href: custom-settings-configure.md
+        - name: HoloLens 2 の例
+          href: custom-profile-hololens.md
     - name: デバイスの設定と機能を制限する
       href: device-restrictions-configure.md
       displayName: device restrictions
