@@ -72,7 +72,7 @@ Intune SCEP と統合するためのライブラリのコードは、「[Microso
 製品にライブラリを統合する場合、次の手順を踏む必要があります。 これらの手順は、GitHub リポジトリの使用と、Visual Studio でのソリューションおよびプロジェクトの作成に関する知識が必要です。
 
 1. リポジトリから通知を受け取るための登録
-2. リポジトリの複製またはダウンロード
+2. リポジトリのクローンまたはダウンロード
 3. `\src\CsrValidation` フォルダー (https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) 下のライブラリ実装に進みます。
 4. README ファイルの手順に従ってライブラリをビルドします
 5. SCEP サーバーをビルドするためのライブラリをプロジェクトに含めます
