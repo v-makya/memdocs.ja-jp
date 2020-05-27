@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/01/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97d3c4ee2e1ad173b8fff238f072b1b36c3ed1cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24663f8338f03fab53369689b4a61b5bd1bec63f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80536874"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991217"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Intune での iOS/iPadOS デバイスに対するアプリごとの仮想プライベート ネットワーク (VPN) の設定
 
@@ -75,7 +75,7 @@ CA によって発行された VPN サーバーのルート証明書を、Intune
 3. 次のプロパティを入力します。
 
     - **[プラットフォーム]** : **[iOS/iPadOS]** を選択します。
-    - **[プロファイルの種類]** : **[信頼された証明書]** を選択します。
+    - **[プロファイル]** : **[信頼された証明書]** を選択します。
 
 4. **[作成]** を選択します。
 5. **[Basics]\(基本\)** で次のプロパティを入力します。
@@ -113,7 +113,7 @@ VPN プロファイルには、クライアントの資格情報が含まれる 
 3. 次のプロパティを入力します。
 
     - **[プラットフォーム]** : **[iOS/iPadOS]** を選択します。
-    - **[プロファイルの種類]** : **[VPN]** を選択します。
+    - **[プロファイル]** : **[VPN]** を選択します。
 
 4. **[作成]** を選択します。
 5. **[Basics]\(基本\)** で次のプロパティを入力します。

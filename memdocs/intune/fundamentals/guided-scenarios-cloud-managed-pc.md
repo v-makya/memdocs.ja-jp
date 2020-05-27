@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fcd77774cb19a70ee02cab9d2d1e6a44dd9745a
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: ec125e1ab58e733707adb3d9f4df304e21ffabcf
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023199"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764137"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>ガイド付きシナリオ - クラウド マネージド モダン デスクトップ
 

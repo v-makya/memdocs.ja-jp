@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b437a72a2380fea215746aa76b35898c6fc60b16
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551379"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988814"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Microsoft Intune でコンプライアンス ポリシーを作成する
 
@@ -53,14 +53,11 @@ Intune を使用して組織のリソースを保護する場合、デバイス�
   - macOS
   - Windows 10
   - Windows 8.1
-  - WVPNdows Phone 8.1
+  - Windows Phone 8.1
 
 - Intune にデバイスを登録します (コンプライアンスの状態を確認するために必要です)。
 
 - 1 人のユーザーにデバイスを登録するか、またはプライマリ ユーザーなしで登録します。 複数のユーザーに登録されたデバイスはサポートされていません。
-
-> [!NOTE]
-> Intune ユーザー インターフェイス (UI) は全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、この記事で説明する設定を作成または編集する際のワークフローが若干異なります。
 
 ## <a name="create-the-policy"></a>ポリシーを作成する
 
@@ -134,7 +131,7 @@ If the **Evaluate** button is grayed out, make sure the policy is assigned to on
 
 ## <a name="refresh-cycle-times"></a>サイクル時間の更新
 
-Intune では、複数の更新サイクルを使用して、コンプライアンス ポリシーの更新が確認されます。 登録してすぐのデバイスでは、チェックインの実行頻度が高くなります。 [ポリシーとプロファイルの更新サイクル](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)に関するページに、おおよその更新間隔が一覧表示されています。
+Intune では、複数の更新サイクルを使用して、コンプライアンス ポリシーの更新が確認されます。 登録してすぐのデバイスでは、チェックインの実行頻度が高くなります。 「[ポリシーとプロファイルの更新サイクル](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)」に、おおよその更新間隔が一覧表示されています。
 
 ユーザーはいつでもポータル サイト アプリを起動し、デバイスを同期して、ポリシーの更新をすぐに確認できます。
 
@@ -166,7 +163,7 @@ Intune では、複数の更新サイクルを使用して、コンプライア�
 |---------|---------|
 |Unknown     |1|
 |NotApplicable     |2|
-|対応|3|
+|[準拠]|3|
 |InGracePeriod|4|
 |NonCompliant|5|
 |エラー|6|

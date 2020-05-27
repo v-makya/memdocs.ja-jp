@@ -6,8 +6,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb5a04b8db382345cbf8f3e86feab8b3cea9efd9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 06e975e386b0d754b03e75ffeda456a432a6dc4b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615687"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83984990"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Intune で Mobile Threat Defense (MTD) デバイス コンプライアンス ポリシーを作成する
 
@@ -59,11 +59,6 @@ MTD でのデバイス コンプライアンス ポリシーの前提条件:
    - **中**: デバイスに存在する脅威が低レベルまたは中レベルの場合、デバイスは準拠しています。 高レベルの脅威が検出された場合は、デバイスは非準拠と判定されます。
 
    - **高**: このレベルは最も安全性の低い状態です。 この場合、すべての脅威レベルが許可され、レポート目的のみで Mobile Threat Defense が使用されます。 デバイスには、この設定でアクティブ化された MTD アプリが含まれている必要があります。
-
-   > [!IMPORTANT]
-   > Android Enterprise デバイス所有者の場合、ポリシーを作成して保存した後に、ポリシーを編集して脅威レベルを変更することはできません。 **[デバイスは、デバイス脅威レベル以下であることが必要]** のデバイスの正常性設定のデバイスの脅威レベルを変更する編集は、有効になりません。 脅威レベル値を変更するには、現在のポリシーを削除し、目的の脅威レベルを設定する新しいポリシーを作成する必要があります。
-   >
-   > これは既知の問題であり、Intune の今後の更新プログラムで解決されます。
 
 6. **[OK]** を 2 回選択し、 **[作成]** を選択するとポリシーが作成されます。
 

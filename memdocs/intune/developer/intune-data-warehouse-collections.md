@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a4d468c62132c6af4477ba48f17ac9b21013e51
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 997a2db8917da1443531d8446176c21db3a5dbf6
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82022739"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709453"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune データ ウェアハウスのコレクション
 
@@ -193,6 +193,8 @@ ms.locfileid: "82022739"
 | OSVersion                  | OS のバージョン。                                                                                                                                                                          |
 | JailBroken                 | デバイスが脱獄またはルート化されているかどうか。                                                                                                                                         |
 | DeviceCategoryKey          | このデバイスのデバイス カテゴリ属性のキー。                                                                                                                                    |
+
+
 ## <a name="deviceregistrationstates"></a>deviceRegistrationStates
 **DeviceRegistrationState** エンティティは、他のデータ ウェアハウス コレクションにより参照される登録の種類を表します。 
 
@@ -222,7 +224,6 @@ ms.locfileid: "82022739"
 | DeviceRegistrationState    | このデバイスのクライアント登録状態属性のキー。                                                                                                                      |
 | OwnerTypeKey               | このデバイスの所有者の種類属性のキー: 会社、個人、不明。                                                                                                    |
 | EnrolledDateTime           | このデバイスが登録された日時。                                                                                                                                         |
-| EthernetMacAddress           | このデバイスの一意のネットワーク識別子。                                                                                                                                        |
 | LastSyncDateTime           | Intune によるデバイス チェックインで最後に確認されているもの。                                                                                                                                              |
 | ManagementAgentKey         | このデバイスに関連付けられている管理エージェントのキー。                                                                                                                             |
 | ManagementStateKey         | このデバイスに関連付けられている管理状態を示すキーであり、リモート アクションの最新の状態を示すか、脱獄/ルート化状態を示します。                                                |
@@ -244,16 +245,12 @@ ms.locfileid: "82022739"
 | MEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | デバイスの監視状態                                                                                                                                                               |
 | FreeStorageSpaceInBytes    | 記憶域の空き容量 (バイト単位)                                                                                                                                                                 |
-| TotalStorageSpaceInBytes   | 記憶域の合計容量 (バイト単位)。                                                                                                                                                                |
 | EncryptionState            | デバイスの暗号化の状態。                                                                                                                                                      |
 | SubscriberCarrier          | デバイスの通信事業者                                                                                                                                                       |
 | PhoneNumber                | デバイスの電話番号                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | デバイスの携帯電話テクノロジ                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
-| モデル                      | デバイスのモデル。                                                                                                                                                                      |
-| Office365Version           | デバイスにインストールされている Office 365 のバージョン。                                                                                                                             |
-| PhysicalMemoryInBytes      | 物理メモリ (バイト単位)。                                                                                                                                                          |
 
 
 ## <a name="devicetypes"></a>deviceTypes

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 861d7f526711f2169e8fd03b3df09659440523b9
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: c20489b8da3080506065d68aeb1b19dae362c2fb
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693455"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556321"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="edge-october-2019"
@@ -47,8 +47,7 @@ Microsoft Intune でサポートされている Microsoft Edge Web ブラウザ�
 ::: zone-end
 ::: zone pivot="edge-april-2020"
 
-*この新しいベースラインはこれから数週間かけてテナントにロールアウトされます。5 月の早い段階でこの新しいベースラインがすべてのテナントに与えられるものと予想しています。*
-以前のバージョンからのこのバージョンのベースラインの変更点を確認するには、このベースラインの *[バージョン]* ウィンドウを表示すると使用可能になる [[ベースラインの比較]](../protect/security-baselines.md#compare-baseline-versions) 操作を使用します。[ ](../protect/security-baselines.md#compare-baseline-versions) ** 
+以前のバージョンからのこのバージョンのベースラインの変更点を確認するには、このベースラインの *[バージョン]* ウィンドウを表示すると使用可能になる [[ベースラインの比較]](../protect/security-baselines.md#compare-baseline-versions) 操作を使用します。 以前のバージョンからのこのバージョンのベースラインの変更点を確認するには、このベースラインの *[バージョン]* ウィンドウを表示すると使用可能になる [[ベースラインの比較]](../protect/security-baselines.md#compare-baseline-versions) 操作を使用します。
 
 ::: zone-end
 ::: zone pivot="edge-october-2019,edge-april-2020"

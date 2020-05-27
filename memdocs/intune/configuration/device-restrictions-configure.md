@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 716925f077b7433eab06a6ea2f557c7653d0b03d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 951293ff723ff0243d4068656497cbe0bca27ef9
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551414"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989185"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Microsoft Intune でデバイスの制限設定を構成する
 
@@ -35,9 +35,6 @@ Intune には、管理者が Android、iOS/iPadOS、macOS、および Windows �
 これらの機能は Intune で使用できます。また、管理者が構成できます。 Intune では、"構成プロファイル" を使用して、お客様の組織のニーズに合わせてこのような設定を作成およびカスタマイズします。 これらの機能をプロファイルに追加した後、そのプロファイルをお客様の組織のデバイスにプッシュまたは展開できます。
 
 この記事では、デバイス制限プロファイルの作成方法について説明します。 さまざまなプラットフォームで使用できるすべての設定を確認することもできます。
-
-> [!NOTE]
-> Intune ユーザー インターフェイス (UI) は全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、この記事で説明する設定を作成または編集する際のワークフローが若干異なります。
 
 ## <a name="create-the-profile"></a>プロファイルの作成
 

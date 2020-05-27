@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fbb82123f28c5049a60d60572aadcb3d03777b7
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5562199d3490085aca26517170745802a0aef489
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326958"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989503"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Microsoft Intune のサポートを受ける方法
 
@@ -68,7 +68,7 @@ Intune 用に新しく作成されたテナントを使用するとき、*ヘル
 
   - Microsoft Endpoint Manager admin center の任意のノードで **[?]** を選択します。 アイコン (ポータルの右上隅) を選択し、ドロップダウンを使用してヘルプの必要な管理の種類を選択します。 Microsoft Endpoint Manager admin center では、次の管理の種類をサポートしているため、Intune など、サポートが必要なものを選択する必要があります。
 
-    - マネージャーの構成 (Desktop Analytics を含む)
+    - Configuration Manager (Desktop Analytics を含む)
     - Intune
     - 共同管理  
 

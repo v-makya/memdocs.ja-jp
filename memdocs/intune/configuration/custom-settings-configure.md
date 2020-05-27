@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
-ms.topic: conceptual
+ms.date: 05/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb211b1de15aa0400e9ff71b428e2db02ef4b03
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ddbb82d3cd5c86ff32917013edd4f16b303678fe
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551360"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990100"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Intune でカスタム設定を持つプロファイルを作成する
 
@@ -31,9 +31,6 @@ Microsoft Intune には、デバイスのさまざまな機能を制御する多
 構成プロファイルの詳細については、「[Microsoft Intune のデバイス プロファイルとは](device-profiles.md)」をご覧ください。
 
 この記事では、Android デバイス管理者、Android Enterprise、iOS/iPadOS、macOS、Windows 用のカスタム プロファイルを作成する方法について説明します。 さまざまなプラットフォームで使用できるすべての設定を確認することもできます。
-
-> [!NOTE]
-> Intune ユーザー インターフェイス (UI) は全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、この記事で説明する設定を作成または編集する際のワークフローが若干異なります。
 
 ## <a name="create-the-profile"></a>プロファイルの作成
 
