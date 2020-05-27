@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7fefed3efd3fb0f435dbed71296289c33d439420
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 5aba5c77c9835e74fdb347fbdf2232fd9944fa03
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79334367"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879200"
 ---
 # <a name="your-macos-devices-operating-system-version-isnt-yet-supported"></a>使用している macOS デバイスのオペレーティング システムのバージョンがまだサポートされていない
 

@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 03/25/2020
-ms.topic: article
+ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5078f41e08f78063fac3e355301d285d1bdf6ff2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 12ea9749fa064493dfd785225ccb4abf8e8e11c5
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80274967"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880463"
 ---
 # <a name="check-compliance-on-your-android-device"></a>Android デバイスでコンプライアンス対応を確認する  
 ポータル サイトからデバイス チェックインを手動で開始し、次のことを行います。
