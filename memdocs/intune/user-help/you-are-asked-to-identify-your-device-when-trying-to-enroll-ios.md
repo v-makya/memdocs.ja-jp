@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 83e77f56f4d68e0f196e6ef13ad538c82c1fd578
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 567942ca0e859c26d8cae11b5f0ba93bfa45524a
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79335030"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881349"
 ---
 # <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>登録試行時にデバイスを識別する必要がある
 

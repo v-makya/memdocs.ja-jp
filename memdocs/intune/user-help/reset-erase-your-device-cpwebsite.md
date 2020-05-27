@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/18/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: coferro
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f7f86f595adf8b06f9a3d9da198d89b263e00574
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 77643d689a2a5693b71f85a7e82b98bddec9a646
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79347653"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881474"
 ---
 # <a name="reset-device-from-company-portal-website"></a>Intune ポータル サイト Web サイからデバイスをリセットする
 

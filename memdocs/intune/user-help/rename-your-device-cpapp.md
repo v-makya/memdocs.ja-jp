@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/07/2018
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 88c9b6789f4475a95201e975d3492acecde3927e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8c71ef5e1abfcccfdeec6c01551a23bf1d1750bd
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79336421"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881145"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Windows 用 Intune ポータル サイト アプリからデバイスの名前を変更する
 他のデバイスから認識しやすいようにデバイスの名前を変更します。 Windows 用ポータル サイト アプリでは、接続されている次の種類のデバイスの名前を変更できます。  

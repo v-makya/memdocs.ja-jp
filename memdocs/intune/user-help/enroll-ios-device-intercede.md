@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: b83092521f1ab0058d47d599e7fd9c10c2fd6d35
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: bac9edcb91ef49cfa2252bd82e6e88bfd512d9ef
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077769"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881518"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>Intune ポータル サイトと Intercede を使用して iOS または iPadOS デバイスをセットアップする
 

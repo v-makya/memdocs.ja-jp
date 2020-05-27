@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 417932e046517f17481e2d6c5e91f24cb7ac2d7a
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 92be57c0f65dfbed5a5fdbdb707659071b460a25
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080047"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83880829"
 ---
 # <a name="you-get-an-error-while-using-the-company-portal-app"></a>会社のポータル アプリの使用中にエラーが発生する
 

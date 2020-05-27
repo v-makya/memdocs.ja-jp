@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 268ed874be65c9ade7f801b89528d1a23f176ee1
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 50330bbdc61eeeada022c44f4d1f2f68b31f19a4
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077803"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881554"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-disa-purebred"></a>Intune ポータル サイトと DISA Purebred を使用して iOS または iPadOS デバイスをセットアップする  
 
