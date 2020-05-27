@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 03/11/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: f0ad29e04e2f1d15c94e3ecdc4dbb3c891cd605e
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 75f163d3f6f5761f1804edd23839bc2e20cca0f0
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077718"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83881757"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Windows 10 デバイスの登録に関するトラブルシューティング
 ご利用のデバイスを登録しても、職場または学校のメール アドレスやファイルにまだアクセスできない場合は、次のトラブルシューティング手順をお試しください。  
