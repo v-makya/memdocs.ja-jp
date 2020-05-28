@@ -25,7 +25,7 @@ Microsoft では、PC、サーバー、デバイスを管理するためのさ�
 
 さまざまなシナリオに合わせて最適に機能するいくつかの Microsoft ソリューションがあります。 1 つだけを選択する必要はありません。
 
-- 小規模な組織では、Windows 管理センターのようなツールが最適である場合があります。
+- 小規模な組織では、Windows Admin Center のようなツールが最適である場合があります。
 - IT 組織の約 75% では、デバイスを管理するために Configuration Manager が使用されています。
 - Microsoft Azure には、Azure Stack を使用した、クラウドまたはオンプレミスのさまざまなソリューションが用意されています。これは主にサーバー管理を対象とします。
 - Microsoft Intune では、クライアントのクラウド管理を利用できます。
@@ -35,7 +35,7 @@ Microsoft では、PC、サーバー、デバイスを管理するためのさ�
 
 |  | クラウド専用 | クラウド接続 | オンプレミス | 切断 |
 |---------|---------|---------|---------|---------|
-| **Hyper-V ホスト** | 適用なし | - Azure Stack<br/> - Windows 管理センター<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows 管理センター<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows 管理センター<br/> - Virtual Machine Manager |
+| **Hyper-V ホスト** | 適用なし | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager |
 | **Windows Server** | - Azure の管理<br/> - Configuration Manager | - Azure の管理<br/> - Configuration Manager | - Azure の管理<br/> - Configuration Manager | Configuration Manager |
 | **Linux サーバー** | Azure の管理 | Azure の管理 | Azure の管理 |  |
 | **Windows 10** | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | Configuration Manager |
@@ -45,7 +45,7 @@ Microsoft では、PC、サーバー、デバイスを管理するためのさ�
 詳細については、以下の記事を参照してください。
 
 - [Azure Stack とは](https://docs.microsoft.com/azure-stack/operator/azure-stack-overview)
-- [Windows 管理センターとは](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/what-is)
+- [Windows Admin Center とは](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/what-is)
 - [Virtual Machine Manager とは](https://docs.microsoft.com/system-center/vmm/overview)
 - [Azure の管理製品](https://docs.microsoft.com/azure/)
 - [Windows Virtual Desktop とは](https://docs.microsoft.com/azure/virtual-desktop/overview)
