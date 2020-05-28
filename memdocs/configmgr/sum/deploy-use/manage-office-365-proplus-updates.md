@@ -5,17 +5,17 @@ description: Configuration Manager が WSUS カタログからサイト サー�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 4967b8b289d54a6355cb0a1e6454d5fac469a733
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 09d8f0a37e9ed4308c5c8ffcf005c788612be235
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110408"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709504"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Configuration Manager での Office 365 ProPlus の管理
 
@@ -224,7 +224,33 @@ Office 365 の更新プログラムをインストールするために[ソフ�
     例: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
 5. **[OK]** をクリックします。 
 
-## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a><a name="bkmk_channel"></a> Configuration Manager から更新プログラムを適用できるように Office 365 クライアントを有効化した後で更新チャネルを変更する
+## <a name="update-channels-for-microsoft-365-apps"></a><a name="bkmk_channel"></a> Microsoft 365 アプリのチャネルを更新する
+<!--6298093-->
+Office 365 ProPlus の名前が **Microsoft 365 Apps for enterprise** に変更されたときに、更新プログラム チャネルの名前も変更されました。 自動展開規則 (ADR) を使用して更新プログラムを展開していて、それらが**タイトル** プロパティに依存している場合は、ADR を変更する必要があります。 それは、Microsoft Update カタログ内の更新プログラム パッケージの名前が変更されているためです。
+
+現在、Office 365 ProPlus の更新プログラム パッケージのタイトルは、次の例に示すように、"Office 365 Client Update" で始まっています。
+
+&nbsp; &nbsp; Office 365 Client Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.20648)
+
+6 月 9 日以降にリリースされる更新プログラム パッケージの場合、タイトルは次の例に示すように "Microsoft 365 Apps Update" で始まります。
+
+&nbsp; &nbsp; Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)
+</br>
+</br>
+
+|新しいチャネル名|以前のチャネル名|
+|--|--|
+|半期エンタープライズ チャネル|半期チャネル|
+|半期エンタープライズ チャネル (プレビュー)|半期チャネル (対象指定)|
+|月間エンタープライズ チャネル|N/A|
+|最新チャネル|月次チャネル|
+|最新チャネル (プレビュー)|月次チャネル (対象指定)|
+|ベータ チャネル|Insider|
+
+ADR の変更方法の詳細については、「[ソフトウェア更新プログラムの自動展開](automatically-deploy-software-updates.md)」を参照してください。 名前の変更の詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。
+
+
+## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>Configuration Manager から更新プログラムを適用できるように Office 365 クライアントを設定した後で更新チャネルを変更する
 
 Office 365 ProPlus を展開した後、グループ ポリシーまたは Office 展開ツール (ODT) で更新プログラム チャネルを変更できます。 たとえば、半期チャネルから半期チャネル (対象指定) にデバイスを移行できます。 チャネルを変更すると、完全バージョンを再インストールまたはダウンロードしなくても Office は自動的に更新されます。 詳細については、「[組織内のデバイスの Office 365 ProPlus 更新チャネルを変更する](https://docs.microsoft.com//deployoffice/change-update-channels)」を参照してください。
 

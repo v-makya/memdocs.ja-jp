@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7476f27c050a7870cd8f860f2e1b6bfa3d68a7e9
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696290"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427759"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Configuration Manager 内で Windows コンピューターのクライアントをアップグレードする方法
 
@@ -97,7 +97,7 @@ Configuration Manager サイト システムもクライアントとして管理
 次回クライアントでポリシーをダウンロードしたときに、これらの設定が受信されます。
 
 > [!NOTE]
-> Configuration Manager のメンテナンス期間を構成している場合、クライアントのアップグレードではそれが優先されます。
+> Configuration Manager のメンテナンス期間を構成している場合、クライアントのアップグレードではそれが優先されます。 execmgr スレッドは、メンテナンス期間中にのみクライアント セットアップ ブートストラップ プログラム (ccmsetup.exe) を実行します。 デバイスが書き込みフィルターがある Windows エディションを実行する場合、ccmsetup はダウンロードとインストールを同時に試行します。 それ以外の場合は、ccmsetup はコンテンツのダウンロードをランダムな時間に実行します。 コンテンツをダウンロードし、ローカル ポリシーをコンパイルしたら、execmgr は、次回のメンテナンス期間中にクライアントのアップグレードをスケジュールします。<!-- SCCMDocs#896 -->
 
 ## <a name="next-steps"></a>次のステップ
 

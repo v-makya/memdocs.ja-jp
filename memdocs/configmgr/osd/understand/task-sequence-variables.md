@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e99efed5d506ddf30e818243ad8b899e8f8b8aca
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782122"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429823"
 ---
 # <a name="task-sequence-variables"></a>タスク シーケンス変数
 
@@ -1832,6 +1832,10 @@ PowerShell スクリプトを実行するアカウントを指定します。 �
 - `1`: 進行状況テキストに現在のステップと合計ステップを含めます。 たとえば、**2/10** です。
 - `2`: 現在のステップ、合計ステップ、完了率を含めます。 たとえば、**2/10 (20% 完了)** です。
 - `3`: 完了率を含めます。 たとえば、 **(20% 完了)** です。
+
+### <a name="tsuefidrive"></a><a name="TSUEFIDrive"></a> TSUEFIDrive
+
+**[変数]** フィールドで FAT32 パーティションのプロパティに対して使用します。 タスク シーケンスでこの変数が検出されると、コンピューターを再起動する前に、UEFI への移行用にディスクが準備されます。 詳細については、「[BIOS から UEFI への変換を管理するためのタスク シーケンス手順](../deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)」を参照してください。
 
 ### <a name="workingdirectory"></a><a name="WorkingDirectory"></a> WorkingDirectory
 

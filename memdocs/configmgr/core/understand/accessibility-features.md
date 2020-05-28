@@ -2,7 +2,7 @@
 title: ユーザー補助
 titleSuffix: Configuration Manager
 description: すべての人に Configuration Manager を利用してもらうための機能について説明します。
-ms.date: 03/27/2019
+ms.date: 05/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f04b777f030f9e55e1d5b17ace9ec8b83d9f8679
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906112"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556032"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Configuration Manager でのユーザー補助機能
 
@@ -45,7 +46,7 @@ Configuration Manager には、すべての人に利用してもらうための�
 |Ctrl + 4|  管理|
 
 
-### <a name="other-keyboard-shortcuts"></a>他のキーボード ショートカット
+### <a name="other-console-shortcuts"></a>その他のコンソール ショートカット
 
 |ショートカット キー|  目的|
 |--------|--------|  
@@ -56,6 +57,14 @@ Configuration Manager には、すべての人に利用してもらうための�
 |Ctrl + D|フォーカスを [詳細] フィールドに設定します (使用可能な場合)。|
 |Alt     |リボンのフォーカスのインとアウトを変更します。|
 
+### <a name="cmpivot-shortcuts"></a><a name="bkmk_cmpshortcuts"></a> CMPivot のショートカット
+
+ほとんどの [Web ブラウザーのキーボード ショートカット](https://support.microsoft.com/help/17456/windows-internet-explorer-ease-of-access-options)は、CMPivot で機能します。
+
+|ショートカット キー|目的|
+|--------|--------|  
+|Ctrl + 1|最初のタブにフォーカスを設定します。|
+|Alt + &lt;|アドレスに戻ります|
 
 
 ## <a name="other-accessibility-features"></a>その他のユーザー補助機能
@@ -85,7 +94,7 @@ Configuration Manager には、すべての人に利用してもらうための�
 ## <a name="see-also"></a>関連項目
 
 Configuration Manager ユーザー インターフェイスのナビゲーションの基礎について詳しくは、次の記事をご覧ください。
-- [Configuration Manager コンソールの使用](../servers/manage/admin-console.md)  
+- [Configuration Manager コンソールの使用](../servers/manage/admin-console.md)
 - [ソフトウェア センターのユーザー ガイド](software-center.md)
 
 > [!NOTE]  

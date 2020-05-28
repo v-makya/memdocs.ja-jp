@@ -5,17 +5,17 @@ description: Configuration Manager と Microsoft Intune を使用し、新しい
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/12/2020
+ms.date: 05/14/2020
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 75016e8028dde29c83ae7e7f5a23a1f6dbb4417f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692990"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428619"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>チュートリアル:新しいインターネットベースのデバイスの共同管理を有効にする
 
@@ -237,11 +237,11 @@ Configuration Manager コンソールから Azure サービスを構成するに
 
    1. 作成した Web アプリを選択します。
 
-   2. **[設定] > [必要なアクセス許可]** の順に移動し、 **[アクセス許可の付与]** を選択してから **[はい]** を選択します。  
+   2. **[API のアクセス許可]** に移動し、 **[<your tenant> に管理者の同意を与えます]** を選択して、 **[はい]** を選択します。  
 
    3. 作成したネイティブ クライアント アプリを選択します。
 
-   4. **[設定] > [必要なアクセス許可]** の順に移動し、 **[アクセス許可の付与]** を選択してから **[はい]** を選択します。  
+   4. **[API のアクセス許可]** に移動し、 **[<your tenant> に管理者の同意を与えます]** を選択して、 **[はい]** を選択します。
 
 9. Configuration Manager コンソールで **[管理] > [クラウド サービス] > [Azure サービス]** の順に移動し、[Azure サービスの構成] を選択します。 次に **[Azure Active Directory ユーザー探索]** を右クリックし、 **[今すぐ完全な探索を実行する]** を選択します。 **[はい]** を選択して操作を確定します。  
 
@@ -383,11 +383,11 @@ Intune を使用して、現在 Intune でのみ管理されている Windows 10
 
 ### <a name="create-an-intune-app-to-install-the-configuration-manager-client"></a>Configuration Manager クライアントをインストールするように Intune アプリを作成する
 
-1. プライマリ サイト サーバーから [Azure portal](https://portal.azure.com/) にサインインし、 **[Intune] > [クライアント アプリ] > [アプリ] > [追加]** に移動します。
+1. プライマリ サイト サーバーから [Microsoft Endpoint Manager 管理センター](https://endpoint.microsoft.com)にサインインし、 **[アプリ]**  >  **[すべてのアプリ]**  >  **[追加]** に移動します。
 
-2. **[アプリの種類]** の場合:**基幹業務アプリ**を選択します。
+2. アプリの種類として、 **[その他]** で **[基幹業務アプリ]** を選択します。
 
-3. **アプリ パッケージ ファイル**を選択してから、Configuration Manager ファイル **ccmsetup.msi** の場所を参照し、 **[開く] > [OK]** の順に選択します。
+3. **アプリ パッケージ ファイル**として、Configuration Manager の **ccmsetup.msi** ファイルがある場所を参照し、 **[開く] > [OK]** の順に選択します。
 たとえば、*C:\Program Files\Microsoft Configuration Manager\bin\i386\ccmsetup.msi* です
 
 4. **[アプリ情報]** を選択してから、以下の詳細情報を指定します。
@@ -412,11 +412,11 @@ Intune を使用して、現在 Intune でのみ管理されている Windows 10
 
 次の手順では、前の手順で作成した Configuration Manager クライアントをインストールするためのアプリを展開します。
 
-1. [Azure portal](https://portal.azure.com/) にサインインします。  **[すべてのサービス] > [Intune] > [クライアント アプリ] > [アプリ]** の順に選択し、Configuration Manager クライアントを展開するために作成したアプリである **[ConfigMgr Client Setup Bootstrap]\(ConfigMgr クライアント セットアップ ブートストラップ\)** を選択します。  
+1. [Microsoft Endpoint Manager 管理センター](https://endpoint.microsoft.com)にサインインします。 **[アプリ]**  >  **[すべてのアプリ]** の順に選択し、Configuration Manager クライアントを展開するために作成したアプリである **[ConfigMgr Client Setup Bootstrap]** \(ConfigMgr クライアント セットアップ ブートストラップ\) を選択します。  
 
-2. **[割り当て] > [グループの追加]** の順に選択します。  **[割り当ての種類]** を **[必須]** に設定し、 **[Included Groups]\(含まれるグループ\)** と **[Excluded Groups]\(除外されるグループ\)** を使用して、共同管理に参加させるユーザーとデバイスを含む Azure Active Directory (AD) グループを設定します。  
+2. **[プロパティ]** をクリックし、 **[割り当て]** の **[編集]** をクリックします。 **[必須]** の割り当ての下の **[グループの追加]** を選択し、共同管理に参加させるユーザーとデバイスを含む Azure Active Directory (AD) グループを設定します。  
 
-3. **[OK]** を選択して構成を **[保存]** します。
+3. **[レビューと保存]** を選択して構成を **[保存]** します。
 アプリは、割り当てるユーザーとデバイスに必要になりました。 アプリが Configuration Manager クライアントをデバイスにインストールした後は、共同管理によって管理されます。
 
 ## <a name="summary"></a>[概要]

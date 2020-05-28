@@ -5,17 +5,17 @@ description: 自動展開規則 (ADR) を使用して、ソフトウェア更新
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/11/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: d1b4329def3aee97e1684935c0c8f889c3e4e513
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269033"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709436"
 ---
 #  <a name="automatically-deploy-software-updates"></a>ソフトウェア更新プログラムの自動展開  
 
@@ -49,7 +49,7 @@ ADR を使用して、ソフトウェア更新プログラムを自動的に承�
 
          - **Office 365 クライアントの更新プログラム** テンプレートには、Office 365 ProPlus クライアントに向けた更新プログラムを展開するときに使用する、一般的な設定が用意されています。
              > [!Note]
-             > 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 ADR が "タイトル" のプロパティに依存している場合は、2020 年 6 月 9 日から編集する必要があります。 `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` は、新しいタイトルの例です。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。
+             > 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 ADR が "タイトル" のプロパティに依存している場合は、2020 年 6 月 9 日から編集する必要があります。 `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` は、新しいタイトルの例です。 タイトルの変更に対する ADR の修正の詳細については、[Microsoft 365 アプリのチャネルの更新](manage-office-365-proplus-updates.md#bkmk_channel)に関するセクションを参照してください。 名前の変更の詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。
 
          - **SCEP および Windows Defender ウイルス対策の更新**テンプレートには、Endpoint Protection の定義ファイルの更新を展開するときに使用する一般的な設定が用意されています。  
 

@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1166d4c674207ed3590901465ca90a98ce3ae78f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
+ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075066"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732875"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Configuration Manager でブート イメージを管理する
 
@@ -201,13 +201,8 @@ PXE を使用してオペレーティング システムを展開する方法の
 
 - **WinPE の既定のキーボード レイアウトを設定する**: <!--4910348-->バージョン 1910 以降では、ブート イメージの既定のキーボード レイアウトを構成します。 en-us 以外の言語を選択した場合でも、Configuration Manager によって、使用可能な入力ロケールに en-us が含められます。 デバイス上の初期のキーボード レイアウトは選択されたロケールですが、ユーザーは必要に応じてデバイスを en-us に切り替えることができます。
 
-    > [!Tip]
-    > これで、[Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell コマンドレットに新しいパラメーター `-InputLocale` が含まれるようになりました。 次に例を示します。
-    >
-    > ```PowerShell
-    > # Set boot image keyboard layout to Russian (Russia)
-    > Set-CMBootimage -Id "CM100004" -InputLocale "ru-ru"`
-    > ```
+> [!Tip]
+> スクリプトからこれらの設定を構成するには、PowerShell コマンドレット [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) を使用します。
 
 #### <a name="optional-components"></a>オプション コンポーネント
 

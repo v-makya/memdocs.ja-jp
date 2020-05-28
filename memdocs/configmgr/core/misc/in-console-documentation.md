@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 1bd4ff4b25fcd4cf77366c93fcc1259ea2b5749f
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 678f19d4ec69bea2bc5b3863e3e2a8332c10f3be
+ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268183"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83551606"
 ---
 <!-- 
 - Feature 1357546
@@ -107,11 +107,12 @@ Configuration Manager のコンポーネントと機能のトラブルシュー�
 
 ## <a name="new-and-updated-support-articles"></a>新規および更新のサポートに関する記事
 
-2020 年 2 月 21 日から 3 月 19 日までの新規または更新されたサポートに関する記事。
+2020 年 3 月 20 日から 5 月 15 日の新規または更新のサポートに関する記事。
 
-- [KB 4552430 Configuration Manager でサードパーティの更新プログラムのカテゴリの同期が既定値にリセットされる](https://support.microsoft.com/help/4552430)
-- [KB 4551013 Configuration Manager で変更されたサードパーティの更新プログラムをダウンロードできない](https://support.microsoft.com/help/4551013)
-- [KB 4552181 Configuration Manager Current Branch バージョン 1910 でコンテンツ配布が停止する](https://support.microsoft.com/help/4552181)
-- [KB 4550023 Windows 10 の一括アップグレードのロールバック後に Configuration Manager の一括アップグレード タスク シーケンスが続行しない](https://support.microsoft.com/help/4550023)
+- [KB 4561494: Microsoft Edge アプリケーションの作成が Configuration Manager で失敗する](https://support.microsoft.com/help/4561494)
+- [KB 4551059: リモート Configuration Manager コンソールが 10 分ごとに 20 秒間ハングする](https://support.microsoft.com/help/4551059)
+- [KB 4556203: Microsoft Endpoint Configuration Manager の現在のブランチ (バージョン 2002) での変更の概要](https://support.microsoft.com/help/4556203)
+- [KB 4553501: Microsoft Endpoint Configuration Manager バージョン 2002 の早期更新リングの更新プログラム](https://support.microsoft.com/help/4553501)
+- [KB 4561945: サービス接続ツールで ConfigMgr.AdminUIContent.cab ファイルがダウンロードされるときの "基になる接続が閉じられました" エラー](https://support.microsoft.com/help/4561945)
 
 新規 Configuration Manager サポート記事の Atom または RSS 通知をサブスクライブするには、「[サポート コンテンツの更新情報](https://support.microsoft.com/help/4089498/)」を参照して、**Microsoft Endpoint Configuration Manager** を選択します。  

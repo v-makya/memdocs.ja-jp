@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bdc98febbc96162b2abe6e666c9354c342e5e913
-ms.sourcegitcommit: ed2c18e210db177eb0d5e10d74207006561b7b5d
+ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83383729"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709395"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>クラウド管理ゲートウェイのトークン ベース認証
 
@@ -25,7 +25,7 @@ ms.locfileid: "83383729"
 
 クラウド管理ゲートウェイ (CMG) では多くの種類のクライアントがサポートされていますが、たとえ[拡張 HTTP](../../plan-design/hierarchy/enhanced-http.md) であっても、これらのクライアントには[クライアント認証証明書](../manage/cmg/certificates-for-cloud-management-gateway.md#for-internet-based-clients-communicating-with-the-cloud-management-gateway)が必要です。 この証明書の要件は、内部ネットワークに接続することがあまりなく、Azure Active Directory (Azure AD) に参加できず、PKI によって発行された証明書をインストールする方法を持たない、インターネットベースのクライアントでは、プロビジョニングするのが困難な場合があります。
 
-バージョン 2002 以降の Configuration Manager では、次の方法でデバイスのサポートが拡張されます。
+これらの問題に対応するため、バージョン 2002 以降の Configuration Manager では、次の方法でデバイスのサポートが拡張されています。
 
 - 一意のトークンのために内部ネットワークに登録する
 
@@ -101,7 +101,7 @@ ms.locfileid: "83383729"
 
 `/new` パラメーターと共に使用して、トークンの有効期間を指定します。 分単位の整数値を指定してください。 既定値は 4,320 (3 日) です。 最大値は 10,080 (7 日) です。
 
-例: `BulkRegistrationTokenTool.exe /lifetime:4320`
+例: `BulkRegistrationTokenTool.exe /lifetime 4320`
 
 ## <a name="bulk-registration-token-management"></a>一括登録トークンの管理
 

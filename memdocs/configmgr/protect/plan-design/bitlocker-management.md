@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 460c9dd503861ba9f45e85f471bb1cb1274754a0
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782121"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764120"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker 管理の計画
 
@@ -74,7 +74,7 @@ Windows 10 または Windows 8.1 が動作しているマネージド Windows �
 
 - BitLocker 管理ポリシーを作成するには、Configuration Manager での**完全な権限を持つ管理者**ロールが必要です。
 
-- BitLocker 回復サービスでは、Configuration Manager クライアントから管理ポイントへのネットワーク上で回復キーを暗号化するために HTTPS が必要です。 次の 2 つのオプションがあります。
+- BitLocker 回復サービスでは、Configuration Manager クライアントから管理ポイントへのネットワーク全体で回復キーを暗号化するために HTTPS が必要です。 次の 2 つのオプションがあります。
 
   - 回復サービスをホストする管理ポイント上の IIS Web サイトを HTTPS 対応にします。 このオプションは、Configuration Manager バージョン 2002 にのみ適用されます。<!-- 5925660 -->
 

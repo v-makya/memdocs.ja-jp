@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 30cd61240b09f821d8b18c37e6accc7450f35817
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701670"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427705"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Configuration Manager 用にクラウド配布ポイントをインストールする
 
@@ -215,6 +215,8 @@ If you issue the server authentication certificate from your PKI, you may direct
 ## <a name="manage-and-monitor"></a><a name="bkmk_monitor"></a> 管理と監視  
 
 他のあらゆるオンプレミス配布ポイントと同じようにクラウド配布ポイントに配布するコンテンツを監視します。 詳細については、[コンテンツの監視](monitor-content-you-have-distributed.md)に関するページを参照してください。
+
+コンソールでクラウド配布ポイントの一覧を表示するとき、その一覧に列を追加できます。 たとえば、 **[Data egress]\(データ エグレス\)** 列には、過去 30 日間にクライアントによってサービスからダウンロードされたデータの量が表示されます。<!-- SCCMDocs#755 -->
 
 ### <a name="alerts"></a><a name="bkmk_alerts"></a> アラート  
 

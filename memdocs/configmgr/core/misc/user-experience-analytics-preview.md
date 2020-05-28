@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 6f481fa54a8018137a4b45bc62f6fde9c1f1165b
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
+ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381582"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764239"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> エンドポイント分析のプレビュー
 
@@ -102,6 +102,8 @@ Intune または Configuration Manager を使用してデバイスを登録す�
 
 プロアクティブな修復の場合、ユーザーには、**デバイスの構成**カテゴリのロールに適したアクセス許可が必要です。  ユーザーがプロアクティブ修復のみを使用する場合、**エンドポイント分析**カテゴリのアクセス許可は必要ありません。
 
+初めてプロアクティブな修復を使用する前に、[Intune サービス管理者](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions)がライセンス要件を確認する必要があります。
+
 ## <a name="start-gathering-data"></a><a name="bkmk_uea_start"></a> データ収集の開始
 - Intune で管理されたのみを登録する場合は、「[エンドポイント分析ポータルでのオンボード](#bkmk_uea_onboard)」セクションに進んでください。
 
@@ -112,7 +114,7 @@ Intune または Configuration Manager を使用してデバイスを登録す�
 
 ### <a name="enroll-devices-managed-by-configuration-manager"></a><a name="bkmk_uea_cm_enroll"></a> Configuration Manager によって管理されるデバイスを登録する
 <!--6051638, 5924760-->
-Configuration Manager デバイスを登録する前に、[Microsoft Endpoint Manager テナントのアタッチ](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)の有効化を含む[前提条件](#bkmk_uea_prereq)を確認してください。 Intune で管理されたのみを登録する場合は、「[エンドポイント分析ポータルでのオンボード](#bkmk_uea_onboard)」セクションに進んでください。
+Configuration Manager デバイスを登録する前に、[Microsoft Endpoint Manager テナントのアタッチ](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)の有効化を含む[前提条件](#bkmk_uea_prereq)を確認してください。 
 
 #### <a name="enable-endpoint-analytics-data-collection-in-configuration-manager"></a><a name="bkmk_uea_cm_enable"></a> Configuration Manager でエンドポイント分析データ コレクションを有効にする
 
@@ -238,7 +240,7 @@ Configuration Manager で管理され、まだ Intune に登録されていな�
 **[Startup performance]\(スタートアップ パフォーマンス\)** ページには、次のような分析情報をサポートするレポート タブがあります。
 1. **[Model performance]\(モデル パフォーマンス\)** 。 このタブには、デバイス モデル別のブートとサインインのパフォーマンスが表示されます。これは、パフォーマンスの問題が特定のモデルに分離されているかどうかを特定するのに役立ちます。
 1. **[Device performance]\(デバイス パフォーマンス\)** 。 このタブには、すべてのデバイスのブートとサインインのメトリックが表示されます。 特定のメトリック (たとえば、GP サインイン時間) で並べ替えて、そのメトリックで最も悪いスコアを持つデバイスを確認できるため、トラブルシューティングに役立ちます。 デバイスを名前で検索することもできます。 デバイスをクリックするとブートとサインインの履歴が表示されるので、最近の回帰があるかどうかを特定することができます
-1. **[Startup processes]\(スタートアップ プロセス\)** 。 このタブ (この機能を開発中のお客様のみに表示されます) は、サインインの "デスクトップが応答するまでの時間" フェーズにどのプロセスが影響しているかを示します。そのようなプロセスは、デスクトップがレンダリングされた後、CPU が常に 50% を超えていることになります。
+1. **[Startup processes]\(スタートアップ プロセス\)** 。 スタートアップ プロセスは、ユーザーがデスクトップが応答するまで待機する時間を長くすることで、ユーザー エクスペリエンスによくない影響がある可能性があります。 このタブ (この機能を開発中のお客様のみに表示されます) は、サインインの "デスクトップが応答するまでの時間" フェーズにどのプロセスが影響しているかを示します。そのようなプロセスは、デスクトップがレンダリングされた後、CPU が常に 50% を超えていることになります。 この表には、テナント内の少なくとも 10 台のデバイスに影響を与えるプロセスのみが一覧表示されます。  
 
 ## <a name="proactive-remediations"></a><a name="bkmk_uea_prs"></a> プロアクティブな修復
 

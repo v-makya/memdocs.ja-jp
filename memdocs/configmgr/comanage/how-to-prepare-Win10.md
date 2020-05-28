@@ -5,17 +5,17 @@ description: 共同管理用に Windows 10 のインターネットベースの�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/24/2020
+ms.date: 05/14/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 59ca1006d8700e52b3f3fb703f8896ce9fa8b9b7
-ms.sourcegitcommit: 3ff33493c3f93bf06fdc942d30958a2a4ad03529
+ms.openlocfilehash: e6582599a02f4a8196ee739ca875df4d158a993e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82137917"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427784"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>共同管理用にインターネットベースのデバイスを準備する方法
 
@@ -104,9 +104,9 @@ Configuration Manager を使用して、Intune で必要なデバイス情報を
 
 ### <a name="create-the-app-in-intune"></a>Intune でアプリを作成する
 
-1. [Azure portal](https://portal.azure.com) に移動して、Intune ページを開きます。  
+1. [Microsoft Endpoint Manager 管理センター](https://endpoint.microsoft.com)に移動し、左のナビゲーション ウィンドウを展開します。  
 
-2. **[クライアント アプリ]**  >  **[アプリ]**  >  **[追加]** を選択します。  
+2. **[アプリ]**  >  **[すべてのアプリ]**  >  **[追加]** の順に選択します。  
 
 3. **[その他]** で **[基幹業務アプリ]** を選択します。  
 

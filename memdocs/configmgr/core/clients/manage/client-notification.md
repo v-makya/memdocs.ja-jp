@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a00f77a5a902728a7c41905314511cffcfa81a5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694960"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83427817"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Configuration Manager のクライアント通知
 
@@ -138,9 +138,9 @@ Windows 10 クライアントによる最新のデバイスの正常性状態の
 
 バージョン 1910 以降、Configuration Manager コンソールの **[クライアント診断]** には新しいデバイス アクションがあります。 次のアクションが追加されました。
 
-- **詳細なログ記録の有効化**:CCM コンポーネントのグローバル ログ レベルを詳細に変更し、デバッグ ログ記録を有効にします。
-- **詳細なログ記録の無効化**:グローバル ログ レベルを既定に変更し、デバッグ ログ記録を無効にします。
-- **クライアント ログの収集** (2002 以降):クライアント通知メッセージが、CCM ログを収集するために選択したクライアントに送信されます。 ログは、ソフトウェア インベントリ ファイル コレクションを使用して返されます。 <!--4226618-->
+- **詳細ログ記録を有効にする**:CCM コンポーネントのグローバル ログ レベルを詳細に変更し、デバッグ ログ記録を有効にします。
+- **詳細なログ記録を無効にする**:グローバル ログ レベルを既定に変更し、デバッグ ログ記録を無効にします。
+- **クライアント ログを収集する** (2002 以降):クライアント通知メッセージが、CCM ログを収集するために選択したクライアントに送信されます。 ログは、ソフトウェア インベントリ ファイル コレクションを使用して返されます。 <!--4226618-->
    - 圧縮されたクライアント ログのサイズの上限は 100 MB です。 <!--6366098-->
    - これらのファイルを管理および表示するには、[リソース エクスプローラー](inventory/use-resource-explorer-to-view-software-inventory.md#bkmk_diag)を使用します。
 
@@ -153,6 +153,9 @@ Windows 10 クライアントによる最新のデバイスの正常性状態の
 これらの設定の詳細については、「[ログ ファイルについて](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-client)」を参照してください。
 
 クライアントの **diagnostics.log** でタスクの状態を追跡記録します。 クライアント ログが収集されると、追加情報が管理ポイントの **MP_SinvCollFile.log** と、サイト サーバーの **sinvproc.log** に記録されます。
+
+> [!Tip]
+> 収集したクライアント ログは、ソフトウェア インベントリのファイル コレクション設定に従って保存されます。 これらのファイルは、サイト サーバーの **Inboxes\sinv.box\FileCol** ディレクトリに格納されます。 バージョン数の制限は定義されていません。 ファイルは [[期限切れの収集ファイルの削除]](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-collected-files) サイト メンテナンス タスクによって、既定で 90 日ごとのスケジュールで削除されます。
 
 ### <a name="prerequisites---client-diagnostics"></a>前提条件 - クライアント診断
 

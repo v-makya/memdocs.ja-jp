@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: acb8900a57408152133637ead3b8a0cf4732b4a7
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: c10e3c1cb2a0044003415d8f55a0a4ac85058656
+ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268727"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83633322"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Desktop Analytics でデバイスを登録する方法
 
@@ -126,7 +126,7 @@ Desktop Analytics でこのオプションを構成するためのオプショ�
 
 通常は、構成マネージャー コレクションを使用して、Desktop Analytics の設定と登録の対象を設定します。 コレクションに対してデバイスを含めたり除外したりするには、ダイレクト メンバーシップまたはクエリを使用します。 詳しくは、「[コレクションを作成する方法](../core/clients/manage/collections/create-collections.md)」をご覧ください。
 
-値がまだ存在していない場合にのみ、Configuration Manager によって Windows の設定が構成されます。 一意のデバイス グループに対して異なる設定を構成する必要がある場合は、[グループ ポリシー](group-policy-settings.md)を使用できます。 グループ ポリシーの対象となる設定は、Configuration Manager 設定よりも優先されます。
+値がまだ存在していない場合にのみ、Configuration Manager によって Windows の設定が構成されます。 一意のデバイス グループに対して異なる設定を構成する必要がある場合は、[グループ ポリシー](group-policy-settings.md)を使用できます。 グループ ポリシーの対象となる設定は、Configuration Manager 設定よりも優先されます。 グループ ポリシーの対象となるデバイスは、[[接続の正常性]](monitor-connection-health.md) ダッシュボードの状態に正確に反映されない可能性があります。
 
 診断データのレベルを構成する場合は、デバイスに対して上限を設定します。 Windows 10 バージョン 1803 以降の規定では、ユーザーがより低いレベルを設定することを選択できます。 この動作を制御するには、グループ ポリシー設定の **[Configure telemetry opt-in setting user interface]\(テレメトリのオプトイン設定のユーザー インターフェイスを構成する\)** を使用します。 詳細については、「[Desktop Analytics のグループ ポリシーの設定](group-policy-settings.md)」を参照してください。
 

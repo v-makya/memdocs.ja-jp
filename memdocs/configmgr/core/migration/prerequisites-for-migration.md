@@ -10,12 +10,12 @@ ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 229a8c7980933480a243278b2679d55f012490ce
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 36e62ea5198824a6b3466853cdbcfc3057d1829e
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693420"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428733"
 ---
 # <a name="prerequisites-for-migration-in-configuration-manager"></a>Configuration Manager での移行の前提条件
 
@@ -93,11 +93,13 @@ System Center 2012 Configuration Manager または Configuration Manager Current
 
   データの収集時には、次のネットワーク プロトコルとポートが使用されます。  
 
-  -   NetBIOS/SMB - 445 (TCP)  
+  - NetBIOS/SMB - 445 (TCP)  
 
-  -   RPC (WMI) - 135 (TCP)  
+  - RPC (WMI) - 135 (TCP および UDP)  
 
-  -   SQL Server - ソースおよび移行先サイト データベースの両方で使用される TCP ポート。  
+  - 動的 RPC。 動的ポートでは、OS バージョンで定義されているポート番号の範囲を使用します。 これらのポートは、エフェメラル ポートとも呼ばれます。 既定のポート範囲の詳細については、「 [Windows のサービス概要およびネットワーク ポート要件](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows)」を参照してください。<!-- SCCMDocs#1053 -->
+
+  - SQL Server - ソースおよび移行先サイト データベースの両方で使用される TCP ポート。  
 
 - **ソフトウェア更新プログラムの移行:**  
 
