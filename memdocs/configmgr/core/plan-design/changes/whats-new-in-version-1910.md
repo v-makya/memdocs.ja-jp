@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 849dd0bdb0f6583d525df8af3f6d46f8a4a9aecf
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904668"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879048"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1910 の新機能
 
@@ -120,10 +120,10 @@ CMPivot エンジンがさらに大幅に最適化されました。 これで�
 
 Configuration Manager 配布ポイントで Microsoft Connected Cache を有効にすると、Microsoft Intune Win32 アプリを共同管理クライアントに提供できるようになります。
 
-詳細については、「[Configuration Manager における Microsoft の接続済みキャッシュ](../hierarchy/microsoft-connected-cache.md#bkmk_intune)」を参照してください。
+詳細については、「[Configuration Manager における Microsoft 接続済みキャッシュ](../hierarchy/microsoft-connected-cache.md#bkmk_intune)」を参照してください。
 
 > [!NOTE]
-> Configuration Manager の Current Branch バージョン 1906 には、Windows Server にインストールされる、まだ開発中のアプリケーションである [Delivery Optimization In-Network Cache](../hierarchy/microsoft-connected-cache.md) (DOINC) が含まれていました。 Current Branch バージョン 1910 以降では、この機能は、Microsoft Connected Cache と呼ばれるようになりました。
+> Configuration Manager の Current Branch バージョン 1906 には、Windows Server にインストールされる、まだ開発中のアプリケーションである [Delivery Optimization In-Network Cache](../hierarchy/microsoft-connected-cache.md) が含まれていました。 Current Branch バージョン 1910 以降では、この機能は、Microsoft Connected Cache と呼ばれるようになりました。
 >
 > Connected Cache を Configuration Manager の配布ポイントにインストールすると、[配信の最適化] サービスのトラフィックがローカル ソースにオフロードされます。 Connected Cache では、コンテンツをバイト範囲レベルで効率的にキャッシュすることによって、この動作を行います。
 

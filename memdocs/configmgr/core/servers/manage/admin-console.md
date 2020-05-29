@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 58b66639094a602206114cd75a724504618ad38c
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: ac5b3ca8e8e2231bb421838fa56b20253ddfcb74
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110034"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878372"
 ---
 # <a name="how-to-use-the-configuration-manager-console"></a>Configuration Manager コンソールの使用方法
 
@@ -228,7 +228,7 @@ Configuration Manager バージョン 1902 以降、コンソールから次の�
 - コンソールのバージョンの不一致 (重要) コンソールのバージョンがサイトのバージョンと一致しません  
 - サイトのアップグレードが利用可能 (警告): 使用可能な新しい更新プログラム パッケージがあります  
 
-詳細とトラブルシューティングに役立つ情報については、コンソール コンピューター上の **SmsAdminUI.log** ファイルをご覧ください。 既定では、このログ ファイルは次のパスに配置されています。`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog\SmsAdminUI.log`
+詳細とトラブルシューティングに役立つ情報については、コンソール コンピューター上の **SmsAdminUI.log** ファイルをご覧ください。 既定では、このログ ファイルは次のパスに配置されています。`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog\SmsAdminUI.log`
 
 
 ## <a name="in-console-documentation-dashboard"></a><a name="bkmk_doc-dashboard"></a> コンソール内ドキュメント ダッシュボード

@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a670660bcf7b3f5cb8209aaf6d0b59eb0f343e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 27994107c32fac87a465240f07b68d57fddfc140
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691240"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983828"
 ---
 # <a name="paths-to-co-management"></a>共同管理へのパス
 
@@ -45,7 +45,6 @@ ms.locfileid: "81691240"
         - フェデレーション ドメイン用
 - ハイブリッド Azure AD 参加のクライアント エージェント設定
 - Intune へのデバイスの自動登録を構成する
-- Intune ユーザー ライセンスを割り当てる
 - Configuration Manager で共同管理を有効にする
 
 このパスのチュートリアルについては、「[Tutorial:Enable co-management for existing Configuration Manager clients](tutorial-co-manage-clients.md)」 (チュートリアル: 既存の Configuration Manager クライアントの共同管理を有効にする) を参照してください。

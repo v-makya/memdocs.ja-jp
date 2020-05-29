@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c7ad4e96d9afba7e52d2ff2e5dd3f4f6be0b9a98
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2db1a719aaf1cb79973f1af8e2de3c1bbb91d605
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078704"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879089"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1906 の新機能
 
@@ -186,7 +186,7 @@ CMPivot の機能を、ヘルプデスクやセキュリティ管理者など、
 ### <a name="use-your-distribution-point-as-an-in-network-cache-server-for-delivery-optimization"></a>配信最適化のネットワーク内キャッシュ サーバーとして配布ポイントを使用する
 
 <!--3555764-->
-自分の配布ポイントで配信の最適化のネットワーク内キャッシュ (DOINC) サーバーをインストールできるようになりました。 このコンテンツをオンプレミスでキャッシュすることによって、クライアントは配信の最適化機能から恩恵を受けることができますが、お客様が WAN リンクを保護するのに役立てることができます。
+自分の配布ポイントで配信の最適化のネットワーク内キャッシュ サーバーをインストールできるようになりました。 このコンテンツをオンプレミスでキャッシュすることによって、クライアントは配信の最適化機能から恩恵を受けることができますが、お客様が WAN リンクを保護するのに役立てることができます。
 
 このキャッシュ サーバーは、配信の最適化によってダウンロードされたコンテンツに対して、オンデマンドの透過型キャッシュとして機能します。 クライアント設定を使用して、このサーバーがローカルの Configuration Manager 境界グループのメンバーにのみ提供されるようにします。
 
