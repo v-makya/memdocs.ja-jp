@@ -157,6 +157,10 @@
               href: intune-endpoints.md
             - name: Intune 米国政府機関のエンドポイント
               href: intune-us-government-endpoints.md
+            - name: 中国のエンドポイント
+              href: china-endpoints.md
+            - name: 中国の 21Vianet が運用する Intune
+              href: china.md
         - name: Intune にサインインする
           href: account-sign-up.md
         - name: ドメインを構成する
