@@ -6,3 +6,9 @@
       href: device-sync-actions.md
     - name: デバイス アクションに関するトラブルシューティング
       href: technical-reference.md
+- name: テナントにアタッチされたデバイスの CMPivot (プレビュー)
+  items:
+    - name: CMPivot の概要
+      href: cmpivot-overview-attached.md
+    - name: CMPivot サンプル スクリプト
+      href: cmpivot-samples-attached.md

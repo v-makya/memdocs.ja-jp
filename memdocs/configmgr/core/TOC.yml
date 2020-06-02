@@ -264,6 +264,8 @@
       items:
         - name: Technical Preview の概要
           href: get-started/technical-preview.md
+        - name: 2005 の機能
+          href: get-started/2020/technical-preview-2005.md
         - name: 2004 の機能
           href: get-started/2020/technical-preview-2004.md
         - name: 2003 の機能
@@ -272,10 +274,6 @@
           href: get-started/2020/technical-preview-2002-2.md
         - name: 2002 の機能
           href: get-started/2020/technical-preview-2002.md
-        - name: 2001.2 の機能
-          href: get-started/2020/technical-preview-2001-2.md
-        - name: 2001 の機能
-          href: get-started/2020/technical-preview-2001.md
     - name: 階層間でのデータの移行
       items:
         - name: 移行の概要
@@ -470,6 +468,8 @@
       href: servers/manage/management-insights.md
     - name: CMPivot
       items:
+        - name: CMPivot の概要
+          href: servers/manage/cmpivot-overview.md
         - name: CMPivot を使う
           href: servers/manage/cmpivot.md
         - name: CMPivot のトラブルシューティング
