@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45f649a99f6b3d632fea9e46dfdaee89450ebd23
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5939d12003df78b459ebc12c294434826194b931
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989271"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166129"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Intune を使用して SCEP をサポートするようにインフラストラクチャを構成する
 
@@ -136,7 +136,7 @@ SCEP を使用する場合は、次の証明書とテンプレートが使用さ
      - **[Active Directory で証明書を発行する]** をオフにします。
      - 後でこのテンプレートを識別できるように、わかりやすい**テンプレート表示名**を指定します。
 
-   - **サブジェクト名**: 
+   - **サブジェクト名**:
 
      - **[要求に含まれる]** を選択します。 セキュリティは、NDES の Intune ポリシー モジュールによって適用されます。
 
@@ -224,9 +224,9 @@ Intune Certificate Connector では、NDES サーバーの**システム アカ�
 
 1. CA で次のコマンドを実行します。
 
-   -**certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**
-   -**net stop certsvc**
-   -**net start certsvc**
+   **certutil -setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE**  
+   **net stop certsvc**  
+   **net start certsvc**    
 
 2. 発行元 CA で、証明機関スナップインを使用して証明書テンプレートを発行します。 **[証明書テンプレート]** ノードを選択し、 **[アクション]**  >  **[新規]**  >  **[発行する証明書テンプレート]** の順に選択して、前のセクションで作成した証明書テンプレートを選択します。
 
