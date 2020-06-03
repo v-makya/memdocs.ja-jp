@@ -3,12 +3,12 @@ title: Microsoft Endpoint Configuration Manager のドキュメント
 summary: Microsoft Endpoint Manager の次のコンポーネントに関する公式製品ドキュメントです。Configuration Manager、共同管理、デスクトップ分析
 metadata:
   ms.topic: hub-page
-  ms.openlocfilehash: b890572e652528e1446f1dd2e194d933c27938dd
-  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.openlocfilehash: 0f8c1c2b9618b841053df58d580d8cee4d0e88fc
+  ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "81741478"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84311169"
 highlightedContent:
   items:
   - title: 新機能
@@ -33,8 +33,11 @@ conceptualContent:
   items:
   - title: クラウド接続の管理
     links:
-    - text: インターネット上のクライアントを管理する
-      url: ./core/clients/manage/manage-clients-internet.md
+    - text: Microsoft Endpoint Manager テナントのアタッチ
+      url: ./tenant-attach/index.yml
+      itemType: overview
+    - text: クラウド管理ゲートウェイの計画
+      url: ./core/clients/manage/cmg/plan-cloud-management-gateway.md
       itemType: overview
     - text: Azure AD の計画
       url: ./core/plan-design/security/plan-for-security.md#bkmk_planazuread
