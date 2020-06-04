@@ -10,12 +10,12 @@ ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 693f661f2a2db59335ec8e463842a0ad03c977f3
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: f9fafcc4b5462afb1b8e528837ea6ba61203e73d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724786"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347146"
 ---
 # <a name="manage-apps-for-on-premises-mdm-in-configuration-manager"></a>Configuration Manager でオンプレミス MDM のアプリを管理する
 
@@ -48,7 +48,7 @@ Windows Phone アプリを**利用可能**または**必須**として展開し�
 
 ## <a name="deploy-and-monitor-apps"></a>アプリの展開と監視
 
-デスクトップやサーバーなどの他のデバイスと同じように Configuration Manager でモバイルデバイスのアプリケーションを展開および監視します。 詳細については、次の記事を参照してください。
+デスクトップやサーバーなどの他のデバイスと同じように Configuration Manager でモバイルデバイスのアプリケーションを展開および監視します。 詳細については、以下の記事を参照してください。
 
 - [アプリケーションの展開](../../apps/deploy-use/deploy-applications.md)
 - [アプリケーションの監視](../../apps/deploy-use/monitor-applications-from-the-console.md)
@@ -61,4 +61,4 @@ Windows Phone アプリを**利用可能**または**必須**として展開し�
 
 ## <a name="next-step"></a>次のステップ
 
-デプロイされたアプリケーションを新しいアプリケーションに変更、アンインストール、または置き換えるには、Configuration Manager 内の任意のアプリと同じように管理します。 詳細については、「[アプリケーションの更新とインベントリからの削除](../../apps/deploy-use/update-and-retire-applications.md)」を参照してください。
+デプロイされたアプリケーションを新しいアプリケーションに変更、アンインストール、または置き換えるには、Configuration Manager 内の任意のアプリと同じように管理します。 詳しくは、「[アプリケーションを修正して置き換える](../../apps/deploy-use/revise-and-supersede-applications.md)」をご覧ください。
