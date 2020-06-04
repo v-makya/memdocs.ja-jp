@@ -10,12 +10,12 @@ ms.assetid: cb616925-bb94-4b7c-a867-b3d95aef4d5e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f9d2a7d4a16f85e9a5f78dd6251754d86527da87
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 05110714d3aa8ca48ff9384f0116338b0092fde1
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688980"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877621"
 ---
 # <a name="troubleshoot-package-conversion-manager"></a>パッケージ変換マネージャーのトラブルシューティング
 
@@ -58,10 +58,13 @@ Configuration Manager コンソールの **[パッケージ]** ノードの詳�
 
 ### <a name="enable-logging"></a>ログを有効にする
 
-パッケージ変換マネージャーでログを有効にすると、アクション、例外、およびエラーがすべて記録されます。 
+パッケージ変換マネージャーでログを有効にすると、アクション、例外、およびエラーがすべて記録されます。
 
 Configuration Manager でこのコンポーネントのログを有効にするには、**Microsoft.ConfigurationManagement.exe.Config** を変更します。既定では、この構成ファイルは次のパスにあります。  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`  
+
+> [!IMPORTANT]
+> バージョン 1910 以降、このパスは `Microsoft Endpoint Manager` フォルダーを使用するように変更されました。 別のフォルダーに存在する可能性がある古いバージョンのファイルを使用しないようにしてください。
 
 **system.diagnostics** 要素にある最後の **sources** 要素の後に、次に示す XML 要素 **switches** および **trace** を挿入します。
 

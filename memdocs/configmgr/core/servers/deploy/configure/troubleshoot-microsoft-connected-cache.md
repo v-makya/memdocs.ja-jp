@@ -10,19 +10,19 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5be6158a2ed7d79af2bee72c81a462e4d83b68e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700870"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878097"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager における Microsoft 接続済みキャッシュのトラブルシューティング
 
 この記事では、Configuration Manager の Microsoft 接続済みキャッシュに関する技術的な詳細情報について説明します。 使用している環境で発生する可能性のある問題のトラブルシューティングに役立ちます。 そのしくみと使用方法については、「[Configuration Manager における Microsoft 接続済みキャッシュ](../../../plan-design/hierarchy/microsoft-connected-cache.md)」を参照してください。
 
 > [!NOTE]
-> バージョン 1910 以降、この機能は、**Microsoft 接続済みキャッシュ**という名前になりました。 以前は、"配信の最適化のネットワーク内キャッシュ" (DOINC) という名前でした。
+> バージョン 1910 以降、この機能は、**Microsoft 接続済みキャッシュ**という名前になりました。 以前は、"配信の最適化のネットワーク内キャッシュ" という名前でした。
 
 ## <a name="verify"></a>確認事項
 

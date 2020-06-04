@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ce77c43f49556b3a60e36f05127f82d4d135762a
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: c9567cc441636bbda31262e0857e2fc6484c2af7
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643261"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153413"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configuration Manager の境界グループの構成
 
@@ -154,8 +154,16 @@ Configuration Manager の境界グループを利用し、関連するネット�
 
 ### <a name="client-installation"></a><a name="bkmk_ccmsetup"></a> クライアントのインストール
 
+Configuration Manager クライアント インストーラー、ccmsetup により、ローカル ソースから、または管理ポイントを介してインストール コンテンツを取得できます。 その初期動作は、クライアントのインストールに使用するコマンドライン パラメーターによって異なります。<!-- MEMDocs#286 -->
+
+- **/mp** または **/source** パラメーターのいずれも使用しない場合、ccmsetup では Active Directory または DNS からの管理ポイントの一覧の取得が試みられます。
+- **/source** のみを指定すると、指定されたパスのインストールが強制されます。 管理ポイントは検出されません。 指定されたパスに ccmsetup.cab が見つからない場合、ccmsetup は失敗します。
+- **/mp** と **/source** の両方を指定した場合、指定した管理ポイント (および管理ポイントがあるかどうか) がチェックされます。 有効な管理ポイントが見つからない場合、指定されたソース パスにフォールバックします。
+
+これらの ccmsetup パラメーターの詳細については、「[クライアント インストール パラメーターとプロパティ](../../../clients/deploy/about-client-installation-properties.md)」を参照してください。
+
 <!--1358840-->
-構成マネージャー クライアントをインストールするとき、ccmsetup プロセスにより管理ポイントが接触され、必要なコンテンツが検索されます。 今回、管理ポイントにより境界グループの構成に基づいて配布ポイントが返されます。 境界グループに関係を定義した場合、管理ポイントから配布ポイントが次の順序で返されます。
+ccmsetup が必要なコンテンツを見つけるために管理ポイントに接続されると、管理ポイントにより、境界グループの構成に基づいて配布ポイントが返されます。 境界グループに関係を定義した場合、管理ポイントから配布ポイントが次の順序で返されます。
 
 1. 現在の境界グループ  
 2. 近隣の境界グループ  

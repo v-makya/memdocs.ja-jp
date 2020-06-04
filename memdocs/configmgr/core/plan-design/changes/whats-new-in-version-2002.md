@@ -2,7 +2,7 @@
 title: バージョン 2002 の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager Current Branch のバージョン 2002 で導入された変更点および新機能について説明します。
-ms.date: 05/11/2020
+ms.date: 05/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1aca9058b0f095b7f25b345c15eed1446dcf61d2
-ms.sourcegitcommit: 7b224e138c0618e978be59832b3486f3745abacc
+ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83381555"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126483"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 2002 の新機能
 
@@ -328,6 +328,15 @@ Configuration Manager では、サービス スタックの更新プログラム
 
 <!-- 5229962 -->
 Configuration Manager では、デバイスを Microsoft Defender ATP にオンボードするためのサポートが拡張されました。 詳細については、「[Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices)」をご覧ください。
+
+## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Microsoft エンドポイント マネージャー管理センターを使用し構成マネージャー クライアントを Microsoft Defender ATP にオンボードする
+<!--5691658-->
+Microsoft Defender ATP エンドポイント検出と応答 (EDR) のオンボード ポリシーを、Configuration Manager 管理対象クライアントに展開できるようになりました。 これらのクライアントは Azure AD や MDM の登録を必要とせず、ポリシーは Azure AD グループではなく ConfigMgr コレクションを対象としています。
+
+この機能により、お客様は、Microsoft エンドポイント マネージャー管理センターという単一の管理エクスペリエンスから、Intune MDM と構成マネージャー クライアント EDR/ATP のオンボードの両方を管理できます。 詳細については、[Intune におけるエンドポイント セキュリティのエンドポイント検出と応答ポリシー](../../../../intune/protect/endpoint-security-edr-policy.md)に関するページを参照してください。
+
+> [!Important]
+> この機能を使用するには、環境にインストールされている修正プログラム ロールアップ [KB4563473](https://support.microsoft.com/help/4563473) が必要です。
 
 ### <a name="improvements-to-bitlocker-management"></a>BitLocker 管理の機能強化
 

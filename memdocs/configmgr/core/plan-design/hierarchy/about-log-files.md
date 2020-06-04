@@ -10,12 +10,12 @@ ms.assetid: b1751e3c-a60c-4ab7-a943-2595df1eb612
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d6be23adc7ac082545bffeef59ed52d3455d9931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 588bccc533909f2438dc61d6f25b39c3a582c71b
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703750"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879026"
 ---
 # <a name="about-log-files-in-configuration-manager"></a>Configuration Manager のログ ファイルについて
 
@@ -211,7 +211,10 @@ DebugLogging の設定では、サーバーによりトラブルシューティ�
 
 Configuration Manager コンソールの AdminUI.log の詳細レベルを変更するには、次の手順のようにします。
 
-1. コンソール構成ファイル **Microsoft.ConfigurationManagement.exe.config** を、メモ帳などの XML エディターで開きます。 既定の構成ファイルは次の場所にあります: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+1. コンソール構成ファイル **Microsoft.ConfigurationManagement.exe.config** を、メモ帳などの XML エディターで開きます。 既定の構成ファイルは次の場所にあります: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+    > [!IMPORTANT]
+    > バージョン 1910 以降、このパスは `Microsoft Endpoint Manager` フォルダーを使用するように変更されました。 別のフォルダーに存在する可能性がある古いバージョンのファイルを使用しないようにしてください。
 
 1. **system.diagnostics** > **sources** > **source** 要素で、**switchValue** 属性を `Error` から `Verbose` に変更します。 次に例を示します。
 
@@ -240,7 +243,7 @@ Configuration Manager と依存コンポーネントでは、さまざまな場�
 - クライアント: `C:\Windows\CCM\logs`
 - サーバー: `C:\Program Files\Microsoft Configuration Manager\Logs`
 - 管理ポイント: `C:\SMS_CCM\Logs`
-- Configuration Manager コンソール: `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\AdminUILog`
+- Configuration Manager コンソール: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\AdminUILog`
 - IIS: `C:\inetpub\logs\logfiles\w3svc1`
 
 ### <a name="task-sequence-log-locations"></a>タスク シーケンス ログの場所

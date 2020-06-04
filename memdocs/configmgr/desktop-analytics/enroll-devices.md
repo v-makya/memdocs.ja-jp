@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c10e3c1cb2a0044003415d8f55a0a4ac85058656
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 22b5461df3a560449316009471ea029967118f5d
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633322"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864902"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Desktop Analytics でデバイスを登録する方法
 
@@ -37,10 +37,10 @@ Desktop Analytics で最適なエクスペリエンスを得るために、こ�
 | OS のバージョン | Appraiser | DiagTrack |
 | --------------| ----------------------- | -------------------|
 | Windows 10 1909 | 含まれる <sup>[注 1](#bkmk_note1)</sup> | [最新の累積的な更新プログラム](https://support.microsoft.com/help/4529964) |
-| Windows 10 1903 | 含まれる | [最新の累積的な更新プログラム](https://support.microsoft.com/help/4498140) |
-| Windows 10 1809 | 含まれる | [最新の累積的な更新プログラム](https://support.microsoft.com/help/4464619) |
-| Windows 10 1803 | 含まれる | [最新の累積的な更新プログラム](https://support.microsoft.com/help/4099479) |
-| Windows 10 1709 | 含まれる | [最新の累積的な更新プログラム](https://support.microsoft.com/help/4043454) |
+| Windows 10 1903 | 含まれる <sup>[注 1](#bkmk_note1)</sup> | [最新の累積的な更新プログラム](https://support.microsoft.com/help/4498140) |
+| Windows 10 1809 | 含まれる <sup>[注 1](#bkmk_note1)</sup> | [最新の累積的な更新プログラム](https://support.microsoft.com/help/4464619) |
+| Windows 10 1803 | 含まれる <sup>[注 1](#bkmk_note1)</sup> | [最新の累積的な更新プログラム](https://support.microsoft.com/help/4099479) |
+| Windows 10 1709 | 含まれる <sup>[注 1](#bkmk_note1)</sup> | [最新の累積的な更新プログラム](https://support.microsoft.com/help/4043454) |
 | Windows 8.1 | [KB 2976978](https://support.microsoft.com/help/2976978) <sup>[注 2](#bkmk_note2)</sup> | [最新のマンスリー ロールアップ](https://support.microsoft.com/help/4009470) |
 | Windows 7 SP1 | [KB 2952664](https://support.microsoft.com/help/2952664) <sup>[注 3](#bkmk_note3)</sup> | [最新のマンスリー ロールアップ](https://support.microsoft.com/help/4009469) |
 
@@ -51,7 +51,7 @@ Desktop Analytics で最適なエクスペリエンスを得るために、こ�
 
 ### <a name="note-1-windows-10"></a><a name="bkmk_note1"></a> 注 1:Windows 10
 
-Windows 10 にはこれらのコンポーネントが既定で含まれていますが、Windows 10 デバイスで Desktop Analytics のすべての機能を利用するには、最新の累積的な更新プログラムが必要です。 たとえば、最新の OS バージョンとの互換性についてデバイスを評価する場合や、展開と登録状態に関するほぼリアルタイムの情報を取得する場合などです。
+Windows 10 にはこれらのコンポーネントが既定で含まれていますが、Windows 10 デバイスで Desktop Analytics のすべての機能 (最新の OS バージョンとの互換性についてのデバイスの評価など) を利用するには、最新の累積的な更新プログラムが必要です。
 
 ### <a name="note-2-windows-81"></a><a name="bkmk_note2"></a> 注 2:Windows 8.1
 

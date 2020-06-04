@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: e9031b09fa6749d619c8048e70331a6f7c67d472
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: b280661c4de9282d3907b7d480477fc67f6a8dc5
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633358"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83824066"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics とは
 
@@ -94,7 +94,7 @@ Desktop Analytics を使用するには、環境が次の前提条件を満た�
     > Desktop Analytics では、1 つの Azure AD テナントに報告する複数の Configuration Manager 階層がサポートされています。<!-- 4814075 --> 環境内に複数の階層がある場合は、次のオプションがあります。
     >
     > - 異なる商用 ID と Azure AD テナントを使用する。
-    > - 同じ商用 ID を使用して Azure AD テナントと Desktop Analytics インスタンスを共有するように、両方の階層を構成する。 各階層を接続するには、[異なるアプリ](connect-configmgr.md#bkmk_connect)を使用します。 ポータルに変更が反映されるには、階層を切断してから最大で 30 分かかることがあります。 
+    > - 同じ商用 ID を使用して Azure AD テナントと Desktop Analytics インスタンスを共有するように、両方の階層を構成する。 各階層を接続するには、[異なるアプリ](connect-configmgr.md#bkmk_connect)を使用します。 ポータルに変更が反映されるには、階層を切断してから最大で 30 日かかることがあります。 
 
 - Windows 7、Windows 8.1、または Windows 10 が実行されているデバイス  
 

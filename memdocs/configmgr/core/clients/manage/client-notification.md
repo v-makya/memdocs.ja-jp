@@ -10,12 +10,12 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7680c8f955773f169d56f36eb9bbe6507d2d7ce6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: cb7cc71618ad0f86abce3ab76d6344e0d23bfc58
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427817"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153418"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Configuration Manager のクライアント通知
 
@@ -140,7 +140,7 @@ Windows 10 クライアントによる最新のデバイスの正常性状態の
 
 - **詳細ログ記録を有効にする**:CCM コンポーネントのグローバル ログ レベルを詳細に変更し、デバッグ ログ記録を有効にします。
 - **詳細なログ記録を無効にする**:グローバル ログ レベルを既定に変更し、デバッグ ログ記録を無効にします。
-- **クライアント ログを収集する** (2002 以降):クライアント通知メッセージが、CCM ログを収集するために選択したクライアントに送信されます。 ログは、ソフトウェア インベントリ ファイル コレクションを使用して返されます。 <!--4226618-->
+- **クライアント ログを収集する** (2002 以降):このサイトでは、クライアント通知メッセージが、CCM ログを収集するために選択したクライアントに送信されます。 クライアントにより、ソフトウェア インベントリ ファイル コレクションと同じチャネルを使用して、管理ポイントにログが送信されます。 <!--4226618--> クライアント設定でソフトウェア インベントリを有効にする必要はありません。<!-- MEMDocs#305 -->
    - 圧縮されたクライアント ログのサイズの上限は 100 MB です。 <!--6366098-->
    - これらのファイルを管理および表示するには、[リソース エクスプローラー](inventory/use-resource-explorer-to-view-software-inventory.md#bkmk_diag)を使用します。
 

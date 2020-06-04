@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ccfb523cc1abc3a64d396f32d55a4dc4551987c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 12fee834e4f384cc180658a8e58cf3920a907831
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428607"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153446"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Configuration Manager のクライアント インストールのパラメーターとプロパティについて
 
@@ -80,6 +80,8 @@ ccmsetup.exe の使用可能なコマンド ライン パラメーターを表�
 
 ファイルのダウンロード場所を指定します。 ローカルまたは UNC パスを使用します。 デバイスにより、サーバー メッセージ ブロック (SMB) プロトコルを使用してファイルがダウンロードされます。 **/source** を使用するには、クライアント インストール用の Windows ユーザー アカウントに、その場所に対する**読み取り**アクセス許可が必要です。
 
+ccmsetup によってコンテンツがダウンロードされる方法の詳細については、[境界グループ - クライアントのインストール](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)に関するページを参照してください。 この記事には、 **/mp** と **/source** パラメーターの両方を使用した場合の ccmsetup の動作の詳細も含まれています。
+
 > [!TIP]  
 > コマンド ラインで **/source** パラメーターを複数回使用して、ダウンロードの代替場所を指定することができます。  
 
@@ -88,6 +90,8 @@ ccmsetup.exe の使用可能なコマンド ライン パラメーターを表�
 ### <a name="mp"></a>/mp
 
 コンピューターの接続先のソース管理ポイントを指定します。 コンピューターではこの管理ポイントを使用して、インストール ファイルの最も近い配布ポイントを見つけます。 配布ポイントがない、またはコンピューターで 4 時間経っても配布ポイントからファイルをダウンロードできない場合、指定された管理ポイントからファイルがダウンロードされます。  
+
+ccmsetup によってコンテンツがダウンロードされる方法の詳細については、[境界グループ - クライアントのインストール](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)に関するページを参照してください。 この記事には、 **/mp** と **/source** パラメーターの両方を使用した場合の ccmsetup の動作の詳細も含まれています。
 
 > [!IMPORTANT]  
 > このパラメーターを使用すると、コンピューターでダウンロード ソースを見つけるための最初の管理ポイントを指定できます。これには、任意のサイト内の任意の管理ポイントを指定できます。 指定した管理ポイントにクライアントを "*割り当てる*" わけではありません。

@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ab54d278caaeeb29bbd8871819de10af97dcf830
-ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
+ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82842208"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83878490"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager における Microsoft 接続済みキャッシュ
 
@@ -26,7 +26,7 @@ ms.locfileid: "82842208"
 バージョン 1906 以降、配布ポイントに Microsoft 接続済みキャッシュ サーバーをインストールできます。 このコンテンツをオンプレミスでキャッシュすることによって、クライアントは配信の最適化機能から恩恵を受けることができますが、お客様が WAN リンクを保護するのに役立てることができます。
 
 > [!NOTE]
-> バージョン 1910 以降、この機能は、**Microsoft 接続済みキャッシュ**という名前になりました。 以前は、"配信の最適化のネットワーク内キャッシュ" (DOINC) という名前でした。
+> バージョン 1910 以降、この機能は、**Microsoft 接続済みキャッシュ**という名前になりました。 以前は、"配信の最適化のネットワーク内キャッシュ" という名前でした。
 
 このキャッシュ サーバーは、配信の最適化によってダウンロードされたコンテンツに対して、オンデマンドの透過型キャッシュとして機能します。 クライアント設定を使用して、このサーバーがローカルの Configuration Manager 境界グループのメンバーにのみ提供されるようにします。
 

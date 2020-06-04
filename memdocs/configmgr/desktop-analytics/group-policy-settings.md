@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 8251e21c7eccb87b764af75e883018bdc894ca37
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 4536adad3114b944baa6c75ac4e246ecddf4a2d2
+ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268676"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153459"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Desktop Analytics のグループ ポリシーの設定
 

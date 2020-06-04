@@ -10,12 +10,12 @@ ms.assetid: 69550b35-bcdb-4b47-bbec-b3c8bc92bb7b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 96cce5d4aaa352177b1c24ff78cf15e90ea6e823
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4a9ae791582911f91e5f76b841248ad5085d8170
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694410"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879814"
 ---
 # <a name="monitor-database-replication"></a>データベース レプリケーションの監視
 
@@ -122,7 +122,10 @@ RLA は、Configuration Manager コンソールまたはコマンド プロン�
 
 - Configuration Manager コンソールで実行するには、 **[監視]** ワークスペースに移動し、 **[データベースのレプリケーション]** ノードを選択します。 分析するレプリケーション リンクを選択してから、リボンで **[レプリケーション リンク アナライザー]** を選択します。  
 
-- コマンド プロンプトで実行するには、コマンド「`%ProgramFiles(x86)%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`」を入力します。  
+- コマンド プロンプトで実行するには、コマンド「`%ProgramFiles(x86)%\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe <source site server FQDN> <destination site server FQDN>`」を入力します。  
+
+    > [!IMPORTANT]
+    > バージョン 1910 以降、このパスは `Microsoft Endpoint Manager` フォルダーを使用するように変更されました。 別のフォルダーに存在する可能性がある古いバージョンのファイルを使用しないようにしてください。
 
 RLA を実行すると、一連の診断規則とチェックに従って問題が検出されます。 ツールによって見つかった問題が表示されます。 問題を解決するための指示がある場合は表示されます。 RLA で自動的に問題を修復できる場合は、そのオプションが表示されます。
 

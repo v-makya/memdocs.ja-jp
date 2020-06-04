@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ba67fee260867494302e49b7c9d3a97480e236b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708380"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823981"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>Configuration Manager でのレポートの構成
 
@@ -130,7 +130,7 @@ Configuration Manager コンソール内でレポートを表示または管理�
 
     - **レポート サービス ポイントのアカウント**: **[設定]** を選択し、使用するアカウントを選択します。 レポート サービス ポイント上の SQL Server Reporting Services では、Configuration Manager サイト データベースに接続するためにこのアカウントが使用されます。 この接続は、レポートのデータを取得するためのものです。 **[既存のアカウント]** を選択して、以前に Configuration Manager アカウントとして構成した Windows ユーザー アカウントを指定します。 **[新しいアカウント]** を選択して、現在使用するように構成されていない Windows ユーザー アカウントを指定します。 Configuration Manager は指定したユーザーにサイト データベースへのアクセスを自動的に付与します。  
 
-        Reporting Services を実行するアカウントは、ドメイン ローカル セキュリティ グループ **Windows Authorization Access Group** に属している必要があります。 また、 **[tokenGroupsGlobalAndUniversal の読み取り]** アクセス許可が **[許可]** に設定されている必要もあります。 レポート サービス ポイント アカウントとは異なるドメイン内のユーザーがレポートを正常に実行するには、ドメイン間の双方向の信頼が必要です。
+        Reporting Services を実行するアカウントは、ドメイン ローカル セキュリティ グループ **Windows Authorization Access Group** に属している必要があります。 これにより、ドメイン内のすべてのユーザー オブジェクトについて、**tokenGroupsGlobalAndUniversal** 属性に対する**読み取りを許可**のアクセス許可がアカウントに付与されます。 レポート サービス ポイント アカウントとは異なるドメイン内のユーザーがレポートを正常に実行するには、ドメイン間の双方向の信頼が必要です。
 
         指定された Windows ユーザー アカウントとパスワードは、暗号化されて Reporting Services データベースに格納されます。 Reporting Services は、このアカウントとパスワードを使用して、サイト データベースからレポートのデータを取得します。  
 

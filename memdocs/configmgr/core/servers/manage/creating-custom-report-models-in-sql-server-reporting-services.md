@@ -10,12 +10,12 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 590f3adec168fe6d7f4718505bd6f7d6b9f7c25f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: fe570eeedc2c050bdaf27903d30ddffff63109d9
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692730"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83879160"
 ---
 # <a name="creating-custom-report-models-for-configuration-manager-in-sql-server-reporting-services"></a>SQL Server Reporting Services での Configuration Manager のカスタム レポート モデルの作成
 
@@ -413,7 +413,7 @@ ms.locfileid: "81692730"
 
 9. ファイル _&lt;モデル名\>_ **.smdl** を保存して閉じます。  
 
-10. ファイル _&lt;モデル名\>_ **.smdl** を、Configuration Manager サイト サーバー上の フォルダー *%programfiles%* \Microsoft Configuration Manager\AdminConsole\XmlStorage\Other にコピーします。  
+10. ファイル _&lt;Model Name\>_ **.smdl** を、Configuration Manager サイト サーバー上のフォルダー *%programfiles%* \Microsoft Endpoint Manager\AdminConsole\XmlStorage\Other にコピーします。  
 
     > [!IMPORTANT]  
     >  レポート モデル ファイルを Configuration Manager サイト サーバーにコピーした後は、まず Configuration Manager コンソールを終了し再起動しないと、**レポートの作成ウィザード**でレポート モデルを使用できません。  

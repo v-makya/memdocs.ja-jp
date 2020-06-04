@@ -2,7 +2,7 @@
 title: リリース ノート
 titleSuffix: Configuration Manager
 description: 製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題について説明します。
-ms.date: 04/08/2020
+ms.date: 05/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: da0b9fc5600a957680ad22e54edc176c892527a6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
+ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700650"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83823964"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager のリリース ノート
 
@@ -33,6 +33,8 @@ Configuration Manager 製品のリリース ノートには、緊急の問題の
 - [バージョン 1910 の新機能](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [バージョン 1906 の新機能](../../../plan-design/changes/whats-new-in-version-1906.md)  
 - [バージョン 1902 の新機能](../../../plan-design/changes/whats-new-in-version-1902.md)
+
+Desktop Analytics の新機能の詳細については、「[Desktop Analytics の新機能](../../../../desktop-analytics/whats-new.md)」を参照してください。
 
 > [!Tip]  
 > このページが更新されたときに通知を受け取るには、次の URL をコピーして RSS フィード リーダーに貼り付けます。`https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
@@ -76,7 +78,7 @@ Windows Server 2019 を実行しているドメイン コントローラーを�
 <!-- 4797313 -->
 *適用対象: バージョン 1906 以降*
 
-次の機能のいずれかを構成後: 
+次の機能のいずれかを構成後:
 
 - Azure Active Directory ユーザー グループの探索
 - コレクションのメンバーシップの結果の Azure Active Directory グループとの同期
@@ -165,6 +167,15 @@ Windows Server 2019 を実行しているドメイン コントローラーを�
 詳しくは、「[カスタム セキュリティ ロールの作成](../configure/configure-role-based-administration.md#BKMK_CreateSecRole)」をご覧ください
 
 ## <a name="desktop-analytics"></a>Desktop Analytics
+
+### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a> Windows 7 向けの拡張セキュリティ更新プログラムによって、**登録できない**と表示される
+
+<!-- 7283186 -->
+_適用対象:Configuration Manager バージョン 1902、1906、1910、および 2002_
+
+2020 年 4 月の Windows 7 向け拡張セキュリティ更新プログラム (ESU) では、diagtrack.dll の最低限必要なバージョンが 10586 から 10240 に変更されました。 この変更により、Windows 7 デバイスが、Desktop Analytics **接続正常性**ダッシュボードに、**登録できない**と表示されます。 この状態のデバイス ビューにドリルダウンすると、**DiagTrack サービス構成**プロパティにより、次の状態が表示されます: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`。
+
+この問題は、解決策を必要としません。 4 月の ESU はアンインストールしないでください。 適切に構成されている場合、Windows 7 デバイスにより診断データが Desktop Analytics サービスに引き続き報告され、デバイスはポータルに引き続き表示されます。
 
 ### <a name="if-you-use-hardware-inventory-for-distributed-views-you-cant-onboard-to-desktop-analytics"></a>分散ビューのハードウェア インベントリを使用する場合、Desktop Analytics にオンボードすることはできない
 

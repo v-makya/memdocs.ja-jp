@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ced1cc1347167451d4efb789b40746ff849710ee
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9178b595ba67723c623979b4c29290e42fe5f6ac
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689080"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83877743"
 ---
 # <a name="technical-reference-for-the-package-conversion-manager-plug-in-configuration-xml"></a>Package Conversion Manager プラグイン構成 XML のテクニカル リファレンス
 
@@ -44,7 +44,10 @@ ms.locfileid: "81689080"
 ## <a name="sample-configuration-xml"></a>サンプルの構成 XML
 
 このセクションでは、Configuration Manager 構成ファイル、**Microsoft.ConfigurationManagement.exe.config** 内にある Package Conversion Manager 構成の XML 要素の例を示します。既定では、このファイルは次のパスに配置されています。  
-`C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+`C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
+
+> [!IMPORTANT]
+> バージョン 1910 以降、このパスは `Microsoft Endpoint Manager` フォルダーを使用するように変更されました。 別のフォルダーに存在する可能性がある古いバージョンのファイルを使用しないようにしてください。 
 
 サンプルでは、Package Conversion Manager に関連する要素は、`Microsoft.ConfigurationManagement.UserCentric.Workflow.Properties.Settings` 要素内にあります。
 
