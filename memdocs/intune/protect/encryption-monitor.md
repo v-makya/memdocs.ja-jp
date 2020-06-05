@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 11/18/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0b634dad49b11e39e9a046688f0b5fd9ddc53ab4
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 1199c6db96325a103394cfb53a4ca70092cd3767
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254998"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989652"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Intune でデバイスの暗号化を監視する
 
@@ -107,7 +107,7 @@ Microsoft Intune の暗号化レポートは、デバイスの暗号化状態に
 
   Intune から報告される状態の詳細の例を次に示します。
 
-  **macOS**: 
+  **macOS**:
   - 回復キーは取得されておらず、まだ保存されていません。 ほとんどの場合は、デバイスのロックが解除されていないか、またはチェックインされていません。
 
     *考慮事項:この結果は、必ずしもエラー状態を表しているわけではありませんが、暗号化要求がデバイスに送信される前に回復キーのエスクローを設定する必要があるデバイス上で、タイミングが原因で起こり得る一時的な状態を表します。また、この状態は、デバイスがロックされたままであるか、最近 Intune にチェックインされていないことを示している可能性があります。最後に、デバイスが接続 (充電) されるまで FileVault 暗号化は開始されないため、ユーザーは、まだ暗号化されていないデバイスの回復キーを受け取る可能性があります*。
@@ -169,68 +169,20 @@ Microsoft Intune の暗号化レポートは、デバイスの暗号化状態に
 
 このレポートは、デバイス グループの問題の特定に使用できます。 たとえば、レポートを使用して、"*FileVault がユーザーによって既に有効にされている*" と報告されているすべての macOS デバイスのリストを識別することができます。これは、Intune によって FileVault 設定の管理が開始される前に、手動で暗号化を解除する必要があるデバイスを示しています。
 
-## <a name="filevault-recovery-keys"></a>FileVault 回復キー
+## <a name="manage-recovery-keys"></a>回復キーの管理
 
-Intune で FileVault を使用して macOS デバイスを最初に暗号化するときに、個人用回復キーが作成されます。 暗号化時に、デバイスではエンドユーザーに対して個人キーが一度だけ表示されます。
+回復キーの管理の詳細については、Intune のドキュメントの次の情報を参照してください。
 
-マネージド デバイスの場合、Intune で個人用回復キーのコピーをエスクローできます。 キーのエスクローにより、Intune 管理者は、デバイスの保護に役立つようにキーを交換したり、紛失または交換した個人用回復キーを回復したりすることができます。
+macOS FileVault:
+- [個人用回復キーの取得](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [回復キーの交換](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
+- [回復キーの回復](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 
-Intune では、個人用回復キーの交換と回復のための複数のオプションがサポートされています。 キーを交換する理由の 1 つは、現在の個人用キーが失われた場合や、リスクがあると考えられる場合です。
-
-> [!IMPORTANT]
-> Intune ではなく、ユーザーによって暗号化されたデバイスを、Intune で管理することはできません。 つまり、Intune では、これらのデバイスの個人用回復キーをエスクローしたり、回復キーの交換を管理したりすることはできません。 Intune でデバイスの FileVault および回復キーを管理できるようにするには、ユーザーがデバイスの暗号化を解除してから、Intune でデバイスを暗号化する必要があります。
-
-### <a name="rotate-recovery-keys"></a>回復キーを交換する
-
-- **自動交換**:管理者は、定期的に新しい回復キーを自動生成するように、FileVault 設定の個人用回復キーの交換を構成できます。 デバイスに対して新しいキーが生成されると、そのキーはユーザーに表示されません。 代わりに、ユーザーは管理者から、またはポータル サイト アプリを使用して、キーを取得する必要があります。
-
-- **手動交換**:管理者は、Intune で管理し、FileVault で暗号化されているデバイスの情報を表示できます。 その後、会社のデバイスの回復キーを手動で交換するように選択できます。 個人のデバイスの回復キーを交換することはできません。
-
-  回復キーを交換するには、次のようにします。
-
-  1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
-  
-  2. **[デバイス]**  >  **[すべてのデバイス]** の順に選択します。
-  
-  3. デバイスのリストから、暗号化され、キーを交換するデバイスを選択します。 その後、[監視] で  **[回復キー]** を選択します。
-  
-  4. [回復キー] ウィンドウで、 **[FileVault 回復キーの交換]** を選択します。
-
-     次回、デバイスで Intune にチェックインしたときに、個人用キーが交換されます。 必要に応じて、エンドユーザーがポータル サイトを介して新しいキーを取得できます。
-
-### <a name="recover-recovery-keys"></a>回復キーを回復する
-
-- **管理者**:管理者は、FileVault で暗号化されたデバイスの個人用回復キーを表示することはできません。
-
-- **エンドユーザー**:エンドユーザーは、任意のデバイスからポータル Web サイトを使用して、マネージド デバイスのいずれかの現在の個人用回復キーを表示します。 ポータル サイト アプリから回復キーを表示することはできません。
-
-  回復キーを表示するには、次のようにします。
-  
-  1. 任意のデバイスから、*Intune ポータル サイト* Web サイトにサインインします。
-
-  2. ポータルで、 **[デバイス]** に移動し、FileVault で暗号化された macOS デバイスを選択します。
-
-  3. **[回復キーを取得する]** を選択します。 現在の回復キーが表示されます。
-
-## <a name="bitlocker-recovery-keys"></a>BitLocker 回復キー
-
-Intune では BitLocker 用の Azure AD ブレードにアクセスできます。これにより、Intune ポータル内から、ご利用の Windows 10 デバイス用の BitLocker キー ID および回復キーを確認できます。 アクセスできるようになるには、デバイスのキーが Azure AD にエスクローされている必要があります。
-
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
-
-2. **[デバイス]**  >  **[すべてのデバイス]** の順に選択します。
-
-3. 一覧からデバイスを選択して、 *[監視]* 下にある **[回復キー]** を選択します。
-  
-   キーが Azure AD で利用できる場合は、次の情報を入手できます。
-   - BitLocker キー ID
-   - BitLocker 回復キー
-   - ドライブの種類
-
-   キーが Azure AD 内に存在していない場合、Intune によって "*このデバイスの BitLocker キーが見つかりません*" が表示されます。
-
-BitLocker の情報については、[BitLocker 構成サービス プロバイダー](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP) に関するページを参照してください。 BitLocker CSP は、Windows 10 の場合、バージョン 1709 以降で、Windows 10 Pro の場合、バージョン 1809 以降でサポートされています。
+Windows 10 BitLocker:
+- [BitLocker 回復キーの交換](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)
 
 ## <a name="next-steps"></a>次のステップ
 
-[デバイス コンプライアンス](compliance-policy-create-windows.md) ポリシーを作成する。
+[BitLocker ポリシーの管理](../protect/encrypt-devices.md)
+
+[FileVault ポリシーの管理](encrypt-devices-filevault.md)

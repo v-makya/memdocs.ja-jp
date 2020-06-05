@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8b8bde6b7979cfe3b936a08630e23e19fc7e5a0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: fff21eac61f7b68e00989aefc1f9ea6dc3ad7c0a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81615050"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989313"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Intune で非準拠デバイスに対するアクションを構成する
 
@@ -55,11 +55,25 @@ ms.locfileid: "81615050"
 
 - **コンプライアンス違反デバイスをリモートでロックする**:デバイスのリモート ロックを発行するには、このアクションを使用します。 その後、ユーザーにはデバイスのロックを解除するための PIN またはパスワードが求められます。 詳細については、[リモート ロック機能](../remote-actions/device-remote-lock.md)に関するページを参照してください。
 
+  この操作は、次のプラットフォームでサポートされています。
+  - Android:
+    - Android デバイス管理者
+    - Android エンタープライズ デバイスの所有者
+    - Android Enterprise 仕事用プロファイル
+    - Android エンタープライズ キオスク デバイス
+  - iOS/iPadOS
+  - macOS
+  - Windows 10 Mobile
+  - Windows Phone 8.1 以降
+
 - **コンプライアンス違反デバイスをインベントリから削除する**:この操作により、デバイスからすべての会社データが削除され、デバイスが Intune 管理から削除されます。 デバイスをうっかり削除してしまうことを防ぐため、このアクションでは、**30** 日間という最小スケジュールがサポートされています。
 
   この操作は、次のプラットフォームでサポートされています。
-  - Android
-  - iOS
+  - Android:
+    - Android デバイス管理者
+    - Android エンタープライズ デバイスの所有者
+    - Android Enterprise 仕事用プロファイル
+  - iOS/iPadOS
   - macOS
   - Windows 10 Mobile
   - Windows Phone 8.1 以降
@@ -161,7 +175,7 @@ ms.locfileid: "81615050"
 
    - **コンプライアンス違反デバイスをリモートでロックする**:デバイスがコンプライアンスに違反しているとき、デバイスをロックします。 このアクションにより、ユーザーはデバイスのロックを解除するために PIN またはパスコードを入力するよう強制されます。
 
-   - **コンプライアンス違反デバイスをインベントリから削除する**:デバイスがコンプライアンスに違反しているとき、デバイスから会社のデータをすべて削除し、Intune 管理からデバイスを削除します。 デバイスをうっかり削除してしまうことを防ぐため、このアクションでは、**30** 日間という最小スケジュールがサポートされています。
+   - **コンプライアンス違反デバイスをインベントリから削除する**:デバイスがコンプライアンスに違反しているとき、デバイスから会社のデータをすべて削除し、Intune 管理からデバイスを削除します。
 
    - **エンド ユーザーにプッシュ通知を送信する**:デバイスのポータル サイト アプリまたは Intune アプリを使用して、デバイスへの非準拠に関するプッシュ通知を送信するように、このアクションを構成します。
 

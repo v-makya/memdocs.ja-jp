@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e77c1dd32bc70b94d5c4fdd74ea82dbd65211e38
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 2614dfc903bf7f10633bf05414ed8a71cdd2e03b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166640"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990626"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Windows の基幹業務アプリを Microsoft Intune に追加する
 
@@ -50,7 +50,7 @@ ms.locfileid: "82166640"
    アプリの詳細が表示されます。
 
     > [!NOTE]
-    > Windows アプリのファイル拡張子には、 **.msi**、 **.appx**、 **.appxbundle**、 **.msix**、 **.msixbundle** が含まれます。  
+    > Windows アプリのファイル拡張子には、 **.msi**、 **.appx**、 **.appxbundle**、 **.msix**、 **.msixbundle** が含まれます。 **.msix** の詳細については、[MSIX のドキュメント](https://docs.microsoft.com/windows/msix/)および「[MSIX アプリの配布](https://docs.microsoft.com/windows/msix/desktop/managing-your-msix-deployment-enterprise)」を参照してください。
 
 3. 操作を完了したら、 **[アプリ パッケージ ファイル]** ペインの **[OK]** を選択してアプリを追加します。
 

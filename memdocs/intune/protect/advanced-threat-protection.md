@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: beea54b7ca244190ec0821d4ce8364369797590a
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 35871aba60d45719b9a6da50184a6113f72e6044
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166615"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989304"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Intune で条件付きアクセスによる Microsoft Defender ATP のコンプライアンスを強制する
 
@@ -204,7 +204,7 @@ Windows デバイスと Android デバイスのどちらでも、コンプライ
 
 ## <a name="view-onboarding-status"></a>オンボードの状態を表示する
 
-Intune で管理されているすべての Windows 10 デバイスのオンボードの状態を確認するには、 **[テナント管理]**  >  **[Microsoft Defender ATP]** に移動します。 このページから、さらに多くのデバイスを Microsoft Defender ATP にオンボードするためのデバイス構成プロファイルの作成を開始することもできます。
+Intune で管理されているすべての Windows 10 デバイスのオンボードの状態を確認するには、 **[エンドポイント セキュリティ]**  >  **[Microsoft Defender ATP]** に移動します。 このページから、さらに多くのデバイスを Microsoft Defender ATP にオンボードするためのデバイス構成プロファイルの作成を開始することもできます。
 
 ## <a name="next-steps"></a>次のステップ
 

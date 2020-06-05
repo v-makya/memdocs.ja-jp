@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de679314bcd3b52ff879fbe9a6340a61d2b7e993
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 68e337f6315fc6d198e27c494b7689bb1cb9bc97
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078364"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989611"
 ---
 # <a name="app-protection-policies-overview"></a>アプリ保護ポリシーの概要
 
@@ -84,6 +84,18 @@ Intune アプリ保護ポリシーのプラットフォーム サポートは、
 > [!IMPORTANT]
 > Android でアプリ保護ポリシーを受信するには、デバイスに Intune ポータル サイトが必要です。 詳細については、[Intune ポータル サイト アクセス アプリの要件](../fundamentals/end-user-mam-apps-android.md#access-apps)に関するページを参照してください。
 
+## <a name="app-protection-policy-data-protection-framework"></a>APP 保護ポリシーのデータ保護フレームワーク
+
+アプリ保護ポリシー (APP) で利用できる選択肢を使用することで、組織は固有のニーズに合わせて保護を調整できます。 場合によっては、完全なシナリオを実装するためにどのポリシー設定が必要であるかが明確ではないことがあります。 組織がモバイル クライアント エンドポイントのセキュリティ強化を優先できるよう、Microsoft では、iOS および Android モバイル アプリ管理のための APP データ保護フレームワークの分類を導入しました。
+
+APP データ保護フレームワークは 3 つの異なる構成レベルに編成されており、各レベルは前のレベルを基に構築されています。
+
+- **エンタープライズ基本データ保護** (レベル 1) では、アプリは PIN で保護され、暗号化されており、選択的ワイプ操作が実行されます。 Android デバイスの場合、このレベルでは Android デバイスの構成証明を検証します。 これは、Exchange Online メールボックス ポリシーに類似したデータ保護制御を提供し、IT 部門およびユーザー集団に APP を経験させる、エントリ レベルの構成です。
+- **エンタープライズ拡張データ保護** (レベル 2) では、APP データ漏えい防止メカニズムと OS の最小要件が導入されています。 この構成は、職場または学校のデータにアクセスするほとんどのモバイル ユーザーに適用されます。
+- **エンタープライズ高度データ保護** (レベル 3) では、高度なデータ保護メカニズム、強化された PIN の構成、および APP Mobile Threat Defense が導入されています。 この構成は、危険度の高いデータにアクセスするユーザーに適しています。
+
+各構成レベルおよび、最低限保護する必要のあるアプリに関する具体的な推奨事項については、「[アプリ保護ポリシーを使用するデータ保護フレームワーク](app-protection-framework.md)」を参照してください。
+
 ## <a name="how-app-protection-policies-protect-app-data"></a>アプリ保護ポリシーでアプリのデータを保護するしくみ
 
 ### <a name="apps-without-app-protection-policies"></a>アプリ保護ポリシーのないアプリ
@@ -143,13 +155,13 @@ Intune SDK 開発チームは、ネイティブの Android、iOS/iPadOS (Obj-C�
 
 次の一覧に、Intune マネージド アプリ上でアプリ保護ポリシーを使用するためのエンドユーザーの要件を示します。
 
-- エンドユーザーに、Azure Active Directory (AAD) アカウントが必要です。 Azure Active Directory で Intune ユーザーを作成する方法については、「[Intune にユーザーを追加して管理権限を付与する](../fundamentals/users-add.md)」を参照してください。
+- エンドユーザーには、Azure Active Directory (Azure AD) アカウントが必要です。 Azure Active Directory で Intune ユーザーを作成する方法については、「[Intune にユーザーを追加して管理権限を付与する](../fundamentals/users-add.md)」を参照してください。
 
 - エンドユーザーに、Azure Active Directory アカウントに割り当てられた Microsoft Intune のライセンスが必要です。 Intune ライセンスをエンドユーザーに割り当てる方法については、「[Intune のライセンスを管理する](../fundamentals/licenses-assign.md)」を参照してください。
 
 - エンドユーザーは、アプリ保護ポリシーの対象となるセキュリティ グループに属している必要があります。 同一のアプリ保護ポリシーでは、使用中の特定のアプリを対象とする必要があります。 アプリ保護ポリシーは、[Azure Portal](https://portal.azure.com) の Intune コンソールで作成して展開できます。 セキュリティ グループは現在のところ、[Microsoft 365 管理センター](https://admin.microsoft.com)で作成できます。
 
-- エンドユーザーは、AAD アカウントを使用してアプリにサインインする必要があります。
+- エンドユーザーは、Azure AD アカウントを使用してアプリにサインインする必要があります。
 
 ## <a name="app-protection-policies-for-microsoft-office-apps"></a>Microsoft Office アプリに対するアプリ保護ポリシー
 
@@ -207,7 +219,7 @@ iOS/iPadOS 用および Android 用の OneDrive アプリと SharePoint アプ�
 Outlook では、"個人" と "企業" 両方の電子メールが組み合わさった電子メール表示になっています。 この場合、Outlook アプリでは、起動時に Intune PIN の入力が求められます。
 
   >[!NOTE]
-  > Edge は "企業" のコンテキスト内にありますが、ユーザーは OneDrive の "企業" のコンテキスト ファイルを不明な個人のクラウド ストレージの場所に意図的に移動できます。 これを回避するには、「[Microsoft Edge に対して許可またはブロックするサイトのリストを指定する](../apps/manage-microsoft-edge.md#specify-allowed-or-blocked-sites-list-for-microsoft-edge)」を参照し、Edge の許可またはブロックするサイトのリストを構成します。
+  > Edge は "企業" のコンテキスト内にありますが、ユーザーは OneDrive の "企業" のコンテキスト ファイルを不明な個人のクラウド ストレージの場所に意図的に移動できます。 これを回避するには、[制限された Web サイトを管理する](manage-microsoft-edge.md#manage-restricted-web-sites)方法に関する記事を参照して、許可またはブロックされたサイトのリストを Edge 用に構成します。
 
 Intune での複数 ID の詳細については、[MAM および複数 ID](apps-supported-intune-apps.md) に関する記事を参照してください。
 
@@ -310,7 +322,7 @@ Intune アプリ保護ポリシーでは、アプリへのアクセスを制御�
 このプロセスの目的は、アプリ内にある組織のデータを、アプリ レベルで安全に保護し続けることです。 この機能は iOS/iPadOS でのみ使用可能で、iOS/iPadOS 用 Intune SDK のバージョン 9.0.1 以降を統合するアプリケーションの参加が必要です。 SDK の統合は、対象のアプリケーション上で動作を適用するために必要です。 この統合は、ローリング方式で行われ、特定のアプリケーション チームに依存します。 参加するアプリケーションには、WXP、Outlook、Managed Browser、Yammer などが含まれます。
   
 ### <a name="ios-share-extension"></a>iOS 共有拡張機能
-データ転送ポリシーで **[マネージド アプリのみ]** または **[アプリなし]** に設定されている場合であっても、iOS/iPadOS 共有拡張機能を使用すると、アンマネージド アプリ内の職場または学校のデータを開くことができます。 Intune アプリ保護ポリシーは、デバイスを管理することなく iOS/iPadOS 共有拡張機能を制御することはできません。 したがって、Intune は _**"企業" データがアプリの外部で共有される前に、データを暗号化します**_ 。 マネージド アプリの外部で "企業" ファイルを開いてみると、この暗号化の動作を確認できます。 ファイルは暗号化されていて、管理対象アプリの外部では開くことができないはずです。
+データ転送ポリシーで **[マネージド アプリのみ]** または **[アプリなし]** に設定されている場合であっても、iOS/iPadOS 共有拡張機能を使用すると、アンマネージド アプリ内の職場または学校のデータを開くことができます。 Intune アプリ保護ポリシーは、デバイスを管理することなく iOS/iPadOS 共有拡張機能を制御することはできません。 したがって、Intune は _**"企業" データがアプリの外部で共有される前に、データを暗号化します**_。 マネージド アプリの外部で "企業" ファイルを開いてみると、この暗号化の動作を確認できます。 ファイルは暗号化されていて、管理対象アプリの外部では開くことができないはずです。
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>同じアプリとユーザーのセットに対する複数の Intune アプリ保護アクセスの設定
 エンドユーザー デバイスが会社のアカウントから対象のアプリにアクセスしようとすると、アクセスに関する Intune アプリ保護ポリシーが所定の順序で適用されます。 通常、優先順位は、ワイプ、ブロック、無視できる警告となります。 たとえば、特定のユーザーまたはアプリに適用可能な場合、ユーザーのアクセスをブロックする最小の iOS/iPadOS オペレーティング システム設定の後、iOS/iPadOS バージョンを更新するようユーザーに警告する最小の iOS/iPadOS オペレーティング システム設定が適用されます。 したがって、IT 管理者が最小の iOS オペレーティング システムを 11.0.0.0 に構成し、最小の iOS オペレーティング システム (警告のみ) を 11.1.0.0 に構成した状態で、アプリにアクセスしようとしているデバイスが iOS 10 にあった場合、エンド ユーザーは最小の iOS オペレーティング システム バージョンに対するより制限の厳しい設定に基づいてブロックされ、その結果、アクセスがブロックされます。

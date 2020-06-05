@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: samyada
-ms.openlocfilehash: 9a0687b9e3938c93cfaebe0e064fd994077a92af
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 325460e4d487ade7337fc99b8a77fd3182d6cc17
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086690"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430117"
 ---
 # <a name="settings-for-microsoft-defender-atp-for-mac-in-microsoft-intune"></a>Microsoft Intune での Microsoft Defender ATP for Mac の設定
 
 Microsoft Intune で、Mac 用の Microsoft Defender ATP 用に構成できる "*ウイルス対策*" プロファイル設定を確認します。 これらの設定の詳細については、Windows ドキュメントの「[Microsoft Defender Advanced Threat Protection for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)」を参照してください。
+
+Intune で[エンドポイント セキュリティ ポリシー](../protect/endpoint-security-policy.md)を使用する方法について説明します。
 
 **Microsoft Defender ATP**
 

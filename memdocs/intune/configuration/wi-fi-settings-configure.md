@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1ff20db13a87faea41d262da5742a428ec4d28f
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: ca2a5ddd3d2b4c0aa93c7c955d0d688944ee8f95
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587292"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985507"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Microsoft Intune でデバイスに Wi-Fi 設定を追加して使用する
 
@@ -39,11 +39,11 @@ Wi-Fi は、多数のモバイル デバイスがネットワークにアクセ�
 
 Wi-Fi プロファイルでは次のデバイス プラットフォームをサポートしています。
 
-- Android 4 以降
+- Android 5 以降
 - Android エンタープライズ、キオスク
-- iOS 8.0 以降
+- iOS 11.0 以降
 - iPadOS 13.0 以降
-- macOS X 10.11 以降
+- macOS X 10.12 以降
 - Windows 10 以降、Windows 10 Mobile、Windows Holographic for Business
 
 > [!NOTE]

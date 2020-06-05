@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60a4ac793500cd4d31df2188344e2b5f4e1094a4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a9be644a47a361cf29e7b7132b2c87a4921553ea
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359161"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989437"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Intune を使用して専用キオスクとして実行するための Windows 10 および Windows Holographic for Business デバイスの設定
 
@@ -45,30 +45,46 @@ Intune では、"構成プロファイル" を使用して、お客様の組織�
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 3. 次のプロパティを入力します。
 
+   - **[プラットフォーム]** : **[Windows 10 以降]** を選択します。
+   - **[プロファイル]** : **[キオスク]** を選択します。
+
+4. **[作成]** を選択します。
+5. **[Basics]\(基本\)** で次のプロパティを入力します。
+
    - **名前**:新しいプロファイルのわかりやすい名前を入力します。
    - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
-   - **[プラットフォーム]** : **[Windows 10 以降]** を選択します。
-   - **[プロファイルの種類]** : **[キオスク]** を選択します。
 
-4. **[設定]** の **[キオスク モード]** を選択します。 **[キオスク モード]** では、ポリシーによってサポートされるキオスク モードの種類を識別します。 次のオプションがあります。
+6. **[次へ]** を選択します。
+7. **[構成設定]** ** > [キオスク モードを選択]** を選択し、ポリシーでサポートされているキオスク モードの種類を選択します。 次のオプションがあります。
 
-    - **[未構成]** (既定):このポリシーでは、キオスク モードが有効になりません。
+    - **[未構成]** (既定):Intune では、この設定は変更または更新されません。 このポリシーでは、キオスク モードが有効になりません。
     - **[シングル アプリ、全画面表示キオスク]** :デバイスは単一ユーザー アカウントとして実行され、1 つのストア アプリに制限されます。 したがって、ユーザーがサインインすると、特定のアプリが起動します。 また、このモードでは、ユーザーによる新しいアプリを開く操作や、実行中のアプリを変更する操作が制限されます。
     - **[マルチ アプリ キオスク]** :デバイスはアプリケーション ユーザー モデル ID (AUMID) を使用して複数のストア アプリ、Win32 アプリ、または受信トレイの Windows アプリを実行します。 デバイスでは追加されているアプリだけを利用できます。
 
         マルチ アプリ キオスク (または固定目的デバイス) の利点は、ユーザーがアクセスできるのは必要なアプリだけなので、わかりやすいエクスペリエンスがユーザーに提供されることです。 また、必要のないアプリはビューから削除されます。
 
     すべての設定の一覧とその実行内容については、以下を参照してください。
+
       - [Windows 10 のキオスク設定](kiosk-settings-windows.md)
       - [Windows Holographic for Business のキオスク設定](kiosk-settings-holographic.md)
 
-5. 完了したら、 **[OK]**  >  **[作成]** を選択して変更を保存します。
+8. **[次へ]** を選択します。
 
-プロファイルが作成され、プロファイル一覧に表示されます。 次に、プロファイルを[割り当てます](device-profile-assign.md)。
+9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはユーザー グループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](device-profile-assign.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+11. **[確認と作成]** で、設定を確認します。 **[作成]** を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
+
+ポリシーは、次に各デバイスがチェックインするときに適用されます。
 
 ## <a name="next-steps"></a>次のステップ
 
-[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
+[プロファイルを割り当てた](device-profile-assign.md)後は、[その状態を監視](device-profile-monitor.md)します。
 
 次のプラットフォームを実行するデバイス用のキオスク プロファイルを作成できます。
 

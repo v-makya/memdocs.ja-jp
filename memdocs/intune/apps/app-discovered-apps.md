@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/21/2020
-ms.topic: conceptual
+ms.date: 05/18/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44089df5645b128ba29e481e899d52c90b8c0a42
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: d60d4eba093ce9663abf2aa57c6461bef5a34ef1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078398"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988719"
 ---
 # <a name="intune-discovered-apps"></a>Intune で検出されたアプリ
 
@@ -54,7 +54,7 @@ Intune では、テナント内の個々のデバイスについて検出され�
 
 | プラットフォーム | 個人所有のデバイス | 会社所有のデバイス | 更新サイクル |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (Win32 アプリ) メモ:デバイスに [Intune 管理拡張が必要](intune-management-extension.md) | 適用しない | デバイスにインストールされているすべてのアプリ | デバイス登録から 24 時間ごと |
+| Windows 10 (Win32 アプリ) メモ:デバイスに [Intune 管理拡張が必要](intune-management-extension.md) | 適用しない | デバイスに MSI でインストールされたアプリ | デバイス登録から 24 時間ごと |
 | Windows 10 (モダン アプリ) | マネージド モダン アプリのみ | デバイスにインストールされているすべてのモダン アプリ | デバイス登録から 7 日おき |
 | Windows 8.1 | 管理対象アプリのみ | 管理対象アプリのみ | デバイス登録から 7 日おき |
 | Windows Phone 8 | 管理対象アプリのみ | 管理対象アプリのみ | デバイス登録から 7 日おき |

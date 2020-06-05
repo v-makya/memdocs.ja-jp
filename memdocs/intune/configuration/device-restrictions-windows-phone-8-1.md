@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 285144e42f2a029bf2d24b96493c54922727d6dc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24fd2085839df35a486fcfa4cf817944b0d19944
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80407655"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556253"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Microsoft Intune の Windows Phone 8.1 デバイス制限設定
 
 この記事では、Windows Phone 8.1 を実行するデバイスに構成できる Microsoft Intune デバイス制限設定について説明します。
+
+## <a name="before-you-begin"></a>始める前に
+
+[Windows Phone 8.1 デバイス制限プロファイル](device-restrictions-configure.md)を作成します。
 
 ## <a name="general"></a>全般
 

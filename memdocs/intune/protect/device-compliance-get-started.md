@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
-ms.topic: conceptual
+ms.date: 05/21/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9fa14dd54a820ed20f8b3b504a836392c7f428f
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: 559d9a704f0b33e3fda3adf628626b56ff263de3
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538157"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989724"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Intune を使用して組織内のリソースへのアクセスを許可するように、デバイス上でルールを設定する
 
@@ -64,11 +64,17 @@ Remember that you need to implement Conditional Access policies in addition to c
 
 ## <a name="device-compliance-policies-work-with-azure-ad"></a>デバイス コンプライアンス ポリシーと Azure AD の連携
 
-Intune では、Azure Active Directory (AD) の[条件付きアクセス](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) (別のドキュメント Web サイトが開きます) を使用して、コンプライアンスが適用されます。 デバイスが Intune に登録されると、Azure AD の登録プロセスが開始され、デバイス情報が Azure AD で更新されます。 重要な情報の 1 つとして、デバイスのコンプライアンス状態があります。 このコンプライアンス状態は、電子メールと他の組織のリソースへのアクセスをブロックまたは許可するための条件付きアクセス ポリシーによって使用されます。
+Intune では、[条件付きアクセス](../protect/conditional-access.md)を使用してコンプライアンスを適用します。 条件付きアクセスは、Azure Active Directory (Azure AD) テクノロジです。
 
-- 「[Azure Active Directory のデバイス管理とは](https://docs.microsoft.com/azure/active-directory/device-management-introduction)」は、デバイスが Azure AD に登録される理由と方法に最適なリソースです。
+デバイスが Intune に登録されると、Azure AD の登録プロセスが開始され、デバイス情報が Azure AD で更新されます。 重要な情報の 1 つとして、デバイスのコンプライアンス状態があります。 このコンプライアンス状態は、電子メールと他の組織のリソースへのアクセスをブロックまたは許可するための条件付きアクセス ポリシーによって使用されます。
 
-- [条件付きアクセス](conditional-access.md)に関するページと[条件付きアクセスの一般的な使用方法](conditional-access-intune-common-ways-use.md)に関するページでは、Intune に関連するこの機能について説明されています。
+条件付きアクセスと Intune について参照する:
+
+- [Intune での条件付きアクセスの一般的な使用方法](conditional-access-intune-common-ways-use.md)
+
+Azure AD のドキュメントで条件付きアクセスの詳細について参照する:
+  - [条件付きアクセスとは](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+  - [デバイス ID とは](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
 
 ## <a name="ways-to-use-device-compliance-policies"></a>デバイス コンプライアンス ポリシーを使用する方法
 
@@ -86,22 +92,22 @@ Intune では、Azure Active Directory (AD) の[条件付きアクセス](https:
 
 Intune には、組み込みのコンプライアンス ポリシー設定のセットも含まれています。 次の組み込みのポリシーは、Intune に登録されたすべてのデバイスで評価されます。
 
-- **[Mark devices with no compliance policy assigned as]\(コンプライアンス ポリシーが割り当てられていないデバイスにマークを付ける\)** :このプロパティには次の 2 つの値があります。
+- **[Mark devices with no compliance policy assigned as]\(コンプライアンス ポリシーが割り当てられていないデバイスにマークを付ける\)** :これはコンプライアンス違反に対する既定のアクションです。 このプロパティには次の 2 つの値があります。
 
   - **[準拠]** (*既定値*): セキュリティ機能が無効
   - **[非準拠]** : セキュリティ機能が有効
 
   デバイスにコンプライアンス ポリシーが割り当てられていない場合、そのデバイスは既定で準拠と見なされます。 コンプライアンス ポリシーで条件付きアクセスを使用する場合は、既定の設定を **[非準拠]** に変更することをお勧めします。 ポリシーが割り当てられていないためにエンド ユーザーが準拠していない場合、[ポータル サイト アプリ](../apps/company-portal-app.md)には `No compliance policies have been assigned` と表示されます。
 
-- **[脱獄の高度な検出]** :この設定を有効にすると、iOS/iPadOS デバイスで、脱獄されたデバイスの状態がより頻繁に発生するようになります。 この設定は、脱獄されたデバイスをブロックするコンプライアンス ポリシーの対象となるデバイスにのみ影響します。 このプロパティを有効にすると、デバイスの位置情報サービスが使用され、バッテリの使用量に影響する可能性があります。 ユーザーの位置データは Intune では保存されません。バックグラウンドで脱獄の検出をより頻繁にトリガーするためにのみ使用されます。 
+- **[脱獄の高度な検出]** (*iOS/iPadOS に適用*):この設定を有効にすると、iOS/iPadOS デバイスで、脱獄されたデバイスの状態がより頻繁に発生するようになります。 この設定は、脱獄されたデバイスをブロックするコンプライアンス ポリシーの対象となるデバイスにのみ影響します。 このプロパティを有効にすると、デバイスの位置情報サービスが使用され、バッテリの使用量に影響する可能性があります。 ユーザーの位置データは Intune では保存されません。バックグラウンドで脱獄の検出をより頻繁にトリガーするためにのみ使用されます。 
 
   この設定を有効にするには、デバイスで以下の操作が必要です。
   - OS レベルで位置情報サービスを有効にする
   - ポータル サイトで常に位置情報サービスを使用できるようにします。
 
-  評価をトリガーするには、ポータル サイト アプリを開くか、物理的に約 500 メートル以上離れた場所にデバイスを移動します。 iOS 13 以降でこの機能を使用するには、ポータル サイトによるバックグラウンドでの位置の使用を引き続き許可することを確認するメッセージがデバイスから表示されるたびに、[常に許可] を選択する必要があります。 ユーザーが常に位置へのアクセスを許可せず、この設定が構成されたポリシーが適用されている場合、そのデバイスは非準拠としてマークされます。 Intune で、位置が大幅に変わるごとに確実に脱獄検出チェックを実行することは、その時点のデバイスのネットワーク接続に依存するため、保証できないことに注意してください。
+  高度な検出は、位置情報サービスを通じて機能します。 評価をトリガーするには、ポータル サイト アプリを開くか、物理的に約 500 メートル以上離れた場所にデバイスを移動します。 iOS 13 以降でこの機能を使用するには、ポータル サイトによるバックグラウンドでの位置の使用を引き続き許可することを確認するメッセージがデバイスから表示されるたびに、[常に許可] を選択する必要があります。 ユーザーが常に位置へのアクセスを許可せず、この設定が構成されたポリシーが適用されている場合、そのデバイスは非準拠としてマークされます。 Intune で、位置が大幅に変わるごとに確実に脱獄検出チェックを実行することは、その時点のデバイスのネットワーク接続に依存するため、保証できないことに注意してください。
 
-- **[コンプライアンス状態の有効期間 (日)]** :デバイスが受け取ったすべてのコンプライアンス ポリシーの状態をレポートする期間を入力します。 この期間内に状態を返さないデバイスは非準拠として扱われます。 既定値は 30 日です。 最小値は 1 日です。
+- **[コンプライアンス状態の有効期間 (日)]** :デバイスが受け取ったすべてのコンプライアンス ポリシーの状態をレポートする期間を入力します。 この期間内に状態を返さないデバイスは非準拠として扱われます。 既定値は 30 日です。 最大値は 120 日間です。 最小値は 1 日です。
 
   この設定は、 **[アクティブ]** な既定のコンプライアンス ポリシーとして表示されます ( **[デバイス]**  >  **[監視]**  >  **[コンプライアンスの設定]** )。 このポリシーのバックグラウンド タスクは 1 日に 1 回実行されます。
 

@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a05e36a2da42bf88e2d9d7e94a67e2d81b8f1271
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 08d53bd7ffedc2679fca675b88e021301d15fb62
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078279"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989027"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Microsoft Intune でユーザーおよびデバイス プロファイルを割り当てる
 
@@ -48,7 +48,7 @@ ms.locfileid: "82078279"
 3. 割り当てるプロファイルを選択して、 **[割り当て]** を選択します。
 4. グループを**含める**か**除外する**かを選んでから、自分のグループを選択します。 グループを選択するときに、Azure AD グループを選択します。 複数のグループを選択する場合は、**Ctrl** キーを押しながら自分のグループを選択します。
 
-    ![プロファイル割り当てにグループを含める、またはグループを除外するオプションのスクリーンショット](./media/device-profile-assign/group-include-exclude.png)
+    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Microsoft Intune で、プロファイル割り当てにグループを含める、またはグループを除外するオプションのスクリーンショット":::
 
 5. 変更内容を**保存**します。
 
@@ -109,7 +109,7 @@ Intune のデバイス構成プロファイルを使うと、プロファイル�
 
 プロファイルを割り当てる場合は、グループを含めたり除外したりするときに、次の表をお使いください。 チェックマークは、割り当てがサポートされていることを意味します。
 
-![プロファイル割り当てに対するグループの追加または除外のサポートされているオプション](./media/device-profile-assign/include-exclude-user-device-groups.png)
+:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups.png" alt-text="プロファイル割り当てに対するグループの追加または除外のサポートされているオプション":::
 
 ### <a name="what-you-should-know"></a>知っておくべきこと
 

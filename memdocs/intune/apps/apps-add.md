@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2020
-ms.topic: conceptual
+ms.date: 05/11/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0cf2096b4a8862a29d47bc05aa29f0cbb48792b
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: da78e0f80df31f5cb0f6236c4f85f93c05f0320a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023250"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989486"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Microsoft Intune にアプリを追加する 
 
@@ -43,6 +43,7 @@ Intune では、広範囲に及ぶさまざまな種類のアプリをサポー�
 | 社内で作成された (基幹業務) アプリ | Intune によってデバイス上にアプリがインストールされます (ユーザーがインストール ファイルを支給)。 | ユーザーがアプリを更新する必要があります。 |
 | 組み込まれているアプリ (組み込みアプリ) | Intune によってデバイス上にアプリがインストールされます。  | アプリの更新は自動的に行われます。 |
 | Web 上のアプリ (Web リンク) | Intune によって、デバイスのホーム画面上の Web アプリへのショートカットが作成されます。 | アプリの更新は自動的に行われます。 |
+| 他の Microsoft サービスからのアプリ  | Intune により、ポータル サイトにアプリのショートカットが作成されます。 詳細については、「[アプリのソース設定オプション](../apps/company-portal-app.md#app-source-setting-options)」を参照してください。 | アプリの更新は自動的に行われます。 |
 
 ### <a name="specific-app-type-details"></a>アプリの具体的な種類の詳細
  
@@ -70,7 +71,6 @@ Intune では、広範囲に及ぶさまざまな種類のアプリをサポー�
 | Android エンタープライズ システム アプリ  | ストア アプリ  | **[アプリの種類]** として **[Android Enterprise システム アプリ]** を選択して、アプリ名、発行元、およびパッケージ ファイルを入力します。  |
 | Windows アプリ (Win32)  | LOB アプリ  | **[アプリの種類]** として **[Windows app (Win32)]\(Windows アプリ (Win32)\)** を選択し、 **[アプリのパッケージ ファイル]** を選択して、拡張子が **.intunewin** のインストール ファイルを選択します。  |
 | macOS LOB アプリ | LOB アプリ  | **[アプリの種類]** として **[基幹業務]** を選択し、 **[アプリのパッケージ ファイル]** を選択して、拡張子が **.intunemac** のインストール ファイルを選択します。  |
-
 
 <sup>1</sup> Android Enterprise および Android 仕事用プロファイルに関する詳細については、後述する「[ライセンスされたアプリを把握する](apps-add.md#understanding-licensed-apps)」を参照してください。
 
@@ -112,6 +112,7 @@ Intune を使用して、デバイスの管理は行わずに MDM でアプリ�
 - **ストアからのアプリ**: Microsoft Store、iOS/iPadOS ストア、Android ストアのいずれかにアップロードされているアプリがストア アプリです。 ストア アプリのプロバイダーは、更新プログラムを維持すると共にアプリに提供します。 ストアの一覧からアプリを選択し、Intune を使用して、そのアプリをユーザーが入手できるアプリとして追加します。
 - **社内で作成された (基幹業務) アプリ**: 社内で作成されたアプリが基幹業務 (LOB) アプリです。 この種類のアプリの機能は、Windows、iOS/iPadOS、macOS、Android など、Intune でサポートされているプラットフォームのいずれかで使用できるように作成されています。 組織は更新プログラムを作成し、管理者に個別のファイルとして提供します。 管理者は、アプリの更新プログラムをユーザーに提供するために、Intune を使用して更新プログラムを追加および展開します。
 - **Web 上のアプリ**: Web アプリはクライアント/サーバー アプリケーションです。 サーバーから Web アプリが提供されます。これには UI、コンテンツ、および機能が含まれます。 さらに、最新の Web ホスティング プラットフォームでは一般的にセキュリティや負荷分散などの利点が提供されます。 この種のアプリは Web 上で個別に維持されます。 Intune を使用して、このアプリの種類をポイントします。 このアプリにアクセスできるユーザー グループも割り当てます。 Android では Web アプリがサポートされていないので注意してください。
+- **他の Microsoft サービスからのアプリ**:Azure AD または Office Online がソースであるアプリです。 **Azure AD エンタープライズ アプリケーション**は、[Azure portal](https://portal.azure.com) を介して登録され、割り当てられます。 **Office Online アプリケーション**は、[M365 管理センター](https://admin.microsoft.com)で利用可能なライセンス制御を使用して割り当てられます。 ポータル サイト内で、エンド ユーザーに対して Azure AD エンタープライズおよび Office Online アプリケーションを表示または非表示にすることができます。 この構成設定を見つけるには、[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)から、 **[テナント管理]**  >  **[カスタマイズ]** の順に選択します。 各ユーザーのポータル サイトの **[Azure AD エンタープライズ アプリケーション]** または **[Office Online アプリケーション]** のどちらかに対して、 **[非表示]** または **[表示]** を選択します。 各エンド ユーザーには、選択された Microsoft サービスによるアプリケーション カタログ全体が表示されます。 既定では、追加のアプリ ソースがそれぞれ **[非表示]** に設定されるようになります。 詳細については、「[アプリのソース設定オプション](../apps/company-portal-app.md#app-source-setting-options)」を参照してください。 
 
 組織に必要なアプリを決定する場合は、それらのアプリをクラウド サービスに統合する方法、アプリがアクセスするデータ、BYOD ユーザーがアプリを使用できるかどうか、アプリでインターネット アクセスが必要かどうかについて検討してください。
 

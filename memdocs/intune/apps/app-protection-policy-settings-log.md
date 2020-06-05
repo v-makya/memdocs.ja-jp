@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e44dbb8e29da829e3455121700e8901a3b3fc98
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 63000a7285b2d1d6505a739f186dc9168e7f3fca
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81007625"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853589"
 ---
 # <a name="review-client-app-protection-logs"></a>クライアント アプリの保護ログのレビュー
 
 アプリ保護ログで確認できる設定について説明します。 モバイル クライアント上で Intune 診断を有効にして、ログにアクセスします。 
 
 ログを有効にして収集するプロセスは、プラットフォームによって変わります。
-- **iOS/iPadOS デバイス** - iOS/iPadOS 用 Microsoft Edge を使用してログを収集します。 詳細については、「[Microsoft Edge と Microsoft Intune を使用して Web アクセスを管理する](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)」を参照してください。 
+- **iOS/iPadOS デバイス** - iOS/iPadOS 用 Microsoft Edge を使用してログを収集します。 詳細については、[iOS と Android で Edge を使用して、マネージド アプリのログにアクセスする](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)方法に関する記事を参照してください。
 - **Windows 10 デバイス** - *MDMDiag* とイベント ログを使用します。 Windows クライアント管理コンテンツの「[Windows 10 での MDM エラーの診断](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)」と、ブログ「[Windows 10 Intune ポリシー エラーのトラブルシューティング](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/)」を参照してください。
-- **Android デバイス** - Android 用 Microsoft Edge を使用してログを収集します。 詳細については、「[Microsoft Edge と Microsoft Intune を使用して Web アクセスを管理する](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)」を参照してください。 
+- **Android デバイス** - Android 用 Microsoft Edge を使用してログを収集します。 詳細については、[iOS と Android で Edge を使用して、マネージド アプリのログにアクセスする](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)方法に関する記事を参照してください。
 
   > [!Note]
   > Android フル マネージド デバイスでは、場合によっては、Intune ポータル サイト アプリがすべてのアプリの下に表示される可能性があります。 これは、アプリ保護ポリシーに関連付けられているアプリがインストールされていないか、起動されていない場合に発生する可能性があります。 

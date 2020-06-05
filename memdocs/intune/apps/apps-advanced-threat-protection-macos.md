@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8707b938231e682fe1cd165c207cca8e575950d4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 24938f85cf85e9c5934a0e26029ec2ccfc5c33a7
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80324653"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989442"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>Microsoft Intune を使用して Microsoft Defender ATP を macOS デバイスに追加する
 
@@ -76,7 +76,7 @@ Microsoft Defender ATP を Intune に追加するには、次の手順を行い�
 > 現在、Apple では、Intune で macOS デバイス上の Microsoft Defender ATP をアンインストールする方法を提供していません。
 
 ## <a name="next-steps"></a>次のステップ
-- macOS デバイスで Microsoft Defender ATP を構成する方法については、[macOS デバイスでの Microsoft Defender ATP の構成](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-preferences)に関するページを参照してください。
+- Intune でエンドポイント セキュリティにウイルス対策ポリシーを適用する方法については、[Intune におけるエンドポイント セキュリティのウイルス対策ポリシー](../protect/endpoint-security-antivirus-policy.md)に関する記事を参照してください。 
 - アプリ割り当てをユーザーのグループに追加したり、除外したりする方法については、「[アプリ割り当ての組み込みと除外](apps-inc-exl-assignments.md)」を参照してください。
-- [アプリをグループに割り当てる](apps-deploy.md)
+- Intune でアプリをグループに割り当てる方法については、[グループにアプリを割り当てる](apps-deploy.md)方法に関する記事を参照してください。
 

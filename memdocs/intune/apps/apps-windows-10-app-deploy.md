@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/25/2020
-ms.topic: conceptual
+ms.date: 05/19/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 391fa20cf7ba53af649f9f614d9ca02c653c278b
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079316"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985931"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Microsoft Intune を使用する Windows 10 アプリの展開 
 
@@ -92,7 +92,9 @@ Windows 10 LOB アプリに署名して、Intune 管理コンソールにアッ�
 > [!NOTE]
 > デュアル モード アプリとして構築された Win32 アプリは、そのインスタンスに関連付けられているすべての割り当てで、アプリがユーザー モードまたはマシン モード アプリとして機能するかどうかを、管理者が選択する必要があります。 開発コンテキストは、割り当てごとに変更することはできません。  
 
-アプリをデバイス コンテキストにインストールできるのは、デバイスと Intune アプリの種類でサポートされている場合のみです。 次のアプリの種類をデバイス コンテキストにインストールし、これらのアプリをデバイス グループに割り当てることができます。
+アプリをデバイス コンテキストにインストールできるのは、デバイスと Intune アプリの種類でサポートされている場合のみです。 デバイス コンテキストのインストールは、Windows 10 デスクトップおよび Teams デバイス (Surface Hub など) でサポートされています。 Microsoft HoloLens などの Windows Holographic for Business を実行するデバイスではサポートされていません。
+
+次のアプリの種類をデバイス コンテキストにインストールし、これらのアプリをデバイス グループに割り当てることができます。
 
 - Win32 アプリ
 - オフライン ライセンスのビジネス向け Microsoft Store アプリ

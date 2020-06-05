@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2020
-ms.topic: conceptual
+ms.date: 05/26/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4e9a37e2dbb725a06d304d345fd085dabbc5e14
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 17c0c83452f7b67ad2fef660e8f0c81bc6d4b78f
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086988"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989135"
 ---
-# <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Intune で eSIM 携帯電話プロファイルを構成する - パブリック プレビュー
+# <a name="configure-esim-cellular-profiles-in-intune-public-preview"></a>Intune で eSIM 携帯電話プロファイルを構成する (パブリック プレビュー)
 
 eSIM は埋め込み SIM チップであり、[Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro) などの eSIM 対応デバイス上で携帯データネットワーク接続を介してインターネットに接続することができます。 eSIM を利用する場合、携帯電話会社から SIM カードを入手する必要はありません。 世界中を旅行する場合でも、携帯電話会社やデータ プランを切り替え、常に回線接続を維持できます。
 
@@ -54,21 +54,7 @@ Intune を使ってご利用のデバイスに eSIM を展開するには、次�
 
 ## <a name="esim-capable-devices"></a>eSIM 対応デバイス
 
-次のデバイスは、eSIM 対応として発表されたものか、現在、市販されているものです。 [ご利用のデバイスで eSIM がサポートされている](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data)かどうかの確認も行ってください。
-
-- Acer Swift 7
-- Asus NovoGo TP370QL
-- Asus TP401
-- Asus Transformer Mini T103
-- HP Elitebook G5
-- HP Envy x2
-- HP Probook G5
-- Lenovo Miix 630
-- Lenovo T480
-- Samsung Galaxy Book
-- Surface Pro LTE
-- HP Spectre Folio 13
-- Lenovo Yoga C630
+お使いのデバイスが eSIM をサポートしているかどうかわからない場合は、デバイスの製造元にお問い合わせください。 Windows デバイスに関しては、eSIM がサポートされているかどうかを確認できます。 詳細については、「[eSIM を使って Windows 10 PC で携帯データ ネットワーク接続を利用する](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data)」を参照してください。
 
 ## <a name="step-1-add-cellular-activation-codes"></a>手順 1:携帯電話のアクティブ化コードを追加する
 
@@ -97,11 +83,11 @@ Intune を使ってご利用のデバイスに eSIM を展開するには、次�
     1. 最初の列は一意の ICCID (SIM チップの識別子) です。
     2. 2 番目の列は、1 つのコンマのみで区切られている (末尾にコンマがない) 照合 ID です。 次の例を参照してください:
 
-        ![携帯電話会社のアクティブ化コード サンプルの csv ファイル](./media/esim-device-configuration/url-activation-code-examples.png)
+        :::image type="content" source="./media/esim-device-configuration/url-activation-code-examples.png" alt-text="携帯電話会社のアクティブ化コード サンプルの csv ファイル。":::
 
 3. csv ファイル名は、Endpoint Manager admin center の携帯電話サブスクリプション プール名となります。 上記のイメージでは、ファイル名が `UnlimitedDataSkynet.csv` となっています。 したがって、次のように、Intune ではサブスクリプション プールに `UnlimitedDataSkynet.csv` という名前が付けられます。
 
-    ![携帯電話サブスクリプション プールに、アクティブ化コード サンプルの csv ファイルの名前が付けられている](./media/esim-device-configuration/subscription-pool-name-csv-file.png)
+    :::image type="content" source="./media/esim-device-configuration/subscription-pool-name-csv-file.png" alt-text="携帯電話サブスクリプション プールに、アクティブ化コード サンプルの csv ファイルの名前が付けられている。":::
 
 ## <a name="step-2-create-an-azure-ad-device-group"></a>手順 2:Azure AD デバイス グループを作成する
 
@@ -120,7 +106,7 @@ eSIM 対応デバイスを含むデバイス グループを作成します。 �
 3. プロファイルの一覧で、割り当てる eSIM 携帯電話サブスクリプション プールを選び、 **[割り当て]** を選択します。
 4. グループを**含める**か**除外する**かを選んでから、グループを選択します。
 
-    ![プロファイルを割り当てるデバイス グループを含める](./media/esim-device-configuration/include-exclude-groups.png)
+    :::image type="content" source="./media/esim-device-configuration/include-exclude-groups.png" alt-text="Microsoft Intune でプロファイルを割り当てるデバイス グループを含める。":::
 
 5. グループを選択するときに、Azure AD グループを選択します。 風数のグループを選択するには、**Ctrl** キーを使用してグループを選びます。
 6. 完了したら、変更内容を**保存**します。
@@ -173,7 +159,7 @@ eSIM アクティブ化コードは一度使用されます。 Intune によっ�
 2. **[携帯電話]**  >  **[eSIM プロファイルの管理]** の順に選択します。
 3. 次のように eSIM プロファイルが一覧表示されます。
 
-    ![ご利用のデバイス設定で eSIM プロファイルを表示する](./media/esim-device-configuration/device-settings-cellular-profiles.png)
+    :::image type="content" source="./media/esim-device-configuration/device-settings-cellular-profiles.png" alt-text="ご利用のデバイス設定で eSIM プロファイルを表示する。":::
 
 ## <a name="remove-the-esim-profile-from-device"></a>デバイスから eSIM プロファイルを削除する
 
@@ -197,4 +183,5 @@ Azure AD グループからデバイスを削除すると、eSIM プロファイ
   - **携帯電話アクティブ化エラー、携帯電話会社に問い合わせる**: このアクティブ化コードは、ネットワーク内でアクティブ化されていない可能性があります。 または、プロファイルのダウンロードと携帯電話のアクティブ化に失敗しています。
 
 ## <a name="next-steps"></a>次のステップ
+
 [デバイス プロファイルを構成する](device-profiles.md)

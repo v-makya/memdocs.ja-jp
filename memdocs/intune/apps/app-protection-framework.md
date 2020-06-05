@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86117193ce7aae01380923ce26f84dfb5ba97a4d
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: 91683280a2e48d82fd145bf19228c33b432b6b49
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82182295"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853572"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>アプリ保護ポリシーを使用するデータ保護フレームワーク 
 
@@ -55,7 +55,7 @@ Microsoft は、APP データ保護フレームワークに対して次の展開
 
 アプリへの変更をテストするときは、[配布のタイミング](app-protection-policy-delivery.md)に注意してください。 特定のユーザーに対する APP 配布の状態を監視できます。 詳細については、「[アプリ保護ポリシーを監視する方法](app-protection-policies-monitor.md)」を参照してください。
 
-Edge と URL *about:Intunehelp* を使用して、各アプリに対する個々の APP 設定を、デバイス上で検証できます。 詳しくは、「[クライアント アプリの保護ログのレビュー](app-protection-policy-settings-log.md)」および「[Microsoft Edge と Microsoft Intune を使用して Web アクセスを管理する](manage-microsoft-edge.md#use-microsoft-edge-to-access-managed-app-logs)」をご覧ください。
+Edge と URL *about:Intunehelp* を使用して、各アプリに対する個々の APP 設定を、デバイス上で検証できます。 詳細については、「[クライアント アプリの保護ログのレビュー](app-protection-policy-settings-log.md)」および「[iOS と Android で Edge を使用して、マネージド アプリのログにアクセスする](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs)」を参照してください。
 
 ## <a name="app-data-protection-framework-settings"></a>APP データ保護フレームワークの設定
 
@@ -140,7 +140,7 @@ Edge と URL *about:Intunehelp* を使用して、各アプリに対する個々
 
 レベル 2 は、ユーザーがより機密な情報にアクセスするデバイスの標準として推奨されるデータ保護構成です。 これらのデバイスは、今日の企業では自然な対象です。 これらの推奨事項では、高度なスキルを持つセキュリティ専門家の大規模なスタッフは想定されていないため、ほとんどの企業組織がアクセスできるはずです。 この構成では、レベル 1 の構成が、データ転送シナリオを制限し、オペレーティング システムの最小バージョンを必要とすることによって、拡張されます。
 
-レベル 2 で適用されるポリシー設定には、レベル 1 に対して推奨されるすべてのポリシー設定が含まれ、以下のポリシー設定だけが追加または更新されることで、レベル 1 よりより多くの制御と高度な構成が実装されます。 これらの設定により、ユーザーまたはアプリケーションに対する影響が若干大きくなる可能性がありますが、ユーザーがモバイル デバイスの機密情報にアクセスするリスクにいっそうふさわしいレベルのデータ保護が適用されます。
+レベル 2 で適用されるポリシー設定には、レベル 1 に対して推奨されるすべてのポリシー設定が含まれていますが、レベル 1 よりも多くのコントロールと高度な構成を実装するために追加または変更された設定のみを、以下に一覧表示します。 これらの設定により、ユーザーまたはアプリケーションに対する影響が若干大きくなる可能性がありますが、ユーザーがモバイル デバイスの機密情報にアクセスするリスクにいっそうふさわしいレベルのデータ保護が適用されます。
 
 #### <a name="data-protection"></a>データの保護
 
@@ -167,7 +167,7 @@ Edge と URL *about:Intunehelp* を使用して、各アプリに対する個々
 
 レベル 3 は、大規模で高度なセキュリティ組織を持つ組織、または攻撃者から際立って対象と見なされる特定のユーザーおよびグループに対して、標準として推奨されるデータ保護構成です。 そのような組織は、通常、豊富な資金を持つ高度な攻撃者の対象となるため、説明されている制約や制御を追加することにメリットがあります。 この構成では、追加のデータ転送シナリオを制限し、PIN 構成の複雑さを高め、モバイル脅威検出を追加することにより、レベル 2 の構成が拡張されます。  
 
-レベル 3 で適用されるポリシー設定には、レベル 2 と 1 に対して推奨されるすべてのポリシー設定が含まれ、厳密なデータ保護の構成と制御を実装するために、以下のポリシー設定のみが追加または更新されます。 これらのポリシー設定により、ユーザーまたはアプリケーションに対して大きな影響がある可能性がありますが、リスクの対象となっている組織にふさわしいレベルのセキュリティが適用されます。  
+レベル 3 で適用されるポリシー設定には、レベル 2 に対して推奨されるすべてのポリシー設定が含まれていますが、レベル 2 よりも多くのコントロールと高度な構成を実装するために追加または変更された設定のみを、以下に一覧表示します。 これらのポリシー設定により、ユーザーまたはアプリケーションに対して大きな影響がある可能性がありますが、リスクの対象となっている組織にふさわしいレベルのセキュリティが適用されます。  
 
 #### <a name="data-protection"></a>データの保護
 

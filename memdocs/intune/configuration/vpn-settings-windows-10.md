@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d2f671e88b1221961e978d1945e28c7cec474cb
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9fbe28a6585fe9fe5cf7772b559924675ac39a30
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086499"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429481"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Intune を使用して VPN 接続を追加するための Windows 10 デバイスと Windows Holographic デバイスの設定
 
@@ -66,7 +66,7 @@ Microsoft Intune を使用して、デバイスの VPN 接続を追加および�
   - **PPTP**
 
   VPN 接続の種類を選択するときに、次の設定を求められる場合があります。  
-  - **Always On**: **[有効にする]** を選択すると、次のようなイベントが発生した場合に VPN 接続に自動的に接続されます。
+  - **Always On**: **[有効にする]** にすると、次のようなイベントが発生した場合に VPN 接続に自動的に接続されます。
     - ユーザーが自分のデバイスにサインインしたとき
     - デバイスでネットワークが変更されたとき
     - デバイスの画面がオフにされた後でオンに戻されたとき
@@ -114,8 +114,9 @@ Microsoft Intune を使用して、デバイスの VPN 接続を追加および�
 
   - **[WIP をこの接続に関連付ける]** :**この接続の WIP ドメイン**を入力します。
   - **[アプリをこの接続に関連付ける]** :**これらのアプリへの VPN 接続を制限**した後、**関連付けるアプリ**を追加することができます。 入力したアプリは、VPN 接続を自動的に使用します。 アプリの種類によってアプリの識別子が決まります。 ユニバーサル アプリの場合は、パッケージのファミリ名を入力します。 デスクトップ アプリの場合は、アプリのファイル パスを入力します。
-  >[!IMPORTANT]
-  >アプリごとの VPN に対して作成されたすべてのアプリ リストをセキュリティで保護することをお勧めします。 承認されていないユーザーがこのリストを変更し、それをアプリごとの VPN アプリ リストにインポートすると、アクセス権のないアプリへの VPN アクセスが承認される可能性があります。 アプリ リストをセキュリティで保護する 1 つの方法は、アクセス制御リスト (ACL) を使用することです。
+
+  > [!IMPORTANT]
+  > アプリごとの VPN に対して作成されたすべてのアプリ リストをセキュリティで保護することをお勧めします。 承認されていないユーザーがこのリストを変更し、それをアプリごとの VPN アプリ リストにインポートすると、アクセス権のないアプリへの VPN アクセスが承認される可能性があります。 アプリ リストをセキュリティで保護する 1 つの方法は、アクセス制御リスト (ACL) を使用することです。
 
 - **[この VPN 接続のネットワーク トラフィック規則]** :VPN 接続に対して有効にするプロトコル、ローカルおよびリモートのポート、およびアドレス範囲を設定します。 ネットワーク トラフィック規則を作成しない場合は、すべてのプロトコル、ポート、アドレス範囲が有効になります。 規則を作成すると、その規則で入力したプロトコル、ポート、アドレス範囲のみが VPN 接続で使用されます。
 

@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2020
-ms.topic: conceptual
+ms.date: 05/14/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2031ba23b49bda4890d2638272e3b808b4bf5a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327452"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988471"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Microsoft Intune でのデバイス プロファイルの作成
 
@@ -85,10 +85,9 @@ ms.locfileid: "80327452"
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
 
-たとえば、プラットフォームとして **iOS/iPadOS** を選択した場合、プロファイルの種類のオプションは次のプロファイルのようになります。
+たとえば、プラットフォームとして **iOS/iPadOS** を選択した場合、プロファイルのオプションは次のプロファイルのようになります。
 
-> [!div class="mx-imgBorder"]
-> ![Intune で iOS/iPadOS プロファイルを作成する](./media/device-profile-create/create-device-profile.png)
+:::image type="content" source="./media/device-profile-create/create-device-profile.png" alt-text="Microsoft Intune で iOS/iPadOS プロファイルを作成します。":::
 
 ## <a name="scope-tags"></a>スコープのタグ
 
@@ -129,10 +128,9 @@ ms.locfileid: "80327452"
 
 ### <a name="add-a-rule"></a>ルールを追加する
 
-1. **[適用性ルール]** を選択します。 **[ルール]** 、 **[プロパティ]** 、および **[OS のエディション]** を選択できます。
+1. **[適用性ルール]** を選択します。 次のように **[ルール]** と **[プロパティ]** を選択できます。
 
-    > [!div class="mx-imgBorder"]
-    > ![Microsoft Intune でデバイス構成プロファイルに適用性ルールを追加する](./media/device-profile-create/applicability-rules.png)
+    :::image type="content" source="./media/device-profile-create/applicability-rules.png" alt-text="Microsoft Intune で Windows 10 のデバイス構成プロファイルに適用性ルールを追加します。":::
 
 2. **[ルール]** で、ユーザーまたはグループを含めるか除外するかを選択します。 次のようなオプションがあります。
 
@@ -174,12 +172,11 @@ Intune では、複数の更新サイクルを使用して、構成プロファ�
 
 - ユーザー ポリシーとデバイス ポリシーを分離します。
 
-  たとえば、[Intune の管理テンプレート](administrative-templates-windows.md)には、数百の ADMX 設定があります。 これらのテンプレートには、設定がユーザーに適用されるのか、デバイスに適用されるのかが示されます。 管理テンプレートを作成するときは、ユーザー設定をユーザー グループに割り当て、デバイス設定をデバイス グループに割り当てます。
+  たとえば、[Intune の管理テンプレート](administrative-templates-windows.md)には、数千の ADMX 設定があります。 これらのテンプレートには、設定がユーザーに適用されるのか、デバイスに適用されるのかが示されます。 管理テンプレートを作成するときは、ユーザー設定をユーザー グループに割り当て、デバイス設定をデバイス グループに割り当てます。
 
   次の画像は、ユーザーとデバイスに適用できる設定の例です。
 
-  > [!div class="mx-imgBorder"]
-  > ![ユーザーとデバイスに適用される Intune 管理テンプレート](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  :::image type="content" source="./media/device-profile-create/setting-applies-to-user-and-device.png" alt-text="ユーザーとデバイスに適用される Intune 管理テンプレート。":::
 
 - 制限の厳しいポリシーを作成するたびに、この変更についてユーザーに伝えます。 たとえば、パスコードの要件を 4 文字から 6 文字に変更する場合、ポリシーを割り当てる前にユーザーに通知できます。
 

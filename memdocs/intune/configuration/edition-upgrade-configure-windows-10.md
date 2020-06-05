@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 068363167d5c6abb54dde26939b102db2f120d27
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364384"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988418"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Microsoft Intune を使用してデバイス上の Windows 10 エディションをアップグレードするか S モードから切り替える
-
-
 
 モバイル デバイス管理 (MDM) ソリューションの一部として、Windows 10 デバイスをアップグレードすることができます。 たとえば、Windows 10 Professional デバイスを Windows 10 Enterprise にアップグレードすることができます。 または、デバイスを S モードから切り替えることができます。
 
@@ -100,21 +98,37 @@ Windows 10 エディションのアップグレード プロファイルでサ�
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 3. 次のプロパティを入力します。
 
+    - **[プラットフォーム]** : **[Windows 10 以降]** を選択します。
+    - **[プロファイル]** : **[エディションのアップグレード]** を選択します。
+
+4. **[作成]** を選択します。
+5. **[Basics]\(基本\)** で次のプロパティを入力します。
+
     - **名前**:新しいプロファイルのわかりやすい名前を入力します。 たとえば、`Windows 10 edition upgrade profile` や `Windows 10 switch off S mode` などを入力します。
     - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
-    - **[プラットフォーム]** : **[Windows 10 以降]** を選択します。
-    - **[プロファイルの種類]** : **[エディションのアップグレード]** を選択します。
-    - **設定**:構成が必要な設定を入力します。 すべての設定の一覧とその実行内容については、以下を参照してください。
 
-        - [Windows 10 のアップグレードと S モード](edition-upgrade-windows-settings.md)
-        - [Windows Holographic for Business](holographic-upgrade.md)
+6. **[次へ]** を選択します。
+7. **[構成設定]** で、構成する設定を入力します。 すべての設定の一覧とその実行内容については、以下を参照してください。
 
-4. **[OK]**  >  **[作成]** を選択して変更を保存します。
+    - [Windows 10 のアップグレードと S モード](edition-upgrade-windows-settings.md)
+    - [Windows Holographic for Business](holographic-upgrade.md)
 
-プロファイルが作成され、一覧に表示されます。 必ず[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)してください。
+8. **[次へ]** を選択します。
+
+9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはユーザー グループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](device-profile-assign.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+11. **[確認と作成]** で、設定を確認します。 **[作成]** を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
+
+ポリシーは、次に各デバイスがチェックインするときに適用されます。
 
 ## <a name="next-steps"></a>次のステップ
 
-プロファイルが作成されると、割り当てることができます。 次に、[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
+[プロファイルを割り当てた](device-profile-assign.md)後は、[その状態を監視](device-profile-monitor.md)します。
 
 [Windows 10](edition-upgrade-windows-settings.md) デバイスと [Windows Holographic for Business](holographic-upgrade.md) デバイスのアップグレードと S モード設定を確認します。

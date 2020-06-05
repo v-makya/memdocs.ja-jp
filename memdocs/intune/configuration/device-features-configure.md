@@ -1,12 +1,12 @@
 ---
 title: Microsoft Intune - Azure での iOS/iPadOS または macOS デバイス プロファイルの作成 | Microsoft Docs
-description: Microsoft Intune で iOS、iPadOS、または macOS デバイス プロファイルを追加または作成し、AirPrint、ホーム画面のレイアウト、アプリの通知、共有デバイス、シングル サインオン、Web コンテンツ フィルター設定を構成します。
+description: iOS、iPadOS、または macOS デバイス プロファイルを追加または作成します。 Microsoft Intune での AirPrint、ホーム画面のレイアウト、アプリの通知、共有デバイス、シングル サインオン、および Web コンテンツ フィルター設定に関する設定を構成します。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2020
-ms.topic: conceptual
+ms.date: 05/06/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e72fc48608ebf32f3e32d4a94ab7203ee418d8f
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 349fdc7b0f13f0999b8c9993bcaba1d458ebac59
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943809"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989193"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Intune での iOS、iPadOS、または macOS デバイスの機能設定の追加
 
@@ -54,7 +54,7 @@ AirPrint の詳細については、Apple の Web サイトの「[AirPrint に�
 
 ## <a name="app-notifications"></a>アプリの通知
 
-iOS および iPadOS デバイス上のアプリで通知を受け取る方法を選択します。 たとえば、Intune から、通知センターに表示されるようにアプリの通知を送信したり、ロック画面に表示したり、音を鳴らしたりすることができます。
+iOS および iPadOS デバイス上のアプリで通知を受け取る方法を選択します。 たとえば、アプリの通知を送信して、それらを通知センターに表示したり、ロック画面上に表示したり、音を鳴らしたりすることができます。
 
 Intune で構成できる設定の一覧については、[iOS/iPadOS でのアプリの通知](ios-device-features-settings.md#app-notifications)に関する記事を参照してください。
 

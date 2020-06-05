@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c086295b93b72ef2f9cfbd2d6a15d6bb54f320
-ms.sourcegitcommit: 53bab52e42de28b87e53596646a3532e25eb9c14
+ms.openlocfilehash: c544109b170d25f4d9a2999a11bc47d4b4a090c5
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82183013"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989980"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>MAM とアプリの保護に関してよく寄せられる質問
 
@@ -78,7 +78,7 @@ Intune アプリ保護ポリシーでは、[Intune アプリ SDK](../developer/a
 
 Intune SDK 開発チームは、ネイティブの Android、iOS/iPadOS (Obj-C、Swift)、Xamarin、および Xamarin.Forms プラットフォームを使ってビルドされたアプリに対するサポートを、積極的にテストして管理しています。 一部のお客様は、Intune SDK とその他のプラットフォーム (React Native や NativeScript など) の統合に成功されていますが、Microsoft では、サポートされているプラットフォーム以外を使うアプリ開発者に向けた明示的なガイダンスやプラグインは提供されません。
 
-**Intune APP SDK は、Microsoft 認証ライブラリ (MSAL) またはソーシャル アカウントをサポートしますか。**<br></br>
+**Intune APP SDK は、Microsoft 認証ライブラリ (MSAL) をサポートしますか。**<br></br>
 Intune App SDK では、認証と条件付き起動のシナリオに対し、Azure Active Directory 認証ライブラリまたは Microsoft 認証ライブラリのいずれかを使用できます。 また、デバイスを登録しないで管理するために MAM サービスにユーザー ID を登録する場合も、ADAL/MSAL を利用します。
 
 **[Outlook モバイル アプリ](https://products.office.com/outlook)を使用するための追加要件は何ですか。**
@@ -170,7 +170,7 @@ Intune は、フル デバイス ワイプ、MDM の選択的ワイプ、およ�
 Intune アプリ保護は、アプリケーションと Intune アプリ SDK の間で一貫性を保つためにユーザーの ID に依存しています。 これを保証する唯一の方法は、最新の認証を使用することです。 アプリをオンプレミス構成と連携させるシナリオはありますが、一貫性がなく保証されていません。
 
 **管理対象アプリから Web リンクを開く安全な方法はありますか。**<br></br>
-はい、ご利用いただけます。 IT 管理者は、Microsoft Intune によって開発された、Intune で簡単に管理可能な Web ブラウザーである [Intune Managed Browser アプリ](../apps/app-configuration-managed-browser.md) のアプリ保護ポリシーを展開および設定することができます。 IT 管理者は、Intune 管理対象アプリ内のすべての Web リンクが Managed Browser アプリで開かれるように指定することができます。
+はい、ご利用いただけます。 IT 管理者は、Microsoft Edge アプリに対してアプリ保護ポリシーを展開して設定できます。 IT 管理者は、Intune 管理対象アプリ内のすべての Web リンクを、Microsoft Edge アプリを使用して開くように指定することができます。
 
 ## <a name="app-experience-on-android"></a>Android でのアプリのエクスペリエンス
 
@@ -211,7 +211,7 @@ Intune アプリ保護ポリシーでは、アプリへのアクセスを制御�
 この目的は、アプリ内の組織のデータを、アプリ レベルで安全に保護し続けるためです。 この機能は iOS/iPadOS でのみ使用可能で、iOS/iPadOS 向け Intune App SDK のバージョン 9.0.1 以降を統合するアプリケーションの参加が必要です。 SDK の統合は、対象のアプリケーション上で動作を適用するために必要です。 この統合は、ローリング方式で行われ、特定のアプリケーション チームに依存します。 参加するアプリケーションには、WXP、Outlook、Managed Browser、Yammer などが含まれます。
   
 **データ転送ポリシーが "管理対象アプリのみ" または "アプリなし" に設定されている場合でも、iOS 共有拡張機能を使って、管理対象ではないアプリの職場または学校のデータを開くことができます。これはデータのリークではないのですか。**<br></br>
-Intune アプリ保護ポリシーでは、デバイスを管理せずに iOS 共有拡張機能を制御することはできません。 したがって、Intune は _**"企業" データがアプリの外部で共有される前に、データを暗号化します**_ 。 これは、管理対象アプリの外部で "企業" ファイルを開いてみることによって確認できます。 ファイルは暗号化されていて、管理対象アプリの外部では開くことができないはずです。
+Intune アプリ保護ポリシーでは、デバイスを管理せずに iOS 共有拡張機能を制御することはできません。 したがって、Intune は _**"企業" データがアプリの外部で共有される前に、データを暗号化します**_。 これは、管理対象アプリの外部で "企業" ファイルを開いてみることによって確認できます。 ファイルは暗号化されていて、管理対象アプリの外部では開くことができないはずです。
 
 **アプリとユーザーの同じセットに対して構成されている複数の Intune アプリ保護アクセス設定は iOS ではどのように動作しますか。**<br></br>
 エンド ユーザー デバイスが会社のアカウントから対象のアプリにアクセスしようとすると、アクセスに関する Intune アプリ保護ポリシーが特定の順序で適用されます。 通常、優先順位は、ワイプ、ブロック、無視できる警告となります。 たとえば、特定のユーザーまたはアプリに適用可能な場合、ユーザーのアクセスをブロックする最小の iOS/iPadOS オペレーティング システム設定の後、iOS/iPadOS バージョンを更新するようユーザーに警告する最小の iOS/iPadOS オペレーティング システム設定が適用されます。 したがって、IT 管理者が最小の iOS/iPadOS オペレーティング システムを 11.0.0.0 に構成し、最小の iOS/iPadOS オペレーティング システム (警告のみ) を 11.1.0.0 に構成した状態で、アプリにアクセスしようとしているデバイスが iOS/iPadOS 10 にあった場合、エンド ユーザーは最小の iOS/iPadOS オペレーティング システム バージョンに対するより制限の厳しい設定に基づいてブロックされるため、アクセスのブロックにつながります。

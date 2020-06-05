@@ -6,8 +6,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
-ms.topic: conceptual
+ms.date: 05/20/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9657353dd877b380d506e588934e3f6fd29b51c1
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: 205c892c885682d10877aae4c92429cf59adb0ac
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587042"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989164"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Intune を使用してデバイスに電子メールの設定を追加する
 
@@ -29,9 +29,9 @@ Microsoft Intune には、組織内のデバイスに展開できるさまざま
 
 電子メール プロファイルを使用して、次のデバイスの組み込みの電子メール設定を構成できます。
 
-- Samsung Knox Standard 4.0 以降上の Android デバイス管理者
+- Samsung Knox Standard 5.0 以降の Android デバイス管理者
 - Android エンタープライズ
-- iOS 8.0 以降
+- iOS 11.0 以降
 - iPadOS 13.0 以降
 - Windows Phone 8.1 以降
 - Windows 10 (デスクトップ) と Windows 10 Mobile

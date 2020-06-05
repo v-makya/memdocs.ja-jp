@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/05/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 7d8ea221b6c1768055e3ca1839c20ed64e2e3838
-ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
+ms.openlocfilehash: be850b2351de138ddacb087b2acf198e164dcd67
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802023"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83430090"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune の Windows 10 Microsoft Defender ウイルス対策ポリシーの設定
 
-Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プロファイルに構成できるウイルス対策ポリシー設定を確認します。
+[エンドポイント セキュリティ ポリシー](../protect/endpoint-security-policy.md)の一部として Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プロファイルに構成できる、エンドポイント セキュリティ ウイルス対策ポリシー設定を確認します。
 
 ## <a name="cloud-protection"></a>クラウド保護
 

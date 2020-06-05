@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2020
+ms.date: 05/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e900252392f1e6f057561d8d07f6e764dc0aafc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e92315377a839a537dfc4c2da00d282d2cddf58f
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359353"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429086"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Microsoft Intune で macOS デバイス用のカスタム設定を使用する
 
@@ -39,11 +39,11 @@ macOS デバイスを使用するとき、Intune にカスタム設定を取り�
 
 ## <a name="before-you-begin"></a>始める前に
 
-[プロファイルを作成します](custom-settings-configure.md)。
+[macOS カスタム プロファイルを作成します](custom-settings-configure.md)。
 
 ## <a name="what-you-need-to-know"></a>知っておく必要がある情報
 
-- **Apple Configurator** を使用して構成プロファイルを作成するときは、エクスポートする設定が、デバイスの macOS バージョンと互換性があることを確認してください。 互換性のない設定の解決については、**Apple 開発者** Web サイトで「**Configuration Profile Reference**」(構成プロファイル リファレンス) および「[Mobile Device Management Protocol Reference](https://developer.apple.com/)」(モバイル デバイス管理プロトコル リファレンス) を検索してください。
+- **Apple Configurator** を使用して構成プロファイルを作成するときは、エクスポートする設定が、デバイスの macOS バージョンと互換性があることを確認してください。 互換性のない設定の解決については、[Apple 開発者](https://developer.apple.com/) Web サイトで「**Configuration Profile Reference**」(構成プロファイル リファレンス) および「**Mobile Device Management Protocol Reference**」(モバイル デバイス管理プロトコル リファレンス) を検索してください。
 
 - **Apple Profile Manager** を使用するときは、次のことを確認してください。
 
@@ -53,20 +53,20 @@ macOS デバイスを使用するとき、Intune にカスタム設定を取り�
 
     このファイルをダウンロードして保存します。 このファイルを Intune プロファイルに入力します。 
 
-  - Apple Profile Manager からエクスポートする設定が、デバイスの macOS バージョンと互換性があることを確認してください。 互換性のない設定の解決については、**Apple 開発者** Web サイトで「**Configuration Profile Reference**」(構成プロファイル リファレンス) および「[Mobile Device Management Protocol Reference](https://developer.apple.com/)」(モバイル デバイス管理プロトコル リファレンス) を検索してください。
+  - Apple Profile Manager からエクスポートする設定が、デバイスの macOS バージョンと互換性があることを確認してください。 互換性のない設定の解決については、[Apple 開発者](https://developer.apple.com/) Web サイトで「**Configuration Profile Reference**」(構成プロファイル リファレンス) および「**Mobile Device Management Protocol Reference**」(モバイル デバイス管理プロトコル リファレンス) を検索してください。
 
 ## <a name="custom-configuration-profile-settings"></a>カスタム構成プロファイルの設定
 
-- **カスタム構成プロファイル名**: ポリシーの名前を入力します。 この名前は、デバイス上と、Intune の状態に表示されます。
-- **構成プロファイル ファイル**: Apple Configurator または Apple Profile Manager を使用して作成した構成プロファイルを指定します。 インポートしたファイルは、 **[ファイルの内容]** 領域に表示されます。
+- **構成プロファイル名**: ポリシーの名前を入力します。 この名前は、デバイス上と、Intune の状態に表示されます。
+- **[構成プロファイル ファイル]** :Apple Configurator または Apple Profile Manager を使用して作成した `.xml` または `.mobileconfig` プロファイルを参照します。 最大ファイル サイズは 1,000,000 バイト (1 MB 未満) です。 インポートしたファイルが表示されます。 ファイルは追加した後に**削除**することもできます。
 
   また、`.mobileconfig` ファイルにデバイス トークンを追加することもできます。 デバイス トークンは、デバイス固有の情報を追加するために使用されます。 たとえば、シリアル番号を表示するには、`{{serialnumber}}` と入力します。 デバイスでは、各デバイスに固有の `123456789ABC` のようなテキストが表示されます。 変数を入力するときは、必ず中かっこ `{{ }}` を使用してください。 [アプリの構成トークン](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list)に関する記事には、使用できる変数の一覧が掲載されています。 `deviceid` または他のデバイス固有の値を使用することもできます。
 
   > [!NOTE]
-  > 変数は UI で検証されず、大文字と小文字が区別されます。 その結果、不適切な入力で保存されたプロファイルが表示される場合があります。 たとえば、`{{DeviceID}}` の代わりに `{{deviceid}}` を入力した場合、リテラル文字列がデバイスの一意の ID の代わりに表示されます。 必ず、正しい情報を入力してください。
+  > 変数は UI で検証されず、大文字と小文字が区別されます。 その結果、不適切な入力で保存されたプロファイルが表示される場合があります。 たとえば、`{{deviceid}}` の代わりに `{{DeviceID}}` を入力した場合、リテラル文字列がデバイスの一意の ID の代わりに表示されます。 必ず、正しい情報を入力してください。
 
 ## <a name="next-steps"></a>次のステップ
 
-プロファイルは作成されましたが、まだ何も実行できない可能性があります。 次に、[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
+[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
 
 [iOS または iPadOS デバイス上でカスタム プロファイル](custom-settings-ios.md)を作成します。

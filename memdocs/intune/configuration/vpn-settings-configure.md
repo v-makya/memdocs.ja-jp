@@ -1,12 +1,12 @@
 ---
 title: Microsoft Intune デバイスに VPN 設定を追加する - Azure | Microsoft Docs
-description: Android デバイス管理者、Android Enterprise、iOS、iPadOS、macOS、および Windows デバイスでは、組み込みの設定を使用して Microsoft Intune で仮想プライベート ネットワーク (VPN) 接続を作成します。
+description: Android デバイス管理者、Android エンタープライズ、iOS、iPadOS、macOS、および Windows デバイス上で、組み込みの設定を使用して Microsoft Intune で仮想プライベート ネットワーク (VPN) 接続を作成します。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 05/07/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c72d2f8d9bd6a7235845863000272f605bb41089
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 1c92220fabf8d1cb2a34ac702dd4157ef848762b
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943826"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990258"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Intune で VPN サーバーに接続するための VPN プロファイルを作成する
 
-仮想プライベート ネットワーク (VPN) を使用すると、組織のユーザーが組織のネットワークにリモート アクセスする際にセキュリティで保護することができます。 デバイスでは、VPN 接続プロファイルを使用して VPN サーバーとの接続が開始されます。 Microsoft Intune の **VPN プロファイル**によって組織内のユーザーとデバイスに VPN 設定を割り当て、組織のネットワークに簡単かつ安全に接続できるようにします。
+仮想プライベート ネットワーク (VPN) を使用すると、組織のユーザーが組織のネットワークにリモート アクセスする際にセキュリティで保護することができます。 デバイスでは、VPN 接続プロファイルを使用して VPN サーバーとの接続が開始されます。 Microsoft Intune の **VPN プロファイル**により、組織内のユーザーとデバイスに VPN 設定が割り当てられます。 これらの設定を使用して、ユーザーが組織のネットワークに簡単かつ安全に接続できるようにします。
 
 たとえば、組織のネットワーク上のファイル共有に接続するために必要な設定をすべての iOS/iPadOS デバイスに構成したいとします。 これらの設定を含む VPN プロファイルを作成します。 その後、iOS/iPadOS デバイスを持っているすべてのユーザーにこのプロファイルを割り当てます。 使用できるネットワークの一覧に VPN 接続が表示されるので、ユーザーは最小限の労力で接続できます。
 
@@ -108,7 +108,6 @@ ms.locfileid: "82943826"
   - Android エンタープライズ仕事用プロファイル
   - Android エンタープライズ デバイス所有者 (フル マネージド)
   - iOS/iPadOS
-  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8.1
@@ -182,7 +181,7 @@ VPN プロファイルは、さまざまな製造元から提供される多く�
 
 VPN プロファイルを作成するときに、Intune で事前に作成した SCEP または PKCS の証明書プロファイルを選択します。 このプロファイルは ID 証明書と呼ばれます。 ユーザーのデバイスの接続を許可するために作成した信頼済み証明書プロファイル (または、"*ルート証明書*") に対して認証を行うために使用されます。 信頼できる証明書は、VPN 接続を認証するコンピューター (通常は VPN サーバー) に割り当てられます。
 
-VPN プロファイルに証明書ベースの認証を使用する場合は、各デバイスが証明機関の正当性を確実に認識できるように、VPN プロファイル、証明書プロファイル、信頼されたルート プロファイルを同じグループに展開します。
+VPN プロファイルに証明書ベースの認証を使用する場合は、VPN プロファイル、証明書プロファイル、および信頼されたルート プロファイルを同じグループに展開します。 この割り当てにより、各デバイスが証明機関の正当性を認識するようになります。
 
 Intune で証明書プロファイルを作成および使用する方法の詳細については、[Microsoft Intune で証明書を構成する方法](../protect/certificates-configure.md)に関する記事を参照してください。
 

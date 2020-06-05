@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 05/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ab94c3cc8bb9009d49a6b301d9a67fa6ffc5f1a
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a91a84ece833bf893395e494a0e99fa675f14c2a
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364306"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83429653"
 ---
 # <a name="windows-10-and-newer-device-settings-to-upgrade-editions-or-enable-s-mode-in-intune"></a>Intune でエディションのアップグレードや S モードの有効化に使用する Windows 10 (以降の) デバイス設定
 
@@ -38,18 +38,20 @@ Microsoft Intune には、デバイスの管理と保護に役立つ多くの設
 
 ## <a name="edition-upgrade"></a>エディションのアップグレード
 
-- **アップグレード後のエディション**: アップグレード後の Windows 10 エディションを選択します。 このポリシーで対象となるデバイスが選択したエディションにアップグレードされます。
-- **プロダクト キー**: Microsoft から受け取ったプロダクト キーを入力します。 プロダクト キーを含むポリシーの作成後、キーは更新できなくなり、セキュリティ上の理由から非表示になります。 プロダクト キーを変更するには、キー全体を再入力します。
+- **アップグレード後のエディション**:アップグレード後の Windows 10 エディションを選択します。 このポリシーで対象となるデバイスが選択したエディションにアップグレードされます。
+- **プロダクト キー**:Microsoft から受け取ったプロダクト キーを入力します。 プロダクト キーを含むポリシーの作成後、キーは更新できなくなり、セキュリティ上の理由から非表示になります。 プロダクト キーを変更するには、キー全体を再入力します。
 - **ライセンス ファイル**: **[Windows 10 Holographic for Business]** または **[Windows 10 Mobile エディション]** については、 **[参照]** を選択し、Microsoft から受け取ったライセンス ファイルを選択します。 このライセンス ファイルには、デバイスをアップグレードするエディションのライセンス情報が含まれています。
 
 ## <a name="mode-switch"></a>モード切り替え
 
-- **構成なし**: S モード デバイスは S モードのままになります。 エンドユーザーはデバイスを S モードから抜けさせることができます。
-- **S モードを維持する**: エンド ユーザーはデバイスを S モードから抜けさせることができなくなります。
-- **切り替える**: デバイスを S モードから抜けさせます。
+- **[S モードから切り替える]** :デバイスを S モードから切り替えます。 次のようなオプションがあります。
+
+  - **No configuration (構成なし)** :Intune では、この設定は変更または更新されません。 既定では、S モードのデバイスは、S モードのままになる場合があります。 ユーザーがデバイスを S モードから切り替えることができます。
+  - **S モードのままにする**:デバイスを S モードから切り替えることができないようにします。
+  - **切り替え**:デバイスを S モードから切り替えることをユーザーに許可します。
 
 ## <a name="next-steps"></a>次のステップ
 
-プロファイルは作成されましたが、まだ何も実行できない可能性があります。 必ず[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)してください。
+[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
 
 [Windows Holographic for Business](holographic-upgrade.md) デバイス用にエディションのアップグレード プロファイルを作成することもできます。

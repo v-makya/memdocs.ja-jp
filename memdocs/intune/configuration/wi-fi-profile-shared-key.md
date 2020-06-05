@@ -5,8 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
-ms.topic: conceptual
+ms.date: 05/13/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5c33e1e8e589f430fe8265ee4762b4755f3618
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 28dfeecf841eb1b9c69f46b2002b350c83514e1d
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086445"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990574"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Intune でカスタム デバイス プロファイルを使用し、事前共有キーを含む WiFi プロファイルを作成する
 
@@ -52,12 +52,17 @@ ms.locfileid: "80086445"
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 3. 次のプロパティを入力します。
 
+    - **[プラットフォーム]** :お使いのプラットフォームを選択します。
+    - **[プロファイル]** : **[カスタム]** を選択します。
+
+4. **[作成]** を選択します。
+5. **[Basics]\(基本\)** で次のプロパティを入力します。
+
     - **名前**:ポリシーのわかりやすい名前を入力します。 後で簡単に識別できるよう、ポリシーに名前を付けます。 たとえば、「**Android デバイス管理者デバイス向けカスタム OMA-URI Wi-F プロファイル設定**」は適切なポリシー名です。
     - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
-    - **[プラットフォーム]** :お使いのプラットフォームを選択します。
-    - **[プロファイルの種類]** : **[カスタム]** を選択します。
 
-4. **[設定]** で **[追加]** を選択します。 次のプロパティで新しい OMA-URI 設定を入力します。
+6. **[次へ]** を選択します。
+7. **[構成設定]** で、 **[追加]** を選択します。 次のプロパティで新しい OMA-URI 設定を入力します。
 
     1. **名前**:OMA-URI 設定の名前を入力します。
     2. **説明**:OMA-URI 設定の説明を入力します。 この設定は省略可能ですが、推奨されます。
@@ -74,10 +79,22 @@ ms.locfileid: "80086445"
     4. **データ型**: **[文字列]** を選択します。
 
     5. **値**:XML コードを貼り付けます。 この記事の[例](#android-or-windows-wi-fi-profile-example)を参照してください。 ご利用のネットワーク設定に一致する値にそれぞれ更新します。 コードのコメント セクションには、一部のポインターが含まれます。
+    6. **[追加]** を選択して変更を保存します。
 
-5. 完了したら、 **[OK]**  >  **[作成]** を選択して変更を保存します。
+8. **[次へ]** を選択します。
 
-プロファイルの一覧にプロファイルが表示されます。 次に、ユーザー グループに[このプロファイルを割り当て](device-profile-assign.md)ます。 このポリシーは、ユーザー グループにのみ割り当てることができます。
+9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。
+
+    **[次へ]** を選択します。
+
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはユーザー グループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](device-profile-assign.md)に関するページを参照してください。
+
+    > [!NOTE]
+    > このポリシーは、ユーザー グループにのみ割り当てることができます。
+
+    **[次へ]** を選択します。
+
+11. **[確認と作成]** で、設定を確認します。 **[作成]** を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
 
 次回各デバイスがチェックインするときに、ポリシーが適用され、そのデバイスに Wi-Fi プロファイルが作成されます。 これで、デバイスは自動的にネットワークに接続できるようになります。
 

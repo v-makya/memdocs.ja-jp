@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/02/2020
-ms.topic: conceptual
+ms.date: 05/12/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: jieyan
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2d0d4c186dd0c703e371169fd24c2dbdabaa8ea
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 8eaa636659cb9e2382f61fb668d8aec2ecd75f7a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254845"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990179"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Microsoft Intune で、OEMConfig を使って Android Enterprise デバイスを使用および管理する
 
@@ -31,6 +31,8 @@ Microsoft Intune では、OEMConfig を使用して、Android Enterprise デバ�
 この機能は、以下に適用されます。  
 
 - Android エンタープライズ
+
+Android デバイス管理者を使用して Zebra Technologies のデバイスを管理するには、[Zebra Mobile Extensions (MX)](android-zebra-mx-overview.md) を使用します。
 
 この記事では、OEMConfig について説明し、前提条件の一覧、構成プロファイルの作成方法、Intune でサポートされている OEMConfig アプリの一覧を示します。
 
@@ -56,7 +58,9 @@ OEMConfig を使用する場合は、次の情報に注意してください。
 - Intune では、ユーザーが構成できるように、OEMConfig アプリのスキーマが示されます。 Intune では、アプリによって提供されるスキーマの検証と変更は行われません。 そのため、スキーマが正しくなかったり、データが不正確だったりしても、このデータはデバイスに送信されます。 スキーマに起因する問題が見つかった場合は、OEM にお問い合わせください。
 - Intune により、アプリ スキーマの内容が影響を受けたり、制御されたりすることはありません。 たとえば、Intune では、文字列、言語、許可される操作などを制御できません。 OEMConfig を使用したデバイス管理の詳細については、OEM に問い合わせることをお勧めします。
 - OEM では、いつでも、サポートされている機能とスキーマを更新し、新しいアプリを Google Play にアップロードすることができます。 Intune では、常に Google Play からの最新バージョンの OEMConfig アプリと同期しています。 Intune では、以前のバージョンのスキーマとアプリのメンテナンスは行われません。 バージョンの競合が発生した場合は、詳細について OEM に問い合わせることをお勧めします。
-- 1 つの OEMConfig プロファイルをデバイスに割り当てます。 複数のプロファイルが同じデバイスに割り当てられると、一貫性のない動作が発生する可能性があります。 OEMConfig モデルでは、デバイスごとに 1 つのポリシーのみがサポートされます。
+- Zebra デバイスでは、複数のプロファイルを作成して、それらを同じデバイスに割り当てることができます。 詳細については、[Zebra デバイスでの OEMConfig](oemconfig-zebra-android-devices.md) に関するページを参照してください。
+
+  Zebra ではないデバイス上での OEMConfig モデルでは、デバイスごとに 1 つのポリシーのみがサポートされます。 複数のプロファイルが同じデバイスに割り当てられると、一貫性のない動作が発生する可能性があります。
 
 ## <a name="prerequisites"></a>[前提条件]
 
@@ -83,7 +87,7 @@ OEMConfig を使用する場合は、次の情報に注意してください。
 3. 次のプロパティを入力します。
 
     - **[プラットフォーム]** : **[Android エンタープライズ]** を選択します。
-    - **[プロファイルの種類]** : **[OEMConfig]** を選択します。
+    - **[プロファイル]** : **[OEMConfig]** を選択します。
 
 4. **[作成]** を選択します。
 5. **[Basics]\(基本\)** で次のプロパティを入力します。
@@ -145,7 +149,7 @@ OEMConfig を使用する場合は、次の情報に注意してください。
 
 ## <a name="supported-oemconfig-apps"></a>サポートされている OEMConfig アプリ
 
-OEMConfig アプリでは、標準アプリと比較して、より複雑なスキーマをサポートできるように、Google が付与する管理構成アクセス許可が拡張されています。 現在、Intune では次の OEMConfig アプリがサポートされています。
+OEMConfig アプリでは、標準アプリと比較してより複雑なスキーマや機能をサポートできるように、Google が付与する管理構成アクセス許可が拡張されています。 OEM は、OEMConfig アプリを Google に登録する必要があります。 登録しないと、これらの機能が想定どおりに動作しない場合があります。 現在、Intune では次の OEMConfig アプリがサポートされています。
 
 -----------------
 
@@ -153,6 +157,7 @@ OEMConfig アプリでは、標準アプリと比較して、より複雑なス�
 | --- | --- | ---|
 | Ascom | com.ascom.myco.oemconfig | |
 | Cipherlab | com.cipherlab.oemconfig | |
+| Datalogic | com.datalogic.settings.oemconfig | |
 | Honeywell | com.honeywell.oemconfig |  |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
 | HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 | 

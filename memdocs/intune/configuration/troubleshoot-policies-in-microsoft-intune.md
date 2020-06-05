@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 05/13/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3aaf2bf895082f3647f0a1ad6b9997a5e97baee
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e96199d9f525fa0dcbf7545d2c20b90a3a76b9cd
+ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364124"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83401790"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Intune でのポリシーとプロファイルのトラブルシューティング
 
@@ -39,12 +39,12 @@ Microsoft Intune には、トラブルシューティング機能がいくつか
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[トラブルシューティング + サポート]** を選択します。
 
-    ![Intune で、[ヘルプとサポート] に移動し、[トラブルシューティング] を選択する](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
+    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="Endpoint Management 管理センターと Intune で、[トラブルシューティングとサポート] に移動します。":::
 
 2. **[ユーザーの選択]** を選択し、問題が発生しているユーザーを選択して、 **[選択]** を選択します。
 3. **[Intune ライセンス]** と **[アカウントの状態]** の両方に緑のチェック マークが表示されていることを確認します。
 
-    ![Intune でユーザーを選択し、[アカウントの状態] と [Intune ライセンス] の状態に緑のチェック マークが表示されることを確認する](./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png)
+    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png" alt-text="Intune でユーザーを選択し、[アカウントの状態] と [Intune ライセンス] の状態に緑のチェック マークが表示されることを確認します。":::
 
     **役に立つリンク**:
 
@@ -53,7 +53,7 @@ Microsoft Intune には、トラブルシューティング機能がいくつか
 
 4. **[デバイス]** で、問題のあるデバイスを探します。 別の列を確認します。
 
-    - **管理対象**: デバイスがコンプライアンス ポリシーまたは構成ポリシーを受け取るには、このプロパティに **[MDM]** または **[EAS/MDM]** と表示されている必要があります。
+    - **[管理対象]** :デバイスがコンプライアンス ポリシーまたは構成ポリシーを受け取るには、このプロパティに **[MDM]** または **[EAS/MDM]** と表示されている必要があります。
 
         - **[管理対象]** が **[MDM]** または **[EAS/MDM]** に設定されていない場合、そのデバイスは登録されていません。 登録されるまでは、コンプライアンス ポリシーまたは構成ポリシーを受け取りません。
 
@@ -63,15 +63,15 @@ Microsoft Intune には、トラブルシューティング機能がいくつか
  
         - この列が **[未登録]** の場合は、登録に問題がある可能性があります。 通常、デバイスをいったん登録解除してから再登録すると、この状態は解決します。
 
-    - **[Intune 準拠]** : **[はい]** にしてください。 **[いいえ]** と表示される場合は、コンプライアンス ポリシーに問題があるか、またはデバイスが Intune サービスに接続されていない可能性があります。 たとえば、デバイスがオフになっていたり、ネットワークに接続していない場合があります。 最終的に、デバイスは非準拠になります (一般に 30 日後)。
+    - **[Intune 準拠]** : **[はい]** である必要があります。 **[いいえ]** と表示される場合は、コンプライアンス ポリシーに問題があるか、またはデバイスが Intune サービスに接続されていない可能性があります。 たとえば、デバイスがオフになっていたり、ネットワークに接続していない場合があります。 最終的に、デバイスは非準拠になります (一般に 30 日後)。
 
         詳細については、「[Intune のデバイス コンプライアンス ポリシーの概要](../protect/device-compliance-get-started.md)」をご覧ください。
 
-    - **[Azure AD 準拠]** : **[はい]** にしてください。 **[いいえ]** と表示される場合は、コンプライアンス ポリシーに問題があるか、またはデバイスが Intune サービスに接続されていない可能性があります。 たとえば、デバイスがオフになっていたり、ネットワークに接続していない場合があります。 最終的に、デバイスは非準拠になります (一般に 30 日後)。
+    - **[Azure AD 準拠]** : **[はい]** である必要があります。 **[いいえ]** と表示される場合は、コンプライアンス ポリシーに問題があるか、またはデバイスが Intune サービスに接続されていない可能性があります。 たとえば、デバイスがオフになっていたり、ネットワークに接続していない場合があります。 最終的に、デバイスは非準拠になります (一般に 30 日後)。
 
         詳細については、「[Intune のデバイス コンプライアンス ポリシーの概要](../protect/device-compliance-get-started.md)」をご覧ください。
 
-    - **[最後のチェックイン]** : 最近の日時になっている必要があります。 既定では、Intune デバイスは 8 時間ごとにチェックインされます。
+    - **[最後のチェックイン]** :最近の日時になっている必要があります。 既定では、Intune デバイスは 8 時間ごとにチェックインされます。
 
         - **[最後のチェックイン]** が 24 時間以上前の場合は、デバイスに問題がある可能性があります。 チェックインできないデバイスは、Intune からポリシーを受信できません。
 
@@ -91,10 +91,10 @@ Microsoft Intune には、トラブルシューティング機能がいくつか
 
         **[ポリシーの状態]** :
 
-        - **[該当なし]** : このポリシーは、このプラットフォームではサポートされていません。 たとえば、iOS/iPadOS のポリシーは、Android では機能しません。 Samsung KNOX のポリシーは、Windows デバイスでは機能しません。
-        - **競合**: Intune でオーバーライドできない既存の設定がデバイス上にあります。 または、デプロイされている 2 つのポリシーで、同じ設定に異なる値が使用されています。
-        - **保留中**: デバイスは、ポリシーを取得するために Intune にチェックインされていません。 または、デバイスはポリシーを受け取りましたが、Intune に状態を報告していません。
-        - **エラー**: エラーと考えられる解決策については、「[Microsoft Intune での会社のリソースへのアクセスに関する問題のトラブルシューティング](../fundamentals/troubleshoot-company-resource-access-problems.md)」をご覧ください。
+        - **該当なし**:このポリシーは、このプラットフォームではサポートされていません。 たとえば、iOS/iPadOS のポリシーは、Android では機能しません。 Samsung KNOX のポリシーは、Windows デバイスでは機能しません。
+        - **[競合]** :Intune でオーバーライドできない既存の設定がデバイス上にあります。 または、デプロイされている 2 つのポリシーで、同じ設定に異なる値が使用されています。
+        - **Pending**:デバイスは、ポリシーを取得するために Intune にチェックインされていません。 または、デバイスはポリシーを受け取りましたが、Intune に状態を報告していません。
+        - **[エラー]** :エラーと考えられる解決策については、「[Microsoft Intune での会社のリソースへのアクセスに関する問題のトラブルシューティング](../fundamentals/troubleshoot-company-resource-access-problems.md)」をご覧ください。
 
         **役に立つリンク**: 
 
@@ -108,13 +108,13 @@ Microsoft Intune には、トラブルシューティング機能がいくつか
 
     すべてのデバイスで、プロファイルが一覧表示されます。 各プロファイルには **[状態]** があります。 ハードウェアと OS の制限と要件を含む、すべての割り当てられたプロファイルがまとめて考慮されると、状態が適用されます。 可能性のある状態は次のとおりです。
 
-    - **準拠**: デバイスはプロファイルを受け取り、設定に準拠していることを Intune に報告しています。
+    - **[準拠]** :デバイスはプロファイルを受け取り、設定に準拠していることを Intune に報告しています。
 
-    - **該当なし**: プロファイル設定は適用されません。 たとえば、iOS/iPadOS デバイス用の電子メール設定は、Android デバイスには適用されません。
+    - **適用なし**:プロファイルの設定は該当しません。 たとえば、iOS/iPadOS デバイス用の電子メール設定は、Android デバイスには適用されません。
 
-    - **保留中**: プロファイルはデバイスに送信されましたが、Intune に状態を報告していません。 たとえば、Android での暗号化では、ユーザーが暗号化を有効にする必要があるため、保留と表示される可能性があります。
+    - **Pending**:プロファイルはデバイスに送信されましたが、Intune に状態を報告していません。 たとえば、Android での暗号化では、ユーザーが暗号化を有効にする必要があるため、保留と表示される可能性があります。
 
-**役に立つリンク**: [デバイス構成プロファイルを監視する](../configuration/device-profile-monitor.md)
+**役に立つリンク**:[デバイス構成プロファイルを監視する](../configuration/device-profile-monitor.md)
 
 > [!NOTE]
 > 制限レベルが異なる 2 つのポリシーを同じデバイスまたはユーザーに適用すると、より厳しい方のポリシーが適用されます。
@@ -126,9 +126,9 @@ Microsoft Intune には、トラブルシューティング機能がいくつか
 - [Windows 10 の CSP カスタム設定のトラブルシューティング](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (別の Microsoft サイトを開きます)
 - [Windows 10 グループ ポリシーと Intune MDM ポリシー](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (別の Microsoft サイトを開きます)
 
-## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>アラート: アクセス ルールを Exchange に保存できませんでした
+## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>アラート:アクセス ルールを Exchange に保存できませんでした
 
-**問題**: 管理コンソールが「 **アクセス ルールを Exchange に保存できませんでした**  」のアラートを受信する。
+**問題**:管理コンソールで "**アクセス ルールを Exchange に保存できませんでした**" というアラートを受け取ります。
 
 [Exchange On-Premises ポリシー] ワークスペース (管理コンソール) でポリシーを作成したが、Office 365 を使用している場合は、構成されたポリシー設定が Intune によって適用されません。 アラートでポリシー ソースに注意します。 [Exchange On-Premises ポリシー] ワークスペースで、従来のルールを削除します。 従来のルールはオンプレミスの Exchange で使用する、Intune 内のグローバルの Exchange ルールであり、Office 365 に関連しないためです。 次に、Office 365 の新しいポリシーを作成します。
 
@@ -170,7 +170,7 @@ Intune ソフトウェア クライアントで管理されている Windows PC 
 
 4. 通知のスライダーを既定の設定に移動します。
 
-### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>エラー: コンピューター 0x80041013 から値を取得できません
+### <a name="error-cannot-obtain-the-value-from-the-computer-0x80041013"></a>エラー:コンピューター 0x80041013 から値を取得できません
 
 ローカル システム上の時間が 5 分以上ずれている場合に発生します。 ローカル コンピューターの時間が同期されていない場合は、タイム スタンプが有効でないためセキュリティで保護されたトランザクションが失敗します。
 

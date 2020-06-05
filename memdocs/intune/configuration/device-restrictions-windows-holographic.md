@@ -1,11 +1,11 @@
 ---
 title: Windows Holographic Business デバイスの設定 - Microsoft Intune - Azure | Microsoft Docs
-description: 登録解除、位置情報、パスワード、アプリ ストアからのアプリのインストール、Microsoft Edge の Cookie とポップアップ、Microsoft Defender、検索、クラウドと記憶域、Bluetooth の接続、システム時刻、Azure の使用状況データなど、Windows Holographic for Business の Microsoft Intune でのデバイス制限設定について説明し、これらの設定を構成します。
+description: Windows Holographic for Business の Microsoft Intune でのデバイス制限設定について説明し、これらの設定を構成します。 登録解除、位置情報、パスワード、アプリ ストアからのアプリのインストール、Microsoft Edge の Cookie とポップアップ、Microsoft Defender、検索、クラウドとストレージ、Bluetooth 接続、システム時刻、使用状況データなどを制御します。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 05/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,98 +15,144 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a207c34c0d46b423eda44abf953e9c084cc9b2d
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 301cdd9403b0bb3e2d64c8707782ecbc639dc044
+ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078228"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83556050"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限する Windows Holographic for Business デバイスの設定
 
-
-
 この記事では、Microsoft Hololens などの Windows Holographic for Business デバイス上で制御できる、さまざまな設定について説明します。 モバイル デバイス管理 (MDM) ソリューションの一部として、これらの設定を使って機能の許可や無効化、セキュリティ管理などを行います。
+
+Intune 管理者は、デバイスに対してこれらの設定を作成し、割り当てることができます。
 
 ## <a name="before-you-begin"></a>始める前に
 
-[デバイス構成プロファイルを作成します](device-restrictions-configure.md#create-the-profile)。
+[Windows 10 デバイス制限の構成プロファイルを作成します](device-restrictions-configure.md#create-the-profile)。
 
-## <a name="general"></a>全般
-
-- **[手動での登録解除]** :ユーザーがデバイスから会社アカウントを手動で削除できるようにします。
-- **[Cortana]** :Cortana の音声アシスタントを有効または無効にします。
-- **[位置情報]** :デバイスが位置情報サービスの情報を使用できるかどうかを指定します。
-
-## <a name="password"></a>パスワード
-
-- **[パスワード]** :エンド ユーザーがデバイスにアクセスする際にパスワードの入力を要求します。
-- **[デバイスがアイドル状態から戻るときにパスワードを必須とする]** :ユーザーがデバイスのロックを解除するときにパスワードの入力を必須にします。
+Windows 10 デバイス制限の構成プロファイルを作成する場合、この記事に記載されているものよりも多くの設定があります。 この記事の設定は、Windows Holographic for Business デバイスでサポートされています。
 
 ## <a name="app-store"></a>アプリ ストア
 
-- **[ストア アプリの自動更新]** :Microsoft ストアからインストールされたアプリの自動更新を許可します。
-- **[信頼できるアプリのインストール]** :信頼済み証明書で署名されたアプリのサイドロードを許可します。
-- **[開発者によるロック解除]** :サイドロードしたアプリのエンド ユーザーによる変更を許可するなど、Windows 開発者の設定を許可します。
+- **[ストア アプリの自動更新]** : **[ブロック]** を選択すると、更新プログラムが Microsoft Store から自動的にインストールされなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、Microsoft Store からインストールされたアプリの自動更新が OS で許可されている可能性があります。
 
-## <a name="microsoft-edge-browser"></a>Microsoft Edge ブラウザー
+  [ApplicationManagement/AllowAppStoreAutoUpdate CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate)
 
-- **[Cookie]** :ブラウザーがインターネット Cookie をデバイスに保存するように設定します。
-- **[ポップアップ]** :ブラウザー内のポップアップ ウィンドウをブロックします (Windows 10 デスクトップのみに適用)。
-- **[検索候補]** :検索語句を入力したときに、検索エンジンからサイトが提案されるようになります。
-- **[パスワード マネージャー]** :Microsoft Edge Password Manager 機能を有効または無効にします。
-- **[トラッキング拒否ヘッダーを送信する]** :ユーザーがアクセスする Web サイトへトラッキング拒否ヘッダーを送信できるように、Microsoft Edge ブラウザーを構成します。
+- **[信頼できるアプリのインストール]** :Microsoft Store 以外のアプリをインストールできる場合に選択します。これはサイドローディングとも呼ばれます。 サイドローディングでは、Microsoft Store によって認定されていないアプリのインストール後に、アプリが実行されるかテストされます。 たとえば、社内でのみ使用されるアプリです。 次のようなオプションがあります。
+  - **[未構成]** (既定値):Intune では、この設定は変更または更新されません。
+  - **[ブロック]** :サイドローディングを禁止します。 Microsoft Store 以外のアプリをインストールすることはできません。
+  - **[許可]** :サイドローディングを許可します。 Microsoft Store 以外のアプリをインストールできます。
 
-## <a name="microsoft-defender-smart-screen"></a>Microsoft Defender SmartScreen
+  [ApplicationManagement/AllowAllTrustedApps CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps)
 
-- **[SmartScreen for Microsoft Edge]** :サイトへのアクセスとファイルのダウンロードに対して Microsoft Edge の SmartScreen を有効にします。
+- **[開発者によるロック解除]** :サイドロードされたアプリのユーザーによる変更を許可するなど、Windows の開発者向け設定を許可します。 次のようなオプションがあります。
+  - **[未構成]** (既定値):Intune では、この設定は変更または更新されません。
+  - **[ブロック]** :開発者モードとアプリのサイドローディングを禁止します。
+  - **[許可]** :開発者モードとアプリのサイドローディングを許可します。
 
-## <a name="search"></a>検索
-
-- **[Search location]\(場所の検索\)** - 検索で場所を使用できるかどうかを指定します。 情報
-
-## <a name="cloud-and-storage"></a>クラウドとストレージ
-
-- **[Microsoft アカウント]** :ユーザーがデバイスに Microsoft アカウントを関連付けられるようにします。
+  [ApplicationManagement/AllowDeveloperUnlock CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowdeveloperunlock)
 
 ## <a name="cellular-and-connectivity"></a>携帯ネットワークと接続性
 
-- **[Bluetooth]** :ユーザーがデバイスの Bluetooth を有効にして構成できるようにするかどうかを制御します。
-- **[Bluetooth の検出可能性]** :その他の Bluetooth 対応デバイスにより、デバイスが検出されるようにします。
-- **[Bluetooth 広告]** :デバイスが Bluetooth 経由で広告を受信できるようにします。
+- **[Bluetooth]** : **[ブロック]** に設定すると、ユーザーは Bluetooth を有効にできなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、デバイスの Bluetooth が OS で許可される場合があります。
+
+  [Connectivity/AllowBluetooth CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowbluetooth)
+
+- **[Bluetooth の検出可能性]** : **[ブロック]** に設定すると、このデバイスは他の Bluetooth 対応デバイスで検出されなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、ヘッドセットなどの他の Bluetooth 対応デバイスからのこのデバイスの検出が OS で許可されている可能性があります。
+
+  [Bluetooth/AllowDiscoverableMode CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+
+- **[Bluetooth 広告]** : **[ブロック]** に設定すると、デバイスは Bluetooth 広告を送信できなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、デバイスによる Bluetooth 広告の送信が OS で許可されている可能性があります。
+
+  [Bluetooth/AllowAdvertising CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+## <a name="cloud-and-storage"></a>クラウドとストレージ
+
+- **[Microsoft アカウント]** : **[ブロック]** にすると、ユーザーは Microsoft アカウントをデバイスに関連付けることができなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、Microsoft アカウントの追加と使用が OS で許可されている可能性があります。
+
+  [Accounts/AllowMicrosoftAccountConnection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts#accounts-allowmicrosoftaccountconnection)
 
 ## <a name="control-panel-and-settings"></a>コントロール パネルと設定
 
-- **[システム時刻の変更]** :エンド ユーザーがシステム時刻を変更できないようにします。
+- **[システム時刻の変更]** : **[ブロック]** に設定すると、ユーザーはデバイスの日付と時刻の設定を変更できなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、ユーザーはこれらの設定の変更を許可される場合があります。
 
-## <a name="kiosk---obsolete"></a>キオスク - 現在不使用
+  [Settings/AllowDateTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings#settings-allowdatetime)
 
-これらの設定は読み取り専用であり、変更することはできません。 キオスク モードを構成する場合は、「[キオスクの設定](kiosk-settings-holographic.md)」を参照してください。
+## <a name="general"></a>全般
 
-通常、キオスク デバイスでは特定のアプリが実行されます。 ユーザーは、キオスク アプリ以外のデバイスの機能にアクセスすることはできません。
+- **[手動での登録解除]** : **[ブロック]** に設定すると、ユーザーはデバイスでワークプレース コントロール パネルを使用して職場アカウントを削除できなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。
 
-- **[キオスク モード]** :ポリシーによってサポートされるキオスク モードの種類を識別します。 次のオプションがあります。
+  [Experience/AllowManualMDMUnenrollment CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowmanualmdmunenrollment)
 
-  - **[未構成]** (既定):このポリシーでは、キオスク モードが有効になりません。 
-  - **[シングル アプリ キオスク]** :このプロファイルの場合、デバイス上で 1 つのアプリのみを実行できます。 ユーザーがサインインすると、特定のアプリが起動します。 また、このモードでは、ユーザーによる新しいアプリを開く操作や、実行中のアプリを変更する操作が制限されます。
-  - **[マルチ アプリ キオスク]** :このプロファイルでは、デバイスは複数のアプリを実行できます。 ユーザーはプロファイルに追加されているアプリだけを利用できます。 マルチ アプリ キオスク (または固定目的デバイス) の利点は、ユーザーがアクセスできるのは必要なアプリだけなので、わかりやすいエクスペリエンスがユーザーに提供されることです。 また、必要のないアプリはビューから削除されます。 
-  
-    マルチ アプリ キオスク エクスペリエンス向けのアプリを追加する場合は、スタート メニュー レイアウト ファイルも追加します。 [スタート メニュー レイアウト ファイル](/hololens/hololens-kiosk#start-layout-file-for-mdm-intune-and-others)には、Intune で使用できるサンプル XML が含まれています。 
+- **[位置情報]** : **[ブロック]** に設定すると、ユーザーはデバイスで位置情報サービスをオンにできなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。
 
-### <a name="single-app-kiosks"></a>シングル アプリ キオスク
+  [Experience/AllowFindMyDevice CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowfindmydevice)
 
-次の設定を入力します。
+- **[Cortana]** : **[ブロック]** に設定すると、デバイスで Cortana 音声アシスタントが無効になります。 Cortana がオフの場合でも、ユーザーはデバイス上の項目を検索できます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、Cortana が OS で許可されている可能性があります。
 
-- **[ユーザー アカウント]** :(デバイスの) ローカル ユーザー アカウントか、キオスク アプリに関連付けられている Azure AD アカウント ログインを入力します。 Azure AD ドメインに参加しているアカウントについては、`domain\username@tenant.org` 形式を使用してアカウントを入力します。 
+  [Experience/AllowCortana CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
 
-    自動ログオンが有効になっている公開環境のキオスクの場合、最小特権 (ローカルの標準ユーザー アカウントなど) を持つユーザーの種類を使用する必要があります。 キオスク モードの Azure Active Directory (AD) アカウントを構成するには、`AzureAD\user@contoso.com` 形式を使用します。
+## <a name="microsoft-edge-browser"></a>Microsoft Edge ブラウザー
 
-- **[アプリのアプリケーション ユーザー モデル ID (AUMID)]** :キオスク アプリの AUMID を入力します。 詳細については、「[Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app)」 (インストール済みアプリのアプリケーション ユーザー モデル ID を見つける) を参照してください。
+- **[開始エクスペリエンス]**  >  **[ポップアップを許可する]** : **[はい]** (既定値) に設定すると、Web ブラウザーでポップアップが表示されます。 **[いいえ]** にすると、ブラウザーにポップアップ ウィンドウが表示されなくなります。
+
+  [Browser/AllowPopups CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)
+
+- **[お気に入りと検索]**  >  **[検索候補を表示する]** : **[はい]** (既定値) に設定すると、アドレス バーに検索語句を入力したときに、検索エンジンからサイトが提案されます。 **[いいえ]** にすると、この機能が停止されます。
+
+  [Browser/AllowSearchSuggestionsinAddressBar CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)
+
+- **[プライバシーとセキュリティ]**  >  **[Password Manager を許可する]** : **[はい]** (既定値) に設定すると、Microsoft Edge は Password Manager を自動的に使用するようになり、ユーザーはデバイスにパスワードを保存して管理できます。 **[いいえ]** にすると、Microsoft Edge で Password Manager は使用できなくなります。
+
+  [Browser/AllowPasswordManager CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)
+
+- **[プライバシーとセキュリティ]**  >  **[Cookie]** :Web ブラウザーで Cookie を処理する方法を選択します。 次のようなオプションがあります。
+  - **[許可]** :Cookie がデバイス上に保存されます。
+  - **[すべての Cookie をブロックする]** :Cookie がデバイス上に保存されまません。
+  - **[サード パーティの Cookie のみブロックする]** :サード パーティまたはパートナーの Cookie がデバイス上に保存されません。
+
+  [Browser/AllowCookies CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)
+
+- **[プライバシーとセキュリティ]**  >  **[トラッキング拒否ヘッダーを送信する]** : **[はい]** に設定すると、追跡情報を要求している Web サイトにトラッキング拒否ヘッダーが送信されます (推奨)。 **[いいえ]** (既定値) の場合、Web サイトにユーザーの追跡を可能にするヘッダーを送信しません。 ユーザーはこの設定を構成できます。
+
+  [Browser/AllowDoNotTrack CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)
+
+## <a name="microsoft-defender-smartscreen"></a>Microsoft Defender SmartScreen
+
+- **[SmartScreen for Microsoft Edge]** : **[必須]** に設定すると、Microsoft Defender SmartScreen がオンになり、ユーザーはそれをオフにすることができなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 OS の既定では、SmartScreen がオンになることがあります。ユーザーはそのオンとオフを切り替えることができます。
+
+  [ブラウザー/AllowSmartScreen CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+
+## <a name="password"></a>パスワード
+
+- **パスワード**: **[必要]** にすると、デバイスにアクセスするユーザーにパスワードの入力が強制されます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、パスワードなしでのデバイスへのアクセスが OS で許可されている可能性があります。 ローカル アカウントのみに適用されます。 ドメイン アカウントのパスワードは、Active Directory (AD) および Azure AD によって構成されたままになります。
+
+  [DeviceLock/DevicePasswordEnabled CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordenabled)
+
+- **[デバイスがアイドル状態から戻るときにパスワードを必須とする]** : **[必須]** にすると、アイドル状態になった後のデバイスのロックを解除するために、ユーザーにパスワードの入力が強制されます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、アイドル状態になった後に PIN またはパスワードが OS で要求されない可能性があります。
+
+  [DeviceLock/AllowIdleReturnWithoutPassword CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowidlereturnwithoutpassword)
 
 ## <a name="reporting-and-telemetry"></a>レポートとテレメトリ
 
-- **[使用状況データの共有]** :診断データの送信レベルを選択します。
+- **[使用状況データの共有]** :送信される診断データのレベルを選択します。 次のようなオプションがあります。
+
+  - **[未構成]** (既定値):Intune では、この設定は変更または更新されません。 強制される設定はありません。 ユーザーは、送信されるレベルを選択します。 既定では、OS でデータが共有されない可能性があります。
+  - **[セキュリティ]** :Windows のより強力なセキュリティ保護を維持するために必要な情報。接続されたユーザー エクスペリエンスとテレメトリ コンポーネントの設定、悪意のあるソフトウェアの削除ツール、Microsoft Defender に関するデータなどが含まれます
+  - **[基本]** : 基本的なデバイス情報。品質に関連するデータ、アプリの互換性、アプリの使用状況データ、およびセキュリティ レベルのデータが含まれます
+  - **[拡張]** : 追加の分析情報。Windows、Windows Server、System Center、およびアプリの利用状況、それらのパフォーマンス、詳細な信頼性データ、基本レベルとセキュリティ レベルの両方の情報が含まれます
+  - **[完全]** : 問題の特定に必要で、問題の修正にも役立つすべてのデータと、セキュリティ、基本、および拡張レベルのデータ。
+
+  [システム/AllowTelemetry CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
+
+## <a name="search"></a>検索
+
+- **場所の検索**: **[ブロック]** に設定すると、Windows Search がその場所を使用できなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、この機能が許可される場合があります。
+
+  [Search/AllowSearchToUseLocation CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search#search-allowsearchtouselocation)
 
 ## <a name="next-steps"></a>次のステップ
 
-[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
+[プロファイルを割り当てて](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。

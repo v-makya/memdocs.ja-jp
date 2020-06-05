@@ -1,12 +1,12 @@
 ---
 title: Microsoft Intune で Windows 10 デバイス用のテンプレートを使用する - Azure | Microsoft Docs
-description: Microsoft Intune とエンドポイント マネージャーで管理用テンプレートを使用して、Windows 10 デバイスの設定のグループを作成します。 デバイス構成プロファイルでこれらの設定を使用して、Office プログラムや Microsoft Edge の制御、Internet Explorer の機能のセキュリティ保護、OneDrive へのアクセスの制御、リモート デスクトップ機能の使用、自動再生の有効化、電源管理の設定、HTTP 印刷の使用、さまざまなユーザー サインイン オプションの使用、イベント ログ サイズの制御を行います。
+description: Microsoft Intune とエンドポイント マネージャーで管理用テンプレートを使用して、Windows 10 デバイスの設定のグループを作成します。 デバイス構成プロファイルでこれらの設定を使用して、Office プログラムや Microsoft Edge の制御、Internet Explorer のセキュリティ保護、OneDrive へのアクセス、リモート デスクトップの使用、自動再生の有効化、電源管理の設定、HTTP 印刷の使用、ユーザー サインインの制御、イベント ログのサイズの変更を制御します。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2020
-ms.topic: conceptual
+ms.date: 05/14/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f609ec62259deffb220c8ee935d0f10a98ae77b5
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 89635c9eb2849b4896ea3df85dd081d6e267627e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254896"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990199"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Windows 10 テンプレートを使用し、Microsoft Intune でグループ ポリシー設定を構成する
 
 組織でデバイスを管理するとき、さまざまなデバイス グループに適用される設定のグループを作成することが推奨されます。 たとえば、いくつかのデバイス グループがあるとします。 グループ A には、特定の設定のセットを割り当てます。 グループ B には、別の設定のセットを割り当てます。 また、構成できる設定の単純なビューも必要です。
 
-このタスクを完了するには、Microsoft Intune で**管理用テンプレート**を使用します。 管理用テンプレートには、Microsoft Edge バージョン 77 以降、Internet Explorer、Microsoft Office プログラム、リモート デスクトップ、OneDrive、パスワードと PIN などの機能を制御するための、数百の設定が含まれています。 グループ管理者は、これらの設定により、クラウドを使ってグループ ポリシーを管理できます。
+このタスクを完了するには、Microsoft Intune で**管理用テンプレート**を使用します。 管理用テンプレートには、Microsoft Edge バージョン 77 以降、Internet Explorer、Microsoft Office プログラム、リモート デスクトップ、OneDrive、パスワード、PIN などの機能を制御するための、数千の設定が含まれています。 グループ管理者は、これらの設定により、クラウドを使ってグループ ポリシーを管理できます。
 
 この機能は、以下に適用されます。
 
@@ -62,27 +62,27 @@ Windows の設定は、Active Directory (AD) のグループ ポリシー (GPO) 
 
 6. **[次へ]** を選択します。
 
-7. **[構成設定]** で、デバイスに適用される設定 ( **[コンピューターの構成]** ) と、ユーザーに適用される設定 ( **[ユーザーの構成]** ) を構成します。
+7. **[構成設定]** の **[すべての設定]** を選択して、すべての設定のアルファベット順の一覧を表示します。 または、次のようにデバイスに適用される設定 ( **[コンピューターの構成]** ) と、ユーザーに適用される設定 ( **[ユーザーの構成]** ) を構成します。
 
     > [!div class="mx-imgBorder"]
     > ![Microsoft Intune エンドポイント マネージャーでユーザーとデバイスに ADMX テンプレート設定を適用する](./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png)
 
-8. **[コンピューターの構成]** を選択すると、設定のカテゴリが表示されます。 任意のカテゴリを選択して、使用可能な設定を確認できます。
+8. **[すべての設定]** を選択すると、すべての設定が一覧表示されます。 さらに設定を表示するには、下へスクロールして戻る矢印と次へ矢印を使用します。
+
+    > [!div class="mx-imgBorder"]
+    > ![設定のサンプル一覧を表示し、戻るボタンと次へボタンを使用する](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
+
+9. 任意の設定を選択します。 たとえば、 **[Office]** でフィルター処理して、 **[参照の制限を有効にする]** を選択します。 設定の詳細説明が表示されます。 **[有効]** 、 **[無効]** を選択するか、または設定を **[未構成]** (既定値) のままにします。 詳細な説明では、 **[有効]** 、 **[無効]** 、または **[未構成]** を選択したときの動作についても説明されています。
+
+    > [!TIP]
+    > Intune の Windows の設定は、ローカル グループ ポリシー エディター (`gpedit`) に表示されるオンプレミスのグループ ポリシー パスに関連付けられます
+
+10. **[コンピューターの構成]** または **[ユーザーの構成]** を選択すると、設定のカテゴリが表示されます。 任意のカテゴリを選択して、使用可能な設定を確認できます。
 
     たとえば、Internet explorer に適用されるすべてのデバイス設定を表示するには、 **[コンピューターの構成]**  >  **[Windows コンポーネント]**  >  **[Internet Explorer]** を選択します。
 
     > [!div class="mx-imgBorder"]
     > ![Microsoft Intune エンドポイント マネージャーで Internet Explorer に適用されるすべてのデバイス設定を表示する](./media/administrative-templates-windows/administrative-templates-all-internet-explorer-settings-device.png)
-
-9. また、 **[すべての設定]** を選択して、すべてのデバイス設定を表示することもできます。 さらに設定を表示するには、下へスクロールして戻る矢印と次へ矢印を使用します。
-
-    > [!div class="mx-imgBorder"]
-    > ![設定のサンプル一覧を表示し、戻るボタンと次へボタンを使用する](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
-
-10. 任意の設定を選択します。 たとえば、 **[Office]** でフィルター処理して、 **[参照の制限を有効にする]** を選択します。 設定の詳細説明が表示されます。 **[有効]** 、 **[無効]** を選択するか、または設定を **[未構成]** (既定値) のままにします。 詳細な説明では、 **[有効]** 、 **[無効]** 、または **[未構成]** を選択したときの動作についても説明されています。
-
-    > [!TIP]
-    > Intune の Windows の設定は、ローカル グループ ポリシー エディター (`gpedit`) に表示されるオンプレミスのグループ ポリシー パスに関連付けられます
 
 11. **[OK]** を選択して変更を保存します。
 
@@ -104,7 +104,7 @@ Windows の設定は、Active Directory (AD) のグループ ポリシー (GPO) 
 14. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](device-profile-assign.md)に関するページを参照してください。
 
     プロファイルがユーザー グループに割り当てられている場合、ユーザーが登録し、サインインしたすべてのデバイスに、構成済みの ADMX 設定が適用されます。 プロファイルがデバイス グループに割り当てられている場合は、そのデバイスにサインインするすべてのユーザーに、構成済みの ADMX 設定が適用されます。 この割り当ては、ADMX 設定がコンピューター構成 (`HKEY_LOCAL_MACHINE`)、またはユーザー構成 (`HKEY_CURRENT_USER`) の場合に行われます。 一部の設定では、ユーザーに割り当てられたコンピューター設定が、そのデバイスの他のユーザーのエクスペリエンスに影響することもあります。
-    
+
     詳細については、「[ユーザー グループとデバイス グループ](device-profile-assign.md#user-groups-vs-device-groups)」を参照してください。
 
     **[次へ]** を選択します。
@@ -115,16 +115,22 @@ Windows の設定は、Active Directory (AD) のグループ ポリシー (GPO) 
 
 ## <a name="find-some-settings"></a>一部の設定を見つける
 
-これらのテンプレートで使用できる設定は数百に及びます。 特定の設定を見つけやすくするには、組み込みの機能を使用します。
+これらのテンプレートで使用できる設定は数千に及びます。 特定の設定を見つけやすくするには、組み込みの機能を使用します。
 
 - 使用するテンプレートで **[設定]** 、 **[状態]** 、 **[設定の種類]** 、または **[パス]** 列を選択し、一覧を並べ替えます。 たとえば、 **[パス]** 列を選択し、隣の矢印を使用して、`Microsoft Excel` パス内の設定を表示します。
 
-- テンプレートで**検索**ボックスを使用して、特定の設定を見つけます。 設定またはパスで検索できます。 たとえば、「 `copy`」というメッセージを探してみてください。 「`copy`」を含むすべての設定が表示されます。
+- テンプレートで**検索**ボックスを使用して、特定の設定を見つけます。 設定またはパスで検索できます。 たとえば、 **[すべての設定]** を選択し、`copy` を検索します。 「`copy`」を含むすべての設定が表示されます。
 
   > [!div class="mx-imgBorder"]
   > ![Intune の管理用テンプレートで「copy」と検索して、すべてのデバイス設定を表示する](./media/administrative-templates-windows/search-copy-settings.png) 
 
   もう 1 つの例として、「`microsoft word`」を検索します。 Microsoft Word プログラムに対して設定できる各設定が表示されます。 「`explorer`」を検索して、テンプレートに追加できる Internet Explorer の設定を確認します。
+
+- **[コンピューターの構成]** または **[ユーザーの構成]** を選択して、検索を絞り込むこともできます。
+
+  たとえば、利用可能な Internet Explorer のユーザー設定をすべて表示するには、 **[ユーザーの構成]** を選択し、`Internet Explorer` を検索します。 ユーザーに適用される IE 設定のみが表示されます。
+
+  :::image type="content" source="./media/administrative-templates-windows/show-all-internet-explorer-settings-user-configuration.png" alt-text="ADMX テンプレートで [ユーザーの構成] を選択し、Microsoft Intune で Internet Explorer を検索するか、フィルターを適用します。":::
 
 ## <a name="next-steps"></a>次のステップ
 
