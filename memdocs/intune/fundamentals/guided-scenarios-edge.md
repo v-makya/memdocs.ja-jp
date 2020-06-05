@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5c2af6ce301b0a5de06cbbd4126b1661ca21fb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 49f9b9076d20c1f5d4740a6f8b1b9883e12ce629
+ms.sourcegitcommit: a1da477542fb0ff360685d6eb58ef43e37ac3950
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359067"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83853538"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>ガイド付きシナリオ - モバイル用の Microsoft Edge を展開する
 
@@ -86,10 +86,9 @@ Intune ポリシーによって有効化された次の Microsoft Edge エンタ
 > Edge が構成を受け取るまでに、最大で 12 時間かかる場合があります。 詳細については、「[Microsoft Intune 用アプリ構成ポリシー](../apps/app-configuration-policies-overview.md)」を参照してください。
 
 > [!IMPORTANT]
-> ガイド付きシナリオが完了すると、概要が表示されます。 概要の一覧で示されているリソースを後で変更できますが、これらのリソースが表示されているテーブルは保存されません。
+> ガイド付きシナリオが完了すると、概要が表示されます。 概要に一覧されているリソースは後で変更できますが、これらのリソースを表示しているテーブルは保存されません。
 
 ## <a name="next-steps"></a>次のステップ
 
-- Intune アプリ保護ポリシーの統合を設定して、Microsoft Edge の使用のセキュリティを強化します。 詳細については、「[Microsoft Edge のアプリケーション保護ポリシー](../apps/manage-microsoft-edge.md#application-protection-policies-for-microsoft-edge)」を参照してください。
-- 含めるイントラネット サイトがある場合は、Azure アプリケーション プロキシの統合によるアクセスの保護を確認してください。 詳細については、「[Microsoft Edge 用にアプリケーション プロキシの設定を構成する](../apps/manage-microsoft-edge.md#configure-application-proxy-settings-for-microsoft-edge)」を参照してください。
-
+- Intune アプリ保護ポリシーの統合を設定して、Microsoft Edge の使用のセキュリティを強化します。 詳細については、「[Intune アプリ保護ポリシーを作成する](../apps/manage-microsoft-edge.md#create-intune-app-protection-policies)」を参照してください。
+- 含めるイントラネット サイトがある場合は、Azure アプリケーション プロキシの統合によるアクセスの保護を確認してください。 詳細については、「[プロキシ構成を管理する](../apps/manage-microsoft-edge.md#manage-proxy-configuration)」を参照してください。

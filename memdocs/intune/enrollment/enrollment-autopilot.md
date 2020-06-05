@@ -6,8 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/23/2019
-ms.topic: conceptual
+ms.date: 05/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6512aa01a55a3a1ed949b634b97eb891e9459a9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 361f0ff36b78daddd08954953744f3f95191d4f3
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327121"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990599"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Windows Autopilot を使用して Intune に Windows デバイスを登録する  
 Windows Autopilot を使用すると、Intune でのデバイスの登録が簡単になります。 カスタマイズされたオペレーティング システム イメージのビルドおよび維持は、時間のかかるプロセスです。 また、これらのカスタム オペレーティング システム イメージを新しいデバイスに適用し、エンド ユーザーに提供する前に使用の準備を行う場合にも、時間がかかることがあります。 Microsoft Intune と Autopilot を使用すれば、カスタム オペレーティング システム イメージのビルド、維持、および新しいデバイスへの適用を行わなくてもデバイスをエンド ユーザーに提供することができます。 Intune を使用して Autopilot デバイスを管理する場合、デバイスの登録後にポリシー、プロファイル、アプリなどを管理することができます。 利点、シナリオ、および前提条件の概要については、「[Overview of Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)」 (Windows Autopilot の概要) を参照してください。
@@ -34,6 +34,8 @@ Autopilot の展開の種類には次の 4 種類があります。
 - [ホワイト グローブ](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove)では、パートナーや IT スタッフが完全に構成され、ビジネスに使用できる Windows 10 PC を事前にプロビジョニングできます。
 - [既存のデバイスの Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices)では、最新バージョンの Windows 10 を既存のデバイスに簡単に展開できます。
 - [ユーザー駆動モード](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)は従来のユーザー向けです。
+
+この記事では、Windows PC に Autopilot を設定する方法について説明します。 Autopilot と Hololens の詳細については、[Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot) に関するページを参照してください。
 
 ## <a name="prerequisites"></a>[前提条件]
 
@@ -90,7 +92,7 @@ CSV ファイルの情報をインポートすることにより、Windows Autop
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Autopilot Deployment プロファイルを作成する
 Autopilot Deployment プロファイルは、Autopilot デバイスを構成する場合に使用されます。 テナントごとに最大 350 個のプロファイルを作成できます。
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[デプロイ プロファイル]**  >  **[プロファイルの作成]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[デプロイ プロファイル]**  >  **[プロファイルの作成]**  >  **[Windows PC]** または **[HoloLens]** を選択します。 この記事では、Windows PC に Autopilot を設定する方法について説明します。 Autopilot と Hololens の詳細については、[Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot) に関するページを参照してください。
 2. **[基本]** ページ上で、 **[名前]** と省略可能な **[説明]** に入力します。
 
     ![基本ページのスクリーンショット](./media/enrollment-autopilot/create-profile-basics.png)

@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/27/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29b30d46fc5998c69059c743c3f469e198cee1ef
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f6cafadbecbb0e0f0287b8a6ac4db5a1168e5e84
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80325133"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83983096"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>デバイスを Intune でリモートからロックする
 
@@ -29,7 +29,7 @@ ms.locfileid: "80325133"
 
 **リモート ロック** デバイス アクションは、デバイスをロックします。 デバイスのロックを解除するには、そのデバイスの所有者がパスコードを入力する必要があります。 PIN またはパスワードが設定されているデバイスをリモートでロックすることができます。 PIN またはパスワードがないデバイスは、リモートでロックできません。
 
-## <a name="supported-platforms"></a>[サポートされているプラットフォーム]
+## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
 **リモート ロック**は、次のプラットフォームでサポートされます。
 
@@ -38,14 +38,15 @@ ms.locfileid: "80325133"
 - Android エンタープライズ仕事用プロファイル デバイス
 - iOS
 - macOS
-- [Windows] 10 Mobile
+- Windows 10 Mobile
 - Windows Phone 8.1 以降
 
 **リモート ロック**は、以下ではサポートされません。
 - Windows 10 Desktop
 
 > [!NOTE]
-> macOS デバイスの場合は、6 桁の回復用 PIN を設定します。 デバイスがロックされているときは、別のデバイス アクションが送信されるまで、 **[デバイス概要]** にその PIN が表示されます。
+> macOS デバイスの場合は、6 桁の回復用 PIN を設定します。 デバイスがロックされているときは、別のデバイス アクションが送信されるまで、 **[デバイス概要]** にその PIN が表示されます。 PIN はリモート ロック コマンドが送信されてから 7 日間しか利用できないため、必ず書き留めておいてください。 7 日後、Intune に その PIN は存在しなくなります。 また、元の PIN を使用してデバイスのロックを正常に解除するまで、同じデバイスに対してこのコマンドを再度起動しないでください。 このコマンドを送信して、PIN を書き留める必要があり、それを使用して macOS デバイスに正常にアクセスするまではこのコマンドを同じデバイスに再度送信しないでください。  
+
 
 ## <a name="remote-lock-a-device"></a>デバイスのリモート ロック
 

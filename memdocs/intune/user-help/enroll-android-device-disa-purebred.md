@@ -1,14 +1,15 @@
 ---
-title: Intune ポータル サイトと Intercede で Android デバイスを登録する
-description: Android デバイスを登録し、Intercede で派生資格情報認証を設定します。
+title: Microsoft Intune アプリと DISA Purebred を使用して Android デバイスを登録する
+description: DISA Purebred を使用して、Android デバイスを登録し、派生資格情報認証を設定する方法について説明します。
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 05/15/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,16 +19,16 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e82d8f27b7ffbce663ee64030a6d933bf1684dc1
+ms.openlocfilehash: 584392891320f96eed16863225ffb323dc240594
 ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880602"
+ms.locfileid: "83880616"
 ---
-# <a name="set-up-android-device-with-company-portal-and-intercede"></a>Intune ポータル サイトと Intercede で Android デバイスを設定する
+# <a name="set-up-android-device-with-the-microsoft-intune-app-and-disa-purebred"></a>Microsoft Intune アプリと DISA Purebred を使用して Android デバイスを設定する
 
-組織の電子メール、ファイル、およびアプリに安全にモバイルからアクセスするために、Intune ポータル サイト アプリでデバイスを登録します。 デバイスが登録されると、*マネージド*になります。 組織は、Intune などのモバイル デバイス管理 (MDM) プロバイダーを介してデバイスにポリシーとアプリを割り当てることができます。
+組織の電子メール、ファイル、およびアプリにモバイルから安全にアクセスするために、Microsoft Intune アプリでデバイスを登録します。 デバイスが登録されると、*マネージド*になります。 組織は、Intune などのモバイル デバイス管理 (MDM) プロバイダーを介してデバイスにポリシーとアプリを割り当てることができます。  
 
 登録時に、派生資格情報もデバイスにインストールします。 組織によっては、ユーザーがリソースにアクセスするとき、またはメールに署名して暗号化するために、認証方法として派生資格情報を使用するよう要求することがあります。
 
@@ -38,8 +39,8 @@ ms.locfileid: "83880602"
 
 この記事では、次のことについて説明します。
 
-* Intune ポータル サイトを使用して Android モバイル デバイスを登録する。
-* 組織の派生資格情報プロバイダーである [Intercede](https://www.intercede.com/) から派生資格情報をインストールして、スマート カードを設定する。  
+* Intune アプリを使用して Android モバイル デバイスを登録する
+* 組織の派生資格情報プロバイダーである [DISA Purebred](https://public.cyber.mil/pki-pke/purebred/) から派生資格情報をインストールして、スマート カードを設定する
 
 ## <a name="what-are-derived-credentials"></a>派生資格情報とは
 
@@ -54,12 +55,15 @@ ms.locfileid: "83880602"
 
 ## <a name="prerequisites"></a>[前提条件]
 
- 登録を完了するには、次のものが必要です。
+登録を完了するには、次のものが必要です。
 
 * 学校または職場で提供されたスマート カード
 * スマート カードを使用してサインインできるコンピューターまたはキオスクへのアクセス
-* Android 7.0 以降が動作している新しいデバイスまたは出荷時の設定に戻したデバイス
+* Android 7.0 以降が動作している新しいデバイスまたは出荷時の設定に戻したデバイス 
 * ご自分のデバイスに Microsoft Intune アプリがインストールされていること
+* デバイスにインストールされている Purebred アプリ (アプリはデバイスのセットアップ直後に自動的にインストールされます。 インストールされない場合は、IT サポート担当者にお問い合わせください。)
+
+また、セットアップの間に、Purebred エージェントまたは担当者に問い合わせる必要があります。
 
 ## <a name="enroll-device"></a>デバイスを登録する  
 
@@ -84,7 +88,7 @@ ms.locfileid: "83880602"
 
 5. Chrome のサービス利用規約を確認します。 次に、 **[ACCEPT & CONTINUE]\(同意して続行\)** をタップします。  
 
-   ![Chrome サービス利用規約画面の例の画像。[Accept & Continue]\(同意して続行\) ボタンが強調表示されている。](./media/fully-managed-intune-app-06.png)  
+   ![Chrome サービス利用規約画面の例の画像。[Accept & Continue]\(同意して続行\) ボタンが強調表示されている。](./media/fully-managed-intune-app-06.png)   
 
 6. サインイン画面で、 **[サインイン オプション]** 、 **[別のデバイスからサインインする]** の順にタップします。 
 
@@ -97,9 +101,9 @@ ms.locfileid: "83880602"
    > [!div class="mx-imgBorder"]
    > ![Intune ポータル サイト Web サイトの "コード入力" プロンプトのスクリーンショット。](./media/enter-code-intercede.png)
 
-10. スマート カードを挿入してサインインします。  
+10. スマート カードを挿入してサインインします。 
 
-11. サインイン画面で、職場または学校アカウントを選択します。 次に、モバイル デバイスに戻ります。
+11. サインイン画面で、職場または学校アカウントを選択します。 次に、モバイル デバイスに戻ります。 
 
 12. 組織の要件によっては、画面のロックや暗号化などの設定の更新を求められる場合があります。 これらのプロンプトが表示された場合は、 **[設定]** をタップして、画面の指示に従います。  
 
@@ -107,18 +111,17 @@ ms.locfileid: "83880602"
 
 13. 仕事用アプリをデバイスにインストールするには、 **[インストール]** をタップします。 インストールが完了したら、 **[次へ]** をタップします。  
 
-       ![職場の携帯電話の設定画面の例の画像。[インストール] ボタンが強調表示されている。](./media/fully-managed-intune-app-11.png)    
+       ![職場の携帯電話の設定画面の例の画像。[インストール] ボタンが強調表示されている。](./media/fully-managed-intune-app-11.png)   
 
 14. **[START] (スタート)** をタップして Microsoft Intune アプリを開きます。 
 
     ![[スタート] ボタンが強調表示されている職場の携帯電話の設定画面の例の画像。](./media/fully-managed-intune-app-17.png)   
- 
 
 15. モバイル デバイスで Intune アプリに戻り、登録が完了するまで画面の指示に従います。 
 
     ![[完了] ボタンが強調して示されているアクセス セットアップのデバイス登録画面の例の画像。](./media/fully-managed-intune-app-19.png)   
 
-16. この記事の「[スマート カードを設定する](enroll-android-device-intercede.md#set-up-smart-card)」セクションに進み、デバイスの設定を完了します。  
+16. この記事の「[スマート カードを設定する](enroll-android-device-disa-purebred.md#set-up-smart-card)」セクションに進み、デバイスの設定を完了します。  
 
 ### <a name="qr-code-enrollment"></a>QR コードでの登録  
 このセクションでは、会社から提供された QR コードをスキャンします。  完了すると、デバイス登録手順に戻ります。     
@@ -151,46 +154,61 @@ ms.locfileid: "83880602"
 
 6. ステップ 4 の「[デバイスを登録する](#enroll-device)」に戻り、セットアップを続けます。
 
+
 ## <a name="set-up-smart-card"></a>スマート カードを設定する  
+
+> [!NOTE]
+> これらの手順を完了するには、Purebred アプリが必要です。これは、登録後、デバイスに自動的にインストールされます。 しばらく待ってもアプリがまだ存在しない場合は、IT サポート担当者にお問い合わせください。  
 
 1. 登録が完了すると、Intune アプリから、スマート カードを設定するよう通知されます。 通知をタップします。 通知が表示されない場合は、メールを確認してください。
 
    > [!div class="mx-imgBorder"]
-   > ![デバイスのホーム画面に Intune ポータル サイトのプッシュ通知が表示されたスクリーンショットの例。](./media/action-required-in-app-android.png)
+   > ![デバイスのホーム画面上の Intune アプリのプッシュ通知のスクリーンショット。](./media/action-required-in-app-android.png)
 
 2. **[Set up smart card] (スマート カードを設定する)** 画面で、次の操作を行います。
 
-   1. 組織のセットアップ手順へのリンクをタップします。 組織で追加の手順が提供されていない場合は、この記事が表示されます。
+   1. 組織のセットアップ手順へのリンクをタップして、それらを確認します。 組織で追加の手順が提供されていない場合は、この記事が表示されます。
 
-   2. **[開始]** をタップします。  
+   2. **[開始]** をタップします。   
 
    > [!div class="mx-imgBorder"]
-   > ![Intune ポータル サイトの "モバイル スマート カードの設定" 画面のスクリーンショットの例。](./media/smart-card-open-entrust-android.png)
+   > ![Intune アプリの [Set up smart card]\(スマート カードのセットアップ\) 画面のスクリーンショット。](./media/smart-card-open-disa-purebred-android.png)
 
-3. スマート カード対応デバイスまたはセルフサービス キオスクに切り替え、MyID アプリを開きます。 職場の資格情報を使用してサインインします。
+3. **[証明書の取得]** 画面で、 **[LAUNCH PUREBRED]\(Purebred の起動\)** をタップして、Purebred アプリを開きます。 (このアプリはデバイスに自動的にインストールされているはずです。 存在しない場合は、サポート担当者にお問い合わせください。)  
 
-4. ID を要求するオプションを選択します。
+   > [!div class="mx-imgBorder"]
+   > ![DISA Purebred アプリを開くための Intune アプリのプロンプトのスクリーンショット。](./media/open-app-prompt-disa-purbred-android.png)  
 
-5. 使用するプロファイルの確認を求めるメッセージが表示されたら、モバイル資格情報でアクティブ化するためのオプションを選択します。 QR コードが表示されます。  
+4. 正常に実行するために、Purebred アプリに追加のアクセス許可が必要になる場合があります。 プロンプトが表示されたら、 **[許可]** または **[Allow all the time]\(常に許可\)** をタップします。 これらのアクセス許可が必要な理由の詳細については、サポート担当者または Purebred エージェントとお話しください。  
 
-6. Android デバイスに戻ります。 Intune ポータル サイトの **[QR コードの取得]** 画面で、 **[次へ]** をタップします。
+5. Purebred アプリを開いたら、組織の Purebred エージェントと協力して、職場または学校のリソースにアクセスするために必要な証明書をダウンロードしてインストールします。
 
-    > [!div class="mx-imgBorder"]
-    > ![Intune ポータル サイトの [QR コードの取得] 画面のスクリーンショットの例。](./media/get-qr-code-entrust-android.png)
+    > [!IMPORTANT]
+    > このプロセスの間にプロンプトが表示されたら、 **[OK]** または **[インストール]** をタップします。 インストールするように求められている証明機関 (CA) または証明書の名前は変更しないでください。    
 
-7. Intune アプリでカメラの使用を許可するように求めるメッセージが表示されたら、 **[許可]** をタップします。
-
-8. スマート カード対応デバイスに表示された QR コードの画像をスキャンします。
-
-9. Intune アプリによって、職場または学校のリソースへのアクセスに必要な証明書のダウンロードとインストールが開始されます。 使用しているインターネット接続によっては、このプロセスにしばらく時間がかかることがあります。 この間はアプリを閉じないでください。
+6. インストールが完了すると、証明書の準備ができたことを示す通知を受け取ります。 その通知をタップして Intune アプリに戻ります。
 
     > [!div class="mx-imgBorder"]
-    > ![Intune ポータル サイトの "証明書のダウンロードとインストール" 画面のスクリーンショットの例。](./media/install-certificates-entrust-android.png)
+    > ![[Allow access to certificates]\(証明書へのアクセスを許可\) 画面のスクリーンショット](./media/certificates-ready-prompt-disa-purbred-android.png)
 
-10. すべての証明書が処理されたら、Intune アプリでデバイスの設定が完了するまで待機します。 **[すべての設定が完了しました!]** 画面が表示されると、設定が完了したことがわかります。
+7. **[Allow access to certificates]\(証明書へのアクセスを許可\)** 画面で、DISA Purebred から取得した派生資格情報にアクセスするためのアクセス許可を Intune アプリに付与します。 この手順により、保護されている職場や学校のリソースにアクセスするたびに、組織が本人確認を確実に行うことができます。  
+
+    1. **[次へ]** をタップします。
+
+       > [!div class="mx-imgBorder"]
+       > !["証明書の準備完了" プロンプトのスクリーンショット](./media/certificates-access-disa-purbred-android.png)
+
+    2. **証明書の選択**を求めるメッセージが表示されたら、選択内容を変更しないでください。 正しい証明書が既に選択されているので、 **[選択]** または **[OK]** のタップのみを行います。  
+
+       > [!div class="mx-imgBorder"]
+       > ![[Choose certificate]\(証明書の選択\) プロンプトのスクリーンショット](./media/choose-certificates-prompt-disa-purbred-android.png)
+
+    3. 派生資格情報は複数の証明書で構成されているため、 **[Choose certificate]\(証明書の選択\)** プロンプトが複数回表示される場合があります。 プロンプトが表示されなくなるまで、前の手順を繰り返します。  
+
+8. すべての証明書が処理されたら、Intune アプリでデバイスの設定が完了するまで待機します。 **[すべての設定が完了しました!]** 画面が表示されると、設定が完了したことがわかります。  
 
     > [!div class="mx-imgBorder"]
-    > !["すべての設定が完了しました" 画面のスクリーンショットの例](./media/all-set-android.png)
+    > ![[すべての設定が完了しました] 画面のスクリーンショット](./media/all-set-android.png)
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -198,5 +216,6 @@ ms.locfileid: "83880602"
 
 * [デバイスで管理対象アプリを使用する](use-managed-apps-on-your-device-android.md)  
 * [ポータル サイト Web サイトからアプリを管理する](manage-apps-cpweb.md)  
+
 
 サポートが必要な場合は、 社内サポートに問い合わせてください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。

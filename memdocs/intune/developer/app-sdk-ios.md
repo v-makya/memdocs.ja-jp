@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 242ec66ef79195533e7362694efb00928769b305
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 379eacee731c8cdd773fc7a15f556ab85e409f7c
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078177"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989893"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>iOS 用 Microsoft Intune App SDK 開発者ガイド
 
@@ -122,7 +122,7 @@ Intune アプリ SDK を有効にするには、次の手順を実行します�
 2. 次の iOS フレームワークをプロジェクトに追加します。  
 -  MessageUI.framework  
 -  Security.framework  
--  MobileCoreServices.framework  
+-  CoreServices.framework  
 -  SystemConfiguration.framework  
 -  libsqlite3.tbd  
 -  libc++.tbd  
@@ -248,7 +248,7 @@ IntuneMAMSettings ディクショナリの下に、次のサポートされる�
 設定  | Type  | 定義 | 必須
 --       |  --   |   --       |  --
 ADALClientId  | 文字列型  | アプリの Azure AD クライアント識別子。 | MSAL を使用するすべてのアプリと、Intune 以外の AAD リソースにアクセスするすべての ADAL アプリに必要です。 |
-ADALAuthority | 文字列型 | 使用されているアプリの Azure AD 機関。 AAD アカウントが構成されている独自の環境を使用する必要があります。 | アプリで ADAL または MSAL を使用して Intune 以外の AAD リソースにアクセスする場合に必要です。 この値が存在しない場合は、Intune の既定値が使用されます。|
+ADALAuthority | 文字列型 | 使用されているアプリの Azure AD 機関。 AAD アカウントが構成されている独自の環境を使用する必要があります。 | 任意。 アプリが、単一の組織/AAD テナント内で使用するように構築された、カスタムの基幹業務アプリケーションである場合に推奨されます。 この値を指定していない場合は、一般的な AAD 機関が使用されます。|
 ADALRedirectUri  | 文字列型  | アプリの Azure AD リダイレクト URI。 | ADALRedirectUri または ADALRedirectScheme は、MSAL を使用するすべてのアプリと、Intune 以外の AAD リソースにアクセスするすべての ADAL アプリに必要です。  |
 ADALRedirectScheme  | 文字列型  | アプリの Azure AD リダイレクト スキーム。 アプリケーションのリダイレクト URI が `scheme://bundle_id` 形式の場合は、ADALRedirectUri の代わりにこれを使用できます。 | ADALRedirectUri または ADALRedirectScheme は、MSAL を使用するすべてのアプリと、Intune 以外の AAD リソースにアクセスするすべての ADAL アプリに必要です。 |
 ADALLogOverrideDisabled | ブール型  | SDK によって、すべての ADAL/MSAL ログ (アプリからの ADAL 呼び出しがある場合はこれを含む) が独自のログ ファイルにルーティングされるかどうかを指定します。 既定は [いいえ] です。 アプリで独自の ADAL/MSAL ログ コールバックを設定する場合は、[はい] に設定します。 | 任意。 |

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b280661c4de9282d3907b7d480477fc67f6a8dc5
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: a2829c5bd86192c4f2421550af9f27aef64aa353
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824066"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428644"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics とは
 
@@ -70,9 +70,6 @@ Desktop Analytics を使用するには、環境が次の前提条件を満た�
 ### <a name="technical"></a>技術面
 
 - [グローバル管理者](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions)のアクセス許可を持つアクティブなグローバル Azure サブスクリプション。 [Microsoft アカウント](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts)はサポートされていません。  
-
-    > [!Important]  
-    > 現在、Desktop Analytics では、Azure AD テナントに Office 365 サービスをデプロイする必要があります。 この要件は将来的にはなくなります。
 
     - **[ワークスペースの設定]** を実行するための**ワークスペースの所有者**アクセス許可、および以下のロール:  
 

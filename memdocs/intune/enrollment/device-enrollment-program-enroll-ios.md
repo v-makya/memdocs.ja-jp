@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 02/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd999f621375cfdbfa80bf076766be20053221dc
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 2db33dbe94ff5aef62563531149250fbd4268acc
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269067"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83986991"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Apple の自動デバイス登録を使用して iOS または iPadOS デバイスを自動登録する
 
@@ -44,9 +44,6 @@ ADE 登録には、App Store バージョンのポータル サイト アプリ�
 登録中に最新の認証を有効にするには、ADE プロファイル内で **[VPP によるポータル サイトのインストール]** (Volume Purchase Program) を使用して、アプリをデバイスにプッシュします。 詳細については、[Apple の ADE を使用した iOS または iPadOS デバイスの自動登録](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile)に関する記事を参照してください。
 
 ポータル サイトが自動的に更新され、ADE に既に登録されているデバイスでポータル サイト アプリを提供できるようにするには、Intune を使用して、そのポータル サイト アプリを[アプリケーション構成ポリシー](../apps/app-configuration-policies-use-ios.md)が適用された必要な Volume Purchase Program (VPP) アプリとして展開します。
-
-> [!NOTE]
-> デバイスの自動登録中の、ポータル サイトがシングル アプリ モードで実行されているときに **[詳細情報]** リンクをクリックすると、シングル アプリ モードが原因のエラー メッセージが表示されます。 登録が完了し、デバイスがシングル アプリ モードでなくなると、CP に詳細情報を表示できます。 
 
 ## <a name="what-is-supervised-mode"></a>監視モードとは何か。
 
@@ -212,7 +209,7 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
 
      > [!NOTE]
      > **[コンピューターと同期する]** が **[すべて拒否]** に設定されている場合、iOS と iPadOS デバイス上でポートが制限されます。 このポートは課金用にのみ使用でき、それ以外の場合は使用できません。 このポートは、iTunes または Apple Configurator 2 の使用に対してブロックされます。
-     **[コンピューターと同期する]** が **[証明書による Apple Configurator の許可]** に設定されている場合、後でアクセスできる証明書のローカル コピーを保存しておいてください。 アップロードされたコピーに変更を加えることはできません。 今後、この証明書にアクセスできるようにしておくことが重要です。 
+     **[コンピューターと同期する]** が **[証明書による Apple Configurator の許可]** に設定されている場合、後でアクセスできる証明書のローカル コピーを必ず保持するようにしてください。 アップロードされたコピーを変更することはできません。今後この証明書にアクセスできるように維持することが重要です。 macOS のデバイスまたは PC から iOS/iPadOS デバイスに接続するには、この構成と証明書を使用して自動デバイス登録プロファイルに登録された iOS/iPadOS デバイスへの接続を行うデバイスに、同じ証明書をインストールする必要があります。
 
 12. 前の手順で **[証明書による Apple Configurator の許可]** を選択した場合は、インポートする Apple Configurator の証明書を選択します。
 
@@ -235,29 +232,33 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
 
     | セットアップ アシスタントの画面の設定 | **[表示]** を選択した場合の、セットアップ時のデバイスの動作... |
     |------------------------------------------|------------------------------------------|
-    | <strong>パスコード</strong> | ユーザーにパスコードの入力を求めます。 デバイスがセキュリティで保護されていない場合は、他の何らかの方法 (デバイスを 1 つのアプリに制限するキオスク モードなど) でアクセスが制御されていない限り、パスコードを常に必須にします。 |
-    | <strong>ロケーション サービス</strong> | ユーザーに場所の指定を求めます。 |
-    | <strong>復元</strong> | [アプリとデータ] 画面が表示されます。 この画面では、ユーザーはデバイスを設定するときに iCloud Backup からデータを復元または転送できます。 |
-    | <strong>iCloud と Apple ID</strong> | 自分の Apple ID を使ってサインインし iCloud を使用するオプションをユーザーに提示します。                         |
-    | <strong>使用条件</strong> | ユーザーに Apple の使用条件への同意を求めます。 |
-    | <strong>Touch ID</strong> | ユーザーに、デバイスの指紋識別を設定するオプションを表示します。 |
-    | <strong>Apple Pay</strong> | ユーザーに、デバイスで Apple Pay を設定するオプションを表示します。 |
-    | <strong>Zoom</strong> | ユーザーに、デバイスを設定するときに表示を拡大するオプションを表示します。 |
-    | <strong>Siri</strong> | ユーザーに、Siri を設定するオプションを表示します。 |
-    | <strong>診断データ</strong> | [診断] 画面をユーザーに表示します。 この画面では、ユーザーは Apple に診断データを送信できます。 |
-    | <strong>トーンの表示</strong> | [トーンの表示] をオンにするオプションをユーザーに表示します。 |
-    | <strong>プライバシー</strong> | [プライバシー] 画面をユーザーに表示します。 |
-    | <strong>Android の移行</strong> | Android デバイスからデータを移行するオプションをユーザーに表示します。 |
-    | <strong>iMessage と FaceTime</strong> | iMessage と FaceTime を設定するオプションをユーザーに提示します。 |
-    | <strong>オンボード</strong> | 送付状、マルチタスク コントロール センターなど、ユーザー教育用のオンボード情報画面を表示します。 |
-    | <strong>Watch の移行</strong> | Watch デバイスからデータを移行するオプションをユーザーに表示します。 |
-    | <strong>画面の表示時間</strong> | [画面の表示時間] 画面を表示します。 |
-    | <strong>ソフトウェア更新プログラム</strong> | 必須のソフトウェア更新プログラム画面を表示します。 |
-    | <strong>SIM のセットアップ</strong> | セルラー プランを追加するオプションをユーザーに表示します。 |
-    | <strong>外観</strong> | [表示] 画面をユーザーに表示します。 |
+    | <strong>パスコード</strong> | ユーザーにパスコードの入力を求めます。 デバイスがセキュリティで保護されていない場合は、他の何らかの方法 (デバイスを 1 つのアプリに制限するキオスク モードなど) でアクセスが制御されていない限り、パスコードを常に必須にします。 iOS/iPadOS 7.0 以降が対象です。 |
+    | <strong>ロケーション サービス</strong> | ユーザーに場所の指定を求めます。 macOS 10.11 以降と、iOS/iPadOS 7.0 以降が対象です。 |
+    | <strong>復元</strong> | [アプリとデータ] 画面が表示されます。 この画面では、ユーザーはデバイスを設定するときに iCloud Backup からデータを復元または転送できます。 macOS 10.9 以降と、iOS/iPadOS 7.0 以降が対象です。 |
+    | <strong>iCloud と Apple ID</strong> | 自分の Apple ID を使ってサインインし iCloud を使用するオプションをユーザーに提示します。 macOS 10.9 以降と、iOS/iPadOS 7.0 以降が対象です。   |
+    | <strong>使用条件</strong> | ユーザーに Apple の使用条件への同意を求めます。 macOS 10.9 以降と、iOS/iPadOS 7.0 以降が対象です。 |
+    | <strong>Touch ID</strong> | ユーザーに、デバイスの指紋識別を設定するオプションを表示します。 macOS 10.12.4 以降と、iOS/iPadOS 8.1 以降が対象です。 |
+    | <strong>Apple Pay</strong> | ユーザーに、デバイスで Apple Pay を設定するオプションを表示します。 macOS 10.12.4 以降と、iOS/iPadOS 7.0 以降が対象です。 |
+    | <strong>Zoom</strong> | ユーザーに、デバイスを設定するときに表示を拡大するオプションを表示します。 iOS/iPadOS 8.3 以降が対象です。 |
+    | <strong>Siri</strong> | ユーザーに、Siri を設定するオプションを表示します。 macOS 10.12 以降と、iOS/iPadOS 7.0 以降が対象です。 |
+    | <strong>診断データ</strong> | [診断] 画面をユーザーに表示します。 この画面では、ユーザーは Apple に診断データを送信できます。 macOS 10.9 以降と、iOS/iPadOS 7.0 以降が対象です。 |
+    | <strong>トーンの表示</strong> | [トーンの表示] をオンにするオプションをユーザーに表示します。 macOS 10.13.6 以降と、iOS/iPadOS 9.3.2 以降が対象です。 |
+    | <strong>プライバシー</strong> | [プライバシー] 画面をユーザーに表示します。 macOS 10.13.4 以降と、iOS/iPadOS 11.3 以降が対象です。 |
+    | <strong>Android の移行</strong> | Android デバイスからデータを移行するオプションをユーザーに表示します。 iOS/iPadOS 9.0 以降が対象です。|
+    | <strong>iMessage と FaceTime</strong> | iMessage と FaceTime を設定するオプションをユーザーに提示します。 iOS/iPadOS 9.0 以降が対象です。 |
+    | <strong>オンボード</strong> | 送付状、マルチタスク コントロール センターなど、ユーザー教育用のオンボード情報画面を表示します。 iOS/iPadOS 11.0 以降が対象です。 |
+    | <strong>Watch の移行</strong> | Watch デバイスからデータを移行するオプションをユーザーに表示します。 iOS/iPadOS 11.0 以降が対象です。|
+    | <strong>画面の表示時間</strong> | [画面の表示時間] 画面を表示します。 macOS 10.15 以降と、iOS/iPadOS 12.0 以降が対象です。 |
+    | <strong>ソフトウェア更新プログラム</strong> | 必須のソフトウェア更新プログラム画面を表示します。 iOS/iPadOS 12.0 以降が対象です。 |
+    | <strong>SIM のセットアップ</strong> | セルラー プランを追加するオプションをユーザーに表示します。 iOS/iPadOS 12.0 以降が対象です。 |
+    | <strong>外観</strong> | [表示] 画面をユーザーに表示します。 macOS 10.14 以降と、iOS/iPadOS 13.0 以降が対象です。 |
     | <strong>簡易言語</strong>| [Express Language]\(簡易言語\) 画面をユーザーに表示します。 |
     | <strong>優先する言語</strong> | **[優先する言語]** を選択するオプションをユーザーに提示します。 |
-    | <strong>デバイスからデバイスへの移行</strong> | 古いデバイスからこのデバイスへデータを移行するオプションをユーザーに提示します。|
+    | <strong>デバイスからデバイスへの移行</strong> | 古いデバイスからこのデバイスへデータを移行するオプションをユーザーに提示します。 iOS/iPadOS 13.0 以降が対象です。 |
+    | <strong>登録</strong> | [登録] 画面をユーザーに表示します。 macOS 10.9 以降が対象です。 |
+    | <strong>FileVault</strong> | FileVault 2 encryption\(FileVault 2 の暗号化\) 画面をユーザーに表示します。 macOS 10.10 以降が対象です。 |
+    | <strong>iCloud 診断</strong> | [iCloud Analytics] 画面をユーザーに表示します。 macOS 10.12.4 以降が対象です。 |
+    | <strong>iCloud ストレージ</strong> | [iCloud Documents and Desktop]\(iCloud の書類とデスクトップ\) 画面をユーザーに表示します。 macOS 10.13.4 以降が対象です。 |
     
 
 16. **[次へ]** を選択して、 **[Review + Create]\(確認および作成\)** ページへ移動します。
@@ -282,7 +283,7 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
 
    許容される Enrollment Program トラフィックについての Apple の規約に準拠するために、Intune では次の制限が課せられています。
    - 完全な同期は 7 日に 1 回だけ実行できます。 完全な同期中に、Intune に接続された Apple MDM サーバーに割り当てられているシリアル番号の完全な最新の一覧を Intune がフェッチします。 ADE デバイスが Intune ポータルから削除された場合、ADE ポータルでは Apple MDM サーバーからの割り当てを解除する必要があります。 割り当てが解除されていない場合、完全な同期が実行されるまでは Intune に再インポートされません。   
-   - 同期は 24 時間ごとに自動的に実行されます。 **[同期]** ボタンをクリックして同期することもできます (15 分以内に 2 回以上は同期できません)。 すべての同期要求は、完了までに 15 分与えられます。 同期が完了するまで、 **[同期]** ボタンは無効になっています。 この同期により、既存のデバイスの状態が更新され、Apple MDM サーバーに割り当てられている新しいデバイスがインポートされます。   
+   - 同期は 12 時間ごとに自動的に実行されます。 **[同期]** ボタンをクリックして同期することもできます (15 分以内に 2 回以上は同期できません)。 すべての同期要求は、完了までに 15 分与えられます。 同期が完了するまで、 **[同期]** ボタンは無効になっています。 この同期により、既存のデバイスの状態が更新され、Apple MDM サーバーに割り当てられている新しいデバイスがインポートされます。   
 
 
 ## <a name="assign-an-enrollment-profile-to-devices"></a>登録プロファイルをデバイスに割り当てる

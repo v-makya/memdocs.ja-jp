@@ -6,7 +6,7 @@ keywords: Intune データ ウェアハウス
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,49 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36944b05a12b150c15e59f145efd9fef85598a2f
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: 8a4ddbb96c17e8e370fee73e6a6ec1d004df05f9
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881045"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709334"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune データ ウェアハウス API の変更ログ
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 常に Intune データ ウェアハウスの最新の更新プログラムをインストールしてください。
+
+## <a name="2004"></a>2004 
+"_リリース日: 2020 年 4 月_"
+
+### <a name="beta-changes"></a>ベータ版の変更
+
+次の表には、Intune データ ウェアハウスの **devices** エンティティに追加されたプロパティが一覧表示されています。
+
+|    コレクション                          |    変更     |    説明情報                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    windowsOsEdition     |    追加    |    Windows オペレーティング システムのエディション。                                                                                                                                                                                                                                                                     |
+
+## <a name="2003"></a>2003 
+"_リリース日: 2020 年 3 月_"
+
+### <a name="beta-changes"></a>ベータ版の変更
+
+次の表には、Intune データ ウェアハウスの **devices** エンティティに追加されたプロパティが一覧表示されています。
+
+|    コレクション                          |    変更     |    説明情報                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    追加    |    このデバイスの一意のネットワーク識別子。                                                                                                                                                                                                                                                                     |
+|    対象となるのは、モデル    |    追加    |    デバイスのモデル。                                                                                                                                                                                                                                                                     |
+|    office365Version    |    追加    |    デバイスにインストールされている Office 365 のバージョン。                                                                                                                                                                                                                                                                     |
+
+次の表には、Intune データ ウェアハウスの **devicePropertyHistory** エンティティに追加されたプロパティが一覧表示されています。
+
+|    コレクション                          |    変更     |    説明情報                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    physicalMemoryInBytes    |    追加    |    物理メモリ (バイト単位)。                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes     |    追加    |    記憶域の合計容量 (バイト単位)。                                                                                                                                                                                                                                                                     |
 
 ## <a name="1903-part-2"></a>1903 (パート 2)
 _リリース日: 2019 年 4 月_
@@ -43,7 +74,7 @@ _リリース日: 2019 年 4 月_
 |    mobileAppDeviceUserInstallStatus    |    削除済み    |    代わりに [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts) を使用します。                                                                                                                                                                                                                                                                     |
 |    enrollmentTypes                     |    削除済み    |    代わりに [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes) を使用します。                                                                                                                                                                                                                                                                                      |
 |    mdmStatuses                         |    削除済み    |    代わりに [complianceStates](intune-data-warehouse-collections.md#compliancestates) を使用します。                                                                                                                                                                                                                                                                                               |
-|    workPlaceJoinStateTypes             |    削除済み    |    代わりに `azureAdRegistered`devices[ と ](intune-data-warehouse-collections.md#devices)devicePropertyHistories[ コレクションの ](intune-data-warehouse-collections.md#devicepropertyhistories) プロパティを使用します。                                                                                                                                                                                                             |
+|    workPlaceJoinStateTypes             |    削除済み    |    代わりに [devices](intune-data-warehouse-collections.md#devices) と [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) コレクションの `azureAdRegistered` プロパティを使用します。                                                                                                                                                                                                             |
 |    clientRegistrationStateTypes        |    削除済み    |    代わりに [deviceRegistrationStates](intune-data-warehouse-collections.md#deviceregistrationstates) を使用します。                                                                                                                                                                                                                                                                             |
 |    currentUser                         |    削除済み    |    代わりに [users](intune-data-warehouse-collections.md#users) コレクションを使用します。                                                                                                                                                                                                                                                                                                      |
 |    mdmDeviceInventoryHistories         |    削除済み    |    多くのプロパティは冗長であったか、[devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) または [devices](intune-data-warehouse-collections.md#devices) コレクションで見つけることができるようになりました。 これらの 2 つのプロパティと共に、まだ一覧にない任意の **mdmDeviceInventoryHistories** プロパティは、利用できなくなりました。 以下の詳細を参照してください。    |

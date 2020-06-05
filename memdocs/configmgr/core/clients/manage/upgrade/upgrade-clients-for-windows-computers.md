@@ -2,7 +2,7 @@
 title: Windows でクライアントをアップグレードする
 titleSuffix: Configuration Manager
 description: Configuration Manager 内で Windows コンピューター上のクライアントをアップグレードします。
-ms.date: 08/27/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3849f360b2f22f2f48bbe49159b610399158b29
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8b0a69b07a3be633434203f93b0724cec4ea88a3
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427759"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347145"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-configuration-manager"></a>Configuration Manager 内で Windows コンピューターのクライアントをアップグレードする方法
 
@@ -59,9 +59,6 @@ ms.locfileid: "83427759"
 > 階層内の異なるバージョンの Configuration Manager クライアントを識別するには、レポート フォルダー **Site - Client Information** 内の **[Configuration Manager クライアント バージョン別の数]** レポートを使用します。  
 
 既定では、Configuration Manager によってアップグレード パッケージが作成されます。 これにより、パッケージが階層内のすべての配布ポイントに自動的に送信されます。 CAS 上のクライアント パッケージに変更を加えると、Configuration Manager によってパッケージが自動的に更新され、再配布されます。 変更の例としては、クライアント言語パックを追加する場合があります。 自動クライアント アップグレードを有効にすると、すべてのクライアントに新しいクライアント言語パッケージが自動的にインストールされます。
-
-> [!NOTE]  
-> Configuration Manager では、Configuration Manager のクラウドベースの配布ポイントにクライアント アップグレード パッケージが自動的に送信されません。  
 
 階層全体の自動クライアント アップグレードを有効にしてください。 この構成では、より少ない作業量でクライアントを最新の状態に保つことができます。  
 

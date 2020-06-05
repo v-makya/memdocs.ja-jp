@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31eef700f7aa38b70c5e9a2fa75fd3faee4c9713
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 2ad156e49444679bbf7b15c53e87f504b07897bd
+ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078058"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83709368"
 ---
 # <a name="reference-for-devices-entities"></a>デバイス エンティティの参照
 
@@ -263,6 +263,11 @@ ms.locfileid: "82078058"
 | cellularTechnology         | デバイスの携帯電話テクノロジ                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
 | ICCD                       | 集積回路カード ID                                                                                                                                                     |
+| windowsOsEdition           | Windows オペレーティング システムのエディション。                                                                                                                             |
+| ethernetMacAddress           | このデバイスの一意のネットワーク識別子。                                                                                                                                        |
+| 対象となるのは、モデル                      | デバイスのモデル。                                                                                                                                                                      |
+| office365Version           | デバイスにインストールされている Office 365 のバージョン。                                                                                                                             |
+
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
@@ -281,4 +286,6 @@ ms.locfileid: "82078058"
 | OSVersion                  | OS のバージョン。                                                                                                                                                                          |
 | jailBroken                 | デバイスが脱獄またはルート化されているかどうか。                                                                                                                                         |
 | deviceCategoryKey          | このデバイスのデバイス カテゴリ属性のキー。 
+| physicalMemoryInBytes      | 物理メモリ (バイト単位)。                                                                                                                                                          |
+| totalStorageSpaceInBytes   | 記憶域の合計容量 (バイト単位)。                                                                                                                                                                |
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 69694fa39375daf436abf59fcd48edda41a9fc62
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268251"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428571"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Desktop Analytics のトラブルシューティング
 
@@ -68,7 +68,7 @@ Desktop Analytics では、次のアプリケーションが Azure AD に追加�
 
 - **MALogAnalyticsReader**: ご利用の Azure Log Analytics ワークスペースを監視して、毎日のスナップショットが正常にコピーされることを保証します。 詳細については、「[MALogAnalyticsReader アプリケーション ロール](#bkmk_MALogAnalyticsReader)」を参照してください。  
 
-- **Office365 クライアント管理者**: Configuration Manager で Desktop Analytics から展開計画に関する情報とデバイスの準備状態を取得できるようにします。
+- **Desktop Analytics**: Configuration Manager で Desktop Analytics から展開計画に関する情報とデバイスの準備状態を取得できるようにします。
 
 セットアップの完了後にこれらのアプリをプロビジョニングする必要がある場合は、 **[接続済みサービス]** ペインに移動します。 **[ユーザーとアプリのアクセスを構成]** を選択し、アプリをプロビジョニングします。  
 

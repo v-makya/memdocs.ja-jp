@@ -6,8 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/05/2019
-ms.topic: conceptual
+ms.date: 05/22/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd7483319443b7a960f8e704442d2b43b6b00c66
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9104716c469168a5ab2c5c1b49caf14071150db1
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326926"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83988913"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Windows デバイスの登録をセットアップする
 
@@ -37,7 +37,7 @@ Intune 管理者は次の方法で登録を簡略化できます。
 - [CNAME の登録](#simplify-windows-enrollment-without-azure-ad-premium)
 - [一括登録を有効にする](windows-bulk-enroll.md) (Azure AD Premium と Windows Configuration Designer が必須)
 
-Windows デバイスの登録を簡略化する方法は、次の 2 つの要素によって決まります。
+Windows デバイスの登録を簡単にする方法は次の 2 つの要素で決まります。
 
 - **Azure Active Directory Premium を使用していますか?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) は、Enterprise Mobility + Security およびその他のライセンス プランに付属します。
 - **ユーザーはどのバージョンの Windows クライアントを登録しますか?** <br>Windows 10 デバイスは、職場または学校のアカウントを追加すると自動的に登録できます。 以前のバージョンでは、会社ポータル アプリを使用して登録する必要があります。
@@ -67,7 +67,7 @@ Intune では、次の両方のデバイスで、複数のユーザーがサポ�
 ## <a name="simplify-windows-enrollment-without-azure-ad-premium"></a>Azure AD Premium なしで Windows 登録を簡略化する
 Intune サーバーに登録要求をリダイレクトする、ドメイン ネーム サーバー (DNS) エイリアス (CNAME レコード タイプ) を作成することで、登録を簡略化できます。 それ以外の場合、Intune に接続を試行するユーザーは、登録時に Intune のサーバー名を入力する必要があります。
 
-**手順 1: CNAME を作成する** (省略可能)<br>
+**手順 1:CNAME を作成する** (省略可能)<br>
 会社のドメインの CNAME DNS リソース レコードを作成します。 たとえば、会社の Web サイトが contoso.com の場合、EnterpriseEnrollment.contoso.com を enterpriseenrollment-s.manage.microsoft.com にリダイレクトする CNAME を DNS に作成します。
 
 CNAME DNS エントリの作成は省略可能ですが、CNAME レコードにより、ユーザーによる登録が簡単になります。 CNAME レコードの登録が見つからない場合、ユーザーは手動で MDM サーバー名 enrollment.manage.microsoft.com を入力するように求められます。
@@ -95,8 +95,8 @@ Contoso DNS の管理者は、次の CNAME を作成する必要があります�
 
 DNS レコードの変更が反映されるまでには、最大で 72 時間かかります。 DNS レコードの変更が反映されるまで、Intune で DNS の変更を確認することはできません。
 
-## <a name="additional-endpoints-are-supported-but-not-recommended"></a>追加のエンドポイントはサポートされてはいるが非推奨
-EnterpriseEnrollment-s.manage.microsoft.com は、登録用の優先 FQDN ですが、その他に、過去に顧客によって使用され、サポートされている 2 つのエンドポイントがあります。 EnterpriseEnrollment.manage.microsoft.com (-s がない) と manage.microsoft.com は、両方とも自動検出サーバーのターゲットとして使用できますが、ユーザーは確認メッセージで [OK] をタッチする必要があります。 EnterpriseEnrollment-s.manage.microsoft.com をポイントすると、ユーザーが追加の確認ステップを実行する必要がないため、これは推奨される構成です。
+## <a name="additional-endpoints-are-used-but-no-longer-supported"></a>追加のエンドポイントが使用されているが、サポートされなくなった
+EnterpriseEnrollment-s.manage.microsoft.com が、登録において推奨される完全修飾ドメイン名です。 過去にお客様が使用していて、引き続き機能するその他のエンドポイントが 2 つありますが、サポートされなくなりました。 EnterpriseEnrollment.manage.microsoft.com (-s がない) と manage.microsoft.com は、両方とも自動検出サーバーのターゲットとして使用できますが、ユーザーは確認メッセージで [OK] をタッチする必要があります。 EnterpriseEnrollment-s.manage.microsoft.com をポイントすると、ユーザーが追加の確認ステップを実行する必要がないため、これは推奨される構成です。
 
 ## <a name="alternate-methods-of-redirection-are-not-supported"></a>リダイレクトの別の方法はサポートされていない
 CNAME の構成以外の方法を使用することは、サポートされていません。 たとえば、プロキシ サーバーを使用して enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc を enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc または manage.microsoft.com/EnrollmentServer/Discovery.svc のいずれかにリダイレクトすることは、サポートされていません。

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 05/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e036e139e97ce033b3269ba0b8d5cf202fad773
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8a90345bef46161911bcb1c1072b6ae4af41f16e
+ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360029"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83864958"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>REST クライアントを使用して Intune データ ウェアハウス API からデータを取得する
 
@@ -41,7 +41,7 @@ RESTful エンドポイント経由で Intune データ ウェアハウスのデ
 
 Azure でネイティブ アプリを作成します。 このネイティブ アプリはクライアント アプリです。 ローカル コンピューターで実行されるクライアントは、ローカル クライアントが資格情報を要求するとき、Intune データ ウェアハウス API を参照します。
 
-1. テナントの Azure Portal にサインインします。 **[Azure Active Directory]**、**[アプリの登録]** の順に選択し、**[アプリの登録]** ウィンドウを開きます。
+1. テナントの Azure Portal にサインインします。 **[Azure Active Directory]** 、 >  **[アプリの登録]** の順に選択し、 **[アプリの登録]** ウィンドウを開きます。
 2. **[New app registration]\(新しいアプリの登録\)** を選択します。
 3. アプリの詳細を入力します。
     1. 「Intune データ ウェアハウス クライアント」など、わかりやすい名前を **[名前]** に入力します。
@@ -88,7 +88,7 @@ Postman を使用して REST 呼び出しを行うには、次の情報が必要
 | 認証 URL         | これは認証に使用する URL です。 | https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/ |
 | アクセス トークン URL | これはトークンの付与に使用する URL です。                                                                                                                                              | https://login.microsoftonline.com/common/oauth2/token |
 | クライアント ID        | Azure でネイティブ アプリを作成したとき、これを作成し、メモしました。                                                                                               | 4184c61a-e324-4f51-83d7-022b6a81b991                                                          |
-| スコープ (省略可能) | [新規]                                                                                                                                                                               | このフィールドは空白にできます。                                                                     |
+| スコープ (省略可能) | 新規                                                                                                                                                                               | このフィールドは空白にできます。                                                                     |
 | 付与タイプ       | このトークンは認証コードです。                                                                                                                                                  | 認証コード                                                                            |
 
 ### <a name="odata-endpoint"></a>OData エンドポイント
@@ -96,7 +96,7 @@ Postman を使用して REST 呼び出しを行うには、次の情報が必要
 エンドポイントも必要です。 データ ウェアハウス エンドポイントを取得するには、カスタム フィード URL が必要です。 OData エンドポイントはデータ ウェアハウス ウィンドウから取得できます。
 
 1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) にサインインします。
-3. **[Microsoft Intune - 概要]** ブレードの右側にある **[その他のタスク]** のデータ ウェアハウス リンクを選択して、**[Intune データ ウェアハウス]** ウィンドウを開きます。
+3. **[Microsoft Intune - 概要]** ブレードの右側にある **[その他のタスク]** のデータ ウェアハウス リンクを選択して、 **[Intune データ ウェアハウス]** ウィンドウを開きます。
 4. **[サード パーティのレポート サービスを使用する]** のカスタム フィード URL をコピーします。 これは次のようになります。`https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
 エンドポイントは次の形式に従います: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
@@ -116,7 +116,7 @@ Postman のために新しいアクセス トークンを取得するには、Az
 3. アドレスにエンドポイント URL を貼り付けます。 次のようになります。  
 
     `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
-4. **[認証]** タブを選択し、**[種類]** 一覧から **[OAuth 2.0]** を選択します。
+4. **[認証]** タブを選択し、 **[種類]** 一覧から **[OAuth 2.0]** を選択します。
 5. **[Get New Access Token]\(新しいアクセス トークンを取得する\)** を選択します。
 6. Azure でアプリにコールバック URL が追加されていることを確認します。 コールバック URL は `https://www.getpostman.com/oauth2/callback` です。
 7. **[トークン名]** のベアラーを入力します。
@@ -216,6 +216,7 @@ Postman のために新しいアクセス トークンを取得するには、Az
 
    Console.Write(response.Content.ReadAsStringAsync().Result);
    Console.ReadKey();
+   }
    }
    }
    ```

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2020
+ms.date: 05/19/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,15 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d309b295281c88dff717c5f609905b3e541e3fed
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
+ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80696431"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83690675"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Intune の [テナントの状態] ページを使用する
-Microsoft Intune の [テナントの状態] ページは、ご利用のテナントに関する現在の重要な詳細を表示できる一元的なハブです。 詳細には、ライセンスの可用性と使用、コネクタの状態、および Intune サービスに関する重要な連絡が含まれます。  
+
+Microsoft Intune の [テナントの状態] ページは、ご利用のテナントに関する現在の重要な詳細を表示できる一元的なハブです。 詳細には、ライセンスの可用性と使用、コネクタの状態、および Intune サービスに関する重要な連絡が含まれます。
+
+> [!TIP]
+> テナントは Azure Active Directory (Azure AD) のインスタンスです。 Intune のサブスクリプションは、Azure AD テナントによってホストされます。 詳細については、Azure AD のドキュメントの「[テナントを設定する](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant)」を参照してください。
 
 ダッシュボードを表示するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[テナント管理]** に移動して、 **[テナントの状態]** を選択します。
 
@@ -64,20 +68,20 @@ Microsoft Intune の [テナントの状態] ページは、ご利用のテナ�
 ## <a name="service-health-dashboard"></a>サービス正常性ダッシュボード  
 サービス正常性ダッシュボードでは、テナントに影響を与える "*サービス インシデント*" の詳細と、更新プログラムと予定されている変更に関する情報を提供する "*Intune ニュース*" を確認できます。
 
-### <a name="intune-service-health"></a>Intune サービスの正常性
+### <a name="intune-service-health-and-message-center"></a>Intune サービスの正常性とメッセージ センター
 アクティブなインシデントやアドバイザリの詳細が表示されます。その際に、Microsoft 365 のサービス正常性ダッシュボードにもメッセージ センターにも移動する必要はありません。これらは両方とも、[Microsoft 365 管理センター](https://admin.microsoft.com)にあります。 テナントに影響を与えるインシデントのみが表示されます。  
 
 インシデントを選択すると、[Tenant Status]\(テナントの状態\) ページに直接インシデントの詳細が表示されます。 過去のアドバイザリとインシデントを表示するには、 **[過去のインシデント/アドバイザリを参照してください]** を選択します。 Microsoft 365 管理センターが開き、テナントの過去 30 日間のアドバイザリとインシデントを表示できます。  
 
-*Intune サービスの正常性*の情報を表示するには、Azure Active Directory または Microsoft 365 管理センターでの**グローバル管理者**ロールまたは**サービス管理者**ロールがご利用のアカウントに割り当てられている必要があります。 これらの権限を割り当てるには、グローバル管理者権限で [Microsoft 365 管理センター](https://admin.microsoft.com)にサインインします。 **[ユーザー] > [アクティブ ユーザー]** の順に選択し、アクセスが必要なアカウントを選択します。 ロールに対して **[編集]** を選択し、*サービス管理者* または*グローバル管理者* を選んでから、編集内容を**保存**して権限を割り当てます。  
+"*Intune サービスの正常性*" の情報を表示するには、ご利用のアカウントに Azure Active Directory または Microsoft 365 管理センターでの**グローバル管理者**または**サービス サポート管理者**のロールが必要です。 これらの権限を割り当てるには、グローバル管理者権限で [Microsoft 365 管理センター](https://admin.microsoft.com)にサインインします。 **[ユーザー] > [アクティブ ユーザー]** の順に選択し、アクセスが必要なアカウントを選択します。 ロールに対して **[編集]** を選択し、 *[サービス サポート管理者]* または *[グローバル管理者]* を選択してから、編集内容を**保存**して権限を割り当てます。  
 
 Microsoft 365 管理センターを通じて設定できるのは、Intune サービスの正常性の通信設定のみとなります。
 
-### <a name="intune-news"></a>Intune ニュース  
+### <a name="intune-message-center"></a>Intune メッセージ センター  
 Intune サービス チームからの通信情報を表示します。その際に、Office メッセージ センターに移動する必要はありません。 通信には、Intune サービスに対して最近行われた変更や、テナントについて実行中の変更に関するメッセージが含まれます。  
 
 既定では、最新のアクティブなメッセージが 10 件表示されます。 古いメッセージを表示するには、 **[過去のメッセージを参照してください]** を選択し、Microsoft 365 管理センターで*メッセージ センター* を開きます。  
 
-Intune ニュースの情報を表示するには、Azure Active Directory での**グローバル管理者**ロールもしくは**サービス管理者**ロール、または Microsoft 365 管理センターでの**メッセージ センター閲覧者**ロールがアカウントに割り当てられている必要があります。  この権限を割り当てるには、管理者権限で [Microsoft 365 管理センター](https://admin.microsoft.com)にサインインします。 **[ユーザー] > [アクティブ ユーザー]** の順に選択し、アクセスが必要なアカウントを選択します。 *ロール* に対して **[編集]** を選択し、*Teams 通信管理者* を選んでから、編集内容を**保存**して権限を割り当てます。  
+Intune ニュースの情報を表示するには、ご利用のアカウントに Azure Active Directory での**グローバル管理者**または**サービス サポート管理者**のロール、または Microsoft 365 管理センターでの**メッセージ センター閲覧者**ロールが必要です。  この権限を割り当てるには、管理者権限で [Microsoft 365 管理センター](https://admin.microsoft.com)にサインインします。 **[ユーザー] > [アクティブ ユーザー]** の順に選択し、アクセスが必要なアカウントを選択します。 *ロール* に対して **[編集]** を選択し、*Teams 通信管理者* を選んでから、編集内容を**保存**して権限を割り当てます。  
 
-Microsoft 365 管理センターを通じて設定できるのは、Intune ニュースの通信設定のみとなります。
+Microsoft 365 管理センターを通じて設定できるのは、Intune メッセージ センターの通信設定のみとなります。

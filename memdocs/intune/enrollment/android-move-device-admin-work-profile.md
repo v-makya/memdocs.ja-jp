@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f16c39ff0af44918099863be5d23ec9fe564493
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: fd9741cfa8cf9edd03d723e63ed1936e1c986d08
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80624911"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989053"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Android デバイスをデバイス管理者から仕事用プロファイル管理に移動する
 
@@ -59,14 +59,18 @@ ms.locfileid: "80624911"
     ![デバイスをブロックする](./media/android-move-device-admin-work-profile/block-devices.png)
 
 5. **[場所]** ページでは、目的の場所を追加し、 **[次へ]** を選択することができます。
-6. **[コンプライアンス非対応に対するアクション]** で、 **[メールをエンド ユーザーに送信する]** アクションを設定できます。
 
-    ![メールを送信する](./media/android-move-device-admin-work-profile/send-email.png)
+6. **[コンプライアンス非対応に対するアクション]** タブで、[非準拠に対して使用できるアクション](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance)を構成して、このフローのエンド ユーザーエクスペリエンスをカスタマイズできます。
 
+    ![コンプライアンス非対応のアクション](media/android-move-device-admin-work-profile/noncompliance-actions.png)
 
-    メールでは、ユーザーへのメッセージに以下の URL を含めることができます。 この URL を選択すると、Android ポータル サイトが起動し、 **[デバイス設定の更新]** ページが表示されます。 このページから、仕事用プロファイルの管理に移動するフローを開始します。
-    - `https://portal.manage.microsoft.com/UpdateSettings.aspx` にする必要があります。
-    - 米国政府の場合は、代わりに次のリンクを使用することができます: `https://portal.manage.microsoft.us/UpdateSettings.aspx`。
+    考慮すべきいくつかのアクションを次に示します。
+
+    - **デバイスに非準拠のマークを付ける**:既定では、このアクションはゼロ (0) 日に設定され、デバイスは非準拠としてすぐにマークされます。 これをより多い日数に変更すると、まだ非準拠とマークされることなしにフローを確認して仕事用プロファイル管理に移動できる猶予期間がユーザーに与えられます。 たとえば、14 日に設定すると、リソースにアクセスできなくなるリスクを伴わずに、デバイス管理者から仕事用プロファイル管理に移動するのに 2 週間の猶予がユーザーに与えられます。
+    - **エンド ユーザーにプッシュ通知を送信する**:デバイス管理者デバイスにプッシュ通知を送信するように、これを構成します。 ユーザーが通知を選択すると、Android ポータル サイトが起動し、 **[デバイス設定の更新]** ページが表示されます。ここでフローを開始して仕事用プロファイル管理に移動できます。
+    - **メールをエンド ユーザーに送信する**:デバイス管理者から仕事用プロファイル管理への移動に関する電子メールをユーザーに送信するように、これを構成します。 電子メールには、以下の URL を含めることができます。これを選択すると、Android ポータル サイトが起動し、[デバイス設定の更新] ページが表示されます。ここでフローを開始して仕事用プロファイル管理に移動できます。
+      - `https://portal.manage.microsoft.com/UpdateSettings.aspx` にする必要があります。
+      - 米国政府の場合は、代わりに次のリンクを使用することができます: `https://portal.manage.microsoft.us/UpdateSettings.aspx`。
   
     > [!NOTE]
     > - もちろん、ユーザーへの連絡には、ユーザーにわかりやすいハイパーテキストをリンクに使用できます。 ただし、URL 短縮サービスを使用しないでください。このように変更するとリンクが機能しなくなる可能性があります。

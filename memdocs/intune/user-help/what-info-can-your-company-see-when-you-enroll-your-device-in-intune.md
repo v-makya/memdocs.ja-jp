@@ -6,7 +6,7 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 10/31/2019
-ms.topic: article
+ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: ed3f9f6f01c8dc2df3a89daee991d9f8c61056b9
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
+ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210317"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83882073"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>デバイスを登録した場合に組織が確認できる情報
 
@@ -51,7 +51,14 @@ Microsoft Intune にデバイスを登録しても、組織はユーザーの個
 - IMEI
 
  > [!NOTE]
- > Android Enterprise のフル マネージド専用デバイスの場合、すべてのアプリ インベントリを表示することはできません。    
+ > Android Enterprise のフル マネージド専用デバイスの場合、すべてのアプリ インベントリを表示することはできません。
+ 
+ > [!NOTE]
+ > アプリは、次のいずれかの方法でインストールされると、**マネージド アプリ**と見なされます。
+ > 1. ユーザーが、Intune 管理者によって**利用可能**として公開された後、ポータル サイト アプリからインストールする。
+ > 2. アプリは、Intune 管理者によって**必須**として公開され、デバイスにインストールされている。 
+ >
+ > 組織の IT 管理者またはサポート担当者であり、Intune でのアプリ管理に関する詳細情報が必要な場合は、「[管理されていないアプリ、マネージド アプリ、MAM アプリの機能について理解する](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/understanding-the-capabilities-of-unmanaged-apps-managed-apps/ba-p/249164)」を参照してください。
     
 **組織が閲覧できる可能性がある情報:**
 

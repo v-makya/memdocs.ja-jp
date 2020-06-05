@@ -7,7 +7,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/16/2019
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eee979ad22a501f8545b93c85790d37ca9648cf7
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 7244872fa888aaee164187e62a2355a94f793499
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077905"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83985183"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>モバイル デバイス管理機関の設定
 
@@ -36,9 +36,9 @@ ms.locfileid: "82077905"
 
 - **Intune 共同管理** - Intune クラウド ソリューションと Windows 10 用 Configuration Manager デバイスの統合。 Configuration Manager コンソールを使用して Intune を構成します。 [Intune へのデバイスの自動登録を構成します](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune)。 
 
-- **Office 365 のモバイル デバイス管理** - Office 365 と Intune クラウド ソリューションの統合。 Microsoft 365 管理センターから Intune を構成します。 Intune スタンドアロンで利用できる機能の一部が含まれます。 Microsoft 365 管理センターで MDM 機関を設定します。
+- **Office 365 のモバイル デバイス管理** - Office 365 と Intune クラウド ソリューションの統合。 Microsoft 365 管理センターから Intune を構成します。 Intune スタンドアロンで利用できる機能の一部が含まれます。 「[Office 365 でのモバイル デバイス管理 (MDM) の設定](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)」を参照してください。
 
-- **Office 365 MDM との共存**テナント上で MDM for Office 365 および Intune を両方とも同時実行でアクティブ化して使用し、ユーザーごとに管理機関を Intune または MDM for Office 365 のどちらかに設定して、どのサービスがモバイル デバイスの管理に使用されるかを指定します。 ユーザーの管理機関は、ユーザーに割り当てられたライセンスに基づいて定義されます。 詳細については、「[Microsoft Intune Co-existence with MDM for Office 365 (Microsoft Itune と MDM for Office 365 の共存)](https://blogs.technet.microsoft.com/configmgrdogs/2016/01/04/microsoft-intune-co-existence-with-mdm-for-office-365)」を参照してください。
+- **Office 365 MDM との共存** テナント上で MDM for Office と Intune の両方を同時にアクティブ化して使用し、ユーザーごとに管理機関を Intune または MDM for Office のどちらかに設定して、どちらのサービスが MDM 登録デバイスの管理に使用されるかを指定できます。 各ユーザーの管理機関は、ユーザーに割り当てられたライセンスに基づいて定義されます。ユーザーが Microsoft 365 Basic または Standard のライセンスのみを所持している場合、そのユーザーのデバイスは MDM for Office によって管理されます。 ユーザーが Intune の権利を与えるライセンスを所持している場合、そのユーザーのデバイスは Intune によって管理されます。 以前は MDM for Office によって管理されていたユーザーに、Intune の権利を与えるライセンスを追加すると、そのユーザーのデバイスは Intune の管理に切り替わります。 ユーザーを Intune に切り替える前に、Intune の構成をユーザーに割り当てて MDM for Office を置き換えるようにしてください。そうしないと、デバイスで MDM for Office の構成が失われ、Intune から置き換えとなるものが受信されません。
 
 ## <a name="set-mdm-authority-to-intune"></a>MDM 機関を Intune に設定する
 
@@ -70,14 +70,6 @@ Android または Apple デバイスの管理が有効になっていると、In
 - デバイスの既存の設定が新しい MDM 機関の設定 (Intune スタンドアロン) に置き換わるように、変更後にご使用のデバイスをサービスに接続する必要があります。
 - MDM 機関を変更した後も、前の MDM 機関からの基本的な設定の一部 (プロファイルなど) が、最大 7 日間、またはデバイスが最初にサービスに接続するまで、デバイスに残ります。 できるだけ早く新しい MDM 機関でアプリと設定 (ポリシー、プロファイル、アプリなど) を構成し、既存の登録済みデバイスを持つユーザーが含まれているユーザー グループにその設定を展開することをお勧めします。 MDM 機関の変更後、デバイスがサービスに接続すると、新しい MDM 機関の新しい設定がすぐに送信されるので、管理と保護の中断を回避できます。
 - 関連付けられているユーザーがいない (通常は iOS/iPadOS の Device Enrollment Program または一括登録シナリオの場合) デバイスは、新しい MDM 機関に移行されません。 これらのデバイスでは、新しい MDM 機関への移行を支援してもらうためにサポートを要請する必要があります。
-
-## <a name="change-mdm-authority-to-office-365"></a>MDM 機関を Office 365 に変更する
-
-Office 365 MDM をアクティブにするには (または、既存の Intune サービスに加えて MDM の共存を有効にするには)、[https://protection.office.com](https://protection.office.com) に進み、 **[データ損失防止]**  >  **[デバイス セキュリティ ポリシー]**  >  **[管理対象デバイスの一覧を表示する]**  >  **[始めましょう]** の順に選択します。
-
-詳細については、「[Office 365 でのモバイル デバイス管理 (MDM) の設定](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)」を参照してください。
-
-エンド ユーザーの管理を Office 365 MDM によってのみ行う場合は、Office 365 MDM をアクティブにした後で、割り当てられている Intune および/または EMS ライセンスを削除します。
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>MDM 証明書の有効期限が切れた後のモバイル デバイスのクリーンアップ
 
