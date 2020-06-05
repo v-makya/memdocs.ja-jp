@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 05/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,67 +15,55 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b6646c67f9425d395bbec1e33c03f6f29b6af7e
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 96074f4bea22b7468b1f210d631f0912eeafe7b5
+ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79361927"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83428987"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Intune で Windows 10 デバイス用のカスタム設定を使用する
 
-Microsoft Intune では、"カスタム プロファイル" を使用して Windows 10 デバイス用のカスタム設定を追加または作成できます。 カスタム プロファイルは Intune の機能です。 Intune に組み込まれていないデバイスの設定と機能を追加するように設計されています。
+この記事では、Windows 10 以降のデバイスで制御できるさまざまなカスタム設定の一覧を示して説明します。 モバイル デバイス管理 (MDM) ソリューションの一部として、これらの設定を使用して、Intune に組み込まれていない設定を構成します。
 
-Windows 10 のカスタム プロファイルでは、Open Mobile Alliance Uniform Resource Identifier (OMA-URI) の設定を使用してさまざまな機能を構成します。 通常、これらの設定は、デバイスの機能を制御するためにモバイル デバイスの製造元によって使われます。 
+カスタム プロファイルの詳細については、[カスタム設定を持つプロファイルの作成](custom-settings-configure.md)に関するページを参照してください。
+
+これらの設定は、Intune でデバイスの構成プロファイルに追加した後、ご使用の Windows 10 デバイスに割り当てたり展開したりします。
+
+この機能は、以下に適用されます。
+
+- Windows 10 以降
+
+Windows 10 のカスタム プロファイルでは、Open Mobile Alliance Uniform Resource Identifier (OMA-URI) の設定を使用してさまざまな機能を構成します。 通常、これらの設定は、デバイスの機能を制御するためにモバイル デバイスの製造元によって使われます。
 
 Windows 10 では、[ポリシー構成サービス プロバイダー (ポリシー CSP)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers) など、多くの構成サービス プロバイダー (CSP) 設定を使用できます。
 
 特定の設定を探している場合、[Windows 10 デバイス制限プロファイル](device-restrictions-windows-10.md)には多くの組み込み設定が含まれることに留意してください。 そのため、カスタム値の入力は必要ない場合があります。
 
-この記事では、以下のことを示します。
+## <a name="before-you-begin"></a>始める前に
 
-- Windows 10 デバイス用のカスタム プロファイルを作成する方法
-- 推奨される OMA-URI 設定の一覧が含まれます
-- VPN 接続を開くカスタム プロファイルの例を提供します
+[Windows 10 カスタム プロファイルを作成します。](custom-settings-configure.md#create-the-profile)
 
-## <a name="create-the-profile"></a>プロファイルの作成
+## <a name="oma-uri-settings"></a>OMA-URI 設定
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
-2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
-3. 次の設定を入力します。
+**[追加]** :次の設定を入力します。
 
-    - **名前**:プロファイルのわかりやすい名前を入力します。 後で簡単に識別できるよう、プロファイルに名前を付けます。 たとえば、適切なプロファイル名は **Windows 10 カスタム プロファイル**です。
-    - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
-    - **[プラットフォーム]** : **[Windows 10 以降]** を選択します。
-    - **[プロファイルの種類]** : **[カスタム]** を選択します。
+- **名前**:OMA-URI 設定の一意の名前を入力すると、設定リスト内で容易に識別できます。
+- **説明**:設定の概要および他の重要な詳細がわかる説明を入力します。
+- **[OMA-URI]** (大文字と小文字を区別):設定として使用する OMA-URI を入力します。
+- **[データ型]** :この OMA-URI の設定に使用するデータ型を選択します。 次のようなオプションがあります。
 
-4. **[OMA-URI のカスタム設定]** で、 **[追加]** を選択します。 次の設定を入力します。
+  - Base64 (ファイル)
+  - ブール型
+  - 文字列 (XML ファイル)
+  - 日付と時刻
+  - 文字列型
+  - 浮動小数点
+  - 整数型
 
-    - **名前**:OMA-URI 設定の一意の名前を入力すると、設定リスト内で容易に識別できます。
-    - **説明**:設定の概要および他の重要な詳細がわかる説明を入力します。
-    - **[OMA-URI]** (大文字と小文字を区別):設定として使用する OMA-URI を入力します。
-    - **[データ型]** :この OMA-URI の設定に使用するデータ型を選択します。 次のようなオプションがあります。
+- **値**:入力した OMA-URI に関連付けるデータ値を入力します。 値は、選択したデータ型に依存します。 たとえば、 **[日付と時刻]** を選択した場合は、日付の選択から値を選択します。
 
-        - 文字列型
-        - 文字列 (XML ファイル)
-        - 日付と時刻
-        - 整数型
-        - 浮動小数点
-        - ブール型
-        - Base64 (ファイル)
-
-    - **[値]** :入力した OMA-URI に関連付けるデータ値を入力します。 値は、選択したデータ型に依存します。 たとえば、 **[日付と時刻]** を選択した場合は、日付の選択から値を選択します。
-
-    設定を何か追加した後は、 **[エクスポート]** を選択できます。 **[エクスポート]** では、追加した値の一覧がコンマ区切り値 (.csv) ファイルで作成されます。
-
-5. **[OK]** を選択して変更を保存します。 必要に応じて他の設定の追加を続けます。
-6. 終わったら、 **[OK]**  >  **[作成]** の順に選択して Intune プロファイルを作成します。 完了すると、プロファイルが **[デバイス - 構成プロファイル]** の一覧に表示されます。
-
-## <a name="example"></a>例
-
-次の例では、**Connectivity/AllowVPNOverCellular** 設定が有効です。 この設定により、移動体通信ネットワーク上の Windows 10 デバイスで VPN 接続が利用できるようになります。
-
-![VPN 設定を含むカスタム ポリシーの例](./media/custom-settings-windows-10/custom-policy-example.png)
+設定を何か追加した後は、 **[エクスポート]** を選択できます。 **[エクスポート]** では、追加した値の一覧がコンマ区切り値 (.csv) ファイルで作成されます。
 
 ## <a name="find-the-policies-you-can-configure"></a>構成できるポリシーを見つける
 
@@ -87,4 +75,6 @@ Windows 10 のバージョンによっては、一部の設定に互換性があ
 
 ## <a name="next-steps"></a>次のステップ
 
-プロファイルは作成されましたが、まだ何も行われていません。 次に、[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
+[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
+
+[Intune のカスタム プロファイルの詳細を確認します](custom-settings-configure.md)。
