@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 775a03e378fb8cee5992de7d81625f4485e6cc84
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5d98f3f8205490848d9f5137e97e7796eee67a67
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990556"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436773"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>iOS/iPadOS と iPadOS のユーザー登録を設定する (プレビュー)
 
@@ -37,7 +37,6 @@ Apple のユーザー登録プロセスを使用して、iOS/iPadOS デバイス
 ## <a name="prerequisites"></a>[前提条件]
 - [モバイル デバイス管理 (MDM) 機関](../fundamentals/mdm-authority-set.md)
 - [Apple MDM プッシュ証明書](apple-mdm-push-certificate-get.md)
-- [マネージド Apple ID](https://support.apple.com/guide/apple-business-manager/mdm1c9622977/web)。
 
 ## <a name="create-a-user-enrollment-profile-in-intune"></a>Intune でユーザー登録プロファイルを作成する
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc180b4a554ceec19fb0815b028d875c32da37bf
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 739ebebe18628279e5242ab227cf0f43993eff08
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166027"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330867"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>アプリ保護ポリシーを利用するために基幹業務アプリで準備を行う
 
@@ -121,7 +121,6 @@ Intune SDK の開発チームは、ネイティブの Android、iOS (Obj-C、Swi
 |組織アカウント向けのアプリ通知の内容を構成する|○|○|
 |承認済みキーボードの使用を要求する (Android のみ)|○|○|
 |アプリの保護ポリシーが必要 (条件付きアクセス)|○||
-|承認されたクライアント アプリが必要です (条件付きアクセス)|○||
 
 ## <a name="next-steps"></a>次のステップ
 

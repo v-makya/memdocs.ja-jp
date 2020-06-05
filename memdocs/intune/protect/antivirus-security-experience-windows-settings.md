@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 089303b76f674d47767afdff72341d09f7f227d4
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 78cc6182cf8682935ecaa6c319e30ee8261fc2fb
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431736"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455261"
 ---
 # <a name="settings-for-the-windows-security-experience-profile-in-microsoft-intune"></a>Microsoft Intune における Windows セキュリティ エクスペリエンス プロファイルの設定
 
@@ -43,7 +43,7 @@ ms.locfileid: "83431736"
   - **[はい]** - Windows セキュリティ アプリの [ウイルスと脅威の防止] 領域がエンドユーザーに表示されません。 ウイルスと脅威の防止に関連した通知は表示されません。
 
   - **[Windows セキュリティ アプリの [ランサムウェア攻撃後のデータ回復] オプションを非表示にする]**  
-    CSP: [](https://go.microsoft.com/fwlink/?linkid=873664)
+    CSP:[HideRansomwareDataRecovery](https://go.microsoft.com/fwlink/?linkid=873664)
 
   - **[未構成]** ("*既定値*") - この設定はクライアントの既定値に戻り、ユーザー アクセスと通知が許可されます。
   - **[はい]** - Windows セキュリティ アプリの [ランサムウェア攻撃後のデータ回復] 領域がエンドユーザーに表示されません。 ランサムウェアに関連した通知は表示されません。
@@ -85,7 +85,7 @@ ms.locfileid: "83431736"
   - **[はい]** - Windows セキュリティ アプリの [ファミリー オプション] 領域がエンドユーザーに表示されません。 また、ファミリー オプションに関連した通知は表示されません。
 
 - **[Windows セキュリティ アプリの通知]**  
-  CSP: [](https://go.microsoft.com/fwlink/?linkid=873675)
+  CSP:[DisableNotifications](https://go.microsoft.com/fwlink/?linkid=873675)
 
   前述のすべての機能設定に関するユーザーへの Windows セキュリティの通知をブロックするには、この設定を使用します。 または、前述の設定を使用して機能ごとに Windows セキュリティ アプリの通知を管理することもできます。
 

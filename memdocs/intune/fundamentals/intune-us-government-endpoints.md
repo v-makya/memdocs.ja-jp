@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28454fc067a7d8ab281b92d571a872bd9e0aa2d0
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d1574e07ca58debaef5bbc134a86d76aa21778a3
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991168"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347256"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Microsoft Intune の米国政府機関のエンドポイント
 
@@ -61,22 +61,9 @@ ms.locfileid: "83991168"
 - MS Graph: https:\//graph.microsoft.us
 - ADRS: https:\//enterpriseregistration.microsoftonline.us
 
-## <a name="windows-push-notification-services"></a>Windows プッシュ通知サービス
-モバイル デバイス管理 (MDM) を使用して管理されている Intune マネージド デバイスでは、デバイス アクションとその他の即時アクティビティに Windows プッシュ通知サービス (WNS) が必要です。 詳細については、「[WNS トラフィックをサポートするためのエンタープライズ ファイアウォールとプロキシ構成](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)」を参照してください。
+[!INCLUDE [Intune notices](../includes/windows-push-notification-services.md)]
 
-## <a name="apple-device-network-information"></a>Apple デバイス ネットワークの情報
-
-|**使用目的**|**ホスト名 (IP アドレス/サブネット)**|**プロトコル**|**ポート**|
-|------------|-----------|------------|-----------|
-|Apple サーバーからコンテンツを取得して表示する|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br>\*.phobos.itunes-apple.com.akadns.net|HTTP|80|
-|APNS サーバーとの通信|#-courier.push.apple.com<br>'#' は、0 から 50 の乱数です。|TCP|5223 および 443|
-|各種の関数には、インターネット、iTunes Store、macOS アプリ ストア、iCloud、メッセージングなどへのアクセスが含まれます。|phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net|HTTP/HTTPS|80 または 443|
-
-詳細については、次をご覧ください。
-
-- [Apple ソフトウェア製品に使用される TCP ポートと UDP ポート](https://support.apple.com/HT202944)
-- [macOS、iOS/iPadOS、iTunes のサーバー ホスト接続と iTunes のバックグラウンド プロセスについて](https://support.apple.com/HT201999)
-- [macOS および iOS/iPadOS クライアントで Apple プッシュ通知が届かない場合](https://support.apple.com/HT203609)
+[!INCLUDE [Intune notices](../includes/apple-device-network-information.md)]
 
 ## <a name="next-steps"></a>次のステップ
 [Microsoft Intune のネットワーク エンドポイント](intune-endpoints.md)
