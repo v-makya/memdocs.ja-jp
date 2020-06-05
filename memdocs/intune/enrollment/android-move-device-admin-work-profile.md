@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd9741cfa8cf9edd03d723e63ed1936e1c986d08
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 685f2a51c7a2bfacbc95fb2a7615f0e459b97245
+ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989053"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84126517"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Android デバイスをデバイス管理者から仕事用プロファイル管理に移動する
 
@@ -72,10 +72,10 @@ ms.locfileid: "83989053"
       - `https://portal.manage.microsoft.com/UpdateSettings.aspx` にする必要があります。
       - 米国政府の場合は、代わりに次のリンクを使用することができます: `https://portal.manage.microsoft.us/UpdateSettings.aspx`。
   
-    > [!NOTE]
-    > - もちろん、ユーザーへの連絡には、ユーザーにわかりやすいハイパーテキストをリンクに使用できます。 ただし、URL 短縮サービスを使用しないでください。このように変更するとリンクが機能しなくなる可能性があります。
-    > - Android ポータル サイトが開いていてバックグラウンドにある場合、ユーザーがリンクをタップすると、代わりに開いていた最後のページが表示される可能性があります。
-    > - ユーザーは、Android デバイス上のリンクをタップする必要があります。 代わりにブラウザーに貼り付けても、Android ポータル サイトは起動しません。 
+      > [!NOTE]
+      > - もちろん、ユーザーへの連絡には、ユーザーにわかりやすいハイパーテキストをリンクに使用できます。 ただし、URL 短縮サービスを使用しないでください。このように変更するとリンクが機能しなくなる可能性があります。
+      > - Android ポータル サイトが開いていてバックグラウンドにある場合、ユーザーがリンクをタップすると、代わりに開いていた最後のページが表示される可能性があります。
+      > - ユーザーは、Android デバイス上のリンクをタップする必要があります。 代わりにブラウザーに貼り付けても、Android ポータル サイトは起動しません。 
 
     **[次へ]** を選択します。
 
