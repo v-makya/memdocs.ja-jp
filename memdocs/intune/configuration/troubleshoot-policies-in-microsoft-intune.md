@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 06/2/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e96199d9f525fa0dcbf7545d2c20b90a3a76b9cd
-ms.sourcegitcommit: b94415467831517f2aeab9c7c8a13fe8db8bc8ed
+ms.openlocfilehash: 8ee0603a96d7276e9e1ef0fb9bff60ac44a3ef84
+ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83401790"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301386"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Intune でのポリシーとプロファイルのトラブルシューティング
 
@@ -37,7 +37,7 @@ Microsoft Intune には、トラブルシューティング機能がいくつか
 
 ## <a name="use-built-in-troubleshooting"></a>組み込みのトラブルシューティングを使用する
 
-1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[トラブルシューティング + サポート]** を選択します。
+1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[トラブルシューティング + サポート]**  >  **[トラブルシューティング]** を選択します。
 
     :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="Endpoint Management 管理センターと Intune で、[トラブルシューティングとサポート] に移動します。":::
 
@@ -98,7 +98,7 @@ Microsoft Intune には、トラブルシューティング機能がいくつか
 
         **役に立つリンク**: 
 
-        - [デバイス コンプライアンス ポリシーを展開する方法](../protect/device-compliance-get-started.md#ways-to-deploy-device-compliance-policies)
+        - [デバイス コンプライアンス ポリシーを展開する方法](../protect/device-compliance-get-started.md)
         - [Intune デバイスのコンプライアンス対応ポリシーの監視](../protect/compliance-policy-monitor.md)
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>プロファイルが正しく適用されているかどうかわからない
@@ -123,7 +123,7 @@ Microsoft Intune には、トラブルシューティング機能がいくつか
 
 - [デバイスに適用されない iOS/iPadOS または Android ポリシーのトラブルシューティング](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (別の Microsoft サイトを開きます)
 - [Windows 10 Intune ポリシー エラーのトラブルシューティング](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (ブログを開きます)
-- [Windows 10 の CSP カスタム設定のトラブルシューティング](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (別の Microsoft サイトを開きます)
+- [Windows 10 の CSP カスタム設定のトラブルシューティング](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (別の Microsoft サイトを開きます)
 - [Windows 10 グループ ポリシーと Intune MDM ポリシー](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (別の Microsoft サイトを開きます)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>アラート:アクセス ルールを Exchange に保存できませんでした

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20c552ff879574edc0ed497b5c99b45b8092918a
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864898"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311181"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限するように Windows 10 (以降) のデバイスを設定する
 
@@ -1095,7 +1095,8 @@ GDI DPI スケールでは、DPI 対応でないアプリケーションをモ�
 - **[望ましくない可能性のあるアプリケーションの検出]** :この機能は、望ましくない可能性のあるアプリケーション (PUA) を識別し、ネットワークへのダウンロードおよびインストールをブロックします。 これらのアプリケーションは、ウイルス、マルウェア、またはその他の種類の脅威とは見なされません。 ただしこれらは、パフォーマンスや使用に影響を与える可能性があるアクションをエンドポイントで実行できます。 Windows が PUA を検出した場合の保護レベルを選択します。 次のようなオプションがあります。
 
   - **[未構成]** (既定値):Intune では、この設定は変更または更新されません。 既定では、Microsoft Defender によりこの機能が無効となる可能性があります。
-  - **[ブロック]** :Microsoft Defender は PUA を検出し、検出された項目をブロックします。 これらの項目は、その他の脅威と共に履歴に表示されます。
+  - **Off**: PUA の保護がオフになります。
+  - **有効**: Microsoft Defender は PUA を検出し、検出された項目をブロックします。 これらの項目は、その他の脅威と共に履歴に表示されます。
   - **[監査]** : Microsoft Defender は PUA を検出しますが、何のアクションも行いません。 Microsoft Defender でアクションが実行されるアプリケーションに関する情報を確認できます。 たとえば、Microsoft Defender によって作成されたイベントをイベント ビューアーで検索します。
 
   望ましくない可能性のあるアプリの詳細については、「[Detect and block potentially unwanted applications (望ましくない可能性があるアプリケーションの検出とブロック)](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus)」をご覧ください。

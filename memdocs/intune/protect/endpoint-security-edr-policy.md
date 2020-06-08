@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2020
+ms.date: 05/29/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ac8f82396571a7ae39df43662000f9f3f17d0430
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990881"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206334"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティのエンドポイントの検出と応答ポリシー
 
@@ -38,13 +38,13 @@ EDR ポリシーは、Intune で管理する Azure Active Directory (Azure AD) �
 
 [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) の **[エンドポイント セキュリティ]** ノードにある *[管理]* で、EDR のためのエンドポイント セキュリティ ポリシーを見つけます。
 
-[エンドポイントの検出と応答プロファイルの設定](../protect/endpoint-security-edr-profile-settings.md)を確認してください。
+[エンドポイントの検出と応答プロファイルの設定](endpoint-security-edr-profile-settings.md)を確認してください。
 
 ## <a name="prerequisites-for-edr-policies"></a>EDR ポリシーの前提条件
 
 **全般**:
 
-- **Microsoft Defender Advanced Threat Protection のテナント** – EDR ポリシーを作成する前に、Defender ATP テナントを Microsoft Endpoint Manager テナント (Intune サブスクリプション) と統合する必要があります。 Intune ドキュメントの [Microsoft Defender ATP の使用](../protect/advanced-threat-protection.md)に関するページを参照してください。
+- **Microsoft Defender Advanced Threat Protection のテナント** – EDR ポリシーを作成する前に、Defender ATP テナントを Microsoft Endpoint Manager テナント (Intune サブスクリプション) と統合する必要があります。 Intune ドキュメントの [Microsoft Defender ATP の使用](advanced-threat-protection.md)に関するページを参照してください。
 
 **Configuration Manager のデバイスをサポートするには**:
 
@@ -67,7 +67,7 @@ Configuration Manager デバイスに対する EDR ポリシーの使用をサ�
 
 ## <a name="edr-profiles"></a>EDR プロファイル
 
-次のプラットフォームとプロファイルで構成できる[設定を確認](../protect/endpoint-security-edr-profile-settings.md)してください。
+次のプラットフォームとプロファイルで構成できる[設定を確認](endpoint-security-edr-profile-settings.md)してください。
 
 **Intune** – Intune で管理するデバイスについては、以下がサポートされます。
 
@@ -138,7 +138,7 @@ Configuration Manager バージョン 2002 には、Microsoft Endpoint Manager a
 
       このオプションを選択すると、ウィザードによって、共同管理の設定を完了するための追加のページが表示されます。 詳細については、Configuration Manager コンテンツの[共同管理の有効化](../../configmgr/comanage/how-to-enable.md)に関するページを参照してください。
 
-     ![テナントのアタッチを構成する](./media/endpoint-security-edr-policy/tenant-onboarding.png)
+     ![テナントのアタッチを構成する](media/endpoint-security-edr-policy/tenant-onboarding.png)
 
 4. **[次へ]** 、 **[はい]** の順にクリックして、 **[AAD アプリケーションの作成]** 通知を受け入れます。 このアクションにより、サービス プリンシパルがプロビジョニングされ、Microsoft Endpoint Manager admin center へのコレクションの同期を容易にするために Azure AD アプリケーション登録が作成されます。
 
@@ -159,7 +159,7 @@ Configuration Manager バージョン 2002 には、Microsoft Endpoint Manager a
 3. **[アップロードを構成する]** タブで、 **[Upload to Microsoft Endpoint Manager admin center]\(Microsoft Endpoint Manager 管理センターにアップロードする\)** を選択します。 **[適用]** をクリックします。
    - デバイスのアップロード用の既定の設定は、 **[Microsoft Endpoint Configuration Manager によって管理されているすべてのデバイス]** となります。 また、構成を 1 つまたはいくつかのデバイス コレクションに制限することもできます。
 
-     ![共同管理の [プロパティ] タブを表示する](./media/endpoint-security-edr-policy/configure-upload.png)
+     ![共同管理の [プロパティ] タブを表示する](media/endpoint-security-edr-policy/configure-upload.png)
 
 4. メッセージが表示されたら、ご利用の "*全体管理者*" アカウントを使用してサインインします。
 
@@ -195,7 +195,7 @@ Microsoft Endpoint Manager admin center に同期するようにコレクショ�
 
    - Configuration Manager 階層がテナントにアタッチされていない場合は、このオプションを選択することはできません。
   
-   ![クラウドの同期を構成する](./media/endpoint-security-edr-policy/cloud-sync.png)
+   ![クラウドの同期を構成する](media/endpoint-security-edr-policy/cloud-sync.png)
 
 3. **[OK]** を選択して構成を保存します。
 
@@ -258,11 +258,17 @@ Microsoft Endpoint Manager admin center では、展開する EDR ポリシー�
 
 - **Windows 10 以降**のプラットフォーム (Intune) を対象とするポリシーの場合、ポリシーへのコンプライアンスの概要が表示されます。 また、グラフを選択して、ポリシーを受け取ったデバイスの一覧を表示し、個々のデバイスにドリルインして詳細を確認することもできます。
 
+  **[ATP センサーがあるデバイス]** のグラフには、**Windows 10 以降**のプロファイルを使用して Defender ATP に正常にオンボードしたデバイスのみが表示されます。 このグラフにデバイスを完全に表現できるようにするには、オンボード プロファイルをすべてのデバイスに展開します。 グループ ポリシーや PowerShell のように、外部から Defender ATP にオンボードするデバイスは、**ATP センサーのないデバイス**としてカウントされます。
+
 - **Windows 10 および Windows Server** プラットフォーム (Configuration Manager) を対象とするポリシーの場合、ポリシーへのコンプライアンスの概要は表示されますが、ドリルインして詳細を表示することはできません。 表示が制限されているのは、Configuration Manager デバイスへのポリシーの展開を管理しているのは Configuration Manager であり、admin center が Configuration Manager から受け取る状態の詳細が限られているからです。
 
-両方のプラットフォームとプロファイルで構成できる[設定を確認](../protect/endpoint-security-edr-profile-settings.md)してください。
+
+
+
+
+両方のプラットフォームとプロファイルで構成できる[設定を確認](endpoint-security-edr-profile-settings.md)してください。
 
 ## <a name="next-steps"></a>次のステップ
 
-- [エンドポイント セキュリティ ポリシーを構成する](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+- [エンドポイント セキュリティ ポリシーを構成する](endpoint-security-policy.md#create-an-endpoint-security-policy)
 - Microsoft Defender ATP ドキュメントの[エンドポイントの検出と応答](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response)に関するページで詳細を確認する。

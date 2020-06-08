@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune - Azure のデバイス コンプライアンス ポリシー | Microsoft Docs
-description: デバイス コンプライアンス ポリシーの使用の開始、状態と重大度レベルの概要、InGracePeriod 状態の使用、条件付きアクセスの使用、割り当てポリシーなしのデバイスの処理。
+description: コンプライアンス ポリシーの設定や Microsoft Intune のデバイス コンプライアンス ポリシーなどの、コンプライアンス ポリシーの使用を開始します。
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 05/28/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,108 +16,146 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 559d9a704f0b33e3fda3adf628626b56ff263de3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 227a44436f4490c9b3e2188609a9714a0e842149
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989724"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206317"
 ---
-# <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Intune を使用して組織内のリソースへのアクセスを許可するように、デバイス上でルールを設定する
+# <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>コンプライアンス ポリシーを使用して、Intune で管理するデバイスのルールを設定する
 
-モバイル デバイス管理 (MDM) ソリューションの多くでは、組織のデータを保護するために、ユーザーやデバイスがいくつかの要件を満たすことを要求します。 Intune では、この機能は "コンプライアンス ポリシー" と呼ばれています。 コンプライアンス ポリシーでは、準拠ユーザーおよびデバイスであるために満たす必要があるルールや設定が定義されます。 条件付きアクセスと組み合わせた場合、管理者はルールを満たしていないユーザーとデバイスをブロックすることができます。
+Intune のようなモバイル デバイス管理 (MDM) ソリューションでは、組織のデータを保護するために、ユーザーやデバイスがいくつかの要件を満たすことを要求します。 Intune では、この機能は "*コンプライアンス ポリシー*" と呼ばれています。
 
-たとえば、Intune 管理者は次を要求できます。
+Intune のコンプライアンス ポリシーとは次のようなものです。
 
-- モバイル デバイス上の組織のデータにアクセスするために、エンド ユーザーがパスワードを使うこと
-- デバイスが脱獄またはルート化されていないこと
-- デバイスのオペレーティング システムの最小または最大バージョン
-- デバイスが脅威レベル以下であること
+- 準拠ユーザーおよびデバイスであるために満たす必要があるルールや設定を定義します。
+- 非準拠のデバイスに適用されるアクションが含まれます。 非準拠に対するアクションにより、ユーザーに非準拠の条件を通知し、非準拠のデバイスでデータを保護することができます。
+- [条件付きアクセスと組み合わせて](#integrate-with-conditional-access)、ルールを満たしていないユーザーとデバイスをブロックすることができます。
 
-また、この機能を使用して、組織のデバイス上のコンプライアンス状態を監視することもできます。
+Intune のコンプライアンス ポリシーには、次の 2 つの部分があります。
 
-> [!IMPORTANT]
-> Intune では、デバイス上のすべてのコンプライアンス評価をデバイスのチェックイン スケジュールに従って行います。 [ポリシーとプロファイルの更新サイクル](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)に関するページに、おおよその更新間隔が一覧表示されています。
+- **コンプライアンス ポリシー設定** – すべてのデバイスが受信する組み込みのコンプライアンス ポリシーのような、テナント全体の設定です。 コンプライアンス ポリシー設定では、デバイス コンプライアンス ポリシーを受信していないデバイスが準拠しているかどうかなど、Intune 環境でのコンプライアンス ポリシーの動作のベースラインを設定します。
 
-<!---### Actions for noncompliance
+- **デバイス コンプライアンス ポリシー** – 構成し、ユーザーまたはデバイスのグループに展開するプラットフォーム固有のルーです。  これらのルールは、最小オペレーティング システムやディスク暗号化の使用などの、デバイスの要件を定義します。 準拠したデバイスと見なされるには、これらの規則を満たす必要があります。
 
-You can specify what needs to happen when a device is determined as noncompliant. This can be a sequence of actions during a specific time.
-When you specify these actions, Intune will automatically initiate them in the sequence you specify. See the following example of a sequence of
-actions for a device that continues to be in the noncompliant status for
-a week:
+他の Intune ポリシーと同様に、デバイスのコンプライアンス ポリシーの評価は、デバイスが Intune にチェックインするタイミングと、[ポリシーとプロファイルの更新サイクル](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)によって異なります。
 
-- When the device is first determined to be noncompliant, an email with noncompliant notification is sent to the user.
+## <a name="compliance-policy-settings"></a>コンプライアンス ポリシーの設定
 
-- 3 days after initial noncompliance state, a follow up reminder is sent to the user.
+*コンプライアンス ポリシー設定* は、Intune のコンプライアンス サービスがデバイスとどのように対話するかを決定する、テナント全体の設定です。 これらの設定は、デバイス コンプライアンス ポリシーで構成する設定とは異なります。
 
-- 5 days after initial noncompliance state, a final reminder with a notification that access to company resources will be blocked on the device in 2 days if the compliance issues are not remediated is sent to the user.
+コンプライアンス ポリシーの設定を管理するには、[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[エンドポイント セキュリティ]**  >  **[デバイスのポリシー準拠]**  >  **[コンプライアンス ポリシー設定]** の順に移動します。
 
-- 7 days after initial noncompliance state, access to company resources is blocked. This requires that you have Conditional Access policy that specifies that access from noncompliant devices should    be blocked for services such as Exchange and SharePoint.
+コンプライアンス ポリシー設定には、次の設定が含まれます。
 
-### Grace Period
+- **[コンプライアンス ポリシーが割り当てられていないデバイスをマークする]**
 
-This is the time between when a device is first determined as
-noncompliant to when access to company resources on that device is blocked. This time allows for time that the user has to resolve
-compliance issues on the device. You can also use this time to create your action sequences to send notifications to the user before their access is blocked.
+  この設定は、デバイス コンプライアンス ポリシーが割り当てられていないデバイスを Intune がどのように処理するかを決定します。 この設定には次の 2 つの値があります。
+  - **準拠** ("*既定値*"): このセキュリティ機能はオフになっています。 デバイス コンプライアンス ポリシーが送信されていないデバイスは "*準拠*" と見なされます。
+  - **準拠していない**: このセキュリティ機能はオンになっています。 デバイス コンプライアンス ポリシーが受信されていないデバイスは、準拠していないと見なされます。
 
-Remember that you need to implement Conditional Access policies in addition to compliance policies in order for access to company resources to be blocked.--->
+  デバイス コンプライアンス ポリシーで条件付きアクセスを使用する場合は、この設定を "**準拠していない**" に変更して、準拠していると確認されたデバイスのみがリソースにアクセスできるようにすることをお勧めします。
 
-## <a name="device-compliance-policies-work-with-azure-ad"></a>デバイス コンプライアンス ポリシーと Azure AD の連携
+  ポリシーが割り当てられていないためにエンド ユーザーが準拠していない場合、[ポータル サイト アプリ](../apps/company-portal-app.md)には [コンプライアンス ポリシーが割り当てられていません] と表示されます。
 
-Intune では、[条件付きアクセス](../protect/conditional-access.md)を使用してコンプライアンスを適用します。 条件付きアクセスは、Azure Active Directory (Azure AD) テクノロジです。
+- **[脱獄の高度な検出]** (*iOS/iPadOS のみに適用*)
 
-デバイスが Intune に登録されると、Azure AD の登録プロセスが開始され、デバイス情報が Azure AD で更新されます。 重要な情報の 1 つとして、デバイスのコンプライアンス状態があります。 このコンプライアンス状態は、電子メールと他の組織のリソースへのアクセスをブロックまたは許可するための条件付きアクセス ポリシーによって使用されます。
+  この設定は、脱獄されたデバイスをブロックするデバイス コンプライアンス ポリシーの対象となるデバイスでのみ動作します。  (iOS/iPadOS の [[デバイスの正常性](compliance-policy-create-ios.md#device-health)] 設定を参照してください)。
 
-条件付きアクセスと Intune について参照する:
+  この設定には次の 2 つの値があります。
 
-- [Intune での条件付きアクセスの一般的な使用方法](conditional-access-intune-common-ways-use.md)
+  - **無効** (*既定値*): このセキュリティ機能はオフになっています。 この設定は、脱獄されたデバイスをブロックするデバイス コンプライアンス ポリシーを受信するデバイスには影響しません。
+  - **有効**: このセキュリティ機能はオンになっています。 脱獄されたデバイスをブロックするデバイス コンプライアンス ポリシーを受信するデバイスは、[脱獄の高度な検出] を使用します。
 
-Azure AD のドキュメントで条件付きアクセスの詳細について参照する:
-  - [条件付きアクセスとは](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
-  - [デバイス ID とは](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
+  適用可能な iOS/iPadOS デバイスで有効になっている場合、デバイスは次を実行します。
 
-## <a name="ways-to-use-device-compliance-policies"></a>デバイス コンプライアンス ポリシーを使用する方法
-
-### <a name="with-conditional-access"></a>条件付きアクセスあり
-
-ポリシー規則に準拠しているデバイスの場合、電子メールやその他の組織のリソースへのアクセス許可をデバイスに付与することができます。 デバイスがポリシー規則に準拠していない場合は、組織のリソースにアクセスすることはできません。 これが条件付きアクセスです。
-
-### <a name="without-conditional-access"></a>条件付きアクセスなし
-
-条件付きアクセスなしのデバイス コンプライアンス ポリシーを使用することもできます。 コンプライアンス ポリシーを単独で使用した場合、対象のデバイスが評価され、コンプライアンス ステータスを含めて報告されます。 たとえば、暗号化されていないデバイスの数や、脱獄またはルート化されたデバイスに関するレポートを取得できます。 条件付きアクセスなしでコンプライアンス ポリシーを使用する場合、組織のリソースに対するアクセス制限はありません。
-
-## <a name="ways-to-deploy-device-compliance-policies"></a>デバイス コンプライアンス ポリシーを展開する方法
-
-ユーザー グループ内のユーザー、またはデバイス グループ内のデバイスにコンプライアンス ポリシーを展開することができます。 コンプライアンス ポリシーがユーザーに展開されると、すべてのユーザーのデバイスのコンプライアンスがチェックされます。 このシナリオでのデバイス グループの使用は、コンプライアンス レポートに役立ちます。
-
-Intune には、組み込みのコンプライアンス ポリシー設定のセットも含まれています。 次の組み込みのポリシーは、Intune に登録されたすべてのデバイスで評価されます。
-
-- **[Mark devices with no compliance policy assigned as]\(コンプライアンス ポリシーが割り当てられていないデバイスにマークを付ける\)** :これはコンプライアンス違反に対する既定のアクションです。 このプロパティには次の 2 つの値があります。
-
-  - **[準拠]** (*既定値*): セキュリティ機能が無効
-  - **[非準拠]** : セキュリティ機能が有効
-
-  デバイスにコンプライアンス ポリシーが割り当てられていない場合、そのデバイスは既定で準拠と見なされます。 コンプライアンス ポリシーで条件付きアクセスを使用する場合は、既定の設定を **[非準拠]** に変更することをお勧めします。 ポリシーが割り当てられていないためにエンド ユーザーが準拠していない場合、[ポータル サイト アプリ](../apps/company-portal-app.md)には `No compliance policies have been assigned` と表示されます。
-
-- **[脱獄の高度な検出]** (*iOS/iPadOS に適用*):この設定を有効にすると、iOS/iPadOS デバイスで、脱獄されたデバイスの状態がより頻繁に発生するようになります。 この設定は、脱獄されたデバイスをブロックするコンプライアンス ポリシーの対象となるデバイスにのみ影響します。 このプロパティを有効にすると、デバイスの位置情報サービスが使用され、バッテリの使用量に影響する可能性があります。 ユーザーの位置データは Intune では保存されません。バックグラウンドで脱獄の検出をより頻繁にトリガーするためにのみ使用されます。 
-
-  この設定を有効にするには、デバイスで以下の操作が必要です。
-  - OS レベルで位置情報サービスを有効にする
+  - OS レベルで位置情報サービスを有効にします。
   - ポータル サイトで常に位置情報サービスを使用できるようにします。
+  - 位置情報サービスを使用して、バックグラウンドで脱獄の検出をより頻繁にトリガーします。 ユーザーの場所データは Intune では保存されません。
 
-  高度な検出は、位置情報サービスを通じて機能します。 評価をトリガーするには、ポータル サイト アプリを開くか、物理的に約 500 メートル以上離れた場所にデバイスを移動します。 iOS 13 以降でこの機能を使用するには、ポータル サイトによるバックグラウンドでの位置の使用を引き続き許可することを確認するメッセージがデバイスから表示されるたびに、[常に許可] を選択する必要があります。 ユーザーが常に位置へのアクセスを許可せず、この設定が構成されたポリシーが適用されている場合、そのデバイスは非準拠としてマークされます。 Intune で、位置が大幅に変わるごとに確実に脱獄検出チェックを実行することは、その時点のデバイスのネットワーク接続に依存するため、保証できないことに注意してください。
+  [脱獄の高度な検出] では、次の場合に評価を実行します。
 
-- **[コンプライアンス状態の有効期間 (日)]** :デバイスが受け取ったすべてのコンプライアンス ポリシーの状態をレポートする期間を入力します。 この期間内に状態を返さないデバイスは非準拠として扱われます。 既定値は 30 日です。 最大値は 120 日間です。 最小値は 1 日です。
+  - ポータル サイト アプリが開いている
+  - デバイスが約 500 メートル以上の距離を物理的に大きく移動している。 位置が大幅に変わるごとに確実に脱獄検出チェックを実行することは、その時点のデバイスのネットワーク接続に依存するため、Intune では保証できません。
 
-  この設定は、 **[アクティブ]** な既定のコンプライアンス ポリシーとして表示されます ( **[デバイス]**  >  **[監視]**  >  **[コンプライアンスの設定]** )。 このポリシーのバックグラウンド タスクは 1 日に 1 回実行されます。
+  iOS 13 以降でこの機能を使用するには、ポータル サイトによるバックグラウンドでの位置の使用を引き続き許可することを確認するメッセージがデバイスから表示されるたびに、"*常に許可*" を選択する必要があります。 ユーザーが位置へのアクセスを常に許可せず、この設定が構成されたポリシーが適用されている場合、そのデバイスは非準拠としてマークされます。
 
-これらの組み込みポリシーを使用して、これらの設定を監視できます。 Intune では、デバイス プラットフォームに応じて、さまざまな間隔で[更新プログラムの更新または確認](create-compliance-policy.md#refresh-cycle-times)も行われます。 「[Microsoft Intune でのデバイス プロファイルの一般的な問題と解決策](../configuration/device-profile-troubleshoot.md)」は、適切なリソースです。
+- **[コンプライアンス状態の有効期間 (日)]**
 
-コンプライアンス レポートは、デバイスの状態を確認する優れた方法です。 [コンプライアンス ポリシーの監視](compliance-policy-monitor.md)には、いくつかのガイダンスが含まれています。
+  受信したすべてのコンプライアンス ポリシーについて、デバイスが正常に報告する必要がある期間を指定します。 有効期限が切れる前にデバイスがポリシーのコンプライアンス状態を報告できなかった場合、デバイスは非準拠として扱われます。
 
-## <a name="non-compliance-and-conditional-access-on-the-different-platforms"></a>さまざまなプラットフォームでのコンプライアンス違反と条件付きアクセス
+  既定では、期間は 30 日に設定されます。 1 日から 120 日の期間を構成できます。
+
+  有効期間の設定に、デバイスのコンプライアンスの詳細を表示できます。 [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[デバイス]**  >  **[監視]**  >  **[コンプライアンスの設定]** の順に移動します。 この設定の名前は、 *[設定]* 列の **[アクティブ]** の名前です。  この情報および関連するコンプライアンス状態ビューの詳細については、「[デバイス コンプライアンスを監視する](compliance-policy-monitor.md)」を参照してください。
+
+## <a name="device-compliance-policies"></a>デバイス コンプライアンス ポリシー
+
+Intune のデバイス コンプライアンス ポリシーは次を行います。
+
+- 準拠ユーザーおよびマネージド デバイスであるために満たす必要があるルールや設定を定義します。 ルールの例として、デバイスで最小 OS バージョンを実行している必要があります。また、脱獄されたりルート化されたりしておらず、Intune と統合されている脅威管理ソフトウェアで指定された "*脅威レベル*" を超えていない必要があります。
+- コンプライアンス ルールを満たしていないデバイスに適用されるアクションをサポートします。 アクションの例として、リモートでのロックや、デバイスの状態に関する電子メールをデバイスのユーザーに送信して修正できるようにする、などがあります。
+- ユーザー グループ内のユーザー、またはデバイス グループ内のデバイスに展開します。 コンプライアンス ポリシーがユーザーに展開されると、すべてのユーザーのデバイスのコンプライアンスがチェックされます。 このシナリオでのデバイス グループの使用は、コンプライアンス レポートに役立ちます。
+
+条件付きアクセスを使用する場合、条件付きアクセス ポリシーはデバイスのコンプライアンス結果を使用して、準拠していないデバイスからのリソースへのアクセスをブロックできます。
+
+デバイス コンプライアンス ポリシーで指定できる設定は、ポリシーの作成時に選択したプラットフォームの種類によって異なります。 デバイス プラットフォームごとに異なる設定がサポートされており、プラットフォームの種類ごとに個別のポリシーが必要です。  
+
+次の項目は、デバイスの構成ポリシーのさまざまな側面に特化した記事にリンクしています。
+
+- [**非準拠に対するアクション**](actions-for-noncompliance.md) - 各デバイス コンプライアンス ポリシーには、非準拠に対するアクションが 1 つ以上含まれています。 これらのアクションは、ポリシーで設定した条件を満たしていないデバイスに適用されるルールです。
+
+  既定では、各デバイス コンプライアンス ポリシーには、ポリシー ルールに適合しない場合にデバイスを非準拠としてマークするアクションが含まれます。 その後、ポリシーは、そのアクションに対して設定したスケジュールに基づいて、構成済みの非準拠に対する追加アクションをデバイスに適用します。
+
+  非準拠に対するアクションは、デバイスが準拠していない場合にユーザーに警告したり、デバイス上のデータを保護したりするのに役立ちます。 アクションの例を次に示します。
+
+  - 非準拠デバイスに関する詳細情報が含まれているユーザーおよびグループに**電子メール アラートを送信します**。 非準拠とマークされた直後に電子メールを送信し、デバイスが準拠状態になるまで定期的に電子メールを送信するポリシーを構成することができます。
+  - しばらくの間準拠していない**デバイスをリモートでロックします**。
+  - しばらくの間準拠していない**デバイスを廃止します**。 このアクションにより、Intune 管理からデバイスが削除され、デバイスからすべての会社データが削除されます。
+
+- [**ネットワークの場所の構成**](use-network-locations.md) - Android デバイスでサポートされています。"*ネットワークの場所*" を構成してその場所をデバイス コンプライアンス ルールとして使用することができます。 この種類のルールでは、デバイスが指定したネットワークの外部にある場合や、ネットワークから退出する場合に、デバイスに非準拠のフラグを設定できます。 場所のルールを指定する前に、ネットワークの場所を構成する必要があります。
+
+- [**ポリシーの作成**](create-compliance-policy.md) – この記事の情報を参考にして前提条件を確認し、オプションを設定してルールを構成し、非準拠に対するアクションを指定して、ポリシーをグループに割り当てることができます。 この記事には、ポリシーの更新時間に関する情報も含まれています。
+
+  さまざまなデバイス プラットフォームでのデバイスのコンプライアンス設定を参照してください。
+
+  - [Android](compliance-policy-create-android.md)
+  - [Android エンタープライズ](compliance-policy-create-android-for-work.md)
+  - [Android](compliance-policy-create-ios.md)
+  - [macOS](compliance-policy-create-mac-os.md)
+  - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
+  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
+  - [Windows 8.1 以降](compliance-policy-create-windows-8-1.md)
+  - [Windows 10 以降](compliance-policy-create-windows.md)
+
+## <a name="monitor-compliance-status"></a>コンプライアンス状態を監視する
+
+Intune には、デバイスのコンプライアンス状態を監視し、ポリシーとデバイスの詳細を確認できるデバイス コンプライアンス ダッシュボードが含まれています。 このダッシュボードの詳細については、[デバイス コンプライアンスの監視](compliance-policy-monitor.md)に関する記事を参照してください。
+
+## <a name="integrate-with-conditional-access"></a>条件付きアクセスと統合する
+
+条件付きアクセスを使用する場合は、デバイス コンプライアンス ポリシーの結果を使用するための条件付きアクセス ポリシーを構成して、組織のリソースにアクセスできるデバイスを決定できます。 このアクセスの制御は、デバイス コンプライアンス ポリシーに含める非準拠に対するアクションとは別のものとして追加されます。
+
+デバイスが Intune に登録されると Azure AD に登録されます。 デバイスのコンプライアンス状態が Azure AD に報告されます。 条件付きアクセス ポリシーのアクセスの制御が "*Require device to be marked as compliant\(デバイスは準拠としてマーク済みである必要があります\)* " に設定されている場合、条件付きアクセスでは、そのコンプライアンス状態を使用して、電子メールやその他の組織のリソースへのアクセスを許可するかブロックするかを決定します。
+
+条件付きアクセス ポリシーが設定されたデバイスのコンプライアンス状態を使用する場合は、テナントで "*コンプライアンス ポリシーが割り当てられていないデバイスをマークする*" がどのように構成されているかを確認します。これは [[コンプライアンス ポリシー設定]](#compliance-policy-settings) で管理します。
+
+デバイス コンプライアンス ポリシーが設定された条件付きアクセスを使用する方法の詳細については、「[デバイスベースの条件付きアクセス](conditional-access-intune-common-ways-use.md#device-based-conditional-access)」を参照してください
+
+次の Azure AD のドキュメントで条件付きアクセスの詳細を参照してください。
+
+- [条件付きアクセスとは](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+- [デバイス ID とは](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
+
+### <a name="reference-for-non-compliance-and-conditional-access-on-the-different-platforms"></a>さまざまなプラットフォームでの非準拠と条件付きアクセスに関するリファレンス
 
 次の表では、条件付きアクセス ポリシーとコンプライアンス ポリシーを使用する場合に非準拠設定をどのように管理するかについて説明しています。
+
+- **修復**: デバイス オペレーティング システムによってコンプライアンスが適用されます。 たとえば、ユーザーは PIN を設定するように強制されます。
+
+- **検疫済み**: デバイス オペレーティング システムによってコンプライアンスは適用されません。 たとえば、Android デバイスと Android エンタープライズ デバイスでは、ユーザーはデバイスの暗号化を強制されません。 デバイスが準拠していない場合、次のアクションが行われます。
+  - ユーザーに条件付きアクセス ポリシーを適用すると、デバイスがブロックされます。
+  - ポータル サイト アプリでは、コンプライアンスの問題についてユーザーに通知します。
 
 ---------------------------
 
@@ -133,25 +171,10 @@ Intune には、組み込みのコンプライアンス ポリシー設定のセ
 
 ---------------------------
 
-**修復**: デバイス オペレーティング システムによってコンプライアンスが適用されます。 たとえば、ユーザーは PIN を設定するように強制されます。
-
-**検疫済み**: デバイス オペレーティング システムによってコンプライアンスは適用されません。 たとえば、Android デバイスと Android エンタープライズ デバイスでは、ユーザーはデバイスの暗号化を強制されません。 デバイスが準拠していない場合、次のアクションが行われます。
-
-- ユーザーに条件付きアクセス ポリシーを適用すると、デバイスがブロックされます。
-- ポータル サイト アプリでは、コンプライアンスの問題についてユーザーに通知します。
-
 ## <a name="next-steps"></a>次のステップ
 
-- [ポリシーを作成](create-compliance-policy.md)して、前提条件を表示します。
-- さまざまなデバイス プラットフォームでのコンプライアンス設定を参照してください。
-
-  - [Android](compliance-policy-create-android.md)
-  - [Android エンタープライズ](compliance-policy-create-android-for-work.md)
-  - [Android](compliance-policy-create-ios.md)
-  - [macOS](compliance-policy-create-mac-os.md)
-  - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
-  - [Windows 8.1 以降](compliance-policy-create-windows-8-1.md)
-  - [Windows 10 以降](compliance-policy-create-windows.md)
-
-- 「[ポリシー エンティティのリファレンス](../developer/reports-ref-policy.md)」には、Intune データ ウェアハウス ポリシー エンティティに関する情報が含まれます。
+- Android デバイスで使用するために[場所を構成する](../protect/use-network-locations.md)
+- [ポリシーを作成して展開](../protect/create-compliance-policy.md)し、前提条件を確認する
+- [デバイス コンプライアンスを監視する](../protect/compliance-policy-monitor.md)
+- [Microsoft Intune でのデバイス ポリシーとプロファイルの一般的な質問、イシューと解決策](../configuration/device-profile-troubleshoot.md)
+- 「[ポリシー エンティティのリファレンス](../developer/reports-ref-policy.md)」には、Intune データ ウェアハウス ポリシー エンティティに関する情報が含まれます
