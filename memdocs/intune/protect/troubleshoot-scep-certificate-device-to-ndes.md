@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/30/2020
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53f33b659e45720dc84b7c38ca54fec0e3768a60
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: b35011577b6c5882a2f136d9b6d321b182c2be6a
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126096"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83991081"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Microsoft Intune で SCEP 証明書プロファイルのためのデバイスから NDES サーバーへの通信をトラブルシューティングする
 
@@ -161,7 +161,7 @@ NDES に接続する Windows デバイスでは、デバイスの Windows イベ
 
 次の手順にしたがって、SCEP 証明書プロファイルで指定されている URL をテストします。
 
-1. Intune で、SCEP 証明書プロファイルを編集し、サーバーの URL をコピーします。 URL は *https://contoso.com/certsrv/mscep/mscep.dll* に似ています。
+1. Intune で、SCEP 証明書プロファイルを編集し、サーバーの URL をコピーします。 URL は `https://contoso.com/certsrv/mscep/mscep.dll` に似ています。
 
 2. Web ブラウザーを開き、その SCEP サーバーの URL に移動します。 結果は次のようになるはずです:**HTTP エラー 403.0 – Forbidden**。 この結果は、URL が正常に機能していることを示しています。
 

@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/22/2020
-ms.topic: conceptual
+ms.date: 05/20/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9a3e2c2a2c50f2d0fde264eedc2096d34f815a9
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 13824c82b426e1efb00dce2db7c9f4a2dd5bb9ee
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023182"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990337"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Intune でインポートした PKCS 証明書を構成して使用する
 
@@ -148,7 +148,7 @@ PowerShell モジュールには、Windows 暗号化を使用してキーを作�
 
 3. モジュールをインポートするには、`Import-Module .\IntunePfxImport.psd1` を実行してモジュールをインポートします。
 
-4. 次に、`Add-IntuneKspKey "Microsoft Software Key Storage Provider" "PFXEncryptionKey"` を実行します
+4. 次に、`Add-IntuneKspKey -ProviderName "Microsoft Software Key Storage Provider" -KeyName "PFXEncryptionKey"` を実行します
 
    > [!TIP]
    > PFX 証明書をインポートするときに、使用するプロバイダーをもう一度選択する必要があります。 **Microsoft ソフトウェア キー記憶域プロバイダー**を使用できますが、別のプロバイダーの使用もサポートされています。 キー名も例として提供されていますが、別のキー名を使用することもできます。
@@ -187,7 +187,7 @@ PowerShell モジュールには、Windows 暗号化を使用してキーを作�
 
 3. モジュールをインポートするには、`Import-Module .\IntunePfxImport.psd1` を実行します
 
-4. Intune Graph を認証するには、`$authResult = Get-IntuneAuthenticationToken -AdminUserName "<Admin-UPN>"` を実行します
+4. Intune Graph を認証するには、`Set-IntuneAuthenticationToken  -AdminUserName "<Admin-UPN>"` を実行します
 
    > [!NOTE]
    > 認証は Graph に対して実行されるので、AppID にアクセス許可を付与する必要があります。 このユーティリティを初めて使用する場合は、"*全体管理者*" が必要です。 PowerShell コマンドレットでは、[PowerShell Intune サンプル](https://github.com/microsoftgraph/powershell-intune-samples)で使用されるものと同じ AppID が使用されます。
@@ -200,10 +200,15 @@ PowerShell モジュールには、Windows 暗号化を使用してキーを作�
 
    > [!NOTE]
    > コネクタがインストールされているサーバー以外のシステムから証明書をインポートする場合、キー ファイルのパスを含む次のコマンドを使用する必要があります: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
+   >
+   > *VPN* は IntendedPurpose としてサポートされていません。 
 
-7. `Import-IntuneUserPfxCertificate -AuthenticationResult $authResult -CertificateList $userPFXObject` を実行して、**UserPFXCertificate** オブジェクトを Intune にインポートします
 
-8. 証明書がインポートされたことを確認するには、`Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UserList "<UserUPN>"` を実行します
+7. `Import-IntuneUserPfxCertificate -CertificateList $userPFXObject` を実行して、**UserPFXCertificate** オブジェクトを Intune にインポートします
+
+8. 証明書がインポートされたことを確認するには、`Get-IntuneUserPfxCertificate -UserList "<UserUPN>"` を実行します
+
+9.  ベスト プラクティスとして、AAD トークン キャッシュが有効期限切れになるまで待たずにクリーンアップするため、`Remove-IntuneAuthenticationToken` を実行することをお勧めします。
 
 その他の使用可能なコマンドについて詳しくは、[GitHub の PFXImport PowerShell プロジェクト](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell)にある readme ファイルをご覧ください。
 

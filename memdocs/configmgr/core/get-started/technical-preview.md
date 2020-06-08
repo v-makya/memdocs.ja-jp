@@ -2,7 +2,7 @@
 title: Technical Preview リリース
 titleSuffix: Configuration Manager
 description: Configuration Manager の新機能を体験する Technical Preview Branch について説明します。
-ms.date: 04/30/2020
+ms.date: 05/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bfcdd74b7b5c31e3f3ab6bb38a7ea96de9d05eec
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e4c0842a3e23eb8503c945073a4be35db5173086
+ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905152"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84226252"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager の Technical Preview
 
@@ -116,20 +116,28 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2003.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2005.md) <!--ID-->
 
 最新の Configuration Manager Technical Preview バージョンでは、以下の機能を使用できます。
 
-### <a name="technical-preview-version-2004"></a>Technical Preview バージョン 2004
+### <a name="technical-preview-version-2005"></a>Technical Preview バージョン 2005
 
-- [Microsoft Endpoint Manager テナントのアタッチ: ConfigMgr クライアントの詳細](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
-- [Microsoft からの通知](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
-- [コンソールからの探索データのコピー](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
-- [CMPivot の改善](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
-- [PowerShell バージョン 7 のサポート](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
-- [ディスクのフォーマットとパーティション作成タスク シーケンスのステップの改善](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
-- [OS 展開のマネジメント インサイト規則](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
-- [タスク シーケンスの展開の種類の PowerShell コマンドレット](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
+- [テナントのアタッチ:管理センターのデバイス タイムライン](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
+- [テナントのアタッチ:管理センターからアプリケーションをインストールする](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
+- [テナントのアタッチ:管理センターからの CMPivot](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
+- [テナントのアタッチ:管理センターからスクリプトを実行する](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
+- [VPN 境界の種類](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
+- [ソフトウェア センターでの Azure AD 認証](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
+- [従量制課金接続でのクライアントのインストールとアップグレード](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
+- [クラウドベース コンテンツに対するタスク シーケンス メディアのサポート](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
+- [クラウド管理ゲートウェイ コマンドレットの強化](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
+- [コミュニティ ハブと GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
+- [Microsoft 365 Apps for enterprise](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
+- [セットアップとアップグレードの失敗を Microsoft に報告する](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
+- [Azure AD アプリの秘密鍵の有効期限切れ通知](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
+- [BitLocker タスク シーケンス ステップの強化](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
+- [コンテンツ ライブラリ クリーンアップ ツールの改善](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
+- [Windows 10 インプレース アップグレード中にコマンド プロンプトを削除する](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
 
 > [!NOTE]
 > Technical Preview の以前のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、Configuration Manager の Current Branch に追加された機能は、Technical Preview Branch でも引き続き利用できます。
@@ -146,6 +154,17 @@ When there's a new CB, add any features not in that CB to the table in H2 "Featu
 
 > [!TIP]
 > 新しい Current Branch バージョンが利用できるようになると、そのバージョンで利用できる機能が最新の "*新機能*" 記事に記載されます。 詳しくは、[増分バージョンの新機能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)に関する記事をご覧ください。
+
+### <a name="technical-preview-version-2004"></a>Technical Preview バージョン 2004
+
+- [Microsoft Endpoint Manager テナントのアタッチ: ConfigMgr クライアントの詳細](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
+- [Microsoft からの通知](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
+- [コンソールからの探索データのコピー](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
+- [CMPivot の改善](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
+- [PowerShell バージョン 7 のサポート](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
+- [ディスクのフォーマットとパーティション作成タスク シーケンスのステップの改善](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
+- [OS 展開のマネジメント インサイト規則](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
+- [タスク シーケンスの展開の種類の PowerShell コマンドレット](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
 
 ### <a name="technical-preview-version-2003"></a>Technical Preview バージョン 2003
 

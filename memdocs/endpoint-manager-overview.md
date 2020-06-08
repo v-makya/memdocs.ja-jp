@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dee569d6f2ce4ed1a3bc278c9c9a886f9d23974
-ms.sourcegitcommit: 99a6e83219978433ec5a91d09beeaf69acbeb522
+ms.openlocfilehash: d9e3d03211907f31008b31d68c4ed5cd11ae1a6e
+ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82782259"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791739"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Microsoft Endpoint Manager の概要
 
@@ -50,7 +50,7 @@ Endpoint Manager には、次のサービスが含まれています。
 
   詳細については、「[Microsoft Intune の概要](https://docs.microsoft.com/intune/fundamentals/what-is-intune)」を参照してください。
 
-- **Configuration Manager**:Configuration Manager は、ネットワーク上にある、またはインターネットベースのデスクトップ、サーバー、ラップトップを管理するためのオンプレミス管理ソリューションです。 これをクラウド対応にして、Intune、Azure AD、Microsoft Defender ATP、その他のクラウド サービスと統合することができます。 Configuration Manager を使用して、アプリ、ソフトウェア更新プログラム、およびオペレーティング システムを展開します。 また、コンプライアンスの監視、クエリ、クライアントの操作などをリアルタイムで行うことができます。
+- **Configuration Manager**:Configuration Manager は、ネットワーク上にある、またはインターネットベースのデスクトップ、サーバー、ラップトップを管理するためのオンプレミス管理ソリューションです。 これをクラウド対応にして、Intune、Azure Active Directory (AD)、Microsoft Defender ATP、その他のクラウド サービスと統合することができます。 Configuration Manager を使用して、アプリ、ソフトウェア更新プログラム、およびオペレーティング システムを展開します。 また、コンプライアンスの監視、クエリ、クライアントの操作などをリアルタイムで行うことができます。
 
   エンドポイント マネージャーの一部として、常に Configuration Manager を使用してください。 いくつかのタスクをクラウドに移行する準備ができたら、[共同管理](https://docs.microsoft.com/configmgr/comanage/)を検討してください。
 
@@ -74,7 +74,7 @@ Endpoint Manager には、次のサービスが含まれています。
 
   詳細については、「[Windows Autopilot の概要](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot)」と、[Intune での Windows デバイスの登録](/mem/intune/enrollment/enrollment-autopilot)に関する記事を参照してください。
 
-- **Azure AD Premium**: Azure AD は、デバイス、ユーザー、グループ、動的グループ、自動登録、多要素認証、条件付きアクセスでエンドポイント マネージャーによって使用されます。 これらの機能は、デバイス、アプリ、データを保護するための重要な機能です。
+- **Azure Active Directory (AD)** :Azure AD は、デバイス、ユーザー、グループ、および多要素認証 (MFA) の ID として Endpoint Manager によって使用されます。 **Azure AD Premium** (追加費用がかかる場合があります) には、動的グループ、自動登録、条件付きアクセスなど、デバイス、アプリ、およびデータの保護に役立つ[追加の機能](https://azure.microsoft.com/pricing/details/active-directory/)があります。
 
   詳細については、[ユーザーの追加](/mem/intune/fundamentals/users-add)、[自動登録の設定](/mem/intune/enrollment/windows-enroll)、[条件付きアクセス](/mem/intune/protect/conditional-access)に関する記事を参照してください。
 

@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
-ms.topic: conceptual
+ms.date: 5/15/2020
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8d4b866ca2086ae11efa10f1967b08f12e55919
-ms.sourcegitcommit: d1c7548b4177d720065b822356f9a08d1e1657c2
+ms.openlocfilehash: d1b13d29f42778d73d4df4a86127b070db5dc601
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82881028"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989805"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Microsoft Intune で派生資格情報を使用する
 
@@ -63,7 +63,7 @@ Intune では、次のプラットフォームで派生資格情報がサポー�
 
 Intune では、テナントごとに 1 つの派生資格情報の発行者がサポートされます。 次の発行者と連携するように Intune を構成することができます。
 
-- **DISA Purebred** (iOS のみ): https:\//cyber.mil/pki-pke/purebred/
+- **DISA Purebred** (iOS のみ): https://public.cyber.mil/pki-pke/purebred/
 - **Entrust Datacard**: https://www.entrustdatacard.com/
 - **Intercede**: https://www.intercede.com/
 
@@ -112,6 +112,7 @@ Intune では、テナントごとに 1 つの派生資格情報の発行者が�
 派生資格情報で使用するデバイスのプラットフォーム固有のユーザー ワークフローを確認します。
 
 - [iOS と iPadOS](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
+- [Android Enterprise のフル マネージド デバイス](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
 
 **主な要件には次のものがあります**。
 
@@ -226,7 +227,10 @@ Intune を使用したアプリの展開に加えて、DISA Purebred アプリ�
   
 1. DISA Purebred アプリケーションをダウンロードします (https:\//cyber.mil/pki-pke/purebred/)。
 
-2. DISA Purebred アプリケーションを Intune に展開します。 「[iOS の基幹業務アプリを Microsoft Intune に追加する](../apps/lob-apps-ios.md)」を参照してください。
+2. DISA Purebred アプリケーションを Intune に展開します。 
+
+   - 「[iOS の基幹業務アプリを Microsoft Intune に追加する](../apps/lob-apps-ios.md)」を参照してください。
+   - 「[Android の基幹業務アプリを Microsoft Intune に追加する](../apps/lob-apps-android.md)」を参照してください
 
 3. DISA Purebred アプリケーション用に[アプリごとの VPN を作成](../configuration/vpn-settings-configure.md)します。
 

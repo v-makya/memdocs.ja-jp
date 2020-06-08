@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/24/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 6b5d0f88222c8d48da4f91ff3cf8d4628ccb179d
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cb51d5f73edbc28572ee01d49ba4bd5a62cf6393
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80551591"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83989640"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Intune でエンドポイント保護設定を追加する
 
@@ -38,9 +38,6 @@ Intune でデバイスの構成プロファイルを使用し、次などのデ�
 
 - [macOS の設定](endpoint-protection-macos.md)
 - [Windows 10 の設定](endpoint-protection-windows-10.md)
-
-> [!NOTE]
-> Intune ユーザー インターフェイス (UI) は全画面表示エクスペリエンスに向けて更新中であり、これには数週間かかる場合があります。 ご自分のテナントがこの更新プログラムを受信するまでは、この記事で説明する設定を作成または編集する際のワークフローが若干異なります。
 
 ## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>エンドポイント保護設定を含むデバイス プロファイルを作成する
 
@@ -60,8 +57,9 @@ Intune でデバイスの構成プロファイルを使用し、次などのデ�
 4. **[作成]** を選択します。
 5. **[Basics]\(基本\)** で次のプロパティを入力します。
 
-    - **名前**:ポリシーのわかりやすい名前を入力します。 後で簡単に識別できるよう、ポリシーに名前を付けます。 たとえば、適切なポリシー名は **macOS: すべての macOS デバイス用のファイアウォールを構成する Endpoint Protection プロファイル**になります。
-    - **説明**:ポリシーの説明を入力します。 この設定は省略可能ですが、推奨されます。
+   - **名前**:ポリシーのわかりやすい名前を入力します。 後で簡単に識別できるよう、ポリシーに名前を付けます。 たとえば、プロファイルの種類とプラットフォームを含めるとわかりやすいポリシー名になります。
+
+   - **説明**:ポリシーの説明を入力します。 この設定は省略可能ですが、推奨されます。
 
 6. **[次へ]** を選択します。
 

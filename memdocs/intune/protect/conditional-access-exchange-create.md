@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/15/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36b39d20e666015ae040a1fa058dca1d167686e4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 530d6de8194a1ca74b72567c98c5d2afcb327170
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739909"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990316"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Intune の Exchange On-Premises アクセスを構成する
 
@@ -66,7 +66,10 @@ Exchange Online Dedicated 環境を使用していて、それが新しい構成
 - **iOS/iPadOS のネイティブ電子メール アプリ** - 条件付きアクセス ポリシーを作成するには、[条件付きアクセス ポリシーの作成](../protect/create-conditional-access-intune.md)に関する記事を参照してください
 - **Android 4 以降の Gmail などの EAS メール クライアント** - 条件付きアクセス ポリシーを作成するには、[条件付きアクセス ポリシーの作成](../protect/create-conditional-access-intune.md)に関する記事を参照してください
 
+- **Android デバイス管理者の EAS メール クライアント** - 条件付きアクセス ポリシーを作成するには、「[条件付きアクセス ポリシーを作成する](../protect/create-conditional-access-intune.md)」を参照してください
+
 - **Android 仕事用プロファイル デバイスの EAS メール クライアント** - Android 仕事用プロファイル デバイスでは、*Gmail* と *Nine Work for Android Enterprise* のみがサポートされています。 Android 仕事用プロファイルで条件付きアクセスを機能させるには、*Gmail* アプリまたは *Nine Work for Android Enterprise* アプリ用の電子メール プロファイルを配置する必要があります。また、これらのアプリを必要なインストールとしてデプロイする必要があります。 アプリを展開した後、デバイスベースの条件付きアクセスを設定できます。
+
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>Android 仕事用プロファイル デバイスの条件付きアクセスを設定するには
 

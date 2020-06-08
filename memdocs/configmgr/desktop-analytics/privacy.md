@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd970dc1517a6fcc197b2bf39a141871b4999a02
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268421"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223647"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Desktop Analytics のデータのプライバシー
 
@@ -55,7 +55,7 @@ Desktop Analytics では、以下の信条を軸として、顧客データの�
 
     4. すべてのターゲット デバイスに、互換性更新プログラムを展開します。  
 
-3. デバイスによって、診断データが Windows の Microsoft 診断データ管理サービスに送信されます。 このサービスは、米国でホストされます。  
+3. デバイスによって、診断データが Windows の Microsoft 診断データ管理サービスに送信されます。 すべての診断データは HTTPS 経由で暗号化され、デバイスからこのサービスへの転送中は証明書のピン留めを使用します。 Microsoft Data Management Service は米国でホストされています。
 
 4. Microsoft は、毎日、IT に焦点を絞った分析情報のスナップショットを作成します。 このスナップショットは、Windows の診断データと、登録されているデバイスの入力の組み合わせです。 このプロセスは一時的なストレージで発生し、Desktop Analytics によってのみ使用されます。 一時的なストレージは、米国の Microsoft データセンターでホストされます。 すべてのデータは、SSL (HTTPS) で暗号化されたチャネルを介して送信されます。 スナップショットは、商用 ID によって分離されます。  
 

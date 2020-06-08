@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 04/21/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de7b96b5ad54a207b92221f7685f6c7f50942c46
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 99cad94d0d0f56aba94e8d00a091efea914f418e
+ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079877"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83990355"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>DigiCert PKI Platform 用に Intune Certificate Connector をセットアップする
 
@@ -32,7 +32,7 @@ Intune Certificate Connector を使用して、DigiCert PKI Platform から Intu
 > [!TIP]
 > DigiCert は Symantec の Web サイト セキュリティおよび関連する PKI ソリューション ビジネスを獲得しました。 この変更の詳細については、[Symantec のテクニカル サポート記事](https://support.symantec.com/en_US/article.INFO4722.html)をご覧ください。
 
-PKCS または System Center Endpoint Protection を使用して Microsoft CA から証明書を発行するために Intune Certificate Connector を既に使用している場合は、その同じコネクタを使用して、DigiCert CA から PKCS 証明書を構成し、発行することができます。 DigiCert CA をサポートするための構成を完了すると、Intune Certificate Connector で次の証明書を発行できます。
+PKCS または Simple Certificate Enrollment Protocol (SCEP) を使用して Microsoft CA から証明書を発行するために Intune Certificate Connector を既に使用している場合は、その同じコネクタを使用して、DigiCert CA から PKCS 証明書を構成し、発行することができます。 DigiCert CA をサポートするための構成を完了すると、Intune Certificate Connector で次の証明書を発行できます。
 
 * Microsoft CA からの PKCS 証明書
 * DigiCert CA からの PKCS 証明書
