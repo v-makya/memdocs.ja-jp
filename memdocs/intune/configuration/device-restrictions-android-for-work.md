@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 06/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38598e0245b0cfe15be4b9303620aea1724933d1
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: b81686f645d9fce610c39266feb2675fd35cc280
+ms.sourcegitcommit: 6f67c864cf71b4a6a316f4d04a6cc43cf28b4277
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166572"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84257037"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限するように Android エンタープライズ デバイスを設定する
 
@@ -231,8 +231,16 @@ ms.locfileid: "82166572"
 
 ### <a name="applications"></a>アプリケーション
 
-- **[提供元不明のアプリのインストールを許可する]** : **[許可]** にすると、ユーザーが **[不明なソース]** をオンにできるようになります。 この設定を使用すると、Google Play ストア以外のソースなど、未知のソースからアプリをインストールすることができます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS でユーザーが **[不明なソース]** をオンにできないようにすることができます。
-- **[Google Play ストア内のすべてのアプリへのアクセスを許可]** : **[許可]** に設定すると、ユーザーが Google Play ストア内のすべてのアプリにアクセスできます。 管理者が [クライアント アプリ](../apps/apps-add-android-for-work.md)内でブロックしているアプリにはユーザーはアクセスできません。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で管理者が Google Play ストアで利用できるようにしたアプリ、または[クライアント アプリ](../apps/apps-add-android-for-work.md)で必要とされるアプリのみにアクセスすることをユーザーに強制できます。
+- **[提供元不明のアプリのインストールを許可する]** : **[許可]** にすると、ユーザーが **[不明なソース]** をオンにできるようになります。 この設定を使用すると、Google Play ストア以外のソースなど、未知のソースからアプリをインストールすることができます。 これによって、ユーザーが、Google Play ストア以外の方法を使用してデバイスにアプリをサイドロードできるようになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS でユーザーが **[不明なソース]** をオンにできないようにすることができます。
+- **[Google Play ストア内のすべてのアプリへのアクセスを許可]** : **[許可]** に設定すると、ユーザーが Google Play ストア内のすべてのアプリにアクセスできます。 管理者が [クライアント アプリ](../apps/apps-add-android-for-work.md)内でブロックしているアプリにはユーザーはアクセスできません。
+
+  **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS によって次が行われる可能性があります。
+  
+  - 管理者が Google Play ストアで利用できるようにしたアプリ、または[クライアント アプリ](../apps/apps-add-android-for-work.md)で必要とされるアプリのみにアクセスするようにユーザーに強制する。 
+  - Google Play ストア以外でユーザーがインストールしていると検出されたすべてのアプリを自動的にアンインストールする。
+
+  サイドローディングを有効にする場合は、 **[提供元不明のアプリのインストールを許可する]** 設定と **[Google Play ストア内のすべてのアプリへのアクセスを許可]** 設定を **[許可]** に設定します。
+
 - **[アプリの自動更新]** :デバイスによってアプリの更新プログラムが毎日確認されます。 自動更新がインストールされている場合に選択します。 次のようなオプションがあります。
   - **[未構成]** :Intune では、この設定は変更または更新されません。
   - **[ユーザー選択]** :OS で既定値をこのオプションに設定できます。 ユーザーは、マネージド Google Play アプリでユーザー設定を設定できます。

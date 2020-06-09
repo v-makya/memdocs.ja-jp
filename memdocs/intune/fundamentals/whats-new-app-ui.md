@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020
+ms.date: 05/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17213a29d5182176fe2fd8e5802e5ca03587d8f7
-ms.sourcegitcommit: 0dafd513a59afe592b5cfe2a80b6288020dc5bf0
+ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
+ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82991780"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166173"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune とエンド ユーザー アプリの UI の更新
 
@@ -34,6 +34,19 @@ Microsoft Intune アプリに対する最新の更新プログラムについて
 
 従業員または学生である場合は、必ず、ポータル サイトのヘルプ ドキュメントへのリンクとスクリーンショットを確認してください。 ポータル サイト アプリを使用する方法の詳細については、[ポータル サイト ユーザーのヘルプ ドキュメント](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)を参照してください。  
 
+
+
+## <a name="week-of-may-18-2020"></a>2020 年 5 月 18 日の週  
+### <a name="update-to-icons-in-company-portal-app-for-iosipados-and-macos---6057697---"></a>iOS または iPadOS および macOS 用のポータル サイト アプリのアイコンの更新 <!--6057697 -->  
+より新しい外観を作成するために、ポータル サイトのアイコンが更新されました。これはデュアル スクリーン デバイスでサポートされ、Microsoft Fluent Design System と適合します。
+
+|更新後 (iOS または iPadOS)|以前 (iOS または iPadOS)|   
+|---|---|   
+|![iOS または iPadOS 用ポータル サイトの画像 (下部メニューの更新されたアイコンを強調表示)。](./media/whats-new-app-ui/company-portal-ios-icons-after-2005.png)|![iOS 用ポータル サイトの画像 (以前のアイコンを強調表示)。](./media/whats-new-app-ui/company-portal-ios-icons-before-2005.png)| 
+
+|更新後 (macOS)|  
+|---|
+|![macOS 用ポータル サイトの [デバイス] タブの画像 (更新されたアイコンを強調表示)。](./media/whats-new-app-ui/company-portal-macos-icons-after-2005.png)|  
 
 
 ## <a name="week-of-may-4-2020"></a>2020 年 5 月 4 日の週  
