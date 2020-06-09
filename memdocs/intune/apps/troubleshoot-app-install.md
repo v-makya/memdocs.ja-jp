@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c98de99eb8f72840080ca720465559c462bc77f
-ms.sourcegitcommit: fb84a87e46f9fa126c1c24ddea26974984bc9ccc
+ms.openlocfilehash: 2cc40eb4a8b094cd933a6bb3f4f8c7fdae927f7b
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82023369"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270893"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>アプリのインストールに関する問題のトラブルシューティング
 
@@ -107,6 +107,18 @@ Win32 アプリのインストール ログを収集するには、まずセク�
 - Win32 アプリのインストール ログ収集は、必須、利用可能、およびアンインストールのアプリ割り当ての意図を満たすアプリに対して有効になります。
 - 保存されたログは、ログに含まれる個人を特定できる情報を保護するために暗号化されます。
 - Win32 アプリの失敗に関するサポート チケットを開くときは、上記の手順を使用して関連するエラー ログを添付してください。
+
+## <a name="app-types-supported-on-arm64-devices"></a>ARM64 デバイスでサポートされているアプリの種類
+
+ARM64 デバイスでサポートされているアプリの種類には、次のものがあります。
+- 管理対象ブラウザーがなくても開くことができる Web アプリ。 
+- 次の `TargetDeviceFamily` 要素と `ProcessorArchitectures` 要素の組み合わせのいずれかを含む、ビジネス向け Microsoft Store のアプリまたは Windows ユニバーサル LOB アプリ (`.appx`)。
+  - `TargetDeviceFamily` にはデスクトップ アプリ、ユニバーサル アプリ、Windows8x アプリが含まれます。 Windows8x アプリは、オンラインのビジネス向け Microsoft Store アプリとしてのみ適用されます。
+  - `ProcessorArchitecture` には x86 アプリ、ARM アプリ、ARM64 アプリ、ニュートラル アプリが含まれます。
+- Windows ストア アプリ
+- モバイル MSI LOB アプリ
+- 32 ビットの要件規則を持つ Win32 アプリ。
+- Windows Office クイック実行アプリ (32 ビットまたは x86 アーキテクチャが選択されている場合)。
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Microsoft ストア アプリのトラブルシューティング
 

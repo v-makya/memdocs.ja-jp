@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 06/01/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49749ec3a839b11062b1cc2655a1cca4e3d6cfb0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 78f69edbc38bc41863783010a0e795290b7762c5
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81525707"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270924"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Jamf Pro と Microsoft Intune の統合のトラブルシューティング
 
@@ -205,14 +205,13 @@ Jamf Pro で Intune の統合を再度有効にします。 統合の構成方�
    - /Library/Application Support/com.microsoft.CompanyPortal.usercontext.info
    - /Library/Application Support/com.microsoft.CompanyPortal
    - /Library/Application Support/com.jamfsoftware.selfservice.mac
-   - /Library/Saved Application
-   - State/com.jamfsoftware.selfservice.mac.savedState
+   - /Library/Saved Application State/com.jamfsoftware.selfservice.mac.savedState
    - /Library/Saved Application State/com.microsoft.CompanyPortal.savedState
    - /Library/Preferences/com.microsoft.CompanyPortal.plist
    - /Library/Preferences/com.jamfsoftware.selfservice.mac.plist
    - /Library/Preferences/com.jamfsoftware.management.jamfAAD.plist
-   - /Users/<username>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
-   - /Users/<username>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
+   - /Users/\<*username*>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
+   - /Users/\<*username*>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
    - com.microsoft.CompanyPortal
    - com.microsoft.CompanyPortal.HockeySDK
    - enterpriseregistration.windows.net
@@ -295,7 +294,7 @@ Jamf Pro で Intune の統合を再度有効にします。 統合の構成方�
 Azure で Jamf Pro アプリを登録するときに、次のいずれかの状態が発生しました。
 
 - アプリが複数のアクセス許可を受け取りました。
-- [  ***\<your company >* ] オプションに対する管理者の同意**が選択されていません。  
+- **[ *\<your company>* に管理者の同意を与えます]** オプションが選択されていません。  
 
 **解決方法**  
 前に説明した「[デバイスを登録できない](#devices-fail-to-register)」の原因 1 の解決策を参照してください。

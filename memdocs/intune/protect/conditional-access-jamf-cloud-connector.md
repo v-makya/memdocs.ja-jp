@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 05/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f86b418df46069b2a33dd56d06e0e82dbbbf8090
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 734a1361d8889ca1463e8d8986239e088b90cd09
+ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81538450"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84206368"
 ---
 # <a name="use-the-jamf-cloud-connector-with-microsoft-intune"></a>Jamf Cloud Connector を Microsoft Intune で使用する
 
@@ -157,13 +157,15 @@ Intune と Jamf Pro の間に手動で構成された統合がある場合は、
 
    ![Jamf Pro コンソールで Cloud Connector を選択](./media/conditional-access-jamf-cloud-connector/select-cloud-connector.png)
 
-6. **[ソブリン クラウド]** ポップアップ メニューから、Microsoft からのソブリン クラウドの場所を選択します。
+6. **[ソブリン クラウド]** ポップアップ メニューから、Microsoft からのソブリン クラウドの場所を選択します。 以前の統合を Jamf Cloud Connector に置き換える場合、その場所が指定されていればこの手順は省略できます。
 
 7. Microsoft Azure によって認識されないコンピューターについて、次のいずれかのランディング ページ オプションを選択します。
    - **[Default Jamf Pro Device Registration]\(既定の Jamf Pro デバイス登録\) ページ** - このオプションを使用すると、macOS デバイスの状態によって、ユーザーは Jamf Pro デバイス登録ポータル (Jamf Pro に登録する場合) か、Intune ポータル サイト アプリ (Azure AD に登録する場合) のどちらかにリダイレクトされます。
    - **[アクセスが拒否されました] ページ**
    - **カスタム URL**
-
+  
+   以前の統合を Jamf Cloud Connector に置き換える場合、そのランディング ページが指定されていればこの手順は省略できます。
+  
 8. **[接続]** を選択します。 Azure に Jamf Pro アプリケーションを登録するため、リダイレクトが実行されます。
 
    プロンプトが表示されたら、Microsoft Azure の資格情報を指定し、画面の指示に従って要求されたアクセス許可を付与します。 **Cloud Connector** に対してアクセス許可を付与し、**Cloud Connector ユーザー登録アプリ**に対してもアクセス許可を付与します。 両方のアプリは、エンタープライズ アプリケーションとして Azure に登録されます。
@@ -283,6 +285,10 @@ Jamf Pro は、AWS のマイクロサービスを使用して、正しいイン�
 ### <a name="permissions-were-modified-on-one-or-both-required-apps-cloud-connector-and-cloud-connector-user-registration-app-and-registration-is-not-working-is-this-supported"></a>必要なアプリ (*Cloud Connector* および *Cloud Connector ユーザー登録アプリ*) の 1 つまたは両方でアクセス許可が変更されており、登録が機能していません。これはサポートされていますか?
 
 アプリのアクセス許可の変更は、サポートされていません。
+
+### <a name="is-there-a-log-file-in-jamf-pro-that-shows-if-the-connection-type-has-been-changed"></a>Jamf Pro には、接続の種類が変更されたかどうかを示すログ ファイルがありますか?
+
+はい。その変更は JAMFChangeManagement.log ファイルに記録されます。 変更管理ログを表示するには、Jamf Pro にログインして、 **[設定]**  >  **[システム設定]**  >  **[変更管理]**  >  **[ログ]** の順に移動し、 **[オブジェクトの種類]** で **[条件付きアクセス]** を検索した後、 **[詳細]** をクリックして変更を表示します。
 
 ## <a name="next-steps"></a>次のステップ
 

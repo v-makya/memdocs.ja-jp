@@ -6,7 +6,7 @@ keywords: Intune データ ウェアハウス
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/03/2019
+ms.date: 05/29/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87c1a63ffdfc0b923f636159536f6d6cf6420db9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 081d293432e15fccfd2b30d2eb7b7c300789e74f
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79360016"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270975"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Power BI で OData フィードから Intune レポートを作成する
 
@@ -54,9 +54,9 @@ Power BI でテーブルを処理します。 テーブルにはデータ フィ
 > [!Note]  
 > Intune の**レポート**に対するアクセス許可が必要です。 詳細については、「[承認](reports-api-url.md#authorization)」を参照してください。
 
-1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) にサインインします。
-2. **[Microsoft Intune - 概要]** ブレードの右側にある **[その他のタスク]** のデータ ウェアハウス リンクを選択して、**[Intune データ ウェアハウス]** ウィンドウを開きます。
-3. カスタム フィードの URL をコピーします。 例: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
+1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+2. **[レポート]**  >  **[Intune データ ウェアハウス]**  >  **[データ ウェアハウス]** の順に選択します。
+3. カスタム フィードの URL をコピーします。 例: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 4. Power BI Desktop を開きます。
 5. メニューバーで、 **[ファイル]**  >  **[データの取得]**  >  **[Odata フィード]** の順に選択します。
 6. **[OData フィード]** ウィンドウの [URL] ボックスに、前の手順でコピーしたカスタム フィードの URL を貼り付けます。
@@ -106,7 +106,7 @@ Power BI でテーブルを処理します。 テーブルにはデータ フィ
 
 アプリを使った追加の質問に回答できるように、ツリーマップにフィルターを追加できます。
 
-1. フィルターを追加するには、レポート キャンバスを選択し、**[視覚化]** の下の**スライサー アイコン** (![データ モデルとサポートされているリレーションシップが示されたツリーマップ](./media/reports-proc-create-with-odata/reports-create-slicer.png)) を選択します。 空の **[スライサー]** 視覚化がキャンバスに表示されます。
+1. フィルターを追加するには、レポート キャンバスを選択し、 **[視覚化]** の下の**スライサー アイコン** (![データ モデルとサポートされているリレーションシップが示されたツリーマップ](./media/reports-proc-create-with-odata/reports-create-slicer.png)) を選択します。 空の **[スライサー]** 視覚化がキャンバスに表示されます。
 2. **[フィールド]** ウィンドウで `ownerTypes` テーブルを見つけます。
 3. `ownerTypes` テーブルを展開し、`ownerTypeName` データ フィールドを選択します。
 4. `onwerTypeName` データ フィールドを `ownerTypes` テーブルから **[フィルター]** ウィンドウにドラッグし、 **[このページでのフィルター]** セクションにある **[ここにデータ フィールドを追加してください]** というラベルのボックスにドロップします。  

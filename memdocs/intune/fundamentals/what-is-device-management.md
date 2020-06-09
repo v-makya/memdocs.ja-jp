@@ -4,7 +4,7 @@ description: Microsoft 365 Enterprise には Microsoft Intune が含まれてい
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 05/28/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44f9446299bb20bd73890a67ec33c3d8e7a36e48
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
+ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988132"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84223638"
 ---
 # <a name="device-management-overview"></a>デバイス管理の概要
 
@@ -57,9 +57,19 @@ Intune により、ユーザーごと、および iOS/iPadOS、macOS、Android�
 
 Intune の詳細については、[Intune の概要](what-is-intune.md)に関する記事をご覧ください。
 
+## <a name="co-management"></a>共同管理
+
+多くの組織では、デスクトップやサーバーなどのデバイスを管理するために、オンプレミスの Configuration Manager が使用されています。 オンプレミスの Configuration Manager と Microsoft Intune をクラウドで接続できます。 クラウドに接続すると、Intune とクラウドの利点が得られます。これには[条件付きアクセス](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access)、[リモート操作の実行](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions)、[Windows Autopilot の使用](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot)などが含まれます。
+
+[Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) は、複数のサービスを統合するソリューション プラットフォームです。 これには、クラウドベースのデバイス管理用の [Microsoft Intune](what-is-intune.md) と、クラウド接続のデバイス管理用の [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) が含まれます。
+
+Configuration Manager を使用し、いくつかのタスクをクラウドに移動する準備ができている場合は、共同管理が適しています。
+
+Configuration Manager のクラウド接続の詳細については、「[共同管理とは](https://docs.microsoft.com/mem/configmgr/comanage/overview)」をご覧ください。
+
 ## <a name="integration-with-secure-and-protect-services"></a>セキュリティおよび保護サービスとの統合
 
-すべてのデバイス管理ソリューションの主要なタスクは、セキュリティと保護を実現することです。 このタスクを実現するために、Intune は他のサービスとの統合に大きな役割を果たします。 例:
+すべてのデバイス管理ソリューションの主要なタスクは、セキュリティと保護を実現することです。 このタスクを実現するために、Intune は他のサービスとの統合に大きな役割を果たします。 次に例を示します。
 
 - **Microsoft 365** は一般的な IT タスクを簡略化する重要なコンポーネントです。 Microsoft 365 管理センターでは、ユーザーを作成し、グループを管理します。 また、Intune、Azure AD などの他のサービスにもアクセスできます。
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8d75208de7cc6697699d79e3a52df742f605fdb
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 529d7a7da1257b9ebce1e1ab3cec706e8f100403
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990718"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270941"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Intune で Windows 10 デバイスに対して PowerShell スクリプトを使用する
 
@@ -68,7 +68,7 @@ Intune 管理拡張機能には次の前提条件があります。 前提条件
     
     - ユーザーが自分の Azure AD アカウントを使用してデバイスにサインインし、Intune に登録している。
 
-  - Configuration Manager と Intune を使用して共同管理しているデバイス。 **[アプリ]** のワークロードが **[パイロット Intune]** または **[Intune]** に設定されていることを確認します。 ガイダンスについては、次の記事を参照してください。 
+  - Configuration Manager と Intune を使用して共同管理しているデバイス。 Win32 アプリをインストールする場合、 **[アプリ]** のワークロードが **[パイロット Intune]** または **[Intune]** に設定されていることを確認します。 **[アプリ]** ワークロードが **[Configuration Manager]** に設定されている場合でも、PowerShell スクリプトが実行されます。 Intune 管理拡張機能はPowerShell スクリプトのターゲットをデバイスにすると、デバイスに展開されます。 ただし、前述のように、デバイスは Azure AD 参加済みまたは Hybrid Azure AD Join を使用したデバイスである必要があり、Windows 10 バージョン 1607 以降が実行されている必要があります。 ガイダンスについては、次の記事を参照してください。 
   
     - [共同管理とは](https://docs.microsoft.com/configmgr/comanage/overview) 
     - [クライアント アプリ ワークロード](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
