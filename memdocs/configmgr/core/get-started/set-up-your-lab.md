@@ -45,7 +45,7 @@ ms.locfileid: "82905160"
 
     -   **SQL 照合順序** クラスとしての **SQL_Latin1_General_CP1_CI_AS** 。  
 
-    -   **SQL 認証**ではなく、 [Windows 認証](https://docs.microsoft.com/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15)ではなく、 is required.  
+    -   **SQL 認証**ではなく、 [Windows 認証](https://docs.microsoft.com/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15)が必要です。  
 
     -   **専用の SQL Server インスタンス**が必要です。  
 
@@ -162,7 +162,7 @@ ms.locfileid: "82905160"
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>.NET をインストールし、Windows Communication Foundation をアクティブ化するには:  
 
-1.  **Server Manager**を開き、 **[管理]** に移動します。 **[役割と機能の追加]** をクリックし、 **[役割と機能の追加] Wizard.** を開きます。  
+1.  **Server Manager**を開き、 **[管理]** に移動します。 **[役割と機能の追加]** をクリックし、 **[役割と機能の追加]ウィザード**を開きます。  
 
 2.  **[始める前に]** パネルの情報を確認し、 **[次へ]** をクリックします。  
 
