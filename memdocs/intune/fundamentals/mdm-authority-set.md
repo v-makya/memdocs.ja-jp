@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7244872fa888aaee164187e62a2355a94f793499
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4209c461877786000e01dd03e4e0dea9f76a6e84
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985183"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270958"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>モバイル デバイス管理機関の設定
 
@@ -36,9 +36,9 @@ ms.locfileid: "83985183"
 
 - **Intune 共同管理** - Intune クラウド ソリューションと Windows 10 用 Configuration Manager デバイスの統合。 Configuration Manager コンソールを使用して Intune を構成します。 [Intune へのデバイスの自動登録を構成します](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune)。 
 
-- **Office 365 のモバイル デバイス管理** - Office 365 と Intune クラウド ソリューションの統合。 Microsoft 365 管理センターから Intune を構成します。 Intune スタンドアロンで利用できる機能の一部が含まれます。 「[Office 365 でのモバイル デバイス管理 (MDM) の設定](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)」を参照してください。
+- **Mobile Device Management for Office 365** - MDM for Office 365 がアクティブ化されている場合、MDM 機関は "Office 365" に設定されているものとして表示されます。 Intune の使用を開始するには、Intune のライセンスを購入する必要があります。
 
-- **Office 365 MDM との共存** テナント上で MDM for Office と Intune の両方を同時にアクティブ化して使用し、ユーザーごとに管理機関を Intune または MDM for Office のどちらかに設定して、どちらのサービスが MDM 登録デバイスの管理に使用されるかを指定できます。 各ユーザーの管理機関は、ユーザーに割り当てられたライセンスに基づいて定義されます。ユーザーが Microsoft 365 Basic または Standard のライセンスのみを所持している場合、そのユーザーのデバイスは MDM for Office によって管理されます。 ユーザーが Intune の権利を与えるライセンスを所持している場合、そのユーザーのデバイスは Intune によって管理されます。 以前は MDM for Office によって管理されていたユーザーに、Intune の権利を与えるライセンスを追加すると、そのユーザーのデバイスは Intune の管理に切り替わります。 ユーザーを Intune に切り替える前に、Intune の構成をユーザーに割り当てて MDM for Office を置き換えるようにしてください。そうしないと、デバイスで MDM for Office の構成が失われ、Intune から置き換えとなるものが受信されません。
+- **Office 365 MDM との共存** - 既に MDM for Office 365 を使用している場合は、ご自分のテナントに Intune を追加して、ユーザーごとに管理機関を Intune または MDM for Office 365 のどちらかに設定して、どちらのサービスが MDM 登録デバイスの管理に使用されるかを指定することができます。 各ユーザーの管理機関は、ユーザーに割り当てられたライセンスに基づいて定義されます。ユーザーが Microsoft 365 Basic または Standard のライセンスのみを所持している場合、そのユーザーのデバイスは MDM for Office によって管理されます。 ユーザーが Intune の権利を与えるライセンスを所持している場合、そのユーザーのデバイスは Intune によって管理されます。 以前は MDM for Office によって管理されていたユーザーに、Intune の権利を与えるライセンスを追加すると、そのユーザーのデバイスは Intune の管理に切り替わります。 ユーザーを Intune に切り替える前に、Intune の構成をユーザーに割り当てて MDM for Office を置き換えるようにしてください。そうしないと、デバイスで MDM for Office の構成が失われ、Intune から置き換えとなるものが受信されません。
 
 ## <a name="set-mdm-authority-to-intune"></a>MDM 機関を Intune に設定する
 

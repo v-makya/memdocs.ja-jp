@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/02/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c145a4b7fa150a9d42c9bf20eca4f85f6356acf8
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2e386d382ceb785d886dfb931bb26222bd82b1a0
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988516"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347323"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Apple Volume Purchase Program で購入した iOS アプリと macOS アプリを Microsoft Intune で管理する方法
 
@@ -180,7 +180,13 @@ Apple Business Manager を使用して、パブリック アプリおよびプ�
 
 ## <a name="renewing-app-licenses"></a>アプリのライセンスの更新
 
-Apple Business Manager または Apple School Manager から新しいトークンをダウンロードし、Intune で既存のトークンを更新することで、Apple VPP トークンを更新できます。
+[Apple Business Manager](https://business.apple.com/) または [Apple School Manager](https://school.apple.com/) から新しいトークンをダウンロードし、Intune で既存のトークンを更新することで、Apple VPP トークンを更新できます。 
+
+Apple VPP トークンを更新するには、次の手順を実行します。
+
+1. [Apple Business Manager](https://business.apple.com/) または [Apple School Manager](https://school.apple.com/) に移動します。
+2. **[設定]**  >  **[アプリと書籍]**  >  **[My Server Tokens]\(サーバー トークン\)** の順に選択して、**Apple Business Manager (または Apple School Manager)** で新しいトークンをダウンロードします。
+3. **[テナント管理]**  >  **[コネクタとトークン]**  >  **[Apple VPP トークン]** の順に選択して、[[Microsoft Endpoint Manager admin center]](https://go.microsoft.com/fwlink/?linkid=2109431) でトークンを更新します。 次に、トークンを手動でアップロードします。
 
 ## <a name="deleting-a-vpp-app"></a>VPP アプリの削除
 
@@ -190,7 +196,7 @@ Apple Business Manager または Apple School Manager から新しいトーク�
 
 Intune のカスタム管理者ロールに割り当てられたアクセス許可を使用して、Apple VPP トークンと VPP アプリへのアクセスを個別に制御できます。
 
-* Intune カスタム ロールで Apple VPP トークンを管理できるようにするには、 **[アプリ]**  >  **[Apple VPP トークン]** で、 **[マネージド アプリ]** のアクセス許可を割り当てます。
+* Intune カスタム ロールで Apple VPP トークンを管理できるようにするには、[Microsoft Endpoint Manager admin center] で **[テナント管理]**  >  **[コネクタとトークン]**  >  **[Apple VPP トークン]** の順に選択し、 **[マネージド アプリ]** のアクセス許可を割り当てます。
 * Intune カスタム ロールで、iOS/iPadOS VPP トークンを使用して購入したアプリを管理できるようにするには、 **[アプリ]**  >  **[すべてのアプリ]** で、 **[モバイル アプリ]** のアクセス許可を割り当てます。 
 
 ## <a name="additional-information"></a>追加情報

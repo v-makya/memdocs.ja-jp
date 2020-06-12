@@ -1,5 +1,5 @@
 ---
-title: Microsoft Intune で SCEP を使用する場合に証明書をデバイスに配信する際のトラブルシューティング | Microsoft Docs
+title: Intune の SCEP 証明書の配信に関するトラブルシューティング | Microsoft Docs
 description: Intune で SCEP 証明書プロファイルを使用して証明書を展開する場合に CA からデバイスへ証明書を配信する際のトラブルシューティングを行います。
 keywords: ''
 author: brenduns
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3acd8f0605ffbfe4f04ea4a9f0aaf81249e38cf5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 401bc2abe1be925f78436ff6557896ed51e37cb1
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991071"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330901"
 ---
 # <a name="troubleshoot-the-delivery-of-certificates-provisioned-by-scep-to-devices-in-microsoft-intune"></a>Microsoft Intune で SCEP によってプロビジョニングされた証明書をデバイスに配信する際のトラブルシューティング
 

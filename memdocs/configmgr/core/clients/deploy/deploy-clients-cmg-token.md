@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6b33027d67329b883f401168795c1b466ded1a7
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: 5054d44371fd3114a9644f90d37dabf1e81d1997
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709395"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455023"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>クラウド管理ゲートウェイのトークン ベース認証
 
@@ -60,10 +60,16 @@ ms.locfileid: "83709395"
 
 1. インターネットベースのデバイスに、構成マネージャー クライアントをインストールします。 クライアント インストール パラメーター [ **/regtoken**](about-client-installation-properties.md#regtoken) を含めます。 次のコマンド ラインの例には、他の必要なセットアップ パラメーターとプロパティが含まれています。
 
-    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
+    `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
 
     > [!TIP]
     > このコマンド ラインの詳細については、「[Azure AD の ID を使用してクライアントをインストールして登録する](deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity)」を参照してください。 このプロセスは似ており、Azure AD のプロパティを使わないだけです。
+
+確かめるために、次のログ ファイルで同様のエントリを確認します。<!-- bug 7357499 -->
+
+```ClientLocation.log
+Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
+```
 
 ### <a name="known-issues"></a>既知の問題
 
@@ -107,23 +113,23 @@ ms.locfileid: "83709395"
 
 Configuration Manager コンソールで以前に作成した一括登録トークンとその有効期間を確認し、必要に応じてその使用をブロックできます。 ただし、サイト データベースには一括登録トークンが保存されません。
 
-#### <a name="to-review-a-bulk-registration-token"></a>一括登録トークンを確認するには
+### <a name="review-a-bulk-registration-token"></a>一括登録トークンを確認する
 
-1. Configuration Manager コンソールで、 **[管理]** をクリックします。
+1. Configuration Manager コンソールで、 **[管理]** ワークスペースに移動します。
 
-2. [管理] ワークスペースで、 **[セキュリティ]** を展開し、 **[証明書]** をクリックします。 コンソールでは、サイトに関連した証明書と一括登録トークンのすべてが、詳細ウィンドウに一覧表示されます。
+2. **[セキュリティ]** を展開し、 **[証明書]** ノードを選択します。 コンソールでは、サイトに関連した証明書と一括登録トークンのすべてが、詳細ウィンドウに一覧表示されます。
 
 3. 確認する一括登録トークンを選択します。
 
-GUID に基づいて特定の一括登録トークンを識別できます。 一括登録トークンの GUID は、トークンの作成時に表示されます。 必要に応じて、 **[種類]** 列でフィルター処理または並べ替えを行うこともできます。
+**[種類]** 列でフィルター処理または並べ替えを行うことができます。 GUID に基づいて特定の一括登録トークンを識別できます。 一括登録トークンを作成すると、ツールに GUID が表示されます。
 
-#### <a name="to-block-a-bulk-registration-token"></a>一括登録トークンをブロックするには
+### <a name="block-a-bulk-registration-token"></a>一括登録トークンをブロックする
 
-1. Configuration Manager コンソールで、 **[管理]** をクリックします。
+1. Configuration Manager コンソールで、 **[管理]** ワークスペースに移動します。
 
-2. [管理] ワークスペースで **[セキュリティ]** を展開し、 **[証明書]** をクリックして、ブロックする一括登録トークンを選択します。
+2. **[セキュリティ]** を展開し、 **[証明書]** ノードを選択して、ブロックする一括登録トークンを選択します。
 
-3. リボン バーの **[ホーム]** タブか右クリックのコンテンツ メニューで、 **[ブロック]** を選択します。 逆に、以前にブロックした一括登録トークンのブロックを解除するには、リボン バーの **[ホーム]** タブか右クリックのコンテンツ メニューで **[ブロック解除]** を選択します。
+3. リボン バーの **[ホーム]** タブか右クリックのコンテキスト メニューで、 **[ブロック]** を選択します。 以前にブロックした一括登録トークンをブロック解除するには、 **[ブロック解除]** アクションを選択します。
 
 ## <a name="see-also"></a>関連項目
 

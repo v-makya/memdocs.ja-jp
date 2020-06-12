@@ -2,7 +2,7 @@
 title: 探索の構成
 titleSuffix: Configuration Manager
 description: 探索方法を構成して、ネットワーク、Active Directory、および Azure Active Directory から管理するリソースを検索します。
-ms.date: 04/01/2020
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3bd03cb15ae1633d8ddfc8c2f26a741d2679b083
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cfda27df7df537ededb1f103afdd6107354af786
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704750"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347289"
 ---
 # <a name="configure-discovery-methods-for-configuration-manager"></a>Configuration Manager の探索方法を構成する
 
@@ -265,7 +265,7 @@ Azure AD からユーザー グループとそのグループのメンバーを�
 
 ### <a name="limitations"></a>制限事項
 
-Azure AD ユーザー グループの探索の差分探索は現在、無効になっています。
+Azure AD ユーザー グループの探索の差分探索は、バージョン 1906 では無効になっています。 Configuration Manager バージョン 1910 以降では有効にすることができます。
 
 ### <a name="log-files"></a>ログ ファイル
 

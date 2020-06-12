@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 9e59d850a78a8f45f93769003e7a1de99e5634b3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: ddd01055ac6edf2872854c93cc5172b396052ad2
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906384"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270856"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Configuration Manager で Windows アプリケーションを作成する
 
@@ -39,7 +39,7 @@ Configuration Manager コンソールでアプリケーションを作成する�
 > [!Important]  
 > 予期しない結果になる場合があるため、1 つのデバイス上で同じ Windows アプリ パッケージの異なるバージョンのインストール、プロビジョニング、および更新を行う際には注意してください。 この動作は、Configuration Manager を使用してアプリをプロビジョニングするが、ユーザーに Microsoft Store からのアプリの更新を許可する場合に発生する可能性があります。 詳細については、[ビジネス向け Microsoft Store からアプリを管理する](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps)場合の「次のステップ」のガイダンスを参照してください。  
 
-オフライン ライセンス付きアプリをプロビジョニングする場合、Configuration Manager では、Windows での Microsoft Store からの自動更新は許可されません。  
+オフライン アプリを構成マネージャー クライアントを使用した Windows 10 デバイスに展開する場合、Configuration Manager の展開の外部のアプリケーションをユーザーが更新できないようにしてください。 オフライン アプリの更新の制御は、教室などのマルチ ユーザー環境で特に重要です。 詳細については、「[Configuration Manager を使用してビジネス向けおよび教育機関向け Microsoft Store のアプリを管理する](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps)」を参照してください。<!-- MEMDocs#316 -->
 
 Configuration Manager では、Windows 10 のすべてのサポート対象バージョンでのアプリのプロビジョニングがサポートされています。<!--SCCMDocs-pr issue 2762-->
 

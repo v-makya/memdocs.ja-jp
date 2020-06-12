@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/27/2020
+ms.date: 06/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33f59cc2ecd2662e2d5d09fb06a9f1c7a33f0fca
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 8605b33d8fb83fb4537182127860f0cbb098e620
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79342362"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428619"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Microsoft Intune のアプリ ライフサイクルの概要
 
@@ -30,11 +30,11 @@ Microsoft Intune のアプリ ライフサイクルは、アプリが追加さ�
 
 ![アプリのライフサイクル - 追加、展開、構成、保護、インベントリから削除。](./media/app-lifecycle/app-lifecycle.png "Intune アプリのライフサイクル")
 
-## <a name="add"></a>[追加]
+## <a name="add"></a>追加
 
 アプリ展開の最初のステップは、管理と割り当てを行うアプリを Intune に追加することです。 使用できるアプリの種類はさまざまですが、基本的な手順は同じです。 Intune では、社内で開発されたアプリ (基幹業務)、ストアから入手したアプリ、組み込みアプリ、Web 上のアプリなど、さまざま種類のアプリを追加できます。 アプリの種類については、「[アプリを Microsoft Intune に追加する方法](apps-add.md)」を参照してください。
 
-## <a name="deploy"></a>展開
+## <a name="deploy"></a>デプロイ
 
 Intune にアプリを追加したら、[それを管理対象のユーザーとデバイスに割り当てる](apps-deploy.md)ことができます。 Intune でこのプロセスが簡単になります。アプリを展開した後、Azure portal 内の Intune から展開の[成功を監視](apps-monitor.md)できます。 さらに、[Apple](vpp-apps-ios.md) や [Windows](windows-store-for-business.md) アプリ ストアなどの一部のアプリ ストアでは、会社用にアプリのライセンスを一括購入できます。 Intune では、これらのストアとデータを同期して、Intune 管理コンソールからこの種のアプリのライセンスを展開して使用状況を追跡できます。
 
@@ -54,7 +54,7 @@ Intune では、さまざまな方法でアプリのデータを保護できま�
 
 ## <a name="retire"></a>インベントリから削除
 
-通常は、最終的に、展開したアプリは古くなり、削除する必要があります。 Intune では、簡単に[サービスからアプリを削除](../remote-actions/device-management.md)できます。
+通常は、最終的に、展開したアプリは古くなり、削除する必要があります。 Intune では、アプリを簡単にアンインストールできます。 詳しくは、「[アプリをアンインストールする](../apps/apps-add.md#uninstall-an-app)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

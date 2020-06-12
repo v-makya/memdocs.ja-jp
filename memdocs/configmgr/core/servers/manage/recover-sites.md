@@ -2,7 +2,7 @@
 title: サイト復元
 titleSuffix: Configuration Manager
 description: Configuration Manager でのサイトの回復について説明します。
-ms.date: 08/23/2019
+ms.date: 06/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b17c8c9ed0c1f6f9a5aeb487e07ad3d3dc66cbae
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
+ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903954"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301437"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Configuration Manager サイトの回復
 
@@ -347,6 +347,10 @@ SQL Server の変更追跡の内部構造については、SQL Server チーム�
     - **PowerShell スクリプトの実行**: **[次のアカウントでこのステップを実行する]** オプションを使用する場合は、 **[設定]** を選択します。 パスワードを入力して確認し、 **[確認]** を選択します。
 
 すべてのタスク シーケンスに対してこのプロセスを繰り返します。
+
+### <a name="recreate-bootable-media-and-prestaged-media-in-non-pki-environments"></a>非 PKI 環境で、起動可能なメディアと事前設定されたメディアを再作成する
+
+非 PKI 環境では、起動可能なメディアと事前設定されたメディアに入った自己署名入り証明書は、メディアが作成されたサーバーのマシン キーに基づいています。 このため、回復の一環としてハードウェアが変更されたり、OS が再インストールされたりした場合は、そのサーバーで作成された起動可能なメディアと事前設定されたメディアを再作成する必要があります。 起動可能なメディアと事前設定されたメディアの作成方法の詳細については、「[起動可能なメディアの作成](../../../osd/deploy-use/create-bootable-media.md)」と「[事前設定されたメディアの作成](../../../osd/deploy-use/create-prestaged-media.md)」を参照してください。
 
 ### <a name="reenter-sideloading-keys"></a>サイドローディング キーを再入力する
 

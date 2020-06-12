@@ -10,12 +10,12 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d3cd21fe4b1d53ecbb0bc60818405cb795a4f289
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b2fc0dfe37ad51ce1a549545c3eaa716395438d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690220"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347111"
 ---
 # <a name="introduction-to-application-management-in-configuration-manager"></a>Configuration Manager でのアプリケーション管理の概要
 
@@ -95,7 +95,7 @@ Configuration Manager は、要件を評価して、アプリケーションと�
 - アプリケーションの以前のバージョンを復元します
 - 以前のバージョンを削除します
 
-詳細については、「[アプリケーションの更新とインベントリからの削除](../deploy-use/update-and-retire-applications.md)」を参照してください。  
+詳しくは、[アプリケーションの修正](../deploy-use/revise-and-supersede-applications.md#application-revisions)に関するページをご覧ください。  
 
 ### <a name="detection-method"></a>検出方法
 

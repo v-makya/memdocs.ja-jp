@@ -10,12 +10,12 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d7697f8b5a2017aa732c52512bf31598c070fbc
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b9111e3be82424425561e0a664fee955d73ee63
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696080"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270822"
 ---
 # <a name="how-to-manage-clients-in-configuration-manager"></a>Configuration Manager でクライアントを管理する方法
 
@@ -103,7 +103,7 @@ ms.locfileid: "81696080"
 
 ### <a name="approve"></a>承認
 
-クライアントが HTTP および自己署名証明書を使用してサイト システムと通信する場合、信頼されるコンピューターとして識別されるように、これらのクライアントを承認する必要があります。 既定では、サイト構成により、同じ Active Directory フォレストと信頼されるフォレストからのクライアントが自動的に承認されます。 この既定の動作により、各クライアントを手動で承認する必要がありません。 信頼できるワークグループ コンピューターと、信頼できるが承認されていないその他のコンピューターは手動で承認します。
+クライアントが HTTP および自己署名証明書を使用してサイト システムと通信する場合、信頼されるコンピューターとして識別されるように、これらのクライアントを承認する必要があります。 既定では、サイト構成により、同じ Active Directory フォレスト、信頼済みフォレスト、接続済み Azure Active Directory (Azure AD) テナントからのクライアントは自動的に承認されます<!-- MEMDocs#318 -->。 この既定の動作により、各クライアントを手動で承認する必要がありません。 信頼できるワークグループ コンピューターと、信頼できるが承認されていないその他のコンピューターは手動で承認します。
 
 > [!IMPORTANT]  
 > 一部の管理機能は承認されていないクライアントでも動作する可能性がありますが、このシナリオは Configuration Manager ではサポートされていません。  

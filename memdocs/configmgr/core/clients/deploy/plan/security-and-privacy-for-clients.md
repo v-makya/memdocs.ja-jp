@@ -10,12 +10,12 @@ ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e4922502b49ab2da9ce393fab809e4dc583fd962
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84ef4e37ddf756f04101c9cdec0ec7a4ed91688d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694840"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270839"
 ---
 # <a name="security-and-privacy-for-configuration-manager-clients"></a>構成マネージャー クライアントのセキュリティとプライバシー
 
@@ -48,7 +48,7 @@ PKI 認証を使用できない場合は、承認処理により、Configuration
 - 信頼される側のドメイン内のコンピューターについて自動
 - すべてのコンピューターについて自動  
 
-最も安全な承認方法は、信頼されたドメインのメンバーであるクライアントを自動で承認する方法です。 その後、他のすべてのコンピューターを手動で確認して承認します。 すべてのクライアントを自動で承認することは、他のアクセス制御によって信頼できないコンピューターがネットワークにアクセスできないようにしていない限り、推奨されません。  
+最も安全な承認方法は、信頼されたドメインのメンバーであるクライアントを自動で承認する方法です。 このオプションには、接続された Azure Active Directory (Azure AD) テナントからの、クラウド ドメインに参加しているクライアントが含まれます。<!-- MEMDocs#318 --> その後、他のすべてのコンピューターを手動で確認して承認します。 すべてのクライアントを自動で承認することは、他のアクセス制御によって信頼できないコンピューターがネットワークにアクセスできないようにしていない限り、推奨されません。  
 
 コンピューターを手動で承認する方法について詳しくは、「[[デバイス] ノードを使用してクライアントを管理する](../../manage/manage-clients.md#BKMK_ManagingClients_DevicesNode)」をご覧ください。  
 

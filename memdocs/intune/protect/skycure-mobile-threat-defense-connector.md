@@ -1,5 +1,5 @@
 ---
-title: Microsoft Intune を使用した Symantec コネクタ
+title: Symantec Endpoint Protection Mobile コネクタと Microsoft Intune の使用
 titleSuffix: Microsoft Intune
 description: モバイル デバイスから会社のリソースへのアクセスを制御するための Intune と Symantec Endpoint Protection Mobile の統合について説明します。
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dcca264716b35600addd917e0ee7f309f530b70
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b078996ba5c7822ce9d8273be1df96a7aad0248b
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988350"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330969"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Symantec Endpoint Protection Mobile コネクタ
 
@@ -42,7 +42,7 @@ Intune デバイス コンプライアンス ポリシーで SEP Mobile のリ�
 > [!NOTE]
 > この Mobile Threat Defense ベンダーは、未登録のデバイスではサポートされていません。
 
-## <a name="supported-platforms"></a>[サポートされているプラットフォーム]
+## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
 - **Android 4.1 以降**
 
@@ -90,7 +90,7 @@ Intune では、SEP Mobile との統合に 2 つのモードがあります。
 
 ![検出された悪意のあるアプリの概念図](./media/skycure-mobile-threat-defense-connector/symantec-arch-1.png)
 
-*修復時に付与されるアクセス権:*
+*修復後、アクセスが与えられる:*
 
 ![悪意のあるアプリが検出された後、修復時に付与されるアクセス権の画像](./media/skycure-mobile-threat-defense-connector/symantec-arch-2.png)
 
@@ -102,11 +102,11 @@ Intune では、SEP Mobile との統合に 2 つのモードがあります。
 
 ![Wi-Fi 経由のネットワーク アクセスをブロックする](./media/skycure-mobile-threat-defense-connector/symantec-arch-3.png)
 
-*修復時に付与されるアクセス権:*
+*修復後、アクセスが与えられる:*
 
 ![修復するとアクセス権が付与される](./media/skycure-mobile-threat-defense-connector/symantec-arch-4.png)
 
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークに対する脅威に基づいて SharePoint Online へのアクセスを制御する
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークへの脅威に基づいて SharePoint Online へのアクセスを制御する
 
 ネットワークで **Man-in-the-middle** のような脅威を検出し、デバイスのリスクに基づいて会社内のファイルの同期を阻止します。
 
@@ -114,7 +114,7 @@ Intune では、SEP Mobile との統合に 2 つのモードがあります。
 
 ![ネットワークの脅威が検出されたときに SharePoint Online をブロック](./media/skycure-mobile-threat-defense-connector/symantec-arch-5.png)
 
-*修復時に付与されるアクセス権:*
+*修復後、アクセスが与えられる:*
 
 ![SharePoint で修復時にアクセス権を付与する例](./media/skycure-mobile-threat-defense-connector/symantec-arch-6.png)
 

@@ -1,5 +1,5 @@
 ---
-title: Symantec と Microsoft Intune の統合を設定する
+title: Symantec Endpoint Protection Mobile と Microsoft Intune の統合を設定する
 titleSuffix: Microsoft Intune
 description: Microsoft Intune で Symantec Endpoint Protection Mobile ソリューションをセットアップし、モバイル デバイスから会社のリソースへのアクセスを制御する方法。
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ebd42a4603224004ab586fb6648dcd6360e2f94
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 250c94250346eb84ad6b1661768d27b8c14fdf62
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988312"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84330986"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Symantec Endpoint Protection Mobile と Intune の統合を設定する
 

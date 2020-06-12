@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d0e809e834a82f192128263742bc2b9b0024a2
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079282"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455244"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Microsoft Enterprise Mobility + Security (EMS) で BYOD を有効にするための技術の決定事項
 
@@ -72,14 +72,14 @@ MDM を行わない MAM は、BYOD をサポートする組織で非常によく
 |侵害されたユーザー アカウント | リスクの高いユーザーをブロック | リスクの高いユーザーをブロック |
 |侵害されたユーザー アカウント | デバイス PIN | アプリ PIN |
 | | | |
-| 侵害されたデバイスまたはアプリ | 準拠しているデバイスを要求 | アプリ起動時の脱獄チェック |
+| 侵害されたデバイスまたはアプリ | 準拠しているデバイスを要求 | アプリ起動時の脱獄またはルートのチェック |
 | 侵害されたデバイスまたはアプリ | デバイス データの暗号化 | [アプリ データの暗号化] |
 | | | |
 |デバイスの紛失または盗難 | すべてのデバイス データを削除 | すべてのアプリ データを削除|
 | | | |
-| セキュリティで保護されていない場所への偶発的なデータの共有または保存 | デバイスのデータのバックアップを制限 | 切り取り/コピー/貼り付けを制限|
+| セキュリティで保護されていない場所への偶発的なデータの共有または保存 | デバイスのデータのバックアップを制限 | 組織データのバックアップを制限 |
 | セキュリティで保護されていない場所への偶発的なデータの共有または保存 | 名前を指定した保存を制限 | 名前を指定した保存を制限 |
-|セキュリティで保護されていない場所への偶発的なデータの共有または保存 | 印刷を無効にする | 該当なし|
+|セキュリティで保護されていない場所への偶発的なデータの共有または保存 | 印刷を無効にする | 組織データの印刷を無効にする |
 
 ## <a name="next-steps"></a>次のステップ
 デバイス管理、アプリ管理、またはこれらの組み合わせに注目し、組織で BYOD を有効にするかどうかを決定します。 実装を選択するのはユーザーですが、Azure AD の ID およびセキュリティ機能を利用できるのでいずれにしても安心です。  

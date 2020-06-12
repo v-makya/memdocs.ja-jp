@@ -2,7 +2,7 @@
 title: Desktop Analytics の新機能
 titleSuffix: Configuration Manager
 description: Desktop Analytics クラウド サービスの最新のマンスリー リリースの新機能の概要です。
-ms.date: 05/11/2020
+ms.date: 06/04/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 1d45d115f279603fa74e143c603c116146278ffe
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 5265ee88cbe6dc119d6d14dadd3fadad6a52b253
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268166"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454955"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Desktop Analytics の新機能
 
@@ -27,6 +27,12 @@ Desktop Analytics の各月の新機能について説明します。
 
 このページが更新されたときに通知を受け取るには、次の URL をコピーして RSS フィード リーダーに貼り付けます。`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="june-2020"></a>2020 年 6 月
+
+### <a name="improvement-to-prerequisites"></a>前提条件の改善
+
+Desktop Analytics では、Azure Active Directory (Azure AD) テナントに Office 365 サービスをデプロイする必要がなくなりました。 Azure AD の **Office 365 クライアント管理**アプリは **Desktop Analytics** アプリになり、このサービスから Configuration Manager が情報と状態を取得できるようになりました。
 
 ## <a name="may-2020"></a>2020 年 5 月
 

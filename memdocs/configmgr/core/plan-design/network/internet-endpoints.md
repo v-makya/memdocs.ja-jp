@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 58afaf564a8afaba4569755575fcc7c1757c5529
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110136"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454972"
 ---
 # <a name="internet-access-requirements"></a>インターネット アクセス要件
 
@@ -38,7 +38,7 @@ ms.locfileid: "82110136"
 
 バージョン 2002 以降、Configuration Manager サイトがクラウド サービスに必要なエンドポイントへの接続に失敗すると、クリティカルなステータス メッセージ ID 11488 が生成されます。 サービスに接続できない場合、SMS_SERVICE_CONNECTOR コンポーネントのステータスがクリティカルに変わります。 Configuration Manager コンソールの[コンポーネントのステータス](../../servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) ノードに、詳細なステータスが表示されます。<!-- 5566763 -->
 
-### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"/> 更新プログラムとサービス
+### <a name="updates-and-servicing"></a><a name="bkmk_scp-updates"></a> 更新プログラムとサービス
 
 この機能の詳細については、「[Configuration Manager の更新とサービス](../../servers/manage/updates.md)」を参照してください。
 
@@ -86,6 +86,18 @@ ms.locfileid: "82110136"
 ## <a name="microsoft-store-for-business"></a>ビジネス向け Microsoft Store
 
 Configuration Manager を[ビジネス向け Microsoft Store](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) と統合する場合は、サービス接続ポイントと対象デバイスがクラウド サービスにアクセスできることを確認してください。 詳細については、[ビジネス向け Microsoft Store のプロキシ構成](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)に関するページをご覧ください。
+
+## <a name="delivery-optimization"></a>配信の最適化
+
+配信の最適化を使用する場合、クライアントがそのクラウド サービス `*.do.dsp.mp.microsoft.com` と通信する必要があります。
+
+Microsoft 接続キャッシュをサポートする配布ポイントにも、これらのエンドポイントが必要です。
+
+詳細については、以下の記事を参照してください。
+
+- [配信の最適化に関する FAQ](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [Configuration Manager でのコンテンツ管理の基本的な概念](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
+- [Configuration Manager における Microsoft 接続済みキャッシュ](../hierarchy/microsoft-connected-cache.md)
 
 ## <a name="cloud-services"></a><a name="bkmk_cloud"></a> クラウド サービス
 

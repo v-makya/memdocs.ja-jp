@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: c7a99931db27b6a55c9e0722cc12c1d7a9cc9e80
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764239"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428684"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> エンドポイント分析のプレビュー
 
@@ -347,8 +347,11 @@ Configuration Manager で管理され、まだ Intune に登録されていな�
 1. データ収集について正常に構成されたデバイスは、データ収集を有効にした後で再起動する必要があります。その後、デバイスが [デバイスのパフォーマンス] タブに表示されるまで、最大 24 時間待機する必要があります。
 1. デバイスがデータ収集について正常に構成され、その後再起動されたが、24 時間経過してもまだ表示されない場合は、デバイスが Microsoft の収集エンドポイントに到達できていない可能性があります。 この問題は、お客様の会社がプロキシ サーバーを使用していて、エンドポイントがプロキシで有効になっていない場合に発生することがあります。 詳細については、「[エンドポイントのトラブルシューティング](#bkmk_uea_endpoints)」をご覧ください。
 
+### <a name="data-collection-for-intune-managed-devices"></a>Intune マネージド デバイスのデータ収集
 
-### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a> エンドポイント
+エンドポイント分析では、Windows 10 と Windows Server の接続ユーザーのエクスペリエンスと利用統計情報コンポーネント (DiagTrack) を活用して、Intune マネージド デバイスからデータが収集されます。 デバイス上の**接続ユーザー エクスペリエンスとテレメトリ** サービスが実行されていることを確認してください。
+
+#### <a name="endpoints"></a><a name="bkmk_uea_endpoints"></a> エンドポイント
 
 エンドポイント分析にデバイスを登録する場合、デバイスから Microsoft に必要な機能データが送信される必要があります。 お使いの環境でプロキシ サーバーが使用されている場合は、この情報を使用してプロキシを構成します。
 
@@ -364,15 +367,15 @@ Configuration Manager で管理され、まだ Intune に登録されていな�
 | `https://*.manage.microsoft.com` | デバイス コレクションおよびデバイスをエンドポイント分析に (Configuration Manager サーバー ロールのみで) 同期するために使用されます。 詳しくは、「[サイト システム サーバー用にプロキシを構成する](../plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)」をご覧ください。 |
 
 
-### <a name="proxy-server-authentication"></a>プロキシ サーバー認証
+#### <a name="proxy-server-authentication"></a>プロキシ サーバー認証
 
 組織でインターネット アクセスにプロキシ サーバー認証を使用している場合は、認証のためにデータがブロックされないことを確認します。 デバイスによるこのデータの送信がプロキシで許可されていない場合、それらのデバイスはデスクトップ分析に表示されません。
 
-#### <a name="bypass-recommended"></a>バイパス (推奨)
+##### <a name="bypass-recommended"></a>バイパス (推奨)
 
 プロキシ サーバーを構成して、データ共有エンドポイントへのトラフィックにプロキシ認証が要求されないようにします。 このオプションは、最も包括的な解決策です。 Windows 10 のすべてのバージョンで動作します。  
 
-#### <a name="user-proxy-authentication"></a>ユーザー プロキシ認証
+##### <a name="user-proxy-authentication"></a>ユーザー プロキシ認証
 
 サインインしたユーザーのコンテキストをプロキシ認証に使用するようにデバイスを構成します。 この方法では、次の構成が必要です。
 
@@ -385,7 +388,7 @@ Configuration Manager で管理され、まだ Intune に登録されていな�
 > [!IMPORTANT]
 > ユーザー プロキシ認証の方法は、Microsoft Defender Advanced Threat Protection の使用と互換性がありません。 このような動作が発生するのは、この認証では **DisableEnterpriseAuthProxy** レジストリ キーが `0` に設定されている必要があるのに対し、Microsoft Defender ATP では `1` に設定されている必要があるためです。 詳しくは、[Microsoft Defender ATP でのコンピューターのプロキシとインターネット接続設定の構成](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)に関する記事をご覧ください。
 
-#### <a name="device-proxy-authentication"></a>デバイス プロキシ認証
+##### <a name="device-proxy-authentication"></a>デバイス プロキシ認証
 
 この方法では次のシナリオがサポートされます。
 

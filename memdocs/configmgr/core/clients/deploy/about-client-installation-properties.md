@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 12fee834e4f384cc180658a8e58cf3920a907831
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: fda1e877f8e0bc211b36e288af13de204305cc5a
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153446"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455040"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Configuration Manager のクライアント インストールのパラメーターとプロパティについて
 
@@ -676,21 +676,19 @@ Configuration Manager クライアントによって送信される状態メッ�
 
 例: `CCMSetup.exe SMSCONFIGSOURCE=RP`
 
-<!--
-### SMSDIRECTORYLOOKUP
+### <a name="smsdirectorylookup"></a>SMSDIRECTORYLOOKUP
 
-Specifies whether the client can use Windows Internet Name Service (WINS) to find a management point that accepts HTTP connections. Clients use this method when they can't find a management point in Active Directory Domain Services or in DNS.  
+クライアントが Windows Internet Name Service (WINS) を使用して HTTP 接続を許可する管理ポイントを検索できるようにするかどうかを指定します。 Active Directory Domain Services または DNS に管理ポイントが見つからないときに、クライアントではこの方法を使用します。
 
- This property doesn't affect whether the client uses WINS for name resolution.  
+このプロパティは、クライアントが名前解決に WINS を使用するかどうかに影響しません。
 
- You can configure two different modes for this property:  
+このプロパティでは 2 つの異なるモードを構成できます。
 
--   NOWINS: This value is the most secure setting for this property and prevents clients from finding a management point in WINS. When you use this setting, clients must have an alternative method to locate a management point on the intranet, such as Active Directory Domain Services or by using DNS publishing.  
+- **NOWINS**:この値は、このプロパティの最も安全な設定です。 これにより、WINS でクライアントが管理ポイントを検出できなくなります。 この設定を使用する場合、イントラネット上の管理ポイントを特定する代替の方法がクライアントに用意されている必要があります。 たとえば、Active Directory Domain Services や DNS 発行です。
 
--   WINSSECURE (default): In this mode, a client that uses HTTP communication can use WINS to find a management point. However, the client must have a copy of the trusted root key before it can successfully connect to the management point. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK).  
+- **WINSSECURE** (既定値):このモードでは、HTTP 接続を使用するクライアントは、WIN を使用して管理ポイントを探せます。 しかし、クライアントは管理ポイントへ接続する前に信頼されたルート キーを持っている必要があります。 詳細については、「[信頼されたルート キーの計画](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)」を参照してください。
 
-Example: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  
--->
+例: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  
 
 ### <a name="smsmp"></a>SMSMP
 

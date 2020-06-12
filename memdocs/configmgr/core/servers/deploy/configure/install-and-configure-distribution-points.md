@@ -2,7 +2,7 @@
 title: 配布ポイントの管理
 titleSuffix: Configuration Manager
 description: 配布ポイントを使用し、デバイスやユーザーに展開するコンテンツをホストします。
-ms.date: 12/03/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1cc931bd0e02be66f608db11e0052fde571a427
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d1d93dd446a65fda0b259bb10e0c944780d41059
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701680"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347093"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>Configuration Manager の配布ポイントのインストールと構成
 
@@ -307,12 +307,16 @@ Configuration Manager SDK を使用してこのプロセスを自動化する方
     - Configuration Manager バージョン 1806 以降、更新プログラムのロールアップ (4462978) あり  
 
         - Windows Server、バージョン 1709 以降
-        - Windows Server 2016、更新プログラムの KB4132216 と KB4284833 を含む
+        - 次の更新プログラムを含む Windows Server 2016:
+           - 2018 年 6 月 21 日にリリースされた累積的な更新プログラム KB4132216、またはそれ以降の累積的な更新プログラム。
+           - 2018 年 5 月 18 日にリリースされたサービス スタック更新プログラム KB4284833、またはそれ以降のサービス スタック更新プログラム。
 
     - Configuration Manager バージョン 1810 以降
 
         - Windows Server、バージョン 1709 以降
-        - Windows Server 2016、更新プログラムの KB4132216 と KB4284833 を含む
+        - 次の更新プログラムを含む Windows Server 2016:
+           - 2018 年 6 月 21 日にリリースされた累積的な更新プログラム KB4132216、またはそれ以降の累積的な更新プログラム。
+           - 2018 年 5 月 18 日にリリースされたサービス スタック更新プログラム KB4284833、またはそれ以降のサービス スタック更新プログラム。
         - Windows Server 2019  
 
 - **事前設定されたコンテンツ用にこの配布ポイントを有効にする**: この設定により、ソフトウェアを配布する前にサーバーにコンテンツを追加できます。 コンテンツ ファイルは既にコンテンツ ライブラリに格納されているため、ソフトウェアを配布するときにネットワークを介してファイルが転送されることはありません。 詳細については、「[事前設定されたコンテンツ](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent)」を参照してください。  

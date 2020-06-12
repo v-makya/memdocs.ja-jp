@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 06/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 424778a86ebf3bac750e17359204ef6be3aaa71c
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 69940fc8e3f495a1738f2b7b4c6769e431821f30
+ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166044"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84436807"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Intune アプリ ラッピング ツールでアプリ保護ポリシーを利用するために iOS アプリを準備する
 
@@ -323,7 +323,7 @@ iOS 用アプリ ラッピング ツールには、すべての機能を保証�
 
 ## <a name="setting-app-entitlements"></a>アプリ権利の設定
 
-アプリをラップする前に、アプリに*権利*を付与して、通常のアプリよりも多くのアクセス許可と機能を与えることができます。 *権利ファイル*は、アプリ内に特殊なアクセス許可 (たとえば、共有キーチェーンへのアクセスなど) を指定するコード署名で使用されます。 アプリの開発中に、Xcode 内で特定のアプリケーション サービス (*機能*と呼ばれます) が有効になります。 機能が有効になると、権利ファイルに反映されます。 権利と機能の詳細については、iOS 権利および機能の詳細については、iOS 開発者ライブラリの「[Adding Capabilities (機能の追加)](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html)」を参照してください。 サポートされる機能の一覧については、「[Supported capabilities (サポートされる機能)](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html)」を参照してください。
+アプリをラップする前に、アプリに " *[権利](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html)* " を付与して、通常のアプリよりも多くのアクセス許可と機能を与えることができます。 *権利ファイル*は、アプリ内に特殊なアクセス許可 (たとえば、共有キーチェーンへのアクセスなど) を指定するコード署名で使用されます。 アプリの開発中に、Xcode 内で特定のアプリケーション サービス (*機能*と呼ばれます) が有効になります。 機能が有効になると、権利ファイルに反映されます。 権利と機能の詳細については、iOS 権利および機能の詳細については、iOS 開発者ライブラリの「[Adding Capabilities (機能の追加)](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html)」を参照してください。 サポートされる機能の一覧については、「[Supported capabilities (サポートされる機能)](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html)」を参照してください。
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>iOS 用アプリ ラッピング ツールでサポートされる機能
 

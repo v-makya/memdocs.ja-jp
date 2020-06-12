@@ -56,7 +56,7 @@
       href: deploy-use/create-remote-connection-profiles.md
     - name: Windows デバイスを新しいエディションにアップグレードする
       href: deploy-use/upgrade-windows-version.md
-    - name: Microsoft Edge の設定の構成
+    - name: Microsoft Edge のレガシ設定の構成
       href: deploy-use/browser-profiles.md
     - name: コンプライアンス設定を監視する
       href: deploy-use/monitor-compliance-settings.md

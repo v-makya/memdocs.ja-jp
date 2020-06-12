@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: e06dc0d40eb6359d11ef31045989d7ed398b3687
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691000"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347187"
 ---
 # <a name="what-is-co-management"></a>共同管理とは
 
@@ -100,9 +100,9 @@ Configuration Manager バージョン 1806 以降では、複数の Configuratio
 
 ### <a name="azure-ad"></a>Azure AD
 
-- Windows 10 デバイスは、Azure AD に参加している必要があります。 次のいずれかの種類です。  
+- Windows 10 デバイスは、Azure AD に接続されている必要があります。 次のいずれかの種類です。  
 
-  - [ハイブリッド Azure AD 参加済み](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)。デバイスがオンプレミスの Active Directory に参加し、Azure Active Directory に参加している場合。  
+  - [Hybrid Azure AD 参加済み](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid): デバイスがオンプレミスの Active Directory に参加し、Azure Active Directory に登録されている場合。
 
   - [Azure AD のみに参加](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)。 (この種類は "クラウド ドメイン参加済み" とも呼ばれます)<!--SCCMDocs issue 605-->  
 

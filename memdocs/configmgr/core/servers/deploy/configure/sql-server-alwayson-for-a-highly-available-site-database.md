@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b9e2e4e85d9fb6a1ab34af8760e0ac61d6e4fab4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79e83a7ba111b1d7f96fb623914ffe8e11f22f3d
+ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700890"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84270873"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager で SQL Server Always On 可用性グループを使用するための準備
 
@@ -263,6 +263,8 @@ Configuration Manager セットアップでは、各レプリカに接続する�
 - SQL over TCP:**TCP 1433**  
 
 これらの構成ではカスタム ポートを使用することができます。 エンドポイントと、可用性グループ内のすべてのレプリカで、同じカスタム ポートを使用します。
+
+SQL によってデータをサイト間でレプリケートするには、Azure ロード バランサーのポートごとに負荷分散規則を作成します。 詳細については、「[内部ロード バランサー用の高可用性ポートの構成](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports)」を参照してください。<!-- MEMDocs#252 -->
 
 #### <a name="listener"></a>リスナー
 

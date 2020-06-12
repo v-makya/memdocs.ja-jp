@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4dead573e1744a5c8b84ff954e85be43af644486
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 70d4930da712eccff8bdb1f1986a68aa5fe77644
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878490"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455278"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager における Microsoft 接続済みキャッシュ
 
@@ -63,7 +63,7 @@ ms.locfileid: "83878490"
 
   - IIS [アプリケーション要求ルーティング処理](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) 機能をプレインストールしないでください。 接続済みキャッシュにより、ARR のインストールとその設定の構成が行われます。 Microsoft は、接続済みキャッシュによる ARR の構成が、サーバー上でこの機能を使用する他のアプリケーションと競合しないことを保証することはできません。
 
-  - 配布ポイントには、Microsoft クラウドへのインターネット アクセスが必要です。 特定の URL は、特定のクラウド対応のコンテンツによって異なる場合があります。 詳細については、「[Internet access requirements (インターネット アクセスの要件)](../network/internet-endpoints.md)」を参照してください。
+  - 配布ポイントには、Microsoft クラウドへのインターネット アクセスが必要です。 特定の URL は、特定のクラウド対応のコンテンツによって異なる場合があります。 配信の最適化のためにエンドポイントも許可してください。 詳細については、「[Internet access requirements (インターネット アクセスの要件)](../network/internet-endpoints.md)」を参照してください。
 
   - バージョン 2002 以降は、接続済みキャッシュ アプリケーションで非認証のプロキシ サーバーをインターネット アクセスに使用できます。 詳しくは、「[サイト システム サーバー用にプロキシを構成する](../network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)」をご覧ください。<!-- 5856396 -->
 

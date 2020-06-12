@@ -10,12 +10,12 @@ ms.assetid: 9d1e8252-99e3-48aa-bfa5-0cf4cd6637b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 184bdc58ac6dc0e311875cc1ddab8c605d8eec32
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ec465f3dee33ca311aec120e74a2994a81a90ec9
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704210"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455227"
 ---
 # <a name="configure-pre-cache-content-for-task-sequences"></a>タスク シーケンス用のコンテンツの事前キャッシュを構成する
 
@@ -101,7 +101,6 @@ Configuration Manager バージョン 1902 以前では、この動作は "*OS �
 >
 > まず、**オペレーティング システムの言語**条件を選択して、言語を追加します。 次に、WMI クエリを編集して、アーキテクチャ句を含めます。
 
-
 ### <a name="3-deploy-the-task-sequence"></a><a name="bkmk_deploy"></a> 3.タスク シーケンスの展開
 
 [タスク シーケンスを展開します](deploy-a-task-sequence.md)。 事前キャッシュの機能については、次の設定を構成します。  
@@ -115,8 +114,7 @@ Configuration Manager バージョン 1902 以前では、この動作は "*OS �
 - **[配布ポイント]** タブで、 **[展開オプション]** 設定を構成します。 ユーザーがインストールを開始する前にコンテンツを事前キャッシュしない場合は、クライアントはこれらの設定を使用します。  
 
     > [!Important]  
-    > OS イメージをインストールするタスク シーケンスの場合は、**実行中のタスク シーケンスによって必要になったときにコンテンツをローカルにダウンロード**する展開オプションを使用しないでください。 OS イメージを適用する前に、タスク シーケンスによってディスクがワイプされると、クライアント キャッシュが削除されます。 コンテンツが失われるため、タスク シーケンスは失敗します。<!-- SCCMDocs-PR #1338 -->
-
+    > OS イメージをインストールするタスク シーケンスの場合は、**実行中のタスク シーケンスによって必要になったときにコンテンツをローカルにダウンロード**する展開オプションを使用しないでください。 OS イメージを適用する前に、タスク シーケンスによってディスクがワイプされると、クライアント キャッシュが削除されます。 コンテンツが失われるため、タスク シーケンスは失敗します。<!-- SCCMDocs-PR #1338 --> これらの展開オプションは、展開用に選択した他のオプションに基づいて変わります。 詳細については、「 [Deploy a task sequence](deploy-a-task-sequence.md#bkmk_deploy-options)」をご覧ください。<!-- MEMDocs#328, SCCMDocs#2114 -->
 
 ## <a name="user-experience"></a>ユーザー側の表示と操作
 
@@ -125,7 +123,6 @@ Configuration Manager バージョン 1902 以前では、この動作は "*OS �
 - クライアントでユーザーが展開を利用できるようになったときに、ユーザーに新しい展開について知らせる通知が表示されます。 これで、タスク シーケンスはソフトウェア センターで表示されます。 ユーザーはソフトウェア センターに移動し、 **[インストール]** をクリックしてインストールを開始します。  
 
 - ユーザーがタスク シーケンスをインストールするときにコンテンツが完全に事前キャッシュされなかった場合、クライアントは、展開の **[デプロイ オプション]** タブで指定された設定を使用します。  
-
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 06/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f39681bf954e84376e5d8e3862354a2a10b1003a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 10c715bcff63e6ec5a9ec9002926f6ee6608360e
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988108"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455074"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>アプリ保護ポリシーを監視する方法
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-[Azure portal](https://portal.azure.com) の Intune アプリ保護ウィンドウから、ユーザーに適用したアプリ保護ポリシーの状態を監視できます。 さらに、アプリ保護ポリシーによって影響を受けるユーザー、ポリシーのコンプライアンスの状態、ユーザーに対して発生する可能性がある問題に関する情報を見つけることができます。
+Intune の Intune アプリ保護ウィンドウから、ユーザーに適用したアプリ保護ポリシーの状態を監視できます。 さらに、アプリ保護ポリシーによって影響を受けるユーザー、ポリシーのコンプライアンスの状態、ユーザーに対して発生する可能性がある問題に関する情報を見つけることができます。
 
 アプリ保護ポリシーは 3 つの異なる場所で監視できます。
 - 概要ビュー
@@ -43,10 +43,9 @@ ms.locfileid: "83988108"
 ## <a name="summary-view"></a>概要ビュー
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
-3. **[アプリ]**  >  **[監視]**  >  **[アプリ保護状態]** を選択します。
+2. **[アプリ]**  >  **[監視]**  >  **[アプリ保護状態]** を選択します。
 
-   ![[Intune モバイル アプリケーション管理] ウィンドウの [概要] タイルのスクリーンショット](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
-
+次の一覧は、アプリの保護状態の詳細を示します。 
 - **[割り当てられたユーザー]** :作業コンテキストでポリシーに関連付けられたアプリを使用している、保護されておりライセンス付与された社内の割り当て済みユーザーと、保護されておらずライセンス付与されていない割り当て済みユーザーの合計数。
 - **[フラグ付きのユーザー]** :デバイスで問題が発生しているユーザーの数。 **[フラグ付きのユーザー]** では、脱獄されたデバイス (iOS/iPadOS) とルート化されたデバイス (Android) が報告されます。 また、Google SafetyNet デバイス構成証明チェック (IT 管理者によってオンにされた場合) によってフラグが設定されたデバイスを持つユーザーは、ここで報告されます。 
 - **[害を及ぼす可能性のあるアプリを持つユーザー]** : Android デバイスに有害なアプリが含まれる可能性があることが Google Play Protect によって検出されたユーザーの数。 

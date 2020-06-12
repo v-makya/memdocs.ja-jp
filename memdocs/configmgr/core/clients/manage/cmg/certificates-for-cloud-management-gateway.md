@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 33e4ecbac965206ec4043f5adf91d2dbfb9602d8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694940"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347204"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>クラウド管理ゲートウェイの証明書
 
@@ -238,15 +238,16 @@ CMG はクライアント認証証明書を信頼する必要があります。 
 
 #### <a name="legend-of-terms"></a>用語の凡例
 
-- *ワークグループ*:デバイスはドメインまたは Azure AD に参加していませんが、[クライアント認証証明書](#bkmk_clientauth)を持っています。  
-- *AD ドメイン参加済み*:デバイスをオンプレミスの Active Directory ドメインに参加させます。  
-- *Azure AD 参加済み*:クラウド ドメイン参加済みとも呼ばれ、デバイスを Azure Active Directory テナントに参加させます。  
-- *ハイブリッド参加済み*:デバイスを Active Directory ドメインと Azure AD テナントの両方に参加させます。  
-- *HTTP*:管理ポイント プロパティで、クライアント接続を **[HTTP]** に設定します。  
-- *HTTPS*:管理ポイント プロパティで、クライアント接続を **[HTTPS]** に設定します。  
-- *E-HTTP*:サイトのプロパティの **[クライアント コンピューターの通信方法]** タブで、サイト システムの設定を **[HTTPS または HTTP]** に設定し、 **[HTTP サイト システムには Configuration Manager によって生成された証明書を使用する]** のオプションを有効にします。 HTTP 用の管理ポイントはご自身で構成します。HTTP と HTTPS の両方の通信用の HTTP 管理ポイントは用意されています (トークン認証のシナリオ)。  
+- *ワークグループ*:デバイスはドメインまたは Azure AD に参加していませんが、[クライアント認証証明書](#bkmk_clientauth)を持っています。
+- *AD ドメイン参加済み*:デバイスをオンプレミスの Active Directory ドメインに参加させます。
+- *Azure AD 参加済み*:クラウド ドメイン参加済みとも呼ばれ、デバイスを Azure Active Directory テナントに参加させます。 詳細については、「[Azure AD 参加済みデバイス](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join)」を参照してください。
+- *ハイブリッド参加済み*:デバイスをオンプレミスの Active Directory に参加させ、Azure Active Directory に登録します。 詳細については、「[ハイブリッド Azure AD 参加済みデバイス](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)」を参照してください。
+- *HTTP*:管理ポイント プロパティで、クライアント接続を **[HTTP]** に設定します。
+- *HTTPS*:管理ポイント プロパティで、クライアント接続を **[HTTPS]** に設定します。
+- *E-HTTP*:サイトのプロパティの **[クライアント コンピューターの通信方法]** タブで、サイト システムの設定を **[HTTPS または HTTP]** に設定し、 **[HTTP サイト システムには Configuration Manager によって生成された証明書を使用する]** のオプションを有効にします。 HTTP 用の管理ポイントはご自身で構成します。HTTP と HTTPS の両方の通信用の HTTP 管理ポイントは用意されています (トークン認証のシナリオ)。
+
     > [!Note]
-    > バージョン 1906 以降では、このタブは **[通信のセキュリティ]** と呼ばれています。<!-- SCCMDocs#1645 -->  
+    > バージョン 1906 以降では、このタブは **[通信のセキュリティ]** と呼ばれています。<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a> Azure 管理証明書
 

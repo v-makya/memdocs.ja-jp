@@ -2,7 +2,7 @@
 title: Azure AD でのクライアントのインストール
 titleSuffix: Configuration Manager
 description: 認証のために Azure Active Directory を使用して、Windows 10 デバイスで Configuration Manager クライアントをインストールして割り当てる
-ms.date: 03/20/2019
+ms.date: 06/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9a55440e7ba61ec62d9f0c91c0a23b98bab5884c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1b447e5c8d34a4b8758fa0fd6109113b0675a635
+ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694110"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84347017"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>認証のため Azure AD を使用して、Configuration Manager の Windows 10 クライアントをインストールして割り当てる
 
@@ -38,9 +38,9 @@ Azure AD 認証を使用して Windows 10 デバイスで Configuration Manager 
 
 - ユーザーの要件:  
 
-  - ログオンしたユーザーは Azure AD の ID である必要があります。
+  - サインインしたユーザーは Azure AD の ID である必要があります。
 
-  - ユーザーがフェデレーション ID または同期 ID である場合、[Azure AD ユーザー探索](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)だけでなく、Configuration Manager の [Active Directory ユーザー探索](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)を使用する必要があります。 ハイブリッド ID の詳細については、「[ハイブリッド ID 導入戦略の定義](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy)」を参照してください。<!--497750-->  
+  - ユーザーがフェデレーション ID または同期 ID である場合、Configuration Manager の [Active Directory ユーザー探索](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)と [Azure AD ユーザー探索](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)の両方を構成する必要があります。 ハイブリッド ID の詳細については、「[ハイブリッド ID 導入戦略の定義](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy)」を参照してください。<!--497750-->
 
 - 管理ポイント サイト システムの役割に関する[既存の前提条件](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq)に加え、このサーバーでは **ASP.NET 4.5** も有効にします。 ASP.NET 4.5 を有効にするときに自動的に選択される他のすべてのオプションを含めます。  
 
@@ -61,26 +61,29 @@ Azure AD 認証を使用して Windows 10 デバイスで Configuration Manager 
 
 ## <a name="configure-client-settings"></a>クライアント設定を構成する
 
-これらのクライアント設定は、Windows 10 デバイスを Azure AD に参加させる場合に役立ちます。 また、インターネット ベースのクライアントで CMG とクラウド配布ポイントを使用することもできます。
+これらのクライアント設定は、Windows 10 デバイスをハイブリッド参加済みに構成するのに役立ちます。 また、インターネット ベースのクライアントで CMG とクラウド配布ポイントを使用することもできます。
 
-1. 「[クライアント設定を構成する方法](configure-client-settings.md)」の情報を使用して、 **[クラウド サービス]** セクションの次のクライアント設定を構成します。  
+1. **[クラウド サービス]** グループで、次のクライアント設定を構成します。 詳しくは、「[クライアント設定を構成する方法](configure-client-settings.md)」をご覧ください。
 
     - **クラウド配布ポイントへのアクセスを許可する**:この設定を有効にすると、インターネットベースのデバイスが、構成マネージャー クライアントのインストールに必要なコンテンツを取得できるようになります。 クラウド配布ポイントでコンテンツを使用できない場合、デバイスは CMG からコンテンツを取得できます。 クライアント インストール ブートストラップでは、CMG にフォールバックするまで 4 時間、クラウド配布ポイントを再試行します。<!--495533-->  
 
     - **[新しい Windows 10 ドメインに参加しているデバイスを自動的に Azure Active Directory に登録する]** : **[はい]** または **[いいえ]** に設定します。 既定の設定は **[はい]** です。 この動作は、Windows 10 バージョン 1709 の既定でもあります。
 
+        > [!TIP]
+        > ハイブリッド参加済みデバイスは、オンプレミスの Active Directory ドメインに参加し、Azure AD に登録されます。 詳細については、「[ハイブリッド Azure AD 参加済みデバイス](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)」を参照してください。<!-- MEMDocs#325 -->
+
     - **クライアントでクラウド管理ゲートウェイを使用できるようにする** **[はい]** (既定値)、または **[いいえ]** に設定します。  
 
 2. クライアント設定を必要なデバイスのコレクションに展開します。 ユーザー コレクションには、これらの設定を展開しないでください。
 
-デバイスが Azure AD に参加していることを確認するには、コマンド プロンプトで `dsregcmd.exe /status` を実行します。 デバイスが Azure AD に参加している場合は、結果の **[AzureAdjoined]** フィールドに **[YES]** が表示されます。
+デバイスがハイブリッド参加済みであることを確認するには、コマンド プロンプトで `dsregcmd.exe /status` を実行します。 デバイスが Azure AD 参加済みまたはハイブリッド参加済みである場合、結果の **[AzureAdjoined]** フィールドに **[YES]** と表示されます。 詳細については、[dsregcmd コマンド - デバイスの状態](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd)に関するページを参照してください。
 
 ## <a name="install-and-register-the-client-using-azure-ad-identity"></a>Azure AD の ID を使用してクライアントをインストールして登録する
 
 Azure AD の ID を使用してクライアントを手動でインストールするには、まず、「[クライアントの手動インストール方法](deploy-clients-to-windows-computers.md#BKMK_Manual)」の一般的なプロセスを確認します。
 
- > [!Note]  
- > デバイスは Azure AD に接続する際にインターネットにアクセスする必要がありますが、インターネット ベースである必要はありません。
+> [!Note]  
+> デバイスは Azure AD に接続する際にインターネットにアクセスする必要がありますが、インターネット ベースである必要はありません。
 
 次の例は、コマンド ラインの一般的な構造を示しています。`ccmsetup.exe /mp:<source management point> CCMHOSTNAME=<internet-based management point> SMSSiteCode=<site code> SMSMP=<initial management point> AADTENANTID=<Azure AD tenant identifier> AADCLIENTAPPID=<Azure AD client app identifier> AADRESOURCEURI=<Azure AD server app identifier>`
 
@@ -94,7 +97,7 @@ Azure AD の ID を使用してクライアントを手動でインストール�
 
 **SMSMP** プロパティでは、オンプレミスまたはインターネット ベースの管理ポイントを指定します。
 
-この例では、クラウド管理ゲートウェイを使用します。 サンプルの値が置き換えられます: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
+この例では、クラウド管理ゲートウェイを使用します。 サンプルの値が次のように置き換えられます。`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
 
 サイトでは、クラウド管理ゲートウェイ (CMG) に対して Azure AD の追加情報が公開されます。 Azure AD に参加しているクライアントは、ccmsetup プロセスの間に、参加している同じテナントを使用して、CMG からこの情報を取得します。 この動作により、複数の Azure AD テナントがある環境でのクライアントのインストールがさらに簡略化されます。 必要な ccmsetup プロパティは、**CCMHOSTNAME** と **SMSSiteCode** の 2 つだけです。<!--3607731-->
 

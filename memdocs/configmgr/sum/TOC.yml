@@ -68,6 +68,8 @@
       href: deploy-use/optimize-windows-10-update-delivery.md
     - name: Windows 10 更新プログラムに対する高速インストール ファイルの管理
       href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
+    - name: Surface ドライバーを管理する
+      href: deploy-use/surface-drivers.md
     - name: Windows 10 における Windows Update for Business との統合
       href: deploy-use/integrate-windows-update-for-business-windows-10.md
     - name: サード パーティ製ソフトウェアの更新プログラム

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0e90855949f5c8f249db6b2f4305c71b8ee4e768
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 3aa722415248ad9275c6ad065f0120bfe78d3ce4
+ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83824020"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84311222"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>Desktop Analytics を使用してパイロットに展開する方法
 
@@ -104,7 +104,7 @@ Windows を展開する前に、まず Configuration Manager 内にソフトウ�
 Configuration Manager で、Desktop Analytics からのデータを使用して、パイロットと運用環境への展開のためのコレクションが作成されます。 これらのコレクションは、 **[資産とコンプライアンス]** ワークスペース、 **[デバイス コレクション]** ノード、 **[展開計画]** フォルダーにあります。
 
 > [!IMPORTANT]
-> これらのコレクションは、Desktop Analytics 展開計画用に Configuration Manager によって管理されます。 手動による変更はサポートされていません。
+> これらのコレクションは、Desktop Analytics 展開計画用に Configuration Manager によって管理されます。 手動による変更はサポートされていません。 これらのコレクションの 1 つを削除する場合、Desktop Analytics は動作せず、もう一度 [Configuration Manager に接続する](connect-configmgr.md)必要があります。<!--7208090-->
 
 各展開段階の後にデバイスが正常であることを確認するには、次の手順に従って、Desktop Analytics に統合された段階的な展開を作成します。
 

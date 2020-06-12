@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91ca1e8a710e13e393af5bb3723ca1086e37887d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
+ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988593"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84331003"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>アプリ保護ポリシーを作成して割り当てる方法
 
@@ -51,7 +51,7 @@ Intune SDK を統合したアプリの一覧については、「[保護され�
 
 ## <a name="app-protection-policies-for-iosipados-and-android-apps"></a>iOS/iPadOS アプリと Android アプリ向けのアプリ保護ポリシー
 
-iOS/iPadOS アプリと Android アプリ向けのアプリ保護ポリシーを作成する場合は、最新の Intune プロセス フローに従うことで、新しいアプリ保護ポリシーが適用されます。
+iOS/iPadOS アプリと Android アプリ向けのアプリ保護ポリシーを作成する場合は、最新の Intune プロセス フローに従うことで、新しいアプリ保護ポリシーが適用されます。 Windows アプリ用のアプリ保護ポリシーの作成については、「[Intune で Windows 情報保護 (WIP) ポリシーを作成して展開する](../apps/windows-information-protection-policy-create.md)」を参照してください。
 
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>iOS/iPadOS または Android のアプリ保護ポリシーを作成する
 

@@ -2,7 +2,7 @@
 title: Windows クライアント展開の前提条件
 titleSuffix: Configuration Manager
 description: Windows コンピューターに Configuration Manager クライアントを展開するための前提条件について説明します。
-ms.date: 11/29/2019
+ms.date: 06/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1d4cd7ffe38f7191a5361ad2e89817ea80f9f093
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2aa375d0521e6088904ebe9a1f10af83f4bc261f
+ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694790"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428563"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>Configuration Manager で Windows コンピューターにクライアントを展開するための前提条件
 
@@ -28,18 +28,20 @@ Configuration Manager クライアントのハードウェアおよび OS の最
 > [!NOTE]  
 > この記事に示されているソフトウェア バージョンの番号は、必要な最小のバージョン番号のみを示します。  
 
-
 ## <a name="prerequisites-for-windows-clients"></a><a name="BKMK_prereqs_computers"></a> Windows クライアントの前提条件  
 
 Windows デバイスに Configuration Manager クライアントをいつインストールするかの前提条件を判断するには次の情報を使用します。  
 
-### <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 外部の依存関係  
+### <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 外部の依存関係
 
-|コンポーネント|[説明]|  
-|---|---|  
-|Windows インストーラー バージョン 3.1.4000.2435|Windows インストーラーの更新 (.msp) ファイルを、パッケージおよびソフトウェアの更新に使用できるようにするために必要となります。|  
-|Microsoft バックグラウンド インテリジェント転送サービス (BITS) バージョン 2.5|クライアント コンピューターと Configuration Manager サイト システムの間でデータが転送されるときのネットワーク負荷を軽減するために必要となります。 BITS は、クライアント インストール中に自動的にはダウンロードされません。 BITS がコンピューターにインストールされると通常、インストールを完了するために再起動が必要となります。<br /><br /> ほとんどのオペレーティング システムに BITS が含まれています。 そうでない場合は、Configuration Manager クライアントをインストールする前に BITS をインストールします。|  
-|Microsoft タスク スケジューラ|クライアントのインストールを完了するために、クライアントでこのサービスを有効にします。|  
+以下のコンポーネントの多くは、Windows によって既定で有効にされるサービスまたは機能です。 Configuration Manager クライアントでこれらのコンポーネントを無効にしないでください。
+
+|コンポーネント|[説明]|
+|---|---|
+|Windows インストーラー|Windows インストーラーのファイルを、アプリケーションおよびソフトウェアの更新で使用できるようにするために必要です。|
+|Microsoft バックグラウンド インテリジェント転送サービス (BITS)|クライアント コンピューターと Configuration Manager サイト システムの間でデータが転送されるときのネットワーク負荷を軽減するために必要となります。|
+|Microsoft タスク スケジューラ|Configuration Manager クライアントの正常性を定期的に評価するなどの、クライアントの操作に必要です。|
+|Microsoft Remote Differential Compression (RDC)|ネットワークのデータ転送を最適化するために必要となります。|
 |SHA-2 コード署名のサポート|バージョン 1906 以降では、クライアントには、SHA-2 コード署名アルゴリズム アルゴリズムのサポートが必要です。 詳細については、[SHA-2 コード署名のサポート](#bkmk_sha2)に関するページをご覧ください。|
 
 #### <a name="sha-2-code-signing-support"></a><a name="bkmk_sha2"></a>SHA-2 コード署名のサポート
@@ -64,18 +66,15 @@ SHA-1 アルゴリズムの弱点と業界標準への整合性のため、Micro
 
 Configuration Manager クライアントには外部の依存関係があります。 これらの依存関係は、クライアント コンピューターの OS バージョンやインストールされたソフトウェアによります。  
 
-インストールを完了するためにクライアントにこれらの依存関係が必要な場合は、それらが自動的にインストールされます。  
+インストールを完了するためにクライアントにこれらの依存関係が必要な場合は、それらが自動的にインストールされます。
 
-|コンポーネント|[説明]|  
-|---|---|  
-|Windows Update エージェント バージョン 7.0.6000.363|更新プログラムの検出および展開のサポートに Windows で必要となります。|  
-|Microsoft Core XML Services (MSXML) バージョン 6.20.5002 以降|Windows で XML ドキュメントを処理できるようにするために必要となります。|  
-|Microsoft Remote Differential Compression (RDC)|ネットワークのデータ転送を最適化するために必要となります。|  
-|Microsoft Visual C++ 2013 再頒布可能パッケージ バージョン 12.0.21005.1|クライアントのオペレーションをサポートするために必要となります。 クライアント コンピューターにこの更新プログラムをインストールする場合、インストールを完了するために再起動が必要になる可能性があります。|  
-|Microsoft Visual C++ 2005 再頒布可能バージョン 8.0.50727.42|1606 以前のバージョンの場合、Microsoft SQL Server Compact オペレーションをサポートするために必要です。|  
-|Windows Imaging APIs 6.0.6001.18000|Configuration Manager が Windows イメージ (.wim) ファイルを管理するのを許可するために必要となります。|  
-|Microsoft Policy Platform 1.2.3514.0|クライアントがコンプライアンス設定を評価するのを許可するために必要となります。|  
-|Microsoft .NET Framework バージョン 4.5.2|クライアントのオペレーションをサポートするために必要となります。 Microsoft .NET Framework バージョン 4.5 以降がインストールされていない場合は、クライアント コンピューターに自動的にインストールされます。 詳細については、「[Microsoft .NET Framework バージョン 4.5.2 に関する追加情報](#dotNet)」を参照してください。|  
+|コンポーネント|[説明]|
+|---|---|
+|Microsoft Core XML Services (MSXML) バージョン 6.20.5002 以降 (`msxml6.msi`)|Windows で XML ドキュメントを処理できるようにするために必要となります。|
+|Microsoft Visual C++ 2013 再頒布可能パッケージ バージョン 12.0.40660.0 (`vcredist_x*.exe`)|クライアントのオペレーションをサポートするために必要となります。 クライアント コンピューターにこの更新プログラムをインストールする場合、インストールを完了するために再起動が必要になる可能性があります。|<!-- SCCMDocs#1526 -->
+|Windows イメージング API 6.0.6001.18000 以降 (`wimgapi.msi`)|Configuration Manager が Windows イメージ (.wim) ファイルを管理するのを許可するために必要となります。|
+|Microsoft ポリシー プラットフォーム 1.2.3514.0 以降 (`MicrosoftPolicyPlatformSetup.msi`)|クライアントがコンプライアンス設定を評価するのを許可するために必要となります。|  
+|Microsoft .NET Framework バージョン 4.5.2 以降 (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`)|クライアントのオペレーションをサポートするために必要となります。 Microsoft .NET Framework バージョン 4.5 以降がインストールされていない場合は、クライアント コンピューターに自動的にインストールされます。 詳細については、「[Microsoft .NET Framework バージョン 4.5.2 に関する追加情報](#dotNet)」を参照してください。|  
 |Microsoft SQL Server Compact 4.0 SP1 コンポーネント|クライアント オペレーションに関連した情報を保存するために必要となります。|  
 
 > [!Important]

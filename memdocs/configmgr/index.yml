@@ -3,12 +3,12 @@ title: Microsoft Endpoint Configuration Manager のドキュメント
 summary: Microsoft Endpoint Manager の次のコンポーネントに関する公式製品ドキュメントです。Configuration Manager、共同管理、デスクトップ分析
 metadata:
   ms.topic: hub-page
-  ms.openlocfilehash: 0f8c1c2b9618b841053df58d580d8cee4d0e88fc
-  ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+  ms.openlocfilehash: f3251366204ef8954b87bcd630117f341844554b
+  ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84311169"
+  ms.lasthandoff: 06/08/2020
+  ms.locfileid: "84506232"
 highlightedContent:
   items:
   - title: 新機能
@@ -162,7 +162,7 @@ conceptualContent:
     - text: 構成アイテムの作成
       url: ./compliance/deploy-use/create-configuration-items.md
       itemType: how-to-guide
-    - text: Microsoft Edge の設定
+    - text: Microsoft Edge のレガシ設定
       url: ./compliance/deploy-use/browser-profiles.md
       itemType: how-to-guide
     - text: Windows のエディションのアップグレード
