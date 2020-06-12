@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b447e5c8d34a4b8758fa0fd6109113b0675a635
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 39d6bf22cb24492a0f4e3f59313184ce522b5d09
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347017"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455006"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>認証のため Azure AD を使用して、Configuration Manager の Windows 10 クライアントをインストールして割り当てる
 
@@ -95,7 +95,7 @@ Azure AD の ID を使用してクライアントを手動でインストール�
 - クラウド管理ゲートウェイ
 - インターネット ベースの管理ポイント
 
-**SMSMP** プロパティでは、オンプレミスまたはインターネット ベースの管理ポイントを指定します。
+**SMSMP** プロパティでは、オンプレミスの管理ポイントを指定します。 必須ではありません。 オンプレミスの管理ポイントを見つけることができるように、イントラネットにローミングする Azure AD に参加しているデバイスを使用することをお勧めします。
 
 この例では、クラウド管理ゲートウェイを使用します。 サンプルの値が次のように置き換えられます。`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
 

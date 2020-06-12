@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 7ddcb1ade6f39d1fc2cb824470c33d39496bcbf1
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: da8c52dabf27ddf0992d9f405400b3ac984f2ecc
+ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428684"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84455125"
 ---
 # <a name="endpoint-analytics-preview"></a><a name="bkmk_uea"></a> エンドポイント分析のプレビュー
 
@@ -56,7 +56,7 @@ ms.locfileid: "84428684"
 
 このプレビューでは、Configuration Manager または Microsoft Intune を使用してデバイスを登録できます。 
 
-Intune を使用してデバイスを登録するには、このプレビューでは次のものが必要です。
+#### <a name="to-enroll-devices-via-intune-this-preview-requires"></a><a name="bkmk_uea__intune_prereq"></a> Intune を使用してデバイスを登録するには、このプレビューでは次のものが必要です。
 - Windows 10 を稼働している Intune に登録されたデバイス
 - スタートアップ パフォーマンスの分析情報は、Windows 10 Enterprise のバージョン 1903 以降を実行しているデバイスでのみ使用できます (Home および Pro エディションは現在サポートされていません)。また、デバイスが Azure AD または Hybrid Azure AD に参加している必要があります。 ワークプレースに参加しているコンピューターは現在サポートされていません。
 - デバイスから Microsoft パブリック クラウドへのネットワーク接続。 詳しくは、「[エンドポイント](#bkmk_uea_endpoints)」をご覧ください。
@@ -64,11 +64,12 @@ Intune を使用してデバイスを登録するには、このプレビュー�
    - **[開始]** をクリックすると、ご自分が Microsoft Intune テナントをプロビジョニングしたときに選択した場所の外部に顧客データが保存される可能性があることに同意し、承認したものと見なされます。
    - データ収集の **[開始]** をクリックすると、他の読み取り専用ロールでデータを表示できるようになります。
 
-Configuration Manager を使用してデバイスを登録するには、このプレビューでは次のものが必要です。
+#### <a name="to-enroll-devices-via-configuration-manager-this-preview-requires"></a><a name="bkmk_uea__cm_prereq"></a> Configuration Manager を使用してデバイスを登録するには、このプレビューでは次のものが必要です。
 - Configuration Manager バージョン 2002 以降
 - バージョン 2002 以降にアップグレードされたクライアント
 - [Microsoft Endpoint Manager テナントのアタッチ](https://docs.microsoft.com/mem/configmgr/tenant-attach/device-sync-actions)。北米またはヨーロッパの Azure テナントの場所で有効になっています (間もなく他のリージョンに展開される予定です)
 
+#### <a name="proactive-remediation-scripting-requires"></a><a name="bkmk_uea__prs_prereq"></a> プロアクティブな修復スクリプトには以下が必要です。
 Intune または Configuration Manager を使用してデバイスを登録するかどうかは、[**プロアクティブな修復スクリプト**](#bkmk_uea_prs)に次の要件があります。
 - デバイスが Azure AD または Hybrid Azure AD に参加している必要があり、次のいずれかの条件を満たしている必要があります。
 - Intune によって管理される Windows 10 Enterprise、Professional、または Education デバイス
