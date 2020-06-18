@@ -141,8 +141,12 @@
               href: configure-microsoft-launcher.md
             - name: Microsoft Edge の構成
               href: manage-microsoft-edge.md
+            - name: Office の構成
+              href: manage-microsoft-office.md
             - name: Outlook の構成
               href: app-configuration-policies-outlook.md
+            - name: Microsoft Teams の構成
+              href: manage-microsoft-teams.md
             - name: Android 用の Google Chrome の構成
               href: apps-configure-chrome-android.md
             - name: Android エンタープライズ用の VPN の構成
