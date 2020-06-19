@@ -19,7 +19,7 @@ ms.locfileid: "82078432"
 ---
 # <a name="manage-applicability-rules-in-updates-publisher"></a>Updates Publisher 内で適用性ルールを管理する
 
-*適用対象: System Center Updates Publisher*
+*適用対象:System Center Updates Publisher*
 
 Updates Publisher では、適用性ルールは、デバイスが更新プログラムをインストールする前に満たす必要がある要件を定義します。 ルールは、コンピューターに更新プログラムがインストールされているかどうかを判別するためにも使用されます。 複数の部分で構成されている複雑な適用性ルールは、ルール セットと呼ばれます。
 

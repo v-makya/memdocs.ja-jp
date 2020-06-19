@@ -40,7 +40,7 @@ ms.locfileid: "83268880"
 
 ## <a name="process"></a>プロセス
 
-1. Microsoft 365 デバイス管理で、[グローバル管理者](https://aka.ms/desktopanalytics)ロールを持つユーザーとして、**Desktop Analytics ポータル**を開きます。
+1. Microsoft 365 デバイス管理で、**グローバル管理者**ロールを持つユーザーとして、[Desktop Analytics ポータル](https://aka.ms/desktopanalytics)を開きます。
 
 1. **[グローバル設定]** メニューで、 **[接続済みサービス]** を選択します。 [デバイスの登録] セクションで、 **[リセット]** オプションを選択します。
 
@@ -48,6 +48,6 @@ ms.locfileid: "83268880"
 
 ## <a name="next-steps"></a>次のステップ
 
-リセットしたら、ページを更新し、オンボード プロセスを再実行します。 詳しくは、「[Desktop Analytics を設定する方法](set-up.md)」をご覧ください。
+リセットしたら、ページを更新し、オンボード プロセスを再実行します。 詳しくは、「[Desktop Analytics をセットアップする方法](set-up.md)」をご覧ください。
 
 このプロセス中に問題が発生した場合は、Microsoft サポートにお問い合わせください。
