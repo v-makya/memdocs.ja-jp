@@ -83,7 +83,7 @@
 ### [ポータル サイトを使用してデバイスをリセットするとどうなるか](effects-of-device-reset-company-portal-ios.md)
 ### [デバイスの登録解除](unenroll-your-device-from-intune-ios.md)
 #### [デバイスの登録を解除した場合の動作](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
-### [デバイスを手動で同期する](sync-your-device-manually-ios.md)
+### [iOS デバイスを手動で同期する](sync-your-device-manually-ios.md)
 
 ### [iOS に関する一般的な問題の解決](troubleshoot-your-device-iOS.md)
 #### [セキュリティを侵害された iOS デバイスを再接続する](how-to-reconnect-a-compromised-ios-device.md)
@@ -115,6 +115,7 @@
 ### [macOS デバイスを登録する](enroll-your-device-in-intune-macos-cp.md)
 ### [組織で提供される macOS デバイスを登録する](enroll-company-device-macos.md)  
 ### [macOS デバイスの登録解除](unenroll-your-device-from-intune-macos.md)  
+### [macOS デバイスを手動で同期する](sync-your-device-manually-macos.md)
 ### [macOS に関する一般的な問題の解決](troubleshoot-your-device-macos.md)
 #### [使用しているバージョンの macOS がまだサポートされていない](your-macos-version-isnt-yet-supported.md)
 #### [macOS デバイスを更新する](you-need-to-update-your-macos-device.md)
