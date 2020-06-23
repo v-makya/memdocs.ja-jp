@@ -59,7 +59,7 @@ Configuration Manager で Linux および UNIX サーバーを管理する場合
 
  たとえば、リモート コントロール設定を有効にし、構成するカスタムのクライアント デバイス設定は、Linux サーバーと UNIX サーバーでは無視されます。Linux と UNIX のクライアントはリモート コントロールをサポートしないためです。  
 
-##  <a name="computer-policy-for-linux-and-unix-servers"></a><a name="BKMK_PolicyforLnU"> Linux および UNIX サーバーのコンピューター ポリシー  
+##  <a name="computer-policy-for-linux-and-unix-servers"></a><a name="BKMK_PolicyforLnU"></a> Linux および UNIX サーバーのコンピューター ポリシー  
  Linux および UNIX サーバーのクライアントは、そのサイトを定期的にポーリングしてコンピューター ポリシーを確認し、要求された構成に関する詳細情報を取得して、展開をチェックします。  
 
  Linux または UNIX サーバーのクライアントにコンピューター ポリシーのポーリングを直ちに実行するように強制することもできます。 それを実行するには、サーバーで **ルート** 資格情報を使用して、 **/opt/microsoft/configmgr/bin/ccmexec -rs policy**コマンドを実行します。  
