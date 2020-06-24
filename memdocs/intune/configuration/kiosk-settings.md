@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9be644a47a361cf29e7b7132b2c87a4921553ea
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f58e457a5868053a94e1f2c1185bbae0e4b69327
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989437"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093069"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Intune を使用して専用キオスクとして実行するための Windows 10 および Windows Holographic for Business デバイスの設定
 
@@ -31,7 +31,7 @@ Windows 10 デバイスで Intune を使用して、専用デバイスとも呼�
 - Windows 10 以降
 - Windows Holographic for Business
 
-他のプラットフォーム用のキオスク プロファイルを作成するには、[Android デバイス管理者](device-restrictions-android.md#kiosk)、[Android エンタープライズ](device-restrictions-android-for-work.md#dedicated-devices)、[iOS または iPadOS](device-restrictions-ios.md#kiosk) を参照してください。
+他のプラットフォーム用のキオスク プロファイルを作成するには、[Android デバイス管理者](device-restrictions-android.md#kiosk)、[Android エンタープライズ](device-restrictions-android-for-work.md#device-experience)、[iOS または iPadOS](device-restrictions-ios.md#kiosk) を参照してください。
 
 Intune では、デバイスごとに 1 つのキオスク プロファイルをサポートします。 1 台のデバイスに複数のキオスク プロファイルが必要な場合は、[カスタム OMA-URI](custom-settings-windows-10.md) を使用することができます。
 
@@ -89,6 +89,6 @@ Intune では、"構成プロファイル" を使用して、お客様の組織�
 次のプラットフォームを実行するデバイス用のキオスク プロファイルを作成できます。
 
 - [Android デバイス管理者](device-restrictions-android.md#kiosk)
-- [Android エンタープライズ](device-restrictions-android-for-work.md#dedicated-devices)
+- [Android エンタープライズ](device-restrictions-android-for-work.md#device-experience)
 - [Windows 10 以降](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

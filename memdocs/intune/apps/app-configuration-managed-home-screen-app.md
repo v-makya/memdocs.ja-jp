@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b2c804618081a21aaf9dfd70b92d65fc14a7cc7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3bcb9d86cf413407bc1e0812be4b0c9e17d0f88d
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988829"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093221"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Android Enterprise 用 Microsoft Managed Home Screen アプリを構成する
 
@@ -34,7 +34,7 @@ Managed Home Screen は、Intune 経由で登録され、マルチアプリ キ�
 通常、デバイス構成から設定が使用できる場合は、ここで設定を構成します。 これにより時間が節約され、エラーを最小限にし、Intune サポート エクスペリエンスの向上が可能になります。 ただし、Managed Home Screen の設定の中には、現在、Intune コンソールの **[アプリ構成ポリシー]** ウィンドウ経由でしか利用できないものがあります。 このドキュメントを使用して、構成デザイナーまたは JSON スクリプトのいずれかを使用して、さまざまな設定を構成する方法について学習します。 
 
 > [!NOTE]
-> 現在、 **[アプリ]** と **[デバイス構成]** を使用して許可リストに登録されたアプリケーションとピン留めされた Web リンクを設定することが可能であり、また推奨されます。 Managed Home Screen に影響を与える**デバイス構成**で使用可能な設定の完全なリストについては、「[専用のデバイス設定](../configuration/device-restrictions-android-for-work.md#dedicated-devices)」を参照してください。  
+> 現在、 **[アプリ]** と **[デバイス構成]** を使用して許可リストに登録されたアプリケーションとピン留めされた Web リンクを設定することが可能であり、また推奨されます。 Managed Home Screen に影響を与える**デバイス構成**で使用可能な設定の完全なリストについては、「[専用のデバイス設定](../configuration/device-restrictions-android-for-work.md#device-experience)」を参照してください。  
 
 最初に、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) に移動し、 **[アプリ]**  >  **[アプリ構成ポリシー]** を選択します。 **Android** を実行している**マネージド デバイス**に構成ポリシーを追加し、関連付けられているアプリとして **[Managed Home Screen]** を選択します。 **[構成設定]** をクリックして、利用可能なさまざまな Managed Home Screen 設定を構成します。 
 
@@ -382,7 +382,7 @@ JSON データを入力して、Managed Home Screen で使用可能なすべて�
 マネージド ホーム スクリーン アプリで、Google の Android デバイス ポリシー アプリにアクセスできるようになりました。 マネージド ホーム スクリーン アプリは、マルチアプリ キオスク モードを使用する Android Enterprise (AE) 専用デバイスとして Intune に登録されているデバイスで使用されるカスタム ランチャーです。 Android デバイス ポリシー アプリにアクセスしたり、ユーザーを Android デバイス ポリシー アプリに案内したりして、サポートとデバッグを行うことができます。 この起動機能は、デバイスが登録され、マネージド ホーム スクリーンにロックされているときに使用できます。 この機能を使用するために追加のインストールは必要ありません。
 
 ## <a name="managed-home-screen-debug-screen"></a>Managed Home Screen のデバッグ画面
-Managed Home Screen のデバッグ画面にアクセスするには、デバッグ画面が表示されるまで**戻る**ボタンをクリックします (**戻る**ボタンを 15 回以上クリックします)。 このデバッグ画面から、Android デバイス ポリシー アプリケーションを起動したり、ログの表示とアップロードを行ったり、キオスク モードを一時的に停止してデバイスを更新したりできます。 キオスク モードの一時停止について詳しくは、Android Enterprise の「[専用デバイスの設定](../configuration/device-restrictions-android-for-work.md#dedicated-devices)」に記載されている **[キオスク モードを終了する]** 項目をご覧ください。 Managed Home Screen のデバッグ画面に簡単にアクセスできるようにする場合は、アプリケーション構成ポリシーを使用して **[Enable easy access debug menu (簡易アクセス デバッグ メニューの有効化)]** を `True` に設定できます。 
+Managed Home Screen のデバッグ画面にアクセスするには、デバッグ画面が表示されるまで**戻る**ボタンをクリックします (**戻る**ボタンを 15 回以上クリックします)。 このデバッグ画面から、Android デバイス ポリシー アプリケーションを起動したり、ログの表示とアップロードを行ったり、キオスク モードを一時的に停止してデバイスを更新したりできます。 キオスク モードの一時停止について詳しくは、Android Enterprise の「[専用デバイスの設定](../configuration/device-restrictions-android-for-work.md#device-experience)」に記載されている **[キオスク モードを終了する]** 項目をご覧ください。 Managed Home Screen のデバッグ画面に簡単にアクセスできるようにする場合は、アプリケーション構成ポリシーを使用して **[Enable easy access debug menu (簡易アクセス デバッグ メニューの有効化)]** を `True` に設定できます。 
 
 ## <a name="next-steps"></a>次のステップ
 

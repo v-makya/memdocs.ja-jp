@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae89a939e35f68f55d2e63e7495a9b743cc0fa34
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: bc3ef945351529ce0db3e40108fef135414c4fab
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791762"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093614"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Intune で Windows 10 以降のデバイスをキオスクとして実行するための設定
 
@@ -213,6 +213,6 @@ Intune での Windows キオスク機能の詳細については、[キオスク
 
 [プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
 
-また、[Android](device-restrictions-android.md#kiosk)、[Android エンタープライズ](device-restrictions-android-for-work.md#dedicated-devices)、[Windows Holographic for Business](kiosk-settings-holographic.md) デバイス用のキオスク プロファイルを作成することもできます。
+また、[Android](device-restrictions-android.md#kiosk)、[Android エンタープライズ](device-restrictions-android-for-work.md#device-experience)、[Windows Holographic for Business](kiosk-settings-holographic.md) デバイス用のキオスク プロファイルを作成することもできます。
 
 また、Windows のガイダンスで「[シングル アプリ キオスクの設定](https://docs.microsoft.com/windows/configuration/kiosk-single-app)」または「[複数アプリ キオスクの設定](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps)」も参照してください。

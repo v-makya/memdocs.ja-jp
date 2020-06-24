@@ -9,17 +9,18 @@ search.appverid:
 audience: ITPro
 ms.date: 4/17/2020
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 8443ca01a0ca1647e8069fdccf1d71aef74c23d8
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7f4d3f8193eeaf9597d56c8cf1cd999147915e61
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989473"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531572"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Intune におけるアプリ保護ポリシーの展開のトラブルシューティング
 

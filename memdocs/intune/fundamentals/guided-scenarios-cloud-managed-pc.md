@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: dagerrit
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec125e1ab58e733707adb3d9f4df304e21ffabcf
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: c43b74b6ca20fa3f140ad688be49daa928c54b5f
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764137"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264041"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>ガイド付きシナリオ - クラウド マネージド モダン デスクトップ
 
@@ -126,5 +127,5 @@ Windows Autopilot では新しいデバイスの構成が自動化されてい�
 
 ## <a name="next-steps"></a>次のステップ
 
-- Microsoft Defender Advanced Threat Detection を使用する場合は、[Intune コンプライアンス ポリシー](../protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy)を作成して、Defender 脅威分析がコンプライアンスを満たすようにする必要があります。
+- Microsoft Defender Advanced Threat Detection を使用する場合は、[Intune コンプライアンス ポリシー](../protect/advanced-threat-protection.md#create-and-assign-compliance-policy-to-set-device-risk-level)を作成して、Defender 脅威分析がコンプライアンスを満たすようにする必要があります。
 - デバイスが Intune コンプライアンスを満たしていない場合は、[デバイスベースの条件付きアクセス ポリシー](../protect/advanced-threat-protection.md#create-a-conditional-access-policy)を作成してアクセスをブロックします。

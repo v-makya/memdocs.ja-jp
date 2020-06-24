@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 05/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: ''
@@ -15,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77c663936ca92b1110d288ad04284af696f9a2af
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 72b0ef53f0451314ef121f82524697ddfdc38cd3
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990242"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531725"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>更新プログラム チャネルとターゲット バージョンの設定を使用して、Microsoft Intune 管理用テンプレートで Office 365 を更新する
 

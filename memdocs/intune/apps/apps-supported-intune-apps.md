@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/30/2020
+ms.date: 06/19/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a8c73b85ed4e21b543b691a18ae90747a747388
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e6291aa606fb6125eec5c5b6cab56315953d2d5b
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986554"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107555"
 ---
 # <a name="microsoft-intune-protected-apps"></a>保護されている Microsoft Intune アプリ  
 
@@ -105,7 +105,7 @@ ms.locfileid: "83986554"
 | **Intune 用 Smartcrypt**<p><img alt="Partner app - Smartcrypt for Intune icon" src="./media/apps-supported-intune-apps/icon-p-smartcrypt.png" width="100"> | Intune 用 Smartcrypt は、Intune 環境で作業している既存の PKWARE のお客様向けに設計されています。 Smartcrypt を使用すると、外出先で作業を行うことができます。 高速で安全で使いやすく、どこからでも生産性を高めることができます。 Smartcrypt がインストールされているかどうかわからない場合は、会社の IT 管理者にお問い合わせください。 Smartcrypt を使用すると、次のことができます。Smartkeys を使用したファイルの暗号化と暗号化解除、X.509 デジタル証明書によるアーカイブの暗号化解除、Smartkeys の作成と管理、X.509 デジタル証明書を使用したデータのデジタル署名と認証、強力なパスフレーズ暗号化によるファイルの暗号化と復号化暗号化 (AE2 を含む)、既存の Active Directory 資格情報を使用したログイン、暗号化されていない zip アーカイブの作成と表示。 Smartcrypt は、その中核にデータが格納されるため、データの使用、共有、保存のすべてにわたって脆弱性が排除されます。 PKWARE は、約 30 年間、3 万を超える企業ユーザーと 200 を超える政府機関に暗号化と圧縮のソフトウェアを提供しています。 iOS/iPadOS、Android で利用できます。 | [App Store のリンク (iOS)](https://apps.apple.com/app/smartcrypt-for-intune/id1489232256) |  
 | **Speaking Email**<p><img alt="Partner app - Speaking Email icon" src="./media/apps-supported-intune-apps/icon-p-speaking-email-icon.png" width="100">   | ご自分のメールを移動中に読み上げさせることで、毎日の時間を節約できます。 運転中でも安全に使えるよう設計された音声コマンドやシンプルなジェスチャを使って、移動中にアーカイブしたり、フラグを設定したり、または返信したりできます。<p>コンテンツのスマート検出により、免責事項や返信ヘッダー、メールの署名はスキップされ、余計なものを除いた内容だけが読み上げられます。<p>従業員は Intune 経由でサインインして、Office 365 Exchange メールにアクセスできます。 | [App Store のリンク (iOS)](https://itunes.apple.com/app/apple-store/id991406423?ct=intune) | 
 | **Synergi Life**<p><img alt="Partner app - Synergi Life icon" src="./media/apps-supported-intune-apps/icon-p-synergi-life.png" width="100"> | Synergi Life の拡張機能である Synergi Life Mobile App を使うと、時間と場所を選ばずに所見とインシデント レポートを簡単に作成し、各自のスマートフォンを使ってスナップショットの取得と音声録音を行えます。<p>Synergi Life (旧称 Synergi) はリクスと QHSE 管理のための包括的なビジネス ソリューションです。あらゆる不適合、インシデント、リスク、リスク分析、監査、評価、および改善提案を管理できます。<p>Synergi Life Mobile App を利用するには、Synergi Life のリクスと QHSE 管理システムのライセンスを持つユーザーであり、かつ必要なバックエンドのライセンスされているソフトウェアおよびサービスを持っている必要があります。 | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.dnv.mobilesolutions.synergimobile.uibase)、[App Store のリンク (iOS)](https://itunes.apple.com/us/app/synergi-life/id641181737)  |  
-| **Tact for Intune**<p><img alt="Partner app - Tact for Intune icon" src="./media/apps-supported-intune-apps/icon-p-tact-icon.png" width="100"> | Tact for Intune は、Salesforce.com、電子メール、カレンダー、マップ、その他の日常的ツールからのデータを統合し、人間にとって便利な、会話式の操作性を与える初めての CRM および販売向けアシスタントです。 AI を備えた Tact では、営業担当者の管理作業が自動化され、CRM とその他のデータ ソースが統合されて 1 つの画面に表示され、情報を各販売員に与えることでパフォーマンスの高い動作がもたらされます。 企業は Tact for Intune を利用することで販売員の生産性を上げ、顧客データを充実させて CRM の導入を増やしながら、同時にアプリケーション層に企業クラスのセキュリティを確保できます。 | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.tactile.tact)、[App Store のリンク (iOS)](https://apps.apple.com/us/app/tact-for-intune/id1477117416?mt=8)  |  
+| **Tact for Intune**<p><img alt="Partner app - Tact for Intune icon" src="./media/apps-supported-intune-apps/icon-p-tact-icon.png" width="100"> | Tact for Intune は、Salesforce.com、電子メール、カレンダー、マップ、その他の日常的ツールからのデータを統合し、人間にとって便利な、会話式の操作性を与える初めての CRM および販売向けアシスタントです。 AI を備えた Tact では、営業担当者の管理作業が自動化され、CRM とその他のデータ ソースが統合されて 1 つの画面に表示され、情報を各販売員に与えることでパフォーマンスの高い動作がもたらされます。 企業は Tact for Intune を利用することで販売員の生産性を上げ、顧客データを充実させて CRM の導入を増やしながら、同時にアプリケーション層に企業クラスのセキュリティを確保できます。 | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.tactile.tact.intune)、[App Store のリンク (iOS)](https://apps.apple.com/us/app/tact-for-intune/id1477117416?mt=8)  |  
 | **Vera for Intune**<p><img alt="Partner app - Vera for Intune icon" src="./media/apps-supported-intune-apps/icon-p-vera.png" width="100"> | Vera for Intune を使うと、ご自分のモバイル デバイスから直接、ファイルやメールの添付ファイルに対する暗号化、追跡、アクセスの取り消しを行えます。 使うアプリに関係なく、最も重要な情報を保護します。Microsoft、Box、Google、Dropbox などを使えます。 | [App Store のリンク (iOS)](https://itunes.apple.com/us/app/vera-for-intune/id1235182010?mt=8) |  
 | **Workspace ONE Send**<p><img alt="Partner app - Intune partner app - Workspace ONE Send icon" src="./media/apps-supported-intune-apps/icon-p-workspace-one-send-icon.png" width="100"> | Workspace ONE Send には、VMware の仕事効率化アプリを使って Office 365 アプリを管理するために Microsoft Intune を使っているお客様が、シームレスな編集と送信を行うための機能が用意されています。 | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.airwatch.vmsend)、<br>[App Store のリンク (iOS)](https://itunes.apple.com/us/app/vmware-workspace-one-send/id1336333505?mt=8) |
 | **Zero - email for attorneys**<p><img alt="Partner app - Zero - email for attorneys icon" src="./media/apps-supported-intune-apps/icon-p-zero.png" width="100"> | ZERØ の電子メール クライアントは、弁護士の作業量を減らし、収入を増やすよう設計されています。 ZERØ を使用すると、弁護士は次のことができます。<ul><li>メッセージのファイル先を予測して、ドキュメント管理システムまたは対応する電子メール フォルダーに格納します。</li><li>重要度や送信者などのパラメーターに応じて受信トレイを並べ替えます。</li><li>間違っている可能性がある送信先にメッセージを送信しようとしている場合に、リアルタイムで警告を送信します。</li><li>モバイル デバイスのクライアント メッセージでのやり取りに費やした時間を自動的かつ同時に取得します。</li></ul> | [App Store のリンク (iOS)](https://apps.apple.com/app/zero-email-for-attorneys/id1216474378) |  
