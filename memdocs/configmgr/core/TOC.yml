@@ -584,6 +584,8 @@
               href: servers/manage/introduction-to-reporting.md
             - name: Power BI Report Server との統合
               href: servers/manage/powerbi-report-server.md
+            - name: Power BI サンプル レポートのインストール
+              href: servers/manage/powerbi-sample-reports.md
             - name: レポートの計画
               items:
                 - name: レポートの計画
