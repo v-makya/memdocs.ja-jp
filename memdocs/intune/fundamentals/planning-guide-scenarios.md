@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d277b47b2d753b5068e871fe33ce0cab48cfb1e4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: f4e98a9c25121bacf1759dc73464e3a51dfe61d9
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357364"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795688"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>モバイル デバイス管理のユース ケース シナリオを特定する
 
@@ -60,11 +60,10 @@ ms.locfileid: "79357364"
 | BYOD | インフォメーション ワーカー |           
 | BYOD | 役員 |
 
-[上記の表のテンプレートをダウンロード](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)して、お客様の組織のユース ケース シナリオとサブ ユース ケース シナリオを入力できます。
 
 ## <a name="organizational-groups-for-your-scenarios"></a>シナリオ用の組織のグループ
 
-次に、各ユース ケースとサブ ユース ケース シナリオに関連付けられている組織グループを特定する必要があります。 例:
+次に、各ユース ケースとサブ ユース ケース シナリオに関連付けられている組織グループを特定する必要があります。 次に例を示します。
 
 | **ユース ケース** | **サブ ユース ケース** | **組織グループ** |
 |:---:|:---:|:---:|

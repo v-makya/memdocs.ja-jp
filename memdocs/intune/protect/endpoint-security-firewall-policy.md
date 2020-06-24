@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: f98d7a30d219aee63e38a63a74d8f1713deb198a
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: aa518036aa99d5de003fbc56f99748267f3cc87b
+ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431619"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84776873"
 ---
 # <a name="firewall-policy-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティのファイアウォール ポリシー
 
-Intune のエンドポイント セキュリティのファイアウォール ポリシーは、macOS や Windows 10 が動作しているデバイスに組み込まれているファイアウォールを構成する場合に使用します。 組み込みのファイアウォールには、Windows デバイス向けの BitLocker や macOS 向けの FileVault があります。
+Intune のエンドポイント セキュリティのファイアウォール ポリシーは、macOS や Windows 10 が動作しているデバイスに組み込まれているファイアウォールを構成する場合に使用します。
 
 デバイス構成の Endpoint Protection プロファイルを使用して同じファイアウォール設定を構成できますが、デバイス構成プロファイルには、追加の設定カテゴリがあります。 これらの追加の設定はファイアウォールとは関係がなく、環境に合わせてファイアウォール設定のみを構成するタスクが複雑になる可能性があります。
 

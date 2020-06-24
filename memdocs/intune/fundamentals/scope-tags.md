@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c447c9187696a8e918886117847dde6421b4014
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 665b88932c88f523b19fec596bfd969bb93ecdd4
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990746"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721909"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>分散 IT にロールベースのアクセス制御 (RBAC) とスコープのタグを使用する
 
@@ -81,7 +81,6 @@ ms.locfileid: "83990746"
 - テナントが複数のバージョンのオブジェクト (ロールの割り当て、アプリなど) を持つことができる場合は、Intune オブジェクトの種類にスコープ タグを割り当てることができます。
   次の Intune オブジェクトはこの規則の例外であり、現在スコープ タグをサポートしていません。
     - Windows ESP プロファイル
-    - デバイス カテゴリ
     - 登録の制限
     - Corp デバイス識別子
     - Autopilot デバイス
