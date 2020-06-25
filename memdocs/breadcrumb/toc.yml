@@ -75,3 +75,6 @@
                 - name: テナントのアタッチ
                   tocHref: /mem/configmgr/tenant-attach/
                   topicHref: /mem/configmgr/tenant-attach/
+            - name: エンドポイント分析
+              tocHref: /mem/analytics/
+              topicHref: /mem/analytics/
