@@ -10,12 +10,12 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d694f9985e6d1e5118f2620e5cbd556de249788a
-ms.sourcegitcommit: 568f8f8c19fafdd0f4352d0682f1ca7a4d665d25
+ms.openlocfilehash: 31f9b1cb083400abd36858a177e87804a916362c
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81771326"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746517"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>Configuration Manager ドキュメントの使用方法
 
@@ -36,7 +36,7 @@ ms.locfileid: "81771326"
 
 - 任意の検索エンジンで Configuration Manager のコンテンツを見つけるとき、検索キーワードと共に `ConfigMgr` を含めます。
 
-  - `docs.microsoft.com/configmgr` からの結果で Configuration Manager Current Branch を探します。 `docs.microsoft.com/previous-versions` の結果は、古い製品バージョンを対象としています。
+  - `docs.microsoft.com/mem/configmgr` からの結果で Configuration Manager Current Branch を探します。 `docs.microsoft.com/previous-versions` の結果は、古い製品バージョンを対象としています。
 
   - さらに検索結果を現在のコンテンツ ライブラリに絞るには、`site:docs.microsoft.com` を含め、検索エンジンの範囲を指定します。
 
