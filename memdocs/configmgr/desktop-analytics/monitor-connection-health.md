@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fdc15860f2d093a4c9c61b787ba0b780051d3f3d
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864873"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746563"
 ---
 # <a name="monitor-connection-health"></a>接続の正常性の監視
 
@@ -217,7 +217,7 @@ Appraiser は、[互換性に関する更新プログラム](enroll-devices.md#u
 
 - デバイスのアプリの互換性データ コレクションを構成できません (SetRequestAllAppraiserVersions)。 ログで例外の詳細を確認してください  
 
-- RequestAllAppraiserVersions をレジストリ キー `HKLM:\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\AppCompatFlags\Appraiser` に書き込めません。 アクセス許可を確認してください  
+- RequestAllAppraiserVersions をレジストリ キー `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Appraiser` に書き込めません。 アクセス許可を確認してください  
 
 このレジストリ キーに対するアクセス許可を確認してください。 構成マネージャー クライアントで設定できるように、ローカル システム アカウントでこのキーにアクセスできることを確認します。  
 
@@ -343,7 +343,7 @@ DisableEnterpriseAuthProxy 設定は、Windows 7 では既定で有効になっ�
 
 このプロパティには、次のエラーが表示される場合があります。
 
-- 認証プロキシが有効になっています。 `HKLM\Software\Policies\Microsoft\Windows\DataCollection` で DisableEnterpriseAuthProxy を 0 に設定してください
+- 認証プロキシが有効になっています。 `HKLM:\Software\Policies\Microsoft\Windows\DataCollection` で DisableEnterpriseAuthProxy を 0 に設定してください
 
 - 認証プロキシの状態を確認できません。 ログで例外の詳細を確認してください
 
