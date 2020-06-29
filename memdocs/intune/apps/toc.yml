@@ -135,8 +135,6 @@
               href: app-configuration-managed-home-screen-app.md
             - name: ポータル サイトの構成
               href: company-portal-app.md
-            - name: Managed Browser の構成
-              href: app-configuration-managed-browser.md
             - name: Microsoft Launcher の構成
               href: configure-microsoft-launcher.md
             - name: Microsoft Edge の構成
