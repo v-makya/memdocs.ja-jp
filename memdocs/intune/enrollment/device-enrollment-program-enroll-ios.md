@@ -1,7 +1,7 @@
 ---
-title: iOS/iPadOS デバイスの登録 - Device Enrollment Program
+title: iOS/iPadOS デバイスの登録 - 自動デバイス登録
 titleSuffix: Microsoft Intune
-description: Device Enrollment Program を使用して企業が所有する iOS/iPadOS デバイスを登録する方法を説明します。
+description: Automated Device Enrollment を使用して企業が所有する iOS/iPadOS デバイスを登録する方法を説明します。
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2db33dbe94ff5aef62563531149250fbd4268acc
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5cb6b4df9e3834ce447b176b5dfab158deb0d543
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986991"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094089"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Apple の自動デバイス登録を使用して iOS または iPadOS デバイスを自動登録する
 
 > [!IMPORTANT]
 > Apple は、Apple Device Enrollment Program (DEP) の使用から Apple の自動デバイス登録 (ADE) に最近変更しました。 Intune では、それを反映するために Intune のユーザー インターフェイスを更新しています。 このような変更が完了するまで、Intune ポータルでは *[Device Enrollment Program]* が引き続き表示されます。 表示される場所では、自動デバイス登録が使用されるようになっています。
 
-Apple の[自動デバイス登録 (ADE)](https://deploy.apple.com) (以前の Device Enrollment Program) を使用して購入した iOS または iPadOS デバイスを登録するように Intune を設定できます。 自動デバイス登録によって、多数のデバイスをそれに触れることなく登録できます。 iPhone、iPad、MacBook などのデバイスは、ユーザーに直接配布できます。 ユーザーがデバイスの電源をオンにすると、Apple 製品の一般的な out-of-box-experience が含まれるセットアップ アシスタントが構成済み設定で実行され、デバイスが管理対象として登録されます。
+Apple の [Automated Device Enrollment (ADE)](https://deploy.apple.com) を使用して購入した iOS/iPadOS デバイスを登録するように Intune を設定できます。 自動デバイス登録によって、多数のデバイスをそれに触れることなく登録できます。 iPhone、iPad、MacBook などのデバイスは、ユーザーに直接配布できます。 ユーザーがデバイスの電源をオンにすると、Apple 製品の一般的な out-of-box-experience が含まれるセットアップ アシスタントが構成済み設定で実行され、デバイスが管理対象として登録されます。
 
 ADE 登録を有効にするには、Intune と [Apple Business Manager (ABM)](https://business.apple.com/) または [Apple School Manager (ASM)](https://school.apple.com/) のポータルの両方を使用します。 いずれかの Apple ポータルで管理するために Intune にデバイスを割り当てられるように、シリアル番号のリストまたは注文番号が必要になります。 登録時にデバイスに適用された設定を含む ADE 登録プロファイルを Intune で作成します。 ADE は、[デバイス登録マネージャー](device-enrollment-manager-enroll.md) アカウントと共に使用できません。
 
@@ -82,23 +82,25 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>手順 1. トークンを作成するために必要な Intune 公開キー証明書をダウンロードする
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]**  >  **[追加]** を選択します。
+1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS/iPadOS enrollment]\(iOS/iPadOS の登録\)** を選択します。
 
-    ![Enrollment Program トークンを取得します。](./media/device-enrollment-program-enroll-ios/image01.png)
+    ![Enrollment Program トークンを取得します。](./media/device-enrollment-program-enroll-ios/ios-enroll.png)
 
-2. **[同意する]** を選択して、Microsoft がユーザーとデバイスの情報を Apple に送信できるようにします。
+2. **[Enrollment Program トークン]**  >  **[追加]** を選択します。
+
+3. **[同意する]** を選択して、Microsoft がユーザーとデバイスの情報を Apple に送信できるようにします。
 
    > [!NOTE]
    > 手順 2 以降に進んで Intune 公開キー証明書をダウンロードしたら、ウィザードを閉じたり、このページから移動したりしないでください。 そうすると、ダウンロードした証明書が無効になるため、このプロセスを再度繰り返す必要があります。 このような状況が発生した場合、通常は **[確認および作成]** タブの **[作成]** ボタンが灰色表示され、プロセスを完了できなくなります。
 
    ![公開キーをダウンロードするための [Apple 証明書] ワークスペースの [Enrollment Program トークン] のスクリーンショット。](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. **[公開キーをダウンロードします]** を選択し、暗号化キー (.pem) ファイルをダウンロードしてローカルに保存します。 .pem ファイルは、Apple ポータルから信頼関係証明書を要求するために使用します。
+4. **[公開キーをダウンロードします]** を選択し、暗号化キー (.pem) ファイルをダウンロードしてローカルに保存します。 .pem ファイルは、Apple ポータルから信頼関係証明書を要求するために使用します。
 
 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>手順 2. キーを使用して Apple からトークンをダウンロードする
 
-1. **[Apple Device Enrollment Program 用のトークンを作成します]** を選択して Apple の Business ポータルを開き、会社の Apple ID でサインインします。 この Apple ID を使って、ADE トークンを更新できます。
+1. **[Create a token via Apple Business Manager]\(Apple Business Manager を使用してトークンを作成する\)** を選択して Apple のビジネス ポータルを開き、会社の Apple ID でサインインします。 この Apple ID を使って、ADE トークンを更新できます。
 2. Apple の [Business ポータル](https://business.apple.com)で、 **[Device Enrollment Program]** の **[開始]** を選択します。
 
 3. **[Manage Servers\(サーバーの管理\)]** ページで、 **[Add MDM Server\(MDM サーバーの追加\)]** を選びます。
@@ -140,8 +142,8 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
 > VPP トークンに十分なポータル サイト ライセンスがない場合、またはトークンの有効期限が切れている場合は、デバイスがブロックされます。 トークンの有効期限が近づいている場合、またはライセンスが不足している場合は、Intune でアラートが表示されます。
  
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択します。
-2. トークンを選択して、 **[プロファイル]**  >  **[プロファイルの作成]**  >  **[iOS]** の順に選択します。
+1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS/iPadOS enrollment]\(iOS/iPadOS の登録\)**  >  **[Enrollment Program トークン]** を選択します。
+2. トークンを選択して、 **[プロファイル]**  >  **[プロファイルの作成]**  >  **[iOS/iPadOS]** の順に選択します。
 
     ![プロファイルの作成のスクリーンショット。](./media/device-enrollment-program-enroll-ios/image04.png)
 
@@ -154,9 +156,9 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
 5. **[ユーザー アフィニティ]** で、このプロファイルに対応するデバイスを割り当て済みユーザーとともに登録する必要があるかどうかを選択します。
     - **[ユーザー アフィニティとともに登録する]** - このオプションは、ユーザーに属しているデバイスであって、かつアプリのインストールなどのサービスにポータル サイトを使用する必要があるデバイスの場合に選択します。 ADFS を使用しており、セットアップ アシスタントを使用して認証している場合、[WS-Trust 1.3 ユーザー名/混合エンドポイント](https://technet.microsoft.com/library/adfs2-help-endpoints) [詳細](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) が必要です。
 
-    - **[ユーザー アフィニティなしで登録する]** - このオプションは、1 人のユーザーに関連付けられていないデバイスの場合に選択します。 ローカルのユーザー データにアクセスしないデバイスには、このオプションを使用します。 ポータル サイト アプリなどのアプリは動作しません。
+    - **[ユーザー アフィニティなしで登録する]** - このオプションは、1 人のユーザーに関連付けられていないデバイスの場合に選択します。 このオプションは、ローカル ユーザー データにアクセスしないデバイスと、Apple Shared iPad for Business デバイスに使用します。 ポータル サイト アプリなどのアプリは動作しません。
 
-5. **[ユーザー アフィニティとともに登録する]** を選択した場合は、Apple セットアップ アシスタントではなく、ポータル サイトを使ってユーザーに認証させることが可能です。
+6. **[ユーザー アフィニティとともに登録する]** を選択した場合は、Apple セットアップ アシスタントではなく、ポータル サイトを使ってユーザーに認証させることが可能です。
 
     ![ポータル サイトで認証します。](./media/device-enrollment-program-enroll-ios/authenticatewithcompanyportal.png)
 
@@ -168,16 +170,16 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
     >
     > Apple セットアップ アシスタントによって認証している場合は、これらはサポートされません。
 
-6. **[ユーザーが認証する必要がある場所を選択する]** に **[ポータル サイト]** を選択した場合は、VPP トークンを使用してデバイス上にポータル サイトを自動的にインストールできます。 この場合、ユーザーは Apple ID を指定する必要はありません。 VPP トークンを使用して Intune ポータル サイトをインストールするには、 **[VPP によるポータル サイトのインストール]** でトークンを選択します。 ポータル サイトが既に VPP トークンに追加されている必要があります。 登録後もポータル サイト アプリが引き続き更新されるようにするには、Intune でアプリの展開を構成していることを確認してください ([Intune] > [クライアント アプリ])。 ユーザー操作を不要にするためには、ほとんどの場合、ポータル サイトを iOS/iPadOS VPP アプリとして取得し、これを必須アプリにして、割り当てにデバイス ライセンスを使用する必要があります。 トークンの期限が切れていないことと、ポータル サイト アプリの十分なデバイス ライセンスがあることを確認してください。 トークンの期限が切れているか、ライセンスがなくなっている場合、Intune では代わりに App Store ポータル サイトをインストールして、Apple ID の入力を求めます。 
+7. **[ユーザーが認証する必要がある場所を選択する]** に **[ポータル サイト]** を選択した場合は、VPP トークンを使用してデバイス上にポータル サイトを自動的にインストールできます。 この場合、ユーザーは Apple ID を指定する必要はありません。 VPP トークンを使用して Intune ポータル サイトをインストールするには、 **[VPP によるポータル サイトのインストール]** でトークンを選択します。 ポータル サイトが既に VPP トークンに追加されている必要があります。 登録後もポータル サイト アプリが引き続き更新されるようにするには、Intune でアプリの展開を構成していることを確認してください ([Intune] > [クライアント アプリ])。 ユーザー操作を不要にするためには、ほとんどの場合、ポータル サイトを iOS/iPadOS VPP アプリとして取得し、これを必須アプリにして、割り当てにデバイス ライセンスを使用する必要があります。 トークンの期限が切れていないことと、ポータル サイト アプリの十分なデバイス ライセンスがあることを確認してください。 トークンの期限が切れているか、ライセンスがなくなっている場合、Intune では代わりに App Store ポータル サイトをインストールして、Apple ID の入力を求めます。 
 
     > [!NOTE]
     > **[ユーザーが認証する必要がある場所を選択する]** が **[ポータル サイト]** になっている場合、ポータル サイトが ADE デバイスにダウンロードされる最初の 24 時間以内に、必ずデバイス登録プロセスが実行されるようにします。 そうでないと、登録に失敗して、デバイスを登録するために工場出荷時の設定にリセットする必要が生じます。
     
     ![[VPP によるポータル サイトのインストール] のスクリーンショット。](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
-7. **[ユーザーが認証する必要がある場所を選択する]** に **[セットアップ アシスタント]** を選択していても、条件付きアクセスを利用するか、デバイス上に会社のアプリを展開する場合は、デバイス上にポータル サイトをインストールする必要があります。 これを行うには、 **[ポータル サイトのインストール]** に **[はい]** を選択します。  アプリ ストアへの認証を行わずにユーザーがポータル サイトを受信できるようにする場合は、 **[VPP によるポータル サイトのインストール]** を選択して、VPP トークンを選択します。 トークンの期限が切れていないことと、ポータル サイト アプリを適切に展開できるだけの十分なデバイス ライセンスを保持していることを確認してください。
+8. **[ユーザーが認証する必要がある場所を選択する]** に **[セットアップ アシスタント]** を選択していても、条件付きアクセスを利用するか、デバイス上に会社のアプリを展開する場合は、デバイス上にポータル サイトをインストールする必要があります。 これを行うには、 **[ポータル サイトのインストール]** に **[はい]** を選択します。  アプリ ストアへの認証を行わずにユーザーがポータル サイトを受信できるようにする場合は、 **[VPP によるポータル サイトのインストール]** を選択して、VPP トークンを選択します。 トークンの期限が切れていないことと、ポータル サイト アプリを適切に展開できるだけの十分なデバイス ライセンスを保持していることを確認してください。
 
-8. **[VPP によるポータル サイトのインストール]** に 1 つのトークンを選択した場合、セットアップ アシスタントの完了直後にシングル アプリ モードでデバイスをロックできます (具体的には、ポータル サイト アプリ)。 **[Run Company Portal in Single App Mode until authentication]\(認証されるまでシングル アプリ モードでポータル サイトを実行する\)** に **[はい]** を選択すると、このオプションが設定されます。 デバイスを使用するには、ポータル サイトを使用したサインインで最初に認証する必要があります。
+9. **[VPP によるポータル サイトのインストール]** に 1 つのトークンを選択した場合、セットアップ アシスタントの完了直後にシングル アプリ モードでデバイスをロックできます (具体的には、ポータル サイト アプリ)。 **[Run Company Portal in Single App Mode until authentication]\(認証されるまでシングル アプリ モードでポータル サイトを実行する\)** に **[はい]** を選択すると、このオプションが設定されます。 デバイスを使用するには、ポータル サイトを使用したサインインで最初に認証する必要があります。
 
     シングル アプリ モードでロックされている単一のデバイス上では、多要素認証はサポートされていません。 そのデバイスでは別のアプリに切り替えて認証の 2 番目の要素を完了することができないため、この制限が設けられています。 そのため、シングル アプリ モードのデバイス上で多要素認証を使用する場合は、2 番目の要素が別のデバイス上にあることが必要になります。
 
@@ -185,11 +187,11 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
 
    ![単一アプリ モードのスクリーンショット。](./media/device-enrollment-program-enroll-ios/single-app-mode.png)
 
-9. このプロファイルを使用しているデバイスを監視対象にする場合は、 **[監視]** に **[はい]** を選択します。
+10. このプロファイルを使用しているデバイスを監視対象にする場合は、 **[監視]** に **[はい]** を選択します。
 
     ![[デバイス管理の設定] のスクリーンショット。](./media/device-enrollment-program-enroll-ios/supervisedmode.png)
 
-    **[監視下]** デバイスでは、より多くの管理オプションを使用できるようになり、既定で [アクティベーション ロック] は無効になります。 Microsoft では、特に多数の iOS または iPadOS デバイスを展開している場合に、監視モードを有効にするメカニズムとして ADE の利用をお勧めしています。
+    **[監視下]** デバイスでは、より多くの管理オプションを使用できるようになり、既定で [アクティベーション ロック] は無効になります。 Microsoft では、特に多数の iOS または iPadOS デバイスを展開している場合に、監視モードを有効にするメカニズムとして ADE の利用をお勧めしています。 Apple Shared iPad for Business デバイスを監視する必要があります。
 
     デバイスが監視対象であることは次の 2 つの方法でユーザーに通知されます。
 
@@ -199,25 +201,36 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
      > [!NOTE]
      > 監視なしで登録されているデバイスは、Apple Configurator でのみ監視対象にリセットすることができます。 この方法でデバイスをリセットするには、USB ケーブルを使用して iOS/iPadOS デバイスを Mac に接続する必要があります。 詳細については、[Apple Configurator ドキュメント](http://help.apple.com/configurator/mac/2.3)を参照してください。
 
-10. このプロファイルを使用するデバイスの登録をロックするかどうかを選択します。 **[ロックされた登録]** を選択すると、 **[設定]** メニューから管理プロファイルを削除する操作を許可する iOS/iPadOS 設定が無効になります。 デバイスの登録後は、デバイスをワイプしないと、この設定を変更できません。 そのようなデバイスについては、 **[監視下]** 管理モードを *[はい]* に設定する必要があります。 
+11. このプロファイルを使用するデバイスの登録をロックするかどうかを選択します。 **[ロックされた登録]** を選択すると、 **[設定]** メニューから管理プロファイルを削除する操作を許可する iOS/iPadOS 設定が無効になります。 デバイスの登録後は、デバイスをワイプしないと、この設定を変更できません。 そのようなデバイスについては、 **[監視下]** 管理モードを *[はい]* に設定する必要があります。 
 
     > [!NOTE]
     > デバイスが **[ロックされた登録]** に登録されると、ユーザーはポータル サイト アプリで **[デバイスの削除]** または **[出荷時の設定にリセット]** を使用できなくなります。 このオプションは、ユーザーが使用できなくなります。 また、ユーザーはポータル サイト Web サイト (https://portal.manage.microsoft.com) でデバイスを削除することもできなくなります。
     > さらに、BYOD デバイスが Apple 自動デバイス登録デバイスに変換され、 **[ロックされた登録]** 対応プロファイルに登録された場合、ユーザーは 30 日間 **[デバイスの削除]** と **[出荷時の設定にリセット]** を使用できますが、その後、このオプションは無効または使用不可になります。 参照: https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859 。
 
-11. このプロファイルを使用するデバイスを**コンピューターと同期**できるようにするかどうかを選択します。 **[証明書による Apple Configurator の許可]** を選択した場合は、 **[Apple Configurator の証明書]** で証明書を選択する必要があります。
+12. 上記の **[ユーザー アフィニティなしで登録する]** と **[監視]** を選択した場合、デバイスを [Apple Shared iPad for Business デバイス](https://support.apple.com/guide/mdm/shared-ipad-overview-cad7e2e0cf56/web)に構成するかどうかを決定する必要があります。 **[共有 iPad]** に **[はい]** を選択すると、複数のユーザーが同じデバイスにサインインできるようになります。 ユーザーは、Managed Apple ID とフェデレーション認証アカウントを使用して、または一時的なセッション (つまり、ゲスト アカウント) を介して認証されます。 このオプションを選択するには、iOS/iPadOS 13.4 以降が必要です。
+
+    デバイスを Apple Shared iPad for Business デバイスとして構成することを選択した場合は、 **[キャッシュされたユーザーの最大数]** を設定する必要があります。 この値を、Shared iPad を使用する予定のユーザー数に設定します。 32 GB または 64 GB のデバイスで最大 24 ユーザーをキャッシュできます。 非常に少ない数を選択すると、サインイン後にユーザーのデータがデバイスに送信されるまでに時間がかかることがあります。 非常に大きな数を選択すると、ユーザーに十分なディスク領域が割り当てられない可能性があります。  
+
+    > [!NOTE]
+    > Apple Shared iPad for Business をセットアップする場合は、以下を設定します。 
+    > - **[ユーザー アフィニティ]**  =  **[ユーザー アフィニティなしで登録する]** 。 
+    > - **[監視]**  =  **[はい]** 。 
+    > - **[共有 iPad]** = **[はい]**。
+    > 一時セッションは既定で有効であり、ユーザーは Managed Apple ID アカウントなしで Shared iPad にログインできます。 iOS/iPadOS Shared iPad [デバイス制限設定](../configuration/device-restrictions-ios.md)を構成することで、Shared iPad の一時的なセッションを無効にすることができます。  
+
+13. このプロファイルを使用するデバイスを**コンピューターと同期**できるようにするかどうかを選択します。 **[証明書による Apple Configurator の許可]** を選択した場合は、 **[Apple Configurator の証明書]** で証明書を選択する必要があります。
 
      > [!NOTE]
      > **[コンピューターと同期する]** が **[すべて拒否]** に設定されている場合、iOS と iPadOS デバイス上でポートが制限されます。 このポートは課金用にのみ使用でき、それ以外の場合は使用できません。 このポートは、iTunes または Apple Configurator 2 の使用に対してブロックされます。
      **[コンピューターと同期する]** が **[証明書による Apple Configurator の許可]** に設定されている場合、後でアクセスできる証明書のローカル コピーを必ず保持するようにしてください。 アップロードされたコピーを変更することはできません。今後この証明書にアクセスできるように維持することが重要です。 macOS のデバイスまたは PC から iOS/iPadOS デバイスに接続するには、この構成と証明書を使用して自動デバイス登録プロファイルに登録された iOS/iPadOS デバイスへの接続を行うデバイスに、同じ証明書をインストールする必要があります。
 
-12. 前の手順で **[証明書による Apple Configurator の許可]** を選択した場合は、インポートする Apple Configurator の証明書を選択します。
+14. 前の手順で **[証明書による Apple Configurator の許可]** を選択した場合は、インポートする Apple Configurator の証明書を選択します。
 
-13. デバイスに対して登録時に自動的に適用される名前付け形式と、連続する各チェックインにおける名前付け形式を指定することができます。 名前付けテンプレートを作成するには、 **[デバイス名のテンプレートを適用する]** に **[はい]** を選択します。 次に、 **[デバイス名のテンプレート]** ボックスに、このプロファイルを使用する名前に使うテンプレートを入力します。 デバイスの種類とシリアル番号を含むテンプレート形式を指定できます。 
+15. デバイスに対して登録時に自動的に適用される名前付け形式と、連続する各チェックインにおける名前付け形式を指定することができます。 名前付けテンプレートを作成するには、 **[デバイス名のテンプレートを適用する]** に **[はい]** を選択します。 次に、 **[デバイス名のテンプレート]** ボックスに、このプロファイルを使用する名前に使うテンプレートを入力します。 デバイスの種類とシリアル番号を含むテンプレート形式を指定できます。 
 
-14. **[Next: Setup Assistant Customization]\(次へ: セットアップ アシスタントのカスタマイズ\)** を選択します。
+16. **[Next: Setup Assistant Customization]\(次へ: セットアップ アシスタントのカスタマイズ\)** を選択します。
 
-15. **[セットアップ アシスタントのカスタマイズ]** ページで、次のプロファイル設定を構成します。![セットアップ アシスタントのカスタマイズ。](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
+17. **[セットアップ アシスタントのカスタマイズ]** ページで、次のプロファイル設定を構成します。![セットアップ アシスタントのカスタマイズ。](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
     | 部門の設定 | [説明] |
@@ -261,9 +274,9 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
     | <strong>iCloud ストレージ</strong> | [iCloud Documents and Desktop]\(iCloud の書類とデスクトップ\) 画面をユーザーに表示します。 macOS 10.13.4 以降が対象です。 |
     
 
-16. **[次へ]** を選択して、 **[Review + Create]\(確認および作成\)** ページへ移動します。
+18. **[次へ]** を選択して、 **[Review + Create]\(確認および作成\)** ページへ移動します。
 
-17. プロファイルを保存するには、 **[作成]** を選択します。
+19. プロファイルを保存するには、 **[作成]** を選択します。
 
 ### <a name="dynamic-groups-in-azure-active-directory"></a>Azure Active Directory の動的グループ
 
@@ -279,7 +292,9 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
 ## <a name="sync-managed-devices"></a>マネージド デバイスを同期する
 デバイスを管理するアクセス許可を Intune に割り当てたので、Intune と Apple を同期して、マネージド デバイスを Azure ポータルの Intune に表示できます。
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]** > **[iOS]** > **[iOS の登録]** > **[Enrollment Program トークン]** を選択しし、一覧からトークンを選択して、 **[デバイス]** > **[同期]** を選択します。![Enrollment Program デバイス ノードと同期リンクのスクリーンショット。](./media/device-enrollment-program-enroll-ios/image06.png)
+1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS/iPadOS enrollment]\(iOS/iPadOS の登録\)**  >  **[Enrollment Program トークン]** を選択します。
+
+2. 一覧からトークンを選択して、 **[デバイス]** > **[同期]** を選択します。![Enrollment Program デバイス ノードと同期リンクのスクリーンショット。](./media/device-enrollment-program-enroll-ios/image06.png)
 
    許容される Enrollment Program トラフィックについての Apple の規約に準拠するために、Intune では次の制限が課せられています。
    - 完全な同期は 7 日に 1 回だけ実行できます。 完全な同期中に、Intune に接続された Apple MDM サーバーに割り当てられているシリアル番号の完全な最新の一覧を Intune がフェッチします。 ADE デバイスが Intune ポータルから削除された場合、ADE ポータルでは Apple MDM サーバーからの割り当てを解除する必要があります。 割り当てが解除されていない場合、完全な同期が実行されるまでは Intune に再インポートされません。   
@@ -292,7 +307,7 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
 >[!NOTE]
 >**[Apple Serial Numbers\(Apple シリアル番号\)]** ブレードでプロファイルにシリアル番号を割り当てることもできます。
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択し、一覧からトークンを選択します。
+1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS/iPadOS enrollment]\(iOS/iPadOS の登録\)**  >  **[Enrollment Program トークン]** を選択し、一覧からトークンを選択します。
 2. **[デバイス]** を選択し、リスト内でデバイスを選択し、 **[プロファイルの割り当て]** を選択します。
 3. **[プロファイルの割り当て]** の下でデバイス用のプロファイルを選択し、 **[割り当て]** を選択します。
 
@@ -300,7 +315,7 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
 
 特定のトークンを使用して登録するすべてのデバイスに適用される既定のプロファイルを選択することができます。
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択し、一覧からトークンを選択します。
+1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS/iPadOS enrollment]\(iOS/iPadOS の登録\)**  >  **[Enrollment Program トークン]** を選択し、一覧からトークンを選択します。
 2. **[既定のプロファイルの設定]** を選択し、ドロップダウン リストでプロファイルを選択し、 **[保存]** を選択します。 このプロファイルは、トークンに登録されたすべてのデバイスに適用されます。
 
 ## <a name="distribute-devices"></a>デバイスを配布する
@@ -320,13 +335,15 @@ Apple と Intune の間の管理と同期を有効にし、ADE デバイスを�
     ![生成された新しいトークンのスクリーンショット。](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
 4. **[Your Server Token]\(サーバー トークン\)** を選択します。  
-5. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択して、トークンを選択します。
+5. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS/iPadOS enrollment]\(iOS/iPadOS の登録\)**  >  **[Enrollment Program トークン]** を選択し、トークンを選択します。
     ![Enrollment Program トークンのスクリーンショット。](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
 6. **[トークンを更新する]** を選択し、元のトークンの作成に使用した Apple ID を入力します。  
     ![生成された新しいトークンのスクリーンショット。](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-8. 新しくダウンロードしたトークンをアップロードします。  
+7. **[次へ]** を選択して **[スコープ タグ]** ページに移動し、必要に応じてスコープ タグを割り当てます。
+
+8. **[次へ]** を選択し、新しくダウンロードしたトークンをアップロードします。  
 9. **[トークンを更新する]** を選択します。 トークンが更新されたことの確認が表示されます。   
     ![確認のスクリーンショット。](./media/device-enrollment-program-enroll-ios/confirmation.png)
 

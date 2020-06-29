@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 9c2e6f742610eb8f2f526c6fc7a5afabfbadcbbf
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 071cab69b652193b835282603e187e4f3d0c7b0d
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990855"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879726"
 ---
 # <a name="manage-device-security-with-endpoint-security-policies-in-microsoft-intune"></a>Microsoft Intune でエンドポイント セキュリティ ポリシーを使用してデバイスのセキュリティを管理する
 
@@ -35,13 +35,13 @@ ms.locfileid: "83990855"
 
 以下では、エンドポイント セキュリティ ポリシーの各種類について簡単に説明します。 それぞれの使用可能なプロファイルなどの詳細については、ポリシーの各種類専用のコンテンツのリンクを参照してください。
 
-- [ウイルス対策](../protect/endpoint-security-antivirus-policy.md) - ウイルス対策ポリシーは、セキュリティ管理者がマネージド デバイスのウイルス対策設定の個別のグループを管理することに注力するのに役立ちます。 ウイルス対策ポリシーを使用するには、Intune と Microsoft Defender Advanced Threat Protection (Defender ATP) を Mobile Threat Defense ソリューションとして統合します。
+- [ウイルス対策](../protect/endpoint-security-antivirus-policy.md) - ウイルス対策ポリシーは、セキュリティ管理者がマネージド デバイスのウイルス対策設定の個別のグループを管理することに注力するのに役立ちます。 ウイルス対策ポリシーを使用するには、Intune と Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) を Mobile Threat Defense ソリューションとして統合します。
 
 - [ディスク暗号化](../protect/endpoint-security-disk-encryption-policy.md) - エンドポイント セキュリティのディスク暗号化プロファイルは、FileVault や BitLocker など、デバイスに組み込まれている暗号化方法に関連する設定のみに焦点を置いています。 そのため、セキュリティ管理者は、関連性のないさまざまな設定に移動することなく、ディスク暗号化の設定を簡単に管理できます。
 
-- [ファイアウォール](../protect/endpoint-security-firewall-policy.md) - Intune のエンドポイント セキュリティのファイアウォール ポリシーは、macOS と Windows 10 を実行するデバイスに組み込まれているファイアウォールを構成する場合に使用します。 組み込みのファイアウォールには、Windows デバイス向けの BitLocker や macOS 向けの FileVault があります。
+- [ファイアウォール](../protect/endpoint-security-firewall-policy.md) - Intune のエンドポイント セキュリティのファイアウォール ポリシーは、macOS と Windows 10 を実行するデバイスに組み込まれているファイアウォールを構成する場合に使用します。 
 
-- [エンドポイントの検出と応答](../protect/endpoint-security-edr-policy.md) - Defender ATP と Intune を統合した場合は、エンドポイントの検出と応答 (EDR) のエンドポイント セキュリティ ポリシーを使用して、EDR の設定を管理したり、デバイスを Defender ATP にオンボードしたりします。
+- [エンドポイントの検出と応答](../protect/endpoint-security-edr-policy.md) - Microsoft Defender ATP と Intune を統合した場合は、エンドポイントの検出と応答 (EDR) のエンドポイント セキュリティ ポリシーを使用して、EDR の設定を管理したり、デバイスを Microsoft Defender ATP にオンボードしたりします。
 
 - [攻撃の回避](../protect/endpoint-security-asr-policy.md) - Windows 10 デバイスで Defender ウイルス対策が使用されている場合は、攻撃の回避のために Intune エンドポイント セキュリティ ポリシーを使用して、デバイスのこれらの設定を管理します。
 

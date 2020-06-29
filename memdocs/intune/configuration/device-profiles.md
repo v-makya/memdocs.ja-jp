@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3437a1b9fe3c663844d366bbfda6c0bcb463c3ab
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5bf114edf17fa1f8959b5f26b83c771b711b83f5
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983808"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093181"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune でデバイス プロファイルを使用してデバイスに機能と設定を適用する
 
@@ -41,7 +41,7 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 
 ## <a name="administrative-templates"></a>管理用テンプレート
 
-[管理用テンプレート](administrative-templates-windows.md)には数百の設定が含まれており、これらを Internet Explorer、OneDrive、リモート デスクトップ、Word、Excel、およびその他の Office プログラム用に構成することができます。
+[管理用テンプレート](administrative-templates-windows.md)には数百の設定が含まれており、これらを Internet Explorer、Microsoft Edge、OneDrive、リモート デスクトップ、Word、Excel、その他の Office プログラム用に構成することができます。
 
 これらのテンプレートでは、管理者にグループ ポリシーと同様の設定の簡易ビューが提供されますが、それらは 100% クラウドベースです。
 
@@ -132,7 +132,7 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 
 - Windows 10 以降
 
-## <a name="edition-upgrade"></a>エディションのアップグレード
+## <a name="edition-upgrade-and-mode-switch"></a>エディションのアップグレードとモードの切り替え
 
 [Windows 10 エディションのアップグレード](edition-upgrade-configure-windows-10.md)は、Windows 10 のいずれかのバージョンを実行するデバイスを自動的に新しいエディションにアップグレードします。
 
@@ -202,7 +202,15 @@ Microsoft Defender Advanced Threat Protection (WDATP) と Microsoft Intune を�
 
 - Windows 10 以降
 
-キオスク設定は、[Android](device-restrictions-android.md#kiosk)、[Android エンタープライズ](device-restrictions-android-for-work.md#dedicated-devices)、および [iOS/iPadOS](device-restrictions-ios.md#kiosk) 用のデバイス制限としても使用できます。
+キオスク設定は、[Android](device-restrictions-android.md#kiosk)、[Android エンタープライズ](device-restrictions-android-for-work.md#device-experience)、および [iOS/iPadOS](device-restrictions-ios.md#kiosk) 用のデバイス制限としても使用できます。
+
+## <a name="mx-profile-zebra"></a>MX プロファイル (Zebra)
+
+[モビリティ拡張機能 (MX)](android-zebra-mx-overview.md) は、Zebra デバイスに固有の設定をカスタマイズしたり、追加したりする目的で、組み込みの Intune 設定で拡張されます。 Zebra デバイスは通常、工場の生産現場や小売環境で使用されます。 Zebra デバイスが大量にある場合、Intune を利用し、デバイスを構成し、管理できます。
+
+この機能では以下をサポートします。
+
+- Android デバイス管理者
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -214,7 +222,7 @@ Microsoft Defender Advanced Threat Protection (WDATP) と Microsoft Intune を�
 
 ## <a name="oemconfig"></a>OEMConfig
 
-[OEMConfig](android-oem-configuration-overview.md) は、OEM (相手先ブランド供給) と EMM (エンタープライズ モビリティ管理) で、OEM 固有の機能を標準化された方法で Android Enterprise デバイス上に構築してサポートできるようにする標準です。 OEMConfig を使用して、OEM で固有の管理機能を定義するスキーマを作成し、それを Google Play にアップロードされるアプリに埋め込みます。 Intune でアプリからスキーマが読み取られ、Intune 管理者がスキーマの設定を構成できます。
+Android Enterprise デバイスでは、[OEMConfig](android-oem-configuration-overview.md) は、OEM (相手先ブランド供給) と EMM (エンタープライズ モビリティ管理) で、OEM 固有の機能を標準化された方法で構築してサポートできるようにする標準です。 OEMConfig を使用して、OEM で固有の管理機能を定義するスキーマを作成し、それを Google Play にアップロードされるアプリに埋め込みます。 Intune でアプリからスキーマが読み取られ、Intune 管理者がスキーマの設定を構成できます。
 
 この機能では以下をサポートします。
 
@@ -222,7 +230,7 @@ Microsoft Defender Advanced Threat Protection (WDATP) と Microsoft Intune を�
 
 ## <a name="powershell-scripts"></a>Powershell スクリプト
 
-[Windows 10 デバイス上の PowerShell スクリプト](../apps/intune-management-extension.md)では、Intune 管理拡張機能を使用して PowerShell スクリプトが Intune にアップロードされた後、それらのスクリプトがデバイス上で実行されます。 この拡張機能を使用するために必要なもの、それらを Intune に追加する方法、およびその他の重要な情報も確認してください。
+[PowerShell スクリプト](../apps/intune-management-extension.md)では、Intune 管理拡張機能を使用して PowerShell スクリプトが Intune にアップロードされた後、それらのスクリプトがデバイス上で実行されます。 この拡張機能を使用するために必要なもの、それらを Intune に追加する方法、およびその他の重要な情報も確認してください。
 
 この機能では以下をサポートします。
 
@@ -278,7 +286,7 @@ Windows デバイスの更新プログラム ポリシーについては、[配�
 
 [Wi-Fi 設定](wi-fi-settings-configure.md)は、ユーザーとデバイスにワイヤレス ネットワーク設定を割り当てます。 Wi-Fi プロファイルを割り当てると、ユーザーは自分でプロファイルを構成することなく、会社の Wi-Fi にアクセスできます。 
 
-この機能では以下をサポートします。 
+この機能では以下をサポートします。
 
 - Android デバイス管理者
 - Android エンタープライズ
@@ -286,6 +294,16 @@ Windows デバイスの更新プログラム ポリシーについては、[配�
 - macOS
 - Windows 8.1 (インポートのみ)
 - Windows 10 以降
+
+## <a name="wired-networks"></a>有線ネットワーク
+
+[有線ネットワーク](wired-networks-configure.md)では、macOS デスクトップ コンピューター用に 802.1x の有線接続を作成し、管理できます。 自分のプロファイルでネットワーク インターフェイスを選択し、承認された EAP タイプを選択し、PKCS 証明書や SCEP 証明書など、サーバー信頼設定を入力します。
+
+プロファイルを割り当てると、macOS デスクトップ ユーザーは自分でプロファイルを構成することなく、会社の有線ネットワークにアクセスできます。
+
+この機能では以下をサポートします。
+
+- macOS
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra モビリティ拡張 (MX)
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b836d3d2f319ca5ec9833e5902e6fcbb94b8dd65
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7101ad9bffcd80bd608690f22db37abbbc7a7895
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987122"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093790"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Apple Configurator を使用した iOS/iPadOS デバイス登録の設定
 
@@ -48,24 +48,26 @@ Apple Configurator の登録方法は、[デバイス登録マネージャー](d
 
 デバイス登録プロファイルで、登録時に適用する設定を定義します。 これらの設定は、1 回だけ適用されます。 Apple Configurator を使用して iOS/iPadOS デバイスを登録するための登録プロファイルを作成するには、以下の手順に従います。
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Apple Configurator]**  >  **[プロファイル]**  >  **[作成]** を選択します。
+1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS/iPadOS enrollment]\(iOS/iPadOS の登録\)**  >  **[Apple Configurator]** を選択します。
 
-    ![Apple Configurator のプロファイルを作成する](./media/apple-configurator-enroll-ios/apple-config-create-profile.png)
+    ![Apple Configurator のプロファイルを作成する](./media/apple-configurator-enroll-ios/apple-configurator.png)
 
-2. **[登録プロファイルの作成]** で、管理用にプロファイルの **[名前]** と **[説明]** を入力します。 ユーザーにはこれらの詳細は表示されません。 この [名前] フィールドを使用して、Azure Active Directory で動的グループを作成できます。 この登録プロファイルに対応するデバイスを割り当てるために enrollmentProfileName パラメーターを定義する場合はプロファイル名を使用します。 Azure Active Directory の動的グループの詳細についてはこちらを参照してください。
+2. **[プロファイル]**  >  **[作成]** を選択します。
+
+3. **[登録プロファイルの作成]** で、管理用にプロファイルの **[名前]** と **[説明]** を入力します。 ユーザーにはこれらの詳細は表示されません。 この [名前] フィールドを使用して、Azure Active Directory で動的グループを作成できます。 この登録プロファイルに対応するデバイスを割り当てるために enrollmentProfileName パラメーターを定義する場合はプロファイル名を使用します。 Azure Active Directory の動的グループの詳細についてはこちらを参照してください。
 
     ![[ユーザー アフィニティとともに登録する] が選択されているプロファイル作成画面のスクリーン ショット](./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png)
 
-3. **[ユーザー アフィニティ]** で、このプロファイルに対応するデバイスを割り当て済みユーザーとともに登録する必要があるかどうかを選択します。
+4. **[ユーザー アフィニティ]** で、このプロファイルに対応するデバイスを割り当て済みユーザーとともに登録する必要があるかどうかを選択します。
 
-    - **[ユーザー アフィニティとともに登録する]** - このオプションは、ユーザーに属しているデバイスであって、かつアプリのインストールなどのサービスにポータル サイトを使用する必要があるデバイスの場合に選択します。 セットアップ アシスタントを使用してデバイスをユーザーに関連付ける必要があります。その後、デバイスは会社のデータや電子メールにアクセスできます。 セットアップ アシスタントでの登録でのみサポートされています。 ユーザー アフィニティには [WS-Trust 1.3 Username/Mixed エンドポイント](https://technet.microsoft.com/library/adfs2-help-endpoints)が必要です。 [詳細については、ここをクリック](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)してください。
+    - **[ユーザー アフィニティとともに登録する]** - このオプションは、ユーザーに属しているデバイスであって、かつアプリのインストールなどのサービスにポータル サイトを使用する必要があるデバイスの場合に選択します。 セットアップ アシスタントを使用してデバイスをユーザーに関連付ける必要があります。その後、デバイスは会社のデータや電子メールにアクセスできます。 セットアップ アシスタントでの登録でのみサポートされています。 ユーザー アフィニティには [WS-Trust 1.3 Username/Mixed エンドポイント](https://technet.microsoft.com/library/adfs2-help-endpoints)が必要です。 [詳細については、こちらを参照してください](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。
 
     - **[ユーザー アフィニティなしで登録する]** - このオプションは、1 人のユーザーに関連付けられていないデバイスの場合に選択します。 ローカルのユーザー データにアクセスせずにタスクを実行するデバイスで使用します。 ユーザー アフィリエーションが必要なアプリ (基幹業務アプリのインストールに使用されるポータル サイト アプリを含む) は機能しません。 直接登録の場合は必須です。
 
      > [!NOTE]
      > **[ユーザー アフィニティとともに登録する]** がオンの場合、デバイスが登録されてから最初の 24 時間以内に設定アシスタントを使用してデバイスがユーザーと関連付けられていることを確認します。 そうでないと、登録に失敗して、デバイスを登録するために工場出荷時の設定にリセットする必要が生じます。
 
-4. **[ユーザー アフィニティとともに登録する]** を選択した場合は、Apple セットアップ アシスタントではなく、ポータル サイトでユーザーに認証を行わせるオプションがあります。
+5. **[ユーザー アフィニティとともに登録する]** を選択した場合は、Apple セットアップ アシスタントではなく、ポータル サイトでユーザーに認証を行わせるオプションがあります。
 
     > [!NOTE]
     > 次のいずれかを実行する場合は、 **[Apple セットアップ アシスタントの代わりにポータル サイトで認証します]** を **[はい]** に設定します。
@@ -88,7 +90,7 @@ Apple Configurator の登録方法は、[デバイス登録マネージャー](d
     DLXQPCWVGHMJ,デバイスの詳細
 
    [iOS/iPadOS デバイスのシリアル番号の見つけ方](https://support.apple.com/HT204073)をご確認ください。
-2. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Apple Configurator]**  >  **[デバイス]**  >  **[追加]** を選択します。
+2. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS/iPadOS enrollment]\(iOS/iPadOS の登録\)**  >  **[Apple Configurator]**  >  **[デバイス]**  >  **[追加]** を選択します。
 
 5. インポートするシリアル番号に適用する**登録プロファイル**を選択します。 新しいシリアル番号の詳細で既存の詳細を上書きする場合は、 **[既存の ID の詳細を上書きします]** を選択します。
 6. **[デバイスのインポート]** でシリアル番号の csv ファイルを参照して、 **[追加]** を選択します。
@@ -100,18 +102,18 @@ Apple Configurator 登録用の iOS/iPadOS シリアル番号をインポート�
 - **AC プロファイル**
 
 #### <a name="assign-from-apple-configurator-devices"></a>Apple Configurator デバイスからの割り当て
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Apple Configurator]**  >  **[デバイス]** を選択し、シリアル番号を選択して、 **[プロファイルの割り当て]** を選択します。
+1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS/iPadOS enrollment]\(iOS/iPadOS の登録\)**  >  **[Apple Configurator]**  >  **[デバイス]** を選択し、シリアル番号を選択して、 **[プロファイルの割り当て]** を選択します。
 2. **[プロファイルの割り当て]** で、割り当てる**新しいプロファイル**を選択し、 **[割り当て]** を選択します。
 
 #### <a name="assign-from-profiles"></a>プロファイルからの割り当て
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Apple Configurator]**  >  **[プロファイル]** を選択し、プロファイルを選択します。
+1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS/iPadOS enrollment]\(iOS/iPadOS の登録\)**  >  **[Apple Configurator]**  >  **[プロファイル]** を選択し、プロファイルを選択します。
 2. プロファイルで **[割り当てられたデバイス]** を選択し、次に **[割り当て]** を選択します。
 3. フィルターを使って、プロファイルに割り当てるシリアル番号を見つけ、デバイスを選択して、 **[割り当て]** を選択します。
 
 ### <a name="export-the-profile"></a>プロファイルのエクスポート
 プロファイルを作成してシリアル番号を割り当てた後、Intune からプロファイルを URL としてエクスポートする必要があります。 エクスポートしたプロファイルは、Mac の Apple Configurator にインポートしてデバイスに展開します。
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Apple Configurator]**  >  **[プロファイル]** を選択し、エクスポートするプロファイルを選択します。
+1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS の登録]**  >  **[Apple Configurator]**  >  **[プロファイル]** を選択し、エクスポートするプロファイルを選択します。
 2. プロファイルで、 **[プロファイルのエクスポート]** を選択します。
 3. **プロファイルの URL** をコピーします。 Apple Configurator にこれを追加すれば、iOS/iPadOS デバイスで使用する Intune プロファイルを定義できます。
 
@@ -147,7 +149,7 @@ iOS/iPadOS デバイスを Apple Configurator で直接登録する場合は、�
 
 ### <a name="export-the-profile-as-mobileconfig-to-iosipados-devices"></a>プロファイルを .mobileconfig として iOS/iPadOS デバイスにエクスポートする
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Apple Configurator]**  >  **[プロファイル]** を選択し、エクスポートするプロファイルを選択して、 **[プロファイルのエクスポート]** を選択します。
+1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS/iPadOS enrollment]\(iOS/iPadOS の登録\)**  >  **[Apple Configurator]**  >  **[プロファイル]** を選択し、エクスポートするプロファイルを選択して、 **[プロファイルのエクスポート]** を選択します。
 2. **[直接登録]** で、 **[プロファイルのダウンロード]** を選択して、ファイルを保存します。 登録プロファイルのファイルは 2 週間のみ有効で、これを過ぎると再作成が必要です。
 3. [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) を実行している Mac コンピューターにファイルを転送し、管理プロファイルとして iOS/iPadOS デバイスに直接プッシュします。
 4. 次の手順に従って、Apple Configurator を使用してデバイスを準備します。

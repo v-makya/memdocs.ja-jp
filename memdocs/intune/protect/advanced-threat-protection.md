@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/24/2020
+ms.date: 06/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35871aba60d45719b9a6da50184a6113f72e6044
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1141879a282219cdac72273e47c84b51df172d04
+ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989304"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85264058"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Intune で条件付きアクセスによる Microsoft Defender ATP のコンプライアンスを強制する
 
@@ -29,12 +29,12 @@ Mobile Threat Defense ソリューションとして Microsoft Defender Advanced
 
 正しく設定するには、以下の構成を同時に使用します。
 
-- **Intune と Microsoft Defender ATP の間にサービス間接続を確立する**。 この接続により、Microsoft Defender ATP が、Intune で管理する Windows 10 デバイスおよび Android デバイスからコンピューターのリスクに関するデータを収集できるようになります。
+- **Intune と Microsoft Defender ATP の間にサービス間接続を確立する**。 この接続により、Microsoft Defender ATP では、Intune で管理するサポート対象デバイスからコンピューターのリスクに関するデータを収集できるようになります。
 - **デバイス構成プロファイルを使用して、デバイスを Microsoft Defender ATP にオンボードする**。 デバイスをオンボードして、Microsoft Defender ATP と通信を行い、そのリスク レベルを評価するのに役立つデータを提供するようにそれらを構成します。
-- **デバイス コンプライアンス ポリシーを使用して、許可するリスクのレベルを設定する**。 リスク レベルは Microsoft Defender ATP によって報告されます。 許可したリスク レベルを超えているデバイスは、非準拠として識別されます。
-- **条件付きアクセス ポリシーを使用**して、ユーザーが非準拠のデバイスから企業リソースにアクセスできないようにします。
+- **デバイス コンプライアンス ポリシーを使用して、許可するリスクのレベルを設定する**。 リスク レベルは Microsoft Defender ATP によって報告されます。 許可されたリスク レベルを超えるデバイスは、非準拠として識別されます。
+- **条件付きアクセス ポリシーを使用**して、ユーザーが非準拠のデバイスから企業リソースにアクセスできないようにする。
 
-Intune を Microsoft Defender ATP と統合する場合、ATP の脅威と脆弱性の管理 (TVM) を利用し、[Intune を使って TVM によって検出されたエンドポイントの脆弱性を修復](atp-manage-vulnerabilities.md)できます。
+Intune を Microsoft Defender ATP と統合する場合、Microsoft Defender ATP の脅威と脆弱性の管理 (TVM) を利用し、[Intune を使って TVM によって識別されたエンドポイントの脆弱性を修復](atp-manage-vulnerabilities.md)できます。
 
 ## <a name="example-of-using-microsoft-defender-atp-with-intune"></a>Intune で Microsoft Defender ATP を使用する例
 
@@ -53,6 +53,8 @@ Microsoft Defender ATP は、このシナリオのようなセキュリティ �
 
 リスク レベルが "*中*" または "*高*" であるデバイスを非準拠として分類する Intune デバイス コンプライアンス ポリシーを使用しているため、侵害されたデバイスは非準拠として分類されます。 この分類により、条件付きアクセス ポリシーが適用されて、そのデバイスから企業リソースへのアクセスがブロックされます。
 
+Intune ポリシーを使用して、Android 上の Microsoft Defender ATP の一部の構成を変更することもできます。 詳細については、この記事の後半の「[Android を実行するデバイスで Web 保護を構成する](#configure-web-protection-on-devices-that-run-android)」を参照してください。
+
 ## <a name="prerequisites"></a>[前提条件]
 
 Intune で Microsoft Defender ATP を使用する場合は、以下が構成済みであり、使用できる状態であることを確認してください。
@@ -68,9 +70,9 @@ Intune で Microsoft Defender ATP を使用する場合は、以下が構成済�
 
 実行する最初の手順は、Intune と Microsoft Defender ATP の間にサービス間接続を設定することです。 これには、Microsoft Defender セキュリティ センターと Intune の両方に対する管理アクセス権が必要です。
 
-### <a name="to-enable-defender-atp"></a>Defender ATP を有効にするには
+### <a name="to-enable-microsoft-defender-atp"></a>Microsoft Defender ATP を有効にするには
 
-Defender ATP を有効にする必要があるのは、テナントごとに 1 回だけです。
+Microsoft Defender ATP を有効にする必要があるのは、テナントごとに 1 回だけです。
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
@@ -87,13 +89,13 @@ Defender ATP を有効にする必要があるのは、テナントごとに 1 �
    3. **[環境設定の保存]** を選択します。
 
 4. Microsoft Endpoint Manager admin center で **[Microsoft Defender ATP]** に戻ります。 組織のニーズに応じて、 **[MDM コンプライアンスポリシー設定]** で:
-   - **[バージョン 10.0.15063 以上の Windows デバイスを Microsoft Defender ATP に接続します]** を **[オン]** に設定し、および/または
-   - **[バージョン 6.0.0 以上の Android デバイスを Microsoft Defender ATP に接続します]** を **[オン]** に設定します。
+   - **[バージョン 10.0.15063 以上の Windows デバイスを Microsoft Defender ATP に接続します]** を **[オン]** に設定します
+   - **[バージョン 6.0.0 以上の Android デバイスを Microsoft Defender ATP に接続します]** を **[オン]** に設定します
 
 5. **[保存]** を選択します。
 
 > [!TIP]
-> 新しいアプリケーションを Intune Mobile Threat Defense に統合し、Intune への接続を有効にすると、Intune によって Azure Active Directory 内に従来の条件付きアクセス ポリシーが作成されます。 統合する各 MTD アプリ ([Defender ATP](advanced-threat-protection.md) や追加の [MTD パートナー](mobile-threat-defense.md#mobile-threat-defense-partners)など) によって、新しい従来の条件付きアクセス ポリシーが作成されます。 これらのポリシーは無視してもかまいませんが、編集、削除、または無効にすることはできません。
+> 新しいアプリケーションを Intune Mobile Threat Defense に統合し、Intune への接続を有効にすると、Intune によって Azure Active Directory 内に従来の条件付きアクセス ポリシーが作成されます。 統合する各 MTD アプリ ([Microsoft Defender ATP](advanced-threat-protection.md) や追加の [MTD パートナー](mobile-threat-defense.md#mobile-threat-defense-partners)のいずれかなど) によって、新しい従来の条件付きアクセス ポリシーが作成されます。 これらのポリシーは無視してもかまいませんが、編集、削除、または無効にすることはできません。
 >
 > 従来のポリシーを削除した場合は、その作成に使用された Intune への接続を削除してから、それを再設定する必要があります。 これにより、従来のポリシーが再作成されます。 MTD アプリ用の従来のポリシーを、条件付きアクセス用の新しいポリシーの種類に移行することは、サポートされていません。
 >
@@ -106,9 +108,9 @@ Defender ATP を有効にする必要があるのは、テナントごとに 1 �
 >
 > 従来の条件付きアクセス ポリシーを表示するには、[Azure](https://portal.azure.com/#home) で **[Azure Active Directory]**  >  **[条件付きアクセス]**  >  **[クラシック ポリシー]** の順に移動します。
 
-## <a name="onboard-windows-devices-by-using-a-configuration-profile"></a>構成プロファイルを使用して Windows デバイスをオンボードする 
+## <a name="onboard-windows-devices-by-using-a-configuration-profile"></a>構成プロファイルを使用して Windows デバイスをオンボードする
 
-Windows プラットフォームでは、Intune と Microsoft Defender ATP の間にサービス間接続を確立したら、Intune の管理対象デバイスを ATP にオンボードして、そのリスク レベルに関するデータを収集して使用できるようにします。 デバイスをオンボードするには、Microsoft Defender ATP のデバイス構成プロファイルを使用します。
+Windows プラットフォームでは、Intune と Microsoft Defender ATP の間にサービス間接続を確立した後、Intune のマネージド デバイスを Microsoft Defender ATP にオンボードし、そのリスク レベルに関するデータを収集して使用できるようにします。 デバイスをオンボードするには、Microsoft Defender ATP のデバイス構成プロファイルを使用します。
 
 Microsoft Defender ATP への接続を確立したときに、Intune は Microsoft Defender ATP から Microsoft Defender ATP のオンボード構成パッケージを受け取りました。 このパッケージは、デバイス構成プロファイルを使用してデバイスに展開されます。 この構成パッケージによってデバイスが構成され、[Microsoft Defender ATP サービス](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)と通信し、ファイルのスキャン、脅威の検出、Microsoft Defender ATP へのリスクの報告が行われるようになります。 構成パッケージを使用してデバイスをオンボードした後は、再度これを行う必要はありません。 [グループ ポリシーまたは Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints) を使用して、デバイスをオンボードすることもできます。
 
@@ -117,7 +119,7 @@ Microsoft Defender ATP への接続を確立したときに、Intune は Microso
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 3. **名前**と**説明**を入力します。
-4. **[プラットフォーム]** では、 **[Windows 10 以降]** を選択します。 
+4. **[プラットフォーム]** では、 **[Windows 10 以降]** を選択します。
 5. **[プロファイルの種類]** では、 **[Microsoft Defender ATP (Windows 10 デスクトップ)]** を選択します。
 6. 次のように設定を構成します。
 
@@ -131,40 +133,141 @@ Microsoft Defender ATP への接続を確立したときに、Intune は Microso
 
      これらの Microsoft Defender ATP の設定について詳しくは、[Microsoft Endpoint Configuration Manager を使用する Windows 10 コンピューターのオンボード](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm)に関する記事をご覧ください。
 
-7. **[OK]** 、 **[作成]** の順に選択して変更を保存します。これで、プロファイルが作成されます。
+7. **[OK]** 、 **[作成]** の順に選択して変更内容を保存します。これで、プロファイルが作成されます。
 8. Microsoft Defender ATP を使用して評価するデバイスに[デバイス構成プロファイルを割り当てます](../configuration/device-profile-assign.md)。
 
-## <a name="create-and-assign-the-compliance-policy"></a>コンプライアンス ポリシーを作成して割り当てる
+## <a name="onboard-android-devices"></a>Android デバイスをオンボードする
+Intune と Microsoft Defender ATP の間にサービス間接続を確立した後、マネージド デバイスを Microsoft Defender ATP にオンボードし、そのリスク レベルに関するデータを収集して使用できるようにする必要があります。
+
+エンド ユーザーと管理者の前提条件を含む、Android デバイスのオンボードの詳細な手順については、Microsoft Defender ATP ドキュメントの「[Android 用の Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android)」を参照してください。
+
+## <a name="create-and-assign-compliance-policy-to-set-device-risk-level"></a>デバイスのリスク レベルを設定するコンプライアンス ポリシーを作成して割り当てる
 
 Windows デバイスと Android デバイスのどちらでも、コンプライアンス ポリシーによって、デバイスに対して許容可能と見なすリスク レベルが決まります。
 
-コンプライアンス ポリシーの作成に慣れていない場合は、「*Microsoft Intune でコンプライアンス ポリシーを作成する*」の記事の「[ポリシーを作成する](../protect/create-compliance-policy.md#create-the-policy)」の手順を参照してください。 次の情報は、コンプライアンス ポリシーの一部として Defender ATP を構成する場合に固有です。
+コンプライアンス ポリシーの作成に慣れていない場合は、「*Microsoft Intune でコンプライアンス ポリシーを作成する*」の記事の「[ポリシーを作成する](../protect/create-compliance-policy.md#create-the-policy)」の手順を参照してください。 次の情報は、コンプライアンス ポリシーの一部として Microsoft Defender ATP を構成する場合に固有のものです。
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
 2. **[デバイス]**  >  **[コンプライアンス ポリシー]**  >  **[ポリシー]**  >  **[ポリシーの作成]** を選択します。
 
-3. **プラットフォーム** については *Windows 10 以降*、**Android デバイス管理者**、および/または **Android Enterprise** を選択します。 次に、 **[作成]** を選択し、 **[ポリシーの作成]** 構成ウィンドウを開きます。
+3. **[プラットフォーム]** については、ドロップダウン ボックスを使用して、次のいずれかのオプションを選択します。
+   - **Windows 10 以降**
+   - **Android デバイス管理者**
+   - **Android エンタープライズ**
 
-4. 後で識別しやすいように **[名前]** を指定します。 **[説明]** を指定することもできます。
+   次に、 **[作成]** を選択し、 **[ポリシーの作成]** 構成ウィンドウを開きます。
+
+4. 後でこのポリシーを識別するのに役立つ **[名前]** を指定します。 **[説明]** を指定することもできます。
   
-5. **[コンプライアンス設定]** タブで、 **[Microsoft Defender ATP]** グループを展開し、 **[デバイスは、次のマシン リスク スコア以下であることが必要]** を目的のレベルに設定します。
+5. **[コンプライアンス設定]** タブで、 **[Microsoft Defender ATP]** グループを展開し、オプションの **[デバイスは、次のマシン リスク スコア以下であることが必要]** を目的のレベルに設定します。
 
    脅威レベルの分類は、[Microsoft Defender ATP によって決定されます](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue)。
 
    - **[クリア]** :このレベルはセキュリティ上最も安全です。 デバイスには既存のいかなる脅威も存在できず、引き続き会社のリソースにアクセスできます。 いずれかの脅威が見つかった場合、デバイスは非準拠と評価されます。 (Microsoft Defender ATP ユーザーの値は *[セキュア]* です)。
    - **低**:低レベルの脅威が存在する場合にのみ、デバイスは準拠しています。 脅威レベルが中または高のデバイスは非準拠になります。
    - **中**: デバイスに存在する脅威が低または中の場合、デバイスは準拠しています。 高レベルの脅威が検出された場合は、デバイスは非準拠と判定されます。
-   - **高**: 最も安全性の低いレベルであり、すべての脅威レベルが許容されます。 したがって、脅威レベルが高、中または低のデバイスは準拠していると見なされます。
+   - **高**: 最も安全性の低いレベルであり、すべての脅威レベルが許容されます。 脅威レベルが高、中または低のデバイスは準拠していると見なされます。
 
 6. 該当するグループへのポリシーの割り当てを含め、ポリシーの構成を完了します。
 
+## <a name="configure-web-protection-on-devices-that-run-android"></a>Android を実行するデバイスで Web 保護を構成する
+
+既定では、Android 用 Microsoft Defender ATP には Web 保護機能が含まれており、有効になります。 [Web 保護](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview)は、Web の脅威からデバイスを保護し、フィッシング攻撃からユーザーを保護するのに役立ちます。
+
+既定では有効になっていますが、一部の Android デバイスでこの保護を無効にする正当な理由があります。 たとえば、Microsoft Defender ATP アプリ スキャン機能のみを使用するか、Web 保護で有害な URL をスキャンするときに VPN を使用しないようにするかを選択できます。
+
+Intune では、Web 保護機能のすべてまたは一部をオフにすることがサポートされます。 使用する方法と無効にできる機能は、Android デバイスが Intune に登録されている方法によって異なります。
+
+- **Android デバイス管理者**: 構成プロファイルを使用して、Web 保護機能全体を無効にするか、VPN の使用のみを無効にするためにデバイスで OMA-URI のカスタム設定を指定します。 Android デバイスのカスタム設定に関する一般的な情報については、[カスタム設定](../configuration/custom-settings-android.md)に関するページを参照してください。
+
+- **Android Enterprise 仕事用プロファイル**: アプリ構成プロファイルと "*構成デザイナー*" を使用して、Web 保護を無効にします。 この方法と登録の種類では、すべての Web 保護機能の無効化がサポートされますが、VPN の使用のみの無効化はサポートされません。 アプリ構成ポリシーに関する一般的な情報については、「[構成デザイナーを使用する](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer)」を参照してください。
+
+デバイスで Web 保護を構成するには、次の手順を使用し、該当する構成を作成して展開します。
+
+### <a name="disable-web-protection-for-android-device-administrator"></a>Android デバイス管理者の Web 保護を無効にする
+
+1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+
+2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
+
+3. 次の設定を入力します。
+
+   - **[プラットフォーム]** : **[Android デバイス管理者]** を選択します
+   - **[プロファイル]** : **[カスタム]** を選択します
+
+   **[作成]** を選択します。
+
+4. **[基本]** で、次の詳細を入力します。
+
+   - **名前**:プロファイルのわかりやすい名前を入力します。 後で簡単に識別できるよう、プロファイルに名前を付けます。 たとえば、"*Microsoft Defender ATP Web 保護用の Android カスタム プロファイル*" などとします
+   - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
+
+5. **[構成設定]** で、 **[追加]** を選択します。
+
+   展開する構成の設定を指定します。
+
+   - **Web 保護を無効にする**:
+     - **名前**:簡単に見つけられるように、この OMA-URI 設定の一意の名前を入力します。 たとえば、"*Microsoft Defender ATP Web 保護を無効にする*" などとします
+     - **説明**:(省略可能) 設定の概要および他の重要な詳細を示す説明を入力します。
+     - **OMA-URI**:「 **./Vendor/MSFT/DefenderATP/AntiPhishing**」と入力します
+     - **[データ型]** :ドロップダウンを使用して、 **[整数]** を選択します
+     - **値**:VPN ベースのスキャンを含め、Web 保護を無効にするには「**0**」と入力します。
+       > [!NOTE]
+       > Web 保護を有効にするには、「**1**」と入力します。これは、Web 保護の既定値です。
+
+   - **Web 保護での VPN の使用のみを無効にする**:
+     - **名前**:簡単に見つけられるように、この OMA-URI 設定の一意の名前を入力します。 たとえば、"*Microsoft Defender ATP Web 保護の VPN を無効にする*" などとします
+     - **説明**:(省略可能) 設定の概要および他の重要な詳細を示す説明を入力します。
+     - **OMA-URI**:「 **./Vendor/MSFT/DefenderATP/Vpn**」と入力します
+     - **[データ型]** :ドロップダウンを使用して、 **[整数]** を選択します
+     - **値**:VPN ベースのスキャンを無効にするには、「**0**」と入力します。
+       > [!NOTE]
+       > Web 保護を有効にするには、「**1**」と入力します。これは、Web 保護の既定値です。
+
+   **[追加]** を選択して OMA-URI 設定の構成を保存し、 **[次へ]** を選んで続行します。
+
+6. **[割り当て]** で、このプロファイルを受け取るグループを指定します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+
+7. **[確認および作成]** で、完了したら、 **[作成]** を選択します。 作成したプロファイルのポリシーの種類を選択すると、新しいプロファイルが一覧に表示されます。
+
+### <a name="disable-web-protection-for-android-enterprise-work-profile"></a>Android Enterprise 仕事用プロファイルの Web 保護を無効にする
+
+1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+
+2. **[アプリ]**  >  **[アプリ構成ポリシー]**  >  **[追加]** の順に選択してから、マネージド デバイスを選びます。
+
+3. **[基本]** で、次の詳細を入力します。
+
+   - **名前**:プロファイルのわかりやすい名前を入力します。 後で簡単に識別できるよう、プロファイルに名前を付けます。 たとえば、"*Microsoft Defender ATP Web 保護用の Android アプリ構成*" などとします。
+   - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
+   - **[プラットフォーム]** : **[Android Enterprise]** を選択します
+   - **[プロファイルの種類]** : **[仕事用プロファイルのみ]** を選択します
+   - **対象アプリ**: **[アプリの選択]** をクリックします。
+
+4. **[関連アプリ]** で、 **[Defender ATP]** を見つけて選択し、 **[OK]**  >  **[次へ]** の順に選びます。
+
+5. **[設定]** で、 **[構成設定の形式]** のドロップダウンを使用し、 **[構成デザイナーを使用する]** を選択してから **[追加]** をクリックします。 JSON エディターが開きます。
+
+6. **[Web 保護]** を見つけて選択し、 **[OK]** を選んで **[設定]** ページに戻ります。
+
+7. **[構成値]** では、「**0**」と入力して Web 保護を無効にします。
+
+   > [!NOTE]
+   > Web 保護を有効にするには、「**1**」と入力します。これは、Web 保護の既定値です。
+
+   **[次へ]** を選択して続行します。
+
+8. **[割り当て]** で、このプロファイルを受け取るグループを指定します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+
+9. **[確認および作成]** で、完了したら、 **[作成]** を選択します。 作成したプロファイルのポリシーの種類を選択すると、新しいプロファイルが一覧に表示されます。
+
 ## <a name="create-a-conditional-access-policy"></a>条件付きアクセス ポリシーを作成する
 
-条件付きアクセス ポリシーによって、コンプライアンス ポリシーで設定した脅威レベルを超えたデバイスによるリソースへのアクセスがブロックされます。 デバイスから企業リソース (SharePoint や Exchange Online など) へのアクセスをブロックできます。
+条件付きアクセス ポリシーでは Microsoft Defender ATP からのデータを使用して、お客様が設定した脅威レベルを超えるデバイスによるリソースへのアクセスをブロックすることができます。 デバイスから企業リソース (SharePoint や Exchange Online など) へのアクセスをブロックできます。
 
 > [!TIP]
-> 条件付きアクセスは、Azure Active Directory (Azure AD) テクノロジです。 Microsoft Endpoint Manager admin center からアクセスされる条件付きアクセス ノードは、*Azure AD* からアクセスされるものと同じノードです。
+> 条件付きアクセスは、Azure Active Directory (Azure AD) テクノロジです。 Microsoft Endpoint Manager admin center で検出される "*条件付きアクセス*" ノードは、*Azure AD* からのノードです。
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
@@ -188,7 +291,7 @@ Windows デバイスと Android デバイスのどちらでも、コンプライ
 
 ## <a name="monitor-device-compliance"></a>デバイス コンプライアンスを監視する
 
-次に、Microsoft Defender ATP コンプライアンス ポリシーを持つデバイスの状態を監視します。
+Microsoft Defender ATP コンプライアンス ポリシーを持つデバイスの状態を監視します。
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
@@ -204,7 +307,7 @@ Windows デバイスと Android デバイスのどちらでも、コンプライ
 
 ## <a name="view-onboarding-status"></a>オンボードの状態を表示する
 
-Intune で管理されているすべての Windows 10 デバイスのオンボードの状態を確認するには、 **[エンドポイント セキュリティ]**  >  **[Microsoft Defender ATP]** に移動します。 このページから、さらに多くのデバイスを Microsoft Defender ATP にオンボードするためのデバイス構成プロファイルの作成を開始することもできます。
+すべての Intune マネージド デバイスのオンボード状態を確認する場合は、 **[エンドポイント セキュリティ]**  >  **[Microsoft Defender ATP]** の順に移動できます。 このページから、さらに多くのデバイスを Microsoft Defender ATP にオンボードするためのデバイス構成プロファイルの作成を開始することもできます。
 
 ## <a name="next-steps"></a>次のステップ
 

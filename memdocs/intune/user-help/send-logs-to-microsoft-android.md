@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/12/2018
+ms.date: 06/16/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7a842e97e0c276926c07f615a7f9089a64132b50
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f83b5ae8cc621a6fab813267216900638ff27269
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881035"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094114"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Android デバイスのログをポータル サイト開発者に送信する
 
@@ -37,12 +37,15 @@ Microsoft にログを送信するには、次の手順に従います。
 
 1. ポータル サイト アプリを開きます。
 
-2. **[メニュー]** 、 **[ヘルプ]** 、 **[メール サポート]** の順にタップします。
+2. **[メニュー]**  >  **[ヘルプ]**  >  **[メール サポート]** の順にタップします。
 
     > [!NOTE]
     > **メニュー**は、ご使用の Android デバイスの種類によって、ソフトウェア ボタンの場合も、ハードウェア ボタンの場合もあります。
 
 3. **[ログのみをアップロード]** をタップします。
+
+    > [!NOTE]
+    > ソブリン クラウド環境を使用している場合、ポータル サイトのログの送信機能は使用できません。 電子メールでログを送信する必要があります。 
 
 4. アップロードが完了すると、インシデント ID が届きます。 記録用に ID を保存します。
 

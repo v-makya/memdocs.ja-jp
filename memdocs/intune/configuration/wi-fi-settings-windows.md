@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/10/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea4b196a6b2fade8ca926d13c3436207cb4b764e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: ee6ccebc9610f74f9f34c08bc8204e652e0a01db
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429770"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85092884"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Intune での Windows 10 以降のデバイス向けの Wi-Fi 設定の追加
 
@@ -34,6 +34,8 @@ ms.locfileid: "83429770"
 [デバイス プロファイルを作成します](wi-fi-settings-configure.md)。
 
 ## <a name="basic-profile"></a>基本プロファイル
+
+基本プロファイルまたは個人プロファイルでは WPA/WPA2 を使用し、デバイスの Wi-Fi 接続をセキュリティで保護します。 通常、WPA/WPA2 はホーム ネットワークや個人ネットワークで使用されます。 接続を認証するため、事前共有キーを追加することもできます。
 
 - **[Wi-Fi の種類]** : **[基本]** を選択します。 
 
@@ -70,6 +72,8 @@ ms.locfileid: "83429770"
   - **[自動的に構成する]** : プロキシ自動構成 (PAC) スクリプトを指す URL を入力します。 たとえば、「`http://proxy.contoso.com/proxy.pac`」と入力します。
 
 ## <a name="enterprise-profile"></a>エンタープライズ プロファイル
+
+エンタープライズ プロファイルでは拡張認証プロトコル (EAP) を使用し、Wi-Fi 接続を認証します。 EAP の場合、証明書を利用して接続を認証し、セキュリティで保護し、構成するセキュリティ オプションの数が多いため、企業で使用されることが多いです。
 
 - **[Wi-Fi の種類]** : **[Enterprise]** を選択します。
 
@@ -116,7 +120,7 @@ ms.locfileid: "83429770"
     **EAP-TLS、EAP-TTLS、PEAP の追加設定**:
 
     > [!NOTE]
-    > 現時点では、EAP の種類を使うときは、SCEP 証明書プロファイルのみがサポートされます。 PKCS 証明書プロファイルはサポートされません。 ユーザーが証明書の入力を求められたときは常に、SCEP 証明書を選択してください。
+    > EAP の種類を使用するときは、SCEP 証明書プロファイルと PKCS 証明書プロファイルがサポートされます。
 
     - **サーバー信頼**  
 

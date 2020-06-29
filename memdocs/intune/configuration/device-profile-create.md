@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74e365e50d73bb14f20376c92b43061b12d00003
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 886f572212a1af3e38fd5ea10afa21ce24c23411
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988471"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093301"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Microsoft Intune でのデバイス プロファイルの作成
 
-デバイス プロファイルでは、設定を追加および構成してから、組織内のデバイスにこれらの設定をプッシュすることができます。 「[デバイス プロファイルを使用してデバイスに機能と設定を適用する](device-profiles.md)」では、可能な操作を含め、詳細について説明しています。
+デバイス プロファイルでは、設定を追加および構成してから、組織内のデバイスにこれらの設定をプッシュすることができます。 可能な操作を含め、詳細については、[デバイス プロファイルを使用してデバイスに機能と設定を適用する](device-profiles.md)方法に関するページを参照してください。
 
 この記事の内容:
 
@@ -84,6 +84,7 @@ ms.locfileid: "83988471"
 - [信頼された証明書](../protect/certificates-configure.md)
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
+- [有線ネットワーク (macOS)](wired-network-settings-macos.md)
 
 たとえば、プラットフォームとして **iOS/iPadOS** を選択した場合、プロファイルのオプションは次のプロファイルのようになります。
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 761f46cdf8865694ba8960044954a16c415a3eba
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4319435b170203f6dfd3763f1d05d2752fc76f8e
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988219"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107529"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Intune デバイスのプライマリ ユーザーを確認する
 
@@ -45,9 +45,8 @@ Azure AD または Hybrid Azure AD に参加している Windows 10 デバイス
 プライマリ ユーザーが更新された後、Intune と Azure AD デバイスのブレードでも更新されます。
 >[!NOTE]
 >1. エンドポイント マネージャーと Azure AD 全体でのプライマリ ユーザーの更新は、反映されるまでに最大で 10 分かかる場合があります。
->2. 現時点では、共同管理された Windows 10 デバイスではプライマリ ユーザーを変更できません。 
->3. デバイスのプライマリ ユーザーを変更しても、ローカル グループのメンバーシップは変更されません (たとえば、"Administrators" ローカル グループに対するユーザーの追加または削除など)
->4. プライマリ ユーザーを変更しても、"登録者" ユーザーは変更されません。 
+>2. デバイスのプライマリ ユーザーを変更しても、ローカル グループのメンバーシップは変更されません (たとえば、"Administrators" ローカル グループに対するユーザーの追加または削除など)
+>3. プライマリ ユーザーを変更しても、"登録者" ユーザーは変更されません。 
 
 
 ## <a name="what-is-the-primary-user"></a>プライマリ ユーザーとは
@@ -79,16 +78,18 @@ Intune では、登録時または登録直後に、プライマリ ユーザー
 | Windows | MDM のみへの登録 | 登録ユーザー | 登録時 | 
 | Windows | ハイブリッド AADJ + 自動登録 GPO | Windows にサインインする最初のユーザー | Windows に最初のユーザーがサインインするとき| 
 | Windows | 共同管理 | Windows にサインインする最初のユーザー | Windows に最初のユーザーがサインインするとき | 
-| Windows | Azure AD 参加 (一括登録トークン) | None | 適用なし | 
-| Windows | Azure AD 参加 (Autopilot の自己展開モード) | None | 適用なし | 
+| Windows | Azure AD 参加 (一括登録トークン) | なし | 適用できません | 
+| Windows | Azure AD 参加 (Autopilot の自己展開モード) | なし | 適用できません | 
 | クロスプラット フォーム | ポータル サイト アプリへのユーザー主導の登録 | 登録ユーザー | 登録時 |
 | クロスプラット フォーム | デバイス登録マネージャー (DEM) | DEM ユーザーの登録 | 登録時 |
 | iOS/iPadOS、macOS | Apple Automated Device Enrollment (ユーザー アフィニティありの DEP) | 登録ユーザー | 登録時 |
-| iOS/iPadOS、macOS | Apple Automated Device Enrollment (ユーザー アフィニティなしの DEP) | None | 適用なし |
-| Android | 会社所有の専用の Android デバイス | None | 適用なし |
+| iOS/iPadOS、macOS | Apple Automated Device Enrollment (ユーザー アフィニティなしの DEP) | なし | 適用できません |
+| Android | 会社所有の専用の Android デバイス | なし | 適用できません |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>プライマリ ユーザーと Azure AD デバイス所有者
 場合によっては、Intune プライマリ ユーザーが Azure AD デバイスの **[所有者]** プロパティとは異なる場合があります ( **[デバイス]**  >  **[Azure AD デバイス]** で表示できます)。 Azure AD デバイスの所有者は、デバイスの Azure Active Directory への登録時に追加されます。
+
+新しく登録された Azure AD デバイスの場合、Azure AD の **[所有者]** プロパティが、Intune プライマリ ユーザーが設定されるのと同時に自動的に設定されます。
 
 ## <a name="next-steps"></a>次のステップ
 [Intune デバイスを管理します。](device-management.md)

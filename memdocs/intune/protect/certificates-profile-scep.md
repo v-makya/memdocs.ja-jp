@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 06/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfa830f1e7bfd87c20c1aed78b933f81e96b8dca
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988650"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531742"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune で SCEP 証明書プロファイルを作成して割り当てる
 
@@ -226,7 +226,17 @@ Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするよ�
 
    - **[SCEP サーバーの URL]** :
 
-     SCEP 経由で証明書を発行する NDES サーバーの URL を 1 つまたは複数入力します。 たとえば、`https://ndes.contoso.com/certsrv/mscep/mscep.dll` のようなものを入力します。 URL はプロファイルと共にデバイスにランダムにプッシュされるため、必要に応じて、負荷分散のためにさらに SCEP URL を追加することができます。 SCEP サーバーのいずれか 1 つが利用できない場合、SCEP 要求は失敗し、後でデバイス チェックインをするときに、ダウンしている同じサーバーに対して証明書要求が行われる可能性があります。
+     SCEP 経由で証明書を発行する NDES サーバーの URL を 1 つまたは複数入力します。 たとえば、`https://ndes.contoso.com/certsrv/mscep/mscep.dll` のようなものを入力します。
+
+     必要に応じて負荷分散のために SCEP URL を追加できます。 デバイスでは、3 回に分けて NDES サーバーが呼び出されます。それぞれ、サーバー機能を取得するため、公開キーを取得するため、署名要求を送信するためです。 複数の URL を使用するとき、負荷分散によって、その後 NDES サーバーを呼び出すとき、別の URL が使用されることがあります。 同じ要求中に、後続の呼び出しのために別のサーバーが接触されると、要求が失敗します。
+
+     NDES サーバー URL を管理するための動作は各デバイス プラットフォームに固有です。
+
+     - **Android**: デバイスにより SCEP ポリシーで受信した URL の一覧がランダム化され、アクセス可能な NDES サーバーが見つかるまで一覧が処理されます。 その後、プロセス全体で引き続き、その同じ URL とサーバーがデバイスで使用されます。 デバイスでいずれの NDES サーバーにもアクセスできない場合、プロセスは失敗します。
+     - **iOS/iPadOS**:Intune では、URL がランダム化され、デバイスに URL が 1 つ提供されます。 そのデバイスで NDES サーバーにアクセスできない場合、SCEP 要求が失敗します。
+     - **Windows**: NDES URL の一覧がランダム化され、Windows デバイスに渡されて、それにより利用できるものが見つかるまで、受け取った順番に試行されます。 デバイスでいずれの NDES サーバーにもアクセスできない場合、プロセスは失敗します。
+
+     NDES サーバーを 3 回呼び出す過程のいずれかでデバイスが同じ NDES サーバーに到達できなかった場合、SCEP 要求は失敗します。 たとえば、このような失敗は、NDES サーバーを呼び出す 2 回目か 3 回目で負荷分散ソリューションにより別の URL が指定されるとき、あるいは NDES の仮想 URL に基づき、別の実際の NDES サーバーが指定されるときに起こることがあります。 要求に失敗すると、次のポリシー サイクルでデバイスはプロセスを再試行します。そのとき、NDES URL のランダム化された一覧から始めるか、iOS/iPadOS の場合、1 つの URL から始めます。  
 
 8. **[次へ]** を選択します。
 

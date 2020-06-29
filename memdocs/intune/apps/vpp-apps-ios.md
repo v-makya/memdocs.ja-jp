@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 06/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e386d382ceb785d886dfb931bb26222bd82b1a0
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 9012cf55bcd74ab0786c3d961bc60914f9ade04e
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347323"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093322"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Apple Volume Purchase Program で購入した iOS アプリと macOS アプリを Microsoft Intune で管理する方法
 
@@ -134,7 +134,6 @@ Apple Business Manager を使用して、パブリック アプリおよびプ�
 > [!NOTE]  
 > Intune (またはこれに関連する他のすべての MDM) で実際に VPP アプリがインストールされることはありません。 代わりに、Intune は VPP アカウントに接続し、どのアプリ ライセンスをどのデバイスに割り当てるかを Apple に指示します。 そこから、すべての実際のインストールが Apple とデバイスの間で処理されます。
 > 
-> [Apple MDM プロトコル リファレンス、135 ページ](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf)
 
 ## <a name="end-user-prompts-for-vpp"></a>VPP のエンド ユーザー プロンプト
 
@@ -188,6 +187,9 @@ Apple VPP トークンを更新するには、次の手順を実行します。
 2. **[設定]**  >  **[アプリと書籍]**  >  **[My Server Tokens]\(サーバー トークン\)** の順に選択して、**Apple Business Manager (または Apple School Manager)** で新しいトークンをダウンロードします。
 3. **[テナント管理]**  >  **[コネクタとトークン]**  >  **[Apple VPP トークン]** の順に選択して、[[Microsoft Endpoint Manager admin center]](https://go.microsoft.com/fwlink/?linkid=2109431) でトークンを更新します。 次に、トークンを手動でアップロードします。
 
+>[!NOTE]
+>Apple Business Manager でトークンを設定したユーザーがそのパスワードを変更したとき、あるいは、Apple Business Manager の組織をユーザーが離れたとき、Apple Business Manager から新しい Apple VPP または場所トークンをダウンロードし、Intune 内で既存のトークンを更新する必要があります。 更新されていないトークンの場合、Intune に "無効" 状態が表示されます。
+
 ## <a name="deleting-a-vpp-app"></a>VPP アプリの削除
 
 現在、Microsoft Intune から iOS/iPadOS VPP アプリを削除することはできません。
@@ -204,6 +206,8 @@ Intune のカスタム管理者ロールに割り当てられたアクセス許�
 Apple では、VPP トークンを作成および更新するために直接サポートが提供されます。 詳細については、Applr のドキュメントの一部である「[Volume Purchase Program (VPP) でユーザにコンテンツを配布する](https://go.microsoft.com/fwlink/?linkid=2014661)」を参照してください。 
 
 **[外部 MDM に割り当てられています]** が Intune ポータルで指定されている場合は、お客様 (管理者) は Intune で VPP トークンを使用する前に、サード パーティの MDM から VPP トークンを削除する必要があります。
+
+トークンの状態が**重複**の場合、**トークンの場所**が同じトークンが複数アップロードされています。 重複トークンを削除し、トークンの同期を再開します。 重複としてマークされたトークンのライセンスは、引き続き割り当ておよび取り消すことができます。 ただし、トークンが重複としてマークされると、購入した新しいアプリやブックのライセンスが反映されない場合があります。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 

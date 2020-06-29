@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb376e9574dcbbbefca3c089dc4180356b1d5a89
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0edb497b2dd9e4853f3fbc378992158c0757e1f6
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973096"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>マネージド Android Enterprise デバイス用にアプリ構成ポリシーを追加する
 
@@ -103,7 +103,7 @@ Microsoft Intune でのアプリ構成ポリシーによって、マネージド
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>複数 ID アプリで構成済みの組織アカウントのみを許可する 
 
-Microsoft Intune 管理者は、マネージド デバイス上の Microsoft アプリにどのユーザー アカウントを追加するかを制御できます。 許可されている組織ユーザー アカウントのみにアクセスを制限したり、登録済みデバイス上の個人アカウントをブロックしたりできます。 Android デバイスでは、次のキー/値ペアを使用します。
+Microsoft Intune 管理者は、マネージド デバイス上の Microsoft アプリにどの職場アカウントまたは学校アカウントを追加するかを制御できます。 許可されている組織ユーザー アカウントのみにアクセスを制限したり、登録済みデバイス上の個人アカウントをブロックしたりできます。 Android デバイスでは、マネージド デバイス アプリ構成ポリシーで次のキーと値のペアを使用します。
 
 | **Key** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|

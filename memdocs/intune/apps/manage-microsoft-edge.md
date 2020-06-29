@@ -1,12 +1,12 @@
 ---
-title: Intune を使用して iOS および Android 用に iOS および Android 用の Edge を管理する
+title: Intune を使用して iOS および Android 用の Edge を管理する
 titleSuffix: ''
-description: iOS および Android 用の Edge で Intune アプリ保護ポリシーを使用して、企業の Web サイトが確実に保護機能付きでアクセスされるようにすることができます。
+description: iOS および Android 用の Edge で Intune アプリ保護および構成ポリシーを使用して、企業の Web サイトが確実に保護機能付きで常にアクセスされるようにすることができます。
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad0a886aba8e1966e47e9ea11c99cb97c35c4f5a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4d32c496fc094879943fc15102bbb5061d830092
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988381"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973062"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>iOS および Android 用の Edge と Microsoft Intune を使用して Web アクセスを管理する
 
@@ -56,14 +56,14 @@ Office 365 データの豊富で広範な保護機能は、Enterprise Mobility +
 APP データ保護フレームワークは 3 つの異なる構成レベルに編成されており、各レベルは前のレベルを基に構築されています。
 
 - **エンタープライズ基本データ保護** (レベル 1) では、アプリが PIN で保護され、暗号化されており、選択的ワイプ操作を実行できるようにします。 Android デバイスの場合、このレベルでは Android デバイスの構成証明を検証します。 これは、Exchange Online メールボックス ポリシーに類似したデータ保護制御を提供し、IT 部門およびユーザー集団に APP を経験させる、エントリ レベルの構成です。
-- **エンタープライズ拡張データ保護** (レベル 2) では、APP データ漏えい防止メカニズムと OS の最小要件が導入されています。 この構成は、職場または学校のデータにアクセスするほとんどのモバイル ユーザーに適用できます。
+- **エンタープライズ拡張データ保護** (レベル 2) では、APP データ漏えい防止メカニズムと OS の最小要件が導入されています。 この構成は、職場または学校のデータにアクセスするほとんどのモバイル ユーザーに適用されます。
 - **エンタープライズ高度データ保護** (レベル 3) では、高度なデータ保護メカニズム、強化された PIN の構成、および APP Mobile Threat Defense が導入されています。 この構成は、危険度の高いデータにアクセスするユーザーに適しています。
 
 各構成レベルおよび、最低限保護する必要のあるアプリに関する具体的な推奨事項については、「[アプリ保護ポリシーを使用するデータ保護フレームワーク](app-protection-framework.md)」を参照してください。
 
 デバイスが統合エンドポイント管理 (UEM) ソリューションに登録されているかどうかに関係なく、「[アプリ保護ポリシーを作成して割り当てる方法](app-protection-policies.md)」の手順を使用して、iOS アプリと Android アプリの両方に対して Intune アプリ保護ポリシーを作成する必要があります。 これらのポリシーは、少なくとも次の条件を満たしている必要があります。
 
-1. Outlook、OneDrive、Office、Teams などのすべての Microsoft モバイル アプリケーションを含む。これにより、ユーザーは Microsoft アプリ内の職場または学校のデータに対し、セキュリティで保護された方法でアクセスして操作できるようになります。
+1. Edge、Outlook、OneDrive、Office、Teams など、すべての Microsoft 365 モバイル アプリケーションを含める。これにより、ユーザーは Microsoft アプリ内の職場または学校のデータに対し、セキュリティで保護された方法でアクセスして操作できることが保証されます。
 
 2. すべてのユーザーに割り当てられている。 これにより、iOS および Android 用の Edge のどちらを使用しているかに関係なく、すべてのユーザーが確実に保護されます。
 
@@ -443,3 +443,4 @@ Android デバイスでログを表示する方法については、[メール�
 ## <a name="next-steps"></a>次のステップ
 
 - [アプリ保護ポリシーとは?](app-protection-policy.md) 
+- [Microsoft Intune 用アプリ構成ポリシー](app-configuration-policies-overview.md)

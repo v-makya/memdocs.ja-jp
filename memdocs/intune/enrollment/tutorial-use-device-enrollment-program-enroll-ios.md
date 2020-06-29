@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3a949738056c9acf33ef09e28f7664690dfd77f
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 47f249d105fbc2481dd1d66956032c91d5006834
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078908"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093523"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>チュートリアル:Apple Business Manager (ABM) にある Apple の Corporate Device Enrollment 機能を使用して、iOS/iPadOS デバイスを Intune に登録する
 Apple Business Manager の Device Enrollment 機能では、デバイスを簡単に登録できます。 Intune では Apple の以前の Device Enrollment Program (DEP) ポータルもサポートしていますが、Apple Business Manager でやり直すことをお勧めします。 デバイスは、Microsoft Intune と Apple Corporate Device Enrollment で、ユーザーが最初にデバイスをオンにしたときに、安全に自動的に登録されます。 そのため、各デバイスを個別に設定することなく、デバイスを多くのユーザーに配送できます。 
@@ -44,7 +44,7 @@ iOS/iPadOS デバイスを Apple の会社登録機能を使用して登録す�
 
 Device Enrollment トークンの作成には、Apple ポータルを使用します。 このポータルは、管理するデバイスを Intune に割り当てるためにも使用します。
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]**  >  **[追加]** を選択します。
+1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]** 、 **[iOS/iPadOS]** 、 **[iOS/iPadOS の登録]** 、 **[Enrollment Program トークン]** 、 **[追加]** の順に選択します。
 
 2. **[同意する]** を選択して、Microsoft がユーザーとデバイスの情報を Apple に送信できるようにします。
 
@@ -80,9 +80,9 @@ Device Enrollment トークンの作成には、Apple ポータルを使用し�
 ## <a name="create-an-apple-enrollment-profile"></a>Apple 登録プロファイルの作成
 これでトークンがインストールされたので、会社で所有している iOS/iPadOS デバイスの登録プロファイルを作成できます。 デバイス登録プロファイルで、デバイス グループに対して登録時に適用する設定を定義します。
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]** 、 **[iOS/iPadOS]** 、 **[iOS の登録]** 、 **[Enrollment Program トークン]** の順に選択します。
 
-2. インストールしたトークンを選択し、 **[プロファイル]**  >  **[プロファイルの作成]**  >  **[iOS]** を選択します。
+2. インストールしたトークンを選択し、 **[プロファイル]** 、 **[プロファイルの作成]** 、 **[iOS/iPadOS]** の順に選択します。
 
 3. **[基本]** ページで、 **[名前]** に「*TestProfile*」、 **[説明]** に「*iOS または iPadOS デバイス用の ADE のテスト*」と入力します。 ユーザーにはこれらの詳細は表示されません。
 
@@ -120,13 +120,13 @@ Device Enrollment トークンの作成には、Apple ポータルを使用し�
 
 ABM、ASM、または ADE ポータルを使用して登録プログラムのトークンを設定し、そこでデバイスを MDM サーバーに割り当てたら、それらのデバイスが Intune サービスで同期されるのを待機するか、手動で同期をプッシュします。手動で同期を行うと、デバイスが Azure portal に表示されるまで、最大 24 時間かかる場合があります。
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択し、一覧からトークンを選択して、 **[デバイス]**  >  **[同期]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]** 、 **[iOS/iPadOS]** 、 **[iOS の登録]** 、 **[Enrollment Program トークン]** の順に選択し、一覧からトークンを選択し、 **[デバイス]** 、 **[同期]** の順に選択します。
 
 ## <a name="assign-an-enrollment-profile-to-iosipados-devices"></a>登録プロファイルを iOS/iPadOS デバイスに割り当てる
 
 登録する前に、Enrollment Program プロファイルをデバイスに割り当てる必要があります。 これらのデバイスは、Apple から Intune に同期されて、ABM、ASM、または ADE ポータルの適切な MDM サーバー トークンに割り当てられる必要があります。
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** を選択し、一覧からトークンを選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]** 、 **[iOS/iPadOS]** 、 **[iOS の登録]** 、 **[Enrollment Program トークン]** を選択し、一覧からトークンを選択します。
 2. **[デバイス]** を選択し、リスト内でデバイスを選択し、 **[プロファイルの割り当て]** を選択します。
 3. **[プロファイルの割り当て]** の下でデバイス用のプロファイルを選択し、 **[割り当て]** を選択します。
 

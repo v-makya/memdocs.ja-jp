@@ -1,12 +1,12 @@
 ---
 title: Windows Hello for Business と Microsoft Intune の統合
 titleSuffix: Microsoft Intune
-description: マネージド デバイスで Windows Hello for Business の使用を制御するポリシーを作成する方法について説明します。"
+description: デバイス登録中、マネージド デバイスで Windows Hello for Business の使用を制御するポリシーを作成する方法について説明します。"
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 06/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,27 +17,25 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 00f617d91541c1a580f6dec0b6b844abfc8d0d97
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 64a76911725e5d596a80ecc67e42f088666017de
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990928"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531895"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Windows Hello for Business と Microsoft Intune の統合  
 
-Windows Hello for Business (旧称 Microsoft passport for Work) と Microsoft Intune を統合することができます。
+デバイス登録中、Windows Hello for Business (旧称 Microsoft passport for Work) と Microsoft Intune を統合することができます。
 
- Hello for Business は、Active Directory や Azure Active Directory アカウントを使った代替サインイン方法であり、パスワード、スマート カード、または仮想スマート カードに取って代わります。 これを使用すると、パスワードの代わりに*ユーザー ジェスチャ*を使用してサインインできます。 ユーザー ジェスチャには、暗証番号 (PIN)、Windows Hello などの生体認証、または指紋リーダーなどの外部のデバイスがあります。
+Hello for Business は、Active Directory や Azure Active Directory アカウントを使った代替サインイン方法であり、パスワード、スマート カード、または仮想スマート カードに取って代わります。 これを使用すると、パスワードの代わりに*ユーザー ジェスチャ*を使用してサインインできます。 ユーザー ジェスチャには、暗証番号 (PIN)、Windows Hello などの生体認証、または指紋リーダーなどの外部のデバイスがあります。
 
 Intune と Hello for Business の統合には 2 通りの方法があります。
 
-- Intune ポリシーは **[デバイスの登録]** で作成できます。 このポリシーの対象は組織全体 (テナント全体) となります。 Windows AutoPilot out-of-box-experience (OOBE) をサポートしており、デバイスが登録されたときに適用されます。 
-- ID 保護プロファイルは **[デバイス構成]** で作成できます。 このプロファイルの対象は割り当てられたユーザーとデバイスであり、チェックイン時に適用されます。 
+- **テナント全体**:Intune ポリシーは *[デバイスの登録]* で作成できます。 このポリシーの対象は組織全体 (テナント全体) となります。 Windows AutoPilot out-of-box-experience (OOBE) をサポートしており、デバイスが登録されたときに適用されます。
+- **個別のグループ**:Windows Hello for Business を管理するポリシーを、Intune に登録したデバイスに配置できます。 Windows Hello を管理できるポリシー タイプには、"*デバイスの構成*" で登録する "*ID 保護*" プロファイル、さまざまな "*セキュリティ ベースライン*"、エンドポイント セキュリティの "*アカウント保護*" プロファイルが含まれます。 これらのプロファイル タイプでは、割り当てられたユーザーまたはデバイスが適用対象になり、チェックイン中、適用されます。
 
 この記事を利用し、組織全体を対象とする既定の Windows Hello for Business ポリシーを作成します。 一部のユーザー グループとデバイス グループに適用される ID 保護プロファイルを作成するには、[ID 保護プロファイルを構成する](identity-protection-configure.md)方法に関するページを参照してください。  
-
-<!--- - You can store authentication certificates in the Windows Hello for Business key storage provider (KSP). For more information, see [Secure resource access with certificate profiles in Microsoft Intune](secure-resource-access-with-certificate-profiles.md). --->
 
 > [!IMPORTANT]
 > Anniversary Update バージョンより前の Windows 10 のデスクトップおよびモバイルでは、リソースの認証に使用可能な 2 つの異なる PIN を設定することができました。
@@ -59,8 +57,10 @@ Intune と Hello for Business の統合には 2 通りの方法があります�
 
 3. **[Windows Hello for Business の構成]** を次のオプションから選択します。
 
-    - **Disabled**。 Windows Hello for Business を使用しない場合は、この設定を選択します。 無効にした場合、プロビジョニングが必須の可能性がある Azure Active Directory に参加した携帯電話以外では、ユーザーは Windows Hello for Business をプロビジョニングできません。
-    - **Enabled**。 Windows Hello for Business の設定を構成する場合は、この設定を選択します。  *Enabled* を選択した場合、Windows Hello の追加設定が表示されます。
+     - **Enabled**。 Windows Hello for Business の設定を構成する場合は、この設定を選択します。  *Enabled* を選択した場合、Windows Hello の追加設定が表示されます。追加設定はデバイスに対して構成できます。
+
+    - **Disabled**。 デバイスの登録中に Windows Hello for Business を有効にしない場合、このオプションを選択します。 無効にしたとき、プロビジョニングが必須の可能性がある Azure Active Directory に参加した携帯電話以外では、ユーザーは Windows Hello for Business をプロビジョニングできません。 *Disabled* に設定されると、このポリシーで Windows Hello for Business が有効にならない場合でも、Windows Hello for Business に後続の設定を構成できます。
+
     - **[Not configured]** (未構成)。 Windows Hello for Business の設定の制御に Intune を使用しない場合は、この設定を選択します。 Windows 10 デバイス上の既存の Windows Hello for Business の設定は変更されません。 ウィンドウ上の他のすべての設定が使用できなくなります。
 
 4. 前の手順で **[有効]** を選択した場合は、すべての登録済みの Windows 10 デバイスと Windows 10 モバイル デバイスに適用される必須設定を構成します。 これらの設定を構成した後、 **[保存]** を選択します。

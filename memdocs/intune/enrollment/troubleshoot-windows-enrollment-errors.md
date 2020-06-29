@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f74308e5c59adee6810d54ce44cf104514f83056
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: f5d296137f71b89abf65f20493fbc1151ffebf28
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254777"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795586"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune での Windows デバイスの登録に関する問題のトラブルシューティング
 
@@ -32,8 +32,8 @@ ms.locfileid: "82254777"
 トラブルシューティングを開始する前に、いくつかの基本的な情報を収集することが重要です。 この情報は、問題の理解を深め、解決策を見つけるための時間を短縮するのに役立ちます。
 
 問題に関する次の情報を収集します。
-- 有効な Intune ライセンスがユーザーに割り当てられていますか?  ユーザーは自分のデバイスを登録する前に、必要なライセンスが割り当てられている必要があります。
-- Windows デバイスに最新の更新プログラムがインストールされていますか?  Intune の一部の機能は、最新バージョンの Windows でのみ動作します。 Windows Update では、既知の問題について多くの修正が行われています。 多くの場合、最新の更新プログラムをすべて適用すると、Windows デバイスの登録に関する問題は解決されます。 
+- 有効な Intune ライセンスがユーザーに割り当てられていますか? ユーザーは自分のデバイスを登録する前に、必要なライセンスが割り当てられている必要があります。
+- Windows デバイスに最新の更新プログラムがインストールされていますか? Intune の一部の機能は、最新バージョンの Windows でのみ動作します。 Windows Update では、既知の問題について多くの修正が行われています。 多くの場合、最新の更新プログラムをすべて適用すると、Windows デバイスの登録に関する問題は解決されます。 
 - 正確なエラー メッセージは何ですか?
 - エラー メッセージはどこに表示されますか?
 - 問題が発生し始めたのはいつですか? 登録は成功しましたか? 
@@ -41,7 +41,7 @@ ms.locfileid: "82254777"
 - 影響を受けているユーザーの数はどれくらいですか? すべてのユーザーに影響がありますか、それとも一部だけですか?
 - 影響を受けているデバイスの数はどれくらいですか? すべてのデバイスですか、一部だけですか?
 - MDM 機関は何ですか?
-- 登録はどのように実行されますか?  "Bring Your Own Device" (BYOD) ですか、または登録プロファイルを使用する Apple 自動デバイス登録 (ADE) ですか? 
+- 登録はどのように実行されますか? "Bring Your Own Device" (BYOD) ですか、または登録プロファイルを使用する Apple 自動デバイス登録 (ADE) ですか?
 
 ## <a name="error-messages"></a>エラー メッセージ
 
@@ -91,7 +91,7 @@ ms.locfileid: "82254777"
 
 ### <a name="this-user-is-not-allowed-to-enroll"></a>This user is not allowed to enroll. (このユーザーは登録を許可されていません。)
 
-エラー 0x801c0003: "This user is not allowed to enroll.  You can try again or contact your system administrator with the error code 801c0003." (このユーザーは登録を許可されていません。もう一度やり直すか、エラー コード 801c0003 についてシステム管理者に問い合わせてください。)
+エラー 0x801c0003: "This user is not allowed to enroll. You can try again or contact your system administrator with the error code 801c0003." (このユーザーは登録を許可されていません。もう一度やり直すか、エラー コード 801c0003 についてシステム管理者に問い合わせてください。)
 
 **原因:** **[ユーザーはデバイスを Azure AD に参加させることができます]** の設定が **[なし]** に設定されています。 これにより、新しいユーザーは自分のデバイスを Azure AD に参加させることができません。 そのため、Intune の登録に失敗します。
 
@@ -122,7 +122,7 @@ ms.locfileid: "82254777"
 
 ### <a name="this-account-is-not-allowed-on-this-phone"></a>This account is not allowed on this phone. (このアカウントは、この電話では許可されていません。)
 
-エラー:"This account is not allowed on this phone.  Make sure the information you provided is correct, and then try again or request support from your company." (このアカウントは、この電話では許可されていません。入力した情報が正しいことを確認してから、もう一度やり直すか、会社のサポートを依頼してください。)
+エラー:"This account is not allowed on this phone. Make sure the information you provided is correct, and then try again or request support from your company." (このアカウントは、この電話では許可されていません。入力した情報が正しいことを確認してから、もう一度やり直すか、会社のサポートを依頼してください。)
 
 **原因:** デバイスを登録しようとしたユーザーに、有効な Intune ライセンスがありません。
 
@@ -202,7 +202,7 @@ ms.locfileid: "82254777"
 スタンドアロンの Intune 環境でこの問題を解決するには、次の手順のようにします。 
  
 1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[登録制限]** を選択し、デバイスの種類の制限を選択します。    
-2. **[プロパティ]** を選択し、 **[プラットフォームの設定**] の横にある [ > ] **をクリックして**、[Windows に対して**許可** **(MDM)** ] > ます     
+2. **[プロパティ]** を選択し、 **[プラットフォームの設定**] の横にある [ > ] **をクリックして**、[Windows に対して**許可** **(MDM)** ] > ます    
 3. **[レビューと保存]** をクリックします。    
 
 ### <a name="a-setup-failure-has-occurred-during-bulk-enrollment"></a>一括登録中にセットアップ エラーが発生しました。
@@ -278,6 +278,12 @@ UPN に未確認またはルーティング不可能なドメインが含まれ�
 #### <a name="resolution"></a>解決策
 Autopilot 用のインターネット ベースのサービスに対して必要なアクセスがブロックされていないことを確認します。 詳しくは、[Windows Autopilot ネットワークの要件](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements-network)に関する記事を参照してください。
 
+### <a name="autopilot-device-enrollment-failed-with-error-hresult--0x80180022"></a>オートパイロット デバイスを登録できず、エラー HRESULT = 0x80180022 が表示される
+
+**原因:** プロビジョニングされているデバイスが Windows Home Edition です
+
+#### <a name="resolution"></a>解決策
+デバイスを Pro エディション以上に更新する
 
 ### <a name="registering-your-device-for-mobile-management-failed3-0x801c03ea"></a>モバイル管理用のデバイスの登録 (失敗: 3、0x801C03EA)。
 

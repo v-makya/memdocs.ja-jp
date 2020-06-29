@@ -5,23 +5,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/01/2020
+ms.date: 06/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: chmaguir, chrisbal
+ms.reviewer: chmaguir, chrisbal, priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b81686f645d9fce610c39266feb2675fd35cc280
-ms.sourcegitcommit: 6f67c864cf71b4a6a316f4d04a6cc43cf28b4277
+ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84257037"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093705"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限するように Android エンタープライズ デバイスを設定する
 
@@ -87,93 +87,124 @@ ms.locfileid: "84257037"
 
 - **[アプリの脅威のスキャン]** : **[必要]** (既定) では、アプリをインストールする前と後に Google Play プロテクトによってアプリがスキャンされます。 脅威が検出されると、そのアプリをデバイスから削除するようにユーザーに警告を出すことができます。 **[未構成]** に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Google Play Protect によるアプリのスキャンを有効にしたり実行することはできません。
 
-### <a name="dedicated-devices"></a>専用デバイス
+### <a name="device-experience"></a>デバイス エクスペリエンス
 
-これらの設定を使用して、専用デバイス上でキオスクスタイルのエクスペリエンスを構成します。 デバイスを構成して、1 つのアプリを実行させたり、複数のアプリを実行させたりすることができます。 デバイスがキオスク モードで設定されているときは、自分が追加したアプリのみを使用できます。 これらの設定は、Android エンタープライズ専用デバイスに適用されます。 Android エンタープライズのフル マネージド デバイスには適用されません。
+これらの設定を使用して、専用デバイスまたはフル マネージド デバイス上でキオスク スタイルのエクスペリエンスを構成します。 デバイスを構成して、1 つのアプリを実行させたり、複数のアプリを実行させたりすることができます。 デバイスがキオスク モードで設定されているときは、自分が追加したアプリのみを使用できます。
 
-**[キオスク モード]** :デバイスで 1 つのアプリまたは複数のアプリを実行する場合に選択します。
+**登録プロファイルの種類**: 登録プロファイルの種類を選択して、デバイスで Microsoft Launcher または Microsoft Managed Home Screen の構成を開始します。 次のようなオプションがあります。
 
-- **[未構成]** :Intune では、この設定は変更または更新されません。
-- **[単一アプリ]** :ユーザーはデバイスで 1 つのアプリにのみアクセスできます。 デバイスを起動させると、特定のアプリのみが起動されます。 ユーザーは新しいアプリを開いたり、実行中のアプリを変更したりできません。
+- **[未構成]** :Intune では、この設定は変更または更新されません。 既定では、デバイスの既定のホーム画面エクスペリエンスがユーザーに表示される可能性があります。
+- **[専用デバイス]** : 専用デバイス上でキオスク スタイルのエクスペリエンスを構成します。 これらの設定を構成する前に、デバイス上で必要なアプリを[追加](../apps/apps-add-android-for-work.md)し、[割り当て](../apps/apps-deploy.md)てください。
 
-  - **[管理対象アプリを選択します]** :一覧から Google Play の管理対象アプリを選択します。
+  - **[キオスク モード]** :デバイスで 1 つのアプリまたは複数のアプリを実行する場合に選択します。 次のようなオプションがあります。
 
-    アプリが一覧表示されない場合は、デバイスに[いくつかの Android アプリを追加](../apps/apps-add-android-for-work.md)します。 必ず[専用デバイス用に作成したデバイス グループにアプリを割り当てます](../apps/apps-deploy.md)。
+    - **[未構成]** :Intune では、この設定は変更または更新されません。
+    - **[単一アプリ]** :ユーザーはデバイスで 1 つのアプリにのみアクセスできます。 デバイスを起動させると、特定のアプリのみが起動されます。 ユーザーは新しいアプリを開いたり、実行中のアプリを変更したりできません。
 
-  > [!IMPORTANT]
-  > シングルアプリ キオスク モードを使用すると、ダイヤラー アプリまたは電話アプリが正常に機能しないことがあります。
+      - **キオスク モードで使用するアプリを選択**: 一覧から Google Play の管理対象アプリを選択します。
+
+      > [!IMPORTANT]
+      > シングル アプリ キオスク モードを使用すると、ダイヤラーまたは電話のアプリが正常に機能しないことがあります。
   
-- **[複数アプリ]** :ユーザーはデバイスで限られた一連のアプリにアクセスできます。 デバイスを起動させると、ご自身で追加したアプリのみが起動されます。 ユーザーが開くことができる Web リンクをいくつか追加することもできます。 ポリシーが適用されると、ユーザーのホーム画面に許可されたアプリのアイコンが表示されます。
+    - **[複数アプリ]** :ユーザーはデバイスで限られた一連のアプリにアクセスできます。 デバイスを起動させると、ご自身で追加したアプリのみが起動されます。 ユーザーが開くことができる Web リンクをいくつか追加することもできます。 ポリシーが適用されると、ユーザーのホーム画面に許可されたアプリのアイコンが表示されます。
 
-  > [!IMPORTANT]
-  > 複数アプリの専用デバイスの場合、Google Play の [Managed Home Screen アプリ](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise)は**次を満たす必要があります**。
-  >   - Intune に[クライアント アプリとして追加されている](../apps/apps-add-android-for-work.md)
-  >   - 専用デバイス用に作成した[デバイス グループに割り当てられている](../apps/apps-deploy.md)
-  >
-  > **Managed Home Screen** アプリを構成プロファイルに含める必要はありませんが、クライアント アプリとして追加する必要があります。 **Managed Home Screen** アプリをクライアント アプリとして追加すると、構成プロファイルに追加するその他のすべてのアプリが **Managed Home Screen** アプリ上でアイコンとして表示されます。
-  >
-  > マルチアプリ キオスク モードを使用すると、ダイヤラー アプリまたは電話アプリが正常に機能しないことがあります。 
+      > [!IMPORTANT]
+      > 複数アプリの専用デバイスの場合、Google Play の [Managed Home Screen アプリ](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise)は**次を満たす必要があります**。
+      >   - [Intune に追加されている](../apps/apps-add-android-for-work.md)
+      >   - 専用デバイス用に作成した[デバイス グループに割り当てられている](../apps/apps-deploy.md)
+      >
+      > **Managed Home Screen** アプリを構成プロファイルに含める必要はありませんが、アプリとして追加する必要があります。 **Managed Home Screen** アプリを追加すると、構成プロファイルに追加するその他のアプリがすべて **Managed Home Screen** アプリ上でアイコンとして表示されます。
+      >
+      > マルチアプリ キオスク モードを使用すると、ダイヤラー アプリまたは電話アプリが正常に機能しないことがあります。 
 
-  - **[追加]** :リストからお使いのアプリを選択します。
+      - **[追加]** :リストからお使いのアプリを選択します。
 
-    **Managed Home Screen** アプリが一覧表示されない場合は、[これを Google Play から追加します](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise)。 必ず専用デバイス用に作成したデバイス グループに[アプリを割り当てます](../apps/apps-deploy.md)。
+        **Managed Home Screen** アプリが一覧表示されない場合は、[これを Google Play から追加します](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise)。 必ず専用デバイス用に作成したデバイス グループに[アプリを割り当てます](../apps/apps-deploy.md)。
 
-    また、ご自身の組織が作成したその他の [Android アプリ](../apps/apps-add-android-for-work.md)や [Web アプリ](../apps/web-app.md)をデバイスに追加することもできます。 必ず[専用デバイス用に作成したデバイス グループにアプリを割り当てます](../apps/apps-deploy.md)。
+        また、ご自身の組織が作成したその他の [Android アプリ](../apps/apps-add-android-for-work.md)や [Web アプリ](../apps/web-app.md)をデバイスに追加することもできます。 必ず[専用デバイス用に作成したデバイス グループにアプリを割り当てます](../apps/apps-deploy.md)。
 
-  - **[仮想ホーム ボタン]** :ユーザーが Managed Home Screen に戻ってアプリを切り替えられるようにするソフト キー ボタンです。 次のようなオプションがあります。
+      - **[仮想ホーム ボタン]** :ユーザーが Managed Home Screen に戻ってアプリを切り替えられるようにするソフト キー ボタンです。 次のようなオプションがあります。
+        - **[未構成]** (既定値):[ホーム] ボタンが表示されません。 ユーザーは、[戻る] ボタンを使用してアプリを切り替える必要があります。
+        - **[上方向にスワイプ]** : ユーザーがデバイスで上方向にスワイプしたときに [ホーム] ボタンが表示されます。
+        - **[フローティング]** : デバイス上に永続的なフローティングの [ホーム] ボタンが表示されます。
 
-    - **[未構成]** (既定値):[ホーム] ボタンが表示されません。 ユーザーは、[戻る] ボタンを使用してアプリを切り替える必要があります。
-    - **[上方向にスワイプ]** : ユーザーがデバイスで上方向にスワイプしたときに [ホーム] ボタンが表示されます。
-    - **[フローティング]** : デバイス上に永続的なフローティングの [ホーム] ボタンが表示されます。
-
-  - **[キオスク モードを終了する]** : **[有効]** にすると、デバイスを更新するために管理者がキオスク モードを一時停止できるようになります。 この機能を使用するには、管理者は次の操作を実行します。
+      - **[キオスク モードを終了する]** : **[有効]** にすると、デバイスを更新するために管理者がキオスク モードを一時停止できるようになります。 この機能を使用するには、管理者は次の操作を実行します。
   
-    1. **[Exit kiosk]\(キオスクの終了\)** ボタンが表示されるまで、[戻る] ボタンを選択し続けます。 
-    2. **[Exit kiosk]\(キオスクの終了\)** ボタンを選択して、 **[キオスク モードを終了するコード]** PIN を入力します。
-    3. 完了したら、**Managed Home Screen** アプリを選択します。 この手順により、複数アプリのキオスク モードにデバイスが再びロックされます。
+        1. **[Exit kiosk]\(キオスクの終了\)** ボタンが表示されるまで、[戻る] ボタンを選択し続けます。 
+        2. **[Exit kiosk]\(キオスクの終了\)** ボタンを選択して、 **[キオスク モードを終了するコード]** PIN を入力します。
+        3. 完了したら、**Managed Home Screen** アプリを選択します。 この手順により、複数アプリのキオスク モードにデバイスが再びロックされます。
 
-      **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で管理者がキオスク モードを一時停止できないようにすることができます。 管理者が [戻る] ボタンを選択し続けて **[Exit kiosk]\(キオスクの終了\)** ボタンを選択すると、パスコードが必要であることを示すメッセージが表示されます。
+        **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で管理者がキオスク モードを一時停止できないようにすることができます。 管理者が [戻る] ボタンを選択し続けて **[Exit kiosk]\(キオスクの終了\)** ボタンを選択すると、パスコードが必要であることを示すメッセージが表示されます。
 
-    - **[キオスク モードを終了するコード]** :4 から 6 桁の数値の PIN を入力します。 管理者はこの PIN を使って一時的にキオスク モードを停止させます。
+      - **[キオスク モードを終了するコード]** :4 から 6 桁の数値の PIN を入力します。 管理者はこの PIN を使って一時的にキオスク モードを停止させます。
 
-  - **[カスタム URL の背景の設定]** :専用デバイス上の背景画面をカスタマイズするための URL を入力します。 たとえば、「`http://contoso.com/backgroundimage.jpg`」と入力します。
+      - **[カスタム URL の背景の設定]** :専用デバイス上の背景画面をカスタマイズするための URL を入力します。 たとえば、「`http://contoso.com/backgroundimage.jpg`」と入力します。
 
-    > [!NOTE]
-    > ほとんどの場合、少なくとも次のサイズの画像から始めることをお勧めします。
-    >
-    > - 電話:1080 x 1920 ピクセル
-    > - タブレット:1920 x 1080 ピクセル
-    >
-    > 最適なエクスペリエンスと細部の鮮明さを実現するために、デバイスごとの画像資産をディスプレイの仕様に合わせて作成することをお勧めします。
-    >
-    > 最新のディスプレイはより高い画素密度を備え、2K/4K 相当の解像度画像を表示することができます。
+        > [!NOTE]
+        > ほとんどの場合、少なくとも次のサイズの画像から始めることをお勧めします。
+        >
+        > - 電話:1080 x 1920 ピクセル
+        > - タブレット:1920 x 1080 ピクセル
+        >
+        > 最適なエクスペリエンスと細部の鮮明さを実現するために、デバイスごとの画像資産をディスプレイの仕様に合わせて作成することをお勧めします。
+        >
+        > 最新のディスプレイはより高い画素密度を備え、2K/4K 相当の解像度画像を表示することができます。
 
-  - **[Wi-Fi 構成]** : **[有効]** にすると、Managed Home Screen に Wi-Fi コントロールが表示され、ユーザーがデバイスを別の Wi-Fi ネットワークに接続できるようになります。 この機能を有効にすると、デバイスの場所もオンになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Managed Home Screen に Wi-Fi コントロールを表示させることはできません。 これによりユーザーが Managed Home Screen を使用している間は、Wi-Fi ネットワークに接続できないようになります。
+      - **[Wi-Fi 構成]** : **[有効]** にすると、Managed Home Screen に Wi-Fi コントロールが表示され、ユーザーがデバイスを別の Wi-Fi ネットワークに接続できるようになります。 この機能を有効にすると、デバイスの場所もオンになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Managed Home Screen に Wi-Fi コントロールを表示させることはできません。 これによりユーザーが Managed Home Screen を使用している間は、Wi-Fi ネットワークに接続できないようになります。
 
-  - **[Bluetooth の構成]** : **[有効]** にすると、Managed Home Screen に Bluetooth コントロールが表示され、ユーザーが Bluetooth 経由でデバイスをペアリングできるようになります。 この機能を有効にすると、デバイスの場所もオンになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Managed Home Screen に Bluetooth コントロールを表示させることはできません。 これによりユーザーが Managed Home Screen を使用している間は、Bluetooth の構成およびデバイスのペアリングを行うことができないようになります。
+      - **[Bluetooth の構成]** : **[有効]** にすると、Managed Home Screen に Bluetooth コントロールが表示され、ユーザーが Bluetooth 経由でデバイスをペアリングできるようになります。 この機能を有効にすると、デバイスの場所もオンになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Managed Home Screen に Bluetooth コントロールを表示させることはできません。 これによりユーザーが Managed Home Screen を使用している間は、Bluetooth の構成およびデバイスのペアリングを行うことができないようになります。
 
-  - **[懐中電灯へのアクセス]** : **[有効]** にすると、Managed Home Screen に懐中電灯コントロールが表示され、ユーザーが懐中電灯をオンまたはオフにすることができるようになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Managed Home Screen に懐中電灯コントロールを表示させることはできません。 これによりユーザーが Managed Home Screen を使用している間は、懐中電灯を使用できないようになります。
+      - **[懐中電灯へのアクセス]** : **[有効]** にすると、Managed Home Screen に懐中電灯コントロールが表示され、ユーザーが懐中電灯をオンまたはオフにすることができるようになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Managed Home Screen に懐中電灯コントロールを表示させることはできません。 これによりユーザーが Managed Home Screen を使用している間は、懐中電灯を使用できないようになります。
 
-  - **[メディア ボリューム コントロール]** : **[有効]** にすると、Managed Home Screen にメディア ボリューム コントロールが表示され、ユーザーがスライダーを使用してデバイスのメディア ボリュームを調整できるようになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Managed Home Screen にメディア ボリューム コントロールを表示させることはできません。 これによりユーザーが Managed Home Screen を使用している間は、ハードウェア ボタンでサポートされている場合を除き、デバイスのメディア ボリュームを調整できないようになります。
+      - **[メディア ボリューム コントロール]** : **[有効]** にすると、Managed Home Screen にメディア ボリューム コントロールが表示され、ユーザーがスライダーを使用してデバイスのメディア ボリュームを調整できるようになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Managed Home Screen にメディア ボリューム コントロールを表示させることはできません。 これによりユーザーが Managed Home Screen を使用している間は、ハードウェア ボタンでサポートされている場合を除き、デバイスのメディア ボリュームを調整できないようになります。
 
-  - **[スクリーンセーバー モード]** : **[有効]** にすると、デバイスがロックされているか、タイムアウトになったときに、Managed Home Screen にスクリーンセーバーが表示されます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Managed Home Screen にスクリーンセーバーを表示させることはできません。
+      - **[スクリーンセーバー モード]** : **[有効]** にすると、デバイスがロックされているか、タイムアウトになったときに、Managed Home Screen にスクリーンセーバーが表示されます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Managed Home Screen にスクリーンセーバーを表示させることはできません。
 
-    有効にする場合は、次の構成も行います。
+        有効にする場合は、次の構成も行います。
 
-    - **[カスタム スクリーン セーバー画像の設定]** : カスタムの PNG、JPG、JPEG、GIF、BMP、WebP、または ICOimage の URL を入力します。 たとえば、次のように入力します。
+        - **[カスタム スクリーン セーバー画像の設定]** : カスタムの PNG、JPG、JPEG、GIF、BMP、WebP、または ICOimage の URL を入力します。 URL を入力しない場合、デバイスの既定のイメージが使用されます (既定のイメージがある場合)。 
+        
+          たとえば、次のように入力します。
 
-      - `http://www.contoso.com/image.jpg`
-      - `www.contoso.com/image.bmp`
-      - `https://www.contoso.com/image.webp`
+          - `http://www.contoso.com/image.jpg`
+          - `www.contoso.com/image.bmp`
+          - `https://www.contoso.com/image.webp`          
 
-      URL を入力しない場合、デバイスの既定のイメージが使用されます (既定のイメージがある場合)。
+          > [!TIP]
+          > ビットマップに変換できる任意のファイル リソース URL がサポートされています。
 
-      > [!TIP]
-      > ビットマップに変換できる任意のファイル リソース URL がサポートされています。
+        - **[画面がオフになるまでデバイスでスクリーン セーバーが表示される秒数]** : デバイスでスクリーンセーバーを表示する時間を選択します。 0-9999999 秒の範囲で値を入力します。 既定値は `0` 秒です。 空白のままにするか、ゼロ (`0`) に設定すると、ユーザーがデバイスとやり取りするまで、スクリーンセーバーがアクティブになります。
+        - **[デバイスが非アクティブになってからスクリーンセーバーを表示するまでの秒数]** : デバイスがアイドル状態になってからスクリーンセーバーが表示されるまでの時間を選択します。 1-9999999 秒の範囲で値を入力します。 既定値は `30` 秒です。 ゼロ (`0`) より大きい数値を入力する必要があります。
+        - **[スクリーン セーバーを開始する前にメディアを検出する]** : **[有効]** (既定) の場合、オーディオまたはビデオがデバイスで再生されている場合にはスクリーンセーバーが表示されません。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、オーディオまたはビデオが再生されている場合でも、OS でスクリーンセーバーを表示させることができます。
 
-    - **[画面がオフになるまでデバイスでスクリーン セーバーが表示される秒数]** : デバイスでスクリーンセーバーを表示する時間を選択します。 0-9999999 秒の範囲で値を入力します。 既定値は `0` 秒です。 空白のままにするか、ゼロ (`0`) に設定すると、ユーザーがデバイスとやり取りするまで、スクリーンセーバーがアクティブになります。
-    - **[デバイスが非アクティブになってからスクリーンセーバーを表示するまでの秒数]** : デバイスがアイドル状態になってからスクリーンセーバーが表示されるまでの時間を選択します。 1-9999999 秒の範囲で値を入力します。 既定値は `30` 秒です。 ゼロ (`0`) より大きい数値を入力する必要があります。
-    - **[スクリーン セーバーを開始する前にメディアを検出する]** : **[有効]** (既定) の場合、オーディオまたはビデオがデバイスで再生されている場合にはスクリーンセーバーが表示されません。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、オーディオまたはビデオが再生されている場合でも、OS でスクリーンセーバーを表示させることができます。
+- **[フル マネージド]** : フル マネージド デバイスで Microsoft Launcher アプリを構成します。
+
+  - **Microsoft Launcher を既定のランチャーにする**: **[有効]** にすると、Microsoft Launcher がホーム画面の既定のランチャーとして設定されます。 Launcher を既定に設定した場合、ユーザーは別のランチャーを使用できません。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、Microsoft Launcher は既定のランチャーとして強制されません。
+
+<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+
+  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
+    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
+    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
+  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
+    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
+  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Show**: The dock is shown on devices.
+    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
+    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+
+  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
+
+  - **Search bar replacement**: Choose where to put the search bar. Your options:
+    - **Not configured** (default): Intune doesn't change or update this setting.
+    - **Top**: Search bar is shown at the top of devices.
+    - **Bottom**: Search bar is shown at the bottom of devices.
+    - **Hide**: Search bar is hidden.
+
+  - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
+
+End of comment -->
 
 ### <a name="password"></a>パスワード
 
@@ -298,8 +329,9 @@ ms.locfileid: "84257037"
 
 - **[仕事用プロファイルと用プロファイルの間でのコピー/貼り付け]** : **[ブロック]** にすると、仕事用アプリと個人用アプリの間でのコピーして貼り付けが実行できなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS でユーザーに個人プロファイル内のアプリでコピーして貼り付けを使ってデータを共有することを許可できます。
 - **[仕事用プロファイルと個人プロファイル間のデータ共有]** :仕事用プロファイル内のアプリが個人プロファイル内のアプリと共有できるようにするかどうかを選択します。 たとえば、アプリケーション内の共有アクション (Chrome ブラウザー アプリの **[Share...]\(共有...\)** オプションなど) を制御します。 この設定は、コピー/貼り付けのクリップボード動作には適用されません。 次のようなオプションがあります。
-  - **[既定のデバイス]** :デバイスの既定の共有動作。Android のバージョンによって異なります。 既定では、個人プロファイルから仕事用プロファイルへの共有が許可されます。 また既定では、仕事用プロファイルから個人プロファイルへの共有はブロックされます。 この設定により、仕事用プロファイルから個人プロファイルへのデータの共有が防止されます。 6\.0 以降のバージョンを実行するデバイスでは、Google によって個人プロファイルから仕事用プロファイルへのデータの共有がブロックされません。
-  - **[境界を越えて共有できないようにする]** : 仕事用プロファイルと個人プロファイル間の共有を防止します。
+  - **[既定のデバイス]** :デバイスの既定の共有動作は、Android のバージョンによって異なります。
+    - Android 6.0 以降を実行しているデバイスでは、仕事用プロファイルから個人プロファイルへの共有はブロックされます。 個人プロファイルから仕事用プロファイルへの共有が許可されます。
+    - Android 5.0 以前を実行しているデバイスでは、仕事用プロファイルと個人プロファイル間の共有は、双方向でブロックされます。
   - **[仕事用プロファイル内のアプリで、個人プロファイルからの共有要求の処理を許可する]** :個人プロファイルから仕事用プロファイルへの共有を許可する Android の組み込み機能を有効にします。 これを有効にすると、個人プロファイル内アプリからの共有要求を仕事用プロファイル内アプリと共有できます。 この設定は、Android 6.0 よりも前のバージョンを実行するデバイスの既定の動作です。
   - **[共有の制限なし]** : 仕事用プロファイルの境界を越えた双方向での共有を有効にします。 この設定を選択すると、仕事用プロファイル内のアプリと、個人プロファイル内の管理対象でないアプリとの間でデータが共有されます。 この設定により、仕事用プロファイル内の管理対象アプリがデバイスの管理対象でない側のアプリと共有されるようになります。 そのため、この設定は慎重に使用してください。
 

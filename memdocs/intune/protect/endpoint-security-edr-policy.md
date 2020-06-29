@@ -16,20 +16,20 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d0ba328f1976d0463c6be042dfd6f8a7570d6dac
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206334"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879666"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティのエンドポイントの検出と応答ポリシー
 
-Microsoft Defender Advanced Threat Protection (Defender ATP) と Intune を統合すると、エンドポイントの検出と応答 (EDR) のエンドポイント セキュリティ ポリシーを使用して、EDR の設定を管理したり、デバイスを Defender ATP にオンボードしたりできます。
+Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) と Intune を統合すると、エンドポイントの検出と応答 (EDR) のエンドポイント セキュリティ ポリシーを使用して、EDR の設定を管理したり、デバイスを Microsoft Defender ATP にオンボードしたりできます。
 
-Defender ATP のエンドポイントの検出と応答機能により、ほぼリアルタイムの実用的で高度な攻撃検出が可能になります。 セキュリティ アナリストは、アラートの優先度を効果的に設定し、侵害の範囲全体を把握し、脅威を修復するための応答アクションを実行できます。
+Microsoft Defender ATP のエンドポイントの検出と応答機能により、ほぼリアルタイムの実用的で高度な攻撃検出が可能になります。 セキュリティ アナリストは、アラートの優先度を効果的に設定し、侵害の範囲全体を把握し、脅威を修復するための応答アクションを実行できます。
 
-EDR ポリシーには、EDR の設定を管理するための、プラットフォーム固有のプロファイルが含まれています。 プロファイルには、Defender ATP の "*オンボード パッケージ*" が自動的に含まれます。 オンボード パッケージには、Defender ATP と連携するためのデバイスの構成方法が定義されています。 デバイスをオンボードすると、そのデバイスからの脅威データの使用を開始できます。
+EDR ポリシーには、EDR の設定を管理するための、プラットフォーム固有のプロファイルが含まれています。 プロファイルには、Microsoft Defender ATP の "*オンボード パッケージ*" が自動的に含まれます。 オンボード パッケージには、Microsoft Defender ATP と連携するためのデバイスの構成方法が定義されています。 デバイスをオンボードすると、そのデバイスからの脅威データの使用を開始できます。
 
 EDR ポリシーは、Intune で管理する Azure Active Directory (Azure AD) のデバイス グループと、Configuration Manager で管理するオンプレミス デバイスのコレクション (Windows サーバーを含む) に展開されます。 異なる管理パスの EDR ポリシーには、異なるオンボード パッケージが必要です。 そのため、管理するデバイスの種類ごとに個別の EDR ポリシーを作成します。
 
@@ -44,7 +44,7 @@ EDR ポリシーは、Intune で管理する Azure Active Directory (Azure AD) �
 
 **全般**:
 
-- **Microsoft Defender Advanced Threat Protection のテナント** – EDR ポリシーを作成する前に、Defender ATP テナントを Microsoft Endpoint Manager テナント (Intune サブスクリプション) と統合する必要があります。 Intune ドキュメントの [Microsoft Defender ATP の使用](advanced-threat-protection.md)に関するページを参照してください。
+- **Microsoft Defender Advanced Threat Protection のテナント** – EDR ポリシーを作成する前に、Microsoft Defender ATP テナントを Microsoft Endpoint Manager テナント (Intune サブスクリプション) と統合する必要があります。 Intune ドキュメントの [Microsoft Defender ATP の使用](advanced-threat-protection.md)に関するページを参照してください。
 
 **Configuration Manager のデバイスをサポートするには**:
 
@@ -258,12 +258,9 @@ Microsoft Endpoint Manager admin center では、展開する EDR ポリシー�
 
 - **Windows 10 以降**のプラットフォーム (Intune) を対象とするポリシーの場合、ポリシーへのコンプライアンスの概要が表示されます。 また、グラフを選択して、ポリシーを受け取ったデバイスの一覧を表示し、個々のデバイスにドリルインして詳細を確認することもできます。
 
-  **[ATP センサーがあるデバイス]** のグラフには、**Windows 10 以降**のプロファイルを使用して Defender ATP に正常にオンボードしたデバイスのみが表示されます。 このグラフにデバイスを完全に表現できるようにするには、オンボード プロファイルをすべてのデバイスに展開します。 グループ ポリシーや PowerShell のように、外部から Defender ATP にオンボードするデバイスは、**ATP センサーのないデバイス**としてカウントされます。
+  **[ATP センサーがあるデバイス]** のグラフには、**Windows 10 以降**のプロファイルを使用して Microsoft Defender ATP に正常にオンボードしたデバイスのみが表示されます。 このグラフにデバイスを完全に表現できるようにするには、オンボード プロファイルをすべてのデバイスに展開します。 グループ ポリシーや PowerShell のように、外部から Microsoft Defender ATP にオンボードするデバイスは、**ATP センサーのないデバイス**としてカウントされます。
 
 - **Windows 10 および Windows Server** プラットフォーム (Configuration Manager) を対象とするポリシーの場合、ポリシーへのコンプライアンスの概要は表示されますが、ドリルインして詳細を表示することはできません。 表示が制限されているのは、Configuration Manager デバイスへのポリシーの展開を管理しているのは Configuration Manager であり、admin center が Configuration Manager から受け取る状態の詳細が限られているからです。
-
-
-
 
 
 両方のプラットフォームとプロファイルで構成できる[設定を確認](endpoint-security-edr-profile-settings.md)してください。

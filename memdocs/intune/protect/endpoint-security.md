@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 99ac1e069386c69011543ac40878dd62a0d50527
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e3ab2e31aa8a35ef04c150972cd7bb7650e46040
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990828"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879705"
 ---
 # <a name="manage-endpoint-security-in-microsoft-intune"></a>Microsoft Intune でエンドポイント セキュリティを管理する
 
@@ -31,15 +31,15 @@ ms.locfileid: "83990828"
 
 - **すべてのマネージド デバイスの状態を確認します**。 デバイス コンプライアンスを高レベルで確認できる [[すべてのデバイス]](#manage-devices) ビューを使用して、特定のデバイスを詳しく調べ、準拠されていないコンプライアンス ポリシーを把握できるので、これらを解決することができます。
 
-- **デバイスのベスト プラクティス セキュリティ構成を確立するセキュリティ ベースラインを展開します**。 Intune には、Windows デバイス用の[セキュリティ ベースライン](#manage-security-baselines)と、Microsoft Defender Advanced Threat Protection (Defender ATP) や Microsoft Edge などのアプリケーションの増え続ける一覧が含まれています。 セキュリティ ベースラインは Windows 設定の事前構成されたグループであり、これを使うと、関連するセキュリティ チームが推奨する設定と既定値を含んだ既知のグループを適用することができます。
+- **デバイスのベスト プラクティス セキュリティ構成を確立するセキュリティ ベースラインを展開します**。 Intune には、Windows デバイス用の[セキュリティ ベースライン](#manage-security-baselines)と、Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) や Microsoft Edge などのアプリケーションの増え続ける一覧が含まれています。 セキュリティ ベースラインは Windows 設定の事前構成されたグループであり、これを使うと、関連するセキュリティ チームが推奨する設定と既定値を含んだ既知のグループを適用することができます。
 
-- **焦点を絞ったポリシーを使用して、デバイスのセキュリティ構成を管理します**。  各[エンドポイント セキュリティ ポリシー](#use-policies-to-manage-device-security)は、ウイルス対策、ディスク暗号化、ファイアウォール、Defender ATP との統合によって利用できる複数の領域などのデバイス セキュリティの側面に焦点を当てています。
+- **焦点を絞ったポリシーを使用して、デバイスのセキュリティ構成を管理します**。  各[エンドポイント セキュリティ ポリシー](#use-policies-to-manage-device-security)は、ウイルス対策、ディスク暗号化、ファイアウォール、Microsoft Defender ATP との統合によって利用できる複数の領域などのデバイス セキュリティの側面に焦点を当てています。
 
 - **コンプライアンス ポリシーを通じてデバイスとユーザーの要件を確立します**。 [コンプライアンス ポリシー](../protect/device-compliance-get-started.md)では、準拠していると見なされるためにデバイスとユーザーが従う必要のあるルールを設定します。 ルールには、OS のバージョン、パスワードの要件、デバイスの脅威レベルなどを含めることができます。
 
   Azure Active Directory (Azure AD) [条件付きアクセス ポリシー](#configure-conditional-access) を統合してコンプライアンス ポリシーを適用した場合、マネージド デバイスとまだ管理されていないデバイスの両方に対し、企業リソースへのアクセスを制限できます。
 
-- **Intune を Microsoft Defender ATP チームと統合します**。 [Defender ATP と統合する](#set-up-integration-with-defender-atp)ことにより、[セキュリティ タスク](#review-security-tasks-from-defender-atp)にアクセスできます。 セキュリティ タスクは、Defender ATP および Intune と密接に結びついているので、セキュリティ チームが危険にさらされているデバイスを特定してから、対処できる Intune 管理者に詳細な修復手順を渡す場合に役立ちます。
+- **Intune を Microsoft Defender ATP チームと統合します**。 [Microsoft Defender ATP と統合する](#set-up-integration-with-microsoft-defender-atp)ことにより、[セキュリティ タスク](#review-security-tasks-from-microsoft-defender-atp)にアクセスできます。 セキュリティ タスクは、Microsoft Defender ATP および Intune と密接に結びついているので、セキュリティ チームが危険にさらされているデバイスを特定してから、対処できる Intune 管理者に詳細な修復手順を渡す場合に役立ちます。
 
 この記事の次のセクションでは、管理センターのエンドポイント セキュリティ ノードから行えるさまざまなタスクと、それらを使用するために必要なロールベースのアクセス制御 (RBAC) のアクセス許可について説明します。
 
@@ -61,13 +61,13 @@ Intune でのセキュリティ ベースラインは、適切な Microsoft セ�
 
 セキュリティ ベースラインは、Intune における、デバイスの設定を構成する複数の方法の 1 つです。 設定を管理するときには、デバイスを構成するために環境内で使用されている他の方法を把握して、競合を回避できるようにすることが重要です。 この記事で後述する「[ポリシーの競合を回避する](#avoid-policy-conflicts)」をご覧ください。
 
-## <a name="review-security-tasks-from-defender-atp"></a>Defender ATP からのセキュリティ タスクを確認する
+## <a name="review-security-tasks-from-microsoft-defender-atp"></a>Microsoft Defender ATP からのセキュリティ タスクを確認する
 
-Intune を Microsoft Defender Advanced Threat Protection (Defender ATP) と統合する場合、危険にさらされているデバイスを特定し、そのリスクを軽減する手順を提供する Intune での*セキュリティ タスク*を確認できます。 その後、これらのリスクが正常に軽減されたときに、これらのタスクを使用して、Defender ATP にレポートを返すことができます。
+Intune を Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) と統合する場合、危険にさらされているデバイスを特定し、そのリスクを軽減する手順を提供する Intune での "*セキュリティ タスク*" を確認できます。 その後、これらのリスクが正常に軽減されたときに、これらのタスクを使用して、Microsoft Defender ATP にレポートを返すことができます。
 
-- Defender ATP チームは、危険にさらされているデバイスを特定し、その情報をセキュリティ タスクとして Intune チームに渡します。 数回クリックするだけで、リスクにさらされているデバイスと脆弱性を識別し、そのリスクを軽減する方法に関するガイダンスをもたらす Intune のセキュリティ タスクが作成されます。
+- Microsoft Defender ATP チームは、危険にさらされているデバイスを特定し、その情報をセキュリティ タスクとして Intune チームに渡します。 数回クリックするだけで、リスクにさらされているデバイスと脆弱性を識別し、そのリスクを軽減する方法に関するガイダンスをもたらす Intune のセキュリティ タスクが作成されます。
 
-- Intune 管理者は、セキュリティ タスクを確認してから、Intune 内でこれらのタスクを修復します。 軽減されたら、タスクを完了に設定し、そのステータスを Defender ATP チームに返します。
+- Intune 管理者は、セキュリティ タスクを確認してから、Intune 内でこれらのタスクを修復します。 軽減されたら、タスクを完了に設定し、そのステータスを Microsoft Defender ATP チームに返します。
 
 セキュリティ タスクを通じて、両方のチームは、どのデバイスが危険にさらされ、それらのリスクがどのようにいつ修復されるかについて同期が保たれます。
 
@@ -93,7 +93,7 @@ Intune を Microsoft Defender Advanced Threat Protection (Defender ATP) と統�
 
 - 最低限または特定の OS バージョンがデバイスで実行されていることが必要
 - パスワード要件の設定
-- Defender ATP または他の Mobile Threat Defense パートナーによって決定される、許可される最大のデバイス脅威レベルの指定
+- Microsoft Defender ATP または他の Mobile Threat Defense パートナーによって決定される、許可される最大のデバイス脅威レベルの指定
 
 ポリシー ルール以外にも、コンプライアンス ポリシーでは次の内容がサポートされています。
 
@@ -119,18 +119,18 @@ Intune は、デバイス コンプライアンス ポリシーの結果を Azur
 
 Intune での条件付きアクセスの使用の詳細については、[条件付きアクセスと Intune の概要](../protect/conditional-access.md)に関するページをご覧ください。
 
-## <a name="set-up-integration-with-defender-atp"></a>Defender ATP との統合を設定する
+## <a name="set-up-integration-with-microsoft-defender-atp"></a>Microsoft Defender ATP との統合を設定する
 
-Microsoft Defender Advanced Threat Protection (Defender ATP) と Intune を統合すると、リスクを特定して対応する能力が向上します。
+Microsoft Defender ATP と Intune を統合すると、リスクを特定して対応する能力が向上します。
 
-Intune は複数の [Mobile Threat Defense パートナー](../protect/mobile-threat-defense.md)と統合できますが、Defender ATP を使用すると、Defender ATP と Intune を緊密に統合でき、次のような詳細なデバイス保護オプションにアクセスできます。
+Intune は複数の [Mobile Threat Defense パートナー](../protect/mobile-threat-defense.md)と統合できますが、Microsoft Defender ATP を使用すると、Microsoft Defender ATP と Intune を緊密に統合でき、次のような詳細なデバイス保護オプションにアクセスできます。
 
 - セキュリティ タスク - 危険にさらされているデバイス、それらを修復する方法、およびリスクが軽減されたときの確認に関する、ATP 管理者と Intune 管理者の間でのシームレスな通信。
-- クライアントでの Defender ATP の合理化されたオンボード。
+- クライアントでの Microsoft Defender ATP の合理化されたオンボード。
 - Intune コンプライアンス ポリシーで ATP デバイスのリスク信号の使用。
 - *改ざん保護*機能へのアクセス。
 
- Defender ATP と Intune の使用の詳細については、「[Intune で条件付きアクセスによる Microsoft Defender ATP のコンプライアンスを強制する](../protect/advanced-threat-protection.md)」をご覧ください。
+ Microsoft Defender ATP と Intune の使用の詳細については、「[Intune で条件付きアクセスによる Microsoft Defender ATP のコンプライアンスを強制する](../protect/advanced-threat-protection.md)」をご覧ください。
 
 ## <a name="role-based-access-control-requirements"></a>ロールベースのアクセス制御要件
 
@@ -230,4 +230,4 @@ Microsoft Endpoint Manager admin center で次のアクセス許可の一覧を�
 - [セキュリティ ベースライン](../protect/security-baselines.md)
 - [コンプライアンス ポリシー](../protect/device-compliance-get-started.md)
 - [条件付きアクセス ポリシー](#configure-conditional-access)
-- [Defender ATP との統合](../protect/advanced-threat-protection.md)
+- [Microsoft Defender ATP との統合](../protect/advanced-threat-protection.md)

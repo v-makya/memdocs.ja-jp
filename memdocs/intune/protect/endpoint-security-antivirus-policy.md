@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 2f3a378cdb3b5e24371edb2fd6dc240962f80342
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: bfefdee7e949faf9e484ea20e7fc203ee72a9784
+ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431905"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84879658"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティのウイルス対策ポリシー
 
-Intune エンドポイント セキュリティのウイルス対策ポリシーは、セキュリティ管理者がマネージド デバイスのウイルス対策設定の個別のグループを管理することに注力するのに役立ちます。 ウイルス対策ポリシーを使用するには、Intune と Microsoft Defender Advanced Threat Protection (Defender ATP) を Mobile Threat Defense ソリューションとして統合します。
+Intune エンドポイント セキュリティのウイルス対策ポリシーは、セキュリティ管理者がマネージド デバイスのウイルス対策設定の個別のグループを管理することに注力するのに役立ちます。 ウイルス対策ポリシーを使用するには、Intune と Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) を Mobile Threat Defense ソリューションとして統合します。
 
-ウイルス対策ポリシーには、複数のプロファイルが含まれます。 それぞれのプロファイルには、macOS および Windows 10 用の Defender ATP ウイルス対策に適した設定、または Windows 10 デバイス上の Windows セキュリティ アプリのユーザー エクスペリエンス用の設定のみが含まれます。
+ウイルス対策ポリシーには、複数のプロファイルが含まれます。 それぞれのプロファイルには、macOS および Windows 10 用の Microsoft Defender ATP ウイルス対策に適した設定、または Windows 10 デバイス上の Windows セキュリティ アプリのユーザー エクスペリエンス用の設定のみが含まれます。
 
 ウイルス対策ポリシーは、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) のエンドポイント セキュリティ ノードの **[管理]** にあります。
 
@@ -37,10 +37,10 @@ Intune エンドポイント セキュリティのウイルス対策ポリシー
 
 - **macOS**
   - サポートされているバージョンの macOS
-  - Intune でデバイスのウイルス対策設定を管理するには、そのデバイスに Defender ATP がインストールされている必要があります。 See. (Defender ATP のドキュメントの) [macOS 用の Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) に関するページをご覧ください
+  - Intune でデバイスのウイルス対策設定を管理するには、そのデバイスに Microsoft Defender ATP がインストールされている必要があります。 関連項目 [macOS 用の Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (Microsoft Defender ATP ドキュメント)
 
 - **Windows 10 以降**
-  - Intune でデバイスのウイルス対策設定を管理するには、そのデバイスに Defender ATP がインストールされている必要があります。 Intune ドキュメントの [Windows 用の Microsoft Defender ATP](../protect/advanced-threat-protection.md) に関するページをご覧ください。
+  - Intune でデバイスのウイルス対策設定を管理するには、そのデバイスに Microsoft Defender ATP がインストールされている必要があります。 Intune ドキュメントの [Windows 用の Microsoft Defender ATP](../protect/advanced-threat-protection.md) に関するページをご覧ください。
   - Windows セキュリティ アプリは、Windows 10 を実行しているすべてのデバイスにインストールされており、追加の前提条件は必要ありません。
 
 ## <a name="antivirus-profiles"></a>ウイルス対策プロファイル

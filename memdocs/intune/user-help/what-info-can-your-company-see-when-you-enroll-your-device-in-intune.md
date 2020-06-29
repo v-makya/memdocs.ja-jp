@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 06/11/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: ''
-ms.openlocfilehash: 028a568b9a588697139f97f292c70c50347217f3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 740d9b68a0101e04e6bf690d09ecce7eaff4509e
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882073"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107326"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>デバイスを登録した場合に組織が確認できる情報
 
@@ -64,6 +64,6 @@ Microsoft Intune にデバイスを登録しても、組織はユーザーの個
 
 - 電話番号:会社所有のデバイスの場合、ユーザーの完全な電話番号を確認できます。 個人所有のデバイスの場合、組織が確認できるのは、ユーザーの電話番号の最後の 4 桁のみです。 個々のデバイスの所有権の種類は、 **[デバイスの詳細]** ページで確認できます。
 - デバイスの記憶域スペース: 必要なアプリをインストールできない場合、組織がユーザーのデバイスの記憶域の容量を確認し、容量が少なすぎるかどうかを判断することがあります。  
-- 場所:失われた監視対象の iOS デバイスを復旧する必要がある場合を除いて、組織がユーザーのデバイスの場所を確認することは絶対にできません。 監視対象のデバイスに関する詳細については、[Apple iOS のドキュメント](https://go.microsoft.com/fwlink/?linkid=853816)を確認してください。  
-- アプリ インベントリの詳細:組織が Mobile Threat Defense を使用している場合、ユーザーの iOS デバイス上にあるアプリの詳細を閲覧することができます。 Mobile Threat Defense の詳細については、[こちら](set-up-mobile-threat-defense.md)をご覧ください。 個人用デバイスを使用している場合、組織はマネージド アプリ インベントリのみを閲覧できます。 会社所有のデバイスを使用している場合、組織はすべてのアプリ インベントリを閲覧できます。
+- 場所:会社が所有しているデバイスの場合、組織は紛失したデバイスの場所を確認できます。 個人が所有しているデバイスの場合、紛失した監視対象の iOS デバイスを見つけようとしない限り、組織はデバイスの場所を確認することはできません。 監視対象のデバイスに関する詳細については、[Apple iOS のドキュメント](https://go.microsoft.com/fwlink/?linkid=853816)を確認してください。  
+- アプリ インベントリの詳細:組織が Mobile Threat Defense を使用している場合、ユーザーの iOS デバイス上にあるアプリの詳細を閲覧することができます。 Mobile Threat Defense の詳細については、[こちら](set-up-mobile-threat-defense.md)をご覧ください。 それ以外の場合、個人が所有しているデバイスでは、組織はマネージド アプリ インベントリのみを確認できます。 会社が所有しているデバイスでは、組織はすべてのアプリ インベントリを確認できます。
 - ネットワーク情報: Android デバイスのネットワーク接続情報の一部は、組織のサポートが入手できる場合があります。 たとえば、デバイスを特定の建物内に維持するように組織が定めている場合、デバイスでは接続先のネットワークが識別されます。 

@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: efa965bc3dff2436a98602e3cb9dda96a1fe580d
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166173"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740880"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune とエンド ユーザー アプリの UI の更新
 
@@ -34,6 +34,14 @@ Microsoft Intune アプリに対する最新の更新プログラムについて
 
 従業員または学生である場合は、必ず、ポータル サイトのヘルプ ドキュメントへのリンクとスクリーンショットを確認してください。 ポータル サイト アプリを使用する方法の詳細については、[ポータル サイト ユーザーのヘルプ ドキュメント](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)を参照してください。  
 
+
+## <a name="week-of-june-8-2020"></a>2020 年 6 月 8 日の週 
+
+### <a name="updates-to-informational-screen-in-company-portal-for-iosipados----7032452---"></a>iOS または iPadOS 用ポータル サイトの情報画面の更新 <!-- 7032452 -->
+iOS または iPadOS 用ポータル サイトの情報画面が更新され、管理者がデバイスで表示および実行できる内容についての説明が改善されました。 これらの説明は企業所有のデバイスのみに関するものです。 更新されたのはテキストのみです。管理者がユーザー デバイスで表示または実行できる内容は実際には変更されていません。 管理者に表示される内容の詳細については、「[デバイスを登録した場合に組織が確認できる情報](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)」を参照してください。  
+
+
+[![ポータル サイト情報画面のスクリーンショット。更新後のテキストを確認できます。](./media/whats-new-app-ui/device-management-privacy-2005-02.png)](./media/whats-new-app-ui/device-management-privacy-2005-03.png#lightbox)
 
 
 ## <a name="week-of-may-18-2020"></a>2020 年 5 月 18 日の週  
@@ -62,12 +70,6 @@ Microsoft Intune アプリに対する最新の更新プログラムについて
 これらの新規および改善されたエクスペリエンスの場所を空けるために、次の画像に示す **[アプリ]** タブは削除されました。  
 
 ![削除されたポータル サイトの [アプリ] タブの画像の例。](./media/whats-new-app-ui/apps-tab-android-removed-2005.png)  
-
-
-
-
-
-
 
 ## <a name="week-of-march-2-2020"></a>2020 年 3 月 2 日の週   
 ### <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Android 用ポータル サイトでのサインイン エクスペリエンスの向上   

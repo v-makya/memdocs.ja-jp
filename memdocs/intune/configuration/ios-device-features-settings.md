@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235a79f644bf15b82eb9e8750f04519238760aca
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551929"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814944"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune で一般的な iOS および iPadOS 機能を使用するための iOS および iPadOS デバイスの設定
 
@@ -78,6 +78,11 @@ AirPrinter サーバーを追加するには、プリンターの IP アドレ�
 - iPadOS 13.0 以降
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>これらの設定は次に適用されます。デバイスの自動登録 (監視)
+
+> [!NOTE]
+> ドック、ページ、ページ上のフォルダーにはアプリを 1 つだけ追加します。 すべての場所に同じアプリを追加すると、アプリはデバイス上に表示されず、レポート エラーが表示されることもあります。
+>
+> たとえば、カメラ アプリをドックやページに追加すると、カメラ アプリは表示されます。レポートにポリシーのエラーが表示されることがあります。 カメラ アプリをホーム画面レイアウトに追加するには、ドックかページだけを選択します。両方ではありません。
 
 ### <a name="dock"></a>ドッキング
 
@@ -210,7 +215,7 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 
 - **ロック画面の脚注**:デバイスの紛失または盗難時に、デバイスの返却に役立つようなメモを入力します。 必要な任意のテキストを入力できます。 たとえば、`If found, call Contoso at ...` のようなものを入力します。
 
-  デバイス トークンを使用して、このようなフィールドにデバイス固有の情報を追加することもできます。 たとえば、シリアル番号を表示するには、`Serial Number: {{serialnumber}}` と入力します。 ロック画面には、`Serial Number 123456789ABC` のようにテキストが表示されます。 変数を入力するときは、必ず中かっこ `{{ }}` を使用してください。 [アプリの構成トークン](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list)に関する記事には、使用できる変数の一覧が掲載されています。 `deviceName` または他のデバイス固有の値を使用することもできます。
+  デバイス トークンを使用して、このようなフィールドにデバイス固有の情報を追加することもできます。 たとえば、シリアル番号を表示するには、`Serial Number: {{serialnumber}}` または `Device ID: {{DEVICEID}}` と入力します。 ロック画面には、`Serial Number 123456789ABC` のようにテキストが表示されます。 変数を入力するときは、必ず中かっこ `{{ }}` を使用してください。 [アプリの構成トークン](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list)に関する記事には、使用できる変数の一覧が掲載されています。 `DEVICENAME` または他のデバイス固有の値を使用することもできます。
 
   > [!NOTE]
   > 変数は UI で検証されず、大文字と小文字が区別されます。 その結果、不適切な入力で保存されたプロファイルが表示される場合があります。 たとえば、`{{deviceid}}` または '{{DEVICEID}}' の代わりに `{{DeviceID}}` を入力した場合、デバイスの一意の ID ではなくリテラル文字列が表示されます。 必ず、正しい情報を入力してください。 すべて小文字、またはすべて大文字の変数はサポートされますが、混在させることはできません。 
@@ -314,6 +319,10 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 - **共有デバイス モード** (Microsoft Azure AD のみ):Azure AD の共有デバイス モード機能用に構成された iOS/iPadOS デバイスに Microsoft Enterprise SSO プラグインをデプロイする場合は、 **[有効]** を選択します。 共有モードのデバイスでは、多くのユーザーが、共有デバイス モードをサポートしているアプリケーションにグローバルにサインインおよびサインアウトすることができます。 **[未構成]** に設定すると、Intune では、この設定は変更または更新されません。 既定で、iOS/iPadOS デバイスは複数のユーザー間で共有されることを想定していません。
 
   共有デバイス モードと、それを有効にする方法の詳細については、「[共有デバイス モードの概要](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices)」および「[iOS デバイスの共有デバイス モード](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices)」を参照してください。  
+
+  この機能は、以下に適用されます。
+  
+  - iOS および iPadOS 13.5 以降
 
 - **[拡張機能 ID]** (リダイレクトと資格情報): SSO アプリの拡張機能を識別するバンドル識別子 (`com.apple.extensiblesso` など) を入力します。
 

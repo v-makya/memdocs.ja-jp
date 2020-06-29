@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d98f3f8205490848d9f5137e97e7796eee67a67
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: 73a222ee8f847071174ea7dee1c438b69a1bd0ae
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436773"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093782"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>iOS/iPadOS と iPadOS のユーザー登録を設定する (プレビュー)
 
@@ -42,7 +42,7 @@ Apple のユーザー登録プロセスを使用して、iOS/iPadOS デバイス
 
 登録プロファイルで、デバイス グループに対して登録時に適用する設定を定義します。 
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[登録の種類 (プレビュー)]**  >  **[プロファイルの作成]**  >  **[iOS/iPadOS]** を選択します。 このプロファイルでは、iOS/iPadOS および iPadOS のエンド ユーザーが、会社の Apple メソッドで登録されていないデバイスでどのような登録エクスペリエンスを利用できるかを指定します。 変更が必要な場合は、作成後にこのプロファイルを編集できます。
+1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS の登録]**  >  **[登録の種類 (プレビュー)]**  >  **[プロファイルの作成]**  >  **[iOS/iPadOS]** を選択します。 このプロファイルでは、iOS/iPadOS および iPadOS のエンド ユーザーが、会社の Apple メソッドで登録されていないデバイスでどのような登録エクスペリエンスを利用できるかを指定します。 変更が必要な場合は、作成後にこのプロファイルを編集できます。
 
     ![Apple 登録プロファイルを作成する](./media/ios-user-enrollment/create-profile.png)
 
@@ -77,7 +77,7 @@ Apple のユーザー登録プロセスを使用して、iOS/iPadOS デバイス
 
 複数の登録の種類のプロファイルを作成した後は、適用される優先順位を変更できます。
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[登録の種類 (プレビュー)]** を選択します。
+1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS の登録]**  >  **[登録の種類 (プレビュー)]** を選択します。
 2. 一覧のプロファイルを、適用する順序でドラッグ アンド ドロップします。
 
 ユーザーのプロファイル間で競合が生じた場合は、優先順位の高いプロファイルがユーザーに適用されます。

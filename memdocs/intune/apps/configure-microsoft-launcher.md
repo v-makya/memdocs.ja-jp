@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/22/2020
+ms.date: 06/09/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 228c6758feca348d2caed4eb3b54207cadf7a037
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 09ebf7fde0cedb907e105e42abe7338237d231af
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985850"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795705"
 ---
 # <a name="configure-microsoft-launcher"></a>Microsoft Launcher の構成
 
@@ -70,7 +70,7 @@ Microsoft Launcher の構成設定を定義するのに使用できる 2 つの�
 |    Feed Enable (フィードの有効化)    |    ブール型    |    True    |    ユーザーがホーム画面を右側にスワイプしたときの、デバイスでのランチャー フィードの有効化を許可します。<ul><li>**True** に設定すると、フィードが有効になります。</li><li>**False** に設定すると、フィードが無効になります。</li></ul><br>JSON キー名:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Feed Enable User Change Allowed (フィード有効化のユーザーによる変更を許可)    |    ブール型    |    True    |     エンド ユーザーが **[Feed Enable]\(フィードの有効化\)** の設定を変更できるかどうかを指定できます。<ul><li>**True** に設定した場合、フィードは初期展開に対してのみ適用されます。 その後は、ポリシーは適用されず、ユーザーが行った変更が尊重されます。</li><li>**False** に設定すると、すべての同期でフィードが適用されます。</li></ul><br>JSON キー名: `com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
 |    検索バーの配置   |    文字列型    |    下    |  ホーム画面の**検索バーの配置**を指定できます。 <ul><li>**[最下部]** に設定した場合、検索バーはホーム画面の一番下に配置されます。</li><li>**[最上部]** に設定した場合、検索バーはホーム画面の一番上に配置されます。</li><li>**[非表示]** に設定した場合、検索バーはホーム画面から取り除かれます。</li></ul><br>JSON キー名:<br>`com.microsoft.launcher.Search.SearchBar.Placement`    |
-|    検索バーの配置をユーザーが変更することを許可する   |    Bool    |    True    |  **[検索バーの配置]** 設定をエンド ユーザーが変更できるかどうかを指定できます。 <ul><li>**True** に設定した場合、検索バーの配置は初期展開に対してのみ適用されます。 その後は、ポリシーは適用されず、ユーザーが行った変更が尊重されます。</li><li>**False** に設定すると、すべての同期で検索バーの配置が適用されます。</li></ul><br>JSON キー名:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`    |
+|    検索バーの配置をユーザーが変更することを許可する   |    Bool    |    True    |  **[検索バーの配置]** 設定をエンド ユーザーが変更できるかどうかを指定できます。 <ul><li>**True** に設定した場合、検索バーの配置は初期展開に対してのみ適用されます。 その後は、ポリシーは適用されず、ユーザーが行った変更が尊重されます。</li><li>**False** に設定すると、すべての同期で検索バーの配置が適用されます。</li></ul><br>JSON キー名:<br>`com.microsoft.launcher.Search.SearchBar.Placement.UserChangeAllowed`<p>**注意:** Microsoft Launcher v 6.2 以降の場合、この設定は強制されません。 そのため、この値を `True` に設定しても効果がありません。 エンド ユーザーは、デバイス上の検索バーの配置場所をカスタマイズできなくなります。    |
 |    ドック モード  |    文字列型    |    表示    | ユーザーがホーム画面を右側にスワイプしたときの、デバイスでのドックの有効化を許可します。<ul><li>**[表示]** に設定すると、ドックが有効になります。</li><li>**[非表示]** に設定すると、ホーム画面からドックが消えますが、ユーザーは必要なときに表示できます。</li><li>**[無効]** に設定すると、ドックは無効になります。</li></ul><br>JSON キー名:<br>`com.microsoft.launcher.Dock.Mode`    |
 |   ドック モードをユーザーが変更することを許可する   |    文字列型    |    True    |  ドック モード設定をエンド ユーザーが変更できるかどうかを指定できます。<ul><li>**True** に設定した場合、ドック モード設定は初期展開に対してのみ適用されます。 その後は、ポリシーは適用されず、ユーザーが行った変更が尊重されます。</li><li>**False** に設定すると、すべての同期でドック モード設定が適用されます。</li></ul><br>JSON キー名:<br>`com.microsoft.launcher.Dock.Mode.UserChangeAllowed`    |
 

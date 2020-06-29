@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 06/16/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07612080f170c5f2bef448aa616a4422508218d1
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326929"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093342"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune での iOS/iPadOS デバイスの登録に関する問題のトラブルシューティング
 
@@ -66,25 +66,6 @@ ms.locfileid: "80326929"
 4. **[デバイスの種類の制限]** で、>**プロパティ** >  設定する制限を選択し、 **[プラットフォームの選択]** > [ **iOS**で**許可**する] の順に選択し、[ **OK]** をクリックします。
 5. **[プラットフォームの構成]** を選択し、個人所有の iOS/iPadOS デバイスに対して **[許可]** を選択して、 **[OK]** をクリックします。
 6. デバイスを再度登録します。
-
-**原因:** DNS に必要な CNAME レコードが存在しません。
-
-#### <a name="resolution"></a>解決策
-会社のドメインの CNAME DNS リソース レコードを作成します。 たとえば、会社のドメインが contoso.com の場合、EnterpriseEnrollment.contoso.com を EnterpriseEnrollment-s.manage.microsoft.com にリダイレクトする CNAME を DNS に作成します。
-
-CNAME DNS エントリの作成は省略可能ですが、CNAME レコードにより、ユーザーによる登録が簡単になります。 CNAME レコードの登録が見つからない場合、ユーザーは手動で MDM サーバー名 enrollment.manage.microsoft.com を入力するように求められます。
-
-検証済みドメインが複数ある場合、ドメインごとに CNAME レコードを作成します。 CNAME リソース レコードには次の情報を含める必要があります。
-
-|種類:|ホスト名|指定先|TTL|
-|------|------|------|------|
-|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com|1 時間|
-|CNAME|EnterpriseRegistration.company_domain.com|EnterpriseRegistration.windows.net|1 時間|
-
-会社でユーザーの資格情報に複数のドメインを使用する場合は、各ドメインに CNAME レコードを作成します。
-
-> [!NOTE]
-> DNS レコードの変更が反映されるまでには、最大で 72 時間かかります。 DNS レコードの変更が反映されるまで、Intune で DNS の変更を確認することはできません。
 
 **原因:** 以前に別のユーザー アカウントで登録されたデバイスを登録していますが、以前のユーザーが Intune から適切に削除されていません。
 
@@ -239,6 +220,16 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 #### <a name="resolution"></a>解決策
 MFA を無効にしてから、デバイスを再登録します。
 
+### <a name="authentication-doesnt-redirect-to-the-government-cloud"></a>認証が政府機関クラウドにリダイレクトされない 
+
+別のデバイスからサインインした政府機関ユーザーが、政府機関クラウドではなく、パブリック クラウドにリダイレクトされます。 
+
+**原因:** Azure AD では現在のところ、別のデバイスからサインインするとき、政府機関クラウドにリダイレクトできません。 
+
+#### <a name="resolution"></a>解決策 
+**設定**アプリの iOS ポータル サイト **クラウド**設定を利用し、政府機関ユーザーの認証を政府機関クラウドにリダイレクトします。 既定では、**クラウド**設定は **[自動]** に設定され、ポータル サイトでは、デバイスで自動検出されるクラウド (パブリックまたは政府機関など) に認証が送信されます。 政府機関ユーザーが別のデバイスからサインインする場合、認証のために政府機関クラウドを手動で選択する必要があります。 
+
+**設定**アプリを開き、[ポータル サイト] を選択します。 [ポータル サイト] 設定で、 **[クラウド]** を選択します。 **[クラウド]** を [政府機関] に設定します。  
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1bbcfc953945f7e8525cb7dc7edf3b1dd8a2f5c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f807eabd2fabd51f7a7bb8eb43225a579784148c
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989079"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746495"
 ---
 # <a name="set-enrollment-restrictions"></a>登録制限を設定する
 
@@ -64,7 +64,7 @@ ms.locfileid: "83989079"
 3. **[次へ]** を選択して、 **[プラットフォームの設定]** ページに移動します。
 4. **[プラットフォーム]** で、この制限を許可するプラットフォームに対して **[許可]** を選択します。
     ![プラットフォームの設定を選択する画面のキャプチャ](./media/enrollment-restrictions-set/choose-platform-settings.png)
-5. **[バージョン]** で、許可されるプラットフォームでサポートされる最小バージョンと最大バージョンを選択します。 バージョン制限は、ポータル サイトを使用して登録されるデバイスにのみ適用されます。
+5. **[バージョン]** で、許可されるプラットフォームでサポートされる最小バージョンと最大バージョンを選択します。 iOS と Android の場合、バージョン制限は、ポータル サイトを使用して登録されるデバイスにのみ適用されます。
      サポートされるバージョン形式:
     - Android デバイス管理者と Android Enterprise 仕事用プロファイルでは、major.minor.rev.build がサポートされます。
     - iOS/iPadOS では major.minor.rev がサポートされます。オペレーティング システムのバージョンは、Device Enrollment Program、Apple School Manager、または Apple Configurator アプリを使用して登録する Apple デバイスには適用されません。

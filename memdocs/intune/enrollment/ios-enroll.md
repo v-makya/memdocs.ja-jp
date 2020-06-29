@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf413dc551d8be8fd646a03826fb3e5507f4d272
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ba44cca323dd2a3fbf756b86743dea403ce0b156
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988939"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093057"
 ---
 # <a name="enroll-iosipados-devices-in-intune"></a>Intune に iOS/iPadOS デバイスを登録する
 
@@ -61,7 +61,7 @@ Intune では、ユーザーのデバイスを購入する組織のために、�
 
 ## <a name="automated-device-enrollment"></a>デバイスの自動登録
 
-組織は、Apple の自動デバイス登録 (ADE) を通して iOS または iPadOS デバイスを購入できます。 ADE では、登録プロファイルを "無線で" 展開して、デバイスを管理対象にすることができます。 詳細については、[Device Enrollment Program](device-enrollment-program-enroll-ios.md) に関する記事を参照してください。
+組織は、Apple の自動デバイス登録 (ADE) を通して iOS または iPadOS デバイスを購入できます。 ADE では、登録プロファイルを "無線で" 展開して、デバイスを管理対象にすることができます。 詳細については、「[Apple の自動デバイス登録を使用して iOS または iPadOS デバイスを自動登録する](device-enrollment-program-enroll-ios.md)」を参照してください。
 
 ## <a name="user-enrollment"></a>ユーザー登録
 ユーザー登録により、管理者は他の登録方法と比較して少ない数の管理オプションを使用できるようになります。 詳細については、[ユーザー登録でサポートされるアクション、パスワード、およびその他のオプション](ios-user-enrollment-supported-actions.md)と [iOS/iPadOS と iPadOS のユーザー登録の設定](ios-user-enrollment.md)に関する記事を参照してください。

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 196fc4f551596a6146513d25166b1b167aa44186
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: bfcc4a8e867041e0053697bbee605f9798e45bec
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986674"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093915"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Apple Business Manager または Apple School Manager を使用して macOS デバイスを自動登録する
 
@@ -46,7 +46,7 @@ Apple Business Manager 登録と Apple School Manager はどちらも、[デバ�
 -->
 ## <a name="prerequisites"></a>[前提条件]
 
-- [Apple School Manager](https://school.apple.com/) または [Apple の Device Enrollment Program](http://deploy.apple.com) で購入したデバイス
+- [Apple School Manager](https://school.apple.com/) または [Apple の自動デバイス登録](http://deploy.apple.com)で購入したデバイス
 - シリアル番号や注文書番号の一覧。
 - [MDM 機関](../fundamentals/mdm-authority-set.md)
 - [Apple MDM プッシュ証明書](../enrollment/apple-mdm-push-certificate-get.md)
@@ -62,24 +62,25 @@ ADE または Apple School Manager に macOS デバイスを登録するには�
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>手順 1. トークンを作成するために必要な Intune 公開キー証明書をダウンロードする
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[macOS]**  >  **[macOS enrollment]\(macOS の登録\)**  >  **[Enrollment Program トークン]**  >  **[追加]** を選択します。
+1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[macOS]**  >  **[macOS enrollment]\(macOS の登録\)** を選択します。 
+> **[Enrollment Program トークン]**  >  **[追加]** を選択します。
 
-    ![Enrollment Program トークンを取得します。](./media/device-enrollment-program-enroll-macos/image01.png)
+    ![Get an enrollment program token.](./media/device-enrollment-program-enroll-macos/image01.png)
 
 2. **[同意する]** を選択して、Microsoft がユーザーとデバイスの情報を Apple に送信できるようにします。
 
-   ![公開キーをダウンロードするための [Apple 証明書] ワークスペースの [Enrollment Program トークン] のスクリーンショット。](./media/device-enrollment-program-enroll-macos/add-enrollment-program-token-pane.png)
+   ![公開キーをダウンロードするための [Apple 証明書] ワークスペースの [Enrollment Program トークン] のスクリーンショット。](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
 3. **[公開キーをダウンロードします]** を選択し、暗号化キー (.pem) ファイルをダウンロードしてローカルに保存します。 .pem ファイルは、Apple ポータルから信頼関係証明書を要求するために使用します。
 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>手順 2. キーを使用して Apple からトークンをダウンロードする
 
-1. **[Create a token for Apple's Device Enrollment Program]\(Apple Device Enrollment Program 用のトークンを作成します\)** または **[Create a token via Apple School Manager]\(Apple School Manager でトークンを作成する\)** を選択して適切な Apple ポータルを開き、会社の Apple ID でサインインします。 この Apple ID を使って、トークンを更新できます。
+1. **[Create a token for via Apple Business Manager]\(Apple Business Manager を使用してトークンを作成する\)** または **[Create a token via Apple School Manager]\(Apple School Manager でトークンを作成する\)** を選択して、適切な Apple ポータルを開き、会社の Apple ID でサインインします。 この Apple ID を使って、トークンを更新できます。
 2. DEP の場合は、Apple portal で **[Device Enrollment Program]** の **[Get Started]\(開始\)**  >  **[サーバーの管理]**  >  **[Add MDM Server]\(MDM サーバーの追加\)** を選択します。
 3. Apple School Manage の場合は、Apple ポータルで **[MDM Servers]\(MDM サーバー\)**  >  **[Add MDM Server]\(MDM サーバーの追加\)** を選択します。
 4. **MDM サーバー名**を入力し、 **[Next]** (次へ) をクリックします。 サーバー名は、自分がモバイル デバイス管理 (MDM) サーバーを識別できるようにするための名前です。 Microsoft Intune サーバーの名前または URL ではありません。
 
-5. **[Add &lt;ServerName&gt;\(<サーバー名> の追加\)]** ダイアログ ボックスが開き、 **[Upload Your Public Key\(公開キーをアップロードする\)]** と表示されます。 **[Choose File]** (ファイルを選択) をクリックして .pem ファイルをアップロードし、 **[Next]** (次へ) を選択します。
+5. **[Add &lt;ServerName&gt;\(<サーバー名> の追加\)]** ダイアログ ボックスが開き、 **[Upload Your Public Key\(公開キーをアップロードする\)]** と表示されます。 **[ファイルの選択…]** を選択して .pem ファイルをアップロードし、 **[Next]** (次へ) を選択します。
 
 6. **[Deployment Programs]** &gt; **[Device Enrollment Program]** &gt; **[デバイスの管理]** の順に移動します。
 7. **[Choose Devices By\(デバイスの選択方法\)]** で、デバイスを識別する方法を指定します。
@@ -95,7 +96,7 @@ ADE または Apple School Manager に macOS デバイスを登録するには�
 
 [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、今後の参照用に Apple ID を指定します。
 
-![Enrollment Program トークンの作成に使った Apple ID の指定と、Enrollment Program トークンの参照のスクリーンショット。](./media/device-enrollment-program-enroll-macos/image03.png)
+![Enrollment Program トークンの作成に使った Apple ID の指定と、Enrollment Program トークンの参照のスクリーンショット。](./media/device-enrollment-program-enroll-ios/image03.png)
 
 ### <a name="step-4-upload-your-token"></a>手順 4. トークンをアップロードする
 **[Apple トークン]** ボックスで、証明書 (.pem) ファイルを参照し、 **[開く]** を選択して、 **[作成]** を選択します。 このプッシュ証明書を使用して、Intune はデバイスを登録し、登録したデバイスにポリシーを適用して macOS デバイスを管理できます。 Intune は、Apple と自動的に同期して、Enrollment Program アカウントを表示します。
@@ -109,24 +110,28 @@ ADE または Apple School Manager に macOS デバイスを登録するには�
 
     ![プロファイルの作成のスクリーンショット。](./media/device-enrollment-program-enroll-macos/image04.png)
 
-3. **[プロファイルの作成]** で、管理用にプロファイルの **[名前]** と **[説明]** を入力します。 ユーザーにはこれらの詳細は表示されません。 この **[名前]** フィールドを使用して、Azure Active Directory で動的グループを作成できます。 この登録プロファイルに対応するデバイスを割り当てるために enrollmentProfileName パラメーターを定義する場合はプロファイル名を使用します。 Azure Active Directory の動的グループの詳細については[こちら](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)を参照してください。
+3. **[基本]** ページ上で、管理用にプロファイルの **[名前]** と **[説明]** を入力します。 ユーザーにはこれらの詳細は表示されません。 この **[名前]** フィールドを使用して、Azure Active Directory で動的グループを作成できます。 この登録プロファイルに対応するデバイスを割り当てるために enrollmentProfileName パラメーターを定義する場合はプロファイル名を使用します。 Azure Active Directory の動的グループの詳細については[こちら](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)を参照してください。
 
     ![プロファイル名と説明。](./media/device-enrollment-program-enroll-macos/createprofile.png)
 
 4. **[プラットフォーム]** で **[macOS]** を選びます。
 
-5. **[ユーザー アフィニティ]** で、このプロファイルに対応するデバイスを割り当て済みユーザーとともに登録する必要があるかどうかを選択します。
+5. **[次へ]** を選択して、 **[管理の設定]** ページに移動します。
+
+6. **[ユーザー アフィニティ]** で、このプロファイルに対応するデバイスを割り当て済みユーザーとともに登録する必要があるかどうかを選択します。
     - **[ユーザー アフィニティとともに登録する]** - このオプションは、ユーザーに属しているデバイスであって、かつアプリのインストールなどのサービスにポータル サイトのアプリを使用する必要があるデバイスの場合に選択します。 ADFS を使用している場合、ユーザー アフィニティには [WS-Trust 1.3 Username/Mixed エンドポイント](https://technet.microsoft.com/library/adfs2-help-endpoints)が必要です。 [詳細情報](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)。多要素認証は、ユーザー アフィニティがある macOS ADE デバイスではサポートされません。
 
     - **[ユーザー アフィニティなしで登録する]** - このオプションは、1 人のユーザーに関連付けられていないデバイスの場合に選択します。 ローカルのユーザー データにアクセスせずにタスクを実行するデバイスで使用します。 ポータル サイト アプリなどのアプリは動作しません。
 
-6. **[デバイス管理の設定]** を選択し、このプロファイルを使用するデバイスに対して、ロックされた登録を使用するかどうかを選択します。 **[ロックされた登録]** を選択すると、 **[システム環境設定]** メニューから、または**ターミナル**を通じて管理プロファイルの削除を許可する macOS 設定が、無効になります。 デバイスの登録後は、デバイスをワイプしないと、この設定を変更することができません。
+6. **[ユーザー アフィニティとともに登録する]** を選択する場合は、 **[認証方法]** の下で **[Setup Assistant (legacy)]\(設定アシスタント (レガシ)\)** または **[Setup Assistant with modern authentication]\(先進認証でのセットアップ アシスタント\)** を選択します。
 
-    ![[デバイス管理の設定] のスクリーンショット。](./media/device-enrollment-program-enroll-macos/devicemanagementsettingsblade-macos.png)
+7. **[ロックされた登録]** の場合、このプロファイルを使用するデバイスの登録をロックする必要があるかどうかを選択します。 **[はい]** にすると、 **[システム環境設定]** メニューから、または **[ターミナル]** を通じて管理プロファイルの削除を許可する macOS 設定が、無効になります。 デバイスの登録後は、デバイスをワイプしないと、この設定を変更することができません。
 
-7. **[OK]** を選びます。
+8. **[次へ]** を選択して、 **[設定アシスタント]** ページに移動します。
 
-8. **[セットアップ アシスタントの設定]** を選択し、次のプロファイル設定を構成します。![セットアップ アシスタントのカスタマイズ。](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
+9. **[設定アシスタント]** ページで、次のプロファイル設定を構成します。
+
+    ![設定アシスタントのカスタマイズ。](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
     | 部門の設定 | [説明] |
     |---|---|
@@ -139,34 +144,36 @@ ADE または Apple School Manager に macOS デバイスを登録するには�
 
     | セットアップ アシスタントの画面の設定 | **[表示]** を選択した場合の、セットアップ時のデバイスの動作... |
     |------------------------------------------|------------------------------------------|
-    | <strong>パスコード</strong> | ユーザーにパスコードの入力を求めます。 デバイスがセキュリティで保護される場合や、他の何らかの方法 (デバイスを 1 つのアプリに制限するキオスク モードなど) でアクセスが制御されている場合を除き、パスコードは常に必須にしてください。 |
-    | <strong>ロケーション サービス</strong> | ユーザーに場所の指定を求めます。 |
-    | <strong>復元</strong> | [アプリとデータ] 画面が表示されます。 この画面では、ユーザーはデバイスを設定するときに iCloud Backup からデータを復元または転送できます。 |
-    | <strong>iCloud と Apple ID</strong> | ユーザーは、自分の **Apple ID** でサインインして、**iCloud** を使用することができます。                         |
-    | <strong>使用条件</strong> | ユーザーに Apple の使用条件への同意を求めます。 |
-    | <strong>Touch ID</strong> | ユーザーに、デバイスの指紋識別を設定するオプションを表示します。 |
-    | <strong>Apple Pay</strong> | ユーザーに、デバイスで Apple Pay を設定するオプションを表示します。 |
-    | <strong>Zoom</strong> | ユーザーに、デバイスを設定するときに表示を拡大するオプションを表示します。 |
-    | <strong>Siri</strong> | ユーザーに、Siri を設定するオプションを表示します。 |
-    | <strong>診断データ</strong> | [診断] 画面をユーザーに表示します。 この画面では、ユーザーは Apple に診断データを送信できます。 |
-    | <strong>FileVault</strong> | ユーザーに、FileVault 暗号化を設定するオプションを表示します。 |
-    | <strong>iCloud 診断</strong> | ユーザーは Apple に iCloud 診断データを送信できます。 |
-    | <strong>iCloud ストレージ</strong> | iCloud ストレージを使用するオプションをユーザーに表示します。 |    
-    | <strong>トーンの表示</strong> | [トーンの表示] をオンにするオプションをユーザーに表示します。 |
-    | <strong>外観</strong> | [表示] 画面をユーザーに表示します。 |
-    | <strong>登録</strong>| ユーザーがデバイスを登録する必要があります。 |
-    | <strong>プライバシー</strong>| [プライバシー] 画面をユーザーに表示します。 |
-    | <strong>画面の表示時間</strong>| [画面の表示時間] 画面をユーザーに表示します。 |
+    | <strong>パスコード</strong> | ユーザーにパスコードの入力を求めます。 デバイスがセキュリティで保護されていない場合は、他の何らかの方法 (デバイスを 1 つのアプリに制限するキオスク モードなど) でアクセスが制御されていない限り、パスコードを常に必須にします。 iOS/iPadOS 7.0 以降が対象です。 |
+    | <strong>ロケーション サービス</strong> | ユーザーに場所の指定を求めます。 macOS 10.11 以降と、iOS/iPadOS 7.0 以降が対象です。 |
+    | <strong>復元</strong> | [アプリとデータ] 画面が表示されます。 この画面では、ユーザーはデバイスを設定するときに iCloud Backup からデータを復元または転送できます。 macOS 10.9 以降と、iOS/iPadOS 7.0 以降が対象です。 |
+    | <strong>Apple ID</strong> | 自分の Apple ID を使ってサインインし iCloud を使用するオプションをユーザーに提示します。 macOS 10.9 以降と、iOS/iPadOS 7.0 以降が対象です。   |
+    | <strong>使用条件</strong> | ユーザーに Apple の使用条件への同意を求めます。 macOS 10.9 以降と、iOS/iPadOS 7.0 以降が対象です。 |
+    | <strong>Touch ID</strong> | ユーザーに、デバイスの指紋識別を設定するオプションを表示します。 macOS 10.12.4 以降と、iOS/iPadOS 8.1 以降が対象です。 |
+    | <strong>Apple Pay</strong> | ユーザーに、デバイスで Apple Pay を設定するオプションを表示します。 macOS 10.12.4 以降と、iOS/iPadOS 7.0 以降が対象です。 |
+    | <strong>Zoom</strong> | ユーザーに、デバイスを設定するときに表示を拡大するオプションを表示します。 iOS/iPadOS 8.3 以降が対象です。 |
+    | <strong>Siri</strong> | ユーザーに、Siri を設定するオプションを表示します。 macOS 10.12 以降と、iOS/iPadOS 7.0 以降が対象です。 |
+    | <strong>診断データ</strong> | [診断] 画面をユーザーに表示します。 この画面では、ユーザーは Apple に診断データを送信できます。 macOS 10.9 以降と、iOS/iPadOS 7.0 以降が対象です。 |
+    | <strong>FileVault</strong> | FileVault 2 encryption\(FileVault 2 の暗号化\) 画面をユーザーに表示します。 macOS 10.10 以降が対象です。 |
+    | <strong>iCloud 診断</strong> | [iCloud Analytics] 画面をユーザーに表示します。 macOS 10.12.4 以降が対象です。 |
+    | <strong>iCloud ストレージ</strong> | [iCloud Documents and Desktop]\(iCloud の書類とデスクトップ\) 画面をユーザーに表示します。 macOS 10.13.4 以降が対象です。 |
+    | <strong>トーンの表示</strong> | [トーンの表示] をオンにするオプションをユーザーに表示します。 macOS 10.13.6 以降と、iOS/iPadOS 9.3.2 以降が対象です。 |
+    | <strong>外観</strong> | [表示] 画面をユーザーに表示します。 macOS 10.14 以降と、iOS/iPadOS 13.0 以降が対象です。 |
+    | <strong>登録</strong> | [登録] 画面をユーザーに表示します。 macOS 10.9 以降が対象です。 |
+    | <strong>画面の表示時間</strong> | [画面の表示時間] 画面を表示します。 macOS 10.15 以降と、iOS/iPadOS 12.0 以降が対象です。 |
+    | <strong>プライバシー</strong> | [プライバシー] 画面をユーザーに表示します。 macOS 10.13.4 以降と、iOS/iPadOS 11.3 以降が対象です。 |
+    
+10. **[次へ]** を選択して、 **[確認と作成]** ページへ移動します。
 
-9. **[OK]** を選びます。
-
-10. プロファイルを保存するには、 **[作成]** を選択します。
+11. プロファイルを保存するには、 **[作成]** を選択します。
 
 ## <a name="sync-managed-devices"></a>マネージド デバイスを同期する
 
 デバイスを管理するアクセス許可を Intune に割り当てたので、Intune と Apple を同期して、マネージド デバイスを Azure ポータルの Intune に表示できます。
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]** > **[macOS]** > **[macOS enrollment]\(macOS の登録\)** > **[Enrollment Program トークン]** を選択し、一覧からトークンを選択して、 **[デバイス]** > **[同期]** を選択します。![[Enrollment Program デバイス] ノードと [同期] リンクが選ばれているスクリーンショット。](./media/device-enrollment-program-enroll-macos/image06.png)
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[macOS]**  >  **[macOS enrollment]\(macOS の登録\)**  >  **[Enrollment Program トークン]** を選択します。
+
+2. 一覧からトークンを選択して、 **[デバイス]** > **[同期]** を選択します。![[Enrollment Program デバイス] ノードと [同期] リンクが選ばれているスクリーンショット。](./media/device-enrollment-program-enroll-macos/image06.png)
 
    Enrollment Program に許容されるトラフィックに関する Apple 社の規約に準拠するよう、Intune には次の制限が課せられます。
    - 完全な同期は 7 日に 1 回だけ実行できます。 完全な同期中に、Intune に接続された Apple MDM サーバーに割り当てられているシリアル番号の完全な最新の一覧を Intune がフェッチします。 Apple ポータルで Apple MDM サーバーからの割り当てを解除せずに Intune ポータルから Enrollment Program デバイスが削除されると、完全同期が実行されるまで Intune に再インポートされません。   
@@ -201,10 +208,10 @@ Apple と Intune の間の同期と管理を有効にし、デバイスを登録
 
 4. **[Your Server Token]\(サーバー トークン\)** を選択します。  
 5. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイスの登録]**  >  **[Apple の登録]**  >  **[Enrollment Program トークン]** を選択し、トークンを選択します。
-    ![Enrollment Program トークンのスクリーンショット。](./media/device-enrollment-program-enroll-macos/enrollmentprogramtokens.png)
+    ![Enrollment Program トークンのスクリーンショット。](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
 6. **[トークンを更新する]** を選択し、元のトークンの作成に使用した Apple ID を入力します。  
-    ![生成された新しいトークンのスクリーンショット。](./media/device-enrollment-program-enroll-macos/renewtoken.png)
+    ![生成された新しいトークンのスクリーンショット。](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
 7. 新しくダウンロードしたトークンをアップロードします。  
 8. **[トークンを更新する]** を選択します。 トークンが更新されたことの確認が表示されます。

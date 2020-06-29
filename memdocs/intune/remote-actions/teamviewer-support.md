@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b94146cc429f2a7f7b196f15527e8687368e6d78
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3031e909b5bd330f9ec84f05f2c83c504022d50e
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988249"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746597"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>TeamViewer を使用して、Intune デバイスをリモートで管理する
 
@@ -69,6 +69,6 @@ TeamViewer を使用すると、Intune コネクタ用 TeamViewer での TeamVie
 > [!NOTE]
 > デバイス登録マネージャー (DEM) や Windows 構成デザイナー (WCD) など、"ユーザーレス" メソッドを使用して登録された Windows デバイスの場合、ポータル サイト アプリに TeamViewer 通知が表示されません。 このようなシナリオでは、TeamViewer ポータルを使用してセッションを生成することをお勧めします。
 
-TeamViewer では、デバイスの制御など、デバイスでさまざまな操作を完了できます。 実行できる操作の詳細については、[TeamViewer ガイダンス](https://www.teamviewer.com/support/documents/)を参照してください。
+TeamViewer では、デバイスの制御など、デバイスでさまざまな操作を完了できます。 実行できる操作の詳細については、[TeamViewer コミュニティ ページ](https://community.teamviewer.com/)を参照してください。
 
 完了したら、TeamViewer ウィンドウを閉じます。

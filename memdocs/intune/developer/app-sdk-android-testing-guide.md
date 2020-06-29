@@ -1,11 +1,11 @@
 ---
-title: Android 用 Microsoft Intune App SDK テスト ガイド
+title: Android 用 Microsoft Intune アプリ SDK 開発者テスト ガイド
 description: Android 用 Microsoft Intune アプリ SDK テスト ガイドは、Intune で管理される Android アプリのテストに役立ちます。
 keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 06/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,20 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6875dc873d44b77a24fe68f637d9329c9f5e1d9c
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: dd4ece62215d48f3481923e099feecc992d7aa6d
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165602"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093365"
 ---
-# <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Android 用 Microsoft Intune App SDK テスト ガイド
+# <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Android 用 Microsoft Intune アプリ SDK 開発者テスト ガイド
 
-このガイドは、開発者が Intune で管理されている Android アプリをテストするのに役立ちます。  
+Android 用 Microsoft Intune アプリ SDK テスト ガイドは、Intune で管理される Android アプリのテストの実施に役立ちます。
 
-## <a name="prerequisite-test-accounts"></a>前提条件のテスト アカウント
-事前に生成されたデータを使用して、または使用せずに、新しいアカウントを作成できます。 新しいアカウントを作成するには:
-1. [Microsoft Demos](https://demos.microsoft.com/environments/create/tenant) のサイトに移動します。 
+## <a name="demo-tenant-setup"></a>デモ テナント セットアップ
+自分の会社でテナントをまだ用意していない場合、事前生成データあり、またはなしでデモ テナントを作成できます。 Microsoft CDX にアクセスするには [Microsoft パートナー](https://partner.microsoft.com/en-us/business-opportunities/why-microsoft)として登録する必要があります。 新しいアカウントを作成するには:
+1. [Microsoft CDX テナント作成サイト](https://cdx.transform.microsoft.com/my-tenants/create-tenant)に移動し、Microsoft 365 Enterprise テナントを作成します。
 2. モバイル デバイス管理 (MDM) が有効になるよう、[Intune をセットアップ](../fundamentals/setup-steps.md)します。
 3. [ユーザーを作成します](../fundamentals/users-add.md)。
 4. [グループを作成します](../fundamentals/groups-add.md)。
@@ -45,7 +45,7 @@ ms.locfileid: "84165602"
 
 ## <a name="test-cases"></a>テスト ケース
 
-次のテスト ケースでは、構成と確認の手順がわかります。 このガイダンスを使用すると、Intune で管理される Android アプリの問題解決に役立てることができます。
+次のテスト ケースでは、構成と確認の手順がわかります。 これらのテストを使用し、新しく統合された Android アプリを確認します。
 
 ### <a name="required-pin-and-corporate-credentials"></a>必要な PIN と会社の資格情報
 
@@ -64,11 +64,30 @@ ms.locfileid: "84165602"
 会社で管理されるアプリケーション間のデータ転送を次のように制御できます。
 
 1. **[アプリで他のアプリへのデータ転送を許可する]** を **[ポリシー マネージド アプリ]** に設定します。
-2. **[このアプリで他のアプリからデータを受信できるようにする]** を **[すべてのアプリ]** に設定します。 意図とコンテンツ プロバイダーの使用は、これらのポリシーの影響を受けます。
+2. **[このアプリで他のアプリからデータを受信できるようにする]** を **[すべてのアプリ]** に設定します。 
+
+意図とコンテンツ プロバイダーの使用は、これらのポリシーの影響を受けます。
 3. 次の条件を確認します。
     - 非管理対象アプリから自分のアプリに開くと、正しく機能します。
-    - 管理対象アプリ間でコンテンツを共有できます。
-    - 管理対象アプリと非管理対象アプリ (Chrome など) の間の共有は禁止されています。
+    - ご自分のアプリと管理対象アプリの間でコンテンツを共有できます。
+    - ご自分のアプリと非管理対象アプリ (Chrome など) の間の共有は禁止されています。
+
+
+#### <a name="restrict-receiving-data-from-other-apps"></a>他のアプリからのデータ受信を制限する
+
+1. **[他のアプリに組織データを送信]** を **[すべてのアプリ]** に設定します。
+2. **[他のアプリからデータを受信]** を **[ポリシーで管理されているアプリ]** に設定します。 
+3. 次の条件を確認します。
+    - ご自分のアプリから非管理対象アプリに送信すると、正しく機能します。
+    - ご自分のアプリと管理対象アプリの間でコンテンツを共有できます。
+    - 非管理対象アプリ (Chrome など) からご自分のアプリに共有することは禁止されています。
+
+アプリに[一体型の "開く場所" コントロール](app-sdk-android.md#opening-data-from-a-local-or-cloud-storage-location)が必要な場合、**開く場所**機能を次のように制御できます。
+
+1. **[他のアプリからデータを受信]** を **[ポリシーで管理されているアプリ]** に設定します。 
+2. **[データを開いて組織ドキュメントに読み込む]** を **[ブロック]** に設定します。 
+3. 次の条件を確認します。
+    - 開くことは、適切に管理されている場所にのみ制限されます。
 
 ### <a name="restrict-cut-copy-and-paste"></a>切り取り、コピー、貼り付けを制限
 次のように、システム クリップボードをマネージド アプリケーションに制限できます。
@@ -78,9 +97,9 @@ ms.locfileid: "84165602"
     - アプリからアンマネージド アプリ (例: Messages) へのテキストのコピーはブロックされています。
 
 ### <a name="prevent-save"></a>保存を禁止する
-**[名前を付けて保存]** 機能を次のように制御できます。
+アプリに[一体型の "名前を付けて保存" コントロール](app-sdk-android.md#example-data-transfer-between-apps-and-device-or-cloud-storage-locations)が必要な場合、**名前を付けて保存**機能を次のように制御できます。
 
-1. アプリで[統合された [名前を付けて保存] コントロール](app-sdk-android.md#example-determine-if-saving-to-device-or-cloud-storage-is-permitted)が必要な場合は、 **[[名前を付けて保存] を禁止する]** を **[はい]** に設定します。
+1. **[名前を付けて保存することを禁止]** を **[はい]** に設定します。
 2. 次の条件を確認します。
     - 保存は、適切に管理されている場所にのみ制限されます。
 
@@ -91,24 +110,24 @@ ms.locfileid: "84165602"
 2. 次の条件を確認します。
     - 通常のアプリケーション動作は影響を受けません。
 
-### <a name="prevent-android-backups"></a>[Android でのバックアップを禁止する]
+### <a name="prevent-android-backups"></a>Android でのバックアップを禁止する
 次のように、アプリのバックアップを制御できます。
 
 1. [統合バックアップ制限](app-sdk-android.md#protecting-backup-data)を設定している場合は、 **[Android でのバックアップを禁止する]** を **[はい]** に設定します。
 2. 次の条件を確認します。
     - バックアップが制限されます。
 
-### <a name="unenrollment"></a>登録解除
-会社のメールやドキュメントから、マネージド アプリをリモートでワイプできます。また、個人データは、管理されなくなったときに暗号化が解除されます。 次に手順を示します。
+### <a name="wipe"></a>ワイプ
+企業の電子メールや文書を管理対象アプリからリモートでワイプできます。 個人データは、管理対象から外れたとき、復号されます。 次に手順を示します。
 
 1. Azure portal から、[ワイプを発行します](../apps/apps-selective-wipe.md)。
 2. アプリにワイプ ハンドラーが登録されていない場合、次の条件を確認してください。
     - アプリの完全ワイプが行われます。
 3. アプリで `WIPE_USER_DATA` または `WIPE_USER_AUXILARY_DATA` が登録されている場合、次の条件を確認してください。
-    - 管理コンテンツがアプリから削除されている。 詳細については、[Android 用 Intune App SDK の開発者ガイド - 選択的ワイプ](app-sdk-android.md#selective-wipe)に関するページをご覧ください。
+    - 管理コンテンツがアプリから削除されている。 詳細については、「[Intune App SDK for Android の開発者ガイド - 選択的ワイプ](app-sdk-android.md#selective-wipe)」を参照してください。
 
 ### <a name="multi-identity-support"></a>複数 ID のサポート
-[複数 ID サポート](app-sdk-android.md#multi-identity-optional)の組み込みは、高いリスクを伴う変更であり、徹底的なテストが必要となります。 最も一般的な問題は、ID の不適切な設定 (コンテキストと脅威レベル) と追跡ファイル (`MAMFileProtectionManager`) が原因で発生します。
+[複数 ID サポート](app-sdk-android.md#multi-identity-optional)の組み込みは、高いリスクを伴う変更であり、徹底的なテストが必要となります。 最も一般的な問題は、アクティブ ID の不適切な設定 (`Context` とスレッド レベル) かファイル ID の不適切な追跡 (`MAMFileProtectionManager`) が原因で発生します。
 
 少なくとは、次のことを確認します。
 
@@ -116,11 +135,9 @@ ms.locfileid: "84165602"
 - マネージドから個人まで、制限のコピーと貼り付けが、正しく適用されている。
 - マネージド ID に属するデータのみが暗号化され、個人ファイルは変更されていない。
 - 登録解除中の選択的ワイプでは、マネージド ID データのみが削除される。
-- アンマネージド アカウントからマネージド アカウントに変更するとき、ユーザーに条件付き起動が求められる (初回のみ)。
+- アンマネージド アカウントからマネージド アカウントに変更するとき、エンド ユーザーに条件付き起動が求められる (初回のみ)。
 
 ### <a name="app-configuration-optional"></a>アプリの構成 (省略可能)
 マネージド アプリの動作は構成できます。 アプリで何らかのアプリ構成設定が使用される場合、(管理者として) 設定できるすべての値がアプリで正しく処理されることをテストしてください。 Intune で[アプリ構成ポリシー](../apps/app-configuration-policies-overview.md)を作成し、割り当てることができます。
 
-## <a name="next-steps"></a>次のステップ
 
-- [Android の基幹業務アプリを Microsoft Intune に追加する](../apps/lob-apps-android.md)

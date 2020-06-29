@@ -6,22 +6,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 06/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49ecd2a1aaa5408a721b06264703720be601c73c
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: aa3cf14b6afd8504a0918b5d61d2a7cae0c308b9
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269016"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093666"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用した機能を許可または制限するための iOS および iPadOS デバイスの設定
 
@@ -72,7 +73,7 @@ ms.locfileid: "83269016"
   - iOS 9.3 以降
   - iPadOS 13.0 以降
 
-- **[Classroom アプリによるプロンプトなしの画面監視]** : **[許可]** にすると、学生に知られることなく Classroom アプリを使用して学生の iOS および iPadOS デバイスの画面を黙って監視することができます。 学生のデバイスが Classroom アプリを使用してクラスに登録されると、その学科の教師にアクセス許可が自動的に付与されます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、この機能が禁止される場合があります。
+- **[Classroom アプリによるプロンプトなしの画面監視]** : **[許可]** を選択すると、教師は、学生に知らせることなく、Classroom アプリを使用して学生の iOS/iPadOS の画面を警告なしで観察できます。 学生のデバイスが Classroom アプリを使用してクラスに登録されると、その学科の教師にアクセス許可が自動的に付与されます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、この機能が禁止される場合があります。
 
   この設定を使用するには、 **[画面キャプチャ]** 設定を **[ブロック]** に設定します。
 
@@ -198,7 +199,7 @@ ms.locfileid: "83269016"
   - **10**:操作がない状態が 10 分続くと、画面がロックされます。
   - **15**:操作がない状態が 15 分続くと、画面がロックされます。
 
-  値が iOS と iPadOS に適用されない場合、Apple では最も近い "*最小*" 値が使用されます。 たとえば、`4` 分と入力すると、iPadOS デバイスでは `2` 分が使用されます。 `10` 分と入力すると、iOS デバイスでは `5` 分が使用されます。 これは Apple の制約です。
+  値が iOS と iPadOS に適用されない場合、Apple では最も近い "*最小*" 値が使用されます。 たとえば、`4` 分と入力すると、iPadOS デバイスでは `2` 分が使用されます。 `10` 分と入力すると、iOS デバイスでは `5` 分が使用されます。 この動作は Apple の制限です。
   
   > [!NOTE]
   > この設定の Intune UI では、iOS と iPadOS でサポートされている値は区別されません。 UI は、今後のリリースで更新される可能性があります。
@@ -429,6 +430,25 @@ ms.locfileid: "83269016"
 > [!IMPORTANT]
 > 制限付きアプリの設定を使用するデバイス プロファイルは、ユーザーのグループに割り当てる必要があります。
 
+## <a name="shared-ipad"></a>Shared iPad
+
+この機能は、以下に適用されます。
+
+- iPadOS 13.4 以降
+- Shared iPad
+
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>これらの設定は次に適用されます。デバイスの自動登録 (監視)
+
+- **Shared iPad の一時セッションをブロックする**:一時セッションでは、ユーザーはゲストとしてサインインすることができます。また、ユーザーは Managed Apple ID またはパスワードを入力する必要はありません。
+
+  **[はい]** に設定した場合:
+
+  - Shared iPad ユーザーは、一時セッションを使用できません。
+  - ユーザーは、各自の Managed Apple ID とパスワードを使用してデバイスにサインインする必要があります。
+  - ゲスト アカウント オプションは、デバイスのロック画面に表示されません。
+
+  **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 OS の既定では、Shared iPad ユーザーはゲスト アカウントを使用してデバイスにサインインできます。 ユーザーがサインアウトすると、ユーザーのデータは保存されず、iCloud に同期されません。
+
 ## <a name="show-or-hide-apps"></a>アプリの表示/非表示
 
 この機能は、以下に適用されます。
@@ -599,12 +619,17 @@ ms.locfileid: "83269016"
 
 これらの設定を使用して、自律的シングル App モード (ASAM) で特定のアプリを実行するように iOS または iPadOS デバイスを構成できます。 このモードが構成されていて、ユーザーが構成済みのアプリの 1 つを起動すると、デバイスはそのアプリに対してロックされます。 アプリとタスクの切り替えは、ユーザーが許可されたアプリを終了するまで無効になります。
 
-たとえば、学校または大学の環境で、ユーザーがデバイスでテストを実行できるようにするアプリを追加します。 または、ユーザーが認証されるまで、デバイスをポータル サイト アプリにロックします。 ユーザーがアプリのアクションを完了した場合、または管理者がこのポリシーを削除した場合、デバイスは通常の状態に戻ります。
+- たとえば、学校または大学の環境で、ユーザーがデバイスでテストを実行できるようにするアプリを追加します。 または、ユーザーが認証されるまで、デバイスをポータル サイト アプリにロックします。 ユーザーがアプリのアクションを完了した場合、または管理者がこのポリシーを削除した場合、デバイスは通常の状態に戻ります。
 
-> [!NOTE]
-> すべてのアプリで自律的シングル App モードをサポートしているわけではありません。 アプリを自律的シングル App モードで配置するには、通常、アプリ構成ポリシーによって提供されるバンドル ID またはキーと値のペアが必要です。 詳細については、Apple の MDM ドキュメントの [`autonomousSingleAppModePermittedAppIDs` の制限](https://developer.apple.com/documentation/devicemanagement/restrictions)を参照してください。 構成しているアプリに必要な特定の設定の詳細については、ベンダーのドキュメントを参照してください。
+- すべてのアプリで自律的シングル App モードをサポートしているわけではありません。 アプリを自律的シングル App モードで配置するには、通常、アプリ構成ポリシーによって提供されるバンドル ID またはキーと値のペアが必要です。 詳細については、Apple の MDM ドキュメントの [`autonomousSingleAppModePermittedAppIDs` の制限](https://developer.apple.com/documentation/devicemanagement/restrictions)を参照してください。 構成しているアプリに必要な特定の設定の詳細については、ベンダーのドキュメントを参照してください。
 
-たとえば、Zoom Rooms を自律的シングル App モードで構成するには、Zoom では `us.zoom.zpcontroller` バンドル ID を使用するように指示されています。 この例では、Zoom Web ポータルでも変更を行います。 詳細については、「[Zoom ヘルプ センター](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM)」を参照してください。
+  たとえば、Zoom Rooms を自律的シングル App モードで構成するには、Zoom では `us.zoom.zpcontroller` バンドル ID を使用するように指示されています。 この例では、Zoom Web ポータルでも変更を行います。 詳細については、「[Zoom ヘルプ センター](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM)」を参照してください。
+
+- iOS/iPadOS デバイスでは、ポータル サイト アプリは ASAM をサポートしています。 ポータル サイト アプリが ASAM 内にある場合、ユーザーが認証されるまで、デバイスはポータル サイト アプリでロックされます。 ユーザーはポータル サイト アプリにサインインすると、他のアプリやデバイスのホーム画面ボタンを使用できます。 ポータル サイト アプリからサインアウトすると、デバイスはシングル App モードに戻り、ポータル サイト アプリ上でロックされます。
+
+  ポータル サイト アプリを "サインインおよびサインアウト" アプリにする (ASAM を有効にする) には、これらの設定に `Microsoft Intune Company Portal` などのポータル サイト アプリ名とバンドル ID (`com.microsoft.CompanyPortal`) を入力します。 このプロファイルを割り当てられたら、ユーザーがサインインおよびサインアウトできるように、ポータル サイト アプリを開いてアプリをロックする必要があります。
+  
+  デバイス構成プロファイルが削除され、ユーザーがサインアウトしても、デバイスはポータル サイト アプリでロックされません。
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>これらの設定は次に適用されます。デバイスの自動登録 (監視)
 

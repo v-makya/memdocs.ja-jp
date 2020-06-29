@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac29e27c85ad43ccc078c54dd9d5b8b659206f57
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e8f400c946f26de272b782194df3f1b1930ab0b4
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81397766"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85093498"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune でのデバイス登録に関するトラブルシューティング
 
@@ -339,7 +339,7 @@ Android デバイスでは、[SSL のサーバー ハロー](https://technet.mic
 4. 登録プロセスを再起動するようユーザーに通知します。
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>VPP トークンに問題があるかどうかを判断する
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]**  >  **[iOS 登録]**  >  **[Enrollment Program トークン]** > トークン名 > **[プロファイル]** > プロファイル名 > **[管理]**  >  **[プロパティ]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]** 、 **[iOS/iPadOS]** 、 **[iOS 登録]** 、 **[Enrollment Program トークン]** 、トークン名、 **[プロファイル]** 、プロファイル名、 **[管理]** 、 **[プロパティ]** の順に選択します。
 2. プロパティを参照して、次のようなエラーが表示されているかどうかを確認します。
     - このトークンは期限切れになっています。
     - このトークンは、ポータル サイトのライセンスが不足しています。
@@ -349,7 +349,7 @@ Android デバイスでは、[SSL のサーバー ハロー](https://technet.mic
 3. トークンの問題を修正します。
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>VPP トークンを使用して、ブロックされているデバイスを特定する
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[iOS]** > **[iOS 登録]**  >  **[Enrollment Program トークン]** > トークン名 > **[デバイス]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]** 、 **[iOS/iPadOS]** 、 **[iOS 登録]** 、 **[Enrollment Program トークン]** 、トークン名、 **[デバイス]** の順に選択します。
 2. **[プロファイルの状態]** 列を **[ブロック]** でフィルターします。
 3. **ブロック**されているすべてのデバイスのシリアル番号をメモしておきます。
 

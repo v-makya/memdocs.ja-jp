@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abd34733bd27ec150a92bf20cecbf7edc02c2bd6
-ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
+ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84331003"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216401"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>アプリ保護ポリシーを作成して割り当てる方法
 
@@ -39,7 +39,7 @@ ms.locfileid: "84331003"
 
 APP データ保護フレームワークは 3 つの異なる構成レベルに編成されており、各レベルは前のレベルを基に構築されています。
 
-- **エンタープライズ基本データ保護** (レベル 1) では、アプリは PIN で保護され、暗号化されており、選択的ワイプ操作が実行されます。 Android デバイスの場合、このレベルでは Android デバイスの構成証明を検証します。 これは、Exchange Online メールボックス ポリシーに類似したデータ保護制御を提供し、IT 部門およびユーザー集団に APP を経験させる、エントリ レベルの構成です。
+- **エンタープライズ基本データ保護** (レベル 1) では、アプリが PIN で保護され、暗号化されており、選択的ワイプ操作を実行できるようにします。 Android デバイスの場合、このレベルでは Android デバイスの構成証明を検証します。 これは、Exchange Online メールボックス ポリシーに類似したデータ保護制御を提供し、IT 部門およびユーザー集団に APP を経験させる、エントリ レベルの構成です。
 - **エンタープライズ拡張データ保護** (レベル 2) では、APP データ漏えい防止メカニズムと OS の最小要件が導入されています。 この構成は、職場または学校のデータにアクセスするほとんどのモバイル ユーザーに適用されます。
 - **エンタープライズ高度データ保護** (レベル 3) では、高度なデータ保護メカニズム、強化された PIN の構成、および APP Mobile Threat Defense が導入されています。 この構成は、危険度の高いデータにアクセスするユーザーに適しています。
 
@@ -183,14 +183,14 @@ Intune アプリ保護ポリシーの対象はユーザーの ID であるため
 
 ### <a name="device-types"></a>デバイスの種類
 
-- **アンマネージド**: アンマネージド デバイスとは、Intune MDM 管理が検出されなかったデバイスです。 これには、サードパーティの MDM ベンダーによって管理されるデバイスが含まれます。
+- **アンマネージド**: iOS/iPadOS デバイスの場合、アンマネージド デバイスとは、Intune MDM 管理またはサード パーティの MDM または EMM ソリューションのいずれも `IntuneMAMUPN` キーを渡さないデバイスのことです。 Android デバイスの場合、アンマネージド デバイスとは、Intune MDM 管理が検出されなかったデバイスのことです。 これには、サードパーティの MDM ベンダーによって管理されるデバイスが含まれます。
 - **Intune マネージド デバイス**: マネージド デバイスは、Intune MDM によって管理されます。
 - **Android デバイス管理者**: Android デバイス管理 API を使用している Intune マネージド デバイス。
 - **Android エンタープライズ**: Android エンタープライズ仕事用プロファイルまたは Android エンタープライズ フル デバイス管理を使用している Intune マネージド デバイス。
 
 Android では、選択されているデバイスの種類に関わらず、Android デバイスによって Intune ポータル サイト アプリのインストールを求められます。 たとえば、"Android エンタープライズ" を選択した場合、アンマネージド Android デバイスを使用しているユーザーにも、まだメッセージが表示されます。
 
-iOS/iPadOS の場合、[デバイスの種類] の選択を "アンマネージド" デバイスに適用するには、追加のアプリ構成設定が必要です。 これらの構成では、特定のアプリがマネージドであること、したがって APP 設定が適用されないことが APP サービスに示されます。
+iOS/iPadOS の場合、[デバイスの種類] の選択を Intune マネージド デバイスに適用するには、追加のアプリ構成設定が必要です。 これらの構成では、特定のアプリがマネージドであること、したがって APP 設定が適用されないことが APP サービスに示されます。
 
 - **IntuneMAMUPN** を、MDM で管理されているすべてのアプリケーションに構成する必要があります。 詳細については、[Microsoft Intune で iOS/iPadOS アプリ間のデータ転送を管理する方法](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm)に関する記事をご覧ください。
 - すべてのサードパーティ製アプリケーションと基幹業務 MDM マネージド アプリケーションに **IntuneMAMDeviceID** を構成する必要があります。 **IntuneMAMDeviceID** を、デバイスの ID トークンに構成する必要があります。 たとえば、`key=IntuneMAMDeviceID, value={{deviceID}}` となります。 詳細については、「[管理対象の iOS/iPadOS デバイス用アプリ構成ポリシーを追加する](app-configuration-policies-use-ios.md)」をご覧ください。

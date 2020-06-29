@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65ecc658b0a63b943a1008c879ae63cfc2c4e8a1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 15c1e1e943d9fd03476c0605c4d41cd417354fce
+ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988736"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84973028"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>管理対象の iOS/iPadOS デバイス用アプリ構成ポリシーを追加する
 
@@ -106,11 +106,11 @@ Microsoft Intune には、アプリに固有の構成設定が用意されてい
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>複数 ID アプリで構成済みの組織アカウントのみを許可する 
 
-Microsoft Intune 管理者は、マネージド デバイス上の Microsoft アプリにどのユーザー アカウントを追加するかを制御できます。 許可されている組織ユーザー アカウントのみにアクセスを制限したり、登録済みデバイス上の個人アカウントをブロックしたりできます。 iOS/iPadOS デバイスでは、次のキー/値ペアを使用します。
+Microsoft Intune 管理者は、マネージド デバイス上の Microsoft アプリにどの職場アカウントまたは学校アカウントを追加するかを制御できます。 許可されている組織ユーザー アカウントのみにアクセスを制限したり、登録済みデバイス上の個人アカウントをブロックしたりできます。 iOS デバイスや iPadOS デバイスでは、マネージド デバイス アプリ構成ポリシーで次のキーと値のペアを使用します。
 
 | **Key** | **値** |
 |----|----|
-| IntuneMAMAllowedAccountsOnly | <ul><li>**[有効]** : [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) キーによって定義された管理対象のユーザー アカウントのみが許可されます。</li><li>**[無効]** ( **[有効]** と大文字小文字を問わず一致しないすべての値): すべてのアカウントが許可されます。</li></ul> |
+| IntuneMAMAllowedAccountsOnly | <ul><li>**有効**: [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) キーによって定義されたマネージド ユーザー アカウントのみが許可されます。</li><li>**[無効]** ( **[有効]** と大文字小文字を問わず一致しないすべての値): すべてのアカウントが許可されます。</li></ul> |
 | IntuneMAMUPN | <ul><li>アプリへのサインインが許可されているアカウントの UPN。</li><li> Intune に登録されているデバイスでは、<code>{{userprincipalname}}</code> のトークンを使用して登録済みのユーザー アカウントを表すことができます。</li></ul>  |
 
    > [!NOTE]
@@ -173,7 +173,7 @@ Intune は、プロパティ リストの次のデータ型をサポートして
 
 ### <a name="tokens-used-in-the-property-list"></a>プロパティ リストで使用されるトークン
 
-また、Intune は次のトークンの種類をプロパティ リストでサポートしています。
+さらに、Intune では、プロパティ リストに次の種類のトークンを利用できます。
 - \{\{userprincipalname\}\} — たとえば、**John\@contoso.com**
 - \{\{mail\}\} — たとえば、**John\@contoso.com**
 - \{\{partialupn\}\} — たとえば、**John**

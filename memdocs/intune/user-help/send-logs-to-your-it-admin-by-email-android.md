@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 06/16/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8094f9739f05a7e7c0ffc10e9b4835c67c5539b3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 83a00368c7f47568497669c940e3c2904a479372
+ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881987"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85094030"
 ---
 # <a name="upload-and-email-logs"></a>アップロードとメールのログ  
 
@@ -34,6 +34,8 @@ Intune ポータル サイトまたは Microsoft Intune アプリで問題が発
 
 > [!Note]
 > 会社のサポート担当者が問題の原因をより簡単に見つけられるように、ポータル サイトで "_詳細ログ記録_" を有効にしてください。 Microsoft Intune アプリを使用している場合は、 **[ログの詳細レベル]** を **[詳細]** に設定します。 詳細ログ記録では、エラーに関するあらゆる詳細が記録され、詳細がレポートに追加されます。 詳細ログ記録を有効にする方法については[こちら](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)を参照してください。  
+>
+> ソブリン クラウド環境を使用している場合、ポータル サイトのログの送信機能は使用できません。 電子メールでログを送信する必要があります。 
 
 ## <a name="upload-and-email-logs-from-company-portal"></a>Intune ポータル サイトからログをアップロードしてメールで送信する  
 

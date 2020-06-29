@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 06/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ac4050e6113eba2a34099a627bf6141049d8454
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 099643f1e55c6f3e58c0cd685c2339abf00dd7dc
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79364189"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506215"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune で iOS および iPadOS デバイスの電子メール設定を追加する
 
@@ -64,7 +64,7 @@ Microsoft Intune では、電子メール サーバーに接続する電子メ�
 - **[SSL]** : **[有効]** を選択すると、電子メールの送受信および Exchange サーバーとの通信に、SSL (Secure Sockets Layer) 通信が使用されます。
 - **[OAuth]** : **[有効]** を選択すると、電子メールの送受信および Exchange との通信に、Open Authorization (OAuth) 通信が使用されます。 OAuth サーバーで証明書認証が使用されている場合は、 **[認証方法]** として **[証明書]** を選択し、プロファイルで証明書を含めます。 それ以外の場合は、 **[認証方法]** として **[ユーザー名とパスワード]** を選択します。 OAuth を使用するときは、次のことを確認してください。
 
-  - ユーザーに対してこのプロファイルを使用する前に、メール ソリューションで OAuth がサポートされていることを確認します。 Office 365 Exchange Online は OAuth をサポートしています。 オンプレミスの Exchange および他のパートナーやサード パーティのソリューションでは、OAuth がサポートされていない可能性があります。 オンプレミスの Exchange は、先進認証用に構成できます (ブログ投稿「[Announcing Hybrid Modern Authentication for Exchange On-Premises](https://blogs.technet.microsoft.com/exchange/2017/12/06/announcing-hybrid-modern-authentication-for-exchange-on-premises/)」(オンプレミス Exchange 用のハイブリッド先進認証の発表) を参照)。
+  - ユーザーに対してこのプロファイルを使用する前に、メール ソリューションで OAuth がサポートされていることを確認します。 Office 365 Exchange Online は OAuth をサポートしています。 オンプレミスの Exchange および他のパートナーやサード パーティのソリューションでは、OAuth がサポートされていない可能性があります。 オンプレミス Exchange の先進認証を設定できます。 詳細については、[ハイブリッド先進認証の概要とオンプレミスの Skype for Business および Exchange サーバーの前提条件](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)に関するページを参照してください。
 
     メール プロファイルで OAuth が使われていて、メール サービスではサポートされていない場合は、 **[パスワードの確認入力]** オプションが破損しているように表示されます。 たとえば、Apple のデバイス設定でユーザーが **[パスワードの確認入力]** を選択しても、何も起こりません。
 

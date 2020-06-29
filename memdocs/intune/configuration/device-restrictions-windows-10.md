@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/02/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f469d9646fad3b247743b6017f0ecbc7917f2cdf
-ms.sourcegitcommit: 8a023e941d90c107c9769a1f7519875a31ef9393
+ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
+ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311181"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85216486"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限するように Windows 10 (以降) のデバイスを設定する
 
@@ -141,6 +141,10 @@ ms.locfileid: "84311181"
 - **[Bluetooth 広告]** : **[ブロック]** に設定すると、デバイスは Bluetooth 広告を送信できなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、デバイスによる Bluetooth 広告の送信が OS で許可されている可能性があります。
 
   [Bluetooth/AllowAdvertising CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+
+- **[Bluetooth の近位接続]** : **[ブロック]** にすると、デバイス ユーザーがクイック ペアリングやその他の近接通信ベースのシナリオを使用できないようになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、デバイスによる Bluetooth 広告の送信が OS で許可されている可能性があります。
+
+  [Bluetooth/AllowPromptedProximalConnections CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **[Bluetooth を使用できるサービス]** :許可される Bluetooth のサービスとプロファイルの一覧を 16 進数文字列 (例: `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`) で入力し、 **[追加]** を選択します。
 
@@ -322,6 +326,9 @@ GDI DPI スケールでは、DPI 対応でないアプリケーションをモ�
 ## <a name="microsoft-edge-browser"></a>Microsoft Edge ブラウザー
 
 これらの設定では、[ブラウザー ポリシー CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) が使用されます。それには、サポートされる Windows のエディションも示されています。
+
+> [!NOTE]
+> ブラウザー ポリシー CSP を使用する場合、Microsoft Edge バージョン 45 以前に適用されます。 Microsoft Edge Enterprise バージョン 77 以降については、「[Microsoft Intune を使って Microsoft Edge ポリシー設定を構成する](/DeployEdge/configure-edge-with-intune)」を参照してください。
 
 ### <a name="use-microsoft-edge-kiosk-mode"></a>Microsoft Edge キオスク モードを使用する
 
