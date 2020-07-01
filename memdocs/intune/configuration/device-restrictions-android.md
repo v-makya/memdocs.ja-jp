@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02e07ec75b7c0d07a81a9c6f555cf119310a9a9f
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 62348a4e551112a93f960388d6e21b398c447dfc
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093688"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502376"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Android および Samsung KNOX Standard デバイスの制限設定一覧 - Intune
 
@@ -178,7 +178,7 @@ URL などアプリの詳細を含む CSV ファイルも**インポート**で�
 
 キオスクの設定は、Samsung KNOX Standard デバイスと、Intune を使って管理するアプリにのみ適用されます。
 
-- デバイスがキオスク モードのときに実行するアプリを追加します。 キオスク モードでは、追加したアプリのみが実行されます。追加していないアプリは実行されません。 デバイスがキオスク モードのとき、事前にインストールされているブラウザーはアプリとして実行されません。 ブラウザーが必要な場合は、[Managed Browser](../apps/app-configuration-managed-browser.md) の使用を検討してください。
+- デバイスがキオスク モードのときに実行するアプリを追加します。 キオスク モードでは、追加したアプリのみが実行されます。追加していないアプリは実行されません。 デバイスがキオスク モードのとき、事前にインストールされているブラウザーはアプリとして実行されません。 ブラウザーが必要な場合は、[Managed Browser](../apps/manage-microsoft-edge.md) の使用を検討してください。
 
   アプリのオプションは次のとおりです。
 

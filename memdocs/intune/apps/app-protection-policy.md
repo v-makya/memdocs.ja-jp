@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68e337f6315fc6d198e27c494b7689bb1cb9bc97
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989611"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502597"
 ---
 # <a name="app-protection-policies-overview"></a>アプリ保護ポリシーの概要
 
@@ -312,7 +312,7 @@ MAM の選択的ワイプは、単にアプリから業務用アプリのデー�
 Intune アプリ保護は、アプリケーションと [Intune SDK](../developer/app-sdk.md) の間で一貫性を保つためにユーザーの ID に依存しています。 これを保証する唯一の方法は、最新の認証を使用することです。 アプリをオンプレミス構成と連携させるシナリオはありますが、一貫性がなく保証されていません。
 
 **マネージド アプリから Web リンクを開く安全な方法**<br>
-IT 管理者は、Intune で簡単に管理可能な Web ブラウザーである [Microsoft Edge](app-configuration-managed-browser.md) のアプリ保護ポリシーを展開および設定することができます。 IT 管理者は、Intune 管理対象アプリ内のすべての Web リンクが Managed Browser アプリで開かれるように指定することができます。
+IT 管理者は、Intune で簡単に管理可能な Web ブラウザーである [Microsoft Edge](manage-microsoft-edge.md) のアプリ保護ポリシーを展開および設定することができます。 IT 管理者は、Intune 管理対象アプリ内のすべての Web リンクが Managed Browser アプリで開かれるように指定することができます。
 
 ## <a name="app-protection-experience-for-ios-devices"></a>iOS デバイスでのアプリ保護のエクスペリエンス
 
