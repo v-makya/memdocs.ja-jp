@@ -12,16 +12,34 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 75dd74e3c1019c9819b44a0ffa8936eeb9eee366
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268353"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353464"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Ready for Modern Desktop の提供終了に関する FAQ
 
 <!-- placeholder -->
+
+## <a name="ready-for-windows-adoption-status"></a>Ready for Windows の導入の状態
+
+導入の状態は、Microsoft とデータを共有する商用デバイスの情報に基づいています。 この状態は、ソフトウェア ベンダーからのサポートに関する声明と統合されています。
+
+Desktop Analytics を使うと、商用デバイスで見つかった資産の各バージョンについて導入の状態が提供されます。 この状態には、コンシューマー デバイスまたはデータを共有していないデバイスからのデータは含まれません。 この状態は、すべての Windows 10 デバイスにおける導入率を表しているわけではありません。
+
+可能性のあるカテゴリは次のとおりです。
+
+- **多数導入済み**: 少なくとも 10 万個の商用 Windows 10 デバイスで、このアプリがインストールされています。
+
+- **導入済み**: 少なくとも 1 万個の商用 Windows 10 デバイスで、このアプリがインストールされています。
+
+- **データ不足**: このアプリに関して Microsoft と情報を共有している商用 Windows 10 デバイスが少なすぎるため、導入を分類できません。
+
+- **開発者にお問い合わせください**: このバージョンのアプリには互換性の問題がある可能性があります。 詳細について、ソフトウェア プロバイダーに問い合わせることをお勧めします。
+
+- **不明**: このアプリケーションのこのバージョンには、利用できる情報がありません。 アプリケーションの他のバージョンでは、情報を利用できる場合があります。
 
 ## <a name="general"></a>全般
 

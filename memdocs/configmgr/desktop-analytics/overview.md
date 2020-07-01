@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: a2829c5bd86192c4f2421550af9f27aef64aa353
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 774e77f62ee31daa89eeb4273f3c1e7db68a374d
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428644"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353481"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics とは
 
@@ -81,7 +81,7 @@ Desktop Analytics を使用するには、環境が次の前提条件を満た�
 
     - オンボード後にポータルにアクセスするには、以下が必要です。
 
-      - [**Desktop Analytics 管理者**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)ロールと、ワークスペースが作成されたリソース グループに対する[**所有者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)または[**共同作成者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)アクセス許可。
+      - [**Desktop Analytics 管理者**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)ロールと、作成された Log Analytics ワークスペースに対する[**所有者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)または[**共同作成者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)アクセス許可。
 
 - Configuration Manager バージョン 1902 および更新プログラムのロールアップ (4500571) 以降。 詳しくは、[Configuration Manager の更新](connect-configmgr.md#bkmk_hotfix)に関する記事をご覧ください。  
 

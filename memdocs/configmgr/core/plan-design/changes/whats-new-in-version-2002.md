@@ -2,7 +2,7 @@
 title: バージョン 2002 の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager Current Branch のバージョン 2002 で導入された変更点および新機能について説明します。
-ms.date: 05/26/2020
+ms.date: 06/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: afdcc608133d306042c9c6dc817396bb2fc3f387
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: 4100f8747418bff769a7830fa63383ce545895ce
+ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126483"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721858"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 2002 の新機能
 
@@ -329,7 +329,7 @@ Configuration Manager では、サービス スタックの更新プログラム
 <!-- 5229962 -->
 Configuration Manager では、デバイスを Microsoft Defender ATP にオンボードするためのサポートが拡張されました。 詳細については、「[Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices)」をご覧ください。
 
-## <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Microsoft エンドポイント マネージャー管理センターを使用し構成マネージャー クライアントを Microsoft Defender ATP にオンボードする
+### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Microsoft エンドポイント マネージャー管理センターを使用し構成マネージャー クライアントを Microsoft Defender ATP にオンボードする
 <!--5691658-->
 Microsoft Defender ATP エンドポイント検出と応答 (EDR) のオンボード ポリシーを、Configuration Manager 管理対象クライアントに展開できるようになりました。 これらのクライアントは Azure AD や MDM の登録を必要とせず、ポリシーは Azure AD グループではなく ConfigMgr コレクションを対象としています。
 
@@ -386,6 +386,16 @@ Power BI Report Server を Configuration Manager レポートと統合できる�
 <!--5891241-->
 
 以前のリリースでの改善と同様に、 **[構成アイテム]** ノードと **[構成基準]** ノードから **[すべてのサブフォルダー]** 検索オプションを使用できるようになりました。
+
+### <a name="community-hub"></a>コミュニティ ハブ
+
+<!--3555935, 3555936-->
+
+"_2020 年 6 月に初めて導入_"
+
+IT 管理者のコミュニティには、長年にわたる豊富な知識が蓄積されています。 スクリプトやレポートなどの項目を最初から作り直す代わりに、私たちは、ユーザーが互いに共有できる Configuration Manager **コミュニティ ハブ**を構築しました。 他のユーザーの作業を活用することで、作業時間を節約できます。 コミュニティ ハブでは、他のユーザーの作業を基礎にし、他のユーザーはあなたの作業を基礎にすることで、創造力が促進されます。 GitHub には、既に共有のために作成された業界標準のプロセスとツールがあります。 そこで、コミュニティ ハブでは、この新しいコミュニティを推進するための基本要素として、これらのツールが Configuration Manager コンソールで直接活用されます。
+
+詳細については、「[コミュニティ ハブと GitHub](../../servers/manage/community-hub.md)」をご覧ください。
 
 ## <a name="tools"></a><a name="bkmk_tools"></a>ツール
 

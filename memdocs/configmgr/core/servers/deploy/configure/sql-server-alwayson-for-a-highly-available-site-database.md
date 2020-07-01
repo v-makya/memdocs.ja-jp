@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79e83a7ba111b1d7f96fb623914ffe8e11f22f3d
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270873"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383157"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager で SQL Server Always On 可用性グループを使用するための準備
 
@@ -256,11 +256,7 @@ Configuration Manager セットアップでは、各レプリカに接続する�
 
 - SQL over TCP:**TCP 1433**
 
-セットアップの完了後、次のポートを Configuration Manager 用に開けておく必要があります。  
-
-- SQL Server Service Broker:**TCP 4022**  
-
-- SQL over TCP:**TCP 1433**  
+セットアップの完了後も、これらのポートを Configuration Manager とレプリケーション リンク アナライザー用に開けておく必要があります。<!-- MEMDocs#375 -->
 
 これらの構成ではカスタム ポートを使用することができます。 エンドポイントと、可用性グループ内のすべてのレプリカで、同じカスタム ポートを使用します。
 

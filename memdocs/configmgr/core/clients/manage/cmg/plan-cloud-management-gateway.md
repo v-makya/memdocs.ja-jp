@@ -2,7 +2,7 @@
 title: クラウド管理ゲートウェイの計画
 titleSuffix: Configuration Manager
 description: インターネットを基盤とするクライアントの管理を簡素化するクラウド管理ゲートウェイ (CMG) を計画し、設計します。
-ms.date: 04/21/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67b6fc51493dce4ee1718586cbf454da91883409
-ms.sourcegitcommit: 0e62655fef7afa7b034ac11d5f31a2a48bf758cb
+ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82254624"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715647"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager でクラウド管理ゲートウェイを計画する
 
@@ -85,9 +85,12 @@ CMG の展開と操作には、次のコンポーネントが含まれます。
 
 - [**サービス接続ポイント**](../../../servers/deploy/configure/about-the-service-connection-point.md) サイト システム ロールは、あらゆる CMG 展開タスクを処理する、クラウド サービス マネージャー コンポーネントを実行します。 また、このコンポーネントは、Azure AD のサービスの正常性とログ情報も監視し、レポートします。 サービス接続ポイントが[オンライン モード](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes)であることを確認します。  
 
-- **管理ポイント** サイト システム ロールは通常のようにクライアント要求にサービスを提供します。  
+- **管理ポイント** サイト システム ロールは通常のようにクライアント要求にサービスを提供します。
 
-- **ソフトウェア更新ポイント** サイト システム ロールは通常のようにクライアント要求にサービスを提供します。  
+- **ソフトウェア更新ポイント** サイト システム ロールは通常のようにクライアント要求にサービスを提供します。
+
+    > [!NOTE]
+    > オンプレミスのクライアントとインターネットベースのクライアントのどちらを使用する場合でも、管理ポイントとソフトウェアの更新ポイントのサイズ設定に関するガイダンスは変わりません。 詳細については、[サイズとスケールの数値](../../../plan-design/configs/size-and-scale-numbers.md#management-point)に関する記事をご覧ください。
 
 - **インターネットベース クライアント**は CMG に接続し、オンプレミスの Configuration Manager コンポーネントにアクセスします。
 
@@ -151,15 +154,33 @@ Fourth Coffee は、シアトルの本社にあるオンプレミス データ�
 > [!TIP]
 > 位置情報の目的で、複数のクラウド管理ゲートウェイをデプロイする必要はありません。 構成マネージャー クライアントは、地理的に離れている場合でも、クラウド サービスで発生するわずかな待機時間の影響をほとんど受けません。
 
+### <a name="test-environments"></a>テスト環境
+<!-- SCCMDocs#1225 -->
+多くの組織には、運用、テスト、開発、または品質保証用に個別の環境があります。 CMG のデプロイを計画するときは、次の点を考慮してください。
+
+- ご自身の組織には Azure AD テナントがいくつありますか?
+  - テスト用の個別のテナントがありますか?
+  - ユーザーとデバイスの ID は同じテナント内にありますか?
+
+- 各テナントにはサブスクリプションがいくつありますか?
+  - テスト専用のサブスクリプションはありますか?
+
+Configuration Manager の**クラウド管理**用 Azure サービスでは、複数のテナントがサポートされています。 複数の Configuration Manager サイトを同じテナントに接続できます。 1 つのサイトで、複数の CMG サービスを異なるサブスクリプションにデプロイできます。 複数のサイトで、CMG サービスを同じサブスクリプションにデプロイできます。 Configuration Manager には、お客様の環境やビジネス要件に応じた柔軟性が備わっています。
+
+詳細については、次の FAQ を参照してください: 「[ユーザー アカウントは、CMG クラウド サービスをホストするサブスクリプションに関連付けられているテナントと同じ Azure AD テナント内にある必要がありますか?](cloud-management-gateway-faq.md#bkmk_tenant)」
+
 ## <a name="requirements"></a>要件
 
 - CMG をホストするための **Azure サブスクリプション**。
+
+    > [!IMPORTANT]
+    > CMG では、Azure クラウド サービス プロバイダー (CSP) を使用するサブスクリプションはサポートされていません。<!-- MEMDocs#320 -->
 
 - 使用するユーザー アカウントが、Configuration Manager で**完全な権限を持つ管理者**または**インフラストラクチャ管理者**である必要があります。<!-- SCCMDocs#2146 -->
 
 - **Azure 管理者**は、設計によっては、特定のコンポーネントの初回作成に参加する必要があります。 このペルソナは、Configuration Manager 管理者と同じでも、別でもかまいません。 別にした場合は、Configuration Manager のアクセス許可は必要ありません。
 
-  - CMG を展開するには、**サブスクリプション管理者**が必要です
+  - CMG をデプロイするには、**サブスクリプションの所有者**が必要です
   - Azure Resource Manager を使用して CMG を展開するためにサイトを Azure AD と統合するには、**全体管理者**が必要です。
 
 - **CMG 接続ポイント**をホストするためのオンプレミス Windows サーバーが少なくとも 1 つ。 このロールと他の Configuration Manager サイト システム ロールは同じ場所に置くことができます。  
@@ -193,7 +214,7 @@ Fourth Coffee は、シアトルの本社にあるオンプレミス データ�
 
 - ネットワーク ロード バランサーを利用するソフトウェア更新ポイントは CMG と連動しません。 <!--505311-->  
 
-- Azure Resource Model を使用する CMG 展開では、Azure クラウド サービス プロバイダー (CSP) のサポートが有効になりません。 Azure Resource Manager での CMG の展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、「[Available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)」 (Azure CSP で使用可能な Azure サービス) を参照してください。  
+- Azure Resource Model を使用する CMG 展開では、Azure クラウド サービス プロバイダー (CSP) のサポートが有効になりません。 Azure Resource Manager での CMG の展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、[Azure CSP プログラムで利用可能な Azure サービス](https://docs.microsoft.com/partner-center/azure-plan-available)に関する記事をご覧ください。
 
 ### <a name="support-for-configuration-manager-features"></a>Configuration Manager の機能のサポート
 
@@ -333,6 +354,9 @@ CMG の概念を表す基本的なデータ フロー図:
 
 3. クライアントは HTTPS ポート 443 で CMG に接続します。 Azure AD またはクライアント認証証明書を利用して認証します。  
 
+    > [!NOTE]
+    > CMG でコンテンツの提供またはクラウド配布ポイントの使用を有効にした場合、クライアントは HTTPS ポート 443 を介して Azure BLOB ストレージに直接接続されます。 詳細については、[クラウドベースの配布ポイントの使用](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_dataflow)に関する記事をご覧ください。<!-- SCCMDocs#2332 -->
+
 4. CMG では、既存の接続を利用し、クライアント接続がオンプレミス CMG 接続ポイントに転送されます。 受信ファイアウォール ポートを開く必要はありません。  
 
 5. CMG 接続ポイントによってクライアント通信がオンプレミス管理ポイントとソフトウェア更新ポイントに転送されます。  
@@ -350,6 +374,7 @@ Azure でコンテンツをホストする場合の詳細については、「[�
 | CMG 接続ポイント | HTTPS | 443 | CMG サービス | ただ 1 つの VM インスタンスに CMG チャネルを構築するためのフォールバック プロトコル <sup>[注 2](#bkmk_port-note2)</sup> |
 | CMG 接続ポイント | HTTPS | 10124-10139 | CMG サービス | 複数の VM インスタンスに CMG チャネルを構築するためのフォールバック プロトコル <sup>[注 3](#bkmk_port-note3)</sup> |
 | クライアント | HTTPS | 443 | CMG | 一般クライアント通信 |
+| クライアント | HTTPS | 443 | BLOB ストレージ | クラウドベースのコンテンツをダウンロード |
 | CMG 接続ポイント | HTTPS または HTTP | 443 または 80 | 管理ポイント | オンプレミス トラフィック、ポートは管理ポイント構成に依存 |
 | CMG 接続ポイント | HTTPS または HTTP | 443 または 80 | ソフトウェアの更新ポイント | オンプレミス トラフィック、ポートはソフトウェア更新ポイント構成に依存 |
 

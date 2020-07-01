@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebd847e44c1acd87c316514ec9919f8a6690a647
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 4a050ab523730adbfdd2ecf541557fabbf95081b
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428590"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715698"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker 管理の展開
 
@@ -126,7 +126,7 @@ BitLocker 管理ポリシーを作成して展開する前に、次の操作を�
 
 1. デバイスでいつでもドライブを暗号化または暗号化解除できるようにするには、 **[メンテナンス期間以外の修復を許可する]** オプションを選択します。 コレクションにメンテナンス期間がある場合でも、この BitLocker ポリシーは修復されます。
 
-1. **簡易**スケジュールまたは**カスタム** スケジュールを構成します。 既定では、クライアントは 12 時間ごとにこのポリシーへのコンプライアンスを評価します。
+1. **簡易**スケジュールまたは**カスタム** スケジュールを構成します。 クライアントでは、スケジュールで指定された設定に基づいてコンプライアンスが評価されます。
 
 1. **[OK]** を選択してポリシーを展開します。
 
@@ -191,7 +191,7 @@ Microsoft BitLocker Administration and Monitoring (MBAM) を現在使用して�
 
 Configuration Manager では BitLocker ドライブ暗号化で既に保護されているドライブを再暗号化しません。 ドライブの現在の保護状態に一致しない BitLocker 管理ポリシーを展開した場合は、非準拠として報告されます。 ドライブは引き続き保護されます。
 
-たとえば、MBAM を使用して、PIN で保護されていないドライブを暗号化したが、Configuration Manager ポリシーには PIN が必要だとします。 このドライブは、暗号化されているけれども、ポリシーには準拠していません。
+たとえば、MBAM を使用して、AES-XTS 128 暗号化アルゴリズムでドライブを暗号化しましたが、Configuration Manager ポリシーでは AES-XTS 256 が要求されているとします。 このドライブは、暗号化されているけれども、ポリシーには準拠していません。
 
 この動作を回避するには、最初にデバイスで BitLocker を無効にします。 次に、新しいポリシーを新しい設定で展開します。
 
@@ -201,7 +201,7 @@ Configuration Manager では BitLocker ドライブ暗号化で既に保護さ�
 
 BitLocker の Configuration Manager クライアント ハンドラーは、共同管理に対応しています。 デバイスが共同管理されており、[Endpoint Protection ワークロード](../../../comanage/workloads.md#endpoint-protection)を Intune に切り替える場合、Configuration Manager クライアントはその BitLocker ポリシーを無視します。 デバイスは、Intune から Windows 暗号化ポリシーを取得します。
 
-暗号化管理機関を切り替えるときは、[再暗号化](#re-encryption)を計画します。
+暗号化管理機関を切り替え、必要な暗号化アルゴリズムも変わる場合は、[再暗号化](#re-encryption)を計画する必要があります。
 
 Intune での BitLocker の管理に関する詳細については、次の記事を参照してください。
 

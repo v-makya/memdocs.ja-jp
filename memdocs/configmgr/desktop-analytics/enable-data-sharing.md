@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0811c695acba4859bf32de535a28ea55cf8eee07
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7403dc26f5fe1789fcda6b3eddf30136a4cd6e68
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268744"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795653"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Desktop Analytics のためにデータ共有を有効にする
 
@@ -35,8 +35,8 @@ Desktop Analytics の基本的な機能は、**基本**[診断データのレベ
 
 - アプリの使用状況
 - [その他のアプリの分析情報](compat-assessment.md#additional-insights)
-- 展開状態データ
-- 正常性監視データ
+- [展開状態データ](deploy-prod.md#address-deployment-alerts)
+- [正常性監視データ](health-status-monitoring.md)
 
 Desktop Analytics で**拡張 (制限付き)** 診断データレベルを有効にして、そこから得られる利点を最大限に高めることをお勧めします。
 

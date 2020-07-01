@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d87b2cde9a9fadb7326939b7fe473ba2a757e91
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430134"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383242"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Configuration Manager で OS をアップグレードするタスク シーケンスを作成する
 
@@ -222,8 +222,10 @@ Windows 10 の一括アップグレード用の既定のタスク シーケン�
 - Configuration Manager で、ツールの[パッケージを作成](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program)します。  
 
 - [コマンド ラインの実行](../understand/task-sequence-steps.md#BKMK_RunCommandLine)手順を、タスク シーケンスのこのグループに追加します。 **[パッケージ]** オプションを使用して、ツールを参照します。 次の文字列は、**コマンド ライン**のサンプルです。  
-    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log" /Mode:Online`  
+    `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
+> [!TIP]
+> 最新の機能と既知の問題の修正を利用するために、常に最新バージョンの SetupDiag を使用してください。 詳細については、「[SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag)」をご覧ください。
 
 ## <a name="additional-recommendations"></a>その他の推奨事項
 

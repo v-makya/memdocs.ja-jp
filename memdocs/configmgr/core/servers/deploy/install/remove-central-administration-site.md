@@ -2,7 +2,7 @@
 title: CAS を削除する
 titleSuffix: Configuration Manager
 description: 中央管理サイト (CAS) を削除して、Configuration Manager インフラストラクチャを 1 つのスタンドアロンのプライマリ サイトに簡素化します。
-ms.date: 04/01/2020
+ms.date: 06/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 16975644-8dfa-4f22-b45a-c54a9250dbd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6704075d707306f55a50a937185c9bdd28b18cc5
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 237c326c4420aec13ad6c9ca9b07d9f5304b6945
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700620"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84613970"
 ---
 # <a name="remove-the-central-administration-site"></a>中央管理サイトを削除する
 
@@ -143,7 +143,7 @@ CAS を削除した後、お使いの環境に適用される次の手順を確�
 
 - Configuration Manager を [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=configmgr/core/context/core-context) に接続している場合は、接続をリセットする必要があります。 問題を解決するには、まず[秘密鍵を更新](../configure/azure-services-wizard.md#bkmk_renew)します。 それでも問題が解決しない場合は、接続を再作成します。<!-- 5584635 -->
 
-- バージョン 2002 では、Surface のドライバーの同期を有効にしている場合は、CAS を削除した後にこの機能を再構成します。 詳細については、「[Microsoft Surface のドライバーとファームウェアの更新プログラムを含める](../../../../sum/get-started/configure-classifications-and-products.md#bkmk_Surface)」を参照してください。<!-- 5728727 -->
+- バージョン 2002 では、Surface のドライバーの同期を有効にしている場合は、CAS を削除した後にこの機能を再構成します。 詳細については、[Microsoft Surface のドライバーとファームウェアの更新プログラム](../../../../sum/deploy-use/surface-drivers.md)に関するページを参照してください。<!-- 5728727 -->
 
 - サード パーティ製のソフトウェア更新プログラムを管理する場合は、次のようにします。
 

@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 27994107c32fac87a465240f07b68d57fddfc140
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d481976a6c86da67670871690ba16985a67c80d8
+ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983828"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746461"
 ---
 # <a name="paths-to-co-management"></a>共同管理へのパス
 
@@ -60,6 +60,5 @@ ms.locfileid: "83983828"
 3. [クラウド管理ゲートウェイを使用するように管理ポイントとクライアントを構成する](../core/clients/manage/cmg/setup-cloud-management-gateway.md)  
 4. [Intune を使用して Configuration Manager クライアントを展開する](how-to-prepare-Win10.md)  
 
-> [!Note]  
-> このパスのチュートリアルは準備中です。
+このパスのチュートリアルについては、「[Tutorial:新しいインターネットベースのデバイスの共同管理を有効にする](tutorial-co-manage-new-devices.md)」をご覧ください。
 

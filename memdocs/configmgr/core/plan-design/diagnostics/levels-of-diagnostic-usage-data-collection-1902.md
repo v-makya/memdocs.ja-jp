@@ -10,12 +10,12 @@ ms.assetid: bce9e299-7b3a-4f51-8863-a322877daa2c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 77b4af9d6f5c84cc2c7aaa62d151f9c89b7f474a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0d9feeacf77bbd54c9ac38c2c05ee1560eeacb80
+ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703840"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506317"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1902"></a>バージョン 1902 の診断情報と使用状況データ
 
@@ -314,7 +314,7 @@ Configuration Manager バージョン 1902 では、このレベルには次の�
 
 - Windows Hello for Business ポリシー (作成済み、展開済み)  
 
-- 展開済みの Microsoft Edge ブラウザー ポリシーの数  
+- 展開された Microsoft Edge レガシ ブラウザー ポリシーの数  
 
 - ***[新規]*** OneDrive ポリシーの数 (作成済み、展開済み)
 

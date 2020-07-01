@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2523d06034f4a7effe769235cb5a4ede4df7e167
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
+ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764120"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84531470"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker 管理の計画
 
@@ -23,7 +23,7 @@ ms.locfileid: "83764120"
 
 <!-- 3601034 -->
 
-バージョン 1910 以降は、Configuration Manager を使用して、オンプレミスの Windows クライアント用の BitLocker ドライブ暗号化 (BDE) を管理します。 Configuration Manager には、Microsoft BitLocker Administration and Monitoring (MBAM) の代わりに使用できる完全な BitLocker ライフサイクル管理機能が用意されています。
+バージョン 1910 以降は、Configuration Manager を使用して、Active Directory に参加しているオンプレミスの Windows クライアント用の BitLocker ドライブ暗号化 (BDE) を管理します。 Azure Active Directory に参加している、またはワークグループのクライアントはサポートされていません。 Configuration Manager には、Microsoft BitLocker Administration and Monitoring (MBAM) の代わりに使用できる完全な BitLocker ライフサイクル管理機能が用意されています。
 
 > [!Note]  
 > Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options)」 (更新プログラムのオプション機能の有効化) を参照してください。  
@@ -92,7 +92,7 @@ Windows 10 または Windows 8.1 が動作しているマネージド Windows �
     > [!NOTE]
     > プライマリ サイト データベースを含むセルフサービス ポータルおよび管理と監視用 Web サイトのみをインストールしてください。 階層内で、各プライマリ サイトにこれらの Web サイトをインストールします。
 
-- セルフサービス ポータルをホストする Web サーバーで、[Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4) をインストールします。
+- インストール プロセスを開始する前に、セルフサービス ポータルをホストする Web サーバーに [Microsoft ASP.NET MVC 4.0](https://docs.microsoft.com/aspnet/mvc/mvc4) と .NET Framework 3.5 機能をインストールします。 その他の必要な Windows サーバーの役割と機能は、ポータルのインストール プロセス中に自動的にインストールされます。
 
 - ポータルのインストーラー スクリプトを実行するユーザー アカウントには、サイト データベース サーバーに対する SQL **sysadmin** 権限が必要です。 セットアップ プロセス中に、スクリプトによって Web サーバー マシン アカウントのログイン、ユーザー、および SQL の役割の権限が設定されます。 セルフサービス ポータルおよび管理と監視用 Web サイトのセットアップが完了したら、このユーザー アカウントを sysadmin 役割から削除できます。
 

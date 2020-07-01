@@ -2,7 +2,7 @@
 title: CMG のトークンベースの認証
 titleSuffix: Configuration Manager
 description: 内部ネットワークにクライアントの一意のトークンを登録するか、インターネット ベースのデバイスの一括登録トークンを作成します。
-ms.date: 04/29/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5054d44371fd3114a9644f90d37dabf1e81d1997
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 8146c9c2605f8693ad7375b974a5dd13c089d946
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455023"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715664"
 ---
 # <a name="token-based-authentication-for-cloud-management-gateway"></a>クラウド管理ゲートウェイのトークン ベース認証
 
@@ -70,6 +70,16 @@ ms.locfileid: "84455023"
 ```ClientLocation.log
 Rotating internet management point, new management point [1] is: https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 (0) with capabilities: <Capabilities SchemaVersion ="1.0"><Property Name="SSL" Version="1" /></Capabilities>
 ```
+
+インストールのトラブルシューティングを行うには、クライアント上の `%WinDir%\ccmsetup\logs\ccmsetup.log` を確認します。 インストール後は、`%WinDir%\ccm\logs\ClientIDManagerStartup.log` を確認します。
+
+サーバー上では、次のログを確認します。
+
+- [CMG ログ](../../plan-design/hierarchy/log-files.md#cloud-management-gateway)
+- 管理ポイント
+  - CCM_STS.log
+  - MP_RegistrationManager.log
+  - ClientAuth.log
 
 ### <a name="known-issues"></a>既知の問題
 

@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0861bb73769beb6c7595b896afc8d0e156eef94d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688620"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715630"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>Configuration Manager のサイズとスケール番号
 
@@ -136,6 +136,9 @@ Configuration Manager の各展開には、サポートできるサイト、サ�
 
 1 つの管理ポイントでサポート可能なクライアント数とデバイスの数については、「[管理ポイント](#bkmk_mp)」セクションを参照してください。  
 
+> [!NOTE]
+> [クラウド管理ゲートウェイ](../../clients/manage/cmg/plan-cloud-management-gateway.md)をサポートするように管理ポイントを有効にすると、通常どおりインターネットベースのクライアント要求が処理されます。 オンプレミスのクライアントとインターネットベースのクライアントのどちらを使用する場合でも、管理ポイントのサイズ設定に関するガイダンスは変わりません。
+
 ### <a name="software-update-point"></a>ソフトウェアの更新ポイント  
 
 基準として次の推奨事項を使用します。 この基準は、組織に適したソフトウェア更新プログラムの容量計画の情報を特定するのに役立ちます。 実際の容量の要件は、次の条件により、この記事で挙げる推奨事項と異なる場合があります。
@@ -144,6 +147,9 @@ Configuration Manager の各展開には、サポートできるサイト、サ�
 - ソフトウェアの更新ポイント サイト システムをホストするために使用しているハードウェア
 - 管理対象クライアントの数
 - サーバーにインストールされている他のサイト システムの役割  
+
+> [!NOTE]
+> [クラウド管理ゲートウェイ](../../clients/manage/cmg/plan-cloud-management-gateway.md)をサポートするようにソフトウェアの更新ポイントを有効にすると、通常どおりインターネットベースのクライアント要求が処理されます。 オンプレミスのクライアントとインターネットベースのクライアントのどちらを使用する場合でも、ソフトウェアの更新ポイントのサイズ設定に関するガイダンスは変わりません。
 
 #### <a name="capacity-planning-for-the-software-update-point"></a><a name="BKMK_SUMCapacity"></a> ソフトウェアの更新ポイントの容量計画  
 

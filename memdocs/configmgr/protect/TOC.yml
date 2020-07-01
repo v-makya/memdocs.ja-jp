@@ -2,7 +2,7 @@
   href: index.yml
 - name: 理解と調査
   items:
-    - name: '[概要]'
+    - name: 概要
       href: understand\protect-data-and-site-infrastructure.md
 - name: 計画と設計
   items:
@@ -36,7 +36,7 @@
               href: deploy-use/endpoint-protection-configure.md
             - name: サイト システムの役割
               href: deploy-use/endpoint-protection-site-role.md
-            - name: Alerts
+            - name: アラート
               href: deploy-use/endpoint-configure-alerts.md
             - name: 定義の更新
               items:
@@ -59,7 +59,7 @@
         - name: Windows ファイアウォール ポリシー
           href: deploy-use/create-windows-firewall-policies.md
         - name: Microsoft Defender Advanced Threat Protection
-          href: deploy-use/windows-defender-advanced-threat-protection.md
+          href: deploy-use/defender-advanced-threat-protection.md
         - name: Exploit Guard ポリシーを作成し、展開する
           href: deploy-use/create-deploy-exploit-guard-policy.md
         - name: Application Guard ポリシーを作成し、展開する
@@ -106,9 +106,9 @@
       items:
         - name: Wi-Fi プロファイルの作成
           href: deploy-use/create-wifi-profiles.md
-    - name: で組織内のユーザーとデバイスに VPN 設定を展開するには、
+    - name: VPN プロファイル
       items:
-        - name: で組織内のユーザーとデバイスに VPN 設定を展開するには、
+        - name: VPN プロファイル
           href: deploy-use/vpn-profiles.md
         - name: VPN プロファイルの作成
           href: deploy-use/create-vpn-profiles.md
@@ -124,7 +124,7 @@
           href: deploy-use/monitor-wifi-email-vpn-profiles.md
         - name: 証明書プロファイルを監視する
           href: deploy-use/monitor-certificate-profiles.md
-        - name: エンドポイント保護の監視
+        - name: Endpoint Protection の監視
           href: deploy-use/monitor-endpoint-protection.md
 - name: テクニカル リファレンス
   items:

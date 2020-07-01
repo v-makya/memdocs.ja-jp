@@ -2,7 +2,7 @@
 title: サポートされている SQL Server のバージョン
 titleSuffix: Configuration Manager
 description: Configuration Manager サイト データベースをホストするための SQL Server のバージョンおよび構成要件を取得します。
-ms.date: 04/03/2020
+ms.date: 06/24/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c52008089a6d23d5c4efe44f0970bb186eb334a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b30380f4e272050b7224b52d092f39aa8ab5bad4
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904643"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383174"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager のサポートされている SQL Server バージョン
 
@@ -74,7 +74,7 @@ SQL Server 2016 以前では、SQL の各バージョンと Service Pack は、[
 
 ### <a name="sql-server-2019-standard-enterprise"></a>SQL Server 2019:Standard、Enterprise
 
-Configuration Manager バージョン 1910 以降では、お使いの累積的な更新プログラムのバージョンが SQL のライフサイクルでサポートされている限り、任意の累積的な更新プログラムでこのバージョンを使用できます。
+Configuration Manager バージョン 1910 以降では、お使いの累積的な更新プログラムのバージョンが SQL のライフサイクルでサポートされている限り、累積的な更新プログラム 5 (CU5) 以降でこのバージョンを使用できます。 CU5 は、SQL Server 2019 の最小要件です。これによって[スカラー UDF のインライン化](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining)に関する問題が解決されるためです。
 
 このバージョンの SQL は、次のサイトで使用できます。
 
@@ -82,19 +82,20 @@ Configuration Manager バージョン 1910 以降では、お使いの累積的�
 - プライマリ サイト
 - セカンダリ サイト
 
-#### <a name="known-issue-with-sql-server-2019"></a>SQL Server 2019 に関する既知の問題
+<!--
+#### Known issue with SQL Server 2019
 
-既知の問題があります。<!--6436234--> これは、SQL 2019 の新しい[スカラー UDF のインライン化](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining)機能に関するものです。 この問題を回避し、UDF のインライン化を無効にするには、SQL 2019 サーバー上で次のスクリプトを実行します。
+There's a known issue<!--6436234 with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
 ```
 
-必ずではありませんが、このスクリプトを実行した後に SQL サーバーの再起動が必要になる場合があります。 詳細については、「[互換性レベルを変更せずに、スカラー UDF のインライン化を無効にする](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level)」をご覧ください。
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
 
-サイト データベース サーバーのこの SQL 機能は、Configuration Manager では使用されないため、安全に無効にすることができます。
+You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
 
-SQL 2019 のスカラー UDF のインライン化を無効にしない場合、サイト サーバーによるサイト データベースへのクエリがランダムに失敗します。 たとえば、**hman.log** に次のエラーが表示されます。
+If you don't disable scalar UDF inlining in SQL 2019, the site server will randomly fail to query the site database. For example, you'll see the following errors in **hman.log**:
 
 ```hman.log
 *** [HY000][0][Microsoft][SQL Server Native Client 11.0]Unspecified error occurred on SQL Server. Connection may have been terminated by the server.
@@ -103,13 +104,14 @@ SQL 2019 のスカラー UDF のインライン化を無効にしない場合、
 Failed to execute SQL command select dbo.fnGetSiteMode(dbo.fnGetSiteCode())
 ```
 
-**SmsAdminUI.log** など、他のログに同様のエラーが表示される場合があります。
+You may see similar errors in other logs, such as **SmsAdminUI.log**.
 
-SQL Server バージョン 2019 では、次のエラーがログに記録されます。
+SQL Server version 2019 logs the following error:
 
 `Microsoft SQL Server reported SQL message 596, severity 21: [HY000][596][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot continue the execution because the session is in the kill state.`
 
-また、SQL からのクラッシュ ダンプ (`.mdump` ファイル) もそのログ ディレクトリ (既定では `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`) に生成されます。
+You'll also see crash dumps (`.mdump` files) from SQL in its log directory, which by default is `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log`.
+-->
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standard、Enterprise
 

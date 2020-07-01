@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623a8dab52e13c4674b961e825033430d34a8f88
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: fe50aad3cb35ab5908f604560f4dcd22800919a5
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906560"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353447"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>暗号化コントロールのテクニカル リファレンス
 
@@ -70,7 +70,7 @@ Configuration Manager では、署名と暗号化を使用して、Configuration
  マルチキャストを使用してパッケージをコンピューターに送信する場合、すべてのオペレーティング システムの展開パッケージに対して、暗号化を有効にすることができます。 この暗号化では Advanced Encryption Standard (AES) が使用されます。 暗号化を有効にする場合は、証明書を追加で構成する必要はありません。 マルチキャスト対応の配布ポイントは、パッケージの暗号化のために自動的に対称キーを生成します。 各パッケージには、異なる暗号化キーがあります。 キーは、標準的な Windows API を使用して、マルチキャスト対応の配布ポイントに格納されます。 クライアントがマルチキャスト セッションに接続するとき、PKI 発行のクライアント認証証明書 (クライアントが HTTPS を使用する場合) または自己署名入り証明書 (クライアントが HTTP を使用する場合) で暗号化されたチャネルを通じてキーの交換が実行されます。 クライアントは、マルチキャスト セッション中の場合のみメモリにキーを格納します。  
 
 ### <a name="encryption-for-media-to-deploy-operating-systems"></a>オペレーティング システムを展開するメディアの暗号化  
- メディアを使用してオペレーティング システムを展開し、メディアを保護するためにパスワードを指定する場合、環境変数は Advanced Encryption Standard (AES) を使用して暗号化されます。 メディア上のその他のデータ (パッケージおよびアプリケーションのコンテンツを含む) は暗号化されません。  
+ メディアを使用してオペレーティング システムを展開し、メディアを保護するためにパスワードを指定する場合、環境変数は 128 ビット キー サイズの Advanced Encryption Standard (AES) を使用して暗号化されます。 メディア上のその他のデータ (パッケージおよびアプリケーションのコンテンツを含む) は暗号化されません。  
 
 ### <a name="encryption-for-content-that-is-hosted-on-cloud-based-distribution-points"></a>クラウドベースの配布ポイントでホストされているコンテンツの暗号化  
  System Center 2012 Configuration Manager SP1 以降では、クラウドベースの配布ポイントを使用する場合、その配布ポイントにアップロードしたコンテンツは、Advanced Encryption Standard (AES) を使用して 256 ビットのキー サイズで暗号化されます。 コンテンツは、更新するたびに再暗号化されます。 クライアントがコンテンツをダウンロードすると、暗号化され、HTTPS 接続で保護されます。  

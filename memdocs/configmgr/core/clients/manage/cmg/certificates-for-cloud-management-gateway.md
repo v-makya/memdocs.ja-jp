@@ -5,17 +5,17 @@ description: クラウド管理ゲートウェイと共に使用するさまざ�
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 7e9602ef5ea784dd3e97578d5ff585f2ca662c1e
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: b5a9a4a7f23942ac06dc16a0b54b657c7fd617a9
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347204"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715613"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>クラウド管理ゲートウェイの証明書
 
@@ -28,7 +28,8 @@ ms.locfileid: "84347204"
   - [パブリック プロバイダーが発行したサーバー認証証明書](#bkmk_serverauthpublic)  
   - [エンタープライズ PKI から発行されたサーバー認証証明書](#bkmk_serverauthpki)  
 
-- [クライアント認証証明書](#bkmk_clientauth)  
+- [クライアント認証証明書](#bkmk_clientauth)
+  - [CMG 接続ポイント](#bkmk_cmgcp)
   - [CMG が信頼するクライアントのルート証明書](#bkmk_clientroot)  
 
 - [HTTPS 用の管理ポイントを有効にする](#bkmk_mphttps)  
@@ -90,7 +91,7 @@ CMG によって、インターネットベースのクライアントが接続�
 
   - Configuration Manager 証明書プロファイルを使用し、クライアントで証明書をプロビジョニングすることもできます。 詳細については、「[証明書プロファイルの概要](../../../../protect/deploy-use/introduction-to-certificate-profiles.md)」をご覧ください。
 
-  - [Intune から Configuration Manager クライアントをインストール](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client)する予定がある場合は、Intune の証明書プロファイルを使用してクライアントに証明書をプロビジョニングすることもできます。 詳細については、[証明書プロファイルの構成](https://docs.microsoft.com/intune/certificates-configure)に関する記事を参照してください。
+  - [Intune から Configuration Manager クライアントをインストール](../../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client)する予定がある場合は、Intune の証明書プロファイルを使用してクライアントに証明書をプロビジョニングすることもできます。 詳細については、[証明書プロファイルの構成](../../../../../intune/protect/certificates-configure.md)に関するページを参照してください。
 
 ### <a name="server-authentication-certificate-issued-by-public-provider"></a><a name="bkmk_serverauthpublic"></a> パブリック プロバイダーが発行したサーバー認証証明書
 
@@ -129,18 +130,35 @@ Configuration Manager で CMG インスタンスを作成する場合、証明�
 
 ## <a name="client-authentication-certificate"></a><a name="bkmk_clientauth"></a> クライアント認証証明書
 
-*この証明書は、Windows 8.1 を稼働しているインターネットベースのクライアント、および Azure Active Directory (Azure AD) に参加していない Windows 10 デバイスに必要です。CMG 接続ポイントにも必要です。Azure AD に参加している Windows 10 クライアントには必要ありません。*
+クライアント認証証明書の要件:
+
+- この証明書は、Windows 8.1 を稼働しているインターネットベースのクライアント、および Azure Active Directory (Azure AD) に参加していない Windows 10 デバイスに必要です。
+- これは、CMG 接続ポイントで必要な場合があります。 詳細については、「[CMG 接続ポイント](#bkmk_cmgcp)」を参照してください。
+- Azure AD に参加している Windows 10 クライアントには必要ありません。
+- サイトがバージョン 2002 以降の場合、デバイスではサイトから発行されたトークンを使用できます。 詳細については、[CMG のトークンベースの認証](../../deploy/deploy-clients-cmg-token.md)に関する記事をご覧ください。
 
 クライアントはこの証明書を利用し、CMG で認証します。 ハイブリッドであるか、クラウド ドメインに参加している Windows 10 デバイスは、Azure AD を利用して認証するため、この証明書を必要としません。
 
 この証明書は Configuration Manager と前後関係のないところでプロビジョニングします。 たとえば、Active Directory 証明書サービスとグループ ポリシーを使用し、クライアント認証証明書を発行します。 詳細については、「[Windows コンピューター用のクライアント証明書の展開](../../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012)」を参照してください。
 
-クライアント要求を安全に転送するために、CMG 接続ポイントでは、HTTPS 管理ポイント上のサーバー認証証明書に対応するクライアント認証証明書が必要です。 クライアントが Azure AD 認証を使用している場合、または拡張 HTTP の管理ポイントを構成する場合、この証明書は必要ありません。 詳細については、「[HTTPS 用の管理ポイントを有効にする](#bkmk_mphttps)」を参照してください。
-
 > [!NOTE]
 > デバイスを Azure AD に参加させることをお勧めします。 インターネットベースのデバイスでは、Azure AD を使用して、Configuration Manager での認証を行うことができます。 また、デバイスがインターネット上にあるか、内部ネットワークに接続されているかにかかわらず、デバイスとユーザーの両方のシナリオに対応できます。 詳細については、「[Azure AD の ID を使用してクライアントをインストールして登録する](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity)」を参照してください。
 >
-> バージョン 2002 以降では、<!--5686290--> Configuration Manager では、内部ネットワークに接続することがあまりなく、Azure Active Directory (Azure AD) に参加できず、PKI によって発行された証明書をインストールする方法を持たない、インターネット ベースのデバイスに対するサポートが拡張されています。 詳細については、[CMG のトークンベースの認証](../../deploy/deploy-clients-cmg-token.md)に関する記事をご覧ください。
+> バージョン 2002 以降、<!--5686290--> Configuration Manager では、内部ネットワークに接続することがあまりなく、Azure AD に参加できず、PKI によって発行された証明書をインストールする方法を持たない、インターネット ベースのデバイスに対するサポートが拡張されています。 詳細については、[CMG のトークンベースの認証](../../deploy/deploy-clients-cmg-token.md)に関する記事をご覧ください。
+
+### <a name="cmg-connection-point"></a><a name="bkmk_cmgcp"></a> CMG 接続ポイント
+
+クライアント要求を安全に転送するには、CMG 接続ポイントに管理ポイントとのセキュリティで保護された接続が必要です。 デバイスと管理ポイントの構成方法に応じて、CMG 接続ポイントの構成が決まります。
+
+- 管理ポイントが HTTPS である
+
+  - クライアントには、クライアント認証証明書があります。CMG 接続ポイントでは、HTTPS 管理ポイント上のサーバー認証証明書に対応するクライアント認証証明書が必要です。
+
+  - クライアントには、Azure AD 認証または Configuration Manager トークンが使用されます。この証明書は必須ではありません。
+
+- 拡張 HTTP 用に管理ポイントを構成する場合:この証明書は必須ではありません。
+
+詳細については、「[HTTPS 用の管理ポイントを有効にする](#bkmk_mphttps)」を参照してください。
 
 ### <a name="client-trusted-root-certificate-to-cmg"></a><a name="bkmk_clientroot"></a> CMG が信頼するクライアントのルート証明書
 
@@ -150,8 +168,8 @@ Configuration Manager コンソールで CMG を作成するとき、この証�
 
 CMG はクライアント認証証明書を信頼する必要があります。 この信頼を実現するには、信頼されたルート証明書チェーンを提供します。 証明書チェーンには必ずすべての証明書を追加します。 たとえば、クライアント認証証明書が中間 CA によって発行されている場合は、中間 CA 証明書とルート CA 証明書の両方を追加します。
 
-> [!Note]  
-> CMG を作成するときに、[設定] ページで信頼されたルート証明書を指定する必要はなくなりました。 クライアント認証で Azure Active Directory (Azure AD) を使用するときにこの証明書は必要ありませんが、ウィザードで必要な場合は使用されます。 PKI クライアント認証証明書を使用する場合は、引き続き信頼されたルート証明書を CMG に追加する必要があります。<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
+> [!NOTE]  
+> CMG を作成するときに、[設定] ページで信頼されたルート証明書を指定する必要はなくなりました。 クライアント認証で Azure AD を使用するときにこの証明書は必要ありませんが、ウィザードで必要な場合は使用されます。 PKI クライアント認証証明書を使用する場合は、引き続き信頼されたルート証明書を CMG に追加する必要があります。<!--SCCMDocs-pr issue #2872 SCCMDocs issue #1319-->
 >
 > バージョン 1902 以前で追加できるのは、2 つの信頼されたルート CA と 4 つの中間 (下位) CA のみです。
 
@@ -193,7 +211,7 @@ CMG はクライアント認証証明書を信頼する必要があります。 
 
 **[HTTP サイト システムには Configuration Manager によって生成された証明書を使用する]** サイト オプションを使用するときは、管理ポイントは HTTP でもかまいません。 詳細については、「[Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md)」(拡張 HTTP) をご覧ください。
 
-> [!Tip]  
+> [!TIP]
 > 拡張 HTTP を使用しておらず、環境内に複数の管理ポイントがある場合、CMG 用にそれらをすべて HTTPS 対応にする必要はありません。 CMG 対応管理ポイントを **[インターネットのみ]** として構成します。 オンプレミスのクライアントはこれらを使用しなくなります。<!-- SCCMDocs#1676 -->
 
 ### <a name="enhanced-http-certificate-for-management-points"></a>管理ポイント用の拡張 HTTP 証明書
@@ -240,14 +258,14 @@ CMG はクライアント認証証明書を信頼する必要があります。 
 
 - *ワークグループ*:デバイスはドメインまたは Azure AD に参加していませんが、[クライアント認証証明書](#bkmk_clientauth)を持っています。
 - *AD ドメイン参加済み*:デバイスをオンプレミスの Active Directory ドメインに参加させます。
-- *Azure AD 参加済み*:クラウド ドメイン参加済みとも呼ばれ、デバイスを Azure Active Directory テナントに参加させます。 詳細については、「[Azure AD 参加済みデバイス](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join)」を参照してください。
-- *ハイブリッド参加済み*:デバイスをオンプレミスの Active Directory に参加させ、Azure Active Directory に登録します。 詳細については、「[ハイブリッド Azure AD 参加済みデバイス](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)」を参照してください。
+- *Azure AD 参加済み*:クラウド ドメイン参加済みとも呼ばれ、デバイスを Azure AD テナントに参加させます。 詳細については、「[Azure AD 参加済みデバイス](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join)」を参照してください。
+- *ハイブリッド参加済み*:デバイスをオンプレミスの Active Directory に参加させ、Azure AD に登録します。 詳細については、「[ハイブリッド Azure AD 参加済みデバイス](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)」を参照してください。
 - *HTTP*:管理ポイント プロパティで、クライアント接続を **[HTTP]** に設定します。
 - *HTTPS*:管理ポイント プロパティで、クライアント接続を **[HTTPS]** に設定します。
-- *E-HTTP*:サイトのプロパティの **[クライアント コンピューターの通信方法]** タブで、サイト システムの設定を **[HTTPS または HTTP]** に設定し、 **[HTTP サイト システムには Configuration Manager によって生成された証明書を使用する]** のオプションを有効にします。 HTTP 用の管理ポイントはご自身で構成します。HTTP と HTTPS の両方の通信用の HTTP 管理ポイントは用意されています (トークン認証のシナリオ)。
+- *E-HTTP*:サイトのプロパティの **[Communication Security]\(通信のセキュリティ\)** タブで、サイト システムの設定を **[HTTPS または HTTP]** に設定し、 **[HTTP サイト システムには Configuration Manager によって生成された証明書を使用する]** のオプションを有効にします。 HTTP 用の管理ポイントはご自身で構成します。HTTP と HTTPS の両方の通信用の HTTP 管理ポイントは用意されています (トークン認証のシナリオ)。
 
     > [!Note]
-    > バージョン 1906 以降では、このタブは **[通信のセキュリティ]** と呼ばれています。<!-- SCCMDocs#1645 -->
+    > 1902 以前のバージョンでは、このタブは **[クライアント コンピューターの通信方法]** という名前です。<!-- SCCMDocs#1645 -->
 
 ## <a name="azure-management-certificate"></a><a name="bkmk_azuremgmt"></a> Azure 管理証明書
 

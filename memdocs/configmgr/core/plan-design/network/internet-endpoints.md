@@ -2,7 +2,7 @@
 title: インターネット アクセス要件
 titleSuffix: Configuration Manager
 description: Configuration Manager の機能をすべて利用するためのインターネット エンドポイントについて説明します。
-ms.date: 04/21/2020
+ms.date: 06/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8423af8d4c743965f627a94a07f587fd97d45bdf
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
+ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454972"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740772"
 ---
 # <a name="internet-access-requirements"></a>インターネット アクセス要件
 
@@ -77,7 +77,8 @@ ms.locfileid: "84454972"
 
 この機能の詳細については、「[Configuration Manager と共に使用するように Azure サービスを構成する](../../servers/deploy/configure/azure-services-wizard.md)」を参照してください。
 
-- `management.azure.com`  
+- `management.azure.com` (Azure パブリック クラウド)
+- `management.usgovcloudapi.net` (Azure US Government クラウド)
 
 ## <a name="co-management"></a>共同管理
 
@@ -110,31 +111,66 @@ Microsoft 接続キャッシュをサポートする配布ポイントにも、�
 - Azure Active Directory (Azure AD) 統合
 - Azure AD ベースの検出
 
-CMG/CDP のサービス展開の場合、**サービス接続ポイント**は次にアクセスする必要があります。
+CMG の詳細については、[CMG の計画](../../clients/manage/cmg/plan-cloud-management-gateway.md)に関するページを参照してください。
 
-- 特定の Azure エンドポイントは、構成によって、環境ごとに異なります。 Configuration Manager はサイト データベースにこれらのエンドポイントを格納します。 Azure エンドポイントの一覧については、SQL Server の **AzureEnvironments** テーブルにクエリを実行してください。  
+以下のセクションでは、各エンドポイントをロール別に示します。 一部のエンドポイントでは、`<name>` によってサービスが参照されます。これは、CMG または CDP のクラウド サービス名です。 たとえば、お使いの CMG が `GraniteFalls.CloudApp.Net` である場合、実際のストレージ エンドポイントは `GraniteFalls.blob.core.windows.net` です。<!-- SCCMDocs#2288 -->
 
-**CMG 接続ポイント**は、次のサービス エンドポイントにアクセスする必要があります。
+### <a name="service-connection-point"></a>[サービス接続ポイント]
+
+CMG または CDP サービスをデプロイする場合、サービス接続ポイントでは次にアクセスできる必要があります。
+
+- 特定の Azure エンドポイントは、構成によって、環境ごとに異なります。 Configuration Manager はサイト データベースにこれらのエンドポイントを格納します。 Azure エンドポイントの一覧については、SQL Server の **AzureEnvironments** テーブルにクエリを実行してください。
+
+- [Azure サービス](#azure-services)
+
+- Azure AD ユーザー検出については:
+
+  - バージョン 1902 以降:Microsoft Graph エンドポイント `https://graph.microsoft.com/`
+
+  - バージョン 1810 以前:Azure AD Graph エンドポイント `https://graph.windows.net/`  
+
+### <a name="cmg-connection-point"></a>CMG 接続ポイント
+
+CMG 接続ポイントでは、次のサービス エンドポイントにアクセスできる必要があります。
+
+- クラウド サービス名 (CMG または CDP 用):
+  - `<name>.cloudapp.net` (Azure パブリック クラウド)
+  - `<name>.usgovcloudapp.net` (Azure US Government クラウド)
 
 - サービス管理エンドポイント: `https://management.core.windows.net/`  
 
-- 記憶域のエンドポイント: `<name>.blob.core.windows.net` および `<name>.table.core.windows.net`
+- ストレージ エンドポイント (コンテンツが有効な CMG または CDP 用):
+  - `<name>.blob.core.windows.net` (Azure パブリック クラウド)
+  - `<name>.blob.core.usgovcloudapi.net` (Azure US Government クラウド)
+<!--  and `<name>.table.core.windows.net` per DC, only used internally -->
 
-    ここで `<name>` は、CMG または CDP のクラウド サービス名です。 たとえば、CMG が `GraniteFalls.CloudApp.Net` である場合、最初に許可するストレージ エンドポイントは `GraniteFalls.blob.core.windows.net` です。<!-- SCCMDocs#2288 -->
+CMG 接続ポイント サイト システムでは、Web プロキシを使用できます。 プロキシにこのロールを構成する方法については、[プロキシ サーバーのサポート](proxy-server-support.md#configure-the-proxy-for-a-site-system-server)に関するページを参照してください。 CMG 接続ポイントは、CMG サービス エンドポイントにのみ接続する必要があります。 他の Azure エンドポイントにアクセスする必要はありません。
 
-**Configuration Manager のコンソール**と**クライアント**による Azure AD トークン取得については:
+### <a name="configuration-manager-client"></a>Configuration Manager クライアント
 
-- ActiveDirectoryEndpoint `https://login.microsoftonline.com/`  
+- クラウド サービス名 (CMG または CDP 用):
+  - `<name>.cloudapp.net` (Azure パブリック クラウド)
+  - `<name>.usgovcloudapp.net` (Azure US Government クラウド)
 
-Azure AD ユーザーの探索では、**サービス接続ポイント**は次にアクセスする必要があります。
+- ストレージ エンドポイント (コンテンツが有効な CMG または CDP 用):
+  - `<name>.blob.core.windows.net` (Azure パブリック クラウド)
+  - `<name>.blob.core.usgovcloudapi.net` (Azure US Government クラウド)
 
-- バージョン 1810 以前:Azure AD Graph エンドポイント `https://graph.windows.net/`  
+- Azure AD トークンを取得するための Azure AD エンドポイント:
+  - `login.microsoftonline.com` (Azure パブリック クラウド)
+  - `login.microsoftonline.us` (Azure US Government クラウド)
 
-- バージョン 1902 以降:Microsoft Graph エンドポイント `https://graph.microsoft.com/`
+### <a name="configuration-manager-console"></a>Configuration Manager コンソール
 
-クラウド管理ポイント (CMG) 接続ポイント サイト システムでは、Web プロキシを使用できます。 プロキシにこのロールを構成する方法については、[プロキシ サーバーのサポート](proxy-server-support.md#configure-the-proxy-for-a-site-system-server)に関するページを参照してください。 CMG 接続ポイントは、CMG サービス エンドポイントにのみ接続する必要があります。 他の Azure エンドポイントにアクセスする必要はありません。
+- Azure AD トークンを取得するための Azure AD エンドポイント:
 
-CMG の詳細については、[CMG の計画](../../clients/manage/cmg/plan-cloud-management-gateway.md)に関するページを参照してください。
+  - Azure パブリック クラウド
+    - `login.microsoftonline.com`
+    - `aadcdn.msauth.net`<!-- MEMDocs#351 -->
+    - `aadcdn.msftauth.net`
+
+  - Azure US Government クラウド
+    - `login.microsoftonline.us`
 
 ## <a name="software-updates"></a><a name="bkmk_sum"></a> ソフトウェア更新プログラム
 
@@ -204,18 +240,23 @@ Configuration Manager コンソールを使用するコンピューターでは�
 
 この機能の詳細については、[製品のフィードバック](../../understand/find-help.md#product-feedback)に関するページを参照してください。
 
-### <a name="community-workspace-documentation-node"></a>コミュニティ ワークスペース、[ドキュメント] ノード
+### <a name="community-workspace"></a>コミュニティ ワークスペース
+
+#### <a name="documentation-node"></a>ドキュメント ノード
+
+このコンソール ノードの詳細については、「[Configuration Manager コンソールの使用](../../servers/manage/admin-console.md)」を参照してください。
 
 - `https://aka.ms`
 
 - `https://raw.githubusercontent.com`
 
-このコンソール ノードの詳細については、「[Configuration Manager コンソールの使用](../../servers/manage/admin-console.md)」を参照してください。
+#### <a name="community-hub"></a>コミュニティ ハブ
 
-<!-- 
-Community Hub
-when in current branch, get details from SCCMDocs-pr #3403 
- -->
+この機能の詳細については、[コミュニティ ハブ](../../servers/manage/community-hub.md)に関する記事をご覧ください。
+
+- `https://github.com`
+
+- `https://communityhub.microsoft.com`
 
 ### <a name="monitoring-workspace-site-hierarchy-node"></a>[監視] ワークスペース、[サイト階層] ノード
 

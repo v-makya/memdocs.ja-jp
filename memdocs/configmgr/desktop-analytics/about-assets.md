@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d5900fd4cb4fdebea23e626ffbe17c5289712b31
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
+ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268914"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107305"
 ---
 # <a name="assets-in-desktop-analytics"></a>Desktop Analytics の資産
 
@@ -56,7 +56,7 @@ ms.locfileid: "83268914"
 
 **[App versions details]\(アプリのバージョンの詳細\)** 設定がオフの場合、アプリの詳細ウィンドウには、結合されているアプリのバージョンと言語の数が表示されます。 アプリの詳細に対する変更を保存すると、すべてのバージョンに適用されます。 たとえば、 **[重要度]** または **[所有者]** を設定します。 一部の値には [複数] と表示されます。これは、すべてのバージョン間に一貫した値が複数あるという意味です。
 
-### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp" /> システム アプリとストア アプリの自動アップグレード判定
+### <a name="automatic-upgrade-decision-of-system-and-store-apps"></a><a name="bkmk_plan-autoapp"> </a> システム アプリとストア アプリの自動アップグレード判定
 
 <!-- 3587232 -->
 Desktop Analytics ワークフローのすべての注目アプリについて、 **[重要度]** と **[アップグレード判定]** を特定することは重要です。 これらのアプリに注釈を付ける手間を減らすために、特定の種類のアプリには、自動的に "*重要でない*" とマークされます。 こうしたアプリの展開計画のアップグレード判定にも "*準備完了*" とマークされます。 次のアプリは互換性があり、Windows のアップグレード後も引き続き機能します。

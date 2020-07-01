@@ -2,7 +2,7 @@
 title: ログ ファイルのリファレンス
 titleSuffix: Configuration Manager
 description: Configuration Manager のクライアント、サーバー、および依存コンポーネントのすべてのログ ファイルのリファレンス。
-ms.date: 04/24/2020
+ms.date: 06/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 36ab89f1e9988adc167bf69ff7d9f53b02bbe10f
-ms.sourcegitcommit: ad4b3e4874a797b755e774ff84429b5623f17c5c
+ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82166540"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715579"
 ---
 # <a name="log-file-reference"></a>ログ ファイルのリファレンス
 
@@ -384,7 +384,9 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 
 |ログの名前|[説明]|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|CcmIsapi.log|エンドポイントでのクライアント メッセージの送受信に関する情報を記録します。|サイト システム サーバー|  
+|CcmIsapi.log|エンドポイントでのクライアント メッセージの送受信に関する情報を記録します。|サイト システム サーバー|
+|CCM_STS.log|Azure Active Directory またはサイト発行のクライアント トークンからの認証トークンのアクティビティを記録します。|サイト システム サーバー|
+|ClientAuth.log|署名および認証アクティビティを記録します。|サイト システム サーバー|
 |MP_CliReg.log|管理ポイントによって処理されるクライアントの登録を記録します。|サイト システム サーバー|  
 |MP_Ddr.log|クライアントの XML レコードの DDR への変換と、変換されたレコードのサイト サーバーへのコピーを記録します。|サイト システム サーバー|  
 |MP_Framework.log|コア管理ポイントとクライアント フレームワーク コンポーネントの動作を記録します。|サイト システム サーバー|  
@@ -394,6 +396,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |MP_Location.log|クライアントからの場所の要求と、それに対する応答を記録します。|サイト システム サーバー|  
 |MP_OOBMgr.log|クライアントからの OTP 受信に関連する、管理ポイントの動作を記録します。|サイト システム サーバー|  
 |MP_Policy.log|ポリシーの通信を記録します。|サイト システム サーバー|  
+|MP_RegistrationManager.log|証明書、CRL、トークンの検証など、クライアントの登録に関連する処理を記録します。|サイト システム サーバー|
 |MP_Relay.log|クライアントから収集されたファイルの転送を記録します。|サイト システム サーバー|  
 |MP_Retry.log|ハードウェア インベントリの再試行プロセスを記録します。|サイト システム サーバー|  
 |MP_Sinv.log|クライアントの XML 形式のソフトウェア インベントリ レコードの変換と、変換されたファイルのサイト サーバーへのコピーを記録します。|サイト システム サーバー|  
@@ -481,6 +484,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |SMSdpmon.log|配布ポイントで構成されている、スケジュールに従った配布ポイントの正常性の監視タスクの詳細を記録します。|サイト サーバー|  
 |SoftwareCatalogUpdateEndpoint.log|ソフトウェア センターに表示されるアプリケーション カタログの URL の管理操作を記録します。|クライアント|  
 |SoftwareCenterSystemTasks.log|ソフトウェア センターの前提条件コンポーネントの検証に関連する活動を記録します。|クライアント|  
+|TSDTHandler.log|タスク シーケンスの展開の種類の場合。 アプリの適用 (インストールまたはアンインストール) からタスク シーケンスの起動までのプロセスを記録します。 AppEnforce.log と smsts.log と共に使用します。|クライアント|<!-- MEMDocs#336 -->
 
 #### <a name="packages-and-programs"></a>パッケージとプログラム
 

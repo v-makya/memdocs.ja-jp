@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c596ba410adc979b92a000c28d815e89695a9b0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: f4089f52d912491b3b1396906fe391c5c334e061
+ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694350"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84814907"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Power BI Report Server との統合
 
@@ -43,6 +43,8 @@ Power BI Desktop レポート ファイル (.PBIX) が保存され、Power BI Re
     > - [**Power BI Report Server 用に最適化済み**と記載されている Power BI Desktop](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop) のバージョンのみを使用してください。
 
 - Power BI 統合では、レポートに同じロール ベース管理を使用します。
+    > [!NOTE]
+    > Power BI Report Server では、RBAC が有効なレポートがサポートされていないため、レポートのすべての閲覧者には、割り当てられたスコープに関係なく同じ結果が表示されます。
 
 ## <a name="configure-the-reporting-services-point"></a>レポート サービス ポイントを構成する
 

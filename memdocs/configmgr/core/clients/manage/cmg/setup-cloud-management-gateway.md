@@ -5,17 +5,17 @@ description: クラウド管理ゲートウェイ (CMG) を設定するには、
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 06/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 8c585473ec80ad4c6dfe49d22e527e99175bfbb4
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 0960637f534bfe1361b55b2d63be87abc7894d7b
+ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877430"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84715239"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager のクラウド管理ゲートウェイを設定する
 
@@ -25,7 +25,6 @@ ms.locfileid: "83877430"
 
 > [!Note]  
 > Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[Enable optional features from updates](../../../servers/manage/install-in-console-updates.md#bkmk_options)」 (更新プログラムのオプション機能の有効化) を参照してください。
-
 
 ## <a name="before-you-begin"></a>始める前に
 
@@ -39,11 +38,11 @@ ms.locfileid: "83877430"
 
 - CMG の [Azure Resource Manager](plan-cloud-management-gateway.md#azure-resource-manager) の展開には、以下の要件が必要です。  
 
-    - **クラウド管理**のための [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) との統合。 Azure AD のユーザー探索は必要ありません。  
+  - **クラウド管理**のための [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) との統合。 Azure AD のユーザー探索は必要ありません。 Azure Resource Manager を使用して CMG をデプロイするためにサイトを Azure AD と統合するには、**全体管理者**が必要です。
 
-    - **Microsoft.ClassicCompute** & **Microsoft.Storage** リソース プロバイダーは、Azure サブスクリプション内に登録する必要があります。 詳細については、[Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services) に関するページを参照してください。
+  - **Microsoft.ClassicCompute** & **Microsoft.Storage** リソース プロバイダーは、Azure サブスクリプション内に登録する必要があります。 詳細については、[Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services) に関するページを参照してください。
 
-    - サブスクリプション管理者はサインインする必要があります。  
+  - CMG をデプロイするには、**サブスクリプション所有者**がサインインする必要があります。
 
 - サービスのグローバル一意名。 この名前は、[CMG サーバー認証証明書](certificates-for-cloud-management-gateway.md#bkmk_serverauth)に含まれています。  
 
@@ -60,10 +59,9 @@ ms.locfileid: "83877430"
     >
     > Configuration Manager バージョン 1902 以降、クラウド管理ゲートウェイの新しいインスタンスに対しては、Azure Resource Manager が唯一の展開メカニズムです。<!-- 3605704 -->
 
-    - Azure サブスクリプション ID  
+  - Azure サブスクリプション ID  
 
-    - Azure 管理証明書  
-
+  - Azure 管理証明書  
 
 ## <a name="set-up-a-cmg"></a>CMG を設定する
 
@@ -73,7 +71,7 @@ ms.locfileid: "83877430"
 
 2. リボンの **[クラウド管理ゲートウェイの作成]** を選択します。  
 
-3. ウィザードの [全般] ページで **[サインイン]** を選択します。 Azure サブスクリプション管理者アカウントで認証を行います。 ウィザードは、Azure AD 統合の前提条件の間に格納された情報から、残りのフィールドを自動的に設定します。 複数のサブスクリプションを所有している場合は、使用する適切なサブスクリプションの**サブスクリプション ID** を選びます。
+3. ウィザードの [全般] ページで **[サインイン]** を選択します。 Azure **サブスクリプション所有者**アカウントを使用して認証します。 ウィザードは、Azure AD 統合の前提条件の間に格納された情報から、残りのフィールドを自動的に設定します。 複数のサブスクリプションを所有している場合は、使用するサブスクリプションの**サブスクリプション ID** を選択します。
 
     > [!Note]  
     > バージョン 1810 以降では、Configuration Manager での Azure の従来のサービス展開は推奨されていません。 バージョン 1902 以前では、CMG 展開方法として、 **[Azure Resource Manager の展開]** を選択してください。
@@ -100,7 +98,7 @@ ms.locfileid: "83877430"
 10. **[証明書]** を選択して、クライアントの信頼されたルート証明書を追加します。 証明書チェーンに、すべての証明書を追加します。  
 
     > [!Note]  
-    > バージョン 1806 以降、CMG を作成するときに、[設定] ページで信頼されたルート証明書を指定する必要はなくなりました。 クライアント認証で Azure Active Directory (Azure AD) を使用するときにこの証明書は必要ありませんが、ウィザードで必要な場合は使用されます。 PKI クライアント認証証明書を使用する場合は、引き続き信頼されたルート証明書を CMG に追加する必要があります。<!--SCCMDocs-pr issue #2872-->  
+    > クライアント認証に Azure Active Directory (Azure AD) を使用する場合、信頼されたルート証明書は必要ありません。 PKI クライアント認証証明書を使用する場合は、引き続き信頼されたルート証明書を CMG に追加する必要があります。<!--SCCMDocs-pr issue #2872-->
     >
     > バージョン 1902 以前で追加できるのは、2 つの信頼されたルート CA と 4 つの中間 (下位) CA のみです。<!-- SCCMDocs-pr#4022 -->
 
@@ -108,7 +106,7 @@ ms.locfileid: "83877430"
 
 12. バージョン 1906 以降では、**TLS 1.2 を強制**することができます。 この設定は、Azure クラウド サービス VM にのみ適用されます。 オンプレミス Configuration Manager サイト サーバーまたはクライアントには適用されません。 TLS 1.2 の詳細については、「[TLS 1.2 を有効にする方法](../../../plan-design/security/enable-tls-1-2.md)」を参照してください。<!-- SCCMDocs-pr#4021 -->
 
-13. バージョン 1806 以降では、ウィザードにおいて既定で次のオプションが有効にされます: **CMG をクラウド配布ポイントとして機能させて、Azure Storage からのコンテンツを提供できるようにする**。 また、CMG では、コンテンツをクライアントに提供できるようになりました。 この機能により、Azure VM の必要な証明書とコストが削減されます。  
+13. ウィザードの既定では、次のオプションが有効です。**CMG をクラウド配布ポイントとして機能させて、Azure Storage からのコンテンツを提供できるようにする**。 CMG では、コンテンツをクライアントに提供することもできます。 この機能により、Azure VM の必要な証明書とコストが削減されます。
 
 14. **[次へ]** を選択します。  
 
@@ -116,9 +114,8 @@ ms.locfileid: "83877430"
 
 16. 設定を確認して、 **[次へ]** を選択します。 Configuration Manager がサービスの設定を開始します。 ウィザードを閉じた後に、Azure でサービスが完全にプロビジョニングされるまで 5 分から 15 分かかります。 新しい CMG の **[状態]** 列を確認して、サービスの準備が完了するタイミングを判断します。  
 
-    > [!Note]  
+    > [!NOTE]
     > CMG 展開のトラブルシューティングを行うには、**CloudMgr.log** と **CMGSetup.log** を使用します。 詳細については、[ログ ファイル](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)に関するページを参照してください。
-
 
 ## <a name="configure-primary-site-for-client-certificate-authentication"></a>クライアント証明書認証用にプライマリ サイトを構成する
 
@@ -128,23 +125,21 @@ ms.locfileid: "83877430"
 
 2. インターネット ベースのクライアントを割り当てるプライマリ サイトを選択して、 **[プロパティ]** を選びます。  
 
-3. プライマリ サイトのプロパティ シートの **[クライアント コンピューターの通信方法]** タブに切り替えて、 **[使用可能な場合は PKI クライアント証明書 (クライアント認証) を使用する]** をオンにします。  
+3. プライマリ サイトのプロパティ シートの **[Communication Security]\(通信のセキュリティ\)** タブに切り替えて、 **[使用可能な場合は PKI クライアント証明書 (クライアント認証) を使用する]** をオンにします。  
 
-    > [!Note]
-    > バージョン 1906 以降では、このタブは **[通信のセキュリティ]** と呼ばれています。<!-- SCCMDocs#1645 -->  
+    > [!NOTE]
+    > 1902 以前のバージョンでは、このタブは **[クライアント コンピューターの通信方法]** という名前です。<!-- SCCMDocs#1645 -->
 
 4. CRL を公開しない場合は、 **[サイト システムの証明書失効リスト (CRL) をチェックする]** のオプションの選択を解除します。  
-
 
 ## <a name="add-the-cmg-connection-point"></a>CMG 接続ポイントを追加する
 
 CMG 接続ポイントは、CMG と通信するためのサイト システムの役割です。 CMG 接続ポイントを追加するには、一般的な手順に従って、[サイト システムの役割をインストール](../../../servers/deploy/configure/install-site-system-roles.md)します。 サイト システムの役割の追加ウィザードの [システムの役割の選択] ページで、 **[クラウド管理ゲートウェイ接続ポイント]** を選択します。 次に、このサーバーの接続先となる**クラウド管理ゲートウェイの名前**を選択します。 ウィザードには選択した CMG のリージョンが表示されます。
 
-> [!Important]
+> [!IMPORTANT]
 > 一部のシナリオでは、CMG 接続ポイントに[クライアント認証証明書](certificates-for-cloud-management-gateway.md#bkmk_clientauth)が必要になります。
 
 CMG サービス正常性のトラブルシューティングを行うには、**CMGService.log** と **SMS_Cloud_ProxyConnector.log** を使用します。 詳細については、[ログ ファイル](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)に関するページを参照してください。
-
 
 ## <a name="configure-client-facing-roles-for-cmg-traffic"></a>CMG トラフィック用にクライアントと直接接続する役割を構成する
 
@@ -162,7 +157,6 @@ CMG トラフィックを受け入れるように管理ポイントおよびソ�
 
 必要に応じて追加の管理ポイント、およびすべてのソフトウェアの更新ポイントについて、これらの手順を繰り返します。
 
-
 ## <a name="configure-boundary-groups"></a>境界グループの構成
 
 <!--3640932-->
@@ -172,17 +166,16 @@ CMG トラフィックを受け入れるように管理ポイントおよびソ�
 
 [境界グループを作成または構成する](../../../servers/deploy/configure/boundary-group-procedures.md)ときに、 **[参照]** タブでクラウド管理ゲートウェイを追加します。 この操作で、CMG がこの境界グループと関連付けられます。
 
-
 ## <a name="configure-clients-for-cmg"></a>CMG 用にクライアントを構成する
 
-CMG とサイト システムの役割が実行されると、クライアントは次の場所の要求で CMG サービスの場所を自動的に取得します。 [認証のために Azure AD を使用して Windows 10 クライアントをインストールして割り当てる](../../deploy/deploy-clients-cmg-azure.md)場合を除き、CMG サービスの場所を受信するにはクライアントがイントラネット上にある必要があります。 場所の要求のポーリング サイクルは 24 時間ごとです。 通常にスケジュール設定された場所の要求を待機したくない場合は、コンピューターで SMS Agent Host サービス (ccmexec.exe) を再起動することによって、要求を強制できます。  
+CMG とサイト システムの役割が実行されると、クライアントは次の場所の要求で CMG サービスの場所を自動的に取得します。 [認証のために Azure AD を使用して Windows 10 クライアントをインストールして割り当てる](../../deploy/deploy-clients-cmg-azure.md)場合を除き、CMG サービスの場所を受信するにはクライアントがイントラネット上にある必要があります。 場所の要求のポーリング サイクルは 24 時間ごとです。 通常はスケジュールされている場所の要求を待機したくない場合は、要求を強制実行できます。 要求を強制実行するには、コンピューター上の SMS Agent Host サービス (ccmexec.exe) を再起動します。
 
-> [!Note]
+> [!NOTE]
 > 既定では、すべてのクライアントは CMG ポリシーを受信します。 この動作は、クライアント設定の [[クライアントでクラウド管理ゲートウェイを使用できるようにする]](../../deploy/about-client-settings.md#enable-clients-to-use-a-cloud-management-gateway) で制御します。
 
 Configuration Manager クライアントは、イントラネット上にあるか、インターネット上にあるかを自動的に判断します。 クライアントがドメイン コントローラーまたはオンプレミス管理ポイントに接続できる場合、その接続の種類が **[現在はイントラネット]** に設定されます。 それ以外の場合は、 **[現在はインターネット]** に切り替え、CMG サービスの場所を使用してサイトと通信を行います。
 
->[!NOTE]
+> [!NOTE]
 > イントラネット上とインターネット上のどちらにあるかにかかわらず、クライアントで CMG を常に使用するように強制することができます。 この構成は、テスト目的や、常に CMG を使用するように強制したいクライアントに対して役立ちます。 クライアントで次のレジストリ キーを設定します。
 >
 > `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\Security, ClientAlwaysOnInternet = 1`
@@ -191,17 +184,20 @@ Configuration Manager クライアントは、イントラネット上にある�
 >
 > この設定は、境界グループの構成によってローカル リソースが活用されるはずの場所にクライアントがローミングする場合でも、常に適用されます。
 
+クライアントに CMG を指定するポリシーがあることを確認するには、クライアント コンピューターで管理者として Windows PowerShell コマンド プロンプトを開き、次のコマンドを実行します。
 
-クライアントに CMG を指定するポリシーがあることを確認するには、クライアント コンピューターで管理者として Windows PowerShell コマンド プロンプトを開き、次のコマンドを実行します。`Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
+```powershell
+Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}`
+```
 
 このコマンドでは、クライアントで認識されているインターネット ベースの管理ポイントが表示されます。 CMG は技術的にはインターネット ベース管理ポイントではありませんが、クライアントではそのように表示されます。
 
-> [!Note]  
+> [!NOTE]  
 > CMG クライアント トラフィックのトラブルシューティングを行うには、**CMGHttpHandler.log**、**CMGService.log**、**SMS_Cloud_ProxyConnector.log** を使用します。 詳細については、[ログ ファイル](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)に関するページを参照してください。
 
 ### <a name="install-off-premises-clients-using-a-cmg"></a>CMG を使用してオフプレミスのクライアントをインストールする
 
-現在イントラネットに接続されていないシステムにクライアント エージェントをインストールするには、次のいずれかの条件が満たされている必要があります。 いずれの場合も、ターゲット システムのローカル管理者アカウントが必要です。
+現在イントラネットに接続されていないシステムに Configuration Manager クライアントをインストールするには、次のいずれかの条件が満たされている必要があります。 いずれの場合も、ターゲット システムのローカル管理者アカウントが必要です。
 
 1. Configuration Manager サイトが、クライアント認証に PKI 証明書を使用するように適切に構成されている。 さらに、各クライアント システムに、以前に発行された有効な一意の信頼されたクライアント認証証明書がある。
 
@@ -209,35 +205,37 @@ Configuration Manager クライアントは、イントラネット上にある�
 
 3. サイトで Configuration Manager バージョン 2002 以降が実行されている。
 
-オプション 1 と 2 については、**ccmsetup.exe** を呼び出す際に、 **/mp** パラメーターを使用して CMG の URL を指定します。 詳しくは、[クライアント インストールのパラメーターとプロパティ](../../deploy/about-client-installation-properties.md#mp)に関するページをご覧ください。
+オプション 1 および 2 の場合、**ccmsetup.exe** を実行するときに、 **/mp** パラメーターを使用して CMG の URL を指定します。 詳しくは、[クライアント インストールのパラメーターとプロパティ](../../deploy/about-client-installation-properties.md#mp)に関するページをご覧ください。
 
-オプション 3 について、Configuration Manager バージョン 2002 以降では、一括登録トークンを使用して、イントラネットに接続されていないシステムにクライアント エージェントをインストールできます。 この方法の詳細については、「[一括登録トークンを作成する](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token)」をご覧ください。
+オプション 3 について、Configuration Manager バージョン 2002 以降では、一括登録トークンを使用して、イントラネットに接続されていないシステムにクライアントをインストールできます。 この方法の詳細については、「[一括登録トークンを作成する](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token)」をご覧ください。
 
 ### <a name="configure-off-premises-clients-for-cmg"></a>CMG 用にオフプレミスのクライアントを構成する
 
 次の条件に該当する場合は、最近構成された CMG にシステムを接続できます。  
 
-- システムに既に Configuration Manager クライアント エージェントがインストールされている。
+- システムに既に Configuration Manager クライアントがインストールされている。
 
 - システムがイントラネットに接続されておらず、接続することもできない。
 
 - システムが次のいずれかの条件を満たしている。
 
-  - 以前に発行された有効な一意の信頼されたクライアント認証証明書がそれぞれにある。
+  - 以前に発行された有効な一意の信頼されたクライアント認証証明書がそれぞれにある
 
   - Azure AD ドメイン参加済み
 
-  - ハイブリッド Azure AD ドメイン参加済み。
+  - Hybrid Azure AD ドメイン参加済み
 
-- 既存のクライアント エージェントを完全に再インストールしたくない、またはできない。
+- 既存のクライアントを完全に再インストールしたくない、またはできない。
 
 - ローカル管理者アカウントを使用してコンピューターのレジストリ値を変更し、**SMS Agent Host** サービスを再起動する方法がある。
 
-これらのシステムで接続を強制するには、**HKLM\Software\Microsoft\CCM** の下にレジストリ値 **CMGFQDNs** (種類: REG_SZ) を作成します。 この値に CMG の URL (`https://contoso-cmg.contoso.com` など) を設定します。 設定が完了したら、クライアント システム上で **SMS Agent Host** サービスを再起動します。
+このようなシステムで接続を強制するには、キー `HKLM\Software\Microsoft\CCM` に **REG_SZ** レジストリ エントリ `CMGFQDNs` を作成します。 その値に CMG の URL (`https://contoso-cmg.contoso.com` など) を設定します。 次に、デバイスで **SMS Agent Host** Windows サービスを再起動します。
 
-Configuration Manager クライアントで、現在の CMG またはインターネットに接続された管理ポイントがレジストリに設定されていない場合は、**CMGFQDNs** レジストリ値が自動的にチェックされます。 このチェックは、25 時間ごと、**SMS Agent Host** サービスの起動時、またはサービスによってネットワークの変更が検出されたときに実行されます。 クライアントがサイトに接続して CMG を認識すると、この値が自動的に更新されます。
+Configuration Manager クライアントで、現在の CMG またはインターネットに接続された管理ポイントがレジストリに設定されていない場合は、`CMGFQDNs` レジストリ値が自動的にチェックされます。 このチェックは、25 時間ごと、**SMS Agent Host** サービスの起動時、またはサービスによってネットワークの変更が検出されたときに実行されます。 クライアントがサイトに接続して CMG を認識すると、この値が自動的に更新されます。
 
 ## <a name="modify-a-cmg"></a>CMG を変更する
+
+### <a name="cmg-properties"></a>CMG のプロパティ
 
 CMG を作成したら、その設定の一部を変更できます。 Configuration Manager コンソールで CMG を選択して、 **[プロパティ]** を選択します。 次のタブで、設定を構成します。  
 
@@ -255,12 +253,11 @@ CMG を作成したら、その設定の一部を変更できます。 Configura
 
 - **クライアント証明書の失効を検証する**: CMG の作成時にこの設定を最初に有効にしなかった場合は、CRL を公開した後に有効にすることができます。 詳細については、「[証明書失効リストを発行する](security-and-privacy-for-cloud-management-gateway.md#bkmk_crl)」を参照してください。  
 
-- **CMG をクラウド配布ポイントとして機能させて、Azure Storage からのコンテンツを提供できるようにする**: バージョン 1806 以降では、この新しいオプションが既定で有効になります。 また、CMG では、コンテンツをクライアントに提供できるようになりました。 この機能により、Azure VM の必要な証明書とコストが削減されます。<!--1358651-->  
+- **CMG をクラウド配布ポイントとして機能させて、Azure Storage からのコンテンツを提供できるようにする**: このオプションは既定で有効です。 CMG では、コンテンツをクライアントに提供することもできます。 この機能により、Azure VM の必要な証明書とコストが削減されます。<!--1358651-->
 
 #### <a name="alerts"></a>アラート
 
 アラートは、CMG を作成した後で、いつでも再構成できます。
-
 
 ### <a name="redeploy-the-service"></a>サービスの再展開
 
@@ -296,7 +293,7 @@ CMG を作成したら、その設定の一部を変更できます。 Configura
 
     4. 従来の CMG を削除します。  
 
-> [!Tip]  
+> [!TIP]
 > CMG の現在のデプロイ モデルを判別するには<!--SCCMDocs issue #611-->  
 >
 > 1. Configuration Manager コンソールで、 **[管理]** ワークスペースに移動し、 **[Cloud Services]** を展開して **[クラウド管理ゲートウェイ]** ノードを選択します。  
@@ -312,7 +309,6 @@ Configuration Manager コンソールで CMG のみを変更します。 Azure �
 ### <a name="delete-the-service"></a>サービスの削除
 
 CMG を削除する必要がある場合は、Configuration Manager コンソールでも削除します。 Azure でコンポーネントを手動で削除すると、システムが一貫性のない状態になります。 その場合、情報が孤立した状態のままになり、予期しない動作が発生する可能性があります。
-
 
 ## <a name="next-steps"></a>次のステップ
 

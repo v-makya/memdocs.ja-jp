@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 82c8495391dcc22aa2784657bc1461887e412577
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 34005a63b372198bbc2e3079f8ab560ef6b2b791
+ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223647"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84795637"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Desktop Analytics のデータのプライバシー
 
@@ -57,6 +57,8 @@ Desktop Analytics では、以下の信条を軸として、顧客データの�
 
 3. デバイスによって、診断データが Windows の Microsoft 診断データ管理サービスに送信されます。 すべての診断データは HTTPS 経由で暗号化され、デバイスからこのサービスへの転送中は証明書のピン留めを使用します。 Microsoft Data Management Service は米国でホストされています。
 
+      - アプリケーション エラー、カーネル エラー、応答しないアプリケーション、およびその他のアプリケーション固有の問題については、Windows エラー報告 API を使用して、アプリケーション固有の問題のレポートが Microsoft に送信されます。 このデータフローに関する詳細については、「[WER の使用](https://docs.microsoft.com/windows/win32/wer/using-wer)」をご覧ください。
+      
 4. Microsoft は、毎日、IT に焦点を絞った分析情報のスナップショットを作成します。 このスナップショットは、Windows の診断データと、登録されているデバイスの入力の組み合わせです。 このプロセスは一時的なストレージで発生し、Desktop Analytics によってのみ使用されます。 一時的なストレージは、米国の Microsoft データセンターでホストされます。 すべてのデータは、SSL (HTTPS) で暗号化されたチャネルを介して送信されます。 スナップショットは、商用 ID によって分離されます。  
 
 5. 次に、スナップショットがご利用の Azure Log Analytics ワークスペースにコピーされます。 このデータ転送は、Log Analytics の機能である Webhook インジェスト プロトコルを使用して HTTPS 経由で行われます。 Desktop Analytics には、Log Analytics ストレージに対する読み取りまたは書き込みのアクセス許可がありません。 Desktop Analytics により、Shared Access Signature (SAS) URI を使用して Webhook API が呼び出されます。 次に、Log Analytics により、HTTPS 経由でストレージ テーブルからデータが取得されます。
@@ -78,6 +80,8 @@ Desktop Analytics のプライバシー関連のよく寄せられる質問に�
 - [Windows 10 バージョン 1809 の基本レベルの Windows 診断イベントとフィールド](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
 - [Windows Analytics で使用される Windows 10 バージョン 1709 の拡張診断データ イベントとフィールド](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+
+- [Windows セットアップのエラー報告](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
 
 - [診断データ ビューアーの概要](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
 

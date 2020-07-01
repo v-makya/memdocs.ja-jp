@@ -5,17 +5,17 @@ description: Configuration Manager コンソールで次の手順を利用し、
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 05/13/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 7e2cc1c2dc52a0bb6eb8d0dd143cbb2d005dc6e9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
+ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078466"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84614078"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>同期する分類と製品の構成  
 
@@ -47,9 +47,9 @@ ms.locfileid: "82078466"
      - **更新プログラムのロールアップ**:修正プログラム、セキュリティ更新プログラム、重要な更新プログラム、他の更新プログラムを展開しやすいようにパッケージにしたテスト済みのセットを指定します。 更新プログラムのロールアップは、通常、セキュリティまたは製品コンポーネントなど特定の領域に対応します。  
      - **更新プログラム**:特定の問題に対して一般にリリースされた修正プログラムを指定します。 更新プログラムは、重大ではない非セキュリティ関連のバグに対処します。  
      - **アップグレード**:Windows 10 の機能のアップグレードを指定します。 ソフトウェアの更新ポイントとサイトは最低限 WSUS 6.2 と[修正プログラム 3095113](https://support.microsoft.com/kb/3095113) を実行して、**アップグレード**の分類を取得する必要があります。 この更新プログラムおよび**アップグレード**用のその他の更新プログラムのインストールの詳細については、「[ソフトウェア更新プログラムの前提条件](../plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012)」を参照してください。
-
+    
     > [!NOTE]
-    > **[Microsoft Surface のドライバーとファームウェアの更新プログラムを含める]** チェックボックスをオンにして、Microsoft Surface ドライバーを同期することができます。<!--1098490--> 詳細については、「[Microsoft Surface のドライバーとファームウェアの更新プログラムを含める](#bkmk_Surface)」を参照してください。
+    > **[Microsoft Surface のドライバーとファームウェアの更新プログラムを含める]** チェックボックスをオンにして、Microsoft Surface ドライバーを同期することができます。<!--1098490--> Surface ドライバーを正常に同期するには、すべてのソフトウェアの更新ポイントで Windows Server 2016 以降を実行している必要があります。 Surface ドライバーを有効にした後、Windows Server 2012 を実行するコンピューターにソフトウェアで更新ポイントを有効にすると、ドライバーの更新プログラムのスキャン結果が不正確になります。 これにより、不適切なコンプライアンス データが Configuration Manager コンソールと Configuration Manager レポートに表示されます。 詳細については、「[Configuration Manager を使用して Surface ドライバーを管理する](../deploy-use/surface-drivers.md)」を参照してください。
 
 5. **[製品]** タブで、ソフトウェア更新プログラムを同期させる製品の更新の分類を指定し、 **[閉じる]** をクリックします。  
 
@@ -67,13 +67,6 @@ ms.locfileid: "82078466"
     > - **Windows 10** 製品を含む[自動展開規則](../deploy-use/automatically-deploy-software-updates.md#bkmk_adr-process)が、**Windows 10 バージョン 1903 以降**が含まれるように更新されます。
     > - **Windows 10 バージョン 1903 以降**の製品を含めるため、[サービス プラン](../../osd/deploy-use/manage-windows-as-a-service.md#servicing-plan-workflow)が更新されます。
 
-## <a name="include-microsoft-surface-drivers-and-firmware-updates"></a><a name="bkmk_Surface"></a>Microsoft Surface のドライバーとファームウェアの更新プログラムを含める
-
-**[Microsoft Surface のドライバーとファームウェアの更新プログラムを含める]** チェックボックスをオンにして、Microsoft Surface ドライバーを同期することができます。<!--1098490--> Surface ドライバーを正常に同期するには、すべてのソフトウェアの更新ポイントで Windows Server 2016 を実行し、累積的な更新プログラム [KB4025339](https://support.microsoft.com/help/4025339) 以降がインストールされている必要があります。 Surface ドライバーを有効にした後、Windows Server 2012 を実行するコンピューターにソフトウェアで更新ポイントを有効にすると、ドライバーの更新プログラムのスキャン結果が不正確になります。 これにより、不適切なコンプライアンス データが Configuration Manager コンソールと Configuration Manager レポートに表示されます。  
-
-- この機能はバージョン 1706 で[プレリリース機能](../../core/servers/manage/pre-release-features.md)として初めて導入されました。 1710 以降のバージョンでは、この機能はプレリリース機能ではありません。  
-- Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options)」 (更新プログラムのオプション機能の有効化) を参照してください。<!--505213-->  
-- ARM デバイスのドライバーは同期がサポートされていません。
 
 ## <a name="configuring-products-for-versions-of-windows-10"></a>Windows 10 のバージョンの製品の構成
 
