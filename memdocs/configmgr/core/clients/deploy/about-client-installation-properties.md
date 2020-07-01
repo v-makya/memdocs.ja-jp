@@ -2,7 +2,7 @@
 title: クライアント インストール パラメーターとプロパティ
 titleSuffix: Configuration Manager
 description: Configuration Manager クライアントをインストールするための ccmsetup コマンド ライン パラメーターとプロパティについて説明します。
-ms.date: 04/01/2020
+ms.date: 06/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fda1e877f8e0bc211b36e288af13de204305cc5a
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455040"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383038"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Configuration Manager のクライアント インストールのパラメーターとプロパティについて
 
@@ -256,6 +256,28 @@ CCMSetup.exe で既存のクライアントをすべてアンインストール�
 
 > [!NOTE]  
 > `ClientUI` は、 **/ExcludeFeatures** パラメーターでサポートされる唯一の値です。
+
+### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+
+このパラメーターでは、[**自動クライアント アップグレード**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)を有効にした場合にクライアントが自動的にアップグレードされるかどうかを指定します。
+
+サポートされる値:
+
+- `TRUE`: クライアントは自動的にアップグレードされません
+- `FALSE`: クライアントは自動的にアップグレードされます (既定)
+
+次に例を示します。  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+詳細については、[拡張相互運用性クライアント](../../understand/interoperability-client.md)に関するページをご覧ください。
+
+> [!NOTE]  
+> **/AlwaysExcludeUpgrade** パラメーターを使用する場合、自動アップグレードは引き続き実行されます。 ただし、アップグレードを行うために CCMSetup を実行すると、 **/AlwaysExcludeUpgrade** パラメーターが設定されていることが確認され、**ccmsetup.log** に次の行が記録されます。
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> CCMSetup はその後すぐに終了し、アップグレードは実行されません。
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> CCMSetup.exe のリターン コード
 
