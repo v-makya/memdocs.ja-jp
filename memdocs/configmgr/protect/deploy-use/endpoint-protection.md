@@ -10,12 +10,12 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5bdfd566682156e39e1dbed7c55af85b20a78671
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0a7ee54e3bfa4a4231d0d57b48caa49cf9869b76
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906674"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591104"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -80,7 +80,7 @@ Windows 10 と Windows Server 2016 以降のコンピューターには、Window
 
 ## <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
-Endpoint Protection を使用すると、Microsoft Defender Advanced Threat Protection (ATP) (旧称 Windows Defender ATP) を管理および監視することができます。 Microsoft Defender ATP サービスは、企業が企業ネットワークに対する高度な攻撃を検出して調査し、対応するのに役立ちます。 詳細については、「[Microsoft Defender Advanced Threat Protection](windows-defender-advanced-threat-protection.md)」をご覧ください。
+Endpoint Protection を使用すると、Microsoft Defender Advanced Threat Protection (ATP) (旧称 Windows Defender ATP) を管理および監視することができます。 Microsoft Defender ATP サービスは、企業が企業ネットワークに対する高度な攻撃を検出して調査し、対応するのに役立ちます。 詳細については、「[Microsoft Defender Advanced Threat Protection](defender-advanced-threat-protection.md)」をご覧ください。
 
 ## <a name="endpoint-protection-workflow"></a>Endpoint Protection のワークフロー  
  次の図を使用して、Endpoint Protection を Configuration Manager 階層に実装するワークフローの理解に役立ててください。  

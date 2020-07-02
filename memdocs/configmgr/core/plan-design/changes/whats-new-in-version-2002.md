@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4100f8747418bff769a7830fa63383ce545895ce
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: 58819d764f69ab7e1cc928e14189e01470deb73b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590441"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 2002 の新機能
 
@@ -325,9 +325,9 @@ Configuration Manager では、サービス スタックの更新プログラム
 ## <a name="protection"></a><a name="bkmk_protect"></a> 保護
 
 ### <a name="expand-microsoft-defender-advanced-threat-protection-atp-onboarding"></a>Microsoft Defender Advanced Threat Protection (ATP) のオンボードを拡張する
-
+ 
 <!-- 5229962 -->
-Configuration Manager では、デバイスを Microsoft Defender ATP にオンボードするためのサポートが拡張されました。 詳細については、「[Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md#onboard-devices)」をご覧ください。
+Configuration Manager では、デバイスを Microsoft Defender ATP にオンボードするためのサポートが拡張されました。 詳細については、「[Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/defender-advanced-threat-protection.md)」をご覧ください。
 
 ### <a name="onboard-configuration-manager-clients-to-microsoft-defender-atp-via-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Microsoft エンドポイント マネージャー管理センターを使用し構成マネージャー クライアントを Microsoft Defender ATP にオンボードする
 <!--5691658-->

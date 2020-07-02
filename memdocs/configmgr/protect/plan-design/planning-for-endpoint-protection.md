@@ -9,12 +9,12 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 720b5060c913ff3157624c4b6060802af396d221
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2c733ef03482ddfc1f3e6502d7f5fe8ae0d20b76
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706130"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590509"
 ---
 # <a name="planning-for-endpoint-protection-in-configuration-manager"></a>Configuration Manager の Endpoint Protection の計画
 
@@ -81,7 +81,7 @@ Configuration Manager の Endpoint Protection を使用すれば、Endpoint Prot
 
 ## <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
-Configuration Manager のバージョン 1606 (Current Branch) 以降では、Endpoint Protection を使用して、Microsoft Defender Advanced Threat Protection (ATP) (旧称 Windows Defender ATP) を管理および監視できるようになりました。 Microsoft Defender ATP は、企業が自社のネットワークに対する高度な攻撃を検出して調査し、対応するのに役立つサービスです。 「[Microsoft Defender Advanced Threat Protection](../deploy-use/windows-defender-advanced-threat-protection.md)」を参照してください。
+Configuration Manager のバージョン 1606 (Current Branch) 以降では、Endpoint Protection を使用して、Microsoft Defender Advanced Threat Protection (ATP) (旧称 Windows Defender ATP) を管理および監視できるようになりました。 Microsoft Defender ATP は、企業が自社のネットワークに対する高度な攻撃を検出して調査し、対応するのに役立つサービスです。 「[Microsoft Defender Advanced Threat Protection](../deploy-use/defender-advanced-threat-protection.md)」を参照してください。
 
 ## <a name="endpoint-protection-workflow"></a>Endpoint Protection のワークフロー  
  次の図を使用して、Endpoint Protection を Configuration Manager 階層に実装するワークフローの理解に役立ててください。  

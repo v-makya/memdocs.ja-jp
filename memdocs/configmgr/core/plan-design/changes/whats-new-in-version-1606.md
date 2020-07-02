@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4298a6a66d60d79d05f8b5cdc9ff8caa0e7f4426
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 070c616ed8411bcd90b2d3edb12b04edd57241e1
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590475"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Configuration Manager のバージョン 1606 の新機能
 
@@ -198,7 +198,7 @@ Configuration Manager を使ってアクティベーション ロックを管理
 
 Endpoint Protection を使用して、Microsoft Defender Advanced Threat Protection (ATP) を管理および監視することができます。 Microsoft Defender ATP は、企業が自社のネットワークに対する高度な攻撃を検出して調査し、対応するのに役立つ新しいサービスです。 Configuration Manager ポリシーは、Windows 10 バージョン 1607 (ビルド 14328) 以降を実行しているマネージド コンピューターの登録と監視に役立ちます。
 
-詳細については、「[Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md)」を参照してください。
+詳細については、「[Microsoft Defender Advanced Threat Protection](../../../protect/deploy-use/defender-advanced-threat-protection.md)」を参照してください。
 
 ### <a name="device-categories"></a>デバイス カテゴリ
 Microsoft Intune と Configuration Manager を使用している場合に、デバイス コレクションにデバイスを自動的に配置するために使用できるデバイス カテゴリを作成することができます。 ユーザーは Intune にデバイスを登録するときに、デバイス カテゴリの選択を求められます。 Configuration Manager コンソールから、デバイスのカテゴリを変更することもできます。
