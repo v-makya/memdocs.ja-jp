@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 136e11f97849e5fd8a27d9f83ea1bd44791c492e
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715647"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502257"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager でクラウド管理ゲートウェイを計画する
 
@@ -227,15 +227,16 @@ Configuration Manager の**クラウド管理**用 Azure サービスでは、�
 | ハードウェアとソフトウェアのインベントリ     | ![サポート](media/green_check.png) |
 | クライアント ステータスと通知     | ![サポート](media/green_check.png) |
 | スクリプトの実行     | ![サポート](media/green_check.png) |
+| CMPivot     | ![サポート](media/green_check.png) |
 | コンプライアンス設定     | ![サポート](media/green_check.png) |
-| クライアント インストール<br>(Azure AD 統合で)     | ![サポート](media/green_check.png) |
+| クライアント インストール<br>([Azure AD 統合](../../deploy/deploy-clients-cmg-azure.md)を使用) | ![サポート](media/green_check.png) |
+| クライアント インストール<br>([トークン認証](../../deploy/deploy-clients-cmg-token.md)を使用) | ![サポート](media/green_check.png) (2002) |
 | ソフトウェア配布 (デバイスを対象に)     | ![サポート](media/green_check.png) |
 | ソフトウェア配布 (ユーザーを対象とし、必須)<br>(Azure AD 統合で)     | ![サポート](media/green_check.png) |
 | ソフトウェア配布 (ユーザーを対象とし、利用可能)<br>([すべての要件](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![サポート](media/green_check.png) |
-| Windows 10 一括アップグレード タスク シーケンス      | ![サポート](media/green_check.png) |
-| ブート イメージを使用せずに、 **[タスク シーケンスを開始する前にすべてのコンテンツをローカルにダウンロードする]** オプションを指定して展開されるタスク シーケンス      | ![サポート](media/green_check.png) |
-| ブート イメージを使用していないタスク シーケンス  | ![サポート](media/green_check.png) (1910)|
-| CMPivot     | ![サポート](media/green_check.png) |
+| Windows 10 [一括アップグレード タスク シーケンス](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) | ![サポート](media/green_check.png) |
+| ブート イメージを使用せずに、 **[タスク シーケンスを開始する前にすべてのコンテンツをローカルにダウンロードする]** オプションを指定して展開されるタスク シーケンス | ![サポート](media/green_check.png) |
+| [いずれかのダウンロード オプション](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg)でブート イメージを使用していないタスク シーケンス | ![サポート](media/green_check.png) (1910)|
 | その他のタスク シーケンス シナリオ     | ![サポートされていません](media/Red_X.png) |
 | クライアント プッシュ     | ![サポートされていません](media/Red_X.png) |
 | サイトの自動割り当て     | ![サポートされていません](media/Red_X.png) |

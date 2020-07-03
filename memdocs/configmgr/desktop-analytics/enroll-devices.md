@@ -2,7 +2,7 @@
 title: Desktop Analytics でデバイスを登録する
 titleSuffix: Configuration Manager
 description: Desktop Analytics でデバイスを登録する方法について説明します。
-ms.date: 04/15/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 22b5461df3a560449316009471ea029967118f5d
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: 8f3a2cfd2cb18d6247c35ae46efab2ab9f89b254
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85820003"
 ---
 # <a name="how-to-enroll-devices-in-desktop-analytics"></a>Desktop Analytics でデバイスを登録する方法
 
@@ -36,6 +36,7 @@ Desktop Analytics で最適なエクスペリエンスを得るために、こ�
 
 | OS のバージョン | Appraiser | DiagTrack |
 | --------------| ----------------------- | -------------------|
+| Windows 10 2004 | 含まれる <sup>[注 1](#bkmk_note1)</sup> | [最新の累積的な更新プログラム](https://support.microsoft.com/help/4555932) |
 | Windows 10 1909 | 含まれる <sup>[注 1](#bkmk_note1)</sup> | [最新の累積的な更新プログラム](https://support.microsoft.com/help/4529964) |
 | Windows 10 1903 | 含まれる <sup>[注 1](#bkmk_note1)</sup> | [最新の累積的な更新プログラム](https://support.microsoft.com/help/4498140) |
 | Windows 10 1809 | 含まれる <sup>[注 1](#bkmk_note1)</sup> | [最新の累積的な更新プログラム](https://support.microsoft.com/help/4464619) |

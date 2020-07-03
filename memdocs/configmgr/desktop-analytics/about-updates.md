@@ -11,17 +11,21 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 1c79db413f8e37424b84d98d51fb584d168e3819
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 96a014f4919480854b57bae82e982ce783f5f59b
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268931"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590968"
 ---
 # <a name="updates-in-desktop-analytics"></a>Desktop Analytics の更新プログラム
 
 Desktop Analytics ポータルで、セキュリティおよび機能の更新プログラムの状態を確認します。 Desktop Analytics メイン メニューの [監視] グループでこれらのノードを選択します。 これらのノードから、環境内のこれらの更新プログラムの状態に関する分析情報が得られます。
 
+<!--7362999-->
+
+> [!IMPORTANT]
+> Desktop Analytics には、Desktop Analytics ワークスペースに関連付けられている商用 ID を持つデバイスのセキュリティと機能更新プログラムの状態が表示されます。 この動作は、デバイスを Configuration Manager に登録したかどうかに関係なく発生します。 これらのタイルの合計デバイス数が、[**接続済みサービス**](monitor-connection-health.md#commercial-id-configuration)に登録されているデバイスの数と一致しない可能性があります。
 
 ## <a name="security-updates"></a>セキュリティ更新プログラム
 

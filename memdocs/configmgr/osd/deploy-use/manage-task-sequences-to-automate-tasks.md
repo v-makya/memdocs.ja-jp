@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b38b0c8f28645fa0aae66058b0c93bd8beffc470
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f79829b7cd6ec70764a20fb05f4438176c41b470
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078483"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591036"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>タスクを自動化するためのタスク シーケンスの管理
 
@@ -190,7 +190,8 @@ Configuration Manager クライアントでのタスク シーケンスの動作
 
 <!-- 5554928 -->
 
-高パフォーマンスを実現するためにこの設定を有効または無効にするには、新しいタスク シーケンスの展開を作成する必要があります。 新しい設定は既存の展開に対して表示されますが、適用されません。<!-- SCCMDocs#2107 -->
+通常、タスク シーケンスのプロパティの設定を変更すると、既存のすべての展開が更新されます。 タスク シーケンスのプロパティでこのパフォーマンス設定を変更しても、タスク シーケンスの既存の展開には影響しません。 ハイ パフォーマンスを実現するためにこの設定を有効または無効にするには、新しいタスク シーケンスの展開を作成します。
+<!-- MEMDocs#437, SCCMDocs#2107 -->
 
 ## <a name="distribute-referenced-content"></a><a name="BKMK_DistributeTS"></a> 参照コンテンツの配布  
 

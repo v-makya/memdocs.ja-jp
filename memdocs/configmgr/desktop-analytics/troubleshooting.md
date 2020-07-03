@@ -2,7 +2,7 @@
 title: Desktop Analytics のトラブルシューティング
 titleSuffix: Configuration Manager
 description: Desktop Analytics に関する問題のトラブルシューティングに役立つ技術的な詳細。
-ms.date: 04/01/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: cfd329b7edb695c1e7316323555bfc18a2fd479e
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
+ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85828977"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Desktop Analytics のトラブルシューティング
 
@@ -205,7 +205,7 @@ Desktop Analytics ポータル内には、次の 2 種類のデータがあり�
 
 - **診断データ**は、クライアント デバイスから Microsoft にアップロードされたシステム メタデータを示します。 このデータは、Desktop Analytics で利用されます。 それには、デバイス インベントリや、セキュリティおよび機能の更新状態などの属性が含まれます。
 
-既定では、Desktop Analytics ポータルのすべてのデータが、毎日自動的に更新されます。 この更新には、診断データの変更と、ユーザーが構成に対して行った変更 (管理者データ) が含まれます。 毎日 UTC の午前 08:00 までには、Desktop Analytics ポータルに表示されるはずです。
+既定では、Desktop Analytics ポータルのすべてのデータが、毎日自動的に更新されます。 この更新には、2 日前の診断データの変更と、ユーザーが構成に対して行った変更 (管理者データ) が含まれます。 毎日 UTC の午前 08:00 までには、Desktop Analytics ポータルに表示されるはずです。
 
 管理者データを変更するときは、ワークスペース内の管理者データのオンデマンド更新をトリガーできます。 Desktop Analytics ポータルの任意のページで、データ更新状態ポップアップを開きます。
 
@@ -221,3 +221,39 @@ Desktop Analytics ポータル内には、次の 2 種類のデータがあり�
 
 > [!IMPORTANT]
 > **[最近のデータを表示]** の Desktop Analytics のオプションは非推奨です。 このアクションは、Desktop Analytics サービスの今後のリリースで削除される予定です。 詳しくは、「[非推奨の機能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)」をご覧ください。<!--7080949-->  
+
+## <a name="service-notifications"></a>サービスの通知
+
+<!-- 4982509 -->
+
+Desktop Analytics ポータルで、管理者に通知バナーを表示できるようになりました。 これらの通知を使って、Microsoft は重要なイベントや問題についてユーザーに連絡することができます。 以下のセクションで、表示される可能性のある通知について詳しく説明します。
+
+### <a name="see-whats-new-this-month-in-desktop-analytics"></a>Desktop Analytics の今月の新機能を確認します
+
+この情報通知によって、サービスの変更を知ることができます。 詳細については、「[Desktop Analytics の新機能](whats-new.md)」 (`https://aka.ms/danews`) を参照してください。
+
+### <a name="there-are-new-prerequisites-to-continue-using-desktop-analytics-review-the-new-requirements"></a>新しい前提条件があります。 引き続き Desktop Analytics を使用するには、新しい要件を確認してください
+
+この情報通知によって、前提条件の変更を知ることができます。 たとえば、新しいインターネット エンドポイントやソフトウェアの更新などです。 詳細については、「[前提条件](overview.md#prerequisites)」 (`https://aka.ms/daprereqs`) を参照してください。
+
+### <a name="were-investigating-an-issue-that-impacts-desktop-analytics"></a>Desktop Analytics に影響を与える問題を調査しています
+
+この警告通知は、Microsoft が Desktop Analytics サービスに影響する問題を認識していることを示しています。 この問題は、通常、スナップショットを生成する場合に発生します。 この通知が表示された場合、Microsoft は、影響の範囲と発生源を特定するため、問題を調査しています。 Microsoft サポートに連絡する必要はありません。 詳細については、「[データ フロー](privacy.md#data-flow)」を参照してください。
+
+### <a name="were-investigating-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>Microsoft がデータ待機時間の問題を調査しています。 過去 24 時間以内に新しいデバイスを登録したか、何らかの資産を変更した場合は、すぐに表示されないことがあります
+
+この警告通知は、Microsoft が Desktop Analytics サービスに影響する問題を認識していることを示しています。 Microsoft はサービスを継続的に監視して、すべてのコンポーネントがスナップショットを正しい時刻に更新することを確認します。 この監視中に、これらのコンポーネントの 1 つが想定どおりに完了しませんでした。 この通知が表示された場合、Microsoft が問題を調査しています。 Microsoft サポートに連絡する必要はありません。 詳細については、「[データ フロー](privacy.md#data-flow)」を参照してください。
+
+最近[デバイスを登録](enroll-devices.md)した、または[資産](about-assets.md)を変更した場合は、Microsoft が問題を解決するまでお待ちください。 操作を繰り返す必要はありません。
+
+### <a name="weve-resolved-a-temporary-issue-with-data-latency-daily-refresh-of-portal-data-is-delayed"></a>データ待機時間の一時的な問題を解決しました。 ポータル データの毎日の更新が遅れています
+
+この通知により、データ待機時間に関する問題が発生したことを知ることができます。 サービスにより、スナップショットが引き続き処理されていますが、データの更新が遅れています。 詳細については、「[データ待機時間](#data-latency)」をご覧ください。
+
+### <a name="weve-resolved-an-issue-with-data-latency-if-you-enrolled-new-devices-or-changed-any-assets-in-the-last-24-hours-they-may-not-appear-right-away"></a>データ待機時間の問題を解決しました。 過去 24 時間以内に新しいデバイスを登録したか、何らかの資産を変更した場合は、すぐに表示されないことがあります
+
+この通知により、Microsoft が、以前に報告されたデータの待機時間に関する問題を解決したことを知ることができます。 明日のスナップショットに対して古いデータが表示される場合があります。 過去 24 時間に[デバイスを登録](enroll-devices.md)したか、デバイスの構成を変更した場合、ポータルにすぐに表示されないことがあります。 引き続き Desktop Analytics を使用して、[資産](about-assets.md)を分類し、[展開計画](about-deployment-plans.md)を準備することができます。 これらのアクションでは、前のスナップショットのデータを使用できます。
+
+### <a name="weve-resolved-an-issue-with-desktop-analytics-daily-refresh-of-the-portal-data-is-on-track"></a>Desktop Analytics の問題を解決しました。 ポータル データの毎日の更新が順調に行われています
+
+この通知により、Microsoft が、処理中に動作を停止したスナップショット コンポーネントを特定したことを知ることができます。 Microsoft がコンポーネントを再起動しましたが、スナップショットの処理には時間がかかります。 Microsoft はサービスを継続的に監視して、すべてのコンポーネントがスナップショットを正しい時刻に更新することを確認します。

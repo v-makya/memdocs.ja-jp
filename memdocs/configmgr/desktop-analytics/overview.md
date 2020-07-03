@@ -2,7 +2,7 @@
 title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: Configuration Manager に統合された Desktop Analytics サービスの概要。
-ms.date: 03/03/2020
+ms.date: 06/29/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 774e77f62ee31daa89eeb4273f3c1e7db68a374d
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 3a1aa67c51998de62f6390db848a458876327ea7
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590917"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics とは
 
@@ -70,6 +70,9 @@ Desktop Analytics を使用するには、環境が次の前提条件を満た�
 ### <a name="technical"></a>技術面
 
 - [グローバル管理者](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions)のアクセス許可を持つアクティブなグローバル Azure サブスクリプション。 [Microsoft アカウント](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts)はサポートされていません。  
+
+    > [!IMPORTANT]
+    > Desktop Analytics は、Windows 診断データを利用する Azure グローバルにホストされる Windows サービスです。 米国政府機関のお客様は Azure グローバル サービスをご利用いただけますが、[US Government Community コンプライアンス (GCC)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) の属性を満たしていません。 Microsoft の製品およびサービスのコンプライアンス認証の一覧については、[Microsoft セキュリティ センター](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide)に関するページをご覧ください。 Desktop Analytics は、GCC High または米国国防総省 (DOD) のお客様はご利用いただけません。 Desktop Analytics ワークスペースをホストするための Azure Government サブスクリプションの使用はサポートされていません。
 
     - **[ワークスペースの設定]** を実行するための**ワークスペースの所有者**アクセス許可、および以下のロール:  
 

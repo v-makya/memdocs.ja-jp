@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb91e62c4ffce37068b2de5e125865e28ff8c53b
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590458"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager でのコンテンツ管理の基本的な概念
 
@@ -147,7 +147,7 @@ Configuration Manager では、同じネットワーク上のピア デバイス
 <!-- 1324696 -->
 Configuration Manager の境界グループを使って、企業ネットワークおよびリモート オフィスへのコンテンツ配布を定義して調整します。 [Windows の配信最適化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)は、Windows 10 デバイス間でコンテンツを共有するための、クラウド ベースのピア ツー ピア テクノロジです。 ピア間でコンテンツを共有するときは、境界グループの使用に向けて配信の最適化を構成します。 クライアントの設定は、クライアントでの配信最適化グループの識別子として境界グループ識別子を適用します。 クライアントは、配信の最適化クラウド サービスと通信するとき、この識別子を使ってコンテンツを含むピアを検索します。 詳細については、「[配信の最適化](../../clients/deploy/about-client-settings.md#delivery-optimization)」のクライアント設定をご覧ください。
 
-配信の最適化は、Windows 10 品質更新プログラム用の高速インストール ファイルの Windows 10 更新プログラムの配信を最適化するために推奨されるテクノロジです。 Configuration Manager バージョン 1910 以降、配信の最適化クラウド サービスへの DeliveryInternet アクセスは、ピアツーピア機能を利用するための要件です。 必要なインターネット エンドポイントの詳細については、[配信の最適化に関してよく寄せられる質問](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)に関するページをご覧ください。 最適化は、すべての Windows 更新プログラムに使用できます。 詳細については、[Windows 10 更新プログラムの配信の最適化](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)に関するページをご覧ください。
+配信の最適化は、Windows 10 品質更新プログラム用の高速インストール ファイルの Windows 10 更新プログラムの配信を最適化するために推奨されるテクノロジです。 Configuration Manager バージョン 1910 以降、配信の最適化クラウド サービスへのインターネット アクセスは、ピアツーピア機能を利用するための要件です。 必要なインターネット エンドポイントの詳細については、[配信の最適化に関してよく寄せられる質問](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)に関するページをご覧ください。 最適化は、すべての Windows 更新プログラムに使用できます。 詳細については、[Windows 10 更新プログラムの配信の最適化](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)に関するページをご覧ください。
 
 
 ## <a name="microsoft-connected-cache"></a>Microsoft 接続キャッシュ

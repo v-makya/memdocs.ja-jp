@@ -2,7 +2,7 @@
 title: インターネット アクセス要件
 titleSuffix: Configuration Manager
 description: Configuration Manager の機能をすべて利用するためのインターネット エンドポイントについて説明します。
-ms.date: 06/12/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fb965ec6547ff1c06586464780b6db224b943000
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: 986b8d83c705be84b04a89c99d9559471c6345c4
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819952"
 ---
 # <a name="internet-access-requirements"></a>インターネット アクセス要件
 
@@ -230,6 +230,8 @@ Configuration Manager を使用して Microsoft 365 Apps for enterprise を展�
 
 - Microsoft 365 Apps for enterprise の展開用にカスタム構成を作成するための `config.office.com`
 
+- Office アドインの準備の評価をサポートするための `contentstorage.osi.office.net`<!-- MEMDocs#410 -->
+
 ## <a name="configuration-manager-console"></a>Configuration Manager コンソール
 
 Configuration Manager コンソールを使用するコンピューターでは、特定の機能を利用するために次のインターネット エンドポイントにアクセスする必要があります。
@@ -267,6 +269,14 @@ Configuration Manager コンソールを使用するコンピューターでは�
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
 Desktop Analytics クラウド サービスに必要なエンドポイントの詳細については、「[データ共有を有効にする](../../../desktop-analytics/enable-data-sharing.md#endpoints)」を参照してください。
+
+## <a name="tenant-attach"></a>テナントのアタッチ
+
+テナントのアタッチ機能に必要なエンドポイントの詳細については、[テナントのアタッチの有効化](../../../tenant-attach/device-sync-actions.md#internet-endpoints)に関するページをご覧ください。
+
+## <a name="endpoint-analytics"></a>エンドポイント分析
+
+エンドポイント分析に必要なエンドポイントの詳細については、[エンドポイント分析のプロキシ構成](../../../../analytics/troubleshoot.md#bkmk_endpoints)に関する記事をご覧ください。
 
 ## <a name="microsoft-public-ip-addresses"></a>Microsoft のパブリック IP アドレス
 

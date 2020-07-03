@@ -10,12 +10,12 @@ ms.assetid: e3e3c97f-5945-49ab-a622-9f6fe6b9737e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b97f9bb6be00129e0b88dc3943af1de166a801d4
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 91b938b5ab64616a35773406cd18b54de80b40e7
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590412"
 ---
 # <a name="windows-autopilot-with-co-management"></a>Windows Autopilot と共同管理
 
@@ -77,9 +77,9 @@ Autopilot があれば、セルフデプロイ モードを利用することで
 
 ## <a name="case-study"></a>導入事例
 
-ドイツの物流/鉄道貨物運送会社である DB Shenker が Autopilot を利用して従業員の生産性を上げ、毎日のサポート作業から IT チームを解放しました。 DB Shenker は従来のイメージングを止め、クラウド経由にプロビジョニングに転向しました。 Azure AD 参加と Intune を利用し、新しいデバイスをすぐに導入できます。 
+ドイツの物流/鉄道貨物運送会社である DB Schenker が Autopilot を利用して従業員の生産性を上げ、毎日のサポート作業から IT チームを解放しました。 DB Schenker は従来のイメージングを止め、クラウド経由のプロビジョニングに転向しました。 Azure AD 参加と Intune を利用し、新しいデバイスをすぐに導入できます。 
 
-離れた場所にいる従業員に IT サービスのあるところまで来させ、時間を無駄にさせる代わりに、DB Shenker では現在、Windows Autopilot を利用しています。 従業員のハードウェアはメーカーから従業員の職場に直送されます。 従業員は新しいデバイスをインターネットに接続し、自分の Azure AD credentials. 資格情報でサインインします。 サインイン後、そのデバイスは、DB Shenker の IT 部門がユーザーの個別プロファイルに割り当てたアプリケーションとサービスに接続されます。
+離れた場所にいる従業員に IT サービスのあるところまで来させ、時間を無駄にさせる代わりに、DB Schenker では現在、Windows Autopilot を利用しています。 従業員のハードウェアはメーカーから従業員の職場に直送されます。 従業員は新しいデバイスをインターネットに接続し、自分の Azure AD credentials. 資格情報でサインインします。 そのデバイスは、DB Schenker の IT 部門がユーザーの個別プロファイルに割り当てたアプリケーションとサービスに接続されます。
 
 詳細については、「[Global logistics firm centralizes IT, unites employees with modern digital workplace](https://customers.microsoft.com/story/db-schenker-travel-transportation-windows-10)」 (世界的な物流企業が IT を集中化し、最新のデジタル職場で従業員を団結させる) を参照してください。
 

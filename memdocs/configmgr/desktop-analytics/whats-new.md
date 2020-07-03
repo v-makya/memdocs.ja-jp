@@ -2,7 +2,7 @@
 title: Desktop Analytics の新機能
 titleSuffix: Configuration Manager
 description: Desktop Analytics クラウド サービスの最新のマンスリー リリースの新機能の概要です。
-ms.date: 06/04/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 5265ee88cbe6dc119d6d14dadd3fadad6a52b253
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
+ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454955"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85819978"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Desktop Analytics の新機能
 
@@ -27,6 +27,28 @@ Desktop Analytics の各月の新機能について説明します。
 
 このページが更新されたときに通知を受け取るには、次の URL をコピーして RSS フィード リーダーに貼り付けます。`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="july-2020"></a>2020 年 7 月
+
+### <a name="windows-10-version-2004-now-available-in-desktop-analytics"></a>Desktop Analytics で Windows 10 バージョン 2004 が利用可能に
+
+<!-- 7370207 -->
+
+Desktop Analytics ポータルで、セキュリティと機能更新プログラムを監視するとき、Windows 10 バージョン 2004 が表示されるようになります。 展開プランを作成するときに、ターゲット バージョンとして Windows 10 バージョン 2004 を選択できます。
+
+### <a name="improved-support-for-viewing-the-portal-from-any-device"></a>ポータルを任意のデバイスから表示するためのサポートを強化
+
+<!-- 6270240 -->
+
+さまざまな種類のデバイスから、Microsoft Endpoint Manager 管理センターの Desktop Analytics ポータルを表示できるようになりました。 320 x 256 ピクセルという低いディスプレイ解像度に対して、Web コンテンツ アクセシビリティ ガイドライン (WCAG) 2.1 に適合しています。 たとえば、次の画像は Apple iPhone 8 のポータルです。
+
+:::image type="content" source="media/dashboard-iphone8.png" alt-text="iPhone 8 の Desktop Analytics ポータル":::
+
+### <a name="notifications-for-service-impacting-events"></a>サービスに影響するイベントの通知
+
+<!-- 4982509 -->
+
+Desktop Analytics ポータルで、通知バナーを表示できるようになりました。 これらの通知を使って、Microsoft は重要なイベントや問題についてユーザーに連絡することができます。 たとえば、サービスに関する既知の問題、データ待機時間、または新しい前提条件があります。 詳細については、「[サービスの通知](troubleshooting.md#service-notifications)」を参照してください。
 
 ## <a name="june-2020"></a>2020 年 6 月
 

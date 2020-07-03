@@ -2,7 +2,7 @@
 title: 更新プログラムとサービス
 titleSuffix: Configuration Manager
 description: 推奨される更新プログラムを簡単に検索してインストールできる、更新とサービスと呼ばれるコンソール内サービス方式について説明します。
-ms.date: 04/15/2020
+ms.date: 06/30/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ffee9d851f00bcac5ed7ba562bdc9db8e0fa2767
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4f92d95b4e1cc814db72b45cfb92cb989b7767c8
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82903936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591019"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Configuration Manager の更新とサービス
 
@@ -73,11 +73,11 @@ Configuration Manager の次のサポート対象バージョンは、現在、�
 > [!Note]  
 > <sup>**注 1:** </sup>基準メディアは、[ボリューム ライセンス サービス センター](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) で次のリリースの一部として利用できます。
 >
-> - System Center Config Mgr (Current Branch)
-> - System Center 2016 Datacenter
-> - System Center 2016 Standard  
+> - Microsoft Endpoint Configmgr (Current Branch)
+> - System Center Datacenter
+> - System Center Standard  
 >
-> たとえば、`System Center Config Mgr (current branch)` という VLSC を探してみてください。 ファイルの一覧で基準メディアを見つけ、そのリリースでダウンロードしてください。  
+> たとえば、`Microsoft Endpoint Configmgr (current branch)` という VLSC を探してみてください。 ファイルの一覧で基準メディアを見つけ、そのリリースでダウンロードしてください。  
 
 #### <a name="historical-versions"></a>過去のバージョン
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
-ms.openlocfilehash: bd846b0155a0baddad76d6027ffbd239d7dbf26f
-ms.sourcegitcommit: 5f15a3abf33ce7bfd6855ffeef2ec3cd4cd48a7f
+ms.openlocfilehash: ecc91168cc90af58c40903ea3d288eeaa82be7a0
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721892"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502240"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>クラウド管理ゲートウェイについてよくあるご質問
 
@@ -87,6 +87,16 @@ CMG 経由で送信される機密情報のトラフィックをセキュリテ�
 CMG を展開し、CMG が有効な管理ポイントでの HTTPS 通信に PKI 証明書を使う場合は、管理ポイントのプロパティで**インターネット専用クライアントを許可する**オプションを選択します。 この設定により、内部クライアントで引き続き環境内の HTTP 管理ポイントが使われることが保証されます。
 
 拡張 HTTP を使う場合は、この設定を構成する必要はありません。 クライアントでは、CMG が有効な管理ポイントに直接通信するときに、引き続き HTTP が使われます。 詳細については、「[Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md)」(拡張 HTTP) をご覧ください。
+
+### <a name="what-are-the-differences-with-client-authentication-between-azure-ad-and-certificates"></a>Azure AD と証明書のクライアント認証にはどのような違いがありますか?
+<!-- MEMDocs#277 -->
+デバイスの CMG サービスに対する認証には、Azure AD または[クライアント認証証明書](certificates-for-cloud-management-gateway.md#bkmk_clientauth)を使用できます。
+
+Active Directory ドメインに参加している ID を使用して従来の Windows クライアントを管理する場合は、通信チャネルをセキュリティで保護するために PKI 証明書が必要です。 これらのクライアントには、Windows 8.1 と Windows 10 を含めることができます。 CMG でサポートされているすべての機能を使用できますが、ソフトウェアの配布はデバイスのみに制限されます。 デバイスがインターネットにローミングする前に Configuration Manager クライアントをインストールするか、バージョン 2002 以降では、トークン認証を使用します。
+
+また、Azure AD との混種または単種のクラウド ドメイン参加のいずれかで、最新の ID を使用して Windows 10 クライアントを管理することもできます。 クライアントでは、PKI 証明書ではなく、Azure AD が認証に利用されます。 Azure AD を利用する場合、複雑な PKI システムより設定、構成、保守管理が簡単です。 同じ管理アクティビティとユーザーへのソフトウェアの配布をすべて実行できます。 また、リモート デバイスにクライアントをインストールするための追加の方法も有効になります。
+
+デバイスを Azure AD に参加させることをお勧めします。 インターネットベースのデバイスでは、Azure AD を使用して、Configuration Manager での認証を行うことができます。 また、デバイスがインターネット上にあるか、内部ネットワークに接続されているかにかかわらず、デバイスとユーザーの両方のシナリオに対応できます。 詳細については、「[Azure AD の ID を使用してクライアントをインストールして登録する](../../deploy/deploy-clients-cmg-azure.md#install-and-register-the-client-using-azure-ad-identity)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 
