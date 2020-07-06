@@ -6,30 +6,33 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/29/2019
+ms.date: 06/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
-ms.reviewer: davidra
+ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0aa02c58f2a2d75389be357ac7c700c2bac99027
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1b9aedb7595db5ff0f40f2d12b8cee985fb7be99
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351579"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332852"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Mobile Threat Defense の Intune との統合
 
 Intune を使用すると、Mobile Threat Defense (MTD) ベンダーからのデータを、デバイス コンプライアンス ポリシーおよびデバイス条件付きアクセス規則の情報ソースとして統合することができます。 この情報を使用すれば、危険にさらされたモバイル デバイスからのアクセスをブロックすることで、Exchange や SharePoint などの会社リソースを容易に保護することができます。
 
 Intune では、Intune アプリ保護ポリシーを使用して、未登録デバイスに対するソースと同じデータを使用できます。 そのため、管理者は、この情報を使用して、[Microsoft Intune の保護されたアプリ](../apps/apps-supported-intune-apps.md)内の企業データを保護し、ブロックまたは選択的ワイプを発行することができます。
+
+> [!NOTE]
+> Intune GCC High および DoD オファリングと Mobile Threat Defense の統合は、現在はサポートされて "*いません*"。 [米国政府機関向けの Microsoft Intune における GCC High のサポート](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description)に関する記事を参照してください。
 
 ## <a name="protect-corporate-resources"></a>会社のリソースを保護する
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4441fdaf8c3fb8bfb6613805df9eca27cc3ebf0c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990383"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383208"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Microsoft Intune で認証に証明書を使用する
 
@@ -104,6 +104,11 @@ SCEP、PKCS、または PKCS のインポートされた証明書プロファイ
 SCEP 証明書プロファイルでは、信頼された証明書プロファイルが直接参照されます。 PKCS 証明書プロファイルでは、信頼された証明書プロファイルが直接参照されず、CA をホストするサーバーが直接参照されます。 PKCS のインポートされた証明書プロファイルでは、信頼された証明書プロファイルが直接参照されませんが、デバイス上で利用されることがあります。 信頼された証明書プロファイルをデバイスに配備することで、この信頼が確立されます。 デバイスでルート CA が信頼されない場合、SCEP または PKCS 証明書プロファイル ポリシーは失敗します。
 
 SCEP、PKCS、PKCS のインポートされた証明書プロファイルの場合と同様に、サポートするデバイス プラットフォームごとに別個の信頼された証明書プロファイルを作成します。
+
+> [!IMPORTANT]
+> *Windows 10 以降*のプラットフォーム用に作成する信頼されたルート プロファイルは、Microsoft Endpoint Manager admin center には *Windows 8.1 以降*のプラットフォーム用のプロファイルとして表示されます。 
+>
+> これは、信頼された証明書プロファイルのプラットフォームの表示に関する既知の問題です。 プロファイルには Windows 8.1 以降のプラットフォームが表示されますが、Windows 10 以降で機能します。
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>信頼された証明書プロファイルを作成するには
 

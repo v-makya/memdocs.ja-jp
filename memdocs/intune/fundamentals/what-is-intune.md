@@ -5,7 +5,7 @@ keywords: Intune の概要
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 06/23/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,16 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a10709972b0387681d00c8fe848079807c6293a
-ms.sourcegitcommit: 4381afb515c06f078149bd52528d1f24b63a2df9
+ms.openlocfilehash: 28a5bc7a1ee00e9595c50d274605af1b33c1ea90
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538092"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332802"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune はデバイスの MDM および MAM プロバイダーです
 
-Microsoft Intune は、モバイル デバイス管理 (MDM) とモバイル アプリケーション管理 (MAM) を中心にしたクラウドベースのサービスです。 Intune は、Microsoft の [Enterprise Mobility + Security (EMS) スイート](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)に含まれており、組織のデータを保護したまま、ユーザーの生産性を高めることができます。 Microsoft 365 や Azure Active Directory (Azure AD) などの他のサービスと統合されており、誰がアクセスできるか、何にアクセスできるか、そしてデータ保護のために Azure Information Protection を制御します。 これを Microsoft 365 と共に使う場合、従業員が各自のデバイスを生産的に活用できるようにしながら、同時に組織の情報を保護することができます。
+Microsoft Intune は、モバイル デバイス管理 (MDM) とモバイル アプリケーション管理 (MAM) を中心にしたクラウドベースのサービスです。 携帯電話、タブレット、ラップトップなど、組織のデバイスの使用方法を制御します。 また、特定のポリシーを構成してアプリケーションを制御することもできます。 たとえば、組織外のユーザーに電子メールが送信されないようにできます。 また、Intune によって、組織内のユーザーは自身の個人用デバイスを学校や職場用に使用することが可能になります。 個人用デバイス上では、Intune によって組織データが保護された状態を確保し、個人データと組織データを分離することができます。
+
+Intune は、Microsoft の [Enterprise Mobility + Security (EMS) スイート](https://www.microsoft.com/microsoft-365/enterprise-mobility-security)の一部です。 Intune は Azure Active Directory (Azure AD) と統合され、アクセス権を持つユーザーと彼らがアクセスできる機能が制御されます。 また、データ保護のために Azure Information Protection とも統合されます。 Microsoft 365 スイートの製品と共に使用できます。 たとえば、Microsoft Teams、OneNote、およびその他の Microsoft 365 アプリをデバイスに展開できます。 この機能によって、ご自身で作成したポリシーを使って組織の情報を保護したうえで、組織内のユーザーがすべてのデバイス上で生産性を維持できるようにすることが可能です。
 
 [![Intune アーキテクチャのイメージ](./media/what-is-intune/intunearch_sm.png )](./media/what-is-intune/intunearchitecture.svg#lightbox)
 

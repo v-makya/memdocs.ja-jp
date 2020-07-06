@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 06/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96b547c50cda0ef623370bae20d347d4ccf1976b
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 6f4fd580a2e36a1cf7a29766c7a5e325e17fc528
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85591070"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限するように Windows 10 (以降) のデバイスを設定する
 
@@ -30,6 +30,8 @@ ms.locfileid: "85216486"
 
 > [!Note]
 > Windows のすべてのエディションですべてのオプションを利用できるわけではありません。 サポートされているエディションについては、[ポリシー CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) に関するページを参照してください (別の Microsoft Web サイトが開きます)。
+>  
+> Windows 10 デバイス制限プロファイルの構成可能な設定の大半は、デバイス レベルで展開されます。 ユーザー グループに展開されるポリシーは、ターゲット ユーザーと、後でそのデバイスにログオンする Intune ライセンスを持つ他のユーザーの両方に対して有効になります。
 
 ## <a name="before-you-begin"></a>始める前に
 

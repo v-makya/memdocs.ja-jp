@@ -4,7 +4,7 @@ description: Microsoft 365 Enterprise には Microsoft Intune が含まれてい
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 06/24/2020
 ms.topic: overview
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 540faaca71d3694b95d32a24c947a977989a3223
-ms.sourcegitcommit: 7b8921d3ea6a751de67315771d68e2d2750fa36f
+ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223638"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353617"
 ---
 # <a name="device-management-overview"></a>デバイス管理の概要
 
-すべての管理者の重要なタスクは、組織のリソースとデータを保護することです。 このタスクが "*デバイス管理*" です。 ユーザーは多くのデバイスを使用して、個人のファイルを開いて共有したり、Web サイトにアクセスしたり、アプリやゲームをインストールしたりしています。 これらの同じユーザーは、従業員と学生でもあります。 ユーザーは各自のデバイスを使用して、電子メールや OneNote などの仕事や学校のリソースにアクセスしたいと考えます。
+すべての管理者の重要なタスクは、組織内のユーザー デバイス上で、組織のリソースとデータを保護してセキュリティ確保を行うことです。 このタスクが "**デバイス管理**" です。 ユーザーは、個人用アカウントから電子メールを送受信したり、自宅やレストランから Web サイトを参照したり、アプリおよびゲームをインストールしたりします。 これらのユーザーは、従業員や学生でもあります。 彼らは各自のデバイス上で、電子メールや OneNote などの仕事や学校のリソースに、迅速にアクセスしたいと考えています。 管理者としての目標は、これらのリソースを保護し、すべて同時での多数のデバイスにわたる簡単なアクセスを、ユーザーに提供することです。
 
 組織では、デバイス管理を使い、さまざまなデバイスから、そのリソースとデータを保護し、セキュリティで保護できます。
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 06/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 99facc87d068239962ab0d40874aa081f5e19189
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1f2a6955a430427fe3f4e2791da6bbaecdd90523
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989694"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353575"
 ---
 # <a name="use-filevault-disk-encryption-for--macos-with-intune"></a>Intune で macOS 用の FileVault ディスク暗号化を使用する
 
@@ -30,18 +30,18 @@ Intune は macOS FileVault ディスク暗号化をサポートしています�
 
 次の種類のポリシーのいずれかを使用して、マネージド デバイスで FileVault を構成します。
 
-- **[macOS FileVault のエンドポイント セキュリティ ポリシー](#create-an-endpoint-security-policy-for-filevault)** 。 *エンドポイント セキュリティ*の FileVault プロファイルは、FileVault の構成専用の一連の設定です。
+- **[macOS FileVault のエンドポイント セキュリティ ポリシー](#create-endpoint-security-policy-for-filevault)** 。 *エンドポイント セキュリティ*の FileVault プロファイルは、FileVault の構成専用の一連の設定です。
 
   [ディスク暗号化ポリシーのプロファイルで使用できる FileVault 設定](../protect/endpoint-security-disk-encryption-profile-settings.md)を表示します。
 
-- **[macOS FileVault のエンドポイント保護のためのデバイス構成プロファイル](#create-an-endpoint-security-policy-for-filevault)** 。 FileVault 設定は、macOS エンドポイント保護で使用可能な設定カテゴリの 1 つです。 デバイス構成プロファイルの使用の詳細については、[Intune でのデバイス プロファイルの作成](../configuration/device-profile-create.md)に関するページを参照してください。
+- **[macOS FileVault のエンドポイント保護のためのデバイス構成プロファイル](#create-endpoint-security-policy-for-filevault)** 。 FileVault 設定は、macOS エンドポイント保護で使用可能な設定カテゴリの 1 つです。 デバイス構成プロファイルの使用の詳細については、[Intune でのデバイス プロファイルの作成](../configuration/device-profile-create.md)に関するページを参照してください。
 
   [デバイス構成ポリシーのエンドポイント保護プロファイルで使用できる FileVault 設定](../protect/endpoint-protection-macos.md#filevault)を表示します。
 
 Windows 10 の BitLocker を管理するには、[BitLocker ポリシーの管理](../protect/encrypt-devices.md)に関する記事を参照してください。
 
 > [!TIP]
-> すべてのマネージド デバイスのデバイスの暗号化ステータスに関する詳細を表示する、組み込みの[暗号化レポート](encryption-monitor.md)。
+> Intune では、すべてのマネージド デバイスのデバイスの暗号化ステータスに関する詳細を表示する、組み込みの[暗号化レポート](encryption-monitor.md)を用意されています。
 
 FileVault を使用してデバイスを暗号化するポリシーを作成すると、そのポリシーは 2 段階でデバイスに適用されます。 まず、Intune が回復キーを取得してバックアップできるようにデバイスが準備されます。 このアクションはエスクローと呼ばれます。 キーがエスクローされると、ディスクの暗号化が開始されます。
 
@@ -60,17 +60,15 @@ Intune で FileVault を管理するには、アカウントに適切な Intune 
 - **FileVault キーのローテーション**
   - ヘルプ デスク オペレーター
 
-## <a name="create-and-deploy-policy"></a>ポリシーの作成と展開
-
-### <a name="create-an-endpoint-security-policy-for-filevault"></a>FileVault のエンドポイント セキュリティ ポリシーを作成する
+## <a name="create-endpoint-security-policy-for-filevault"></a>FileVault のエンドポイント セキュリティ ポリシーを作成する
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
 2. **[エンドポイント セキュリティ]**  >  **[ディスク 暗号化]**  >  **[ポリシーの作成]** を選択します。
 
 3. **[基本]** ページで、次のプロパティを入力し、 **[次へ]** を選択します。
-   1. **プラットフォーム**: macOS
-   2. **[プロファイル]** :FileVault
+   - **プラットフォーム**: macOS
+   - **[プロファイル]** :FileVault
 
    ![FileVault プロファイルの選択](./media/encrypt-devices-filevault/select-macos-filevault-es.png)
 
@@ -94,33 +92,49 @@ Intune で FileVault を管理するには、アカウントに適切な Intune 
 
 8. **[確認および作成]** ページで、完了したら、 **[作成]** を選択します。 作成したプロファイルのポリシーの種類を選択すると、新しいプロファイルが一覧に表示されます。
 
-### <a name="create-a-device-configuration-policy-for-filevault"></a>FileVault のデバイス構成ポリシーを作成する
+## <a name="create-device-configuration-policy-for-filevault"></a>FileVault のデバイス構成ポリシーを作成する
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
 
-3. 次のオプションを設定します。
-   1. **プラットフォーム**: macOS
-   2. **[プロファイル]** :エンドポイント保護
+3. **[プロファイルの作成]** ページ上で、次のオプションを設定して、 **[作成]** をクリックします。
+   - **プラットフォーム**: macOS
+   - **[プロファイル]** :エンドポイント保護
 
    ![FileVault プロファイルの選択](./media/encrypt-devices-filevault/select-macos-filevault-dc.png)
 
-4. **[設定]**  >  **[FileVault]** の順に選択します。
+4. **[基本]** ページ上で、次のプロパティを入力します。
 
-   ![FileVault の設定](./media/encrypt-devices-filevault/filevault-settings.png)
+   - **名前**:ポリシーのわかりやすい名前を入力します。 後で簡単に識別できるよう、ポリシーに名前を付けます。 たとえば、プロファイルの種類とプラットフォームを含めるとわかりやすいポリシー名になります。
 
-5. *FileVault* で **[有効]** を選択します。
+   - **説明**:ポリシーの説明を入力します。 この設定は省略可能ですが、推奨されます。
 
-6. *[回復キーの種類]* には、**個人用キー**のみがサポートされています。
+5. **[構成設定]** ページ上で、 **[FileVault]** を選択して利用可能な設定を展開します。
 
-   自分のデバイスの回復キーを取得する方法について、ユーザーを支援するガイドにメッセージを追加することを検討してください。 この情報は、個人用回復キーの交換の設定を使用するときに、デバイスの新しい回復キーを定期的に自動生成することができるため、ユーザーにとって役立ちます。
+   > [!div class="mx-imgBorder"]
+   > ![FileVault の設定](./media/encrypt-devices-filevault/filevault-settings.png)
 
-   次に例を示します。紛失した、または最近交換した回復キーを取得するには、任意のデバイスから Intune ポータル Web サイトにサインインします。 ポータルで、 *[デバイス]* に移動し、FileVault が有効になっているデバイスを選択し、 *[回復キーを取得する]* を選択します。 現在の回復キーが表示されます。
+6. 次の設定を構成します。
+  
+   - *[FileVault を有効にする]* で、 **[はい]** を選択します。
 
-7. ご自身のビジネス ニーズに合うよう残りの [FileVault 設定](endpoint-protection-macos.md#filevault)を構成した後、 **[OK]** を選択します。
+   - *[回復キーの種類]* で、 **[個人用キー]** を選択します。
 
-8. 追加設定の構成を完了したら、プロファイルを保存します。
+   - *[個人用回復キーのエスクローの場所に関する説明]* に、デバイスの回復キーを取得する方法に関してユーザーを導くためのメッセージを追加します。 この情報は、個人用回復キーの交換の設定を使用するときに、デバイスの新しい回復キーを定期的に自動生成することができるため、ユーザーにとって役立ちます。
+
+     次に例を示します。紛失した、または最近交換した回復キーを取得するには、任意のデバイスから Intune ポータル Web サイトにサインインします。 ポータルで、 *[デバイス]* に移動し、FileVault が有効になっているデバイスを選択し、 *[回復キーを取得する]* を選択します。 現在の回復キーが表示されます。
+
+   ご自身のビジネス ニーズに合うように残りの [[FileVault] 設定](endpoint-protection-macos.md#filevault)を構成した後、 **[次へ]** を選択します。
+
+7. **[スコープ (タグ)]** タブで **[スコープ タグを選択]** を選択し、[タグを選択する] ウィンドウを開いて、プロファイルにスコープ タグを割り当てます。
+
+   **[次へ]** を選択して続行します。
+
+8. **[割り当て]** ページで、このプロファイルを受け取るグループを選択します。 プロファイルの割り当ての詳細については、ユーザーおよびデバイス プロファイルの割り当てに関するページを参照してください。
+**[次へ]** を選択します。
+
+9. **[確認および作成]** ページで、完了したら、 **[作成]** を選択します。 作成したプロファイルのポリシーの種類を選択すると、新しいプロファイルが一覧に表示されます。
 
 ## <a name="manage-filevault"></a>FileVault の管理
 

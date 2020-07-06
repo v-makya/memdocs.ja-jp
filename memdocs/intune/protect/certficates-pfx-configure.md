@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2694897e0a9e0ebf0744615e65d76f29416811d0
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 609f7209d79acd944d141930f2287b5572a51c89
+ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990408"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85332836"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Intune で PKCS 証明書を構成して使用する
 
@@ -365,3 +365,5 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
 プロファイルは作成されましたが、まだ何も行われていません。 次に、[プロファイルを割り当て](../configuration/device-profile-assign.md)、[その状態を監視](../configuration/device-profile-monitor.md)します。
 
 [証明書に SCEP を使用](certificates-scep-configure.md)するか、[Symantec PKI マネージャー Web サービスから PKCS 証明書を発行](certificates-digicert-configure.md)します。
+
+[PKCS 証明書プロファイルのトラブルシューティング](../protect/troubleshoot-pkcs-certificate-profiles.md)

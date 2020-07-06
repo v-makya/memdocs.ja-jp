@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41b85299057f172fec224873607509aaaec60024
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
+ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84977269"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85383259"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>Microsoft Intune で、iOS および Android 用の Office を使用するコラボレーション エクスペリエンスを管理する
 
@@ -108,7 +108,13 @@ iOS および Android 用の Office では、Microsoft Endpoint Manager など�
 
 ### <a name="manage-file-transfers"></a>ファイル転送を管理する
 
-Office を使用すると、ユーザーは、既定により、近くのユーザーとファイルを共有したり、デスクトップ システムにファイルを転送したりすることができます。
+既定では、iOS および Android 用の Office を利用すると、ユーザーはさまざまなメカニズムを使用してコンテンツを共有できます。
+
+- ファイルが OneDrive または SharePoint でホストされている場合、ユーザーはそのファイル内で直接、共有要求を開始できます。
+- ユーザーは、 **[ファイルの転送]**  の操作を使用して、デスクトップ システムにファイルを転送できます。
+- ユーザーは、 **[近くと共有]** の操作を使用して、近くのモバイル デバイスにファイルを共有できます。
+
+**[ファイルの転送]** および **[近くと共有]** の操作では、メディア、ローカル ファイル、およびアプリ保護ポリシーによって保護されていないファイルのみが操作されます。 
 
 |    キー    |    値    |
 |-------------------------------------------------------------------|-------------|

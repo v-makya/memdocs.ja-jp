@@ -16,20 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57878ee1f87d53c05ad7eddd39714a5fc5a8ae08
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1b3c3485496b6f72bd51241d47c12de3990a6802
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358833"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353549"
 ---
 # <a name="how-is-intune-for-education-different-from-the-full-device-management-experience-in-intune"></a>Intune for Education と Intune でのフル デバイス管理エクスペリエンスはどのように異なりますか。
 
-Intune for Education では、学校データを保護しながら、教師と生徒を生産的にすることができます。 Intune はクラウド基盤の EMM (エンタープライズ モビリティ管理) サービスであり、Intune for Education の土台です。
+Intune for Education では、学校データを保護しながら、教師と生徒を生産的にすることができます。 Intune for Education は、クラウドベースのエンタープライズ モビリティ管理 (EMM) サービスある Microsoft の Intune サービスによって支えられています。
 
 ![Intune for Education コンソールと Intune コンソールの比較。](./media/introduction-intune-education/intune-azure-vs-intuneEDU.png)
 
-Intune for Education では、Intune の完全 MDM 機能を利用し、Windows 10 および iOS/iPadOS のデバイスを管理できます。 フル デバイス管理エクスペリエンスでは、Windows、iOS/iPadOS、Android のデバイスを管理できます。  
+Intune for Education では、Intune の完全 MDM 機能を利用し、Windows 10 および iOS/iPadOS のデバイスを管理できます。 フル デバイス管理エクスペリエンスでは、Windows、iOS/iPadOS、Android のデバイスを管理できます。 
 
 Intune for Education は単独で使用することも、[Intune の完全デバイス管理](what-is-intune.md)に合わせて使用することもできます。 また、[Microsoft Education](https://microsoft.com/education) のその他のツールと併用できます。Intune for Education を Microsoft の他の便利な教育ツールで簡単に利用できるようになります。  
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0739b27d5b2b6bb21809b2a9f109c894765ea7e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 17f1d045d89df3ad5bb37d85957e872ec6692b7e
+ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988565"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353498"
 ---
 # <a name="enroll-android-devices"></a>Android デバイスの登録
 
@@ -39,6 +39,8 @@ Intune 管理者は、次の方法で Android デバイスを登録できます�
 ## <a name="prerequisites"></a>[前提条件]
 
 モバイル デバイスの管理を準備するには、MDM (モバイル デバイス管理) 機関を **Microsoft Intune** に設定する必要があります。 手順については、[MDM 機関の設定](../fundamentals/mdm-authority-set.md)に関するページを参照してください。 この項目は、モバイル デバイス管理について初めて Intune を設定するときに一度だけ設定します。
+
+Android Enterprise の場合は、Google の次のサポート記事を参照して、お住まいの国または地域で Android Enterprise を利用できることを確認してください: https://support.google.com/work/android/answer/6270910
 
 Zebra Technologies 製のデバイスの場合、特定のデバイスの機能に応じて、ポータル サイトの追加のアクセス許可を付与しなければならない場合があります。 詳細については、[Zebra デバイス上のモビリティの拡張機能](../configuration/android-zebra-mx-overview.md)に関するページを参照してください。
 

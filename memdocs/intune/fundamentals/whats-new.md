@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/23/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87cf4d9fc21b951386c496e49fe482810febcda3
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 89703c8aec11517417f9459391c431b9db75456c
+ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263956"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85502291"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
@@ -58,18 +58,32 @@ ms.locfileid: "85263956"
 
 ## <a name="week-of-june-22-2020"></a>2020 年 6 月 22 日の週
 
+### <a name="app-management"></a>アプリ管理
+
+#### <a name="newly-available-protected-apps-for-intune---7248952---"></a>Intune 用に新しく利用可能になった保護されたアプリ<!-- 7248952 -->
+次の保護されたアプリを使用できるようになりました。
+- BlueJeans Video Conferencing
+- Cisco Jabber for Intune
+- Tableau Mobile for Intune
+- ZERO for Intune
+
+保護されたアプリの詳細については、「[保護されている Microsoft Intune アプリ](../apps/apps-supported-intune-apps.md)」を参照してください。
+
 ### <a name="monitor-and-troubleshoot"></a>監視とトラブルシューティング
+
+#### <a name="use-endpoint-analytics-to-improve-user-productivity-and-reduce-it-support-costs---5653063---"></a>エンドポイント分析を使用してユーザーの生産性を向上させ、IT サポート コストを削減する<!-- 5653063 --> 
+次の週の間、この機能はロール アウトされます。エンドポイント分析は、ユーザー エクスペリエンスに関する分析情報を提供することで、ユーザーの生産性を向上させ、IT サポートのコストを削減することを目的としています。 IT 部門は、この分析情報を使用して、プロアクティブなサポートによりエンド ユーザー エクスペリエンスを最適化したり、構成変更がもたらすユーザーへの影響を評価して、ユーザー エクスペリエンスの低下を検知したりすることができます。 詳細については、[エンドポイント分析のプレビュー](https://aka.ms/uea)に関する記事を参照してください。
 
 #### <a name="proactively-remediate-end-user-device-issues-using-script-packages---5933328---"></a>スクリプト パッケージを使用してエンド ユーザー デバイスの問題を事前に修復する<!-- 5933328 -->
 エンド ユーザー デバイスでスクリプト パッケージを作成して実行し、組織内の上位のサポート問題を事前に見つけて修復することができます。 スクリプト パッケージを展開することは、サポートへの問い合わせを減らすのに役立ちます。 独自のスクリプト パッケージを作成するか、当社が作成して社内で使用しているスクリプト パッケージのいずれかを展開するかを選択してサポート チケットを減らします。 Intune では、展開されたスクリプト パッケージの状態を確認したり、検出と修復の結果を監視したりすることができます。 [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[レポート]**  >  **[エンドポイント分析]**  >  **[プロアクティブな修復]** の順に選択します。 詳細については、「[プロアクティブな修復](https://aka.ms/uea_prs)」を参照してください。
 
 ### <a name="device-security"></a>デバイス セキュリティ
 
-### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Android 用のコンプライアンス ポリシーで Microsoft Defender ATP を使用する<!-- 4425686  -->
+#### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Android 用のコンプライアンス ポリシーで Microsoft Defender ATP を使用する<!-- 4425686  -->
 
 Intune を使用して、[Android デバイスを Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) にオンボード](../protect/advanced-threat-protection.md#onboard-android-devices)できるようになりました。 登録済みデバイスがオンボードされた後、Android 用のコンプライアンス ポリシーでは、Microsoft Defender ATP からの "*脅威レベル*" シグナルを使用することができます。 これらは、Windows 10 デバイスで以前に使用できたものと同じシグナルです。
 
-### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>Android デバイス用に Defender ATP Web 保護を構成する<!-- 6185563 WNReady -->
+#### <a name="configure-defender-atp-web-protection-for-android-devices---6185563-wnready---"></a>Android デバイス用に Defender ATP Web 保護を構成する<!-- 6185563 WNReady -->
 
 Android デバイスで Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) を使用する場合は、[Microsoft Defender ATP Web 保護を構成](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)し、フィッシング スキャン機能を無効にしたり、スキャンで VPN が使用されないようにすることができます。
 

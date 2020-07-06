@@ -1,11 +1,11 @@
 ---
-title: 既存の会社の電子メール アカウントが検出された | Microsoft Docs
-description: 職場または学校のメールにもう一度アクセスできるように、デバイスに更新プログラムを適用する方法について説明します。
+title: 既存の仕事用電子メール アカウントが検出された | Microsoft Docs
+description: 職場または学校のメールにもう一度アクセスできるようにデバイスを更新する方法について説明します。
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/17/2018
+ms.date: 06/29/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,29 +15,28 @@ ms.assetid: 74c51f7b-7bd8-45cf-99bd-02d1972267cb
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: chrisgre
+ms.reviewer: samyada
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c6917c2ad2650ae093293ba172934661a4f9863f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 78beb08555a9c276bec79a65bb10bb9dad816926
+ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881288"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85590985"
 ---
-# <a name="an-existing-company-email-account-was-found"></a>既存の会社の電子メール アカウントが検出された
+# <a name="an-existing-email-account-was-found"></a>既存の電子メール アカウントが検出された
 
-デバイスがマネージドになる "*以前*" に、職場または学校の電子メール アカウントへのモバイル デバイス アクセスを保持していた可能性があります。 お使いのデバイスが現在、マネージドになっている場合は、次の操作を行うことをお勧めします。
+登録前に仕事用電子メールをデバイスに設定した場合は、それを削除することを組織から要求される可能性があります。 
 
-* 既存の職場の電子メール アカウントをお使いのデバイスから切断します。
-* ポータル サイト アプリからデバイス設定を再同期します。  
+これを行うことで、組織は、ネットワークとセキュリティの要件を満たす電子メール プロファイルを設定することができます。 接続を切断した後、デバイスを同期するだけで、電子メールに再びアクセスできるようになります。 
 
-これらの手順によって、確実にお使いのデバイスが社内のセキュリティ要件を満たすと共に、電子メールを引き続きセキュリティ保護できます。
+次の手順を完了して、既存のアカウントを切断し、デバイスの設定を更新します。 これらの手順を完了しないと、職場アカウントへのモバイル アクセスが失われたり、制限されたりする可能性があります。
 
-1. お使いのデバイス上で、 **[設定]** に移動して、接続されているアカウントを検出します。 たとえば、iOS 11+ デバイス上で、 **[Password & Accounts]** \(パスワードとアカウント\) を選択します。
+1. お使いのデバイス上で、 **[設定]** に移動して、接続されているアカウントを検出します。 たとえば、iOS 11 以降のデバイスで、 **[パスワードとアカウント]** を選択します。
  
-2. お使いの職場の電子メール アカウントを選択して削除します。
+2. お使いの仕事用電子メールにリンクしたアカウントを選択して削除します。 
 
 3. デバイス上でポータル サイト アプリを開きます。  
 
@@ -45,6 +44,8 @@ ms.locfileid: "83881288"
 
 5. **[設定の確認]** を選択します。 短時間のうちに、デバイスが新しい電子メール設定を同期します。
 
-6. 職場または学校の電子メール アカウントにサインインします。
+6. お使いの電子メール アカウントにサインインします。 
+
+## <a name="next-steps"></a>次のステップ
 
 サポートが必要な場合は、 社内サポートに問い合わせてください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。
