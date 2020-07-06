@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 02a281b800c1156cf8492e8a897a5cf1b412006e
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 388a051f899369aa6a7754f94b0a7727f943f0ec
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383038"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854407"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Configuration Manager のクライアント インストールのパラメーターとプロパティについて
 
@@ -601,7 +601,11 @@ Configuration Manager クライアントによって送信される状態メッ�
 
 バージョン 2002 以降では、このプロパティを使用して、サイトに正常に登録された後にクライアント上でタスク シーケンスを開始します。
 
+> [!NOTE]
+> タスク シーケンスでソフトウェア更新プログラムまたはアプリケーションをインストールする場合、クライアントには有効なクライアント認証証明書が必要です。 トークン認証単体では機能しません。 詳細については、[「リリース ノート」の「OS の展開」](../../servers/deploy/install/release-notes.md#os-deployment)を参照してください。<!--7527072-->
+      
 たとえば、Windows Autopilot を使用して新しい Windows 10 デバイスをプロビジョニングし、Microsoft Intune に自動登録した後、共同管理用の Configuration Manager クライアントをインストールします。 この新しいオプションを指定すると、新しくプロビジョニングされたクライアントでタスク シーケンスが実行されるようになります。 このプロセスにより、アプリケーションとソフトウェア更新プログラムをインストールしたり、設定を構成したりするための柔軟性が向上します。
+
 
 次の手順を使用します。
 
@@ -617,6 +621,8 @@ Configuration Manager クライアントによって送信される状態メッ�
       > この方法には、追加の前提条件がある場合があります。 たとえば、Azure Active Directory へのサイトの登録や、コンテンツが有効なクラウド管理ゲートウェイの作成などです。
 
 クライアントがインストールされ、サイトに正しく登録されると、参照されているタスク シーケンスが開始されます。 クライアントの登録に失敗すると、タスク シーケンスは開始されません。
+
+
 
 ### <a name="resetkeyinformation"></a>RESETKEYINFORMATION
 

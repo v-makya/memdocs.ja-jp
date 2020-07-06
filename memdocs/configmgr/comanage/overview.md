@@ -5,17 +5,17 @@ description: Configuration Manager と Microsoft Intune の両方を使用して
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/01/2020
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 86bd566e9582c7dd7c83f93c22430edcc8ea0d0d
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347187"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854441"
 ---
 # <a name="what-is-co-management"></a>共同管理とは
 
@@ -88,7 +88,7 @@ Windows 10 デバイスに Configuration Manager クライアントがあり、I
     > [!Tip]
     > テナントへのサインインに使用するアカウントには必ず Intune ライセンスを割り当ててください。 そうしないと、サインインが失敗し、"User not recognized (ユーザーが認識されません)" というエラー メッセージが表示されます。
     >
-    > ユーザーに対して個別の Intune または EMS ライセンスを購入して割り当てる必要はなくなりました。 詳細については、「[Configuration Manager のブランチとライセンスに関してよく寄せられる質問](../core/understand/product-and-licensing-faq.md#bkmk_mem)」を参照してください。
+    > ユーザーに対して個別の Intune または EMS ライセンスを購入して割り当てる必要がない場合があります。 詳細については、「[Configuration Manager のブランチとライセンスに関してよく寄せられる質問](../core/understand/product-and-licensing-faq.md#bkmk_mem)」を参照してください。
 
 ### <a name="configuration-manager"></a>Configuration Manager
 

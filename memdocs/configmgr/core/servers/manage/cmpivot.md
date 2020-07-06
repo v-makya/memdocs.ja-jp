@@ -2,7 +2,7 @@
 title: リアルタイム データ用 CMPivot
 titleSuffix: Configuration Manager
 description: Configuration Manager でクライアントに対してクエリをリアルタイムで実行するために CMPivot を使用する方法について学習します。
-ms.date: 04/08/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcd441c7f35748f42adc8824c68ec703291a13e0
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7bf9d6018acb74ccd1a33b6101d5cceb119ca982
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702090"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914629"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>Configuration Manager でのリアルタイム データ用の CMPivot
 
@@ -46,6 +46,7 @@ Configuration Manager では、レポートを目的として顧客が使用す�
   - IPConfig
   - SMBConfig
 
+- CMPivot と [Microsoft Edge](../../../apps/deploy-use/deploy-edge.md) インストーラーは、**Microsoft コード署名**証明書で署名されています。 その証明書が**信頼された発行元**ストアに登録されていない場合は、追加する必要があります。 そうしないと、PowerShell 実行ポリシーが **AllSigned** に設定されている場合に、CMPivot と Microsoft Edge インストーラーが実行されません。 <!--7585106-->
 
 - CMPivot のアクセス許可:
   - **SMS スクリプト** オブジェクトの**読み取り**アクセス許可
@@ -56,6 +57,8 @@ Configuration Manager では、レポートを目的として顧客が使用す�
 
 >[!NOTE]
 > **スクリプトの実行**は、**CMPivot の実行**アクセス許可のスーパーセットです。
+
+CMPivot と Edge インストーラーは、**Microsoft コード署名**証明書で署名されています。 その証明書が**信頼された発行元**ストアに登録されていない場合は、追加する必要があります。 そうしないと、PowerShell 実行ポリシーが **AllSigned** に設定されている場合に、CMPivot と Edge インストーラーが実行されません。
  
 ## <a name="limitations"></a>制限事項
 
@@ -617,7 +620,7 @@ CMPivot の最適化によって、CMPivot クエリの実行に必要なネッ�
    | project Device, MalwareFound = iif( isnull(FileName), 'No', 'Yes')
    ```
 
-### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a> WinEvent(\<ログ名>,[\<期間>])
+### <a name="wineventlognametimespan"></a><a name="bkmk_WinEvent"></a> WinEvent(\<logname>,[\<timespan>])
 
 このエンティティは、イベント ログおよびイベント トレーシング ログ ファイルからイベントを取得するために使用します。 このエンティティを使って、Windows イベント ログ テクノロジによって生成されたイベント ログからデータを取得できます。 また、このエンティティを使って、Windows イベント トレーシング (ETW) によって生成されたログ ファイル内のイベントも取得できます。 WinEvent では、既定で、過去 24 時間以内に発生したイベントが調べられます。 ただし、24 時間の既定値は、期間を含めることによってオーバーライドできます。
 
@@ -627,7 +630,7 @@ WinEvent('Microsoft-Windows-HelloForBusiness/Operational', 1d)
 | summarize count() by Device
 ```
 
-### <a name="filecontentfilename"></a><a name="bkmk_File"></a> FileContent(\<ファイル名>)
+### <a name="filecontentfilename"></a><a name="bkmk_File"></a> FileContent(\<filename>)
 
 FileContent は、テキスト ファイルの内容を取得するために使用します。
 
@@ -637,7 +640,7 @@ FileContent('c:\\windows\\SMSCFG.ini')
 | project Device, SMSId= substring(Content,22)
 ```
 
-### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a> ProcessModule(\<プロセス名>)  
+### <a name="processmoduleprocessname"></a><a name="bkmk_ProcessModule"></a> ProcessModule(\<processname>)  
 
 このエンティティは、指定したプロセスによって読み込まれたモジュール (dll) を列挙するために使用します。 ProcessModule は、正当なプロセス内に隠されたマルウェアを探索するときに便利です。  
 

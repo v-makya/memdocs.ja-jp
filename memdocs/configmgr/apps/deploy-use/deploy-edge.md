@@ -2,7 +2,7 @@
 title: Microsoft Edge バージョン 77 以降を展開および更新する
 titleSuffix: Configuration Manager
 description: Configuration Manager で Microsoft Edge バージョン 77 以降を展開および更新する方法
-ms.date: 04/01/2020
+ms.date: 07/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 141a60a72038156fff2579419e92e558dab5a9b8
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 2061a6701bf40233593e2e5d683e36f2814d3978
+ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776941"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85914573"
 ---
 # <a name="microsoft-edge-management"></a>Microsoft Edge の管理
 
@@ -33,6 +33,8 @@ Microsoft Edge 展開の対象となるクライアントの場合:
 
 - PowerShell [実行ポリシー](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)は制限ありに設定できません。
   - インストールのために PowerShell が実行されます。
+
+- Microsoft Edge インストーラーと [CMPivot](../../core/servers/manage/cmpivot.md) は、**Microsoft コード署名**証明書で署名されています。 その証明書が**信頼された発行元**ストアに登録されていない場合は、追加する必要があります。 そうしないと、PowerShell 実行ポリシーが **AllSigned** に設定されている場合に、Microsoft Edge インストーラーと CMPivot が実行されません。 <!--7585106-->
 
 Configuration Manager コンソールを実行しているデバイスは次のエンドポイントにアクセスする必要があります。
 
@@ -135,6 +137,22 @@ Microsoft Edge の管理ダッシュボード用に、以下の[ハードウェ�
 **[ソフトウェア ライブラリ]** ワークスペースで、 **[Microsoft Edge の管理]** をクリックしてダッシュボードを表示します。 グラフ データのコレクションを変更するには、 **[参照]** をクリックし、別のコレクションを選択します。 既定では、最も大きい 5 つのコレクションがドロップダウン リストに表示されます。 リストにないコレクションを選択すると、新しく選択されたコレクションがドロップダウン リストの下の方に移動します。
 
 [![Microsoft Edge の管理ダッシュボード](./media/3871913-microsoft-edge-dashboard.png)](./media/3871913-microsoft-edge-dashboard.png#lightbox)
+
+## <a name="known-issues"></a>既知の問題
+
+### <a name="hardware-inventory-may-fail-to-process"></a>ハードウェア インベントリの処理に失敗する場合がある
+<!--7535675-->
+デバイスのハードウェア インベントリの処理に失敗する場合があります。 Dataldr.box ファイルに次のようなエラーが表示される場合があります。
+
+```text
+Begin transaction: Machine=<machine>
+*** [23000][2627][Microsoft][SQL Server Native Client 11.0][SQL Server]Violation of PRIMARY KEY constraint 'BROWSER_USAGE_HIST_PK'. Cannot insert duplicate key in object 'dbo.BROWSER_USAGE_HIST'. The duplicate key value is (XXXX, Y). : dbo.dBROWSER_USAGE_DATA
+ERROR - SQL Error in
+ERROR - is NOT retyrable.
+Rollback transaction: XXXX
+```
+
+**対策:** この問題を回避するには、ブラウザーの使用状況 (SMS_BrowerUsage) のハードウェア インベントリ クラスの収集を無効にします。 現在、このクラスは利用されていません。
 
 ## <a name="next-steps"></a>次のステップ
 

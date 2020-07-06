@@ -2,7 +2,7 @@
 title: 製品とライセンスに関する FAQ
 titleSuffix: Configuration Manager
 description: Configuration Manager の一般的な製品とライセンスの質問に対する回答を検索できます。
-ms.date: 02/12/2020
+ms.date: 07/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63e53c502e67d2bfbfc5f8a706006c6ec14f8fcd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7b2c785fb41fa78ea0bd5d480560d45a3a7a7eda
+ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706840"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85854424"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager のブランチとライセンスに関してよく寄せられる質問
 
@@ -68,19 +68,54 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 > [!IMPORTANT]
 > Configuration Manager は [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business) プランに含まれていません。
 
-### <a name="does-anything-change-with-the-rebrand-to-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a> Microsoft Endpoint Manager へのブランド変更に伴って何か変更はありますか?
+### <a name="what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a> Microsoft Endpoint Manager の共同管理のライセンスを使用すると、何が変わりますか?
 
-はい。 2019 年 12 月 1 日より、Configuration Manager のライセンスが既に付与されている場合、[共同管理](../../comanage/overview.md)の Windows PC を登録するための Intune のライセンスも自動的に付与されています。 この変更により、Microsoft Endpoint Manager を使用して Windows デバイスを管理しやすくなりました。
+<!-- 7202432 -->
 
-ソフトウェア アシュアランスを持つ Configuration Manager カスタマーの場合、共同管理のために追加の Intune ライセンスを購入することなく、Intune PC 管理権限を取得できる新しいライセンスが利用可能になりました。 ユーザーに対して個別の Intune ライセンスを購入して割り当てる必要はなくなりました。
+共同管理ライセンスを使用すると、ソフトウェア アシュアランスをお持ちの Configuration Manager のお客様は Intune PC 管理権限を取得できます。個別の Intune ライセンスを購入してユーザーに割り当てる必要はありません。 このライセンスを使用すると、Microsoft Endpoint Manager で Windows デバイスを管理しやすくなります。
 
-- Configuration Manager によって管理され、共同管理に登録されているデバイスには、Intune のスタンドアロンマネージド PC とほぼ同じ権限があります。 ただし、リセット後は、Autopilot を使用して再プロビジョニングできなくなります。
+- Configuration Manager によって既に管理され、共同管理用に Intune に登録されているデバイスは、Intune のスタンドアロン マネージド PC とほぼ同じアクセス権を持ちます。 このデバイス上の Windows をリセットすると、Windows オートパイロットを使用してプロビジョニングできなくなります。 オートパイロットには完全な Intune ライセンスが必要です。
 
-- 他の方法を使用して Intune に登録された Windows 10 デバイスには、完全な Intune ライセンスが必要です。
+- 他の方法で Windows 10 デバイスを Intune に登録する場合にも、完全な Intune ライセンスが必要です。 たとえば、オートパイロットを使用してデバイスをプロビジョニングする場合や、ユーザーが手動でセルフサービス登録を行う場合です。
+
+- 既存の Configuration Manager マネージド デバイスで、ユーザー操作なしで大規模に共同管理を行うために Intune に登録する場合、共同管理には、Windows 10 の自動登録と呼ばれる Azure Active Directory (Azure AD) 機能が使用されます。 自動登録には、Microsoft Endpoint Manager とは別に Azure AD Premium (AADP1) ライセンスが必要です。 このシナリオで共同管理を行う場合、以前は AADP1 ライセンスと Intune ライセンスの両方を各ユーザーに割り当てる必要がありました。 2019 年 12 月 1 日から、共同管理ライセンスが変更されました。 このシナリオでは、個別の Intune ライセンスを割り当てる必要はなくなりましたが、他の登録シナリオでは引き続き必要です。 自動登録と共同管理を行うための AADP1 ライセンス要件は同じままです。
 
 - iOS、Android、または macOS デバイスの管理に Intune を使用する場合は、スタンドアロンの Intune ライセンス、Enterprise Mobility + Security (EMS)、または Microsoft 365 を介した適切な Intune サブスクリプションが必要です。
 
+- Intune 関連のサブスクリプション プランをご利用ではない場合、共同管理をサポートするには、少なくとも 1 つの Intune ライセンスを購入する必要があります。 このライセンスは、管理者が Microsoft Endpoint Manager 管理センターにアクセスするためのものです。
+
+- Microsoft 365 に組み込まれている[基本的なモビリティとセキュリティ](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0)を使用している場合、基本的なモビリティとセキュリティによって管理されているデバイスもお持ちのユーザーには、新しい共同管理ライセンスを使用できません。 ユーザーの Configuration Manager マネージド デバイスの共同管理ライセンスを使用するには、次のいずれかの操作を行います。
+
+  - ユーザーに完全な Intune ライセンスを割り当て、Intune を使用してデバイスを管理します。
+  - 基本的なモビリティとセキュリティからデバイスの登録を解除します。
+
 - System Center Configuration Manager のために以前に所有していたライセンスは、Microsoft Endpoint Configuration Manager にも引き続き適用されます。 新しいサイトをインストールする場合は、既存のプロダクト キーを使用します。
+
+|機能 | 共同管理ライセンス | 完全な Intune ライセンス |
+|---------|---------|---------|
+|Windows 10 の登録|はい (既存の ConfigMgr マネージド デバイスの場合のみ)|はい|
+|iOS、Android、macOS の登録|いいえ|はい|
+|Autopilot|いいえ|はい|
+|モバイル アプリケーション管理 (MAM)|いいえ|はい|
+|条件付きアクセス<br>(追加の AADP1 が必要)|はい|はい|
+|デバイス プロファイル|はい|はい|
+|ソフトウェア更新管理|はい|はい|
+|インベントリ|はい|はい|
+|アプリ管理|はい|はい|
+|リモート アシスタンス<br>(TeamViewer ライセンスが必要)|はい|はい|
+|Desktop Analytics<br>(Windows サブスクリプションのライセンスが必要|はい|該当なし|
+|テナントのアタッチ|はい|該当なし|
+|エンドポイント分析|はい|はい|
+
+詳細については、以下の記事を参照してください。
+
+- [共同管理の前提条件](../../comanage/overview.md#prerequisites)
+- [Windows Autopilot の要件](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [デスクトップ分析の前提条件](../../desktop-analytics/overview.md#prerequisites)
+- [テナントのアタッチの前提条件](../../tenant-attach/device-sync-actions.md#prerequisites)
+- [エンドポイント分析のライセンスの前提条件](../../../analytics/overview.md#licensing-prerequisites)
+- [Intune で条件付きアクセスを使用する](../../../intune/protect/conditional-access.md#use-conditional-access-with-intune)
+- [TeamViewer の前提条件](../../../intune/remote-actions/teamviewer-support.md#prerequisites)
 
 ### <a name="i-have-enterprise-mobility--security-and-it-expired-what-must-i-do-now"></a><a name="bkmk_ems-expires"></a> Enterprise Mobility + Security を持っていますが、有効期限が切れてしまいました。何をする必要がありますか?  
 
