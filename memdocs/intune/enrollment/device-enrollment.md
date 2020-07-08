@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d907aaac6c37cbe7cad71e850fbc44322c93841
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d3ca95db3297a6ca251f91a79fda705aebb6d18d
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986395"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088464"
 ---
 # <a name="what-is-device-enrollment"></a>デバイス登録とは
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -45,6 +45,7 @@ Intune では、従業員のデバイスやアプリ、従業員が会社のデ�
 |**[USB-Direct](#usb-direct)**| × | × | ×|[詳細情報](apple-configurator-enroll-ios.md)|
 
 ## <a name="macos-enrollment-methods"></a>macOS の登録方法
+
 | **方法** |  **リセットが必要** |  **ユーザー アフィニティ** | **Locked** | **詳細**|
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | ×| [はい] | × | [詳細情報](macos-enroll.md)|
@@ -54,7 +55,7 @@ Intune では、従業員のデバイスやアプリ、従業員が会社のデ�
 ## <a name="windows-enrollment-methods"></a>Windows の登録方法
 
 | **方法** | **リセットが必要** | **ユーザー アフィニティ** | **Locked** | **詳細**|
-|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#bring-your-own-device)** | × | [はい] | × | [詳細情報](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| × |× |× |[詳細情報](device-enrollment-manager-enroll.md)|
 |**自動登録** | × |[はい] |× | [詳細情報](windows-enroll.md#enable-windows-10-automatic-enrollment)|
@@ -77,7 +78,7 @@ Intune では、従業員のデバイスやアプリ、従業員が会社のデ�
 |**Android のデバイス管理**|**(事前に宣言されている IMEI または SN) ポータル サイトからユーザーが開始**| × | [はい] | × | [詳細情報](corporate-identifiers-add.md)|
 |**Zebra モビリティ拡張が装備された Android デバイス管理**|**ポータル サイトからユーザーまたは[DEM](#device-enrollment-manager) が開始**| × | ユーザーが開始した場合は [はい]、[DEM](#device-enrollment-manager) が開始した場合は [いいえ] | × | [詳細情報](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise 専用**|**NFC、トークン、QR コード、ゼロ タッチ**| [はい] | × | ポリシーで構成可能 | [詳細情報](android-kiosk-enroll.md)|
-|**Android Enterprise フル マネージド**|**NFC、トークン、QR コード、ゼロ タッチ**| [はい] | はい ([DEM](device-enrollment.md#device-enrollment-manager) が開始した場合は、いいえ) | ポリシーで構成可能 | [詳細情報](android-dedicated-devices-fully-managed-enroll.md)|
+|**Android Enterprise フル マネージド**|**NFC、トークン、QR コード、ゼロ タッチ**| [はい] | はい | ポリシーで構成可能 | [詳細情報](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13623f92ac68855aefbd1900c5040004acba1f09
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 74152e28d1c78ea911b1f4e2cca31d6382283c19
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216503"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088481"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune のネットワーク エンドポイント  
 
@@ -67,7 +67,6 @@ ms.locfileid: "85216503"
 |fef.msua05.manage.microsoft.com|138.91.244.151|
 |fef.msua06.manage.microsoft.com|13.78.185.97|
 |fef.msub01.manage.microsoft.com|137.135.128.214|
-|fef.msub03.manage.microsoft.com|52.169.82.238|
 |fef.msub05.manage.microsoft.com|23.97.166.52|
 |fef.msuc03.manage.microsoft.com|23.101.0.100|
 |fef.amsua0502.manage.microsoft.com|13.85.68.142|
@@ -130,8 +129,8 @@ Intune を使用して PowerShell スクリプトまたは Win32 アプリをデ
 
 Android デバイスの管理方法によっては、Google Android Enterprise ポートや Android プッシュ通知を開く必要がある場合があります。 サポートされている Android 管理方法の詳細については、[Android の登録に関するドキュメント](https://docs.microsoft.com/mem/intune/enrollment/android-enroll)を参照してください。 
 
-[!NOTE]
-中国では Google モバイル サービスを使用できないため、Intune によって管理されている中国のデバイスでは、Google モバイル サービスを必要とする機能を使用できません。 これには次の機能があります。SafetyNet デバイス構成証明などの Google Play プロテクト機能、Google Play ストアからのアプリの管理、Android Enterprise 機能 (この [Google ドキュメント](https://support.google.com/work/android/answer/6270910)をご覧ください)。 さらに、Android 用 Intune ポータル サイト アプリでは、Microsoft Intune サービスと通信するために Google モバイル サービスが使用されます。 中国では Google Play サービスを使用できないため、一部のタスクは完了までに最大 8 時間かかることがあります。 詳細については、[こちらの記事](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)を参照してください。
+> [!NOTE]
+> 中国では Google モバイル サービスを使用できないため、Intune によって管理されている中国のデバイスでは、Google モバイル サービスを必要とする機能を使用できません。 これには次の機能があります。SafetyNet デバイス構成証明などの Google Play プロテクト機能、Google Play ストアからのアプリの管理、Android Enterprise 機能 (この [Google ドキュメント](https://support.google.com/work/android/answer/6270910)をご覧ください)。 さらに、Android 用 Intune ポータル サイト アプリでは、Microsoft Intune サービスと通信するために Google モバイル サービスが使用されます。 中国では Google Play サービスを使用できないため、一部のタスクは完了までに最大 8 時間かかることがあります。 詳細については、[こちらの記事](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)を参照してください。
 
 ### <a name="google-android-enterprise"></a>Google Android Enterprise 
 
@@ -141,3 +140,6 @@ Google によって、[Android Enterprise Bluebook](https://static.googleusercon
 
 Intune では、プッシュ通知に Google の Firebase Cloud Messaging (FCM) を利用して、デバイス アクションとチェックインをトリガーします。これは、Android デバイス管理者と Android Enterprise の両方で必要です。 FCM ネットワーク要件の詳細については、Google の「[FCM ポートとファイアウォール](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall)」を参照してください。
 
+## <a name="endpoint-analytics"></a>エンドポイント分析
+
+エンドポイント分析に必要なエンドポイントの詳細については、[エンドポイント分析のプロキシ構成](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints)に関する記事をご覧ください。

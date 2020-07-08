@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9e3d03211907f31008b31d68c4ed5cd11ae1a6e
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: 2095fdd349437e03c673fb9f7906511c5e3af388
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791739"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088379"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Microsoft Endpoint Manager の概要
 
@@ -43,7 +43,6 @@ Endpoint Manager には、次のサービスが含まれています。
   Exchange や Active Directory などのオンプレミス インフラストラクチャがある場合は、次のような Intune コネクタを使用することもできます。
 
   - **Active Directory の Intune コネクタ**は、Windows Autopilot を使用して登録するコンピューターのオンプレミスの Active Directory ドメインにエントリを追加します。 詳細については、[ハイブリッド Azure AD 参加済みデバイスの展開](/mem/intune/enrollment/windows-autopilot-hybrid)に関する記事を参照してください。
-  - **Intune Exchange Connector** は、デバイスが Intune に登録され、ポリシーに準拠している場合に、Exchange サーバーへのデバイスのアクセスを許可 (またはブロック) します。 詳細については、「[オンプレミスの Intune Exchange Connector を設定する](/mem/intune/protect/exchange-connector-install)」を参照してください。
   - **Intune Certificate Connector** は、認証と S/MIME 電子メール暗号化で証明書を使用するデバイスからの証明書要求を処理します。 詳細については、[認証での証明書の使用](/mem/intune/protect/certificates-configure)に関する記事を参照してください。
 
   コンプライアンスの作成と確認のために、エンドポイント マネージャーの一部として Intune を使用し、クラウドを使用してデバイスにアプリ、機能、および設定を展開します。
