@@ -52,6 +52,8 @@
       items:
         - name: コンプライアンスの概要
           href: device-compliance-get-started.md
+        - name: デバイス コンプライアンス パートナー
+          href: device-compliance-partners.md
         - name: ポリシーの作成
           href: create-compliance-policy.md
         - name: 地域別のコンプライアンス
