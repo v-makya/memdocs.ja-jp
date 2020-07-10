@@ -2,20 +2,20 @@
 title: Microsoft Endpoint Manager テナントのアタッチ
 titleSuffix: Configuration Manager
 description: Configuration Manager デバイスをクラウドサービスにアップロードし、管理センターからアクションを実行します。
-ms.date: 04/10/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.technology: configmgr-core
 ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: be1c938cfcf332edb37e24e4094567f88f363560
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: a9e97c74e4825dc49ce628b3ae176c55f4288966
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795620"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210291"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a>Microsoft Endpoint Manager テナントの接続: デバイスの同期とデバイスの操作
 <!--3555758 live 3/4/2020-->
@@ -56,8 +56,9 @@ Configuration Manager バージョン2002以降では、Configuration Manager �
 1. ご自分の共同管理設定を右クリックし、 **[プロパティ]** を選択します。
 1. **[アップロードを構成する]** タブで、 **[Upload to Microsoft Endpoint Manager admin center]\(Microsoft Endpoint Manager 管理センターにアップロードする\)** を選択します。 **[適用]** をクリックします。
    - デバイスのアップロード用の既定の設定は、 **[Microsoft Endpoint Configuration Manager によって管理されているすべてのデバイス]** となります。 必要に応じて、アップロードを1つのデバイスコレクションに制限することができます。
+1. エンドポイント[分析](../../analytics/overview.md)でエンドユーザーエクスペリエンスを最適化するための洞察も得たい場合は、 **Microsoft endpoint Manager にアップロードされたデバイスのエンドポイント分析を有効**にするオプションをオンにします。
 
-   [![共同管理構成ウィザード](./media/3555758-configure-upload.png)](./media/3555758-configure-upload.png#lightbox)
+   [![Microsoft Endpoint Manager 管理センターにデバイスをアップロードする](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
 1. メッセージが表示されたら、ご利用の "*全体管理者*" アカウントを使用してサインインします。
 1. **[はい]** をクリックして、 **[AAD アプリケーションの作成]** 通知を受け入れます。 このアクションでは、サービス プリンシパルがプロビジョニングされ、同期を容易にするための Azure AD アプリケーション登録が作成されます。
 1. 変更を行ったら、 **[OK]** をクリックして、共同管理プロパティを終了します。
@@ -77,6 +78,7 @@ Configuration Manager バージョン2002以降では、Configuration Manager �
    [![共同管理構成ウィザード](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
 1. **[次へ]** 、 **[はい]** の順にクリックして、 **[AAD アプリケーションの作成]** 通知を受け入れます。 このアクションでは、サービス プリンシパルがプロビジョニングされ、同期を容易にするための Azure AD アプリケーション登録が作成されます。
 1. [**アップロードの構成**] ページで、 **Microsoft エンドポイント Configuration Manager によって管理**されるすべてのデバイスについて、推奨されるデバイスのアップロード設定を選択します。 必要に応じて、アップロードを1つのデバイスコレクションに制限することができます。
+1. エンドポイント[分析](../../analytics/overview.md)でエンドユーザーエクスペリエンスを最適化するための洞察も得たい場合は、 **Microsoft endpoint Manager にアップロードされたデバイスのエンドポイント分析を有効**にするオプションをオンにします。
 1. **[概要]** をクリックしてご自分の選択内容を確認して、 **[次へ]** をクリックします。
 1. ウィザードが完了したら、 **[閉じる]** をクリックします。  
 
@@ -118,6 +120,6 @@ Configuration Manager クライアントである特定のデバイスがサー�
 - **Cmgatewaysyncuのログ**
 - **CMGatewayNotificationWorker .log**
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-テナントアタッチログファイルの詳細については、「[テナント接続のトラブルシューティング](technical-reference.md)」を参照してください。
+テナントアタッチログファイルの詳細については、「[テナント接続のトラブルシューティング](troubleshoot.md)」を参照してください。
