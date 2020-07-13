@@ -11,12 +11,12 @@ metadata:
   author: mestew
   ms.author: mstewart
   ms.date: 04/01/2020
-  ms.openlocfilehash: 282a213e680231ad1d88323f8a4e34380e58672d
-  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.openlocfilehash: 41220354f28671ae62b6f2c788dbe21790c2fa77
+  ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "81741359"
+  ms.lasthandoff: 07/09/2020
+  ms.locfileid: "86210255"
 landingContent:
 - title: テナントのアタッチについて
   linkLists:
@@ -24,7 +24,11 @@ landingContent:
     links:
     - text: テナントのアタッチを有効にする
       url: device-sync-actions.md
+    - text: ConfigMgr クライアントの詳細の表示 (プレビュー)
+      url: client-details.md
   - linkListType: reference
     links:
-    - text: テナントのアタッチのトラブルシューティング
-      url: technical-reference.md
+    - text: テナントのアタッチとデバイス アクションのトラブルシューティング
+      url: troubleshoot.md
+    - text: ConfigMgr クライアントの詳細のトラブルシューティング (プレビュー)
+      url: troubleshoot-client-details.md

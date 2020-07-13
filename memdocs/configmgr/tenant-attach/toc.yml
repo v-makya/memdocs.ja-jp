@@ -4,11 +4,17 @@
   items:
     - name: テナントのアタッチを有効にする
       href: device-sync-actions.md
-    - name: デバイス アクションに関するトラブルシューティング
-      href: technical-reference.md
+    - name: クライアントの詳細 (プレビュー)
+      href: client-details.md
 - name: テナントにアタッチされたデバイスの CMPivot (プレビュー)
   items:
     - name: CMPivot の概要
       href: cmpivot-overview-attached.md
     - name: CMPivot サンプル スクリプト
       href: cmpivot-samples-attached.md
+- name: トラブルシューティング
+  items:
+    - name: テナントのアタッチとデバイス アクション
+      href: troubleshoot.md
+    - name: クライアントの詳細 (プレビュー)
+      href: troubleshoot-client-details.md
