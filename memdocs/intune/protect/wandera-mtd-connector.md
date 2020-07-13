@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 07/2/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 382bf47807634fa9a5d6abde768fe6ee9bed23d1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1655c7b18262d0515308a00c617f06d917d976de
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990952"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972186"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Wandera Mobile Threat Defense コネクタと Intune  
 
@@ -32,9 +32,6 @@ Wandera によって実施されるリスク評価に基づく条件付きアク
 
 Intune のデバイス コンプライアンス ポリシーを通じて有効にすることで、Wandera のリスク評価に基づく "*条件付きアクセス*" ポリシーを構成できます。 リスク評価ポリシーは、検出された脅威に基づき、非準拠デバイスの企業リソースへのアクセスを許可またはブロックすることができます。  
 
-> [!NOTE]
-> この Mobile Threat Defense ベンダーは、未登録のデバイスではサポートされていません。
-
 ## <a name="how-do-intune-and-wandera-mobile-threat-defense-help-protect-your-company-resources"></a>Intune および Wandera Mobile Threat Defense が会社のリソースの保護に役立つしくみ  
 
 Wandera のモバイル アプリは、Microsoft Intune を使用してシームレスにインストールされます。 このアプリにより、ファイル システム、ネットワーク スタック、デバイスとアプリケーションのテレメトリ (入手できる場合) がキャプチャされます。 この情報は Wandera のクラウド サービスと同期され、モバイルの脅威に対するデバイスのリスクが評価されます。 これらのリスク レベルの分類は、Wandera のコンソールである RADAR で、ご自身のニーズに合わせて構成できます。
@@ -43,7 +40,15 @@ Intune のコンプライアンス ポリシーには、Wandera のリスク評�
 
 非準拠のデバイスについては、Office 365 などのリソースへのアクセスをブロックできます。 ブロックされたデバイスを使っているユーザーには、問題を解決してアクセスを回復するためのガイダンスが Wandera アプリから届きます。
 
-## <a name="supported-platforms"></a>[サポートされているプラットフォーム]  
+各デバイスの最新の脅威レベル (安全、低、中、高) が変更されるたびに、Wandera によって Intune がそのレベルで更新されます。 この脅威レベルは Wandera Security Cloud によって継続的に再計算されます。レベルは、デバイスの状態、ネットワークの活動、さまざまな脅威カテゴリにわたるさまざまなモバイル脅威インテリジェンス フィードに基づきます。
+
+これらのカテゴリとそれに関連付けられている脅威レベルは Wandera の RADAR コンソールで構成できるため、デバイスごとに総計算される脅威レベルは、組織のセキュリティ要件に合わせてカスタマイズすることができます。 脅威レベルを把握しているとき、次の 2 種類の Intune ポリシーでこの情報を活用することで企業データへのアクセスが管理されます。
+
+* 管理者は条件付きアクセスで**デバイス コンプライアンス ポリシー**を使用し、Wandera から報告された脅威レベルに基づいてマネージド デバイスに "コンプライアンス違反" のマークを自動的に付けるポリシーを設定します。 その後、このコンプライアンス フラグによって条件付きアクセス ポリシーが制御され、最新式の認証を利用するアプリケーションへのアクセスが許可されたり、拒否されたりします。  構成の詳細については、「[Intune で Mobile Threat Defense (MTD) デバイス コンプライアンス ポリシーを作成する](../protect/mtd-device-compliance-policy-create.md)」を参照してください。
+
+* 管理者は条件付き起動で**アプリ保護ポリシー**を使用し、Wandera から報告された脅威レベルに基づき、ネイティブ アプリ レベル (たとえば、Outlook や OneDrive などの、Android や iOS または iPad OS のアプリ) で適用されるポリシーを設定できます。  これらのポリシーは、あらゆるデバイス プラットフォームと所有権モードでポリシーを統一する目的で、アンマネージド デバイス (MAM-WE) で使用されることもあります。 構成の詳細については、「[Intune で Mobile Threat Defense アプリ保護ポリシーを作成する](../protect/mtd-app-protection-policy.md)」を参照してください。
+
+## <a name="supported-platforms"></a>サポートされているプラットフォーム  
 
 Intune に登録したとき、Wandera では次のプラットフォームがサポートされます。
 
@@ -90,11 +95,11 @@ Intune で Wandera MTD を使用する場合の一般的なシナリオを次に
 
 *修復するとアクセス権が付与される*:  
 
-![修復するとアクセス権が付与される](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
+![修復後に許可されるアクセス](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
 
-## <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークに対する脅威に基づいて SharePoint Online へのアクセスを制御する
+## <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>ネットワークへの脅威に基づいて SharePoint Online へのアクセスを制御する
 
-Man-in-the-middle 攻撃など、ネットワークに対する脅威を検出し、デバイスのリスクに基づいて会社内のファイルの同期を阻止します。
+Man-in-the-middle 攻撃のようなネットワークの脅威を検出し、デバイス リスクに基づき、企業ファイルの同期を制限します。
 
 *ネットワークの脅威が検出されたときに SharePoint Online をブロック*:  
 
@@ -104,17 +109,15 @@ Man-in-the-middle 攻撃など、ネットワークに対する脅威を検出�
 
 ![SharePoint で修復時にアクセス権が付与される例](./media/wandera-mtd-connector/wandera-network-spo-unblocked.png)  
 
-<!-- 
-### Control access on unenrolled devices based on threats from malicious apps
+### <a name="control-access-on-unenrolled-devices-based-on-threats-from-malicious-apps"></a>悪意のあるアプリの脅威に基づいて登録されていないデバイスでアクセスを制御する
 
-When the Wandera Mobile Threat Defense solution considers a device to be infected:
+Wandera Mobile Threat Defense ソリューションでデバイスが感染していると見なされる場合:
 
-![App protection policy blocks due to detected malware](./media/wandera-mtd-connector/wandera-mobile-app-policy-block.png)
+![検出されたマルウェアによるアプリ保護ポリシーのブロック](./media/wandera-mtd-connector/wandera-mobile-app-policy-block.png)
 
-Access is granted on remediation:
+修復するとアクセス権が付与されます。
 
-![Access is granted on remediation for App protection policy](./media/wandera-mtd-connector/wandera-mobile-app-policy-remediated.png)
--->
+![アプリ保護ポリシーの修復時にアクセス権が付与される](./media/wandera-mtd-connector/wandera-mobile-app-policy-remediated.png)
 
 ## <a name="next-steps"></a>次のステップ
 

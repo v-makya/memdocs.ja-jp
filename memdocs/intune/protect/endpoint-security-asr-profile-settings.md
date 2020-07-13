@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 7f200e5cb5bb4aa0f29cbd3adc0f177bb14e5476
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: ac5b4685249ffa46be63e9ad55ca6067edec1b03
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431697"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022400"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティの攻撃の回避ポリシー設定
 
@@ -92,7 +92,7 @@ ms.locfileid: "83431697"
 - **Application Guard でローカル プリンターへの印刷を許可する**  
 
   - **[未構成]** ("*既定値*")
-  - **はい** - ローカル プリンターへの印刷を許可します。
+  - **[はい]** - ローカル プリンターへの印刷を許可します。
 
 - **Application Guard でネットワーク プリンターへの印刷を許可する**  
 
@@ -114,7 +114,7 @@ ms.locfileid: "83431697"
   - **[未構成]** ("*既定値*")
   - **はい** - Windows ネットワーク分離ポリシーを構成します。  
   
-  *[構成]* に設定すると、次の設定を構成できます。
+  *[はい]* に設定すると、つぎの設定を構成できます。
 
   - **IP 範囲**  
     ドロップダウンを展開し、 **[追加]** を選択してから、*開始アドレス*、*終了アドレス*の順に指定します。
@@ -186,9 +186,9 @@ ms.locfileid: "83431697"
 - **ユーザーが SmartScreen 警告を無視できないようにする**  
   [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  この設定を使用するには、[アプリとファイルに対して SmartScreen を適用する] の設定を有効にする必要があります。
-  - **未構成** (*既定値*) - 設定が Windows の既定値に戻され、ユーザーはオーバーライドできるようになります。
-  - **はい** - SmartScreen では、警告を無視してアプリを実行するオプションは提示されません。 警告が表示されますが、ユーザーはこれをバイパスできません。
+  - **[未構成]** ("*既定*") - ユーザーはファイルや悪意のあるアプリに関する SmartScreen の警告を無視できます。
+  - **[はい]** - SmartScreen は有効になっており、ファイルや悪意のあるアプリに関する警告をユーザーは無視できません。
+
 
 - **Windows SmartScreen を有効にする**  
   CSP:[SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)

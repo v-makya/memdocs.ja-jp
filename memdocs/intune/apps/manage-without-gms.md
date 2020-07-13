@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5aa91a84b2fe5d8870afc93022ab5a468b30e0db
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 7955afb2aef88e3787546843cc477bce22369a4d
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074794"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022383"
 ---
 # <a name="how-to-use-intune-in-environments-without-google-mobile-services"></a>Google Mobile Services のない環境で Intune を使用する方法
 
@@ -31,13 +31,13 @@ Microsoft Intune では、Android デバイスを管理するときに、Google 
 
 ## <a name="install-the-intune-company-portal-app-without-access-to-the-google-play-store"></a>Google Play ストアへのアクセスなしで Intune ポータル サイト アプリをインストールする 
 
-### <a name="for-users-outside-of-mainland-china"></a>中国大陸以外のユーザーの場合 
+### <a name="for-users-outside-of-peoples-republic-of-china"></a>中華人民共和国以外のユーザーの場合
 
 Google Play を使用できない場合、Android デバイスでは、 [Android 用 Microsoft Intune ポータル サイト](https://www.microsoft.com/en-us/download/details.aspx?id=49140)をダウンロードし、そのアプリをサイドロードすることができます。 この方法でインストールした場合、アプリに更新プログラムまたは修正プログラムは自動的に提供されません。 ユーザーは、定期的に手動でアプリを更新し、修正プログラムを適用する必要があります。 
 
-### <a name="for-users-in-mainland-china"></a>中国大陸のユーザーの場合 
+### <a name="for-users-in-peoples-republic-of-china"></a>中華人民共和国のユーザーの場合
 
-現時点では、中国大陸では Google Play ストアを利用できないため、Android デバイスでは中国のアプリ マーケットプレースからアプリを入手する必要があります。 詳細については、「[中国大陸でポータル サイト アプリをインストールする](../user-help/install-company-portal-android-china.md)」をご覧ください。
+現時点では、中華人民共和国では Google Play ストアを利用できないため、Android デバイスでは中国のアプリ マーケットプレースからアプリを入手する必要があります。 詳細については、[中華人民共和国でポータル サイト アプリをインストールする](../user-help/install-company-portal-android-china.md)方法に関するページをご覧ください。
 
 ## <a name="limitations-of-intune-device-administrator-management-when-gms-is-unavailable"></a>GMS を使用できない場合の Intune デバイス管理者の管理の制限事項 
 

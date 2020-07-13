@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 82272fd4239b50657b887bf6c310b280eeecae7a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2ef0cf3909442cec818fd775bef4f848d6be5a83
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880080"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022315"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Intune ポータル サイトでデバイスを登録する  
 自分個人または会社所有の Android デバイスを登録して、会社のメール、アプリ、データにアクセスします。 Intune ポータル サイトでは、Android 4.4 以降が実行されている Samsung Knox などの Android デバイスがサポートされています。  
@@ -35,7 +35,7 @@ ms.locfileid: "83880080"
 > Samsung KNOX は、ネイティブ Android に用意されている以外の追加保護のために特定の Samsung 製のデバイスで使用されるセキュリティの一種です。 Samsung KNOX デバイスかどうかを確認するには、 **[設定]**  >  **[About device]\(デバイス情報\)** を選択します。 そこに **[KNOX version]\(KNOX バージョン\)** と表示されない場合は、ネイティブ Android デバイスです。
 
 ## <a name="enroll-device"></a>デバイスを登録する  
-[Google Play から](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) Intune ポータル サイト アプリをインストールしてください。 中国大陸でアプリを提供するストアの一覧については、「[中国大陸でポータル サイト アプリをインストールする](install-company-portal-android-china.md)」をご覧ください。    
+[Google Play から](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) Intune ポータル サイト アプリをインストールしてください。 中華人民共和国でアプリを提供するストアの一覧については、[中華人民共和国でポータル サイト アプリをインストールする](install-company-portal-android-china.md)方法に関するページをご覧ください。
 
 登録中に、デバイスの使用方法に適したカテゴリを選ぶように求められる場合があります。 会社のサポートは、その回答を使用して、ユーザーがアクセスできるアプリを確認します。  
 

@@ -1,5 +1,5 @@
 ---
-title: 中国大陸で Intune ポータル サイト アプリをインストールする | Microsoft Docs
+title: 中華人民共和国で Intune ポータル サイト アプリをインストールする | Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,16 +19,16 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 39aa0108d160aea74e1ac47b19877763a9ffefa5
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 58ba595b65ade57fee0ff3fe40242b27a2ff8ba4
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332764"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86021839"
 ---
-# <a name="install-company-portal-app-in-mainland-china"></a>中国大陸でポータル サイト アプリをインストールする   
+# <a name="install-company-portal-app-in-peoples-republic-of-china"></a>中華人民共和国でポータル サイト アプリをインストールする
 
-Intune ポータル サイト アプリをインストールして、Android デバイスから学校または職場のリソースにアクセスします。 このアプリは中国大陸で利用可能であり、次のアプリ ストアからインストールできます。 
+Intune ポータル サイト アプリをインストールして、Android デバイスから学校または職場のリソースにアクセスします。 このアプリは中華人民共和国で利用可能であり、次のアプリ ストアからインストールできます。 
 
 
 * [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947) 

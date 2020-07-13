@@ -18,18 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d70123eab1847dd1b2cd3eb7583d397d97543e1
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d6e57f062a3440ea922684d7ad746060ac7788f3
+ms.sourcegitcommit: ba36a60b08bb85d592bfb8c4bbe6d02a47858b09
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986918"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052478"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>managed Google Play アカウントに Intune アカウントを接続する
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 [Android Enterprise 仕事用プロファイル デバイス](android-work-profile-enroll.md)、[Android Enterprise フル マネージド デバイス](android-fully-managed-enroll.md)、[Android 専用デバイス](android-kiosk-enroll.md)をサポートするには、Intune テナント アカウントを managed Google Play アカウントに接続する必要があります。  
+
+確実にお住まいの国または地域で Android Enterprise を利用できるようにするため、Google の次のサポート記事を参照してください: https://support.google.com/work/android/answer/6270910
 
 Android Enterprise 管理をより簡単に構成して使用できるように、Google Play に接続する際に、Intune では 4 つの一般的な Android Enterprise 関連アプリが Intune 管理コンソールに自動的に追加されます。 4 つの Android Enterprise アプリは次のとおりです。
 

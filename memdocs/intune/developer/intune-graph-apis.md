@@ -15,14 +15,14 @@ ms.technology: ''
 ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c83859d56b23974e95299c76b0d65512da0a0e
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 2d300be679d54a5f565fb2c42f889a7dcd23894a
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455091"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088549"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Azure AD を使用して Microsoft Graph の Intune API にアクセスする方法
 
@@ -82,6 +82,10 @@ Microsoft Graph API を使用するアプリを登録するには、次の作業
 
         これらは要件によって異なります。 たとえば Azure AD [Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) を使用している場合、 **[アプリケーションの種類]** は `Native` に、 **[リダイレクト URI]** は `urn:ietf:wg:oauth:2.0:oob` に設定します。
 
+        > [!NOTE]
+        > Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
+
+
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
 
         詳細については、「[Azure AD の認証シナリオ](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios)」をご覧ください。
@@ -140,7 +144,7 @@ Azure AD と Microsoft Graph では、アクセス許可スコープを使用し
 - [Azure AD 認証](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
 - [アプリケーションのアクセス許可スコープ](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
 
-Microsoft Graph へのアクセス許可を付与する場合は、次のスコープを指定して Intune の機能へのアクセスを制御できます。次の表に、Intune API のアクセス許可スコープをまとめています。  1 番目の列には Azure Portal に表示される機能名を示し、2 番目の列にはアクセス許可スコープ名を掲載しています。
+Microsoft Graph にアクセス許可を付与する場合は、次のスコープを指定して Intune の機能へのアクセスを制御できます。次の表では、Intune API のアクセス許可のスコープをまとめています。  1 番目の列には Azure Portal に表示される機能名を示し、2 番目の列にはアクセス許可スコープ名を掲載しています。
 
 _[アクセスを有効にする]_ 設定 | スコープ名
 :--|---
@@ -162,7 +166,7 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 ### <a name="devicemanagementappsreadall"></a><a name="app-ro"></a>DeviceManagementApps.Read.All
 
-- **[アクセスを有効にする]** 設定: __Microsoft Intune アプリの読み取り__
+- **[アクセスを有効にする]** 設定:__Microsoft Intune アプリの読み取り__
 
 - 次のエンティティのプロパティとステータスへの読み取りアクセスを許可します。
   - クライアント アプリ
@@ -172,7 +176,7 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 ### <a name="devicemanagementappsreadwriteall"></a><a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
-- **[アクセスを有効にする]** 設定: __Microsoft Intune アプリの読み取りおよび書き込み__
+- **[アクセスを有効にする]** 設定:__Microsoft Intune アプリの読み取りおよび書き込み__
 
 - __DeviceManagementApps.Read.All__ と同じ操作を許可します。
 
@@ -185,7 +189,7 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 ### <a name="devicemanagementconfigurationreadall"></a><a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
-- **[アクセスを有効にする]** 設定: __Microsoft Intune のデバイスの構成とポリシーの読み取り__
+- **[アクセスを有効にする]** 設定:__Microsoft Intune デバイスの構成とポリシーの読み取り__
 
 - 次のエンティティのプロパティとステータスへの読み取りアクセスを許可します。
   - デバイス構成
@@ -194,7 +198,7 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 ### <a name="devicemanagementconfigurationreadwriteall"></a><a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
-- **[アクセスを有効にする]** 設定: __Microsoft Intune のデバイスの構成とポリシーの読み取りおよび書き込み__
+- **[アクセスを有効にする]** 設定:__Microsoft Intune のデバイスの構成とポリシーの読み取りおよび書き込み__
 
 - __DeviceManagementConfiguration.Read.All__ と同じ操作を許可します。
 
@@ -205,7 +209,7 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 ### <a name="devicemanagementmanageddevicesprivilegedoperationsall"></a><a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
-- **[アクセスを有効にする]** 設定: __Microsoft Intune デバイスでユーザーに影響を与えるリモート操作を実行する__
+- **[アクセスを有効にする]** 設定:__Microsoft Intune デバイスでユーザーに影響を与えるリモート操作を実行する__
 
 - マネージド デバイスへの次のリモート操作を許可します。
   - インベントリから削除
@@ -219,7 +223,7 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 ### <a name="devicemanagementmanageddevicesreadall"></a><a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
-- **[アクセスを有効にする]** 設定: __Microsoft Intune デバイスの読み取り__
+- **[アクセスを有効にする]** 設定:__Microsoft Intune デバイスの読み取り__
 
 - 次のエンティティのプロパティとステータスへの読み取りアクセスを許可します。
   - マネージド デバイス
@@ -230,7 +234,7 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 ### <a name="devicemanagementmanageddevicesreadwriteall"></a><a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
-- **[アクセスを有効にする]** 設定: __Microsoft Intune デバイスの読み取りおよび書き込み__
+- **[アクセスを有効にする]** 設定:__Microsoft Intune デバイスの読み取りおよび書き込み__
 
 - __DeviceManagementManagedDevices.Read.All__ と同じ操作を許可します。
 
@@ -245,7 +249,7 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 ### <a name="devicemanagementrbacreadall"></a><a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
-- **[アクセスを有効にする]** 設定: __Microsoft Intune RBAC の設定の読み取り__
+- **[アクセスを有効にする]** 設定:__Microsoft Intune RBAC の設定の読み取り__
 
 - 次のエンティティのプロパティとステータスへの読み取りアクセスを許可します。
   - ロールの割り当て
@@ -254,7 +258,7 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 ### <a name="devicemanagementrbacreadwriteall"></a><a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
-- **[アクセスを有効にする]** 設定: __Microsoft Intune RBAC の設定の読み取りおよび書き込み__
+- **[アクセスを有効にする]** 設定:__Microsoft Intune RBAC の設定の読み取りおよび書き込み__
 
 - __DeviceManagementRBAC.Read.All__ と同じ操作を許可します。
 
@@ -264,7 +268,7 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 ### <a name="devicemanagementserviceconfigreadall"></a><a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
-- **[アクセスを有効にする]** 設定: __Microsoft Intune の構成の読み取り__
+- **[アクセスを有効にする]** 設定:__Microsoft Intune の構成の読み取り__
 
 - 次のエンティティのプロパティとステータスへの読み取りアクセスを許可します。
   - デバイスの登録
@@ -280,7 +284,7 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 ### <a name="devicemanagementserviceconfigreadwriteall"></a><a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
-- **[アクセスを有効にする]** 設定: __Microsoft Intune の構成の読み取りおよび書き込み__
+- **[アクセスを有効にする]** 設定:__Microsoft Intune の構成の読み取りおよび書き込み__
 
 - DeviceManagementServiceConfig.Read.All と同じ操作を許可します。
 
@@ -342,6 +346,10 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
     <img src="../media/aad-auth-cpp-new-console.png" width="624" height="433" alt="Creating a C# console app project in Visual Studio"  />
 
 3. ソリューション エクスプローラーを使用して、プロジェクトに Microsoft ADAL NuGet パッケージを追加します。
+
+  > [!NOTE]
+  > Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
+
 
     1. ソリューション エクスプローラーを右クリックします。
     2. **[NuGet パッケージの管理...]** &gt; **[参照]** を選択します。

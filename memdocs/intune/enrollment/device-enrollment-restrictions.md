@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 07/02/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,16 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d26040c5a009a9c3877abbc25512e317f584f114
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 6629f416dbbc9555514dfc305db8f224f6b76526
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502974"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088447"
 ---
 # <a name="android-enterprise-device-enrollment-restrictions"></a>Android Enterprise デバイスの登録制限
 
-[Android Enterprise セキュリティ構成フレームワーク]()にデバイスを登録する前に、組織では適切な制限を構成する必要があります。 これらの制限によって、ユーザーが以下のみを登録できることが保証されます。
+[Android Enterprise セキュリティ構成フレームワーク](android-configuration-framework.md)にデバイスを登録する前に、組織では適切な制限を構成する必要があります。 これらの制限によって、ユーザーが以下のみを登録できることが保証されます。
+
 - 承認されたデバイス。
 - 指定された数のデバイス。
 - 指定されたプラットフォームのデバイス。
@@ -54,7 +55,12 @@ Android Enterprise 仕事用プロファイルの高セキュリティ (レベ�
 | Android デバイス管理者| ブロックする | すべてのバージョン | はい |
 
 ## <a name="fully-managed-security-restrictions"></a>フル マネージド セキュリティ制限
-Android Enterprise フル マネージド登録を見直して、組織で Android Enterprise フル マネージド デバイス登録がサポートされていることを確認します。 
+「[フル マネージド デバイスを登録する](android-fully-managed-enroll.md#enroll-the-fully-managed-devices)」を読み、組織で Android Enterprise フル マネージド デバイス登録が確実にサポートされるようにします。 
+
+## <a name="conditional-access-policies"></a>条件付きアクセス ポリシー
+組織は Azure AD 条件付きアクセス ポリシーを使用して、ユーザーが確実に登録済み Android デバイスを使用して職場または学校のコンテンツにのみアクセスできるようにすることができます。 これを行うには、可能性のあるすべてのユーザーを対象とする条件付きアクセス ポリシーが必要です。 このポリシーの作成の詳細については、[条件付きアクセスを使用してクラウド アプリへのアクセスにマネージド デバイスを要求する方法](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)に関するページを参照してください。 
+
+次のステップに従います。「[シナリオ:iOS および Android デバイスでデバイス登録を必須にする](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices)」。これにより、準拠している登録済みモバイル デバイスのみで Office 365 エンドポイントに接続できるようになります。
 
 ## <a name="next-steps"></a>次のステップ
 

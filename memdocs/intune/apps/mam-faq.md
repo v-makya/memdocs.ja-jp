@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c544109b170d25f4d9a2999a11bc47d4b4a090c5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 81ba50c9822ff5672fd52bab1d89f444aafdb402
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989980"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022332"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>MAM とアプリの保護に関してよく寄せられる質問
 
@@ -79,7 +79,7 @@ Intune アプリ保護ポリシーでは、[Intune アプリ SDK](../developer/a
 Intune SDK 開発チームは、ネイティブの Android、iOS/iPadOS (Obj-C、Swift)、Xamarin、および Xamarin.Forms プラットフォームを使ってビルドされたアプリに対するサポートを、積極的にテストして管理しています。 一部のお客様は、Intune SDK とその他のプラットフォーム (React Native や NativeScript など) の統合に成功されていますが、Microsoft では、サポートされているプラットフォーム以外を使うアプリ開発者に向けた明示的なガイダンスやプラグインは提供されません。
 
 **Intune APP SDK は、Microsoft 認証ライブラリ (MSAL) をサポートしますか。**<br></br>
-Intune App SDK では、認証と条件付き起動のシナリオに対し、Azure Active Directory 認証ライブラリまたは Microsoft 認証ライブラリのいずれかを使用できます。 また、デバイスを登録しないで管理するために MAM サービスにユーザー ID を登録する場合も、ADAL/MSAL を利用します。
+Intune App SDK では、その認証および条件付き起動シナリオに Microsoft 認証ライブラリを使用できます。 また、デバイスを登録せずに管理するために MAM サービスにユーザー ID を登録する場合も、MSAL を利用します。
 
 **[Outlook モバイル アプリ](https://products.office.com/outlook)を使用するための追加要件は何ですか。**
 

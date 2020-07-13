@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a90345bef46161911bcb1c1072b6ae4af41f16e
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: 1fa3f6e96b46b27be4f6cbbe475d03eed007b0d4
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864958"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022417"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>REST クライアントを使用して Intune データ ウェアハウス API からデータを取得する
 
@@ -41,37 +41,28 @@ RESTful エンドポイント経由で Intune データ ウェアハウスのデ
 
 Azure でネイティブ アプリを作成します。 このネイティブ アプリはクライアント アプリです。 ローカル コンピューターで実行されるクライアントは、ローカル クライアントが資格情報を要求するとき、Intune データ ウェアハウス API を参照します。
 
-1. テナントの Azure Portal にサインインします。 **[Azure Active Directory]** 、 >  **[アプリの登録]** の順に選択し、 **[アプリの登録]** ウィンドウを開きます。
-2. **[New app registration]\(新しいアプリの登録\)** を選択します。
-3. アプリの詳細を入力します。
+1. [Azure Active Directory 管理センター](https://aad.portal.azure.com/)にサインインします。
+2. **[Azure Active Directory]** 、 >  **[アプリの登録]** の順に選択し、 **[アプリの登録]** ウィンドウを開きます。
+3. **[New app registration]\(新しいアプリの登録\)** を選択します。
+4. アプリの詳細を入力します。
     1. 「Intune データ ウェアハウス クライアント」など、わかりやすい名前を **[名前]** に入力します。
-    2. **[アプリケーションの種類]** の **[ネイティブ]** を選択します。
-    3. **[サインオン URL]** に URL を入力します。 サインオン URL は特定のシナリオによって代わります。ただし、Postman を利用する予定の場合、「`https://www.getpostman.com/oauth2/callback`」と入力してください。 Azure AD に認証するとき、クライアント認証手順のコールバックを利用します。
-4. **[作成]** を選択します。
-
-     ![Intune データ ウェアハウスのクライアント アプリ](./media/reports-proc-data-rest/reports-get_rest_data_client_overview.png)
-
-5. このアプリの **[アプリケーション ID]** をメモします。 この ID は次のセクションで使用します。
+    2. **[サポートされているアカウントの種類]** に **[Accounts in this organizational directory only (Microsoft only - Single tenant)]\(この組織ディレクトリのみに含まれるアカウント (Microsoft のみ - シングル テナント)\)** を選択します。
+    3. **[リダイレクト URI]** に URL を入力します。 リダイレクト URI は特定のシナリオによって変わります。ただし、Postman を利用する予定の場合、「`https://www.getpostman.com/oauth2/callback`」と入力してください。 Azure AD に認証するとき、クライアント認証手順のコールバックを利用します。
+5. **[登録]** を選択します。
+6. このアプリの **[アプリケーション (クライアント) ID]** をメモします。 この ID は次のセクションで使用します。
 
 ## <a name="grant-the-client-app-access-to-the-microsoft-intune-api"></a>Microsoft Intune API へのアクセスをクライアント アプリに与える
 
 これでアプリが Azure に定義されました。 ネイティブ アプリから Microsoft Intune API にアクセスするための許可を与えます。
 
-1. ネイティブ アプリを選択します。 アプリには **Intune Data Warehouse Client** などの名前が付けてあります。
-2. **[設定]** ウィンドウから **[必要なアクセス許可]** を選択します。
-3. **[必要なアクセス許可]** ウィンドウで **[追加]** を選択します。
-4. **[API を選択します]** を選びます。
-5. Web アプリ名を検索します。 **Microsoft Intune API** という名前です。
-6. 一覧でアプリを選びます。
-7. **[選択]** を選びます。
-8. **[委任されたアクセス許可]** ボックスにチェックマークを入れ、 **[Get data warehouse information from Microsoft Intune]\(Microsoft Intune からデータ ウェアハウス情報を取得する\)** を追加します。
-
-    ![アクセスの有効化 - Microsot Intune API](./media/reports-proc-data-rest/reports-get_rest_data_client_access.png)
-
-9. **[選択]** を選びます。
-10. **[完了]** を選びます。
-11. 必要に応じて、[必要なアクセス許可] ウィンドウで **[アクセス許可の付与]** を選択します。 これで、現在のディレクトリのすべてのアカウントへのアクセスが与えられます。 テナントのすべてのユーザーに対して同意を求めるダイアログ ボックスが表示されなくなります。 詳細については、「[Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)」を参照してください。
-12. **[はい]** を選択します。
+1. [Azure Active Directory 管理センター](https://aad.portal.azure.com/)にサインインします。
+2. **[Azure Active Directory]** 、 >  **[アプリの登録]** の順に選択し、 **[アプリの登録]** ウィンドウを開きます。
+3. アクセスを許可する必要があるアプリを選択します。 アプリには **Intune Data Warehouse Client** などの名前が付けてあります。
+4. **[API のアクセス許可]** 、 **[アクセス許可の追加]** の順に選択します。
+5. Intune API を検索して選択します。 **Microsoft Intune API** という名前です。
+6. **[委任されたアクセス許可]** ボックスを選択し、 **[Get data warehouse information from Microsoft Intune]\(Microsoft Intune からデータ ウェアハウス情報を取得する\)** ボックスをクリックします。
+7. **[アクセス許可の追加]** をクリックします。
+8. 任意で、[構成されたアクセス許可] ウィンドウで、 **[Microsoft に管理者の同意を与えます]** を選択し、 **[はい]** を選択します。 これで、現在のディレクトリのすべてのアカウントへのアクセスが与えられます。 テナントのすべてのユーザーに対して同意を求めるダイアログ ボックスが表示されなくなります。 詳細については、「[Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)」を参照してください。
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Microsoft Intune API と Postman からデータを取得する
 
@@ -95,9 +86,9 @@ Postman を使用して REST 呼び出しを行うには、次の情報が必要
 
 エンドポイントも必要です。 データ ウェアハウス エンドポイントを取得するには、カスタム フィード URL が必要です。 OData エンドポイントはデータ ウェアハウス ウィンドウから取得できます。
 
-1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) にサインインします。
-3. **[Microsoft Intune - 概要]** ブレードの右側にある **[その他のタスク]** のデータ ウェアハウス リンクを選択して、 **[Intune データ ウェアハウス]** ウィンドウを開きます。
-4. **[サード パーティのレポート サービスを使用する]** のカスタム フィード URL をコピーします。 これは次のようになります。`https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
+1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
+3. **[レポート]** 、 **[データ ウェアハウス]** の順に選択し、 **[データ ウェアハウス]** ウィンドウを開きます。
+4. **[レポート サービス用の OData フィード]** のカスタム フィード URL をコピーします。 これは次のようになります。`https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
 エンドポイントは次の形式に従います: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
 
@@ -149,13 +140,13 @@ Postman のために新しいアクセス トークンを取得するには、Az
 
 ## <a name="create-a-rest-client-c-to-get-data-from-the-intune-data-warehouse"></a>Intune データ ウェアハウスからデータを取得する REST クライアント (C#) を作成する
 
-次のサンプルには、単純な REST クライアントが含まれています。 このコードでは、.Net ライブラリの **httpClient** クラスが使用されています。 クライアントが Azure AD の資格情報を得ると、GET REST 呼び出しを構築し、データ ウェアハウス API から日付エンティティを取得します。
+次のサンプルには、単純な REST クライアントが含まれています。 このコードでは、.NET ライブラリの **httpClient** クラスが使用されています。 クライアントが Azure AD の資格情報を得ると、GET REST 呼び出しを構築し、データ ウェアハウス API から日付エンティティを取得します。
 
 > [!Note]  
 > 次のコード [サンプルは GitHub](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs) にあります。 サンプルの最新の変更と更新については、GitHub リポジトリを参照してください。
 
 1. **Microsoft Visual Studio** を起動します。
-2. **[ファイル]**  >  **[新しいプロジェクト]** の順に選択します。 **[Visual C#]** を展開し、 **[コンソール アプリ (.Net Framework)]** を選択します。
+2. **[ファイル]**  >  **[新しいプロジェクト]** の順に選択します。 **[Visual C#]** を展開し、 **[コンソール アプリ (.NET Framework)]** を選択します。
 3. プロジェクトに `IntuneDataWarehouseSamples` という名前を付け、プロジェクトを保存する場所に進み、 **[OK]** を選択します。
 4. ソリューション エクスプローラーでソリューションの名前を右クリックし、 **[ソリューションの NuGet パッケージの管理]** を選択します。 **[参照]** を選択して、検索ボックスに「`Microsoft.IdentityModel.Clients.ActiveDirectory`」と入力します。
 5. パッケージを選択し、[Manage Packages for Your Solution]\(ソリューションのパッケージ管理\) で **IntuneDataWarehouseSamples** プロジェクトを選択して、 **[インストール]** を選択します。

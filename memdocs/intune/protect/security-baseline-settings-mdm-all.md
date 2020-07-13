@@ -5,7 +5,7 @@ description: Microsoft Intune で管理できる Windows MDM セキュリティ 
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67bb805df6406226c67084ed832f5cc590b1664a
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 9cc2cf4531c2e2d7a2847ccdbce87c8b938a46d6
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943911"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022230"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Intune 用の Windows MDM セキュリティ ベースラインの設定
 
@@ -1851,7 +1851,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
   **既定値**:Enabled
 
 - **[Block drive redirection]\(ドライブのリダイレクトをブロックする\)** :  
-  このポリシー設定では、リモート デスクトップ サービス セッションで、クライアント ドライブのマッピングをしないようにするかどうかを指定します (ドライブ リダイレクト)。 既定の RD セッション ホスト サーバーでは、接続時に自動的にクライアント ドライブがマップされます。 マップされたドライブは、エクスプローラーまたは [コンピューター] のセッション フォルダー ツリーに、 *\<コンピューター名>* の *\<ドライブ文字>* という形式で表示されます。 このポリシー設定を使用して、この動作をオーバーライドできます。 このポリシー設定を有効にすると、クライアント ドライブのリダイレクトはリモート デスクトップ サービス セッションでは許可されません。また、クリップボードでのファイル コピーのリダイレクトは、Windows Server 2003、Windows 8、および Windows XP を実行しているコンピューターでは許可されません。 このポリシー設定を無効にすると、クライアント ドライブのリダイレクトは常に許可されます。 また、クリップボードのリダイレクトを許可すると、クリップボードでのファイル コピーのリダイレクトは常に許可されます。 このポリシー設定を構成しなかった場合、クライアント ドライブのリダイレクトおよびクリップボードでのファイル コピーのリダイレクトはグループ ポリシー レベルでは指定されません。  
+  このポリシー設定では、リモート デスクトップ サービス セッションで、クライアント ドライブのマッピングをしないようにするかどうかを指定します (ドライブ リダイレクト)。 既定の RD セッション ホスト サーバーでは、接続時に自動的にクライアント ドライブがマップされます。 マップされたドライブは、エクスプローラーまたは [コンピューター] のセッション フォルダー ツリーに、 *\<computername>* の *\<driveletter>* という形式で表示されます。 このポリシー設定を使用して、この動作をオーバーライドできます。 このポリシー設定を有効にすると、クライアント ドライブのリダイレクトはリモート デスクトップ サービス セッションでは許可されません。また、クリップボードでのファイル コピーのリダイレクトは、Windows Server 2003、Windows 8、および Windows XP を実行しているコンピューターでは許可されません。 このポリシー設定を無効にすると、クライアント ドライブのリダイレクトは常に許可されます。 また、クリップボードのリダイレクトを許可すると、クリップボードでのファイル コピーのリダイレクトは常に許可されます。 このポリシー設定を構成しなかった場合、クライアント ドライブのリダイレクトおよびクリップボードでのファイル コピーのリダイレクトはグループ ポリシー レベルでは指定されません。  
   [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067197)
 
   **既定値**:Enabled
@@ -1968,7 +1968,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
   **既定値**:はい
 
 ::: zone-end
-::: zone pivot="mdm-may-201"
+::: zone pivot="mdm-may-2019"
 
 - **Windows SmartScreen を有効にする**  
   CSP:[SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)
@@ -1980,7 +1980,9 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 - **ユーザーが SmartScreen 警告を無視できないようにする**  
   CSP:[SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-  [はい] に設定すると、SmartScreen では、警告を無視してアプリを実行するオプションがユーザーに提示されません。 警告が表示されますが、ユーザーはそれをバイパスすることができます。 [未構成] に設定すると、ユーザーによるオーバーライドを許可する Windows の既定の設定が返されます。 この設定を使用するには、[アプリとファイルに対して SmartScreen を適用する] の設定を有効にする必要があります。
+  [はい] に設定されていると、SmartScreen は有効となり、ファイルや悪意のあるアプリに関する警告をユーザーは無視できません。 [未構成] に設定されていると、ユーザーはファイルや悪意のあるアプリに関する SmartScreen の警告を無視できます。  
+
+  この設定では、[Windows SmartScreen の有効化] 設定を [はい] にする必要があります。
 
   **既定値**:はい
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fe0b1748a40858bca55cc66b250c96725bfd9f1
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 299b09c57f0cff44c465102d85628c8f2605adea
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332865"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088498"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Apple の自動デバイス登録を使用して iOS または iPadOS デバイスを自動登録する
 
@@ -69,7 +69,7 @@ Apple では、iOS/iPadOS 5 において監視モードが導入されました�
 - トークンあたりの登録プロファイルの最大数:1,000  
 - プロファイルあたりの自動デバイス登録デバイスの最大数: 無制限 (トークンあたりのデバイスの最大数)
 - Intune アカウントあたりの自動デバイス登録トークンの最大数:2,000
-- トークンあたりの自動デバイス登録デバイスの最大数:最初の同期での上限は、75,000 から 80,000 デバイスです。 Intune では、12 時間ごとのチェックインで ABM または ASM との同期を継続し、毎回さらに 80,000 のデバイスが追加されます。 また、1 回の手動同期では、80,000 デバイスが別に追加されます。 同期は継続して行われ、デバイスは75,000 から 80,000 のデバイス バッチで、ABM/ASM から Intune へ同期され続けます。 
+- トークンあたりの自動デバイス登録デバイスの最大数:最初の同期での上限は、75,000 から 80,000 デバイスです。 Intune では、12 時間ごとのチェックインで ABM または ASM との同期を継続し、毎回さらにデバイスが追加されます。 手動同期 (15 分おきにトリガーできます) でも、別のデバイス バッチが Intune に追加されます。 同期は継続して行われ、大量のデバイスが ABM/ASM から Intune へ同期され続けます。 
 
 ## <a name="get-an-apple-ade-token"></a>Apple ADE トークンの取得
 

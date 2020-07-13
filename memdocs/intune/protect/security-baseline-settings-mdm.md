@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf43608bd6eb9132cef1b97198e724bcada81d30
-ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+ms.openlocfilehash: afc823a906d76edfe8d3d635bcbfdbe845867266
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82693370"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022298"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Intune 用の MDM セキュリティ ベースラインの設定  
 
@@ -1437,7 +1437,7 @@ Intune でのセキュリティ ベースラインの使用方法については
   **既定値**:Enabled
   
 - **Block drive redirection (ドライブのリダイレクトをブロックする)**  
-  このポリシー設定では、リモート デスクトップ サービス セッションで、クライアント ドライブのマッピングをしないようにするかどうかを指定します (ドライブ リダイレクト)。 既定の RD セッション ホスト サーバーでは、接続時に自動的にクライアント ドライブがマップされます。 マップされたドライブは、エクスプローラーまたは [コンピューター] のセッション フォルダー ツリーに、 *\<コンピューター名>* の *\<ドライブ文字>* という形式で表示されます。 このポリシー設定を使用して、この動作をオーバーライドできます。 このポリシー設定を有効にすると、クライアント ドライブのリダイレクトはリモート デスクトップ サービス セッションでは許可されません。また、クリップボードでのファイル コピーのリダイレクトは、Windows Server 2003、Windows 8、および Windows XP を実行しているコンピューターでは許可されません。 このポリシー設定を無効にすると、クライアント ドライブのリダイレクトは常に許可されます。 また、クリップボードのリダイレクトを許可すると、クリップボードでのファイル コピーのリダイレクトは常に許可されます。 このポリシー設定を構成しなかった場合、クライアント ドライブのリダイレクトおよびクリップボードでのファイル コピーのリダイレクトはグループ ポリシー レベルでは指定されません。  
+  このポリシー設定では、リモート デスクトップ サービス セッションで、クライアント ドライブのマッピングをしないようにするかどうかを指定します (ドライブ リダイレクト)。 既定の RD セッション ホスト サーバーでは、接続時に自動的にクライアント ドライブがマップされます。 マップされたドライブは、エクスプローラーまたは [コンピューター] のセッション フォルダー ツリーに、 *\<computername>* の *\<driveletter>* という形式で表示されます。 このポリシー設定を使用して、この動作をオーバーライドできます。 このポリシー設定を有効にすると、クライアント ドライブのリダイレクトはリモート デスクトップ サービス セッションでは許可されません。また、クリップボードでのファイル コピーのリダイレクトは、Windows Server 2003、Windows 8、および Windows XP を実行しているコンピューターでは許可されません。 このポリシー設定を無効にすると、クライアント ドライブのリダイレクトは常に許可されます。 また、クリップボードのリダイレクトを許可すると、クリップボードでのファイル コピーのリダイレクトは常に許可されます。 このポリシー設定を構成しなかった場合、クライアント ドライブのリダイレクトおよびクリップボードでのファイル コピーのリダイレクトはグループ ポリシー レベルでは指定されません。  
   [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067197)  
   
   **既定値**:Enabled
@@ -1521,10 +1521,10 @@ Intune でのセキュリティ ベースラインの使用方法については
   **既定値**:はい
   
 ## <a name="smart-screen"></a>スマート スクリーン  
-詳細については、Windows ドキュメントの「[Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen)」 (ポリシー CSP - SmartScreen) を参照してください。  
+詳細については、Windows ドキュメントの「[Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen)」 (ポリシー CSP - SmartScreen) を参照してください。 
 
 - **Block execution of unverified files (確認されていないファイルの実行をブロックする)**  
-  確認されていないファイルをユーザーが実行しないようにします。 
+  確認されていないファイルをユーザーが実行しないようにします。
   - "*未構成*" - 従業員は SmartScreen の警告を無視し、悪意のあるファイルを実行できます。 
   - "*はい*" - 従業員は SmartScreen の警告を無視して、悪意のあるファイルを実行することはできません。
 

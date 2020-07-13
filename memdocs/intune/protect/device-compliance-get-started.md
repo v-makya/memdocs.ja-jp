@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 07/15/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 227a44436f4490c9b3e2188609a9714a0e842149
-ms.sourcegitcommit: eb51bb38d484e8ef2ca3ae3c867561249fa413f3
+ms.openlocfilehash: 832ddbde9e3cf4782c7d3867ad6a09cc250960c7
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206317"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088328"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>コンプライアンス ポリシーを使用して、Intune で管理するデバイスのルールを設定する
 
@@ -31,7 +31,9 @@ Intune のコンプライアンス ポリシーとは次のようなものです
 
 - 準拠ユーザーおよびデバイスであるために満たす必要があるルールや設定を定義します。
 - 非準拠のデバイスに適用されるアクションが含まれます。 非準拠に対するアクションにより、ユーザーに非準拠の条件を通知し、非準拠のデバイスでデータを保護することができます。
-- [条件付きアクセスと組み合わせて](#integrate-with-conditional-access)、ルールを満たしていないユーザーとデバイスをブロックすることができます。
+- [条件付きアクセスと組み合わせ](#integrate-with-conditional-access)、ルールを満たしておらず、非準拠の印が付けられたユーザーとデバイスをブロックできます。
+
+  条件付きアクセスは、サードパーティ モバイル デバイス管理パートナーで管理しているデバイスからのコンプライアンスの状態データとも連動できます。 この機能を有効にするには、Azure AD と Intune の両方にパートナーのサポートを追加します。 詳細については、デバイス コンプライアンス パートナーのサポートを追加する方法に関するページを参照してください。 
 
 Intune のコンプライアンス ポリシーには、次の 2 つの部分があります。
 

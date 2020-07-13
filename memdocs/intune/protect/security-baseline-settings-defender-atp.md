@@ -5,7 +5,7 @@ description: Microsoft Defender Advanced Threat Protection を管理するため
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 330a4387ef1a079b2a0f691bfb0b887117dd9e4b
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429353"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022189"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -859,9 +859,9 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
 - **ユーザーが SmartScreen 警告を無視できないようにする**  
   CSP:[SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
-   この設定を使用するには、[アプリとファイルに対して SmartScreen を適用する] の設定を有効にする必要があります。
-  - **はい** (*既定値*) - SmartScreen では、警告を無視してアプリを実行するオプションがユーザーに提示されません。 警告が表示されますが、ユーザーはそれをバイパスすることができます。
-  - **未構成** - 設定が Windows の既定値に戻されます。これにより、ユーザーはオーバーライドできるようになります。
+   この設定では、[Windows SmartScreen の有効化] 設定を [はい] にする必要があります。
+  - **[はい]** ("*既定*") - SmartScreen は有効になっており、ファイルや悪意のあるアプリに関する警告をユーザーは無視できません。
+  - **[未構成]** - ユーザーはファイルや悪意のあるアプリに関する SmartScreen の警告を無視できます。
 
 - **ストアからのアプリのみを要求する**  
 

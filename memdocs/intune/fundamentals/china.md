@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 879cb5d1659b886a01e564574452bd9e5370664c
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: f82664cbc9f6970d494945cfdf6fc72e8d95ae8b
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126815"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022349"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>中国の 21Vianet が運用する Intune  
 
@@ -50,7 +50,7 @@ Microsoft がサービス自体を運用しているわけではありません�
 - Android 用 Intune ポータル サイト アプリでは、Microsoft Intune サービスと通信するために Google Mobile Services が使用されます。 中国では Google Play サービスを使用できないため、一部のタスクは完了までに最大 8 時間かかることがあります。 詳細については、[こちらの記事](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)を参照してください。 
 - 地域の規制に従って機能を強化するために、中国では、Intune のクライアント エクスペリエンス (ポータル サイト アプリ) が異なる場合があります。
 - フェンシングは使用できません。
-- モバイル アプリケーション管理 (MAM) の可用性は、中国大陸で使用できるアプリに制限されます。
+- モバイル アプリケーション管理 (MAM) の可用性は、中華人民共和国で使用できるアプリに制限されます。
 
 ## <a name="you-control-customer-data"></a>自分で顧客データを制御する
 

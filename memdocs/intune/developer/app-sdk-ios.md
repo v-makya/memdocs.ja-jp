@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b34235f5e8a2badd61e39f43f8a5cc724f64dbd9
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: a69176e347453131c76d669b14fd7ec37b331071
+ms.sourcegitcommit: ba36a60b08bb85d592bfb8c4bbe6d02a47858b09
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383276"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052495"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>iOS 用 Microsoft Intune App SDK 開発者ガイド
 
@@ -120,17 +120,17 @@ Intune アプリ SDK を有効にするには、次の手順を実行します�
      ![Intune App SDK iOS: バンドル リソースのコピー](./media/app-sdk-ios/intune-app-sdk-ios-copy-bundle-resources.png)
          
 2. 次の iOS フレームワークをプロジェクトに追加します。  
--  MessageUI.framework  
--  Security.framework  
--  CoreServices.framework  
--  SystemConfiguration.framework  
--  libsqlite3.tbd  
--  libc++.tbd  
--  ImageIO.framework  
--  LocalAuthentication.framework  
--  AudioToolbox.framework  
--  QuartzCore.framework  
--  WebKit.framework
+   -  MessageUI.framework  
+   -  Security.framework  
+   -  CoreServices.framework  
+   -  SystemConfiguration.framework  
+   -  libsqlite3.tbd  
+   -  libc++.tbd  
+   -  ImageIO.framework  
+   -  LocalAuthentication.framework  
+   -  AudioToolbox.framework  
+   -  QuartzCore.framework  
+   -  WebKit.framework
 
 3. 各プロジェクト ターゲットの **[機能]** を選択し、 **[Keychain Sharing]** (キーチェーン共有) スイッチを有効にして、キーチェーン共有を有効にします (まだ有効になっていない場合)。 次の手順に進むには、キーチェーン共有が必要です。
 
@@ -177,6 +177,9 @@ Intune アプリ SDK を有効にするには、次の手順を実行します�
 "-o" パラメーターが指定されていない場合、入力ファイルはインプレースで変更されます。 このツールにはべき等性があるため、アプリの Info.plist や権利に変更が入った場合は再実行してください。 また、Intune SDK を更新する際は、ツールの最新バージョンをダウンロードして実行してください。これは、Info.plist の構成要件が、最新のリリースで変更されている場合があるためです。
 
 ## <a name="configure-adalmsal"></a>ADAL/MSAL を構成する
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
 
 Intune App SDK では、認証と条件付き起動のシナリオに対し、[Azure Active Directory 認証ライブラリ](https://github.com/AzureAD/azure-activedirectory-library-for-objc)または [Microsoft 認証ライブラリ](https://github.com/AzureAD/microsoft-authentication-library-for-objc)のいずれかを使用できます。 また、デバイスを登録しないで管理するために MAM サービスにユーザー ID を登録する場合も、ADAL/MSAL を利用します。
 
@@ -287,6 +290,9 @@ Intune アプリの保護ポリシーを受信するには、アプリで Intune
 > アプリ保護ポリシーによって暗号化が有効にされた場合、iOS 用 Intune App SDK では 256 ビットの暗号化キーが使用されます。 すべてのアプリでは、保護されたデータの共有を許可するために、最新の SDK バージョンが必要になります。
 
 ### <a name="apps-that-already-use-adal-or-msal"></a>ADAL または MSAL を既に使用しているアプリ
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
 
 既に ADAL または MSAL を使用しているアプリの場合、ユーザーが正常に認証された後に、`IntuneMAMEnrollmentManager` インスタンスで `registerAndEnrollAccount` メソッドが呼び出されます。
 
@@ -467,7 +473,7 @@ Intune App SDK にはいくつかの API が用意されています。これら
 インスタンス | [説明]
 ----- | -----------
 IntuneMAMPolicyManager.h | IntuneMAMPolicyManager クラスでは、アプリケーションに展開された Intune APP ポリシーを公開します。 特に、[複数 ID を有効にする](app-sdk-ios.md#enable-multi-identity-optional)のに役立つ API を公開します。 |
-IntuneMAMPolicy.h | IntuneMAMPolicy クラスでは、アプリに適用される MAM ポリシー設定を公開します。 これらのポリシー設定は公開されるため、アプリでその UI をカスタマイズできます。 ポリシー設定のほとんどは、アプリではなく、SDK によって適用されます。 アプリで実装する必要があるのは、名前を付けて保存のコントロールのみです。 このクラスでは、名前を付けて保存を実装する必要がある API を公開します。 |
+IntuneMAMPolicy.h | IntuneMAMPolicy クラスでは、アプリに適用される MAM ポリシー設定を公開します。 これらのポリシー設定のほとんどは公開されるため、アプリでその UI をカスタマイズできます。 ポリシー設定のほとんどは、アプリではなく、SDK によって適用されます。 ただし、例外がいくつかあります。 アプリ開発者はこのヘッダーのコメントを確認し、自分のアプリケーションのシナリオに該当する API を判断する必要があります。 |
 IntuneMAMFileProtectionManager.h | IntuneMAMFileProtectionManager クラスでは、指定した ID に基づいてファイルとディレクトリを明示的にセキュリティで保護するために、アプリで使用できる API を公開します。 ID は Intune によって管理される場合と、管理されない場合があり、SDK で適切な MAM ポリシーが適用されます。 このクラスの使用は省略可能です。 |
 IntuneMAMDataProtectionManager.h | IntuneMAMDataProtectionManager クラスでは、指定された ID を指定するデータ バッファーをセキュリティで保護するために、アプリで使用できる API を公開します。 ID は Intune によって管理される場合と、管理されない場合があり、SDK で暗号化が適切に適用されます。 |
 
@@ -478,6 +484,12 @@ Intune では、IT 管理者は、ユーザーがログインできるアカウ�
 許可されたアカウントを照会するには、アプリで `IntuneMAMEnrollmentManager` の `allowedAccounts` プロパティを確認する必要があります。 `allowedAccounts` プロパティは、許可されたアカウントまたは nil を含む配列です。 プロパティが nil の場合は、許可されているアカウントが指定されていません。
 
 アプリは、`IntuneMAMAllowedAccountsDidChangeNotification` 通知を監視することで、`allowedAccounts` プロパティの変更にも対応できます。 `allowedAccounts` プロパティの値が変更されるたびに通知が投稿されます。
+
+## <a name="implement-file-encryption-required"></a>ファイル暗号化必須の実装
+
+ディスクに保存されているあらゆるファイルに対し、アプリケーションで Intune 暗号化を使用することを IT 管理者が必須にすると、`IntuneMAMPolicy.h` に定義されている `isFileEncryptionRequired` API によってアプリケーションに通知されます。 `isFileEncryptionRequired` が true の場合、アプリによってディスクに保存されたファイルが `IntuneMAMFile.h`、`IntuneMAMFileProtectionManager.h`、`IntuneMAMFDataProtectionManager.h` の API を利用して確実に暗号化されるようにすることはアプリの責任となります。
+
+アプリでは、`IntuneMAMFDataProtectionManager.h` に定義されている `IntuneMAMDataProtectionDidChangeNotification` 通知を観察することでこのポリシーの変更に対応できます。
 
 ## <a name="implement-save-as-and-open-from-controls"></a>save-as コントロールと open-from コントロールを実装する
 
@@ -496,13 +508,14 @@ Intune では、IT 管理者は、マネージド アプリでデータの保存
 * IntuneMAMSaveLocationOneDriveForBusiness
 * IntuneMAMSaveLocationSharePoint
 * IntuneMAMSaveLocationLocalDrive
+* IntuneMAMSaveLocationCameraRoll
 * IntuneMAMSaveLocationAccountDocument
 
 アプリでは、`isSaveToAllowedForLocation` で定数を使用して、OneDrive for Business などの "マネージド" の場所、または "個人用" の場所にデータを保存できるかどうかを確認する必要があります。 さらに、アプリが場所について "管理対象" か "個人用" かを確認できない場合は、API を使用する必要があります。
 
-アプリでデータをローカル デバイス上の任意の場所に保存する場合は、`IntuneMAMSaveLocationLocalDrive` 定数を使用する必要があります。
+アプリでデータをローカル デバイス上の任意の場所に保存する場合は、`IntuneMAMSaveLocationLocalDrive` 定数を使用する必要があります。 同様に、`IntuneMAMSaveLocationCameraRoll` 定数は、アプリで写真をカメラ ロールに保存する場合に使用する必要があります。
 
-保存先の場所のアカウントが不明な場合は、`nil` を渡す必要があります。 `IntuneMAMSaveLocationLocalDrive` の場所は、常に `nil` アカウントとペアにする必要があります。
+保存先の場所のアカウントが不明な場合は、`nil` を渡す必要があります。 `IntuneMAMSaveLocationLocalDrive` と `IntuneMAMSaveLocationCameraRoll` の場所は、常に `nil` アカウントとペアにする必要があります。
 
 ### <a name="supported-open-locations"></a>サポートされている開く場所
 

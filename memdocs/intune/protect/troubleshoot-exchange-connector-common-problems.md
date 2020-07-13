@@ -5,7 +5,7 @@ description: オンプレミスの Microsoft Intune Exchange コネクタに関�
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 07/06/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55f51f94cf26aa2486ef390d5fbb668eaf013e10
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 57f8b8193fd2f4e871f744743b768ec6248ae0b9
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79350630"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972132"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Intune Exchange コネクタに関する一般的な問題を解決する
  
@@ -74,7 +74,7 @@ Android Knox が実行されていないデバイス上のオンプレミス メ
    また、 https://testconnectivity.microsoft.com でインターネットから自動検出サービスをテストすることもできます。 または、Microsoft 接続アナライザー ツールを使用して、ローカル ドメインからテストします。 詳細については、「[Microsoft 接続アナライザー ツール](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80))」を参照してください。
 
 
-### <a name="check-autodiscovery"></a>自動検出を確認する
+### <a name="check-autodiscover"></a>自動検出を確認する
 
 自動検出が失敗する場合は、次の手順を試してください。
 

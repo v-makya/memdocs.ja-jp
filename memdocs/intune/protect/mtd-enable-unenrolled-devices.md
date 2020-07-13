@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 06/26/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6c762aafbc1d82e7e51746806f8ba15cc5ad83c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 933810cb079ac405d15a18a26efd07fb69a6e3f1
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984928"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972040"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>未登録デバイスに対して Intune で Mobile Threat Defense コネクタを有効にする
 
@@ -33,8 +33,9 @@ Mobile Threat Defense (MTD) のセットアップ中、Mobile Threat Defense パ
 > この記事は、アプリ保護ポリシーをサポートするすべての Mobile Threat Defense パートナーに適用されます。
 >
 > - Better Mobile (Android、iOS/iPadOS)
-> - Zimperium (Android、iOS/iPadOS)
 > - Lookout for Work (Android、iOS/iPadOS)。
+> - Wandera (Android、iOS/iPadOS)
+> - Zimperium (Android、iOS/iPadOS)
 
 ## <a name="classic-conditional-access-policies-for-mtd-apps"></a>MTD アプリ用の従来の条件付きアクセス ポリシー
 
@@ -74,9 +75,9 @@ MTD アプリ用の従来の条件付きアクセス ポリシーは:
 
 **アプリ保護ポリシー設定**
 
-- **[アプリ保護ポリシーの評価のため、バージョン 4.4 以降の Android デバイスを \<*MTD パートナー名*> に接続します]** : このオプションを有効にすると、デバイスの脅威レベルの規則を使用したアプリ保護ポリシーによって、このコネクタのデータを含むデバイスが評価されます。
+- **[アプリ保護ポリシーの評価のため、バージョン 4.4 以降の Android デバイスを *\<MTD partner name>* に接続します]** :このオプションを有効にすると、デバイスの脅威レベルの規則を使用したアプリ保護ポリシーによって、このコネクタのデータを含むデバイスが評価されます。
 
-- **[アプリ保護ポリシーの評価のため、バージョン 11 以降の iOS デバイスを \<*MTD パートナー名*> に接続します]** : このオプションを有効にすると、デバイスの脅威レベルの規則を使用したアプリ保護ポリシーによって、このコネクタのデータを含むデバイスが評価されます。
+- **[アプリ保護ポリシーの評価のため、バージョン 11 以降の iOS デバイスを *\<MTD partner name>* に接続します]** :このオプションを有効にすると、デバイスの脅威レベルの規則を使用したアプリ保護ポリシーによって、このコネクタのデータを含むデバイスが評価されます。
 
 **共通の共有設定**
 

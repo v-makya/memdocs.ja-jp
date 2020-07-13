@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: aa518036aa99d5de003fbc56f99748267f3cc87b
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 5b33be56975713c801d2ad3fdea17e6303687274
+ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776873"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946914"
 ---
 # <a name="firewall-policy-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティのファイアウォール ポリシー
 
@@ -56,7 +56,7 @@ Intune のエンドポイント セキュリティのファイアウォール �
 
 - このような形のポリシーの競合は **Microsoft Defender ファイアウォール** プロファイルに当てはまるため、このプロファイルは、他の Microsoft Defender ファイアウォール プロファイルと競合したり、デバイスの構成などの別の種類のポリシーによって提供されるファイアウォール構成と競合したりする可能性があります。
 
-  *Microsoft Defender ファイアウォール* プロファイルは *Microsoft Defender ファイアウォール規則*プロファイルとは競合しません。
+  "*Microsoft Defender ファイアウォール*" プロファイルは "*Microsoft Defender ファイアウォール規則*" プロファイルとは競合しません。
 
 **Microsoft Defender ファイアウォール規則** プロファイルを使用すると、同じデバイスに複数の規則プロファイルを適用できます。 ただし、構成が異なっていても同じものに対して異なる規則が存在する場合、両方の規則がデバイスに送信されると、そのデバイスで競合が発生します。
 

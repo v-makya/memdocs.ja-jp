@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 8171eb3cf484c61e2b99046b36553a633d92044e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 55a73806e343ac23525dbd2a28950d46285bf9a3
+ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431463"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86088532"
 ---
 # <a name="manage-devices-with-endpoint-security-in-microsoft-intune"></a>Microsoft Intune でエンドポイント セキュリティを使用してデバイスを管理する
 
@@ -66,6 +66,8 @@ Microsoft Endpoint Manager 管理センターでデバイスを表示してい�
     共同管理を使用すると、[さまざまな共同管理ワークロードを選択](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)して、Configuration Manager または Intune によって管理される側面を決定できます。 これらの選択は、デバイスで適用されるポリシーと、コンプライアンス データを管理センターに報告する方法に影響を与えます。
 
     たとえば、Intune を使用して、ウイルス対策、ファイアウォール、および暗号化のポリシーを構成できます。 これらのポリシーの種類は、*Endpoint Protection* のポリシーと見なされます。 共同管理されているデバイスで Configuration Manager のポリシーではなく Intune のポリシーを使用するには、Endpoint Protection の共同管理スライダーを *[Intune]* または *[パイロット Intune]* に設定します。 スライダーが [Configuration Manager] に設定されている場合、デバイスでは代わりに Configuration Manager のポリシーと設定が使用されます。
+
+  - **Workspace ONE** - これらのデバイスは、サードパーティ デバイス コンプライアンス パートナーである Workspace ONE によって管理されます。 詳細については、[デバイス コンプライアンス パートナー](../protect/device-compliance-partners.md)に関するページを参照してください。
 
 - **コンプライアンス**:コンプライアンスは、デバイスに割り当てられているコンプライアンス ポリシーに照らして評価されます。 これらのポリシーのソースとコンソール内の情報は、デバイスの管理方法 (Intune による管理、Configuration Manager による管理、または共同管理) によって異なります。 共同管理されるデバイスでコンプライアンスを報告するには、デバイスのコンプライアンスの共同管理スライダーを [Intune] または [パイロット Intune] に設定します。  
 

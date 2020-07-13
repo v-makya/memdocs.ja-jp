@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 163a0d231192277f27c69d7bcf983e817393d526
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: a222a1f4adfd2f73731c40946169338989162e5e
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383123"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022366"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Android 用 Microsoft Intune アプリ SDK 開発者ガイド
 
@@ -79,7 +79,10 @@ Intune アプリ SDK は、外部依存関係のない標準の Android ライ�
 
 [ProGuard](http://proguard.sourceforge.net/) (または任意のその他の圧縮/難読化メカニズム) がビルド ステップとして使用される場合、SDK には追加の構成ルールを含める必要があります。 .AAR をご自分のビルドに含めると、ルールが自動的に ProGuard ステップに統合され、必要なクラス ファイルが保持されます。
 
-Azure Active Directory 認証ライブラリ (ADAL) には、独自の ProGuard の制限がある場合があります。 アプリが ADAL を統合する場合、これらの制限について ADAL のドキュメントに従う必要があります。
+[Microsoft 認証ライブラリ (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) には独自の ProGuard 制限が含まれていることがあります。 アプリで MSAL を統合する場合、これらの制限について MSAL のドキュメントに従う必要があります。
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
 
 ### <a name="policy-enforcement"></a>ポリシーの適用
 Intune App SDK は Android ライブラリで、これにより、ご自分のアプリで Intune ポリシーの強制のサポートと参加を行うことができます。 
@@ -92,7 +95,7 @@ Intune App SDK は Android ライブラリで、これにより、ご自分の�
 ### <a name="build-tooling"></a>ビルド ツール
 SDK ではビルド ツールが提供されます (Gradle ビルド用のプラグインと Gradle 以外のビルド用のコマンド ライン ツール)。これにより、自動的に同等の MAM が置換されます。 これらのツールによって、Java のコンパイルによって生成されたクラス ファイルが変換され、元のソース コードへの変更は行われません。
 
-このツールでは[直接の置換](#class-and-method-replacements)のみが実行されます。 これにより、[ポリシーとして保存](#enable-features-that-require-app-participation)、[複数 ID](#multi-identity-optional)、[App-WE の登録](#app-protection-policy-without-device-enrollment)、[Android のマニフェストの変更](#manifest-replacements)または[ADAL の構成](#configure-azure-active-directory-authentication-library-adal)など、さらに複雑な SDK の統合が実行されることはないため、これらはご利用のアプリで完全に Intune を有効にする前に完了する必要があります。 ご利用のアプリに関連する統合ポイントのために、このドキュメントの残りの部分を慎重に確認してください。
+このツールでは[直接の置換](#class-and-method-replacements)のみが実行されます。 これにより、[ポリシーとして保存](#enable-features-that-require-app-participation)、[複数 ID](#multi-identity-optional)、[App-WE の登録](#app-protection-policy-without-device-enrollment)、[AndroidManifest の変更](#manifest-replacements)など、さらに複雑な SDK の統合が実行されることはないため、これらはご利用のアプリで完全に Intune を有効にする前に完了する必要があります。 ご利用のアプリに関連する統合ポイントのために、このドキュメントの残りの部分を慎重に確認してください。
 
 > [!NOTE]
 > 既に部分的に実行されている、または手動の置換によって MAM SDK のソースの統合を完了するプロジェクトに対してツールを実行しても構いません。 ご自分のプロジェクトでは、依存関係として MAM SDK を引き続き一覧する必要があります。
@@ -421,7 +424,10 @@ Intune アプリ SDK では、統合するアプリに対する次の 3 つの [
 
 Azure Active Directory Authentication Library ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) では、仲介型認証を実行する場合にこれらのアクセス許可が必要になります。 これらのアクセス許可がアプリに付与されていない場合や、ユーザーによって取り消された場合、ブローカー (ポータル サイト アプリ) を必要とする認証フローは無効になります。
 
-## <a name="logging"></a>ログ記録
+> [!NOTE]
+> Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
+
+## <a name="logging"></a>ログの記録
 
 ログに記録されたデータを最も有効に活用するには、ログを早い段階で初期化する必要があります。 一般的にログを初期化するには、`Application.onMAMCreate()` が最も効果的です。
 
@@ -886,6 +892,9 @@ MAM でアプリの `MANAGEMENT_REMOVED` レシーバーを呼び出す場合、
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Azure Active Directory Authentication Library (ADAL) の構成
 
+> [!NOTE]
+> Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
+
 最初に、[ADAL GitHub のリポジトリ](https://github.com/AzureAD/azure-activedirectory-library-for-android)にある ADAL の統合のガイドラインを参照してください。
 
 SDK では[認証](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/)と条件付き起動シナリオを [ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) に依存するため、アプリを [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) を使用して構成する必要があります。 構成値は、AndroidManifest メタデータを使用して SDK に伝達されます。
@@ -989,6 +998,9 @@ Azure AD にアプリを登録し、そのアプリに保護ポリシー サー�
 
 SDK の代わりに Azure Active Directory Authentication Library (ADAL) から適切なアクセス トークンを取得するコールバックを提供するには、アプリが必要です。 アプリがユーザー認証および独自のアクセス トークンを取得するために既に ADAL を使用していると見なされます。
 
+> [!NOTE]
+> Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
+
 アプリがアカウントを完全に削除するときは、アプリがそのユーザーのポリシーをこれ以上適用しないことを示すためにそのアカウントを登録解除する必要があります。 MAM サービスにユーザーが登録されていた場合、ユーザーの登録が解除され、アプリは消去されます。
 
 
@@ -1064,6 +1076,9 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 
 1. アプリは、`MAMServiceAuthenticationCallback` インターフェイスを実装し、SDK が特定のユーザーの ADAL トークンとリソース ID を要求できるようにする必要があります。 `registerAuthenticationCallback()` メソッドを呼び出すことでコールバック インスタンスを `MAMEnrollmentManager` に提供する必要があります。 アプリのライフサイクルの早い段階で、登録の再試行またはアプリ保護ポリシーの更新チェックインのためにトークンが必要になることがあるので、コールバックの登録の理想的な場所は、アプリの `MAMApplication` サブクラスの `onMAMCreate()` メソッドです。
 
+  > [!NOTE]
+  > Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
+
 2. `acquireToken()` メソッドは、特定のユーザーの要求されたリソース ID のアクセス トークンを取得する必要があります。 要求されたトークンを取得できない場合は、null を返す必要があります。
 
     > [!NOTE]
@@ -1099,6 +1114,9 @@ Result getRegisteredAccountStatus(String upn);
 2. AAD 認証が必要であるため、ユーザー アカウントを登録する最適なタイミングは、ユーザーがアプリにサインインし、ADAL を使用して正常に認証した後です。[`AuthenticationResult`](https://github.com/AzureAD/azure-activedirectory-library-for-android) オブジェクトの一部として、ユーザーの AAD ID とテナント ID が ADAL 認証呼び出しから返されます。
     * テナント ID は、`AuthenticationResult.getTenantID()` メソッドから取得されます。
     * ユーザーに関する情報は、`AuthenticationResult.getUserInfo()` から取得される `UserInfo` 型のサブオブジェクトで見つかり、AAD ユーザー ID は `UserInfo.getUserId()` を呼び出すオブジェクトから取得されます。
+
+  > [!NOTE]
+  > Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
 
 3. アカウントを Intune 管理から登録解除するには、アプリで `unregisterAccountForMAM()` を呼び出す必要があります。 アカウントが正常に登録されて管理される場合、SDK は、アカウントの登録を解除し、そのデータを消去します。 アカウントの定期的な登録の再試行は停止されます。 SDK は、通知を介して非同期的に登録解除要求の状態を示します。
 
@@ -1139,6 +1157,9 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 #### <a name="authentication"></a>認証
 
 * アプリが `registerAccountForMAM()` を呼び出したときに、`MAMServiceAuthenticationCallback` インターフェイスで直後に異なるスレッドでコールバックを受け取る場合があります。 要求されたトークンの取得を早めるために、アプリがアカウントを登録する前に ADAL から専用のトークンを取得しているの理想的です。 アプリが、コールバックから有効なトークンを返す場合は、登録処理が続行され、アプリが通知を使用して最終的な結果を取得します。
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
 
 * アプリが有効な AAD トークンを返さない場合、登録の試行の最終的な結果は `AUTHORIZATION_NEEDED` になります。 通知を介してアプリでこの結果を受信する場合、`acquireToken()` から以前に要求されたリソースとユーザーのトークンを取得し、`updateToken()` メソッドを呼び出してもう一度登録プロセスを開始することで、登録プロセスを迅速化することを強くお勧めします。
 
@@ -1204,6 +1225,9 @@ ADAL ライブラリには、APP 管理に準拠していないことが原因�
 
 > [!NOTE]
 > ポリシー保証付き APP CA 用のこの新しいエラー コードと他のサポートには、バージョン 1.15.0 (以上) の ADAL ライブラリが必要です。
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
 
 ### <a name="mamcompliancemanager"></a>MAMComplianceManager
 
@@ -2067,6 +2091,9 @@ MAM SDK によって生成されるビューは、統合されたアプリとよ
 次の手順で既定の登録を有効にします。
 
 1. アプリで ADAL を統合するか、自分で SSO を有効にする必要がある場合は、「[ADAL の一般的な構成](#common-adal-configurations)」の 2. に従って、[ADAL を構成](#configure-azure-active-directory-authentication-library-adal)します。 それ以外の場合は、この手順をスキップできます。
+
+  > [!NOTE]
+  > Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
    
 2. マニフェストの `<application>` タグの下に次の値を追加して、既定の登録を有効にします。
 

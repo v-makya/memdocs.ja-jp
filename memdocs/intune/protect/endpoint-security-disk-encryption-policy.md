@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a8eeb8263e337fa7427818c05f183fdea3c9dbea
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 3e01e54eb6e74c8139c266d677a6406554119273
+ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353634"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85972074"
 ---
 # <a name="disk-encryption-policy-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティのディスクの暗号化ポリシー
 
@@ -29,7 +29,7 @@ ms.locfileid: "85353634"
 
 デバイス構成の "*Endpoint Protection*" プロファイルを使用して同じデバイス設定を構成できますが、デバイス構成プロファイルには、追加の設定カテゴリがあります。 これらの追加の設定はディスクの暗号化とは関係がなく、ディスクの暗号化のみを構成するタスクが複雑になる可能性があります。
 
-[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) の **[エンドポイント セキュリティ]** ノードにある *[管理]* で、ディスクの暗号化ポリシーのためのエンドポイント セキュリティ ポリシーを見つけます。
+[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) の **[エンドポイント セキュリティ]** ノードにある *[管理]* で、ディスクの暗号化のためのエンドポイント セキュリティ ポリシーを見つけます。
 
 ## <a name="prerequisites-for-disk-encryption-policy"></a>ディスクの暗号化ポリシーの前提条件
 
