@@ -2,7 +2,7 @@
 title: 製品とライセンスに関する FAQ
 titleSuffix: Configuration Manager
 description: Configuration Manager の一般的な製品とライセンスの質問に対する回答を検索できます。
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b2c785fb41fa78ea0bd5d480560d45a3a7a7eda
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: 1ce9024fa610c6af19eb40ccf0da662a3e99234f
+ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854424"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157826"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager のブランチとライセンスに関してよく寄せられる質問
 
@@ -78,11 +78,11 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 
 - 他の方法で Windows 10 デバイスを Intune に登録する場合にも、完全な Intune ライセンスが必要です。 たとえば、オートパイロットを使用してデバイスをプロビジョニングする場合や、ユーザーが手動でセルフサービス登録を行う場合です。
 
-- 既存の Configuration Manager マネージド デバイスで、ユーザー操作なしで大規模に共同管理を行うために Intune に登録する場合、共同管理には、Windows 10 の自動登録と呼ばれる Azure Active Directory (Azure AD) 機能が使用されます。 自動登録には、Microsoft Endpoint Manager とは別に Azure AD Premium (AADP1) ライセンスが必要です。 このシナリオで共同管理を行う場合、以前は AADP1 ライセンスと Intune ライセンスの両方を各ユーザーに割り当てる必要がありました。 2019 年 12 月 1 日から、共同管理ライセンスが変更されました。 このシナリオでは、個別の Intune ライセンスを割り当てる必要はなくなりましたが、他の登録シナリオでは引き続き必要です。 自動登録と共同管理を行うための AADP1 ライセンス要件は同じままです。
+- 既存の Configuration Manager マネージド デバイスで、ユーザー操作なしで大規模に共同管理を行うために Intune に登録する場合、共同管理には、Windows 10 の自動登録と呼ばれる Azure Active Directory (Azure AD) 機能が使用されます。 共同管理での自動登録には、Azure AD Premium (AADP1) と Intune の両方のライセンスが必要です。 2019 年 12 月 1 日以降、このシナリオで個別の Intune ライセンスを割り当てる必要がなくなりました。 Microsoft Endpoint Manager には、共同管理用の Intune ライセンスが含まれるようになりました。 このシナリオを使用する場合、個別の AADP1 ライセンス要件は変わりません。 他の登録シナリオでも、やはり Intune ライセンスを割り当てる必要があります。
 
 - iOS、Android、または macOS デバイスの管理に Intune を使用する場合は、スタンドアロンの Intune ライセンス、Enterprise Mobility + Security (EMS)、または Microsoft 365 を介した適切な Intune サブスクリプションが必要です。
 
-- Intune 関連のサブスクリプション プランをご利用ではない場合、共同管理をサポートするには、少なくとも 1 つの Intune ライセンスを購入する必要があります。 このライセンスは、管理者が Microsoft Endpoint Manager 管理センターにアクセスするためのものです。
+- Intune 関連のサブスクリプション プランをご利用ではない場合、共同管理をサポートするには、少なくとも 1 つの Intune ライセンスを購入する必要があります。 このライセンスは、管理者がサブスクリプション プランをアクティブにし、Microsoft Endpoint Manager 管理センターにアクセスできるようにするためのものです。
 
 - Microsoft 365 に組み込まれている[基本的なモビリティとセキュリティ](https://support.microsoft.com/office/capabilities-of-built-in-mobile-device-management-for-microsoft-365-a1da44e5-7475-4992-be91-9ccec25905b0)を使用している場合、基本的なモビリティとセキュリティによって管理されているデバイスもお持ちのユーザーには、新しい共同管理ライセンスを使用できません。 ユーザーの Configuration Manager マネージド デバイスの共同管理ライセンスを使用するには、次のいずれかの操作を行います。
 

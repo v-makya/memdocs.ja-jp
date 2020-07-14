@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 3a1aa67c51998de62f6390db848a458876327ea7
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 0ef2d09423e7bb51e94cb626bf513aa7e98992c9
+ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590917"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86195652"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics とは
 
@@ -72,7 +72,7 @@ Desktop Analytics を使用するには、環境が次の前提条件を満た�
 - [グローバル管理者](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions)のアクセス許可を持つアクティブなグローバル Azure サブスクリプション。 [Microsoft アカウント](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts)はサポートされていません。  
 
     > [!IMPORTANT]
-    > Desktop Analytics は、Windows 診断データを利用する Azure グローバルにホストされる Windows サービスです。 米国政府機関のお客様は Azure グローバル サービスをご利用いただけますが、[US Government Community コンプライアンス (GCC)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) の属性を満たしていません。 Microsoft の製品およびサービスのコンプライアンス認証の一覧については、[Microsoft セキュリティ センター](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide)に関するページをご覧ください。 Desktop Analytics は、GCC High または米国国防総省 (DOD) のお客様はご利用いただけません。 Desktop Analytics ワークスペースをホストするための Azure Government サブスクリプションの使用はサポートされていません。
+    > Desktop Analytics は、Windows 診断データを利用する Azure グローバルにホストされる Windows サービスです。 Desktop Analytics は米国政府機関のお客様が利用できる Azure グローバル サービスですが、[US Government Community コンプライアンス (GCC)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) の属性を満たしていません。 Microsoft の製品およびサービスのコンプライアンス認証の一覧については、[Microsoft セキュリティ センター](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide)に関するページをご覧ください。 Desktop Analytics は、GCC High または米国国防総省 (DOD) のお客様はご利用いただけません。 Desktop Analytics ワークスペースをホストするための Azure Government サブスクリプションの使用はサポートされていません。
 
     - **[ワークスペースの設定]** を実行するための**ワークスペースの所有者**アクセス許可、および以下のロール:  
 

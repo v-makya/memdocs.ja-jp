@@ -10,12 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c043cfabc411dbd5ae4984110fc2904d37669300
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1cf428b479e9311c92f6d14d9c376817ee5e3ab5
+ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700210"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86022264"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Configuration Manager でタスク シーケンス変数を使用する方法
 
@@ -157,7 +157,7 @@ ms.locfileid: "81700210"
 
 #### <a name="example-scenario-with-run-powershell-script-step"></a>[PowerShell スクリプトの実行] ステップを使用したシナリオ例
 
-使用する環境内に複数の国のユーザーがいるため、複数の言語に固有の **[Apply OS]\(OS の適用\)** ステップの条件として、設定する OS の言語に対してクエリを実行する必要があるとします。
+使用する環境内に複数の国や地域のユーザーがいるため、複数の言語に固有の **[Apply OS]\(OS の適用\)** ステップの条件として、設定する OS の言語に対してクエリを実行する必要があるとします。
 
 1. **[Apply OS]\(OS の適用\)** ステップの前に、タスク シーケンスに **[Powershell スクリプトの実行]** のインスタンスを追加します。
 

@@ -2,7 +2,7 @@
 title: ログ ファイルのリファレンス
 titleSuffix: Configuration Manager
 description: Configuration Manager のクライアント、サーバー、および依存コンポーネントのすべてのログ ファイルのリファレンス。
-ms.date: 06/10/2020
+ms.date: 07/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f8ad6827a1aa72c3aaa51e21fecbf639fbb405
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715579"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210334"
 ---
 # <a name="log-file-reference"></a>ログ ファイルのリファレンス
 
@@ -77,6 +77,8 @@ Configuration Manager のログ ファイルに関するより一般的な情報
 
   - [探索](#BKMK_DiscoveryLog)  
 
+  - [エンドポイント分析](#bkmk_analytics)
+  
   - [Endpoint Protection](#BKMK_EPLog)  
 
   - [拡張機能](#BKMK_Extensions)  
@@ -171,7 +173,10 @@ Configuration Manager のログ ファイルに関するより一般的な情報
 |SCClient_&lt;*domain*\>@&lt;*username*\>_2.log|クライアント コンピューターの特定のユーザーがソフトウェア センターで行った操作の履歴を記録します。|  
 |Scheduler.log|クライアントのスケジュールが設定されている処理をすべて記録します。|  
 |SCNotify_&lt;*domain*\>@&lt;*username*\>_1.log|特定のユーザーに送信したソフトウェアに関する通知を記録します。|  
-|SCNotify_&lt;*domain*\>@&lt;*username*\>_1-&lt;*date_time*>.log|特定のユーザーに送信したソフトウェアに関する通知の履歴を記録します。|  
+|SCNotify_&lt;*domain*\>@&lt;*username*\>_1-&lt;*date_time*>.log|特定のユーザーに送信したソフトウェアに関する通知の履歴を記録します。|
+|SensorWmiProvider.log|エンドポイント分析センサーに対する WMI プロバイダーの処理を記録します。|
+|SensorEndpoint.log|エンドポイント分析ポリシーの実行と、サイト サーバーへのクライアント データのアップロードを記録します。|
+|SensorManagedProvider.log|イベントの収集と処理、およびエンドポイント分析のための情報を記録します。|
 |setuppolicyevaluator.log|WMI による構成とインベントリ ポリシーの作成を記録します。|  
 |SleepAgent_&lt;*domain*\>@SYSTEM_0.log|ウェイクアップ プロキシのメイン ログ ファイルです。|  
 |smscliui.log|コントロール パネルで Configuration Manager クライアントがどのように使用されたかを記録します。|  
@@ -344,7 +349,8 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |srsrpsetup.log|レポート ポイントのインストール プロセスの結果を記録します。|サイト システム サーバー|  
 |statesys.log|ステート システムのメッセージの処理を記録します。|サイト サーバー|  
 |statmgr.log|データベースに書き込まれたすべてのステータス メッセージを記録します。|サイト サーバー|  
-|swmproc.log|ファイルの使用状況測定と設定の処理を記録します。|サイト サーバー|  
+|swmproc.log|ファイルの使用状況測定と設定の処理を記録します。|サイト サーバー|
+|UXAnalyticsUploadWorker.log|エンドポイント分析のためのサービスへのデータのアップロードを記録します。|サイト サーバー|   
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a> サイト サーバーのインストール
 
@@ -427,6 +433,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |objreplmgr.log|ポリシーと割り当ての処理を記録します。|プライマリ サイト サーバー|  
 |policypv.log|すべてのポリシーのポリシー生成を記録します。|サイト サーバー|  
 |outgoingcontentmanager.log|Microsoft Intune にアップロードされたコンテンツを記録します。|サービス接続ポイントのあるコンピューター|  
+|ServiceConnectionTool.log|使用するパラメーターに基づいて、[サービス接続ツール](../../servers/manage/use-the-service-connection-tool.md)の使用に関する詳細を記録します。 ツールを実行するたびに、既存のログ ファイルが置き換えられます。|ツールと同じ場所|
 |sitecomp.log|サービス接続ポイントのインストールの詳細を記録します。|サイト サーバー|  
 |SmsAdminUI.log|Configuration Manager コンソール アクティビティを記録します。|Configuration Manager コンソールを実行しているコンピューター|  
 |SMS_CLOUDCONNECTION.log|クラウド サービスに関する情報を記録します。|サービス接続ポイントのあるコンピューター|
@@ -643,6 +650,15 @@ Configuration Manager クライアント上のログ ファイルは、ディレ
 |ddm.log|探索データ マネージャーによる処理を記録します。|サイト サーバー|  
 |InventoryAgent.log|クライアントで行われるハードウェア インベントリ、ソフトウェア インベントリ、定期探索を記録します。|クライアント|  
 |netdisc.log|ネットワーク探索操作を記録します。|サイト サーバー|  
+
+### <a name="endpoint-analytics"></a><a name="bkmk_analytics"></a> エンドポイント分析
+
+|ログの名前|[説明]|ログ ファイルのあるコンピューター|  
+|--------------|-----------------|----------------------------|  
+|UXAnalyticsUploadWorker.log|エンドポイント分析のためのサービスへのデータのアップロードを記録します。|サイト サーバー|  
+|SensorWmiProvider.log|エンドポイント分析センサーに対する WMI プロバイダーの処理を記録します。|クライアント|  
+|SensorEndpoint.log|エンドポイント分析ポリシーの実行と、サイト サーバーへのクライアント データのアップロードを記録します。|クライアント|
+|SensorManagedProvider.log|イベントの収集と処理、およびエンドポイント分析のための情報を記録します。|クライアント|
 
 ### <a name="endpoint-protection"></a><a name="BKMK_EPLog"></a> Endpoint Protection
 

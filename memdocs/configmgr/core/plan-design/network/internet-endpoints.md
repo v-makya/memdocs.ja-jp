@@ -2,7 +2,7 @@
 title: インターネット アクセス要件
 titleSuffix: Configuration Manager
 description: Configuration Manager の機能をすべて利用するためのインターネット エンドポイントについて説明します。
-ms.date: 07/01/2020
+ms.date: 07/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,25 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 986b8d83c705be84b04a89c99d9559471c6345c4
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819952"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137349"
 ---
 # <a name="internet-access-requirements"></a>インターネット アクセス要件
 
 一部の Configuration Manager 機能をすべて利用するには、インターネット接続が必要です。 組織がファイアウォールまたはプロキシ デバイスを使用してインターネットとのネットワーク通信を制限している場合は、これらのエンドポイントを許可する必要があります。
 
 <!-- SCCMDocs-pr #3403 -->
+
+Configuration Manager では、製品全体で次の Microsoft URL 転送サービスが使用されます。
+
+- `https://aka.ms`
+- `https://go.microsoft.com`
+
+以下のセクションでは、明示的に記載されていなくても常にこれらのエンドポイントを許可する必要があります。
 
 ## <a name="service-connection-point"></a><a name="bkmk_scp"></a> サービス接続ポイント
 
@@ -277,6 +284,14 @@ Desktop Analytics クラウド サービスに必要なエンドポイントの�
 ## <a name="endpoint-analytics"></a>エンドポイント分析
 
 エンドポイント分析に必要なエンドポイントの詳細については、[エンドポイント分析のプロキシ構成](../../../../analytics/troubleshoot.md#bkmk_endpoints)に関する記事をご覧ください。
+
+## <a name="asset-intelligence"></a>資産インテリジェンス
+
+<!-- memdocs#470 -->
+[資産インテリジェンス](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)を使用する場合は、サービスの同期のために次のエンドポイントを許可します。
+
+- `https://sc.microsoft.com`
+- `https://ssu2.manage.microsoft.com`
 
 ## <a name="microsoft-public-ip-addresses"></a>Microsoft のパブリック IP アドレス
 

@@ -10,12 +10,12 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2061a6701bf40233593e2e5d683e36f2814d3978
-ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
+ms.openlocfilehash: 423864c2c954cc67da4ef54d55d7263ae346e786
+ms.sourcegitcommit: 24ce7df7dadf2385afe364b817ec58feeb04c700
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85914573"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86212292"
 ---
 # <a name="microsoft-edge-management"></a>Microsoft Edge の管理
 
@@ -152,7 +152,7 @@ ERROR - is NOT retyrable.
 Rollback transaction: XXXX
 ```
 
-**対策:** この問題を回避するには、ブラウザーの使用状況 (SMS_BrowerUsage) のハードウェア インベントリ クラスの収集を無効にします。 現在、このクラスは利用されていません。
+**対策:** この問題を回避するには、ブラウザーの使用状況 (SMS_BrowerUsage) のハードウェア インベントリ クラスの収集を無効にします。
 
 ## <a name="next-steps"></a>次のステップ
 
