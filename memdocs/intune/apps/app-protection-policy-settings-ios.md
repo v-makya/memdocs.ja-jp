@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6cfd2879c6e764da9a1b758e072f0b80ee434713
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 2d3a390243f00a7f3f27f3fed92a08e26ff4335f
+ms.sourcegitcommit: 01c1ca337e82c5e8e92153079ed89f79e20bde9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502665"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157843"
 ---
 # <a name="ios-app-protection-policy-settings"></a>iOS アプリ保護ポリシー設定
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -75,7 +75,6 @@ ms.locfileid: "85502665"
 
 | アプリ/サービス名 | [説明] |
 | ---- | --- |
-|<code>tel; telprompt</code> | ネイティブの電話アプリ |
 | <code>skype</code> | Skype |
 | <code>app-settings</code> | デバイスの設定 |
 | <code>itms; itmss; itms-apps; itms-appss; itms-services</code> | アプリ ストア |

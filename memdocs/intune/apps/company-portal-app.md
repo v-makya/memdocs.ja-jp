@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f79ac0ef70eb9eccf47837517e3e69df3fdb3e8
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165721"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239948"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune ポータル サイト アプリ、ポータル サイト Web サイト、および Intune アプリをカスタマイズする方法
 
@@ -110,9 +110,7 @@ Android 用 Intune アプリのブランド イメージの例を次に示しま
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
 |    使用可能、プロンプトあり    |    すべての可能な場所で登録を求める既定のエクスペリエンス。    |    はい    |    はい    |    はい    |    はい    |
 |    使用可能、プロンプトなし    |    ユーザーは、現在のデバイスのデバイス詳細の状態から、または登録が必要なアプリから登録できます。    |    いいえ    |    いいえ    |    はい    |    はい    |
-|    利用不可    |    ユーザーが登録する方法はありません。    |    いいえ    |    いいえ    |    いいえ    |    いいえ<sup>(1)</sup>    |
-
-<sup>(1)</sup> **既知の問題:** インストールに登録を要求するようにアプリを設定し、デバイスの登録を [使用不可] に設定した場合でも、Android 上のポータル サイト アプリでは、ユーザーに登録が指示されます。 これは間もなく削除される予定です。
+|    利用不可    |    ユーザーが登録する方法はありません。    |    いいえ    |    いいえ    |    いいえ    |    いいえ    |
 
 ### <a name="privacy"></a>プライバシー
 
@@ -221,7 +219,7 @@ Windows ポータル サイト アプリで使用できるキーボード ショ
 
 一部のプラットフォームおよび構成では、セルフサービス デバイス アクションは許可されていません。 次の表では、セルフサービス アクションについての詳細を示します。
 
-|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| 操作 | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | インベントリから削除 | 利用可能<sup>(1)</sup> | 利用可能<sup>(9)</sup> | 利用可能 | 利用可能<sup>(7)</sup> |
 | ワイプ | 利用可能 | 利用可能<sup>(5)</sup><sup>(9)</sup> | N/A | 利用可能<sup>(7)</sup> |

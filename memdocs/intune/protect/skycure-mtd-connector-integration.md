@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 250c94250346eb84ad6b1661768d27b8c14fdf62
-ms.sourcegitcommit: 42a4a4454e56fa681f0ad39f5e585492dfbad286
+ms.openlocfilehash: b9f6b117855430af281db7087d77f53bb0e11c61
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84330986"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137423"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Symantec Endpoint Protection Mobile と Intune の統合を設定する
 
@@ -40,7 +40,7 @@ Symantec Endpoint Protection Mobile (SEP Mobile) ソリューションと Intune
 - Azure AD アカウントは、統合を実行する全体管理者アカウントである必要があります。
 ### <a name="network-setup"></a>ネットワークのセットアップ
 
-SEP Mobile のセットアップと統合できるようにネットワークが適切に構成されていることを確認するには、Symantec の[インストール後の SEP Manager の構成](http://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/Managing_a_Custom_Installation_3/Planning_the_Installation_0/network-architecture-considerations-v19543152-d23e65.html)に関する記事を参照してください。
+SEP Mobile のセットアップと統合できるようにネットワークが適切に構成されていることを確認するには、Symantec の[インストール後の SEP Manager の構成](https://techdocs.broadcom.com/content/broadcom/techdocs/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/installing-v16194271-d23e1332/configuring-after-installation-v18374552-d23e1454.html)に関する記事を参照してください。
 
 ### <a name="full-integration-vs-read-only"></a>比較: 完全統合と読み取り専用
 

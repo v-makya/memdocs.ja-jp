@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be9a4257fec357c3dc124318fda98807df6c26b7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: c26af63691fc4b198d308f39a7c1cc0d719933cb
+ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093491"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86285302"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Intune と Windows Autopilot を使用して Hybrid Azure AD 参加済みデバイスをデプロイする
 Intune と Windows Autopilot を使用して、Hybrid Azure Active Directory (Azure AD) 参加済みデバイスを設定できます。 そのためには、この記事の手順のようにします。
@@ -35,7 +35,7 @@ Intune と Windows Autopilot を使用して、Hybrid Azure Active Directory (Az
 登録するデバイスでは次のことも必要です。
 - Windows 10 v1809 以降を実行している。
 - [文書化されている Windows Autopilot のネットワーク要件に従って](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements)インターネットにアクセスできる。
-- Active Directory ドメイン コントローラーにアクセスできる。したがって、組織のネットワークに接続されている必要があります (そこで、AD ドメインと AD ドメイン コントローラーの DNS レコードを解決し、ドメイン コントローラーと通信してユーザーの認証を行うことができます。 現時点では、VPN 接続はサポートされていません)。
+- Active Directory ドメイン コントローラーにアクセスできる。したがって、組織のネットワークに接続されている必要があります (そこで、AD ドメインと AD ドメイン コントローラーの DNS レコードを解決し、ドメイン コントローラーと通信してユーザーの認証を行うことができます。
 - 参加を試みるドメインのドメイン コントローラーを ping できる。
 - プロキシを使用する場合は、WPAD プロキシ設定オプションを有効にして構成する必要がある。
 - OOBE (Out-of-Box Experience) を使用している。
