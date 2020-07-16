@@ -36,14 +36,6 @@
           href: core/understand/introduction-to-wbemtest.md
         - name: リスト、作成、変更、および削除の簡単な例
           href: core/understand/simple-example-of-list--create--modify--and-delete.md
-    - name: Configuration Manager および Windows PowerShell を開始する
-      items:
-        - name: Configuration Manager および Windows PowerShell を開始する
-          href: core/understand/getting-started-with-configuration-manager-and-windows-powershell.md
-        - name: Windows PowerShell の基礎
-          href: core/understand/windows-powershell-basics.md
-        - name: Windows PowerShell を使用して Configuration Manager に接続する
-          href: core/understand/connecting-to-configuration-manager-with-windows-powershell.md
     - name: Configuration Manager のコード スニペットを呼び出す
       href: core/understand/calling-code-snippets.md
     - name: サイトのパスワードまたはデータを暗号化する

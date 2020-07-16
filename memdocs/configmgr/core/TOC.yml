@@ -232,8 +232,6 @@
           href: plan-design/security/plan-for-security.md
         - name: セキュリティのベスト プラクティスとプライバシー情報
           href: plan-design/security/security-best-practices-and-privacy-information.md
-        - name: プライバシーに関する声明 - Configuration Manager Cmdlet Library
-          href: plan-design/security/privacy-statement-cmdlet-library.md
         - name: 追加のプライバシー情報
           href: plan-design/security/additional-privacy.md
         - name: セキュリティの構成
