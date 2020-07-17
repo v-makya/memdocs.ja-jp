@@ -2,7 +2,7 @@
 title: 拡張 HTTP
 titleSuffix: Configuration Manager
 description: 先進認証を使用して、PKI サーバー認証証明書を必要とせずにクライアント通信をセキュリティ保護します。
-ms.date: 03/28/2020
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bb14830e99600da1b71c516a44d51a0090cdc673
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1a6ec98bd350eb0ac8643254f64a9480f156bb13
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703570"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239761"
 ---
 # <a name="enhanced-http"></a>拡張 HTTP
 
@@ -93,8 +93,6 @@ Azure AD 参加済みデバイスまたは[ハイブリッド Azure AD デバイ
 - HTTP クライアント接続用に構成された配布ポイント。 配布ポイントのロール プロパティの **[通信]** タブで、このオプションを設定します。 **[クライアントに匿名接続を許可する]** オプションを有効にしないでください。  
 
 - クラウド管理のために、サイトを Azure AD にオンボードします。  
-
-    - 既にサイトでこの前提条件を満たしている場合は、Azure AD アプリケーションを更新する必要があります。 Configuration Manager コンソールで、 **[管理]** ワークスペースに移動し、 **[クラウド サービス]** を展開して **[Azure Active Directory テナント]** を選択します。 Azure AD テナントを選択し、 **[アプリケーション]** ウィンドウで Web アプリケーションを選択して、リボンにある **[アプリケーション設定の更新]** を選択します。  
 
 - " *[シナリオ 3](#bkmk_scenario3) のみ*":Windows 10 バージョン 1803 以降を実行していて、Azure AD に参加しているクライアント。 このクライアントでは Azure AD デバイス認証にこの構成が必要です。<!-- SCCMDocs issue 1126 -->
 

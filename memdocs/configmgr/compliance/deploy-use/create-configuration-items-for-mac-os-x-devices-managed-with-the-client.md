@@ -7,15 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
-author: aczechowski
+author: mestew
 manager: dougeby
-ms.author: aaroncz
-ms.openlocfilehash: 219ddd4c828cdabd022deb9fe372718184a4c024
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.author: mstewart
+ms.openlocfilehash: 9323fc3c1203d20c77af1f2fd27cee0a377e8d68
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81693430"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240084"
 ---
 # <a name="create-configuration-items-for-mac-os-x-devices"></a>Mac OS X デバイスの構成項目を作成する
 Configuration Manager の **[Mac OS X (カスタム)]** 構成アイテムを使用して、構成マネージャー クライアントで管理されている Mac OS X デバイスの設定を管理します。  

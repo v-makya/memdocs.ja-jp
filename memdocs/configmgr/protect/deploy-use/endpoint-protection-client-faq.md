@@ -2,7 +2,7 @@
 title: Endpoint Protection クライアントのよく寄せられる質問
 titleSuffix: Configuration Manager
 description: Windows Defender と Endpoint Protection についてよく寄せられる質問に回答します。
-ms.date: 12/09/2017
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3b206c1556c2e9550ade5c2322acd65ad2b19412
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0eafa09275220cdf07f837388aa6cb848fbd5e5a
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906833"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240288"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection クライアントのよく寄せられる質問
 
@@ -34,7 +34,6 @@ ms.locfileid: "82906833"
 -   [ウイルス、スパイウェア、およびその他の望ましくない可能性があるソフトウェアはどこからくるのでしょうか。](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
 -   [知らずに悪意のあるソフトウェアを入手してしまう恐れがありますか。](#can-i-get-malicious-software-without-knowing-it)  
 -   [ソフトウェアをインストールする前にライセンス契約を確認することはなぜ重要ですか。](#why-is-it-important-to-review-license-agreements-before-installing-software)  
--   [Endpoint Protection と Windows Defender の違いは何ですか。](#whats-the-difference-between-endpoint-protection-and-windows-defender)  
 -   [Windows Defender が Cookie を検出しないのはなぜですか。](#why-doesnt-windows-defender-detect-cookies)  
 -   [マルウェアをどのように防げますか。](#how-can-i-prevent-malware)  
 -   [ウイルス定義およびスパイウェア定義とは](#what-are-virus-and-spyware-definitions)  
@@ -132,9 +131,6 @@ Windows Defender によって検出された望ましくない項目または有
 ##  <a name="why-is-it-important-to-review-license-agreements-before-installing-software"></a>ソフトウェアをインストールする前にライセンス契約を確認することはなぜ重要ですか。  
  Web サイトにアクセスする場合は、サイトの提供物をダウンロードすることに無意識に同意しないようにしてください。 ファイル共有プログラムやスクリーン セーバーなどのフリー ソフトウェアをダウンロードする場合は、ライセンス契約を注意深くお読みください。 企業からの広告やポップアップに同意する必要がある、またはソフトウェアがソフトウェア発行元に特定の情報を送信するという趣旨の文言がないか確認します。  
 
-##  <a name="whats-the-difference-between-endpoint-protection-and-windows-defender"></a>Endpoint Protection と Windows Defender の違いは何ですか。  
- Endpoint Protection は、マルウェア対策ソフトウェアです。つまり、ウイルス、スパイウェア、およびその他の望ましくないソフトウェアなどの悪意のある幅広いソフトウェアからコンピューターを保護することを意図して設計されています。 Windows Defender は Windows オペレーティング システムに自動的にインストールされ、スパイウェアを検出して停止するソフトウェアです。  
-
 ##  <a name="why-doesnt-windows-defender-detect-cookies"></a>Windows Defender が cookie を検出しないのはなぜですか。  
  Cookie は、ユーザーとユーザーの好みに関する情報を格納するために Web サイトによってコンピューター上に配置される小規模なテキスト ファイルです。 Web サイトは Cookie を使用してパーソナライズされたエクスペリエンスを提供し、Web サイトの使用状況に関する情報を収集します。 Windows Defender では、Cookie はプライバシーやご使用のコンピューターのセキュリティに対する脅威と見なされないため検出されません。 ほとんどのインターネット ブラウザー プログラムでは、Cookie をブロックできます。  
 
@@ -200,9 +196,8 @@ Windows Defender によって検出された望ましくない項目または有
 
   Windows Defender が監視するソフトウェアと設定を選択できますが、リアルタイム保護を有効にして、すべてのリアルタイム保護オプションを有効にすることをお勧めします。 利用できるオプションを次の表で説明します。  
 
-|||  
-|-|-|  
 |**リアルタイム保護オプション**|**目的**|  
+|-|-|  
 |すべてのダウンロードをスキャンする|このオプションを有効にすると、ダウンロードされるファイルおよびプログラムが監視されます。ActiveX® コントロールやソフトウェア インストール プログラムなど、Windows Internet Explorer と Microsoft Outlook® Express によって自動的にダウンロードされるファイルも対象となります。 このようなファイルは、ブラウザー単体でダウンロード、インストール、または実行できます。 このようなファイルには、ウイルス、スパイウェア、その他の望ましくないソフトウェアなど、悪意のあるソフトウェアが紛れ込み、気付かない間にインストールされる可能性があります。<br /><br /> このリアルタイム保護オプションを使用すると、Windows Defender によってコンピューターが常時監視され、悪意のあるファイルまたはプログラムがダウンロードされていないかチェックされます。 この監視機能の場合、ダウンロードするファイルまたはプログラムに対して Windows Defender のチェックを実行することでブラウザーや電子メール プログラムの動作が遅くなることはありません。|  
 |[このコンピューターのファイルとプログラムのアクティビティを監視する]|このオプションを有効にすると、コンピューター上でファイルやプログラムの実行がいつ開始されるかを監視し、そのファイルやプログラムの動作、およびそのファイルやプログラムに対する動作に関してアラートを通知します。 この機能が重要なのは、インストール済みプログラムの脆弱性が悪意のあるソフトウェアで利用され、悪意のあるソフトウェアや望ましくないソフトウェアが気付かない間に実行される可能性があるためです。 たとえば、よく使用するプログラムを起動したときに、スパイウェアがバックグラウンドで起動することがあります。 Windows Defender はプログラムを監視し、疑わしい動作が検出されるとアラートを通知します。|  
 |動作の監視を有効にする|このオプションを有効にすると、動作を集合的に監視し、従来のウイルス対策検出手法では検出されない可能性がある、疑わしいパターンを探します。|  
