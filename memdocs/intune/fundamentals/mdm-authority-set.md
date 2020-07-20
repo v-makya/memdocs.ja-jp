@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b0fab472f9bef682666d743c8a53b1308f32b40
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 974636ae787be0d454cc3a4fea98832aa4400c7c
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022434"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303489"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>モバイル デバイス管理機関の設定
 
@@ -42,7 +42,9 @@ ms.locfileid: "86022434"
 
 ## <a name="set-mdm-authority-to-intune"></a>MDM 機関を Intune に設定する
 
-MDM 機関をまだ設定していない場合は、次の手順に従います。
+1911 サービス リリース以降を使用しているテナントの場合、MDM 機関は自動的に Intune に設定されます。
+
+1911 より前のサービス リリースを使用しているテナントで、MDM 機関をまだ設定していない場合は、次の手順に従います。
 
 1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、オレンジのバナーを選択して **[モバイル デバイス管理機関]** の設定を開きます。 オレンジのバナーは、MDM 機関をまだ設定していない場合にのみ表示されます。
 2. **[モバイル デバイス管理機関]** で、次の選択肢から MDM 機関を選択します。

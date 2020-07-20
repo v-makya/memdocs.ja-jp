@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/04/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 299b09c57f0cff44c465102d85628c8f2605adea
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 9a7943fb33cf670eedd600db083b77e981da9029
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088498"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240781"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Apple の自動デバイス登録を使用して iOS または iPadOS デバイスを自動登録する
 
@@ -156,7 +156,7 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
 5. **[ユーザー アフィニティ]** で、このプロファイルに対応するデバイスを割り当て済みユーザーとともに登録する必要があるかどうかを選択します。
     - **[ユーザー アフィニティとともに登録する]** - このオプションは、ユーザーに属しているデバイスであって、かつアプリのインストールなどのサービスにポータル サイトを使用する必要があるデバイスの場合に選択します。 ADFS を使用しており、セットアップ アシスタントを使用して認証している場合、[WS-Trust 1.3 ユーザー名/混合エンドポイント](https://technet.microsoft.com/library/adfs2-help-endpoints) [詳細](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) が必要です。
 
-    - **[ユーザー アフィニティなしで登録する]** - このオプションは、1 人のユーザーに関連付けられていないデバイスの場合に選択します。 このオプションは、ローカル ユーザー データにアクセスしないデバイスと、Apple Shared iPad for Business デバイスに使用します。 ポータル サイト アプリなどのアプリは動作しません。
+    - **[ユーザー アフィニティなしで登録する]** - このオプションは、1 人のユーザーに関連付けられていないデバイスの場合に選択します。 ローカルのユーザー データにアクセスしないデバイスには、このオプションを使用します。 エンド ユーザーが iOS ポータル サイトにサインインし、自分自身をデバイスのプライマリ ユーザーとして設定できるようにするには、マネージド デバイスのアプリ構成ポリシーで `IntuneUDAUserlessDevice` キーを iOS ポータル サイトに送信します。 最初にサインインしたユーザーのみがプライマリ ユーザーとして設定されることに注意してください。 最初のユーザーがサインアウトし、2 番目のユーザーがサインインした場合、最初のユーザーは引き続きデバイスのプライマリ ユーザーになります。 詳細については、「[iOS と iPadOS の DEP デバイスをサポートするようにポータル サイト アプリを構成する](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices)」をご覧ください。 
 
 6. **[ユーザー アフィニティとともに登録する]** を選択した場合は、Apple セットアップ アシスタントではなく、ポータル サイトを使ってユーザーに認証させることが可能です。
 

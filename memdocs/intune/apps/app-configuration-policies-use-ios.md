@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/11/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15c1e1e943d9fd03476c0605c4d41cd417354fce
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 730a8974753575b2726d821106f7b3c937b30207
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973028"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239982"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>管理対象の iOS/iPadOS デバイス用アプリ構成ポリシーを追加する
 
@@ -193,20 +193,33 @@ DEP (Apple の Device Enrollment Program) の登録には、アプリ ストア 
 2. **[アプリ]**  >  **[アプリ構成ポリシー]** に移動し、ポータル サイト アプリのアプリ構成ポリシーを作成します。
 3. 次の XML を使用して、アプリ構成ポリシーを作成します。 アプリ構成ポリシーを作成して XML データを入力する方法について詳しくは、「[管理対象の iOS/iPadOS デバイス用アプリ構成ポリシーを追加する](app-configuration-policies-use-ios.md)」をご覧ください。
 
-    ``` xml
-    <dict>
-        <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
-        <dict>
-            <key>IntuneDeviceId</key>
-            <string>{{deviceid}}</string>
-            <key>UserId</key>
-            <string>{{userid}}</string>
-        </dict>
-    </dict>
-    ```
+    - **ユーザー アフィニティに登録されている DEP デバイス上でポータル サイトを使用する:**
 
-3. 目的のグループを対象としたアプリ構成ポリシーを使用して、ポータル サイトをデバイスに展開します。 ポリシーは、既に DEP に登録されているデバイスのグループにのみ展開してください。
-4. ポータル サイト アプリが自動的にインストールされたらサインインするように、エンド ユーザーに指示します。
+        ``` xml
+        <dict>
+            <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
+            <dict>
+                <key>IntuneDeviceId</key>
+                <string>{{deviceid}}</string>
+                <key>UserId</key>
+                <string>{{userid}}</string>
+            </dict>
+        </dict>
+        ```
+    - **ユーザー アフィニティなしで登録されている DEP デバイス上でポータル サイトを使用する**:
+
+        > [!NOTE]
+        > ポータル サイトにサインインするユーザーは、デバイスのプライマリ ユーザーとして設定されます。
+
+        ``` xml
+        <dict>
+            <key>IntuneUDAUserlessDevice</key>
+            <string>{{SIGNEDDEVICEID}}</string>
+        </dict>
+        ```     
+
+4. 目的のグループを対象としたアプリ構成ポリシーを使用して、ポータル サイトをデバイスに展開します。 ポリシーは、既に DEP に登録されているデバイスのグループにのみ展開してください。
+5. ポータル サイト アプリが自動的にインストールされたらサインインするように、エンド ユーザーに指示します。
 
 ## <a name="monitor-iosipados--app-configuration-status-per-device"></a>デバイスごとに iOS/iPadOS のアプリ構成の状態を監視する 
 構成ポリシーが割り当てられたら、マネージド デバイスごとに iOS/iPadOS アプリ構成の状態を監視することができます。 Azure Portal の **[Microsoft Intune]** から、 **[デバイス]**  >  **[すべてのデバイス]** の順に選びます。 マネージド デバイスの一覧から、デバイス用のウィンドウを表示する特定のデバイスを選択します。 デバイスのウィンドウで、 **[アプリの構成]** を選択します。  

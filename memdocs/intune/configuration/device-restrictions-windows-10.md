@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/30/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f4fd580a2e36a1cf7a29766c7a5e325e17fc528
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: e6304c35d93d717be13a564b5bf5dd2bdc0f84d5
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591070"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303455"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限するように Windows 10 (以降) のデバイスを設定する
 
@@ -31,7 +31,7 @@ ms.locfileid: "85591070"
 > [!Note]
 > Windows のすべてのエディションですべてのオプションを利用できるわけではありません。 サポートされているエディションについては、[ポリシー CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) に関するページを参照してください (別の Microsoft Web サイトが開きます)。
 >  
-> Windows 10 デバイス制限プロファイルの構成可能な設定の大半は、デバイス レベルで展開されます。 ユーザー グループに展開されるポリシーは、ターゲット ユーザーと、後でそのデバイスにログオンする Intune ライセンスを持つ他のユーザーの両方に対して有効になります。
+> Windows 10 デバイス制限プロファイルでは、構成可能な設定の大半がデバイス グループを使用してデバイス レベルで展開されます。 ユーザー グループに展開されたポリシーは対象ユーザーに適用され、また Intune ライセンスを持ち、そのデバイスにサインインするユーザーに適用されます。
 
 ## <a name="before-you-begin"></a>始める前に
 
@@ -1108,7 +1108,7 @@ GDI DPI スケールでは、DPI 対応でないアプリケーションをモ�
   - **有効**: Microsoft Defender は PUA を検出し、検出された項目をブロックします。 これらの項目は、その他の脅威と共に履歴に表示されます。
   - **[監査]** : Microsoft Defender は PUA を検出しますが、何のアクションも行いません。 Microsoft Defender でアクションが実行されるアプリケーションに関する情報を確認できます。 たとえば、Microsoft Defender によって作成されたイベントをイベント ビューアーで検索します。
 
-  望ましくない可能性のあるアプリの詳細については、「[Detect and block potentially unwanted applications (望ましくない可能性があるアプリケーションの検出とブロック)](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus)」をご覧ください。
+  望ましくない可能性のあるアプリの詳細については、「[Detect and block potentially unwanted applications (望ましくない可能性があるアプリケーションの検出とブロック)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus)」をご覧ください。
 
   [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 

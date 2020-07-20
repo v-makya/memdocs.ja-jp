@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bfcc4a8e867041e0053697bbee605f9798e45bec
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8c4d66638ffbeded5bf514bba1501e5797e38aac
+ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093915"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86210387"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Apple Business Manager または Apple School Manager を使用して macOS デバイスを自動登録する
 
@@ -62,10 +62,9 @@ ADE または Apple School Manager に macOS デバイスを登録するには�
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>手順 1. トークンを作成するために必要な Intune 公開キー証明書をダウンロードする
 
-1. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[macOS]**  >  **[macOS enrollment]\(macOS の登録\)** を選択します。 
-> **[Enrollment Program トークン]**  >  **[追加]** を選択します。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[macOS]**  >  **[macOS enrollment]\(macOS の登録\)**  >  **[Enrollment Program トークン]**  >  **[追加]** を選択します。
 
-    ![Get an enrollment program token.](./media/device-enrollment-program-enroll-macos/image01.png)
+    ![Enrollment Program トークンを取得します。](./media/device-enrollment-program-enroll-macos/image01.png)
 
 2. **[同意する]** を選択して、Microsoft がユーザーとデバイスの情報を Apple に送信できるようにします。
 
@@ -106,7 +105,7 @@ ADE または Apple School Manager に macOS デバイスを登録するには�
 これでトークンがインストールされました。デバイスの登録プロファイルを作成することができます。 デバイス登録プロファイルで、デバイス グループに対して登録時に適用する設定を定義します。
 
 1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[macOS]**  >  **[macOS enrollment]\(macOS の登録\)**  >  **[Enrollment Program トークン]** を選択します。
-2. トークンを選択し、 **[プロファイル]** を選択し、 **[プロファイルの作成]** を選択します。
+2. トークンを選択し、 **[プロファイル]** を選択した後、 **[プロファイルの作成]**  >  **[macOS]** を選択します。
 
     ![プロファイルの作成のスクリーンショット。](./media/device-enrollment-program-enroll-macos/image04.png)
 
@@ -123,13 +122,11 @@ ADE または Apple School Manager に macOS デバイスを登録するには�
 
     - **[ユーザー アフィニティなしで登録する]** - このオプションは、1 人のユーザーに関連付けられていないデバイスの場合に選択します。 ローカルのユーザー データにアクセスせずにタスクを実行するデバイスで使用します。 ポータル サイト アプリなどのアプリは動作しません。
 
-6. **[ユーザー アフィニティとともに登録する]** を選択する場合は、 **[認証方法]** の下で **[Setup Assistant (legacy)]\(設定アシスタント (レガシ)\)** または **[Setup Assistant with modern authentication]\(先進認証でのセットアップ アシスタント\)** を選択します。
+6. **[ロックされた登録]** の場合、このプロファイルを使用するデバイスの登録をロックする必要があるかどうかを選択します。 **[はい]** にすると、 **[システム環境設定]** メニューから、または **[ターミナル]** を通じて管理プロファイルの削除を許可する macOS 設定が、無効になります。 デバイスの登録後は、デバイスをワイプしないと、この設定を変更することができません。
 
-7. **[ロックされた登録]** の場合、このプロファイルを使用するデバイスの登録をロックする必要があるかどうかを選択します。 **[はい]** にすると、 **[システム環境設定]** メニューから、または **[ターミナル]** を通じて管理プロファイルの削除を許可する macOS 設定が、無効になります。 デバイスの登録後は、デバイスをワイプしないと、この設定を変更することができません。
+7. **[次へ]** を選択して、 **[設定アシスタント]** ページに移動します。
 
-8. **[次へ]** を選択して、 **[設定アシスタント]** ページに移動します。
-
-9. **[設定アシスタント]** ページで、次のプロファイル設定を構成します。
+8. **[設定アシスタント]** ページで、次のプロファイル設定を構成します。
 
     ![設定アシスタントのカスタマイズ。](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
@@ -163,9 +160,9 @@ ADE または Apple School Manager に macOS デバイスを登録するには�
     | <strong>画面の表示時間</strong> | [画面の表示時間] 画面を表示します。 macOS 10.15 以降と、iOS/iPadOS 12.0 以降が対象です。 |
     | <strong>プライバシー</strong> | [プライバシー] 画面をユーザーに表示します。 macOS 10.13.4 以降と、iOS/iPadOS 11.3 以降が対象です。 |
     
-10. **[次へ]** を選択して、 **[確認と作成]** ページへ移動します。
+9. **[次へ]** を選択して、 **[確認と作成]** ページへ移動します。
 
-11. プロファイルを保存するには、 **[作成]** を選択します。
+10. プロファイルを保存するには、 **[作成]** を選択します。
 
 ## <a name="sync-managed-devices"></a>マネージド デバイスを同期する
 

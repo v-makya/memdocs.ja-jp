@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 07/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88843cfa1c4f98d87e5eaaefdc0dcd87daf8cb68
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
+ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093705"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86303472"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限するように Android エンタープライズ デバイスを設定する
 
@@ -89,7 +89,7 @@ ms.locfileid: "85093705"
 
 ### <a name="device-experience"></a>デバイス エクスペリエンス
 
-これらの設定を使用して、専用デバイスまたはフル マネージド デバイス上でキオスク スタイルのエクスペリエンスを構成します。 デバイスを構成して、1 つのアプリを実行させたり、複数のアプリを実行させたりすることができます。 デバイスがキオスク モードで設定されているときは、自分が追加したアプリのみを使用できます。
+これらの設定を使用して、専用デバイス上でキオスク スタイルのエクスペリエンスを構成するか、またはフル マネージド デバイス上のホーム画面エクスペリエンスをカスタマイズします。 デバイスを構成して、1 つのアプリを実行させたり、複数のアプリを実行させたりすることができます。 デバイスがキオスク モードで設定されているときは、自分が追加したアプリのみを使用できます。
 
 **登録プロファイルの種類**: 登録プロファイルの種類を選択して、デバイスで Microsoft Launcher または Microsoft Managed Home Screen の構成を開始します。 次のようなオプションがあります。
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/27/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f82664cbc9f6970d494945cfdf6fc72e8d95ae8b
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 1c4e567c7812f53a7497f368ded47d72640443f6
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022349"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137393"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>中国の 21Vianet が運用する Intune  
 
@@ -39,6 +39,7 @@ Microsoft がサービス自体を運用しているわけではありません�
 - 21Vianet が運用している Intune では、スタンドアロン展開のみがサポートされています。 System Center Configuration Manager を使用した共同管理のサポートは、現在開発中です。
 - パブリック クラウドからソブリン クラウドへの移行はサポートされていません。 21Vianet が運用している Intune への移行を希望されるお客様は、手動で移行する必要があります。
 - テナントのアタッチ機能 (クラウド コンソールのシナリオをサポートするために登録なしでデバイスを Intune に同期する) は、現在サポートされていません。
+- 派生資格情報は、21Vianet が運用する Intune ではサポートされていません。
 - 21Vianet が運用している Intune では Intune エージェントがサポートされていないため、レガシ PC 管理もサポートされていません。
 - Windows 10 の管理は、最新の MDM チャネルの使用によってサポートされます。
 - 21Vianet が運用している Intune では、オンプレミス Exchange Connector がサポートされていません。

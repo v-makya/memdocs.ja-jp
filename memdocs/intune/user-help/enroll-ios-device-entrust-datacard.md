@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 07/08/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: e24a03f3706256c1d18efb2eaebf520a4312edb1
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: e849936e7e0686af3377fd4d10182d3a4eb84458
+ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881540"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86137430"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-entrust-datacard"></a>Intune ポータル サイトと Entrust Datacard を使用して iOS または iPadOS デバイスを設定する
 
@@ -62,7 +62,7 @@ ms.locfileid: "83881540"
 
 
 ## <a name="enroll-device"></a>デバイスを登録する  
-1. モバイル デバイスで iOS または iPadOS 用の Intune ポータル サイト アプリを開き、職場のアカウントでサインインします。  
+1. モバイル デバイスで iOS または iPadOS 用の Intune ポータル サイト アプリを開き、別のデバイスからサインインするオプションを選択します。  
 
 2. 画面に表示されたコードを書き留めます。  
 

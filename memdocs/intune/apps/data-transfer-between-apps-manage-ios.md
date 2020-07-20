@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41be99c94b31c166622ee497d08de438ee59cf23
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 771741ed0e07a6373c63dd2e81745fe53adc4242
+ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985714"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86236394"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Microsoft Intune で iOS アプリ間のデータ転送を管理する方法
 
@@ -58,6 +58,10 @@ Intune またはサード パーティの EMM ソリューションによって�
      > [!NOTE]
      > Intune で、App Configuration ポリシーの登録の種類を、 **[マネージド デバイス]** に設定する必要があります。
      > さらに、アプリを、Intune ポータル サイトからインストールするか (使用可能として設定されている場合)、または必要に応じてデバイスにプッシュする必要があります。 
+
+     > [!NOTE]
+     > IntuneMAMUPN アプリの構成設定を、受信側のアプリではなく、データを送信するターゲット マネージド アプリに展開します。 
+
 
 4. 登録済みデバイスに、Intune またはサード パーティの MDM プロバイダーを使用して **Open in management** ポリシーをデプロイします。
 
