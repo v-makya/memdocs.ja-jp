@@ -6,8 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/25/2020
-ms.topic: conceptual
+ms.date: 07/10/2020
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89703c8aec11517417f9459391c431b9db75456c
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: c9e65171c0eb723f338e87cdf1f7a99601c0833f
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502291"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240735"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
@@ -56,8 +56,26 @@ ms.locfileid: "85502291"
 
 <!-- ########################## -->
 
-## <a name="week-of-june-22-2020"></a>2020 年 6 月 22 日の週
 
+## <a name="week-of-july-06-2020"></a>2020 年 7 月 6 日の週
+
+### <a name="device-enrollment"></a>デバイスの登録
+
+#### <a name="ios-company-portal-will-support-apples-automated-device-enrollment-without-user-affinity---7282707---"></a>iOS ポータル サイトでは、ユーザー アフィニティなしでの Apple の自動デバイス登録がサポートされます<!-- 7282707 --> 
+割り当てられたユーザーを必要とせずに Apple の自動デバイス登録を使用して登録されたデバイス上で、iOS ポータル サイトがサポートされるようになりました。 エンド ユーザーは、iOS ポータル サイトにサインインして、デバイス アフィニティなしで登録された iOS/iPadOS デバイス上で、自身をプライマリ ユーザーとして確立できます。 自動デバイス登録に関する詳細については、「[Apple の自動デバイス登録を使用して iOS または iPadOS デバイスを自動登録する](../enrollment/device-enrollment-program-enroll-ios.md)」を参照してください。
+
+### <a name="app-management"></a>アプリ管理
+
+#### <a name="update-to-device-icons-in-company-portal-and-intune-apps-on-android---6057023---"></a>Android 上のポータル サイトおよび Intune アプリのデバイス アイコンを更新する<!-- 6057023 -->
+Microsoft では、より新しい外観を作成し、Microsoft Fluent Design System に準拠するように、Android デバイス上のポータル サイトと Intune アプリのデバイス アイコンを更新しました。 関連する情報については、「[iOS または iPadOS および macOS 用のポータル サイト アプリのアイコンの更新](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-)」を参照してください。 
+
+### <a name="device-management"></a>デバイス管理
+
+#### <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview---7552762---"></a>テナントのアタッチ:管理センターでの ConfigMgr クライアントの詳細 (プレビュー)<!-- 7552762 -->
+
+Microsoft Endpoint Manager admin center で、特定のデバイスのコレクション、境界グループのメンバーシップ、およびリアルタイムのクライアント情報を含む ConfigMgr クライアントの詳細を確認できるようになりました。 詳細については、「[テナントのアタッチ:管理センターでの ConfigMgr クライアントの詳細 (プレビュー)](../../configmgr/tenant-attach/client-details.md)」をご覧ください。
+
+## <a name="week-of-june-22-2020"></a>2020 年 6 月 22 日の週
 ### <a name="app-management"></a>アプリ管理
 
 #### <a name="newly-available-protected-apps-for-intune---7248952---"></a>Intune 用に新しく利用可能になった保護されたアプリ<!-- 7248952 -->

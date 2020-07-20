@@ -52,8 +52,6 @@
       items:
         - name: コンプライアンスの概要
           href: device-compliance-get-started.md
-        - name: デバイス コンプライアンス パートナー
-          href: device-compliance-partners.md
         - name: ポリシーの作成
           href: create-compliance-policy.md
         - name: 地域別のコンプライアンス
@@ -93,6 +91,8 @@
               href: endpoint-security-account-protection-policy.md
         - name: Microsoft Defender ATP
           href: advanced-threat-protection.md
+        - name: ファイアウォール規則の移行
+          href: endpoint-security-firewall-rule-tool.md
         - name: ディスクの暗号化
           items:
             - name: BitLocker ポリシーの管理
