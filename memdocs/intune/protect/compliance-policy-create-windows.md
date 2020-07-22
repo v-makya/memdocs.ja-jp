@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 972596cd3973c84c4f00409464f2fe621efc1369
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: 6c42ec6b7b67a1c000702e6e53747270d0eda28c
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107413"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437346"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune を使用してデバイスを準拠または非準拠としてマークするための Windows 10 以降の設定
 
@@ -244,7 +244,7 @@ Windows Holographic for Business では、**Windows 10 以降**のプラット�
 
 - **システム セキュリティ** > **暗号化** > **デバイス上のデータ ストレージの暗号化**。
 
-Microsoft HoloLens でデバイスの暗号化を確認するには、「[デバイスの暗号化を確認する](https://docs.microsoft.com/hololens/hololens-encryption#verify-device-encryption)」を参照してください。
+Microsoft HoloLens でデバイスの暗号化を確認するには、「[デバイスの暗号化を確認する](https://docs.microsoft.com/hololens/security-encryption-data-protection)」を参照してください。
 
 ## <a name="surface-hub"></a>Surface Hub
 

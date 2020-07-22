@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16ba955c1d40f0298c17bd9e5826a7674ddc9cab
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 4ebc719d65024f26d1661d311bfbf9077bcdcbe3
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84977270"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410914"
 ---
 # <a name="manage-team-collaboration-access-by-using-teams-for-ios-and-android-with-microsoft-intune"></a>Microsoft Intune で iOS および Android 用の Teams を使用してチーム コラボレーションを管理する
 
@@ -89,9 +89,6 @@ iOS および Android 用の Teams でサポートされるアプリ設定を使
 - [iOS の設定](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
 この構成シナリオは、登録済みデバイスでのみ機能します。 ただし、UEM プロバイダーはすべてサポートされています。 Microsoft Endpoint Manager を使用していない場合は、これらの構成キーの展開方法について UEM のドキュメントを参照する必要があります。
-
-> [!IMPORTANT]
-> 組織の許可されたアカウント モードは、6 月下旬に iOS および Android 用の Teams でサポートされます。 アプリの最小バージョンについては、上記の記事を確認してください。
 
 ## <a name="next-steps"></a>次のステップ
 

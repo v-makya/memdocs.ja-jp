@@ -5,7 +5,7 @@ description: Microsoft Intune で管理できる Windows MDM セキュリティ 
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/06/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cc2cf4531c2e2d7a2847ccdbce87c8b938a46d6
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 0bfbb73772124ded12d520c6c5742d1576f50f82
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022230"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491305"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Intune 用の Windows MDM セキュリティ ベースラインの設定
 
@@ -322,7 +322,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 - **[Hardware device installation by device identifiers]\(デバイス識別子を使用してハードウェア デバイスをインストールする\)** :  
   このポリシー設定を使用すると、Windows によるインストールが禁止されているデバイスのプラグ アンド プレイ ハードウェア ID と互換 ID の一覧を指定できます。 このポリシー設定は、Windows がデバイスをインストールできるようにするその他のポリシー設定よりも優先されます。 このポリシー設定を有効にした場合、ハードウェア ID または互換性 ID が作成した一覧に含まれているデバイスはインストールできません。 リモート デスクトップ サーバーでこのポリシー設定を有効にした場合、ポリシー設定は、リモート デスクトップ クライアントからリモート デスクトップ サーバーへの指定されたデバイスのリダイレクトに影響します。 この設定を無効にした場合、または構成しなかった場合は、他のポリシー設定に従って、デバイスのインストールや更新が許可されるかどうかが決まります。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2066794)
+  [詳細情報](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids)
 
   **既定値**:Block hardware device installation (ハードウェア デバイスのインストールをブロックする)
 
@@ -340,7 +340,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 - **[Hardware device installation by setup classes]\(セットアップ クラスを使用してハードウェア デバイスをインストールする\)** :  
   このポリシー設定を使用すると、Windows によるインストールが禁止されているデバイス ドライバーのデバイス セットアップ クラス GUID (グローバル一意識別子) の一覧を指定できます。 このポリシー設定は、Windows がデバイスをインストールできるようにするその他のポリシー設定よりも優先されます。 このポリシー設定を有効にした場合、デバイス セットアップ クラス GUID が作成した一覧に含まれているデバイス ドライバーはインストールすることも更新することもできません。 リモート デスクトップ サーバーでこのポリシー設定を有効にした場合、ポリシー設定は、リモート デスクトップ クライアントからリモート デスクトップ サーバーへの指定されたデバイスのリダイレクトに影響します。 この設定を無効にした場合、または構成しなかった場合は、他のポリシー設定に従って、デバイスのインストールや更新が許可されるかどうかが決まります。  
-  [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067048)
+  [詳細情報](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
 
   **既定値**:Block hardware device installation (ハードウェア デバイスのインストールをブロックする)
 

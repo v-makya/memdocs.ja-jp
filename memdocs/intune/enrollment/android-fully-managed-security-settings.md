@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99b17cc165fc8d24fdf1b0f48525f3b23d8cc9b7
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 01c8c0ffba349966c99e1cbd90dbdfc10a5c9782
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195635"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461166"
 ---
 # <a name="android-enterprise-fully-managed-security-configurations"></a>Android Enterprise フル マネージド セキュリティ構成
 
-[Android Enterprise セキュリティ構成フレームワーク](android-configuration-framework.md)の一部として、Android Enterprise フル マネージド モバイル ユーザー用の次の設定を適用します。 各ポリシー設定の詳細については、[Intune を使用してデバイスを準拠または非準拠としてマークするための Android Enterprise デバイス所有者設定](../protect/compliance-policy-create-android-for-work.md#device-owner)に関する記事と、「[Intune を使用して機能を許可または制限するように Android Enterprise デバイスを設定する](../configuration/device-restrictions-android-for-work.md#device-owner-only)」を参照してください。
+[Android Enterprise セキュリティ構成フレームワーク](android-configuration-framework.md)の一部として、Android Enterprise フル マネージド モバイル ユーザー用の次の設定を適用します。 各ポリシー設定の詳細については、[Intune を使用してデバイスを準拠または非準拠としてマークするための Android Enterprise デバイス所有者設定](../protect/compliance-policy-create-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)に関する記事と、「[Intune を使用して機能を許可または制限するように Android Enterprise デバイスを設定する](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)」を参照してください。
 
 設定を選択するときは、必ず使用シナリオを確認して分類してください。 その後、選択したセキュリティ レベルのガイダンスに従ってユーザーを構成します。 組織のニーズに基づいて、推奨される設定を調整できます。 セキュリティ チームによる脅威環境、リスク選好度、および使いやすさへの影響の評価を必ず受けてください。
 

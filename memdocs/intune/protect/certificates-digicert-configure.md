@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99cad94d0d0f56aba94e8d00a091efea914f418e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ab862efd37bfeffc392d1d18cbf1f8a2f3deb50e
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990355"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565701"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>DigiCert PKI Platform 用に Intune Certificate Connector をセットアップする
 
@@ -51,30 +51,32 @@ PKCS または Simple Certificate Enrollment Protocol (SCEP) を使用して Mic
 
 1. 次のコード スニペットを **certreq.ini** という名前のファイルに保存し、必要に応じて更新します (例:*CN 形式のサブジェクト名*)。
 
-        [Version] 
-        Signature="$Windows NT$" 
-        
-        [NewRequest] 
-        ;Change to your,country code, company name and common name 
-        Subject = "Subject Name in CN format"
-        
-        KeySpec = 1 
-        KeyLength = 2048 
-        Exportable = TRUE 
-        MachineKeySet = TRUE 
-        SMIME = False 
-        PrivateKeyArchive = FALSE 
-        UserProtected = FALSE 
-        UseExistingKeySet = FALSE 
-        ProviderName = "Microsoft RSA SChannel Cryptographic Provider" 
-        ProviderType = 12 
-        RequestType = PKCS10 
-        KeyUsage = 0xa0 
-        
-        [EnhancedKeyUsageExtension] 
-        OID=1.3.6.1.5.5.7.3.2 ; Client Authentication  // Uncomment if you need a mutual TLS authentication
-        
-        ;----------------------------------------------- 
+   ```
+   [Version] 
+   Signature="$Windows NT$" 
+
+   [NewRequest] 
+   ;Change to your,country code, company name and common name 
+   Subject = "Subject Name in CN format"
+
+   KeySpec = 1 
+   KeyLength = 2048 
+   Exportable = TRUE 
+   MachineKeySet = TRUE 
+   SMIME = False 
+   PrivateKeyArchive = FALSE 
+   UserProtected = FALSE 
+   UseExistingKeySet = FALSE 
+   ProviderName = "Microsoft RSA SChannel Cryptographic Provider" 
+   ProviderType = 12 
+   RequestType = PKCS10 
+   KeyUsage = 0xa0 
+
+   [EnhancedKeyUsageExtension] 
+   OID=1.3.6.1.5.5.7.3.2 ; Client Authentication  // Uncomment if you need a mutual TLS authentication
+
+   ;----------------------------------------------- 
+   ```
 
 2. 管理者特権でのコマンド プロンプトを開き、次のコマンドを使用して証明書署名要求 (CSR) を生成します。
 
@@ -82,13 +84,14 @@ PKCS または Simple Certificate Enrollment Protocol (SCEP) を使用して Mic
 
 3. メモ帳で request.csr ファイルを開き、次の形式の CSR コンテンツをコピーします。
 
-        -----BEGIN NEW CERTIFICATE REQUEST-----
-        MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
-        …
-        …
-        fzpeAWo=
-        -----END NEW CERTIFICATE REQUEST-----
-
+   ``` 
+   -----BEGIN NEW CERTIFICATE REQUEST-----
+   MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
+   …
+   …
+   fzpeAWo=
+   -----END NEW CERTIFICATE REQUEST-----
+   ```
 
 4. DigiCert CA にサインインし、タスクから **[Get an RA Cert]\(RA 証明書の取得\)** を参照します。
 
@@ -136,7 +139,7 @@ PKCS または Simple Certificate Enrollment Protocol (SCEP) を使用して Mic
 
    g. スペースを除いて RA 証明書のサムプリントのコピーを記録します。 次にサムプリントの例を示します。
 
-        RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"
+      `RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"`
 
     > [!NOTE]
     > DigiCert CA から RA 証明書を取得する方法については、[DigiCert のカスタマー サポート](mailto:enterprise-pkisupport@digicert.com)にお問い合わせください。
@@ -196,8 +199,10 @@ Intune 管理ポータルから Intune Certificate Connector の最新バージ�
 
    a. `RACertThumbprint` キーの値を、前のセクションでコピーした証明書のサムプリントで更新します。 次に例を示します。
 
-        <add key="RACertThumbprint"
-        value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
+      ```
+      <add key="RACertThumbprint"
+      value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
+      ```
 
    b. ファイルを保存して閉じます。
 
@@ -272,7 +277,7 @@ DigiCert CA の証明書プロファイル テンプレートには、証明書�
 3. 使用する証明書プロファイルを選択します。
 4. 証明書プロファイル OID をコピーします。 これは次の例のようなものです。
 
-       Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109 
+   `Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109`
 
 > [!NOTE]
 > 証明書プロファイル OID の取得に関してサポートが必要な場合は、[DigiCert のカスタマー サポート](mailto:enterprise-pkisupport@digicert.com)にお問い合わせください。

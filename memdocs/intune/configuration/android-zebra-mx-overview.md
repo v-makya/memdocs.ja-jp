@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 077318d4b55c7e1f2a83864aba51e2282630b9fb
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: cb1d4917e94528dc64fa336df8eacc085a4d685c
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990154"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461982"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Microsoft Intune で Zebra モビリティ拡張機能を備えた Zebra デバイスを使用および管理する
 
@@ -117,7 +117,7 @@ StageNow でプロファイルを作成するときの最後の手順で、 **[E
   あるいは、これらの変更情報を、Intune の次のような組み込み機能を使用して取得します。
 
   - アプリを[追加](../apps/apps-add.md)、[展開](../apps/apps-deploy.md)、更新、および[監視](../apps/apps-monitor.md)するためのアプリ管理機能。
-  - Android エンタープライズが稼働しているデバイス上で[システムおよびアプリの更新プログラム](device-restrictions-android-for-work.md#device-owner-only)を管理する
+  - Android エンタープライズが稼働しているデバイス上で[システムおよびアプリの更新プログラム](device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)を管理する
 
 ファイルをテストしたら、次のステップとして、Intune を使用してプロファイルをデバイスに展開します。
 

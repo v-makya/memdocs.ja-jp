@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc44bb114d6ff9089a01da2d0b7db7aa7527f4b5
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: b227148a6e16f7c9f8d62cb58eeb628afbd84123
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972149"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872020"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Wandera モバイル脅威保護を Intune と統合する  
 
@@ -70,12 +70,10 @@ Wandera と Intune 間の統合を設定するために、Wandera スタッフ�
 
    ![アクセス許可に同意する](./media/wandera-mtd-connector-integration/permissions.png)
 
-10. RADAR 管理コンソールに自動的に戻ります。  承認が成功した場合は、[Grant]\(許可\) ボタンの横に緑色のティックが表示されます。
-11. 一覧表示された残りの統合について、[Grant]\(許可\) ボタンをクリックして、それぞれの横に緑色のティックが表示されるまで同意プロセスを繰り返します。
+9. RADAR 管理コンソールに自動的に戻ります。  承認が成功した場合は、[Grant]\(許可\) ボタンの横に緑色のティックが表示されます。
+10. 一覧表示された残りの統合について、[Grant]\(許可\) ボタンをクリックして、それぞれの横に緑色のティックが表示されるまで同意プロセスを繰り返します。
 
-    ![同期グループ](./media/wandera-mtd-connector-integration/sync-group-name.png)
-
-12. Intune コンソールに戻り、Wandera MTD コネクタの編集を再開します。 使用可能な切り替えを [オン] に設定して、構成を [保存] します。
+11. Intune コンソールに戻り、Wandera MTD コネクタの編集を再開します。 使用可能な切り替えを [オン] に設定して、構成を [保存] します。
 
     ![Wandera の有効化](./media/wandera-mtd-connector-integration/enable-wandera.png)
 
