@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f5461f888bfa2b749061eef4000f0d7c5f756b84
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 2f5aa622ca5d98f2cb5eb0b0c3154625df11a42e
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906744"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240764"
 ---
 # <a name="enable-third-party-updates"></a>サード パーティの更新プログラムを有効にする 
 
@@ -35,6 +35,7 @@ ms.locfileid: "82906744"
     - パートナー カタログ一覧については、HTTPS ポート 443 経由での download.microsoft.com が必要です。 
     -  サード パーティのカタログおよび更新プログラムのコンテンツ ファイルへのインターネット アクセスを行います。 443 以外の追加のポートが必要な場合があります。
     - サード パーティの更新プログラムでは、SUP と同じプロキシ設定が使用されます。
+- 1910 より前のバージョンの Configuration Manager では、**ソフトウェア更新マネージャー**のセキュリティ ロールではサードパーティのカタログを同期できません。 カタログを同期するには、**完全な権限を持つ管理者**のセキュリティ ロールが必要です。
 
 
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>SUP が最上位サイト サーバーから離れている場合の追加の要件 

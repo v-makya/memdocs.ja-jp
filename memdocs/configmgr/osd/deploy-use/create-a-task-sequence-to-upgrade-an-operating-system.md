@@ -2,7 +2,7 @@
 title: OS の更新タスク シーケンスを作成する
 titleSuffix: Configuration Manager
 description: タスク シーケンスを使用して、自動的に Windows 7 以降から Windows 10 にアップグレードします。
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ad36978f3f3dc5207068a65d76bf8f5c7c3078c
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 84e6ea21f2bb9627ae6b40c62f8f856fb426bdaf
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383242"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384894"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Configuration Manager で OS をアップグレードするタスク シーケンスを作成する
 
@@ -253,13 +253,17 @@ Windows のドキュメント「[Windows 10 のアップグレード エラー�
 
     `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`
 
+    このコマンドによって、コマンド プロンプトが指定されたゼロ以外の終了コードで終了されます。これは、タスク シーケンスによってエラーと見なされます。
+
 1. **[オプション]** タブで、次の条件を追加します。
 
     `Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400`
 
-このリターン コードは MOSETUP_E_COMPAT_SCANONLY (0xC1900210) に相当する 10 進数で、互換性スキャンが成功して問題がなかったことを示します。 "*アップグレード評価*" ステップが成功してこのコードを返した場合、タスク シーケンスはこのステップをスキップします。 評価ステップが他のリターン コードを返した場合、このステップは Windows セットアップ互換性スキャンからのリターン コードでタスク シーケンスを失敗させます。 **_SMSTSOSUpgradeActionReturnCode** について詳しくは、「[タスク シーケンス変数](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode)」をご覧ください。
+    この条件は、リターン コードが成功コードではない場合、タスク シーケンスによってこの **[コマンド ラインの実行]** ステップのみが実行されることを意味します。
 
-詳細については、「[オペレーティング システムのアップグレード](../understand/task-sequence-steps.md#BKMK_UpgradeOS)」を参照してください。  
+リターン コード `3247440400` は MOSETUP_E_COMPAT_SCANONLY (0xC1900210) に相当する 10 進数で、互換性スキャンが成功して問題がなかったことを示します。 "*アップグレード評価*" ステップが成功して `3247440400` が返された場合、タスク シーケンスではこの **[コマンド ラインの実行]** ステップがスキップされ、続行されます。 評価手順から他のリターン コードが返された場合は、この **[コマンド ラインの実行]** ステップが実行されます。 コマンドはゼロ以外のリターン コードで終了するため、タスク シーケンスも失敗します。 タスク シーケンスのログとステータス メッセージには、Windows セットアップ互換性スキャンからのリターン コードが含まれます。 **_SMSTSOSUpgradeActionReturnCode** について詳しくは、「[タスク シーケンス変数](../understand/task-sequence-variables.md#SMSTSOSUpgradeActionReturnCode)」をご覧ください。
+
+詳細については、「[オペレーティング システムのアップグレード](../understand/task-sequence-steps.md#BKMK_UpgradeOS)」タスク シーケンス ステップを参照してください。
 
 ### <a name="convert-from-bios-to-uefi"></a>BIOS から UEFI に変換する
 

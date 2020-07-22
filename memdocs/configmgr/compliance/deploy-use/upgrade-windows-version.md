@@ -2,20 +2,20 @@
 title: Windows デバイスを別のバージョンにアップグレードする
 titleSuffix: Configuration Manager
 description: Windows 10 デバイスを別の Windows エディションに自動的にアップグレードするには、Configuration Manager を使用します。
-ms.date: 09/03/2019
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 77ef255a820104ef2042a370b5056677fddb9d12
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7a82a635eafcc0ecb5251457db9d4fbb301fce33
+ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692300"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86390842"
 ---
 # <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>Configuration Manager による Windows デバイスの新しいエディションへのアップグレード
 
@@ -37,7 +37,7 @@ ms.locfileid: "81692300"
 
 - Windows 10 のデスクトップ エディションの場合:ポリシーの対象とするすべてのデバイスでの Windows の新しいバージョンに対する有効なプロダクト キー。 このプロダクト キーは、マルチ ライセンス認証キー (MAK) または汎用ボリューム ライセンス キー (GVLK) でもかまいません。 GVLK は、キー管理サービス (KMS) クライアント セットアップ キーとも呼ばれます。 詳細については、「[ボリューム ライセンス認証の計画](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)」を参照してください。 KMS クライアント セットアップ キーの一覧については、Windows Server のライセンス認証ガイドの「[付録 A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)」を参照してください。 <!--496871-->  
 
-- Windows 10 Mobile の場合:Microsoft ボリューム ライセンス サービス センター (VLSC) から入手した XML ライセンス ファイル。 このファイルには、ポリシーの対象とするすべてのデバイスでの Windows の新しいバージョンに対するライセンス情報が含まれます。
+- Windows 10 Mobile の場合:Microsoft ボリューム ライセンス サービス センター (VLSC) から入手した XML ライセンス ファイル。 このファイルには、ポリシーの対象とするすべてのデバイスでの Windows の新しいバージョンに対するライセンス情報が含まれます。 ライセンス XML を含む **Windows 10 Mobile Enterprise** 用の ISO ファイルをダウンロードします。<!-- SCCMDocs#2033 -->
 
 - この種類のポリシーを管理するには、Configuration Manager の**完全な権限を持つ管理者**のセキュリティ ロールである必要があります。
 

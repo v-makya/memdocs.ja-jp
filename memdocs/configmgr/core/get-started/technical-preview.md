@@ -2,7 +2,7 @@
 title: Technical Preview リリース
 titleSuffix: Configuration Manager
 description: Configuration Manager の新機能を体験する Technical Preview Branch について説明します。
-ms.date: 06/25/2020
+ms.date: 07/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dfa3b33a46166cfa4e1233eb71125696f5aa39d
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 64e784ec7313dfa778ee39f6e1f52e7c09fcfd95
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383140"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384827"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager の Technical Preview
 
@@ -91,9 +91,10 @@ Configuration Manager の Technical Preview Branch では、次の製品とテ�
 
 ### <a name="active-baseline-versions"></a>アクティブなベースライン バージョン
 
-リリース後、最長 1 年間、ベースライン バージョンをインストールできます。 新しい Technical Preview サイトをインストールする場合は、最新のベースライン バージョンを使用してください。
+リリース後、最長 1 年間、ベースライン バージョンをインストールできます。 新しい Technical Preview サイトをインストールする場合は、最新のベースライン バージョンを使用してください。 次の Configuration Manager Technical Preview Branch バージョンは、コンソール内更新と、新しいベースライン バージョンの両方として使用できます。
 
-- **Technical Preview バージョン 2002**:Configuration Manager Technical Preview Branch バージョン 2002 は、コンソール内更新と、新しいベースライン バージョンの両方として使用できます。
+- **Technical Preview バージョン 2007**
+- **Technical Preview バージョン 2002**
 
 ベースライン バージョンは [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) からダウンロードしてください。
 
@@ -116,25 +117,17 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2006.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
 
 最新の Configuration Manager Technical Preview バージョンでは、以下の機能を使用できます。
 
-### <a name="technical-preview-version-2006"></a>Technical Preview バージョン 2006
+### <a name="technical-preview-version-2007"></a>Technical Preview バージョン 2007
 
-- [共同管理デバイスでポータル サイト アプリを使用する](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
-- [CMG を介した利用可能なアプリの改善](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
-- [イントラネット クライアントで CMG ソフトウェアの更新ポイントを使用できる](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
-- [CMG を介したタスク シーケンスの改善](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
-- [リモート ワーカーに合わせた最適化を行うための管理分析情報](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
-- [VPN 境界の種類の改善](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
-- [テナント接続:Microsoft Endpoint Manager admin center での Configuration Manager 操作の改善](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
-- [CMG によるエンドポイント保護ポリシーのサポート](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
-- [テナント接続のオンボード中に以前に作成した Azure AD アプリケーションをインポートする](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
-- [従量制課金接続でのクライアント アップグレードの改善](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
-- [デバイスの再起動の管理の改善](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
-- [Windows Virtual Desktop のサポートの改善](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
-- [Configuration Manager コミュニティ ハブの項目への直接リンク](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
+- [テナントのアタッチ:Microsoft Endpoint Manager 管理センターでハードウェア インベントリを表示する](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [クライアント データ ソース ダッシュボードの機能強化](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [一部のコンソール領域で固定幅フォントが使用される](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [タスク シーケンス ポリシー サイズの管理](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [管理センターのデバイス タイムラインの機能強化](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
 
 > [!NOTE]
 > Technical Preview の以前のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、Configuration Manager の Current Branch に追加された機能は、Technical Preview Branch でも引き続き利用できます。
@@ -151,6 +144,22 @@ When there's a new CB, add any features not in that CB to the table in H2 "Featu
 
 > [!TIP]
 > 新しい Current Branch バージョンが利用できるようになると、そのバージョンで利用できる機能が最新の "*新機能*" 記事に記載されます。 詳しくは、[増分バージョンの新機能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)に関する記事をご覧ください。
+
+### <a name="technical-preview-version-2006"></a>Technical Preview バージョン 2006
+
+- [共同管理デバイスでポータル サイト アプリを使用する](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
+- [CMG を介した利用可能なアプリの改善](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
+- [イントラネット クライアントで CMG ソフトウェアの更新ポイントを使用できる](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
+- [CMG を介したタスク シーケンスの改善](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
+- [リモート ワーカーに合わせた最適化を行うための管理分析情報](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
+- [VPN 境界の種類の改善](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
+- [テナント接続:Microsoft Endpoint Manager admin center での Configuration Manager 操作の改善](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
+- [CMG によるエンドポイント保護ポリシーのサポート](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
+- [テナント接続のオンボード中に以前に作成した Azure AD アプリケーションをインポートする](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
+- [従量制課金接続でのクライアント アップグレードの改善](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
+- [デバイスの再起動の管理の改善](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
+- [Windows Virtual Desktop のサポートの改善](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
+- [Configuration Manager コミュニティ ハブの項目への直接リンク](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
 
 ### <a name="technical-preview-version-2005"></a>Technical Preview バージョン 2005
 

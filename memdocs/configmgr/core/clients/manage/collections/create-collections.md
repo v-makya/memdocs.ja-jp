@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e3f178b41fbb305ef938063bd9b9743daa6b5c69
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: def7a40091f6c9a45e67f5e4de7d7dca94b3cba2
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695340"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422808"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Configuration Manager でのコレクションの作成方法
 
@@ -229,11 +229,11 @@ Configuration Manager に他のコレクションのメンバーを含めます�
 
 Azure AD 同期は 5 分おきに行われます。 これは Configuration Manager から Azure AD への一方向プロセスです。 Azure AD で行われた変更は Configuration Manager コレクションで反映されませんが、Configuration Manager で上書きされることがありません。 たとえば、Configuration Manager コレクションにデバイスが 2 台あり、Azure AD グループに異なるデバイスが 3 台あるとき、同期後、Azure AD グループのデバイスは 5 台となります。
 
-
 ### <a name="prerequisites"></a>[前提条件]
 
-- [クラウド管理](../../../servers/deploy/configure/azure-services-wizard.md)
+- [クラウド管理](../../../servers/deploy/configure/azure-services-wizard.md)のための Azure AD との統合
 - [Azure Active Directory ユーザー探索](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
+- HTTPS または [拡張 HTTP](../../../plan-design/hierarchy/enhanced-http.md) 対応の管理ポイント
 
 ### <a name="create-a-group-and-set-the-owner-in-azure-ad"></a>Azure AD でグループを作成して所有者を設定する
 

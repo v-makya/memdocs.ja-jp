@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 0ef2d09423e7bb51e94cb626bf513aa7e98992c9
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195652"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411016"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics とは
 
@@ -103,7 +103,7 @@ Desktop Analytics を使用するには、環境が次の前提条件を満た�
     - デバイスには、Configuration Manager クライアント バージョン 1902 および更新プログラムのロールアップ (4500571) 以降も必要です。 詳しくは、[Configuration Manager の更新](connect-configmgr.md#bkmk_hotfix)に関する記事をご覧ください。  
 
     > [!Note]  
-    > Desktop Analytics では、Windows 10 の長期サービス チャネル (LTSC) へのアップグレードはサポートされていません。 詳しくは、[サービスとしての Windows の概要](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)に関する記事をご覧ください。
+    > Desktop Analytics では、Windows 10 の長期サービス チャネル (LTSC) への、またはそこからのアップグレードはサポートされていません。 詳しくは、[サービスとしての Windows の概要](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)に関する記事をご覧ください。
     >
     > Desktop Analytics は、インプレース アップグレードのシナリオを最適にサポートするように設計されています。 32 ビットから 64 ビット アーキテクチャなど、大幅な変更を行う必要がある場合は、イメージング シナリオを使用します。 これらの従来の OS 展開シナリオでは、Desktop Analytics の分析情報が依然として有益ですが、インプレース アップグレード固有のガイダンスは無視してかまいません。 詳しくは、「[Configuration Manager を使用して、エンタープライズ オペレーティング システムを展開するシナリオ](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)」をご覧ください。
 

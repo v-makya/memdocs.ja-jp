@@ -5,17 +5,17 @@ description: 自動展開規則 (ADR) を使用して、ソフトウェア更新
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 07/10/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: bf172c4cb34a17ac793ea5568b0505505baf97a0
-ms.sourcegitcommit: dba89b827d7f89067dfa75a421119e0c973bb747
+ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83709436"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86240033"
 ---
 #  <a name="automatically-deploy-software-updates"></a>ソフトウェア更新プログラムの自動展開  
 
@@ -197,7 +197,7 @@ ADR を使用して、ソフトウェア更新プログラムを自動的に承�
 
         -  **送信の優先順位**: 展開パッケージの送信の優先順位を指定します。 Configuration Manager は、パッケージを配布ポイントに送信するときに、この優先順位を使用します。 展開パッケージは優先順位に従って送信されます。[高]、[中]、[低] の順です。 パッケージの優先順位が同じ場合は、作成された順に送信されます。 バックログがない場合、パッケージは優先順位に関係なく、すぐに処理されます。  
 
-        - **バイナリ差分レプリケーションを有効にする**: この設定を有効にすると、サイト間のネットワーク トラフィックを最小限に抑えることができます。 バイナリ差分レプリケーション (BDR) は、パッケージ全体の内容を更新するのではなく、パッケージ内の変更されたコンテンツのみを更新します。 詳細については、「[バイナリ差分レプリケーションについて](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication)」を参照してください。  
+        - **バイナリ差分レプリケーションを有効にする**: 展開パッケージにバイナリ差分レプリケーションを使用するには、この設定を有効にします。 詳細については、「[バイナリ差分レプリケーションについて](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication)」を参照してください。  
 
     - **展開パッケージなし**: バージョン 1806 以降、最初にコンテンツをダウンロードして配布ポイントに配布することなく、ソフトウェア更新プログラムをデバイスに展開します。 この設定は、きわめて大規模な更新プログラムのコンテンツを扱うときに役立ちます。 また、クライアントが常に Microsoft Update のクラウド サービスからコンテンツを取得するようにしたい場合にも使用します。 このシナリオのクライアントでは、既に必要なコンテンツがあるピアからコンテンツをダウンロードすることもできます。 Configuration Manager クライアントで引き続きコンテンツのダウンロードが管理されるため、Configuration Manager のピア キャッシュ機能や、配信の最適化などの他のテクノロジを利用することができます。 この機能では、Windows および Office の更新プログラムを含む、Configuration Manager ソフトウェア更新プログラム管理でサポートされるすべての更新プログラムの種類がサポートされます。<!--1357933-->  
 

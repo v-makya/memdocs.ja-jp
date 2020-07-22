@@ -2,7 +2,7 @@
 title: Role-based Administration Tool
 titleSuffix: Configuration Manager
 description: Role-based Administration and Auditing Tool を使用して、Configuration Manager のセキュリティ ロールとスコープをモデル化し、監査します。
-ms.date: 07/30/2018
+ms.date: 07/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6372ff17-7f56-4d7b-a21b-87fb8bdd6d3a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ff940db21711aabb5d57a45b05d90d04415639bb
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4cf9d4d3f9d1b2f439d2e87d41cc280e7af0805a
+ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707560"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86239710"
 ---
 # <a name="role-based-administration-and-auditing-tool"></a>Role-based Administration and Auditing Tool
 
@@ -31,7 +31,7 @@ Role-based Administration and Auditing Tool は、[Configuration Manager ツー�
 
 ## <a name="requirements"></a>要件
 
-- Configuration Manager コンソールと同じコンピューターで実行します  
+- Configuration Manager サイト サーバーと同じコンピューターで実行します 
 
 - **完全な権限を持つ管理者**、**読み取り専用アナリスト**、または**セキュリティ管理者**のロールを持っています  
 

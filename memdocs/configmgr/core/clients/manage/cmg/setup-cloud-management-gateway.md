@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 0960637f534bfe1361b55b2d63be87abc7894d7b
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715239"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410872"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager のクラウド管理ゲートウェイを設定する
 
@@ -246,6 +246,9 @@ CMG を作成したら、その設定の一部を変更できます。 Configura
 #### <a name="settings"></a>Settings
 
 - **証明書ファイル**: CMG のサーバー認証証明書を変更します。 このオプションは、有効期限が切れる前に証明書を更新する場合に役立ちます。  
+
+  > [!NOTE]
+  > CMG のサーバー認証証明書を更新すると、証明書の共通名 (CN) に指定された FQDN で大文字と小文字が区別されます。  たとえば、現在使用されている証明書に `https://contoso-cmg.contoso.com` の CN がある場合は、同じ小文字の CN で新しい証明書を作成します。 CN `https://CONTOSO-CMG.CONTOSO.COM` の証明書はウィザードで受け付けられません。
 
 - **VM インスタンス**: サービスが Azure で使用する仮想マシンの数を変更します。 この設定では、サービスを使用やコストに関する考慮事項に基づいて、動的にスケール アップまたはスケール ダウンすることができます。  
 

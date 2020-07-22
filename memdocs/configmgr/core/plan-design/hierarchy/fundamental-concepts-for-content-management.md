@@ -2,7 +2,7 @@
 title: コンテンツ管理の基礎
 titleSuffix: Configuration Manager
 description: Configuration Manager のツールとオプションを使用して、展開するコンテンツを管理します。
-ms.date: 12/17/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ffd6487297bb682ef9bda7c5bf5ee9cb3beede15
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590458"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384946"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager でのコンテンツ管理の基本的な概念
 
@@ -85,7 +85,7 @@ BDR は、同じ階層内の親サイトと子サイト間でサポートされ�
 - "*ブロック*" レベルの相違点
 - アプリに対して常に有効
 - レガシ パッケージでは省略可能
-- ファイルが配布ポイントに既に存在し、変更がある場合、サイトは BDR を使用して、ファイル全体ではなく、ブロックレベルの変更をレプリケートします。
+- ファイルが配布ポイントに既に存在し、変更がある場合、サイトは BDR を使用して、ファイル全体ではなく、ブロックレベルの変更をレプリケートします。 この動作は、オブジェクトで BDR を使用できるようにした場合にのみ適用されます。<!-- SCCMDocs#2026 -->
 
 #### <a name="summary-of-delta-replication"></a>差分レプリケーションの概要
 
@@ -220,7 +220,9 @@ Configuration Manager 配布ポイントで Windows LEDBAT を使用する方法
 
 ## <a name="content-source-priority"></a>コンテンツ ソースの優先順位
 
-クライアントでコンテンツが必要な場合は、コンテンツの場所の要求を管理ポイントに対して行います。 管理ポイントからは、要求されたコンテンツで有効なソースの場所の一覧が返されます。 この一覧は、特定のシナリオ、使用されているテクノロジ、サイト設計、境界グループ、展開の設定によって異なります。 次の一覧には、クライアントで使用できる、利用可能なコンテンツ ソースの場所がすべて含まれており、優先順に示されています。  
+クライアントでコンテンツが必要な場合は、コンテンツの場所の要求を管理ポイントに対して行います。 管理ポイントからは、要求されたコンテンツで有効なソースの場所の一覧が返されます。 この一覧は、特定のシナリオ、使用されているテクノロジ、サイト設計、境界グループ、展開の設定によって異なります。 たとえば、タスク シーケンスが実行されるときに、完全な Configuration Manager クライアントが常に実行されているわけではないため、動作が異なる場合があります。<!-- SCCMDocs#1960 -->
+
+次の一覧には、Configuration Manager クライアントで使用できる、利用可能なコンテンツ ソースの場所がすべて含まれており、優先順に示されています。  
 
 1. クライアントと同じコンピューター上の配布ポイント
 2. 同じネットワーク サブネット内のピア ソース

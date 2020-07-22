@@ -2,7 +2,7 @@
 title: SQL Server AlwaysOn
 titleSuffix: Configuration Manager
 description: Configuration Manager で SQL Server Always On 可用性グループの使用を計画します
-ms.date: 07/26/2019
+ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 576f909be15a35f4c29e803236c220cdde33c0ac
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 9ce8c10d9d59d97caa53ece12dd43d90c78546bb
+ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383157"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86384844"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager で SQL Server Always On 可用性グループを使用するための準備
 
@@ -247,6 +247,9 @@ Configuration Manager では、最新であることを確認するための非�
 #### <a name="replica-member-location"></a>レプリカ メンバーの場所
 
 すべてのレプリカを、オンプレミスまたは Microsoft Azure どちらかの可用性グループでホストします。 オンプレミス メンバーと Azure のメンバーを 1 つのグループに含めることはサポートされていません。
+
+> [!NOTE]
+> SQL Server に Azure 仮想マシンを使用している場合は、**floating IP** を有効にします。 詳細については、「[Azure Virtual Machines に SQL Server Always On 可用性グループのロード バランサーを構成する](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure)」を参照してください。<!-- SCCMDocs#1928 -->
 
 Configuration Manager セットアップでは、各レプリカに接続する必要があります。 Azure で可用性グループをセットアップし、グループが内部または外部ロード バランサーの背後にある場合、次の既定ポートを開きます。
 

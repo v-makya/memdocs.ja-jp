@@ -2,7 +2,7 @@
 title: バージョン 2002 の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager Current Branch のバージョン 2002 で導入された変更点および新機能について説明します。
-ms.date: 06/11/2020
+ms.date: 07/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 58819d764f69ab7e1cc928e14189e01470deb73b
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 3c5107ffe26c72852cbc1dbaa15eb19a990c7939
+ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590441"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422856"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 2002 の新機能
 
@@ -432,10 +432,7 @@ Configuration Manager 向け Windows PowerShell コマンドレットの変更�
 
 このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Configuration Manager Current Branch バージョン 2002 での変更の概要](https://support.microsoft.com/help/4556203)」を参照してください。
 
-<!--
-The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
-
--->
+2020 年 7 月 15 日以降、コンソールで次の更新プログラムのロールアップ (4560496) を利用できるようになりました: [Microsoft Endpoint Configuration Manager バージョン 2002 の更新プログラムのロールアップ](https://support.microsoft.com/help/4560496)。
 
 <!--
 ### Hotfixes
