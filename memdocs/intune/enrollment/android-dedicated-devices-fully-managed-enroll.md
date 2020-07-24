@@ -1,7 +1,7 @@
 ---
-title: Intune で Android Enterprise の専用デバイスまたはフル マネージド デバイスを登録する
+title: Android Enterprise 専用、フル マネージド、または会社所有の仕事用プロファイル デバイスを Intune で登録する
 titleSuffix: Microsoft Intune
-description: Intune で Android Enterprise 専用デバイスまたはフル マネージド デバイスを登録する方法について説明します。
+description: Android Enterprise 専用、フル マネージド、または会社所有の仕事用プロファイル デバイスを Intune で登録する方法について説明します。
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93cd7c7e852e3d8d8fe576cec66ce7a7020f06b7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 858d813d3df2b020a869e1f18327d35e68bde7e0
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990215"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461727"
 ---
-# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>Android Enterprise 専用デバイスまたはフル マネージド デバイスを登録する
+# <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Android Enterprise 専用、フル マネージド、または仕事用プロファイルを備えた会社所有のデバイスを登録する
 
-Intune で [Android Enterprise 専用デバイス](android-kiosk-enroll.md)または[フル マネージド デバイス](android-fully-managed-enroll.md)を設定した後、デバイスを登録できます。 専用デバイスとフル マネージド デバイスの両方とも Intune 登録は、工場出荷時の設定に戻すことから始まります。 Android Enterprise デバイスの登録方法は、オペレーティング システムによって異なります。
+Intune で Android Enterprise [専用デバイス](android-kiosk-enroll.md)、[フル マネージド デバイス](android-fully-managed-enroll.md)、または[会社所有の仕事用プロファイル デバイス](android-corporate-owned-work-profile-enroll.md)を設定すると、デバイスを登録できます。 専用デバイスとフル マネージド デバイスの両方とも Intune 登録は、工場出荷時の設定に戻すことから始まります。 Android Enterprise デバイスの登録方法は、オペレーティング システムによって異なります。
 
 | 登録方法 | 専用およびフル マネージド デバイスの最小 Android OS バージョン |
 | ----- | ----- |

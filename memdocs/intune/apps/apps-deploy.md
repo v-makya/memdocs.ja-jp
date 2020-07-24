@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b80527921172201dc86c5f3241e9978525afa083
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 665e06e6aca0a4ba4f71147325eb587b1b8b4d40
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984827"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461540"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Microsoft Intune を使用してアプリをグループに割り当てる
 
@@ -36,7 +36,7 @@ ms.locfileid: "83984827"
 
 次の表は、ユーザーおよびデバイスへのアプリの割り当てに関するさまざまなオプションの一覧です。
 
-|   | Intune に登録されているデバイス | Intune に登録されていないデバイス |
+| オプション  | Intune に登録されているデバイス | Intune に登録されていないデバイス |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
 | ユーザーへの割り当て | はい | はい |
 | デバイスへの割り当て | はい | いいえ |
@@ -122,7 +122,7 @@ ms.locfileid: "83984827"
 
 managed Google Play アプリをアンマネージド デバイスに割り当てる手順:
 
-1. ご自分の Intune テナントを managed Google Play に接続します。 Android エンタープライズの仕事用プロファイル、専用、またはフル マネージドのデバイスを管理するために既にこれを実行していた場合は、もう一度行う必要はありません。
+1. ご自分の Intune テナントを managed Google Play に接続します。 Android エンタープライズの仕事用プロファイル、専用、フル マネージド、会社所有の作業用プロファイルのデバイスを管理するために既にこれを実行していた場合は、もう一度行う必要はありません。
 2. managed Google Play のアプリを Intune コンソールに追加します。
 3. managed Google Play アプリを、目的のユーザー グループに対して **[登録の有無にかかわらず使用可能]** としてターゲットにします。 **[必須]** および **[アンインストール]** アプリをターゲットにすることは、登録されていないデバイスではサポートされていません。
 4. ユーザー グループにアプリ保護ポリシーを割り当てます。

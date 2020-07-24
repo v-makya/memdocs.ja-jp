@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 07/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aee865b2a16ce3a9114433f9e10e185b26997f7
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 7f49ba4fffd84ffae3e5b47ad74088b65d599533
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303472"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491254"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限するように Android エンタープライズ デバイスを設定する
 
@@ -31,9 +31,18 @@ ms.locfileid: "86303472"
 
 [デバイス構成プロファイルを作成します](device-restrictions-configure.md)。
 
-## <a name="device-owner-only"></a>デバイスの所有者のみ
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>フル マネージド、専用、会社所有の仕事用プロファイル
 
-これらの設定は、Android Enterprise のフル マネージド デバイスまたは専用デバイスなど、デバイス全体を Intune で制御する Android Enterprise 登録の種類に適用されます。
+これらの設定は、Android Enterprise のフル マネージド デバイス、専用デバイス、会社所有の仕事用プロファイル デバイスなど、デバイス全体を Intune で制御する Android Enterprise 登録の種類に適用されます。
+
+一部の設定は、すべての登録の種類でサポートされているわけではありません。 どの設定がどの種類の登録でサポートされているかについては、ユーザー インターフェイスを参照してください。 各設定は、その設定を使用できる登録の種類を示す見出しの下にあります。
+
+![設定の見出し。](./media/device-restrictions-android-for-work/setting-headers.png)
+
+一部の設定は、仕事用プロファイルを含む会社所有のバイスに対して仕事用プロファイル レベルでのみ適用されます。 これらの設定は、フル マネージドおよび専用デバイスに対しても、デバイス全体に適用されます。 これらの設定は、ユーザー インターフェイスで " *(work profile-level)* " 記述子でマークされます。
+
+![設定の見出し。](./media/device-restrictions-android-for-work/work-profile-level.png)
+
 
 ### <a name="general"></a>全般
 
@@ -115,7 +124,9 @@ ms.locfileid: "86303472"
       >
       > **Managed Home Screen** アプリを構成プロファイルに含める必要はありませんが、アプリとして追加する必要があります。 **Managed Home Screen** アプリを追加すると、構成プロファイルに追加するその他のアプリがすべて **Managed Home Screen** アプリ上でアイコンとして表示されます。
       >
-      > マルチアプリ キオスク モードを使用すると、ダイヤラー アプリまたは電話アプリが正常に機能しないことがあります。 
+      > マルチアプリ キオスク モードを使用すると、ダイヤラー アプリまたは電話アプリが正常に機能しないことがあります。
+      >
+      > Managed Home Screen の詳細については、[マルチアプリ キオスク モードの専用デバイスでの Microsoft Managed Home Screen のセットアップ](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060)に関するページを参照してください。
 
       - **[追加]** :リストからお使いのアプリを選択します。
 
@@ -123,9 +134,31 @@ ms.locfileid: "86303472"
 
         また、ご自身の組織が作成したその他の [Android アプリ](../apps/apps-add-android-for-work.md)や [Web アプリ](../apps/web-app.md)をデバイスに追加することもできます。 必ず[専用デバイス用に作成したデバイス グループにアプリを割り当てます](../apps/apps-deploy.md)。
 
+      - **フォルダー アイコン**:Managed Home Screen に表示されるフォルダー アイコンの色と形状を選択します。 次のようなオプションがあります。
+        - 未構成 
+        - 濃色テーマの四角形
+        - 濃色テーマの円
+        - 淡色テーマの四角形
+        - 淡色テーマの円
+      - **アプリとフォルダーのアイコンのサイズ**:Managed Home Screen に表示されるフォルダー アイコンのサイズを選択します。 次のようなオプションがあります。
+        - 未構成 
+        - 極小
+        - 小
+        - 平均
+        - 大
+        - 特大
+
+          画面のサイズによっては、実際のアイコンのサイズが異なる場合があります。
+
+      - **[画面の向き]** :デバイスに Managed Home Screen を表示する方向を選択します。 次のようなオプションがあります。
+        - 未構成
+        - 縦
+        - 横
+        - 自動回転
+      - **[App notification badges]\(アプリ通知バッジ\)** : **[有効]** に設定すると、アプリ アイコンに新規および未読の通知の数が表示されます。 **[未構成]** に設定すると、Intune では、この設定は変更または更新されません。
       - **[仮想ホーム ボタン]** :ユーザーが Managed Home Screen に戻ってアプリを切り替えられるようにするソフト キー ボタンです。 次のようなオプションがあります。
         - **[未構成]** (既定値):[ホーム] ボタンが表示されません。 ユーザーは、[戻る] ボタンを使用してアプリを切り替える必要があります。
-        - **[上方向にスワイプ]** : ユーザーがデバイスで上方向にスワイプしたときに [ホーム] ボタンが表示されます。
+        - **[上方向にスワイプ]** :ユーザーがデバイスで上方向にスワイプしたときに [ホーム] ボタンが表示されます。
         - **[フローティング]** : デバイス上に永続的なフローティングの [ホーム] ボタンが表示されます。
 
       - **[キオスク モードを終了する]** : **[有効]** にすると、デバイスを更新するために管理者がキオスク モードを一時停止できるようになります。 この機能を使用するには、管理者は次の操作を実行します。
@@ -150,7 +183,31 @@ ms.locfileid: "86303472"
         >
         > 最新のディスプレイはより高い画素密度を備え、2K/4K 相当の解像度画像を表示することができます。
 
+      - **[Shortcut to settings menu]\(設定メニューのショートカット\)** : **[無効]** に設定すると、Managed Home Screen でマネージド設定ショートカットが非表示になります。 ユーザーは引き続き下方向にスワイプして、設定にアクセスできます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、マネージド設定ショートカットはデバイスに表示されます。 また、下方向にスワイプして、これらの設定にアクセスすることもできます。
+
+      - **[Quick access to debug menu]\(デバッグ メニューへのクイック アクセス\)** :この設定では、ユーザーがデバッグ メニューにアクセスする方法を制御します。 次のようなオプションがあります。
+
+        - **有効**: ユーザーはデバッグ メニューに簡単にアクセスできます。 具体的には、下方向にスワイプするか、マネージド設定ショートカットを使用します。 いつものように、戻るボタンを 15 回選択し続けることができます。
+        - **[未構成]** (既定値):Intune では、この設定は変更または更新されません。 既定では、デバッグ メニューへのクイック アクセスはオフになっています。 ユーザーは、戻るボタンを 15 回選択してデバッグ メニューを開く必要があります。
+
+        ユーザーはデバッグ メニューを使用して、次の操作を行うことができます。
+
+        - Managed Home Screen のログを表示およびアップロードする
+        - Google の Android Device Policy Manager アプリを開く
+        - [Microsoft Intune アプリ](https://play.google.com/store/apps/details?id=com.microsoft.intune)を開く
+        - キオスク モードを終了する
+
       - **[Wi-Fi 構成]** : **[有効]** にすると、Managed Home Screen に Wi-Fi コントロールが表示され、ユーザーがデバイスを別の Wi-Fi ネットワークに接続できるようになります。 この機能を有効にすると、デバイスの場所もオンになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Managed Home Screen に Wi-Fi コントロールを表示させることはできません。 これによりユーザーが Managed Home Screen を使用している間は、Wi-Fi ネットワークに接続できないようになります。
+
+        - **[Wi-Fi allow list]\(Wi-Fi 許可リスト\)** :有効なワイヤレス ネットワーク名のリストを作成します。これは、サービス セット識別子 (SSID) とも呼ばれます。 Managed Home Screen ユーザーは、入力した SSID にのみ接続できます。
+
+          空のままにすると、Intune はこの設定の変更や更新を行いません。 既定では、使用可能なすべての Wi-Fi ネットワークが許可されています。
+
+          有効な SSID の一覧を含む .csv ファイルを**インポート**します。
+
+          現在の一覧を .csv ファイルに**エクスポート**します。
+
+        - **[SSID]** :また、Managed Home Screen ユーザーが接続できる Wi-Fi ネットワーク名 (SSID) を入力することもできます。 必ず有効な SSID を入力してください
 
       - **[Bluetooth の構成]** : **[有効]** にすると、Managed Home Screen に Bluetooth コントロールが表示され、ユーザーが Bluetooth 経由でデバイスをペアリングできるようになります。 この機能を有効にすると、デバイスの場所もオンになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Managed Home Screen に Bluetooth コントロールを表示させることはできません。 これによりユーザーが Managed Home Screen を使用している間は、Bluetooth の構成およびデバイスのペアリングを行うことができないようになります。
 
@@ -158,17 +215,19 @@ ms.locfileid: "86303472"
 
       - **[メディア ボリューム コントロール]** : **[有効]** にすると、Managed Home Screen にメディア ボリューム コントロールが表示され、ユーザーがスライダーを使用してデバイスのメディア ボリュームを調整できるようになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Managed Home Screen にメディア ボリューム コントロールを表示させることはできません。 これによりユーザーが Managed Home Screen を使用している間は、ハードウェア ボタンでサポートされている場合を除き、デバイスのメディア ボリュームを調整できないようになります。
 
+      - **[Quick access to device information]\(デバイス情報へのクイック アクセス\)** : **[有効]** に設定すると、ユーザーは下方向にスワイプして、Managed Home Screen 上のデバイス情報を表示できます。たとえば、シリアル番号、製造元とモデル番号、SDK レベルなどです。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、デバイス情報は表示されない場合があります。
+
       - **[スクリーンセーバー モード]** : **[有効]** にすると、デバイスがロックされているか、タイムアウトになったときに、Managed Home Screen にスクリーンセーバーが表示されます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS で Managed Home Screen にスクリーンセーバーを表示させることはできません。
 
         有効にする場合は、次の構成も行います。
 
-        - **[カスタム スクリーン セーバー画像の設定]** : カスタムの PNG、JPG、JPEG、GIF、BMP、WebP、または ICOimage の URL を入力します。 URL を入力しない場合、デバイスの既定のイメージが使用されます (既定のイメージがある場合)。 
-        
+        - **[カスタム スクリーン セーバー画像の設定]** : カスタムの PNG、JPG、JPEG、GIF、BMP、WebP、または ICOimage の URL を入力します。 URL を入力しない場合、デバイスの既定のイメージが使用されます (既定のイメージがある場合)。
+
           たとえば、次のように入力します。
 
           - `http://www.contoso.com/image.jpg`
           - `www.contoso.com/image.bmp`
-          - `https://www.contoso.com/image.webp`          
+          - `https://www.contoso.com/image.webp`
 
           > [!TIP]
           > ビットマップに変換できる任意のファイル リソース URL がサポートされています。
@@ -180,30 +239,27 @@ ms.locfileid: "86303472"
 - **[フル マネージド]** : フル マネージド デバイスで Microsoft Launcher アプリを構成します。
 
   - **Microsoft Launcher を既定のランチャーにする**: **[有効]** にすると、Microsoft Launcher がホーム画面の既定のランチャーとして設定されます。 Launcher を既定に設定した場合、ユーザーは別のランチャーを使用できません。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、Microsoft Launcher は既定のランチャーとして強制されません。
+  - **[Configure custom wallpaper]\(カスタムの壁紙を構成する\)** : **[有効]** に設定すると、ホーム画面の壁紙として独自のイメージを適用し、ユーザーがイメージを変更できるかどうかを選択することができます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、デバイスで現在の壁紙が保持されます。
+    - **[Enter URL of wallpaper image]\(壁紙イメージの URL を入力する\)** :壁紙イメージの URL を入力します。 このイメージは、デバイスのホーム画面に表示されます。 たとえば、「`http://www.contoso.com/image.jpg`」と入力します。 
+    - **[Allow user to modify wallpaper]\(壁紙の変更をユーザーに許可する\)** : **[有効]** に設定すると、ユーザーは壁紙イメージを変更できます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、ユーザーは壁紙を変更できません。
+  - **[Enable launcher feed]\(ランチャー フィードを有効にする\)** : **[有効]** に設定すると、カレンダー、ドキュメント、最近のアクティビティを表示するランチャー フィードがオンになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、このフィードは表示されません。
+    - **[Allow user to enable/disable feed]\(フィードの有効化/無効化をユーザーに許可する\)** : **[有効]** に設定すると、ユーザーはランチャー フィードを有効または無効にすることができます。 **[有効]** の場合、プロファイルの初回割り当て時にのみこの設定が強制されます。 以降のプロファイル割り当てでは、この設定は強制されません。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、ユーザーはランチャー フィードの設定を変更できません。
+  - **[Dock presence]\(ドックの有無\)** :ドックを使用すると、ユーザーは自分のアプリやツールにすばやくアクセスできます。 次のようなオプションがあります。
+    - **[未構成]** (既定値):Intune では、この設定は変更または更新されません。
+    - **[表示]** :デバイスにドックが表示されます。
+    - **[非表示にする]** :ドックが非表示になります。 ドックにアクセスするには、ユーザーが方向にスワイプする必要があります。
+    - **Disabled**:デバイスにドックが表示されず、ユーザーが表示することもできません。
 
-<!-- The following settings are in a future release. Per PM, we can leave them in GitHub, not live. Remove comment tags when they release.
+  - **[Allow user to change dock presence]\(ドックの有無の変更をユーザーに許可する\)** : **[有効]** に設定すると、ユーザーはドックの表示と非表示を切り替えることができます。 **[有効]** の場合、プロファイルの初回割り当て時にのみこの設定が強制されます。 以降のプロファイル割り当てでは、この設定は強制されません。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、ユーザーはデバイスのドックの構成を変更できません。
 
-  - **Configure custom wallpaper**: **Enable** lets you apply your own image as the home screen wallpaper, and choose if users can change the image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the device keeps its current wallpaper.
-    - **Enter URL of wallpaper image**: Enter the URL of your wallpaper image. This image shows on the device home screen. For example, enter `http://www.contoso.com/image.jpg`. 
-    - **Allow user to modify wallpaper**: **Enable** allows users to change the wallpaper image. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the wallpaper.
-  - **Enable launcher feed**: **Enable** turns on the launcher feed, which shows calendars, documents, and recent activities. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, this feed isn't shown.
-    - **Allow user to enable/disable feed**: **Enable** lets users enable or disable the launcher feed. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the launcher feed settings.
-  - **Dock presence**: The dock gives users quick access to their apps and tools. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Show**: The dock is shown on devices.
-    - **Hide**: The dock is hidden. Users must swipe up to access the dock.
-    - **Disabled**: The dock isn't shown on devices, and users are prevented from showing it.
+  - **[Search bar replacement]\(検索バーの再配置\)** :検索バーを配置する場所を選択します。 次のようなオプションがあります。
+    - **[未構成]** (既定値):Intune では、この設定は変更または更新されません。
+    - **[上]** :検索バーが、デバイスの上部に表示されます。
+    - **[下]** :検索バーが、デバイスの下部に表示されます。
+    - **[非表示にする]** :検索バーが非表示になります。
 
-  - **Allow user to change dock presence**: **Enable** allows users to show or hide the dock. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users aren't allowed to change the device dock configuration.
-
-  - **Search bar replacement**: Choose where to put the search bar. Your options:
-    - **Not configured** (default): Intune doesn't change or update this setting.
-    - **Top**: Search bar is shown at the top of devices.
-    - **Bottom**: Search bar is shown at the bottom of devices.
-    - **Hide**: Search bar is hidden.
-
+<!-- MandiA (7.16.2020) The following settings may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
-
 End of comment -->
 
 ### <a name="password"></a>パスワード
@@ -240,7 +296,7 @@ End of comment -->
 - **[デバイスがワイプされるまでのサインイン失敗回数]** :デバイスがワイプされるまでに許容される間違ったパスワードの回数を 4 から 11 の範囲で入力します。 `0` (ゼロ) を使用すると、デバイスのワイプ機能を無効にできます。 値が空白の場合、Intune でこの設定が変更または更新されることはありません。
 
   > [!NOTE]
-  > デバイス所有者のデバイスは、パスワードの設定を求められません。 設定が適用され、パスワードを手動で設定する必要があります。 これを適用するポリシーでは、要件を満たすパスワードを設定するまで、失敗と報告されます。
+  > フル マネージド、専用、および会社所有の仕事用プロファイル デバイスは、パスワードの設定を求められることはありません。 設定が適用され、パスワードを手動で設定する必要があります。 これを適用するポリシーでは、要件を満たすパスワードを設定するまで、失敗と報告されます。
 
 ### <a name="power-settings"></a>電源設定
 
@@ -255,7 +311,7 @@ End of comment -->
 - **[アカウントの変更]** (専用デバイスのみ): **[ブロック]** にすると、ユーザーがアカウントを変更できなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS でユーザーがデバイスでユーザー アカウントを更新することを許可できます。
 
   > [!NOTE]
-  > デバイス所有者 (フル マネージド) デバイスでは、この設定は適用されません。 この設定を構成した場合、設定は無視され、影響はありません。
+  > この設定は、フル マネージド、専用、および会社所有の仕事用プロファイル デバイスに対して無効になります。 この設定を構成した場合、設定は無視され、影響はありません。
 
 - **[ユーザーは資格情報を構成可能]** : **[ブロック]** にすると、ユーザーはデバイスに割り当てられた証明書を構成できなくなります。ユーザー アカウントに関連付けられていないデバイスであっても同じです。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS でユーザーがキーストア内の自身の資格情報にアクセスする際に、それらを構成または変更できるようにすることができます。
 - **[個人用 Google アカウント]** : **[ブロック]** にすると、ユーザーが自分の個人用 Google アカウントをデバイスに追加できなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS でユーザーが自分の個人用 Google アカウントを追加することを許可できます。

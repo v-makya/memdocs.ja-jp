@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e95ceb3aabf4e97d020c52983deea683646fa85d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 45317cc9c43f4f25f0adc043ce784a7b3dc4b9fd
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983144"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461778"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Intune でデバイスをリモートで再起動する
 
@@ -34,7 +34,9 @@ ms.locfileid: "83983144"
 
 - Windows - Windows 8.1 以降でサポートされています
 - Windows Phone - Windows Phone 8.1 以降でサポートされています
-- Android キオスク デバイス - Android 7.0 以降でサポートされています
+- Android Enterprise 専用デバイス - Android 7.0 以降でサポートされています
+- Android Enterprise フル マネージド デバイス - Android 6.0 以降でサポートされています
+- 仕事用プロファイルを備えた会社所有の Android Enterprise デバイス - Android 8.0 以降でサポートされています
 - iOS/iPadOS - サポートされています
 
     > [!Note]  

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ac6a5d848a0d02b72a4f7275a6b6df47b2cd834
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: 220a2ac92d46c1279d4498c8673e2ceef28c470f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107327"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462050"
 ---
 # <a name="remotely-lock-devices-with-intune"></a>デバイスを Intune でリモートからロックする
 
@@ -35,7 +35,9 @@ ms.locfileid: "85107327"
 
 - Android
 - Android エンタープライズ キオスク デバイス
-- Android エンタープライズ仕事用プロファイル デバイス
+- Android Enterprise 仕事用プロファイル デバイス
+- Android エンタープライズのフル マネージド デバイス
+- 仕事用プロファイルを備えた会社所有の Android Enterprise デバイス
 - iOS
 - macOS
 - Windows 10 Mobile
@@ -45,7 +47,7 @@ ms.locfileid: "85107327"
 - Windows 10 Desktop
 
 > [!NOTE]
-> macOS デバイスの場合は、6 桁の回復用 PIN を設定します。 デバイスがロックされているときは、別のデバイス アクションが送信されるまで、 **[デバイス概要]** にその PIN が表示されます。 PIN はリモート ロック コマンドが送信されてから 30 日間しか利用できないため、必ず書き留めておいてください。 30 日後、Intune にその PIN は存在しなくなります。 また、元の PIN を使用してデバイスのロックを正常に解除するまで、同じデバイスに対してこのコマンドを再度起動しないでください。 このコマンドを送信して、PIN を書き留める必要があり、それを使用して macOS デバイスに正常にアクセスするまではこのコマンドを同じデバイスに再度送信しないでください。  
+> macOS デバイスの場合は、6 桁の回復用 PIN を設定します。 デバイスがロックされているときは、別のデバイス アクションが送信されるまで、 **[デバイス概要]** にその PIN が表示されます。 PIN はリモート ロック コマンドが送信されてから 30 日間しか利用できないため、必ず書き留めておいてください。 30 日後、Intune にその PIN は存在しなくなります。 また、元の PIN を使用してデバイスが正常にロック解除されていないときに、同じデバイスに対してこのコマンドを再び開始すると、レポートに失敗の状態が表示されます。 このコマンドを送信したら、PIN を書き留めます。それを使用して macOS デバイスに正常にアクセスするまでは、このコマンドを同じデバイスに再送信しないようにしてください。
 
 
 ## <a name="remote-lock-a-device"></a>デバイスのリモート ロック

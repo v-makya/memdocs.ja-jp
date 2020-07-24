@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89e3111ef902b0ea0f7f66e6be6aa0c227fdb3c4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239948"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461965"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune ポータル サイト アプリ、ポータル サイト Web サイト、および Intune アプリをカスタマイズする方法
 
@@ -158,6 +158,17 @@ Android 用 Intune アプリのブランド イメージの例を次に示しま
 > [!NOTE]
 > これらのアクションは、ポータル サイト アプリと Web サイトでのデバイス アクションを制限するために利用できるもので、デバイスの制限ポリシーの実装は行いません。 ユーザーが設定から、出荷時の設定にリセットしたり、MDM を削除したりすることを制限するには、デバイスの制限ポリシーを構成する必要があります。 
 
+## <a name="opening-web-company-portal-applications"></a>Web ポータル サイト アプリケーションを開く
+Web ポータル サイト アプリケーションについては、エンド ユーザーがポータル サイト アプリケーションをインストールしている場合には、ブラウザーの外部でそのアプリケーションを開く方法を確認するダイアログ ボックスがエンド ユーザーに表示されます。 アプリがポータル サイトのパスにない場合は、ポータル サイトでホームページが開きます。 アプリがポータル サイトのパスにある場合は、ポータル サイトで特定のアプリが開きます。 
+
+ポータル サイトを選択すると、URI パスが次のいずれかの場合に、ユーザーはアプリケーション内の対応するページにリダイレクトされます。
+
+- `/apps` - Web ポータル サイトでは、すべてのアプリが一覧表示される [アプリ] ページが開きます。
+- `/apps/[appID]` - Web ポータル サイトでは、対応するアプリの詳細ページが開きます。
+- "*URI パスが異なる、または予期されていない*" - Web ポータル サイト ホーム ページが表示されます。
+
+ユーザーがポータル サイト アプリをインストールしていない場合は、ユーザーに Web ポータル サイトが表示されます。
+
 ## <a name="company-portal-derived-credentials-for-iosipados-devices"></a>iOS/iPadOS デバイス用のポータル サイトの派生資格情報
 
 Intune では、資格情報プロバイダーの DISA Purebred、Entrust Datacard、Intercede と連携して、Personal Identity Verification (PIV) と Common Access Card (CAC) 派生資格情報がサポートされています。 エンド ユーザーは、iOS/iPadOS デバイスの登録後に追加の手順を行い、ポータル サイト アプリケーションで自身の ID を確認します。 ユーザーに対して派生資格情報を有効にするには、最初にテナントに対して資格情報プロバイダーを設定してから、派生資格情報を使用するプロファイルをユーザーまたはデバイスに対して設定します。
@@ -227,7 +238,7 @@ Windows ポータル サイト アプリで使用できるキーボード ショ
 | 同期 | 利用可能 | 利用可能 | 利用可能 | 利用可能 |
 | リモート ロック | Windows Phone のみ | 利用可能 | 利用可能 | 利用可能 |
 | パスコードのリセット | Windows Phone のみ | 使用可能<sup>(8)</sup> | N/A | 利用可能<sup>(6)</sup> |
-| キー回復 | N/A | N/A | 利用可能<sup>(2)</sup> | N/A |
+| キー回復 | NA | NA | 利用可能<sup>(2)</sup> | N/A |
 
 <sup>(1)</sup> Azure AD に参加している Windows デバイスでは、**インベントリからの削除**は常にブロックされます。<br>
 <sup>(2)</sup> MacOS の**キー回復**は、Web ポータルでのみ使用できます。<br>

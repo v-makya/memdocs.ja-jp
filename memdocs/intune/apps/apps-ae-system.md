@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1d994960e28deb3e48e4f778b6b496440037052
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4ee71bdcf45c4dc99b9c6b3eb889ba373ecadca9
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83984743"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461846"
 ---
 # <a name="add-android-enterprise-system-apps-to-microsoft-intune"></a>Microsoft Intune に Android Enterprise システム アプリを追加する
 
-アプリをデバイスまたはユーザーのグループに割り当てる前に、最初にアプリを Microsoft Intune に追加する必要があります。 システム アプリは Android Enterprise デバイスでサポートされています。 システム アプリは [Android Enterprise 専用デバイス](../enrollment/android-kiosk-enroll.md)または[フル マネージド デバイス](../enrollment/android-fully-managed-enroll.md)に対して有効にすることができます。
+アプリをデバイスまたはユーザーのグループに割り当てる前に、最初にアプリを Microsoft Intune に追加する必要があります。 システム アプリは Android Enterprise デバイスでサポートされています。 [Android Enterprise 専用デバイス](../enrollment/android-kiosk-enroll.md)、[フル マネージド デバイス](../enrollment/android-fully-managed-enroll.md)、または[仕事用プロファイルを備えた会社所有の Android Enterprise](../enrollment/android-corporate-owned-work-profile-enroll.md) に対してシステム アプリを有効にすることができます。
 
 ## <a name="add-the-app"></a>アプリを追加する
 

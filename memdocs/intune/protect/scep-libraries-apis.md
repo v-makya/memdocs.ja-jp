@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a915ffc908c985b38533a362f2a17ec561ddf6f
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 16b212bde0f46861b8acb1470588b784c6f2a7fb
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351241"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565667"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>SCEP 用のサード パーティ CA を Intune に追加するための API の使用
 
@@ -72,23 +72,23 @@ Intune SCEP と統合するためのライブラリのコードは、「[Microso
 製品にライブラリを統合する場合、次の手順を踏む必要があります。 これらの手順は、GitHub リポジトリの使用と、Visual Studio でのソリューションおよびプロジェクトの作成に関する知識が必要です。
 
 1. リポジトリから通知を受け取るための登録
-2. リポジトリのクローンまたはダウンロード
+2. リポジトリの複製またはダウンロード
 3. `\src\CsrValidation` フォルダー (https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) 下のライブラリ実装に進みます。
 4. README ファイルの手順に従ってライブラリをビルドします
 5. SCEP サーバーをビルドするためのライブラリをプロジェクトに含めます
 6. SCEP サーバーで次のタスクを完了します。
 
-    - ライブラリが認証に使用する (この記事の) [Azure アプリケーション ID、Azure アプリケーション キー、テナント ID](#onboard-scep-server-in-azure) の構成を管理者に許可します。 管理者には、Azure アプリケーション キーを更新する権限が必要です。
-    - Intune によって生成された SCEP パスワードを含む SCEP 要求を識別します
-    - **検証要求 API** ライブラリを使用し、Intune によって生成された SCEP パスワードを検証します
-    - ライブラリ通知 API を使用し、Intune によって生成された SCEP パスワードを持つ SCEP 要求用に発行された証明書を Intune に通知します。 また、これらの SCEP 要求の処理時に発生する可能性があるエラーを Intune に通知します。
-    - 管理者が問題をトラブルシューティングできる十分な情報をサーバーが記録していることを確認します。
+   - ライブラリが認証に使用する (この記事の) [Azure アプリケーション ID、Azure アプリケーション キー、テナント ID](#onboard-scep-server-in-azure) の構成を管理者に許可します。 管理者には、Azure アプリケーション キーを更新する権限が必要です。
+   - Intune によって生成された SCEP パスワードを含む SCEP 要求を識別します
+   - **検証要求 API** ライブラリを使用し、Intune によって生成された SCEP パスワードを検証します
+   - ライブラリ通知 API を使用し、Intune によって生成された SCEP パスワードを持つ SCEP 要求用に発行された証明書を Intune に通知します。 また、これらの SCEP 要求の処理時に発生する可能性があるエラーを Intune に通知します。
+   - 管理者が問題をトラブルシューティングできる十分な情報をサーバーが記録していることを確認します。
 
 7. (この記事の) [統合テスト](#integration-testing)を完了し、問題を解決します
 8. 以下を説明する指導書をお客様に提供します。
 
-    - SCEP サーバーを Azure Portal にオンボードする方法
-    - ライブラリの構成に必要な Azure アプリケーション ID と Azure アプリケーション キーの取得方法
+   - SCEP サーバーを Azure Portal にオンボードする方法
+   - ライブラリの構成に必要な Azure アプリケーション ID と Azure アプリケーション キーの取得方法
 
 ### <a name="onboard-scep-server-in-azure"></a>Azure への SCEP サーバーのオンボード
 
@@ -108,38 +108,38 @@ Java ライブラリは、ビルド時にその依存関係のプルする Maven
 
 ##### <a name="intunescepserviceclient-constructor"></a>IntuneScepServiceClient コンストラクター
 
-署名:
+**署名**:
 
 ```java
 IntuneScepServiceClient(
     Properties configProperties)
 ```
 
-説明:
+**説明**:
 
 `IntuneScepServiceClient` オブジェクトをインスタンス化し構成します。
 
-パラメーター:
+**パラメーター**:
 
-    - configProperties    クライアント構成情報を含むプロパティ オブジェクト
+- **configProperties** - クライアント構成情報を含むプロパティ オブジェクト
 
 構成には、次のプロパティが必要です。
 
-    - AAD_APP_ID="オンボード処理時に取得した Azure アプリケーション ID"
-    - AAD_APP_KEY="オンボード処理時に取得した Azure アプリケーション キー"
-    - TENANT="オンボード処理時に取得したテナント ID"
-    - PROVIDER_NAME_AND_VERSION="製品とそのバージョンを識別するために使用する情報"
-    
+- AAD_APP_ID="オンボード処理時に取得した Azure アプリケーション ID"
+- AAD_APP_KEY="オンボード処理時に取得した Azure アプリケーション キー"
+- TENANT="オンボード処理時に取得したテナント ID"
+- PROVIDER_NAME_AND_VERSION="製品とそのバージョンを識別するために使用する情報"
+
 ソリューションで認証を使用するかまたは使用しないプロキシが必要な場合は、次のプロパティを追加できます。
 
-    - PROXY_HOST="プロキシがホストされているホスト。"
-    - PROXY_PORT="プロキシがリッスンしているポート。"
-    - PROXY_USER ="プロキシで基本認証が使用されている場合に使用するユーザー名。"
-    - PROXY_PASS ="プロキシで基本認証が使用されている場合に使用するパスワード。"
+- PROXY_HOST="プロキシがホストされているホスト。"
+- PROXY_PORT="プロキシがリッスンしているポート。"
+- PROXY_USER ="プロキシで基本認証が使用されている場合に使用するユーザー名。"
+- PROXY_PASS ="プロキシで基本認証が使用されている場合に使用するパスワード。"
 
-スロー:
+**スロー**:
 
-    - IllegalArgumentException    適切なプロパティ オブジェクトなしにコンストラクターが実行された場合にスローされます。
+- **IllegalArgumentException** - 適切なプロパティ オブジェクトなしにコンストラクターが実行された場合にスローされます。
 
 > [!IMPORTANT]
 > このクラスのインスタンスはインスタンス化し、複数の SCEP 要求の処理に使用するのが最良です。 これを行うと、これが認証トークンとサービスの場所の情報をキャッシュするので、オーバーヘッドが減少します。
@@ -149,7 +149,7 @@ SCEP サーバーの導入者は、記憶域に永続化された構成プロパ
 
 ##### <a name="validaterequest-method"></a>ValidateRequest メソッド
 
-署名:
+**署名**:
 
 ```java
 void ValidateRequest(
@@ -157,32 +157,32 @@ void ValidateRequest(
     String certificateRequest)
 ```
 
-説明:
+**説明**:
 
 SCEP 証明書要求を検証します。
 
-パラメーター:
+**パラメーター**:
 
-    - transactionId         SCEP トランザクション ID
-    - certificateRequest    文字列としてエンコードされた DER によってエンコードされた PKCS #10 証明書要求 Base64
+- **transactionId** - SCEP のトランザクション ID
+- **certificateRequest** - 文字列としてエンコードされた、DER によってエンコードされた PKCS #10 証明書要求 Base64
 
-スロー:
+**スロー**:
 
-    - IllegalArgumentException      無効なパラメーターで呼び出された場合にスローされます
-    - IntuneScepServiceException    証明書が無効であることがわかるとスローされます
-    - Exception                     予期せぬエラーが発生した場合にスローされます
+- **IllegalArgumentException** - 無効なパラメーターで呼び出された場合にスローされます
+- **IntuneScepServiceException** - 証明書が無効であることがわかるとスローされます
+- **Exception** - 予期せぬエラーが発生した場合にスローされます
 
 > [!IMPORTANT]
 > このメソッドによってスローされる例外は、サーバーで記録される必要があります。 なお、`IntuneScepServiceException` プロパティには、証明書要求の検証が失敗した理由の詳細な情報があります。
 
-**セキュリティのメモ**  
+**セキュリティのメモ**:
 
 - このメソッドで例外がスローされる場合、SCEP サーバーはクライアントに証明書を発行**しないようにする**必要があります。
 - SCEP 証明書要求の検証が失敗するということは、Intune のインフラストラクチャに問題があることが示唆されます。 または、証明書を取得しようとしている攻撃者がいることが示唆されます。
 
 ##### <a name="sendsuccessnotification-method"></a>SendSuccessNotification メソッド
 
-署名:
+**署名**:
 
 ```java
 void SendSuccessNotification(
@@ -194,36 +194,36 @@ void SendSuccessNotification(
     String certIssuingAuthority)
 ```
 
-説明:
+**説明**:
 
 証明書が SCEP 要求の処理の一環として作成されたことを Intune に通知します。
 
-パラメーター:
+**パラメーター**:
 
-    - transactionId           SCEP のトランザクション ID
-    - certificateRequest    文字列としてエンコードされた DER によってエンコードされた PKCS #10 証明書要求 Base64
-    - certThumprint           プロビジョニングされた証明書のサムプリントの SHA1 ハッシュ
-    - certSerialNumber        プロビジョニングされた証明書のシリアル番号
-    - certExpirationDate      プロビジョニングされた証明書の有効期限 日付の文字列は、Web UTC 時間 (YYYY-MM-DDThh:mm:ss.sssTZD) ISO 8601 を使用してフォーマットされる必要があります。
-    - certIssuingAuthority    証明書を発行した機関の名前
+- **transactionId** - SCEP のトランザクション ID
+- **certificateRequest** - 文字列としてエンコードされた、DER によってエンコードされた PKCS #10 証明書要求 Base64
+- **certThumprint** - プロビジョニングされた証明書のサムプリントの SHA1 ハッシュ
+- **certSerialNumber** - プロビジョニングされた証明書のシリアル番号
+- **certExpirationDate** - プロビジョニングされた証明書の有効期限 日付の文字列は、Web UTC 時間 (YYYY-MM-DDThh:mm:ss.sssTZD) ISO 8601 を使用してフォーマットされる必要があります。
+- **certIssuingAuthority** - 証明書を発行した機関の名前
 
-スロー:
+**スロー**:
 
-    - IllegalArgumentException      無効なパラメーターで呼び出された場合にスローされます
-    - IntuneScepServiceException    証明書が無効であることがわかるとスローされます
-    - Exception                     予期せぬエラーが発生した場合にスローされます
+- **IllegalArgumentException** - 無効なパラメーターで呼び出された場合にスローされます
+- **IntuneScepServiceException** - 証明書が無効であることがわかるとスローされます
+- **Exception** - 予期せぬエラーが発生した場合にスローされます
 
 > [!IMPORTANT]
 > このメソッドによってスローされる例外は、サーバーで記録される必要があります。 なお、`IntuneScepServiceException` プロパティには、証明書要求の検証が失敗した理由の詳細な情報があります。
 
-**セキュリティのメモ**
+**セキュリティのメモ**:
 
 - このメソッドで例外がスローされる場合、SCEP サーバーはクライアントに証明書を発行**しないようにする**必要があります。
 - SCEP 証明書要求の検証が失敗するということは、Intune のインフラストラクチャに問題があることが示唆されます。 または、証明書を取得しようとしている攻撃者がいることが示唆されます。
 
 ##### <a name="sendfailurenotification-method"></a>SendFailureNotification メソッド
 
-署名:
+**署名**:
 
 ```java
 void SendFailureNotification(
@@ -233,51 +233,51 @@ void SendFailureNotification(
     String errorDescription)
 ```
 
-説明:
+**説明**:
 
 SCEP 要求の処理中にエラーが発生したことを Intune に通知します。 このメソッドは、このクラスのメソッドによってスローされる例外に対して呼び出すことはできません。
 
-パラメーター:
+**パラメーター**:
 
-    - transactionId         SCEP トランザクション ID
-    - certificateRequest    文字列としてエンコードされた DER によってエンコードされた PKCS #10 証明書要求 Base64
-    - hResult               発生したエラーを最も正しく説明する Win32 エラー コード。 「[Win32 エラー コード](https://msdn.microsoft.com/library/cc231199.aspx)」を参照してください。
-    - errorDescription      発生したエラーの説明
+- **transactionId** - SCEP のトランザクション ID
+- **certificateRequest** - 文字列としてエンコードされた、DER によってエンコードされた PKCS #10 証明書要求 Base64
+- **hResult** - 発生したエラーを最も正しく説明する Win32 エラー コード。 「[Win32 エラー コード](https://msdn.microsoft.com/library/cc231199.aspx)」を参照してください。
+- **errorDescription** - 発生したエラーの説明
 
-スロー:
+**スロー**:
 
-    - IllegalArgumentException      無効なパラメーターで呼び出された場合にスローされます
-    - IntuneScepServiceException    証明書が無効であることがわかるとスローされます
-    - Exception                     予期せぬエラーが発生した場合にスローされます
+- **IllegalArgumentException** - 無効なパラメーターで呼び出された場合にスローされます
+- **IntuneScepServiceException** - 証明書が無効であることがわかるとスローされます
+- **Exception** - 予期せぬエラーが発生した場合にスローされます
 
 > [!IMPORTANT]
 > このメソッドによってスローされる例外は、サーバーで記録される必要があります。 なお、`IntuneScepServiceException` プロパティには、証明書要求の検証が失敗した理由の詳細な情報があります。
 
-**セキュリティのメモ**
+**セキュリティのメモ**:
 
 - このメソッドで例外がスローされる場合、SCEP サーバーはクライアントに証明書を発行**しないようにする**必要があります。
 - SCEP 証明書要求の検証が失敗するということは、Intune のインフラストラクチャに問題があることが示唆されます。 または、証明書を取得しようとしている攻撃者がいることが示唆されます。
 
 ##### <a name="setsslsocketfactory-method"></a>SetSslSocketFactory メソッド
 
-署名:
+**署名**:
 
 ```java
 void SetSslSocketFactory(
     SSLSocketFactory factory)
 ```
 
-説明:
+**説明**:
 
 このメソッドは、Intune との通信時、(既定ではなく) 指定された SSL ソケット ファクトリを使用する必要があることをクライアントに通知するために使用します。
 
-パラメーター:
+**パラメーター**:
 
-    - factory    クライアントが HTTPS 要求に使用する SSL ソケット ファクトリ
+- **factory** - クライアントが HTTPS 要求に使用する SSL ソケット ファクトリ
 
-スロー:
+**スロー**:
 
-    - IllegalArgumentException    無効なパラメーターで呼び出された場合にスローされます
+- **IllegalArgumentException** - 無効なパラメーターで呼び出された場合にスローされます
 
 > [!NOTE]
 > このクラスの他のメソッドを実行する前に必要である場合、SSL ソケット ファクトリを設定する必要があります。

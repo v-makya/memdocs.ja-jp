@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/07/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c92220fabf8d1cb2a34ac702dd4157ef848762b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990258"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565616"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Intune で VPN サーバーに接続するための VPN プロファイルを作成する
 
@@ -49,6 +49,7 @@ ms.locfileid: "83990258"
 - Check Point Capsule VPN
   - Android デバイス管理者
   - Android エンタープライズ仕事用プロファイル
+  - Android Enterprise フル マネージドおよび会社所有の仕事用プロファイル: [アプリ構成ポリシー](../apps/app-configuration-vpn-ae.md)を使用する
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -58,7 +59,7 @@ ms.locfileid: "83990258"
 - Cisco AnyConnect
   - Android デバイス管理者
   - Android エンタープライズ仕事用プロファイル
-  - Android エンタープライズ デバイス所有者 (フル マネージド)
+  - Android Enterprise フル マネージドおよび会社所有の仕事用プロファイル
   - iOS/iPadOS
   - macOS
 
@@ -67,8 +68,8 @@ ms.locfileid: "83990258"
 
 - Citrix SSO
   - Android デバイス管理者
-  - Android エンタープライズ仕事用プロファイル[アプリ構成ポリシー](../apps/app-configuration-policies-use-android.md)を使用する
-  - Android エンタープライズ デバイス所有者 (フル マネージド)[アプリ構成ポリシー](../apps/app-configuration-policies-use-android.md)を使用する
+  - Android エンタープライズ仕事用プロファイル[アプリ構成ポリシー](../apps/app-configuration-vpn-ae.md)を使用する
+  - Android Enterprise フル マネージドおよび会社所有の仕事用プロファイル: [アプリ構成ポリシー](../apps/app-configuration-vpn-ae.md)を使用する
   - iOS/iPadOS
   - Windows 10
 
@@ -81,7 +82,7 @@ ms.locfileid: "83990258"
 - F5 Access
   - Android デバイス管理者
   - Android エンタープライズ仕事用プロファイル
-  - Android エンタープライズ デバイス所有者 (フル マネージド)
+  - Android Enterprise フル マネージドおよび会社所有の仕事用プロファイル
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -96,7 +97,8 @@ ms.locfileid: "83990258"
   - Windows 10
 
 - Palo Alto Networks GlobalProtect
-  - Android エンタープライズ仕事用プロファイル[アプリ構成ポリシー](../apps/app-configuration-policies-use-android.md)を使用する
+  - Android エンタープライズ仕事用プロファイル[アプリ構成ポリシー](../apps/app-configuration-vpn-ae.md)を使用する
+  - Android Enterprise フル マネージドおよび会社所有の仕事用プロファイル: [アプリ構成ポリシー](../apps/app-configuration-vpn-ae.md)を使用する
   - iOS/iPadOS
   - Windows 10
 
@@ -106,7 +108,7 @@ ms.locfileid: "83990258"
 - Pulse Secure
   - Android デバイス管理者
   - Android エンタープライズ仕事用プロファイル
-  - Android エンタープライズ デバイス所有者 (フル マネージド)
+  - Android Enterprise フル マネージドおよび会社所有の仕事用プロファイル
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
@@ -115,6 +117,7 @@ ms.locfileid: "83990258"
 - SonicWall Mobile Connect
   - Android デバイス管理者
   - Android エンタープライズ仕事用プロファイル
+  - Android Enterprise フル マネージドおよび会社所有の仕事用プロファイル
   - iOS/iPadOS
   - macOS
   - Windows 10
@@ -122,7 +125,8 @@ ms.locfileid: "83990258"
   - Windows Phone 8.1
 
 - Zscaler
-  - Android エンタープライズ仕事用プロファイル[アプリ構成ポリシー](../apps/app-configuration-policies-use-android.md)を使用する
+  - Android エンタープライズ仕事用プロファイル[アプリ構成ポリシー](../apps/app-configuration-vpn-ae.md)を使用する
+  - Android Enterprise フル マネージドおよび会社所有の仕事用プロファイル: [アプリ構成ポリシー](../apps/app-configuration-vpn-ae.md)を使用する
   - iOS/iPadOS
 
 > [!IMPORTANT]
@@ -136,8 +140,8 @@ ms.locfileid: "83990258"
 
     - **[プラットフォーム]** :デバイスのプラットフォームを選択します。 次のようなオプションがあります。
       - **Android デバイス管理者**
-      - **[Android エンタープライズ]**  >  **[デバイスの所有者のみ]**
-      - **[Android エンタープライズ]**  >  **[仕事用プロファイルのみ]**
+      - **[Android Enterprise]**  >  **[フル マネージド]、[専用]、[会社所有の仕事用プロファイル]**
+      - **[Android Enterprise]**  >  **[仕事用プロファイル]**
       - **iOS/iPadOS**
       - **macOS**
       - **Windows 10 以降**

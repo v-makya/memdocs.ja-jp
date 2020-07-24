@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69940fc8e3f495a1738f2b7b4c6769e431821f30
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: c10738d20b793de2ba1adbca548290a517ca5d9e
+ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436807"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405921"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Intune アプリ ラッピング ツールでアプリ保護ポリシーを利用するために iOS アプリを準備する
 
@@ -225,7 +225,7 @@ macOS ターミナルを開き、次のコマンドを実行します。
 | ADAL クライアント ID |文字列型|空| as -ac と同じ|
 | ADAL 返信 URI |文字列型|空| as -ar と同じ|
 | 詳細が有効です |ブール型|false| -v と同じ|
-| 不足している権利を削除します |ブール型|false| -c と同じ|
+| 不足している権利を削除します |ブール型|false| -e と同じ|
 | 既定のビルドの更新を防ぎます |ブール型|false| 引数なしで -b を使用したのと同じ|
 | ビルド文字列のオーバーライド |文字列型|空| ラッピングされた出力アプリのカスタム CFBundleVersion|
 | Citrix XenMobile App SDK (ネットワークのみのバリアント) を含めます|ブール型|false| -citrix と同じ|

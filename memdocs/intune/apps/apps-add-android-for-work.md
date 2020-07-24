@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b9cd6d0292c07b2f1a987efba6d1ad9f8d81d99
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 8404c475bc5a84177abeba3a96fb613f04b9aa2b
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989570"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461948"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Intune を使ってマネージド Google Play アプリを Android Enterprise デバイスに追加する
 
-マネージド Google Play は、Google のエンタープライズ アプリ ストアであり、Android Enterprise 用の唯一のアプリケーション ソースです。 Intune を使用すると、任意の Android Enterprise シナリオ (仕事用プロファイル、専用、およびフル マネージド登録など) に対して、マネージド Google Play 経由でのアプリの展開を調整できます。 マネージド Google Play アプリを Intune に追加する方法は、Android アプリを Android Enterprise 以外に追加する方法とは異なります。 ストア アプリ、基幹業務 (LOB) アプリ、および Web アプリは、マネージド Google Play に承認または追加され、Intune に同期されてクライアント アプリの一覧に表示されます。 クライアント アプリの一覧に表示されたら、他のアプリの場合と同様に、任意のマネージド Google Play アプリの割り当てを管理できます。
+マネージド Google Play は、Google のエンタープライズ アプリ ストアであり、Android Enterprise 用の唯一のアプリケーション ソースです。 Intune を使用すると、任意の Android Enterprise シナリオ (仕事用プロファイル、専用、フル マネージド、会社所有の仕事用プロファイルの登録など) に対して、マネージド Google Play 経由でのアプリの展開を調整できます。 マネージド Google Play アプリを Intune に追加する方法は、Android アプリを Android Enterprise 以外に追加する方法とは異なります。 ストア アプリ、基幹業務 (LOB) アプリ、および Web アプリは、マネージド Google Play に承認または追加され、Intune に同期されてクライアント アプリの一覧に表示されます。 クライアント アプリの一覧に表示されたら、他のアプリの場合と同様に、任意のマネージド Google Play アプリの割り当てを管理できます。
 
 Android Enterprise 管理をより簡単に構成して使用できるように、マネージド Google Play に Intune テナントを接続する際に、Intune では 4 つの一般的な Android Enterprise 関連アプリが Intune 管理コンソールに自動的に追加されます。 次に 4 つのアプリを示します。
 
@@ -179,7 +179,7 @@ Web リンクは、Microsoft Edge または選択して展開したその他の�
 6. Microsoft Endpoint Manager 管理センターで、 **[アプリ]**  >  **[すべてのアプリ]** の順に選択します。  
     新しく使用可能になった Managed Google Play アプリが表示されます。
 
-## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>マネージド Google Play アプリを Android Enterprise 仕事用プロファイル デバイスに割り当てる
+## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices"></a>マネージド Google Play アプリを Android Enterprise 仕事用プロファイル デバイスと会社所有の仕事用プロファイル デバイスに割り当てる
 
 アプリが **[アプリ]** ワークロード ウィンドウの **[アプリ ライセンス]** ノードに表示される場合は、そのアプリをユーザーのグループに割り当てることで、[他のアプリの割り当てと同様の方法で割り当てる](/mem/intune/apps/apps-deploy)ことができます。
 
@@ -219,7 +219,7 @@ Android エンタープライズ仕事用プロファイル デバイスに展�
 
 ## <a name="working-with-managed-google-play-closed-testing-tracks"></a>マネージド Google Play のクローズド テスト トラックの操作
 
-Android Enterprise シナリオに登録されているデバイス (**Android Enterprise 仕事用プロファイル**、**フル マネージド**、**専用**) に非運用バージョンのマネージド Google Play アプリをテスト用に配布できます。 Intune では、アプリに運用前のビルド テスト トラックが発行されているかどうかや、そのトラックを AAD ユーザー グループまたはデバイス グループに割り当てることができるかどうかを確認できます。 現在存在するグループに運用バージョンを割り当てるワークフローは、非運用チャネルを割り当てる場合と同じです。 展開後の各トラックのインストール状態は、マネージド Google Play でのトラックのバージョン番号に対応します。 詳細については、[アプリのプレリリース版のテスト用の Google Play のクローズド テスト トラック](https://support.google.com/googleplay/android-developer/answer/3131213)に関するページをご覧ください。
+Android Enterprise シナリオに登録されているデバイス (**Android Enterprise 仕事用プロファイル**、**フル マネージド**、**専用**、**会社所有の仕事用プロファイル**) に非運用バージョンのマネージド Google Play アプリをテスト用に配布できます。 Intune では、アプリに運用前のビルド テスト トラックが発行されているかどうかや、そのトラックを AAD ユーザー グループまたはデバイス グループに割り当てることができるかどうかを確認できます。 現在存在するグループに運用バージョンを割り当てるワークフローは、非運用チャネルを割り当てる場合と同じです。 展開後の各トラックのインストール状態は、マネージド Google Play でのトラックのバージョン番号に対応します。 詳細については、[アプリのプレリリース版のテスト用の Google Play のクローズド テスト トラック](https://support.google.com/googleplay/android-developer/answer/3131213)に関するページをご覧ください。
 
 ## <a name="delete-managed-google-play-apps"></a>managed Google Play アプリを削除する
 必要に応じて、Microsoft Intune から managed Google Play アプリを削除できます。 マネージド Google Play アプリを削除するには、Azure portal で Microsoft Intune を開き、 **[アプリ]**  >  **[すべてのアプリ]** を選択します。 アプリの一覧から、managed Google Play アプリの右側にある省略記号 (...) を選択し、表示された一覧で **[削除]** を選択します。 アプリの一覧からマネージド Google Play アプリを削除すると、そのマネージド Google Play アプリは自動的に未承認になります。

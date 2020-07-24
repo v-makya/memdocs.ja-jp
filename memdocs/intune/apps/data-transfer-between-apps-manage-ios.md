@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 07/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 771741ed0e07a6373c63dd2e81745fe53adc4242
-ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
+ms.openlocfilehash: cdb8ca0ca24d196bb21f9d7e484374555d6fefd2
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86236394"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410846"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Microsoft Intune で iOS アプリ間のデータ転送を管理する方法
 
 会社のデータを保護するには、管理しているアプリにのみファイルの転送を制限します。 iOS アプリは次の方法で管理できます。
 
-- アプリ用のアプリ保護ポリシーを構成して、職場または学校アカウントの組織データを保護します。 これを "*ポリシー マネージド アプリ*" と呼びます。  [アプリ保護ポリシーで管理できるすべての Intune 管理アプリに関するページ](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)をご覧ください
+- アプリ用のアプリ保護ポリシーを構成して、職場または学校アカウントの組織データを保護します。 これを "*ポリシー マネージド アプリ*" と呼びます。  「[保護されている Microsoft Intune アプリ](apps-supported-intune-apps.md)」を参照してください。
 
 - iOS デバイス管理を使用してアプリを展開し、管理します。そのためには、モバイル デバイス管理 (MDM) ソリューションにデバイスを登録する必要があります。 "*ポリシー マネージド アプリ*" または他の iOS マネージド アプリを展開できます。
 
@@ -40,10 +40,10 @@ ms.locfileid: "86236394"
 
 - **MDM ソリューションによって管理されていないデバイス:** アプリ保護ポリシーの設定をセットして、"*Open In 拡張機能*" または "*Share 拡張機能*" により他のアプリケーションとのデータの共有を制御できます。  そのためには、 **[他のアプリに組織データを送信]** の設定を値 **[Policy managed apps with Open-In/Share filtering]\(Open In/Share フィルター利用のポリシー マネージド アプリ\)** に構成します。  "*ポリシー マネージド アプリ*" での *Open In/Share* 動作では、共有のオプションとして他の "*ポリシー マネージド アプリ*" のみが表示されます。 
 
-- **MDM ソリューションで管理されるデバイス**: Intune またはサード パーティの MDM ソリューションに登録されているデバイスでは、アプリと、アプリ保護ポリシーおよび MDM を通して展開される他のマネージド iOS アプリの間でのデータ共有は、Intune のアプリ ポリシーおよび iOS の **Open in management** 機能によって制御されます。 MDM ソリューションを使用して展開するアプリを、Intune アプリ保護ポリシーとも関連付けるには、[ユーザー UPN 設定の構成](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm)に関するセクションに従って、ユーザー UPN 設定を構成します。 他のアプリへのデータ転送を許可する方法を指定するには、 **[他のアプリに組織データを送信]** を有効にして、希望する共有レベルを選択します。 アプリで他のアプリからのデータの受信を許可する方法を指定するには、 **[他のアプリからデータを受信]** を有効にして、希望するデータ受信レベルを選択します。 アプリ データの受信と共有の詳細については、「[データ再配置設定](app-protection-policy-settings-ios.md#data-protection)」を参照してください。
+- **MDM ソリューションで管理されるデバイス**: Intune またはサード パーティの MDM ソリューションに登録されているデバイスでは、アプリと、アプリ保護ポリシーおよび MDM を通して展開される他のマネージド iOS アプリの間でのデータ共有は、Intune のアプリ ポリシーおよび iOS の **Open in management** 機能によって制御されます。 MDM ソリューションを使用して展開するアプリを、Intune アプリ保護ポリシーとも関連付けるには、[ユーザー UPN 設定の構成](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm)に関するセクションに従って、ユーザー UPN 設定を構成します。 他の "*ポリシーで管理されているアプリ*" や iOS で管理されているアプリにデータ転送を許可する方法を指定するには、 **[他のアプリに組織データを送信]** 設定を **[OS 共有利用のポリシー マネージド アプリ]** に構成します。 アプリで他のアプリからのデータの受信を許可する方法を指定するには、 **[他のアプリからデータを受信]** を有効にして、希望するデータ受信レベルを選択します。 アプリ データの受信と共有の詳細については、「[データ再配置設定](app-protection-policy-settings-ios.md#data-protection)」を参照してください。
 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Microsoft Intune またはサード パーティ EMM のユーザー UPN 設定を構成する
-Intune またはサード パーティの EMM ソリューションによって管理されているデバイスで、登録されているユーザー アカウントを識別するには、ユーザー UPN 設定を構成することが**必要**です。 UPN 構成は、Intune から展開するアプリ保護ポリシーと連携します。 次に示す手順は、UPN の設定の構成方法とその結果のユーザー エクスペリエンスに関する一般的なフローです。
+Intune またはサード パーティの EMM ソリューションによって管理されているデバイスで、iOS で管理されているアプリにデータを転送するとき、送信側の "*ポリシーで管理されているアプリ*" に登録されているユーザー アカウントを識別するには、ユーザー UPN 設定を構成することが**必要**です。 UPN 構成は、Intune から展開するアプリ保護ポリシーと連携します。 次に示す手順は、UPN の設定の構成方法とその結果のユーザー エクスペリエンスに関する一般的なフローです。
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、iOS/iPadOS の[アプリ保護ポリシーを作成して割り当てます](app-protection-policies.md)。 企業の要件に合わせてポリシー設定を構成し、このポリシーを使う iOS アプリを選びます。
 
@@ -70,7 +70,7 @@ Intune またはサード パーティの EMM ソリューションによって�
 
 1. Intune またはサード パーティ MDM プロバイダーの管理コンソールに移動します。 登録済みの iOS デバイスにアプリケーション構成設定をデプロイするコンソールのセクションに移動します。
 
-2. [アプリケーションの構成] セクションで、次の設定を入力します。
+2. [アプリケーションの構成] セクションで、iOS で管理されているアプリにデータを転送する "*ポリシーで管理されているアプリ*" ごとに次の設定を入力します。
 
    **キー** = IntuneMAMUPN、**値** = <username@company.com>
 

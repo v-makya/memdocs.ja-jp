@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 07/20/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08d53bd7ffedc2679fca675b88e021301d15fb62
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989027"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565684"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Microsoft Intune でユーザーおよびデバイス プロファイルを割り当てる
 
@@ -85,11 +85,13 @@ Windows 10 デバイスでは、**適用性ルール**を追加して、特定�
 
 - 特定の Windows デバイスでは、デバイスを使用しているユーザーに関係なく、Microsoft Edge の一部の設定を常に制御する必要があります。 たとえば、すべてのダウンロードをブロックし、すべての Cookie を現在の閲覧セッションに限定し、閲覧の履歴を削除するとします。 このシナリオでは、これらの特定の Windows デバイスをデバイス グループに配置します。 次に、[Intune で管理用テンプレート](administrative-templates-windows.md)を作成し、これらのデバイス設定を追加したうえで、このプロファイルをデバイス グループに割り当てます。
 
-要約すると、デバイスにサインインしているユーザーがだれであるか、またはサインインしているユーザーがいるかどうかにかまわない場合は、デバイス グループを使用します。 設定を常にデバイスに適用します。
+要約すると、デバイスにサインインしているユーザーが誰であるか、または誰かがサインインしているかどうかを気にしない場合は、デバイス グループを使用します。 設定を常にデバイスに適用します。
 
 ### <a name="user-groups"></a>ユーザー グループ
 
 ユーザー グループに適用されたプロファイル設定は、常にユーザーに対して有効になり、ユーザーがさまざまなデバイスにサインインしたときに使用されます。 ユーザーは、職場用の Surface Pro と個人用の iOS または iPadOS デバイスなど、複数のデバイスを使用することが普通です。 そして、ユーザーはそれらのデバイスから電子メールやその他の組織リソースにアクセスします。
+
+この一般規則に従います。電子メールやユーザー証明書など、ある機能があるユーザーに属する場合、ユーザー グループに割り当てます。
 
 次に例を示します。
 

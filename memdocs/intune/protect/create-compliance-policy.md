@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de23dc438ac176383cf5f5fbfac4da22f91bd4b2
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e541eb04f8de689ee76a68556bb1b2eb90914b96
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988814"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461438"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Microsoft Intune でコンプライアンス ポリシーを作成する
 
@@ -75,7 +75,7 @@ Intune を使用して組織のリソースを保護する場合、デバイス�
    - *Windows 10 以降*
 
     *Android Enterprise* の場合は、 **[ポリシーの種類]** も選択します。
-     - *Android デバイス所有者のコンプライアンス ポリシー*
+     - *Android フル マネージド、専用、会社所有の仕事用プロファイル ポリシー*
      - *Android 仕事用プロファイルのコンプライアンス ポリシー*
 
     次に、 **[作成]** を選択し、 **[ポリシーの作成]** 構成ウィンドウを開きます。

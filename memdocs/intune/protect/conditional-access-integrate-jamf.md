@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b70d1e8b64a9000d10e46a17b0d3cb6133088f5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 479dd1fede23c902d7be0f38ad0f16aa9f4917cf
+ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989130"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86565511"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>コンプライアンスのために Jamf Pro を Intune と統合する
 
@@ -102,7 +102,7 @@ Intune を Jamf Pro に接続するには:
 
 9. **[API アクセス許可の要求]** ページで、 **[Intune]** を選択して、 **[アプリケーションのアクセス許可]** を選択します。 **update_device_attributes** のチェック ボックスだけをオンにして、新しいアクセス許可を保存します。
 
-10. 次に、 **[API のアクセス許可]** ページの左上にある **[ _\<テナント> に管理者の同意を与えます_** ] を選択して、このアプリに管理者の同意を付与します。 新しいウィンドウで自分のアカウントを再認証し、プロンプトに従って、アプリケーションにアクセス権限を付与する必要がある場合があります。  
+10. 次に、 **[API のアクセス許可]** ページの左上にある **[ _\<your tenant>_ に管理者の同意を与えます**] を選択して、このアプリに管理者の同意を付与します。 新しいウィンドウで自分のアカウントを再認証し、プロンプトに従って、アプリケーションにアクセス権限を付与する必要がある場合があります。  
 
 11. ページの上部にある **[更新]** ボタンをクリックしてページを更新してください。 **update_device_attributes** アクセス許可に対して管理者の同意が与えられていることを確認します。 
 
@@ -110,10 +110,10 @@ Intune を Jamf Pro に接続するには:
 
    ![成功したアクセス許可](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
-   Azure AD でのアプリの登録プロセスは完了です。
+Azure AD でのアプリの登録プロセスは完了です。
 
-    > [!NOTE]
-    > クライアント シークレットの有効期限が切れた場合は、Azure で新しいクライアント シークレットを作成し、Jamf Pro で条件付きアクセス データを更新する必要があります。 Azure では、サービスの中断を防ぐため、古いシークレットと新しいキーの両方をアクティブにすることができます。
+> [!NOTE]
+> クライアント シークレットの有効期限が切れた場合は、Azure で新しいクライアント シークレットを作成し、Jamf Pro で条件付きアクセス データを更新する必要があります。 Azure では、サービスの中断を防ぐため、古いシークレットと新しいキーの両方をアクティブにすることができます。
 
 ### <a name="enable-intune-to-integrate-with-jamf-pro"></a>Intune の Jamf Pro との統合を有効にする
 

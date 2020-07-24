@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: db23ee1742934e8545c03c529d6a05c13cc59f1a
-ms.sourcegitcommit: 6ca5e75ed7a6fd2186fbe51c177960004d5ec81f
+ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83633283"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462033"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティのディスク暗号化ポリシー設定
 
@@ -66,6 +66,11 @@ ms.locfileid: "83633283"
     ユーザーがサインアウトするときに FileVault を有効にするように要求するプロンプトを表示しないようにします。無効に設定すると、サインアウト時のプロンプトは無効になり、代わりにユーザーがサインインするときにメッセージが表示されます。
     - **[未構成]** ("*既定値*")
     - **[はい]** - サインアウト時に表示される、FileVault を有効にするためのプロンプトを無効にします。
+
+  - **[Hide recovery key]\(回復キーを非表示にする\)**  
+     暗号化中は、macOS デバイスのユーザーに個人用回復キーが表示されなくなります。 ディスクが暗号化されると、ユーザーは任意のデバイスを使用して、Intune ポータル サイトの Web サイト経由、またはサポートされているプラットフォーム上のポータル サイト経由で、個人用回復キーを表示することができます。
+    - **[未構成]** ("*既定値*")
+    - **[はい]** - デバイスの暗号化中に個人用回復キーを非表示にします。
 
 ## <a name="bitlocker"></a>BitLocker
 

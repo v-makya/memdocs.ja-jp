@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 07/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 536ad36120a8fb5dc4ad0d16b8f265e56260d461
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: e57cd425ca89fa875b89c73a9eba30cecb7516d7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729256"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871918"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune を使用してデバイスを準拠または非準拠としてマークするための iOS および iPadOS 設定
 
@@ -149,7 +149,7 @@ Intune サービス管理者は、組織のリソースの保護に役立てる�
   バンドル ID をポリシーに追加することでアプリを制限できます。 デバイスにアプリがインストールされている場合、そのデバイスは非準拠としてマークされます。
 
   - **[アプリ名]** - バンドル ID の識別を容易にするわかりやすい名前を入力します。
-  - **[アプリ バンドル ID]** - アプリ プロバイダーによって割り当てられた一意のバンドル ID を入力します。 バンドル ID を検索するには、「[iOS および iPadOS アプリのバンドル ID を検索する方法](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app)」を参照してください (別の Microsoft Web サイトが開きます)。  
+  - **[アプリ バンドル ID]** - アプリ プロバイダーによって割り当てられた一意のバンドル ID を入力します。 バンドル ID を見つけるには、Support.apple.com の[ネイティブ iOS および iPadOS アプリ用バンドル ID](https://support.apple.com/guide/mdm/native-ios-and-ipados-app-bundle-ids-mdm90f60c1ce/web) ページを参照するか、アプリのソフトウェア ベンダーにお問い合わせください。
 
 ## <a name="next-steps"></a>次のステップ
 

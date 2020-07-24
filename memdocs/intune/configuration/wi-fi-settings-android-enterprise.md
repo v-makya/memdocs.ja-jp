@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38c3c4adb7029303eaad34b1d5a9fdef774c0f00
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 65b5c7c0b9cb8a587213d237854e69705b5a7f63
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086431"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461693"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Microsoft Intune で Android エンタープライズの専用デバイスおよびフル マネージド デバイス用の Wi-Fi 設定を追加する
 
@@ -33,14 +33,14 @@ ms.locfileid: "80086431"
 
 [デバイス プロファイルを作成します](wi-fi-settings-configure.md)。
 
-## <a name="device-owner-only"></a>デバイスの所有者のみ
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>フル マネージド、専用、会社所有の仕事用プロファイル
 
 Android エンタープライズの専用デバイスまたはフル マネージド デバイスに展開する場合は、このオプションを選択します。  現在、Android エンタープライズの専用デバイスまたはフル マネージド デバイスでは SCEP 証明書の展開がサポートされていますが、PKCS はサポートされていません。
 
 ### <a name="basic"></a>基本
 
 - **[Wi-Fi の種類]** : **[Basic]** を選択します。
-- **[ネットワーク名]** : この Wi-Fi 接続の名前を入力します。 エンド ユーザーがデバイスで利用可能な Wi-FI 接続を参照するときに、この名前が表示されます。 たとえば、「**Contoso WiFi**」と入力します。
+- **[ネットワーク名]** : この Wi-Fi 接続の名前を入力します。 エンド ユーザーがデバイスで利用可能な Wi-Fi 接続を参照するときに、この名前が表示されます。 たとえば、「**Contoso WiFi**」と入力します。
 - **[SSID]** : **サービス セット識別子**を入力します。これは、デバイスが接続するワイヤレス ネットワークの実際の名前です。 ただし、ユーザーが接続を選択したときにユーザーに表示されるのは、構成された**ネットワーク名**のみです。
 - **[非公開のネットワーク]** : **[有効]** を選択すると、デバイスで使用可能なネットワークのリストにこのネットワークが含まれなくなります。 SSID はブロードキャストされません。 **[無効]** を選択すると、デバイスで使用可能なネットワークのリストにこのネットワークが含まれるようになります。
 - **[Wi-Fi の種類]** : Wi-Fi ネットワークへの認証に使用するセキュリティ プロトコルを選択します。 次のようなオプションがあります。

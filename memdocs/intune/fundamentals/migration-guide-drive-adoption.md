@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4998dab72196d904e2530e85481b0498c8e23c21
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 5eb3f743e90dc4f2769b455a981676676ab43704
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022213"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462220"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Microsoft Intune で条件付きアクセスでエンド ユーザーの導入を推進する
 
@@ -67,7 +67,7 @@ Intune で条件付きアクセス機能を有効にする (未登録のデバ�
 
 - [Azure Active Directory の条件付きアクセスを構成する](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-- [Intune で On-Premises Exchange Connector をインストールする](../protect/exchange-connector-install.md)
+- [ハイブリッド先進認証を構成する](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)
 
 - [Exchange Online 用にアプリベースの条件付きアクセス ポリシーを設定する](../protect/app-based-conditional-access-intune-create.md)
 

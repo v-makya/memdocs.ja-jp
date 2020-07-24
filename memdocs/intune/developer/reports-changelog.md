@@ -6,7 +6,7 @@ keywords: Intune データ ウェアハウス
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 07/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,18 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90d1ab0792e329616fce525cfe672c07219908b5
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: d6f460039aaff282476c3e8e3d074a332cde716f
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165857"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461217"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune データ ウェアハウス API の変更ログ
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 常に Intune データ ウェアハウスの最新の更新プログラムをインストールしてください。
+
+## <a name="2007"></a>2007 
+_リリース日: 2020 年 7 月_
+
+### <a name="v10-changes"></a>v1.0 の変更点
+
+次の表には、Intune データ ウェアハウスの [devices](../developer/intune-data-warehouse-collections.md#devices) エンティティに追加されたプロパティが一覧表示されています。
+
+|    コレクション                          |    変更     |    説明情報                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ethernetMacAddress    |    追加    |    このデバイスの一意のネットワーク識別子。                                                                                                                                                                                                                                                                     |
+|    office365Version    |    追加    |    デバイスにインストールされている Office 365 のバージョン。                                                                                                                                                                                                                                                                     |
+
+次の表には、Intune データ ウェアハウスの [devicePropertyHistories](../developer/intune-data-warehouse-collections.md#devicepropertyhistories) エンティティに追加されたプロパティが一覧表示されています。
+
+|    コレクション                          |    変更     |    説明情報                                                                                                                                                                                                                                                                                                                                                                 |
+|----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    physicalMemoryInBytes    |    追加    |    物理メモリ (バイト単位)。                                                                                                                                                                                                                                                                     |
+|    totalStorageSpaceInBytes    |    追加    |    記憶域の合計容量 (バイト単位)。                                                                                                                                                                                                                                                                     |
 
 ## <a name="2004"></a>2004 
 "_リリース日: 2020 年 4 月_"

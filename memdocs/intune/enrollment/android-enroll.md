@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17f1d045d89df3ad5bb37d85957e872ec6692b7e
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: d8506661c49fa4f9c8481a3caa96883c91e6d8bb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353498"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461761"
 ---
 # <a name="enroll-android-devices"></a>Android デバイスの登録
 
@@ -33,7 +33,8 @@ Intune 管理者は、次の方法で Android デバイスを登録できます�
 - Android Enterprise (最新のセキュリティで保護された機能をユーザーに提供する一連の登録オプションがあります)。
     - [**Android Enterprise 仕事用プロファイル**](android-work-profile-enroll.md):会社のデータにアクセスする権限が与えられた個人用デバイス用です。 管理者は職場のアカウント、アプリ、データにアクセスできます。 デバイスに入っている個人のデータは仕事のデータから分離され、個人の設定やデータが管理者に操作されることはありません。 
     - [**Android Enterprise 専用**](android-kiosk-enroll.md):デジタル サイネージ、チケット印刷、在庫管理など、会社が所有する単一用途のデバイス用です。 管理者はデバイスの使用を厳しく管理し、限られたアプリと Web リンクのみ許可します。 また、ユーザーがデバイスに他のアプリを追加したり、他の操作を行ったりできないようになっています。
-    - [**Android Enterprise フル マネージド**](android-fully-managed-enroll.md):仕事のためにのみ使用し、私事には使用しない会社所有の単一ユーザー デバイス用です。 管理者はデバイス全体を管理し、仕事用プロファイルで利用できないポリシー制御を強制できます。 
+    - [**Android Enterprise フル マネージド**](android-fully-managed-enroll.md):仕事のためにのみ使用し、私事には使用しない会社所有の単一ユーザー デバイス用です。 管理者はデバイス全体を管理し、仕事用プロファイルで利用できないポリシー制御を強制できます。
+    - [**仕事用プロファイルを備えた会社所有の Android Enterprise**](android-corporate-owned-work-profile-enroll.md): 会社および私事での使用が想定される、会社所有の単一ユーザー デバイスに対応します。
 - [**Android デバイス管理者**](android-enroll-device-administrator.md) (Samsung KNOX Standard デバイスと [Zebra デバイス](../configuration/android-zebra-mx-overview.md)を含みます)。 
 
 ## <a name="prerequisites"></a>[前提条件]

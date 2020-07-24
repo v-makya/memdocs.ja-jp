@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1199c6db96325a103394cfb53a4ca70092cd3767
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989652"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86460469"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Intune でデバイスの暗号化を監視する
 
@@ -118,7 +118,7 @@ Microsoft Intune の暗号化レポートは、デバイスの暗号化状態に
 
   - デバイスは既に暗号化されています。 デバイス ユーザーは、デバイスの暗号化を解除してから続行する必要があります。
 
-    *考慮事項:Intune では、既に暗号化されているデバイスで FileVault を設定することはできません。代わりに、デバイスをデバイス構成ポリシーと Intune で管理するために、ユーザーがデバイスを手動で暗号化解除する必要があります*。
+    *考慮事項:Intune では、既に暗号化されているデバイスで FileVault を設定することはできません。ただし、FileVault を有効にするポリシーがデバイスで受け取られた後、ユーザーは、[個人の回復キーをアップロードして Intune を有効にし、そのデバイスで暗号化を管理できます](../protect/encrypt-devices-filevault.md#assume-management-of-filevault-on-previously-encrypted-devices)。あるいは、一定時間デバイスの暗号化が解かれるため推奨しませんが、Intune ポリシーで暗号化できるよう、ユーザーは自分のデバイスを手動で暗号化を解除できます。*
 
   - FileVault では、ユーザーは macOS Catalina 以降で管理プロファイルを承認する必要があります。
 
@@ -174,7 +174,7 @@ Microsoft Intune の暗号化レポートは、デバイスの暗号化状態に
 回復キーの管理の詳細については、Intune のドキュメントの次の情報を参照してください。
 
 macOS FileVault:
-- [個人用回復キーの取得](../protect/encrypt-devices-filevault.md#retrieve-personal-recovery-key)
+- [個人用回復キーの取得](../protect/encrypt-devices-filevault.md#retrieve-a-personal-recovery-key)
 - [回復キーの交換](../protect/encrypt-devices-filevault.md#rotate-recovery-keys)
 - [回復キーの回復](../protect/encrypt-devices-filevault.md#recover-recovery-keys)
 

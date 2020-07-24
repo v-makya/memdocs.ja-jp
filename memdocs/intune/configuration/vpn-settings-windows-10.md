@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune での Windows 10 VPN の設定 - Azure | Microsoft Docs
-description: Microsoft Intune で使用可能なすべての VPN 設定、その用途、実行内容について説明します。これには、Windows 10 デバイスと Windows Holographic for Business デバイスのトラフィック規則、条件付きアクセス、DNS、プロキシ設定が含まれます。
+description: Microsoft Intune で使用できるすべての VPN 設定、その用途、実行内容について説明します。 Windows 10 および Windows Holographic for Business デバイスのトラフィック規則、条件付きアクセス、DNS およびプロキシ設定を確認します。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 06/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbe28a6585fe9fe5cf7772b559924675ac39a30
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 25950311b5a6936340dbdba01961a5dab6f6ff91
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429481"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461354"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Intune を使用して VPN 接続を追加するための Windows 10 デバイスと Windows Holographic デバイスの設定
 
-Microsoft Intune を使用して、デバイスの VPN 接続を追加および構成できます。 この記事では、仮想プライベート ネットワーク (VPN) の作成時に一般的に使用される設定および機能の一覧を示して説明します。 これらの VPN 設定および機能は、デバイスにプッシュまたは展開されている、Intune のデバイス構成プロファイルで使用されます。
+Microsoft Intune を使用して、デバイスの VPN 接続を追加および構成できます。 この記事では、仮想プライベート ネットワーク (VPN) の作成時の一般的な設定および機能の一覧を示して説明します。 これらの VPN 設定および機能は、デバイスにプッシュまたは展開されている、Intune のデバイス構成プロファイルで使用されます。
 
 モバイル デバイス管理 (MDM) ソリューションの一部として、これらの設定を使用して、VPN ベンダーの使用、Always On、DNS の使用、プロキシの追加などの機能を有効化または無効化します。
 
@@ -65,16 +65,69 @@ Microsoft Intune を使用して、デバイスの VPN 接続を追加および�
   - **L2TP**
   - **PPTP**
 
-  VPN 接続の種類を選択するときに、次の設定を求められる場合があります。  
+  VPN 接続の種類を選択するときに、次の設定を求められる場合があります。
+
   - **Always On**: **[有効にする]** にすると、次のようなイベントが発生した場合に VPN 接続に自動的に接続されます。
     - ユーザーが自分のデバイスにサインインしたとき
     - デバイスでネットワークが変更されたとき
     - デバイスの画面がオフにされた後でオンに戻されたとき
 
-  - **[認証方法]** :ユーザーが VPN サーバーに対して認証を行う方法を選びます。 **証明書**を使用すると、ゼロタッチ エクスペリエンス、オンデマンド VPN、アプリごとの VPN などの拡張機能が提供されます。
+    IKEv2 などのデバイス トンネル接続を使用するにはこの設定を **[有効]** にします。
+
+  - **[認証方法]** :ユーザーが VPN サーバーに対して認証を行う方法を選びます。 次のようなオプションがあります。
+    - **[ユーザー名とパスワード]** :認証するためにユーザーにドメインのユーザー名とパスワードの入力を要求します (`user@contoso.com`、`contoso\user` など)。
+    - **証明書**:既存のユーザー クライアント証明書プロファイルを選択して、ユーザーを認証します。 このオプションには、ゼロタッチ エクスペリエンス、オンデマンド VPN、アプリごとの VPN などの拡張機能が用意されています。
+
+      Intune で証明書プロファイルを作成するには、[認証に証明書を使用する](../protect/certificates-configure.md)方法に関するページを参照してください。
+
+    - **[コンピューターの証明書]** (IKEv2 のみ):デバイスを認証する既存のデバイス クライアント証明書プロファイルを選択します。
+
+      [デバイス トンネル接続](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config)を使用する場合は、このオプションを選択する必要があります。
+
+      Intune で証明書プロファイルを作成するには、[認証に証明書を使用する](../protect/certificates-configure.md)方法に関するページを参照してください。
+
+    - **[EAP]** (IKEv2 のみ):認証する既存の拡張認証プロトコル (EAP) クライアント証明書プロファイルを選択します。 **[EAP XML]** 設定に認証のパラメーターを入力します。
   - **[ログオンするたびに資格情報を記憶する]** :選択すると、認証資格情報がキャッシュされます。
   - **[カスタム XML]** :VPN 接続を構成する任意のカスタム XML コマンドを入力します。
-  - **[EAP XML]** :VPN 接続を構成する任意の EAP XML コマンドを入力します。
+  - **[EAP XML]** :VPN 接続を構成する任意の EAP XML コマンドを入力します。 詳細については、「[EAP の構成](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration)」を参照してください。
+
+  - **[Device tunnel]\(デバイス トンネル\)** (IKEv2 のみ): **[有効]** にすると、ユーザーの操作やサインインを行わなくても、デバイスが VPN に自動的に接続されます。 この設定は、Azure Active Directory (AD) に参加している PC に適用されます。
+
+    この機能を使用するには、次ようにする必要があります。
+
+    - **[接続の種類]** 設定が **[IKEv2]** に設定されている。
+    - **[常時接続]** 設定が **[有効]** に設定されている。
+    - **[認証方法]** 設定が **[コンピューターの証明書]** に設定されている。
+
+    **[Device Tunnel]\(デバイス トンネル\)** を有効にして、デバイスごとに 1 つのプロファイルのみを割り当てます。
+
+  **[IKE Security Association Parameters]\(IKE セキュリティ アソシエーション パラメーター\)** (IKEv2 のみ):これらの暗号化設定は、IKEv2 接続の IKE セキュリティ アソシエーション ネゴシエーション (`main mode` または `phase 1` とも呼ばれます) 中に使用されます。 これらの設定は、VPN サーバーの設定と一致している必要があります。 設定が一致しない場合、VPN プロファイルは接続されません。
+
+  - **[暗号化アルゴリズム]** : VPN サーバーで使用する暗号化アルゴリズムを選択します。 たとえば、VPN サーバーで AES 128 ビットが使用されている場合は、一覧から **[AES-128]** を選択します。
+
+    **[未構成]** に設定すると、Intune では、この設定は変更または更新されません。
+
+  - **[Integrity check algorithm]\(整合性チェック アルゴリズム\)** :VPN サーバーで使用する整合性アルゴリズムを選択します。 たとえば、VPN サーバーで SHA1-96 を使用している場合は、一覧から **[SHA1-96]** を選択します。
+
+    **[未構成]** に設定すると、Intune では、この設定は変更または更新されません。
+
+  - **[Diffie-Hellman グループ]** : VPN サーバーで使用する Diffie-Hellman 計算グループを選択します。 たとえば、VPN サーバーで Group2 (1024 ビット) を使用している場合は、一覧から **[2]** を選択します。
+
+    **[未構成]** に設定すると、Intune では、この設定は変更または更新されません。
+
+  **[子セキュリティ アソシエーション パラメーター]** (IKEv2 のみ)これらの暗号化設定は、IKE v2 接続の子セキュリティ アソシエーション ネゴシエーション (`quick mode` または `phase 2` とも呼ばれます) 中に使用されます。 これらの設定は、VPN サーバーの設定と一致している必要があります。 設定が一致しない場合、VPN プロファイルは接続されません。
+
+  - **[Cipher transform algorithm]\(暗号変換アルゴリズム\)** :VPN サーバーで使用するアルゴリズムを選択します。 たとえば、VPN サーバーで AES-CBC 128 ビットが使用されている場合は、一覧から **[CBC-AES-128]** を選択します。
+
+    **[未構成]** に設定すると、Intune では、この設定は変更または更新されません。
+
+  - **[Authentication transform algorithm]\(認証変換アルゴリズム\)** :VPN サーバーで使用するアルゴリズムを選択します。 たとえば、VPN サーバーで AES-GCM 128 ビットが使用されている場合は、一覧から **[GCM-AES-128]** を選択します。
+
+    **[未構成]** に設定すると、Intune では、この設定は変更または更新されません。
+
+  - **[Perfect forward secrecy (PFS) group]\(Perfect Forward Secrecy (PFS) グループ\)** :VPN サーバーで Perfect Forward Secrecy (PFS) に使用する Diffie-Hellman 計算グループを選択します。 たとえば、VPN サーバーで Group2 (1024 ビット) を使用している場合は、一覧から **[2]** を選択します。
+
+    **[未構成]** に設定すると、Intune では、この設定は変更または更新されません。
 
 ### <a name="pulse-secure-example"></a>Pulse Secure の例
 

@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3ca95db3297a6ca251f91a79fda705aebb6d18d
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: e5d673c5688c4ab4f3219256412a098855af63ec
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088464"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461880"
 ---
-# <a name="what-is-device-enrollment"></a>デバイス登録とは
+# <a name="what-is-device-enrollment-in-intune"></a>Intune のデバイス登録とは
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune では、従業員のデバイスやアプリ、従業員が会社のデータにアクセスする手段を管理できます。 このモバイル デバイス管理 (MDM) を使用するには、まず Intune サービスにデバイスを登録する必要があります。 デバイスが登録されると、MDM 証明書が発行されます。 この証明書を使用して、Intune サービスと通信します。
@@ -72,6 +72,8 @@ Intune では、従業員のデバイスやアプリ、従業員が会社のデ�
 |**Android エンタープライズの仕事用プロファイル**|**ポータル サイトからユーザーが開始**| × | [はい] | × | [詳細情報](android-work-profile-enroll.md)|
 
 
+&nbsp;
+
 | **企業** | **登録方法** | **リセットが必要** | **ユーザー アフィニティ** | **Locked** | **詳細**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Android のデバイス管理**|**ポータル サイトから [DEM](#device-enrollment-manager) が開始**| × | × | × |[詳細情報](device-enrollment-manager-enroll.md)|
@@ -79,7 +81,7 @@ Intune では、従業員のデバイスやアプリ、従業員が会社のデ�
 |**Zebra モビリティ拡張が装備された Android デバイス管理**|**ポータル サイトからユーザーまたは[DEM](#device-enrollment-manager) が開始**| × | ユーザーが開始した場合は [はい]、[DEM](#device-enrollment-manager) が開始した場合は [いいえ] | × | [詳細情報](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise 専用**|**NFC、トークン、QR コード、ゼロ タッチ**| [はい] | × | ポリシーで構成可能 | [詳細情報](android-kiosk-enroll.md)|
 |**Android Enterprise フル マネージド**|**NFC、トークン、QR コード、ゼロ タッチ**| [はい] | はい | ポリシーで構成可能 | [詳細情報](android-dedicated-devices-fully-managed-enroll.md)|
-
+|**仕事用プロファイルを備えた会社所有の Android Enterprise** | **NFC、トークン、QR コード、ゼロ タッチ** | はい | はい | ポリシーで構成可能 | [詳細情報](android-corporate-owned-work-profile-enroll.md)|
 
 ## <a name="bring-your-own-device"></a>Bring Your Own Device
 BYOD (私物デバイスの業務利用) デバイスには、個人所有の電話、タブレット、および PC が含まれます。 ユーザーは、ポータル サイト アプリをインストール、および実行して、BYOD デバイスを登録します。 このプログラムによって、ユーザーは電子メールなどの会社のリソースにアクセスできます。
@@ -100,7 +102,7 @@ iOS または iPadOS の ADE 登録についての詳細をご確認ください
 
 ### <a name="usb-sa"></a>USB-SA
 IT 管理者は、セットアップ アシスタントを使用した登録を行うため、USB 経由で Apple Configurator を使用して、会社が所有するデバイスを手動で準備します。 IT 管理者は登録プロファイルを作成して、Apple Configurator にエクスポートします。 ユーザーは、自分のデバイスを受け取ったときに、セットアップ アシスタントを実行してデバイスを登録するように求められます。 この方法は、**iOS 監視対象**モードをサポートしているため、以下の機能が有効になります。
-- 登録のロック
+- ロック登録
 - キオスク モード、およびその他の高度な構成および制限
 
 セットアップ アシスタントを使用した iOS/iPadOS Apple Configurator 登録については、以下をご覧ください。

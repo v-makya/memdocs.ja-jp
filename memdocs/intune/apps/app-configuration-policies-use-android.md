@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 07/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0edb497b2dd9e4853f3fbc378992158c0757e1f6
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 5fca2bfab84807311f7a23dd5b4cf42090246353
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973096"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461625"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>マネージド Android Enterprise デバイス用にアプリ構成ポリシーを追加する
 
@@ -115,6 +115,7 @@ Microsoft Intune 管理者は、マネージド デバイス上の Microsoft ア
    > - Android 用 Office、Word、Excel、PowerPoint (16.0.9327.1000 以降)
    > - OneDrive for Android (5.28 以降)
    > - Android 用 Outlook (2.2.222 以降)
+   > - Android 用 Teams (1416/1.0.0.2020061103 以降)
 
 ## <a name="enter-json-data"></a>JSON データの入力
 
@@ -153,7 +154,7 @@ Android デバイス機能にアクセスするために、アプリのアクセ
 
 ## <a name="additional-information"></a>追加情報
 
-- [マネージド Google Play アプリを Android Enterprise デバイスに割り当てる](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices)
+- [マネージド Google Play アプリを Android Enterprise デバイスに割り当てる](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices)
 - [iOS/iPadOS および Android 用 Outlook のアプリ構成設定の展開](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## <a name="next-steps"></a>次のステップ

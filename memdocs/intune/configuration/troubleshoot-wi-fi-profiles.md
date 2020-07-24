@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82706356f82008798dc8c9b9de02ad55606ee87b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 78b7a0ea6e25754e2839e1fda788b3440eaf3880
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987852"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86872054"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Microsoft Intune での Wi-Fi デバイス構成プロファイルのトラブルシューティング
 
@@ -177,7 +177,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
 ## <a name="common-issues"></a>一般的な問題
 
-### <a name="issue-1-the-wi-fi-profile-isnt-deployed-to-the-device"></a>問題 1:Wi-Fi プロファイルがデバイスに展開されていない
+### <a name="the-wi-fi-profile-isnt-deployed-to-the-device"></a>Wi-Fi プロファイルがデバイスに展開されていない
 
 - Wi-Fi プロファイルが正しいグループに割り当てられていることを確認します。
 
@@ -248,7 +248,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
     ログにエラーが出現する場合は、そのエラーのタイム スタンプをコピーし、ログのフィルターを解除します。 次に、タイム スタンプと共に [検索] オプションを使用して、エラーの直前に何が起こったかを確認します。
 
-### <a name="issue-2-the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>問題 2:Wi-Fi プロファイルはデバイスに展開されていますが、デバイスはネットワークに接続できません
+### <a name="the-wi-fi-profile-is-deployed-to-the-device-but-the-device-cant-connect-to-the-network"></a>Wi-Fi プロファイルはデバイスに展開されていますが、デバイスはネットワークに接続できません
 
 通常、この問題は Intune 以外の何かが原因で発生します。 次のタスクは、接続の問題を理解してトラブルシューティングするために役立ちます。
 
@@ -256,6 +256,22 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
 
   接続できる場合は、手動接続で証明書のプロパティを確認します。 次に、同じ証明書プロパティを使用して Intune Wi-Fi プロファイルを更新します。
 - 通常、接続エラーは Radius サーバー ログに記録されます。 たとえば、デバイスが Wi-Fi プロファイルに接続しようとしたかどうかが示されます。
+
+### <a name="users-dont-get-new-profile-after-changing-password-on-existing-profile"></a>既存のプロファイルでパスワードを変更後、ユーザーに新しいプロファイルが与えられません
+
+企業の Wi-Fi プロファイルを作成し、それをグループに展開し、パスワードを変更し、プロファイルを保存します。 プロファイルが変更されたときに一部のユーザーが新しいプロファイルを取得できないことがあります。
+
+この問題を軽減するには、ゲスト Wi-Fi を設定します。 企業の Wi-Fi に問題がある場合は、ユーザーがゲスト Wi-Fi に接続できます。 自動的に接続設定を有効にしてください。 ゲスト Wi-Fi プロファイルをすべてのユーザーに展開します。
+
+追加の推奨事項:  
+
+- 接続先の Wi-Fi ネットワークがパスワードまたはパスフレーズを受け取る場合は、Wi-Fi ルーターに直接接続できることを確認します。 iOS/iPadOS デバイスでテストできます。
+- Wi-Fi エンドポイント (Wi-Fi ルーター) に正常に接続されたら、SSID と使用した資格情報 (この値はパスワードまたはパスフレーズです) をメモします。
+- 事前共有キー フィールドに SSID と資格情報 (パスワードまたはパスフレーズ) を入力します。 
+- ユーザー数が限られているテスト グループに展開します。IT チームに限定することをお勧めします。 
+- iOS/iPadOS デバイスを Intune に同期します。 登録していない場合、登録します。 
+- (最初の手順で説明した) 同じ Wi-Fi エンドポイントへの接続をもう一度テストします。
+- より大きなグループにロールアウトし、最後には、展開が求められる組織の全ユーザーに展開します。 
 
 ## <a name="need-more-help"></a>さらにヘルプが必要な場合
 

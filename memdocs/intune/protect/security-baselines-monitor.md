@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,88 +16,99 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c6e18bb6c58138d42565d70ab69a6cbd7169ff0
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: cecd39bcba7e16cc933086c99bbc0b403381d75d
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988361"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461795"
 ---
-# <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Microsoft Intune でセキュリティのベースラインとプロファイルを監視する
+# <a name="monitor-security-baselines-and-profiles-in-microsoft-intune"></a>Microsoft Intune でセキュリティのベースラインとプロファイルを監視する
 
-Intune からは、セキュリティ ベースラインを監視するためのオプションがいくつか与えられます。 ユーザーとデバイスに適用されるセキュリティのベースライン プロファイルを監視できます。 また、実際のベースラインと、推奨値と一致する (または一致しない) デバイスを監視することもできます。
+Intune からは、セキュリティ ベースラインを監視するためのオプションがいくつか与えられます。 次の操作を行います。
 
-この記事では、両方の監視オプションについて手順を追って説明します。
+- セキュリティのベースライン、および推奨値と一致する (または一致しない) デバイスを監視します。
+- ユーザーとデバイスに適用されるセキュリティのベースライン プロファイルを監視します。
+- 選択したプロファイルが、選択したデバイスでどのように設定されているかを表示します。
+
+また、セキュリティのベースラインが含まれる個々のデバイスに適用される "*エンドポイントのセキュリティ構成*" を表示することもできます。
+
+この記事では、これらの監視オプションについて手順を追って説明します。
 
 Microsoft Intune のセキュリティのベースライン機能の詳細については、[Intune のセキュリティのベースライン](security-baselines.md)に関するページを参照してください。
 
 ## <a name="monitor-the-baseline-and-your-devices"></a>ベースラインとデバイスを監視する
 
-ベースラインを監視すると、Microsoft の推奨事項に基づいて、デバイスのセキュリティ状態に関する分析情報が得られます。 このような分析情報は、Intune コンソールのセキュリティ ベースラインの [概要] ウィンドウから表示できます。  最初にベースラインを割り当ててからデータが表示されるまで最大 24 時間かかります。 その後の変更は、表示されるまで最大 6 時間かかります。
+ベースラインを監視すると、Microsoft の推奨事項に基づいて、デバイスのセキュリティ状態に関する分析情報が得られます。 これらの分析情報を表示するには、[Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインし、 **[エンドポイントのセキュリティ]**  >  **[セキュリティ ベースライン]** の順にアクセスして、 *[MDM セキュリティ ベースライン]* など、セキュリティのベースラインの種類を選択します。 次に、 *[プロファイル]* ウィンドウで、詳細を表示するプロファイル インスタンスを選択します。 これにより、プロファイルの *[プロパティ]* ウィンドウが開き、ここにある *[モニター]* セクションから任意のプロファイル レポートを選択することができます。 
 
-ベースラインとデバイスの監視データを表示するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインします。 次に、 **[エンドポイント セキュリティ]**  >  **[セキュリティ ベースライン]** の順に選択して、ベースラインを選択し、 **[概要]** ウィンドウを表示します。
+最初にベースラインを割り当ててからデータが表示されるまで最大 24 時間かかります。 その後の変更は、表示されるまで最大 6 時間かかります。
 
-**[概要]** ウィンドウには、状態を監視する方法が 2 つあります。
+レポートとデバイスを確認すると、さまざまな詳細情報が表示されます。
 
-- **デバイス** ビュー - ベースラインの状態カテゴリ別デバイス数の概要。
-- **カテゴリ別**ビュー - ベースラインに各カテゴリを表示し、ベースライン カテゴリ別に、状態グループごとのデバイスの割合を表示するビュー。
+<!-- UI is changing, unclear how yet: 
 
-各デバイスは次のいずれかの状態によって表されます ("*デバイス*" ビューと "*カテゴリ別*" ビューの両方で使用されます)。
 
-- **Matches baseline (ベースラインと一致)** - ベースラインのすべての設定は推奨設定と一致しています。
-- **Does not match baseline (ベースラインと一致しない)** - ベースラインの 1 つまたは複数の設定が、元のベースラインの既定値から変更されました。 各セキュリティ ベースラインの既定値は、そのベースラインに推奨される値です。
+- **Device view** – A summary of how many devices are in each status category for the baseline.
+- **Per-category** - A view that displays each category in the baseline and includes the percentage of devices for each status group for each baseline category.
+
+Each device is represented by one of the following statuses (used in the *device* view and also the *per-category* views):
+
+- **Matches baseline** - All the settings in the baseline match the recommended settings.
+- **Does not match baseline** - One or more settings in the baseline were modified from their default values in the original baseline. The default values in each security baseline are the recommended values for that baseline.
 
   > [!NOTE]
-  > ベースライン プロファイルを作成または編集するとき、既定値または構成設定を変更すると、*Does not match baseline* (ベースラインと一致しない) という状態が発生します。 変更された設定を確認するには、Microsoft サポートにお問い合わせください。 
+  > When you create or edit a baseline profile, any change that is made to a default value or configuration setting causes a *Does not match baseline* status to occur. For help to determine the settings that were changed, contact Microsoft Support. 
 
-- **Misconfigured (正しく構成されていない)** - 少なくとも 1 つの設定が正しく構成されていません。 この状態は、設定が競合、エラー、または保留中の状態にあることを意味します。
-- **Not applicable (適用なし)** - 少なくとも 1 つの設定が適用可能ではなく、適用されていません。
+- **Misconfigured** - At least one setting isn't correctly configured. This status means that the setting is in a conflict, error, or pending state.
+- **Not applicable** - At least one setting isn't applicable and isn't applied.
 
-### <a name="device-view"></a>デバイス ビュー
+### Device view
 
-[概要] ウィンドウには、ベースラインの特定の状態になっているデバイスの数がグラフによる概要で表示されます。下は「**Security baseline posture for assigned Windows 10 devices**」のまとめです。
+The Overview pane displays a chart-based summary of how many devices have a specific status for the baseline; **Security baseline posture for assigned Windows 10 devices**.
 
-![デバイスの状態を確認する](./media/security-baselines-monitor/overview.png)
+![Check the status of the devices](./media/security-baselines-monitor/overview.png)
 
-1 台のデバイスにベースラインのさまざまなカテゴリからさまざまな状態が与えられるとき、そのデバイスは 1 つの状態で表されます。 デバイスを表す状態は次の優先順位で取得されます。**正しく構成されていません**、**ベースラインと一致しない**、**適用なし**、**ベースラインと一致**。
+When a device has different status from different categories in the baseline, the device is represented by a single status. The status that represents the device is taken from the following order of precedence: **Misconfigured**, **Does not match baseline**, **Not applicable**, **Matches baseline**.
 
-たとえば、あるデバイスに "*正しく構成されていません*" として分類される設定が与えられているとき、他にも "*ベースラインと一致しない*" として分類される設定が与えられている場合、そのデバイスは "*正しく構成されていません*" として分類されます。
+For example, if a device has a setting that's classified as *misconfigured* and one or more settings that are classified as *Does not match baseline*, the device is classified as *Misconfigured*.
 
-グラフをクリックすると詳細が表示されます。さまざまな状態が与えられたデバイスが一覧表示されます。 その一覧から個々のデバイスを選択すると、個々のデバイスの詳細を表示できます。 次に例を示します。
+You can click on the chart to drill through and view a list of devices with various statuses. You can then select individual devices from that list to view details about individual devices. For example:
 
-- **[デバイスの構成]** を選択し、状態がエラーになっているプロファイルを選択します。
+- Select **Device configuration** > Select the profile with an Error state:
 
-  ![プロファイルの状態を表示する](./media/security-baselines-monitor/device-configuration-profile-list.png)
+  ![View the status of a profile](./media/security-baselines-monitor/device-configuration-profile-list.png)
 
-- エラーのプロファイルを選択します。 プロファイル内のすべての設定の一覧と、その状態が表示されます。 ここで、スクロールし、エラーの原因となっている設定を探します。
+- Select the Error profile. A list of all settings in the profile, and their state is shown. Now, you can scroll to find the setting causing the error:
 
-  ![エラーの原因となっている設定を確認する](./media/security-baselines-monitor/profile-with-error-status.png)
+  ![See the setting causing the error](./media/security-baselines-monitor/profile-with-error-status.png)
 
-このレポートを使用して、問題の原因となっているプロファイル内の設定を確認します。 また、デバイスに展開されているポリシーとプロファイルの詳細情報も得られます。
+Use this reporting to see any settings in a profile that are causing an issue. Also get more details of policies and profiles deployed to devices.
 
 > [!NOTE]
-> ベースラインでプロパティが **[未構成]** に設定されている場合、その設定は無視され、制限は適用されません。 このプロパティはどのレポートにも表示されません。
+> When a property is set to **Not configured** in the baseline, the setting is ignored, and no restrictions are enforced. The property isn't shown in any reporting.
 
-### <a name="per-category-view"></a>カテゴリ別ビュー
+### Per category view
 
-[概要] ウィンドウには、ベースラインのカテゴリ別グラフが表示されます。下は「**Security baseline posture by category**」のまとめです  このビューには、ベースラインからの各カテゴリが表示され、各カテゴリの特定の状態分類に属するデバイスの割合が表示されます。
+The Overview pane displays a per-category chart for the baseline named **Security baseline posture by category**.  This view displays each category from the baseline, and identifies the percentage of devices that fall into a status classification for each of those categories.
 
-![状態のカテゴリ別ビュー](./media/security-baselines-monitor/monitor-baseline-per-category.png)
+![Per-Category view of status](./media/security-baselines-monitor/monitor-baseline-per-category.png)
 
-**[ベースラインと一致]** の状態は、カテゴリに対して 100% のデバイスがその状態を報告するまで表示されません。
+Status for **Matches baseline** doesn't display until 100% of devices report that status for the category.
 
-カテゴリ別ビューは列ごとに並べ替えることができます。その際、列の一番上にある上下の矢印アイコンを選択します。
+You can sort the by-category view by each column, by selecting up-down arrow icon at the top of the column.
+-->
 
 ## <a name="monitor-the-profile"></a>プロファイルを監視する
 
-プロファイルを監視すると、デバイスの展開状態に関する分析情報が得られますが、ベースラインの推奨事項に基づくセキュリティ状態に関する分析情報は得られません。
+プロファイルを監視すると、デバイスの展開状態に関する分析情報を得られますが、ベースラインの推奨事項に基づくセキュリティ状態に関する分析情報は得られません。
 
-1. Intune で **[Security Baselines]\(セキュリティのベースライン\)** を選択し、ベースライン、 **[Profiles created]\(作成したプロファイル\)** の順に選択します。
+1. Intune で **[セキュリティ ベースライン]** を選択し、ベースラインを選択して、その *[プロファイル]* ウィンドウを開きます。
 
-2. プロファイルを選択します。 **[概要]** の画像には、このプロファイルが割り当てられているデバイスとユーザーの数が表示されます。
+<!-- More churn  
+2. Select a profile. In **Overview**, the image shows how many devices and users have this profile assigned:
 
-   ![セキュリティのベースライン プロファイルが割り当てられているデバイスとユーザーの数を確認する](./media/security-baselines-monitor/existing-profile-overview.png)
-
+   ![See how many devices and users are assigned the security baselines profile](./media/security-baselines-monitor/existing-profile-overview.png)
+--> 
 3. **[管理]**  >  **[プロパティ]** に、ベースラインのすべての設定の一覧が表示されます。 これらの設定のすべてを変更することもできます。
 
    ![セキュリティのベースライン プロファイルの設定を確認および更新する](./media/security-baselines-monitor/manage-settings.png)
@@ -106,11 +117,24 @@ Microsoft Intune のセキュリティのベースライン機能の詳細につ
 
    ![セキュリティのベースライン プロファイルのさまざまなモニター オプションを確認する](./media/security-baselines-monitor/monitor-status-options.png)
 
+## <a name="view-settings-from-profiles-that-apply-to-a-device"></a>デバイスに適用されるプロファイルの設定を表示する
+
+セキュリティのベースライン プロファイルを選択すると、個々のデバイスに適用されるプロファイルの設定の一覧を表示することができます。  この一覧を表示するには、 **[エンドポイントのセキュリティ]**  >  **[セキュリティ ベースライン]**  > "*セキュリティ ベースラインの種類を選択します*" > "*表示するプロファイルを選択します*" >  **[デバイスの状態]** の順に移動します。 一覧を表示するには、 **[エンドポイントのセキュリティ]**  >  **[すべてのデバイス]**  > "*デバイスを選択します*" >  **[エンドポイントのセキュリティ構成]**  > "*ベースラインのバージョンを選択します*" の順に移動します。
+
+デバイスを選択すると、Microsoft エンドポイント マネージャー管理センターに、そのプロファイルの設定の一覧が表示されます。これには、設定の基になるカテゴリや、デバイスの構成の状態が含まれます。 構成の状態には、次の値が含まれます。
+
+- **成功** – デバイスの設定は、プロファイルで構成されている値と一致します。 これは、ベースラインの既定値と推奨値、またはプロファイルの構成時に管理者によって指定されたカスタム値のいずれかです。
+- **競合** – 設定が別のポリシーと競合しているか、エラーが発生しているか、更新が保留されています。
+- **該当なし** - 設定はプロファイルによって適用されません。
+
+> [!NOTE]
+> 設定の状態の値は、今後のリリースで更新され、詳細に指定されます。
+
 ## <a name="view-endpoint-security-configurations-per-device"></a>デバイスごとのエンドポイントのセキュリティ構成を表示する
 
 個々のデバイスに適用されるセキュリティ構成の詳細を表示します。これは、正しく構成されていない設定を特定するのに役立ちます。
 
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインします。
+1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
 2. **[デバイス]**  >  **[すべてのデバイス]** の順に移動し、表示するデバイスを選択します。
 
@@ -122,7 +146,7 @@ Microsoft Intune のセキュリティのベースライン機能の詳細につ
 
 セキュリティのベースラインを展開しましたが、展開状態にエラーが表示されます。 次の手順では、エラーのトラブルシューティングに関するガイダンスをいくつか紹介します。
 
-1. Intune で **[Security Baselines]\(セキュリティのベースライン\)** を選択し、ベースライン、 **[Profiles created]\(作成したプロファイル\)** の順に選択します。
+1. Intune で、 **[セキュリティ ベースライン]** を選択し、ベースラインを選択したら、 **[プロファイル]** を選択します。
 
 2. プロファイルを選択し、 **[監視]**  >  **[設定ごとの状態]** を選択します。
 

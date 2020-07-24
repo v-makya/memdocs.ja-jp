@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2019
+ms.date: 07/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,17 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c8c78106125b45f52b45cb5fc6494b8e13b7a15
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 9c1d4dacf29aa0c87a8356306d10bf05acbf3afb
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084943"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462169"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Intune での条件付きアクセスの一般的な使用方法
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 
 Intune での条件付きアクセスには、デバイス ベースの条件付きアクセスとアプリ ベースの条件付きアクセスの 2 種類があります。 組織の条件付きアクセス コンプライアンスを進めるために関連するコンプライアンス ポリシーを構成する必要があります。 条件付きアクセスは、一般的に Exchange へのアクセスの許可またはブロック、ネットワークへのアクセスの制御、Mobile Threat Defense ソリューションとの統合などを行うために使用されます。
  
@@ -113,34 +110,44 @@ Intune と Azure Active Directory が連携することで、管理対象アプ�
 
 デバイスが条件を満たしていない場合、エンド ユーザーは、デバイス非準拠の原因である問題を修正するためのデバイス登録プロセスを提示されます。
 
-#### <a name="how-conditional-access-for-exchange-on-premises-works"></a>Exchange On-Premises の条件付きアクセスのしくみ
+> [!NOTE]
+> 2020 年 7 月以降、Exchange Connector のサポートは非推奨とされ、Exchange の[ハイブリッド先進認証](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) に置き換えられます。 HMA を使用する場合、Intune をセットアップして Exchange Connector を使用する必要はありません。 サブスクリプションで Exchange Connector を既に使用していない限り、Intune の Exchange Connector を構成および管理するための UI は、この変更により Microsoft エンドポイント マネージャー管理センターから削除されています。
+>
+> ご使用の環境に Exchange Connector が設定されている場合、Intune テナントの使用は引き続きサポートされ、その構成をサポートする UI に引き続きアクセスできます。 詳細については、[Exchange On-Premises Connector のインストール](../protect/exchange-connector-install.md)に関する記事を参照してください。 引き続きコネクタを使用するか、HMA を構成してから、コネクタをアンインストールすることができます。
+>
+> ハイブリッド先進認証は、以前に Intune の Exchange Connector によって提供されていた機能であるデバイス ID の Exchange レコードへのマッピングを備えています。  このマッピングは、Intune で行った構成、または Intune と Exchange をブリッジする Intune コネクタの要件の外部で行われるようになりました。 HMA では、"Intune" 固有の構成 (コネクタ) を使用するための要件が削除されています。
 
-Exchange On-Premises の条件付きアクセスの動作は、Azure の条件付きアクセス ベースのポリシーとは異なります。 Intune Exchange On-premises コネクタをインストールして、Exchange サーバーと直接対話します。 Intune Exchange Connector は Exchange サーバーに存在するすべての Exchange Active Sync (EAS) レコードを収集するため、Intune はこれらの EAS レコードを取得して、Intune デバイス レコードにマップすることができます。 これらのレコードはデバイスに登録され、Intune によって認識されます。 このプロセスにより、電子メールへのアクセスが許可またはブロックされます。
 
-EAS レコードが新しいために Intune で認識されない場合、電子メールへのアクセスをブロックすることを Exchange サーバーに指示するコマンドレットが Intune によって発行されます。 このプロセスのしくみの詳細を次に示します。
+<!-- Deprecated with change from the connector to Exchange hybrid modern authentication)
 
-![Exchange On-premises と条件付きアクセス (CA) のフローチャート](./media/conditional-access-intune-common-ways-use/ca-intune-common-ways-1.png)
+#### How conditional access for Exchange on-premises works
 
-1. ユーザーは、Exchange On-premises 2010 SP1 以降でホストされている会社の電子メールにアクセスしようとしています。
+Conditional access for Exchange on-premises works differently than Azure Conditional Access based policies. You install the Intune Exchange on-premises connector to directly interact with Exchange server. The Intune Exchange connector pulls in all the Exchange Active Sync (EAS) records that exist at the Exchange server so Intune can take these EAS records and map them to Intune device records. These records are devices enrolled and recognized by Intune. This process allows or blocks e-mail access.
 
-2. デバイスが Intune で管理されていない場合、電子メールへのアクセスがブロックされます。 Intune によって、EAS クライアントにブロック通知が送信されます。
+If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (pronounced "command-let") that directs the Exchange server to block access to e-mail. Following are more details on how this process works:
 
-3. EAS がブロック通知を受信し、該当デバイスを検疫に移動して、検疫メールを送信します。このメールには、ユーザーがデバイスを登録するためのリンクを含む修復手順が記載されています。
+![Exchange on-premises with CA flow-chart](./media/conditional-access-intune-common-ways-use/ca-intune-common-ways-1.png)
 
-4. Workplace Join プロセスが発生します。これは、Intune でデバイスを管理する最初の手順です。
+1. User tries to access corporate email, which is hosted on Exchange on-premises 2010 SP1 or later.
 
-5. デバイスが Intune に登録されます。
+2. If the device is not managed by Intune, access to email will be blocked. Intune sends a block notification to the EAS client.
 
-6. Intune により EAS レコードとデバイス レコードがマップされ、デバイスのコンプライアンス対応状態が保存されます。
+3. EAS receives the block notification, moves the device to quarantine, and sends the quarantine email with remediation steps that contain links so the users can enroll their devices.
 
-7. Azure AD Device Registration プロセスにより EAS クライアント ID が登録され、Intune デバイス レコードと EAS クライアント ID の間のリレーションシップが作成されます。
+4. The Workplace join process happens, which is the first step to have the device managed by Intune.
 
-8. Azure AD Device Registration により、デバイスの状態に関する情報が保存されます。
+5. The device gets enrolled into Intune.
 
-9. ユーザーが条件付きアクセス ポリシーを満たしている場合、Intune によって Intune Exchange Connector を介して、メールボックスの同期を許可するコマンドレットが発行されます。
+6. Intune maps the EAS record to a device record, and saves the device compliance state.
 
-10. Exchange サーバーが EAS クライアントに通知を送信し、ユーザーは電子メールにアクセスできるようになります。
+7. The EAS client ID gets registered by the Azure AD Device Registration process, which creates a relationship between the Intune device record, and the EAS client ID.
 
+8. The Azure AD Device Registration saves the device state information.
+
+9. If the user meets the conditional access policies, Intune issues a cmdlet through the Intune Exchange connector that allows the mailbox to sync.
+
+10. Exchange server sends the notification to EAS client so the user can access e-mail.
+-->
 
 #### <a name="whats-the-intune-role"></a>Intune ロールとは
 
@@ -158,7 +165,5 @@ Exchange サーバーでは、デバイスを検疫に移動するための API 
 [Azure Active Directory で条件付きアクセスを構成する方法](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 
 [アプリベースの条件付きアクセス ポリシーを設定する](app-based-conditional-access-intune-create.md)
-
-[Intune で On-Premises Exchange Connector をインストールする方法](exchange-connector-install.md)
 
 [Exchange On-Premises の条件付きアクセス ポリシーを作成する方法](conditional-access-exchange-create.md)

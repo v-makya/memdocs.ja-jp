@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,18 +18,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 530d6de8194a1ca74b72567c98c5d2afcb327170
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 6b0a22d24a67364df3d3aa064489db67e2c97e98
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990316"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462237"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Intune の Exchange On-Premises アクセスを構成する
 
 この記事では、デバイスのコンプライアンスに基づく Exchange On-Premises の条件付きアクセスを構成する方法を示します。
 
 Exchange Online Dedicated 環境を使用していて、それが新しい構成であるか既存の構成であるかを確認する必要がある場合は、アカウント マネージャーに問い合わせてください。 Exchange On-Premises または従来の Exchange Online Dedicated 環境への電子メール アクセスを制御するには、Intune で Exchange On-Premises に対する条件付きアクセスを構成します。
+
+> [!IMPORTANT]
+> この記事の情報は、Exchange Connector の使用がサポートされているお客様に適用されます。
+>
+> 2020 年 7 月以降、Exchange Connector のサポートは非推奨とされ、Exchange の[ハイブリッド先進認証](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) に置き換えられます。  ご使用の環境に Exchange Connector が設定されている場合、Intune テナントの使用は引き続きサポートされ、その構成をサポートする UI に引き続きアクセスできます。 引き続きコネクタを使用するか、HMA を構成してから、コネクタをアンインストールすることができます。
+>
+> HMA を使用する場合、Intune をセットアップして Exchange Connector を使用する必要はありません。 サブスクリプションで Exchange Connector を既に使用していない限り、Intune の Exchange Connector を構成および管理するための UI は、この変更により Microsoft エンドポイント マネージャー管理センターから削除されています。
 
 ## <a name="before-you-begin"></a>始める前に
 

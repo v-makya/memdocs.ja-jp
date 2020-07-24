@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 07/20/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,32 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7893e845d2f4c73d4fc6fdecd8691b288c33bb48
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b6004526d8c9340e70e5149f2261eea07a916ed7
+ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078245"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871985"
 ---
-# <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Microsoft Intune でのデバイス ポリシーとプロファイルの一般的な質問、問題と解決策
+# <a name="common-questions-and-answers-with-device-policies-and-profiles-in-microsoft-intune"></a>Microsoft Intune でのデバイス ポリシーとプロファイルの一般的な質問と回答
 
 Intune でデバイス プロファイルとポリシーを使用する場合の、一般的な質問に対する回答を得ます。 この記事には、チェックイン時刻の間隔のリストもあり、競合などの詳細についても提供します。
-
-## <a name="why-doesnt-a-user-get-a-new-profile-when-changing-a-password-or-passphrase-on-an-existing-wi-fi-profile"></a>既存の Wi-Fi プロファイルでパスワードやパスフレーズを変更すると、ユーザーに新しいプロファイルが与えられません。
-
-企業の Wi-Fi プロファイルを作成し、それをグループに展開し、パスワードを変更し、プロファイルを保存します。 プロファイルが変更されたときに一部のユーザーが新しいプロファイルを取得できないことがあります。
-
-この問題を軽減するには、ゲスト Wi-Fi を設定します。 企業の Wi-Fi に問題がある場合は、ユーザーがゲスト Wi-Fi に接続できます。 自動的に接続設定を有効にしてください。 ゲスト Wi-Fi プロファイルをすべてのユーザーに展開します。
-
-追加の推奨事項:  
-
-- 接続先の Wi-Fi ネットワークがパスワードまたはパスフレーズを受け取る場合は、Wi-Fi ルーターに直接接続できることを確認します。 iOS/iPadOS デバイスでテストできます。
-- Wi-Fi エンドポイント (Wi-Fi ルーター) に正常に接続されたら、SSID と使用した資格情報 (この値はパスワードまたはパスフレーズです) をメモします。
-- 事前共有キー フィールドに SSID と資格情報 (パスワードまたはパスフレーズ) を入力します。 
-- ユーザー数が限られているテスト グループに展開します。IT チームに限定することをお勧めします。 
-- iOS/iPadOS デバイスを Intune に同期します。 登録していない場合、登録します。 
-- (最初の手順で説明した) 同じ Wi-Fi エンドポイントへの接続をもう一度テストします。
-- より大きなグループにロールアウトし、最後には、展開が求められる組織の全ユーザーに展開します。 
 
 ## <a name="how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned"></a>デバイスへのポリシー、プロファイル、アプリの割り当て後にそれらが取得されるまでどれくらいの時間がかかりますか。
 

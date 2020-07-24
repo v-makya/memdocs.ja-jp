@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcc524a69d0fb41da84a2e882b81a205fe7192cc
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: b51ed6653dff5b7d0aeef40892e16e2826f30204
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79363331"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461251"
 ---
 # <a name="troubleshoot-android-enterprise-device-problems-in-microsoft-intune"></a>Microsoft Intune での Android Enterprise デバイスの問題解決
 
@@ -76,6 +76,8 @@ Samsung はこの制限を Android 8.0 以降のデバイスから強制適用�
 
 ### <a name="wipe-factory-reset-option-isnt-available-for-work-profile-enrolled-device"></a>仕事用プロファイルに登録されたデバイスで [ワイプ (工場出荷時の設定へのリセット)] オプションを使用できない
 これは通常の動作です。 仕事用プロファイル シナリオでは、MDM プロバイダーはデバイスを完全制御できません。 使用できる唯一のオプションは [インベントリから削除 (会社データを削除する)] です。仕事用プロファイル全体とそのすべての内容が削除されます。
+
+ワイプは[仕事用プロファイルを備えた会社所有の Android Enterprise デバイス](android-corporate-owned-work-profile-enroll.md)でサポートされています。
 
 ### <a name="is-device-passcode-reset-supported"></a>デバイス パスコードをリセットできますか。
 仕事用プロファイルに登録されたデバイスについては、次の場合にのみ、Android 8.0 以降で仕事用プロファイルのパスコードをリセットできます。

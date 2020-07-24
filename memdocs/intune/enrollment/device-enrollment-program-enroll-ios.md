@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a7943fb33cf670eedd600db083b77e981da9029
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: fa06e5fee4658ad3c7f19ec39bd126ce69d8cd41
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240781"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891515"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Apple の自動デバイス登録を使用して iOS または iPadOS デバイスを自動登録する
 
@@ -71,7 +71,7 @@ Apple では、iOS/iPadOS 5 において監視モードが導入されました�
 - Intune アカウントあたりの自動デバイス登録トークンの最大数:2,000
 - トークンあたりの自動デバイス登録デバイスの最大数:最初の同期での上限は、75,000 から 80,000 デバイスです。 Intune では、12 時間ごとのチェックインで ABM または ASM との同期を継続し、毎回さらにデバイスが追加されます。 手動同期 (15 分おきにトリガーできます) でも、別のデバイス バッチが Intune に追加されます。 同期は継続して行われ、大量のデバイスが ABM/ASM から Intune へ同期され続けます。 
 
-## <a name="get-an-apple-ade-token"></a>Apple ADE トークンの取得
+## <a name="get-an-apple-automated-device-enrollment-token"></a>Apple 自動デバイス登録トークンを取得する
 
 ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE トークン (.p7m) ファイルが必要です。 このトークンにより、Intune は企業所有の ADE デバイスに関する情報を同期できるようになります。 また、Intune は Apple に登録プロファイルをアップロードして、デバイスをそれらのプロファイルに割り当てられるようになります。
 
@@ -323,7 +323,7 @@ Apple と Intune の間の管理と同期を有効にし、ADE デバイスを�
 
 [Device Enrollment Program を使用して Intune に iOS/iPadOS デバイスを登録する方法](../user-help/enroll-your-device-dep-ios.md)に関する記事をご覧ください。
 
-## <a name="renew-an-ade-token"></a>ADE トークンの更新  
+## <a name="renew-an-automated-device-enrollment-token"></a>自動デバイス登録トークンを更新する  
 
 > [!NOTE]
 > ADE トークンの毎年の更新に加えて、Apple Business Manager でトークンを設定したユーザーの管理対象 Apple ID のパスワードが変更された場合、またはそのユーザーが Apple Business Manager 組織を脱退した場合に、Intune および Apple Business Manager 内の Enrollment Program トークンを更新する必要があります。
@@ -347,7 +347,7 @@ Apple と Intune の間の管理と同期を有効にし、ADE デバイスを�
 9. **[トークンを更新する]** を選択します。 トークンが更新されたことの確認が表示されます。   
     ![確認のスクリーンショット。](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
-## <a name="delete-an-ade-token-from-intune"></a>Intune から ADE トークンを削除する
+## <a name="delete-an-automated-device-enrollment-token-from-intune"></a>自動デバイス登録トークンを Intune から削除する
 
 次の場合に限り、Intune から登録プロファイル トークンを削除できます
 - トークンに割り当てられているデバイスがない

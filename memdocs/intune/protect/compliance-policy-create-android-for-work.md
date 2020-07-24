@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d419eb341d3d15a8307396d1bcf13235201606f4
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: 9897f824bb1bd13c1d12ff0c705b42cea275b9d4
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729234"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462084"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune を使用してデバイスを準拠または非準拠としてマークするための Android エンタープライズ設定
 
@@ -42,7 +42,7 @@ Intune サービス管理者は、組織のリソースの保護に役立てる�
 [コンプライアンス ポリシーの作成](create-compliance-policy.md#create-the-policy)。 **[プラットフォーム]** に、 **[Android エンタープライズ]** を選択します。
 
 
-## <a name="device-owner"></a>デバイスの所有者
+## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>フル マネージド、専用、会社所有の仕事用プロファイル
 
 ### <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -67,7 +67,7 @@ Intune サービス管理者は、組織のリソースの保護に役立てる�
   - **[高]** - すべての脅威レベルが許容されるため、最も安全性の低いオプションとなります。 このソリューションをレポート目的のみで使用した場合、役立つ場合があります。
   
 > [!NOTE]
-> すべての Mobile Threat Defense (MTD) プロバイダーが、アプリ構成を使用した Android エンタープライズ デバイス所有者のデプロイでサポートされています。 Intune で Android Enterprise デバイス所有者プラットフォームをサポートするために必要な構成については、MTD プロバイダーに確認してください。
+> すべての Mobile Threat Defense (MTD) プロバイダーは、アプリ構成を使用した Android Enterprise フル マネージド、専用、および会社所有の仕事用プロファイルの展開に対してサポートされています。 Intune で Android Enterprise フル マネージド、専用、および会社所有の仕事用プロファイルのプラットフォームをサポートするために必要な構成については、MTD プロバイダーに確認してください。
 
 #### <a name="google-play-protect"></a>Google Play Protect
 

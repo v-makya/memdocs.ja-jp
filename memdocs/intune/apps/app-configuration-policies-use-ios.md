@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2020
+ms.date: 07/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 730a8974753575b2726d821106f7b3c937b30207
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: b60d37c4da0b706dc109b5800b362d448224f116
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239982"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410968"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>管理対象の iOS/iPadOS デバイス用アプリ構成ポリシーを追加する
 
@@ -117,7 +117,8 @@ Microsoft Intune 管理者は、マネージド デバイス上の Microsoft ア
    > 次のアプリでは、上記のアプリ構成が処理され、組織アカウントのみが許可されます。
    > - iOS 用 Edge (44.8.7 以降)
    > - OneDrive for iOS (10.34 以降)
-   > - Outlook (iOS 2.99.0 以降用)
+   > - Outlook for iOS (2.99.0 以降)
+   > - Teams for iOS (2.0.15 以降)
 
 ## <a name="enter-xml-data"></a>XML データを入力する
 

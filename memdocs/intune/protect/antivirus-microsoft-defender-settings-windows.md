@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 07/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: be850b2351de138ddacb087b2acf198e164dcd67
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 0eae6837ff2ef1d8b2e47118a20d4aa4e6b0f22b
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430090"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461285"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune の Windows 10 Microsoft Defender ウイルス対策ポリシーの設定
 
@@ -282,6 +282,18 @@ ms.locfileid: "83430090"
   CSP:[SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   署名の確認に使用する間隔を 0 から 24 (時間単位) の範囲で指定します。 値を 0 にすると、新しい署名は確認されなくなります。 値が 2 の場合、2 時間ごとに確認されます。
+
+- **定義ファイルの更新をダウンロードするためのファイル共有を定義する**  
+  CSP:[SignatureUpdateFallbackOrder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+
+  定義ファイルの更新を取得するダウンロード元の場所として、UNC ファイル共有など、場所を管理します。 指定した更新元の 1 つから定義ファイルの更新が正しくダウンロードされたら、リストの残りの更新元には接続されません。
+
+  個別の場所を**追加**したり、.csv ファイルとして場所の一覧を**インポート**したりすることができます。
+
+- **定義ファイルの更新をダウンロードするためのソースの順序を定義する**  
+  CSP:[SignatureUpdateFileSharesSources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+
+  定義ファイルの更新を取得する目的で、指定したダウンロード元に接続する順序を指定します。 指定した更新元の 1 つから定義ファイルの更新が正しくダウンロードされたら、リストの残りの更新元には接続されません。
 
 ## <a name="user-experience"></a>ユーザー側の表示と操作
 

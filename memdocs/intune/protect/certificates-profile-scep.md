@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/03/2020
+ms.date: 07/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35cf4b3afb766d8729d3438d2d8c61e1d79f4791
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: ebf6a71a4d462e1025b6c44557a9513887488673
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531742"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891532"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune で SCEP 証明書プロファイルを作成して割り当てる
 
@@ -40,15 +40,15 @@ Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするよ�
    - **[プラットフォーム]** :デバイスのプラットフォームを選択します。
    - **[プロファイル]** : **[SCEP 証明書]** を選択します
 
-     **[Android エンタープライズ]** プラットフォームの場合、 *[プロファイルの種類]* は *[デバイスの所有者のみ]* と *[仕事用プロファイルのみ]* の 2 つのカテゴリに分かれています。 管理するデバイスに対する正しい SCEP 証明書プロファイルを選択してください。  
+     **[Android エンタープライズ]** プラットフォームの場合、 *[プロファイルの種類]* は *[フル マネージド、専用、会社所有の仕事用プロファイル]* と *[仕事用プロファイルのみ]* の 2 つのカテゴリに分かれています。 管理するデバイスに対する正しい SCEP 証明書プロファイルを選択してください。  
 
-     "*デバイスの所有者のみ*" プロファイルの SCEP 証明書プロファイルには、次の制限があります。
+     *[フル マネージド、専用、会社所有の仕事用プロファイル]* プロファイルの SCEP 証明書プロファイルには次の制限があります。
 
       1. [監視] では、証明書レポートはデバイス所有者の SCEP 証明書プロファイルに対しては使用できません。
 
       2. Intune を使用して、デバイス所有者の SCEP 証明書プロファイルによってプロビジョニングされた証明書を失効させることはできません。 失効を管理するには、外部プロセスを使用するか、証明機関で直接行います。
 
-      3. Android Enterprise 専用デバイスの場合、SCEP 認証プロファイルは Wi-Fi ネットワーク構成と認証でのみサポートされます。  Android Enterprise 専用デバイスの SCEP 証明書プロファイルは、VPN またはアプリの認証ではサポートされていません。
+      3. Android Enterprise 専用デバイスの場合、SCEP 認証プロファイルは Wi-Fi ネットワーク構成、VPN、認証でサポートされます。 Android Enterprise 専用デバイスの SCEP 証明書プロファイルは、アプリの認証ではサポートされていません。
 
 4. **[作成]** を選択します。
 
@@ -71,6 +71,9 @@ Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするよ�
 
        キオスクのようなユーザーのいないデバイスなどのシナリオまたは Windows デバイスには、 **[デバイス]** を使用します。 Windows デバイスでは、ローカル コンピューターの証明書ストアに証明書が配置されます。
 
+     > [!NOTE]
+     > macOS では、SCEP でプロビジョニングする証明書は常に、デバイスのシステム キーチェーン (システム ストア) に配置されます。
+ 
    - **[サブジェクト名の形式]** :
 
      Intune が証明書要求のサブジェクト名をどのように自動生成するかを選択します。 サブジェクト名の形式のオプションは、選択した証明書の種類 ( **[ユーザー]** または **[デバイス]** ) によって異なります。
@@ -112,7 +115,7 @@ Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするよ�
 
          その例には、CN 変数と E 変数に加えて、組織単位、組織、場所、州、国の各値を表す文字列を使用するサブジェクト名形式が含まれています。 [CertStrToName 関数](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx)の記事では、この関数とそのサポートされる文字列について説明されています。
          
-         \* Android の "デバイスの所有者のみ" プロファイルでは、**CN={{UserPrincipalName}}** 設定は機能しません。 Android の "デバイスの所有者のみ" プロファイルは、"ユーザー" なしのデバイスに使用できるため、このプロファイルではユーザーのユーザー プリンシパル名を受け取れません。 ユーザーのいるデバイスに対してこのオプションが本当に必要な場合は、**CN={{UserName}}\@contoso.com** のような回避策を使用できます。これにより、手動で追加したユーザー名とドメイン (janedoe@contoso.com など) が指定されます
+         \* [Android フル マネージド、専用、会社所有の仕事用プロファイル] プロファイルには、**CN={{UserPrincipalName}}** 設定は動作しません。 Android の "Android フル マネージド、専用、会社所有の仕事用プロファイル" プロファイルは、"ユーザー" なしのデバイスに使用できるため、このプロファイルではユーザーのユーザー プリンシパル名を受け取れません。 ユーザーのいるデバイスに対してこのオプションが本当に必要な場合は、**CN={{UserName}}\@contoso.com** のような回避策を使用できます。これにより、手動で追加したユーザー名とドメイン (janedoe@contoso.com など) が指定されます
 
       - **デバイス証明書の種類**
 

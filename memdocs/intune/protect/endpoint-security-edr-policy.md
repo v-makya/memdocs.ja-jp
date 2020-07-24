@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: ae95fb48296f778fb98affa2270ba763d79fb766
-ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
+ms.openlocfilehash: b1711dad8163409d05c5299e8d3b54ad619b48ec
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879666"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462067"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティのエンドポイントの検出と応答ポリシー
 
@@ -32,9 +32,6 @@ Microsoft Defender ATP のエンドポイントの検出と応答機能により
 EDR ポリシーには、EDR の設定を管理するための、プラットフォーム固有のプロファイルが含まれています。 プロファイルには、Microsoft Defender ATP の "*オンボード パッケージ*" が自動的に含まれます。 オンボード パッケージには、Microsoft Defender ATP と連携するためのデバイスの構成方法が定義されています。 デバイスをオンボードすると、そのデバイスからの脅威データの使用を開始できます。
 
 EDR ポリシーは、Intune で管理する Azure Active Directory (Azure AD) のデバイス グループと、Configuration Manager で管理するオンプレミス デバイスのコレクション (Windows サーバーを含む) に展開されます。 異なる管理パスの EDR ポリシーには、異なるオンボード パッケージが必要です。 そのため、管理するデバイスの種類ごとに個別の EDR ポリシーを作成します。
-
-> [!TIP]
-> Configuration Manager で管理しているデバイスのサポートは、"*パブリック プレビュー*" 中です。
 
 [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) の **[エンドポイント セキュリティ]** ノードにある *[管理]* で、EDR のためのエンドポイント セキュリティ ポリシーを見つけます。
 
@@ -74,10 +71,10 @@ Configuration Manager デバイスに対する EDR ポリシーの使用をサ�
 - プラットフォーム:**Windows 10 以降** - Intune は Azure AD グループ内のデバイスにポリシーを展開します。
 - プロファイル:**エンドポイントの検出と応答 (MDM)**
 
-**Configuration Manager** " *(プレビュー中)* " - Configuration Manager で管理するデバイスについては、以下がサポートされます。
+**Configuration Manager** - Configuration Manager で管理するデバイスについては、以下がサポートされます。
 
 - プラットフォーム:**Windows 10 および Windows Server** - Configuration Manager は Configuration Manager コレクション内のデバイスにポリシーを展開します。
-- プロファイル:**エンドポイントの検出と応答 (ConfigMgr) (プレビュー)**
+- プロファイル:**エンドポイントの検出と応答 (ConfigMgr)**
 
 ## <a name="set-up-configuration-manager-to-support-edr-policy"></a>EDR ポリシーをサポートするよう Configuration Manager を設定する
 
@@ -223,7 +220,7 @@ Configuration Manager によって管理されるデバイスにポリシーを�
 
    - Configuration Manager - Configuration Manager は Configuration Manager コレクション内のデバイスにポリシーを展開します。 ポリシーを作成するときに、次を選択します。
      - プラットフォーム:**Windows 10 および Windows Server**
-     - プロファイル:**エンドポイントの検出と応答 (ConfigMgr) (プレビュー)**
+     - プロファイル:**エンドポイントの検出と応答 (ConfigMgr)**
 
 4. **[作成]** を選択します。
 

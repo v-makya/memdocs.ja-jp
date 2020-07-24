@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5de1268b8b04c98ac7a9cfa96d42349fc0f8890
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 0242e7725afa23ed94400c79eae27118b7dbb8c5
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383208"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491186"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Microsoft Intune で認証に証明書を使用する
 
@@ -109,6 +109,9 @@ SCEP、PKCS、PKCS のインポートされた証明書プロファイルの場�
 > *Windows 10 以降*のプラットフォーム用に作成する信頼されたルート プロファイルは、Microsoft Endpoint Manager admin center には *Windows 8.1 以降*のプラットフォーム用のプロファイルとして表示されます。 
 >
 > これは、信頼された証明書プロファイルのプラットフォームの表示に関する既知の問題です。 プロファイルには Windows 8.1 以降のプラットフォームが表示されますが、Windows 10 以降で機能します。
+
+> [!NOTE]
+> Intune の "*信頼された証明書*" プロファイルは、ルート証明書または中間証明書を提供するためにのみ使用できます。 このような証明書を展開する目的は、信頼チェーンを確立することです。 信頼された証明書プロファイルを使用してルート証明書または中間証明書以外の証明書を配信することは、Microsoft ではサポートされていません。 Intune ポータルで信頼された証明書プロファイルを選択する場合は、ルート証明書または中間証明書と見なされない証明書のインポートがブロックされることがあります。 このプロファイルの種類を使用して、ルート証明書でも中間証明書でもない証明書をインポートして展開できたとしても、iOS や Android など、異なるプラットフォーム間で予期しない結果が発生する可能性があります。
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>信頼された証明書プロファイルを作成するには
 

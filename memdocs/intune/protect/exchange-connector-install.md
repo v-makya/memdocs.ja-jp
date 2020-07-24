@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 07/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 390a80f6333229a99daec9627e3810c27ca6b580
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e646ce40acaa156910f516c475cd6b0885989941
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990850"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86462195"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>オンプレミスの Intune Exchange Connector を設定する
 
+> [!IMPORTANT]
+> この記事の情報は、Exchange Connector の使用がサポートされているお客様に適用されます。
+>
+> 2020 年 7 月以降、Exchange Connector のサポートは非推奨とされ、Exchange の[ハイブリッド先進認証](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) に置き換えられます。  ご使用の環境に Exchange Connector が設定されている場合、Intune テナントの使用は引き続きサポートされ、その構成をサポートする UI に引き続きアクセスできます。 引き続きコネクタを使用するか、HMA を構成してから、コネクタをアンインストールすることができます。
+>
+>HMA を使用する場合、Intune をセットアップして Exchange Connector を使用する必要はありません。 サブスクリプションで Exchange Connector を既に使用していない限り、Intune の Exchange Connector を構成および管理するための UI は、この変更により Microsoft エンドポイント マネージャー管理センターから削除されています。
+
 Exchange へのアクセスを保護するために、Intune は Microsoft Intune Exchange Connector というオンプレミスのコンポーネントに依存しています。 このコネクタは、Intune コンソールの一部の場所では *[Exchange ActiveSync のオンプレミス コネクタ]* とも表示されます。
+
+> [!IMPORTANT]
+> Intune では、2007 年 (7 月) のリリースで開始した Intune サービスから Exchange On-Premises Connector 機能のサポートが削除されます。 アクティブなコネクタを使用している既存のお客様は、現時点では現在の機能を引き続き利用できます。 新規のお客様や、アクティブなコネクタをお持ちでない既存のお客様は、Intune での新しいコネクタの作成、または Exchange ActiveSync (EAS) デバイスの管理は実行できなくなります。 これらのテナントについては、Exchange の[ハイブリッド先進認証 (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) を使用して Exchange On-Premises へのアクセスを保護することを Microsoft はお勧めします。 HMA を使用すると、Intune App Protection ポリシー (MAM とも呼ばれます) と Outlook Mobile を使用した条件付きアクセスの両方が Exchange On-Premises に対して有効になります。
 
 この記事の情報は、Intune Exchange Connector のインストールと監視に役立ちます。 コネクタと[条件付きアクセス ポリシー](conditional-access-exchange-create.md)を使用して、Exchange On-Premises メールボックスへのアクセスを許可またはブロックすることができます。
 
@@ -46,13 +56,42 @@ Intune では、サブスクリプションごとに複数の Intune Exchange Co
 3. Exchange 接続を確認します。
 4. Intune と接続させる追加の Exchange 組織ごとに以上の手順を繰り返します。
 
+## <a name="how-conditional-access-for-exchange-on-premises-works"></a>Exchange On-Premises の条件付きアクセスのしくみ
+
+Exchange On-Premises の条件付きアクセスの動作は、Azure の条件付きアクセス ベースのポリシーとは異なります。 Intune Exchange On-premises コネクタをインストールして、Exchange サーバーと直接対話します。 Intune Exchange Connector は Exchange サーバーに存在するすべての Exchange Active Sync (EAS) レコードを収集するため、Intune はこれらの EAS レコードを取得して、Intune デバイス レコードにマップすることができます。 これらのレコードはデバイスに登録され、Intune によって認識されます。 このプロセスにより、電子メールへのアクセスが許可またはブロックされます。
+
+EAS レコードが新しいために Intune で認識されない場合、電子メールへのアクセスをブロックすることを Exchange サーバーに指示するコマンドレットが Intune によって発行されます。 このプロセスのしくみの詳細を次に示します。
+
+> [!div class="mx-imgBorder"]
+> ![Exchange On-Premises と条件付きアクセス (CA) のフローチャート](./media/exchange-connector-install/ca-intune-common-ways-1.png)
+
+1. ユーザーは、Exchange On-premises 2010 SP1 以降でホストされている会社の電子メールにアクセスしようとしています。
+
+2. デバイスが Intune で管理されていない場合、電子メールへのアクセスがブロックされます。 Intune によって、EAS クライアントにブロック通知が送信されます。
+
+3. EAS がブロック通知を受信し、該当デバイスを検疫に移動して、検疫メールを送信します。このメールには、ユーザーがデバイスを登録するためのリンクを含む修復手順が記載されています。
+
+4. Workplace Join プロセスが発生します。これは、Intune でデバイスを管理する最初の手順です。
+
+5. デバイスが Intune に登録されます。
+
+6. Intune により EAS レコードとデバイス レコードがマップされ、デバイスのコンプライアンス対応状態が保存されます。
+
+7. Azure AD Device Registration プロセスにより EAS クライアント ID が登録され、Intune デバイス レコードと EAS クライアント ID の間のリレーションシップが作成されます。
+
+8. Azure AD Device Registration により、デバイスの状態に関する情報が保存されます。
+
+9. ユーザーが条件付きアクセス ポリシーを満たしている場合、Intune によって Intune Exchange Connector を介して、メールボックスの同期を許可するコマンドレットが発行されます。
+
+10. Exchange サーバーが EAS クライアントに通知を送信し、ユーザーは電子メールにアクセスできるようになります。
+
 ## <a name="intune-exchange-connector-requirements"></a>Intune Exchange Connector の要件
 
 Exchange に接続するには、コネクタが使用できる Intune ライセンスを持つアカウントが必要です。 コネクタをインストールするときに、アカウントを指定します。  
 
 以下の表に、Intune Exchange Connector をインストールするコンピューターの要件を示します。  
 
-|  要件  |   説明     |
+|  要件  |   詳細情報     |
 |---------------|------------------------|
 |  オペレーティング システム        | Intune は、Windows Server 2008 SP2 64 ビット、Windows Server 2008 R2、Windows Server 2012、Windows Server 2012 R2、または Windows Server 2016 の任意のエディションを実行しているコンピューター上の Intune Exchange Connector をサポートします。<br /><br />Server Core インストールでは、コネクタはサポートされません。  |
 | Microsoft Exchange          | オンプレミス コネクタには、Microsoft Exchange 2010 SP3 以降または従来の Exchange Online Dedicated が必要です。 Exchange Online Dedicated 環境が*新しい*構成か*従来の*構成かを確認するには、アカウント マネージャーに問い合わせてください。 |
@@ -66,16 +105,16 @@ Exchange に接続するには、コネクタが使用できる Intune ライセ
 
 Intune Exchange Connector 用に Active Directory ユーザー アカウントを作成します。 アカウントには、次の Windows PowerShell Exchange コマンドレットを実行できるアクセス許可が必要です。  
 
-- `Get-ActiveSyncOrganizationSettings`、`Set-ActiveSyncOrganizationSettings`
-- `Get-CasMailbox`、`Set-CasMailbox`
-- `Get-ActiveSyncMailboxPolicy`、`Set-ActiveSyncMailboxPolicy`、`New-ActiveSyncMailboxPolicy`、`Remove-ActiveSyncMailboxPolicy`
-- `Get-ActiveSyncDeviceAccessRule`、`Set-ActiveSyncDeviceAccessRule`、`New-ActiveSyncDeviceAccessRule`、`Remove-ActiveSyncDeviceAccessRule`
+- `Get-ActiveSyncOrganizationSettings`, `Set-ActiveSyncOrganizationSettings`
+- `Get-CasMailbox`, `Set-CasMailbox`
+- `Get-ActiveSyncMailboxPolicy`, `Set-ActiveSyncMailboxPolicy`, `New-ActiveSyncMailboxPolicy`, `Remove-ActiveSyncMailboxPolicy`
+- `Get-ActiveSyncDeviceAccessRule`, `Set-ActiveSyncDeviceAccessRule`, `New-ActiveSyncDeviceAccessRule`, `Remove-ActiveSyncDeviceAccessRule`
 - `Get-ActiveSyncDeviceStatistics`
 - `Get-ActiveSyncDevice`
 - `Get-ExchangeServer`
 - `Get-ActiveSyncDeviceClass`
 - `Get-Recipient`
-- `Clear-ActiveSyncDevice`、`Remove-ActiveSyncDevice`
+- `Clear-ActiveSyncDevice`, `Remove-ActiveSyncDevice`
 - `Set-ADServerSettings`
 - `Get-Command`
 
