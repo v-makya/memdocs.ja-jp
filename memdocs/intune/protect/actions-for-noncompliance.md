@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 330dd566599d6bdb1fa667d8797878ea8c92f098
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 9e5786289e54071d54c11fbb08790e95e54a9377
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093739"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461863"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Intune で非準拠デバイスに対するアクションを構成する
 
@@ -58,7 +58,7 @@ ms.locfileid: "85093739"
   この操作は、次のプラットフォームでサポートされています。
   - Android:
     - Android デバイス管理者
-    - Android エンタープライズ デバイスの所有者
+    - Android フル マネージド、専用、会社所有の仕事用プロファイル
     - Android Enterprise 仕事用プロファイル
     - Android エンタープライズ キオスク デバイス
   - iOS/iPadOS

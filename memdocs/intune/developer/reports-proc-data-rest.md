@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fa3f6e96b46b27be4f6cbbe475d03eed007b0d4
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 4f00ba5049401c07f5112061172dc3e7cda4f46c
+ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022417"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86437363"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>REST クライアントを使用して Intune データ ウェアハウス API からデータを取得する
 
@@ -63,22 +63,24 @@ Azure でネイティブ アプリを作成します。 このネイティブ �
 6. **[委任されたアクセス許可]** ボックスを選択し、 **[Get data warehouse information from Microsoft Intune]\(Microsoft Intune からデータ ウェアハウス情報を取得する\)** ボックスをクリックします。
 7. **[アクセス許可の追加]** をクリックします。
 8. 任意で、[構成されたアクセス許可] ウィンドウで、 **[Microsoft に管理者の同意を与えます]** を選択し、 **[はい]** を選択します。 これで、現在のディレクトリのすべてのアカウントへのアクセスが与えられます。 テナントのすべてのユーザーに対して同意を求めるダイアログ ボックスが表示されなくなります。 詳細については、「[Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)」を参照してください。
+9. **[証明書とシークレット]** 、 **[+ 新しいクライアント シークレット]** の順に選択し、新しいシークレットを生成します。 再度アクセスすることはできないため、どこか安全な場所に必ずコピーしてください。
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Microsoft Intune API と Postman からデータを取得する
 
-Intune データ ウェアハウス API と、Postman など、汎用 REST クライアントを連動させることができます。 Postman を利用することで、API の機能、つまり、基礎となる OData データ モデルを詳しく理解できます。また、API リソースへの接続で発生した問題を解決できます。 このセクションでは、ローカル クライアントに Auth2.0 トークンを生成する方法を紹介します。 クライアントが Azure AD で認証したり、API リソースにアクセスしたりするには、トークンが必要です。
+Intune データ ウェアハウス API と、Postman など、汎用 REST クライアントを連動させることができます。 Postman を利用することで、API の機能、つまり、基礎となる OData データ モデルについての分析情報を得ることができ、API リソースへの接続で発生した問題を解決できます。 このセクションでは、ローカル クライアントに Auth2.0 トークンを生成する方法を紹介します。 クライアントが Azure AD で認証したり、API リソースにアクセスしたりするには、トークンが必要です。
 
 ### <a name="information-you-will-need-to-make-the-call"></a>呼び出しに必要な情報
 
 Postman を使用して REST 呼び出しを行うには、次の情報が必要です。
 
-| 属性        | [説明]                                                                                                                                                                          | 例                                                                                       |
+| 属性        | 説明                                                                                                                                                                          | 例                                                                                       |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | コールバック URL     | アプリ設定ページでこれをコールバック URL として設定します。                                                                                                                              | https://www.getpostman.com/oauth2/callback                                                    |
 | トークン名       | Azure アプリに資格情報を渡すために使用する文字列。 この過程で生成されたトークンにより、データ ウェアハウス API を呼び出すことができます。                          | Bearer                                                                                        |
 | 認証 URL         | これは認証に使用する URL です。 | https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/ |
 | アクセス トークン URL | これはトークンの付与に使用する URL です。                                                                                                                                              | https://login.microsoftonline.com/common/oauth2/token |
 | クライアント ID        | Azure でネイティブ アプリを作成したとき、これを作成し、メモしました。                                                                                               | 4184c61a-e324-4f51-83d7-022b6a81b991                                                          |
+| Client Secret (クライアント シークレット)        | Azure でネイティブ アプリを作成したとき、これを作成し、メモしました。                                                                                               | Ksml3dhDJs+jfK1f8Mwc8                                                          |
 | スコープ (省略可能) | 新規                                                                                                                                                                               | このフィールドは空白にできます。                                                                     |
 | 付与タイプ       | このトークンは認証コードです。                                                                                                                                                  | 認証コード                                                                            |
 
@@ -122,14 +124,18 @@ Postman のために新しいアクセス トークンを取得するには、Az
 
      `88C8527B-59CB-4679-A9C8-324941748BB4`
 
-11. **[認証コード]** を選択し、アクセス トークンをローカルで要求します。
+11. Azure で作成したネイティブ アプリ内から生成した**クライアント シークレット**を追加します。 次のようになります。  
 
-12. **[Request Token]\(トークンの要求\)** を選択します。
+     `Ksml3dhDJs+jfK1f8Mwc8 `
+
+12. [許可の種類] として **[認証コード]** を選択します。
+
+13. **[Request Token]\(トークンの要求\)** を選択します。
 
     ![アクセス トークンの情報](./media/reports-proc-data-rest/reports-postman_getnewtoken.png)
 
-13. アクティブな AD 認証ページで資格情報を入力します。 これで、Postman のトークン一覧に `Bearer` という名前のトークンが含まれます。
-14. **[Use Token]\(トークンの使用\)** を選択します。 ヘッダーの一覧には、認証の新しいキー値と値 `Bearer <your-authorization-token>` が含まれます。
+14. アクティブな AD 認証ページで資格情報を入力します。 これで、Postman のトークン一覧に `Bearer` という名前のトークンが含まれます。
+15. **[Use Token]\(トークンの使用\)** を選択します。 ヘッダーの一覧には、認証の新しいキー値と値 `Bearer <your-authorization-token>` が含まれます。
 
 #### <a name="send-the-call-to-the-endpoint-using-postman"></a>Postman を使用し、エンドポイントへの呼び出しを送信します。
 

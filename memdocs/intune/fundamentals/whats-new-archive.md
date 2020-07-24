@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a1c47a157e4ee5bd4337d840515a340dcf1fd9c
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 8073cb1dbe872d9c7fd1ad05235707be4b969519
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195720"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461421"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune の新機能 (過去数か月)
 
@@ -801,7 +801,7 @@ Android フル マネージド デバイスに対して次のサポートが追�
     - 認証用の DO 電子メール プロファイルに SCEP 証明書をリンクする (AppConfig を使用)
 - システム アプリは Android Enterprise デバイスでサポートされています。 Intune で、 **[クライアント アプリ]**  >  **[アプリ]**  >  **[追加]** を選択して、Android Enterprise システム アプリを追加します。 **[アプリの種類]** の一覧で、 **[Android Enterprise システム アプリ]** を選択します。 詳しくは、「[Microsoft Intune に Android Enterprise システム アプリを追加する](../apps/apps-ae-system.md)」をご覧ください。 <!-- 4062195 -->
 - **[デバイスのポリシー準拠]**  >  **[Android Enterprise]**  >  **[デバイスの所有者]** で、Google SafetyNet 構成証明レベルを設定するコンプライアンス ポリシーを作成できます。   <!-- 4631425 -->
-- Android Enterprise フル マネージド デバイスでは、モバイル脅威防御プロバイダーがサポートされています。 **[デバイスのポリシー準拠]**  >  **[Android Enterprise]**  >  **[デバイスの所有者]** では、許容される脅威レベルを選択できます。 <!-- 4631440 --> [Intune を使用してデバイスを準拠または非準拠としてマークするための Android エンタープライズ設定](../protect/compliance-policy-create-android-for-work.md#device-owner)に関するページに、現在の設定が記載されています。
+- Android Enterprise フル マネージド デバイスでは、モバイル脅威防御プロバイダーがサポートされています。 **[デバイスのポリシー準拠]**  >  **[Android Enterprise]**  >  **[デバイスの所有者]** では、許容される脅威レベルを選択できます。 <!-- 4631440 --> [Intune を使用してデバイスを準拠または非準拠としてマークするための Android エンタープライズ設定](../protect/compliance-policy-create-android-for-work.md)に関するページに、現在の設定が記載されています。
 - Android Enterprise フル マネージド デバイスでは、アプリ構成ポリシーを使用して Microsoft Launcher アプリを構成し、フル マネージド デバイスでの標準化されたエンド ユーザー エクスペリエンスを実現できるようになりました。 Microsoft Launcher アプリを使用して、Android デバイスを個人用に設定することができます。 Microsoft アカウントまたは職場/学校アカウントでアプリを使用して、カスタマイズしたフィード内で予定表、ドキュメント、最近のアクティビティにアクセスできます。 <!-- 5334044 -->
 
 この更新では、Android Enterprise フル マネージドに対する Intune のサポートが一般提供になったことをお知らせします。
@@ -833,7 +833,7 @@ Intune Endpoint Protection の設定を使用して、Windows バージョン 19
 この設定により、OS ドライブの復旧 (bootmgr または WinRE を使用して) および固定データ ドライブでの回復パスワードのロック解除の後で、クライアント主導の回復パスワード更新が開始します。 この設定により、使用されていた特定の回復パスワードは更新され、ボリューム上の他の未使用のパスワードは変更されません。 詳しくは、[ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) に関する BitLocker CSP のドキュメントをご覧ください。
 
 #### <a name="tamper-protection-for-windows-defender-antivirus---4705448----------"></a>Windows Defender ウイルス対策の改ざん保護<!-- 4705448        -->
-Intune を使用して、Windows Defender ウイルス対策の "*改ざん保護*" を管理します。 Windows 10 エンドポイント保護用のデバイス構成プロファイルを使用するときに、Microsoft Defender セキュリティ センター グループで[改ざん保護の設定](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center)を探します。 改ざん保護を "*有効*" に設定すると改ざん保護の制限をオンにでき、"*無効*" に設定するとオフにでき、"*未構成*" に設定するとデバイスを現在の構成のままにすることができます。  
+Intune を使用して、Windows Defender ウイルス対策の "*改ざん保護*" を管理します。 Windows 10 エンドポイント保護用のデバイス構成プロファイルを使用するときに、Microsoft Defender セキュリティ センター グループで[改ざん保護の設定](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center)を探します。 改ざん保護を "**有効**" に設定すると改ざん保護の制限をオンにでき、"**無効**" に設定するとオフにでき、"**未構成**" に設定するとデバイスを現在の構成のままにすることができます。  
 
 改ざん保護について詳しくは、Windows ドキュメントの「[改ざん防止機能によってセキュリティ設定の変更を防止する](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection)」をご覧ください。
 
@@ -1603,7 +1603,7 @@ Apple の会社登録方法 (DEP/ABM/ASM) のいずれかを使用する場合�
 V1.0 が 1808 で初めて導入されたとき、ベータ API とはいくつかの重要な点で異なっていました。 1903 では、それらの変更がベータ API バージョンに反映されます。 ベータ API バージョンを使用する重要なレポートがある場合は、破壊的な変更を回避するためにそれらのレポートを V1.0 に切り替えることを強くお勧めします。 詳細については、「[Intune データ ウェアハウス API の変更ログ](../developer/reports-changelog.md#1903-part-2)」を参照してください。
 
 #### <a name="monitor-security-baseline-status-public-preview----3082047---"></a>セキュリティ ベースライン状態のモニター (パブリック プレビュー) <!-- 3082047 --> 
-セキュリティ ベースラインのモニタリングに[カテゴリごとのビュー](../protect/security-baselines-monitor.md#per-category-view)を追加しました (セキュリティ ベースラインは引き続きプレビュー段階です)。 カテゴリごとのビューには、ベースラインの各カテゴリと、そのカテゴリの各状態グループに分類されるデバイスの割合が表示されます。 個々のカテゴリに一致しない、構成が間違っている、または適用されないデバイスの数を把握できるようになりました。
+セキュリティ ベースラインのモニタリングに[カテゴリごとのビュー](../protect/security-baselines-monitor.md)を追加しました (セキュリティ ベースラインは引き続きプレビュー段階です)。 カテゴリごとのビューには、ベースラインの各カテゴリと、そのカテゴリの各状態グループに分類されるデバイスの割合が表示されます。 個々のカテゴリに一致しない、構成が間違っている、または適用されないデバイスの数を把握できるようになりました。
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="role-based-access-control"></a>ロール ベースのアクセス制御
@@ -1623,7 +1623,7 @@ Microsoft Intune を使用して、Windows 10 デバイスに Microsoft Visio Pr
 **Microsoft Visio Pro for Office 365** は、**Microsoft Visio Online プラン 2** と呼ばれるようになりました。  Microsoft Visio の詳細については、「[Visio Online プラン 2](https://products.office.com/visio/visio-online-plan-2)」を参照してください。 Windows 10 デバイス用 Office 365 アプリの詳細については、「[Microsoft Intune で Windows 10 デバイスに Office 365 アプリを割り当てる](../apps/apps-add-office365.md)」を参照してください。
 
 #### <a name="intune-app-protection-policy-app-character-limit-setting---3291302----"></a>Intune アプリ保護ポリシー (APP) の文字制限の設定<!-- 3291302  -->
-Intune 管理者は、Intune APP の **[他のアプリとの間で切り取り、コピー、貼り付けを制限する]** ポリシー設定の例外を指定できます。  管理者は、マネージド アプリから切り取りまたはコピーできる文字数を指定できます。 この設定により、[他のアプリとの間で切り取り、コピー、貼り付けを制限する] 設定に関係なく、指定した文字数を任意のアプリと共有できます。 Android 用 Intune ポータル サイト アプリのバージョンは、バージョン 5.0.4364.0 またはそれ以降である必要があることに注意してください。 詳細については、[iOS のデータの保護](../apps/app-protection-policy-settings-ios.md#data-protection)、[Android のデータの保護](../apps/app-protection-policy-settings-android.md#data-protection)、および[クライアント アプリの保護ログのレビュー](../apps/app-protection-policy-settings-log.md#app-protection-policy-settings)に関するページを参照してください。
+Intune 管理者は、Intune APP の **[他のアプリとの間で切り取り、コピー、貼り付けを制限する]** ポリシー設定の例外を指定できます。  管理者は、マネージド アプリから切り取りまたはコピーできる文字数を指定できます。 この設定により、[他のアプリとの間で切り取り、コピー、貼り付けを制限する] 設定に関係なく、指定した文字数を任意のアプリと共有できます。 Android 用 Intune ポータル サイト アプリのバージョンは、バージョン 5.0.4364.0 またはそれ以降である必要があることに注意してください。 詳細については、[iOS のデータの保護](../apps/app-protection-policy-settings-ios.md#data-protection)、[Android のデータの保護](../apps/app-protection-policy-settings-android.md#data-protection)、および[クライアント アプリの保護ログのレビュー](../apps/app-protection-policy-settings-log.md)に関するページを参照してください。
 
 #### <a name="office-deployment-tool-odt-xml-for-office-proplus-deployment---3192477-----"></a>Office 展開ツール (ODT) の Office ProPlus 展開用 XML<!-- 3192477   -->
 Intune 管理コンソールで Office Pro Plus のインスタンスを作成するときに、Office 展開ツール (ODT) XML を提供できるようになります。 これにより、既存の Intune の UI オプションによってニーズが満たされない場合に、より大きなカスタマイズが可能になります。 詳細については、「[Microsoft Intune で Windows 10 デバイスに Office 365 アプリを割り当てる](../apps/apps-add-office365.md)」と「[Office 展開ツールのオプションの構成](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool)」を参照してください。
@@ -3897,7 +3897,7 @@ Windows 10 デバイスのユーザーをキオスク モードに制限する�
 #### <a name="two-additional-settings-for-windows-defender-antivirus---1338409---"></a>Windows Defender ウイルス対策用の 2 つの追加設定<!-- 1338409 -->  
 **ファイル ブロック レベル**
 
-| | |
+| 設定 | 詳細 |
 |---|---|
 | 未構成 | **未構成**は、Windows Defender ウイルス対策の既定のブロック レベルを使用し、正当なファイルが検出されるリスクを高めることなく強力な検出を提供します。 |
 | 高 | **高**は、強力なレベルの検出を適用します。
@@ -3909,7 +3909,7 @@ Windows 10 デバイスのユーザーをキオスク モードに制限する�
 
 **クラウドによるファイル スキャンの時間延長**  
 
-| | |
+| 設定 | 項目 |
 |--|--|
 | 秒数 (0 - 50) | Windows Defender ウイルス対策がクラウドからの結果の待機中にファイルをブロックする最大時間を指定します。 既定値は 10 秒です。ここで指定した延長時間 (最大 50 秒) は、この 10 秒間に追加されます。 ほとんどの場合、スキャンは最大値よりはるかに短い時間で済みます。 時間を延長すると、クラウドは疑わしいファイルを徹底的に調査できます。 この設定を有効にし、少なくとも 20 秒の追加を指定することをお勧めします。 |
 

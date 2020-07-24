@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f807eabd2fabd51f7a7bb8eb43225a579784148c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: 535def8c7504d8cd1ea1890c419c2f8b98d4f6f6
+ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746495"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86491203"
 ---
 # <a name="set-enrollment-restrictions"></a>登録制限を設定する
 
@@ -164,7 +164,7 @@ BYOD の登録中にユーザーがデバイス登録の上限に達すると、
 
 ## <a name="blocking-personal-iosipados-devices"></a>個人の iOS/iPadOS デバイスをブロックする
 Intune の既定では、iOS/iPadOS デバイスは個人所有として分類されます。 企業所有に分類するには、iOS/iPadOS デバイスが次のいずれかの条件を満たしている必要があります。
-- シリアル番号または IMEI を使用して登録されている。
+- [シリアル番号で登録されている](corporate-identifiers-add.md)。
 - 自動デバイス登録 (旧称 Device Enrollment Program) を使用して登録されている
 
 

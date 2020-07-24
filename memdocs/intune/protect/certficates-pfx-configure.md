@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 609f7209d79acd944d141930f2287b5572a51c89
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 29cb970dd7148496f1a4f200ba32505e6f2c0e16
+ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332836"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86461591"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Intune で PKCS 証明書を構成して使用する
 
@@ -221,7 +221,7 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
 3. 次のプロパティを入力します。
    - **[プラットフォーム]** :デバイスのプラットフォームを選択します。 次のようなオプションがあります。
      - Android デバイス管理者
-     - [Android エンタープライズ] > [デバイスの所有者のみ]
+     - [Android Enterprise] > [フル マネージド、専用、会社所有の仕事用プロファイル]
      - [Android エンタープライズ] > [仕事用プロファイルのみ]
      - iOS/iPadOS
      - macOS

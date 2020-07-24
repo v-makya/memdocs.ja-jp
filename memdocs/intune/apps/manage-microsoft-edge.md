@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 07/08/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d32c496fc094879943fc15102bbb5061d830092
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: aa70da636d619a52c0ec8591a43e85e11ff7f9f2
+ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973062"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410897"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>iOS および Android 用の Edge と Microsoft Intune を使用して Web アクセスを管理する
 
@@ -436,7 +436,7 @@ iOS または Android デバイスに iOS および Android 用の Edge をイ�
 2. アドレス バーに「`about:intunehelp`」と入力します。
 3. iOS および Android 用の Edge でトラブルシューティング モードが起動します。
 
-アプリ ログに格納されている設定の一覧については、「[Managed Browser 内のアプリの保護ログのレビュー](app-protection-policy-settings-log.md)」を参照してください。
+アプリ ログに格納されている設定の一覧については、「[クライアント アプリの保護ログのレビュー](app-protection-policy-settings-log.md)」を参照してください。
 
 Android デバイスでログを表示する方法については、[メールによる IT 管理者へのログの送信](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android)に関するページを参照してください。
 
