@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 55cecac47accf6dfa2efdc3b0905497260a652e5
-ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
+ms.openlocfilehash: e7d80d2f528365e7759ce7ceb50639b0d474e329
+ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86390876"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891464"
 ---
 <!-- 
 - Feature 1357546
@@ -108,8 +108,11 @@ Configuration Manager のコンポーネントと機能のトラブルシュー�
 
 ## <a name="new-and-updated-support-articles"></a>新規および更新のサポートに関する記事
 
-2020 年 5 月 16 日から 6 月 22 日までの新規または更新されたサポートに関する記事。
+2020 年 5 月 16 日から 7 月 17 日までの新規または更新されたサポートに関する記事。
 
+- [KB 4560496 Microsoft Endpoint Configuration Manager バージョン 2002 の更新プログラムのロールアップ](https://support.microsoft.com/help/4560496)
+- [KB 4569513 アプリケーション カタログ テーブルの更新を編集しようとすると "Not found" エラーが発生する](https://support.microsoft.com/help/4569513)
+- [KB 4574419 Microsoft Endpoint Configuration Manager 管理センターでタイムアウト エラーが発生する](https://support.microsoft.com/help/4574416)
 - [KB 4564442 BIOS 型のファームウェアを搭載したコンピューターで、Microsoft Deployment Toolkit を使用した Windows 10 の展開が失敗する](https://support.microsoft.com/help/4564442)
 - [KB 4563473 Configuration Manager バージョン 2002 の更新プログラムのロールアップにおけるテナントの接続に関する問題](https://support.microsoft.com/help/4563473)
 - [KB 4567007 Configuration Manager Current Branch バージョン 2002 への更新後に PXE ブートが失敗する、またはタスク シーケンスが遅延する](https://support.microsoft.com/help/4567007)
