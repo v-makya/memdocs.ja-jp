@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da2f2b1155e6760d23d4ead65899b82e277fbd3e
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 2cd5e8f6e1975adf33131ca47049eb2d4a6f68cd
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891549"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262882"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
@@ -290,11 +290,11 @@ Microsoft Endpoint Manager admin center で、特定のデバイスのコレク�
 
 #### <a name="use-microsoft-defender-atp-in-compliance-policies-for-android---4425686----"></a>Android 用のコンプライアンス ポリシーで Microsoft Defender ATP を使用する<!-- 4425686  -->
 
-Intune を使用して、[Android デバイスを Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) にオンボード](../protect/advanced-threat-protection.md#onboard-android-devices)できるようになりました。 登録済みデバイスがオンボードされた後、Android 用のコンプライアンス ポリシーでは、Microsoft Defender ATP からの "*脅威レベル*" シグナルを使用することができます。 これらは、Windows 10 デバイスで以前に使用できたものと同じシグナルです。
+Intune を使用して、[Android デバイスを Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) にオンボード](../protect/advanced-threat-protection-configure.md#onboard-devices)できるようになりました。 登録済みデバイスがオンボードされた後、Android 用のコンプライアンス ポリシーでは、Microsoft Defender ATP からの "*脅威レベル*" シグナルを使用することができます。 これらは、Windows 10 デバイスで以前に使用できたものと同じシグナルです。
 
 #### <a name="configure-defender-atp-web-protection-for-android-devices---6185563----"></a>Android デバイス用に Defender ATP Web 保護を構成する<!-- 6185563  -->
 
-Android デバイスで Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) を使用する場合は、[Microsoft Defender ATP Web 保護を構成](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)し、フィッシング スキャン機能を無効にしたり、スキャンで VPN が使用されないようにすることができます。
+Android デバイスで Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) を使用する場合は、[Microsoft Defender ATP Web 保護を構成](../protect/advanced-threat-protection-manage-android.md)し、フィッシング スキャン機能を無効にしたり、スキャンで VPN が使用されないようにすることができます。
 
 Android デバイスがどのように Intune に登録されるかに応じて、次のオプションを使用できます。
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72fb278070e2d5b8581fb1b2e263aa06c90b5df9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a1d410da2cbedb9bcd2418fac1ddb783529ee8c6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989758"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262593"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Intune を使用して Microsoft Defender ATP によって検出された脆弱性を修復する
 
@@ -75,7 +75,7 @@ ATP セキュリティ管理者は、Microsoft Defender セキュリティ セ�
 - Microsoft Defender ATP でサービス間の接続を構成します。
 - ATP によって評価されるリスクがあるデバイスに、プロファイルの種類を **Microsoft Defender ATP (Windows 10 Desktop)** にしてデバイス構成ポリシーを展開します。
 
-  ATP で動作するように Intune を設定する方法については、[Intune の条件付きアクセスでの Microsoft Defender ATP に対するコンプライアンスの適用](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune)に関する記事を参照してください。
+  ATP で動作するように Intune を設定する方法については、[Intune の条件付きアクセスでの Microsoft Defender ATP に対するコンプライアンスの適用](advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune)に関する記事を参照してください。
 
 ## <a name="work-with-security-tasks"></a>セキュリティ タスクを処理する
 
@@ -103,6 +103,7 @@ ATP セキュリティ管理者は、Microsoft Defender セキュリティ セ�
 修復が成功した後、修復されたデバイスからの新しい情報に基づき、ATP のリスク エクスポージャ スコアが下がる場合があります。
 
 ## <a name="next-steps"></a>次のステップ
+
 Intune と [Microsoft Defender ATP](advanced-threat-protection.md) についてさらに詳しく学習する。
 
 Intune の [Mobile Threat Defense](mobile-threat-defense.md) について確認する。

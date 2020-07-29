@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd4ece62215d48f3481923e099feecc992d7aa6d
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: b47361bf4812de91d12c779a6eb58fef35e9d0f2
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093365"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262049"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Android 用 Microsoft Intune アプリ SDK 開発者テスト ガイド
 
 Android 用 Microsoft Intune アプリ SDK テスト ガイドは、Intune で管理される Android アプリのテストの実施に役立ちます。
 
 ## <a name="demo-tenant-setup"></a>デモ テナント セットアップ
-自分の会社でテナントをまだ用意していない場合、事前生成データあり、またはなしでデモ テナントを作成できます。 Microsoft CDX にアクセスするには [Microsoft パートナー](https://partner.microsoft.com/en-us/business-opportunities/why-microsoft)として登録する必要があります。 新しいアカウントを作成するには:
+自分の会社でテナントをまだ用意していない場合、事前生成データあり、またはなしでデモ テナントを作成できます。 Microsoft CDX にアクセスするには [Microsoft パートナー](https://partner.microsoft.com/business-opportunities/why-microsoft)として登録する必要があります。 新しいアカウントを作成するには:
 1. [Microsoft CDX テナント作成サイト](https://cdx.transform.microsoft.com/my-tenants/create-tenant)に移動し、Microsoft 365 Enterprise テナントを作成します。
 2. モバイル デバイス管理 (MDM) が有効になるよう、[Intune をセットアップ](../fundamentals/setup-steps.md)します。
 3. [ユーザーを作成します](../fundamentals/users-add.md)。

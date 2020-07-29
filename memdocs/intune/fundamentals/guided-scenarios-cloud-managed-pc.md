@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c43b74b6ca20fa3f140ad688be49daa928c54b5f
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 4991ced4517ffe5902f876c196b47c2c2b50a8a6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264041"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262763"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>ガイド付きシナリオ - クラウド マネージド モダン デスクトップ
 
@@ -47,7 +47,7 @@ ms.locfileid: "85264041"
 
 ## <a name="step-1---introduction"></a>ステップ 1 - 概要
 
-このガイド付きシナリオを使用すると、テスト ユーザーを設定し、Intune にデバイスを登録し、Windows 10 および Microsoft 365 アプリと共に Intune の推奨設定を使用してデバイスを展開できます。 また、[Intune でこの保護を有効にする](../protect/advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune)ことを選択した場合、ご利用のデバイスは Microsoft Defender Advanced Threat Protection 用に構成されます。 設定したユーザーおよび登録したデバイスは、新しいセキュリティ グループに追加され、さらにセキュリティと生産性のために推奨されている設定で構成されます。
+このガイド付きシナリオを使用すると、テスト ユーザーを設定し、Intune にデバイスを登録し、Windows 10 および Microsoft 365 アプリと共に Intune の推奨設定を使用してデバイスを展開できます。 また、[Intune でこの保護を有効にする](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-atp-in-intune)ことを選択した場合、ご利用のデバイスは Microsoft Defender Advanced Threat Protection 用に構成されます。 設定したユーザーおよび登録したデバイスは、新しいセキュリティ グループに追加され、さらにセキュリティと生産性のために推奨されている設定で構成されます。
 
 ### <a name="what-you-will-need-to-continue"></a>続けるために必要なこと
 
@@ -127,5 +127,5 @@ Windows Autopilot では新しいデバイスの構成が自動化されてい�
 
 ## <a name="next-steps"></a>次のステップ
 
-- Microsoft Defender Advanced Threat Detection を使用する場合は、[Intune コンプライアンス ポリシー](../protect/advanced-threat-protection.md#create-and-assign-compliance-policy-to-set-device-risk-level)を作成して、Defender 脅威分析がコンプライアンスを満たすようにする必要があります。
-- デバイスが Intune コンプライアンスを満たしていない場合は、[デバイスベースの条件付きアクセス ポリシー](../protect/advanced-threat-protection.md#create-a-conditional-access-policy)を作成してアクセスをブロックします。
+- Microsoft Defender Advanced Threat Detection を使用する場合は、[Intune コンプライアンス ポリシー](../protect/advanced-threat-protection-configure.md#create-and-assign-compliance-policy-to-set-device-risk-level)を作成して、Defender 脅威分析がコンプライアンスを満たすようにする必要があります。
+- デバイスが Intune コンプライアンスを満たしていない場合は、[デバイスベースの条件付きアクセス ポリシー](../protect/advanced-threat-protection-configure.md#create-a-conditional-access-policy)を作成してアクセスをブロックします。

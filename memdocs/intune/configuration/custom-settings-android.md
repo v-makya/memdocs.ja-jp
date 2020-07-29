@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43107ce98ee1c9d002b07470c224b2291819069b
-ms.sourcegitcommit: 397ec824f1368dcf06c3870c89f52347852062bd
+ms.openlocfilehash: 8012b11557971ff8a7e3a05360243010d891fa2e
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85264109"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262780"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Microsoft Intune で Android デバイス用のカスタム設定を使用する
 
@@ -35,7 +35,7 @@ Android のカスタム プロファイルでは、Open Mobile Alliance Uniform 
 - [事前共有キーを使用した Wi-Fi プロファイルの作成](/intune/wi-fi-profile-shared-key)
 - [アプリごとの VPN プロファイルを作成する](/intune/android-pulse-secure-per-app-vpn)
 - [Samsung Knox Standard デバイス用のアプリを許可またはブロックする](/intune/samsung-knox-apps-allow-block)
-- [Microsoft Defender Advanced Threat Protection for Android での Web 保護の構成](../protect/advanced-threat-protection.md#configure-web-protection-on-devices-that-run-android)
+- [Microsoft Defender Advanced Threat Protection for Android での Web 保護の構成](../protect/advanced-threat-protection-manage-android.md)
 
 >[!IMPORTANT]
 > カスタム プロファイルでは、ここで挙げられている設定のみを構成できます。 Android デバイスでは、構成できる OMA-URI 設定の完全な一覧が表示されません。 他の設定が表示されるようにしたい場合は、[Intune Uservoice サイト](https://microsoftintune.uservoice.com/forums/291681-ideas)で他の設定に投票してください。
