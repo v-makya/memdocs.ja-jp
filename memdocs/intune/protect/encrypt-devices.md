@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 16a2558a0f4b002528e749f4a66d3341e83c8576
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a9fad599342cf358409c7be09ebb8b4eb1c0c4a5
+ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989671"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334625"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Intune で Windows 10 の BitLocker ポリシーを管理する
 
@@ -168,11 +168,11 @@ BitLocker 回復キーの交換をサポートするには、デバイスで次�
 
 - デバイスで Windows 10 バージョン 1909 以降を実行している必要があります。
 
-- Azure AD 参加デバイスと Hybrid 参加デバイスで、キーの交換のサポートを有効にしておく必要があります。
+- Azure AD 参加デバイスと Hybrid 参加デバイスでは、BitLocker ポリシーの構成を使用してキーの交換のサポートを有効にしておく必要があります。
 
-  - **クライアント主導の回復パスワードの交換**
-
-  この設定は、Windows 10 Endpoint Protection のデバイス構成ポリシーの一部として *[Windows 暗号化]* にあります。
+  - **[クライアント主導の回復パスワードのローテーション]** を *[Azure AD 参加済みデバイスでローテーションを有効にする]* または *[Azure AD およびハイブリッド参加済みデバイスでローテーションを有効にする]* に
+  - **[BitLocker 回復情報を Azure Active Directory に保存]** を *[有効]* に
+  - **[BitLocker を有効にする前に Azure Active Directory で回復情報を保存]** を *[必須]* に
 
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>BitLocker 回復キーを交換するには
 

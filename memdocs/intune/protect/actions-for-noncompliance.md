@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e5786289e54071d54c11fbb08790e95e54a9377
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 2e881dc386fa0fe0b98b5e3d4480e1957c251808
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461863"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262678"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Intune で非準拠デバイスに対するアクションを構成する
 
@@ -147,8 +147,12 @@ ms.locfileid: "86461863"
 
 5. **[確認および作成]** で構成を確認し、通知メッセージ テンプレートが使えることを確認します。 **[作成]** を選択し、通知の作成を完了します。
 
-> [!NOTE]
-> 前に作成した既存の通知テンプレートを選択し、その情報を**編集**してテンプレートを更新することもできます。
+### <a name="view-and-edit-notifications"></a>通知の表示と編集
+
+作成した通知は、 *[コンプライアンス ポリシー]*  >  *[通知]* ページで利用できます。 このページから、通知を選択してその構成を表示し、次の操作を実行できます。
+
+- **[プレビュー メールの送信]** を選択して、Intune へのサインインに使用したアカウントに通知メールのプレビューを送信します。 
+- *[基本]* または *[スコープ タグ]* の **[編集]** を選択して、変更を加えます。
 
 ## <a name="add-actions-for-noncompliance"></a>コンプライアンス違反に対するアクションを追加する
 

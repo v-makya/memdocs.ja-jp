@@ -1,11 +1,11 @@
 ---
-title: Microsoft Intune での Android 用のアプリごとのカスタム VPN プロファイル - Azure | Microsoft Docs
-description: Microsoft Intune で管理する Android デバイス管理者デバイス用にアプリごとの VPN プロファイルを作成する方法について説明します。
+title: Microsoft Intune における Android デバイス管理者用のアプリごとのカスタム VPN プロファイル - Azure | Microsoft Docs
+description: Microsoft Intune で Pulse Secure または Citrix VPN の接続の種類を使用して、Android デバイス管理者でアプリごとの VPN プロファイルに対してカスタム プロファイルを使用します。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 07/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,25 +17,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a351255fa0574e9b92d096b3895f9469ed9ced2a
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 3c8e09b6010f7fc846fd81281053eaaa722e5ef4
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137370"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262797"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Microsoft Intune のカスタム プロファイルを使って、Android デバイス用にアプリごとの VPN プロファイルを作成する
 
 Intune で管理する、アプリごとの VPN プロファイルを Android 5.0 以降のデバイスに作成できます。 まず、Pulse Secure または Citrix 接続の種類を使用する VPN プロファイルを作成します。 次に、特定のアプリと VPN プロファイルを関連付けるカスタム構成ポリシーを作成します。
 
-> [!NOTE]
-> Android Enterprise デバイスでアプリごとの VPN を使用する目的でもこの手順を利用できます。 ただし、VPN クライアント アプリには[アプリ構成ポリシー](../apps/app-configuration-vpn-ae.md)を使用することをお勧めします。
+この機能は、以下に適用されます。
+
+- Android デバイス管理者
+
+Android Enterprise デバイスでアプリごとの VPN を使用するには、[アプリ構成ポリシー](../apps/app-configuration-vpn-ae.md)を使います。 アプリ構成ポリシーでは、より多くの VPN クライアント アプリがサポートされています。 Android Enterprise デバイスでは、この記事の手順を使用できます。 ただしこれは推奨されません。また、Pulse Secure と Citrix VPN 接続のみに制限されます。
 
 Android デバイスまたはユーザー グループにポリシーが割り当てられた後、ユーザーは Pulse Secure または Citrix VPN クライアントを開始する必要があります。 その後、VPN クライアントは、指定されたアプリからのトラフィックにのみ、開いている VPN 接続の使用を許可します。
 
 > [!NOTE]
 >
-> このプロファイルに対しては Pulse Secure 接続タイプと Citrix 接続タイプのみがサポートされます。
+> Android デバイス管理者に対しては、Pulse Secure と Citrix の接続の種類のみがサポートされます。 Android Enterprise デバイスでは、[アプリ構成ポリシー](../apps/app-configuration-vpn-ae.md)を使います。
 
 ## <a name="step-1-create-a-vpn-profile"></a>手順 1:VPN プロファイルの作成
 
@@ -80,10 +83,9 @@ Android デバイスまたはユーザー グループにポリシーが割り�
     - **[データ型]** :「**String**」と入力します。
     - **値**:プロファイルと関連付けるセミコロンで区切られたパッケージの一覧を入力します。 たとえば、Excel と Google Chrome ブラウザーで VPN 接続を使用するには、「`com.microsoft.office.excel;com.android.chrome`」と入力します。
 
-    > [!div class="mx-imgBorder"]
-    >![Android デバイス管理者のアプリごとの VPN カスタム ポリシーの例](./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png)
+    :::image type="content" source="./media/android-pulse-secure-per-app-vpn/android_per_app_vpn_oma_uri.png" alt-text="Microsoft Intune における Android デバイス管理者のアプリごとの VPN カスタム ポリシー":::
 
-### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>アプリの一覧をブラックリストまたはホワイトリストとして設定する (省略可能)
+### <a name="set-your-blocked-and-allowed-app-list-optional"></a>ブロックされたアプリと許可されたアプリの一覧を設定する (省略可能)
 
 VPN 接続を使用*できない*アプリの一覧を入力するには、**BLACKLIST** 値を使用します。 その他のすべてのアプリは、VPN 経由で接続します。 あるいは、**WHITELIST** 値を使用し、VPN 接続を使用*できる*アプリの一覧を入力します。 一覧に含まれないアプリは、VPN 経由で接続しません。
 

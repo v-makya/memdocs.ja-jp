@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 64a76911725e5d596a80ecc67e42f088666017de
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531895"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262865"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Windows Hello for Business と Microsoft Intune の統合  
 
@@ -32,13 +32,21 @@ Hello for Business は、Active Directory や Azure Active Directory アカウ�
 
 Intune と Hello for Business の統合には 2 通りの方法があります。
 
-- **テナント全体**:Intune ポリシーは *[デバイスの登録]* で作成できます。 このポリシーの対象は組織全体 (テナント全体) となります。 Windows AutoPilot out-of-box-experience (OOBE) をサポートしており、デバイスが登録されたときに適用されます。
-- **個別のグループ**:Windows Hello for Business を管理するポリシーを、Intune に登録したデバイスに配置できます。 Windows Hello を管理できるポリシー タイプには、"*デバイスの構成*" で登録する "*ID 保護*" プロファイル、さまざまな "*セキュリティ ベースライン*"、エンドポイント セキュリティの "*アカウント保護*" プロファイルが含まれます。 これらのプロファイル タイプでは、割り当てられたユーザーまたはデバイスが適用対象になり、チェックイン中、適用されます。
+- **テナント全体** (*この記事*):Intune ポリシーは *[デバイスの登録]* で作成できます。 このポリシーの対象は組織全体 (テナント全体) となります。 Windows AutoPilot out-of-box-experience (OOBE) をサポートしており、デバイスが登録されたときに適用されます。
+- **個別のグループ**:以前に Intune に登録したデバイスの場合は、デバイス構成 [ **[ID 保護]** ](../protect/identity-protection-configure.md) プロファイルを使用して、Windows Hello for Business 用にデバイスを構成します。 ID 保護プロファイルは、割り当てられたユーザーまたはデバイスを対象とし、チェックイン中に適用することができます。
 
-この記事を利用し、組織全体を対象とする既定の Windows Hello for Business ポリシーを作成します。 一部のユーザー グループとデバイス グループに適用される ID 保護プロファイルを作成するには、[ID 保護プロファイルを構成する](identity-protection-configure.md)方法に関するページを参照してください。  
+さらに、Intune では、Windows Hello for Business 用の設定をいくつか管理するために、次の種類のポリシーがサポートされています。
+
+- [**セキュリティ ベースライン**](../protect/security-baselines.md)。 次のベースラインには、Windows Hello for Business 用の設定が含まれています。
+  - [Microsoft Defender Advanced Threat Protection のベースライン設定](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
+  - [Windows MDM セキュリティ ベースラインの設定](../protect/security-baseline-settings-mdm-all.md#windows-hello-for-business)
+- エンドポイント セキュリティ [ **[アカウント保護]** ](../protect/endpoint-security-account-protection-policy.md) ポリシー。 [アカウント保護の設定](../protect/endpoint-security-account-protection-profile-settings.md#account-protection)に関する記事をご覧ください。
+
+この記事の残りの部分では、組織全体を対象とする既定の Windows Hello for Business ポリシーの作成に焦点を当てます。
 
 > [!IMPORTANT]
 > Anniversary Update バージョンより前の Windows 10 のデスクトップおよびモバイルでは、リソースの認証に使用可能な 2 つの異なる PIN を設定することができました。
+>
 > - **デバイス PIN**: デバイスのロック解除とクラウド リソースへの接続に使用できました。
 > - **勤務先 PIN**: ユーザーの個人用デバイス (BYOD) 上の Azure AD リソースへのアクセスに使用されていました。
 > 

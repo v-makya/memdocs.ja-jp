@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 07/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29cb970dd7148496f1a4f200ba32505e6f2c0e16
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d71326dc46d404925bdd94bd5d1140f23151748c
+ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461591"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86946645"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Intune で PKCS 証明書を構成して使用する
 
@@ -59,7 +59,7 @@ Intune で PKCS 証明書を使用するには、次のインフラストラク�
 - **Microsoft Intune Certificate Connector** ("*NDES 証明書コネクタ*" とも呼ばれます):  
   Intune ポータルで、 **[デバイス構成]**  >  **[証明書コネクタ]**  >  **[追加]** の順に移動して、*PKCS #12 用コネクタをインストールする手順*に従います。 ポータルのダウンロード リンクを使用して、証明書コネクタのインストーラー **NDESConnectorSetup.exe** のダウンロードを開始します。  
 
-  Intune では、テナントごとにこのコネクタのインスタンスが最大 100 サポートされます。 コネクタの各インスタンスは、別個の Windows サーバー上に置く必要があります。 このコネクタのインスタンスは、Microsoft Intune 用の PFX Certificate Connector のインスタンスと同じサーバー上にインストールできます。 複数のコネクタを使用する場合、コネクタのインフラストラクチャでは、使用可能なコネクタ インスタンスによって PKCS 証明書要求を処理できるため、高可用性と負荷分散がサポートされます。 
+  Intune では、テナントごとにこのコネクタのインスタンスが最大 100 サポートされます。 コネクタの各インスタンスは、別個の Windows サーバー上に置く必要があります。 このコネクタのインスタンスは、Microsoft Intune 用の PFX Certificate Connector のインスタンスと同じサーバー上にインストールできます。 複数のコネクタを使用する場合、コネクタのインフラストラクチャによって冗長と負荷分散がサポートされます。使用可能なコネクタ インスタンスによって PKCS 証明書要求を処理できるためです。 
 
   このコネクタは、認証または S/MIME メールの署名で使用される PKCS 証明書の要求を処理します。
 
@@ -68,9 +68,7 @@ Intune で PKCS 証明書を使用するには、次のインフラストラク�
 - **PFX Certificate Connector for Microsoft Intune**:  
   S/MIME メールの暗号化の使用を計画している場合は、Intune ポータルを使用して、PFX 証明書のインポートをサポートする *PFX Certificate Connector* をダウンロードします。  **[デバイス構成]**  >  **[証明書コネクタ]**  >  **[追加]** の順に移動して、*インポートした PFX 証明書用コネクタをインストールする手順*に従います。 ポータルのダウンロード リンクを使用して、インストーラー **PfxCertificateConnectorBootstrapper.exe** のダウンロードを開始します。
 
-  各 Intune テナントでは、このコネクタの 1 つのインスタンスがサポートされます。 Microsoft Intune Certificate Connector のインスタンスと同じサーバー上に、このコネクタをインストールできます。
-
-  このコネクタでは、特定のユーザーを対象にした S/MIME メールの暗号化のために Intune にインポートされる PFX ファイルに対する要求を処理します。  
+  このコネクタでは、特定のユーザーを対象にした S/MIME メールの暗号化のために Intune にインポートされる PFX ファイルに対する要求を処理します。 Microsoft Intune Certificate Connector のインスタンスと同じサーバー上に、このコネクタをインストールできます。 
 
   このコネクタは、新しいバージョンが利用可能になったときに自動更新することができます。 更新機能を使用するには、次の操作を実行する必要があります。
   - PFX Certificate Connector for Microsoft Intune をサーバーにインストールします。  
@@ -260,7 +258,7 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
 
    **[次へ]** を選択します。
 
-10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 この証明書プロファイルを、信頼された証明書プロファイルを受信する同じグループに展開するようにします。プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+10. **[割り当て]** で、プロファイルを受け取るユーザーまたはグループを選択します。 この証明書プロファイルを、信頼された証明書プロファイルを受信するのと同じグループに展開することを計画してください。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
 
     **[次へ]** を選択します。
 

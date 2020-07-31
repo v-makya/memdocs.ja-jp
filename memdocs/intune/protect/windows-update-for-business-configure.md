@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d246ea2811e0fb561bc623ae29d3fb5ef0de66f9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 70f8033f694dfafefc92696df0b0e6ea652e2feb
+ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989383"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86946662"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Intune で Windows 10 ソフトウェア更新プログラムを管理する
 
@@ -221,6 +221,8 @@ Intune で Windows 10 の機能更新プログラムを使用するには、次�
   - 更新リングの機能の更新プログラムは "*実行中*" である必要があります。 それらを一時停止しないでください。
 
 - Windows 10 の機能更新プログラム ポリシーは、Autopilot の Out-of-Box Experience (OOBE) 中には適用できず、デバイスのプロビジョニングの完了後 (通常は 1 日)、最初の Windows Update のスキャン時にのみ適用されます。
+
+- Windows 10 の機能更新プログラムはパブリック プレビューのままですが、Configuration Manager と Intune を使用してデバイスを共同管理する場合は、機能更新プログラム ポリシーが直ちに有効にならないことがある制限が存在します。この場合、デバイスは Intune で構成されているよりも後の機能更新プログラムに更新されます。 この制限は、Configuration Manager の今後の更新プログラムで削除される予定です。
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Windows 10 機能の更新プログラムを作成して割り当てる
 

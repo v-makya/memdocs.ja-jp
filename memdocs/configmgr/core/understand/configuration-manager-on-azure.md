@@ -10,12 +10,12 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c12372325573c6795396ff0832ca60cba68b8c29
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: c9d398d7fddab61014547fc0f8f64cd180e58ab6
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078500"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438580"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure の Configuration Manager - よく寄せられる質問
 
@@ -84,7 +84,7 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 
 ## <a name="performance"></a>パフォーマンス
 ### <a name="what-factors-affect-performance-in-this-scenario"></a>このシナリオではどのような要素がパフォーマンスに影響しますか?
-[Azure VM のサイズと種類](https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs)、Azure VM ディスク (特に SQL Server では Premium Storage が推奨されます)、ネットワーク待機時間、および速度が最も重要です。
+[Azure VM のサイズと種類](/azure/virtual-machines/sizes)、Azure VM ディスク (特に SQL Server では Premium Storage が推奨されます)、ネットワーク待機時間、および速度が最も重要です。
 
 ### <a name="so-tell-me-more-about-azure-virtual-machines-what-size-vms-should-i-use"></a>Azure Virtual Machines について詳しく知りたいのですが、どのようなサイズの VM を使用すべきですか?
 一般に、コンピューターの性能 (CPU およびメモリ) は、[Configuration Manager の推奨ハードウェア](../plan-design/configs/recommended-hardware.md)に対応する必要があります。 ただし、通常のコンピューター ハードウェアと Azure VM には、特にこれらの VM で使用されるディスクについて、いくつか異なる点があります。  使用する VM のサイズは使用環境の規模によって異なりますが、次のようないくつかの推奨事項があります。
@@ -157,7 +157,7 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 **基礎:** https://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure Virtual Machine の種類:**
-- Azure マシンのサイズ: https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
+- Azure マシンのサイズ: https://docs.microsoft.com/azure/virtual-machines/sizes  
 - VM 価格設定: https://azure.microsoft.com/pricing/details/virtual-machines/  
 - ストレージ価格設定: https://azure.microsoft.com/pricing/details/storage/
 
@@ -169,7 +169,7 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 
 **可用性:**
 - Azure IaaS アップタイム SLA: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
-- 可用性セットの説明: https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
+- 可用性セットの説明: https://docs.microsoft.com/azure/virtual-machines/windows/manage-availability
 
 **接続:**
 - ExpressRoute と Azure VPN: https://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/

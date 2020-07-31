@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8404c475bc5a84177abeba3a96fb613f04b9aa2b
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: bc8fb5b50475c523741128d64582be29d4bf5ffe
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461948"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262661"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Intune を使ってマネージド Google Play アプリを Android Enterprise デバイスに追加する
 
@@ -122,6 +122,8 @@ LOB アプリをマネージド Google Play に追加するには、2 つの方�
 5. [Google Play] ウィンドウで **[Private apps]\(プライベート アプリ\)** ("*ロック*" アイコンの横) を選択します。 
 6. 右下にある **[+]** ボタン クリックして新しいアプリを追加します。
 7. アプリの **[タイトル]** を追加し、 **[アップロード]** をクリックして APK アプリ パッケージを追加します。
+   > [!NOTE]
+   > アプリのパッケージ名は、(ご自分のエンタープライズや Google Play Developer アカウント内で一意であるだけでなく) Google Play 内でグローバルに一意である必要があります。 そうでない場合は、"**別のパッケージ名を使用して新しい APK ファイルをアップロードしてください**" というエラーが発生します。
 8. **[作成]** をクリックします。
 9. アプリの追加が完了したら、[managed Google Play] ペインを閉じます。
 10. **[アプリの追加]** ウィンドウの **[同期]** をクリックして、managed Google Play サービスと同期します。 

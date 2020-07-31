@@ -149,7 +149,7 @@
               href: manage-microsoft-teams.md
             - name: Android 用の Google Chrome の構成
               href: apps-configure-chrome-android.md
-            - name: Android エンタープライズ用の VPN の構成
+            - name: Android Enterprise での VPN およびアプリごとの VPN
               href: app-configuration-vpn-ae.md
         - name: ボリューム購入アプリとブック
           items:

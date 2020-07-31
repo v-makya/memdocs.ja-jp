@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/14/2020
+ms.date: 07/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ad862ff1f04558bd699db2ef0c09d4da4654e23
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d979001f159b427314f8bc53788ccce0acd13d11
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461965"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365544"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune ポータル サイト アプリ、ポータル サイト Web サイト、および Intune アプリをカスタマイズする方法
 
@@ -178,9 +178,9 @@ Intune では、資格情報プロバイダーの DISA Purebred、Entrust Dataca
 
 iOS/iPadOS デバイスの派生資格情報の詳細については、「[Microsoft Intune で派生資格情報を使用する](../protect/derived-credentials.md)」を参照してください。
 
-## <a name="dark-mode-for-iosipados-company-portal"></a>iOS/iPadOS ポータル サイトのダーク モード
+## <a name="dark-mode-for-the-company-portal"></a>ポータル サイトのダーク モード
 
-iOS/iPadOS ポータル サイトでダーク モードを使用できます。 ユーザーは、デバイス設定に基づく任意の配色で、アプリをダウンロードし、デバイスを管理し、IT サポートを受けることができます。 iOS/iPadOS ポータル サイトは、ダーク モードまたはライト モードについて、エンド ユーザーのデバイス設定に自動的に一致します。
+iOS および iPadOS、macOS、Windows のポータル サイトでダーク モードを使用できます。 ユーザーは、デバイス設定に基づく任意の配色で、アプリをダウンロードし、デバイスを管理し、IT サポートを受けることができます。 iOS および iPadOS、macOS、Windows のポータル サイトは、ダーク モードまたはライト モードについて、エンド ユーザーのデバイス設定と自動的に一致します。
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Windows ポータル サイトのキーボード ショートカット
 

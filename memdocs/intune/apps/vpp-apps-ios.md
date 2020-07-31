@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9012cf55bcd74ab0786c3d961bc60914f9ade04e
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 89f6c1d4498151eed87cf90ae24d0cc7a846d3f7
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093322"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262559"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Apple Volume Purchase Program で購入した iOS アプリと macOS アプリを Microsoft Intune で管理する方法
 
@@ -177,7 +177,7 @@ Apple Business Manager を使用して、パブリック アプリおよびプ�
 <!-- 820870 -->  
 特定の VPP トークンのすべての VPP アプリのライセンスを取り消すには、最初にそのトークンに関連付けられているすべてのアプリ ライセンスを取り消し、次いでトークンを削除する必要があります。
 
-## <a name="renewing-app-licenses"></a>アプリのライセンスの更新
+## <a name="renewing-vpp-tokens"></a>VPP トークンの更新
 
 [Apple Business Manager](https://business.apple.com/) または [Apple School Manager](https://school.apple.com/) から新しいトークンをダウンロードし、Intune で既存のトークンを更新することで、Apple VPP トークンを更新できます。 
 

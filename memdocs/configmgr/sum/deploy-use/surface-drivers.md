@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-ms.openlocfilehash: 04793a053e85be051ce9ffafd2f15d274cf166f0
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: f276db618a2e67832ffa5575622e00eea02c7422
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973079"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438632"
 ---
 # <a name="manage-surface-drivers-with-configuration-manager"></a>Configuration Manager を使用して Surface ドライバーを管理する
 
@@ -162,4 +162,4 @@ Surface ドライバーの詳細については、次の記事を参照してく
 
 - [Surface と System Center Configuration Manager に関する考慮事項](https://docs.microsoft.com/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
 - [Surface の更新履歴](https://support.microsoft.com/help/4036283/surface-surface-update-history)
-- [Surface デバイス用の最新のファームウェアとドライバーをダウンロードする](https://docs.microsoft.com/surface/deploy-the-latest-firmware-and-drivers-for-surface-devices)
+- [Surface デバイス用の最新のファームウェアとドライバーをダウンロードする](/surface/manage-surface-driver-and-firmware-updates)

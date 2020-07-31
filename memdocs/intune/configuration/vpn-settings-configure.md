@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 07/28/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1916004d8e61239d7de92a77769ee970cc7a3118
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 72d0345c91f525fb6dc28adeabe8522801c51a9f
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565616"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365425"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Intune で VPN サーバーに接続するための VPN プロファイルを作成する
 
 仮想プライベート ネットワーク (VPN) を使用すると、組織のユーザーが組織のネットワークにリモート アクセスする際にセキュリティで保護することができます。 デバイスでは、VPN 接続プロファイルを使用して VPN サーバーとの接続が開始されます。 Microsoft Intune の **VPN プロファイル**により、組織内のユーザーとデバイスに VPN 設定が割り当てられます。 これらの設定を使用して、ユーザーが組織のネットワークに簡単かつ安全に接続できるようにします。
 
 たとえば、組織のネットワーク上のファイル共有に接続するために必要な設定をすべての iOS/iPadOS デバイスに構成したいとします。 これらの設定を含む VPN プロファイルを作成します。 その後、iOS/iPadOS デバイスを持っているすべてのユーザーにこのプロファイルを割り当てます。 使用できるネットワークの一覧に VPN 接続が表示されるので、ユーザーは最小限の労力で接続できます。
+
+> [!NOTE]
+> iOS および iPadOS、macOS のユーザー登録では、[アプリごとの VPN](vpn-setting-configure-per-app.md)のみがサポートされます。
 
 > [!NOTE]
 > [Intune のカスタム構成ポリシー](custom-settings-configure.md)を使用して、次のプラットフォーム用の VPN プロファイルを作成できます。

@@ -6,7 +6,7 @@ keywords: Intune データ ウェアハウス
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 07/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7ba3c7397298ea25eecc1147319760892434720
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: a6cabb4f89d1ad105b88f54ac7a1c43405d1a65d
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270992"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262576"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Power BI でデータ ウェアハウスに接続する
 
@@ -52,6 +52,9 @@ Power BI ファイルをダウンロードする方法と、Power BI で OData �
 ## <a name="load-the-data-and-reports-using-the-power-bi-intune-compliance-data-warehouse-app"></a>Power BI の Intune Compliance Data Warehouse アプリを使用してデータとレポートを読み込む
 
 Power BI の [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) アプリには、テナントの接続情報と、データ ウェアハウス データ モデルに基づいた構築済みのレポートのセットが含まれています。
+
+> [!NOTE]
+> Power BI の Intune Compliance Data Warehouse アプリは、Azure Government クラウド環境ではサポートされていません。
 
 1. インストール プロセスを開始するには、[Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) アプリの **[AppSource]** ページに移動します。
 2. **[今すぐ入手]** ボタンをクリックしてから、 **[続行]** をクリックします。
