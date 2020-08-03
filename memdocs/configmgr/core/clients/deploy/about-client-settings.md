@@ -2,7 +2,7 @@
 title: クライアント設定
 titleSuffix: Configuration Manager
 description: クライアントの動作を制御する既定の設定とカスタム設定について説明します。
-ms.date: 04/21/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 21e837d5d97c42f095159a87e015f181c5e53419
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
+ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347170"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87365510"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Configuration Manager のクライアント設定について
 
@@ -328,6 +328,11 @@ Configuration Manager クライアントで Windows PowerShell スクリプト�
 必要なアプリケーションのインストール、またはソフトウェア更新プログラムの展開の期限が過ぎてからも、さらにユーザーに時間を与えられるようにする場合は、このオプションの値を設定します。 この猶予期間は、ユーザーが、長い間コンピューターの電源を切っていて、多くのアプリケーションまたは更新プログラムの展開をインストールする必要がある場合のためのものです。 たとえば、ユーザーが休暇から戻ってきて、期限を過ぎたアプリケーションの展開をクライアントがインストールするのを長時間待たなければならないような場合に、この設定が役立ちます。
 
 0 から 120 時間の間で猶予期間を設定します。 この設定は、展開プロパティ **[ユーザー設定に従い、この展開の実施を延期する]** と共に使います。 詳細については、「[アプリケーションの展開](../../../apps/deploy-use/deploy-applications.md#delay-enforcement-with-a-grace-period)」をご覧ください。
+
+
+### <a name="enable-endpoint-analytics-data-collection"></a>エンドポイント分析データの収集を有効にする
+
+エンドポイント分析にアップロードする目的で、クライアント上でのローカル データの収集を有効にします。 **[はい]** に設定すると、ローカル データのコレクションを行えるようにデバイスが構成されます。 **[いいえ]** に設定すると、ローカル データの収集は無効になります。 詳細については、[Configuration Manager デバイスをエンドポイント分析に登録](../../../../analytics/enroll-configmgr.md)に関するページを参照してください。
 
 ## <a name="computer-restart"></a>コンピューターの再起動
 

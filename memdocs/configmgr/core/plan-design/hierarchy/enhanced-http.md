@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1a6ec98bd350eb0ac8643254f64a9480f156bb13
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86239761"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262100"
 ---
 # <a name="enhanced-http"></a>拡張 HTTP
 
@@ -53,10 +53,10 @@ Configuration Manager バージョン 1806 では、クライアントがシス�
 ### <a name="scenario-1-client-to-management-point"></a><a name="bkmk_scenario1"></a> シナリオ 1:管理ポイントに対するクライアント
 
 <!--1356889-->
-[Azure Active Directory (Azure AD) 参加済みデバイス](/azure/active-directory/devices/concept-azure-ad-join)は、HTTP 用に構成された管理ポイントと通信できます。 サイト サーバーは、管理ポイントに対する証明書を生成して、安全なチャネル経由での通信を可能にします。
+サイトに対して拡張 HTTP を有効にすると、[Azure Active Directory (Azure AD) に参加しているデバイス](/azure/active-directory/devices/concept-azure-ad-join)と、[Configuration Manager によって発行されたトークン](../../clients/deploy/deploy-clients-cmg-token.md)を持つデバイスが、HTTP 用に構成された管理ポイントと通信できるようになります。 拡張 HTTP が有効になっていると、サイト サーバーによって管理ポイントに対する証明書が生成され、安全なチャネル経由での通信が可能になります。
 
 > [!Note]  
-> この動作は、クラウド管理ゲートウェイ経由で通信する Azure AD 参加済みクライアント用に HTTPS が有効な管理ポイントを必要とする Configuration Manager Current Branch バージョン 1802 から変更されました。 詳細については、「[HTTPS 用の管理ポイントを有効にする](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps)」を参照してください。  
+> HTTPS 対応の管理ポイントは、このシナリオで使用する必要はありませんが、拡張 HTTP の使用に代わる手段としてサポートされています。 HTTPS 対応の管理ポイントの使い方の詳細については、「[HTTPS 用の管理ポイントを有効にする](../../clients/manage/cmg/certificates-for-cloud-management-gateway.md#bkmk_mphttps)」を参照してください。  
 
 ### <a name="scenario-2-client-to-distribution-point"></a><a name="bkmk_scenario2"></a> シナリオ 2:配布ポイントに対するクライアント
 

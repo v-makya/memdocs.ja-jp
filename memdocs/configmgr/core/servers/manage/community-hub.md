@@ -2,7 +2,7 @@
 title: コミュニティ ハブと GitHub
 titleSuffix: Configuration Manager
 description: Configuration Manager のコミュニティ ハブの有効化と使用
-ms.date: 07/10/2020
+ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8aadc391c5c0b259ab1a1736f3654f25b98dbae0
-ms.sourcegitcommit: aa876a9b5aa9437ae59a68e1cc6355d7070f89f4
+ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
+ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86236411"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87262083"
 ---
 # <a name="community-hub-and-github"></a>コミュニティ ハブと GitHub
 <!--3555935, 3555936-->
@@ -44,10 +44,7 @@ IT 管理者のコミュニティでは、長年にわたって豊富な知識�
       - Windows Server はサポートされていないため、Configuration Manager コンソールは、サイト サーバーとは別の Windows 10 デバイスにインストールする必要があります。
    - ログインしたユーザー アカウントをビルトイン管理者アカウントにすることはできません
 
-- レポートをダウンロードするには、インポートするサイトで **[HTTP サイト システムには Configuration Manager によって生成された証明書を使用する]** オプションをオンにする必要があります。 詳細については、「[拡張 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)」を参照してください。
-   1. **[管理]**  >  **[サイトの構成]**  >  **[サイト]** の順に移動します。
-   1. サイトを選択して、リボンの **[プロパティ]** を選択します。
-   1. **[通信のセキュリティ]** タブで、 **[HTTP サイト システムには Configuration Manager によって生成された証明書を使用する]** オプションを選択します。
+- Configuration Manager 内の[管理サービス](../../../develop/adminservice/set-up.md)を設定して機能させる必要があります。
 
 - 組織でファイアウォールまたはプロキシ デバイスを使用してインターネットとのネットワーク通信が制限されている場合は、Configuration Manager コンソールによるインターネット エンドポイントへのアクセスを許可する必要があります。 詳細については、「[Internet access requirements (インターネット アクセスの要件)](../../plan-design/network/internet-endpoints.md#community-hub)」を参照してください。
 

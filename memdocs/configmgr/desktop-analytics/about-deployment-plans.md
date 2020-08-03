@@ -2,7 +2,7 @@
 title: Desktop Analytics 内の展開計画
 titleSuffix: Configuration Manager
 description: Desktop Analytics 内の展開計画について説明します。
-ms.date: 05/11/2020
+ms.date: 07/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ccc325ac4b8e02142a1442862ad661a77b0561f2
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
+ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268489"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87400717"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Desktop Analytics 内の展開計画について
 
@@ -47,6 +47,8 @@ Desktop Analytics を使用すると、組織内のデバイス、アプリケ�
 既定では、Desktop Analytics の展開計画データの更新は毎日行われます。 展開計画で行った変更 (アプリへの重要度の割り当てやパイロットに含めるデバイスの選択など) は、処理されるまでに最大 24 時間かかります。 この処理を早めるには、オンデマンドのデータ更新を要求します。 詳細については、「[Desktop Analytics の FAQ](faq.md#can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal)を参照してください。  
 
 Desktop Analytics を Configuration Manager に接続したら、展開計画内のコレクションを選択します。 この統合により、Desktop Analytics データに基づいて Windows をコレクションに展開できるようになります。
+
+展開計画では、最近の 3 つの Windows 10 バージョンをターゲットにすることがサポートされています。 Desktop Analytics では、新しいバージョンの Windows 10 が利用可能になった後 45 日以内にそのサポートが追加されます。 その時点で、サービスによって最も古いバージョンの削除も行われます。 最も古いバージョンをターゲットとする展開計画は使用できなくなります。 Desktop Analytics でサポートされている最も古いバージョンをターゲットとする継続的な展開計画がある場合は、新しいバージョンの Windows 10 が利用可能になってから 45 日以内に展開を完了してください。
 
 ## <a name="readiness-rules"></a>準備ルール
 

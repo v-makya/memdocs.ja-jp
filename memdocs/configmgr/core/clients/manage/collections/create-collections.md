@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: def7a40091f6c9a45e67f5e4de7d7dca94b3cba2
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422808"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438607"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Configuration Manager でのコレクションの作成方法
 
@@ -234,6 +234,7 @@ Azure AD 同期は 5 分おきに行われます。 これは Configuration Mana
 - [クラウド管理](../../../servers/deploy/configure/azure-services-wizard.md)のための Azure AD との統合
 - [Azure Active Directory ユーザー探索](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
 - HTTPS または [拡張 HTTP](../../../plan-design/hierarchy/enhanced-http.md) 対応の管理ポイント
+- **[すべてのシステム]** コレクションへのアクセス
 
 ### <a name="create-a-group-and-set-the-owner-in-azure-ad"></a>Azure AD でグループを作成して所有者を設定する
 
@@ -255,7 +256,7 @@ Azure AD 同期は 5 分おきに行われます。 これは Configuration Mana
 
 1. Configuration Manager コンソールで、 **[資産とコンプライアンス]**  >  **[概要]**  >  **[デバイス コレクション]** の順に移動します。
 1. 同期するコレクションを右クリックして、 **[プロパティ]** をクリックします。 
-1. **[AAD グループの同期]** タブで、 **[追加]** をクリックします。
+1. **[クラウドの同期]** タブで、 **[追加]** をクリックします。
 1. ドロップダウン メニューで、Azure AD グループを作成した **[テナント]** を選択します。
 1. **[名前の先頭]** フィールドに検索条件を入力し、 **[検索]** をクリックします。
   - サインインを求めるメッセージが表示されたら、Azure AD グループの所有者として指定した ID を使用します。
