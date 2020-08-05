@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa70da636d619a52c0ec8591a43e85e11ff7f9f2
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 35ee8b225abe48aa4b8b0ca78b9e5b137d0721f6
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410897"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758365"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>iOS および Android 用の Edge と Microsoft Intune を使用して Web アクセスを管理する
 
@@ -320,7 +320,7 @@ iOS および Android 用の Edge に対して許可またはブロックする�
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    単一のページと一致する    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    単一のページと一致する    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
-    |    `http://www.contoso.com/*;`   |    `www.contoso.com` で始まるすべての URL と一致する    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
+    |    `http://www.contoso.com/*`   |    `www.contoso.com` で始まるすべての URL と一致する    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
     |    `http://*.contoso.com/*`    |    `contoso.com` の下のすべてのサブドメインと一致する    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
     |    `http://*contoso.com/*`    |    `contoso.com/` で終わるすべてのサブドメインと一致する    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
     `http://www.contoso.com/images`    |    単一のフォルダーと一致する    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |

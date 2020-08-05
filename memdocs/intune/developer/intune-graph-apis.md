@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d300be679d54a5f565fb2c42f889a7dcd23894a
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 7acbd455ef720dd0ab17cce40eae8060c7a68c87
+ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088549"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438635"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Azure AD を使用して Microsoft Graph の Intune API にアクセスする方法
 
@@ -351,11 +351,11 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
   > Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
 
 
-    1. ソリューション エクスプローラーを右クリックします。
-    2. **[NuGet パッケージの管理...]** &gt; **[参照]** を選択します。
-    3. `Microsoft.IdentityModel.Clients.ActiveDirectory` を選択して、 **[インストール]** を選択します。
+   1. ソリューション エクスプローラーを右クリックします。
+   2. **[NuGet パッケージの管理...]** &gt; **[参照]** を選択します。
+   3. `Microsoft.IdentityModel.Clients.ActiveDirectory` を選択して、 **[インストール]** を選択します。
 
-    <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
+   <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
 4. **Program.cs** の先頭に、次のステートメントを追加します。
 
@@ -447,7 +447,7 @@ namespace IntuneGraphExample
 
 ### <a name="authenticate-azure-ad-powershell"></a>Azure AD の認証 (PowerShell)
 
-次の PowerShell スクリプトでは、認証のために AzureAD PowerShell モジュールを使用します。  詳細については、「[Azure Active Directory PowerShell Version 2 (Azure Active Directory PowerShell バージョン 2)](https://docs.microsoft.com/powershell/azure/install-adv2?view=azureadps-2.0)」と「[Intune PowerShell examples (Intune PowerShell の例)](https://github.com/microsoftgraph/powershell-intune-samples)」をご覧ください。
+次の PowerShell スクリプトでは、認証のために AzureAD PowerShell モジュールを使用します。  詳細については、「[Azure Active Directory PowerShell Version 2 (Azure Active Directory PowerShell バージョン 2)](/powershell/azure/active-directory/install-adv2)」と「[Intune PowerShell examples (Intune PowerShell の例)](https://github.com/microsoftgraph/powershell-intune-samples)」をご覧ください。
 
 この例では、`$clientID` の値を、有効なアプリケーション ID と一致するように更新します。
 

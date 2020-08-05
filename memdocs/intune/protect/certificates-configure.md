@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0242e7725afa23ed94400c79eae27118b7dbb8c5
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 33464c6e0abff9f28e18f9bf6a82e2601dbf115f
+ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491186"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87400734"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Microsoft Intune で認証に証明書を使用する
 
@@ -81,7 +81,7 @@ Microsoft の証明機関 (CA) を使用する場合:
 |--|--|--|--|---|
 | Android デバイス管理者 | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png)|  ![サポート](./media/certificates-configure/green-check.png) |
 | Android エンタープライズ <br> - フル マネージド (デバイスの所有者)   | ![サポート](./media/certificates-configure/green-check.png) |   | ![サポート](./media/certificates-configure/green-check.png) |   |
-| Android エンタープライズ <br> - 専用 (デバイスの所有者)   | ![サポート](./media/certificates-configure/green-check.png)  |   | ![サポート](./media/certificates-configure/green-check.png)  |   |
+| Android エンタープライズ <br> - 専用 (デバイスの所有者)   | ![サポート](./media/certificates-configure/green-check.png)  | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png)  |   |
 | Android エンタープライズ <br> - 仕事用プロファイル    | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) |
 | iOS/iPadOS                   | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) |
 | macOS                 | ![サポート](./media/certificates-configure/green-check.png) |  ![サポート](./media/certificates-configure/green-check.png) |![サポート](./media/certificates-configure/green-check.png)|![サポート](./media/certificates-configure/green-check.png)|
