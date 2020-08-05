@@ -56,10 +56,6 @@
           href: windows-bulk-enroll.md
         - name: 登録状態ページ
           href: windows-enrollment-status.md
-        - name: Windows Autopilot Deployment プログラム
-          href: enrollment-autopilot.md
-        - name: Hybrid Azure AD と Autopilot
-          href: windows-autopilot-hybrid.md
         - name: Intune AD コネクタのプロキシを構成する
           href: autopilot-hybrid-connector-proxy.md
     - name: Android の登録を設定する

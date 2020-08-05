@@ -78,3 +78,6 @@
             - name: エンドポイント分析
               tocHref: /mem/analytics/
               topicHref: /mem/analytics/
+            - name: Autopilot
+              tocHref: /mem/autopilot/
+              topicHref: /mem/autopilot/
