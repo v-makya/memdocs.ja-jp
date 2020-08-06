@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 07/30/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cd5e8f6e1975adf33131ca47049eb2d4a6f68cd
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 46c58437fab66b0a4fd22ea8452856ca701e9eb7
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262882"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546811"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
@@ -54,6 +54,14 @@ ms.locfileid: "87262882"
 ### Role-based access control
 ### Scripts
 
+<!-- ########################## -->
+## <a name="week-of-july-27-2020"></a>2020 年 7 月 27 日の週
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>監視とトラブルシューティング
+
+#### <a name="power-bi-compliance-report-template-v20---636958---"></a>Power BI コンプライアンス レポート テンプレート V2.0<!-- 636958 -->
+Power BI テンプレート アプリを使用すると、Power BI パートナーはコーディングをほとんどまたはまったく行わずに Power BI アプリを構築し、それを Power BI の顧客にデプロイすることができます。 管理者は、Power BI コンプライアンス レポート テンプレートのバージョンを V1.0 から V2.0 に更新できます。 V2.0 では、設計が改善され、テンプレートの一部として表示される計算とデータが変更されます。 詳細については、「[Power BI でデータ ウェアハウスに接続する](../developer/reports-proc-get-a-link-powerbi.md)」と「[テンプレート アプリを更新する](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app)」を参照してください。 また、ブログ記事「[Announcing a New Version of the PowerBI Compliance Report with Intune Data Warehouse](https://aka.ms/new_compliance_report)」 (Intune データ ウェアハウスを使用した PowerBI コンプライアンス レポートの新しいバージョンの発表) を参照してください。
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>2020 年 7 月 13 日の週 (2007 サービス リリース)
@@ -67,8 +75,8 @@ ms.locfileid: "87262882"
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Exchange On-Premises コネクタのサポート<!-- 7138486  -->
 Intune では、2007 (7 月) リリース以降、Intune サービスから Exchange On-Premises Connector 機能のサポートが削除されます。 アクティブなコネクタを使用している既存のお客様は、現時点では現在の機能を引き続きお使いいただけます。 新規のお客様や、アクティブなコネクタをお持ちでない既存のお客様は、Intune での新しいコネクタの作成、または Exchange ActiveSync (EAS) デバイスの管理ができなくなります。 そのようなお客様の場合、Microsoft では、Exchange の[ハイブリッド先進認証 (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) を使用して Exchange On-Premises へのアクセスを保護することをお勧めします。 HMA を使用すると、Intune App Protection ポリシー (MAM とも呼ばれます) と Outlook Mobile を使用した条件付きアクセスの両方が Exchange On-Premises に対して有効になります。
 
-#### <a name="smime-for-outlook-on-ios-and-android-enterprise-devices-managed-without-enrollment---6517155----"></a>登録なしで管理されている iOS および Android Enterprise デバイス上での Outlook の S/MIME<!-- 6517155  -->
-登録なしで管理されているデバイス用のアプリ構成ポリシーを使用して、iOS および Android Enterprise デバイス上で Outlook の S/MIME を有効にすることができます。 [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[アプリ]**  >  **[アプリ構成ポリシー]**  >  **[追加]**  >  **[マネージド アプリ]** の順に選択します。 さらに、Outlook 上でユーザーによるこの設定の変更を許可するかどうかの選択ができます。 S/MIME の一般情報については、「[Intune で電子メールに署名し、暗号化する S/MIME の概要](../protect/certificates-s-mime-encryption-sign.md)」を参照してください。 Outlook の構成設定の詳細については、[Microsoft Outlook の構成設定](../apps/app-configuration-policies-outlook.md)に関するページと、「[デバイス登録なしで管理対象アプリ用アプリ構成ポリシーを追加する](../apps/app-configuration-policies-managed-app.md)」を参照してください。 Microsoft Exchange 固有の S/MIME の情報については、「[S/MIME シナリオ](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios)」と、[「構成キー」の「S/MIME 設定」](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings)を参照してください。
+#### <a name="smime-for-outlook-on-ios-and-android-devices-without-enrollment---6517155---"></a>登録なしの iOS および Android デバイス上での Outlook の S/MIME<!-- 6517155 -->
+マネージド アプリのアプリ構成ポリシーを使用して、iOS および Android デバイスで Outlook の S/MIME を有効にできるようになりました。 これにより、デバイスの登録状態に関係なく、ポリシーの配信が可能になります。 [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[アプリ]**  >  **[アプリ構成ポリシー]**  >  **[追加]**  >  **[マネージド アプリ]** の順に選択します。 さらに、Outlook 上でユーザーによるこの設定の変更を許可するかどうかの選択ができます。 ただし、Outlook for iOS および Outlook for Android に S/MIME 証明書を自動的に展開するには、デバイスを登録する必要があります。 S/MIME の一般情報については、「[Intune で電子メールに署名し、暗号化する S/MIME の概要](https://docs.microsoft.com/mem/intune/protect/certificates-s-mime-encryption-sign)」を参照してください。 Outlook の構成設定の詳細については、[Microsoft Outlook の構成設定](../apps/app-configuration-policies-outlook.md)に関するページと、「[デバイス登録なしで管理対象アプリ用アプリ構成ポリシーを追加する](../apps/app-configuration-policies-managed-app.md)」を参照してください。 Outlook for iOS および Outlook for Android の S/MIME 情報については、「[S/MIME シナリオ](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios)」と、[「構成キー」の「S/MIME 設定」](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings)を参照してください。 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>デバイスの構成

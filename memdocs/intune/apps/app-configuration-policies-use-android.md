@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 08/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fca2bfab84807311f7a23dd5b4cf42090246353
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 1bed9fe2ce2f674b5202deecce512802520f6a1d
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461625"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758178"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>マネージド Android Enterprise デバイス用にアプリ構成ポリシーを追加する
 
@@ -115,7 +115,7 @@ Microsoft Intune 管理者は、マネージド デバイス上の Microsoft ア
    > - Android 用 Office、Word、Excel、PowerPoint (16.0.9327.1000 以降)
    > - OneDrive for Android (5.28 以降)
    > - Android 用 Outlook (2.2.222 以降)
-   > - Android 用 Teams (1416/1.0.0.2020061103 以降)
+   > - Android 用 Teams (1416/1.0.0.2020073101 以降)
 
 ## <a name="enter-json-data"></a>JSON データの入力
 

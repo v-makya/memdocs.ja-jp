@@ -1,5 +1,5 @@
 ---
-title: 登録デバイスの制限に達した | Microsoft Docs
+title: 登録済み iOS デバイスの上限に達した
 titlesuffix: Intune Company Portal
 description: ''
 keywords: ''
@@ -19,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7920450185bbc3d198777893a303f4fdec1cd5f7
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 9e808ced9ad2d4f8ce8aded4fe572fea8d55884f
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880501"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546401"
 ---
-# <a name="the-limit-of-devices-you-can-register-has-been-reached"></a>登録できるデバイスの制限に達した
+# <a name="the-limit-of-ios-devices-you-can-register-has-been-reached"></a>登録できる iOS デバイスの制限に達した
 
 どの企業も、各ユーザーが会社のリソースへのアクセスに使用できるデバイス数に制限を設定しています。 これにより、会社の情報を安全に保つことができ、各ユーザーには特定のデバイスと場所から情報にアクセスする権限が付与されます。 デバイス数の制限に達したために**デバイスを登録できなかった**というメッセージが表示された場合には、次の 3 つを実行できます。
 

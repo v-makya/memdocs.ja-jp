@@ -1,5 +1,5 @@
 ---
-title: Android Enterprise セキュリティの構成フレームワーク
+title: Android Enterprise 仕事用プロファイルのセキュリティ設定
 titleSuffix: Microsoft Intune
 description: Android Enterprise デバイスの基本セキュリティと高セキュリティのために推奨される制限事項と設定について説明します。
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05d0cb3db60ed0f54a66bc4128e5528e789537a8
-ms.sourcegitcommit: d647eefa23c8849f49584442df568284d51d7525
+ms.openlocfilehash: 4283caf8f21e87736b09a3d6c7b31f8daf1f6075
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86195703"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546828"
 ---
 # <a name="android-enterprise-work-profile-security-configurations"></a>Android Enterprise 仕事用プロファイルのセキュリティ設定
 

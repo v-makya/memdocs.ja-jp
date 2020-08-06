@@ -1,5 +1,5 @@
 ---
-title: 登録デバイスの制限に達した | Microsoft Docs
+title: 登録済み macOS デバイスの上限に達した
 titlesuffix: Intune Company Portal
 description: ''
 keywords: ''
@@ -19,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 94be96db8596fbc6a5d8f17e923e687c7972433d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2e07e7ebd2c209aabf8c0094f9f1220f249fcf6e
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880530"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546469"
 ---
-# <a name="the-limit-of-devices-you-can-register-has-been-reached"></a>登録できるデバイスの制限に達した
+# <a name="the-limit-of-macos-devices-you-can-register-has-been-reached"></a>登録できる macOS デバイスの制限に達した
 
 どの企業も、各ユーザーが会社のリソースへのアクセスに使用できるデバイス数に制限を設定しています。 これにより、会社の情報を安全に保つことができ、各ユーザーには特定のデバイスと場所から情報にアクセスする権限が付与されます。 デバイス数の制限に達したために**デバイスを登録できなかった**というメッセージが表示された場合には、次の 3 つを実行できます。
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/23/2020
+ms.date: 07/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b9aedb7595db5ff0f40f2d12b8cee985fb7be99
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 7bc7f526db4cb9fd269d2d48845cc5dc4096b5df
+ms.sourcegitcommit: 0c5d09bfefbedeb561658cf7274483896e84e5d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332852"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87412343"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Mobile Threat Defense の Intune との統合
 
 Intune を使用すると、Mobile Threat Defense (MTD) ベンダーからのデータを、デバイス コンプライアンス ポリシーおよびデバイス条件付きアクセス規則の情報ソースとして統合することができます。 この情報を使用すれば、危険にさらされたモバイル デバイスからのアクセスをブロックすることで、Exchange や SharePoint などの会社リソースを容易に保護することができます。
+
+> [!NOTE]
+> この記事は Mobile Threat Defense のサードパーティ ベンダーに関するものです。Microsoft Defender の詳細については、[Microsoft Defender ATP](../protect/advanced-threat-protection.md) に関する記事を参照してください。
 
 Intune では、Intune アプリ保護ポリシーを使用して、未登録デバイスに対するソースと同じデータを使用できます。 そのため、管理者は、この情報を使用して、[Microsoft Intune の保護されたアプリ](../apps/apps-supported-intune-apps.md)内の企業データを保護し、ブロックまたは選択的ワイプを発行することができます。
 
@@ -97,3 +100,4 @@ Mobile Threat Defense ソリューションによってデバイスが感染し�
 - [Better Mobile](better-mobile-threat-defense-connector.md)
 - [Sophos Mobile](sophos-mtd-connector.md)
 - [Wandera Mobile Threat Defense](wandera-mtd-connector.md)
+- [Microsoft Defender](../protect/advanced-threat-protection.md)

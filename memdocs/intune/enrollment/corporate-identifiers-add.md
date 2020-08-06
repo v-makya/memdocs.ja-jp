@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9796df0da4974b860348bf52ef06db202219136
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: b90051e9062978fbc016e461d67fbf081f50c616
+ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491118"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87473680"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>デバイスの企業所有としての識別
 
@@ -52,7 +52,10 @@ Intune 管理者は、14 桁の IMEI 番号またはシリアル番号をリス�
 | Windows | サポートされています (Windows Phone) | サポートされていません |
 | iOS/macOS | サポートされていません (以下の「重要」を参照してください)  | サポート |
 | デバイス管理者によって管理されている Android OS v10 | サポートされていません | サポートされていません |
-| その他の Android | サポートされていません | サポート |
+| Android Enterprise 仕事用プロファイル | サポートされていません | サポート |
+| Android Enterprise のフル マネージド | サポートされていません | サポート |
+| Android Enterprise 専用デバイス | サポートされていません | サポートされていません |
+| Android Enterprise の会社所有の仕事用プロファイル | サポートされていません | サポート |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
 
@@ -63,11 +66,6 @@ Android デバイスのシリアル番号の検索方法については、[こ�
 リストを作成するには、ヘッダーなしの 2 列のコンマ区切り値 (.csv) リストを作成します。 14 桁の IMEI またはシリアル番号を左側の列に、詳細を右側の列に追加します。 1 つの .csv ファイルにインポートできるのは、1 種類の ID、IMEI、またはシリアル番号のみです。 詳細の上限は 128 文字です。また、管理者のみが使用できます。 詳細はデバイスに表示されません。 現在の上限は .csv ファイルあたり 5,000 行です。
 
 **シリアル番号が含まれている .csv ファイルをアップロード** – csv ファイル 1 つあたりデバイス 5,000 個または 5 MB を上限とする、2 つの列を持つヘッダーなしのコンマ区切り値のリスト (.csv) を作成します。
-
-|||
-|-|-|
-|&lt;ID #1&gt;|&lt;デバイス 1 の詳細&gt;|
-|&lt;ID #2&gt;|&lt;デバイス 2 の詳細&gt;|
 
 この .csv ファイルをテキスト エディターで開くと、次のように表示されます。
 

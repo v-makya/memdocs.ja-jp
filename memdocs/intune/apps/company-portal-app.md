@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/04/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d979001f159b427314f8bc53788ccce0acd13d11
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 33977676b4c144573965477154a7939f6061280a
+ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365544"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87758348"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune ポータル サイト アプリ、ポータル サイト Web サイト、および Intune アプリをカスタマイズする方法
 
@@ -105,12 +105,14 @@ Android 用 Intune アプリのブランド イメージの例を次に示しま
 
 > [!IMPORTANT]
 > 次の設定は、[デバイスの自動登録](../enrollment/device-enrollment-program-enroll-ios.md)で登録するように構成された iOS/iPadOS デバイスには適用されません。 これらの設定がどのように構成されているかにかかわらず、デバイスの自動登録を使用して登録するように構成された iOS/iPadOS デバイスは既定のフローで登録され、ユーザーがポータル サイトを起動したときにサインインを求めるメッセージが表示されます。
+> 
+> 次の設定は、[Samsung Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md) (KME) で構成された Android デバイスに適用されます。 デバイスが KME 用に構成されていて、デバイスの登録が [利用不可] に設定されている場合、デバイスを既定のフローで登録できなくなります。
 
 |    デバイス登録オプション    |    [説明]    |    チェックリストのプロンプト    |    通知    |    デバイスの詳細状態    |    アプリの (登録が必要なアプリの) 詳細状態    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
-|    使用可能、プロンプトあり    |    すべての可能な場所で登録を求める既定のエクスペリエンス。    |    はい    |    はい    |    はい    |    はい    |
-|    使用可能、プロンプトなし    |    ユーザーは、現在のデバイスのデバイス詳細の状態から、または登録が必要なアプリから登録できます。    |    いいえ    |    いいえ    |    はい    |    はい    |
-|    利用不可    |    ユーザーが登録する方法はありません。    |    いいえ    |    いいえ    |    いいえ    |    いいえ    |
+|    使用可能、プロンプトあり    |    すべての可能な場所で登録を求める既定のエクスペリエンス。    |    はい    |    はい    |    ○    |    はい    |
+|    使用可能、プロンプトなし    |    ユーザーは、現在のデバイスのデバイス詳細の状態から、または登録が必要なアプリから登録できます。    |    いいえ    |    いいえ    |    [はい]    |    はい    |
+|    利用不可    |    ユーザーが登録する方法はありません。    |    いいえ    |    いいえ    |    ×    |    いいえ    |
 
 ### <a name="privacy"></a>プライバシー
 
@@ -238,7 +240,7 @@ Windows ポータル サイト アプリで使用できるキーボード ショ
 | 同期 | 利用可能 | 利用可能 | 利用可能 | 利用可能 |
 | リモート ロック | Windows Phone のみ | 利用可能 | 利用可能 | 利用可能 |
 | パスコードのリセット | Windows Phone のみ | 使用可能<sup>(8)</sup> | N/A | 利用可能<sup>(6)</sup> |
-| キー回復 | NA | NA | 利用可能<sup>(2)</sup> | N/A |
+| キー回復 | NA | N/A | 利用可能<sup>(2)</sup> | N/A |
 
 <sup>(1)</sup> Azure AD に参加している Windows デバイスでは、**インベントリからの削除**は常にブロックされます。<br>
 <sup>(2)</sup> MacOS の**キー回復**は、Web ポータルでのみ使用できます。<br>

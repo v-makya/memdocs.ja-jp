@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 07/30/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 665e06e6aca0a4ba4f71147325eb587b1b8b4d40
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cafc7549dfb04bff14b0cdfe8c737ee4971d4db1
+ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461540"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443824"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Microsoft Intune を使用してアプリをグループに割り当てる
 
@@ -32,7 +32,7 @@ ms.locfileid: "86461540"
 [アプリを Microsoft Intune に追加](apps-add.md)した後は、そのアプリをユーザーとデバイスに割り当てることができます。 デバイスが Intune で管理されているかどうかに関係なく、デバイスにアプリを割り当てることができることに注意してください。
 
 > [!NOTE]
-> デバイス グループ用の "利用可能" デプロイ インテントはサポートされていません。サポートされているのはユーザー グループのみです。
+> Android Enterprise のフル マネージド デバイス (COBO) と Android Enterprise の企業所有の個人使用可能な (COPE) デバイスをターゲットとする場合、**利用可能な**デプロイ インテントは、**デバイス グループ**でのみサポートされます。
 
 次の表は、ユーザーおよびデバイスへのアプリの割り当てに関するさまざまなオプションの一覧です。
 

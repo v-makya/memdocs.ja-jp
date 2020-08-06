@@ -19,16 +19,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e031acf6964c2e43bb355db85dd5e365db1a08ad
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 619974819575936912b6a5c386116bdf26448252
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80326895"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546845"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>チュートリアル:Autopilot を使用して Intune に Windows デバイスを登録する
 
-Windows Autopilot を使用すると、デバイスの登録が簡単になります。 Microsoft Intune と Autopilot を使用すれば、カスタム オペレーティング システム イメージのビルド、維持、および適用を行わなくてもデバイスをエンド ユーザーに提供することができます。
+[Windows Autopilot](../../autopilot/index.yml) を使用すると、デバイスの登録が簡単になります。 Microsoft Intune と Autopilot を使用すれば、カスタム オペレーティング システム イメージのビルド、維持、および適用を行わなくてもデバイスをエンド ユーザーに提供することができます。
 
 このチュートリアルでは、次の方法について説明します。
 > [!div class="checklist"]
@@ -127,6 +127,6 @@ Autopilot デバイスを使用しなくなった場合は、それらを削除�
 Windows Autopilot で使用できる他のオプションについての詳細を確認できます。
 
 > [!div class="nextstepaction"]
-> [Autopilot の登録に関する詳細な記事](enrollment-autopilot.md)
+> [Autopilot の登録に関する詳細な記事](../../autopilot/enrollment-autopilot.md)
 
 

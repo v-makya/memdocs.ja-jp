@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/30/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 22dc48a60d03a0cc6bc10e04bc3facbf36983ff9
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 79e2694cfd34f1db8bf11969506ec3d8cbc453d4
+ms.sourcegitcommit: 8a9b85d1c879060ea541f7c8ad1ae34a4ed33ed0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84637569"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87507568"
 ---
 以下の通知では、今後の Intune の変更と機能に備えるために役立つ重要な情報が提供されます。
 
@@ -75,6 +75,9 @@ Google によるこれらの変更により、2020 年第 4 四半期には、�
 - **[パスワードの最小文字数]** の設定
 - **[パスワードの有効期限が切れるまでの日数]** の設定
 - **[再使用を禁止するパスワード世代数]** の設定
+
+
+![[Android コンプライアンス ポリシー] ページのスクリーンショット](../fundamentals/media/notices/android-compliance-settings.png)
 
 ###### <a name="additional-impacts-based-on-android-os-version"></a>Android OS のバージョンに基づくその他の影響
 

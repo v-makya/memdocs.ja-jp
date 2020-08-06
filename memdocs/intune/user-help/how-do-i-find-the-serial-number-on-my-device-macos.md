@@ -1,5 +1,5 @@
 ---
-title: iOS デバイスのシリアル番号を検索する方法 | Microsoft Docs
+title: macOS デバイスのシリアル番号を検索する方法
 description: ''
 keywords: ''
 author: lenewsad
@@ -19,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: de415b788bf3df53d799721e1da54aadf9002fe4
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 8d6647f8569c454a1e4bca6d8af1245f4128e2f3
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878213"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546794"
 ---
-# <a name="how-do-i-find-the-serial-number-on-my-device"></a>デバイスのシリアル番号を検索する方法
+# <a name="how-do-i-find-the-serial-number-on-my-macos-device"></a>macOS デバイスのシリアル番号を検索する方法
 
 デバイスのシリアル番号はデバイスを一意に識別し、会社のサポートがデバイスを既存のものから新しいものに置き換える場合などに役立ちます。 シリアル番号を確認するには、**Apple メニュー** >  **[この Mac について]** の順に移動します。
 
