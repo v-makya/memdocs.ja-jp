@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0db9c917bef2a28451ef3b74310f826f97f0dba9
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: ce002acf118fb39712f8195247f556b01faa830f
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757241"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865522"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-windows-autopilot"></a>Windows Autopilot を使用して、Intune での Windows デバイスを登録する
 
@@ -84,9 +84,9 @@ CSV ファイルの情報をインポートすることにより、Windows Autop
 3. 前の手順の **[メンバーシップの種類]** で **[割り当て済み]** を選択した場合は、 **[グループ]** ブレードで **[メンバー]** を選択して Autopilot のデバイスをグループに追加します。
     まだ登録されていない Autopilot デバイスの場合、デバイスのシリアル番号が名前です。
 4. 上の **[メンバーシップの種類]** で **[動的デバイス]** を選択した場合は、 **[グループ]** ブレードで **[動的なデバイス メンバー]** を選択し、 **[高度なルール]** ボックスに次のいずれかのコードを入力します。 これらのルールは Autopilot デバイスでのみ処理される属性を対象としているため、Autopilot デバイスのみが収集されます。 Autopilot 以外の属性に基づいてグループを作成すると、グループに含まれるデバイスが実際に Autopilot に登録されることは保証されません。
-    - Autopilot デバイスをすべて含むグループを作成する場合は、「`(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`」と入力します
-    - Intune のグループ タグ フィールドは、Azure AD デバイス上の OrderID 属性にマップされます。 特定のグループ タグ (Azure AD デバイス の OrderID) を持つすべての Autopilot デバイスが含まれるグループを作成する場合は、「`(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`」と入力する必要があります
-    - 特定の注文書 ID の Autopilot デバイスをすべて含むグループを作成する場合は、「`(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`」と入力します
+    - Autopilot デバイスをすべて含むグループを作成する場合は、「`(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`」と入力します
+    - Intune のグループ タグ フィールドは、Azure AD デバイス上の OrderID 属性にマップされます。 特定のグループ タグ (Azure AD デバイス の OrderID) を持つすべての Autopilot デバイスが含まれるグループを作成する場合は、「`(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`」と入力する必要があります
+    - 特定の注文書 ID の Autopilot デバイスをすべて含むグループを作成する場合は、「`(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`」と入力します
     
     **[高度なルール]** にコードを追加したら、 **[保存]** を選択します。
 5. **[作成]** を選択します。  
