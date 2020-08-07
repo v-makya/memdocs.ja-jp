@@ -121,6 +121,8 @@
       items:
         - name: デバイスの自動登録
           href: device-enrollment-program-enroll-macos.md
+        - name: macOS デバイスの直接登録
+          href: device-enrollment-direct-enroll-macos.md
     - name: 不完全な登録のレポート
       href: enrollment-report-company-portal-abandon.md
     - name: 登録のトラブルシューティング

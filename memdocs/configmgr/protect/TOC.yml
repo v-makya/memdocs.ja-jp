@@ -56,8 +56,10 @@
               href: deploy-use/endpoint-antimalware-policies.md
             - name: クライアントの構成
               href: deploy-use/endpoint-protection-configure-client.md
-            - name: スタンドアロン クライアントで Endpoint Protection を構成する方法
+            - name: スタンドアロン クライアントでの Endpoint Protection の構成
               href: deploy-use/endpoint-protection-configure-standalone-client.md
+            - name: グループ ポリシーを使用して Endpoint Protection を管理する
+              href: deploy-use/endpoint-protection-group-policies.md
         - name: Windows ファイアウォール ポリシー
           href: deploy-use/create-windows-firewall-policies.md
         - name: Microsoft Defender Advanced Threat Protection
