@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 08/07/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf8754adfb16e6d166a3ad1ad1b5fdde11e207ab
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: ed3a554ee374df1513a07fa2365e147f34d787f0
+ms.sourcegitcommit: 5291e1946eddbb97670f8e02beb5beef82b22f38
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757057"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87953528"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Intune と Windows Autopilot を使用して Hybrid Azure AD 参加済みデバイスをデプロイする
 Intune と Windows Autopilot を使用して、Hybrid Azure Active Directory (Azure AD) 参加済みデバイスを設定できます。 そのためには、この記事の手順のようにします。
@@ -40,7 +40,6 @@ Intune と Windows Autopilot を使用して、Hybrid Azure Active Directory (Az
 - プロキシを使用する場合は、WPAD プロキシ設定オプションを有効にして構成する必要がある。
 - OOBE (Out-of-Box Experience) を使用している。
 - Azure Active Directory が OOBE でサポートしている認証の種類を使用する。
-
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Windows 10 の自動登録を設定する
 
@@ -98,6 +97,9 @@ Active Directory 用の Intune コネクタでは、オンプレミスの Active
 ## <a name="install-the-intune-connector"></a>Intune コネクタをインストールする
 
 Active Directory 用の Intune コネクタは、Windows Server 2016 以降を実行しているコンピューターにインストールする必要があります。 コンピューターは、インターネットとお使いの Active Directory にもアクセスできる必要があります。 スケーラビリティと可用性を高めるために、環境内に複数のコネクタをインストールできます。 コネクタは、他の Intune コネクタが実行されていないサーバーにインストールすることをお勧めします。  各コネクタでは、サポート対象にするドメインにコンピューター オブジェクトを作成できる必要がある点に注意してください。
+
+> [!NOTE]
+> 組織に複数のドメインがあり、複数の Intune コネクタをインストールする場合は、特定のドメインに対してのみハイブリッド Azure AD 参加を実装する予定がある場合でも、すべてのドメインにコンピューターオブジェクトを作成できるサービスアカウントを使用する必要があります。 これらが信頼されていないドメインの場合は、Windows 自動操縦を使用しないドメインからコネクタをアンインストールする必要があります。 複数のドメインにわたって複数のコネクタを使用する場合は、すべてのコネクタがすべてのドメインでコンピューターオブジェクトを作成できる必要があります。
 
 Intune コネクタには、[Intune と同じエンドポイント](../intune/fundamentals/intune-endpoints.md)が必要です。
 
