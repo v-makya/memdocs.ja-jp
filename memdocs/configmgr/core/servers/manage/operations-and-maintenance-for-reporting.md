@@ -10,12 +10,12 @@ ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 5e154f2859a7541ac8f67b8588da7dfb8877c940
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 414d1138a7682d6b9acbc7731035fff1842a1fe7
+ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694420"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87815414"
 ---
 # <a name="operations-and-maintenance-for-reporting-in-configuration-manager"></a>Configuration Manager のレポートの操作とメンテナンス
 
@@ -33,7 +33,7 @@ Configuration Manager は、SQL Server Reporting Services にレポートを保�
 レポートを実行すると、レポートのタイトル、説明、およびカテゴリが、ローカルの OS の言語で表示されます。 詳細については、「[レポートの言語](configuring-reporting.md#-languages-for-reports)」をご覧ください。
 
 > [!NOTE]  
-> レポート マネージャーは、Web ベースのレポートのアクセスと管理ツールです。 これを使用すると、HTTPS 接続を介して 1 つのレポートサーバー インスタンスを管理できます。 レポート マネージャーは、レポートの表示、レポートのプロパティの変更、および関連付けられているレポートのサブスクリプションの管理などの操作タスクに使用できます。 この記事では、レポート マネージャーでレポートを表示し、レポートのプロパティを変更する手順について説明します。 レポート マネージャーのその他のオプションの詳細については、「[レポートマネージャーとは](https://docs.microsoft.com/sql/reporting-services/report-manager-ssrs-native-mode)」を参照してください。
+> レポート マネージャーは、Web ベースのレポートのアクセスと管理ツールです。 これを使用すると、HTTPS 接続を介して 1 つのレポートサーバー インスタンスを管理できます。 レポート マネージャーは、レポートの表示、レポートのプロパティの変更、および関連付けられているレポートのサブスクリプションの管理などの操作タスクに使用できます。 この記事では、レポート マネージャーでレポートを表示し、レポートのプロパティを変更する手順について説明します。 レポート マネージャーのその他のオプションの詳細については、「[レポートマネージャーとは](https://docs.microsoft.com/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)」を参照してください。
 
 Configuration Manager レポートを実行するのにには、次の手順を使用します。
 

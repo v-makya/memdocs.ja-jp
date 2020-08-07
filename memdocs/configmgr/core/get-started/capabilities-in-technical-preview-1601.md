@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ed3f53b6e2e9557def20fc459dfcf4641b0e396d
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905824"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526034"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Configuration Manager の Technical Preview 1601 の機能
 
@@ -130,8 +130,8 @@ Technical Preview 1601 以降、Configuration Manager コンソールでクラ�
 
 ### <a name="icons-for-client-status"></a>クライアントの状態アイコン  
 
-|||  
-|-|-|  
+| アイコン | 説明 |
+| ---- | ----------- |
 |![クライアントのオンライン状態アイコン](media/online-status-icon.png)|クライアントはオンラインです。|  
 |![クライアントのオフライン状態アイコン](media/offline-status-icon.png)|クライアントはオフラインです。|  
 |![クライアントの不明な状態アイコン](media/unknown-status-icon.png)|クライアントの状態は不明です。|  

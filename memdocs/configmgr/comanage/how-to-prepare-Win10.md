@@ -5,17 +5,17 @@ description: 共同管理用に Windows 10 のインターネットベースの�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 07/06/2020
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: d58faa57fa1459bbc8d821d117d20b3f404dc8e0
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 076a4b6d1bf5773287d4a0b32109023039a3b399
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776890"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546418"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>共同管理用にインターネットベースのデバイスを準備する方法
 
@@ -25,7 +25,7 @@ ms.locfileid: "84776890"
 
 新しい Windows 10 のデバイスでは、Autopilot サービスを使用して out of box experience (OOBE) を構成することができます。 このプロセスには、デバイスを Azure AD に参加させ、デバイスを Intune に登録する作業が含まれています。  
 
-詳細については、「[Windows Autopilot の概要](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot)」を参照してください。
+詳細については、「[Windows Autopilot の概要](../../autopilot/windows-autopilot.md)」を参照してください。
 
 Azure AD に参加したときにデバイスが Intune に自動的に登録されるように構成するには、 [Microsoft Intune での Windows デバイスの登録](https://docs.microsoft.com/intune/windows-enroll)に関する記事を参照してください。  
 
@@ -46,9 +46,9 @@ Configuration Manager を使用して、Intune で必要なデバイス情報を
 ### <a name="autopilot-for-existing-devices"></a>既存のデバイス向け Autopilot
 <!--1358333-->
 
-[既存のデバイス向けの Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) は、Windows 10 バージョン 1809 以降で利用できます。 この機能を利用すると、単一のネイティブな Configuration Manager タスク シーケンスを使用して、[Windows Autopilot ユーザー駆動モード](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)用に Windows 7 デバイスを再イメージ化およびプロビジョニングできます。
+[既存のデバイス向けの Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) は、Windows 10 バージョン 1809 以降で利用できます。 この機能を利用すると、単一のネイティブな Configuration Manager タスク シーケンスを使用して、[Windows Autopilot ユーザー駆動モード](../../autopilot/user-driven.md)用に Windows 7 デバイスを再イメージ化およびプロビジョニングできます。
 
-詳細については、「[Windows Autopilot for existing devices task sequence](../osd/deploy-use/windows-autopilot-for-existing-devices.md)」 (既存のデバイス向け Windows Autopilot のタスク シーケンス) を参照してください。
+詳細については、「[Windows Autopilot for existing devices task sequence](../../autopilot/existing-devices.md)」 (既存のデバイス向け Windows Autopilot のタスク シーケンス) を参照してください。
 
 ## <a name="install-the-configuration-manager-client"></a>Configuration Manager クライアントのインストール
 

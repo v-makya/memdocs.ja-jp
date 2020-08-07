@@ -2,7 +2,7 @@
 title: タスク シーケンスのステップ
 titleSuffix: Configuration Manager
 description: Configuration Manager タスク シーケンスに追加できるステップについて説明します。
-ms.date: 04/01/2020
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 114a0a18b3eb5d416b45379ccb3ac68128e529c5
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353600"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546622"
 ---
 # <a name="task-sequence-steps"></a>タスク シーケンスのステップ
 
@@ -1599,7 +1599,7 @@ Configuration Manager は、無効なアプリケーションまたは次のよ�
 <!--SCCMDocs-pr issue 2695-->
 このオプションは、その既定の再起動動作ではなく、コンピューターをシャットダウンするよう Sysprep に指示します。
 
-このオプションでは、このステップは[既存のデバイス向け Windows Autopilot](../deploy-use/windows-autopilot-for-existing-devices.md) タスク シーケンスで使用されます。
+このオプションでは、このステップは[既存のデバイス向け Windows Autopilot](../../../autopilot/existing-devices.md) タスク シーケンスで使用されます。
 
 - タスク シーケンスでデバイスを更新した後すぐに OOBE for Autopilot を起動する場合は、このオプションをオフのままにします。  
 

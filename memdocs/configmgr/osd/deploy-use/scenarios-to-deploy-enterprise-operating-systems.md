@@ -2,7 +2,7 @@
 title: エンタープライズ オペレーティング システムを展開するシナリオ
 titleSuffix: Configuration Manager
 description: Configuration Manager を使用して、エンタープライズ オペレーティング システムを展開するいくつかのシナリオについて学習します。
-ms.date: 02/22/2019
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 07e8623928cbfe0bcd562d3d6efdf3a9ceee85ae
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8304ba7384eba2fc7bfa41d4caf5a256380931c5
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708390"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546639"
 ---
 # <a name="scenarios-to-deploy-enterprise-operating-systems-with-configuration-manager"></a>Configuration Manager を使用して、エンタープライズ オペレーティング システムを展開するシナリオ
 
@@ -28,13 +28,11 @@ Configuration Manager では、次の OS 展開シナリオを使用すること
 
 詳細については、「[Windows を最新バージョンにアップグレードする](upgrade-windows-to-the-latest-version.md)」をご覧ください。
 
-
 #### <a name="windows-autopilot-for-existing-devices"></a>既存のデバイス向け Windows Autopilot
 <!--3607717, fka 1358333-->
 バージョン 1810 以降では、既存のデバイス向けの Windows Autopilot を、Windows 10 バージョン 1809 以降で利用できます。 この機能を利用すると、単一の Configuration Manager タスク シーケンスを使用して、Windows Autopilot ユーザー駆動モード用に Windows 7 デバイスを再イメージ化およびプロビジョニングできます。
 
-詳細については、「[Windows Autopilot for existing devices](windows-autopilot-for-existing-devices.md)」 (既存のデバイス向け Windows Autopilot) を参照してください。
-
+詳細については、「[Windows Autopilot for existing devices](../../../autopilot/existing-devices.md)」 (既存のデバイス向け Windows Autopilot) を参照してください。
 
 #### <a name="refresh-an-existing-computer-with-a-new-version-of-windows"></a>新しいバージョンの Windows で既存のコンピューターを更新する
 このシナリオでは、既存のコンピューターにパーティションを作成してフォーマット (ワイプ) し、コンピューターに新しい OS をインストールします。 OS をインストールした後、設定とユーザー データを移行できます。  

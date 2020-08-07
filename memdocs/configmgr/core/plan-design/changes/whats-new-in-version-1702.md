@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: eacf64245f4cfc779dc92be73e8d7e387b34f909
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427935"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912294"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Configuration Manager のバージョン 1702 の新機能
 
@@ -271,9 +271,8 @@ HTTP カタログの要求時に [ドライバーの自動適用] タスク シ�
 
 ライセンスされたアプリをユーザーだけでなくデバイスにも展開できるようになりました。 デバイス ライセンスをサポートするアプリ機能に応じて、次のように、展開時に適切なライセンスが要求されます。
 
-|||||
-|-|-|-|-|
-|Configuration Manager バージョン|アプリでのデバイス ライセンスのサポート|展開コレクションの種類|要求されるライセンス|
+| Configuration Manager バージョン | アプリでのデバイス ライセンスのサポート | 展開コレクションの種類 | 要求されるライセンス |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |1702 より前|はい|ユーザー|ユーザー ライセンス|
 |1702 より前|いいえ|ユーザー|ユーザー ライセンス|
 |1702 より前|はい|デバイス|ユーザー ライセンス|

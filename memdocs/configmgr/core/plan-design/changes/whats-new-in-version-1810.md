@@ -2,7 +2,7 @@
 title: バージョン 1810 の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager Current Branch のバージョン 1810 で導入された変更点および新機能について説明します。
-ms.date: 04/23/2019
+ms.date: 07/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2a3b322f868c5c203114de4d974ba6682272c5d7
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f08b7449b4232d55c4be6227d23965231aa7a273
+ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906249"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87546452"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1810 の新機能
 
@@ -237,7 +237,7 @@ PowerShell プロファイルは、PowerShell の開始時に実行されるス�
 <!--3607717, fka 1358333-->
 [既存デバイス向けの Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) を、Windows 10 バージョン 1809 以降で利用できるようになりました。 この新しい機能を使用すると、単一のネイティブな Configuration Manager タスク シーケンスを使用して、[Windows Autopilot ユーザー駆動モード](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)用に Windows 7 デバイスを再イメージ化およびプロビジョニングできます。
 
-詳細については、「[Windows Autopilot for existing devices](../../../osd/deploy-use/windows-autopilot-for-existing-devices.md)」 (既存のデバイス向け Windows Autopilot) を参照してください。
+詳細については、「[Windows Autopilot for existing devices](../../../../autopilot/existing-devices.md)」 (既存のデバイス向け Windows Autopilot) を参照してください。
 
 
 ### <a name="specify-the-drive-for-offline-os-image-servicing"></a>オフライン OS イメージ サービス用のドライブを指定する

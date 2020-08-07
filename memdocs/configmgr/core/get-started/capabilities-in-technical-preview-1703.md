@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fb13844dd05049b9186909884aa0c457a8cfacd9
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
+ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428409"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87526017"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Configuration Manager の Technical Preview 1703 の機能
 
@@ -31,9 +31,8 @@ ms.locfileid: "83428409"
 
 ライセンスされたアプリをユーザーだけでなくデバイスにも展開できるようになりました。 デバイス ライセンスをサポートするアプリ機能に応じて、次のように、展開時に適切なライセンスが要求されます。
 
-|||||
-|-|-|-|-|
-|Configuration Manager バージョン|アプリでのデバイス ライセンスのサポート|展開コレクションの種類|要求されるライセンス|
+| Configuration Manager バージョン | アプリでのデバイス ライセンスのサポート | 展開コレクションの種類 | 要求されるライセンス |
+| ----------------------------- | ------------------------------ | -------------------------- | --------------- |
 |1702 より前|はい|ユーザー|ユーザー ライセンス|
 |1702 より前|いいえ|ユーザー|ユーザー ライセンス|
 |1702 より前|はい|デバイス|ユーザー ライセンス|
