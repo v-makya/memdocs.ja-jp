@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 400f3e228562dde3e4d61a4d314c174080dab597
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: fc892a4372aa7d72f294ddf93f811d641ca961b5
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757443"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051426"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Windows 自動操縦にデバイスを追加する
 
@@ -112,6 +112,7 @@ WMI アクセス許可が適用されていて、そのリモートコンピュ�
 ハードウェア Id は、既存のデバイスからキャプチャされた後、さまざまな方法でアップロードできます。 使用可能な各メカニズムの詳細なドキュメントを参照してください。
 
 -   [Microsoft Intune](enrollment-autopilot.md)。  これは、すべてのお客様に推奨されるメカニズムです。
+    - Microsoft Endpoint Manager 管理センターは、Intune のデバイス登録に使用されます。
 -   [パートナーセンター](https://msdn.microsoft.com/partner-center/autopilot)。  これは、ユーザーに代わってデバイスを登録するために CSP パートナーによって使用されます。
 -   [& Office 365 管理者を Microsoft 365 Business](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa)します。 通常、これは、Microsoft 365 Business を使用してデバイスを管理する中小企業 (Smb) によって使用されます。
 -   [ビジネス向け Microsoft Store](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles)。  アプリと設定の管理には、既に MSfB を使用している可能性があります。

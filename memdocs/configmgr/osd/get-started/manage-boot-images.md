@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4403c8d0c57fba8fb63e3df729fb8a48ff123362
-ms.sourcegitcommit: d8dc05476ecd5db7ecb36dc649b566b349ba263d
+ms.openlocfilehash: 76e0fd3ad8ceaecb43d2a61c3abe15accda5e5d8
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732875"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912387"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Configuration Manager でブート イメージを管理する
 
@@ -80,8 +80,8 @@ Windows ADK インストール ディレクトリにある最新バージョン�
 
 サイトのインストール中に、Configuration Manager は、Windows ADK のサポートされているバージョンから、WinPE バージョンに基づくブート イメージを自動的に追加します。 Configuration Manager のバージョンによっては、サポートされているバージョンの Windows ADK とは異なるバージョンの WinPE に基づくブート イメージを追加できます。 サポートされていないバージョンの WinPE が含まれるブート イメージを追加しようとすると、エラーが発生します。 次のリストに、現在サポートされている Windows ADK と WinPE バージョンを示します。
 
-|  |  |
-|---------|---------|
+| Windows の種類 | サポートされているバージョン |
+|--------------|--------------------|
 | Windows ADK バージョン | Windows 10 用 Windows ADK |
 | Configuration Manager コンソールでカスタマイズできる Windows PE ブート イメージのバージョン | Windows PE 10 |
 | Configuration Manager コンソールで "*カスタマイズできない*" Windows PE ブート イメージのバージョン | - Windows PE 3.1<sup>[注 1](#bkmk_note1)</sup> <br> - Windows PE 5 |

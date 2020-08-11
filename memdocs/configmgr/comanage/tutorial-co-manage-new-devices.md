@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 67d86850dc0440481916984af8635d9e005044c6
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 742cd1e86ac0bff6563c0d3ee4edce7324629480
+ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428619"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87815465"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>チュートリアル:新しいインターネットベースのデバイスの共同管理を有効にする
 
@@ -96,7 +96,7 @@ ms.locfileid: "83428619"
 
 ### <a name="identify-a-unique-name-for-your-cloud-management-gateway-in-azure"></a>Azure でクラウド管理ゲートウェイの一意の名前を特定する
 
-CMG サーバー認証証明書を要求するときは、Azure で "*クラウド サービス (クラシック)* " を特定できる一意の名前を指定する必要があります。 既定では、Azure パブリック クラウドは *cloudapp.net* を使用し、CMG は *\<YourUniqueDnsName>.cloudapp.net* という cloudapp.net ドメイン内でホストされます。  
+CMG サーバー認証証明書を要求するときは、Azure で "*クラウド サービス (クラシック)* " を特定できる一意の名前を指定する必要があります。 既定では、Azure パブリック クラウドでは *cloudapp.net* が使用され、CMG は *\<YourUniqueDnsName>.cloudapp.net* という cloudapp.net ドメイン内でホストされます。  
 
 > [!TIP]  
 > このチュートリアルの **CMG サーバー認証証明書**では末尾が *contoso.com* の FQDN を使用します。  CMG を作成したら、組織のパブリック DNS に正規名レコード (CNAME) を構成します。 このレコードによって、パブリック証明書で使用する名前に対応する CMG のエイリアスを作成します。  
@@ -125,7 +125,9 @@ CSR を生成するときはバージョン 2 のキー プロバイダーの種
 > [!TIP]  
 > CMG を展開するときは、クラウド配布ポイント (CDP) も同時にインストールします。 CMG を展開する場合、既定では **[CMG をクラウド配布ポイントとして機能させて、Azure Storage からのコンテンツを提供できるようにする]** オプションがオンです。 同じサーバー上に CDP と CMG を配置すると、CDP をサポートするための個別の証明書と構成が不要になります。 共同管理を使用するために CDP は必須ではありませんが、ほとんどの環境で役立ちます。  
 >
-> 共同管理に追加のクラウド配布ポイントを使用する場合は、追加のサーバーごとに個別の証明書を要求する必要があります。 CDP のパブリック証明書を要求するには、クラウド管理ゲートウェイの CSR の場合と同じ詳細情報を使用します。 共通名を変更するだけで、CDP ごとに一意の名前にすることができます。  
+> 追加の個別の CDP を使用する場合は、追加の CDP ごとに個別の証明書を要求する必要があります。 CDP のパブリック証明書を要求するには、クラウド管理ゲートウェイの CSR の場合と同じ詳細情報を使用します。 共通名を変更するだけで、CDP ごとに一意の名前にすることができます。
+>
+> 追加の個別 CDP の使用は非推奨になり、推奨されなくなりました。 詳しくは、「[非推奨の機能](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#deprecated-features)」をご覧ください。
 
 #### <a name="details-for-the-cloud-management-gateway-csr"></a>クラウド管理ゲートウェイ CSR の詳細情報
 
@@ -395,7 +397,7 @@ Intune を使用して、現在 Intune でのみ管理されている Windows 10
 
    - **[発行元]** : Microsoft  
 
-   - **コマンドライン引数**: *\< **CCMSETUPCMD** コマンド行を指定します。共同管理の構成ウィザードの* [有効化] *ページから保存したコマンド ラインを使用できます。このコマンド ラインには、クラウド サービスの名前と、デバイスが Configuration Manager クライアント ソフトウェアをインストールできるようにする追加の値が含まれています。>*  
+   - **コマンドライン引数**: *\<Specify the **CCMSETUPCMD** command line. You can use the command line you saved from the* Enablement *page of the Co-management Configuration Wizard. This command line includes the names of your cloud service and additional values that enable devices to install the Configuration Manager client software.>*  
 
      コマンドライン構造は、CCMSETUPCMD および SMSSiteCode パラメーターのみを使用したこの例のようになります。  
 
@@ -414,7 +416,7 @@ Intune を使用して、現在 Intune でのみ管理されている Windows 10
 
 1. [Microsoft Endpoint Manager 管理センター](https://endpoint.microsoft.com)にサインインします。 **[アプリ]**  >  **[すべてのアプリ]** の順に選択し、Configuration Manager クライアントを展開するために作成したアプリである **[ConfigMgr Client Setup Bootstrap]** \(ConfigMgr クライアント セットアップ ブートストラップ\) を選択します。  
 
-2. **[プロパティ]** をクリックし、 **[割り当て]** の **[編集]** をクリックします。 **[必須]** の割り当ての下の **[グループの追加]** を選択し、共同管理に参加させるユーザーとデバイスを含む Azure Active Directory (AD) グループを設定します。  
+2. **[プロパティ]** を選択し、 **[割り当て]** の **[編集]** を選択します。 **[必須]** の割り当ての下の **[グループの追加]** を選択し、共同管理に参加させるユーザーとデバイスを含む Azure Active Directory (AD) グループを設定します。  
 
 3. **[レビューと保存]** を選択して構成を **[保存]** します。
 アプリは、割り当てるユーザーとデバイスに必要になりました。 アプリが Configuration Manager クライアントをデバイスにインストールした後は、共同管理によって管理されます。

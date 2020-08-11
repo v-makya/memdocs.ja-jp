@@ -10,12 +10,12 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7eccc3bf6b7ded9db93f5af78d55f090e9704cbc
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: 5e81bc9b2135d17c445f8a86ff2214db394f63db
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438607"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865491"
 ---
 # <a name="how-to-create-collections-in-configuration-manager"></a>Configuration Manager でのコレクションの作成方法
 
@@ -171,9 +171,8 @@ Configuration Manager に他のコレクションのメンバーを含めます�
 
 - **クエリ ステートメントの編集**:コレクションの規則として使用するクエリを記述できる **[クエリ ステートメントのプロパティ]** ダイアログ ボックスを開きます。 クエリの詳細については、[クエリの概要](../../../servers/manage/introduction-to-queries.md)に関するページを参照してください。  
 
-        
-        > [!TIP]  
-        > On the General tab, selecting the checkbox to **Omit duplicate rows (select distinct)** may result in less rows returned and potentially quicker results. 
+    > [!TIP]  
+    > [全般] タブで **[重複している列の省略 (区別の選択)** )] チェックボックスをオンにすると、返される列が少なくなり、結果にすばやくアクセスできる可能性があります。
 
 ### <a name="device-category-rule"></a><a name="bkmk-category"></a> デバイス カテゴリの規則
 
