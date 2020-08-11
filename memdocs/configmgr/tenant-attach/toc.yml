@@ -6,6 +6,8 @@
       href: device-sync-actions.md
     - name: クライアントの詳細 (プレビュー)
       href: client-details.md
+    - name: アプリケーションのインストール (プレビュー)
+      href: applications.md
 - name: テナントにアタッチされたデバイスの CMPivot (プレビュー)
   items:
     - name: CMPivot の概要
@@ -18,3 +20,5 @@
       href: troubleshoot.md
     - name: クライアントの詳細 (プレビュー)
       href: troubleshoot-client-details.md
+    - name: アプリケーションのインストール (プレビュー)
+      href: troubleshoot-applications.md
