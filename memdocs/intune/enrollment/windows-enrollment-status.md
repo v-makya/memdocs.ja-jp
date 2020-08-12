@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f8991b772f5562538403492735f1f4c2fdc87e8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093443"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051589"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>登録ステータス ページを設定する
  
@@ -31,7 +31,7 @@ ms.locfileid: "85093443"
  
 登録ステータス ページ (ESP) には、新しいデバイスが登録された後、および新しいユーザーがデバイスにサインインしたときのプロビジョニングの進行状況が表示されます。  これにより、IT 管理者は必要に応じて、プロビジョニング プロセスの残りのタスクに関する情報をユーザーに提供すると同時に、完全にプロビジョニングされるまでデバイスへのアクセスを禁止 (ブロック) できます。
 
-ESP は [Windows オートパイロット](https://docs.microsoft.com/windows/deployment/windows-autopilot/)のプロビジョニング シナリオの一部として使用できます。また、Azure AD Join の既定の out-of-box experience (OOBE) の一部として Windows オートパイロットとは別に使用することもでき、新しいユーザーが初めてデバイスにサインインするときにも使用できます。
+ESP は [Windows オートパイロット](../../autopilot/index.yml)のプロビジョニング シナリオの一部として使用できます。また、Azure AD Join の既定の out-of-box experience (OOBE) の一部として Windows オートパイロットとは別に使用することもでき、新しいユーザーが初めてデバイスにサインインするときにも使用できます。
 
 登録ステータス ページの複数のプロファイルを作成して、さまざまな構成で、以下を指定できます。
 

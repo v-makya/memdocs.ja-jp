@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 010bbd18c09424ed2434dc19405851bb5c254591
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f71bbc2022068616b90f37c209d41d28ea5970d0
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990775"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912535"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Intune でストレージ、イベントハブ、または Log Analytics にログ データを送信する (プレビュー)
 
@@ -139,55 +139,55 @@ Microsoft Intune ライセンスを既にお持ちの場合は、ストレージ
 
 **100,000 ユーザーの監査ログ**
 
-| | |
-|---|---|
+| カテゴリ | 値 |
+| -------- | ----- |
 |1 日あたりのイベント| 150 万|
 |1 か月あたりの推定データ量| 90 GB|
-|1 か月あたりの推定コスト (USD)| $1.93|
-|1 年あたりの推定コスト (USD)| $23.12|
+|1 か月あたりの推定コスト (USD)| 1\.93 ドル|
+|1 年あたりの推定コスト (USD)| 23.12 ドル|
 
 **1,000 ユーザーの監査ログ**
 
-| | |
-|---|---|
+| カテゴリ | 値 |
+| -------- | ----- |
 |1 日あたりのイベント| 15,000|
 |1 か月あたりの推定データ量| 900 MB|
-|1 か月あたりの推定コスト (USD)| $0.02|
-|1 年あたりの推定コスト (USD)| $0.24|
+|1 か月あたりの推定コスト (USD)| 0\.02 ドル|
+|1 年あたりの推定コスト (USD)| 0\.24 ドル|
 
-### <a name="event-hub-messages-for-activity-logs"></a>アクティビティ ログのイベント ハブ メッセージ
+### <a name="event-hub-messages-for-activity-logs"></a>アクティビティ ログのイベント ハブのメッセージ
 
 通常、イベントは 5 分間隔でバッチ処理され、その時間枠内のすべてのイベントを含む単一のメッセージとして送信されます。 イベント ハブ内のメッセージの最大サイズは 256 KB です。 時間枠内のすべてのメッセージの合計サイズがその量を超えると、複数のメッセージが送信されます。
 
 たとえば、ユーザーが 100,000 人を超える大規模なテナントの場合、通常、1 秒間に約 18 個のイベントが発生します。 これは、5 分ごとに 5,400 イベント (300 秒 x 18 イベント) に相当します。 監査ログはイベントごとに約 2 KB です。 これは 10.8 MB のデータに相当します。 そのため、この 5 分間隔で 43 個のメッセージがイベント ハブに送信されます。
 
-次の表は、イベント データの量に応じた、米国西部の基本的なイベント ハブの 1 か月あたりの推定コストを示します。 ログについて予想されるデータ量の見積もりを取得するには、[イベント ハブ料金計算ツール](https://azure.microsoft.com/pricing/details/event-hubs/)を使用します。
+次の表は、イベント データの量に基づく、米国西部の基本的なイベント ハブの 1 か月のコストの見積もりを示します。 ログについて予想されるデータ量の見積もりを取得するには、[イベント ハブ料金計算ツール](https://azure.microsoft.com/pricing/details/event-hubs/)を使用します。
 
 **100,000 ユーザーの監査ログ**
 
-| | |
-|---|---|
-|イベント/秒| 18|
-|5 分間隔ごとのイベント| 5,400|
+| カテゴリ | 値 |
+| -------- | ----- |
+|1 秒あたりのイベント数| 18|
+|5 分間隔あたりのイベント数| 5,400|
 |間隔あたりの量| 10.8 MB|
-|間隔あたりのメッセージ| 43|
-|1 か月あたりのメッセージ| 371,520|
-|1 か月あたりの推定コスト (USD)| $10.83|
+|間隔あたりのメッセージ数| 43|
+|1 か月あたりのメッセージ数| 371,520|
+|1 か月あたりの推定コスト (USD)| 10.83 ドル|
 
 **1,000 ユーザーの監査ログ**
 
-| | |
-|---|---|
-|イベント/秒|0.1 |
-|5 分間隔ごとのイベント| 52|
+| カテゴリ | 値 |
+| -------- | ----- |
+|1 秒あたりのイベント数|0.1 |
+|5 分間隔あたりのイベント数| 52|
 |間隔あたりの量|104 KB |
-|間隔あたりのメッセージ|1 |
-|1 か月あたりのメッセージ|8,640 |
-|1 か月あたりの推定コスト (USD)|$10.80 |
+|間隔あたりのメッセージ数|1 |
+|1 か月あたりのメッセージ数|8,640 |
+|1 か月あたりの推定コスト (USD)|10.80 ドル |
 
-### <a name="log-analytics-cost-considerations"></a>Log Analytics コストの考慮事項
+### <a name="log-analytics-cost-considerations"></a>Log Analytics のコストに関する考慮事項
 
-Log Analytics ワークスペースの管理に関連するコストを確認するには、[Log Analytics でデータ量とリテンション期間を制御することでコストを管理する方法](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage)に関するページを参照してください。
+Log Analytics ワークスペースの管理に関連するコストをレビューするには、「[Log Analytics でデータ ボリュームと保有期間を制御してコストを管理する](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage)」を参照してください。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
@@ -215,11 +215,11 @@ Azure ストレージ アカウントの場合、待ち時間はアクション�
 
 ### <a name="how-much-does-it-cost-to-stream-my-data-to-an-event-hub"></a>データをイベント ハブにストリームするためにかかるコストはどのくらいですか。
 
-ストリーム コストは、1 分間に受信するメッセージ数によって変わります。 メッセージ数に基づくコストの計算方法とコスト見積もりの詳細については、「[アクティビティ ログのイベント ハブ メッセージ](#event-hub-messages-for-activity-logs)」(この記事) を参照してください。
+ストリーミングの料金は、1 分あたりに受信するメッセージの数によって異なります。 メッセージ数に基づくコストの計算方法とコスト見積もりの詳細については、「[アクティビティ ログのイベント ハブ メッセージ](#event-hub-messages-for-activity-logs)」(この記事) を参照してください。
 
 ### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Intune の監査ログを SIEM システムと統合するにはどうすればよいですか。
 
-Azure Monitor を Event Hubs と共に使用して、ログを SIEM システムにストリームします。 まず、[ログをイベント ハブにストリーム](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)します。 次に、構成したイベント ハブを使用して [SIEM ツールを設定](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub)します。 
+Azure Monitor と Event Hubs を使用して、ログを SIEM システムにストリーム配信する。 まず、[ログをイベント ハブにストリーム](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)します。 次に、構成したイベント ハブを使用して [SIEM ツールを設定](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub)します。 
 
 ### <a name="what-siem-tools-are-currently-supported"></a>現在サポートされている SIEM ツールは何ですか。
 
@@ -227,7 +227,7 @@ Azure Monitor を Event Hubs と共に使用して、ログを SIEM システム
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>外部の SIEM ツールを使用せずにイベント ハブのデータにアクセスできますか。
 
-はい。 カスタム アプリケーションからログにアクセスするには、[Event Hubs API](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph) を使用できます。
+はい。 カスタム アプリケーションからログにアクセスするには、[Event Hubs API](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph) を使用します。
 
 ### <a name="what-data-is-stored"></a>どのデータが保存されますか。
 
@@ -237,4 +237,4 @@ Intune では、パイプラインを介して送信されたデータは保存�
 
 * [アクティビティ ログをストレージ アカウントにアーカイブする](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
 * [アクティビティ ログをイベント ハブにルーティングする](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
-* [アクティビティ ログを Log Analytics と統合する](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+* [アクティビティ ログと Log Analytics の統合](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)

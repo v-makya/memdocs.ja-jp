@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f1bd1b5da0a45ce4291eba765742405e1e4ba43
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 080b7237eb95ba729e4152e646ff8de7466309a0
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077890"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912270"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Microsoft Intune で Windows PC ソフトウェアのライセンス契約を管理する
 
@@ -178,10 +178,8 @@ Intune には、Microsoft ボリューム ライセンス契約に加えて、�
 ## <a name="manage-license-agreements"></a>ライセンス契約の管理
 ソフトウェア ライセンス契約をライセンス グループに追加することができます。 ライセンス グループは、組織の構造に合った単位でライセンス契約をまとめるのに便利です。 また、以前に作成したライセンス契約を削除することもできます。
 
-
-|                            |                                                                                                                                                                                                                                                                                                                                                                          |
-|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|            タスク            |                                                                                                                                                                                 詳細                                                                                                                                                                                  |
+| タスク | 詳細 |
+| ---- | ------- |
 |   ライセンス グループの作成   |                                                            <strong>[ライセンス]</strong> ワークスペースの <strong>[概要]</strong> ページで、<strong>[タスク]</strong> メニューの <strong>[ライセンス グループの作成]</strong> を選択します。 <strong>注:</strong>合計 500 個までのライセンス グループを作成できます。                                                             |
 |   ライセンス グループの名前変更   |                                                                                                      <strong>[ライセンス]</strong> ワークスペースで、ライセンス グループを選択し、<strong>[タスク]</strong> メニューの <strong>[ライセンス グループの編集]</strong> を選択します。                                                                                                       |
 |   ライセンス グループの削除   |                                 <strong>[ライセンス]</strong> ワークスペースで、ライセンス グループを選択し、<strong>[タスク]</strong> メニューの <strong>[ライセンス グループの削除]</strong> を選択します。 <strong>ヒント</strong>: 削除されたグループに含まれていたライセンスはいずれも <strong>[割り当てられていない契約]</strong> ライセンス グループに移されます。                                 |

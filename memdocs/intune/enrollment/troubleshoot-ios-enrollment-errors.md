@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b0c65e12349f8b4c887b5a633a1cd94c272ca5a
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 37724c4d9acdfcdb9e371a21a7b15c509de78c60
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093342"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865474"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune での iOS/iPadOS デバイスの登録に関する問題のトラブルシューティング
 
@@ -109,8 +109,9 @@ ms.locfileid: "85093342"
 1. デバイスからポータル サイト アプリを削除します。
 2. **App Store**から **Microsoft Intune ポータル サイト** アプリをダウンロードしてインストールします。
 3. デバイスを再度登録します。
- > [!NOTE]
-    > このエラーは、デバイス登録で許可するように構成されている数より多くのデバイスをユーザーが登録しようとした場合にも、発生する可能性があります。 以上の手順で問題が解決しない場合は、下記の「**デバイス キャップに達しました**」の解決手順に従ってください。
+
+> [!NOTE]
+> このエラーは、デバイス登録で許可するように構成されている数より多くのデバイスをユーザーが登録しようとした場合にも、発生する可能性があります。 以上の手順で問題が解決しない場合は、下記の「**デバイス キャップに達しました**」の解決手順に従ってください。
 
 ### <a name="device-cap-reached"></a>デバイス キャップに達しました
 
@@ -186,7 +187,7 @@ APNs 証明書を更新してから、デバイスを再登録します。
 
 登録プロファイルが割り当てられている ADE で管理されたデバイスの電源を入れると、登録が失敗し、次のエラー メッセージを受け取ります。
 
-```
+```output
 asciidoc
 mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" } }
 iPhone mobileassetd[83] <Notice>: Client connection invalid (Connection invalid); terminating connection

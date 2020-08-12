@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/24/2020
+ms.date: 08/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e76816768090a624247db7a84da8c6bdffb800bc
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 0b7f1a4280b409ec4a12c6371fd2e6cba8a571ca
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443829"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048023"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune 用に開発中
 
@@ -125,9 +125,6 @@ macOS SSO アプリ拡張機能について詳しくは、「[シングル サ�
 
 適用対象:
 - iOS/iPadOS
-
-### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-show-descriptions---7414768---"></a>Android 用ポータル サイト アプリの [デバイス設定の更新] ページを説明が表示されるように改善<!-- 7414768 -->
-Android デバイス上のポータル サイト アプリの **[デバイス設定の更新]** ページには、準拠するためにユーザーが更新する必要がある設定の一覧が表示されます。 そのユーザー エクスペリエンスが改善され、一覧表示される設定が既定で展開されて、説明と **[解決]** ボタン (適用できる場合) が表示されるようになりました。 以前は、折りたたまれた状態が既定でした。 この新しい既定の動作によってクリック回数が減るため、ユーザーがより迅速に問題を解決できるようになります。
 
 <!-- ***********************************************-->
 <!-- ## Device enrollment-->
