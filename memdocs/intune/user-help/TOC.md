@@ -135,7 +135,6 @@
 #### [Windows の登録の概要](windows-enrollment-company-portal.md)
 #### [Windows 10 デバイスを登録する](enroll-windows-10-device.md)
 #### [Windows 8.1 または Windows RT 8.1 デバイスを登録する](enroll-your-w81-or-rt81-windows.md)
-#### [Windows Phone 8.1 デバイスを登録する](enroll-your-wp81-windows.md)
 ### [デバイスを暗号化する](encrypt-your-device-windows.md)
 ### [デバイスのパスワードを設定または変更する](set-or-change-your-password-windows.md)
 ### [Intune からのデバイスの削除](unenroll-your-device-from-intune-windows.md)
