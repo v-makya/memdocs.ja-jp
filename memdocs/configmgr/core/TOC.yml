@@ -14,12 +14,18 @@
           href: understand/find-help.md
         - name: ドキュメントの使用方法
           href: understand/use-docs.md
-        - name: コンソールの使用方法
-          href: servers/manage/admin-console.md
         - name: ユーザー補助機能
           href: understand/accessibility-features.md
         - name: ソフトウェア センターのユーザー ガイド
           href: understand/software-center.md
+    - name: コンソールの使用方法
+      items:
+        - name: コンソールの使用方法
+          href: servers/manage/admin-console.md
+        - name: コンソール通知
+          href: servers/manage/admin-console-notifications.md
+        - name: コンソールの変更とヒント
+          href: servers/manage/admin-console-tips.md
     - name: 基本
       items:
         - name: Configuration Manager の基礎
@@ -76,6 +82,8 @@
           href: plan-design/changes/features-and-capabilities.md
         - name: 増分バージョンの新機能
           href: plan-design/changes/whats-new-incremental-versions.md
+        - name: バージョン 2006 の新機能
+          href: plan-design/changes/whats-new-in-version-2006.md
         - name: バージョン 2002 の新機能
           href: plan-design/changes/whats-new-in-version-2002.md
         - name: バージョン 1910 の新機能
@@ -84,8 +92,6 @@
           href: plan-design/changes/whats-new-in-version-1906.md
         - name: バージョン 1902 の新機能
           href: plan-design/changes/whats-new-in-version-1902.md
-        - name: バージョン 1810 の新機能
-          href: plan-design/changes/whats-new-in-version-1810.md
         - name: Configuration Manager 2012 からの変更点
           href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
         - name: 削除と非推奨
@@ -212,6 +218,8 @@
           items:
             - name: レベルの概要
               href: plan-design/diagnostics/levels-overview.md
+            - name: バージョン 2006 のデータ
+              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2006.md
             - name: バージョン 2002 のデータ
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
             - name: バージョン 1910 のデータ
@@ -220,8 +228,6 @@
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1906.md
             - name: バージョン 1902 のデータ
               href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
-            - name: バージョン 1810 のデータ
-              href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
         - name: よく寄せられる質問 (FAQ)
           href: plan-design/diagnostics/frequently-asked-questions.md
     - name: Configuration Manager のセキュリティとプライバシー
@@ -470,6 +476,8 @@
           href: servers/manage/cmpivot-overview.md
         - name: CMPivot を使う
           href: servers/manage/cmpivot.md
+        - name: CMPivot の変更
+          href: servers/manage/cmpivot-changes.md
         - name: CMPivot のトラブルシューティング
           href: servers/manage/cmpivot-tsg.md
     - name: メンテナンス タスク
@@ -512,6 +520,8 @@
           href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
         - name: 修正プログラム インストーラーの使用
           href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+        - name: 2006 に更新するためのチェックリスト
+          href: servers/manage/checklist-for-installing-update-2006.md
         - name: 2002 に更新するためのチェックリスト
           href: servers/manage/checklist-for-installing-update-2002.md
         - name: 1910 に更新するためのチェックリスト
@@ -520,8 +530,6 @@
           href: servers/manage/checklist-for-installing-update-1906.md
         - name: 1902 に更新するためのチェックリスト
           href: servers/manage/checklist-for-installing-update-1902.md
-        - name: 1810 に更新するためのチェックリスト
-          href: servers/manage/checklist-for-installing-update-1810.md
         - name: Current Branch バージョンのサポート
           href: servers/manage/current-branch-versions-supported.md
     - name: バックアップと回復

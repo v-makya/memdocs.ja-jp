@@ -32,7 +32,7 @@
       items:
         - name: 切断されているソフトウェアの更新ポイントからのソフトウェア更新プログラムの同期
           href: get-started/synchronize-software-updates-disconnected.md
-        - name: 切断されているソフトウェアの更新ポイントからの Office 365 の更新プログラムの同期
+        - name: 切断されているソフトウェアの更新ポイントからの Microsoft 365 Apps 更新プログラムの同期
           href: get-started/synchronize-office-updates-disconnected.md
 - name: 展開と使用
   items:
@@ -62,7 +62,7 @@
       href: deploy-use/service-a-server-group.md
     - name: Office 365 クライアント管理ダッシュボード
       href: deploy-use/office-365-dashboard.md
-    - name: Office 365 ProPlus の更新プログラムの管理
+    - name: Microsoft 365 Apps 更新プログラムの管理
       href: deploy-use/manage-office-365-proplus-updates.md
     - name: Windows 10 更新プログラムの配信の最適化
       href: deploy-use/optimize-windows-10-update-delivery.md

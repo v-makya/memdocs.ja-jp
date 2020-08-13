@@ -113,7 +113,7 @@
           href: apps/initiateuserinstall-method-in-class-sms_application.md
         - name: ManageDeploymentForDevice メソッド
           href: apps/managedeploymentfordevice-method-in-class-sms_application.md
-        - name: Restore メソッド
+        - name: 復元方法
           href: apps/restore-method-in-class-sms_application.md
         - name: SetIsExpired メソッド
           href: apps/setisexpired-method-in-class-sms_application.md
@@ -218,7 +218,7 @@
           href: core/clients/asset-intelligence/getstatus-method-in-class-sms_aimlsparser.md
         - name: GetSummary メソッド
           href: core/clients/asset-intelligence/getsummary-method-in-class-sms_aimlsparser.md
-        - name: インポート方法
+        - name: Import メソッド
           href: core/clients/asset-intelligence/import-method-in-class-sms_aimlsparser.md
     - name: SMS_AIProxy サーバー WMI クラス
       href: core/clients/asset-intelligence/sms_aiproxy-server-wmi-class.md
@@ -484,6 +484,8 @@
                   href: core/clients/client-classes/iprogressui--showerrordialog-method.md
                 - name: IProgressUI ShowMessage メソッド
                   href: core/clients/client-classes/iprogressui--showmessage-method.md
+                - name: IProgressUI ShowMessageEx メソッド
+                  href: core/clients/client-classes/iprogressui--showmessageex-method.md
                 - name: IProgressUI ShowRebootDialog メソッド
                   href: core/clients/client-classes/iprogressui--showrebootdialog-method.md
                 - name: IProgressUI ShowSwapMediaDialog メソッド
@@ -1609,6 +1611,8 @@
           href: osd/sms_tasksequence_prepareosaction-server-wmi-class.md
         - name: SMS_TaskSequence_PrepareSMSClientAction サーバー WMI クラス
           href: osd/sms_tasksequence_preparesmsclientaction-server-wmi-class.md
+        - name: SMS_TaskSequence_PrestartCheckAction サーバー WMI クラス
+          href: osd/sms_tasksequence_prestartcheckaction-server-wmi-class.md
         - name: SMS_TaskSequence_RebootAction サーバー WMI クラス
           href: osd/sms_tasksequence_rebootaction-server-wmi-class.md
         - name: SMS_TaskSequence_Reference サーバー WMI クラス
@@ -1623,6 +1627,8 @@
           href: osd/sms_tasksequence_restoreuserstateaction-server-wmi-class.md
         - name: SMS_TaskSequence_RunCommandLineAction サーバー WMI クラス
           href: osd/sms_tasksequence_runcommandlineaction-server-wmi-class.md
+        - name: SMS_TaskSequence_RunPowerShellScriptAction サーバー WMI クラス
+          href: osd/sms_tasksequence_runpowershellscriptaction-server-wmi-class.md
         - name: SMS_TaskSequence_SetupWindowsAndSMSAction サーバー WMI クラス
           href: osd/sms_tasksequence_setupwindowsandsmsaction-server-wmi-class.md
         - name: SMS_TaskSequence_SetVariableAction サーバー WMI クラス
@@ -2432,7 +2438,7 @@
     - name: ステータス MIF 関数
       href: core/servers/manage/status-mif-functions.md
       items:
-        - name: Create 関数
+        - name: 関数の作成
           href: core/servers/manage/create-function.md
         - name: InstallStatusMIF 関数
           href: core/servers/manage/installstatusmif-function.md
