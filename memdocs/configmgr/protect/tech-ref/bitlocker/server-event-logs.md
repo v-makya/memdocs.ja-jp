@@ -5,17 +5,17 @@ description: Windows イベント ログで使用可能な BitLocker (MBAM) サ�
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c3279b7d-654d-444b-bd17-1262894590c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d49a24b6fea08f12d1fe70c1e0b7415adf98719
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fe7d24bc1cad27094d720a5cb5aa487caec9199d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074811"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127867"
 ---
 # <a name="server-event-logs"></a>サーバー イベント ログ
 

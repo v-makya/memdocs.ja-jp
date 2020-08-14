@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 295940337f191b791d8c7a86de4003466213df6b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702340"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128952"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1806 の新機能
 
@@ -296,7 +296,7 @@ Security Content Automation Protocol (SCAP) コンテンツをコンプライア
 <!--1358149-->
 Office カスタマイズ ツールが、Configuration Manager コンソールの Office 365 インストーラーと統合されました。 Office 365 の展開を作成するときに、最新の Office の管理容易性設定を動的に構成します。 Microsoft は、Office 365 の新しいビルドをリリースするとき、Office カスタマイズ ツールを更新します。 この統合により、Office 365 で新しい管理容易性設定が利用可能になるのと同時にそれを活用できます。 
 
-詳細については、「[Office 365 アプリを展開する](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps)」を参照してください。
+詳細については、「[Office 365 アプリを展開する](../../../sum/deploy-use/manage-office-365-proplus-updates.md)」を参照してください。
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>新しい Windows アプリ パッケージ形式のサポート
@@ -546,7 +546,7 @@ WSUS クリーンアップ ウィザードでは、ソフトウェアの更新�
 
 資産を右クリックし、 **[コピー]** を選択します。 このアクションにより、詳細をすべて含む選択した資産がコンマ区切りリストとしてコピーされます。 これらのビューでは、キーボード ショートカット **Ctrl** + **C** も動作します。 
 
-詳細については、「[バージョン 1806 のコンソールの機能強化](../../servers/manage/admin-console.md#copy-details-in-monitoring-views)」を参照してください。
+詳細については、「[バージョン 1806 のコンソールの機能強化](../../servers/manage/admin-console-tips.md#copy-details-in-monitoring-views)」を参照してください。
 
 
 ### <a name="improvements-to-the-surface-dashboard"></a>Surface ダッシュボードの改善
@@ -568,7 +568,7 @@ WSUS クリーンアップ ウィザードでは、ソフトウェアの更新�
 <!--1358202-->
 既定で、 **[資産とコンプライアンス]** ワークスペースの **[デバイス]** ノードに **[現在ログオンしているユーザー]** の列が表示されるようになりました。 コレクション固有デバイス リストに対しても表示されます。 この値は、現在の[クライアント ステータス](../../clients/manage/monitor-clients.md#bkmk_indStatus)を示します。 ユーザーがサインオフすると、クライアントによりこの値が消去されます。 サインオンしているユーザーがいない場合、値は空白になります。 
 
-詳細については、「[バージョン 1806 のコンソールの機能強化](../../servers/manage/admin-console.md#view-users-for-a-device)」を参照してください。
+詳細については、「[バージョン 1806 のコンソールの機能強化](../../servers/manage/admin-console-tips.md#view-users-for-a-device)」を参照してください。
 
 
 ### <a name="submit-feedback-from-the-configuration-manager-console"></a>Configuration Manager コンソールからフィードバックを送信する  
@@ -576,7 +576,7 @@ WSUS クリーンアップ ウィザードでは、ソフトウェアの更新�
 
 [気に入った機能の報告] を使ってみましょう。 Configuration Manager チームに使用感を直接伝えることができるようになりました。 フィードバックは、Configuration Manager コンソールから簡単に送信できます。 称賛、問題、提案など、あらゆるフィードバックを歓迎します。 Configuration Manager コンソールで、リボンの右上にあるスマイル ボタンをクリックします。 このフィードバックは、Configuration Manager の Microsoft 製品チームに直接送られます。 Windows 10 フィードバック ハブも使用できますが、コンソール内のフィードバック機能を使用することをお勧めします。  
 
-詳細については、「[バージョン 1806 のコンソールの機能強化](../../servers/manage/admin-console.md#send-feedback)」と[製品フィードバック](../../understand/find-help.md#BKMK_1806Feedback)に関するページを参照してください。
+詳細については、「[バージョン 1806 のコンソールの機能強化](../../servers/manage/admin-console-tips.md#send-feedback)」と[製品フィードバック](../../understand/find-help.md#BKMK_1806Feedback)に関するページを参照してください。
 
 
 

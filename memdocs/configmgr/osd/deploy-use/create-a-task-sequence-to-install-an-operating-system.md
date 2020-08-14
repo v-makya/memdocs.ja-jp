@@ -5,17 +5,17 @@ description: Configuration Manager でタスク シーケンスを使用して�
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e1b298856edea3f81cab2e9cd5ab75af49dff51
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: dae4287b1e4a4a69209672f01f45eeaeb3b540d7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707310"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125476"
 ---
 # <a name="create-a-task-sequence-to-install-an-os"></a>OS をインストールするタスク シーケンスの作成
 
