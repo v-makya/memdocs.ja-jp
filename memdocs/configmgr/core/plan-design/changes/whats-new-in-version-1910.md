@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a52b70b0a753036c506e5d515cbac048d6771295
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1567531ed83586f47ba2f79372e0b7962c1341dc
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879048"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128918"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1910 の新機能
 
@@ -98,19 +98,19 @@ Desktop Analytics クラウド サービスの毎月の変更については、�
 <!--3197353-->
 CMPivot エンジンがさらに大幅に最適化されました。 これで、より多くの処理を ConfigMgr クライアントにプッシュすることができます。 最適化によって、CMPivot クエリの実行に必要なネットワークとサーバーの CPU 負荷が大幅に削減されます。 これらの最適化を利用して、数ギガバイトのクライアント データをリアルタイムで処理できるようになりました。 
 
-詳細については、「[CMPivot エンジンに対する最適化](../../servers/manage/cmpivot.md#bkmk_optimization)」を参照してください。
+詳細については、「[CMPivot エンジンに対する最適化](../../servers/manage/cmpivot-changes.md#bkmk_optimization)」を参照してください。
 
 ### <a name="additional-cmpivot-entities-and-enhancements"></a>追加の CMPivot エンティティと拡張機能
 <!--5410930-->
 トラブルシューティングとハンティングを支援するために、いくつかの新しい CMPivot エンティティとエンティティの拡張機能が追加されました。 クエリを実行する次のエンティティを含めています。
 
-- Windows イベント ログ ([WinEvent](../../servers/manage/cmpivot.md#bkmk_WinEvent))
-- ファイルの内容 ([FileContent](../../servers/manage/cmpivot.md#bkmk_File))
-- プロセスによって読み込まれた DLL ([ProcessModule](../../servers/manage/cmpivot.md#bkmk_ProcessModule))
-- Azure Active Directory 情報 ([AADStatus](../../servers/manage/cmpivot.md#bkmk_AadStatus))
-- エンドポイント保護の状態 ([EPStatus](../../servers/manage/cmpivot.md#bkmk_EPStatus))
+- Windows イベント ログ ([WinEvent](../../servers/manage/cmpivot-changes.md#bkmk_WinEvent))
+- ファイルの内容 ([FileContent](../../servers/manage/cmpivot-changes.md#bkmk_File))
+- プロセスによって読み込まれた DLL ([ProcessModule](../../servers/manage/cmpivot-changes.md#bkmk_ProcessModule))
+- Azure Active Directory 情報 ([AADStatus](../../servers/manage/cmpivot-changes.md#bkmk_AadStatus))
+- エンドポイント保護の状態 ([EPStatus](../../servers/manage/cmpivot-changes.md#bkmk_EPStatus))
 
-このリリースには、CMPivot に対する[その他の拡張機能](../../servers/manage/cmpivot.md#bkmk_Other)もいくつか追加されています。 詳細については、「[バージョン 1910 以降の CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot1910)」を参照してください。
+このリリースには、CMPivot に対する[その他の拡張機能](../../servers/manage/cmpivot-changes.md#bkmk_Other)もいくつか追加されています。 詳細については、「[バージョン 1910 以降の CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1910)」を参照してください。
 
 ## <a name="content-management"></a><a name="bkmk_content"></a> コンテンツ管理
 

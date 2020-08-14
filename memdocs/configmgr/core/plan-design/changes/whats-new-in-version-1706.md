@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a8a4ce1c3d54311db18decc85f57d3e03298d339
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904688"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129020"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Configuration Manager のバージョン 1706 の新機能
 
@@ -78,7 +78,7 @@ Configuration Manager コンソールのユーザー補助機能の機能強化�
 - フォールバックの構成に関係なく、クライアントは、使用した最後のソフトウェアの更新ポイントへの到達を 120 分間試行します。 120 分以内にそのサーバーに到達できない場合は、新しいサーバーを見つけるため、クライアントは利用可能なソフトウェアの更新ポイントのプールをチェックします。
 - 2 時間で元のサーバーに到達できない場合、クライアントは、新しいソフトウェアの更新ポイントに接続するためにより短いサイクルに切り替えます。 つまり、クライアントは新しいサーバーとの接続に失敗すると、使用可能なサーバー プールからすぐに次のサーバーを選択して、接続を試行します。
 
-詳細については、Current Branch の境界グループに関するトピックの[ソフトウェアの更新ポイント](../../servers/deploy/configure/boundary-groups.md#software-update-points)の記述を参照してください。
+詳細については、Current Branch の境界グループに関するトピックの[ソフトウェアの更新ポイント](../../servers/deploy/configure/boundary-groups.md#bkmk_sup)の記述を参照してください。
 
 ### <a name="azure-ad-integration-with-configuration-manager"></a>Azure AD と Configuration Manager の統合
 <!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
@@ -228,7 +228,7 @@ Windows Update for Business によって直接管理されている Windows 10 �
 詳細については、「[Windows 10 における Windows Update for Business との統合](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies)」を参照してください。
 
 ### <a name="improved-user-notifications-for-office-365-updates"></a>Office 365 更新プログラムのユーザーへの通知の改善
-クライアントが Office 365 更新プログラムをインストールする場合に、Office クイック実行ユーザー エクスペリエンスを活用するように改善されました。 これには、ポップアップとアプリ内通知、およびカウントダウン エクスペリエンスが含まれます。 詳細については、「[Office 365 の更新プログラムの動作とクライアント通知を再起動する](../../../sum/deploy-use/manage-office-365-proplus-updates.md#restart-behavior-and-client-notifications-for-office-365-updates)」
+クライアントが Office 365 更新プログラムをインストールする場合に、Office クイック実行ユーザー エクスペリエンスを活用するように改善されました。 これには、ポップアップとアプリ内通知、およびカウントダウン エクスペリエンスが含まれます。 詳細については、「[Office 365 の更新プログラムの動作とクライアント通知を再起動する](../../../sum/deploy-use/manage-office-365-proplus-updates.md)」
 
 ## <a name="reporting"></a>レポート
 

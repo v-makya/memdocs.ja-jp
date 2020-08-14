@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 34005a63b372198bbc2e3079f8ab560ef6b2b791
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: eb393b05e1ee93239b43725a67b9a1b3e54e71ed
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795637"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997965"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Desktop Analytics のデータのプライバシー
 
@@ -94,7 +94,5 @@ Desktop Analytics のプライバシー関連のよく寄せられる質問に�
 - [信頼できるクラウドであるという自信](https://azure.microsoft.com/overview/trusted-cloud/)  
 
 - [セキュリティ センター](https://www.microsoft.com/trustcenter)  
-
-- [プライバシー シールド](https://www.privacyshield.gov/)  
 
 Desktop Analytics とは別に、Configuration Manager では、診断および使用状況データが Microsoft に送信されます。 このデータは、Configuration Manager の今後のリリースでインストールのエクスペリエンス、品質、セキュリティを向上させるために Microsoft によって使用されます。 詳細については、[Configuration Manager の診断結果と使用状況データ](../core/plan-design/diagnostics/diagnostics-and-usage-data.md)に関するページをご覧ください。

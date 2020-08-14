@@ -5,17 +5,17 @@ description: Configuration Manager でソフトウェアの段階的な展開を
 ms.date: 04/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 419b91365d80062baabc289d0dbcf064c89b71a0
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 66f31983e34ff37cd2df8532cd9d45d372ef1f3b
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110476"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125102"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>段階的な展開の管理と監視
 

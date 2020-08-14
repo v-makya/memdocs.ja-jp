@@ -10,12 +10,12 @@ ms.assetid: 36385bea-f05e-4300-947f-cb3927b3bac5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 69178f9ac1c1acb1ee2a2931c88a55a0784435b8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6bddf46df63eac70a536faaee04a2ac7243e534a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708020"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128275"
 ---
 # <a name="troubleshoot-cmpivot"></a>CMPivot のトラブルシューティング
 
@@ -27,7 +27,7 @@ CMPivot は、お使いの環境内でデバイスのリアルタイム状態へ
 
 Configuration Manager バージョン 1902 以降では、階層内の中央管理サイト (CAS) から CMPivot を実行できます。 まだ、プライマリ サイトでクライアントへの通信が処理されます。
 
-CAS から CMPivot を実行すると、プライマリ サイトとの通信のために高速メッセージ サブスクリプション チャネルが使われます。 CMPivot では、サイト間で標準の SQL レプリケーションは使われません。 お使いの SQL Server インスタンスまたは SQL プロバイダーがリモートである場合、または SQL Server Always On を使用する場合は、CMPivot の "ダブル ホップ シナリオ" が発生します。 "ダブル ホップ シナリオ" に対して制約付き委任を定義する方法の詳細については、「[バージョン 1902 以降の CMPivot](cmpivot.md#bkmk_cmpivot1902)」をご覧ください。
+CAS から CMPivot を実行すると、プライマリ サイトとの通信のために高速メッセージ サブスクリプション チャネルが使われます。 CMPivot では、サイト間で標準の SQL レプリケーションは使われません。 お使いの SQL Server インスタンスまたは SQL プロバイダーがリモートである場合、または SQL Server Always On を使用する場合は、CMPivot の "ダブル ホップ シナリオ" が発生します。 "ダブル ホップ シナリオ" に対して制約付き委任を定義する方法の詳細については、「[バージョン 1902 以降の CMPivot](cmpivot-changes.md#bkmk_cmpivot1902)」をご覧ください。
 
 >[!IMPORTANT]
 > CMPivot のトラブルシューティングを行う場合は、管理ポイント (MP) およびサイト サーバーの SMS_MESSAGE_PROCESSING_ENGINE で詳細ログを有効にして、より詳しい情報を取得します。 また、クライアントの出力が 80 KB を超える場合は、MP とサイト サーバーの SMS_STATE_SYSTEM コンポーネントの詳細ログも有効にしてください。 詳細ログを有効にする方法について詳しくは、「[サイト サーバーのログ オプション](../../plan-design/hierarchy/about-log-files.md#bkmk_reg-site)」をご覧ください。
@@ -45,7 +45,7 @@ CAS から CMPivot を実行すると、プライマリ サイトとの通信の
   <pre><code lang="Log">Type parameter is 135.
   Auditing: User &ltusername> ran script 7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14 with hash dc6c2ad05f1bfda88d880c54121c8b5cea6a394282425a88dd4d8714547dc4a2 on collection &ltCollectionId>. </code></pre>
 
- `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14` は、CMPivot のスクリプト GUID です。 この GUID は [CMPivot 監査ステータス メッセージ](cmpivot.md#cmpivot-audit-status-messages)でも確認できます。
+ `7DC6B6F1-E7F6-43C1-96E0-E1D16BC25C14` は、CMPivot のスクリプト GUID です。 この GUID は [CMPivot 監査ステータス メッセージ](cmpivot-changes.md#cmpivot-audit-status-messages)でも確認できます。
 
 次に、CMPivot ウィンドウで ID を探します。 この ID は `ClientOperationID` です。
 

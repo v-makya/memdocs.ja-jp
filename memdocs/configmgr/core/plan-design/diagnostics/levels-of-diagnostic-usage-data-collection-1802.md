@@ -5,18 +5,18 @@ description: バージョン 1802 で収集される診断情報と使用状況�
 ms.date: 05/13/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 29dd51b8-6576-4010-81ba-3129ed2c3421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: c2edff394e915273fb34f4627e3636ea6e20237c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: bae73e89852efbc8e85ba4df7e98eb0452d6b754
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690380"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128731"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1802-of-configuration-manager"></a>Configuration Manager バージョン 1802 で収集される診断結果および使用状況データのレベル
 

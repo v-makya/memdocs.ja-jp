@@ -5,17 +5,17 @@ description: Configuration Manager で使用できるすべての BitLocker 管�
 ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9ce6a9c566fec22e69c0a4a7fde01b911330ec1d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708620"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127885"
 ---
 # <a name="bitlocker-settings-reference"></a>BitLocker 設定のリファレンス
 
@@ -25,7 +25,7 @@ ms.locfileid: "81708620"
 
 Configuration Manager の BitLocker 管理ポリシーには、次のポリシー グループが含まれます。
 
-- Setup
+- セットアップ
 - オペレーティング システム ドライブ
 - 固定ドライブ
 - リムーバブル ドライブ
@@ -36,7 +36,7 @@ Configuration Manager の BitLocker 管理ポリシーには、次のポリシ�
 > [!NOTE]
 > これらの設定は Configuration Manager バージョン2002 に基づいています。 バージョン 1910 には、これらの設定のすべてが含まれているわけではありません。
 
-## <a name="setup"></a>Setup
+## <a name="setup"></a>セットアップ
 
 このページの設定により、グローバルな BitLocker 暗号化オプションが構成されます。
 
@@ -52,7 +52,7 @@ Configuration Manager の BitLocker 管理ポリシーには、次のポリシ�
 Windows 8.1 デバイスの場合、 **[Drive encryption method and cipher strength]\(ドライブの暗号化方法と暗号強度\)** のオプションを有効にし、次のいずれかの暗号化方法を選択します。
 
 - ディフューザー付き AES 128 ビット
-- ディフューザー付き AES 256 ビット
+- ディフューザーを使用した AES 256 ビット
 - AES 128 ビット (既定)
 - AES 256 ビット
 
@@ -66,7 +66,7 @@ Windows 10 デバイスの場合、 **[Drive encryption method and cipher streng
 - XTS-AES 256 ビット
 
 > [!TIP]
-> BitLocker では、その暗号化アルゴリズムとして、128 ビットまたは 256 ビットの構成可能なキー長を持つ Advanced Encryption Standard (AES) が使用されます。 Windows 10 デバイスでは、AES 暗号化によって暗号化ブロック チェーン (CBC) または Ciphertext Stealing (XTS) がサポートされます。
+> BitLocker には、高度暗号化標準 (AES) が暗号化アルゴリズムとして使われており、キーの長さを設定することができます (128 ビットまたは 256 ビット)。 Windows 10 デバイスでは、AES 暗号化によって暗号化ブロック チェーン (CBC) または Ciphertext Stealing (XTS) がサポートされます。
 >
 > Windows 10 を実行していないデバイスでリムーバブル ドライブを使用する必要がある場合は、AES-CBC を使用します。
 
@@ -76,7 +76,7 @@ Windows 10 デバイスの場合、 **[Drive encryption method and cipher streng
 
 - BitLocker を有効にすると、Configuration Manager によってこれらの設定が適用されます。
 
-- ドライブが既に暗号化されている場合、または暗号化が進行中の場合は、これらのポリシー設定を変更しても、デバイスのドライブ暗号化は変更されません。
+- ドライブが既に暗号化されている場合、または暗号化が進行中の場合は、これらのポリシー設定を変更しても、デバイスでのドライブ暗号化は変更されません。
 
 - 既定値を使用する場合、BitLocker コンピューターの準拠レポートに、暗号強度が **[不明]** として表示されることがあります。 この問題に対処するには、この設定を有効にして、暗号強度の明示的な値を設定します。
 
@@ -84,7 +84,7 @@ Windows 10 デバイスの場合、 **[Drive encryption method and cipher streng
 
 *推奨構成*:**未構成**
 
-このポリシーを構成すると、再起動時にメモリ内の BitLocker シークレットが上書きされずに再起動のパフォーマンスが向上します。
+再起動の際に、メモリ上の BitLocker の機密情報を上書きせずに再起動のパフォーマンスを向上させるために、このポリシーを構成します。
 
 このポリシーを構成しない場合、BitLocker は、コンピューターの再起動時にメモリからシークレットを削除します。
 
@@ -92,7 +92,7 @@ Windows 10 デバイスの場合、 **[Drive encryption method and cipher streng
 
 *推奨構成*:**未構成**
 
-このポリシーを構成すると、スマートカード証明書ベースの BitLocker 保護が使用されます。 次に、証明書の**オブジェクト識別子**を指定します。
+スマートカード証明書ベースの BitLocker の保護を使用するために、このポリシーを構成します。 次に、証明書の**オブジェクト識別子**を指定します。
 
 このポリシーを構成しない場合、BitLocker は、既定のオブジェクト識別子 `1.3.6.1.4.1.311.67.1.1` を使用して証明書を指定します。
 
@@ -100,17 +100,17 @@ Windows 10 デバイスの場合、 **[Drive encryption method and cipher streng
 
 *推奨構成*:**未構成**
 
-このポリシーを構成すると、証明書ベースのデータ回復エージェント、または BitLocker To Go リーダーが使用されます。
+証明書ベースのデータ回復エージェント、または BitLocker To Go リーダーを使用するために、このポリシーを構成します。
 
 このポリシーを構成しない場合、BitLocker は **[Identification]\(識別\)** フィールドを使用しません。
 
 組織でより高度なセキュリティ対策が必要な場合は、 **[Identification]\(識別\)** フィールドを構成してください。 対象となるすべての USB デバイスでこのフィールドを設定し、この設定に適合させます。
 
-## <a name="os-drive"></a>OS drive (OS ドライブ)
+## <a name="os-drive"></a>OS ドライブ
 
 このページの設定では、Windows がインストールされているドライブの暗号化設定を構成します。
 
-### <a name="operating-system-drive-encryption-settings"></a>Operating System Drive Encryption Settings (オペレーティング システム ドライブの暗号化設定)
+### <a name="operating-system-drive-encryption-settings"></a>オペレーティング システム ドライブの暗号化設定
 
 *推奨構成*:**Enabled**
 
@@ -121,7 +121,7 @@ Windows 10 デバイスの場合、 **[Drive encryption method and cipher streng
 
 お使いのデバイスに[トラステッド プラットフォーム モジュール (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-top-node) がない場合は、 **[互換性のある TPM が装備されていない BitLocker を許可する (パスワードが必要)]** オプションを使用します。 この設定により、デバイスに TPM がない場合でも、BitLocker で OS ドライブを暗号化できます。 このオプションを有効にした場合、Windows で、BitLocker パスワードを指定するよう求めるプロンプトがユーザーに出されます。
 
-互換性のある TPM を備えたデバイスでは、暗号化されたデータの保護を強化するためにスタートアップ時に 2 種類の認証方法を使用できます。 コンピューターの起動時に、認証に TPM のみを使用することも、個人識別番号 (PIN) の入力を要求することもできます。 次の設定を構成します。
+互換性のある TPM を装備したデバイスでは、暗号化されたデータの保護を強化するためにスタートアップ時に 2 種類の認証方法を使用できます。 コンピューターの起動時に、認証に TPM のみを使用することも、個人識別番号 (PIN) の入力を要求することもできます。 次の設定を構成します。
 
 - **Select protector for operating system drive (オペレーティング システム ドライブのプロテクターを選択)** :TPM と PIN、または TPM のみが使用されるように構成します。
 
@@ -167,11 +167,11 @@ Windows 10 デバイスの場合、 **[Drive encryption method and cipher streng
 
 - これらの複雑さの条件に関する設定を有効にするには、 **[コンピューターの構成]**  >  **[Windows の設定]**  >  **[セキュリティの設定]**  >  **[アカウント ポリシー]**  >  **[パスワード ポリシー]** で、グループ ポリシー設定の **[パスワードが複雑さの条件を満たす必要がある]** も有効にします。
 
-- これらの設定は、ボリュームのロックを解除するときではなく、BitLocker を有効にするときに適用されます。 BitLocker では、ドライブで使用できるいずれかの保護機能を使用してドライブのロックを解除できます。
+- これらの設定は、ボリュームのロックを解除するときではなく、BitLocker を有効にするときに適用されます。 BitLocker は、ユーザーがドライブで利用できるいずれかの保護機能を使用してドライブのロックを解除できます。
 
 - グループ ポリシーを使用して、暗号化、ハッシュ、および署名のために FIPS 準拠のアルゴリズムを有効にする場合、BitLocker 保護機能としてパスワードを許可することはできません。
 
-### <a name="reset-platform-validation-data-after-bitlocker-recovery"></a>BitLocker の回復後にプラットフォームの検証データをリセットする
+### <a name="reset-platform-validation-data-after-bitlocker-recovery"></a>BitLocker 回復の実行後にプラットフォームの検証データをリセットする
 
 *推奨構成*:**未構成**
 
@@ -181,7 +181,7 @@ BitLocker の回復後、Windows が起動したときにプラットフォー�
 
 このポリシー設定を無効にした場合、Windows によって、この状況でプラットフォームの検証データは更新されません。
 
-### <a name="pre-boot-recovery-message-and-url"></a>プリブート回復メッセージと URL
+### <a name="pre-boot-recovery-message-and-url"></a>[プリブート回復メッセージと URL]
 
 *推奨構成*:**未構成**
 
@@ -274,7 +274,7 @@ Windows でデバイス上の固定ドライブにデータを書き込む場合
 
 - これらの複雑さの条件に関する設定を有効にするには、 **[コンピューターの構成]**  >  **[Windows の設定]**  >  **[セキュリティの設定]**  >  **[アカウント ポリシー]**  >  **[パスワード ポリシー]** で、グループ ポリシー設定の **[パスワードが複雑さの条件を満たす必要がある]** も有効にします。
 
-- これらの設定は、ボリュームのロックを解除するときではなく、BitLocker を有効にするときに適用されます。 BitLocker では、ドライブで使用できるいずれかの保護機能を使用してドライブのロックを解除できます。
+- これらの設定は、ボリュームのロックを解除するときではなく、BitLocker を有効にするときに適用されます。 BitLocker は、ユーザーがドライブで利用できるいずれかの保護機能を使用してドライブのロックを解除できます。
 
 - グループ ポリシーを使用して、暗号化、ハッシュ、および署名のために FIPS 準拠のアルゴリズムを有効にする場合、BitLocker 保護機能としてパスワードを許可することはできません。
 
@@ -365,7 +365,7 @@ Windows でデバイス上のリムーバブル ドライブにデータを書�
 
 - これらの複雑さの条件に関する設定を有効にするには、 **[コンピューターの構成]**  >  **[Windows の設定]**  >  **[セキュリティの設定]**  >  **[アカウント ポリシー]**  >  **[パスワード ポリシー]** で、グループ ポリシー設定の **[パスワードが複雑さの条件を満たす必要がある]** も有効にします。
 
-- これらの設定は、ボリュームのロックを解除するときではなく、BitLocker を有効にするときに適用されます。 BitLocker では、ドライブで使用できるいずれかの保護機能を使用してドライブのロックを解除できます。
+- これらの設定は、ボリュームのロックを解除するときではなく、BitLocker を有効にするときに適用されます。 BitLocker は、ユーザーがドライブで利用できるいずれかの保護機能を使用してドライブのロックを解除できます。
 
 - グループ ポリシーを使用して、暗号化、ハッシュ、および署名のために FIPS 準拠のアルゴリズムを有効にする場合、BitLocker 保護機能としてパスワードを許可することはできません。
 
@@ -381,7 +381,7 @@ Windows でデバイス上のリムーバブル ドライブにデータを書�
 
 - **格納する BitLocker 回復情報を選択する**:BitLocker 回復情報をバックアップするためのキー回復サービスを構成します。 これにより、BitLocker によって暗号化された回復データの管理方法が提供され、キー情報がないことによるデータの損失を防ぐことができます。
 
-- **回復情報をプレーン テキストで保存することを許可する**:SQL Server 用の BitLocker 管理の暗号化証明書がない場合、Configuration Manager によってキーの回復情報がプレーン テキストで保存されます。 詳細については、「[回復データの暗号化](../../deploy-use/bitlocker/encrypt-recovery-data.md)」を参照してください。
+- **回復情報をプレーン テキストで保存することを許可する**:SQL Server 用の BitLocker 管理の暗号化証明書がない場合、Configuration Manager によってキーの回復情報がプレーン テキストで保存されます。 詳細については、「[回復データの暗号化](../../deploy-use/bitlocker/encrypt-recovery-data.md)」をご覧ください。
 
 - **Client checking status frequency (minutes) (クライアントが状態を確認する頻度 (分単位))** :クライアントは、構成された頻度で、コンピューターの BitLocker 保護ポリシーと状態を確認し、クライアント回復キーのバックアップも行います。 既定では、Configuration Manager クライアントは、90 分ごとに BitLocker 回復情報を更新します。
 

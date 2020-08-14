@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 7fb02a5c-e286-46b1-a972-6335c858429a
-ms.openlocfilehash: 742cd1e86ac0bff6563c0d3ee4edce7324629480
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 0d7122942fe6a1455518b56159b48a11a2519d3e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815465"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127312"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>チュートリアル:新しいインターネットベースのデバイスの共同管理を有効にする
 
@@ -367,13 +367,9 @@ Azure 構成、サイト システムの役割、およびクライアント設�
 
 ### <a name="enable-co-management-starting-in-version-1906"></a>バージョン 1906 以降での共同管理の有効化
 
-Configuration Manager バージョン 1906 以降で共同管理を有効化するには、次の手順に従います。
-
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
 ### <a name="enable-co-management-in-version-1902-and-earlier"></a>バージョン 1902 以前での共同管理の有効化
-
-Configuration Manager バージョン 1902 以前で共同管理を有効化するには、次の手順に従います。
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 

@@ -2,7 +2,7 @@
 title: 共同管理を有効にする
 titleSuffix: Configuration Manager
 description: Configuration Manager で共同管理を有効にした直後に機能が追加されます。
-ms.date: 07/26/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 8fac7ac5-96a3-4ec1-85cb-623b26bf5b1c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 949b1f23d6ec816db4a801f7f14b9b6468737576
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 9c411d5102180ebf067e1319d39d2494eae50a95
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776992"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127377"
 ---
 # <a name="how-to-enable-co-management-in-configuration-manager"></a>Configuration Manager で共同管理を有効にする方法
 
@@ -25,13 +25,9 @@ ms.locfileid: "84776992"
 
 ## <a name="enable-co-management-starting-in-version-1906"></a>バージョン 1906 以降での共同管理の有効化
 
-Configuration Manager バージョン 1906 以降で共同管理を有効化するには、次の手順に従います。
-
 [!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
 
 ## <a name="enable-co-management-in-version-1902-and-earlier"></a>バージョン 1902 以前での共同管理の有効化
-
-Configuration Manager バージョン 1902 以前で共同管理を有効化するには、次の手順に従います。
 
 [!INCLUDE [Enable Co-management in version 1902 and earlier](includes/enable-co-management-1902-and-earlier.md)]
 

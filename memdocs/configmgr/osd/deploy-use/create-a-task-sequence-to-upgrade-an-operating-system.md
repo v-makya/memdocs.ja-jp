@@ -5,17 +5,17 @@ description: タスク シーケンスを使用して、自動的に Windows 7 �
 ms.date: 07/13/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84e6ea21f2bb9627ae6b40c62f8f856fb426bdaf
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 907c36b6f06bbf4fbbabb9ee1b2df6cadb0acb75
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384894"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125459"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Configuration Manager で OS をアップグレードするタスク シーケンスを作成する
 

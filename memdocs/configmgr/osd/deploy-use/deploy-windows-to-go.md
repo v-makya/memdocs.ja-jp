@@ -5,17 +5,17 @@ description: Configuration Manager で Windows To Go をプロビジョニング
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: add0d17205cc82b30f3a88558c690a813239b92a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: a3cf735dfa2dd73ed39a24c2d674a966acddf05a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906928"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125119"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Configuration Manager を使用して Windows To Go を展開する
 

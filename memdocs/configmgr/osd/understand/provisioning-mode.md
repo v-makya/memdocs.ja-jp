@@ -5,17 +5,17 @@ description: Configuration Manager タスク シーケンス中のクライア�
 ms.date: 05/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 3e3ff3a4-7a75-41bb-bdf9-33ede9c0e3a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 815b32ecf7e9cd315c2365cb5ed73004b2a48718
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: b0039648c6f444efdbbaeb16f55d29b630ee7f16
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708650"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124272"
 ---
 # <a name="provisioning-mode"></a>プロビジョニング モード
 

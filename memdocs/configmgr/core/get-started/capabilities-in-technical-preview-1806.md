@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2168f844f1c9ef98ea21da68b73531bca7aad999
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905188"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126792"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager の Technical Preview 1806 の機能
 
@@ -240,7 +240,7 @@ Office カスタマイズ ツールが、Configuration Manager コンソール�
  タスクを実行してみます。 試した結果の[フィードバック](capabilities-in-technical-preview-1804.md#bkmk_feedback)をお送りください。
 
 1. Configuration Manager コンソールで、 **[ソフトウェア ライブラリ]** ワークスペースに移動し、 **[Office 365 クライアント管理]** ノードを選択します。
-2. ダッシュボードの **[Office 365 インストーラー]** タイルをクリックして、Office 365 クライアント インストール ウィザードを起動します。 詳細については、「[Office 365 アプリを展開する](../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps)」を参照してください。
+2. ダッシュボードの **[Office 365 インストーラー]** タイルをクリックして、Office 365 クライアント インストール ウィザードを起動します。 詳細については、「[Office 365 アプリを展開する](../../sum/deploy-use/manage-office-365-proplus-updates.md)」を参照してください。
 3. **[Office の設定]** ページで、 **[Go To Office Web Page]\(Office Web ページへ移動\)** をクリックします。 オンラインの Office カスタマイズ ツールを使用して、この展開の設定を指定します。 
 4. 完了したら、右上隅にある **[送信]** をクリックします。 Office 365 クライアントのインストール ウィザードを終了します。
 

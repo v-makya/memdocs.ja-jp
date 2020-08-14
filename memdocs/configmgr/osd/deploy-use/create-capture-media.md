@@ -5,17 +5,17 @@ description: Configuration Manager でキャプチャ メディアを使用し�
 ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: article
+ms.topic: how-to
 ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbbec355356a74d61f263fe2b16d44c0cd15ba80
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d85ab7e9d66c1206c6741117d7b379c998078708
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690770"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125374"
 ---
 # <a name="create-capture-media"></a>キャプチャ メディアを作成する
 

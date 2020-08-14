@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fa29c1b2474d6a0a42b7ff8e3624a3ec8d6a090e
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: f2486e838e01415786e24c077af1997b3dfb7638
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912294"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129071"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Configuration Manager のバージョン 1702 の新機能
 
@@ -121,7 +121,7 @@ Configuration Manager コンソールでの検索機能の強化の内容を次�
 OMS コネクタを使用すれば、Microsoft Azure Government Cloud 内の OMS Log Analytics に接続することができます。 そのためには、OMS コネクタが Government Cloud と連携するように構成ファイルを変更してから OMS コネクタをインストールする必要があります。 詳細については、[「Use the OMS connector with the Azure Government cloud」](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm) (Azure Government Cloud で OMS コネクタを使用する) を参照してください。
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>境界グループへのソフトウェア更新ポイントの追加
-バージョン 1702 以降では、クライアントは境界グループを使用して、新しいソフトウェアの更新ポイントを検索します。また、現在のソフトウェアの更新ポイントにアクセスできなくなっている場合は、フォールバックして新しいソフトウェアの更新ポイントを検索します。 ソフトウェアの更新ポイントをそれぞれ異なる境界グループに追加して、クライアントで検索できるサーバーを制御できます。 詳細については、[境界グループの構成](../../servers/deploy/configure/boundary-groups.md)に関するトピックの[ソフトウェアの更新ポイント](../../servers/deploy/configure/boundary-groups.md#software-update-points)の記述を参照してください。
+バージョン 1702 以降では、クライアントは境界グループを使用して、新しいソフトウェアの更新ポイントを検索します。また、現在のソフトウェアの更新ポイントにアクセスできなくなっている場合は、フォールバックして新しいソフトウェアの更新ポイントを検索します。 ソフトウェアの更新ポイントをそれぞれ異なる境界グループに追加して、クライアントで検索できるサーバーを制御できます。 詳細については、[境界グループの構成](../../servers/deploy/configure/boundary-groups.md)に関するトピックの[ソフトウェアの更新ポイント](../../servers/deploy/configure/boundary-groups.md#bkmk_sup)の記述を参照してください。
 
 
 <!-- ## Migration  -->
@@ -221,7 +221,7 @@ HTTP カタログの要求時に [ドライバーの自動適用] タスク シ�
 ## <a name="software-updates"></a>ソフトウェア更新プログラム
 
 ### <a name="deploy-office-365-apps-to-clients"></a>クライアントに Office 365 アプリを展開する
-1702 以降、Office 365 クライアント管理ダッシュボードから Office 365 のインストーラーを起動できます。インストーラーを使用すると、Office 365 のインストール設定を構成し、Office コンテンツ配信ネットワーク (CDN) からファイルをダウンロードし、Configuration Manager でファイルをアプリケーションとして展開できます。 詳細については、[Office 365 ProPlus の更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md#deploy-office-365-apps)に関するページを参照してください。
+1702 以降、Office 365 クライアント管理ダッシュボードから Office 365 のインストーラーを起動できます。インストーラーを使用すると、Office 365 のインストール設定を構成し、Office コンテンツ配信ネットワーク (CDN) からファイルをダウンロードし、Configuration Manager でファイルをアプリケーションとして展開できます。 詳細については、[Office 365 ProPlus の更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy)に関するページを参照してください。
 
 > [!IMPORTANT]
 > Configuration Manager で Office 365 アプリケーション ウィザードを使用して作成し、展開した Office 365 は、 **[Office 365 クライアント エージェントの管理を有効にする]** ソフトウェア更新プログラム クライアント エージェント設定を有効にしない限り、Configuration Manager で自動的に管理されません。 詳細については、「[System Center Configuration Manager のクライアント設定について](../../clients/deploy/about-client-settings.md)」を参照してください。

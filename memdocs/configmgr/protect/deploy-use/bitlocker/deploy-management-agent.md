@@ -5,17 +5,17 @@ description: BitLocker 管理エージェントを Configuration Manager クラ�
 ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ba72e9accb7cbc5a7dc1149c6c9d947cb3e0692b
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: a7eca5c2f5c00ae559a8567d5fce1e4e36df19c0
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526085"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129275"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker 管理の展開
 

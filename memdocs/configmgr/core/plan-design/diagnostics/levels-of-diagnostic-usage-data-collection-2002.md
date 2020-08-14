@@ -5,17 +5,17 @@ description: バージョン 2002 で Configuration Manager によって各レ�
 ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 264ea96f-f26a-4fb7-a23f-ecf36054e54b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8521120de444d4c9725a297c63a9c0c72d4bf2fb
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 7db3c587d592f7ef972e53a8bbdc2b27da1abbf4
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506360"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126547"
 ---
 # <a name="diagnostic-and-usage-data-for-version-2002"></a>バージョン 2002 の診断情報と使用状況データ
 

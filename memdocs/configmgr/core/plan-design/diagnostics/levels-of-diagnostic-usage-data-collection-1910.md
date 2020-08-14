@@ -5,17 +5,17 @@ description: バージョン 1910 で Configuration Manager によって各レ�
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b3ce6b9a-7d54-4374-9b7a-f017f872bd6f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd1657e4c77430fea4cae754f5db5d669e9bf0fd
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 316cd4b532c248027def1f1cac4dfbe71476b0a4
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506361"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128605"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1910"></a>バージョン 1910 の診断情報と使用状況データ
 

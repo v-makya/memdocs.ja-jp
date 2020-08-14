@@ -5,17 +5,17 @@ description: バージョン 1906 で Configuration Manager によって各レ�
 ms.date: 07/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 370fc61f-2d8a-45b4-adc7-7b5d5ede2bf4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35432fe7805c2a301eb8b101c194dad738f8ab6d
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 9c4b82bba24eccf9be5f410b5d2854d782230a72
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84505909"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126649"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1906"></a>バージョン 1906 の診断情報と使用状況データ
 

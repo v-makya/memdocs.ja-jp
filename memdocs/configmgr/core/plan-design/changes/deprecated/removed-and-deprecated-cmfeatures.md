@@ -2,7 +2,7 @@
 title: 非推奨の機能
 titleSuffix: Configuration Manager
 description: Configuration Manager でサポートされなくなった機能について説明します。
-ms.date: 05/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 40eda7184d7be5010bf51e3ac0d30d6d9442203c
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 5ee84a41a5c47ce554e4618b897c8e4933bdbe73
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905055"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129054"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager から削除された機能と非推奨の機能
 
@@ -31,7 +31,6 @@ ms.locfileid: "82905055"
 
 |機能|最初に非推奨と発表|削除されたサポート&nbsp;|
 |-----------|---|--------------|
-| デバイス登録とセキュリティ更新プログラムの **[最近のデータを表示]** の Desktop Analytics のオプション。<!-- 7080949 --> 詳細については、「[データ待機時間](../../../../desktop-analytics/troubleshooting.md#data-latency)」をご覧ください。|2020 年 5 月|2020 年 7 月|
 |Azure からコンテンツを共有するための実装が変更されました。 コンテンツが有効なクラウド管理ゲートウェイを使用します。 今後は、従来のクラウド配布ポイントを作成できなくなります。|2019 年 2 月|未定<sup>[注 1](#bkmk_note1)</sup>|
 |クラウド管理ゲートウェイとクラウドの配布ポイントのための Azure への従来のサービス展開。 詳細については、[CMG の計画](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)に関するページを参照してください。|2018 年 11 月|未定<sup>[注 1](#bkmk_note1)</sup>|
 
@@ -45,6 +44,7 @@ ms.locfileid: "82905055"
 
 |機能|最初に非推奨と発表|削除されたサポート&nbsp;|  
 |-----------|---|--------------|  
+| デバイス登録とセキュリティ更新プログラムの **[最近のデータを表示]** の Desktop Analytics のオプション。<!-- 7080949 --> 詳細については、「[データ待機時間](../../../../desktop-analytics/troubleshooting.md#data-latency)」をご覧ください。|2020 年 5 月|2020 年 7 月|
 | Windows Analytics と Upgrade Readiness の統合。 詳細については、[KB 4521815:Windows Analytics の廃止 (2020 年 1 月 31 日)](https://support.microsoft.com/help/4521815/windows-analytics-retirement) に関するページをご確認ください。 | 2019 年 10 月 14 日 | 2020 年 1 月 31 日 |
 | 条件付きアクセス コンプライアンス ポリシーに対するデバイス正常性構成証明の評価 <!--1235616 aka 3608202--> 詳細については、「[ハイブリッド MDM はどうなりましたか?](../../../../mdm/understand/what-happened-to-hybrid.md)」を参照してください。| 2019 年 7 月 3 日 | バージョン 1910 |
 | Configuration Manager ポータル サイト アプリ | 2019 年 5 月 21 日 | バージョン 1910 |

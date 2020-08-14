@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: d554f4f6e0c68912f4fac91bc1a8db2807b26a04
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078789"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126758"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Configuration Manager の Technical Preview 1706 の機能
 
@@ -72,7 +72,7 @@ ms.locfileid: "82078789"
   - このサイクルは、クライアントが使用可能なソフトウェアの更新ポイントに接続するまで続きます。
   - クライアントがソフトウェアの更新ポイントを見つけるまで、近隣境界グループのフォールバック時間が満たされるたびに、使用可能なサーバーのプールに追加のサーバーが追加されます。
 
-詳細については、Current Branch の境界グループに関するトピックの[ソフトウェアの更新ポイント](../servers/deploy/configure/boundary-groups.md#software-update-points)の記述を参照してください。
+詳細については、Current Branch の境界グループに関するトピックの[ソフトウェアの更新ポイント](../servers/deploy/configure/boundary-groups.md#bkmk_sup)の記述を参照してください。
 
 
 ## <a name="site-server-role-high-availability"></a>サイト サーバーの役割の高可用性
