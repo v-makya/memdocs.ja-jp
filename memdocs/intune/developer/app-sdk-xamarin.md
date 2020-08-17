@@ -5,7 +5,7 @@ keywords: sdk, Xamarin, intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2020
+ms.date: 08/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13b2c69a0bf4e031717847b700e60e873fbda157
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 3d54a03290b7d2020b6ec13b64f985613c0a292d
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262848"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912310"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin バインディング
 
@@ -56,9 +56,9 @@ Intune App SDK Xamarin バインディングで開発された Xamarin アプリ
 
 [ライセンス条項](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf)を確認します。 記録用にライセンス条項を印刷し、保持します。 Intune App SDK Xamarin バインディングをダウンロードし、使用すると、このライセンス条項に同意したことになります。 本ライセンス条項に同意されない場合、お客様は本ソフトウェアを使用できません。
 
-Intune SDK では、その[認証](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/)と条件付き起動シナリオを [Active Directory 認証ライブラリ (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) に依存しているため、[Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) を使用してアプリを構成する必要があります。 
+Intune SDK では、その[認証](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/)と条件付き起動シナリオが [Microsoft 認証ライブラリ (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/v2-overview) に依存しているため、[Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) を使用してアプリを構成する必要があります。 
 
-アプリケーションが ADAL または MSAL を使用するように既に構成されており、独自のカスタム クライアント ID が Azure Active Directory での認証に利用される場合は、Intune モバイル アプリケーション管理 (MAM) サービスへのアクセス許可を Xamarin アプリに付与するための手順に従っていることを確認します。 [Intune SDK の概要ガイド](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)の[アプリに対する Intune アプリ保護サービスへのアクセス権の付与](app-sdk-get-started.md)に関するセクションに記載されている手順を使用します。
+アプリケーションが MSAL を使用するように既に構成されており、独自のカスタム クライアント ID が Azure Active Directory での認証に利用される場合は、Intune モバイル アプリケーション管理 (MAM) サービスへのアクセス許可を Xamarin アプリに付与するための手順に確実に従います。 [Intune SDK の概要ガイド](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)の[アプリに対する Intune アプリ保護サービスへのアクセス権の付与](app-sdk-get-started.md)に関するセクションに記載されている手順を使用します。
 
 ## <a name="security-considerations"></a>セキュリティに関する考慮事項
 
@@ -83,7 +83,7 @@ Intune SDK では、その[認証](https://azure.microsoft.com/documentation/art
       using Microsoft.Intune.MAM;
       ```
 
-4. アプリ保護ポリシーを受信するには、Intune MAM サービスにアプリを登録する必要があります。 アプリがユーザーの認証に [Azure Active Directory Authentication Library](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) (ADAL) または [Microsoft Authentication Library](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) を使用しておらず、Intune SDK で認証を処理したい場合、アプリは IntuneMAMEnrollmentManager の LoginAndEnrollAccount メソッドにユーザーの UPN を提供する必要があります:
+4. アプリ保護ポリシーを受信するには、Intune MAM サービスにアプリを登録する必要があります。 アプリでのユーザーの認証に [Microsoft 認証ライブラリ](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) が使用されず、Intune SDK で認証を処理したい場合、アプリから IntuneMAMEnrollmentManager の LoginAndEnrollAccount メソッドにユーザーの UPN が提供される必要があります。
 
       ```csharp
        IntuneMAMEnrollmentManager.Instance.LoginAndEnrollAccount([NullAllowed] string identity);
@@ -91,7 +91,7 @@ Intune SDK では、その[認証](https://azure.microsoft.com/documentation/art
 
       呼び出し時にユーザーの UPN が不明な場合、アプリは null を渡すことがあります。 この場合、ユーザーはメール アドレスとパスワードの両方を入力するよう求められます。
       
-      アプリが既に ADAL または MSAL を使用してユーザーを認証している場合は、アプリと Intune SDK 間のシングルサインオン (SSO) エクスペリエンスを構成できます。 まず、Intune SDK で使用される既定の AAD 設定を、使用するアプリの設定でオーバーライドする必要があります。 これを行うには、[iOS 用 Intune App SDK 開発者ガイド](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk)で説明しているように、アプリの Info.plist 内にある IntuneMAMSettings ディクショナリを利用できます。または、IntuneMAMSettings クラスの AAD のオーバーライド プロパティを使用し、コードでこれを実行することもできます。 ADAL 設定が静的なアプリケーションでは Info.plist を使用する方法をお勧めしますが、実行時にその値が決定されるアプリケーションでは override プロパティをお勧めします。 すべての SSO 設定が構成されたら、アプリが正常に認証された後、IntuneMAMEnrollmentManager の RegisterAndEnrollAccount メソッドにユーザーの UPN を指定する必要があります。
+      アプリで既に MSAL を使用してユーザーの認証が行われている場合は、アプリと Intune SDK 間のシングルサインオン (SSO) エクスペリエンスを構成できます。 まず、Intune SDK で使用される既定の AAD 設定を、使用するアプリの設定でオーバーライドする必要があります。 これを行うには、[iOS 用 Intune App SDK 開発者ガイド](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk)で説明しているように、アプリの Info.plist 内にある IntuneMAMSettings ディクショナリを利用できます。または、IntuneMAMSettings クラスの AAD のオーバーライド プロパティを使用し、コードでこれを実行することもできます。 MSAL 設定が静的なアプリケーションでは Info.plist を使用する方法をお勧めしますが、実行時にその値が決定されるアプリケーションでは override プロパティをお勧めします。 すべての SSO 設定が構成されたら、アプリが正常に認証された後、IntuneMAMEnrollmentManager の RegisterAndEnrollAccount メソッドにユーザーの UPN を指定する必要があります。
 
       ```csharp
       IntuneMAMEnrollmentManager.Instance.RegisterAndEnrollAccount(string identity);

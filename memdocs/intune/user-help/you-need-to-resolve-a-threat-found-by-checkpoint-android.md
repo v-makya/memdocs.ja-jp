@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 86e2305692c1e50af7cc2518f394b5c91cfed4f3
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2f6ba59ccc2832a66eb1a7b081008aa43b0c75bc
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882286"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866232"
 ---
-# <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>SandBlast Mobile Protect で検出された脅威を解決する
+# <a name="resolve-a-threat-found-by-sandblast-mobile-protect-on-android"></a>Android で SandBlast Mobile Protect によって検出された脅威を解決する
 
 SandBlast Mobile Protect は Mobile Threat Defender サービスであり、Android デバイスの潜在的な脅威を識別します。 ポータル サイト アプリから見ることができる脅威が報告されます。 脅威は非準拠に関する未解決の問題として、アプリに示されます。 これらの脅威が存在する限り、以下を実行できない可能性があります。   
 

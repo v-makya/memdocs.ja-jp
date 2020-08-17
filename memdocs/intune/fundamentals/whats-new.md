@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46c58437fab66b0a4fd22ea8452856ca701e9eb7
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 894ef12107b8e8b520ca69a463be47ef339bd9b4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546811"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051633"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
@@ -55,6 +55,15 @@ ms.locfileid: "87546811"
 ### Scripts
 
 <!-- ########################## -->
+## <a name="week-of-august-10-2020"></a>2020 年 8 月 10 日の週
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>デバイス管理
+
+#### <a name="tenant-attach-install-an-application-from-the-admin-center----in7220536-cm6024389--"></a>テナントのアタッチ:管理センターからアプリケーションをインストールする <!-- IN7220536 CM6024389-->
+Microsoft エンドポイント マネージャーの管理センターからテナントに接続されたデバイスへのアプリケーションのインストールを、リアルタイムで開始できるようになりました。 詳細については、「[テナントのアタッチ:管理センターからアプリケーションをインストールする](../../configmgr/tenant-attach/applications.md)」。
+
+<!-- ########################## -->
 ## <a name="week-of-july-27-2020"></a>2020 年 7 月 27 日の週
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -68,9 +77,6 @@ Power BI テンプレート アプリを使用すると、Power BI パートナ�
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>アプリ管理
-
-#### <a name="win32-app-installation-notifications-and-the-company-portal---7485945----"></a>Win32 アプリのインストール通知とポータル サイト<!-- 7485945  -->
-エンド ユーザーは、[Microsoft Intune Web ポータル サイト](https://portal.manage.microsoft.com/)に表示されるアプリケーションが、ポータル サイト アプリまたは Web ポータル サイトのどちらで開かれるようにするかを決めることができます。 このオプションは、エンド ユーザーがポータル サイト アプリをインストールしており、ブラウザーの外部で Web ポータル サイト アプリケーションを起動する場合にのみ使用できます。 
 
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Exchange On-Premises コネクタのサポート<!-- 7138486  -->
 Intune では、2007 (7 月) リリース以降、Intune サービスから Exchange On-Premises Connector 機能のサポートが削除されます。 アクティブなコネクタを使用している既存のお客様は、現時点では現在の機能を引き続きお使いいただけます。 新規のお客様や、アクティブなコネクタをお持ちでない既存のお客様は、Intune での新しいコネクタの作成、または Exchange ActiveSync (EAS) デバイスの管理ができなくなります。 そのようなお客様の場合、Microsoft では、Exchange の[ハイブリッド先進認証 (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) を使用して Exchange On-Premises へのアクセスを保護することをお勧めします。 HMA を使用すると、Intune App Protection ポリシー (MAM とも呼ばれます) と Outlook Mobile を使用した条件付きアクセスの両方が Exchange On-Premises に対して有効になります。

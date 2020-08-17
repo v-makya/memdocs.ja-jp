@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc8fb5b50475c523741128d64582be29d4bf5ffe
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: b8ce02a86236e390983b4e1ecca8d48d4767e49e
+ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262661"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87821633"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Intune を使ってマネージド Google Play アプリを Android Enterprise デバイスに追加する
 
@@ -175,8 +175,8 @@ Web リンクは、Microsoft Edge または選択して展開したその他の�
 ストアからのアプリを承認しても、 **[アプリ]** ワークロードに表示されない場合は、次の手順を実行して、即時同期を強制します。
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
-3. **[アプリ]**  >  **[テナント管理]**  >  **[コネクタとトークン]**  >  **[マネージ Google Play]** を選択します。
-5. **[Managed Google Play]** ウィンドウで、 **[更新]** を選択します。  
+3. **[テナント管理]**  >  **[コネクタとトークン]**  >  **[managed Google Play]** の順に選択します。
+5. **[managed Google Play]** ウィンドウで、 **[同期]** を選択します。  
     ページで、前回の同期の時刻と状態が更新されます。
 6. Microsoft Endpoint Manager 管理センターで、 **[アプリ]**  >  **[すべてのアプリ]** の順に選択します。  
     新しく使用可能になった Managed Google Play アプリが表示されます。

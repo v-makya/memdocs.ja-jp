@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7ce384a835bbc4b8d990bbd3ebf93b812647aa1d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 9ef18bc6554f5db364eaf320c66da12e7a5ffe7d
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882228"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866164"
 ---
-# <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>SandBlast Mobile Protect で検出された脅威を解決する
+# <a name="resolve-a-threat-found-by-sandblast-mobile-protect-on-ios"></a>iOS で SandBlast Mobile Protect によって検出された脅威を解決する
 
 SandBlast Mobile Protect は Mobile Threat Defender サービスであり、iOS デバイスの潜在的な脅威を識別し、評価します。 その後、脅威が報告され、ポータル サイト アプリから確認できます。 脅威は非準拠に関する未解決の問題として、アプリに示されます。 これらの脅威が存在する限り、次のことが行えなくなる可能性があります。   
 

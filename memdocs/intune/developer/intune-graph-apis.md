@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7acbd455ef720dd0ab17cce40eae8060c7a68c87
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: 541c607bebb57b1ee23df1af3ab80d29cdd0c6fc
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438635"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866130"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Azure AD を使用して Microsoft Graph の Intune API にアクセスする方法
 
@@ -308,7 +308,7 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 いずれかの例をテストすると、次のような HTTP ステータス 403 (禁止されています) のエラーが表示されることがあります。
 
-``` javascript
+```json
 {
   "error": {
     "code": "Forbidden",
@@ -339,6 +339,9 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 この例では、C# を使用して、Intune アカウントに関連付けられているデバイスの一覧を取得する方法を説明します。
 
+ > [!NOTE]
+  > Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
+
 1. Visual Studio を起動して、新しい Visual C# コンソール アプリ (.NET Framework) プロジェクトを作成します。
 
 2. プロジェクトの名前を入力し、必要に応じて他の詳細情報を入力します。
@@ -347,15 +350,11 @@ __Microsoft Intune の構成の読み取り__ | DeviceManagementServiceConfig.Re
 
 3. ソリューション エクスプローラーを使用して、プロジェクトに Microsoft ADAL NuGet パッケージを追加します。
 
-  > [!NOTE]
-  > Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
+    1. ソリューション エクスプローラーを右クリックします。
+    1. **[NuGet パッケージの管理...]** &gt; **[参照]** を選択します。
+    1. `Microsoft.IdentityModel.Clients.ActiveDirectory` を選択して、 **[インストール]** を選択します。
 
-
-   1. ソリューション エクスプローラーを右クリックします。
-   2. **[NuGet パッケージの管理...]** &gt; **[参照]** を選択します。
-   3. `Microsoft.IdentityModel.Clients.ActiveDirectory` を選択して、 **[インストール]** を選択します。
-
-   <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
+    <img src="../media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
 4. **Program.cs** の先頭に、次のステートメントを追加します。
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2020
+ms.date: 08/11/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7667cf1d62040c4435f41ffbe377452d3666a3ec
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 2c6f2eb7d6174c706cdd8a3910df1d0ddc2e6ef0
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85343118"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110683"
 ---
 # <a name="troubleshoot-pkcs-certificate-deployment-in-microsoft-intune"></a>Microsoft Intune での PKCS 証明書の展開のトラブルシューティング
 
@@ -129,6 +129,19 @@ Windows を実行するデバイスの場合、Windows イベント ログを使
 デバイスで、 **[イベント ビューアー]**  >  **[アプリケーションとサービス ログ]**  >  **[Microsoft]**  >  **[Windows]**  >  **[DeviceManagement-Enterprise-Diagnostics-Provider]** を開きます。
 
 ![Windows イベント ログ](../protect/media/troubleshoot-pkcs-certificate-profiles/windows-event-log.png)
+
+## <a name="antivirus-exclusions"></a>ウイルス対策の除外
+
+次の場合に、NDES または Certificate Connector をホストするサーバーでウイルス対策の除外を追加することを検討してください。
+
+- 証明書の要求はサーバーまたは Intune Certificate Connector に届いているが、正常に処理されていない 
+- 証明書の発行が遅い
+
+除外対象となる可能性がある場所の例を次に示します。
+
+- *%program_files%* \Microsoft Intune\PfxRequest
+- *%program_files%* \Microsoft Intune\CertificateRequestStatus
+- *%program_files%* \Microsoft Intune\CertificateRevocationStatus
 
 ## <a name="common-errors"></a>一般的なエラー
 

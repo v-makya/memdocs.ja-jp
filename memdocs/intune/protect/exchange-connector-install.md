@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e646ce40acaa156910f516c475cd6b0885989941
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: db9f275254a7b392491d01769db71d42f04c33f2
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462195"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048125"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>オンプレミスの Intune Exchange Connector を設定する
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/21/2020
+ms.date: 08/10/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf6a71a4d462e1025b6c44557a9513887488673
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 77a69af395aee293f927682f9d1a095c11a1d8a5
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891532"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048091"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune で SCEP 証明書プロファイルを作成して割り当てる
 
@@ -315,6 +315,8 @@ SCEP 証明書プロファイルを使用するには、信頼されたルート
 
 > [!NOTE]
 > - iOS/iPadOS デバイスでは、SCEP 証明書プロファイルまたは PKCS 証明書プロファイルが Wi-Fi プロファイルや VPN プロファイルなどの追加のプロファイルに関連付けられている場合、デバイスは、該当する追加のプロファイルの各々に対する証明書を受け取ります。 これにより、SCEP 証明書または PKCS 証明書の要求によって提供される複数の証明書を持つ iOS/iPadOS デバイスが存在するようになります。 
+> 
+>   SCEP によって提供される証明書はそれぞれ一意です。 PKCS によって提供される証明書は同じ証明書ですが、各プロファイル インスタンスは管理プロファイルの別の行で表されるため、異なるように見えます。
 > - iOS 13 および macOS 10.15 の場合は、[Apple によって文書化されている追加のセキュリティ要件](https://support.apple.com/HT210176)をいくつか考慮に入れる必要があります。  
 
 

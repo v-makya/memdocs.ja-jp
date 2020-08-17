@@ -17,12 +17,12 @@ ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8df3c23417f146821d6f9b73e8b68f59c71a31df
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 28eaf0462a91f20bb6a3c5bc5d6de65845e1f06b
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988954"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051606"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Intune へのデバイスの登録で多要素認証を要求する
 
@@ -36,7 +36,7 @@ MFA は、次の確認方法のうち 2 つ以上を必須にすることで機�
 - ユーザーの所持品 (電話など、容易には複製できない、信頼済みのデバイス)。
 - ユーザー自身 (指紋など、生体認証)
 
-MFA は、iOS/iPadOS、Android、Windows 8.1 以上、Windows Phone 8.1、または Windows 10 Mobile 以上のデバイスでサポートされています。
+MFA は、iOS/iPadOS、Android、Windows 8.1 以降のデバイスでサポートされています。
 
 MFA を有効にするには、エンド ユーザーは 2 種類の資格情報を提供し、デバイスを登録する必要があります。
 

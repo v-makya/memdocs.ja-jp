@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/19/2020
+ms.date: 08/06/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28401c314d70f1d810fe12e815d8558afc8aab89
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 9688397218539ef3cc16f6fed91380e1820dbb15
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502597"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997979"
 ---
 # <a name="app-protection-policies-overview"></a>アプリ保護ポリシーの概要
 
@@ -323,6 +323,11 @@ Intune アプリ保護ポリシーでは、アプリへのアクセスを制御�
   
 ### <a name="ios-share-extension"></a>iOS 共有拡張機能
 データ転送ポリシーで **[マネージド アプリのみ]** または **[アプリなし]** に設定されている場合であっても、iOS/iPadOS 共有拡張機能を使用すると、アンマネージド アプリ内の職場または学校のデータを開くことができます。 Intune アプリ保護ポリシーは、デバイスを管理することなく iOS/iPadOS 共有拡張機能を制御することはできません。 したがって、Intune は _**"企業" データがアプリの外部で共有される前に、データを暗号化します**_。 マネージド アプリの外部で "企業" ファイルを開いてみると、この暗号化の動作を確認できます。 ファイルは暗号化されていて、管理対象アプリの外部では開くことができないはずです。
+
+### <a name="universal-links-support"></a>ユニバーサル リンクのサポート
+既定では、Intune アプリ保護ポリシーによって、承認されていないアプリケーション コンテンツへのアクセスが禁止されています。 iOS/iPadOS には、[ユニバーサル リンク](https://developer.apple.com/ios/universal-links/)を使用して特定のコンテンツまたはアプリケーションを開く機能があります。 
+
+ユーザーがアプリのユニバーサル リンクを無効にするには、Safari でアクセスし、 **[新規タブで開く]** または **[開く]** を選択します。 Intune アプリ保護ポリシーを使用してユニバーサル リンクを使用するには、ユニバーサル リンクを再度有効にすることが重要です。 エンド ユーザーは、Safari で対応するリンクを長く押した後に、 **[ <***アプリ名***> で開く]** を選択する必要があります。 これにより、追加の保護されたアプリすべてに対して、すべてのユニバーサル リンクをデバイス上の保護されたアプリケーションにルーティングするよう求められます。
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>同じアプリとユーザーのセットに対する複数の Intune アプリ保護アクセスの設定
 エンドユーザー デバイスが会社のアカウントから対象のアプリにアクセスしようとすると、アクセスに関する Intune アプリ保護ポリシーが所定の順序で適用されます。 通常、優先順位は、ワイプ、ブロック、無視できる警告となります。 たとえば、特定のユーザーまたはアプリに適用可能な場合、ユーザーのアクセスをブロックする最小の iOS/iPadOS オペレーティング システム設定の後、iOS/iPadOS バージョンを更新するようユーザーに警告する最小の iOS/iPadOS オペレーティング システム設定が適用されます。 したがって、IT 管理者が最小の iOS オペレーティング システムを 11.0.0.0 に構成し、最小の iOS オペレーティング システム (警告のみ) を 11.1.0.0 に構成した状態で、アプリにアクセスしようとしているデバイスが iOS 10 にあった場合、エンド ユーザーは最小の iOS オペレーティング システム バージョンに対するより制限の厳しい設定に基づいてブロックされ、その結果、アクセスがブロックされます。

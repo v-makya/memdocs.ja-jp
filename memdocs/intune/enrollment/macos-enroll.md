@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1de1b015daad50837142ce9628543f0b2d7587d7
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 7c0973805a0646ec7df87f36eea183a9456f7e39
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093765"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865508"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Intune で macOS デバイスの登録をセットアップする
 
@@ -62,6 +62,7 @@ macOS デバイスの登録を設定する前に、以下の前提条件を満�
 Intune は、ユーザーのデバイスを購入する組織のため、次の会社所有の macOS デバイスの登録方法をサポートします。
 - [Apple の自動デバイス登録 (ADE)](device-enrollment-program-enroll-macos.md): 組織は ADE から macOS デバイスを購入できます。 ADE では、登録プロファイルを "無線で" 展開して、デバイスを管理対象にすることができます。
 - [デバイス登録マネージャー (DEM)](device-enrollment-manager-enroll.md):DEM アカウントを使用して、最大で 1,000 台のデバイスを登録できます。
+- [直接登録](device-enrollment-direct-enroll-macos.md): 直接登録では、デバイスはワイプされません。
 
 ## <a name="block-macos-enrollment"></a>macOS の登録をブロックする
 既定では、Intune で macOS デバイスを登録できます。 macOS デバイスの登録をブロックする場合は、「[Set device type restrictions](enrollment-restrictions-set.md)」 (デバイスの種類の制限を設定する) を参照してください。

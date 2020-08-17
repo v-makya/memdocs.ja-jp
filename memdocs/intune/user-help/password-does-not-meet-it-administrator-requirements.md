@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aed17d518213f875e15f2261ec1a18640357203a
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4f53aa731dbe7483f7fbe97c509a82677072c25c
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880935"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88047977"
 ---
 # <a name="device-password-requirements-for-enrolled-devices"></a>登録済みデバイスのデバイス パスワード要件
 
@@ -89,13 +89,15 @@ ms.locfileid: "83880935"
 | パスワードの有効期限が切れています。 | 新しいパスワードを設定します。 組織によって、一定の日数が経過した後にパスワードを変更することが要求されています。 |
 | パスワードがごく最近に使用されました。 | 前に使ったことのないパスワードを選択してください。 組織によって、パスワードを再利用する前に一定の時間が経過していることが要求されています。 |
 
-## <a name="next-steps"></a>次のステップ
+## <a name="update-password-passcode-pin"></a>パスワード、パスコード、PIN を更新する
 
-デバイスのパスワード、パスコード、または PIN を作成または変更するには、次の記事を参照してください。  
+次の記事では、デバイスのパスワード、パスコード、または PIN を変更する方法を説明しています。 最新の手順については、デバイスの製造元のヘルプ ドキュメントを参照してください。 
 
 - [Windows 10 デバイスのパスワードを設定する](set-or-change-your-password-windows.md)  
 - [iOS デバイスのパスコードを設定する](set-or-change-your-passcode-ios.md)  
 - [Android デバイスの PIN またはパスワードを設定する](set-your-pin-or-password-android.md)  
+
+## <a name="next-steps"></a>次のステップ
 
 サポートが必要な場合は、 サポート担当者にお問い合わせください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。  
 

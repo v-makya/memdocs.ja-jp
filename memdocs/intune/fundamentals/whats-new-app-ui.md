@@ -1,12 +1,12 @@
 ---
-title: Intune とエンド ユーザー アプリの UI の更新
+title: Intune とエンド ユーザー アプリの UI の更新 | Microsoft Docs
 titleSuffix: Microsoft Intune
 description: Microsoft Intune を使用したエンド ユーザー デバイスで動作するアプリの UI の変更点について説明します。
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11aba38d63621472b5e8513b066b96120d649c31
-ms.sourcegitcommit: 9a8a9cc7dcb6ca333b87e89e6b325f40864e4ad8
+ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740880"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048159"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune とエンド ユーザー アプリの UI の更新
 
@@ -34,6 +34,13 @@ Microsoft Intune アプリに対する最新の更新プログラムについて
 
 従業員または学生である場合は、必ず、ポータル サイトのヘルプ ドキュメントへのリンクとスクリーンショットを確認してください。 ポータル サイト アプリを使用する方法の詳細については、[ポータル サイト ユーザーのヘルプ ドキュメント](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)を参照してください。  
 
+## <a name="week-of-august-10-2020"></a>2020 年 8 月 10 日の週
+
+### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-shows-descriptions---7414768---"></a>Android 用ポータル サイト アプリの [デバイス設定の更新] ページを説明が表示されるように改善<!-- 7414768 -->
+
+Android デバイス上のポータル サイト アプリの **[デバイス設定の更新]** ページには、準拠するために更新する必要がある設定の一覧が表示されます。 ユーザーは問題を展開して詳細情報を確認し、 **[解決]** ボタンを表示します。
+
+このユーザー エクスペリエンスが改善されました。 一覧表示される設定が既定で展開されて、説明が表示され、 **[解決]** ボタン (適用できる場合) が表示されるようになりました。 以前は、問題は既定では折りたたまれていました。 この新しい既定の動作によってクリック回数が減るため、ユーザーがより迅速に問題を解決できるようになります。
 
 ## <a name="week-of-june-8-2020"></a>2020 年 6 月 8 日の週 
 

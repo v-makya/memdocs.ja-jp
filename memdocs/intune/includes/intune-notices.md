@@ -4,27 +4,24 @@ description: インクルード ファイル
 author: ErikjeMS
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 03/30/2020
+ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 79e2694cfd34f1db8bf11969506ec3d8cbc453d4
-ms.sourcegitcommit: 8a9b85d1c879060ea541f7c8ad1ae34a4ed33ed0
+ms.openlocfilehash: af506f9eee80d167b42827f93958fc2a3a5741a4
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87507568"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051632"
 ---
 以下の通知では、今後の Intune の変更と機能に備えるために役立つ重要な情報が提供されます。
 
-### <a name="microsoft-intune-support-for-windows-10-mobile-ending--3544938--"></a>Windows 10 Mobile 終了のための Microsoft Intune のサポート<!--3544938-->
-Windows 10 Mobile の Microsoft メインストリーム サポートは、2019 年 12 月に終了しました。 このサポートの声明に記載されているように、Windows 10 Mobile のユーザーは、新しいセキュリティ更新プログラム、セキュリティ以外の修正プログラム、無償のサポート オプション、Microsoft からのオンライン技術コンテンツ更新プログラムを受け取ることができなくなります。 Microsoft Intune は、すべてのモバイル OS のサポートに基づいて、2020 年 8 月 10 日に Windows 10 Mobile アプリと Windows 10 Mobile オペレーティング システムの両方のポータル サイトのサポートを終了することになりました。
+### <a name="microsoft-intune-ends-support-for-windows-phone-81-and-windows-10-mobile---3544938-3544909---"></a>Microsoft Intune での Windows Phone 8.1 と Windows 10 Mobile のサポートが終了<!-- 3544938, 3544909 -->
+Windows Phone 8.1 に対する Microsoft のメインストリーム サポートは 2017 年 7 月に終了し、拡張サポートは 2019 年 6 月に終了しました。 Windows Phone 8.1 用のポータル サイト アプリは、2017 年 10 月から維持モードになっています。 さらに、2020 年 2 月 20 日に、Windows Phone 8.1 に対する Microsoft Intune のサポートが終了しました。 
 
-#### <a name="how-does-this-affect-me"></a>ユーザーへの影響
-Windows 10 Mobile のデバイスが組織に展開されている場合、今から 2020 年 8 月 10 日まで、新しいデバイスを登録したり、ポリシーとアプリを追加または削除したり、管理設定を更新したりできます。 8 月 10 日以降は、新しい登録が停止され、最終的に Intune UI から Windows 10 Mobile の管理が削除されます。 デバイスが Intune サービスにチェックインされなくなり、デバイスとポリシーのデータが削除されます。  
+Windows 10 Mobile の Microsoft メインストリーム サポートは、2019 年 12 月に終了しました。 サポートの声明に記載されているように、Windows 10 Mobile のユーザーは、新しいセキュリティ更新プログラム、セキュリティ以外の修正プログラム、無償のサポート オプション、Microsoft からのオンライン技術コンテンツ更新プログラムを受け取ることができなくなります。 Microsoft Intune は、すべてのモバイル OS のサポートに基づいて、2020 年 8 月 10 日に Windows 10 Mobile アプリと Windows 10 Mobile オペレーティング システムの両方のポータル サイトのサポートを終了します。
 
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>この変更に対して必要な準備
-Intune レポートをチェックして、影響を受ける可能性のあるデバイスまたはユーザーを確認できます。 **[デバイス]**  >  **[すべてのデバイス]** の順に移動し、OS でフィルター処理します。 さらに列を追加して、Windows 10 Mobile を稼働しているデバイスを持つ組織内のユーザーの特定に役立てることができます。 エンド ユーザーに対して、デバイスのアップグレードや、会社にアクセスするためのデバイスの使用中止を要求してください。
-
+8 月 10 日の時点で、Windows Phone 8.1 と Windows 10 Mobile デバイスの登録は失敗し、Windows Mobile のプロファイルの種類は Intune UI から削除されます。 登録済みのデバイスは Intune サービスにチェックインされなくなり、デバイスとポリシーのデータが削除されます。
 
 ### <a name="end-of-support-for-legacy-pc-management"></a>従来の PC 管理のサポート終了
 

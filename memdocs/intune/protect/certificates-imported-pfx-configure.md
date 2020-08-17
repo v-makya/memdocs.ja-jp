@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d09f3a2e734709f769aebcd4e8aab4fec774d4fc
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 630d270202f1064c9e80e7cb87df3929138ee54a
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461829"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048108"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Intune でインポートした PKCS 証明書を構成して使用する
 
@@ -56,7 +56,8 @@ Intune では、次のプラットフォーム用の PFX 証明書のインポ�
 
 - **PFX Certificate Connector for Microsoft Intune**:
 
-  各 Intune テナントでは、このコネクタの 1 つのインスタンスがサポートされます。 Microsoft Intune Certificate Connector のインスタンスと同じサーバー上に、このコネクタをインストールできます。
+  各 Intune テナントによって、このコネクタの複数のインスタンスがサポートされます。 各コネクタに、アップロードした PFX ファイルのパスワードの暗号化に使用される秘密キーへのアクセス権を確保します。
+  Microsoft Intune Certificate Connector のインスタンスと同じサーバー上に、このコネクタをインストールできます。
 
   このコネクタでは、特定のユーザーを対象にした S/MIME メールの暗号化のために Intune にインポートされる PFX ファイルに対する要求を処理します。
 

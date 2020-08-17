@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a8d48235141c0b5ad07fbdce4d24e894f8103e6f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882404"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048040"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>iOS デバイスからの会社のリソースへのアクセスを設定する  
 
@@ -35,12 +35,12 @@ ms.locfileid: "83882404"
 > [!NOTE]
 > Microsoft では、いかなる理由でも、Microsoft のサービスによって収集されたデータを第三者に販売することはありません。  
 
-デバイスから職場または学校の情報へのアクセスを維持するには、組織の推奨される設定と一致するようにデバイスを構成する必要があります。 この記事では、ポータル サイトを使用してデバイスを登録し、組織の設定要件を維持する方法について説明します。  
+デバイスから職場または学校の情報へのアクセスを維持するには、組織の推奨される設定と一致するようにデバイスを構成する必要があります。 この記事では、ポータル サイトを使用してデバイスを登録し、アクセス要件を維持する方法について説明します。  
 </br>
 > [!VIDEO https://www.youtube.com/embed/mJyv6YcHi7c?rel=0]
 
 > [!NOTE]
-> メール アプリで会社のメールにアクセスしようとしたときに、デバイスを管理対象にすることを求めるメッセージが表示された場合は問題ありません。 iOS デバイスから電子メールやその他の会社リソースにアクセスするには、以下の手順に従います。  
+> メール アプリで職場のメールにアクセスしようとしたときに、デバイスを管理対象にすることを求めるメッセージが表示された場合は問題ありません。 iOS デバイスで電子メールやその他の職場のリソースにアクセスできるようにするには、以下の手順に従います。  
 
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>ポータル サイト アプリでできること  
@@ -56,13 +56,17 @@ ms.locfileid: "83882404"
 
 登録の詳細については、[ポータル サイト アプリをインストールして、デバイスを登録するとどうなるか](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios)についてのページを参照してください。  
 
+## <a name="prerequisties"></a>前提条件  
+
+* App Store に移動して、[Intune ポータル サイト アプリ](install-and-sign-in-to-the-intune-company-portal-app-ios.md)をダウンロードしてデバイスにインストールします。 
+* すべての手順が完了するまで Wi-Fi 接続を維持します。
+* デバイス上の Safari Web ブラウザーにアクセスできるようにします。
+
 ## <a name="enroll-your-ios-device"></a>iOS デバイスを登録する  
 
-App Store に移動して、[Intune ポータル サイト アプリ](install-and-sign-in-to-the-intune-company-portal-app-ios.md)をダウンロードしてデバイスにインストールします。 また、登録中は、Wi-Fi 接続を維持し、Safari にアクセスできる必要があります。 
+登録時に数分以上一時停止すると、ポータル サイト アプリが閉じたりセットアップが終了したりする場合があります。 これが発生した場合は、アプリを再度開いて、もう一度やり直してください。  
 
-登録時に数分以上一時停止すると、アプリが閉じたりセットアップが終了したりする場合があります。 これが発生した場合は、ポータル サイト アプリを開いてもう一度やり直してください。  
-
-1. ポータル サイトを開き、職場または学校アカウントでサインインします。  
+1. Intune ポータル サイト アプリを開き、職場または学校アカウントでサインインします。  
 
 2. ポータル サイトの通知を受け取るように求められたら、 **[許可]** をタップします。 ポータル サイトでは、たとえばデバイスの設定を更新する必要がある場合に、通知を使用してアラートを表示します。  
 

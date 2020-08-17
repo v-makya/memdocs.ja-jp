@@ -19,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 06e6b170667d16afa699706e2349e01710a0dc6e
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 27a251a4f0bacd41d5cbf2e69d194b01c0a93def
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880886"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866249"
 ---
-# <a name="you-need-to-identify-your-device-when-youre-trying-to-enroll"></a>登録試行時にデバイスを識別する必要がある
+# <a name="youre-asked-to-identify-your-macos-device-during-enrollment"></a>登録時に macOS デバイスを識別するよう求められる
 
 Intune に macOS デバイスを登録している最中に、デバイスを識別するように求める画面が表示される場合は、ポータル サイト アプリ以外の方法を使用して、少なくとも 1 つのデバイスが既に登録されてアカウントに割り当てられています。 ポータル サイト アプリを正常に動作させるためには、使用しているデバイスが既に Intune に登録されているかどうかを識別する必要があります。
 

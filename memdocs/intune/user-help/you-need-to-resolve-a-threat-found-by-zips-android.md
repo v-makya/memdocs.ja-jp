@@ -17,14 +17,14 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 6d9507b5aaefce58df9e4ce0c833c1da88e7e93f
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 8421ee84c38727b9732dddf0ed63c62e940eab66
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882548"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866147"
 ---
-# <a name="resolve-a-threat-found-by-zimperium-zips"></a>Zimperium zIPS によって検出された脅威を解決する
+# <a name="resolve-a-threat-found-by-zimperium-zips-on-android"></a>Android で Zimperium zIPS によって検出された脅威を解決する
 
 Zimperium zIPS は Mobile Threat Defender サービスであり、Android デバイスの潜在的な脅威を識別します。 これらの脅威はポータル サイト アプリに報告され、非準拠に関する未解決の問題として示されます。 デバイスが非準拠であると識別された場合、以下を実行できない可能性があります。
 

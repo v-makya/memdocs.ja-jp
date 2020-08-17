@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa06e5fee4658ad3c7f19ec39bd126ce69d8cd41
-ms.sourcegitcommit: 4dc2e3c54a18fca98553dd46703e91819e2433d7
+ms.openlocfilehash: 05a0c4e5a78281f78a986d0512abfeca155494dd
+ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891515"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051674"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Apple の自動デバイス登録を使用して iOS または iPadOS デバイスを自動登録する
 
@@ -328,23 +328,28 @@ Apple と Intune の間の管理と同期を有効にし、ADE デバイスを�
 > [!NOTE]
 > ADE トークンの毎年の更新に加えて、Apple Business Manager でトークンを設定したユーザーの管理対象 Apple ID のパスワードが変更された場合、またはそのユーザーが Apple Business Manager 組織を脱退した場合に、Intune および Apple Business Manager 内の Enrollment Program トークンを更新する必要があります。
 
-1. business.apple.com に移動します。  
-2. **[サーバーの管理]** で、更新するトークン ファイルに関連付けられた MDM サーバーを選択します。
-3. **[新しいトークンの生成]** を選択します。
+1. business.apple.com に移動します。
+2. **[Settings]\(設定\)** (左下) をクリックします。
+3.  **[MDM Servers]\(MDM サーバー\)** で、更新する ADE または DEP トークンに関連付けられた MDM サーバーを選択します。
+4. **[Download token]\(トークンのダウンロード\)** をクリックします。
 
     ![生成された新しいトークンのスクリーンショット。](./media/device-enrollment-program-enroll-ios/generatenewtoken.png)
 
-4. **[Your Server Token]\(サーバー トークン\)** を選択します。  
-5. [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS/iPadOS enrollment]\(iOS/iPadOS の登録\)**  >  **[Enrollment Program トークン]** を選択し、トークンを選択します。
+5. プロンプトが表示されたら、[Download Server Token]\(サーバー トークンをダウンロードする\) を選択します。
+> [!NOTE]
+> プロンプトに示されているようにトークンを更新しない場合は、 **[Download Server Token]\(サーバー トークンをダウンロードする\)** をクリックしないでください。この操作を行うと、Intune (または、さらに言えばその他の MDM ソリューション) によって現在使用されているトークンが無効になります。 トークンを既にダウンロードしている場合は、トークンが更新されるまで、次の手順を続行してください。
+
+6. 次に、トークンをダウンロードした後、[Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[iOS/iPadOS]**  >  **[iOS/iPadOS enrollment]\(iOS/iPadOS の登録\)**  >  **[Enrollment Program トークン]** の順に選択し、トークンを選択します。
     ![Enrollment Program トークンのスクリーンショット。](./media/device-enrollment-program-enroll-ios/enrollmentprogramtokens.png)
 
-6. **[トークンを更新する]** を選択し、元のトークンの作成に使用した Apple ID を入力します。  
+7. **[トークンを更新する]** を選択し、元のトークンの作成に使用した Apple ID を入力します (自動的に設定されていない場合)。  
     ![生成された新しいトークンのスクリーンショット。](./media/device-enrollment-program-enroll-ios/renewtoken.png)
 
-7. **[次へ]** を選択して **[スコープ タグ]** ページに移動し、必要に応じてスコープ タグを割り当てます。
+8. 新しくダウンロードしたトークンをアップロードします。
 
-8. **[次へ]** を選択し、新しくダウンロードしたトークンをアップロードします。  
-9. **[トークンを更新する]** を選択します。 トークンが更新されたことの確認が表示されます。   
+9. **[次へ]** を選択して **[スコープ タグ]** ページに移動し、必要に応じてスコープ タグを割り当てます。
+
+10. **[トークンを更新する]** を選択します。 トークンが更新されたことの確認が表示されます。   
     ![確認のスクリーンショット。](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
 ## <a name="delete-an-automated-device-enrollment-token-from-intune"></a>自動デバイス登録トークンを Intune から削除する

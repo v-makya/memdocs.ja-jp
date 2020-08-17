@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7894e2648b58b1afd313250dc9724f117fe6c93a
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 6d50d7f8e4edeaf6d88875fafef977936909d71f
+ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216537"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88110734"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows デバイスの一括登録
 
@@ -100,4 +100,4 @@ Azure AD ユーザーはこれらのデバイス上の標準ユーザーであ�
 オープン ネットワークを使用していない場合は、[デバイス レベルの証明書](../protect/certificates-configure.md)を使用して接続を開始する必要があります。 一括登録されたデバイスは、ネットワーク アクセスのためにユーザー対象の証明書に使用することはできません。 
 
 ### <a name="conditional-access"></a>条件付きアクセス
-条件付きアクセスは、一括登録を使用して登録された Windows デバイスでは使用できません。
+条件付きアクセスは、Windows 10 1803+ を除き、一括登録を使用して登録された Windows デバイスでは使用できません。

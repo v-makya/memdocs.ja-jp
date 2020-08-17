@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 3ebca81f459f0e49345db08f992c288514a7331a
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a0d1ee33e3aca6dbb6ff6e349eb9a578aad6ae88
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461608"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048074"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティの攻撃の回避ポリシー設定
 
@@ -181,10 +181,10 @@ ms.locfileid: "86461608"
   - **コンポーネントとストア アプリの適用**
   - **コンポーネントとストア アプリの監査**
   - **コンポーネント、ストア アプリ、Smartlocker の適用**
-  - **コンポーネント、ストア アプリ、Smartlocker の監査**
+  - **コンポーネント、ストア アプリ、Smartlocker の監査** CSP:[AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
 
 - **ユーザーが SmartScreen 警告を無視できないようにする**  
-  [PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+  CSP:[SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
 
   - **[未構成]** ("*既定*") - ユーザーはファイルや悪意のあるアプリに関する SmartScreen の警告を無視できます。
   - **[はい]** - SmartScreen は有効になっており、ファイルや悪意のあるアプリに関する警告をユーザーは無視できません。

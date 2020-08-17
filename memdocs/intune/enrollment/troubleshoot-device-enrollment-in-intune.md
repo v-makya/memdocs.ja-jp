@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8f400c946f26de272b782194df3f1b1930ab0b4
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
+ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093498"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865824"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune でのデバイス登録に関するトラブルシューティング
 
@@ -290,7 +290,9 @@ Android デバイスでは、[SSL のサーバー ハロー](https://technet.mic
 
 ユーザー アフィニティがある ADE デバイスを登録するには、ユーザー トークンを要求するよう WS-Trust 1.3 Username/Mixed エンドポイントを有効にする必要があります。 Active Directory は既定でこのエンドポイントを有効にします。 有効なエンドポイントの一覧を表示するには、Get-AdfsEndpoint PowerShell コマンドレットを使用し、trust/13/UsernameMixed エンドポイントを探します。 次に例を示します。
 
-      Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```powershell
+Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
+```
 
 詳細については、[Get-AdfsEndpoint のドキュメント](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)を参照してください。
 
@@ -422,7 +424,7 @@ VPP トークンを使用して問題を修正した後は、ブロックされ�
 |--------------|--------------------|----------------------------------------|
 |0x80CF0437 |クライアント コンピューターのクロックが正しい時刻に設定されていません。|クライアント コンピューターのクロックおよびタイム ゾーンが正しく設定されていることを確認してください。|
 |0x80240438、0x80CF0438、0x80CF402C|Intune サービスに接続できません。 クライアントのプロキシ設定を確認してください。|Intune がクライアント コンピューターでプロキシ構成をサポートしていることを確認します。 クライアント コンピューターがインターネットに接続していることを確認します。|
-|0x80240438、0x80CF0438|Internet Explorer とローカル システムのプロキシ設定が構成されていません。|Intune サービスに接続できません。 クライアントのプロキシ設定を確認します。Intune がクライアント コンピューターでプロキシ構成をサポートしていることを確認します。 クライアント コンピューターがインターネットに接続していることを確認します。|
+|0x80240438、0x80CF0438|Internet Explorer とローカル システムのプロキシ設定が構成されていません。|Intune サービスに接続できません。 クライアントのプロキシ設定を確認してください。 Intune がクライアント コンピューターでプロキシ構成をサポートしていることを確認します。 クライアント コンピューターがインターネットに接続していることを確認します。|
 |0x80043001、0x80CF3001、0x80043004、0x80CF3004|登録パッケージが最新ではありません。|[管理] ワークスペースを使用して、最新のクライアント ソフトウェア パッケージをダウンロードしてインストールしてください。|
 |0x80043002、0x80CF3002|アカウントがメンテナンス モードです。|アカウントがメンテナンス モードになっている場合は、新しいクライアント コンピューターを登録することはできません。 自分のアカウントの設定を見るには、アカウントにサインインしてください。|
 |0x80043003、0x80CF3003|アカウントが削除されています。|Intune のアカウントとサブスクリプションがアクティブであることを確認します。 自分のアカウントの設定を見るには、アカウントにサインインしてください。|

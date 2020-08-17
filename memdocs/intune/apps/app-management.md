@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 617c6b89bfc52d926e2ddb422c36db39edec6908
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 99dc504f8fc3148463288820dc810bab892e3081
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093050"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912389"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Microsoft Intune アプリの管理とは
 
@@ -51,8 +51,8 @@ Intune MAM では次の 2 つの構成をサポートしています。
 
 Intune では、アプリを実行するデバイス上で必要なアプリを取得するのに役立つさまざまな機能を提供しています。 次の表に、アプリの管理機能の概要を示します。
 
-|  | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
-|-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
+| アプリの管理機能 | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
+|-------------------------- | -------------------------- | ---------- | ----- | ---------- | ----------------- |
 | デバイスとユーザーにアプリを追加して割り当てる | はい | はい | はい | はい | はい |
 | Intune に登録されていないデバイスにアプリを割り当てる | はい | はい | いいえ | いいえ | いいえ |
 | アプリ構成ポリシーを使用してアプリのスタートアップ動作を制御する | はい | はい | いいえ | いいえ | いいえ |

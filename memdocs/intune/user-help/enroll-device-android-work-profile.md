@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/08/2020
+ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,16 +19,18 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2be81c19a48d89876f71293e6f868d8cee0e1192
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 39d68f7cec9cdd4baef84d07d7284f6407f659c5
+ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531402"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88048057"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Android の仕事用プロファイルでデバイスを登録する
 
-自分の個人用の Android デバイスを登録して、職場または学校のメール、アプリ、その他のデータにアクセスできます。 登録中に、Android の仕事用プロファイルを設定します。 このプロファイルにより、デバイス上の個人データが作業データから分離されます。 仕事用プロファイルは組織によって管理されます。これは作業ファイルとデータで構成されます。 会社のサポートでは、デバイス上の個人情報は管理できません。  
+自分の個人用の Android デバイスを登録して、職場または学校のメール、アプリ、その他のデータにアクセスできます。 登録の間、Android の仕事用プロファイルを設定します。これはデバイス上の個人データと仕事のデータを分けるものです。 この種類のセットアップを行う必要があるユーザーには、お客様の組織の優先通信チャネルまたは Intune ポータル サイト アプリを通じて、組織から通知されます。 
+
+プロファイルが設定されると、作業ファイルと作業データのみで構成される仕事に関する部分は、組織によって管理されます。 会社のサポートでは、デバイス上の個人情報は管理できません。  
 </br>
 > [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI]
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2020
+ms.date: 08/05/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35ee8b225abe48aa4b8b0ca78b9e5b137d0721f6
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: 49d731ef6e9508367ded8ed5d711b744be7d2db1
+ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758365"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87912543"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>iOS および Android 用の Edge と Microsoft Intune を使用して Web アクセスを管理する
 
@@ -114,7 +114,7 @@ iOS および Android 用の Edge は、Microsoft Endpoint Manager などの統�
 
 ## <a name="general-app-configuration-scenarios"></a>一般的なアプリ構成シナリオ
 
-iOS および Android 用の Edge では、管理者は、いくつかのアプリ内設定について既定の構成をカスタマイズできます。 この機能は、現在、iOS および Android 用の Edge で、アプリにサインインしている職場または学校のアカウントに対して Intune アプリ保護ポリシーが適用されている場合にのみ提供されます。
+iOS および Android 用の Edge では、管理者は、いくつかのアプリ内設定について既定の構成をカスタマイズできます。 この機能は、現在、iOS および Android の Edge で、アプリにサインインしている職場または学校のアカウントに Intune App Protection ポリシーが適用されていて、ポリシー設定がマネージド アプリのアプリ構成ポリシーを介して配信されている場合にのみ提供されます。
 
 > [!IMPORTANT]
 > Android 用の Edge では、マネージド Google Play で使用できる Chromium 設定がサポートされていません。
@@ -246,12 +246,12 @@ Android 用の Edge は、次の設定を使用して、キオスク アプリ�
 |    キー    |    値    |
 |-----------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.enableKioskMode    |    **true** を設定すると、Android 用の Edge でキオスク モードが有効になります<br>**false** (既定値) を設定すると、キオスク モードが無効になります    |
-|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** を設定すると、キオスク モードでアドレス バーが表示されます<br> **false** (既定値) を設定すると、キオスク モードでアドレスバーが非表示になります    |
-|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** を設定すると、キオスク モードで下部のアクション バーが表示されます<br> **false** (既定値) を設定すると、キオスク モードで下部のバーが非表示になります    |
+|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** を設定すると、キオスク モードでアドレス バーが表示されます<br> **false** (既定値) を設定すると、キオスク モードが有効な場合にアドレス バーが非表示になります    |
+|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** を設定すると、キオスク モードで下部のアクション バーが表示されます<br> **false** (既定値) を設定すると、キオスク モードが有効な場合に下部のバーが非表示になります    |
 
 ## <a name="data-protection-app-configuration-scenarios"></a>データ保護アプリ構成シナリオ
 
-アプリが Microsoft Endpoint Manager によって管理されていて、アプリにサインインしている職場または学校のアカウントに Intune アプリ保護ポリシーが適用されている場合、iOS および Android 用の Edge は、次のデータ保護設定のためのアプリ構成ポリシーをサポートします。
+アプリが Microsoft Endpoint Manager によって管理され、アプリにサインインしている職場または学校のアカウントに Intune アプリ保護ポリシーが適用されており、ポリシー設定がマネージド アプリのアプリ構成ポリシーを介して配信されている場合、iOS および Android 用の Edge によって、次のデータ保護設定のためのアプリ構成ポリシーがサポートされます。
 
 - アカウントの同期を管理する
 - 制限付き Web サイトを管理する
