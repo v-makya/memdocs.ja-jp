@@ -13,12 +13,12 @@ ms.audience: itpro
 author: greg-lindsay
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b86c59b2ef38ea54dd2d7bc0d0d237aeafc30b02
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: df7b4bc3cbac23024dc8d108a91defebbf6dde38
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559554"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614689"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>ホワイトグローブ展開のための Windows 自動操縦
 
@@ -59,7 +59,7 @@ Windows の自動操縦は、プレインストールされた OEM イメージ�
 
 これらのシナリオを完了できない場合、ホワイトグローブ展開の Windows 自動操縦も、これらのシナリオの上に構築されるため、成功しません。
 
-プロビジョニングサービス機能でホワイトグローブプロセスを開始する前に、rIntune アカウントを使用して、追加の自動操縦プロファイル設定を構成する必要があります。
+プロビジョニングサービス機能でホワイトグローブプロセスを開始する前に、Intune アカウントを使用して、さらに自動操縦プロファイル設定を構成する必要があります。
 
  ![ホワイトグローブを許可する](images/allow-white-glove-oobe.png)
 
