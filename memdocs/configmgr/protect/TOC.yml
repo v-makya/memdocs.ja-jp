@@ -121,7 +121,7 @@
     - name: Wi-Fi、VPN、電子メール、および証明書プロファイルの展開
       href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
     - name: 使用条件の設定
-      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/sccm/protect/toc.json&bc=/sccm/protect/breadcrumb/toc.json
+      href: ../mdm/understand/what-happened-to-hybrid.md?toc=/mem/configmgr/protect/toc.json&bc=/mem/configmgr/protect/breadcrumb/toc.json
     - name: モニターの保護
       items:
         - name: Wi-Fi、電子メール、VPN プロファイルの監視

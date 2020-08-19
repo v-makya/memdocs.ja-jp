@@ -48,12 +48,12 @@
         - name: ソフトウェア更新プログラムの自動展開
           href: deploy-use/automatically-deploy-software-updates.md
         - name: 段階的な展開を作成する
-          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json
     - name: ソフトウェア更新プログラムの監視
       href: deploy-use/monitor-software-updates.md
       items:
         - name: 段階的な展開の管理と監視
-          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json
     - name: ソフトウェア更新プログラムのメンテナンス
       href: deploy-use/software-updates-maintenance.md
     - name: オーケストレーション グループ

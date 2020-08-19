@@ -750,7 +750,7 @@
         - name: Linux および UNIX クライアントを管理する方法
           href: clients/manage/manage-clients-for-linux-and-unix-servers.md
         - name: Azure Monitor にデータを同期する
-          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=sccm/core/context/core-context'
+          href: 'https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context'
         - name: Mac クライアントを維持する
           href: clients/manage/maintain-mac-clients.md
         - name: Surface デバイス ダッシュボード

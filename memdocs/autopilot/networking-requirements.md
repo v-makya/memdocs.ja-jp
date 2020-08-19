@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 24566a248017caa29fb286c59161fd1ea2ad9e3c
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 18031ff51e8086d29f706110946adeacb63d908e
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88253339"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88590906"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Windows Autopilot ネットワーク要件
 
@@ -65,7 +65,7 @@ Windows Update にアクセスできない場合でも、自動操縦プロセ�
 診断データを送信できない場合でも、自動操縦プロセスは続行されます。 ただし、Windows Analytics などの診断データに依存するサービスは機能しません。
 <tr><td><b>ネットワーク接続状態インジケーター (NCSI)<b><td>Windows は、デバイスがインターネットにアクセスできることを通知できる必要があります。 詳細については、「 <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#14-network-connection-status-indicator">ネットワーク接続状態インジケーター (NCSI)</a>」を参照してください。
 
-<a href="http://www.msftconnecttest.com">www.msftconnecttest.com</a> は、DNS 経由で解決可能で、HTTP 経由でアクセス可能である必要があります。
+<code>www.msftconnecttest.com</code> DNS で解決可能で、HTTP 経由でアクセス可能である必要があります。
 <tr><td><b>Windows Notification Services (WNS)<b><td>このサービスを使って、Windows がアプリとサービスから通知を受け取ることができるようにします。 詳細については、「 <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store">Microsoft Store</a>」を参照してください。<br>
 
 WNS サービスが使用できない場合でも、自動操縦プロセスは通知なしで続行されます。
@@ -76,9 +76,11 @@ Microsoft Store にアクセスできない場合でも、自動操縦プロセ�
 <tr><td><b>Office 365<b><td>Intune デバイス構成の一部として、enterprise 用 Microsoft 365 アプリのインストールが必要になる場合があります。 詳細については、「 <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">Office 365 の url と IP アドレス範囲</a>」を参照してください。 この記事には、すべての Office サービス、DNS 名、IP アドレスが含まれています。 また、上記のサービスと重複する可能性のある Azure AD およびその他のサービスも含まれています。
 <tr><td><b>証明書失効リスト (Crl)<b><td>これらのサービスの一部は、証明書失効リスト (CRL) にサービスで使用される証明書がないか確認する必要もあります。完全な一覧については、「 <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">office 365 の url と IP アドレスの範囲</a> 」と「 <a href="https://aka.ms/o365chains">Office 365 証明書チェーン</a>」を参照してください。
 <tr><td><b>ハイブリッド Azure AD 参加<b><td>デバイスは、ハイブリッド Azure AD 参加できます。 ハイブリッド Azure AD 参加するには、コンピューターが企業ネットワーク上にある必要があります。 詳細については<a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">、「Windows 自動操縦のユーザー主導モード」を</a>参照してください。
-<tr><td><b>自動展開モードと自動操縦用ホワイトグローブ<b><td>Intel、AMD、または Qualcomm によってのみ提供されるファームウェア TPM デバイスは、起動時に必要なすべての証明書を含みません。また、最初に使用するときに製造元から取得できる必要があります。 (他の製造元のデバイスを含む) 個別の TPM チップを搭載したデバイスには、これらの証明書がプレインストールされています。 詳細については、「 <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM の推奨事項</a>」を参照してください。 各ファームウェア TPM プロバイダーについて、証明書が正常に要求されるように、これらの Url にアクセスできることを確認します。 
+<tr><td><b>自動展開モードと自動操縦用ホワイトグローブ<b><td>Intel、AMD、または Qualcomm によってのみ提供されるファームウェア TPM デバイスは、起動時に必要なすべての証明書を含みません。また、最初に使用するときに製造元から取得できる必要があります。 (他の製造元のデバイスを含む) 個別の TPM チップを搭載したデバイスには、これらの証明書がプレインストールされています。 詳細については、「 <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM の推奨事項</a>」を参照してください。 各ファームウェア TPM プロバイダーについて、証明書が正常に要求されるように、これらの Url にアクセスできることを確認します。
 
- <br>Intel- https://ekop.intel.com/ekcertservice <br>Qualcomm- https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1 <br>AMD https://ftpm.amd.com/pki/aia
+ <br>Intel <code>https://ekop.intel.com/ekcertservice</code>
+ <br>Qualcomm <code>https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1</code>
+ <br>AMD <code>https://ftpm.amd.com/pki/aia</code>
 
 </table>
 
