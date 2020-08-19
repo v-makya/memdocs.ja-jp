@@ -13,12 +13,12 @@ ms.audience: itpro
 author: greg-lindsay
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: ac0b8d5262e774902dc79dace5c94e49002e2569
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: b86c59b2ef38ea54dd2d7bc0d0d237aeafc30b02
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252005"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559554"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>ホワイトグローブ展開のための Windows 自動操縦
 
@@ -34,9 +34,7 @@ Windows の自動操縦は、プレインストールされた OEM イメージ�
 
  ![OEM](images/wg02.png)
 
-ホワイトグローブ展開では、Windows 10 バージョン1903以降の Microsoft Intune を使用します。 このようなデプロイは、既存の Windows 自動操縦の [ユーザー主導型のシナリオ](user-driven.md) を基にして構築されており、ユーザー主導モードのシナリオをサポートしています。
-- Azure Active Directory 結合
--  Azure Active Directory 結合
+ホワイトグローブ展開では、Windows 10 バージョン1903以降の Microsoft Intune を使用します。 このようなデプロイは、既存の Windows 自動操縦の [ユーザー主導型のシナリオ](user-driven.md) を基に構築されており、Azure Active Directory 参加済みデバイスとハイブリッド Azure Active Directory 参加しているデバイスの両方のユーザー主導モードのシナリオをサポートします。
 
 ## <a name="prerequisites"></a>前提条件
 
