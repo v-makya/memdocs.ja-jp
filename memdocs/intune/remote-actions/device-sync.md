@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 650a91d17223c31e02d660e47874a42731de572a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: de0c6694f046d9df61f136e830d220ab0b688d28
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983021"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252692"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>デバイスを Intune と同期して最新のポリシーとアクションを取得する
 
@@ -31,7 +31,6 @@ ms.locfileid: "83983021"
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
 - Windows
-- Windows Phone
 - iOS
 - macOS
 - Android

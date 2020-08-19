@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bb01770909192b17f0e72b852e4094ff7ad3a04
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: de260f56753e292ed95ac22c76b9cc16457c981b
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565650"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88145999"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Intune を使用してデバイスに電子メールの設定を追加する
 
@@ -33,8 +33,7 @@ Microsoft Intune には、組織内のデバイスに展開できるさまざま
 - Android エンタープライズ
 - iOS 11.0 以降
 - iPadOS 13.0 以降
-- Windows Phone 8.1 以降
-- Windows 10 (デスクトップ) と Windows 10 Mobile
+- Windows 10 (デスクトップ)
 
 この記事では、Microsoft Intune で電子メール プロファイルを作成する方法を示します。 また、より具体的な設定用にさまざまなプラットフォームへのリンクも含まれています。
 
@@ -50,7 +49,6 @@ Microsoft Intune には、組織内のデバイスに展開できるさまざま
         - **Android エンタープライズ**
         - **iOS/iPadOS**
         - **Windows 10 以降**
-        - **Windows Phone 8.1**
 
     - **[プロファイル]** : **[電子メール]** を選択します。
 
@@ -68,7 +66,6 @@ Microsoft Intune には、組織内のデバイスに展開できるさまざま
     - [Android エンタープライズ](email-settings-android-enterprise.md)
     - [iOS/iPadOS](email-settings-ios.md)
     - [Windows 10](email-settings-windows-10.md)
-    - [Windows Phone 8.1](email-settings-windows-phone-8-1.md)
 
 8. **[次へ]** を選択します。
 9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。

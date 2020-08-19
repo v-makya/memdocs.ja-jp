@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72d0345c91f525fb6dc28adeabe8522801c51a9f
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 649b9417f349509e4d1630d0cfecfe8e5b6b1430
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365425"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146492"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Intune で VPN サーバーに接続するための VPN プロファイルを作成する
 
@@ -37,9 +37,7 @@ ms.locfileid: "87365425"
 >
 > * Android 4 以降
 > * Windows 8.1 以降を実行する登録済みのデバイス
-> * Windows Phone 8.1 以降
 > * Windows 10 デスクトップを実行する登録済みのデバイス
-> * Windows 10 Mobile
 > * Windows Holographic for Business
 
 ## <a name="vpn-connection-types"></a>VPN 接続の種類
@@ -57,7 +55,6 @@ ms.locfileid: "87365425"
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Cisco AnyConnect
   - Android デバイス管理者
@@ -90,7 +87,6 @@ ms.locfileid: "87365425"
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - IKEv2
   - iOS/iPadOS
@@ -115,7 +111,6 @@ ms.locfileid: "87365425"
   - iOS/iPadOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - SonicWall Mobile Connect
   - Android デバイス管理者
@@ -125,7 +120,6 @@ ms.locfileid: "87365425"
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8.1
 
 - Zscaler
   - Android エンタープライズ仕事用プロファイル[アプリ構成ポリシー](../apps/app-configuration-vpn-ae.md)を使用する
@@ -149,7 +143,6 @@ ms.locfileid: "87365425"
       - **macOS**
       - **Windows 10 以降**
       - **Windows 8.1 以降**
-      - **Windows Phone 8.1**
     - **[プロファイル]** : **[VPN]** を選択します。
 
 4. **[作成]** を選択します。
@@ -167,7 +160,6 @@ ms.locfileid: "87365425"
     - [macOS](vpn-settings-macos.md)
     - [Windows 10 (Windows Holographic for Business を含む)](vpn-settings-windows-10.md)
     - [Windows 8.1](vpn-settings-windows-8-1.md)
-    - [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
 
 8. **[次へ]** を選択します。
 9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。

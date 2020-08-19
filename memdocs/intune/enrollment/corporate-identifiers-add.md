@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b90051e9062978fbc016e461d67fbf081f50c616
-ms.sourcegitcommit: 5a58af4f7d40bbde88a273fba859bf69eeff6107
+ms.openlocfilehash: 3e999cb66c42bd0e04c76cb13689122df187f2f6
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87473680"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252726"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>デバイスの企業所有としての識別
 
@@ -49,7 +49,7 @@ Intune 管理者は、14 桁の IMEI 番号またはシリアル番号をリス�
 
 | プラットフォーム | IMEI 番号 | シリアル番号 |
 |---|---|---|
-| Windows | サポートされています (Windows Phone) | サポートされていません |
+| Windows | サポートされていません | サポートされていません |
 | iOS/macOS | サポートされていません (以下の「重要」を参照してください)  | サポート |
 | デバイス管理者によって管理されている Android OS v10 | サポートされていません | サポートされていません |
 | Android Enterprise 仕事用プロファイル | サポートされていません | サポート |

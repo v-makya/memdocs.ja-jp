@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cffdadab0518fbc6a52d0f2bf60752c165fd1c3e
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: cb9812505bb1a4560c7b5668aee5b83d5cc0aec7
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881496"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179589"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Intune ポータル サイトで Windows 10 デバイスを登録する
 
@@ -37,7 +37,7 @@ Windows 10 は、デスクトップ、スマートフォン、タブレットな
 ## <a name="enroll-windows-10-version-1607-and-later-device"></a>Windows 10 バージョン 1607 以降のデバイスを登録する 
 以下の手順では、Windows 10 バージョン 1607 以降が実行されているデバイスを登録する方法について説明します。  
 
-1. **[スタート]** メニューに移動します。 Windows 10 Mobile デバイスの場合は、 **[すべてのアプリ]** の一覧に進みます。
+1. **[スタート]** メニューに移動します。 
 
 2. **[設定]** アプリを開きます。 アプリの一覧でアプリをすぐに使用できない場合は、検索バーに移動して「設定」と入力します。
 
@@ -72,7 +72,7 @@ Windows 10 は、デスクトップ、スマートフォン、タブレットな
 ## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>Windows 10 バージョン 1511 以前のデバイスを登録する  
 以下の手順では、Windows 10 バージョン 1511 以前が実行されているデバイスを登録する方法について説明します。  
 
-1. **[スタート]** メニューに移動します。 Windows 10 Mobile デバイスの場合は、 **[すべてのアプリ]** の一覧に進みます。
+1. **[スタート]** メニューに移動します。 
 
 2. **[設定]** アプリを開きます。 アプリの一覧でアプリをすぐに使用できない場合は、検索バーに移動して「設定」と入力します。
 

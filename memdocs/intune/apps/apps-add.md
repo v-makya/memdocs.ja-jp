@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/11/2020
-ms.topic: how-to
+ms.date: 08/12/2020
+ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f01baaf8ca48229242b6f65d10ef28a294a632bc
-ms.sourcegitcommit: 92e6d2899b1cf986c29c532d0cd0555cad32bc0c
+ms.openlocfilehash: ccbd923ba1110f99c57b499115a41a03ec3317c1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428631"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252811"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Microsoft Intune にアプリを追加する 
 
@@ -54,7 +54,6 @@ Intune では、広範囲に及ぶさまざまな種類のアプリをサポー�
 | Android ストア アプリ  | ストア アプリ  | **[アプリの種類]** として **[Android]** を選択し、Google Play ストアのアプリの URL を入力します。 |
 | Android Enterprise アプリ  | ストア アプリ  | **[アプリの種類]** として **[Android]** を選択し、アプリ用のマネージド Google Play ストアの URL を入力します。 <sup>1</sup> |
 | iOS/iPadOS ストア アプリ  | ストア アプリ  | **[アプリの種類]** として **[iOS]** を選択し、アプリを検索し、Intune でアプリを選択します。 |
-| Windows Phone 8.1 ストア アプリ  | ストア アプリ  | **[アプリの種類]** として **[Windows Phone 8.1]** を選択し、Microsoft ストアのアプリの URL を入力します。 |
 | Microsoft ストア アプリ  | ストア アプリ  | **[アプリの種類]** として **[Windows]** を選択し、Microsoft ストアのアプリの URL を入力します。 |
 | 管理対象の Google Play アプリ | ストア アプリ  | **[アプリの種類]** として **[managed Google Play]** を選択し、アプリを検索し、Intune でアプリを選択します。 |
 | Windows 10 用の Office 365 アプリ  | ストア アプリ (Office 365) | **[アプリの種類]** として **[Microsoft 365 アプリ]** の下から **[Windows 10]** を選択し、インストールする Office 365 アプリを選択します。  |
@@ -63,7 +62,6 @@ Intune では、広範囲に及ぶさまざまな種類のアプリをサポー�
 | macOS 向け Microsoft Edge バージョン 77 以降 | ストア アプリ | **[アプリの種類]** として、 **[Microsoft Edge バージョン 77 以降]** の下の **[macOS]** を選択します。 |
 | Android 基幹業務 (LOB) アプリ | LOB アプリ | **[アプリの種類]** として **[基幹業務]** を選択し、 **[アプリのパッケージ ファイル]** を選択し、拡張子が **.apk** の Android のインストール ファイルを入力します。  |
 | iOS/iPadOS LOB アプリ | LOB アプリ | **[アプリの種類]** として **[基幹業務]** を選択し、 **[アプリのパッケージ ファイル]** を選択して、拡張子が **.ipa** の iOS/iPadOS インストール ファイルを入力します。  |
-| Windows Phone LOB アプリ | LOB アプリ | **[アプリの種類]** として **[基幹業務]** を選択し、 **[アプリのパッケージ ファイル]** を選択し、拡張子が **.xap** の Windows Phone のインストール ファイルを入力します。  |
 | Windows LOB アプリ | LOB アプリ | アプリの種類として **[基幹業務]** アプリを選択し、 **[アプリのパッケージ ファイル]** を選択し、拡張子が **.msi**、 **.appx**、 **.appxbundle**、 **.msix**、 **.msixbundle** の Windows のインストール ファイルを入力します。 |
 | 組み込みの iOS/iPadOS アプリ  | 組み込みアプリ | **[アプリの種類]** として **[組み込みアプリ]** を選択し、提供されているアプリの一覧から、組み込みアプリを選択します。  |
 | 組み込みの Android アプリ  | 組み込みアプリ | **[アプリの種類]** として **[組み込みアプリ]** を選択し、提供されているアプリの一覧から、組み込みアプリを選択します。  |
@@ -221,8 +219,6 @@ Intune アプリのインストール エラーについて詳しくは、[ア�
 - [iOS LOB アプリ](lob-apps-ios.md)
 - [macOS LOB アプリ](lob-apps-macos.md)
 - [Web アプリ (すべてのプラットフォーム)](web-app.md)
-- [Windows Phone 8.1 ストア アプリ](store-apps-windows-phone-8-1.md)
-- [Windows Phone LOB アプリ](lob-apps-windows-phone.md)
 - [Microsoft ストア アプリ](store-apps-windows.md)
 - [Windows LOB アプリ](lob-apps-windows.md)
 - [Windows 10 用の Office 365 アプリ](apps-add-office365.md)

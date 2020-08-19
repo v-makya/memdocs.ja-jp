@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70f8033f694dfafefc92696df0b0e6ea652e2feb
-ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
+ms.openlocfilehash: e4425178dde820bc1f9b0503d50406c007d090ca
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86946662"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252573"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Intune で Windows 10 ソフトウェア更新プログラムを管理する
 
@@ -60,7 +60,6 @@ Intune で Windows 10 デバイス用の Windows 更新プログラムを使用�
 
   > [!NOTE]
   > **サポートされていないバージョンとエディション**:
-  > - Windows 10 Mobile  
   > - Windows 10 Enterprise LTSC。 Windows Update for Business (WUfB) では現在、"*Long Term Service Channel*" リリースはサポートされていません。 WSUS や Configuration Manager など、別の修正プログラムの手法を使用することを計画してください。
 
 - Windows デバイスで、 **[フィードバックと診断]**  >  **[診断と使用状況データ]** が **[基本]** 、 **[拡張]** 、 **[完全]** のいずれかに設定されている必要があります。

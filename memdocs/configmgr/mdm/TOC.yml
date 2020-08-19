@@ -6,7 +6,7 @@
       href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
     - name: オンプレミス MDM の計画
       href: plan-design/plan-on-premises-mdm.md
-    - name: Setup
+    - name: セットアップ
       items:
         - name: オンプレミスの役割のインストール
           href: get-started/install-site-system-roles-for-on-premises-mdm.md
@@ -14,7 +14,7 @@
           href: get-started/set-up-certificates-on-premises-mdm.md
         - name: 登録の設定
           href: get-started/set-up-device-enrollment-on-premises-mdm.md
-    - name: デバイスを登録する
+    - name: デバイスの登録
       items:
         - name: 登録の概要
           href: deploy-use/enroll-devices-on-premises-mdm.md
@@ -28,16 +28,16 @@
       href: deploy-use/management-tasks-applications.md
     - name: 構成設定を管理する
       href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
-    - name: リソースへのアクセスを管理する
+    - name: リソース アクセスの管理
       items:
         - name: PFX 証明書プロファイルの作成
           href: deploy-use/create-pfx-certificate-profiles.md
         - name: PFX 証明書プロファイルインポート
           href: deploy-use/import-pfx-certificate-profiles.md
         - name: Wi-Fi プロファイル
-          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
-        - name: で組織内のユーザーとデバイスに VPN 設定を展開するには、
-          href: ../protect/deploy-use/vpn-profiles.md?toc=/configmgr/mdm/toc.json&bc=/configmgr/mdm/breadcrumb/toc.json
+          href: ../protect/deploy-use/create-wifi-profiles.md?toc=/mem/configmgr/mdm/toc.json&bc=/mem/configmgr/mdm/breadcrumb/toc.json
+        - name: VPN プロファイル
+          href: ../protect/deploy-use/vpn-profiles.md?toc=/mem/configmgr/mdm/toc.json&bc=/mem/configmgr/mdm/breadcrumb/toc.json
 - name: Exchange Server コネクタ
   items:
     - name: Exchange でのデバイスの管理
