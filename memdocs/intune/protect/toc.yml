@@ -60,6 +60,8 @@
           href: actions-for-noncompliance.md
         - name: デバイス コンプライアンスを監視する
           href: compliance-policy-monitor.md
+        - name: デバイス コンプライアンス パートナー
+          href: device-compliance-partners.md
     - name: エンドポイントのセキュリティ
       href: endpoint-security.md
       items:
