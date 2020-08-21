@@ -10,29 +10,29 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3304d480f0650191a784a9152ae464e81c2207a1
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: df5dfdeab010012a258fe59612a348c269081c45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906412"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700499"
 ---
 # <a name="import-pfx-certificate-profiles"></a>PFX 証明書プロファイルインポート
 
 *適用対象:Configuration Manager (Current Branch)*
 
-外部証明書から資格情報をインポートして証明書プロファイルを作成する方法について説明します。 この記事では、personal information exchange (PFX) 証明書プロファイルに関する特定の情報について説明します。 これらのプロファイルを作成して構成する方法の詳細については、「[証明書プロファイル](../../protect/deploy-use/introduction-to-certificate-profiles.md)」を参照してください。
+外部証明書から資格情報をインポートして証明書プロファイルを作成する方法について説明します。 この記事では、personal information exchange (PFX) 証明書プロファイルに関する特定の情報について説明します。 これらのプロファイルを作成して構成する方法の詳細については、「 [証明書プロファイル](../../protect/deploy-use/introduction-to-certificate-profiles.md)」を参照してください。
 
-Configuration Manager は、さまざまな種類のデバイスと OS バージョンに対応するさまざまな種類の証明書ストアをサポートしています。 たとえば、Windows 10 と Windows 10 Mobile です。 詳細については、「[証明書プロファイルの前提条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)」を参照してください。
+Configuration Manager は、さまざまな種類のデバイスと OS バージョンに対応するさまざまな種類の証明書ストアをサポートしています。 たとえば、Windows 10 と Windows 10 Mobile です。 詳細については、「 [証明書プロファイルの前提条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)」を参照してください。
 
 Configuration Manager を使用して証明書の資格情報をインポートし、PFX ファイルをデバイスにプロビジョニングします。 これらのファイルを使用して、暗号化されたデータ交換をサポートするユーザー固有の証明書を生成できます。
 
 > [!TIP]  
-> このプロセスの詳細な手順については、 [Configuration Manager で PFX 証明書プロファイルを作成して展開する方法に](https://docs.microsoft.com/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager)関するブログ投稿を参照してください。  
+> このプロセスの詳細な手順については、 [Configuration Manager で PFX 証明書プロファイルを作成して展開する方法に](/archive/blogs/karanrustagi/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager)関するブログ投稿を参照してください。  
 
-## <a name="create-a-profile"></a>プロファイルを作成する
+## <a name="create-a-profile"></a>プロファイルの作成
 
-1. Configuration Manager コンソールで、[**資産とコンプライアンス**] ワークスペースにアクセスし、[**コンプライアンス設定**]、[**会社リソースのアクセス**] の順に展開して、[**証明書プロファイル**] を選択します。
+1. Configuration Manager コンソールで、[ **資産とコンプライアンス** ] ワークスペースにアクセスし、[ **コンプライアンス設定**]、[ **会社リソースのアクセス**] の順に展開して、[ **証明書プロファイル**] を選択します。
 
 1. リボンの **[ホーム]** タブの **[作成]** グループで、**[証明書プロファイルの作成]** を選択します。
 
@@ -45,7 +45,7 @@ Configuration Manager を使用して証明書の資格情報をインポート�
 1. [ **Personal Information Exchange-PKCS #12 (PFX) の設定-インポート**] を選択します。 このオプションは、既存の証明書から情報をインポートして、証明書プロファイルを作成します。
 
     > [!NOTE]
-    > **Create**オプションは、接続されているオンプレミスの証明機関 (CA) からユーザーの代わりに証明書を要求します。 その後、このプロセスは証明書を PFX ファイルとしてクライアントに安全に配信します。 詳細については、「[証明機関を使用した PFX 証明書プロファイルの作成](create-pfx-certificate-profiles.md)」を参照してください。
+    > **Create**オプションは、接続されているオンプレミスの証明機関 (CA) からユーザーの代わりに証明書を要求します。 その後、このプロセスは証明書を PFX ファイルとしてクライアントに安全に配信します。 詳細については、「 [証明機関を使用した PFX 証明書プロファイルの作成](create-pfx-certificate-profiles.md)」を参照してください。
 
 1. **証明書プロファイルの作成ウィザード**の [ **PFX 証明書**] ページで、デバイスのキー格納プロバイダー (KSP) を指定します。
 
@@ -54,25 +54,25 @@ Configuration Manager を使用して証明書の資格情報をインポート�
     - **Windows Hello for Business にインストールする (それ以外は失敗)**
     - **ソフトウェア キー記憶域プロバイダーにインストールする**
 
-1. [**サポートさ**れているプラットフォーム] ページで、サポートされているデバイスプラットフォームを選択します。
+1. [ **サポートさ** れているプラットフォーム] ページで、サポートされているデバイスプラットフォームを選択します。
 
 1. ウィザードを完了します。
 
 ## <a name="deploy-the-profile"></a>プロファイルのデプロイ
 
-証明書プロファイルを作成してプロビジョニングすると、[**証明書プロファイル**] ノードで使用できるようになります。 デプロイ方法の詳細については、「[リソースアクセスプロファイルのデプロイ](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)」を参照してください。
+証明書プロファイルを作成してプロビジョニングすると、[ **証明書プロファイル** ] ノードで使用できるようになります。 デプロイ方法の詳細については、「 [リソースアクセスプロファイルのデプロイ](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)」を参照してください。
 
 ## <a name="assign-primary-users"></a>プライマリユーザーの割り当て
 
-PFX 証明書をインストールする必要がある Windows 10 デバイスで、ターゲットユーザーをプライマリユーザーとして割り当てます。 詳細については、「[ユーザーとデバイスのアフィニティ](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)」を参照してください。
+PFX 証明書をインストールする必要がある Windows 10 デバイスで、ターゲットユーザーをプライマリユーザーとして割り当てます。 詳細については、「 [ユーザーとデバイスのアフィニティ](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)」を参照してください。
 
 ## <a name="provision-a-create-pfx-script"></a>PFX スクリプトの作成をプロビジョニングする
 
 PFX 証明書をインポートするには、次の Configuration Manager PowerShell コマンドレットを使用して PFX 作成スクリプトをプロビジョニングします。
 
-- [取得-CMClientCertificatePfx](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
-- [インポート-CMClientCertificatePfx](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
-- [CMClientCertificatePfx を削除します。](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
+- [取得-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
+- [インポート-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
+- [CMClientCertificatePfx を削除します。](/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
 
 ### <a name="example-script"></a>サンプル スクリプト
 
@@ -102,4 +102,4 @@ Import-CMClientCertificatePfx -UserName "$env:USERDOMAIN\$user" -Password (Conve
 
 [証明機関を使用して PFX 証明書プロファイルを作成する](create-pfx-certificate-profiles.md)
 
-[、VPN、電子メール、および証明書プロファイルの展開](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
+[Wi-Fi、VPN、電子メール、および証明書プロファイルの展開](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)

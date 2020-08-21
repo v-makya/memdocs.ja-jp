@@ -11,12 +11,12 @@ ms.assetid: e179e30a-a1fc-461e-8087-ff3a55803450
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3d854e4b70a59a364b8611947feea89d4678e7e6
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: e0db550369ca2d81f42a25e68960b5f8f27be168
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724846"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700482"
 ---
 # <a name="install-and-configure-the-exchange-connector"></a>Exchange connector をインストールして構成する
 
@@ -76,32 +76,32 @@ Configuration Manager 用の Exchange Server コネクタをインストール�
 - 表示のみの組織管理
 - Server Management
 
-詳細については、Exchange Server 2013 のドキュメントの「[管理ロールグループ](https://docs.microsoft.com/exchange/understanding-management-role-groups-exchange-2013-help)について」を参照してください。
+詳細については、Exchange Server 2013 のドキュメントの「 [管理ロールグループ](/exchange/understanding-management-role-groups-exchange-2013-help) について」を参照してください。
 
 > [!TIP]  
-> 必要なコマンドレットなしで Exchange Server コネクタをインストールまたは使用しようとすると、サイトサーバーコンピューター `Invoking cmdlet <cmdlet> failed`の easdisc .log ファイルに次のエラーが表示されます。
+> 必要なコマンドレットなしで Exchange Server コネクタをインストールまたは使用しようとすると、サイトサーバーコンピューターの EasDisc .log ファイルに次のエラーが表示さ `Invoking cmdlet <cmdlet> failed` れます。
 
 ## <a name="install-the-connector"></a>コネクタをインストールする
 
-1. Configuration Manager コンソールで、[**管理**] ワークスペースにアクセスし、[**階層の構成**] を展開して、[ **Exchange Server コネクタ**] を選択します。
+1. Configuration Manager コンソールで、[ **管理** ] ワークスペースにアクセスし、[ **階層の構成**] を展開して、[ **Exchange Server コネクタ**] を選択します。
 
-1. リボンの [**ホーム**] タブの [**作成**] グループで、[ **Exchange Server の追加**] を選択します。
+1. リボンの [ **ホーム** ] タブの [ **作成** ] グループで、[ **Exchange Server の追加**] を選択します。
 
-1. Exchange Server の追加ウィザードの [**全般**] ページで、exchange server 環境の1つを選択します。
+1. Exchange Server の追加ウィザードの [ **全般** ] ページで、exchange server 環境の1つを選択します。
 
     - **オンプレミスの Exchange server**: Active Directory サイトごとに1台のサーバーまたはクライアントアクセスサーバーの配列を指定します。
 
-        サーバーまたはアレイがオフラインの場合は、Configuration Manager が使用するクライアント アクセス サーバーを検出しようとします。 失敗した場合、Configuration Manager はメール ボックス サーバーの使用にフォールバックして、クライアント アクセス サーバーに接続します。 接続を再試行すると、サイトサーバーコンピューター `Failed to open runspace for site <site_name>`の easdisc .log ファイルに次の警告が記録されます。
+        サーバーまたはアレイがオフラインの場合は、Configuration Manager が使用するクライアント アクセス サーバーを検出しようとします。 失敗した場合、Configuration Manager はメール ボックス サーバーの使用にフォールバックして、クライアント アクセス サーバーに接続します。 接続を再試行すると、サイトサーバーコンピューターの EasDisc .log ファイルに次の警告が記録されます。 `Failed to open runspace for site <site_name>`
 
     - **ホスト型 Exchange サーバー**: exchange Online 環境のサーバーアドレスを指定します。
 
     次に、Exchange Server コネクタを実行するプライマリサイトを選択します。
 
-1. [**アカウント**] ページで、Exchange サーバーに接続するアカウントを指定します。 詳細については、「 [Exchange の接続アカウント](#exchange-connection-account)」を参照してください。
+1. [ **アカウント** ] ページで、Exchange サーバーに接続するアカウントを指定します。 詳細については、「 [Exchange の接続アカウント](#exchange-connection-account)」を参照してください。
 
-1. [**検出**] ページで、デバイスを検索するための同期スケジュールとルールを構成します。
+1. [ **検出** ] ページで、デバイスを検索するための同期スケジュールとルールを構成します。
 
-1. [**設定**] ページで、次のグループのモバイルデバイス設定を構成します。
+1. [ **設定** ] ページで、次のグループのモバイルデバイス設定を構成します。
 
     - **全般**
     - **パスワード**
@@ -123,7 +123,7 @@ Exchange Server コネクタがステータスメッセージとログファイ�
 
     指定されたクライアントアクセスサーバーがオフラインの場合、インストールは失敗する可能性があります。 Configuration Manager がコネクタを正常にインストールできない場合は、Configuration Manager 60 分ごとにインストールを再試行します。 インストールが成功するか、Exchange Server コネクタを削除するまで、再試行は続行されます。
 
-- サイトサーバーコンピューターで、次のエントリについて**Sitecomp .log**を確認`Component SMS_EXCHANGE_CONNECTOR flagged for installation`します。 次のテキストを使用して、インストールが成功`STATMSG: ID=1015`したことをログに記録します。
+- サイトサーバーコンピューターで、次のエントリについて **Sitecomp .log** を確認 `Component SMS_EXCHANGE_CONNECTOR flagged for installation` します。 次のテキストを使用して、インストールが成功したことをログに記録し `STATMSG: ID=1015` ます。
 
 インストールが完了したら、コネクタによって検出および管理されるモバイルデバイスを監視します。 モバイルデバイスのコレクションを表示し、モバイルデバイスのレポートを使用します。
 

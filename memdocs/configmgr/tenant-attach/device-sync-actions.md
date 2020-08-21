@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 676ae288003b257802eea495c4101a95129eaf34
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 4bdfbabf27906eb8a79ec8ba24f51c3e176dc028
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251866"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700407"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Microsoft Endpoint Manager テナントの接続: デバイスの同期とデバイスの操作
 <!--3555758 live 3/4/2020-->
@@ -27,7 +27,7 @@ Configuration Manager バージョン2002以降では、Configuration Manager �
 
 ## <a name="prerequisites"></a>前提条件
 
-- この変更を適用するときにサインインするための *グローバル管理者* であるアカウント。 詳細については、「 [Azure Active Directory (Azure AD) 管理者ロール](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles)」を参照してください。
+- この変更を適用するときにサインインするための *グローバル管理者* であるアカウント。 詳細については、「 [Azure Active Directory (Azure AD) 管理者ロール](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles)」を参照してください。
    - オンボードすると、Azure AD テナントにサードパーティのアプリとファーストパーティのサービスプリンシパルが作成されます。
 - Azure パブリッククラウド環境。
 - デバイスアクションをトリガーするユーザーアカウントには、次の前提条件があります。
@@ -118,13 +118,13 @@ Configuration Manager バージョン2002以降では、Configuration Manager �
    - CmCollectionData. 書き込み
 
 - Microsoft Graph のアクセス許可:
-   - Directory. Read. すべての [アプリケーションのアクセス許可](https://docs.microsoft.com/graph/permissions-reference#application-permissions)
-   - Directory. Read. すべての委任された [ディレクトリのアクセス許可](https://docs.microsoft.com/graph/permissions-reference#directory-permissions)
+   - Directory. Read. すべての [アプリケーションのアクセス許可](/graph/permissions-reference#application-permissions)
+   - Directory. Read. すべての委任された [ディレクトリのアクセス許可](/graph/permissions-reference#directory-permissions)
 
-- Azure AD アプリケーションに対して [ **テナントの管理者の同意を付与する** 。 詳細については、「 [アプリの登録で管理者の同意を付与](https://docs.microsoft.com/azure/active-directory/manage-apps/grant-admin-consent)する」を参照してください。
+- Azure AD アプリケーションに対して [ **テナントの管理者の同意を付与する** 。 詳細については、「 [アプリの登録で管理者の同意を付与](/azure/active-directory/manage-apps/grant-admin-consent)する」を参照してください。
 
 - インポートされたアプリケーションは、次のように構成する必要があります。
-   - **この組織ディレクトリのアカウントにのみ**登録されています。 詳細については、「 [アプリケーションにアクセスできるユーザーを変更する](https://docs.microsoft.com/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application)」を参照してください。
+   - **この組織ディレクトリのアカウントにのみ**登録されています。 詳細については、「 [アプリケーションにアクセスできるユーザーを変更する](/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application)」を参照してください。
    -  有効なアプリケーション ID URI とシークレットがある
 
 
