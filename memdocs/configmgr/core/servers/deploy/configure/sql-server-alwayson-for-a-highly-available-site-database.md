@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 05553af3e973805eed62c68f13afc3cf7d3d2ee3
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: c9cf8e74793213e47dd503de1fdf1284bdc7d6a9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438597"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699230"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager で SQL Server Always On 可用性グループを使用するための準備
 
@@ -76,13 +76,13 @@ SQL Server の *Enterprise* エディションを使用します。
 
 SQL Server の各インスタンスは、ドメイン ユーザー アカウント (**サービス アカウント**) またはドメイン以外のアカウントで実行できます。 グループ内の各レプリカは別の構成を持つことができます。
 
-- できるだけアクセス許可が制限されたアカウントを使用します。 詳しくは、「[SQL Server インストールにおけるセキュリティの考慮事項](https://docs.microsoft.com/sql/sql-server/install/security-considerations-for-a-sql-server-installation)」をご覧ください。  
+- できるだけアクセス許可が制限されたアカウントを使用します。 詳しくは、「[SQL Server インストールにおけるセキュリティの考慮事項](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)」をご覧ください。  
 
-- SQL Server 用のサービス アカウントとアクセス許可の構成について詳しくは、「[Windows サービス アカウントと権限の構成](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)」をご覧ください。  
+- SQL Server 用のサービス アカウントとアクセス許可の構成について詳しくは、「[Windows サービス アカウントと権限の構成](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)」をご覧ください。  
 
-- ドメイン以外のアカウントを使用するには、証明書を使用する必要があります。 詳しくは、「[データベース ミラーリング エンドポイントでの証明書の使用 (Transact-SQL)](https://docs.microsoft.com/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql)」をご覧ください。  
+- ドメイン以外のアカウントを使用するには、証明書を使用する必要があります。 詳しくは、「[データベース ミラーリング エンドポイントでの証明書の使用 (Transact-SQL)](/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql)」をご覧ください。  
 
-- 詳しくは、[Always On 可用性グループのデータベース ミラーリング エンドポイントの作成](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell)に関するページを参照してください。  
+- 詳しくは、[Always On 可用性グループのデータベース ミラーリング エンドポイントの作成](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell)に関するページを参照してください。  
 
 
 ### <a name="database"></a>データベース
@@ -104,7 +104,7 @@ SQL Server の各インスタンスは、ドメイン ユーザー アカウン�
     GO
     ```
 
-    詳しくは、「[CLR integration](https://docs.microsoft.com/sql/relational-databases/clr-integration/clr-integration-enabling)」(CLR の統合) をご覧ください。  
+    詳しくは、「[CLR integration](/sql/relational-databases/clr-integration/clr-integration-enabling)」(CLR の統合) をご覧ください。  
 
 - **テキスト レプリケーションの最大サイズ**を `2147483647` に設定します。  
 
@@ -120,7 +120,7 @@ SQL Server の各インスタンスは、ドメイン ユーザー アカウン�
     ALTER DATABASE [CM_xxx] SET TRUSTWORTHY ON;
     ```
 
-    詳しくは、「[TRUSTWORTHY データベース プロパティ](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property)」をご覧ください。
+    詳しくは、「[TRUSTWORTHY データベース プロパティ](/sql/relational-databases/security/trustworthy-database-property)」をご覧ください。
 
 - **Service Broker** を有効にします。  
 
@@ -217,9 +217,9 @@ SQL Server の各インスタンスは、ドメイン ユーザー アカウン�
 - 同期レプリカを復旧するために非同期コミット レプリカを使用できます。 詳しくは、[サイト データベースの回復オプション](../../manage/recover-sites.md#site-database-recovery-options)に関するページをご覧ください。  
 
     > [!Warning]  
-    > Configuration Manager では、非同期コミット レプリカをサイト データベースとして使用するための "*フェールオーバー*" はサポートされていません。 詳しくは、「[Failover and failover modes (Always On availability groups)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups)」(フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ)) をご覧ください。  
+    > Configuration Manager では、非同期コミット レプリカをサイト データベースとして使用するための "*フェールオーバー*" はサポートされていません。 詳しくは、「[Failover and failover modes (Always On availability groups)](/sql/database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups)」(フェールオーバーとフェールオーバー モード (AlwaysOn 可用性グループ)) をご覧ください。  
 
-Configuration Manager では、最新であることを確認するための非同期コミット レプリカの状態の検証は行われません。 非同期コミット レプリカをサイト データベースとして使用すると、サイトとデータの整合性が危険にさらされる場合があります。 設計上、このレプリカは同期しなくなる可能性があります。 詳しくは、[SQL Server Always On 可用性グループの概要](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)に関するページを参照してください。
+Configuration Manager では、最新であることを確認するための非同期コミット レプリカの状態の検証は行われません。 非同期コミット レプリカをサイト データベースとして使用すると、サイトとデータの整合性が危険にさらされる場合があります。 設計上、このレプリカは同期しなくなる可能性があります。 詳しくは、[SQL Server Always On 可用性グループの概要](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)に関するページを参照してください。
 
 各レプリカ メンバーは次のように構成されている必要があります。
 
@@ -239,17 +239,17 @@ Configuration Manager では、最新であることを確認するための非�
     > - Configuration Manager のセットアップを実行して、可用性グループでのサイト データベースの使用を指定する。  
     > - Configuration Manager にすべての更新プログラムをインストールする (サイト データベースに適用される更新プログラムだけでなく)。  
 
-- すべてのメンバーが同じ[シード処理モード](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)を必要とします。<!-- SCCMDocs-pr#3899 --> Configuration Manager セットアップには、インストールまたは復元を使用してデータベースを作成するときにこの構成を検証するための前提条件の確認が含まれます。
+- すべてのメンバーが同じ[シード処理モード](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)を必要とします。<!-- SCCMDocs-pr#3899 --> Configuration Manager セットアップには、インストールまたは復元を使用してデータベースを作成するときにこの構成を検証するための前提条件の確認が含まれます。
 
     > [!Note]  
-    > セットアップでデータベースを作成し、**自動**シード処理を構成する場合は、可用性グループにデータベースを作成する権限が必要です。 この要件は、新しいデータベースと回復の両方に適用されます。 詳細については、「[セカンダリ レプリカの自動シード処理](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security)」を参照してください。<!-- SCCMDocs-pr#3900 -->
+    > セットアップでデータベースを作成し、**自動**シード処理を構成する場合は、可用性グループにデータベースを作成する権限が必要です。 この要件は、新しいデータベースと回復の両方に適用されます。 詳細については、「[セカンダリ レプリカの自動シード処理](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas#security)」を参照してください。<!-- SCCMDocs-pr#3900 -->
 
 #### <a name="replica-member-location"></a>レプリカ メンバーの場所
 
 すべてのレプリカを、オンプレミスまたは Microsoft Azure どちらかの可用性グループでホストします。 オンプレミス メンバーと Azure のメンバーを 1 つのグループに含めることはサポートされていません。
 
 > [!NOTE]
-> SQL Server に Azure 仮想マシンを使用している場合は、**floating IP** を有効にします。 詳細については、「[Azure Virtual Machines に SQL Server Always On 可用性グループのロード バランサーを構成する](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure)」を参照してください。<!-- SCCMDocs#1928 -->
+> SQL Server に Azure 仮想マシンを使用している場合は、**floating IP** を有効にします。 詳細については、「[Azure Virtual Machines に SQL Server Always On 可用性グループのロード バランサーを構成する](/azure/azure-sql/virtual-machines/windows/availability-group-load-balancer-portal-configure)」を参照してください。<!-- SCCMDocs#1928 -->
 
 Configuration Manager セットアップでは、各レプリカに接続する必要があります。 Azure で可用性グループをセットアップし、グループが内部または外部ロード バランサーの背後にある場合、次の既定ポートを開きます。
 
@@ -263,11 +263,11 @@ Configuration Manager セットアップでは、各レプリカに接続する�
 
 これらの構成ではカスタム ポートを使用することができます。 エンドポイントと、可用性グループ内のすべてのレプリカで、同じカスタム ポートを使用します。
 
-SQL によってデータをサイト間でレプリケートするには、Azure ロード バランサーのポートごとに負荷分散規則を作成します。 詳細については、「[内部ロード バランサー用の高可用性ポートの構成](https://docs.microsoft.com/azure/load-balancer/load-balancer-configure-ha-ports)」を参照してください。<!-- MEMDocs#252 -->
+SQL によってデータをサイト間でレプリケートするには、Azure ロード バランサーのポートごとに負荷分散規則を作成します。 詳細については、「[内部ロード バランサー用の高可用性ポートの構成](/azure/load-balancer/load-balancer-configure-ha-ports)」を参照してください。<!-- MEMDocs#252 -->
 
 #### <a name="listener"></a>リスナー
 
-可用性グループには、少なくとも 1 つの *可用性グループ リスナー*が必要です。 可用性グループのサイト データベースを使用するように Configuration Manager を構成するときは、このリスナーの仮想名が使用されます。 可用性グループに複数のリスナーを含めることはできますが、Configuration Manager で使用できるのは 1 つだけです。 詳しくは、「[可用性グループ リスナーの作成または構成 (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server)」をご覧ください。
+可用性グループには、少なくとも 1 つの *可用性グループ リスナー*が必要です。 可用性グループのサイト データベースを使用するように Configuration Manager を構成するときは、このリスナーの仮想名が使用されます。 可用性グループに複数のリスナーを含めることはできますが、Configuration Manager で使用できるのは 1 つだけです。 詳しくは、「[可用性グループ リスナーの作成または構成 (SQL Server)](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server)」をご覧ください。
 
 #### <a name="file-paths"></a>ファイル パス
 
@@ -294,7 +294,7 @@ Configuration Manager のセットアップを使用して可用性グループ�
 #### <a name="multi-subnet-failover"></a>マルチサブネット フェールオーバー
 
 <!-- SCCMDocs-pr#3734 -->
-バージョン 1906 以降では、SQL Server で [MultiSubnetFailover 接続文字列キーワード](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover)を有効にすることができます。 また、サイト サーバーの Windows レジストリに次の値を手動で追加する必要もあります。
+バージョン 1906 以降では、SQL Server で [MultiSubnetFailover 接続文字列キーワード](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover)を有効にすることができます。 また、サイト サーバーの Windows レジストリに次の値を手動で追加する必要もあります。
 
 ``` Registry
 HKLM:\SOFTWARE\Microsoft\SMS\Identification
@@ -315,11 +315,11 @@ MSF Enabled : 1 (DWORD)
 
 ### <a name="unsupported-sql-server-options-and-configurations"></a>サポートされていない SQL Server のオプションと構成
 
-- **基本的な可用性グループ**:SQL Server 2016 Standard エディションで導入された基本的な可用性グループでは、セカンダリ レプリカに対する読み取りアクセスがサポートされていません。 構成にはこのアクセスが必要です。 詳しくは、[基本的な SQL Server 可用性グループ](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017)に関するページをご覧ください。  
+- **基本的な可用性グループ**:SQL Server 2016 Standard エディションで導入された基本的な可用性グループでは、セカンダリ レプリカに対する読み取りアクセスがサポートされていません。 構成にはこのアクセスが必要です。 詳しくは、[基本的な SQL Server 可用性グループ](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017)に関するページをご覧ください。  
 
-- **フェールオーバー クラスター インスタンス**:フェールオーバー クラスター インスタンスは、Configuration Manager で使用するレプリカではサポートされていません。 詳しくは、「[AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)」をご覧ください。  
+- **フェールオーバー クラスター インスタンス**:フェールオーバー クラスター インスタンスは、Configuration Manager で使用するレプリカではサポートされていません。 詳しくは、「[AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)」をご覧ください。  
 
-- **MultiSubnetFailover**:バージョン 1902 以前では、Configuration Manager でマルチサブネット構成の可用性グループを使用することはサポートされていません。 [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) キーワードを含む接続文字列も使用できません。
+- **MultiSubnetFailover**:バージョン 1902 以前では、Configuration Manager でマルチサブネット構成の可用性グループを使用することはサポートされていません。 [MutliSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) キーワードを含む接続文字列も使用できません。
 
     この構成をサポートするには、Configuration Manager をバージョン 1906 以降に更新します。 詳細については、[マルチサブネット フェールオーバー](sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover)の前提条件に関するページを参照してください。
 
@@ -382,7 +382,7 @@ Configuration Manager のセットアップを実行してサイト データベ
 
 ### <a name="transaction-log"></a>トランザクション ログ  
 
-サイト データベースの復旧モデルを**完全**に設定します。 可用性グループで Configuration Manager を使用するには、このように構成する必要があります。 サイト データベース トランザクション ログのサイズを監視および維持するための計画を立てます。 完全復旧モデルでは、データベースまたはトランザクション ログの完全バックアップが作成されるまで、トランザクションは書き込まれません。 詳しくは、「[SQL Server データベースのバックアップと復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases)」をご覧ください。
+サイト データベースの復旧モデルを**完全**に設定します。 可用性グループで Configuration Manager を使用するには、このように構成する必要があります。 サイト データベース トランザクション ログのサイズを監視および維持するための計画を立てます。 完全復旧モデルでは、データベースまたはトランザクション ログの完全バックアップが作成されるまで、トランザクションは書き込まれません。 詳しくは、「[SQL Server データベースのバックアップと復元](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases)」をご覧ください。
 
 
 ## <a name="changes-for-site-recovery"></a>サイトの回復の変更

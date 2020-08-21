@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2f5aa622ca5d98f2cb5eb0b0c3154625df11a42e
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 3192cd8177075542ffc86ab236b817db5befca1d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240764"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696890"
 ---
 # <a name="enable-third-party-updates"></a>サード パーティの更新プログラムを有効にする 
 
@@ -30,7 +30,7 @@ ms.locfileid: "86240764"
 ## <a name="prerequisites"></a>[前提条件] 
 - 最上位のソフトウェア更新ポイントの WSUSContent フォルダーに、サード パーティのソフトウェア更新プログラム用のソース バイナリ コンテンツを格納するのに十分なディスク領域がある必要があります。
     - 必要な記憶域の容量は、ベンダー、更新プログラムの種類、および展開のために発行する特定の更新プログラムによって異なります。
-    - 空き領域がより多い別のドライブに WSUSContent フォルダーを移動する必要がある場合は、「[How to change the location where WSUS stores updates locally](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally)」 (WSUS で更新プログラムをローカルに格納する場所を変更する方法) のブログ記事を参照してください。
+    - 空き領域がより多い別のドライブに WSUSContent フォルダーを移動する必要がある場合は、「[How to change the location where WSUS stores updates locally](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally)」 (WSUS で更新プログラムをローカルに格納する場所を変更する方法) のブログ記事を参照してください。
 - サード パーティのソフトウェア更新プログラムの同期サービスにはインターネット アクセスが必要です。
     - パートナー カタログ一覧については、HTTPS ポート 443 経由での download.microsoft.com が必要です。 
     -  サード パーティのカタログおよび更新プログラムのコンテンツ ファイルへのインターネット アクセスを行います。 443 以外の追加のポートが必要な場合があります。
@@ -41,7 +41,7 @@ ms.locfileid: "86240764"
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>SUP が最上位サイト サーバーから離れている場合の追加の要件 
 
 1. SUP が離れている場合、SUP で SSL を有効にする必要があります。 これには、内部の証明機関からまたはパブリック プロバイダーを通じて生成されたサーバー認証証明書が必要です。
-    - [WSUS で SSL を構成する](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
+    - [WSUS で SSL を構成する](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
         - WSUS で SSL を構成する場合、一部の Web サービスおよび仮想ディレクトリは、HTTPS ではなく、常に HTTP であることに注意してください。 
         - Configuration Manager では、HTTP 経由で WSUS コンテンツ ディレクトリからソフトウェア更新プログラム パッケージ用のサード パーティのコンテンツがダウンロードされます。   
     - [SUP で SSL を構成する](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
@@ -93,7 +93,7 @@ PKI 証明書を使用する必要がない場合は、サード パーティの
 
 
 ## <a name="enable-third-party-updates-on-the-clients"></a>クライアントでサード パーティの更新プログラムを有効にする
-クライアント設定で、クライアントのサード パーティの更新プログラムを有効にします。 この設定により、[[イントラネットの Microsoft 更新サービスの保存場所にある署名済み更新を許可する]](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location) の Windows Update エージェント ポリシーが設定されます。 また、このクライアント設定により、クライアントの信頼された発行元ストアに WSUS 署名証明書がインストールされます。 証明書の管理ログはクライアントの `updatesdeployment.log` に示されます。  サード パーティの更新プログラムに使用するカスタム クライアント設定ごとに、これらの手順を行います。 詳細については、「[クライアント設定について](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates)」の記事を参照してください。
+クライアント設定で、クライアントのサード パーティの更新プログラムを有効にします。 この設定により、[[イントラネットの Microsoft 更新サービスの保存場所にある署名済み更新を許可する]](/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#allow-signed-updates-from-an-intranet-microsoft-update-service-location) の Windows Update エージェント ポリシーが設定されます。 また、このクライアント設定により、クライアントの信頼された発行元ストアに WSUS 署名証明書がインストールされます。 証明書の管理ログはクライアントの `updatesdeployment.log` に示されます。  サード パーティの更新プログラムに使用するカスタム クライアント設定ごとに、これらの手順を行います。 詳細については、「[クライアント設定について](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates)」の記事を参照してください。
 
 1. Configuration Manager コンソールで、 **[管理]** ワークスペースに移動して、 **[クライアント設定]** ノードを選択します。
 2. 既存のカスタム クライアント設定を選択するか、新しく作成します。 
@@ -235,7 +235,7 @@ Configuration Manager コンソールでサード パーティのカタログを
 -  Configuration Manager には、カタログの cab ファイル形式用の新しいバージョンがあります。 新しいバージョンには、ベンダーのバイナリ ファイル用の証明書が含まれています。 カタログを承認して信頼すると、これらの証明書は **[管理]** ワークスペースの **[セキュリティ]** の下にある **[証明書]** ノードに追加されます。  
      - ダウンロード URL が https であり、更新プログラムが署名されている限り、古いカタログの cab ファイル バージョンを引き続き使用できます。 バイナリの証明書が cab ファイル内になく、まだ承認されていないため、コンテンツの発行は失敗します。 **[証明書]** ノードで証明書を見つけてブロックを解除し、更新プログラムをもう一度発行することで、この問題を回避できます。 別の証明書で署名された複数の更新プログラムを発行する場合は、使用される各証明書のブロックを解除する必要があります。
      - 詳細については、以下のステータス メッセージ表の 11523 と 11524 のステータス メッセージを参照してください。
--  最上位のソフトウェア更新ポイントにあるサード パーティ製ソフトウェア更新同期サービスで、インターネット アクセスのためにプロキシ サーバーが必要な場合は、デジタル署名のチェックが失敗する可能性があります。 この問題を緩和するには、サイト システムで WinHTTP プロキシ設定を構成します。 詳しくは、「[Netsh commands for WinHTTP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10))」(WinHTTP 用の Netsh コマンド) をご覧ください。
+-  最上位のソフトウェア更新ポイントにあるサード パーティ製ソフトウェア更新同期サービスで、インターネット アクセスのためにプロキシ サーバーが必要な場合は、デジタル署名のチェックが失敗する可能性があります。 この問題を緩和するには、サイト システムで WinHTTP プロキシ設定を構成します。 詳しくは、「[Netsh commands for WinHTTP](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131(v=ws.10))」(WinHTTP 用の Netsh コマンド) をご覧ください。
 - コンテンツの保存に CMG を使用する場合、[クライアント設定](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)の **[Download delta content when available]\(デルタ コンテンツが使用可能な場合はダウンロードする\)** が有効になっていると、サードパーティの更新プログラムのコンテンツはクライアントにダウンロードされません。 <!--6598587-->
 
 ## <a name="status-messages"></a>ステータス メッセージ

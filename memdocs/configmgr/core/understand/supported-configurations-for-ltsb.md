@@ -10,12 +10,12 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7de7d562131f97ac21d1c394b176d3b7f4ce7747
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: b72e0a14abd2b468056d4303497625633b8f64a8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906432"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698924"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager の Long-Term Servicing Branch のサポートされている構成
 
@@ -72,7 +72,7 @@ LTSB を使用して、以下の Windows コンピューター オペレーテ�
 - Windows Server 2012 の Server Core のインストール (x64) (注 2)
 
 **(注 1)** Datacenter リリースは、Configuration Manager でサポートされますが動作は保障されません。  
-**(注 2)** クライアント プッシュ インストールをサポートするには、このオペレーティング システムのバージョンを実行するコンピューターで、ファイルおよびストレージ サービスのサーバーの役割のための、ファイル サーバーの役割サービスを実行する必要があります。 Server Core コンピューターへの Windows 機能のインストールの詳細については、「[Server Core サーバーへのサーバーの役割と機能のインストール](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))」を参照してください。
+**(注 2)** クライアント プッシュ インストールをサポートするには、このオペレーティング システムのバージョンを実行するコンピューターで、ファイルおよびストレージ サービスのサーバーの役割のための、ファイル サーバーの役割サービスを実行する必要があります。 Server Core コンピューターへの Windows 機能のインストールの詳細については、「[Server Core サーバーへのサーバーの役割と機能のインストール](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574158(v=ws.11))」を参照してください。
 
 ### <a name="windows-embedded"></a>Windows Embedded
 デバイス上にクライアント ソフトウェアをインストールすることによって、LTSB を使用して以下の Windows Embedded デバイスを管理できます。  詳細については、「[Windows Embedded デバイスへのクライアント展開の計画](../clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)」を参照してください。

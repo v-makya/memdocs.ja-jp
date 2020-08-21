@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a3cf735dfa2dd73ed39a24c2d674a966acddf05a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: c2861214bcdc9162b0121304b342d1d9d48be170
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125119"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697944"
 ---
 # <a name="deploy-windows-to-go-with-configuration-manager"></a>Configuration Manager を使用して Windows To Go を展開する
 
@@ -23,7 +23,7 @@ ms.locfileid: "88125119"
 
 このトピックでは、Configuration Manager で Windows To Go をプロビジョニングする手順について説明します。 Windows To Go は Windows 8 のエンタープライズ機能で、コンピューターに USB 接続された外部ドライブからブート可能な Windows To Go ワークスペースを作成できます。コンピューターは、Windows 7 または Windows 8 の認定要件を満たしている必要がありますが、コンピューターで実行されているオペレーティング システムは問いません。 Windows To Go では、企業のデスクトップ コンピューターとノート パソコンで使用しているものと同じイメージを使用でき、同じ方法で管理できます。  
 
- Windows To Go の詳細については、「[Windows To Go: 機能の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11))」をご覧ください。  
+ Windows To Go の詳細については、「[Windows To Go: 機能の概要](/previous-versions/windows/it-pro/windows-8.1-and-8/hh831833(v=ws.11))」をご覧ください。  
 
 ## <a name="provision-windows-to-go"></a>Windows To Go の準備  
  Windows To Go は、USB 接続の外部ドライブに保存されるオペレーティング システムです。 Windows To Go ドライブは、その他のオペレーティング システムの展開と同じようにプロビジョニングできます。 ただし、Windows To Go はユーザー中心のモバイルに特化したソリューションとして設計されているため、ドライブをプロビジョニングするには、少し異なる方法で行う必要があります。  
@@ -461,4 +461,4 @@ ms.locfileid: "88125119"
  コンピューターを Windows To Go ドライブで再起動すると、ドライブは Windows PE で起動し、管理ポイントに接続してポリシーを取得し、オペレーティング システムの展開を完了します。 Configuration Manager でドライブが構成され、ステージングされます。 Configuration Manager によってドライブがステージングされた後で、ユーザーは、コンピューターを再起動してプロビジョニング処理 (ドメインへの参加やアプリケーションのインストールなど) を終了できます。 この処理は、事前設定メディアの場合と同じです。  
 
 ###  <a name="user-logs-in-to-windows-8"></a><a name="BKMK_UserLogsIn"></a> ユーザーによる Windows 8 へのログイン  
- Configuration Manager でプロビジョニング処理が完了して Windows 8 のロック画面が表示されると、ユーザーはオペレーティング システムにログインできるようになります。  
+ Configuration Manager でプロビジョニング処理が完了して Windows 8 のロック画面が表示されると、ユーザーはオペレーティング システムにログインできるようになります。

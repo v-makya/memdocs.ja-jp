@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: dd18355b9e472866a4d684162913795443ab07ef
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 112a1fe4a47cce330593d34da7ce8d9180457497
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268523"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698907"
 ---
 # <a name="get-support-for-desktop-analytics"></a>Desktop Analytics のサポートを受ける
 
@@ -31,7 +31,7 @@ Microsoft サポートは、Desktop Analytics に世界的な技術、購入前�
 
 ## <a name="help-and-support"></a>ヘルプとサポート
 
-Desktop Analytics についてヘルプを依頼するには、ポータルの **[トラブルシューティング + サポート]** にある **[ヘルプとサポート]** オプションを使用します。 この操作で、Desktop Analytics のオンライン サポート チケットが提出されます。 サポート インシデントを作成および管理するには、アカウントにアクション **microsoft.office365.supportTickets/tickets/manage** を含む Azure Active Directory (Azure AD) ロールが必要です。 詳細については、[Azure AD での管理者ロール](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)に関する記事を参照してください。
+Desktop Analytics についてヘルプを依頼するには、ポータルの **[トラブルシューティング + サポート]** にある **[ヘルプとサポート]** オプションを使用します。 この操作で、Desktop Analytics のオンライン サポート チケットが提出されます。 サポート インシデントを作成および管理するには、アカウントにアクション **microsoft.office365.supportTickets/tickets/manage** を含む Azure Active Directory (Azure AD) ロールが必要です。 詳細については、[Azure AD での管理者ロール](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)に関する記事を参照してください。
 
 単なる分析ではなく Configuration Manager の問題が大きい場合は、[Microsoft サポート](https://aka.ms/cmcbsupport)にアクセスして新しいサポート リクエストを開きます。 **Desktop Analytics** カテゴリを使用します。
 

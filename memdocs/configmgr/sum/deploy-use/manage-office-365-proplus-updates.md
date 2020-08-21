@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: d2a7f5ec31359cdd1a69bad3204d5119f8998e92
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 907c8d63d68ee4f34b9d22be24f32ffb1878b715
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129173"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696176"
 ---
 # <a name="manage-microsoft-365-apps-with-configuration-manager"></a>Configuration Manager での Microsoft 365 Apps の管理
 
 *適用対象:Configuration Manager (Current Branch)*
 
 > [!Note]
-> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
+> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
 
 Configuration Manager では、次の方法で Microsoft 365 Apps を管理できます。
 
@@ -40,7 +40,7 @@ Configuration Manager では、次の方法で Microsoft 365 Apps を管理で�
 Microsoft 365 Apps クライアントの情報を確認し、これらの Microsoft 365 Apps 管理アクションのいくつかを開始するには、[Office 365 クライアント管理ダッシュボード](office-365-dashboard.md)を使用します。
 
 ## <a name="deploy-microsoft-365-apps"></a><a name="bkmk_deploy"></a>Microsoft 365 Apps を展開する
-最初の Microsoft 365 Apps のインストールのために、Office 365 クライアント管理ダッシュボードから Microsoft 365 Apps インストーラーを起動します。 ウィザードに従って、Microsoft 365 Apps のインストール設定を構成し、Office Content Delivery Network (CDN) からファイルをダウンロードして、そのファイルのスクリプト アプリケーションを作成して展開することができます。 Microsoft 365 Apps がクライアントにインストールされて [Microsoft 365 Apps 自動更新タスク](https://docs.microsoft.com/deployoffice/overview-update-process-microsoft-365-apps)が実行されるまでは、Microsoft 365 Apps 更新プログラムは適用できません。 テスト目的で、更新タスクを手動で実行することができます。
+最初の Microsoft 365 Apps のインストールのために、Office 365 クライアント管理ダッシュボードから Microsoft 365 Apps インストーラーを起動します。 ウィザードに従って、Microsoft 365 Apps のインストール設定を構成し、Office Content Delivery Network (CDN) からファイルをダウンロードして、そのファイルのスクリプト アプリケーションを作成して展開することができます。 Microsoft 365 Apps がクライアントにインストールされて [Microsoft 365 Apps 自動更新タスク](/deployoffice/overview-update-process-microsoft-365-apps)が実行されるまでは、Microsoft 365 Apps 更新プログラムは適用できません。 テスト目的で、更新タスクを手動で実行することができます。
 
 以前のバージョンの Configuration Manager では、次の手順に従って、最初にクライアントに Microsoft 365 Apps をインストールする必要があります。
 - Office 展開ツール (ODT) をダウンロードします。
@@ -76,7 +76,7 @@ Configuration Manager 1806 以降では、Office カスタマイズ ツールが
 
     既存の構成ファイルを使用する場合は、ファイルの場所を入力し、ステップ 7 に進みます。 場所は &#92;&#92;*server*&#92;*share*&#92;*filename*.XML の形式で指定する必要があります。
     > [!IMPORTANT]    
-    > XML 構成ファイルには、[Office 2016 でサポートされている言語](https://docs.microsoft.com/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016)のみを含める必要があります。
+    > XML 構成ファイルには、[Office 2016 でサポートされている言語](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016)のみを含める必要があります。
 
 5. **[クライアント製品]** ページで、使用する Microsoft 365 Apps スイートを選択します。 含めるアプリケーションを選択します。 含める必要がある追加の製品を選択し、 **[次へ]** をクリックします。
 6. **[クライアント設定]** ページで、含める設定を選び、 **[次へ]** をクリックします。
@@ -126,7 +126,7 @@ Configuration Manager で Microsoft 365 Apps 更新プログラムを展開す�
 
 > [!NOTE]  
 >
-> Microsoft 365 Apps が最近インストールされた場合、そのインストール方法によっては、更新プログラム チャネルがまだ設定されていない可能性があります。 その場合、展開された更新プログラムは適用外として検出されます。 Microsoft 365 Apps をインストールするときに、[スケジュールされた自動更新タスク](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus)が作成されます。 この状況では、更新チャネルを設定し、更新プログラムが適用可能として検出されるようにするために、このタスクを少なくとも 1 回実行する必要があります。
+> Microsoft 365 Apps が最近インストールされた場合、そのインストール方法によっては、更新プログラム チャネルがまだ設定されていない可能性があります。 その場合、展開された更新プログラムは適用外として検出されます。 Microsoft 365 Apps をインストールするときに、[スケジュールされた自動更新タスク](/deployoffice/overview-of-the-update-process-for-office-365-proplus)が作成されます。 この状況では、更新チャネルを設定し、更新プログラムが適用可能として検出されるようにするために、このタスクを少なくとも 1 回実行する必要があります。
 >
 > Microsoft 365 Apps が最近インストールされ、展開された更新プログラムが検出されない場合は、クライアント上で、テストのために Office 自動更新タスクを手動で起動してから、[ソフトウェア更新プログラムの展開評価サイクル](../understand/software-updates-introduction.md#scan-for-software-updates-compliance-process)を開始できます。 タスク シーケンスでこれを実行する手順について詳しくは、「[タスク シーケンスでの Microsoft 365 Apps の更新](manage-office-365-proplus-updates.md#bkmk_ts)」を参照してください。
 
@@ -151,7 +151,7 @@ Microsoft 365 Apps クライアントに更新プログラムを展開する場�
 >- ユーザーが期限前に Microsoft 365 Apps 更新プログラムをインストールすると、期限に達したときに、Configuration Manager によって、更新プログラムがインストールされていることが確認されます。 デバイスで更新プログラムが検出されない場合、更新プログラムがインストールされます。 
 >- アプリ内通知バーは、更新プログラムがダウンロードされる前に実行されているアプリでは表示されません。 更新プログラムをダウンロードすると、アプリ内通知は新しく開いたアプリに対してのみ表示されます。
 >- サービス ウィンドウによってトリガーされるか、営業時間外にスケジュールされている Microsoft 365 Apps 更新プログラムの場合、実行中の Office アプリを強制的に閉じて、通知せずに更新プログラムをインストールすることが可能です。 
->- 詳細については、「[Microsoft 365 アプリのエンドユーザーによる更新の通知](https://docs.microsoft.com/deployoffice/end-user-update-notifications-microsoft-365-apps)」を参照してください。
+>- 詳細については、「[Microsoft 365 アプリのエンドユーザーによる更新の通知](/deployoffice/end-user-update-notifications-microsoft-365-apps)」を参照してください。
 
 
 ## <a name="add-languages-for-microsoft-365-apps-update-downloads"></a><a name="bkmk_o365_lang"></a>Microsoft 365 Apps 更新プログラムのダウンロード対象言語を追加する
@@ -243,12 +243,12 @@ Office 365 ProPlus の名前が **Microsoft 365 Apps for enterprise** に変更�
 |最新チャネル (プレビュー)|月次チャネル (対象指定)|
 |ベータ チャネル|Insider|
 
-ADR の変更方法の詳細については、「[ソフトウェア更新プログラムの自動展開](automatically-deploy-software-updates.md)」を参照してください。 名前の変更の詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。
+ADR の変更方法の詳細については、「[ソフトウェア更新プログラムの自動展開](automatically-deploy-software-updates.md)」を参照してください。 名前の変更の詳細については、「[Office 365 ProPlus の名前の変更](/deployoffice/name-change)」を参照してください。
 
 
 ## <a name="change-the-update-channel-after-you-enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager"></a>Configuration Manager から更新プログラムを受信できるように Microsoft 365 Apps クライアントを設定した後で更新プログラム チャネルを変更する
 
-Microsoft 365 Apps を展開した後、グループ ポリシーまたは Office 展開ツール (ODT) を使用して更新プログラム チャネルを変更できます。 たとえば、半期チャネルから半期チャネル (対象指定) にデバイスを移行できます。 チャネルを変更すると、完全バージョンを再インストールまたはダウンロードしなくても Office は自動的に更新されます。 詳細については、「[組織のデバイスの Microsoft 365 Apps 更新プログラム チャネルを変更する](https://docs.microsoft.com//deployoffice/change-update-channels)」を参照してください。
+Microsoft 365 Apps を展開した後、グループ ポリシーまたは Office 展開ツール (ODT) を使用して更新プログラム チャネルを変更できます。 たとえば、半期チャネルから半期チャネル (対象指定) にデバイスを移行できます。 チャネルを変更すると、完全バージョンを再インストールまたはダウンロードしなくても Office は自動的に更新されます。 詳細については、「[組織のデバイスの Microsoft 365 Apps 更新プログラム チャネルを変更する](//deployoffice/change-update-channels)」を参照してください。
 
 
 ## <a name="next-steps"></a>次のステップ

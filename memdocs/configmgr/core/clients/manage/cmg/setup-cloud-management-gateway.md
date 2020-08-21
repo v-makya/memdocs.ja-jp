@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 9ba4466a40d49c4b78b75e6f85137dfd0a4ff5ce
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a5800b40b581f2a65c4adcea0d229977ae61f774
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129139"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693337"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager のクラウド管理ゲートウェイを設定する
 
@@ -40,7 +40,7 @@ ms.locfileid: "88129139"
 
   - **クラウド管理**のための [Azure AD](../../../servers/deploy/configure/azure-services-wizard.md) との統合。 Azure AD のユーザー探索は必要ありません。 Azure Resource Manager を使用して CMG をデプロイするためにサイトを Azure AD と統合するには、**全体管理者**が必要です。
 
-  - **Microsoft.ClassicCompute** & **Microsoft.Storage** リソース プロバイダーは、Azure サブスクリプション内に登録する必要があります。 詳細については、[Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services) に関するページを参照してください。
+  - **Microsoft.ClassicCompute** & **Microsoft.Storage** リソース プロバイダーは、Azure サブスクリプション内に登録する必要があります。 詳細については、[Azure Resource Manager](/azure/azure-resource-manager/resource-manager-supported-services) に関するページを参照してください。
 
   - CMG をデプロイするには、**サブスクリプション所有者**がサインインする必要があります。
 
@@ -207,7 +207,7 @@ Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate 
 
 オプション 1 および 2 の場合、**ccmsetup.exe** を実行するときに、 **/mp** パラメーターを使用して CMG の URL を指定します。 詳しくは、[クライアント インストールのパラメーターとプロパティ](../../deploy/about-client-installation-properties.md#mp)に関するページをご覧ください。
 
-オプション 3 について、Configuration Manager バージョン 2002 以降では、一括登録トークンを使用して、イントラネットに接続されていないシステムにクライアントをインストールできます。 この方法の詳細については、「[一括登録トークンを作成する](../../deploy/deploy-clients-cmg-token.md#create-a-bulk-registration-token)」をご覧ください。
+オプション 3 について、Configuration Manager バージョン 2002 以降では、一括登録トークンを使用して、イントラネットに接続されていないシステムにクライアントをインストールできます。 この方法の詳細については、「[一括登録トークンを作成する](../../deploy/deploy-clients-cmg-token.md#bulk-registration-token)」をご覧ください。
 
 ### <a name="configure-off-premises-clients-for-cmg"></a>CMG 用にオフプレミスのクライアントを構成する
 

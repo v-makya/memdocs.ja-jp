@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0c2464bfba05d640868af7d5c8be7c32c0999946
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9cd0df25c64c4ca1e0d2ce98de5d2915f7564241
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705410"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693031"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-configuration-manager"></a>Configuration Manager の Technical Preview 1612 の機能
 
@@ -185,7 +185,7 @@ Technical Preview 1612 をインストールすると、Technical Preview サイ
 2. 次に、必須のコマンド ライン スイッチと、使用する省略可能なスイッチを含めたコマンドラインを入力します。
 
 **既知の問題** パッケージまたは展開が失敗した場合、または進行中の場合、ツールを実行すると、次のようなエラーが返される可能性があります。
--  *System.InvalidOperationException:This content library cannot be cleaned up right now because package \<packageID> is not fully installed.* (System.InvalidOperationException: パッケージ <packageID> が完全にインストールされていないため、このコンテンツ ライブラリを今すぐクリーンアップすることはできません。)
+-  *System.InvalidOperationException: This content library cannot be cleaned up right now because package \<packageID> is not fully installed.* (System.InvalidOperationException: パッケージ <パッケージ ID> が完全にインストールされていないため、このコンテンツ ライブラリを今すぐクリーンアップすることはできません。)
 
 **回避策:** ありません。 コンテンツの展開が進行中または失敗した場合、このツールは孤立ファイルを確実に識別することはできません。 したがって、その問題が解決されるまで、ツールではコンテンツのクリーンアップが許可されません。
 
@@ -201,7 +201,7 @@ Technical Preview 1612 をインストールすると、Technical Preview サイ
 | **/dp &lt;配布ポイント FQDN>**  | **必須** </br> クリーニングする配布ポイントの完全修飾ドメイン名 (FQDN) を指定します。 </br></br> 例:***ContentLibraryCleanup.exe /dp server1.contoso.com***|
 | **/ps &lt;プライマリ サイト FQDN>**       | プライマリ サイトで配布ポイントからコンテンツをクリーニングする場合は**省略可能**。</br>セカンダリ サイトで配布ポイントからコンテンツをクリーニングする場合は**必須**。 </br></br> 配布ポイントが属するプライマリ サイトの FQDN を指定します。あるいは、配布ポイントがセカンダリ サイトにある場合は親であるプライマリ サイトの FQDN を指定します。 </br></br> 例:***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;プライマリ サイト コード>**  | プライマリ サイトで配布ポイントからコンテンツをクリーニングする場合は**省略可能**。</br>セカンダリ サイトで配布ポイントからコンテンツをクリーニングする場合は**必須**。 </br></br> 配布ポイントが属するプライマリ サイトのサイト コードを指定します。あるいは、配布ポイントがセカンダリ サイトにある場合は親であるプライマリ サイトのサイト コードを指定します。</br></br> 例:***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
-| **/log \<ログ ファイルのディレクトリ>**       |**省略可能** </br> ログ ファイルを配置するディレクトリを指定します。 ローカル ドライブを指定したり、ネットワーク共有上の場所を指定したりできます。</br></br> このスイッチを使用しない場合、ログ ファイルはユーザーの temp フォルダーに自動的に配置します。</br></br> ローカル ドライブの例:***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>ネットワーク共有の例:***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
+| **/log \<log file directory>**       |**省略可能** </br> ログ ファイルを配置するディレクトリを指定します。 ローカル ドライブを指定したり、ネットワーク共有上の場所を指定したりできます。</br></br> このスイッチを使用しない場合、ログ ファイルはユーザーの temp フォルダーに自動的に配置します。</br></br> ローカル ドライブの例:***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>ネットワーク共有の例:***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
 
 
 ## <a name="improvements-for-in-console-search"></a>コンソール内検索の機能強化
@@ -317,4 +317,4 @@ Azure 管理者資格情報が必要となるので、このタスクは Azure �
 
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>デバイス登録のための多要素認証の構成の変更
 
-Azure Portal でデバイス登録のための多要素認証 (MFA) を設定できるようになったので、Configuration Manager コンソールでは MFA オプションが削除されました。 登録用の MFA を設定する方法の詳細については、[こちらの Microsoft Intune に関するトピック](/mem/intune/enrollment/multi-factor-authentication)を参照してください。
+Azure Portal でデバイス登録のための多要素認証 (MFA) を設定できるようになったので、Configuration Manager コンソールでは MFA オプションが削除されました。 登録用の MFA を設定する方法の詳細については、[こちらの Microsoft Intune に関するトピック](../../../intune/enrollment/multi-factor-authentication.md)を参照してください。

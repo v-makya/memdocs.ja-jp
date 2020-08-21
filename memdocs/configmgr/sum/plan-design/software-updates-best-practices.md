@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: eb9a675970abb581a793208c73506e1e94cc6f63
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 3a48ce044f3d1aecbebf2ba93e936dd34b904140
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906702"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696640"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Configuration Manager でのソフトウェア更新プログラムのベスト プラクティス
 
@@ -41,7 +41,7 @@ WSUS データベースの共有について詳しくは、次のブログ投稿
 
 - [Configuration Manager のソフトウェアの更新ポイント用に共有 SUSDB を実装する方法](https://techcommunity.microsoft.com/t5/Configuration-Manager-Archive/How-to-implement-a-shared-SUSDB-for-Configuration-Manager/ba-p/274103)  
 
-- [Configuration Manager を使用するときにコンテンツ データベースを共有する、複数の WSUS インスタンスに関する考慮事項](https://docs.microsoft.com/archive/blogs/wsus/considerations-for-multiple-wsus-instances-sharing-a-content-database-when-using-system-center-configuration-manager-but-without-network-load-balancing-nlb)。
+- [Configuration Manager を使用するときにコンテンツ データベースを共有する、複数の WSUS インスタンスに関する考慮事項](/archive/blogs/wsus/considerations-for-multiple-wsus-instances-sharing-a-content-database-when-using-system-center-configuration-manager-but-without-network-load-balancing-nlb)。
 
 
 ### <a name="when-configuration-manager-and-wsus-use-the-same-sql-server-configure-one-to-use-a-named-instance-and-the-other-to-use-the-default-instance"></a><a name="bkmk_sql-instance"></a> Configuration Manager と WSUS が同じ SQL Server を使用する場合は、一方は名前付きインスタンスを使用するように構成し、もう一方は既定のインスタンスを使用するように構成する  

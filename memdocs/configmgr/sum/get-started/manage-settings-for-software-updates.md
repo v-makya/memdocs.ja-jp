@@ -10,12 +10,12 @@ ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 2b851c03424af0ba0f826716b401705879338855
-ms.sourcegitcommit: 7a5196d4d9736c5cd52a23155c479523e52a097d
+ms.openlocfilehash: e0395d41c2886bca1d623fb2736bfc86012f89b4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84436671"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696754"
 ---
 #  <a name="manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> ソフトウェア更新の設定の管理  
 
@@ -40,7 +40,7 @@ Configuration Manager でソフトウェアの更新を同期したら、以下�
 ソフトウェアの更新ポイントがサイトに作成されると、クライアントはコンピューター ポリシーを受け取ります。このポリシーは、ソフトウェアの更新ポイントのサーバー名を提供し、コンピューターで **[イントラネットの Microsoft 更新サービスの場所を指定する]** ローカル ポリシーを構成します。 WUA は、 **[更新を検出するためのイントラネットの更新サービスを設定する]** で指定されたサーバー名を取得し、ソフトウェア更新プログラムの対応をスキャンするときにこのサーバーに接続します。 **[イントラネットの Microsoft 更新サービスの場所を指定する]** 設定に対するドメイン ポリシーが作成されている場合、ローカル ポリシーはオーバーライドされ、WUA がソフトウェアの更新ポイント以外のサーバーに接続する場合があります。 この場合、クライアントは、別の製品、分類、および言語に基づいてソフトウェア更新プログラムの対応をスキャンする可能性があります。 そのため、クライアント コンピューターの Active Directory ポリシーを構成しないでください。  
 
 ### <a name="allow-signed-content-from-intranet-microsoft-update-service-location-group-policy"></a>[イントラネットの Microsoft 更新サービスの場所からの署名済みコンテンツを許可する] グループ ポリシー  
-コンピューター上の WUA が System Center Updates Publisher で作成および発行されたソフトウェア更新プログラムをスキャンする前に、 **[イントラネットの Microsoft 更新サービスの場所からの署名済みコンテンツを許可する]** グループ ポリシー設定を有効にする必要があります。 この設定が有効になっている場合、WUA は、ローカル コンピューターに格納されている、 **信頼される発行元** の証明書でソフトウェア更新プログラムが署名されていることを条件に、イントラネット上の場所から受信したソフトウェア更新プログラムを受け入れます。 Updates Publisher に必要なグループ ポリシー設定の詳細については、 [Updates Publisher 2011 Documentation Library (Updates Publisher 2011 のドキュメント ライブラリ)](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))を参照してください。  
+コンピューター上の WUA が System Center Updates Publisher で作成および発行されたソフトウェア更新プログラムをスキャンする前に、 **[イントラネットの Microsoft 更新サービスの場所からの署名済みコンテンツを許可する]** グループ ポリシー設定を有効にする必要があります。 この設定が有効になっている場合、WUA は、ローカル コンピューターに格納されている、 **信頼される発行元** の証明書でソフトウェア更新プログラムが署名されていることを条件に、イントラネット上の場所から受信したソフトウェア更新プログラムを受け入れます。 Updates Publisher に必要なグループ ポリシー設定の詳細については、 [Updates Publisher 2011 Documentation Library (Updates Publisher 2011 のドキュメント ライブラリ)](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))を参照してください。  
 
 ### <a name="automatic-updates-configuration"></a>自動更新の構成  
 自動更新を使用すると、セキュリティの更新プログラムおよびその他の重要なダウンロードをクライアント コンピューターに取得させることができます。 自動更新は、ローカル コンピューターの **[自動更新を構成する]** グループ ポリシー設定またはコントロール パネルで構成します。 自動更新が有効になっている場合、クライアント コンピューターは、更新通知を受け取り、構成された設定によっては、必須の更新のダウンロードおよびインストールも行います。 自動更新とソフトウェア更新プログラムが共存している場合、それぞれが同一の更新について通知アイコンを表示し、表示通知をポップアップ表示します。 また、再起動が必要な場合、それぞれが同一の更新について再起動ダイアログ ボックスを表示します。  
@@ -139,4 +139,4 @@ CRL チェックを使用する場合は、ソフトウェア更新プログラ�
 #### <a name="to-enable-crl-checking"></a>CRL チェックを有効にするには  
 CRL チェックを実行するコンピューターで、製品 DVD から、コマンドプロンプトで **\SMSSETUP\BIN\X64\\** <*言語*> **\UpdDwnldCfg.exe /checkrevocation** を実行します。  
 
-たとえば、英語 (米国) の場合、 **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation** を実行します。  
+たとえば、英語 (米国) の場合、 **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation** を実行します。

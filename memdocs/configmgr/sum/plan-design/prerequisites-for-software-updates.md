@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: a870d2bf18b9e7f064e914f450aee0f5e3e2e545
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4604b6d2c0396b9192c031264cffef8b8641d557
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906712"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696683"
 ---
 # <a name="prerequisites-for-software-updates-in-configuration-manager"></a>Configuration Manager でのソフトウェア更新の前提条件
 
@@ -95,7 +95,7 @@ WSUS 6.2 および 6.3 で**アップグレード**分類を同期するには�
 
 ### <a name="historical-information-about-kb-3095113"></a>KB 3095113 に関する履歴情報
 
- [KB 3095113](https://support.microsoft.com/kb/3095113) は、Windows 10 のアップグレードのサポートを WSUS に追加するために、2015 年 10 月に[修正プログラムとしてリリース](https://docs.microsoft.com/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113)されました。 この更新プログラムにより、WSUS は Windows 10 の**アップグレード**分類で更新プログラムを同期および配布できるようになりました。
+ [KB 3095113](https://support.microsoft.com/kb/3095113) は、Windows 10 のアップグレードのサポートを WSUS に追加するために、2015 年 10 月に[修正プログラムとしてリリース](/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113)されました。 この更新プログラムにより、WSUS は Windows 10 の**アップグレード**分類で更新プログラムを同期および配布できるようになりました。
 
 [KB 3095113](https://support.microsoft.com/kb/3095113) を最初にインストールせずにアップグレードを同期する場合、WSUS データベース (SUSDB) に使用できないデータを読み込みます。 アップグレードを適切に展開するには、そのデータをクリアする必要があります。 この状態の Windows 10 アップグレードは、ソフトウェア更新プログラムのダウンロード ウィザードを使用してダウンロードすることはできません。
 
@@ -115,13 +115,13 @@ ERROR: DownloadContentFiles() failed with hr=0x80073633
 # This log is truncated for readability.
 ```
 
-以前は、これらのエラーが発生すると、[WSUS の解決手順](https://docs.microsoft.com/archive/blogs/wsus/how-to-delete-upgrades-in-wsus)の変更されたバージョンを実行することで解決されました。 これらの手順は、KB 3159706 のインストール後に必要な手動の手順を実行しない場合の解決策に似ているため、両方の手順を 1 つの解決策として次のセクションにまとめました。
+以前は、これらのエラーが発生すると、[WSUS の解決手順](/archive/blogs/wsus/how-to-delete-upgrades-in-wsus)の変更されたバージョンを実行することで解決されました。 これらの手順は、KB 3159706 のインストール後に必要な手動の手順を実行しない場合の解決策に似ているため、両方の手順を 1 つの解決策として次のセクションにまとめました。
 
 - [KB 3095113 または KB 3159706 をインストールする前にアップグレードの同期から回復するには](#bkmk_fix-upgrades)
 
 ### <a name="historical-information-about-kb-3159706"></a>KB 3159706 に関する履歴情報
 
-KB 3148812 は、WSUS が Windows 10 パッケージのアップグレードに使用される .esd ファイルをネイティブに復号化できるようにするため、2016 年 4 月に最初にリリースされました。 [KB 3148812 は、一部の顧客で問題が発生](https://docs.microsoft.com/archive/blogs/wsus/the-long-term-fix-for-kb3148812-issues)したため、[KB 3159706](https://support.microsoft.com/help/3159706) に置き換えられました。 Windows 10 バージョン 1607 以降のデバイスをサービスするには、すべてのソフトウェアの更新ポイントとサイト サーバーに KB 3159706 をインストールする必要があります。 ただし、KB をインストールした後に次の手動の手順を実行する必要があることを理解していないと、問題が発生する可能性があります。
+KB 3148812 は、WSUS が Windows 10 パッケージのアップグレードに使用される .esd ファイルをネイティブに復号化できるようにするため、2016 年 4 月に最初にリリースされました。 [KB 3148812 は、一部の顧客で問題が発生](/archive/blogs/wsus/the-long-term-fix-for-kb3148812-issues)したため、[KB 3159706](https://support.microsoft.com/help/3159706) に置き換えられました。 Windows 10 バージョン 1607 以降のデバイスをサービスするには、すべてのソフトウェアの更新ポイントとサイト サーバーに KB 3159706 をインストールする必要があります。 ただし、KB をインストールした後に次の手動の手順を実行する必要があることを理解していないと、問題が発生する可能性があります。
 
 1. 管理者特権でのコマンド プロンプトから `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing` を実行します。
 1. すべての WSUS サーバーで WSUS サービスを再起動します。
@@ -138,13 +138,13 @@ KB 3159706 にはインストール後に手動で実行する手順があるこ
 1. WSUS と Configuration Manager の両方で、**アップグレード**分類を無効にします。 この手順で指示されるまで同期が行われないようにします。  
    - 最上位サイトのソフトウェアの更新ポイント コンポーネントのプロパティで**アップグレード**分類をオフにします。
      - 詳細については、「[分類と製品の構成](../get-started/configure-classifications-and-products.md)」を参照してください。
-   - [ **[オプション]** ページ](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/setting-up-update-synchronizations)の **[製品と分類]** の下にある WSUS からの**アップグレード**分類をオフにするか、管理者として実行している PowerShell ISE を使用します。
+   - [ **[オプション]** ページ](/windows-server/administration/windows-server-update-services/manage/setting-up-update-synchronizations)の **[製品と分類]** の下にある WSUS からの**アップグレード**分類をオフにするか、管理者として実行している PowerShell ISE を使用します。
       ```PowerShell
       Get-WsusClassification | Where-Object -FilterScript {$_.Classification.Title -Eq "Upgrades"} | Set-WsusClassification -Disable
       ```  
      - WSUS データベースを複数の WSUS サーバー間で共有する場合は、データベースごとに 1 回だけ**アップグレード**をオフにする必要があります。  
 1. 各 WSUS サーバーで、管理者特権でのコマンド プロンプトから `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing` を実行します。 次に、すべての WSUS サーバーで WSUS サービスを再起動します。
-   -  WSUS では、サービスが必要かどうかをチェックする前に、データベースが[シングル ユーザー モード](https://docs.microsoft.com/sql/relational-databases/databases/set-a-database-to-single-user-mode)にされます。 サービスは、チェックの結果に基づいて実行されるか、実行されません。 その後、データベースはマルチユーザー モードに戻されます。 
+   -  WSUS では、サービスが必要かどうかをチェックする前に、データベースが[シングル ユーザー モード](/sql/relational-databases/databases/set-a-database-to-single-user-mode)にされます。 サービスは、チェックの結果に基づいて実行されるか、実行されません。 その後、データベースはマルチユーザー モードに戻されます。 
    - WSUS データベースを複数の WSUS サーバー間で共有する場合は、データベースごとに 1 回だけこのサービスを行う必要があります。
 1. 管理者として実行している PowerShell ISE を使用して、各 WSUS データベースからすべての Windows 10 アップグレードを削除します。
    ```PowerShell

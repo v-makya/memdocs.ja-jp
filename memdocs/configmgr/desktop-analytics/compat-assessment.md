@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 7b2bff4f8365693c86540c9b0578307340f13a49
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268897"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699077"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Desktop Analytics での互換性評価
 
@@ -180,13 +180,13 @@ Desktop Analytics では、以下の追加の分析情報を使用して問題�
 
 #### <a name="16-bit-apps"></a>16 ビット アプリ
 
-すべての 16 ビット コンポーネントをアプリケーションから削除し、32 ビットまたは 64 ビットに相当するものに置き換えます。 詳しくは、「[Windows Vista および Windows Server 2008 の開発者ストーリー: アプリケーションの互換性クックブック](https://docs.microsoft.com/previous-versions/aa480152\(v=msdn.10\))」をご覧ください。
+すべての 16 ビット コンポーネントをアプリケーションから削除し、32 ビットまたは 64 ビットに相当するものに置き換えます。 詳しくは、「[Windows Vista および Windows Server 2008 の開発者ストーリー: アプリケーションの互換性クックブック](/previous-versions/aa480152\(v=msdn.10\))」をご覧ください。
 
 もう 1 つのオプションは、NT 仮想 DOS コンピューター (NTVDM) で Windows 10 のサポートを有効にすることです。
 
 #### <a name="requires-admin-privileges"></a>管理者特権が必要
 
-アプリでは、ユーザーがデバイスへの管理アクセス権を持っている必要があります。 管理者アクセス許可を必要とするこれらのアプリにはアプリ マニフェストを使用します。 詳しくは、「[アプリケーション マニフェストを作成して埋め込む](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\))」をご覧ください。
+アプリでは、ユーザーがデバイスへの管理アクセス権を持っている必要があります。 管理者アクセス許可を必要とするこれらのアプリにはアプリ マニフェストを使用します。 詳しくは、「[アプリケーション マニフェストを作成して埋め込む](/previous-versions/bb756929\(v=msdn.10\))」をご覧ください。
 
 Desktop Analytics では、アプリのパイロット テストを行って回帰を検出することが推奨されます。
 
@@ -196,7 +196,7 @@ Desktop Analytics では、アプリのパイロット テストを行って回�
 
 #### <a name="not-dpi-aware"></a>DPI 対応でない
 
-Windows 10 の高度な画面解像度では、アプリで表示の問題が発生する可能性があります。 高 DPI 解像度に関する問題を回避するには、アプリ マニフェストを使用します。 詳しくは、「[アプリケーション マニフェスト](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests)」をご覧ください。
+Windows 10 の高度な画面解像度では、アプリで表示の問題が発生する可能性があります。 高 DPI 解像度に関する問題を回避するには、アプリ マニフェストを使用します。 詳しくは、「[アプリケーション マニフェスト](/windows/desktop/SbsCs/application-manifests)」をご覧ください。
 
 Desktop Analytics では、アプリのパイロット テストを行って回帰を検出することが推奨されます。
 
@@ -220,13 +220,13 @@ Desktop Analytics では、アプリのパイロット テストを行って回�
 
 #### <a name="net-framework-2030"></a>.NET Framework 2.0/3.0
 
-.NET 2.0 および 3.5 フレームワークは、Windows 10 でサポートされています。 場合によっては、Windows の機能を有効にする必要があります。 詳しくは、[Windows 10 への .NET Framework 3.5 のインストール](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10)に関する記事をご覧ください。
+.NET 2.0 および 3.5 フレームワークは、Windows 10 でサポートされています。 場合によっては、Windows の機能を有効にする必要があります。 詳しくは、[Windows 10 への .NET Framework 3.5 のインストール](/dotnet/framework/install/dotnet-35-windows-10)に関する記事をご覧ください。
 
 #### <a name="ui-access"></a>UI アクセス
 
 UI アクセスのあるアプリケーションでは、ユーザー インターフェイスの制御レベルをバイパスして、デスクトップ上の上位の特権ウィンドウに入力を行うことができます。 この設定は、ユーザー インターフェイスの支援技術アプリケーションにのみ使用してください。
 
-アプリでユーザー補助機能が使われていない場合は、アプリ マニフェストで UI アクセス フラグを false に設定します。 詳しくは、「[アプリケーション マニフェストを作成して埋め込む](https://docs.microsoft.com/previous-versions/bb756929\(v=msdn.10\))」をご覧ください。
+アプリでユーザー補助機能が使われていない場合は、アプリ マニフェストで UI アクセス フラグを false に設定します。 詳しくは、「[アプリケーション マニフェストを作成して埋め込む](/previous-versions/bb756929\(v=msdn.10\))」をご覧ください。
 
 Desktop Analytics では、アプリのパイロット テストを行って回帰を検出することが推奨されます。
 
@@ -245,4 +245,4 @@ Desktop Analytics では、その OS バージョンに移行されないすべ�
 
 ## <a name="see-also"></a>関連項目
 
-Windows 10 用の FastTrack センター特典を使用すると、**Desktop App Assure** にアクセスできます。 この特典は、Windows 10 および Microsoft 365 Apps for enterprise アプリの互換性に関する問題に対応するように設計された新しいサービスです。 詳細については、「[Desktop App Assure](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure)」を参照してください。
+Windows 10 用の FastTrack センター特典を使用すると、**Desktop App Assure** にアクセスできます。 この特典は、Windows 10 および Microsoft 365 Apps for enterprise アプリの互換性に関する問題に対応するように設計された新しいサービスです。 詳細については、「[Desktop App Assure](/fasttrack/win-10-desktop-app-assure)」を参照してください。

@@ -10,12 +10,12 @@ ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 159afbf2c5aae9516fc5244ee06a2aa484290c20
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 84f1ea48887f89cf06ed4b41d0de0dfc24e9d508
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705770"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697128"
 ---
 # <a name="create-certificate-profiles"></a>証明書プロファイルの作成
 
@@ -114,7 +114,7 @@ Configuration Manager で証明書プロファイルを使用して、会社の�
 
   - **トラステッド プラットフォーム モジュール (TPM) にインストールする (それ以外は失敗)** : TPM にキーをインストールします。 TPM モジュールが存在しない場合、インストールは失敗します。  
 
-  - **Windows Hello for Business にインストールする (それ以外は失敗)** : このオプションは、Windows 10 デバイスで使用できます。 これにより、多要素認証で保護されている Windows Hello for Business ストアに証明書を格納できます。 詳細については、「[Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)」を参照してください。
+  - **Windows Hello for Business にインストールする (それ以外は失敗)** : このオプションは、Windows 10 デバイスで使用できます。 これにより、多要素認証で保護されている Windows Hello for Business ストアに証明書を格納できます。 詳細については、「[Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification)」を参照してください。
 
     > [!NOTE]  
     > このオプションは、[証明書のプロパティ] ページでの拡張キー使用法のスマート カード ログオンをサポートしていません。

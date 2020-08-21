@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 4f13ff305ba5fc2b5c5080bafb6fed2412ff8366
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: 7dc3ef2ceb22f1c15c96127c593965ea31bdd7eb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84614078"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696822"
 ---
 # <a name="configure-classifications-and-products-to-synchronize"></a>同期する分類と製品の構成  
 
@@ -129,7 +129,7 @@ Configuration Manager での Windows Insider のサポートの詳細につい�
 ### <a name="prerequisites"></a>[前提条件]
 
 - [ソフトウェア更新プログラムの管理](../plan-design/plan-for-software-updates.md)用に構成された、Configuration Manager バージョン 1906 以降。
-- [Windows Insider Preview ビルド](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-get-started)を実行している Windows 10 デバイス。
+- [Windows Insider Preview ビルド](/windows-insider/at-work-pro/wip-4-biz-get-started)を実行している Windows 10 デバイス。
 - Windows Insider デバイスを含むコレクション。
 
 ### <a name="enable-windows-insider-upgrades-and-updates"></a>Windows Insider のアップグレードと更新プログラムを有効にする
@@ -160,7 +160,7 @@ Windows Insider のアップグレードが同期されると、 **[ソフトウ
 - ライセンス条項がある場合、インストールするためには、展開で条項に同意する必要があります。
 - [クライアント設定のスレッドの優先順位](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority)を使用することを検討してください。
 - 動的更新により、最新の累積的な更新プログラムを含む重要な更新プログラムが Microsoft Update から直接自動的にインストールされます。 この動作は、Windows 10 バージョン 1903 の機能更新プログラムで開始されました。 
-  - 明示的に[クライアント設定の動的更新を無効](../../core/clients/deploy/about-client-settings.md#bkmk_du)にできます。[setupconfig.ini ファイル](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)を使用して無効にすることもできます。 
+  - 明示的に[クライアント設定の動的更新を無効](../../core/clients/deploy/about-client-settings.md#bkmk_du)にできます。[setupconfig.ini ファイル](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)を使用して無効にすることもできます。 
   - 詳細については、[Windows 10 の動的更新](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847)に関するブログ記事を参照してください。
 
 アップグレードを展開する方法の詳細については、[サービスとしての Windows の管理](../../osd/deploy-use/manage-windows-as-a-service.md)に関するページを参照してください。
@@ -168,7 +168,7 @@ Windows Insider のアップグレードが同期されると、 **[ソフトウ
 
 ### <a name="keeping-insider-devices-up-to-date"></a>Insider デバイスを最新の状態に保つ
 
-Windows Insider の累積的な更新プログラムは、WSUS および Configuration Manager 用拡張機能によって利用可能になります。 これらの累積的な更新プログラムは、Windows 10 バージョン 1903 の累積的な更新プログラムと同様の頻度でリリースされます。 Windows Insider の累積的な更新プログラムは、**Windows Insider プレリリース**製品カテゴリに含まれており、**セキュリティ更新プログラム**または**更新プログラム**として分類されています。 [自動展開規則](../deploy-use/automatically-deploy-software-updates.md)や[段階的な展開](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)など、通常のソフトウェア更新プロセスを使用して、Windows Insider の累積的な更新プログラムを展開できます。
+Windows Insider の累積的な更新プログラムは、WSUS および Configuration Manager 用拡張機能によって利用可能になります。 これらの累積的な更新プログラムは、Windows 10 バージョン 1903 の累積的な更新プログラムと同様の頻度でリリースされます。 Windows Insider の累積的な更新プログラムは、**Windows Insider プレリリース**製品カテゴリに含まれており、**セキュリティ更新プログラム**または**更新プログラム**として分類されています。 [自動展開規則](../deploy-use/automatically-deploy-software-updates.md)や[段階的な展開](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)など、通常のソフトウェア更新プロセスを使用して、Windows Insider の累積的な更新プログラムを展開できます。
 
 ## <a name="extended-security-updates-and-configuration-manager"></a><a name="bkmk_ESU"></a> 延長セキュリティ更新プログラムと Configuration Manager
 

@@ -10,12 +10,12 @@ ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d85ab7e9d66c1206c6741117d7b379c998078708
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f8f8d6512e0ddd9881005c5916eeb804aac59e2d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125374"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698012"
 ---
 # <a name="create-capture-media"></a>キャプチャ メディアを作成する
 
@@ -84,7 +84,7 @@ OS を展開するためにタスク シーケンスで使用するブート イ
 
         - Configuration Manager では、`MediaLabel.txt` というテキスト ファイルがメディアのルートに書き込まれます。 既定では、このファイルには、`label=Configuration Manager` の 1 行テキストが含まれます。 メディアのラベルをカスタマイズする場合は、既定値の代わりにカスタム ラベルがこの行で使用されます。  
 
-    - **メディアに autorun.inf ファイルを含める**<!-- 4090666 -->:バージョン 1906 以降では、Configuration Manager で autorun.inf ファイルが既定で追加されません。 通常、このファイルはマルウェア対策製品によってブロックされます。 Windows の自動実行機能の詳細については、「[Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay)」 (自動実行が有効にされた CD-ROM アプリケーションを作成する) を参照してください。 引き続きシナリオに必要な場合は、このオプションを選択してファイルに含めます。  
+    - **メディアに autorun.inf ファイルを含める**<!-- 4090666 -->:バージョン 1906 以降では、Configuration Manager で autorun.inf ファイルが既定で追加されません。 通常、このファイルはマルウェア対策製品によってブロックされます。 Windows の自動実行機能の詳細については、「[Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay)」 (自動実行が有効にされた CD-ROM アプリケーションを作成する) を参照してください。 引き続きシナリオに必要な場合は、このオプションを選択してファイルに含めます。  
 
 5. **[ブート イメージ]** ページで、次のオプションを指定します。  
 

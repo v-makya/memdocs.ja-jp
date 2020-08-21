@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d8f29ed1e3201da139daeaa1fadca739ff44dc8e
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 11649452012de33ef1e62007d71466d5a45c56ca
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384946"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698607"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager でのコンテンツ管理の基本的な概念
 
@@ -132,7 +132,7 @@ Configuration Manager では、同じネットワーク上のピア デバイス
 
 ## <a name="branchcache"></a>BranchCache
 
-[BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) は Windows のテクノロジです。 BranchCache をサポートし、BranchCache 用に構成されている展開をダウンロードしたクライアントは、BranchCache が有効な他のクライアントに対するコンテンツ ソースとして機能します。  
+[BranchCache](/windows-server/networking/branchcache/branchcache) は Windows のテクノロジです。 BranchCache をサポートし、BranchCache 用に構成されている展開をダウンロードしたクライアントは、BranchCache が有効な他のクライアントに対するコンテンツ ソースとして機能します。  
 
 たとえば、Windows Server 2012 以降を実行する配布ポイントがあり、BranchCache サーバーとして構成されているものとします。 最初の BranchCache が有効なクライアントがこのサーバーのコンテンツを要求すると、クライアントはそのコンテンツをダウンロードしてキャッシュします。  
 
@@ -145,9 +145,9 @@ Configuration Manager では、同じネットワーク上のピア デバイス
 ## <a name="delivery-optimization"></a>配信の最適化
 
 <!-- 1324696 -->
-Configuration Manager の境界グループを使って、企業ネットワークおよびリモート オフィスへのコンテンツ配布を定義して調整します。 [Windows の配信最適化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)は、Windows 10 デバイス間でコンテンツを共有するための、クラウド ベースのピア ツー ピア テクノロジです。 ピア間でコンテンツを共有するときは、境界グループの使用に向けて配信の最適化を構成します。 クライアントの設定は、クライアントでの配信最適化グループの識別子として境界グループ識別子を適用します。 クライアントは、配信の最適化クラウド サービスと通信するとき、この識別子を使ってコンテンツを含むピアを検索します。 詳細については、「[配信の最適化](../../clients/deploy/about-client-settings.md#delivery-optimization)」のクライアント設定をご覧ください。
+Configuration Manager の境界グループを使って、企業ネットワークおよびリモート オフィスへのコンテンツ配布を定義して調整します。 [Windows の配信最適化](/windows/deployment/update/waas-delivery-optimization)は、Windows 10 デバイス間でコンテンツを共有するための、クラウド ベースのピア ツー ピア テクノロジです。 ピア間でコンテンツを共有するときは、境界グループの使用に向けて配信の最適化を構成します。 クライアントの設定は、クライアントでの配信最適化グループの識別子として境界グループ識別子を適用します。 クライアントは、配信の最適化クラウド サービスと通信するとき、この識別子を使ってコンテンツを含むピアを検索します。 詳細については、「[配信の最適化](../../clients/deploy/about-client-settings.md#delivery-optimization)」のクライアント設定をご覧ください。
 
-配信の最適化は、Windows 10 品質更新プログラム用の高速インストール ファイルの Windows 10 更新プログラムの配信を最適化するために推奨されるテクノロジです。 Configuration Manager バージョン 1910 以降、配信の最適化クラウド サービスへのインターネット アクセスは、ピアツーピア機能を利用するための要件です。 必要なインターネット エンドポイントの詳細については、[配信の最適化に関してよく寄せられる質問](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)に関するページをご覧ください。 最適化は、すべての Windows 更新プログラムに使用できます。 詳細については、[Windows 10 更新プログラムの配信の最適化](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)に関するページをご覧ください。
+配信の最適化は、Windows 10 品質更新プログラム用の高速インストール ファイルの Windows 10 更新プログラムの配信を最適化するために推奨されるテクノロジです。 Configuration Manager バージョン 1910 以降、配信の最適化クラウド サービスへのインターネット アクセスは、ピアツーピア機能を利用するための要件です。 必要なインターネット エンドポイントの詳細については、[配信の最適化に関してよく寄せられる質問](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)に関するページをご覧ください。 最適化は、すべての Windows 更新プログラムに使用できます。 詳細については、[Windows 10 更新プログラムの配信の最適化](../../../sum/deploy-use/optimize-windows-10-update-delivery.md)に関するページをご覧ください。
 
 
 ## <a name="microsoft-connected-cache"></a>Microsoft 接続キャッシュ

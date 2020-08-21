@@ -10,12 +10,12 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 652a0c5e36ce7c4bacf40531a82fdf4e16197d95
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 4f1d89707fa3e1765067c264d2abec12116bde88
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906914"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697723"
 ---
 # <a name="customize-operating-system-images-with-configuration-manager"></a>Configuration Manager を使用したオペレーティング システム イメージのカスタマイズ
 
@@ -95,7 +95,7 @@ Configuration Manager のオペレーティング システム イメージは�
     > [!IMPORTANT]  
     >  「 [Windows のキャプチャの準備](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) 」タスク シーケンス ステップは、Sysprep を実行する前に、参照コンピューターのローカル管理者のパスワードをリセットしようとします。 ローカルのセキュリティ ポリシー **[パスワードは、複雑さの要件を満たす必要がある]** が有効な場合、タスク シーケンス ステップは、管理者パスワードのリセットに失敗します。 この場合は、タスク シーケンスを実行する前にこのポリシーを無効にします。  
 
-     Sysprep について詳しくは、[Sysprep (システムの準備) の概要](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)に関するページを参照してください。  
+     Sysprep について詳しくは、[Sysprep (システムの準備) の概要](/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview)に関するページを参照してください。  
 
 -   **インストールのシナリオを軽減するために必要な適切なツールおよびスクリプト**  
 
@@ -131,4 +131,4 @@ Configuration Manager のオペレーティング システム イメージは�
 ##  <a name="use-a-task-sequence-to-build-a-reference-computer"></a><a name="BKMK_UseTSToBuildReference"></a> タスク シーケンスによる参照コンピューターの構築  
  オペレーティング システム、ドライバー、アプリケーションなどを展開するタスク シーケンスを使用して、参照コンピューターを作成するプロセスを自動化できます。  以下の手順を使用して参照コンピューターを構築し、その後、参照コンピューターからオペレーティング システム イメージをキャプチャします。  
 
--   タスク シーケンスを使用して、参照コンピューターからオペレーティング システム イメージを構築し、キャプチャします。  詳しい手順については、「 [タスク シーケンスを使用して、参照コンピューターを構築およびキャプチャする](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS)」を参照してください。  
+-   タスク シーケンスを使用して、参照コンピューターからオペレーティング システム イメージを構築し、キャプチャします。  詳しい手順については、「 [タスク シーケンスを使用して、参照コンピューターを構築およびキャプチャする](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS)」を参照してください。

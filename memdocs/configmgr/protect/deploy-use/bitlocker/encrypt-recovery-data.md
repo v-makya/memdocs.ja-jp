@@ -10,12 +10,12 @@ ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e887d594e80c0f92340081d9b922bfc334d1b3a5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2c74f1ac74b120fac2dabcd5f84f288b41368324
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129190"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697298"
 ---
 # <a name="encrypt-recovery-data"></a>回復データの暗号化
 
@@ -203,9 +203,9 @@ else select 0
 
 これらの SQL コマンドの詳細については、次の記事を参照してください。
 
-- [SQL Server とデータベースの暗号化キー](https://docs.microsoft.com/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
-- [証明書の作成](https://docs.microsoft.com/sql/t-sql/statements/create-certificate-transact-sql)
-- [証明書のバックアップ](https://docs.microsoft.com/sql/t-sql/statements/backup-certificate-transact-sql)
-- [マスター キーの作成](https://docs.microsoft.com/sql/t-sql/statements/create-master-key-transact-sql)
-- [バックアップ マスター キー](https://docs.microsoft.com/sql/t-sql/statements/backup-master-key-transact-sql)
-- [証明書のアクセス許可の付与](https://docs.microsoft.com/sql/t-sql/statements/grant-certificate-permissions-transact-sql)
+- [SQL Server とデータベースの暗号化キー](/sql/relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine)
+- [証明書の作成](/sql/t-sql/statements/create-certificate-transact-sql)
+- [証明書のバックアップ](/sql/t-sql/statements/backup-certificate-transact-sql)
+- [マスター キーの作成](/sql/t-sql/statements/create-master-key-transact-sql)
+- [バックアップ マスター キー](/sql/t-sql/statements/backup-master-key-transact-sql)
+- [証明書のアクセス許可の付与](/sql/t-sql/statements/grant-certificate-permissions-transact-sql)

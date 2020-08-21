@@ -10,12 +10,12 @@ ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c60f30e306c6ff52849cfcdd4696d67a7d26f395
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4c8029cdda80d327cbed2a4c60c71ff1811e4723
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706220"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698699"
 ---
 # <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Configuration Manager における Windows Hello for Business の設定
 
@@ -31,7 +31,7 @@ Configuration Manager は、Windows Hello for Business と統合されます。 
 >
 > 共同管理デバイスの場合は、[**リソース アクセス ポリシー** ワークロード](../../comanage/workloads.md#resource-access-policies)を Intune に移行することを検討してください。 次に、Intune ポリシーを使用してこれらの証明書を管理します。 詳細については、[ワークロードを切り替える方法](../../comanage/how-to-switch-workloads.md)に関するページをご覧ください。
 
-詳細については、「[Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)」を参照してください。
+詳細については、「[Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification)」を参照してください。
 
 > [!Note]  
 > Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options)」 (更新プログラムのオプション機能の有効化) を参照してください。<!--505213-->  

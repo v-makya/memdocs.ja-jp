@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: fc4309d3d09cd35c17b23bc46dcb1a28d210aa8e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 5c5337433b0d64ec1f6bf1efae97bd2391031f2e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125748"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694271"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>チュートリアル:Windows 10 のパイロット展開
 
@@ -32,7 +32,7 @@ ms.locfileid: "88125748"
 
 Azure サブスクリプションをお持ちでない場合は、開始する前に[無料アカウント](https://azure.microsoft.com/free)を作成してください。 適切に構成すると、Desktop Analytics を使用しても Azure のコストは発生しません。
 
-Desktop Analytics では、Azure サブスクリプション内の *Log Analytics ワークスペース*が使用されます。 ワークスペースは、基本的には、アカウント情報と、アカウントの単純な構成情報が含まれるコンテナーです。 詳しくは、[ワークスペースの管理](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json)に関するページをご覧ください。
+Desktop Analytics では、Azure サブスクリプション内の *Log Analytics ワークスペース*が使用されます。 ワークスペースは、基本的には、アカウント情報と、アカウントの単純な構成情報が含まれるコンテナーです。 詳しくは、[ワークスペースの管理](/azure/log-analytics/log-analytics-manage-access?toc=%2fazure%2fazure-monitor%2ftoc.json)に関するページをご覧ください。
 
 
 
@@ -102,7 +102,7 @@ Desktop Analytics では、Azure サブスクリプション内の *Log Analytic
 
         このオプションを選択しない場合でも、Desktop Analytics によって、セキュリティ グループのメンバーとしてユーザーが追加されます。 **グローバル管理者**が、ユーザーに **Desktop Analytics 管理者**ロールを手動で割り当てる必要があります。  
 
-        Azure Active Directory での管理者ロールのアクセス許可の割り当てと、**Desktop Analytics 管理者**に割り当てられるアクセス許可の詳細については、「[Azure Active Directory での管理者ロールのアクセス許可](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)」を参照してください。  
+        Azure Active Directory での管理者ロールのアクセス許可の割り当てと、**Desktop Analytics 管理者**に割り当てられるアクセス許可の詳細については、「[Azure Active Directory での管理者ロールのアクセス許可](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)」を参照してください。  
 
     - ワークスペースと展開計画を作成して管理するために、Desktop Analytics によって、 **[ワークスペースの所有者]** セキュリティ グループが Azure Active Directory 内に事前構成されます。 
 
@@ -339,7 +339,7 @@ Desktop Analytics 用のデバイスの構成を監視します。 Configuration
     - **プロダクト キー**:インストールする OS の Windows プロダクト キーを指定します。 エンコードされたボリューム ライセンス キーまたは標準のプロダクト キーを指定します。 標準のプロダクト キーを使う場合は、5 つの各文字グループをダッシュ (-) で区切ります。 次に例を示します。*XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*。 ボリューム ライセンス版のアップグレードの場合、プロダクト キーは必要ないことがあります。  
 
         > [!Note]  
-        > このプロダクト キーは、マルチ ライセンス認証キー (MAK) または汎用ボリューム ライセンス キー (GVLK) でもかまいません。 GVLK は、キー管理サービス (KMS) クライアント セットアップ キーとも呼ばれます。 詳細については、「[ボリューム ライセンス認証の計画](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)」を参照してください。 KMS クライアント セットアップ キーの一覧については、Windows Server のライセンス認証ガイドの「[付録 A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)」を参照してください。
+        > このプロダクト キーは、マルチ ライセンス認証キー (MAK) または汎用ボリューム ライセンス キー (GVLK) でもかまいません。 GVLK は、キー管理サービス (KMS) クライアント セットアップ キーとも呼ばれます。 詳細については、「[ボリューム ライセンス認証の計画](/windows/deployment/volume-activation/plan-for-volume-activation-client)」を参照してください。 KMS クライアント セットアップ キーの一覧については、Windows Server のライセンス認証ガイドの「[付録 A](/windows-server/get-started/kmsclientkeys)」を参照してください。
 
 6. **[更新プログラムを含める]** ページで、 **[次へ]** を選択して、ソフトウェアの更新プログラムをインストールしないようにします。  
 

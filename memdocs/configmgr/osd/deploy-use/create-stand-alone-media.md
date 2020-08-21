@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 62c667706a9d77b3bb7d2b6bbdfde3cde8bb8365
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 57b353dd9dd9fcf7f97d10480f4067bd65a1f483
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125187"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697978"
 ---
 # <a name="create-stand-alone-media"></a>スタンドアロン メディアの作成
 
@@ -140,7 +140,7 @@ Configuration Manager のスタンドアロン メディアには、ネットワ
 
         - Configuration Manager では、`MediaLabel.txt` というテキスト ファイルがメディアのルートに書き込まれます。 既定では、このファイルには、`label=Configuration Manager` の 1 行テキストが含まれます。 メディアのラベルをカスタマイズする場合は、既定値の代わりにカスタム ラベルがこの行で使用されます。  
 
-    - **メディアに autorun.inf ファイルを含める**<!-- 4090666 -->:バージョン 1906 以降では、Configuration Manager で autorun.inf ファイルが既定で追加されません。 通常、このファイルはマルウェア対策製品によってブロックされます。 Windows の自動実行機能の詳細については、「[Creating an AutoRun-enabled CD-ROM Application](https://docs.microsoft.com/windows/desktop/shell/autoplay)」 (自動実行が有効にされた CD-ROM アプリケーションを作成する) を参照してください。 引き続きシナリオに必要な場合は、このオプションを選択してファイルに含めます。  
+    - **メディアに autorun.inf ファイルを含める**<!-- 4090666 -->:バージョン 1906 以降では、Configuration Manager で autorun.inf ファイルが既定で追加されません。 通常、このファイルはマルウェア対策製品によってブロックされます。 Windows の自動実行機能の詳細については、「[Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay)」 (自動実行が有効にされた CD-ROM アプリケーションを作成する) を参照してください。 引き続きシナリオに必要な場合は、このオプションを選択してファイルに含めます。  
 
 5. **[セキュリティ]** ページで、次のオプションを指定します。
 
@@ -151,7 +151,7 @@ Configuration Manager のスタンドアロン メディアには、ネットワ
         >
         > スタンドアロン メディアでは、タスク シーケンス ステップとその変数のみが暗号化されます。 メディアの残りのコンテンツは暗号化されません。 タスク シーケンスのスクリプトには機密情報を含めないでください。 機密情報はすべて、タスク シーケンスの変数を使用して保存し、実装します。  
 
-    - **このスタンドアロン メディアが有効な日付の範囲を選択する**: メディアに任意の開始日付/有効期限を設定します。 この設定は既定で無効になっています。 スタンドアロン メディアが実行される前に、この日付はコンピューター上のシステム時刻と比較されます。 システム時刻が開始時刻より前か、有効期限より後の場合、スタンドアロン メディアは開始されません。 これらのオプションは、[New-CMStandaloneMedia](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) PowerShell コマンドレットを使用して利用することもできます。  
+    - **このスタンドアロン メディアが有効な日付の範囲を選択する**: メディアに任意の開始日付/有効期限を設定します。 この設定は既定で無効になっています。 スタンドアロン メディアが実行される前に、この日付はコンピューター上のシステム時刻と比較されます。 システム時刻が開始時刻より前か、有効期限より後の場合、スタンドアロン メディアは開始されません。 これらのオプションは、[New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) PowerShell コマンドレットを使用して利用することもできます。  
 
 6. **[スタンドアロン CD/DVD]** ページで、OS を展開するタスク シーケンスを選択します。 ブート イメージに関連付けられたタスク シーケンスのみを選択できます。 タスク シーケンスによって参照されるコンテンツの一覧を確認します。  
 

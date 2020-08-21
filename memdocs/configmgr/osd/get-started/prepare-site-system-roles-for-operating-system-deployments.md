@@ -10,12 +10,12 @@ ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1beec2f5ef7b6da9f1f093300ec6c2b239e7396e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 5d9331ce452e40944e4a9b363773d254a32f2c58
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708800"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697485"
 ---
 # <a name="prepare-site-system-roles-for-os-deployments-with-configuration-manager"></a>Configuration Manager で OS 展開用のサイト システムの役割を準備する
 
@@ -116,7 +116,7 @@ OS を展開する前に、マルチキャストをサポートするように�
 
 オペレーティング システムの展開中にユーザー状態をキャプチャして復元するには、USMT ソース ファイルをポイントするユーザー状態移行ツール (USMT) パッケージを使用します。 Configuration Manager コンソールの **[ソフトウェア ライブラリ]**  >  **[アプリケーション管理]**  >  **[パッケージ]** でこのパッケージが自動的に作成されます。 Configuration Manager では USMT 10 を使用して、ある OS からユーザー状態をキャプチャし、それを別の OS に復元します。 Windows 10 用の Windows アセスメント & デプロイメント キット (Windows ADK) には USMT 10 が含まれています。
 
-USMT 10.0 のさまざまな移行シナリオの詳細については、Windows ドキュメントの「[Common Migration Scenarios](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios)」(移行の一般的なシナリオ) を参照してください。  
+USMT 10.0 のさまざまな移行シナリオの詳細については、Windows ドキュメントの「[Common Migration Scenarios](/windows/deployment/usmt/usmt-common-migration-scenarios)」(移行の一般的なシナリオ) を参照してください。  
 
 
 ### <a name="retention-policy"></a>ポリシーの保存  
@@ -156,4 +156,4 @@ USMT 10.0 のさまざまな移行シナリオの詳細については、Windows
 
 -   状態移行ポイントがユーザー状態データの復元要求にのみ応答するかどうか このオプションを有効にすると、状態移行ポイントを使用してユーザー状態データを保存できません。  
 
-サイト システムの役割をインストールする手順については、「[Add site system roles](../../core/servers/deploy/configure/add-site-system-roles.md)」(サイト システムの役割の追加) を参照してください。  
+サイト システムの役割をインストールする手順については、「[Add site system roles](../../core/servers/deploy/configure/add-site-system-roles.md)」(サイト システムの役割の追加) を参照してください。

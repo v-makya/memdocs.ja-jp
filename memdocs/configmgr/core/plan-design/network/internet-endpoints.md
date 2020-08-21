@@ -10,12 +10,12 @@ ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bc3e1312c214f871635a65d8d0031e06ea4ad8d9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: fbb5d524551f5ff2c0a04b62b0f494046eee7a45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126463"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692684"
 ---
 # <a name="internet-access-requirements"></a>インターネット アクセス要件
 
@@ -89,11 +89,11 @@ Configuration Manager では、製品全体で次の Microsoft URL 転送サー�
 
 ## <a name="co-management"></a>共同管理
 
-共同管理対象の Windows 10 デバイスを Microsoft Intune に登録する場合は、それらのデバイスが Intune に必要なエンドポイントにアクセスできることを確認します。 詳細については、「[Microsoft Intune のネットワーク エンドポイント](https://docs.microsoft.com/intune/intune-endpoints)」を参照してください。
+共同管理対象の Windows 10 デバイスを Microsoft Intune に登録する場合は、それらのデバイスが Intune に必要なエンドポイントにアクセスできることを確認します。 詳細については、「[Microsoft Intune のネットワーク エンドポイント](/intune/intune-endpoints)」を参照してください。
 
 ## <a name="microsoft-store-for-business"></a>ビジネス向け Microsoft Store
 
-Configuration Manager を[ビジネス向け Microsoft Store](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) と統合する場合は、サービス接続ポイントと対象デバイスがクラウド サービスにアクセスできることを確認してください。 詳細については、[ビジネス向け Microsoft Store のプロキシ構成](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)に関するページをご覧ください。
+Configuration Manager を[ビジネス向け Microsoft Store](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) と統合する場合は、サービス接続ポイントと対象デバイスがクラウド サービスにアクセスできることを確認してください。 詳細については、[ビジネス向け Microsoft Store のプロキシ構成](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)に関するページをご覧ください。
 
 ## <a name="delivery-optimization"></a>配信の最適化
 
@@ -103,7 +103,7 @@ Microsoft 接続キャッシュをサポートする配布ポイントにも、�
 
 詳細については、以下の記事を参照してください。
 
-- [配信の最適化に関する FAQ](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
+- [配信の最適化に関する FAQ](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)
 - [Configuration Manager でのコンテンツ管理の基本的な概念](../hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)
 - [Configuration Manager における Microsoft 接続済みキャッシュ](../hierarchy/microsoft-connected-cache.md)
 
@@ -225,7 +225,7 @@ WSUS および自動更新が Microsoft Update クラウド サービスと通�
 ## <a name="manage-microsoft-365-apps"></a>Microsoft 365 Apps の管理
 
 > [!NOTE]
-> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
+> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
 
 Configuration Manager を使用して Microsoft 365 Apps for enterprise を展開および更新する場合は、次のエンドポイントを許可します。
 

@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 907c36b6f06bbf4fbbabb9ee1b2df6cadb0acb75
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ca002664bd55dbac79ace5cfe4bf88cd41d65b89
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125459"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698097"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Configuration Manager で OS をアップグレードするタスク シーケンスを作成する
 
@@ -66,7 +66,7 @@ Configuration Manager でタスク シーケンスを使用して、OS をイン
     - **プロダクト キー**:インストールする OS の Windows プロダクト キーを指定します。 エンコードされたボリューム ライセンス キーまたは標準のプロダクト キーを指定します。 標準のプロダクト キーを使う場合は、5 つの各文字グループをダッシュ (`-`) で区切ります。 例: `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX`。 ボリューム ライセンス版のアップグレードの場合、プロダクト キーは必要ないことがあります。  
 
         > [!Note]  
-        > このプロダクト キーは、マルチ ライセンス認証キー (MAK) または汎用ボリューム ライセンス キー (GVLK) でもかまいません。 GVLK は、キー管理サービス (KMS) クライアント セットアップ キーとも呼ばれます。 詳細については、「[ボリューム ライセンス認証の計画](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)」を参照してください。 KMS クライアント セットアップ キーの一覧については、Windows Server のライセンス認証ガイドの「[付録 A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)」を参照してください。
+        > このプロダクト キーは、マルチ ライセンス認証キー (MAK) または汎用ボリューム ライセンス キー (GVLK) でもかまいません。 GVLK は、キー管理サービス (KMS) クライアント セットアップ キーとも呼ばれます。 詳細については、「[ボリューム ライセンス認証の計画](/windows/deployment/volume-activation/plan-for-volume-activation-client)」を参照してください。 KMS クライアント セットアップ キーの一覧については、Windows Server のライセンス認証ガイドの「[付録 A](/windows-server/get-started/kmsclientkeys)」を参照してください。
 
     - **[互換性に関するメッセージが無視できる場合、すべて無視する]** :Windows Server 2016 にアップグレードする場合は、この設定を選択します。 この設定を選択しないと、Windows アプリの互換性ダイアログで、ユーザーが **[確認]** を選択するのを Windows セットアップが待機してしまうため、タスク シーケンスを完了できません。  
 
@@ -217,7 +217,7 @@ Windows 10 の一括アップグレード用の既定のタスク シーケン�
 
 追加の診断ツールを実行するには、このグループで手順を追加します。 失敗後すぐにシステムから追加情報を収集するために、これらのツールを自動化します。  
 
-このようなツールの 1 つが、Windows の [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag) です。 これは、Windows 10 がアップグレードに失敗した詳細な理由を取得する、スタンドアロンの診断ツールです。  
+このようなツールの 1 つが、Windows の [SetupDiag](/windows/deployment/upgrade/setupdiag) です。 これは、Windows 10 がアップグレードに失敗した詳細な理由を取得する、スタンドアロンの診断ツールです。  
 
 - Configuration Manager で、ツールの[パッケージを作成](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program)します。  
 
@@ -225,13 +225,13 @@ Windows 10 の一括アップグレード用の既定のタスク シーケン�
     `SetupDiag.exe /Output:"%_SMSTSLogPath%\SetupDiagResults.log"`  
 
 > [!TIP]
-> 最新の機能と既知の問題の修正を利用するために、常に最新バージョンの SetupDiag を使用してください。 詳細については、「[SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag)」をご覧ください。
+> 最新の機能と既知の問題の修正を利用するために、常に最新バージョンの SetupDiag を使用してください。 詳細については、「[SetupDiag](/windows/deployment/upgrade/setupdiag)」をご覧ください。
 
 ## <a name="additional-recommendations"></a>その他の推奨事項
 
 ### <a name="windows-documentation"></a>Windows のドキュメント
 
-Windows のドキュメント「[Windows 10 のアップグレード エラーの解決](https://docs.microsoft.com/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)」を参照してください。 この記事には、アップグレード プロセスに関する詳細情報も含まれています。  
+Windows のドキュメント「[Windows 10 のアップグレード エラーの解決](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)」を参照してください。 この記事には、アップグレード プロセスに関する詳細情報も含まれています。  
 
 ### <a name="check-minimum-disk-space"></a>最小ディスク領域を確認する
 
@@ -272,12 +272,12 @@ Windows のドキュメント「[Windows 10 のアップグレード エラー�
 ### <a name="manage-bitlocker"></a>BitLocker の管理
 
 <!--SCCMDocs issue #494-->
-BitLocker Disk Encryption を使っている場合、Windows セットアップはアップグレード中にそれを既定で自動的に一時停止します。 Windows 10 バージョン 1803 以降、Windows セットアップにはこの動作を制御するための `/BitLocker` コマンド ライン パラメーターが含まれます。 セキュリティ要件のためディスク暗号化を常にアクティブに維持する必要がある場合は、**アップグレードの準備**グループの **OSDSetupAdditionalUpgradeOptions** [タスク シーケンス変数](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions)を使用して、`/BitLocker TryKeepActive` を含めます。 詳しくは、「[Windows セットアップ コマンド ライン オプション](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker)」をご覧ください。
+BitLocker Disk Encryption を使っている場合、Windows セットアップはアップグレード中にそれを既定で自動的に一時停止します。 Windows 10 バージョン 1803 以降、Windows セットアップにはこの動作を制御するための `/BitLocker` コマンド ライン パラメーターが含まれます。 セキュリティ要件のためディスク暗号化を常にアクティブに維持する必要がある場合は、**アップグレードの準備**グループの **OSDSetupAdditionalUpgradeOptions** [タスク シーケンス変数](../understand/task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions)を使用して、`/BitLocker TryKeepActive` を含めます。 詳しくは、「[Windows セットアップ コマンド ライン オプション](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker)」をご覧ください。
 
 ### <a name="remove-default-apps"></a>既定のアプリを削除する
 
 <!--SCCMDocs issue #526-->
-お客様によっては、Windows 10 に既定でプロビジョニングされるアプリを削除することがあります。 たとえば、Bing 天気アプリや Microsoft Solitaire Collection などです。 状況によっては、Windows 10 の更新後にこれらのアプリが戻る場合があります。 詳しくは、「[How to keep apps removed from Windows 10](https://docs.microsoft.com/windows/application-management/remove-provisioned-apps-during-update)」(Windows 10 から削除されたアプリを維持する方法) をご覧ください。
+お客様によっては、Windows 10 に既定でプロビジョニングされるアプリを削除することがあります。 たとえば、Bing 天気アプリや Microsoft Solitaire Collection などです。 状況によっては、Windows 10 の更新後にこれらのアプリが戻る場合があります。 詳しくは、「[How to keep apps removed from Windows 10](/windows/application-management/remove-provisioned-apps-during-update)」(Windows 10 から削除されたアプリを維持する方法) をご覧ください。
 
 **アップグレードの準備**グループのタスク シーケンスに**コマンド ラインの実行**ステップを追加します。 次の例のようなコマンド ラインを指定します。
 

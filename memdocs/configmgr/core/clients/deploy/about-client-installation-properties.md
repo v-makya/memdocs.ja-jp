@@ -10,12 +10,12 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d26be4d3e3381a80fcbaa547cfcc7a3b8db42f5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: efc2cc22dc4edeacc00e521233eda383314b0b92
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127020"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693439"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Configuration Manager のクライアント インストールのパラメーターとプロパティについて
 
@@ -323,7 +323,7 @@ CCMSetup.exe コマンドを実行すると、次のリターン コードが提
 
 ### <a name="aadclientappid"></a>AADCLIENTAPPID
 
-Azure Active Directory (Azure AD) クライアント アプリの ID を指定します。 クラウド管理用に [Azure サービスを構成する](../../servers/deploy/configure/azure-services-wizard.md)ときに、クライアント アプリを作成またはインポートします。 Azure 管理者は、Azure Portal からこのプロパティの値を取得することができます。 詳細については、「[アプリケーション ID の取得](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)」を参照してください。 **AADCLIENTAPPID** プロパティの場合、このアプリケーション ID は、**ネイティブ** アプリケーションの種類用です。
+Azure Active Directory (Azure AD) クライアント アプリの ID を指定します。 クラウド管理用に [Azure サービスを構成する](../../servers/deploy/configure/azure-services-wizard.md)ときに、クライアント アプリを作成またはインポートします。 Azure 管理者は、Azure Portal からこのプロパティの値を取得することができます。 詳細については、「[アプリケーション ID の取得](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)」を参照してください。 **AADCLIENTAPPID** プロパティの場合、このアプリケーション ID は、**ネイティブ** アプリケーションの種類用です。
 
 例: `ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
 
@@ -344,7 +344,7 @@ Azure AD テナントの ID を指定します。 クラウド管理用に [Azur
 - [デバイスの状態] セクションで、**TenantId** の値を見つけます。 たとえば、 `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a` と記述します。
 
   > [!Note]
-  > Azure 管理者は、Azure Portal でこの値を取得することもできます。 詳細については、[テナント ID の取得](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)に関する記事をご覧ください。
+  > Azure 管理者は、Azure Portal でこの値を取得することもできます。 詳細については、[テナント ID の取得](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)に関する記事をご覧ください。
 
 例: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -793,4 +793,4 @@ Configuration Manager は、PKI 証明書の選択条件として次の属性値
 |2.5.4.12|T または Title|タイトル|  
 |2.5.4.42|G または GN または GivenName|名前|  
 |2.5.4.43|I または Initials|イニシャル|  
-|2.5.29.17|(値なし)|サブジェクト代替名|  
+|2.5.29.17|(値なし)|サブジェクト代替名|

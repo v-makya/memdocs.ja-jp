@@ -10,20 +10,20 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66f31983e34ff37cd2df8532cd9d45d372ef1f3b
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: efc43258e65752e7371c9baadf61598aac820062
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125102"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697995"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>段階的な展開の管理と監視
 
 この記事では、段階的な展開を管理および監視する方法について説明します。 管理タスクには、手動で次のフェーズを開始することと、フェーズを中断または再開することが含まれます。 
 
 まず、段階的な展開を作成する必要があります。 
-- [アプリケーション](create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)。  
-- [ソフトウェア更新プログラム](create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [アプリケーション](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)。  
+- [ソフトウェア更新プログラム](create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)  
 - [タスク シーケンス](create-phased-deployment-for-task-sequence.md)  
 
 
@@ -79,7 +79,7 @@ ms.locfileid: "88125102"
 4. 段階的な展開を選択し、リボンの **[中断]** または **[再開]** をクリックします。 
 
 > [!NOTE]
-> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager 製品やドキュメントに古い名前が表示される場合があります。 
+> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager 製品やドキュメントに古い名前が表示される場合があります。 
 
 <!-- Removed for 1806, need to clarify behavior with engineering
 When you suspend a phased deployment, it sets the available and deadline times on the active deployments to a future time. When you resume, it generates a new schedule based on when you resume the phased deployment. The new schedule helps to avoid problems if you resume after the original deadline. For example, the initial schedule has the required deadline seven days after the deployment is available. You suspend it on the second day. If you aren't ready to resume it until day eight, you don't want the deployment to be immediately past the deadline. So it generates a new deadline starting from when you resume the phased deployment on day eight. 
@@ -128,4 +128,3 @@ Configuration Manager 1806 および 1810 では、段階的展開用のネイ�
 
 たとえば、以下のプロパティは、前述した条件が 65% の [成功の条件] タイルと同じフェーズのプロパティです。  
 ![フェーズのプロパティの [プロパティの設定] タブ](media/phase-properties-phase-settings.png)
-

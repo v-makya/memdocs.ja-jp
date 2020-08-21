@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: d52725e0127f7129a3962cd3ef178d2540bb785a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1836a4c7d08547405dad08d7e60eb108d0dfd00f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905750"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695717"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-configuration-manager"></a>Configuration Manager の Technical Preview 1605 の機能
 
@@ -168,8 +168,8 @@ ms.locfileid: "82905750"
 ##  <a name="enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a> エンタープライズ データ保護 (EDP)  
  エンタープライズ データ保護 (EDP) ポリシー (保護されているアプリ、EDP 保護レベル、およびネットワーク上の企業データを検索する方法を選択できるようにするなど) を展開するのに便利な構成項目を作成することができます。 EDP の詳細については、次のトピックを参照してください。  
 
-- [Windows 情報保護 (WIP) を使用したエンタープライズ データの保護](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
-- [Configuration Manager を使用した Windows 情報保護 (WIP) ポリシーの作成と展開](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
+- [Windows 情報保護 (WIP) を使用したエンタープライズ データの保護](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Configuration Manager を使用した Windows 情報保護 (WIP) ポリシーの作成と展開](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
 
 
 ##  <a name="end-users-can-install-apps-from-the-company-portal"></a><a name="BKMK_End"></a> エンド ユーザーはポータル サイトからアプリをインストールできる  
@@ -463,4 +463,4 @@ ms.locfileid: "82905750"
 
      **[次へ]** をクリックします。  
 
-4. ファイル インポートの結果を確認します。 以前にインポートした IMEI またはシリアル番号には、新しい詳細で更新された詳細があります。  **[次へ]** をクリックして続行するか、 **[戻る]** をクリックして最新の詳細を保持して、ウィザードを完了します。  
+4. ファイル インポートの結果を確認します。 以前にインポートした IMEI またはシリアル番号には、新しい詳細で更新された詳細があります。  **[次へ]** をクリックして続行するか、 **[戻る]** をクリックして最新の詳細を保持して、ウィザードを完了します。

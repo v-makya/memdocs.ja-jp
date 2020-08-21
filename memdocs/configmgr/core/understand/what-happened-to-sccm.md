@@ -9,18 +9,18 @@ ms.assetid: 68430abb-d18e-4266-aa5a-3ad3ab753f4c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 150da86c7a78484d13bbc81c533db292bc2b4756
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6692b339871f3b53ec1b60e72f6c1e8b5827366c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706690"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699060"
 ---
 # <a name="what-happened-to-system-center-configuration-manager"></a>System Center Configuration Manager はどうなりましたか?
 
 バージョン 1910 以降、Configuration Manager の Current Branch は Microsoft Endpoint Manager の一部になりました。 バージョン 1906 以前では、System Center Configuration Manager がブランド化されたままです。 Microsoft Endpoint Manager ブランドは、今後数か月のうちに製品とドキュメントに表示されます。
 
-[System Center スイート](https://docs.microsoft.com/system-center)の他のコンポーネントに変更はありません。
+[System Center スイート](/system-center)の他のコンポーネントに変更はありません。
 
 System Center 2012 Configuration Manager などの以前の製品バージョンは、再ブランド化されません。
 

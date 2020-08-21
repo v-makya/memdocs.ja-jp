@@ -10,12 +10,12 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a08b74552d5d17a737ec9e1802e10c87621f5b97
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b24ed0aa963373fc0933a2c34b7b036d77cc9a2b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126360"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699213"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager における Microsoft 接続済みキャッシュのトラブルシューティング
 
@@ -228,7 +228,7 @@ DO キャッシュ サーバーごとに必要になるディスク容量は、�
 
 DO キャッシュ サーバーでは、システム メモリやプロセッサ時間をたくさん消費すべきではありません。 DO キャッシュ サーバーのインストール後、プロセスまたはメモリ リソースに大きな消費が見られた場合、IIS と ARR のログ ファイルを分析してください。
 
-IIS と ARR のログ ファイルでサーバー上の領域がたくさん占められている場合、いくつかの方法でログ ファイルを管理できます。 詳細については、「[IIS ログ ファイル ストレージの管理](https://docs.microsoft.com/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview)」をご覧ください。
+IIS と ARR のログ ファイルでサーバー上の領域がたくさん占められている場合、いくつかの方法でログ ファイルを管理できます。 詳細については、「[IIS ログ ファイル ストレージの管理](/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

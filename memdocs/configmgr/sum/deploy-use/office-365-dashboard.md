@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
-ms.openlocfilehash: ce3947c8ca3c562869fdfed2ddba4d9b160902be
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bae995b0704e2b2774d5f002cbf907777a3edcf0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129385"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697043"
 ---
 # <a name="office-365-client-management-dashboard"></a>Office 365 クライアント管理ダッシュボード
 
 *適用対象:Configuration Manager (Current Branch)*
 
 > [!Note]
-> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
+> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
 
 Configuration Manager バージョン 1802 以降では、Office 365 クライアント管理ダッシュボードから Microsoft 365 Apps クライアントの情報を確認できます。 Office 365 クライアント管理ダッシュボードでは、グラフ セクションを選択すると関連するデバイスの一覧が表示されます。 <!--1357281 -->
 
@@ -59,7 +59,7 @@ Office 365 クライアント管理ダッシュ ボードに表示されるデ�
 
 バージョン 1910 以降では、**Office 365 ProPlus のパイロットと正常性ダッシュボード**に情報を設定するために、Microsoft 365 Apps のデータ収集を有効にする必要があります。 データは Configuration Manager サイト データベースに格納され、Microsoft に送信されることはありません。
 
-このデータは、[Microsoft 365 Apps から Microsoft に送信される診断データ](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft)に関する記事で説明されている診断データとは異なります。
+このデータは、[Microsoft 365 Apps から Microsoft に送信される診断データ](/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft)に関する記事で説明されている診断データとは異なります。
 
 データ収集を有効にするには、グループ ポリシーを使用するか、レジストリを編集します。
 
@@ -67,7 +67,7 @@ Office 365 クライアント管理ダッシュ ボードに表示されるデ�
 
 1. [Microsoft ダウンロード センターから最新の管理用テンプレート ファイル](https://www.microsoft.com/download/details.aspx?id=49030)をダウンロードします。
 2. `User Configuration\Policies\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard` で **[テレメトリ データの収集を有効にする]** ポリシー設定を有効にします。
-    - または、[Office クラウド ポリシー サービス](https://docs.microsoft.com/DeployOffice/overview-office-cloud-policy-service)を使用してポリシー設定を適用します。
+    - または、[Office クラウド ポリシー サービス](/DeployOffice/overview-office-cloud-policy-service)を使用してポリシー設定を適用します。
     - このポリシー設定は、このデータ収集用に展開する必要はない Office テレメトリ ダッシュボードでも使用されます。
 
 #### <a name="enable-data-collection-from-the-registry"></a>レジストリからデータ収集を有効にする
@@ -105,7 +105,7 @@ Office 365 クライアント管理ダッシュボードには、 **[O365 ProPlu
 
 - クライアント設定でハードウェア インベントリを有効にしてください。 詳細については、「[前提条件](#prerequisites)」のセクションを参照してください。  
 
-- デバイスでアドインの準備状況ファイルをダウンロードするには、Office コンテンツ配信ネットワーク (CDN) への接続が必要です。 詳しくは、「[コンテンツ配信ネットワーク](https://docs.microsoft.com/office365/enterprise/content-delivery-networks)」を参照してください。 デバイスでこのファイルをダウンロードできない場合、アドインの状態は *[レビューが必要]* です。  
+- デバイスでアドインの準備状況ファイルをダウンロードするには、Office コンテンツ配信ネットワーク (CDN) への接続が必要です。 詳しくは、「[コンテンツ配信ネットワーク](/office365/enterprise/content-delivery-networks)」を参照してください。 デバイスでこのファイルをダウンロードできない場合、アドインの状態は *[レビューが必要]* です。  
 
     > [!Note]  
     > この機能のデータは Microsoft に送信されません。  

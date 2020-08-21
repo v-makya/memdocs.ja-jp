@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0513c1908b1360a50653931dda57e5d148055240
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 18ea44f662591a21750fb630425ddfb975678aa2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905672"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695598"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Configuration Manager の Technical Preview 1606 の機能
 
@@ -80,9 +80,9 @@ Microsoft Intune と Configuration Manager を使用している場合に、デ�
 
 Device Guard は、ハードウェアとソフトウェアの機能を使用して、デバイスでの実行を許可する条件を厳密に制御する Windows 10 の機能です。
 
-詳しくは、[Device Guard の概要](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)に関するページを参照してください。
+詳しくは、[Device Guard の概要](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)に関するページを参照してください。
 
-このリリースでは、Configuration Manager は Device Guard および [Windows AppLocker](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) と相互運用して、Configuration Manager で展開される実行可能ファイルや DLL ファイルが、管理されたインストーラーから提供されているものとして自動的に信頼されるようにすることができます。つまり、これらのファイルが対象のデバイス上で実行されることが許可され、その他のソフトウェアは他の AppLocker の規則によって明示的に実行が許可されない限り、実行することはできません。  
+このリリースでは、Configuration Manager は Device Guard および [Windows AppLocker](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) と相互運用して、Configuration Manager で展開される実行可能ファイルや DLL ファイルが、管理されたインストーラーから提供されているものとして自動的に信頼されるようにすることができます。つまり、これらのファイルが対象のデバイス上で実行されることが許可され、その他のソフトウェアは他の AppLocker の規則によって明示的に実行が許可されない限り、実行することはできません。  
 
 現時点では、この機能は Configuration Manager コンソールから構成することはできません。 ポリシーを構成するには、クライアントごとにレジストリ キーを構成し、クライアントで Windows サービスを構成する必要があります。
 これが完了したら、AppLocker ポリシー ファイルを構成します。 ポリシー ファイルを構成したら、それを互換性のある任意のクライアント デバイスに展開できます。
@@ -95,9 +95,9 @@ Device Guard は、ハードウェアとソフトウェアの機能を使用し�
 
 詳細については、以下の記事を参照してください。
 
-- [Device Guard の概要](https://docs.microsoft.com/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
+- [Device Guard の概要](/windows/security/threat-protection/device-guard/introduction-to-device-guard-virtualization-based-security-and-windows-defender-application-control)
 
-- [Windows Defender Application Control の展開プロセスの計画と概要](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
+- [Windows Defender Application Control の展開プロセスの計画と概要](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
   ##  <a name="multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a> オンプレミス モバイル デバイス管理のための複数のデバイス管理ポイント  
   Technical Preview 1606 では、オンプレミスのモバイル デバイス管理 (MDM) で、複数のデバイス管理ポイントが使用できるように登録済みのデバイスを自動的に構成する Windows 10 Anniversary Update の新機能をサポートしています。 この機能により、通常使用しているデバイスの管理ポイントが使用できない場合に、デバイスが別のデバイス管理ポイントにフォールバックすることができます。 この機能は、Windows 10 Anniversary Update がインストールされている PC でのみ機能します。  
@@ -170,8 +170,8 @@ Configuration Manager コンソールを使用して、Azure にサービスを�
 #### <a name="upload-the-management-certificate-to-azure"></a>管理証明書を Azure にアップロードする
 
 Azure 管理証明書は、Configuration Manager が Azure API にアクセスして、クラウド プロキシ サービスを構成するために必要です。 管理証明書をアップロードする方法の詳細と手順については、Azure のドキュメントの次の記事を参照してください。
-- [Azure Cloud Services の証明書の概要](https://azure.microsoft.com/documentation/articles/cloud-services-certs-create/)
-- [Azure Management API 管理証明書のアップロード](https://azure.microsoft.com/documentation/articles/azure-api-management-certs/)
+- [Azure Cloud Services の証明書の概要](/azure/cloud-services/cloud-services-certs-create)
+- [Azure Management API 管理証明書のアップロード](/previous-versions/azure/azure-api-management-certs)
 
 管理証明書に関連付けられているサブスクリプション ID を必ずコピーしてください。 これは Configuration Manager コンソールで、クラウド プロキシ サービスを設定する際に必要になります。
 

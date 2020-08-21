@@ -10,22 +10,22 @@ ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4d13d9dfd75abb656a765ce8c91ce6f177636cd3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ca7d81ba112c9eb79fb8bcfff96fb213b87b44c3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127173"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694816"
 ---
 # <a name="onedrive-for-business-profiles"></a>OneDrive for Business プロファイル
 
-Configuration Manager バージョン 1902 以降、 Windows の既知のフォルダーを OneDrive for Business に移動するための OneDrive for Business プロファイルを作成できます。 これらのフォルダーには、デスクトップ、ドキュメント、およびピクチャが含まれます。 各プロファイルで、Windows の既知のフォルダーを移動するための設定を指定できます。 OneDrive for Business の詳細については、「[Redirect and move Windows known folders to OneDrive (Windows の既知のフォルダーを OneDrive にリダイレクトして移動する)](https://docs.microsoft.com/onedrive/redirect-known-folders)」をご覧ください。 <!--3556021-->
+Configuration Manager バージョン 1902 以降、 Windows の既知のフォルダーを OneDrive for Business に移動するための OneDrive for Business プロファイルを作成できます。 これらのフォルダーには、デスクトップ、ドキュメント、およびピクチャが含まれます。 各プロファイルで、Windows の既知のフォルダーを移動するための設定を指定できます。 OneDrive for Business の詳細については、「[Redirect and move Windows known folders to OneDrive (Windows の既知のフォルダーを OneDrive にリダイレクトして移動する)](/onedrive/redirect-known-folders)」をご覧ください。 <!--3556021-->
 
 ## <a name="prerequisites"></a>[前提条件]
 
-- [Microsoft 365 テナント ID を検索します](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
+- [Microsoft 365 テナント ID を検索します](/onedrive/find-your-office-365-tenant-id)  
 
-- OneDrive 同期クライアント バージョン 18.111.0603.0004 以降を展開します。 詳細については、「[Configuration Manager を使用した OneDrive アプリの展開](https://docs.microsoft.com/onedrive/deploy-on-windows)」を参照してください。  
+- OneDrive 同期クライアント バージョン 18.111.0603.0004 以降を展開します。 詳細については、「[Configuration Manager を使用した OneDrive アプリの展開](/onedrive/deploy-on-windows)」を参照してください。  
 
 ## <a name="move-windows-known-folders-to-onedrive"></a><a name="bkmk_odfb"></a> Windows の既知のフォルダーを OneDrive に移動する
 <!--3556021-->

@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f2ada7bfcef5714d8df3c476a6bbba695dc398e0
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f5b9addd35dd3e9252c1b988de4bb006e9a5bc0d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127275"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694969"
 ---
 # <a name="conditional-access-with-co-management"></a>共同管理での条件付きアクセス
 
@@ -108,12 +108,11 @@ ATP 統合の詳細については、[Microsoft Defender ATP デバイス リス
 
 条件付きアクセスの使用の詳細については、次の記事を参照してください。 
 
-- [Azure AD の条件付きアクセス](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)  
+- [Azure AD の条件付きアクセス](/azure/active-directory/conditional-access/overview)  
 
-- [Intune のデバイス コンプライアンス ポリシー](https://docs.microsoft.com/intune/device-compliance)  
+- [Intune のデバイス コンプライアンス ポリシー](/intune/device-compliance)  
 
-- [Intune でのアプリ ベースの条件付きアクセス](https://docs.microsoft.com/intune/app-based-conditional-access-intune)  
+- [Intune でのアプリ ベースの条件付きアクセス](/intune/app-based-conditional-access-intune)  
 
 > [!Note]  
-> 条件付きアクセス機能は、ハイブリッド Azure AD 参加済みデバイスですぐに使用できるようになります。 これらの機能には、多要素認証とハイブリッド Azure AD 参加のアクセス制御が含まれます。 この動作は、Azure AD プロパティに基づいているためです。 Intune と Configuration Manager からの構成ベースの評価を利用するには、共同管理を有効にします。 この構成では、準拠しているデバイス用の Intune から直接アクセスを制御できます。 Intune のコンプライアンス ポリシー評価機能も提供されます。  
-
+> 条件付きアクセス機能は、ハイブリッド Azure AD 参加済みデバイスですぐに使用できるようになります。 これらの機能には、多要素認証とハイブリッド Azure AD 参加のアクセス制御が含まれます。 この動作は、Azure AD プロパティに基づいているためです。 Intune と Configuration Manager からの構成ベースの評価を利用するには、共同管理を有効にします。 この構成では、準拠しているデバイス用の Intune から直接アクセスを制御できます。 Intune のコンプライアンス ポリシー評価機能も提供されます。

@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: be1401f28ccbd15de2561a19169ed67a81a91550
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 1e86f331531d166e30ec7284d3852930fb3e62af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526034"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695819"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-configuration-manager"></a>Configuration Manager の Technical Preview 1601 の機能
 
@@ -75,11 +75,11 @@ ms.locfileid: "87526034"
 
     -   Microsoft Intune サブスクリプション。 Microsoft Intune サブスクリプションは、Configuration Manager コンソールで構成する必要があります。  
 
-    -   [Azure AD 自動登録の前提条件](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
+    -   [Azure AD 自動登録の前提条件](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1)。  
 
     このオプションを使用するには、以下に示す特定のルールが含まれるコンプライアンス ポリシーを Configuration Manager で作成し、Intune コンソールで条件付きアクセス ポリシーを設定する必要があります。  また、コンプライアンスに適合した PC のみにアクセスが許可されるようにするため、Windows コンピューターの要件で **[デバイスは準拠デバイスである必要があります]** オプションを設定しなければなりません。 Configuration Manager によって管理される PC に適用されるコンプライアンス ポリシー ルールを次に示します。  
 
-    -   **Azure Active Directory への登録が必要**: このルールでは、ユーザーのデバイスが Azure AD に社内参加しているかどうかがチェックされ、参加していない場合、そのデバイスは Azure AD 内に自動的に登録されます。 自動登録がサポートされているのは Windows 8.1 のみです。 Windows 7 PC の場合には、MSI を展開して自動登録を実行します。 詳しくは、[こちら](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)をご覧ください。  
+    -   **Azure Active Directory への登録が必要**: このルールでは、ユーザーのデバイスが Azure AD に社内参加しているかどうかがチェックされ、参加していない場合、そのデバイスは Azure AD 内に自動的に登録されます。 自動登録がサポートされているのは Windows 8.1 のみです。 Windows 7 PC の場合には、MSI を展開して自動登録を実行します。 詳しくは、[こちら](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1)をご覧ください。  
 
     -   **必要な更新が特定の日数の期限を過ぎている場合、そのすべてをインストール:** このルールでは、指定された期限および猶予期間内の必須のすべての更新プログラム (**必須の自動更新**ルールで指定) がユーザーのデバイスに含まれているかどうかが確認され、保留されている必須の更新プログラムがあれば自動的にインストールされます。  
 
@@ -213,4 +213,4 @@ Technical Preview 1601 以降、Configuration Manager コンソールでクラ�
 
  新しい設定を確認するには、 **[構成項目の作成]** ウィザードの構成項目 **[デバイス設定]** ページで、 **[Kiosk Mode - Samsung KNOX]** \(キオスク モード - Samsung KNOX) を選択します。  
 
- 詳しくは、「[Configuration Manager クライアントを使用せずに管理されている Windows 8.1 デバイスと Windows 10 デバイスの構成項目を作成する方法](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)」をご覧ください。  
+ 詳しくは、「[Configuration Manager クライアントを使用せずに管理されている Windows 8.1 デバイスと Windows 10 デバイスの構成項目を作成する方法](../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)」をご覧ください。

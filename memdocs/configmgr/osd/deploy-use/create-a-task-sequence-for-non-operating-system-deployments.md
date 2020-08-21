@@ -10,12 +10,12 @@ ms.assetid: 92aaec8a-8751-442a-b64b-62ab05b5bf50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1fcae4d520b1e81d0ef3470cd12ee68488b4f589
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1c5ef6d4a17623428f299ff9df676dcba49e7f0c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125528"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698156"
 ---
 # <a name="create-a-task-sequence-for-non-os-deployments"></a>OS 以外の展開用タスク シーケンスの作成
 
@@ -32,7 +32,7 @@ Configuration Manager のタスク シーケンスは、お客様の環境でさ
 
 - [構成の設定](../../compliance/understand/ensure-device-compliance.md)
 
-[Orchestrator](https://docs.microsoft.com/system-center/orchestrator/) や [Service Management Automation](https://docs.microsoft.com/system-center/sma/) など、Microsoft System Center の他の自動化テクノロジもご検討ください。  
+[Orchestrator](/system-center/orchestrator/) や [Service Management Automation](/system-center/sma/) など、Microsoft System Center の他の自動化テクノロジもご検討ください。  
 
 タスク シーケンスの能力は、その柔軟性と使用方法にあります。 クライアント設定の構成、ソフトウェアの配布、ドライバーの更新、ユーザー状態の編集、および OS の展開とは独立したその他のタスクの実行を行うことができます。 カスタム タスク シーケンスを作成して、タスクをいくつでも追加できます。 Configuration Manager では、OS 以外の展開用のカスタム タスク シーケンスの使用がサポートされています。 ただし、タスク シーケンスで好ましくない結果や矛盾する結果が生じる場合は、操作を簡略化する方法を考えてください。
 

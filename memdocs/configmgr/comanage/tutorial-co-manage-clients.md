@@ -10,12 +10,12 @@ ms.assetid: 140c522f-d09a-40b6-a4b0-e0d14742834a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9cb8097fbdd57184e5cd0e229cf96dcb317cf1e5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: cc05ae5a9be6c437fab60f8c4c5a45d61e8c3e65
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127343"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694884"
 ---
 # <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>チュートリアル: 既存の Configuration Manager クライアントの共同管理を有効にする
 
@@ -50,7 +50,7 @@ ms.locfileid: "88127343"
 
 環境にまだ存在しない場合は、このチュートリアルの中で以下を実行します。
 
-- オンプレミスの Active Directory と Azure Active Directory (AD) テナントの間に [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation) を構成します。
+- オンプレミスの Active Directory と Azure Active Directory (AD) テナントの間に [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation) を構成します。
 
 > [!TIP]
 > ユーザーに対して個別の Intune または EMS ライセンスを購入して割り当てる必要はなくなりました。 詳細については、「[Configuration Manager のブランチとライセンスに関してよく寄せられる質問](../core/understand/product-and-licensing-faq.md#bkmk_mem)」を参照してください。
@@ -78,10 +78,10 @@ ms.locfileid: "88127343"
 >
 > ハイブリッド Azure AD の詳細については、Azure Active Directory のドキュメントの次の記事を参照することから始めてください。
 >
-> - [Azure AD 参加の実装を計画する](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)
-> - [ハイブリッド Azure Active Directory 参加の実装を計画する](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
-> - [デバイスのハイブリッド Azure AD 参加を制御する](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-control)
-> - [フェデレーション ドメイン用のハイブリッド Azure Active Directory 参加を構成する](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+> - [Azure AD 参加の実装を計画する](/azure/active-directory/devices/azureadjoin-plan)
+> - [ハイブリッド Azure Active Directory 参加の実装を計画する](/azure/active-directory/devices/hybrid-azuread-join-plan)
+> - [デバイスのハイブリッド Azure AD 参加を制御する](/azure/active-directory/devices/hybrid-azuread-join-control)
+> - [フェデレーション ドメイン用のハイブリッド Azure Active Directory 参加を構成する](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
 
 ### <a name="set-up-azure-ad-connect"></a>Azure AD Connect を設定する
 
@@ -92,7 +92,7 @@ ms.locfileid: "88127343"
 Azure AD Connect を構成するには、Azure AD のグローバル管理者の資格情報が必要です。  
 
 > [!TIP]  
-> 次の手順を Azure AD Connect を設定するための正式な手順とみなさないでください。ここに記載されているのは、Intune と Configuration Manager 間の共同管理の構成の流れを示するために役立つからです。 Azure AD を設定するための正規の内容と関連手順については、Azure AD ドキュメントの「[マネージド ドメイン用のハイブリッド Azure Active Directory 参加の構成](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains)」を参照してください。  
+> 次の手順を Azure AD Connect を設定するための正式な手順とみなさないでください。ここに記載されているのは、Intune と Configuration Manager 間の共同管理の構成の流れを示するために役立つからです。 Azure AD を設定するための正規の内容と関連手順については、Azure AD ドキュメントの「[マネージド ドメイン用のハイブリッド Azure Active Directory 参加の構成](/azure/active-directory/devices/hybrid-azuread-join-managed-domains)」を参照してください。  
 
 #### <a name="configure-a-hybrid-azure-ad-join-using-azure-ad-connect"></a>Azure AD Connect を使用してハイブリッド Azure AD 参加を構成する
 
@@ -107,7 +107,7 @@ Azure AD Connect を構成するには、Azure AD のグローバル管理者の
    Windows ダウンレベル ドメイン参加済みデバイスをサポートするオプションを選択できますが、デバイスの共同管理は Windows 10 に対してのみサポートされることを忘れないでください。
 8. **[SCP]** ページで、Azure AD Connect にサービス接続ポイント (SCP) を構成する各オンプレミス フォレストに対して、次の手順を実行した後、 **[次へ]** を選択します。  
    1. フォレストを選択します。  
-   2. 認証サービスを選択します。  フェデレーション ドメインがある場合は、ご自身の組織に Windows 10 クライアントのみがあり、コンピューター/デバイスの同期を構成しているか、ご自身の組織で [SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) を使用している場合を除いて、AD FS サーバーを選択します。  
+   2. 認証サービスを選択します。  フェデレーション ドメインがある場合は、ご自身の組織に Windows 10 クライアントのみがあり、コンピューター/デバイスの同期を構成しているか、ご自身の組織で [SeamlessSSO](/azure/active-directory/hybrid/how-to-connect-sso) を使用している場合を除いて、AD FS サーバーを選択します。  
    3. **[追加]** をクリックし、エンタープライズ管理者の資格情報を入力します。  
 9. マネージド ドメインがある場合は、この手順をスキップします。  
 
@@ -115,7 +115,7 @@ Azure AD Connect を構成するには、Azure AD のグローバル管理者の
 10. **[構成の準備完了]** ページで、 **[構成]** を選択します。
 11. **[構成が完了しました]** ページで、 **[終了]** を選択します。
 
-ドメイン参加済み Windows デバイスに対するハイブリッド Azure AD 参加の完了で問題が発生した場合は、「[Windows の現在のデバイスのハイブリッド Azure AD 参加のトラブルシューティング](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)」を参照してください。
+ドメイン参加済み Windows デバイスに対するハイブリッド Azure AD 参加の完了で問題が発生した場合は、「[Windows の現在のデバイスのハイブリッド Azure AD 参加のトラブルシューティング](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)」を参照してください。
 
 ## <a name="configure-client-settings-to-direct-clients-to-register-with-azure-ad"></a>Azure AD への登録をクライアントに指示するようにクライアント設定を構成する
 
@@ -155,7 +155,7 @@ Azure AD Connect を構成するには、Azure AD のグローバル管理者の
     > [!NOTE]
     > 一部のテナントでは、これらのオプションを構成することはできません。<!-- SCCMDocs#1230 -->
     >
-    > **Microsoft Intune** を使うと、Azure AD に対して MDM アプリを構成できます。 **Microsoft Intune の登録**は、iOS および Android の登録に多要素認証ポリシーを適用するときに作成される特定の Azure AD アプリです。 詳細については、「[Intune へのデバイスの登録で多要素認証を要求する](https://docs.microsoft.com/intune/enrollment/multi-factor-authentication)」を参照してください。
+    > **Microsoft Intune** を使うと、Azure AD に対して MDM アプリを構成できます。 **Microsoft Intune の登録**は、iOS および Android の登録に多要素認証ポリシーを適用するときに作成される特定の Azure AD アプリです。 詳細については、「[Intune へのデバイスの登録で多要素認証を要求する](/intune/enrollment/multi-factor-authentication)」を参照してください。
 
 5. MDM ユーザー スコープで、 **[すべて]** を選択し、 **[保存]** を選択します。  
 

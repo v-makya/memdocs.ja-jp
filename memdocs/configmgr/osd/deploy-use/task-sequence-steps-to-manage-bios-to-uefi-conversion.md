@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 761270fe9419330e2d60d0483554ee6c932c1b26
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf108cec074129f9b70e7cd2658cf2b1c8c10bc2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124887"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697910"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>BIOS からUEFI への変換を管理するためのタスク シーケンス手順
 
@@ -91,7 +91,7 @@ Windows 10 には、簡単な変換ツール **MBR2GPT.EXE** が含まれてい�
     > [!TIP]
     > 完全な OS ではなく、Windows PE で MBR2GPT.EXE ツールを実行することもできます。 MBR2GPT.EXE ツールを実行するステップの前に、コンピューターを Windows PE で再起動するステップを追加します。 次に、コマンド ラインから **/AllowFullOS** オプションを削除します。
 
-    ツールと使用可能なオプションの詳細については、「[MBR2GPT.EXE](https://docs.microsoft.com/windows/deployment/mbr-to-gpt)」を参照してください。
+    ツールと使用可能なオプションの詳細については、「[MBR2GPT.EXE](/windows/deployment/mbr-to-gpt)」を参照してください。
 
     1. ファームウェアを BIOS から UEFI に変換する OEM ツールを実行するステップを追加します。 このステップは通常、OEM ツールを実行するコマンド ラインを含む**コマンド ラインの実行**です。
 

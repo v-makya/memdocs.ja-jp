@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9f0ed1d5913154d90242d1aa2a47efbcf7d22282
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943792"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698958"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager の前提条件の確認の一覧
 
@@ -279,7 +279,7 @@ Configuration Manager セカンダリ サイト サーバーで .NET Framework 4
 
 SQL Server のインスタンスが、**SQL_Latin1_General_CP1_CI_AS** 照合順序を使用するように構成されています。
 
-Configuration Manager サイト データベースが既にインストールされている場合、この確認はデータベースにも適用されます。 SQL Server インスタンスとデータベースの照合順序の変更方法の詳細については、[SQL の照合順序と Unicode サポート](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support)に関するページを参照してください。
+Configuration Manager サイト データベースが既にインストールされている場合、この確認はデータベースにも適用されます。 SQL Server インスタンスとデータベースの照合順序の変更方法の詳細については、[SQL の照合順序と Unicode サポート](/sql/relational-databases/collations/collation-and-unicode-support)に関するページを参照してください。
 
 中国語の OS を使用しており、GB18030 のサポートが必要な場合、この確認は適用されません。 GB18030 サポートの有効化の詳細については、「[International support](../../../plan-design/hierarchy/international-support.md)」(インターナショナル サポート) を参照してください。
 
@@ -379,7 +379,7 @@ SQL Server Always On を使用している場合、可用性グループのレ�
 <!-- SCCMDocs-pr#3899 -->
 *適用対象:サイト データベース サーバー*
 
-バージョン 1906 以降で SQL Server Always On を使用する場合は、同じ[シード処理モード](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)で可用性グループ レプリカを構成する必要があります。
+バージョン 1906 以降で SQL Server Always On を使用する場合は、同じ[シード処理モード](/sql/database-engine/availability-groups/windows/automatic-seeding-secondary-replicas)で可用性グループ レプリカを構成する必要があります。
 
 ### <a name="sql-availability-group-replicas-must-be-healthy"></a>SQL 可用性グループ レプリカが正常である必要があります
 
@@ -741,7 +741,7 @@ Configuration Manager では、サイト サーバーのインストールに Ac
 
 バージョン 1810 以降では、サイト データベースに SQL 変更追跡データのバックログがあるかどうかを確認します。<!--SCCMDocs-pr issue 3023-->  
 
-サイト データベースで診断ストアド プロシージャを実行することで、この確認を手動で検証します。 最初に、サイト データベースへの[診断接続](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017)を作成します。 最も簡単な方法は、SQL Server Management Studio のデータベース エンジン クエリ エディターを使用して、`admin:<instance name>` に接続することです。
+サイト データベースで診断ストアド プロシージャを実行することで、この確認を手動で検証します。 最初に、サイト データベースへの[診断接続](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017)を作成します。 最も簡単な方法は、SQL Server Management Studio のデータベース エンジン クエリ エディターを使用して、`admin:<instance name>` に接続することです。
 
 専用管理者接続クエリ ウィンドウで、次のコマンドを実行します。
 
@@ -804,7 +804,7 @@ Configuration Manager では、次のサイト システムの役割で SQL Serv
 
 SQL Server で、中央管理サイトとプライマリ サイト用に少なくとも 8 GB、セカンダリ サイト用に少なくとも 4 GB のメモリが予約されています。
 
-詳細については、「[[SQL Server Management Studio] を利用してメモリ オプションを構成する方法](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-)」を参照してください。
+詳細については、「[[SQL Server Management Studio] を利用してメモリ オプションを構成する方法](/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-)」を参照してください。
 
 > [!NOTE]  
 > この確認は、セカンダリ サイトの SQL Server Express には適用できません。 このエディションでは、予約メモリが 1 GB に制限されます。  
@@ -849,7 +849,7 @@ Upgrade Assessment Toolkit はインストールされません。 詳細につ�
 
 帯域外管理コンソールを実行するために、プライマリ サイト サーバーまたは Configuration Manager コンソール コンピューターに WinRM 1.1 がインストールされています。
 
-WinRM は、現在サポートされているあらゆるバージョンの Windows と共に自動的にインストールされます。 詳細については、「[Windows リモート管理のためのインストールと構成](https://docs.microsoft.com/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)」をご覧ください。
+WinRM は、現在サポートされているあらゆるバージョンの Windows と共に自動的にインストールされます。 詳細については、「[Windows リモート管理のためのインストールと構成](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)」をご覧ください。
 
 ### <a name="wsus-on-site-server"></a>サイト サーバー上の WSUS
 
@@ -857,4 +857,4 @@ WinRM は、現在サポートされているあらゆるバージョンの Wind
 
 サポートされているバージョンの Windows Server Update Services (WSUS) がサイト サーバーにインストールされています。
 
-サイト サーバー以外のサーバーでソフトウェアの更新ポイントを使用する場合は、サイト サーバーに WSUS 管理コンソールをインストールする必要があります。 WSUS の詳細については、「[Windows Server Update Services](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus)」を参照してください。
+サイト サーバー以外のサーバーでソフトウェアの更新ポイントを使用する場合は、サイト サーバーに WSUS 管理コンソールをインストールする必要があります。 WSUS の詳細については、「[Windows Server Update Services](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus)」を参照してください。

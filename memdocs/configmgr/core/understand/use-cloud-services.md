@@ -10,12 +10,12 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84cb878de3eea56dc68180a83fd4b6a32b2d1073
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e5ea198f944cf44909e54e123889a3f0f29b1db5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906419"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699111"
 ---
 # <a name="use-cloud-services-with-configuration-manager"></a>Configuration Manager でのクラウド サービスの使用
 
@@ -78,4 +78,4 @@ Azure で配布ポイントをホストするには、Azure サブスクリプ�
 ##  <a name="security-for-cloud-based-services"></a><a name="BKMK_CloudSec"></a> クラウドベースのサービスのセキュリティ  
  Configuration Manager は証明書を使用して、Azure 内のコンテンツのプロビジョニングとアクセスを行い、使用するサービスを管理します。 Configuration Manager は Azure に保存されるデータを暗号化しますが、Azure が提供する機能以外のセキュリティ機能やデータ制御機能を提供しません。  
 
- 詳細については、クラウドベースのリソースの各種シナリオを参照してください。 「[Azure のセキュリティの概要](https://docs.microsoft.com/azure/security/fundamentals/overview)」も参照してください。
+ 詳細については、クラウドベースのリソースの各種シナリオを参照してください。 「[Azure のセキュリティの概要](/azure/security/fundamentals/overview)」も参照してください。

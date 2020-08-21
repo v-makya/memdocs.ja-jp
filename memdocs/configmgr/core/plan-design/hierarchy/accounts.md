@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 176280452039fd42dfef1d63cfdbb48169cda545
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777026"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698488"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager で使用されるアカウント
 
@@ -553,7 +553,7 @@ Configuration Manager 2007 の配布ポイントまたは配布ポイントが�
 > [!NOTE]  
 > Configuration Manager コンソールの **[管理]** ワークスペースの **[アカウント]** ノードでは、ソース サイトのアカウントと[ソース サイトのデータベース アカウント](#source-site-database-account)の両方が **[移行マネージャー]** として識別されます。  
 
-詳細については、[階層間でのデータの移行](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies)に関するページを参照してください。
+詳細については、[階層間でのデータの移行](/sccm/core/migration/migrate-data-between-hierarchies)に関するページを参照してください。
 
 
 ### <a name="source-site-database-account"></a>ソース サイトのデータベース アカウント  
@@ -569,7 +569,7 @@ Configuration Manager (Current Branch) のコンピューター アカウント�
 > [!NOTE]  
 > Configuration Manager コンソールの **[管理]** ワークスペースの **[アカウント]** ノードでは、ソース サイトのアカウントと[ソース サイトのデータベース アカウント](#source-site-database-account)の両方が **[移行マネージャー]** として識別されます。  
 
-詳細については、[階層間でのデータの移行](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies)に関するページを参照してください。
+詳細については、[階層間でのデータの移行](/sccm/core/migration/migrate-data-between-hierarchies)に関するページを参照してください。
 
 
 ### <a name="task-sequence-domain-join-account"></a>タスク シーケンス ドメイン参加アカウント 

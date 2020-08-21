@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2e398795a14f5073141f103d93ccd82e61d4d7a8
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9a54ee5fb427f276ec755e748513b178d0c026ab
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904887"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698573"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Configuration Manager のバージョン 1602 の新機能
 
@@ -42,9 +42,9 @@ Configuration Manager の更新プログラム 1602 は、以前にインスト�
 > [!WARNING]  
 >  Windows Server 2012 R2 にアップグレードする前に、サーバーから WSUS 3.2 をアンインストールする必要があります。  
 >   
->  この重要な手順について詳しくは、「[Windows Server Update Services の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)」の「新機能と変更された機能」セクションをご覧ください。  
+>  この重要な手順について詳しくは、「[Windows Server Update Services の概要](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)」の「新機能と変更された機能」セクションをご覧ください。  
 
- サーバーをアップグレードするには、Windows Server 2012 R2 のアップグレード手順を使用します。 アップグレード後に Configuration Manager サイト サーバーの復元を実行する必要はありません。 アップグレード手順については、Windows Server のドキュメントの「[Windows Server 2012 R2 のアップグレード オプション](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))」をご覧ください。  
+ サーバーをアップグレードするには、Windows Server 2012 R2 のアップグレード手順を使用します。 アップグレード後に Configuration Manager サイト サーバーの復元を実行する必要はありません。 アップグレード手順については、Windows Server のドキュメントの「[Windows Server 2012 R2 のアップグレード オプション](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))」をご覧ください。  
 
 ###  <a name="sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a> SQL Server AlwaysOn 可用性グループ  
  高可用性と障害復旧ソリューションとして、SQL Server AlwaysOn 可用性グループを使用して、プライマリ サイトと中央管理サイトでサイト データベースをホストします。  
@@ -209,4 +209,4 @@ Configuration Manager では、iOS 7.1 以降を実行している監視対象�
 
 -   **非対応**: ユーザーが最新のバージョンではない使用条件に同意しました。  
 
--   **不明**: 登録済みデバイスのない使用条件を含めて、ユーザーが使用条件に同意したことはありません。  
+-   **不明**: 登録済みデバイスのない使用条件を含めて、ユーザーが使用条件に同意したことはありません。

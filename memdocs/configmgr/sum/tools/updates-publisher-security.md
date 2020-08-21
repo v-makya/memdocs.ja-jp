@@ -10,12 +10,12 @@ ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5f441bc277f9c91cb1a83ce97879bd29b6349481
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: dc8e31245212136cd67f6f8cac062723c2cabefb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701610"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696006"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Updates Publisher 用の証明書とセキュリティを管理する
 
@@ -76,7 +76,7 @@ ms.locfileid: "81701610"
    -   証明機関 (CA) 発行の証明書の場合: **[信頼された発行元]** 証明書ストアに証明書を追加します。
 
    > [!NOTE]
-   > また、WUA では、ローカル コンピューターで **[イントラネットの Microsoft 更新サービスの場所からの署名済みコンテンツを許可する]** グループ ポリシー設定が有効になっているかどうかも確認します。 Updates Publisher で作成および発行された更新プログラムをスキャンするには、WUA でこのポリシー設定が有効になっている必要があります。 このグループ ポリシー設定を有効にする方法の詳細については、「[クライアント コンピューター上でのグループ ポリシーの構成方法](https://docs.microsoft.com/previous-versions/bb530967(v=technet.10))」を参照してください。
+   > また、WUA では、ローカル コンピューターで **[イントラネットの Microsoft 更新サービスの場所からの署名済みコンテンツを許可する]** グループ ポリシー設定が有効になっているかどうかも確認します。 Updates Publisher で作成および発行された更新プログラムをスキャンするには、WUA でこのポリシー設定が有効になっている必要があります。 このグループ ポリシー設定を有効にする方法の詳細については、「[クライアント コンピューター上でのグループ ポリシーの構成方法](/previous-versions/bb530967(v=technet.10))」を参照してください。
 
 
 

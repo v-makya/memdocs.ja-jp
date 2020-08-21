@@ -10,12 +10,12 @@ ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6df9238cd81f14a64a42c45136c778357acb89c4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1d79edb5ad1a60c5876163281ec5c1d1c17eff0a
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126952"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692810"
 ---
 # <a name="manage-configuration-manager-clients-in-a-virtual-desktop-infrastructure-vdi"></a>仮想デスクトップ インフラストラクチャ (VDI) で Configuration Manager クライアントを管理します
 
@@ -41,7 +41,7 @@ Configuration Manager では、パーソナル VM を物理コンピューター
 
 Configuration Manager クライアントは、個別のリモート デスクトップ セッションのためにインストールしません。 リモート デスクトップ サービスをホストするサーバーに 1 回インストールします。 リモート デスクトップ サービス サーバーですべての Configuration Manager クライアント機能を使用できます。
 
-詳細については、「[リモート デスクトップ サービスへようこそ](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/welcome-to-rds)」を参照してください。
+詳細については、「[リモート デスクトップ サービスへようこそ](/windows-server/remote/remote-desktop-services/welcome-to-rds)」を参照してください。
 
 ## <a name="pooled-vms"></a>プール VM
 

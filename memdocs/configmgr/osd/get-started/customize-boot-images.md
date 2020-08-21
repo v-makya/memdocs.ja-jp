@@ -10,12 +10,12 @@ ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b16ba822cb538b62fac06ee550dd17cfa8f077be
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0e4fc5b019de25234ae964137f6b374ecbbca7d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124563"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697791"
 ---
 # <a name="customize-boot-images-with-configuration-manager"></a>Configuration Manager を使用してブート イメージを管理する
 
@@ -49,7 +49,7 @@ Configuration Manager の各バージョンが、Windows アセスメントお�
 
 - **WinPE-WDS-Tools**: Windows 展開サービス ツールをインストールします。  
 
-  その他の Windows PE パッケージも追加できます。 ブート イメージに追加できるオプションのコンポーネントの詳細については、[WinPE: パッケージの追加 (オプション コンポーネント リファレンス)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) に関するページを参照してください。
+  その他の Windows PE パッケージも追加できます。 ブート イメージに追加できるオプションのコンポーネントの詳細については、[WinPE: パッケージの追加 (オプション コンポーネント リファレンス)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) に関するページを参照してください。
 
 > [!NOTE]
 >追加したツールを含むカスタマイズされたブート イメージから WinPE を起動するときは、WinPE からコマンド プロンプトを開き、それを実行するツールのファイル名を入力できます。 これらのツールの場所は、パス変数に自動的に追加されます。 ブート イメージ プロパティの **[カスタマイズ]** タブで **[コマンド サポートを有効にする (テストのみ)]** 設定が選択されている場合は、コマンド プロンプトのみを追加できます。
@@ -72,7 +72,7 @@ Configuration Manager の各バージョンが、Windows アセスメントお�
     ここで、C:\WinPEWAIK はブート イメージが含まれているフォルダー、C:\WinPEMount はマウントするフォルダーです。  
 
    > [!NOTE]
-   >  詳細については、[DISM (展開イメージのサービスと管理) リファレンス](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management)に関するページを参照してください。
+   >  詳細については、[DISM (展開イメージのサービスと管理) リファレンス](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management)に関するページを参照してください。
 
 5. ブート イメージをマウントしたら、DISM を使って、ブート イメージにオプションのコンポーネントを追加します。 Windows PE 5 では、64 ビットのオプションのコンポーネントは <*インストール パス*>\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs にあります。  
 
@@ -108,7 +108,7 @@ Configuration Manager の各バージョンが、Windows アセスメントお�
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files (x86)\Windows Kits\8.1\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"**  
 
    > [!TIP]
-   >  ブート イメージに追加できるオプションのコンポーネントの詳細については、「[Windows PE オプション コンポーネント リファレンス](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)」をご覧ください。
+   >  ブート イメージに追加できるオプションのコンポーネントの詳細については、「[Windows PE オプション コンポーネント リファレンス](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)」をご覧ください。
 
 6. 必要に応じて、DISM を使って特定のドライバーをブート イメージに追加します。 このためには、次のように入力します。  
 
@@ -194,7 +194,7 @@ Configuration Manager の各バージョンが、Windows アセスメントお�
     ここで、C:\WinPEWAIK はブート イメージが含まれているフォルダー、C:\WinPEMount はマウントするフォルダーです。  
 
    > [!NOTE]
-   > 詳細については、[DISM (展開イメージのサービスと管理) リファレンス](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management)に関するページを参照してください。
+   > 詳細については、[DISM (展開イメージのサービスと管理) リファレンス](/windows-hardware/manufacture/desktop/dism-reference--deployment-image-servicing-and-management)に関するページを参照してください。
 
 5. ブート イメージをマウントしたら、DISM を使って、ブート イメージにオプションのコンポーネントを追加します。 たとえば、Windows PE 3.1 では、オプションのコンポーネントは、<*インストール パス*>\Windows AIK\Tools\PETools\amd64\WinPE_FPs\\ にあります。  
 
@@ -224,7 +224,7 @@ Configuration Manager の各バージョンが、Windows アセスメントお�
     **dism.exe /image:C:\WinPEMount /add-package /packagepath:"C:\Program Files\Windows AIK\Tools\PETools\amd64\WinPE_FPs\en-us\winpe-wds-tools_en-us.cab"**  
 
    > [!TIP]
-   >  ブート イメージに追加できる他のパッケージの詳細については、「[パッケージを Windows PE イメージに追加する](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10))」をご覧ください。
+   >  ブート イメージに追加できる他のパッケージの詳細については、「[パッケージを Windows PE イメージに追加する](/previous-versions/windows/it-pro/windows-7/dd799312(v=ws.10))」をご覧ください。
 
 6. 必要に応じて、DISM を使って特定のドライバーをブート イメージに追加します。 このためには、次のように入力します。  
 
@@ -290,4 +290,4 @@ Configuration Manager の各バージョンが、Windows アセスメントお�
 
     3.  手順 3 で確認したブート イメージ ID をクリックします。  
 
-    4.  **[ホーム]** タブの **[展開]** グループで、 **[配布ポイントの更新]** をクリックします。  
+    4.  **[ホーム]** タブの **[展開]** グループで、 **[配布ポイントの更新]** をクリックします。

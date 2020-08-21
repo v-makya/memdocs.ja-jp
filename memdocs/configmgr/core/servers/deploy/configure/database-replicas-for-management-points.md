@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3daf23f17719e111dacd45e6176c5f697a3d3224
-ms.sourcegitcommit: 4c129bb04ea4916c78446e89fbff956397cbe828
+ms.openlocfilehash: e647672b02c0122709b3c80fc012ed1fb82b1519
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343118"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696431"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Configuration Manager の管理ポイントのデータベース レプリカ
 
@@ -57,7 +57,7 @@ Configuration Manager プライマリ サイトでは、データベース レ�
 
     -   サイト データベースはデータベース レプリカを **発行** する必要があります。また、リモートの各データベース レプリカ サーバーは、発行されたデータを **サブスクライブ** する必要があります。  
 
-    -   サイト データベースをホストする SQL Server とデータベース レプリカをホストする SQL Server の両方を、2 GB の **テキスト レプリケーションの最大サイズ** をサポートするように構成する必要があります。 SQL Server 2012 でこれを構成する方法の例については、「 [max text repl size サーバー構成オプションの構成](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15)」をご覧ください。  
+    -   サイト データベースをホストする SQL Server とデータベース レプリカをホストする SQL Server の両方を、2 GB の **テキスト レプリケーションの最大サイズ** をサポートするように構成する必要があります。 SQL Server 2012 でこれを構成する方法の例については、「 [max text repl size サーバー構成オプションの構成](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15)」をご覧ください。  
 
 -   **自己署名証明書:** データベース レプリカを構成するには、データベース レプリカ サーバー上で自己署名証明書を作成して、そのデータベース レプリカ サーバーを使用する各管理ポイントでこの証明書を利用できるようにする必要があります。  
 
@@ -174,7 +174,7 @@ Windows Server 2008 R2 コンピューターにデータベース レプリカ �
         -   SQL Server エージェントを別のアカウントを使用して実行する場合は、 **[次の Windows アカウントで実行する]** を選択して、そのアカウントを構成します。 Windows アカウントまたは SQL Server アカウントを指定できます。  
 
         > [!IMPORTANT]  
-        >  配布エージェントを実行するアカウントに、発行元へのアクセス許可をプル サブスクリプションとして付与する必要があります。 これらのアクセス許可の構成について詳しくは、「[ディストリビューション エージェント セキュリティ](https://docs.microsoft.com/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15)」をご覧ください。  
+        >  配布エージェントを実行するアカウントに、発行元へのアクセス許可をプル サブスクリプションとして付与する必要があります。 これらのアクセス許可の構成について詳しくは、「[ディストリビューション エージェント セキュリティ](/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15)」をご覧ください。  
 
       - **[ディストリビューターに接続]** で、 **[プロセスのアカウントを借用する]** を選択します。  
 
@@ -459,7 +459,7 @@ Windows Server 2008 R2 コンピューターにデータベース レプリカ �
 -   この証明書を使用して構成する後続のデータベース レプリカごとに、証明書のフレンドリ名を更新します。  これを行うには、 **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** の行を編集し、 **ConfigMgr SQL Server Identification Certificate** を新しい名前 (  **ConfigMgr SQL Server Identification Certificate1**など) に置き換えます。  
 
 ##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a> データベースのレプリカの構成の管理  
- サイトでデータベースのレプリカを使用する場合は、データベースのレプリカのアンインストール、データベースのレプリカを使用するサイトのアンインストール、または SQL Server の新しいインストールへのサイト データベースの移動を行うための補足する手順として、以下のセクションの情報を参照してください。 以下のセクションの情報を参照してパブリケーションを削除する場合は、データベースのレプリカに使用しているバージョンの SQL Server のトランザクション レプリケーションを削除する手順に従ってください。 詳細については、「[パブリケーションの削除](https://docs.microsoft.com/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15)」を参照してください。  
+ サイトでデータベースのレプリカを使用する場合は、データベースのレプリカのアンインストール、データベースのレプリカを使用するサイトのアンインストール、または SQL Server の新しいインストールへのサイト データベースの移動を行うための補足する手順として、以下のセクションの情報を参照してください。 以下のセクションの情報を参照してパブリケーションを削除する場合は、データベースのレプリカに使用しているバージョンの SQL Server のトランザクション レプリケーションを削除する手順に従ってください。 詳細については、「[パブリケーションの削除](/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15)」を参照してください。  
 
 > [!NOTE]  
 >  データベースのレプリカ用に構成されたサイト データベースを復元した後で、データベースのレプリカを使用するためには、データベースの各レプリカを再構成して、パブリケーションとサブスクリプションの両方を再作成する必要があります。  
@@ -507,4 +507,4 @@ Windows Server 2008 R2 コンピューターにデータベース レプリカ �
 
 4.  サイト データベース サーバーにデータベースのレプリカのパブリケーションを再作成します。 詳細については、このトピックの「 [手順 1 - データベース レプリカを発行するようにサイト データベース サーバーを構成する](#BKMK_DBReplica_ConfigSiteDB) 」をご覧ください。  
 
-5.  各データベース レプリカ サーバーにデータベースのレプリカのサブスクリプションを再作成します。 詳細については、このトピックの「 [手順 2 - データベース レプリカ サーバーの構成](#BKMK_DBReplica_ConfigSrv) 」をご覧ください。  
+5.  各データベース レプリカ サーバーにデータベースのレプリカのサブスクリプションを再作成します。 詳細については、このトピックの「 [手順 2 - データベース レプリカ サーバーの構成](#BKMK_DBReplica_ConfigSrv) 」をご覧ください。

@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e671118578d059e2b8416e6854a701ce7c405c0f
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c6e4c0f7c6a1be519a33343508da3bd72cd2cd48
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701210"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695581"
 ---
 # <a name="mms-2019-docathon"></a>MMS 2019 Docathon
 
@@ -51,7 +51,7 @@ Midwest Management Summit (MMS) 2019 の開催中、Configuration Manager と Mi
 
 - Microsoft の従業員は、あと数回の 1 回限りの手順、および若干異なるコントリビューション プロセスが必要です  
 
-詳細については、docs.microsoft.com の共同作成者ガイドで「[GitHub アカウントのセットアップ](https://docs.microsoft.com/contribute/get-started-setup-github)」を参照してください。
+詳細については、docs.microsoft.com の共同作成者ガイドで「[GitHub アカウントのセットアップ](/contribute/get-started-setup-github)」を参照してください。
 
 ## <a name="scope"></a>Scope
 
@@ -68,7 +68,7 @@ Midwest Management Summit (MMS) 2019 の開催中、Configuration Manager と Mi
 [問題を登録する方法](../understand/use-docs.md#bkmk_docfeedback)と[投稿方法](../understand/use-docs.md#bkmk_contribute)の情報を閲覧してください。 最も基本的な変更は、GitHub のブラウザー操作によって行うことができます。  
 
 > [!Note]  
-> Git と VSCode でのより複雑なワークフローに関心がある場合は、「[コンテンツ オーサリング ツールのインストール](https://docs.microsoft.com/contribute/get-started-setup-tools)」を参照してください。 かつ/または Aaron または Erik にサポートを依頼してください。 次のアクションは、次のより複雑なワークフローを使用する理由の一部です。
+> Git と VSCode でのより複雑なワークフローに関心がある場合は、「[コンテンツ オーサリング ツールのインストール](/contribute/get-started-setup-tools)」を参照してください。 かつ/または Aaron または Erik にサポートを依頼してください。 次のアクションは、次のより複雑なワークフローを使用する理由の一部です。
 >
 > - 新しい記事の作成
 > - イメージの追加
@@ -134,13 +134,13 @@ Midwest Management Summit (MMS) 2019 の開催中、Configuration Manager と Mi
 
 - [Microsoft スタイル](https://aka.ms/MicrosoftStyle)
 
-    - [クイック スタート](https://docs.microsoft.com/contribute/style-quick-start)
+    - [クイック スタート](/contribute/style-quick-start)
 
-    - [Microsoft スタイルとボイスに関する上位 10 のヒント](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)
+    - [Microsoft スタイルとボイスに関する上位 10 のヒント](/style-guide/top-10-tips-style-voice)
 
-- [共同作成者ガイド](https://docs.microsoft.com/contribute)
+- [共同作成者ガイド](/contribute)
 
-- [ドキュメントを記述するための Markdown の使用方法](https://docs.microsoft.com/contribute/markdown-reference)
+- [ドキュメントを記述するための Markdown の使用方法](/contribute/markdown-reference)
 
 ## <a name="official-rules"></a>公式ルール
 
@@ -166,7 +166,7 @@ Microsoft Cloud + AI 開発者リレーションシップのコンテンツと M
 
 5. 参加方法
 
-    エントリを作成するには、次の GitHub リポジトリの記事に編集を送信します (IntuneDocs、SCCMDocs、sccm-docs-powershell-ref)。送信プロセスの詳細については、[投稿方法](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_contribute)に関する記事を参照してください。
+    エントリを作成するには、次の GitHub リポジトリの記事に編集を送信します (IntuneDocs、SCCMDocs、sccm-docs-powershell-ref)。送信プロセスの詳細については、[投稿方法](/sccm/core/understand/use-docs#bkmk_contribute)に関する記事を参照してください。
 
     エントリを送信するには、GitHub でプル要求を送信します。
 

@@ -10,12 +10,12 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 590c6fd336ec19949b5f5b99b25b3104524a52d6
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 656cc80c929eb7e829dd06b642a83cb174d3b0c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210113"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697247"
 ---
 # <a name="configure-certificate-infrastructure"></a>証明書インフラストラクチャの構成
 
@@ -34,7 +34,7 @@ Configuration Manager の証明書インフラストラクチャについて説�
 
 ### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成するには  
 
-1. Windows Server 2012 R2 を実行しているサーバーに、ネットワーク デバイス登録サービスの役割サービスをインストールし、Active Directory 証明書サービス サーバーの役割用に構成します。 詳しくは、「[ネットワーク デバイス登録サービス ガイダンス](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))」をご覧ください。
+1. Windows Server 2012 R2 を実行しているサーバーに、ネットワーク デバイス登録サービスの役割サービスをインストールし、Active Directory 証明書サービス サーバーの役割用に構成します。 詳しくは、「[ネットワーク デバイス登録サービス ガイダンス](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))」をご覧ください。
 
 2. 必要に応じて、ネットワーク デバイス登録サービスが使用している証明書テンプレートのセキュリティ アクセス許可を変更します。  
 
@@ -44,7 +44,7 @@ Configuration Manager の証明書インフラストラクチャについて説�
 
    -   ネットワーク デバイス登録サービスのアプリケーション プールで使用する SCEP サービス アカウントの場合: **[読み取り]** および **[登録]** のアクセス許可。  
 
-        この要件は Configuration Manager に固有ではありませんが、ネットワーク デバイス登録サービスの構成に含まれます。 詳しくは、「[ネットワーク デバイス登録サービス ガイダンス](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))」をご覧ください。  
+        この要件は Configuration Manager に固有ではありませんが、ネットワーク デバイス登録サービスの構成に含まれます。 詳しくは、「[ネットワーク デバイス登録サービス ガイダンス](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498\(v=ws.11\))」をご覧ください。  
 
    > [!TIP]  
    >  どの証明書テンプレートをネットワーク デバイス登録サービスで使用しているかを調べるには、ネットワーク デバイス登録サービスを実行しているサーバーの次のレジストリ キーを表示します。HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP  
@@ -79,7 +79,7 @@ Configuration Manager の証明書インフラストラクチャについて説�
 
    - **クエリ文字列の最大長 (バイト)** : **65534**  
 
-     これらの設定とその構成方法について詳しくは、[IIS 要求の制限](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)に関する記事をご覧ください。
+     これらの設定とその構成方法について詳しくは、[IIS 要求の制限](/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)に関する記事をご覧ください。
 
 7. 使用している証明書テンプレートよりも有効期間が短い証明書を要求できるようにしたい場合があります。この設定は、エンタープライズ CA では既定で無効になっています。 エンタープライズ CA でこのオプションを有効にするには、次のように、Certutil コマンドライン ツールを使って設定を変更してから、証明書サービスをいったん停止して再開します。  
 
@@ -89,7 +89,7 @@ Configuration Manager の証明書インフラストラクチャについて説�
 
    3. **net start certsvc**  
 
-      詳しくは、「[証明書サービス ツールと設定](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\))」をご覧ください。
+      詳しくは、「[証明書サービス ツールと設定](/previous-versions/windows/it-pro/windows-server-2003/cc780742\(v=ws.10\))」をご覧ください。
 
 8. `https://server.contoso.com/certsrv/mscep/mscep.dll` のようなリンクを使用して、ネットワーク デバイス登録サービスが動作していることを確認してください。 組み込まれているネットワーク デバイス登録サービスの Web ページが表示されるはずです。 この Web ページには、登録サービスの紹介と、ネットワーク デバイスが証明書要求を送信する URL の説明が記載されています。  
 
@@ -201,4 +201,4 @@ Configuration Manager の階層に少なくとも 1 つの証明書登録ポイ�
    Configuration Manager ポリシー モジュールをアンインストールする場合は、コントロール パネルの **[プログラムと機能]** を使用します。 
 
  
-これで構成手順が完了したので、証明書をユーザーやデバイスに展開できます。証明書をユーザーやデバイスに展開するには、証明書プロファイルを作成して展開します。 証明書プロファイルの作成方法の詳細については、[証明書プロファイルの作成方法](../../protect/deploy-use/create-certificate-profiles.md)に関する記事を参照してください。  
+これで構成手順が完了したので、証明書をユーザーやデバイスに展開できます。証明書をユーザーやデバイスに展開するには、証明書プロファイルを作成して展開します。 証明書プロファイルの作成方法の詳細については、[証明書プロファイルの作成方法](../../protect/deploy-use/create-certificate-profiles.md)に関する記事を参照してください。

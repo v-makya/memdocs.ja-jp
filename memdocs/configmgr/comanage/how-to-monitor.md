@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: eab91146ec21bbee888d496012419f47bca4b599
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: ac3bbb7c755be82b171f35442d2dbaf446dfea84
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776975"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695122"
 ---
 # <a name="how-to-monitor-co-management-in-configuration-manager"></a>Configuration Manager で共同管理を監視する方法
 
@@ -102,8 +102,8 @@ OS ごとのクライアント デバイスの数がバージョン別に表示�
 
 | エラー | [説明] |
 |---------|---------|
-| 2147549183 (0x8000FFFF) | MDM 登録が Azure AD 上でまだ構成されていないか、想定されていない登録 URL です。<br><br>[Windows 10 の自動登録を有効にする](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
-| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | ユーザーのライセンスが正常ではない状態で登録できません<br><br>[ユーザーにライセンスを割り当てる](https://docs.microsoft.com/intune/licenses-assign) |
+| 2147549183 (0x8000FFFF) | MDM 登録が Azure AD 上でまだ構成されていないか、想定されていない登録 URL です。<br><br>[Windows 10 の自動登録を有効にする](/intune/windows-enroll#enable-windows-10-automatic-enrollment) |
+| 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | ユーザーのライセンスが正常ではない状態で登録できません<br><br>[ユーザーにライセンスを割り当てる](/intune/licenses-assign) |
 | 2149056555 (0x8018002B)<br>MENROLL_E_MDM_NOT_CONFIGURED | Intune に自動的に登録しようとしましたが、Azure AD の構成が完全に適用されていません。 デバイスは短時間で再試行されるため、この問題は一時的なものです。 |
 | 2149056554 (0x‭8018002A‬)<br>&nbsp; | ユーザーが操作を取り消しました。<br><br>MDM 登録に多要素認証が必要であり、サポートされている 2 つ目の要素でユーザーがサインインしていない場合、Windows ではユーザーに登録を促すトースト通知を表示します。 ユーザーがトースト通知に応答しない場合、このエラーが発生します。 Configuration Manager は再試行してユーザーにプロンプトを表示するため、これは一時的な問題のはずです。 ユーザーは Windows にサインインするときに多要素認証を使用する必要があります。 また、この行動を予想し、プロンプトが表示されたら操作するように教育してください。 |
 | 2149056532 (0x80180014)<br>MENROLL_E_DEVICENOTSUPPORTED | モバイル デバイス管理はサポートされていません。 デバイスの制限を確認してください。 |
@@ -114,7 +114,7 @@ OS ごとのクライアント デバイスの数がバージョン別に表示�
 | 3399548929 | ユーザーのサインインが必要です<br><br>この問題はおそらく一時的です。 登録タスクが発生する前にユーザーがすぐにサインアウトしたときに発生します。 |
 | 3400073236 | ADAL セキュリティ トークン要求が失敗しました。<br><br>Azure AD の構成を確認し、ユーザーが正常に認証できることを確認します。 |
 | 2149122477 | 一般的な HTTP の問題 |
-| 3400073247 | ADAL 統合 Windows 認証はフェデレーション フローでのみサポートされています<br><br>[ハイブリッド Azure Active Directory 参加の実装を計画する](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) |
+| 3400073247 | ADAL 統合 Windows 認証はフェデレーション フローでのみサポートされています<br><br>[ハイブリッド Azure Active Directory 参加の実装を計画する](/azure/active-directory/devices/hybrid-azuread-join-plan) |
 | 3399942148 | サーバーまたはプロキシが見つかりませんでした。<br><br>クライアントがクラウドと通信できない場合、この問題はおそらく一時的です。 問題が解決しない場合は、クライアントが一貫して Azure に接続できることを確認してください。 | 
 | 2149056532 | 特定のプラットフォームまたはバージョンがサポートされていません<br><br>デバイスが共同管理の[最小要件](overview.md#windows-10)を満たしていることを確認します。 |
 | 2147943568 | 要素が見つかりません<br><br>この問題はおそらく一時的です。 問題が解決しない場合は、Microsoft サポートに連絡してください。 |
@@ -124,7 +124,7 @@ OS ごとのクライアント デバイスの数がバージョン別に表示�
 | 2149134055 | Winhttp 名が解決されていません<br><br>クライアントはサービスの名前を解決できません。 DNS 構成を確認してください。 |
 | 2149134050 | インターネット タイムアウト<br><br>クライアントがクラウドと通信できない場合、この問題はおそらく一時的です。 問題が解決しない場合は、クライアントが一貫して Azure に接続できることを確認してください。 |
 
-詳細については、「[MDM Registration Error Values](https://docs.microsoft.com/windows/desktop/mdmreg/mdm-registration-constants)」(MDM 登録エラー値) を参照してください。
+詳細については、「[MDM Registration Error Values](/windows/desktop/mdmreg/mdm-registration-constants)」(MDM 登録エラー値) を参照してください。
 
 ## <a name="deployment-policies"></a>展開ポリシー
 

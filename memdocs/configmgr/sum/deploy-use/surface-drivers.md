@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9f9f4e6-5b4f-4b8f-94d6-db9b2b239113
-ms.openlocfilehash: f276db618a2e67832ffa5575622e00eea02c7422
-ms.sourcegitcommit: 8a4a86ee8044f273dcece26155132a801f3d8f9a
+ms.openlocfilehash: c0b4942e8a6e81477814e24281e0d9e3752c5f90
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438632"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696873"
 ---
 # <a name="manage-surface-drivers-with-configuration-manager"></a>Configuration Manager を使用して Surface ドライバーを管理する
 
@@ -154,12 +154,12 @@ Configuration Manager 環境がオンラインであり、新しい更新プロ�
 
 ### <a name="what-alternative-methods-do-i-have-to-deploy-surface-driver-and-firmware-updates"></a>Surface ドライバーとファームウェアの更新プログラムを展開するには、他にどのような方法がありますか。
 
-代替チャネルを使用して Surface ドライバーとファームウェアの更新プログラムを展開する方法の詳細については、[Surface ドライバーとファームウェアの更新プログラムの管理](https://docs.microsoft.com/surface/manage-surface-driver-and-firmware-updates)に関する記事をご覧ください。 .msi または .exe ファイルをダウンロードしてから、従来のソフトウェア展開チャネルを使用して展開する場合は、「[Configuration Manager を使用して Surface のファームウェアを更新された状態に維持する](https://docs.microsoft.com/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager)」をご覧ください。
+代替チャネルを使用して Surface ドライバーとファームウェアの更新プログラムを展開する方法の詳細については、[Surface ドライバーとファームウェアの更新プログラムの管理](/surface/manage-surface-driver-and-firmware-updates)に関する記事をご覧ください。 .msi または .exe ファイルをダウンロードしてから、従来のソフトウェア展開チャネルを使用して展開する場合は、「[Configuration Manager を使用して Surface のファームウェアを更新された状態に維持する](/archive/blogs/thejoncallahan/keeping-surface-firmware-updated-with-configuration-manager)」をご覧ください。
 
 ## <a name="next-steps"></a>次のステップ
 
 Surface ドライバーの詳細については、次の記事を参照してください。
 
-- [Surface と System Center Configuration Manager に関する考慮事項](https://docs.microsoft.com/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
+- [Surface と System Center Configuration Manager に関する考慮事項](/surface/considerations-for-surface-and-system-center-configuration-manager#deploy-surface-app-with-configuration-manager)
 - [Surface の更新履歴](https://support.microsoft.com/help/4036283/surface-surface-update-history)
 - [Surface デバイス用の最新のファームウェアとドライバーをダウンロードする](/surface/manage-surface-driver-and-firmware-updates)

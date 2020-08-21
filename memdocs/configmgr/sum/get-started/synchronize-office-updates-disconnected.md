@@ -10,12 +10,12 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 4739703436d7feec7c4c899e60b33d38ce28babf
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 49e0f5e1dff466e62cdba0def917dd34510e48ee
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125731"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696771"
 ---
 # <a name="synchronize-microsoft-365-apps-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a> 切断されているソフトウェアの更新ポイントからの Microsoft 365 Apps 更新プログラムの同期
 
@@ -24,7 +24,7 @@ ms.locfileid: "88125731"
 Configuration Manager バージョン 2002 以降、ツールを使用して、インターネットに接続されている WSUS サーバーから、切断された Configuration Manager 環境に Microsoft 365 Apps 更新プログラムをインポートすることができます。 以前は、更新されたソフトウェアのメタデータをエクスポートし、切断された環境にインポートした場合、Microsoft 365 Apps 更新プログラムを展開できませんでした。 Microsoft 365 Apps 更新プログラムには Office API と Office CDN からダウンロードした追加のメタデータが必要ですが、これは、切断された環境では不可能です。
 
 > [!Note]
-> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
+> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
 
 ## <a name="prerequisites"></a>[前提条件]
 
@@ -51,7 +51,7 @@ Configuration Manager バージョン 2002 以降、ツールを使用して、�
 1. 同期が完了したら、Configuration Manager で展開しない Microsoft 365 Apps 更新プログラムをすべて拒否します。 Microsoft 365 Apps 更新プログラムをダウンロードするために、それらを承認する必要はありません。  
    - WSUS で不要な Microsoft 365 Apps 更新プログラムを拒否すると、それらが WsusUtil.exe のエクスポート中にエクスポートされることはありませんが、OfflineUpdateExporter ツールによるそれらのコンテンツのダウンロードが停止されます。
    - OfflineUpdateExporter ツールによって、Microsoft 365 Apps 更新プログラムが自動的に実行されます。 他の製品の更新プログラムをエクスポートする場合、ダウンロードのためには引き続きそれらを承認する必要があります。
-    - [WSUS の新しい更新プログラム ビュー](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus)を作成して、不要な Microsoft 365 Apps 更新プログラムを WSUS で簡単に表示および拒否できるようにします。
+    - [WSUS の新しい更新プログラム ビュー](/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus)を作成して、不要な Microsoft 365 Apps 更新プログラムを WSUS で簡単に表示および拒否できるようにします。
 1. 他の製品の更新プログラムをダウンロードおよびエクスポートのために承認する場合は、コンテンツのダウンロードが完了するまで待機してから、WsusUtil.exe エクスポートを実行し、WSUSContent フォルダーの内容をコピーします。 詳細については、「[切断されているソフトウェアの更新ポイントからのソフトウェア更新プログラムの同期](synchronize-software-updates-disconnected.md)」を参照してください
 
 ## <a name="exporting-the-microsoft-365-apps-updates"></a>Microsoft 365 Apps 更新プログラムのエクスポート

@@ -10,12 +10,12 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f34c803cb2b43a2c69cee4c16f5029474e318eb2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c9bb07bd2b82a9411bc527d04a9a64a0bb6e12f8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709340"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697672"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Configuration Manager での OS の展開に対するインフラストラクチャ要件
 
@@ -33,9 +33,9 @@ Windows アセスメント & デプロイメント キット (ADK) は、Windows
 
 詳細については、以下の記事を参照してください。  
 
-- [IT 担当者向け Windows ADK for Windows 10 シナリオ](https://docs.microsoft.com/windows/deployment/windows-adk-scenarios-for-it-pros)  
+- [IT 担当者向け Windows ADK for Windows 10 シナリオ](/windows/deployment/windows-adk-scenarios-for-it-pros)  
 
-- [Windows ADK for Windows 10 をダウンロードする](https://docs.microsoft.com/windows-hardware/get-started/adk-install)  
+- [Windows ADK for Windows 10 をダウンロードする](/windows-hardware/get-started/adk-install)  
 
     > [!IMPORTANT]
     > **Windows ADK for Windows 10** と、**ADK 用の Windows PE アドオン**の両方をダウンロードしてください。
@@ -79,7 +79,7 @@ Configuration Manager では、USMT 10 ソース ファイルを含む USMT パ�
 
 詳細については、以下の記事を参照してください。  
 
-- [USMT 10 の一般的な移行シナリオ](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios)  
+- [USMT 10 の一般的な移行シナリオ](/windows/deployment/usmt/usmt-common-migration-scenarios)  
 
 - [ユーザー状態の管理](../get-started/manage-user-state.md)  
 

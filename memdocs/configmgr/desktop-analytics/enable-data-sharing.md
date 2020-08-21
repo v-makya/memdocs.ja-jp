@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 40ebeabaaf236377388660a2a1a328e308a708ab
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 999d8441e8c97f0a4b7ad4a92c8175300dcc4ead
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125955"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696448"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Desktop Analytics のためにデータ共有を有効にする
 
@@ -31,7 +31,7 @@ Configuration Manager を Desktop Analytics と統合したら、デバイスで
 > [!IMPORTANT]
 > ほとんどの場合、Configuration Manager だけを使ってこれらの設定を構成します。 これらの設定は、ドメイン グループ ポリシー オブジェクトでは適用しないでください。 詳細については、「[競合の解決](enroll-devices.md#conflict-resolution)」をご覧ください。
 
-Desktop Analytics の基本的な機能は、**必須**[診断データのレベル](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)で動作します。 Configuration Manager で **[省略可能 (制限あり)]** レベルを構成しない場合、Desktop Analytics の次の機能は利用できません。
+Desktop Analytics の基本的な機能は、**必須**[診断データのレベル](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)で動作します。 Configuration Manager で **[省略可能 (制限あり)]** レベルを構成しない場合、Desktop Analytics の次の機能は利用できません。
 
 - アプリの使用状況
 - [その他のアプリの分析情報](compat-assessment.md#additional-insights)
@@ -58,7 +58,7 @@ Desktop Analytics で **[省略可能 (制限あり)]** 診断データレベル
 >
 > 以前に**拡張**レベルでデバイスを構成したことがある場合、バージョン 2006 にアップグレードすると、 **[省略可能 (制限あり)]** に戻ります。 その後、Microsoft に送信するデータが少なくなります。 この変更は、Desktop Analytics に表示される内容には影響しません。
 
-**[省略可能 (制限あり)]** で Microsoft と共有される診断データについて詳しくは、[Windows 10 の拡張診断データのイベントとフィールド](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)に関する記事をご覧ください。
+**[省略可能 (制限あり)]** で Microsoft と共有される診断データについて詳しくは、[Windows 10 の拡張診断データのイベントとフィールド](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)に関する記事をご覧ください。
 
 > [!IMPORTANT]
 > Microsoft は、お客様のプライバシーを管理するためのツールとリソースを提供するために強力なコミットメントを行っています。 そのため、Desktop Analytics では Windows 8.1 デバイスがサポートされていますが、ヨーロッパの国 (EEA およびスイス) に存在する Windows 8.1 デバイスからは Windows 診断データは収集されません。
@@ -67,9 +67,9 @@ Desktop Analytics で **[省略可能 (制限あり)]** 診断データレベル
 
 次の記事も、Windows の診断データ レベルをよく理解するためのよいリソースです。
 
-- [IT 意思決定者向けの Windows 10 と GDPR](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+- [IT 意思決定者向けの Windows 10 と GDPR](/windows/privacy/gdpr-it-guidance)  
 
-- [組織内の Windows 診断データの構成](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [組織内の Windows 診断データの構成](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
 > [!NOTE]
 > **[省略可能 (制限あり)]** 診断データを送信するように構成されたクライアントでは、最初のフルスキャンで Microsoft クラウドに約 2 MB のデータが送信されます。 毎日のデルタは、1 日あたり 250 から 400 KB で変動します。
@@ -111,7 +111,7 @@ Desktop Analytics で **[省略可能 (制限あり)]** 診断データレベル
 - ユーザーに診断データ エンドポイントにアクセスするためのプロキシ アクセス許可があることを確認します。 このオプションでは、デバイスにプロキシ アクセス許可を持つコンソール ユーザーが存在する必要があるため、この方法をヘッドレス デバイスで使用することはできません。
 
 > [!IMPORTANT]
-> ユーザー プロキシ認証の方法は、Microsoft Defender Advanced Threat Protection の使用と互換性がありません。 このような動作が発生するのは、この認証では **DisableEnterpriseAuthProxy** レジストリ キーが `0` に設定されている必要があるのに対し、Microsoft Defender ATP では `1` に設定されている必要があるためです。 詳しくは、[Microsoft Defender ATP でのコンピューターのプロキシとインターネット接続設定の構成](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)に関する記事をご覧ください。
+> ユーザー プロキシ認証の方法は、Microsoft Defender Advanced Threat Protection の使用と互換性がありません。 このような動作が発生するのは、この認証では **DisableEnterpriseAuthProxy** レジストリ キーが `0` に設定されている必要があるのに対し、Microsoft Defender ATP では `1` に設定されている必要があるためです。 詳しくは、[Microsoft Defender ATP でのコンピューターのプロキシとインターネット接続設定の構成](/windows/security/threat-protection/windows-defender-atp/configure-proxy-internet-windows-defender-advanced-threat-protection)に関する記事をご覧ください。
 
 ### <a name="device-proxy-authentication"></a>デバイス プロキシ認証
 
@@ -137,4 +137,4 @@ Desktop Analytics で **[省略可能 (制限あり)]** 診断データレベル
 
   - ルーティングされた接続、またはネットワーク アドレス変換 (NAT) を使用する接続
 
-- Active Directory のコンピューター アカウントが診断データ エンドポイントにアクセスできるように、プロキシ サーバーを構成します。 この構成では、プロキシ サーバーで Windows 統合認証をサポートする必要があります。  
+- Active Directory のコンピューター アカウントが診断データ エンドポイントにアクセスできるように、プロキシ サーバーを構成します。 この構成では、プロキシ サーバーで Windows 統合認証をサポートする必要があります。

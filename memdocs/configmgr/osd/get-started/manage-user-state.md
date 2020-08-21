@@ -10,12 +10,12 @@ ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a720c68fc705187dedb6ff04fc3898a8b0b21c8
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b4975f67c84c2354d13457981ac90ba4481d292f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124365"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697587"
 ---
 # <a name="manage-user-state-in-configuration-manager"></a>Configuration Manager でのユーザー状態の管理
 
@@ -27,7 +27,7 @@ ms.locfileid: "88124365"
 
 - 同じコンピューターでユーザー状態をキャプチャして復元する更新プログラムの展開。  
 
-オペレーティング システムのインストールが完了した後、Configuration Manager では、ユーザー状態移行ツール (USMT) 10.0 を使用して、ソース コンピューターからセットアップ先のコンピューターへのユーザー状態データの移行を管理します。 USMT 10.0 の一般的な移行シナリオの詳細については、「  [一般的な移行シナリオ](https://docs.microsoft.com/windows/deployment/usmt/usmt-common-migration-scenarios)」を参照してください。
+オペレーティング システムのインストールが完了した後、Configuration Manager では、ユーザー状態移行ツール (USMT) 10.0 を使用して、ソース コンピューターからセットアップ先のコンピューターへのユーザー状態データの移行を管理します。 USMT 10.0 の一般的な移行シナリオの詳細については、「  [一般的な移行シナリオ](/windows/deployment/usmt/usmt-common-migration-scenarios)」を参照してください。
 
 以下のセクションを参照して、ユーザー データをキャプチャして復元してください。
 
@@ -129,4 +129,4 @@ ms.locfileid: "88124365"
 
 ## <a name="restore-user-state-data-when-an-operating-system-deployment-fails"></a><a name="BKMK_MigrationFails"></a> オペレーティング システムの展開が失敗したときにユーザー状態データを復元する
 
-オペレーティング システムの展開が失敗する場合、USMT 10.0 LoadState 機能を使用して、展開プロセス中にキャプチャされたユーザー状態データを取得します。 このデータには、状態移行ポイントに保存されているデータや、移行先コンピューターのローカルに保存されているデータが含まれます。 この USMT 機能の詳細については、「 [LoadState 構文](https://docs.microsoft.com/windows/deployment/usmt/usmt-loadstate-syntax)」をご覧ください。
+オペレーティング システムの展開が失敗する場合、USMT 10.0 LoadState 機能を使用して、展開プロセス中にキャプチャされたユーザー状態データを取得します。 このデータには、状態移行ポイントに保存されているデータや、移行先コンピューターのローカルに保存されているデータが含まれます。 この USMT 機能の詳細については、「 [LoadState 構文](/windows/deployment/usmt/usmt-loadstate-syntax)」をご覧ください。

@@ -10,12 +10,12 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a9ed8e1ece27117993761a3ce52c462e94e9f79a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eb7e2e5c564263c7172d70ec33bb33c0dd73409c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124775"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697825"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-configuration-manager"></a>Windows を最新バージョンの Configuration Manager にアップグレードする
 
@@ -55,7 +55,7 @@ OS のアップグレード タスク シーケンスを対象とするには、
 - Windows 8.1
 - 以前のバージョンの Windows 10。 たとえば、Windows 10 バージョン 1809 を Windows 10 バージョン 1903 にアップグレードできます。  
 
-詳細については、「[Windows 10 アップグレード パス](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-upgrade-paths)」を参照してください。
+詳細については、「[Windows 10 アップグレード パス](/windows/deployment/upgrade/windows-10-upgrade-paths)」を参照してください。
 
 #### <a name="windows-server"></a>Windows Server
 
@@ -64,7 +64,7 @@ OS のアップグレード タスク シーケンスを対象とするには、
 - 以前のバージョンの Windows Server 2016
 - 以前のバージョンの Windows Server 2019
 
-Windows Server でサポートされているアップグレード パスの詳細については、「[Windows Server 2016 でサポートされているアップグレード パス](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016)」と「[Windows Server アップグレード センター](https://aka.ms/upgradecenter)」に関するページを参照してください。
+Windows Server でサポートされているアップグレード パスの詳細については、「[Windows Server 2016 でサポートされているアップグレード パス](/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016)」と「[Windows Server アップグレード センター](https://aka.ms/upgradecenter)」に関するページを参照してください。
 
 
 ## <a name="plan"></a><a name="BKMK_Plan"></a> プラン  
@@ -125,4 +125,4 @@ OS を展開するには、次の展開方法のいずれかを使用します�
 
 ## <a name="monitor"></a>モニター  
 
-OS をアップグレードするために、タスク シーケンスの展開を監視するには、「[OS の展開の監視](monitor-operating-system-deployments.md)」を参照してください。  
+OS をアップグレードするために、タスク シーケンスの展開を監視するには、「[OS の展開の監視](monitor-operating-system-deployments.md)」を参照してください。

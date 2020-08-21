@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7c57e6568ce60680d9febc533c60533055595bc3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d5b9a65b768d02d02084d778fd36255341a808b2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126935"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692844"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager でクラウド管理ゲートウェイを計画する
 
@@ -105,10 +105,10 @@ CMG の展開と操作には、次のコンポーネントが含まれます。
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 
 <!-- 1324735 -->
-**Azure Resource Manager の展開**を使用して CMG を作成します。 [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager で CMG を展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
+**Azure Resource Manager の展開**を使用して CMG を作成します。 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager で CMG を展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
 
 > [!NOTE]
-> この機能では、Azure クラウド サービス プロバイダー (CSP) のサポートは有効になりません。 Azure Resource Manager での CMG の展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、「[Available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)」(Azure CSP で使用可能な Azure サービス) を参照してください。
+> この機能では、Azure クラウド サービス プロバイダー (CSP) のサポートは有効になりません。 Azure Resource Manager での CMG の展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、「[Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)」(Azure CSP で使用可能な Azure サービス) を参照してください。
 
 Configuration Manager バージョン 1902 以降、クラウド管理ゲートウェイの新しいインスタンスに対しては、Azure Resource Manager が唯一の展開メカニズムです。 既存の展開は引き続き機能します。<!-- 3605704 -->
 
@@ -216,7 +216,7 @@ Configuration Manager の**クラウド管理**用 Azure サービスでは、�
 
 - ネットワーク ロード バランサーを利用するソフトウェア更新ポイントは CMG と連動しません。 <!--505311-->  
 
-- Azure Resource Model を使用する CMG 展開では、Azure クラウド サービス プロバイダー (CSP) のサポートが有効になりません。 Azure Resource Manager での CMG の展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、[Azure CSP プログラムで利用可能な Azure サービス](https://docs.microsoft.com/partner-center/azure-plan-available)に関する記事をご覧ください。
+- Azure Resource Model を使用する CMG 展開では、Azure クラウド サービス プロバイダー (CSP) のサポートが有効になりません。 Azure Resource Manager での CMG の展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、[Azure CSP プログラムで利用可能な Azure サービス](/partner-center/azure-plan-available)に関する記事をご覧ください。
 
 ### <a name="support-for-configuration-manager-features"></a>Configuration Manager の機能のサポート
 
@@ -268,7 +268,7 @@ Configuration Manager の**クラウド管理**用 Azure サービスでは、�
 
 - サイトとクライアントをバージョン 2006 に更新します。
 
-- 共同管理を使用し、[エンドポイント保護のワークロード](../../../../comanage/workloads.md#endpoint-protection)を Intune に切り替え、クラウドから [Microsoft Defender ウイルス対策](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)を管理する。
+- 共同管理を使用し、[エンドポイント保護のワークロード](../../../../comanage/workloads.md#endpoint-protection)を Intune に切り替え、クラウドから [Microsoft Defender ウイルス対策](../../../../../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)を管理する。
 
 - ネイティブの[マルウェア対策ポリシー](../../../../protect/deploy-use/endpoint-antimalware-policies.md)機能の代わりに[構成項目](../../../../compliance/deploy-use/create-configuration-items.md)を使用して、エンドポイント保護ポリシーを適用する。
 
@@ -325,7 +325,7 @@ CMG では次の Azure コンポーネントが利用され、Azure サブスク
 
 - クライアントにコンテンツを提供するクラウド配布ポイントとして CMG も使用できるようになりました。 この機能により、Azure VM の必要な証明書とコストが削減されます。 詳細については、[CMG の変更](setup-cloud-management-gateway.md#modify-a-cmg)に関するページを参照してください。<!--1358651-->  
 
-- CMG では Azure ローカル冗長ストレージ (LRS) が使用されています。 詳細については、[ローカル冗長ストレージ](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs)に関するページを参照してください。  
+- CMG では Azure ローカル冗長ストレージ (LRS) が使用されています。 詳細については、[ローカル冗長ストレージ](/azure/storage/common/storage-redundancy-lrs)に関するページを参照してください。  
 
 ### <a name="other-costs"></a>その他のコスト
 

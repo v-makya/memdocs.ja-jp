@@ -10,12 +10,12 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 31f9b1cb083400abd36858a177e87804a916362c
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: aca3322c245fa22a7c87f30e328833d8a8a128bc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746517"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699043"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>Configuration Manager ドキュメントの使用方法
 
@@ -61,7 +61,7 @@ ms.locfileid: "84746517"
 
 ## <a name="feedback"></a><a name="bkmk_docfeedback"></a> フィードバック
 
-記事の右上にある **[フィードバック]** リンクを選択し、一番下の [フィードバック] セクションに進みます。 このセクションは GitHub Issues と統合されています。 GitHub Issues との統合の詳細については、[ドキュメント プラットフォームのブログの投稿](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs)に関するページを参照してください。
+記事の右上にある **[フィードバック]** リンクを選択し、一番下の [フィードバック] セクションに進みます。 このセクションは GitHub Issues と統合されています。 GitHub Issues との統合の詳細については、[ドキュメント プラットフォームのブログの投稿](/teamblog/a-new-feedback-system-is-coming-to-docs)に関するページを参照してください。
 
 Configuration Manager 製品自体のフィードバックを投稿するには、 **[製品のフィードバック]** を選択してください。 詳細については、「[製品に関するフィードバック](find-help.md#product-feedback)」を参照してください。
 
@@ -93,11 +93,11 @@ GitHub Issues を使用し、次の種類のフィードバックを送信しま
 
 ドキュメント ライブラリの内容が変わったときに通知を受け取るには、次の手順を使用します。
 
-1. [ドキュメント検索](https://docs.microsoft.com/search/index?scope=ConfigMgr)を使用し、1 件または一連の記事を見つけます。 次に例を示します。
+1. [ドキュメント検索](/search/index?scope=ConfigMgr)を使用し、1 件または一連の記事を見つけます。 次に例を示します。
 
-    - ["Log files for troubleshooting - Configuration Manager"](https://docs.microsoft.com/search/index?search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22&scope=ConfigMgr) というタイトルの 1 件の記事を検索します
+    - ["Log files for troubleshooting - Configuration Manager"](/search/index?scope=ConfigMgr&search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22) というタイトルの 1 件の記事を検索します
 
-    - [SQL](https://docs.microsoft.com/search/index?search=SQL&scope=ConfigMgr) に関するあらゆる記事を検索します
+    - [SQL](/search/index?scope=ConfigMgr&search=SQL) に関するあらゆる記事を検索します
 
 2. 右上隅にある **RSS** リンクを選択します。
 
@@ -108,7 +108,7 @@ GitHub Issues を使用し、次の種類のフィードバックを送信しま
 
 ## <a name="contribute"></a><a name="bkmk_contribute"></a> 投稿
 
-Configuration Manager ドキュメント ライブラリは、docs.microsoft.com のほとんどのコンテンツと同様に、GitHub ではオープンソースになっています。 このライブラリは、コミュニティの寄稿を受け入れ、奨励しています。 概要については、[投稿に関するガイド](https://docs.microsoft.com/contribute) ページをご覧ください。 [GitHub アカウント](https://github.com/join)の作成が唯一の前提条件です。
+Configuration Manager ドキュメント ライブラリは、docs.microsoft.com のほとんどのコンテンツと同様に、GitHub ではオープンソースになっています。 このライブラリは、コミュニティの寄稿を受け入れ、奨励しています。 概要については、[投稿に関するガイド](/contribute) ページをご覧ください。 [GitHub アカウント](https://github.com/join)の作成が唯一の前提条件です。
 
 ### <a name="basic-steps-to-contribute-to-sccmdocs"></a>SCCMdocs に寄稿するための基本手順
 
@@ -116,7 +116,7 @@ Configuration Manager ドキュメント ライブラリは、docs.microsoft.com
 
 2. ソース ファイルを編集するには、鉛筆アイコンを選択します。
 
-3. マークダウン ソースで変更を加えます。 詳細については、「[How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/markdown-reference)」 (ドキュメントの記述にマークダウンを使用する方法) を参照してください。
+3. マークダウン ソースで変更を加えます。 詳細については、「[How to use Markdown for writing Docs](/contribute/markdown-reference)」 (ドキュメントの記述にマークダウンを使用する方法) を参照してください。
 
 4. ファイル変更の提案セクションで、公開コミット コメントを入力し、自分が *"変更した内容"* を説明します。 **[Propose file change]\(ファイル変更の提案\)** を選択します。
 
@@ -148,7 +148,7 @@ Configuration Manager のドキュメントに投稿する場合、次の一般�
 
 - いきなり大規模な pull requests を行わないでください。 そうではなく、[問題を報告](#bkmk_docfeedback)してディスカッションを開始してください。 これで、大量の時間を費やす前にその方向性が正しいかどうか確認できます。
 
-- [Microsoft スタイル ガイド](https://aka.ms/MicrosoftStyle)をご覧ください。 [Microsoft のスタイルとボイスに関する 10 のヒント](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)を把握してください。
+- [Microsoft スタイル ガイド](https://aka.ms/MicrosoftStyle)をご覧ください。 [Microsoft のスタイルとボイスに関する 10 のヒント](/style-guide/top-10-tips-style-voice)を把握してください。
 
 - 作業の出発点として[pull request のテンプレート](https://github.com/MicrosoftDocs/SCCMdocs/blob/master/PULL_REQUEST_TEMPLATE.md)を使用してください。
 
@@ -160,7 +160,7 @@ Configuration Manager のドキュメントに投稿する場合、次の一般�
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Microsoft エンドポイント マネージャーのドキュメントの統合
 
-Intune と Configuration Manager の結合シナリオをより適切にサポートするために、このドキュメント ライブラリは [Microsoft Endpoint Manager サイト](https://docs.microsoft.com/mem)に統合されました。 現在、Intune のドキュメントは [docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) にあり、Configuration Manager のドキュメントは [docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr) にあります。 古い URL を使用していても自動的にリダイレクトされるため、このコンテンツを読むために変更を行う必要はありません。
+Intune と Configuration Manager の結合シナリオをより適切にサポートするために、このドキュメント ライブラリは [Microsoft Endpoint Manager サイト](/mem)に統合されました。 現在、Intune のドキュメントは [docs.microsoft.com/mem/intune](../../../intune/index.yml) にあり、Configuration Manager のドキュメントは [docs.microsoft.com/mem/configmgr](../../index.yml) にあります。 古い URL を使用していても自動的にリダイレクトされるため、このコンテンツを読むために変更を行う必要はありません。
 
 フィードバックを提供したり、記事に投稿したりする場合は、いくつかの変更が必要です。
 

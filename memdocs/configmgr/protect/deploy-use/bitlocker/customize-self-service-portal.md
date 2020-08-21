@@ -10,12 +10,12 @@ ms.assetid: 6bc26e36-9914-4606-ae8d-f7b23218942f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 220ebb558a0e01f701cab621381ad951a8fd0738
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: aa7f95e18775862427254839a2aab2c229e31057
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123903"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697332"
 ---
 # <a name="customize-the-self-service-portal"></a>セルフサービス ポータルのカスタマイズ
 
@@ -128,7 +128,7 @@ ms.locfileid: "88123903"
 
 1. `Self Service Website` アプリケーション パスに、サポートされている言語ごとに `<language>` フォルダーを作成します。 たとえば、スペイン語 (スペイン) の場合は、`es-es` を作成します。 既定では、完全なパスは `C:\inetpub\Microsoft BitLocker Management Solution\Self Service Website\es-es` です。
 
-    使用できる言語コードの一覧については、「[各国語サポート (NLS) API リファレンス](https://docs.microsoft.com/windows/win32/intl/locale-identifiers#predefined-locale-identifiers)」を参照してください。
+    使用できる言語コードの一覧については、「[各国語サポート (NLS) API リファレンス](/windows/win32/intl/locale-identifiers#predefined-locale-identifiers)」を参照してください。
 
     > [!TIP]
     > 言語フォルダーの名前は、言語に依存しない名前にすることもできます。 たとえば、スペイン語 (スペイン ) の **es-es** や、スペイン語 (アルゼンチン) の **es-ar** の代わりに、スペイン語に **es** を使用できます。 ユーザーが **es**にブラウザーを設定し、その言語フォルダーが存在しない場合、web サーバーは親のロケールフォルダー (**es**) を再帰的に確認します。 (親ロケールは .NET で定義されています)。たとえば、`Self Service Website\es\Notice.txt` のようになります。 この再帰的フォールバックは、.NET リソースの読み込みルールを模倣します。

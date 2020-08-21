@@ -10,12 +10,12 @@ ms.assetid: 81f03922-90f6-4e8f-be65-da64ccb21cf2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b64e09561def3d19c306b9cfcd4f7eb808763fd
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bf9301e4fcb279b7d79a6f6c3d0a90ab3d15e277
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129258"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697315"
 ---
 # <a name="bitlocker-administration-and-monitoring-website"></a>BitLocker administration and monitoring web サイト
 
@@ -48,7 +48,7 @@ BitLocker 管理と監視の Web サイトは、BitLocker ドライブ暗号化�
 
 ユーザーが正しくない PIN を何回も入力すると、TPM がロックアウトされる可能性があります。 TPM がロックされるまでにユーザーが正しくない PIN を入力できる回数は、製造元によって異なります。 管理と監視の Web サイトの **[TPM の管理]** 領域から、集中管理されているキー回復データ システムにアクセスします。
 
-TPM 所有権の詳細については、「[MBAM を構成して TPM をエスクローし、所有者の認証パスワードを保存する](https://docs.microsoft.com/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm)」を参照してください。
+TPM 所有権の詳細については、「[MBAM を構成して TPM をエスクローし、所有者の認証パスワードを保存する](/microsoft-desktop-optimization-pack/mbam-v25/mbam-25-security-considerations#bkmk-tpm)」を参照してください。
 
 > [!NOTE]
 > Windows 10 バージョン 1607 以降では、TPM のプロビジョニング時に Windows は TPM 所有者パスワードを保持しません。
@@ -159,7 +159,7 @@ TPM 所有権の詳細については、「[MBAM を構成して TPM をエス�
 
 移動したドライブが元のコンピューターで TPM チップを使用するように構成されている場合は、次の手順を行います。 それ以外の場合、回復プロセスはこれで終了です。
 
-1. ドライブのロックを解除したら、WinRE モードでコンピューターを起動します。 WinRE でコマンド プロンプトを開き、`manage-bde` コマンドを使用してドライブの暗号化を解除します。 このツールは、元の TPM チップがない状態で **TPM と PIN** 保護機能を削除する唯一の手段です。 このコマンドの詳細については、「[Manage-bde](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde)」を参照してください。
+1. ドライブのロックを解除したら、WinRE モードでコンピューターを起動します。 WinRE でコマンド プロンプトを開き、`manage-bde` コマンドを使用してドライブの暗号化を解除します。 このツールは、元の TPM チップがない状態で **TPM と PIN** 保護機能を削除する唯一の手段です。 このコマンドの詳細については、「[Manage-bde](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-managebde)」を参照してください。
 
 1. 完了したら、通常どおりにコンピューターを起動します。 Configuration Manager によって、新しいコンピューターの TPM と PIN を使用してドライブを暗号化する BitLocker ポリシーが適用されます。
 
@@ -184,7 +184,7 @@ TPM 所有権の詳細については、「[MBAM を構成して TPM をエス�
 
     `repair-bde C: D: -kp F:\RecoveryKeyPackage -rp 111111-222222-333333-444444-555555-666666-777777-888888`
 
-このコマンドの詳細については、「[Repair-bde](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde)」を参照してください。
+このコマンドの詳細については、「[Repair-bde](/windows/security/information-protection/bitlocker/bitlocker-use-bitlocker-drive-encryption-tools-to-manage-bitlocker#bkmk-repairbde)」を参照してください。
 
 ## <a name="reports"></a>レポート
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 070c616ed8411bcd90b2d3edb12b04edd57241e1
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 2fa46770adfbf3e688bbdc561d8193967f3913cd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590475"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698590"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Configuration Manager のバージョン 1606 の新機能
 
@@ -86,7 +86,7 @@ Configuration Manager コンソールの [更新とサービス] ノードの変
 Configuration Manager コンソールの [管理] の変更点を次に示します。
 ### <a name="oms-connector"></a>OMS コネクタ
 
-Configuration Manager を Configuration Manager のコレクションとして [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/) に接続できるようになりました。 これにより、Configuration Manager 展開のコレクションなどのデータを OMS に表示できるようになります。 [Configuration Manager から Microsoft Operations Management Suite へのデータの同期については、こちら](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)をご覧ください。
+Configuration Manager を Configuration Manager のコレクションとして [Microsoft Operations Management Suite (OMS)](/azure/azure-monitor/overview) に接続できるようになりました。 これにより、Configuration Manager 展開のコレクションなどのデータを OMS に表示できるようになります。 [Configuration Manager から Microsoft Operations Management Suite へのデータの同期については、こちら](/azure/azure-monitor/platform/collect-sccm)をご覧ください。
 
 OMS コネクタは、プレリリースの機能です。 有効にするには、「[更新プログラムからのプレリリース機能の使用](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease)」をご覧ください。
 

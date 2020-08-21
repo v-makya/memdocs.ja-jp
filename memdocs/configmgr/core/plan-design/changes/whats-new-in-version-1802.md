@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 87056482f098a440e5950b76520ab410844a1888
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: aaba31a8a017f75338cf4d6dee3c2f2d80d7e377
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129003"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698522"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Configuration Manager のバージョン 1802 の新機能
 
@@ -267,7 +267,7 @@ Windows 10 の一括アップグレード用の既定のタスク シーケン�
 
 ### <a name="report-on-windows-autopilot-device-information"></a>Windows Autopilot のデバイス情報についてのレポート
 <!-- 1351442 -->
-Windows Autopilot は、最新の方法で新しい Windows 10 デバイスをオンボーディングおよび構成するためのソリューションです。 詳細については、「[Windows Autopilot の概要](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)」を参照してください。 既存のデバイスを Windows Autopilot に登録する 1 つの方法は、ビジネス向け Microsoft Store および教育機関向け Microsoft Store にデバイスの情報をアップロードすることです。 この情報には、デバイスのシリアル番号、Windows 製品識別子、およびハードウェア ID が含まれます。 Configuration Manager を利用し、**ハードウェア - 全般**レポート ノードの新しいレポート、**Windows Autopilot デバイス情報**でこのデバイスの情報を収集し、報告します。 詳細については、共同管理の準備での「[How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#windows-autopilot)」 (共同管理用のインターネット ベースのデバイスを準備する方法) を参照してください。
+Windows Autopilot は、最新の方法で新しい Windows 10 デバイスをオンボーディングおよび構成するためのソリューションです。 詳細については、「[Windows Autopilot の概要](/windows/deployment/windows-autopilot/windows-10-autopilot)」を参照してください。 既存のデバイスを Windows Autopilot に登録する 1 つの方法は、ビジネス向け Microsoft Store および教育機関向け Microsoft Store にデバイスの情報をアップロードすることです。 この情報には、デバイスのシリアル番号、Windows 製品識別子、およびハードウェア ID が含まれます。 Configuration Manager を利用し、**ハードウェア - 全般**レポート ノードの新しいレポート、**Windows Autopilot デバイス情報**でこのデバイスの情報を収集し、報告します。 詳細については、共同管理の準備での「[How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#windows-autopilot)」 (共同管理用のインターネット ベースのデバイスを準備する方法) を参照してください。
 
 ### <a name="report-on-windows-10-servicing-details-for-a-specific-collection"></a>特定のコレクションに対する Windows 10 サービスの詳細を報告する
 <!--1357653-->
@@ -287,7 +287,7 @@ Windows Autopilot は、最新の方法で新しい Windows 10 デバイスを�
 
 ### <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Windows Defender Exploit Guard に対する Configuration Manager ポリシーの機能強化
 <!-- 1356220 -->
-[攻撃の回避](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR)および[フォルダー アクセスの制御](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA)コンポーネントに対する新しいポリシー設定が、[Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction) 用に Configuration Manager に追加されました。
+[攻撃の回避](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_ASR)および[フォルダー アクセスの制御](../../../protect/deploy-use/create-deploy-exploit-guard-policy.md#bkmk_CFA)コンポーネントに対する新しいポリシー設定が、[Windows Defender Exploit Guard](/windows/security/threat-protection/microsoft-defender-atp/configure-attack-surface-reduction) 用に Configuration Manager に追加されました。
 
 ### <a name="new-host-interaction-settings-for-windows-defender-application-guard"></a>Windows Defender Application Guard の新しいホスト対話設定
 <!-- 1356256 -->

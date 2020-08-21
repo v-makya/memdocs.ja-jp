@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 378a5de5633d7a526004d84ec5e6885e165eaadb
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128986"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88698716"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1906 の新機能
 
@@ -87,7 +87,7 @@ Configuration Manager 更新プログラムを適用するとき、インスト�
 
 - セットアップから新しい同期レプリカを追加する<!--3127336-->:既存の SQL Always On 可用性グループに新しいセカンダリ レプリカ ノードを追加できるようになりました。 手動プロセスの代わりに、Configuration Manager 設定を使用し、この変更を行います。 詳しくは、[SQL Server Always On 可用性グループの構成](../../servers/deploy/configure/configure-aoag.md#bkmk_sync)に関するページを参照してください。
 
-- マルチサブネット フェールオーバー<!-- SCCMDocs-pr#3734 -->:SQL Server で [MultiSubnetFailover 接続文字列キーワード](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover)を有効にできるようになりました。 サイト サーバーを手動で構成する必要もあります。 詳細については、[マルチサブネット フェールオーバー](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover)の前提条件に関するページを参照してください。
+- マルチサブネット フェールオーバー<!-- SCCMDocs-pr#3734 -->:SQL Server で [MultiSubnetFailover 接続文字列キーワード](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover)を有効にできるようになりました。 サイト サーバーを手動で構成する必要もあります。 詳細については、[マルチサブネット フェールオーバー](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#multi-subnet-failover)の前提条件に関するページを参照してください。
 
 - 分散ビューのサポート<!-- SCCMDocs-pr#3792 -->:サイト データベースを SQL Server Always On 可用性グループでホストすることができ、データベース レプリケーション リンクでの[分散ビュー](../hierarchy/data-transfers-between-sites.md#bkmk_dbrep)の使用を有効にすることができます。
 
@@ -198,7 +198,7 @@ CMPivot の機能を、ヘルプデスクやセキュリティ管理者など、
 ### <a name="support-for-windows-virtual-desktop"></a>Windows Virtual Desktop のサポート
 
 <!--3556025-->
-[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) は Microsoft Azure と Microsoft 365 のプレビュー機能です。 Configuration Manager を使用し、Azure で Windows を実行しているこれらの仮想デバイスを管理できるようになりました。
+[Windows Virtual Desktop](/azure/virtual-desktop/) は Microsoft Azure と Microsoft 365 のプレビュー機能です。 Configuration Manager を使用し、Azure で Windows を実行しているこれらの仮想デバイスを管理できるようになりました。
 
 ターミナル サーバーと同様に、これらの仮想デバイスでは、アクティブ ユーザーの同時実行セッションが複数許可されます。 クライアントのパフォーマンスを支援する目的で、Configuration Manager では、このような複数のユーザー セッションを許可するあらゆるデバイスでユーザー ポリシーが無効になりました。 ユーザー ポリシーを有効にした場合でも、Windows Virtual Desktop やターミナル サーバーを含む、これらのデバイスでは、クライアントによって既定でポリシーが無効化されます。
 
@@ -622,7 +622,7 @@ Configuration Manager コンソールのいくつかのノードで管理サー�
 
 このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Configuration Manager Current Branch バージョン 1906 での変更の概要](https://support.microsoft.com/help/4514258)」を参照してください。
 
-Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 1906 のリリース ノート](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps)を参照してください。
+Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 1906 のリリース ノート](/powershell/sccm/1906-release-notes?view=sccm-ps)を参照してください。
 
 2019 年 10 月 1 日以降、コンソールで次の更新プログラムのロールアップ (4517869) を利用できるようになりました:[Configuration Manager Current Branch バージョン 1906 の更新プログラムのロールアップ](https://support.microsoft.com/help/4517869)。
 

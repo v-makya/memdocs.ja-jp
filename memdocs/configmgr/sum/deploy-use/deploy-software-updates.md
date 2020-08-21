@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 2adf22fd9c17863d7c29e2a29d2125d22f2d944f
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a6e27e2d03983fdf627016d0e3b41aaa378afe29
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127673"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693473"
 ---
 # <a name="deploy-software-updates"></a>ソフトウェアの更新を展開する  
 
@@ -69,7 +69,7 @@ Configuration Manager コンソールでソフトウェア更新プログラム�
 詳細な手順については、「[ソフトウェア更新プログラムの手動展開](manually-deploy-software-updates.md)」をご覧ください。
 
 > [!Note]
-> - 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
+> - 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
 > - Microsoft 365 Apps クライアント更新プログラムを手動で展開するときは、 **[ソフトウェア ライブラリ]** ワークスペースの **[Office 365 クライアント管理]** の **[Office 365 の更新プログラム]** ノードで検索します。 
 
 ## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> ソフトウェア更新プログラムの自動展開
@@ -115,5 +115,5 @@ ADR を作成した後、ルールにさらに他の展開を追加します。 
 <!--1358146-->
 バージョン 1810 以降では、ソフトウェア更新プログラムの段階的な展開を作成します。 段階的な展開を使用すると、カスタマイズ可能な条件およびグループに基づいて、調整およびシーケンス化されたソフトウェアの展開をまとめることができます。
 
-詳しくは、「[段階的展開の作成](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)」をご覧ください。
+詳しくは、「[段階的展開の作成](../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)」をご覧ください。
 

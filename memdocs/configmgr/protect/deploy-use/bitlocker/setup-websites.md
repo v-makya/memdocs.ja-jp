@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dbd782c97d11f8077c18796c87c7880eb26f3f3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d1b07d30c7a593ec0bd70e6c330c57364186f2c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129156"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697264"
 ---
 # <a name="set-up-bitlocker-portals"></a>BitLocker ポータルのセットアップ
 
@@ -70,7 +70,7 @@ IIS がインストールされた既存のサイト サーバーまたはサイ
 - administration and monitoring web サイト: `https://webserver.contoso.com/HelpDesk`
 
 > [!NOTE]
-> Microsoft では HTTPS の使用をお勧めしますが、必須ではありません。 詳細については、[IIS 上で SSL を設定する方法](https://docs.microsoft.com/iis/manage/configuring-security/how-to-set-up-ssl-on-iis)に関するページをご覧ください。
+> Microsoft では HTTPS の使用をお勧めしますが、必須ではありません。 詳細については、[IIS 上で SSL を設定する方法](/iis/manage/configuring-security/how-to-set-up-ssl-on-iis)に関するページをご覧ください。
 
 ## <a name="script-usage"></a>スクリプトの使用法
 

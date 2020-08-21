@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aa574cd3db2e7a3d3277912ed4a383f71d33e59c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 2f8b8a45ff83ce903f5737c94144e6ca5ab50826
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124289"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697655"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Configuration Manager で OS イメージを管理する
 
@@ -89,7 +89,7 @@ OS イメージを使用するには、最初にご使用の Configuration Manag
 
 5. ウィザードを完了します。  
 
-このコンソール ウィザードに相当する PowerShell コマンドレットについては、「[New-CMOperatingSystemImage (New-CMOperatingSystemImage)](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps)」をご覧ください。
+このコンソール ウィザードに相当する PowerShell コマンドレットについては、「[New-CMOperatingSystemImage (New-CMOperatingSystemImage)](/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps)」をご覧ください。
 
 次に、OS イメージを配布ポイントに配布します。  
 
@@ -122,4 +122,4 @@ OS イメージを使用するには、最初にご使用の Configuration Manag
 
          **[このパッケージをマルチキャストでのみ送信する]** を選択する場合は、タスク シーケンスの展開オプションを **[実行中のタスク シーケンスでコンテンツが必要になったときにローカルにダウンロードする]** に指定する必要もあります。 詳細については、「 [Deploy a task sequence](../deploy-use/deploy-a-task-sequence.md)」をご覧ください。  
 
-5. **[OK]** を選択して設定を保存し、イメージのプロパティを閉じます。  
+5. **[OK]** を選択して設定を保存し、イメージのプロパティを閉じます。
