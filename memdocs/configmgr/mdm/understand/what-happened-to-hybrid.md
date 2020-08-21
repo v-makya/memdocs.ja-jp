@@ -10,12 +10,12 @@ ms.assetid: e9e0da6d-bd5a-48d9-930a-e74b34b9286c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d07a014cdcb3f371a90028ec09be3c0c939b8424
-ms.sourcegitcommit: 578ad1e8088f7065b565e8a4f4619f5a26b94001
+ms.openlocfilehash: 95ac4160895394eb075589ed18a317923f317b45
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724656"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695394"
 ---
 # <a name="what-happened-to-hybrid-mdm"></a>ハイブリッド MDM はどうなりましたか?
 
@@ -45,7 +45,7 @@ ms.locfileid: "81724656"
 >
 > その結果、ほとんどのお客様は、ハイブリッド MDM ではなく Azure での Intune を選択されています。 クラウドに移行するお客様の増加により、ハイブリッド MDM を使用するお客様の数は減り続けています。 そのため、2019 年 9 月 1 日をもって、Microsoft はハイブリッド MDM サービスの提供を終了します。
 >
-> この変更は、オンプレミスの Configuration Manager または [Windows 10 デバイスの共同管理](../../comanage/overview.md)には影響しません。 ハイブリッド MDM を使用しているかどうかわからない場合は、Configuration Manager コンソールの [**管理**] ワークスペースで [ **Cloud Services**] を展開し、[ **Microsoft Intune サブスクリプション**] を選択します。 Microsoft Intune のサブスクリプションが設定されている場合、そのテナントはハイブリッド MDM 用に構成されています。
+> この変更は、オンプレミスの Configuration Manager または [Windows 10 デバイスの共同管理](../../comanage/overview.md)には影響しません。 ハイブリッド MDM を使用しているかどうかわからない場合は、Configuration Manager コンソールの [ **管理** ] ワークスペースで [ **Cloud Services**] を展開し、[ **Microsoft Intune サブスクリプション**] を選択します。 Microsoft Intune のサブスクリプションが設定されている場合、そのテナントはハイブリッド MDM 用に構成されています。
 >
 > **ユーザーへの影響**
 >
@@ -57,7 +57,7 @@ ms.locfileid: "81724656"
 >
 > - ライセンスは同じままです。 Azure での Intune のライセンスは、ハイブリッド MDM に含まれています。  
 >
-> - Configuration Manager のオンプレミス MDM 機能は非推奨とされます。 Configuration Manager バージョン1810以降では、Intune に接続せずにオンプレミスの MDM を使用することができます。 詳細については、「[新しいオンプレミス MDM デプロイでは Intune 接続が](../../core/plan-design/changes/whats-new-in-version-1810.md#bkmk_opmdm)不要になりました。」を参照してください。
+> - Configuration Manager のオンプレミス MDM 機能は非推奨とされます。 Configuration Manager バージョン1810以降では、Intune に接続せずにオンプレミスの MDM を使用することができます。 詳細については、「 [新しいオンプレミス MDM デプロイでは Intune 接続が](../../core/plan-design/changes/whats-new-in-version-1810.md#bkmk_opmdm)不要になりました。」を参照してください。
 >
 > - Configuration Manager のオンプレミスの条件付きアクセス機能も、ハイブリッド MDM では非推奨とされます。 Configuration Manager クライアントで管理されているデバイスで条件付きアクセスを使用する場合は、移行する前に保護されていることを確認してください。
 >     1. Azure で条件付きアクセスポリシーを設定する
@@ -80,6 +80,6 @@ ms.locfileid: "81724656"
 
 MDM デバイスの管理に関してサポートされている機能の詳細については、次の記事を参照してください。
 
-- [Microsoft Intune とは](https://docs.microsoft.com/intune/what-is-intune)
+- [Microsoft Intune とは](/intune/what-is-intune)
 - [オンプレミス MDM とは](manage-mobile-devices-with-on-premises-infrastructure.md)
 - [Exchange でのデバイスの管理](../deploy-use/manage-mobile-devices-with-exchange-activesync.md)
