@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: e24c2ee19093dd12af6e87280a31851a1f593782
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b8d22d7f011fb87dc1105fd8447d2e93adc80c6e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268472"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693371"
 ---
 # <a name="how-to-close-your-account"></a>アカウントを閉じる方法
 
@@ -114,9 +114,9 @@ Desktop Analytics データは、ワークスペースのデータ保持ポリ�
 次のいずれかの方法で、これらの値を設定します。
 
 - グループ ポリシー: **[コンピューターの構成]**  >  **[管理用テンプレート]**  >  **[Windows コンポーネント]**  >  **[データの収集とプレビュー ビルド]**
-- モバイル デバイス管理 (MDM): [Microsoft Intune](https://docs.microsoft.com/intune/device-restrictions-windows-10#reporting-and-telemetry) など
+- モバイル デバイス管理 (MDM): [Microsoft Intune](/intune/device-restrictions-windows-10#reporting-and-telemetry) など
 
-詳しくは、「[組織内の Windows 診断データの構成](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)」をご覧ください。
+詳しくは、「[組織内の Windows 診断データの構成](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)」をご覧ください。
 
 > [!NOTE]  
 > これらの変更を適用すると、デバイスによる診断データの送信は、すぐに停止されます。 Microsoft がワークスペースの分析情報の処理を停止するまでに 24 時間から48 時間かかることがあります。 Microsoft では、このデータを、30 日以内にクラウド サービスから削除します。

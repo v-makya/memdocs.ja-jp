@@ -10,12 +10,12 @@ ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7a82a635eafcc0ecb5251457db9d4fbb301fce33
-ms.sourcegitcommit: 1edcfb3ce4350ba1a6f36a6150e86301d35c631b
+ms.openlocfilehash: 920f3c9aabcdec1242a6f5e5fc8e6b65c5cc0b53
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86390842"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694612"
 ---
 # <a name="upgrade-windows-devices-to-a-new-edition-with-configuration-manager"></a>Configuration Manager による Windows デバイスの新しいエディションへのアップグレード
 
@@ -35,7 +35,7 @@ ms.locfileid: "86390842"
 
 デバイスを最新バージョンにアップグレードし始める前に、次の前提条件を確認する必要があります。  
 
-- Windows 10 のデスクトップ エディションの場合:ポリシーの対象とするすべてのデバイスでの Windows の新しいバージョンに対する有効なプロダクト キー。 このプロダクト キーは、マルチ ライセンス認証キー (MAK) または汎用ボリューム ライセンス キー (GVLK) でもかまいません。 GVLK は、キー管理サービス (KMS) クライアント セットアップ キーとも呼ばれます。 詳細については、「[ボリューム ライセンス認証の計画](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)」を参照してください。 KMS クライアント セットアップ キーの一覧については、Windows Server のライセンス認証ガイドの「[付録 A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)」を参照してください。 <!--496871-->  
+- Windows 10 のデスクトップ エディションの場合:ポリシーの対象とするすべてのデバイスでの Windows の新しいバージョンに対する有効なプロダクト キー。 このプロダクト キーは、マルチ ライセンス認証キー (MAK) または汎用ボリューム ライセンス キー (GVLK) でもかまいません。 GVLK は、キー管理サービス (KMS) クライアント セットアップ キーとも呼ばれます。 詳細については、「[ボリューム ライセンス認証の計画](/windows/deployment/volume-activation/plan-for-volume-activation-client)」を参照してください。 KMS クライアント セットアップ キーの一覧については、Windows Server のライセンス認証ガイドの「[付録 A](/windows-server/get-started/kmsclientkeys)」を参照してください。 <!--496871-->  
 
 - Windows 10 Mobile の場合:Microsoft ボリューム ライセンス サービス センター (VLSC) から入手した XML ライセンス ファイル。 このファイルには、ポリシーの対象とするすべてのデバイスでの Windows の新しいバージョンに対するライセンス情報が含まれます。 ライセンス XML を含む **Windows 10 Mobile Enterprise** 用の ISO ファイルをダウンロードします。<!-- SCCMDocs#2033 -->
 
@@ -89,16 +89,16 @@ ms.locfileid: "86390842"
 
 これらのエラーは、展開が失敗したことを意味しているわけではありません。 対象のデバイスで、アップグレードが正常に実行されたことを確認してください。
 
-クライアントでは、対象ポリシーを評価した後、2 時間以内にアップグレードが適用されます。 [Windows の一部のバージョン](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades)では、その時点で再起動が必要になる場合があります。 ポリシーを展開するすべてのユーザーに通知するか、ポリシーの実行をユーザーの業務時間外にスケジュール設定します。
+クライアントでは、対象ポリシーを評価した後、2 時間以内にアップグレードが適用されます。 [Windows の一部のバージョン](/windows/deployment/upgrade/windows-10-edition-upgrades)では、その時点で再起動が必要になる場合があります。 ポリシーを展開するすべてのユーザーに通知するか、ポリシーの実行をユーザーの業務時間外にスケジュール設定します。
 
-クライアントの **DcmWmiProvider.log** に次のエラーが記録される場合は、ライセンス認証シナリオに対して適切なキーを使っていることを確認します。 詳細については、「[開始する前に](#before-you-start)」セクションを参照してください。 ライセンス認証にキー管理サービス (KMS) を使っている場合は、必ず [KMS クライアント セットアップ キー](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)を使うようにしてください。  <!-- 496871 -->
+クライアントの **DcmWmiProvider.log** に次のエラーが記録される場合は、ライセンス認証シナリオに対して適切なキーを使っていることを確認します。 詳細については、「[開始する前に](#before-you-start)」セクションを参照してください。 ライセンス認証にキー管理サービス (KMS) を使っている場合は、必ず [KMS クライアント セットアップ キー](/windows-server/get-started/kmsclientkeys)を使うようにしてください。  <!-- 496871 -->
 
 `Failed to execute CheckApplicabilityMethod with error = 0x80041001 OsEditionUpgradeProvider`
 
 ## <a name="see-also"></a>関連項目
 
-- [ボリューム ライセンス認証の計画](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)
+- [ボリューム ライセンス認証の計画](/windows/deployment/volume-activation/plan-for-volume-activation-client)
 
-- [Windows 10 エディションのアップグレード](https://docs.microsoft.com/windows/deployment/upgrade/windows-10-edition-upgrades)
+- [Windows 10 エディションのアップグレード](/windows/deployment/upgrade/windows-10-edition-upgrades)
 
-- [Microsoft Intune を使用してデバイス上の Windows 10 エディションをアップグレードするか S モードから切り替える](https://docs.microsoft.com/intune/edition-upgrade-configure-windows-10)
+- [Microsoft Intune を使用してデバイス上の Windows 10 エディションをアップグレードするか S モードから切り替える](/intune/edition-upgrade-configure-windows-10)

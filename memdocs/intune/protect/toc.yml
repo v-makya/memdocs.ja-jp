@@ -302,8 +302,6 @@
           href: compliance-policy-create-windows.md
         - name: コンプライアンス ポリシー設定 - Windows 8.1
           href: compliance-policy-create-windows-8-1.md
-        - name: コンプライアンス ポリシー設定 - Windows Phone 8.1
-          href: compliance-policy-create-windows-8-1.md
     - name: エンドポイント セキュリティ ポリシーの設定
       items:
         - name: ウイルス対策ポリシーの設定

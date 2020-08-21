@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 076a4b6d1bf5773287d4a0b32109023039a3b399
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: c20f5e883c1b33c90218532dd6ae31f510fd8294
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546418"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695037"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>共同管理用にインターネットベースのデバイスを準備する方法
 
@@ -27,7 +27,7 @@ ms.locfileid: "87546418"
 
 詳細については、「[Windows Autopilot の概要](../../autopilot/windows-autopilot.md)」を参照してください。
 
-Azure AD に参加したときにデバイスが Intune に自動的に登録されるように構成するには、 [Microsoft Intune での Windows デバイスの登録](https://docs.microsoft.com/intune/windows-enroll)に関する記事を参照してください。  
+Azure AD に参加したときにデバイスが Intune に自動的に登録されるように構成するには、 [Microsoft Intune での Windows デバイスの登録](/intune/windows-enroll)に関する記事を参照してください。  
 
 ### <a name="gather-information-from-configuration-manager"></a>Configuration Manager から情報を収集する
 
@@ -41,7 +41,7 @@ Configuration Manager を使用して、Intune で必要なデバイス情報を
 
 4. ファイルを保存した後、データを Intune にアップロードします。  
 
-詳細については、[Intune でデバイスを追加する方法](https://docs.microsoft.com/intune/enrollment-autopilot#add-devices)に関するページをご覧ください。
+詳細については、[Intune でデバイスを追加する方法](/intune/enrollment-autopilot#add-devices)に関するページをご覧ください。
 
 ### <a name="autopilot-for-existing-devices"></a>既存のデバイス向け Autopilot
 <!--1358333-->

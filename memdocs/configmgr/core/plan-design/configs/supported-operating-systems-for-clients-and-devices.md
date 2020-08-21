@@ -2,7 +2,7 @@
 title: サポートされるクライアントとデバイス
 titleSuffix: Configuration Manager
 description: Configuration Manager がクライアントとデバイスをサポートする OS のバージョンについて説明します。
-ms.date: 02/19/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e9e0ec6df5f80b318cb78ed8cddc986b613230e1
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 497a43fe6647f1dc2787f16a76f45ddd26d24796
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904528"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128850"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager でクライアントとデバイスに対してサポートされる OS のバージョン
 
@@ -58,6 +58,16 @@ Configuration Manager は、Windows および macOS コンピューター上の�
 
 > [!Note]  
 > Windows 10 Enterprise マルチセッションを実行しているクライアントで共同管理を使用することはできません。 <!-- SCCMDocs-pr#3950 -->
+
+バージョン 2006 以降では、**Windows 10 Enterprise マルチセッション** プラットフォームが、要件の規則や適用性の一覧があるオブジェクトでサポートされている OS バージョンの一覧に表示されます。<!--6527576-->
+
+> [!NOTE]
+> 以前に最上位レベルの **Windows 10** プラットフォームを選択した場合、このアクションにより自動的にすべての子プラットフォームが選択されました。 この新しいプラットフォームは自動的には選択されません。 **Windows 10 Enterprise マルチセッション**を追加する場合は、一覧から手動で選択します。
+
+詳細については、次の記事を参照してください。
+
+- [仮想環境のサポート](support-for-virtualization-environments.md)
+- [仮想デスクトップ インフラストラクチャ (VDI) で Configuration Manager クライアントを管理する](../../clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
 ### <a name="supported-server-os-versions"></a>サポートされているサーバーの OS のバージョン
 
@@ -151,8 +161,8 @@ Configuration Manager に含まれる Configuration Manager モバイル デバ�
 
 - Windows CE 7.0 (ARM および x86 プロセッサ)  
 
-    > [!Note]
-    > Configuration Manager では Windows CE 7.0 のサポートは非推奨とされています。 詳細については、「[削除され、非推奨になった Configuration Manager クライアントの項目](../changes/deprecated/removed-and-deprecated-client.md)」を参照してください。
+    > [!IMPORTANT]
+    > Configuration Manager バージョン 2006 では、クライアントとしての Windows CE 7.0 のサポートが廃止されます。 廃止については[バージョン 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated) で発表されました。
 
 #### <a name="supported-languages-include"></a>次の言語がサポートされています
 
@@ -335,9 +345,8 @@ Configuration Manager には、クライアント ソフトウェアをインス
 
 - **Windows 10 Mobile Enterprise**  
 
-    > [!Note]
-    > Configuration Manager では、Windows 10 Mobile と Windows 10 Mobile Enterprise のサポートは非推奨となりました。 詳細については、「[削除され、非推奨になった Configuration Manager クライアントの項目](../changes/deprecated/removed-and-deprecated-client.md)」を参照してください。
-
+    > [!IMPORTANT]
+    > Configuration Manager バージョン 2006 では、クライアントとしての Windows 10 Mobile と Windows 10 Mobile Enterprise のサポートが廃止されます。 廃止については[バージョン 1906](../changes/whats-new-in-version-1906.md#bkmk_deprecated) で発表されました。
 
 ## <a name="exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a> Exchange Server コネクタ  
 

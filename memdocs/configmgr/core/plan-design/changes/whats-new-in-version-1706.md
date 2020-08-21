@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f6087011a0390997d704278af6ffd5e6071bf031
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129020"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692827"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Configuration Manager のバージョン 1706 の新機能
 
@@ -213,7 +213,7 @@ Configuration Manager を使用して、Microsoft Surface ドライバーの更�
 
 #### <a name="prerequisites"></a>[前提条件]
 - すべてのソフトウェアの更新ポイントで Windows Server 2016 を実行している必要があります。    
-- これは、使用するために有効にする必要があるプレリリース機能です。 詳細については、「[更新プログラムからプレリリース機能を使用する](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)」を参照してください。
+- これは、使用するために有効にする必要があるプレリリース機能です。 詳細については、「[更新プログラムからプレリリース機能を使用する](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)」を参照してください。
 
 #### <a name="to-manage-surface-driver-updates"></a>Surface ドライバーの更新プログラムを管理するには
 

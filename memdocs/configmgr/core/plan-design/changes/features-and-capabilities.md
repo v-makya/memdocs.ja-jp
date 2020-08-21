@@ -10,12 +10,12 @@ ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5cdd0a9497f07d80813aca5dc169c4d61944e85d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 74b150b5a2157104b6a380489202fd309224a3bb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706400"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129037"
 ---
 # <a name="features-and-capabilities-of-configuration-manager"></a>Configuration Manager の特徴と機能
 
@@ -49,7 +49,7 @@ CMPivot を使用してすぐにオンラインのデバイスを照会し、詳
 
 ## <a name="application-management"></a>アプリケーション管理
 
-管理しているさまざまなデバイスに対して、アプリケーションを作成、管理、展開、監視するのに役立ちます。 Configuration Manager コンソールから Office 365 を展開、更新、管理します。 さらに、Configuration Manager をビジネス向けおよび教育機関向け Microsoft Store と統合することで、クラウドベースのアプリが提供されます。 詳細については、[アプリケーション管理の概要](../../../apps/understand/introduction-to-application-management.md)に関するページを参照してください。
+管理しているさまざまなデバイスに対して、アプリケーションを作成、管理、展開、監視するのに役立ちます。 Configuration Manager コンソールから Microsoft 365 Apps を展開、更新、管理します。 さらに、Configuration Manager をビジネス向けおよび教育機関向け Microsoft Store と統合することで、クラウドベースのアプリが提供されます。 詳細については、[アプリケーション管理の概要](../../../apps/understand/introduction-to-application-management.md)に関するページを参照してください。
 
 ## <a name="os-deployment"></a>OS の展開
 

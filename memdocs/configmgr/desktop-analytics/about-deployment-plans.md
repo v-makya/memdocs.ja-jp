@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: acaa7c8a906edd78f0c54c5735c97c55434d848b
-ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
+ms.openlocfilehash: 0e9f1551f75c1cb8499c5eab846588ee6ddc1d80
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87400717"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693388"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>Desktop Analytics 内の展開計画について
 
@@ -70,7 +70,7 @@ Desktop Analytics を Configuration Manager に接続したら、展開計画内
 
 次のいずれかの理由により、Windows アップグレードの決定を **[デバイス交換]** にすることができます。
 
-- Windows 10 の必須プロセッサ チェックに失敗している。 詳細については、「[最小ハードウェア要件](https://docs.microsoft.com/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor)」を参照してください。
+- Windows 10 の必須プロセッサ チェックに失敗している。 詳細については、「[最小ハードウェア要件](/windows-hardware/design/minimum/minimum-hardware-requirements-overview#31-processor)」を参照してください。
 - BIOS ブロックがある
 - 十分なメモリがない
 - システム上の起動に不可欠なコンポーネントに、ブロックされたドライバーがある
@@ -132,4 +132,4 @@ Desktop Analytics では、重要な情報とグローバル パイロットの�
 
 - [セキュリティと機能の更新についての詳細](about-updates.md)  
 
-- [展開計画を作成する](create-deployment-plans.md)  
+- [展開計画を作成する](create-deployment-plans.md)

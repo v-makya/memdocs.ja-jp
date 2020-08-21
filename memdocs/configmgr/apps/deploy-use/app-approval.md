@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f725c1b7dc380a84cd94e666b98dbd309df3744c
-ms.sourcegitcommit: 14d7dd0a99ebd526c9274d5781c298c828323ebf
+ms.openlocfilehash: 15aba2a32e680ab9499f5295307c82daafbbed71
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82802057"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695343"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Configuration Manager でアプリケーションを承認する
 
@@ -49,7 +49,7 @@ Configuration Manager コンソールの **[ソフトウェア ライブラリ]*
 
 バージョン 1906 以降では、コンソールでアプリ要求を承認して拒否した場合、再度承認できるようになりました。 承認すると、アプリはクライアントに再インストールされます。  <!-- 4224910 -->
 
-[Approve-CMApprovalRequest](https://docs.microsoft.com/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) PowerShell コマンドレットによって、承認プロセスを自動化します。 バージョン 1902 以降では、このコマンドレットに **InstallActionBehavior** パラメーターが含まれています。 このパラメーターを使用して、アプリケーションをすぐインストールするか、または営業時間外にインストールするかを指定します。<!-- SCCMDocs-pr issue #3418 -->
+[Approve-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) PowerShell コマンドレットによって、承認プロセスを自動化します。 バージョン 1902 以降では、このコマンドレットに **InstallActionBehavior** パラメーターが含まれています。 このパラメーターを使用して、アプリケーションをすぐインストールするか、または営業時間外にインストールするかを指定します。<!-- SCCMDocs-pr issue #3418 -->
 
 1906 以降では、承認が必要な展開を確認できます。 **[アプリケーション]** ノードでアプリを選択します。 詳細ウィンドウで、 **[展開]** タブに切り替えます。既定では新しい列 **[Requires Approval] (承認が必要)** が表示されます。
 

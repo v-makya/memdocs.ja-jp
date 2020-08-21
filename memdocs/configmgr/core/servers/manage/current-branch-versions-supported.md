@@ -2,7 +2,7 @@
 title: Current Branch バージョン
 titleSuffix: Configuration Manager
 description: Configuration Manager のバージョン履歴を確認し、提供サービスのフェーズについて説明します。
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 429e8159058e9126d578f9d33769ffc32eb73def
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 28920512fa2f9353ea5dbb038b140293b0e8c5e8
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692690"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126165"
 ---
 # <a name="support-for-configuration-manager-current-branch-versions"></a>Configuration Manager の Current Branch バージョンのサポート
 
@@ -27,11 +27,11 @@ Microsoft は、Configuration Manager の Current Branch に対し、年に数�
 
 - **セキュリティ更新プログラム (のみ)** のサービス提供フェーズ - 新しい Current Branch バージョンがリリースされた後、そのバージョンのサポート ライフサイクルの残りの期間中は、古いバージョンに対するセキュリティ更新プログラムのみがサポートされます (図 1 を参照)。  
 
-[ ![Configuration Manager のサービスとサポートのタイムラインの図](media/servicing_support_timeline.png) ](media/servicing_support_timeline.png#lightbox)
+:::image type="content" source="media/servicing_support_timeline.png" alt-text="Configuration Manager のサービスとサポートのタイムライン" lightbox="media/servicing_support_timeline.png":::
 
 図 1 Current Branch のサービス提供サポートのリリース サイクルの重複部分の例 この例は、サイクルを説明するためのもので、実際のまたは予定されているリリース日を表しているわけではありません。
 
-> [!NOTE]  
+> [!NOTE]
 > Current Branch の最新バージョンは常に、**セキュリティ更新プログラムと重要な更新プログラム**のサービス提供フェーズとなります。 このサポートに関する説明は、重要な更新プログラムの発行に値するコード障害が発生した場合、修正プログラムを受け取るためには Current Branch の最新バージョンがインストールされている必要があることを意味しています。 その他のサポートされている Current Branch バージョンでは、セキュリティ更新プログラムを受信できるだけとなります。
 >
 > Current Branch バージョンの 18 か月間のライフサイクルの有効期限が切れた後、すべてのサポートが終了します。

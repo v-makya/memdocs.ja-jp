@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: ae1f52b0744f79f79e00e5dfe2d6a76c903cf4a4
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 1a64d49edca146c70a56b07cb304d1744b86a1bf
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240033"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127748"
 ---
 #  <a name="automatically-deploy-software-updates"></a>ソフトウェア更新プログラムの自動展開  
 
@@ -47,7 +47,7 @@ ADR を使用して、ソフトウェア更新プログラムを自動的に承�
 
          - **[月例パッチ]** テンプレートは、1 か月サイクルでソフトウェア更新プログラムを展開するときに使用する一般的な設定を提供します。  
 
-         - **Office 365 クライアントの更新プログラム** テンプレートには、Office 365 ProPlus クライアントに向けた更新プログラムを展開するときに使用する、一般的な設定が用意されています。
+         - **Office 365 クライアントの更新プログラム** テンプレートには、Microsoft 365 Apps クライアントに向けた更新プログラムを展開するときに使用する、一般的な設定が用意されています。
              > [!Note]
              > 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 ADR が "タイトル" のプロパティに依存している場合は、2020 年 6 月 9 日から編集する必要があります。 `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` は、新しいタイトルの例です。 タイトルの変更に対する ADR の修正の詳細については、[Microsoft 365 アプリのチャネルの更新](manage-office-365-proplus-updates.md#bkmk_channel)に関するセクションを参照してください。 名前の変更の詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。
 
@@ -199,7 +199,7 @@ ADR を使用して、ソフトウェア更新プログラムを自動的に承�
 
         - **バイナリ差分レプリケーションを有効にする**: 展開パッケージにバイナリ差分レプリケーションを使用するには、この設定を有効にします。 詳細については、「[バイナリ差分レプリケーションについて](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication)」を参照してください。  
 
-    - **展開パッケージなし**: バージョン 1806 以降、最初にコンテンツをダウンロードして配布ポイントに配布することなく、ソフトウェア更新プログラムをデバイスに展開します。 この設定は、きわめて大規模な更新プログラムのコンテンツを扱うときに役立ちます。 また、クライアントが常に Microsoft Update のクラウド サービスからコンテンツを取得するようにしたい場合にも使用します。 このシナリオのクライアントでは、既に必要なコンテンツがあるピアからコンテンツをダウンロードすることもできます。 Configuration Manager クライアントで引き続きコンテンツのダウンロードが管理されるため、Configuration Manager のピア キャッシュ機能や、配信の最適化などの他のテクノロジを利用することができます。 この機能では、Windows および Office の更新プログラムを含む、Configuration Manager ソフトウェア更新プログラム管理でサポートされるすべての更新プログラムの種類がサポートされます。<!--1357933-->  
+    - **展開パッケージなし**: バージョン 1806 以降、最初にコンテンツをダウンロードして配布ポイントに配布することなく、ソフトウェア更新プログラムをデバイスに展開します。 この設定は、きわめて大規模な更新プログラムのコンテンツを扱うときに役立ちます。 また、クライアントが常に Microsoft Update のクラウド サービスからコンテンツを取得するようにしたい場合にも使用します。 このシナリオのクライアントでは、既に必要なコンテンツがあるピアからコンテンツをダウンロードすることもできます。 Configuration Manager クライアントで引き続きコンテンツのダウンロードが管理されるため、Configuration Manager のピア キャッシュ機能や、配信の最適化などの他のテクノロジを利用することができます。 この機能では、Windows および Microsoft 365 Apps の更新プログラムを含む、Configuration Manager ソフトウェア更新プログラム管理でサポートされるすべての更新プログラムの種類がサポートされます。<!--1357933-->  
 
         > [!Note]  
         > このオプションを選択し、設定を適用すると、変更できなくなります。 その他のオプションは灰色で表示されます。<!--SCCMDocs-pr issue 3003-->  

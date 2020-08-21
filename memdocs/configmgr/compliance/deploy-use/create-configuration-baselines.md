@@ -10,12 +10,12 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 01355230d0dc8969555740cc25a08e0b8d2967d0
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 4c96a7636902bd313f8e8868917b45d8fa49e1f7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240475"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127139"
 ---
 # <a name="create-configuration-baselines-in-configuration-manager"></a>Configuration Manager での構成基準の作成
 
@@ -84,7 +84,7 @@ Configuration Manager の構成基準には、定義済みの構成項目と、�
 <!--3608345-->
 *(バージョン 1910 で導入)*
 
-バージョン 1910 より、コンプライアンス ポリシー評価の規則として、カスタム構成基準の評価を追加できるようになりました。 構成基準を作成または編集するとき、 **[コンプライアンス ポリシー評価の一部としてこの基準を評価する]** というオプションがあります。 コンプライアンス ポリシー ルールを追加または編集するとき、 **[コンプライアンス ポリシーの評価に構成済みのベースラインを含める]** という条件があります。 共同管理デバイスの場合、全体のコンプライアンス対応状態の一部として Configuration Manager コンプライアンス評価の結果を受け取るように Intune を設定すると、この情報は Azure AD に送信されます。 その後、Office 365 リソースに対する条件付きアクセスで利用できます。 詳細については、「[共同管理での条件付きアクセス](../../comanage/quickstart-conditional-access.md)」を参照してください。
+バージョン 1910 より、コンプライアンス ポリシー評価の規則として、カスタム構成基準の評価を追加できるようになりました。 構成基準を作成または編集するとき、 **[コンプライアンス ポリシー評価の一部としてこの基準を評価する]** というオプションがあります。 コンプライアンス ポリシー ルールを追加または編集するとき、 **[コンプライアンス ポリシーの評価に構成済みのベースラインを含める]** という条件があります。 共同管理デバイスの場合、全体のコンプライアンス対応状態の一部として Configuration Manager コンプライアンス評価の結果を受け取るように Intune を設定すると、この情報は Azure AD に送信されます。 その後、Microsoft 365 Apps リソースに対する条件付きアクセスで利用できます。 詳細については、「[共同管理での条件付きアクセス](../../comanage/quickstart-conditional-access.md)」を参照してください。
 
 コンプライアンス ポリシー評価の一部としてカスタム構成基準を含めるには、次の操作を行います。
 

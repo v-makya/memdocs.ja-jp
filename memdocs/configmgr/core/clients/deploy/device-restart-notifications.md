@@ -2,7 +2,7 @@
 title: デバイスの再起動の通知
 titleSuffix: Configuration Manager
 description: Configuration Manager のさまざまなクライアント設定に対する再起動通知の動作。
-ms.date: 06/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b326c4dd8112a72555239f2c3eda078ebf47bf82
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: feb9f4206df65ee34228577a9e589ddd1be72870
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347221"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127251"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Configuration Manager でのデバイスの再起動通知
 
@@ -33,25 +33,25 @@ ms.locfileid: "84347221"
 
 ## <a name="restart-notification-types"></a>再起動通知の種類
 
-デバイスを再起動する必要がある場合、再起動しようとしていることがクライアントからエンド ユーザーに向けて示されます。 ユーザーは、次の 4 つの一般的な通知を受け取る場合があります。
+デバイスを再起動する必要がある場合、再起動しようとしていることがクライアントからエンド ユーザーに向けて示されます。
 
 ### <a name="toast-notification"></a>トースト通知
 
 Windows のトースト通知では、デバイスを再起動する必要があることをユーザーに知らせます。 トースト通知の情報は、実行されている Configuration Manager のバージョンによって異なる場合があります。 この種類の通知は、Windows OS に元々備わっているものです。 この種類の通知を使用しているサード パーティ製のソフトウェアもあるかもしれません。
 
-![保留中再起動のトースト通知](media/3555947-restart-toast.png)
+:::image type="content" source="media/3555947-restart-toast.png" alt-text="保留中再起動のトースト通知":::
 
 ### <a name="software-center-notification-with-snooze"></a>再通知機能が付いたソフトウェア センターの通知
 
 ソフトウェア センターにより、通知とともに、再通知オプションとデバイス再起動が強制されるまでの残り時間が表示されます。 メッセージは、Configuration Manager のバージョンによって異なる場合があります。
 
-![再通知ボタンのある保留中再起動のソフトウェア センター通知](media/3976435-snooze-restart-countdown.png)
+:::image type="content" source="media/3976435-snooze-restart-countdown.png" alt-text="再通知ボタンのある保留中再起動のソフトウェア センター通知":::
 
 ### <a name="software-center-final-countdown-notification"></a>ソフトウェア センターの最終カウントダウン通知
 
 ソフトウェア センターは次の最終カウントダウン通知を表示します。ユーザーが通知を閉じたり、再通知を選択したりすることはできません。
 
-![ソフトウェア センターの最終カウントダウン通知](media/3976435-final-restart-countdown.png)
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="ソフトウェア センターの最終カウントダウン通知":::
 
 バージョン 1906 以降では、保留中の再起動までの時間が 24 時間未満になるまで、再起動通知の進行状況バーはユーザーに対して表示されません。
 
@@ -59,17 +59,47 @@ Windows のトースト通知では、デバイスを再起動する必要があ
 
 期限より前に、ユーザーが事前に必要なソフトウェアをインストールし、再起動が必要な場合は、別の通知が表示されます。 ユーザー エクスペリエンスの設定で通知が許可されていて、かつ、展開にトースト通知が使われていない場合は、次の通知が発生します。 これらの設定の構成について詳しくは、「[展開の**ユーザー エクスペリエンス**設定](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux)」および「[必要な展開のユーザー通知](../../../apps/deploy-use/deploy-applications.md#bkmk_notify)」をご覧ください。
 
-![事前にインストールされたソフトウェアに対する通知](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="事前にインストールされたソフトウェアに対する通知":::
 
 #### <a name="available-apps"></a>Available apps
 
 トースト通知を使っていない場合、**利用可能**とマークされたソフトウェアに対するダイアログは、事前にインストールされたソフトウェアのものと似ています。 **利用可能**なソフトウェアの場合、通知に再起動の期限はなく、ユーザーは独自に再通知間隔を選択できます。 詳しくは、「[承認設定](../../../apps/deploy-use/deploy-applications.md#bkmk_approval)」をご覧ください。
 
-!["使用可能" とマークされているソフトウェアでは、通知に再起動の期限はありません。](media/3555947-deployment-marked-available-restart.png)
+:::image type="content" source="media/3555947-deployment-marked-available-restart.png" alt-text="利用可能なソフトウェアの再起動の期限が通知にない":::
+
+### <a name="software-center-notification-of-required-restart"></a>必要な再起動に関するソフトウェア センターの通知
+
+<!--3601213-->
+
+バージョン 2006 以降では、デバイスの再起動が展開で要求されても自動的に実行されないように、クライアント設定を構成できます。 必須の展開でデバイスの再起動が必要な場合に、クライアント設定 **[Configuration Manager can force a device to restart]\(Configuration Manager でデバイスの再起動を強制できる\)** を無効にしていると、次の通知が表示されます。
+
+:::image type="content" source="media/3601213-restart-your-computer.png" alt-text="コンピューターを再起動するためのソフトウェア センターの通知":::
+
+この通知を **[再通知]** した場合は、どのように再起動リマインダー通知の頻度を構成したかに基づいて再表示されます。 **[再起動]** を選択するか、手動で Windows を再起動するまで、デバイスは再起動されません。
+
+> [!NOTE]
+> 既定では、引き続き Configuration Manager でデバイスを強制的に再起動できます。
 
 ## <a name="client-settings"></a>クライアント設定
 
 クライアントの再起動の動作を制御するには、 **[コンピューターの再起動]** グループで、次のデバイス クライアント設定を構成してください。 詳しくは、「[クライアント設定を構成する方法](configure-client-settings.md)」をご覧ください。
+
+### <a name="configuration-manager-can-force-a-device-to-restart"></a>Configuration Manager でデバイスの再起動を強制できる
+
+<!--3601213-->
+
+バージョン 2006 以降では、デバイスの再起動が展開で要求されても自動的に実行されないように、クライアント設定を構成できます。 この設定は Configuration Manager で既定で有効になっています。
+
+> [!IMPORTANT]
+> このクライアント設定は、すべてのアプリケーション、ソフトウェア更新プログラム、およびデバイスへのパッケージの展開に適用されます。 ユーザーが手動でデバイスを再起動するまで、次のようになります。
+>
+> - ソフトウェア更新プログラムとアプリ リビジョンが完全にインストールされない可能性があります
+> - 追加のソフトウェアのインストールが行われない場合があります
+
+この設定を無効にした場合、期限後にデバイスが再起動される、またはユーザーに最後のカウントダウン通知が提示されるまでの時間の長さを指定することはできません。
+
+> [!NOTE]
+> Configuration Manager の新機能をすべて利用するには、サイトを更新した後、クライアントも最新バージョンに更新します。 サイトとコンソールを更新すると Configuration Manager コンソールに新しい機能が表示されますが、クライアントのバージョンも最新になるまでは完全なシナリオは機能しません。
 
 ### <a name="specify-the-amount-of-time-after-the-deadline-before-a-device-gets-restarted-minutes"></a>期限後からデバイスが再起動されるまでの経過時間を指定します (分)
 
@@ -123,17 +153,17 @@ _バージョン 1906 以降_
 
   - 再起動までの時間が 24 時間より長い場合は、推定再起動時刻が表示されます。 この通知のタイミングは、次の設定に基づきます: **[期限後からデバイスが再起動されるまでの経過時間を指定します (分)]**
 
-    ![再起動時刻まで 24 時間より長い](media/3976435-notification-greater-than-24-hours.png)
+    :::image type="content" source="media/3976435-notification-greater-than-24-hours.png" alt-text="再起動時刻まで 24 時間より長い":::
 
   - 再起動までの時間が 24 時間より短い場合は、進行状況バーが表示されます。 この通知のタイミングは、次の設定に基づきます: **[期限後からデバイスが再起動されるまでの経過時間を指定します (分)]**
 
-    ![再起動時刻まで 24 時間より短い](media/3976435-notification-less-than-24-hours.png)
+    :::image type="content" source="media/3976435-notification-less-than-24-hours.png" alt-text="再起動時刻まで 24 時間より短い":::
 
 ユーザーが **[再通知]** を選択する場合、再通知の期間が経過した後に別の一時的な通知が表示されます。 この動作は、まだ最終カウントダウンに到達していないことを前提としています。 次の通知のタイミングは、次の設定に基づきます: **[期限後からデバイスが再起動されるまでにアラーム通知をユーザーに表示する頻度を指定します (分)]** 。 ユーザーが **[再通知]** を選択し、再通知の期間が 1 時間である場合、ソフトウェア センターは 60 分後にユーザーに再び通知します。 この動作は、まだ最終カウントダウンに到達していないことを前提としています。
 
 最終カウントダウンに到達すると、ソフトウェア センターはユーザーに対して、閉じることができない通知を表示します。 進行状況バーは赤で表示され、ユーザーは **[再通知]** を選択できません。
 
-![バージョン 1906 でのソフトウェア センターの最終カウントダウン通知](media/3976435-1906-final-restart-countdown.png)
+:::image type="content" source="media/3976435-1906-final-restart-countdown.png" alt-text="バージョン 1906 でのソフトウェア センターの最終カウントダウン通知":::
 
 ### <a name="proactively-install-required-software-before-the-deadline"></a>期限より前に、事前に必要なソフトウェアをインストールする
 
@@ -141,7 +171,7 @@ _バージョン 1906 以降_
 
 ユーザー エクスペリエンスの設定で通知が許可されていて、かつ、展開にトースト通知が使われていない場合は、次の通知が発生します。
 
-![事前にインストールされたソフトウェアに対する通知](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="事前にインストールされたソフトウェアに対する通知":::
 
 展開が期限に到達すると、ソフトウェア センターの動作は「[必要なソフトウェアを期限の時点か期限後にインストールする](#install-required-software-at-or-after-the-deadline)」で説明されているのと同じになります。
 
@@ -193,25 +223,25 @@ _バージョン 1906 以降_
 
 このクライアント設定を構成すると、トースト通知からの再起動が必要な、すべての必要な展開のユーザー エクスペリエンスが変更されます。
 
-!["再起動が必要" というトースト通知](media/3555947-restart-toast-initial.png)  
+:::image type="content" source="media/3555947-restart-toast-initial.png" alt-text=""再起動が必要" というトースト通知":::
 
 さらに詳細なソフトウェア センターのダイアログ ウィンドウになります。
 
-![コンピューターを再起動するためのダイアログ ウィンドウ](media/3976435-proactive-user-restart-notification.png)
+:::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="コンピューターを再起動するためのダイアログ ウィンドウ":::
 
 インストール後にユーザーがデバイスを再起動しなかった場合、リマインダーとして通知が送られます。 この一時的なリマインダーは、次のクライアント設定に基づいてユーザーに表示されます: **[ユーザーがログオフするかコンピューターを再起動するまでの時間を知らせる一時的な通知を表示する (分)]** 。 この設定は、再起動が強制される前に、ユーザーがコンピューターを再起動する必要がある全体的な時間です。
 
 - トースト通知を使用したときの一時的な通知:
 
-  ![保留中再起動のトースト通知](media/3555947-restart-toast.png)
+    :::image type="content" source="media/3555947-restart-toast.png" alt-text="保留中再起動のトースト通知":::
 
 - トーストではなく、ソフトウェア センターのダイアログ ウィンドウを使用したときの一時的な通知:
 
-  ![再通知ボタンのある保留中再起動のソフトウェア センター通知](media/3555947-1902-hide-notification.png)
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="再通知ボタンのある保留中再起動のソフトウェア センター通知":::
 
 一時的な通知の後でユーザーが再起動を行わない場合は、閉じることができない最終的なカウントダウン通知が表示されます。 最終通知が表示されるタイミングは、次のクライアント設定に基づきます: **[ユーザーがログオフするかコンピューターを再起動するまでの時間を知らせる、ユーザーが閉じることのできないダイアログ ボックスを表示する (分)]** 。 たとえば、設定が 60 の場合、再起動が強制される前の 1 時間、最終通知がユーザーに対して表示されます。
 
-![ソフトウェア センターの最終カウントダウン通知](media/3555947-1902-final-countdown.png)
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="ソフトウェア センターの最終カウントダウン通知":::
 
 以下の設定は、コンピューターに適用される最短の[メンテナンス期間](../manage/collections/use-maintenance-windows.md)より短い期間にする必要があります。
 

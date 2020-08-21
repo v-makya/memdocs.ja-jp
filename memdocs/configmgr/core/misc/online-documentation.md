@@ -9,12 +9,12 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 01b6587d1d223675fdc240c20913e21854d55821
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 9f24768521cd179c3a6403aff057de48ae46e7e7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701120"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695513"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Configuration Manager のオンライン ドキュメント
 
@@ -26,7 +26,7 @@ Configuration Manager のドキュメント ライブラリへようこそ。 �
 
 ### <a name="online-documentation"></a>オンライン ドキュメント
 
-Configuration Manager の Current Branch のオンライン ドキュメントは、[docs.microsoft.com/configmgr](https://docs.microsoft.com/configmgr) を参照してください。  
+Configuration Manager の Current Branch のオンライン ドキュメントは、[docs.microsoft.com/configmgr](/configmgr) を参照してください。  
 
 - [Configuration Manager の概要](../understand/introduction.md)  
 
@@ -76,33 +76,33 @@ Configuration Manager の Current Branch のオンライン ドキュメント�
 
 オンライン ドキュメントについては、次の場所を参照してください。  
 
-- [System Center 2012 Configuration Manager の概要](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
+- [System Center 2012 Configuration Manager の概要](/previous-versions/system-center/system-center-2012-R2/gg682144\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager のサイト管理](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
+- [System Center 2012 Configuration Manager のサイト管理](/previous-versions/system-center/system-center-2012-R2/gg681983\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager の階層の移行](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
+- [System Center 2012 Configuration Manager の階層の移行](/previous-versions/system-center/system-center-2012-R2/gg682006\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager のクライアントの展開](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391\(v=technet.10\))  
+- [System Center 2012 Configuration Manager のクライアントの展開](/previous-versions/system-center/system-center-2012-R2/gg699391\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager でのソフトウェアとオペレーティング システムの展開](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699393\(v=technet.10\))  
+- [System Center 2012 Configuration Manager でのソフトウェアとオペレーティング システムの展開](/previous-versions/system-center/system-center-2012-R2/gg699393\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager の資産とコンプライアンス](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682029\(v=technet.10\))  
+- [System Center 2012 Configuration Manager の資産とコンプライアンス](/previous-versions/system-center/system-center-2012-R2/gg682029\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager のセキュリティとプライバシー](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033\(v=technet.10\))  
+- [System Center 2012 Configuration Manager のセキュリティとプライバシー](/previous-versions/system-center/system-center-2012-R2/gg682033\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager を使用したシナリオとソリューション](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj884163\(v=technet.10\))  
+- [System Center 2012 Configuration Manager を使用したシナリオとソリューション](/previous-versions/system-center/system-center-2012-R2/jj884163\(v=technet.10\))  
 
 ### <a name="release-notes-and-technical-publications"></a>リリース ノートと技術発行物
 
 リリース ノートと技術発行物は、Configuration Manager ガイドを補足するものです。 リリース ノートには、製品ドキュメントに含まれていない情報、および Configuration Manager を正しくインストールするために必要な情報が記載されています。 技術文書では、Configuration Manager に関する追加情報を提供します。  
 
-- [System Center 2012 Configuration Manager リリース ノート](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj870706\(v=technet.10\))  
+- [System Center 2012 Configuration Manager リリース ノート](/previous-versions/system-center/system-center-2012-R2/jj870706\(v=technet.10\))  
 
-- [System Center 2012 Configuration Manager のテクニカル文書](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
+- [System Center 2012 Configuration Manager のテクニカル文書](/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
 
 ### <a name="accessibility"></a>アクセシビリティ
 
-Configuration Manager を障碍のある方にとってより使いやすくするための機能、製品、サービスについては、「[Configuration Manager のユーザー補助機能](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\))」を参照してください。
+Configuration Manager を障碍のある方にとってより使いやすくするための機能、製品、サービスについては、「[Configuration Manager のユーザー補助機能](/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\))」を参照してください。
 
 ### <a name="downloadable-documentation"></a>ダウンロード可能なドキュメント
 

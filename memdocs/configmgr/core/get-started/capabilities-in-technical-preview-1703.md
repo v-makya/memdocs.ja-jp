@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 98a82d118442a7ca37ff7b2df62bf4702c15ba2c
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 9209a1a948c43a21f097ba836a6761b53ddc9530
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87526017"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692963"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-configuration-manager"></a>Configuration Manager の Technical Preview 1703 の機能
 
@@ -82,7 +82,7 @@ Technical Preview 1703 では、ビジネス向け Windows ストア (WSfB) の�
 
 - このプレビュー トピックの情報を使用して、Current Branch のトピック「[Configuration Manager によるビジネス向け Windows ストアからのアプリの管理](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)」の「[ビジネス向け Windows ストアの同期の設定](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_setup)」セクションに記載されている構成手順を置き換えます。
 
-- Web アプリの詳細については、「[Azure App Service での認証および承認](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)」と「[Web Apps の概要](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)」を参照してください。
+- Web アプリの詳細については、「[Azure App Service での認証および承認](/azure/app-service/app-service-authentication-overview)」と「[Web Apps の概要](/azure/app-service-web/app-service-web-overview)」を参照してください。
 
 ### <a name="prerequisites-and-planning"></a>前提条件と計画
 Configuration Manager とビジネス向け Windows ストアの間の接続を設定するとき、ストアから同期されたアプリ コンテンツが保存するフォルダーを指定する必要があります。 このフォルダーが安全であり、そのコンテンツをデバイスに展開できるようにするには、次のアクセス許可を配置します。

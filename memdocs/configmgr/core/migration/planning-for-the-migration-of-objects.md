@@ -10,12 +10,12 @@ ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 93c3887307c32ea636a6dbb064cda13f4b9130c6
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 996cff4b8b333a59b774afb979bbdd89aae536a1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905131"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692895"
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-configuration-manager-current-branch"></a>Configuration Manager オブジェクトの Configuration Manager の現在のブランチへの移行を計画する
 
@@ -123,7 +123,7 @@ System Center 2012 Configuration Manager または Configuration Manager Current
 構成項目と構成基準を移行できます。  
 
 > [!NOTE]  
->  移行では、Configuration Manager 2007 ソース階層の解釈なしの構成項目はサポートされていません。 これらの構成項目は、移行先階層に移行もインポートもできません。 解釈なしの構成項目については、Configuration Manager 2007 ドキュメント ライブラリの「[必要な構成管理の構成項目について](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item)」トピックの「解釈なしの構成項目」セクションを参照してください。  
+>  移行では、Configuration Manager 2007 ソース階層の解釈なしの構成項目はサポートされていません。 これらの構成項目は、移行先階層に移行もインポートもできません。 解釈なしの構成項目については、Configuration Manager 2007 ドキュメント ライブラリの「[必要な構成管理の構成項目について](/previous-versions/system-center/configuration-manager-2007/bb694136(v=technet.10)#uninterpreted-configuration-item)」トピックの「解釈なしの構成項目」セクションを参照してください。  
 
 Configuration Manager 2007 構成パックをインポートすることができます。 インポート処理により、自動的に構成パックが Configuration Manager Current Branch と互換性を持つように変換されます。  
 
@@ -160,4 +160,4 @@ Configuration Manager では、レポートの移行をサポートしていま�
 ##  <a name="plan-to-migrate-software-metering-rules-customizations"></a><a name="Plan_Migrate_SWM_Rules"></a> ソフトウェア使用状況測定規則のカスタマイズ設定の移行の計画  
  Configuration Manager 2007 と Configuration Manager Current Branch の間では、ソフトウェア使用状況測定に大きな変更はありません。 サポートされているソース階層から移行先階層にソフトウェア使用状況測定規則を移行できます。  
 
- 既定では、移行先階層に移行するソフトウェア使用状況測定規則は、移行先階層の特定のサイトには関連付けられません。代わりに、階層内のすべてのクライアントに適用されます。 ソフトウェア使用状況測定規則を特定のサイトのクライアントに適用するには、移行後に使用状況測定規則を編集する必要があります。  
+ 既定では、移行先階層に移行するソフトウェア使用状況測定規則は、移行先階層の特定のサイトには関連付けられません。代わりに、階層内のすべてのクライアントに適用されます。 ソフトウェア使用状況測定規則を特定のサイトのクライアントに適用するには、移行後に使用状況測定規則を編集する必要があります。

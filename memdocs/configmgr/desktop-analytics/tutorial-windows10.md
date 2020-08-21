@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 15cf7f3621f25a82f0e16d5275369ec93225bbf7
-ms.sourcegitcommit: 034226b5a60de49a75c7b54e856814f81c03a112
+ms.openlocfilehash: fc4309d3d09cd35c17b23bc46dcb1a28d210aa8e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422829"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125748"
 ---
 # <a name="tutorial-deploy-windows-10-to-pilot"></a>チュートリアル:Windows 10 のパイロット展開
 
@@ -56,7 +56,7 @@ Desktop Analytics では、Azure サブスクリプション内の *Log Analytic
 
     - Configuration Manager クライアント バージョン 1902 以降、更新プログラムのロールアップ (4500571) あり  
 
-- パイロット デバイスの Windows 診断データ レベルを **[拡張 (制限付き)]** に構成するための業務上の承認  
+- パイロット デバイスの Windows 診断データ レベルを **[省略可能 (制限あり)]** に構成するための業務上の承認  
 
     詳細については、[Desktop Analytics のプライバシー](privacy.md)に関する記事を参照してください。
 
@@ -193,7 +193,7 @@ Desktop Analytics との統合をサポートするには、Configuration Manage
 
     - **商用 ID**: この値には、組織の ID が自動的に入力されます。  
 
-    - **Windows 10 診断データ レベル**: 最低でも **[拡張 (制限付き)]** を選択します。  
+    - **Windows 10 診断データ レベル**: 少なくとも **[省略可能 (制限あり)]** を選択します。  
 
     - **[診断データでデバイス名を許可する]** : **[有効にする]** を選択します。  
   

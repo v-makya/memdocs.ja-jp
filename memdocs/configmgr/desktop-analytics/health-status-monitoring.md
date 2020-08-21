@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 119f787f15b8c907d0c760a12b973ca984f4348c
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: b4663ca5640bcfea4338912ff471a3253b744d5f
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268540"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125833"
 ---
 # <a name="health-status-monitoring-in-desktop-analytics"></a>Desktop Analytics での正常性状態の監視
 
@@ -27,7 +27,7 @@ ms.locfileid: "83268540"
 ![Desktop Analytics の [正常性の監視] ページのスクリーンショット](media/monitor-health.png)
 
 > [!NOTE]  
-> Desktop Analytics を使用すると、分母として使用できる使用状況データを提供するデバイスから正常性データのみが収集されます。 これは、診断データを拡張 (制限付き) レベルで共有するように設定されていない Windows 7 と Windows 10 を実行中のデバイスは含まれないことを意味します。 Windows 10 を実行中のデバイスのうち、診断データを [拡張 (制限付き)] 以外のレベルで共有するように設定されているデバイスが 10% を超える場合、 **[モニターの正常性]** ページのバナー領域に警告が表示されます。  
+> Desktop Analytics を使用すると、分母として使用できる使用状況データを提供するデバイスから正常性データのみが収集されます。 これは、診断データを [省略可能 (制限あり)] レベルで共有するように設定されていない Windows 7 と Windows 10 を実行中のデバイスは含まれないことを意味します。 Windows 10 を実行中のデバイスのうち、診断データを [省略可能 (制限あり)] 以外のレベルで共有するように設定されているデバイスが 10% を超える場合、 **[モニターの正常性]** ページのバナー領域に警告が表示されます。  
 
 特定のアプリに関する詳細情報を表示するには、一覧から選択します。
 

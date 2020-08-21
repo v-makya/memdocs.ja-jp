@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: f2486e838e01415786e24c077af1997b3dfb7638
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a947b332addbc3404617abdbbe199ede4e74dc63
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129071"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692793"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Configuration Manager のバージョン 1702 の新機能
 
@@ -118,7 +118,7 @@ Configuration Manager コンソールでの検索機能の強化の内容を次�
 
 
 ### <a name="use-the-oms-connector-with-the-azure-government-cloud"></a>Azure Government Cloud で OMS コネクタを使用する
-OMS コネクタを使用すれば、Microsoft Azure Government Cloud 内の OMS Log Analytics に接続することができます。 そのためには、OMS コネクタが Government Cloud と連携するように構成ファイルを変更してから OMS コネクタをインストールする必要があります。 詳細については、[「Use the OMS connector with the Azure Government cloud」](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm) (Azure Government Cloud で OMS コネクタを使用する) を参照してください。
+OMS コネクタを使用すれば、Microsoft Azure Government Cloud 内の OMS Log Analytics に接続することができます。 そのためには、OMS コネクタが Government Cloud と連携するように構成ファイルを変更してから OMS コネクタをインストールする必要があります。 詳細については、[「Use the OMS connector with the Azure Government cloud」](/azure/azure-monitor/platform/collect-sccm) (Azure Government Cloud で OMS コネクタを使用する) を参照してください。
 
 ### <a name="software-update-points-are-added-to-boundary-groups"></a>境界グループへのソフトウェア更新ポイントの追加
 バージョン 1702 以降では、クライアントは境界グループを使用して、新しいソフトウェアの更新ポイントを検索します。また、現在のソフトウェアの更新ポイントにアクセスできなくなっている場合は、フォールバックして新しいソフトウェアの更新ポイントを検索します。 ソフトウェアの更新ポイントをそれぞれ異なる境界グループに追加して、クライアントで検索できるサーバーを制御できます。 詳細については、[境界グループの構成](../../servers/deploy/configure/boundary-groups.md)に関するトピックの[ソフトウェアの更新ポイント](../../servers/deploy/configure/boundary-groups.md#bkmk_sup)の記述を参照してください。

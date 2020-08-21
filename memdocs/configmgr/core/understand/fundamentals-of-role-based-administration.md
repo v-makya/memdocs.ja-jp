@@ -10,12 +10,12 @@ ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 62faf2fd736f9751e8b33e821cb814f527a1197c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c39d3380212debe97c2d2f33de6a98fecfb8402e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707090"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126054"
 ---
 # <a name="fundamentals-of-role-based-administration-for-configuration-manager"></a>Configuration Manager のロール ベース管理の基礎
 
@@ -27,7 +27,7 @@ Configuration Manager では、ロール ベース管理を使用して、Config
 
 - *セキュリティ ロール*: 管理ユーザーに割り当てられ、これらのユーザー (またはユーザーのグループ) は Configuration Manager のさまざまなオブジェクトにアクセスできるになります。 たとえば、クライアントの設定を作成したり、変更したりできるようになります。  
 
-- *セキュリティ スコープ*: 管理ユーザーが管理を担当する特定のオブジェクトのインスタンス (Microsoft Office 2010 をインストールするアプリケーションなど) をグループ化する場合に使用されます。  
+- *セキュリティ スコープ*: 管理ユーザーが管理を担当する特定のオブジェクトのインスタンス (Microsoft 365 Apps をインストールするアプリケーションなど) をグループ化する場合に使用されます。  
 
 - *コレクション*: 管理ユーザーが管理できるユーザーやデバイス リソースのグループを指定する場合に使用されます。  
 

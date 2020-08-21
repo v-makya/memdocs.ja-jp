@@ -10,12 +10,12 @@ ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 95b8bf41d74e7011eed40116f4fe34e2c356d67e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6c702916f73d1fbc842966161a6958a61d24044a
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707060"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126071"
 ---
 # <a name="fundamentals-of-security-for-configuration-manager"></a>Configuration Manager のセキュリティの基礎
 
@@ -82,7 +82,7 @@ Windows Server とネットワーク インフラストラクチャによって�
 
  管理者が*セキュリティ ロール*を管理ユーザーとグループのアクセス許可に割り当てます。 アクセス許可は、たとえばクライアント設定の作成や変更を行うために、さまざまな Configuration Manager オブジェクトの種類に接続されます。 
 
- *セキュリティ スコープ*は、管理ユーザーが管理を担当する特定のオブジェクトのインスタンス (Microsoft Office をインストールするアプリケーションなど) をグループ化します。 
+ *セキュリティ スコープ*は、管理ユーザーが管理を担当する特定のオブジェクトのインスタンス (Microsoft 365 Apps をインストールするアプリケーションなど) をグループ化します。 
 
  セキュリティ ロール、セキュリティ スコープ、およびコレクションの組み合わせによって、管理ユーザーが表示および管理できるオブジェクトが定義されます。 Configuration Manager は、一般的な管理タスクのためにいくつかの既定のセキュリティ ロールをインストールします。 独自のセキュリティ ロールを作成して、特定のビジネス要件をサポートできます。  
 

@@ -10,12 +10,12 @@ ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df6f550b21523e365055f6a4cdafadca7603c4bf
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 63db181bd145ea2fa14f206e94c521b65f7e7354
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906366"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695156"
 ---
 # <a name="deploy-app-v-virtual-applications-with-configuration-manager"></a>Configuration Manager での App-V 仮想アプリケーションの展開
 
@@ -31,7 +31,7 @@ Configuration Manager を使用して仮想アプリケーションを管理す�
 
 -   オペレーティング システムの展開、ソフトウェアとハードウェアのインベントリ、ソフトウェア使用状況測定、資産インテリジェンスを使用した仮想アプリケーションのサポート  
 
-Microsoft Application Virtualization (App-V) を使用したアプリケーションの作成方法とシーケンス方法については、[Application Virtualization 4 のドキュメント](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v4/)を参照してください。  
+Microsoft Application Virtualization (App-V) を使用したアプリケーションの作成方法とシーケンス方法については、[Application Virtualization 4 のドキュメント](/microsoft-desktop-optimization-pack/appv-v4/)を参照してください。  
 
 アプリケーションを作成するための Configuration Manager の他の要件と手順に加えて、仮想アプリケーションを作成および展開するときには以下の考慮事項について検討する必要があります。
 
@@ -65,9 +65,9 @@ Microsoft Application Virtualization (App-V) を使用したアプリケーシ�
 
 Windows 10 の App-V の詳細については、次のトピックを参照してください。
 
-- [App-V の新着情報](https://docs.microsoft.com/windows/application-management/app-v/appv-about-appv)
-- [Windows 10 向け App-V の概要](https://docs.microsoft.com/windows/application-management/app-v/appv-getting-started)
-- [既存のインストールから Windows 10 向け App-V へのアップグレード](https://docs.microsoft.com/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
+- [App-V の新着情報](/windows/application-management/app-v/appv-about-appv)
+- [Windows 10 向け App-V の概要](/windows/application-management/app-v/appv-getting-started)
+- [既存のインストールから Windows 10 向け App-V へのアップグレード](/windows/application-management/app-v/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
 
 ##  <a name="steps-to-manage-app-v-virtual-applications"></a>App-V 仮想アプリケーションの管理の手順  
  App-V 仮想アプリケーションを管理するには、次の手順を実行します。  
@@ -147,7 +147,7 @@ Configuration Manager でこの機能を使用するには、両方のパッケ�
 App-V Dynamic Suite Composition の詳細については、App-V のドキュメントをご覧ください。  
 
 ##  <a name="converting-app-v-46-applications-to-app-v-5-applications"></a>App-V 4.6 アプリケーションから App-V 5 アプリケーションへの変換  
-App-V 5 のアプリケーション パッケージの形式は、App-V 4.6 から変わりました。 App-V 4.6 を使用してシーケンス処理されたアプリケーションは、サポートされなくなりました。 ただし、App-V 5 には、アプリケーションの変換に使用できるパッケージ変換ツールがあります。 詳細については、[以前の App-V バージョンで作成されたパッケージを変換する方法](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v)に関するページを参照してください。  
+App-V 5 のアプリケーション パッケージの形式は、App-V 4.6 から変わりました。 App-V 4.6 を使用してシーケンス処理されたアプリケーションは、サポートされなくなりました。 ただし、App-V 5 には、アプリケーションの変換に使用できるパッケージ変換ツールがあります。 詳細については、[以前の App-V バージョンで作成されたパッケージを変換する方法](/microsoft-desktop-optimization-pack/appv-v5/how-to-convert-a-package-created-in-a-previous-version-of-app-v)に関するページを参照してください。  
 
 App-V 4.6 アプリケーションを App-V 5 アプリケーションに変換するには、次の手順を実行します。  
 
@@ -178,7 +178,7 @@ App-V 4.6 アプリケーションを App-V 5 アプリケーションに変換�
 
 Configuration Manager を使用して App-V 5 仮想アプリケーションを展開する場合、App-V 5 の展開の種類を作成するときに、3 つのファイルすべてが同じフォルダーに配置されている必要があります。 フォルダー内に複数のファイルがある場合、Configuration Manager は最新のファイルを使用します。  
 
-詳細については、[App-V 5.0 動的構成の概要](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration)に関するページを参照してください。  
+詳細については、[App-V 5.0 動的構成の概要](/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-dynamic-configuration)に関するページを参照してください。  
 
 ##  <a name="app-v-local-interaction"></a>App-V ローカル通信  
 アプリケーションの展開のシナリオによっては、アプリケーションがクライアント コンピューターのローカルにインストールされ、他のアプリケーションが仮想アプリケーションとして同じクライアント コンピューターに展開されることがあります。 既定では、ローカルにインストールされたアプリケーションは、仮想化されたアプリケーションを直接表示または通信することはできません。 これは、App-V が提供しているアプリケーションの分離機能の意図的な動作です。 ローカル通信は、各アプリケーションで有効にすることができる App-V クライアントの機能です。有効にすると、クライアント コンピューターのローカルにインストールされ、実行されているアプリケーションが、仮想化されたアプリケーションを表示して通信できるようになります。 Configuration Manager および App-V はローカル通信を完全にサポートしています。  
@@ -186,7 +186,7 @@ Configuration Manager を使用して App-V 5 仮想アプリケーションを�
 App-V のローカル通信機能の詳細については、App-V のドキュメントをご覧ください。  
 
 ##  <a name="app-v-5-shared-content-store"></a>App-V 5 共有コンテンツ ストア  
-Configuration Manager では、App-V 5 共有コンテンツ格納機能をサポートしています。 詳細については、「 [App-v 5.0 共有コンテンツ ストア (SCS) の計画](https://docs.microsoft.com/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs)」をご覧ください。  
+Configuration Manager では、App-V 5 共有コンテンツ格納機能をサポートしています。 詳細については、「 [App-v 5.0 共有コンテンツ ストア (SCS) の計画](/microsoft-desktop-optimization-pack/appv-v5/planning-for-the-app-v-50-sequencer-and-client-deployment#planning-for-the-app-v-50-shared-content-store-scs)」をご覧ください。  
 
 ##  <a name="monitoring-virtual-applications"></a>仮想アプリケーションの監視  
 
@@ -206,4 +206,4 @@ Configuration Manager 環境で App-V を監視するには、次のレポート
 ### <a name="log-files"></a>ログ ファイル  
 Configuration Manager は、仮想アプリケーションの展開に関する情報をログ ファイルに記録します。 仮想アプリケーションと Configuration Manager アプリケーション管理で使用されるログ ファイルについては、「[ログ ファイル](../../core/plan-design/hierarchy/log-files.md)」をご覧ください。  
 
-Windows 8.1 の場合、App-V クライアントのログは C:\ProgramData\Microsoft\Application Virtualization Client にあります。  
+Windows 8.1 の場合、App-V クライアントのログは C:\ProgramData\Microsoft\Application Virtualization Client にあります。

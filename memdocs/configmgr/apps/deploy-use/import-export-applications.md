@@ -10,12 +10,12 @@ ms.assetid: dba00e54-9d5b-4f6b-916d-ead48c66e288
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b4ed1c10e23b75dc4478a0409d197015c98aff8b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3db127deb353f30566a1f03cbc6ac0eef666cb37
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689440"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695258"
 ---
 # <a name="import-and-export-applications"></a>アプリケーションのインポートとエクスポート
 
@@ -49,5 +49,5 @@ Configuration Manager を使用して、2 つの階層間でアプリケーシ�
  
 PowerShell を使用してアプリケーションのインポートとエクスポートを自動化します。
 
-* [Import-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication)
-* [Export-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/export-cmapplication)
+* [Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication)
+* [Export-CMApplication](/powershell/module/configurationmanager/export-cmapplication)

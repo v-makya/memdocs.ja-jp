@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2113baf43c377379a2a996c59fd13e55072cf898
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: db3a673d99efc40bd6fa0da7930c66c648136e03
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605186"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695362"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Configuration Manager コンソールから PowerShell スクリプトを作成して実行する
 
@@ -205,7 +205,7 @@ Configuration Manager では、スクリプトを実行するために使用さ�
 
 正規表現はプログラミングのコンパクトな形式で、エンコードされた検証に対して文字列をチェックします。 たとえば、 *[RegEx]* フィールドに `[^A-Z]` を指定することによって、 *[FirstName]* フィールド内の大文字アルファベット文字の有無をチェックすることができます。
 
-このダイアログ ボックスの正規表現処理は、.NET Framework でサポートされています。 正規表現の使用方法の詳細については、「[.NET の正規表現](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions)」および「[正規表現言語](https://docs.microsoft.com/dotnet/standard/base-types/regular-expression-language-quick-reference)」をご覧ください。
+このダイアログ ボックスの正規表現処理は、.NET Framework でサポートされています。 正規表現の使用方法の詳細については、「[.NET の正規表現](/dotnet/standard/base-types/regular-expressions)」および「[正規表現言語](/dotnet/standard/base-types/regular-expression-language-quick-reference)」をご覧ください。
 
 
 ## <a name="script-examples"></a>スクリプトの例
@@ -294,7 +294,7 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 
 ## <a name="script-output"></a>スクリプトの出力
 
-スクリプトの結果を [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) コマンドレットにパイプすることにより、JSON 形式を使用してクライアントからスクリプトの出力を返します。 JSON 形式では、読み取り可能なスクリプトの出力が一貫して返されます。 出力としてオブジェクトを返さないスクリプトの場合、ConvertTo-Json コマンドレットでは出力が単純な文字列に変換され、JSON ではなくそれがクライアントから返されます。  
+スクリプトの結果を [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json) コマンドレットにパイプすることにより、JSON 形式を使用してクライアントからスクリプトの出力を返します。 JSON 形式では、読み取り可能なスクリプトの出力が一貫して返されます。 出力としてオブジェクトを返さないスクリプトの場合、ConvertTo-Json コマンドレットでは出力が単純な文字列に変換され、JSON ではなくそれがクライアントから返されます。  
 
 - 不明な結果を取得するスクリプトや、クライアントがオフラインだったスクリプトは、グラフやデータ セットには表示されません。 <!--507179-->
 - 大きいスクリプトの出力は 4 KB に切り捨てられるため、そのような出力が返されないようにしてください。 <!--508488-->
@@ -302,7 +302,7 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 
    ![列挙オブジェクトを文字列値に変換する](./media/run-scripts/enum-tostring-JSON.png)
 
-詳細なスクリプトの出力を、生の形式または構造化された JSON 形式で表示できます。 この書式設定を行うと、出力の読み取りと分析が容易になります。 スクリプトによって有効な JSON 形式のテキストが返される場合、または [ConvertTo-Json](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/convertto-json) PowerShell コマンドレットを使用して出力を JSON に変換できる場合は、 **[JSON 形式の出力]** または **[未加工で出力]** として詳細出力を表示します。 それ以外の場合は、 **[スクリプトの出力]** が唯一のオプションです。
+詳細なスクリプトの出力を、生の形式または構造化された JSON 形式で表示できます。 この書式設定を行うと、出力の読み取りと分析が容易になります。 スクリプトによって有効な JSON 形式のテキストが返される場合、または [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json) PowerShell コマンドレットを使用して出力を JSON に変換できる場合は、 **[JSON 形式の出力]** または **[未加工で出力]** として詳細出力を表示します。 それ以外の場合は、 **[スクリプトの出力]** が唯一のオプションです。
 
 ### <a name="example-script-output-is-convertible-to-valid-json"></a>例:スクリプトの出力を有効な JSON に変換できる
 

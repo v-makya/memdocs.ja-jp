@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: b5a9a4a7f23942ac06dc16a0b54b657c7fd617a9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: a2e032e2aecfd53dc3a92cfb9c40798b4dcd1db9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715613"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692776"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>クラウド管理ゲートウェイの証明書
 
@@ -258,8 +258,8 @@ CMG はクライアント認証証明書を信頼する必要があります。 
 
 - *ワークグループ*:デバイスはドメインまたは Azure AD に参加していませんが、[クライアント認証証明書](#bkmk_clientauth)を持っています。
 - *AD ドメイン参加済み*:デバイスをオンプレミスの Active Directory ドメインに参加させます。
-- *Azure AD 参加済み*:クラウド ドメイン参加済みとも呼ばれ、デバイスを Azure AD テナントに参加させます。 詳細については、「[Azure AD 参加済みデバイス](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join)」を参照してください。
-- *ハイブリッド参加済み*:デバイスをオンプレミスの Active Directory に参加させ、Azure AD に登録します。 詳細については、「[ハイブリッド Azure AD 参加済みデバイス](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)」を参照してください。
+- *Azure AD 参加済み*:クラウド ドメイン参加済みとも呼ばれ、デバイスを Azure AD テナントに参加させます。 詳細については、「[Azure AD 参加済みデバイス](/azure/active-directory/devices/concept-azure-ad-join)」を参照してください。
+- *ハイブリッド参加済み*:デバイスをオンプレミスの Active Directory に参加させ、Azure AD に登録します。 詳細については、「[ハイブリッド Azure AD 参加済みデバイス](/azure/active-directory/devices/concept-azure-ad-join-hybrid)」を参照してください。
 - *HTTP*:管理ポイント プロパティで、クライアント接続を **[HTTP]** に設定します。
 - *HTTPS*:管理ポイント プロパティで、クライアント接続を **[HTTPS]** に設定します。
 - *E-HTTP*:サイトのプロパティの **[Communication Security]\(通信のセキュリティ\)** タブで、サイト システムの設定を **[HTTPS または HTTP]** に設定し、 **[HTTP サイト システムには Configuration Manager によって生成された証明書を使用する]** のオプションを有効にします。 HTTP 用の管理ポイントはご自身で構成します。HTTP と HTTPS の両方の通信用の HTTP 管理ポイントは用意されています (トークン認証のシナリオ)。
@@ -282,9 +282,9 @@ Azure で CMG を作成するには、Configuration Manager サービス接続�
 
 管理証明書をアップロードする方法の詳細と手順については、Azure のドキュメントの次の記事を参照してください。
 
-- [クラウド サービスと管理証明書](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
+- [クラウド サービスと管理証明書](/azure/cloud-services/cloud-services-certs-create#what-are-management-certificates)  
 
-- [Azure サービス管理証明書をアップロードする](https://docs.microsoft.com/azure/azure-api-management-certs)  
+- [Azure サービス管理証明書をアップロードする](/azure/azure-api-management-certs)  
 
 > [!IMPORTANT]
 > 管理証明書に関連付けられているサブスクリプション ID を必ずコピーしてください。 Configuration Manager コンソールで CMG を作成するために使用します。
@@ -295,4 +295,4 @@ Azure で CMG を作成するには、Configuration Manager サービス接続�
 
 - [クラウド管理ゲートウェイについてよくあるご質問](cloud-management-gateway-faq.md)  
 
-- [クラウド管理ゲートウェイのセキュリティとプライバシー](security-and-privacy-for-cloud-management-gateway.md)  
+- [クラウド管理ゲートウェイのセキュリティとプライバシー](security-and-privacy-for-cloud-management-gateway.md)

@@ -2,20 +2,20 @@
 title: 回復データの暗号化
 titleSuffix: Configuration Manager
 description: ネットワーク全体と Configuration Manager データベース内で、BitLocker 回復キー、回復パッケージ、および TPM パスワード ハッシュを暗号化します。
-ms.date: 04/15/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79f50cf4b0d241df2fc8d12dc46c833af278bd5a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e887d594e80c0f92340081d9b922bfc334d1b3a5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709350"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129190"
 ---
 # <a name="encrypt-recovery-data"></a>回復データの暗号化
 
@@ -36,7 +36,7 @@ BitLocker 管理ポリシーを作成すると、Configuration Manager によっ
     > [!NOTE]
     > 現在、拡張 HTTP はサポートされていません。
 
-- このデータがサイト データベースに格納されている場合は、このデータも暗号化することを検討します。 独自の証明書を使用して SQL Server のセルレベルの暗号化を使用できます。
+- このデータがサイト データベースに格納されている場合は、このデータも暗号化することを検討します。 SQL 証明書をインストールすると、Configuration Manager によって SQL 内のデータが暗号化されます。
 
     BitLocker 管理暗号化証明書を作成しない場合は、回復データをプレーンテキストで保存することを選択します。 BitLocker 管理ポリシーを作成する際、 **[回復情報をプレーンテキストで保存することを許可する]** オプションを有効にします。
 
@@ -77,7 +77,7 @@ Configuration Manager Current Branch バージョン 1910 で、BitLocker 回復
 
 ### <a name="sql-encryption-certificate"></a>SQL 暗号化証明書
 
-この証明書を使用すると、BitLocker 回復データの SQL Server セルレベルの暗号化を有効にできます。 次の要件を満たしている限り、独自のプロセスを使用して BitLocker 管理暗号化証明書を作成し、展開することができます。
+サイト データベース内の BitLocker 回復データを暗号化するには、この SQL 証明書を Configuration Manager で使用します。 次の要件を満たしている限り、独自のプロセスを使用して BitLocker 管理暗号化証明書を作成し、展開することができます。
 
 - BitLocker 管理暗号化証明書の名前は `BitLockerManagement_CERT`である必要があります。
 

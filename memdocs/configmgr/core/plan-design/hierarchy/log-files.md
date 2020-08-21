@@ -2,7 +2,7 @@
 title: ログ ファイルのリファレンス
 titleSuffix: Configuration Manager
 description: Configuration Manager のクライアント、サーバー、および依存コンポーネントのすべてのログ ファイルのリファレンス。
-ms.date: 07/09/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 296ac8448292b46318921cb952b5b8545a34f1fa
-ms.sourcegitcommit: 3806a1850813b7a179d703e002bcc5c7eb1cb621
+ms.openlocfilehash: 7fa4fbc7cb4e66a1ad47cb0c14a5f7e52abb5bf5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86210334"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126428"
 ---
 # <a name="log-file-reference"></a>ログ ファイルのリファレンス
 
@@ -331,6 +331,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |sitestat.log|すべてのサイト システムの可用性とディスク領域の監視プロセスを記録します。|サイト サーバー|
 |SMS_AZUREAD_DISCOVERY_AGENT.log| Azure Active Directory (Azure AD) ユーザーとユーザー グループの探索のログ ファイル。 バージョン 1910 以前では、コレクション メンバーシップの結果の Azure AD への同期も含まれていました。| サイト サーバー|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|ビジネス向け Microsoft Store からアプリを同期するコンポーネントのログ ファイルです。|サイト サーバー|
+|SMS_DataEngine.log|管理分析情報のためのログ ファイル。|サイト サーバー|
 |SMS_ISVUPDATES_SYNCAGENT.log| サードパーティのソフトウェア更新プログラムを同期するためのログ ファイルです。| Configuration Manager 階層内の最上位のソフトウェア更新ポイント。|
 |SMS_OrchestrationGroup.log| オーケストレーション グループのログ ファイル|サイト サーバー|
 |SMS_PhasedDeployment.log| 段階的展開のログ ファイル|Configuration Manager 階層の最上位サイト|
@@ -350,7 +351,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |statesys.log|ステート システムのメッセージの処理を記録します。|サイト サーバー|  
 |statmgr.log|データベースに書き込まれたすべてのステータス メッセージを記録します。|サイト サーバー|  
 |swmproc.log|ファイルの使用状況測定と設定の処理を記録します。|サイト サーバー|
-|UXAnalyticsUploadWorker.log|エンドポイント分析のためのサービスへのデータのアップロードを記録します。|サイト サーバー|   
+|UXAnalyticsUploadWorker.log|エンドポイント分析のためのサービスへのデータのアップロードを記録します。|サイト サーバー|
 
 ### <a name="site-server-installation"></a><a name="BKMK_SiteInstallLog"></a> サイト サーバーのインストール
 

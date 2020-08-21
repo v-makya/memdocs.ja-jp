@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2db1a719aaf1cb79973f1af8e2de3c1bbb91d605
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 378a5de5633d7a526004d84ec5e6885e165eaadb
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879089"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128986"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1906 の新機能
 
@@ -149,7 +149,7 @@ Desktop Analytics のトラブルシューティングを行うには、Configur
 
 CMPivot では、新しい算術演算子、アグリゲーター、およびレジストリとファイルの併用などのクエリを結合する機能が追加されています。
 
-詳細については、[CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot1906) に関するページを参照してください。
+詳細については、[CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1906) に関するページを参照してください。
 
 ### <a name="cmpivot-standalone"></a>CMPivot スタンドアロン
 
@@ -171,7 +171,7 @@ CMPivot の機能を、ヘルプデスクやセキュリティ管理者など、
 - コレクションでの CMPivot の実行
 - インベントリ レポートの読み取り
 
-詳細については、[CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot_secadmin1906) に関するページを参照してください。
+詳細については、[CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot_secadmin1906) に関するページを参照してください。
 
 
 ## <a name="content-management"></a><a name="bkmk_content"></a> コンテンツ管理
@@ -505,7 +505,7 @@ Configuration Manager バージョン 1906 に更新し、同期のために **W
    - **[ソフトウェア ライブラリ]**  >  **[Windows 10 のサービス]**  >  **[すべての Windows 10 更新プログラム]**
    - **[ソフトウェア ライブラリ]**  >  **[Office 365 クライアント管理]**  >  **[Office 365 の更新プログラム]**
 
-詳しくは、[ソフトウェア更新プログラムの監視](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates)、[サービスとしての Windows の管理](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)、[Office 365 ProPlus の更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md#drill-through-required-office-365-updates)に関する記事をご覧ください。
+詳しくは、[ソフトウェア更新プログラムの監視](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates)、[サービスとしての Windows の管理](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)、[Office 365 ProPlus の更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md)に関する記事をご覧ください。
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a> Office 管理
@@ -538,7 +538,7 @@ Configuration Manager バージョン 1906 に更新し、同期のために **W
 
 フォルダーにセキュリティ スコープを設定できるようになりました。 フォルダー内のオブジェクトへのアクセス許可が与えられていても、フォルダーにアクセスできない場合、そのオブジェクトを表示できません。 同様に、フォルダーへのアクセス許可が与えられていても、その中のオブジェクトにアクセスできない場合、そのオブジェクトは表示できません。 フォルダーを右クリックし、 **[セキュリティ スコープの設定]** を選択して、適用するセキュリティ スコープを選びます。
 
-詳しくは、「[Configuration Manager コンソールの使用](../../servers/manage/admin-console.md#tips)」および[ロール ベースの管理の構成](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder)に関する記事をご覧ください。
+詳しくは、[Configuration Manager コンソールのヒント](../../servers/manage/admin-console-tips.md)と[ロールベース管理の構成](../../servers/deploy/configure/configure-role-based-administration.md#bkmk_config-folder)に関する記事をご覧ください。
 
 ### <a name="add-smbios-guid-column-to-device-and-device-collection-nodes"></a>デバイスおよびデバイス コレクション ノードに SMBIOS GUID 列を追加する
 

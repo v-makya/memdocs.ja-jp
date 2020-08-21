@@ -2,20 +2,20 @@
 title: クライアント設定
 titleSuffix: Configuration Manager
 description: クライアントの動作を制御する既定の設定とカスタム設定について説明します。
-ms.date: 07/28/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f6bb29930a6e2d4faf4ffdd141d3c9cd1831305
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365510"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127003"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Configuration Manager のクライアント設定について
 
@@ -139,7 +139,7 @@ Windows コンピューターの構成マネージャー クライアント キ�
 
 - インターネット ベースの管理ポイントが、Windows 認証 (Kerberos または NTLM) を使ってユーザーを正しく認証する。 詳細については、[インターネットからのクライアント通信に関する考慮事項](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)のページを参照してください。  
 
-- クラウド管理ゲートウェイは、Azure Active Directory を使用してユーザーを正常に認証するようになりました。 詳細については、[Azure AD 参加デバイスにユーザーが利用できるアプリケーションを展開する方法](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)に関するページを参照してください。  
+- クラウド管理ゲートウェイは、Azure Active Directory を使用してユーザーを正常に認証するようになりました。 詳細については、[ユーザーが利用できるアプリケーションの展開](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)に関するページを参照してください。
 
 このオプションを **[いいえ]** に設定した場合、または上記の要件のいずれかが満たされていない場合は、インターネット上のコンピューターはコンピューター ポリシーのみを受け取ります。 この場合、ユーザーは、インターネットベースのアプリケーション カタログからアプリケーションを表示、要求、およびインストールできます。 この設定が **[いいえ]** に設定されていて、 **[クライアントでユーザー ポリシーを有効にする]** が **[はい]** に設定されている場合は、コンピューターがイントラネットに接続されるまで、ユーザーはユーザー ポリシーを受け取りません。  
 
@@ -244,7 +244,7 @@ Configuration Manager は、この設定を使用して、ソフトウェア セ
 
 ### <a name="organization-name-displayed-in-software-center"></a>ソフトウェア センターに表示される組織名
 
-ソフトウェア センターでユーザーに表示する名前を入力します。 このブランド情報によって、ユーザーはこのアプリケーションを信頼されるソースとして特定できます。 この設定の優先順位について詳しくは、「[ソフトウェア センターのブランド化](../../../apps/plan-design/plan-for-software-center.md#branding-software-center)」をご覧ください。  
+ソフトウェア センターでユーザーに表示する名前を入力します。 このブランド情報によって、ユーザーはこのアプリケーションを信頼されるソースとして特定できます。 この設定の優先順位について詳しくは、「[ソフトウェア センターのブランド化](../../../apps/plan-design/plan-for-software-center.md#brand-software-center)」をご覧ください。  
 
 ### <a name="use-new-software-center"></a>新しいソフトウェア センターの使用
 
@@ -468,41 +468,40 @@ MIF ファイルをハードウェア インベントリで収集するために
 > [!NOTE]  
 > この設定は、既定のクライアント設定でのみ使用できます。
 
+## <a name="metered-internet-connections"></a>従量制インターネット接続
 
+Windows 8 以降のコンピューターが Configuration Manager サイトとの通信に従量制インターネット接続を使う方法を管理します。 インターネット プロバイダーは、従量制インターネット接続を使用しているときに送受信したデータ量に基づいて課金することがあります。
 
-## <a name="metered-internet-connections"></a>従量制インターネット接続  
-
-Windows 8 以降のコンピューターが Configuration Manager サイトとの通信に従量制インターネット接続を使う方法を管理します。 インターネット プロバイダーは、従量制インターネット接続を使用しているときに送受信したデータ量に基づいて課金することがあります。  
-
-> [!NOTE]  
-> 構成したクライアント設定は、次のシナリオでは適用されません。  
+> [!NOTE]
+> 構成したクライアント設定は、次のシナリオでは適用されません。
 >
 > - コンピューターがローミング データ接続を使っている場合、構成マネージャー クライアントは、Configuration Manager サイトへのデータ転送が必要なタスクを実行しません。  
 > - Windows ネットワーク接続のプロパティが従量制以外に構成されている場合、構成マネージャー クライアントは、接続が従量制以外であるものとして動作し、サイトにデータを転送します。  
 
 ### <a name="client-communication-on-metered-internet-connections"></a>従量制ネットワーク接続でのクライアントの通信方法
 
-この設定には次のいずれかのオプションを選びます。  
+この設定には次のいずれかのオプションを選びます。
 
-- **[許可]** :クライアント デバイスがローミング データ接続を使用していない場合、従量制インターネット接続でのすべてのクライアント通信を許可します。  
+- **[許可]** :クライアント デバイスがローミング データ接続を使用していない場合、従量制インターネット接続でのすべてのクライアント通信を許可します。
 
-- **[制限]** :従量制インターネット接続で、次のクライアント通信のみを許可します。  
+- **[制限]** :クライアントは、次の動作については従量制インターネット接続のみを使用して通信を行います。
 
-    - クライアント ポリシーの取得  
+  - クライアント ポリシーをダウンロードする。
 
-    - クライアント状態メッセージのサイトへの送信  
+  - クライアント状態メッセージを送信する
 
-    - ソフトウェア センターからのソフトウェア インストール要求  
+  - ソフトウェア センターからのソフトウェアのインストールを要求する
 
-    - 必要な展開 (インストールの期限に達した場合)  
+  - インストールの期限に、必要な展開の追加のポリシーとコンテンツをダウンロードする
 
-    クライアントが従量制インターネット接続のデータ転送の制限に達した場合、クライアントはそれ以上 Configuration Manager サイトとの通信を試行しません。  
+  クライアントが従量制インターネット接続のデータ転送の制限に達した場合、クライアントはそれ以上サイトとの通信を行いません。
 
-- **[ブロック]** :構成マネージャー クライアントは、従量制インターネット接続を使っている場合に、Configuration Manager サイトとの通信を試行しません。 これが既定のオプションです。  
+- **[ブロック]** :デバイスが従量制インターネット接続を使用している場合、Configuration Manager クライアントはサイトとの通信を試行しません。 これが既定のオプションです。
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > クライアントは、従量制インターネット接続の設定に関係なく、ソフトウェア センターからのソフトウェアのインストールを常に許可します。 デバイスが従量制課金ネットワークにあるときに、ユーザーがソフトウェアのインストールを要求すると、ソフトウェア センターによってユーザーの意図が受け入れられます。<!-- MEMDocs#285 -->
 
+バージョン 2006 以降では、このクライアント設定を **[許可]** または **[制限]** と構成した場合に、クライアントのインストールと更新の両方が機能します。 この動作により、クライアントは最新の状態を維持しながら、従量制課金ネットワークでクライアントの通信を管理できます。 クライアントのインストール中に ccmsetup パラメーター **/AllowMetered** を使用してこの動作を制御できます。 詳しくは、[クライアント インストールのパラメーターとプロパティ](../../clients/deploy/about-client-installation-properties.md#allowmetered)に関するページをご覧ください。<!--6976145-->
 
 ## <a name="power-management"></a>電源管理  
 
@@ -894,7 +893,7 @@ Configuration Manager コンソールで開始されるリモート アシスタ
 
 ### <a name="enable-management-of-the-office-365-client-agent"></a>Office 365 クライアント エージェントの管理を有効にする
 
-このオプションを **[はい]** に設定すると、Office 365 のインストール設定を構成できます。 また、Office コンテンツ配信ネットワーク (CDN) からファイルをダウンロードし、Configuration Manager でファイルをアプリケーションとして展開することもできます。 詳しくは、「[Office 365 ProPlus の更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md)」をご覧ください。
+このオプションを **[はい]** に設定すると、Microsoft 365 Apps のインストール設定を構成できます。 また、Office コンテンツ配信ネットワーク (CDN) からファイルをダウンロードし、Configuration Manager でファイルをアプリケーションとして展開することもできます。 詳細については、[Microsoft 365 Apps の管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md)に関するページをご覧ください。
 
 ### <a name="enable-installation-of-software-updates-in-all-deployments-maintenance-window-when-software-update-maintenance-window-is-available"></a><a name="bkmk_SUMMaint"></a> [ソフトウェアの更新プログラム] メンテナンス期間を利用できる場合に、[すべての展開] メンテナンス期間内のソフトウェア更新プログラムのインストールを有効にします
 
@@ -980,9 +979,9 @@ Configuration Manager が収集する使用状況情報に基づいてユーザ�
 <!--3485366-->
 この設定を **[はい]** にすると、ユーザーはソフトウェア センターで自分のプライマリ デバイスを識別できます。 詳細については、「[Security Center のユーザー ガイド](../../understand/software-center.md#work-information)」を参照してください。
 
-## <a name="windows-analytics"></a>Windows Analytics
+## <a name="windows-diagnostic-data"></a>Windows 診断データ
 
-> [!Important]  
-> Windows Analytics サービスは、2020 年 1 月 31 日をもって廃止されています。 詳細については、[KB 4521815:Windows Analytics の廃止 (2020 年 1 月 31 日)](https://support.microsoft.com/help/4521815/windows-analytics-retirement) に関するページをご確認ください。
+> [!IMPORTANT]
+> このグループは、以前は **Windows Analytics** と呼ばれていました。 Microsoft は Windows Analytics サービスを 2020 年 1 月 31 日に廃止しました。 詳細については、[KB 4521815:Windows Analytics の廃止 (2020 年 1 月 31 日)](https://support.microsoft.com/help/4521815/windows-analytics-retirement) に関するページをご確認ください。
 >
-> Desktop Analytics が Windows Analytics の進化版です。 詳細については、「[Desktop Analytics とは](../../../desktop-analytics/overview.md)」を参照してください。
+> Desktop Analytics が Windows Analytics の進化版です。 Desktop Analytics を使用して、Windows 診断データの設定を管理します。 詳細については、「[Desktop Analytics とは](../../../desktop-analytics/overview.md)」を参照してください。

@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 3843dd4ab4fe5a9aecaae8e6f207c3d037fc1950
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ff616c9ee61e85e4e77aeef6254ca9922427270c
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700050"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129425"
 ---
 # <a name="icons-used-for-software-updates-in-configuration-manager"></a>Configuration Manager でソフトウェア更新プログラムに使用されるアイコン
 
@@ -59,7 +59,7 @@ ms.locfileid: "81700050"
 
 - ソフトウェア更新プログラムのインストールが承認された場合、クライアントにインストールされるソフトウェア更新プログラム ファイル パッケージの効率を改善します。 たとえば、置き換えられたソフトウェア更新プログラムに、修正または、新しいソフトウェア更新プログラムでサポートされるようになったオペレーティング システムに関連しないファイルが含まれる場合があるため、置き換える方のソフトウェア更新プログラムのファイル パッケージにこれらのファイルは含まれません。  
 
-- より新しいバージョンの製品を更新し、古いバージョンや構成の製品には適用できません。 また、言語サポートを拡張する修正が行われたため、ソフトウェア更新プログラムが他のソフトウェア更新プログラムを置き換えることもあります。 たとえば、Microsoft Office 用の比較的新しいバージョンの製品更新プログラムにより、古いオペレーティング システムがサポートされなくなり、代わりに、初期ソフトウェア更新プログラム リリースで新しい言語が追加サポートされるようになる場合があります。  
+- より新しいバージョンの製品を更新し、古いバージョンや構成の製品には適用できません。 また、言語サポートを拡張する修正が行われたため、ソフトウェア更新プログラムが他のソフトウェア更新プログラムを置き換えることもあります。 たとえば、Microsoft 365 Apps 用の比較的新しいバージョンの製品更新プログラムにより、古いオペレーティング システムがサポートされなくなり、代わりに、初期ソフトウェア更新プログラム リリースで新しい言語が追加サポートされるようになる場合があります。  
 
   [ソフトウェアの更新ポイント コンポーネント] プロパティの [置き換えの規則] タブで、置き換えられたソフトウェア更新プログラムの管理方法を指定できます。 詳細については、「 [置き換え規則](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules)」を参照してください。  
 

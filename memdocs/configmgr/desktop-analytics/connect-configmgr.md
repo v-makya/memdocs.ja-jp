@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c7bb6d01a35ce42002207d57d27fc41c37646d15
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 7015ab4c180ed56b00149ffbff99c9e5a8112e95
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268863"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126003"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>Configuration Manager を Desktop Analytics に接続する方法
 
@@ -84,14 +84,17 @@ Desktop Analytics は、Configuration Manager と密接に統合されていま�
 
     - **[商用 ID]** : この値には、ご自分の組織の ID が自動的に入力されます。 そうでない場合は、お使いのプロキシ サーバーが、必要なすべての[エンドポイント](enable-data-sharing.md#endpoints)が許可されるように構成されていることを確認してから、次に進んでください。 または、[Desktop Analytics ポータル](monitor-connection-health.md#bkmk_ViewCommercialID)から、手動で商用 ID を取得します。
 
-    - **[Windows 10 診断データ レベル]** : 最低でも **[基本]** を選択します。 「[診断データのレベル](enable-data-sharing.md#diagnostic-data-levels)」をご覧ください
-  
-    - **[診断データでデバイス名を許可する]** : **[有効にする]** を選択します
+    - **[Windows 10 診断データ レベル]** : 最低でも **[必須]** を選択します。 詳細については、「[診断データのレベル](enable-data-sharing.md#diagnostic-data-levels)」をご覧ください。
+
+        > [!TIP]
+        > Configuration Manager バージョン 2002 以前、この値の名称は**基本**でした。<!-- 7363467 -->
+
+    - **[診断データでデバイス名を許可する]** : **[有効にする]** を選択します。
 
         > [!NOTE]
         > Windows 10 バージョン 1803 からは、既定ではデバイス名が Microsoft に送信されません。 デバイス名を送信しない場合、それは Desktop Analytics で "不明" として表示されます。 この動作によって、デバイスの特定と評価が困難になる場合があります。
 
-   **[次へ]** を選択します。 **[利用可能な機能]** ページには、前のページの診断データの設定で使用できる Desktop Analytics 機能が表示されます。 **[次へ]** を選択して続行するか、 **[前へ]** を選択して変更を加えます。
+   **[次へ]** を選択します。 **[利用可能な機能]** ページには、前のページの診断データの設定で使用できる Desktop Analytics 機能が表示されます。 **[次へ]** を選択して続行するか、**[前へ]** を選択して変更を加えます。
 
     ![Azure サービス ウィザードの [利用可能な機能] ページの例](media/available-functionality.png)
 
@@ -105,10 +108,10 @@ Desktop Analytics は、Configuration Manager と密接に統合されていま�
 
     - **ターゲット コレクション内のデバイスでは、送信方向の通信にユーザー認証済みプロキシが使用されます**:既定では、この値は **[いいえ]** です。 環境内で必要な場合は、 **[はい]** に設定します。
 
-    - **[Select specific collections to synchronize with Desktop Analytics]\(Desktop Analytics と同期する特定のコレクションを選択する\)** :ご自分の **[ターゲット コレクション]** 階層のコレクションを追加するには、 **[追加]** を選択します。 これらのコレクションは、Desktop Analytics ポータルで展開計画を使用してグループ化するために使用できます。 パイロット コレクションとパイロット除外コレクションが含まれていることを確認してください。  <!-- 4097528 -->
+    - **Desktop Analytics と同期する特定のコレクションを選択します**:ご自分の **[ターゲット コレクション]** 階層のコレクションを追加するには、 **[追加]** を選択します。 これらのコレクションは、Desktop Analytics ポータルで展開計画を使用してグループ化するために使用できます。 パイロット コレクションとパイロット除外コレクションが含まれていることを確認してください。  <!-- 4097528 -->
 
         > [!TIP]
-        > [コレクションの選択] ウィンドウには、 **[ターゲット コレクション]** によって制限されているコレクションのみが表示されます。
+        > [コレクションの選択] ウィンドウには、**[ターゲット コレクション]** によって制限されているコレクションのみが表示されます。
         >
         > 次の例では、使用するターゲット コレクションとして CollectionA を選択します。 その後、さらにコレクションを追加すると、CollectionA、CollectionB、および CollectionC が表示されます。 CollectionD を追加することはできません。
         >
@@ -117,14 +120,14 @@ Desktop Analytics は、Configuration Manager と密接に統合されていま�
         >         - CollectionC: CollectionB によって制限されます
         > - CollectionD: **[すべてのシステム]** コレクションによって制限されます
         >
-        > Desktop Analytics で展開プランを使用してグループ化するために利用できるコレクションを管理するには、Configuration Manager コンソールで **[管理]** ワークスペースにアクセスし、 **[クラウド サービス]** を展開して、 **[Azure サービス]** ノードを選択します。 **Desktop Analytics** Azure サービスに関連付けられているエントリを選択し、 **[Desktop Analytics コレクション]** ページでご利用の設定を更新します。
+        > Desktop Analytics で展開プランを使用してグループ化するために利用できるコレクションを管理するには、Configuration Manager コンソールで **[管理]** ワークスペースにアクセスし、**[クラウド サービス]** を展開して、**[Azure サービス]** ノードを選択します。 **Desktop Analytics** Azure サービスに関連付けられているエントリを選択し、**[Desktop Analytics コレクション]** ページでご利用の設定を更新します。
 
         > [!IMPORTANT]
         > これらのコレクションは、メンバーシップが変更されても引き続き同期されます。 たとえば、ご利用のターゲット コレクションで、Windows 7 のメンバーシップ規則付きのコレクションを使用するとします。 これらのデバイスが Windows 10 にアップグレードされ、Configuration Manager によってコレクションのメンバーシップが評価されると、これらのデバイスはコレクションと Desktop Analytics から削除されます。
 
 9. ウィザードを完了します。
 
-Configuration Manager によって、ターゲット コレクション内にデバイスを構成するための設定ポリシーが作成されます。 このポリシーには、デバイスが Microsoft にデータを送信できるようにする診断データの設定が含まれています。 既定では、クライアントでのポリシーの更新は 1 時間ごとに行われます。 新しい設定を受信した後、Desktop Analytics でデータが使用できるようになるまでに数時間以上かかる可能性があります。
+Configuration Manager によって、ターゲット コレクション内にデバイスを構成するための設定ポリシーが作成されます。 このポリシーには、デバイスが Microsoft にデータを送信できるようにする診断データの設定が含まれています。 既定では、クライアントでのポリシーの更新は 1 時間ごとに行われます。 新しい設定を受信した後、Desktop Analytics でデータが使用可能になるまでに数時間以上かかる可能性があります。
 
 ## <a name="monitor-connection-health"></a><a name="bkmk_monitor"></a> 接続の正常性の監視
 

@@ -2,20 +2,20 @@
 title: サービス接続ツール
 titleSuffix: Configuration Manager
 description: このツールによって、Configuration Manager クラウド サービスに接続し、使用状況の情報を手動でアップロードできます。
-ms.date: 07/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 48aa08f3318aaa4629691bfb30b60580cd3e25f0
-ms.sourcegitcommit: 03d2331876ad61d0a6bb1efca3aa655b88f73119
+ms.openlocfilehash: 8b56b849be6abd2634e29d35e58494d4d3215857
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85946846"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126088"
 ---
 # <a name="use-the-service-connection-tool-for-configuration-manager"></a>Configuration Manager のサービス接続ツールを使用する
 
@@ -78,7 +78,7 @@ ms.locfileid: "85946846"
 - **-downloadsiteversion**:サイトのバージョンよりも新しいバージョンの更新プログラムと修正プログラムをダウンロードします。
 
     > [!IMPORTANT]
-    > Configuration Manager バージョン 2002 の既知の問題が原因で、既定の動作は想定どおりに動作しません。 **-downloadsiteversion** パラメーターを使用して、バージョン 2002 に必要な更新プログラムをダウンロードしてください。<!-- 7594517 -->
+    > Configuration Manager バージョン 2002 の既知の問題が原因で、既定の動作は想定どおりに動作しません。 バージョン 2006 に更新するか、 **-downloadsiteversion** パラメーターを使用して、バージョン 2002 に必要な更新プログラムをダウンロードしてください。<!-- 7594517 -->
 
 詳細については、「[コマンド ライン パラメーター](#bkmk_cmd)」をご覧ください。
 

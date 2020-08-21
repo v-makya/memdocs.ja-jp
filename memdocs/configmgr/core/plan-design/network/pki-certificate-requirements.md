@@ -10,12 +10,12 @@ ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: df0b632ccf7939bdc897d4a456f0e6cacc7a1760
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: ff364dc248519d0027ce96fe43f4f3f6cf373e68
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87525951"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692742"
 ---
 # <a name="pki-certificate-requirements-for-configuration-manager"></a>Configuration Manager での PKI 証明書の要件
 
@@ -23,7 +23,7 @@ ms.locfileid: "87525951"
 
 Configuration Manager で必要になる場合がある公開キー基盤 (PKI) 証明書の一覧を、以下の表に一覧表示します。 この情報は、PKI 証明書の基本的な知識があることを前提にしています。 詳細については、「[Configuration Manager PKI 証明書の展開手順の例:Windows Server 2008 証明機関](example-deployment-of-pki-certificates.md)」を参照してください。
 
-Active Directory 証明書サービスの詳細については、「[Active Directory 証明書サービスの概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11))」を参照してください。
+Active Directory 証明書サービスの詳細については、「[Active Directory 証明書サービスの概要](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831740(v=ws.11))」を参照してください。
 
 Cryptography API: Next Generation (CNG) 証明書と Configuration Manager の使用については、「[CNG 証明書の概要](cng-certificates-overview.md)」を参照してください。
 

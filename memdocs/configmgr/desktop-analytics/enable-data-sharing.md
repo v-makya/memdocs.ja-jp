@@ -2,7 +2,7 @@
 title: データ共有を有効にする
 titleSuffix: Configuration Manager
 description: Desktop Analytics で診断データを共有するためのリファレンスガイド。
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 7403dc26f5fe1789fcda6b3eddf30136a4cd6e68
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 40ebeabaaf236377388660a2a1a328e308a708ab
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795653"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125955"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>Desktop Analytics のためにデータ共有を有効にする
 
@@ -24,32 +24,43 @@ ms.locfileid: "84795653"
 
 ## <a name="diagnostic-data-levels"></a>診断データのレベル
 
-![Desktop Analytics の診断データ レベルの図](media/diagnostic-data-levels.png)
+:::image type="content" source="media/diagnostic-data-levels.png" alt-text="Desktop Analytics の診断データ レベルの図":::
 
 Configuration Manager を Desktop Analytics と統合したら、デバイスでの診断データ レベルの管理にもそれを使用します。 最良のエクスペリエンスを実現するには、Configuration Manager をお使いください。
 
-> [!Important]  
+> [!IMPORTANT]
 > ほとんどの場合、Configuration Manager だけを使ってこれらの設定を構成します。 これらの設定は、ドメイン グループ ポリシー オブジェクトでは適用しないでください。 詳細については、「[競合の解決](enroll-devices.md#conflict-resolution)」をご覧ください。
 
-Desktop Analytics の基本的な機能は、**基本**[診断データのレベル](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)で動作します。 Configuration Manager で**拡張 (制限付き)** レベルを構成しない場合、Desktop Analytics の次の機能は利用できません。
+Desktop Analytics の基本的な機能は、**必須**[診断データのレベル](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-levels)で動作します。 Configuration Manager で **[省略可能 (制限あり)]** レベルを構成しない場合、Desktop Analytics の次の機能は利用できません。
 
 - アプリの使用状況
 - [その他のアプリの分析情報](compat-assessment.md#additional-insights)
 - [展開状態データ](deploy-prod.md#address-deployment-alerts)
 - [正常性監視データ](health-status-monitoring.md)
 
-Desktop Analytics で**拡張 (制限付き)** 診断データレベルを有効にして、そこから得られる利点を最大限に高めることをお勧めします。
+Desktop Analytics で **[省略可能 (制限あり)]** 診断データレベルを有効にして、そこから得られる利点を最大限に高めることをお勧めします。
 
-> [!Tip]
-> Configuration Manager での**拡張 (制限付き)** の設定は、Windows 10 バージョン 1709 以降を実行しているデバイスで利用可能な "**拡張診断データを Windows Analytics で必要とされる最小限のものに限定します**" ポリシーと同じ設定です。
+> [!TIP]
+> Configuration Manager での **[省略可能 (制限あり)]** の設定は、Windows 10 バージョン 1709 以降を実行しているデバイスで利用可能**拡張診断データを Windows Analytics で必要とされる最小限のものに限定します**ポリシーと同じ設定です。
 >
-> Windows 10 バージョン 1703 以前、Windows 8.1、または Windows 7 が実行されているデバイスには、このポリシー設定はありません。 Configuration Manager で**拡張 (制限付き)** の設定を構成すると、これらのデバイスは**基本**レベルに戻されます。
+> Windows 10 バージョン 1703 以前、Windows 8.1、または Windows 7 が実行されているデバイスには、このポリシー設定はありません。 Configuration Manager で **[省略可能 (制限あり)]** の設定を構成すると、これらのデバイスは**必須**レベルに戻されます。
 >
-> Windows 10 バージョン 1709 が実行されているデバイスには、このポリシー設定があります。 ただし、Configuration Manager で**拡張 (制限付き)** の設定を構成すると、これらのデバイスも**基本**レベルに戻されます。
+> Windows 10 バージョン 1709 が実行されているデバイスには、このポリシー設定があります。 ただし、Configuration Manager で **[省略可能 (制限あり)]** の設定を構成すると、これらのデバイスも**必須**レベルに戻されます。
+>
+> Configuration Manager バージョン 2002 以前では、設定の名前が異なっていました。<!-- 7363467 -->
+>
+> | バージョン 2006 以降 | バージョン 2002 以前 |
+> |---------|---------|
+> | 必須 | Basic |
+> | 省略可能 (制限あり) | 拡張 (制限付き) |
+> | 該当なし | 拡張 |
+> | Optional | [完全] |
+>
+> 以前に**拡張**レベルでデバイスを構成したことがある場合、バージョン 2006 にアップグレードすると、 **[省略可能 (制限あり)]** に戻ります。 その後、Microsoft に送信するデータが少なくなります。 この変更は、Desktop Analytics に表示される内容には影響しません。
 
-**拡張 (制限付き)** で Microsoft と共有される診断データについて詳しくは、[Windows 10 の拡張診断データのイベントとフィールド](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)に関する記事をご覧ください。
+**[省略可能 (制限あり)]** で Microsoft と共有される診断データについて詳しくは、[Windows 10 の拡張診断データのイベントとフィールド](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)に関する記事をご覧ください。
 
-> [!Important]
+> [!IMPORTANT]
 > Microsoft は、お客様のプライバシーを管理するためのツールとリソースを提供するために強力なコミットメントを行っています。 そのため、Desktop Analytics では Windows 8.1 デバイスがサポートされていますが、ヨーロッパの国 (EEA およびスイス) に存在する Windows 8.1 デバイスからは Windows 診断データは収集されません。
 
 詳細については、[Desktop Analytics のプライバシー](privacy.md)に関する記事を参照してください。
@@ -60,8 +71,8 @@ Desktop Analytics で**拡張 (制限付き)** 診断データレベルを有効
 
 - [組織内の Windows 診断データの構成](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-> [!Note]  
-> 拡張診断データを制限するように構成されたクライアントでは、最初のフルスキャンで Microsoft クラウドに約 2 MB のデータが送信されます。 毎日のデルタは、1 日あたり 250 から 400 KB で変動します。
+> [!NOTE]
+> **[省略可能 (制限あり)]** 診断データを送信するように構成されたクライアントでは、最初のフルスキャンで Microsoft クラウドに約 2 MB のデータが送信されます。 毎日のデルタは、1 日あたり 250 から 400 KB で変動します。
 >
 > 毎日のデルタ スキャンは、午前 3:00 (デバイスのローカル時刻) に行われます。 一部のイベントは、1 日で最初に使用可能な時刻に送信されます。 これらの時刻は構成できません。
 >
@@ -71,7 +82,7 @@ Desktop Analytics で**拡張 (制限付き)** 診断データレベルを有効
 
 データ共有を有効にするには、以下のインターネット エンドポイントを許可するようにプロキシ サーバーを構成します。
 
-> [!Important]  
+> [!IMPORTANT]
 > プライバシーとデータの整合性を確保するため、診断データ エンドポイントとの通信時に、Windows によって Microsoft SSL 証明書がチェックされます (証明書のピン留め)。 SSL を傍受および検査することはできません。 Desktop Analytics を使用するには、以下のエンドポイントを SSL の検査から除外します。<!-- BUG 4647542 -->
 
 バージョン 2002 以降、Configuration Manager サイトがクラウド サービスに必要なエンドポイントへの接続に失敗すると、クリティカルなステータス メッセージ ID 11488 が生成されます。 サービスに接続できない場合、SMS_SERVICE_CONNECTOR コンポーネントのステータスがクリティカルに変わります。 Configuration Manager コンソールの[コンポーネントのステータス](../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorSystemStatus) ノードに、詳細なステータスが表示されます。<!-- 5566763 -->
@@ -79,47 +90,7 @@ Desktop Analytics で**拡張 (制限付き)** 診断データレベルを有効
 > [!NOTE]
 > Microsoft IP アドレス範囲の詳細については、「[Microsoft Public IP Space (Microsoft のパブリック IP スペース)](https://www.microsoft.com/download/details.aspx?id=53602)」を参照してください。 これらのアドレスは定期的に更新されます。 サービス別に細かく分かれておらず、これらの範囲内の任意の IP アドレスを使用できます。
 
-### <a name="server-connectivity-endpoints"></a>サーバー接続のエンドポイント
-
-サービス接続ポイントでは、次のエンドポイントと通信する必要があります。
-
-| エンドポイント  | 関数  |
-|-----------|-----------|
-| `https://aka.ms` | サービスを探すために使用されます |
-| `https://graph.windows.net` | 階層を (Configuration Manager サーバー ロール上の) Desktop Analytics にアタッチするときに、CommercialId などの設定を自動的に取得するために使用されます。 詳しくは、「[サイト システム サーバー用にプロキシを構成する](../core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)」をご覧ください。 |
-| `https://*.manage.microsoft.com` | デバイス コレクションのメンバーシップ、展開計画、およびデバイスの準備状態を (Configuration Manager サーバー ロール上の) Desktop Analytics と同期するために使用されます。 詳しくは、「[サイト システム サーバー用にプロキシを構成する](../core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server)」をご覧ください。 |
-
-### <a name="user-experience-and-diagnostic-component-endpoints"></a>ユーザー エクスペリエンスと診断コンポーネントのエンドポイント
-
-クライアント デバイスでは、次のエンドポイントと通信する必要があります。
-
-| エンドポイント  | 関数  |
-|-----------|-----------|
-| `https://v10c.events.data.microsoft.com` | 接続されたユーザー エクスペリエンスと診断コンポーネントのエンドポイント。 Windows 10 バージョン 1809 以降が実行されているデバイス、または 2018-09 の累積的な更新プログラムがインストールされたバージョン 1803 が実行されているデバイスで使用されます。 |
-| `https://v10.events.data.microsoft.com` | 接続されたユーザー エクスペリエンスと診断コンポーネントのエンドポイント。 2018-09 の累積的な更新プログラムがインストールされて "_いない_" Windows 10 バージョン 1803 が実行されているデバイスで使用されます。 |
-| `https://v10.vortex-win.data.microsoft.com` | 接続されたユーザー エクスペリエンスと診断コンポーネントのエンドポイント。 Windows 10 バージョン 1709 以前が実行されているデバイスで使用されます。 |
-| `https://vortex-win.data.microsoft.com` | 接続されたユーザー エクスペリエンスと診断コンポーネントのエンドポイント。 Windows 7 および Windows 8.1 が実行されているデバイスで使用されます |
-
-### <a name="client-connectivity-endpoints"></a>クライアント接続のエンドポイント
-
-クライアント デバイスでは、次のエンドポイントと通信する必要があります。
-
-| インデックス | エンドポイント  | 関数  |
-|-------|-----------|-----------|
-| 1 | `https://settings-win.data.microsoft.com` | Microsoft にデータを送信するための互換性に関する更新プログラムを有効にします。 |
-| 2 | `http://adl.windows.com` | 互換性に関する更新プログラムで Microsoft から最新の互換性データを受信できるようにします。 |
-| 3 | `https://watson.telemetry.microsoft.com` | [Windows エラー報告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 Windows 10 バージョン 1803 以前で展開の正常性を監視するために必要です。 |
-| 4 | `https://umwatsonc.events.data.microsoft.com` | [Windows エラー報告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 Windows 10 バージョン 1809 以降でデバイス正常性レポートに必要です。 |
-| 5 | `https://ceuswatcab01.blob.core.windows.net` | [Windows エラー報告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 Windows 10 バージョン 1809 以降で展開の正常性を監視するために必要です。 |
-| 6 | `https://ceuswatcab02.blob.core.windows.net` | [Windows エラー報告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 Windows 10 バージョン 1809 以降で展開の正常性を監視するために必要です。 |
-| 7 | `https://eaus2watcab01.blob.core.windows.net` | [Windows エラー報告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 Windows 10 バージョン 1809 以降で展開の正常性を監視するために必要です。 |
-| 8 | `https://eaus2watcab02.blob.core.windows.net` | [Windows エラー報告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 Windows 10 バージョン 1809 以降で展開の正常性を監視するために必要です。 |
-| 9 | `https://weus2watcab01.blob.core.windows.net` | [Windows エラー報告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 Windows 10 バージョン 1809 以降で展開の正常性を監視するために必要です。 |
-| 10 | `https://weus2watcab02.blob.core.windows.net` | [Windows エラー報告 (WER)](https://docs.microsoft.com/windows/win32/wer/windows-error-reporting)。 Windows 10 バージョン 1809 以降で展開の正常性を監視するために必要です。 |
-| 11 | `https://kmwatsonc.events.data.microsoft.com` | [オンライン クラッシュ分析 (OCA)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis)。 Windows 10 バージョン 1809 以降でデバイス正常性レポートに必要です。 |
-| 12 | `https://oca.telemetry.microsoft.com`  | [オンライン クラッシュ分析 (OCA)](https://docs.microsoft.com/windows/win32/dxtecharts/crash-dump-analysis)。 Windows 10 バージョン 1803 以前で展開の正常性を監視するために必要です。 |
-| 13 | `https://login.live.com` | Desktop Analytics により信頼性の高いデバイス ID を提供するために必要です。 <br> <br>エンド ユーザーの Microsoft アカウント アクセスを無効にするには、このエンドポイントをブロックするのではなく、ポリシー設定を使用します。 詳しくは、「[エンタープライズでの Microsoft アカウント](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)」をご覧ください。 |
-| 14 | `https://v20.events.data.microsoft.com` | 接続されたユーザー エクスペリエンスと診断コンポーネントのエンドポイント。 |
+[!INCLUDE [Internet endpoints for Desktop Analytics](../core/plan-design/network/includes/internet-endpoints-desktop-analytics.md)]
 
 ## <a name="proxy-server-authentication"></a>プロキシ サーバー認証
 

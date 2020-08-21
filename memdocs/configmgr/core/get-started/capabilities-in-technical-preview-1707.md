@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4ddae3e4c4cf31cb05376bfa437d722f16652fad
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 6ff280a01b7388f3e4d296625a94c0184a0e6b09
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705140"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692980"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-configuration-manager"></a>Configuration Manager の Technical Preview 1707 の機能
 
@@ -85,7 +85,7 @@ Windows Defender Application Guard ポリシーを作成して展開するには
 3. **[ホーム]** タブの **[作成]** グループで、 **[Windows Defender Application Guard ポリシーの作成]** をクリックします。
 4. ブログ記事を参照として使用して、使用可能な設定を参照および構成して、機能を試すことができます。
 5. 今回のリリースでは、ウィザードに新しく **[ネットワーク定義]** ページを追加しました。 このページでは、企業の ID を指定し、企業ネットワークの境界を定義します。<br>Windows 10 PC の場合、クライアントでネットワーク分離リストが 1 つだけ保存されます。 今回のリリースでは、2 種類のネットワーク分離リスト (Windows 情報保護のリストと Windows Defender Application Guard のリスト) を作成し、クライアントに展開できます。 両方のポリシーを展開する場合、ネットワーク分離リストが一致している必要があります。 一致しないリストを同じクライアントに展開すると失敗します。
-ネットワーク定義の指定方法については、[Windows 情報保護のドキュメント](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)を参照してください。
+ネットワーク定義の指定方法については、[Windows 情報保護のドキュメント](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)を参照してください。
 
 6. 完了したら、ウィザードを終了し、1 つ以上の Windows 10 デバイスにポリシーを展開します。
 

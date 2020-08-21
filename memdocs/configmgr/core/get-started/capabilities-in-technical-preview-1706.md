@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 79258786b56cc3e7fe4971391903772700768a89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8c3624f9fc903395b36846170ff3552f32db59dd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126758"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692946"
 ---
 # <a name="capabilities-in-technical-preview-1706-for-configuration-manager"></a>Configuration Manager の Technical Preview 1706 の機能
 
@@ -104,7 +104,7 @@ ms.locfileid: "88126758"
 
 - パッシブ モードのサイト サーバーを実行するコンピューターは、
 
-    - [プライマリ サイトをインストールするための前提条件](https://docs.microsoft.com/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site)を満たす必要があります。
+    - [プライマリ サイトをインストールするための前提条件](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site)を満たす必要があります。
 
     - アクティブ モードのサイト サーバーのバージョンと一致するソース ファイルを使用してインストールします。
 
@@ -261,7 +261,7 @@ Upgrade Readiness への接続の前提条件は、Configuration Manager の Cur
 
 **必要条件**
 - 接続を追加するために、Configuration Manager 環境で最初に[サービス接続ポイント](../servers/deploy/configure/about-the-service-connection-point.md)を[オンライン モード](../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes)で構成する必要があります。 接続を環境に追加する場合、このサイト システムの役割を実行するマシンに Microsoft Monitoring Agent もインストールされます。
-- "Web アプリケーションや Web API" 管理ツールとして Configuration Manager を登録し、[この登録のクライアント ID](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/) を取得します。
+- "Web アプリケーションや Web API" 管理ツールとして Configuration Manager を登録し、[この登録のクライアント ID](/azure/active-directory/develop/quickstart-register-app) を取得します。
 - Azure Active Directory で、登録済み管理ツールのクライアント キーを作成します。
 - Azure portal で、登録済みの Web アプリに OMS へのアクセス許可を付与します。
 

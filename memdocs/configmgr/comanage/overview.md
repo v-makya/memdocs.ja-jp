@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: a7f38f48946244deb6026d040c44159d0384f7b1
-ms.sourcegitcommit: efe89408a3948b79b38893174cb19268ee37c8f3
+ms.openlocfilehash: f9e1809447f8d8ea8f6e0382575b71bfdec71fac
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854441"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695054"
 ---
 # <a name="what-is-co-management"></a>共同管理とは
 
@@ -102,15 +102,15 @@ Configuration Manager バージョン 1806 以降では、複数の Configuratio
 
 - Windows 10 デバイスは、Azure AD に接続されている必要があります。 次のいずれかの種類です。  
 
-  - [Hybrid Azure AD 参加済み](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid): デバイスがオンプレミスの Active Directory に参加し、Azure Active Directory に登録されている場合。
+  - [Hybrid Azure AD 参加済み](/azure/active-directory/devices/concept-azure-ad-join-hybrid): デバイスがオンプレミスの Active Directory に参加し、Azure Active Directory に登録されている場合。
 
-  - [Azure AD のみに参加](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)。 (この種類は "クラウド ドメイン参加済み" とも呼ばれます)<!--SCCMDocs issue 605-->  
+  - [Azure AD のみに参加](/azure/active-directory/devices/azureadjoin-plan)。 (この種類は "クラウド ドメイン参加済み" とも呼ばれます)<!--SCCMDocs issue 605-->  
 
 ### <a name="intune"></a>Intune
 
-- [Intune をセットアップする](https://docs.microsoft.com/intune/setup-steps)  
+- [Intune をセットアップする](/intune/setup-steps)  
 
-- [Windows 10 の自動登録を有効にする](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
+- [Windows 10 の自動登録を有効にする](/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
 
 ### <a name="windows-10"></a>Windows 10
 
@@ -129,7 +129,7 @@ Configuration Manager バージョン 1806 以降では、複数の Configuratio
 | Configuration Manager で Azure AD アプリをインポートする | Configuration Manager の**完全な権限を持つ管理者**<br>その他の Azure 役割は必要はありません |
 | Configuration Manager で共同管理を有効にする | Azure AD ユーザー<br>**すべての**スコープの権限を含め、Configuration Manager の**完全な権限を持つ管理者**<!--SCCMDoc issue 626--> |
 
-Azure の役割について詳しくは、[さまざまな役割](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles)に関するページをご覧ください。
+Azure の役割について詳しくは、[さまざまな役割](/azure/role-based-access-control/rbac-and-directory-admin-roles)に関するページをご覧ください。
 
 Configuration Manager の役割の詳細については、「[ロール ベース管理の基礎](../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。
 
@@ -167,4 +167,4 @@ Configuration Manager の役割の詳細については、「[ロール ベー�
 
 - [共同管理のすぐに得られる価値と基本の詳細](quickstarts.md)  
 
-- [チュートリアル:既存の Configuration Manager クライアントの共同管理を有効にする](tutorial-co-manage-clients.md)  
+- [チュートリアル:既存の Configuration Manager クライアントの共同管理を有効にする](tutorial-co-manage-clients.md)

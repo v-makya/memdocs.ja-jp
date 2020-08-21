@@ -10,16 +10,16 @@ ms.assetid: 561eb5b6-f90c-485a-91c2-e45bb0ce7877
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e11a6130fb9f7d86b7d3377cc4120d4e61c43d2d
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d41a0806a33ac627eceaafab54c73c31ea013365
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691200"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694833"
 ---
 # <a name="upgrade-windows-10-for-co-management"></a>共同管理のために Windows 10 をアップグレードする
 
-共同管理への組織のオンボードに向けて取り組んでいる場合、現状を把握することは、一部の顧客にとって大きな壁となります。 共同管理には [Windows 10 バージョン 1709](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1709) 以降が必要です。 Windows を更新し、自動登録を構成すると、クライアントは自動的に共同管理に登録されます。
+共同管理への組織のオンボードに向けて取り組んでいる場合、現状を把握することは、一部の顧客にとって大きな壁となります。 共同管理には [Windows 10 バージョン 1709](/windows/whats-new/whats-new-windows-10-version-1709) 以降が必要です。 Windows を更新し、自動登録を構成すると、クライアントは自動的に共同管理に登録されます。
 
 次のビデオでは、シニア プログラム マネージャーの Rob York とプロダクト マーケティング マネージャーの Locky Ainley が共同管理のための Windows 10 へのアップグレードについて説明し、デモを行っています。
 
@@ -31,7 +31,7 @@ ms.locfileid: "81691200"
 
 プラットフォームの進歩は他にもありますが、特に Windows 10 バージョン 1709 以降では自動登録がサポートされます。 この動作により、デバイスは、Azure Active Directory (Azure AD) への参加時に Intune に自動的に登録されます。 
 
-詳細については、「[Windows 10 の自動登録を有効にする](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)」を参照してください。
+詳細については、「[Windows 10 の自動登録を有効にする](/intune/windows-enroll#enable-windows-10-automatic-enrollment)」を参照してください。
 
 
 ## <a name="how-to-do-it"></a>実行方法
@@ -61,5 +61,4 @@ Microsoft IT 部門では、Windows 10 を Microsoft の 96,000 人の分散ユ�
 
 プロセスの任意の時点で Windows 10 のアップグレード サポートが必要な場合は、[Microsoft FastTrack](https://Microsoft.com/FastTrack/) に移動し、サインインしてサポートを要求してください。 
 
-詳細については、[FastTrack からのサポートの取得](quickstart-fasttrack.md)に関するページを参照してください。 
-
+詳細については、[FastTrack からのサポートの取得](quickstart-fasttrack.md)に関するページを参照してください。

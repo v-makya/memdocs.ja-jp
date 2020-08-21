@@ -10,12 +10,12 @@ ms.assetid: 121e0341-4f51-4d54-a357-732c26caf7c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a8c975798c506339a981e8648003387dc1e9838
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: a08b74552d5d17a737ec9e1802e10c87621f5b97
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878097"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126360"
 ---
 # <a name="troubleshoot-microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager における Microsoft 接続済みキャッシュのトラブルシューティング
 
@@ -223,7 +223,7 @@ DO キャッシュ サーバーにより次の書き換えルールが追加さ�
 DO キャッシュ サーバーごとに必要になるディスク容量は、組織の更新の要件によって異なることがあります。 次のコンテンツをキャッシュする場合、100 GB の容量で十分です。
 
 - 機能更新プログラム
-- 2 から 3 か月分の品質更新プログラムと Office 更新プログラム
+- 2 から 3 か月分の品質更新プログラムと Microsoft 365 Apps 更新プログラム
 - Microsoft Intune アプリと Windows 受信トレイ アプリ
 
 DO キャッシュ サーバーでは、システム メモリやプロセッサ時間をたくさん消費すべきではありません。 DO キャッシュ サーバーのインストール後、プロセスまたはメモリ リソースに大きな消費が見られた場合、IIS と ARR のログ ファイルを分析してください。

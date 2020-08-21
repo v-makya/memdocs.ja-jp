@@ -1,8 +1,8 @@
 ---
-title: インターネットに接続せずに Office 365 の更新プログラムを同期する
+title: インターネットに接続せずに Microsoft 365 Apps 更新プログラムを同期する
 titleSuffix: Configuration Manager
-description: インターネットから切断されている最上位のソフトウェアの更新ポイントで Office 365 の更新プログラムを同期します。
-ms.date: 04/21/2020
+description: インターネットから切断されている最上位のソフトウェアの更新ポイントで Microsoft 365 Apps 更新プログラムを同期します。
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -10,18 +10,18 @@ ms.assetid: a8fa7e7a-bf55-42de-b0c2-c56777dc1508
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 3627d2f7772b7b9e133d742b0ee4f94dba6e457a
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 4739703436d7feec7c4c899e60b33d38ce28babf
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110357"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125731"
 ---
-# <a name="synchronize-office-365-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a>切断されているソフトウェアの更新ポイントからの Office 365 の更新プログラムの同期
+# <a name="synchronize-microsoft-365-apps-updates-from-a-disconnected-software-update-point"></a><a name="bkmk_O365"></a> 切断されているソフトウェアの更新ポイントからの Microsoft 365 Apps 更新プログラムの同期
 
 *適用対象:Configuration Manager (Current Branch)*
 <!--4065163-->
-Configuration Manager バージョン 2002 以降、ツールを使用して、インターネットに接続されている WSUS サーバーから、切断された Configuration Manager 環境に Office 365 更新プログラムをインポートすることができます。 以前は、更新されたソフトウェアのメタデータをエクスポートし、切断された環境にインポートした場合、Office 365 更新プログラムを展開できませんでした。 Office 365 更新プログラムには Office API と Office CDN からダウンロードした追加のメタデータが必要ですが、これは、切断された環境では不可能です。
+Configuration Manager バージョン 2002 以降、ツールを使用して、インターネットに接続されている WSUS サーバーから、切断された Configuration Manager 環境に Microsoft 365 Apps 更新プログラムをインポートすることができます。 以前は、更新されたソフトウェアのメタデータをエクスポートし、切断された環境にインポートした場合、Microsoft 365 Apps 更新プログラムを展開できませんでした。 Microsoft 365 Apps 更新プログラムには Office API と Office CDN からダウンロードした追加のメタデータが必要ですが、これは、切断された環境では不可能です。
 
 > [!Note]
 > 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
@@ -35,26 +35,26 @@ Configuration Manager バージョン 2002 以降、ツールを使用して、�
 - OfflineUpdateExporter ツールとその依存関係を、インターネットに接続されている WSUS サーバーにコピーします。
   - ツールとその依存関係は、 **&lt;ConfigMgr インストール ディレクトリ>/tools/OfflineUpdateExporter** ディレクトリにあります。
 - このツールを実行するユーザーは、**WSUS 管理者**グループに属している必要があります。
-- Office 更新プログラムのメタデータとコンテンツを格納するために作成したディレクトリには、ファイルをセキュリティで保護するための適切なアクセス制御リスト (ACL) が必要です。
+- Microsoft 365 Apps 更新プログラムのメタデータとコンテンツを格納するために作成したディレクトリには、ファイルをセキュリティで保護するための適切なアクセス制御リスト (ACL) が必要です。
     - また、このディレクトリは空である必要もあります。
 - オンラインの WSUS サーバーから切断された環境に移動するデータは、安全に移動する必要があります。
 
 > [!IMPORTANT]
-> すべての Office 365 言語でコンテンツがダウンロードされます。 各更新プログラムには約 10 GB のコンテンツを含めることができます。
+> すべての Microsoft 365 Apps 言語でコンテンツがダウンロードされます。 各更新プログラムには約 10 GB のコンテンツを含めることができます。
 
-## <a name="synchronize-then-decline-unneeded-office-365-updates"></a>同期して、不要な Office 365 更新プログラムを拒否する
+## <a name="synchronize-then-decline-unneeded-microsoft-365-apps-updates"></a>同期して、不要な Microsoft 365 Apps 更新プログラムを拒否する
 
 1. インターネットに接続されている WSUS で、WSUS コンソールを開きます。
 1. **[オプション]** 、 **[製品と分類]** の順に選択します。
-1. **[製品]** タブで **[Office 365 クライアント]** をオンにし、 **[分類]** タブで **[更新プログラム]** をオンにします。[![WSUS での Office 365 更新プログラムの製品と分類](./media/4065163-o365-updates-product-classification.png)](./media/4065163-o365-updates-product-classification.png#lightbox)
-1. **[同期]** に移動し、 **[今すぐ同期]** を選択して、Office 365 更新プログラムを WSUS に取り込みます。
-1. 同期が完了したら、Configuration Manager で展開しない Office 365 更新プログラムをすべて拒否します。 Office 365 更新プログラムをダウンロードするために、それらを承認する必要はありません。  
-   - WSUS で不要な Office 365 更新プログラムを拒否すると、それらが WsusUtil.exe のエクスポート中にエクスポートされることはありませんが、OfflineUpdateExporter ツールによるそれらのコンテンツのダウンロードが停止されます。
-   - OfflineUpdateExporter ツールによって、Office 365 更新プログラムが自動的に実行されます。 他の製品の更新プログラムをエクスポートする場合、ダウンロードのためには引き続きそれらを承認する必要があります。
-    - [WSUS の新しい更新プログラム ビュー](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus)を作成して、不要な Office 365 更新プログラムを WSUS で簡単に表示および拒否できるようにします。
+1. **[製品]** タブで **[Office 365 クライアント]** をオンにし、 **[分類]** タブで **[更新プログラム]** をオンにします。[![WSUS での Microsoft 365 Apps 更新プログラムの製品と分類](./media/4065163-o365-updates-product-classification.png)](./media/4065163-o365-updates-product-classification.png#lightbox)
+1. **[同期]** に移動し、 **[今すぐ同期]** を選択して、Microsoft 365 Apps 更新プログラムを WSUS に取り込みます。
+1. 同期が完了したら、Configuration Manager で展開しない Microsoft 365 Apps 更新プログラムをすべて拒否します。 Microsoft 365 Apps 更新プログラムをダウンロードするために、それらを承認する必要はありません。  
+   - WSUS で不要な Microsoft 365 Apps 更新プログラムを拒否すると、それらが WsusUtil.exe のエクスポート中にエクスポートされることはありませんが、OfflineUpdateExporter ツールによるそれらのコンテンツのダウンロードが停止されます。
+   - OfflineUpdateExporter ツールによって、Microsoft 365 Apps 更新プログラムが自動的に実行されます。 他の製品の更新プログラムをエクスポートする場合、ダウンロードのためには引き続きそれらを承認する必要があります。
+    - [WSUS の新しい更新プログラム ビュー](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/manage/viewing-and-managing-updates#to-create-a-new-update-view-on-wsus)を作成して、不要な Microsoft 365 Apps 更新プログラムを WSUS で簡単に表示および拒否できるようにします。
 1. 他の製品の更新プログラムをダウンロードおよびエクスポートのために承認する場合は、コンテンツのダウンロードが完了するまで待機してから、WsusUtil.exe エクスポートを実行し、WSUSContent フォルダーの内容をコピーします。 詳細については、「[切断されているソフトウェアの更新ポイントからのソフトウェア更新プログラムの同期](synchronize-software-updates-disconnected.md)」を参照してください
 
-## <a name="exporting-the-office-365-updates"></a>Office 365 更新プログラムのエクスポート
+## <a name="exporting-the-microsoft-365-apps-updates"></a>Microsoft 365 Apps 更新プログラムのエクスポート
 
 1. OfflineUpdateExporter フォルダーを Configuration Manager からインターネットに接続されている WSUS サーバーにコピーします。
     - ツールとその依存関係は、 **&lt;ConfigMgr インストール ディレクトリ>/tools/OfflineUpdateExporter** ディレクトリにあります。
@@ -62,13 +62,13 @@ Configuration Manager バージョン 2002 以降、ツールを使用して、�
 
    |OfflineUpdateExporter のパラメーター|[説明]|
    |---|---|
-   |**-O**|  **-Office**。 更新プログラムをエクスポートする製品が Office 365 であることを指定します|
+   |**-O**|  **-Office**。 更新プログラムをエクスポートする製品が Office 365 または Microsoft 365 Apps であることを指定します|
    |**-D**|**-Destination**。 Destination は必須パラメーターであり、ターゲット フォルダーへの完全なパスが必要です。|
 
    - **OfflineUpdateExporter** ツールによって、次が行われます。
       - WSUS に接続する
-      - WSUS の Office 365 更新プログラムのメタデータを読み取る
-      - Office 365 更新プログラムに必要なコンテンツや追加のメタデータを、ターゲット フォルダーにダウンロードする
+      - WSUS で Microsoft 365 Apps 更新プログラム メタデータを読み取る
+      - Microsoft 365 Apps 更新プログラムに必要なコンテンツや追加のメタデータを、ターゲット フォルダーにダウンロードする
 
 1. インターネットに接続されている WSUS サーバーのコマンド プロンプトで、WsusUtil.exe を含むフォルダーに移動します。 既定では、このツールは %*ProgramFiles*%\Update Services\Tools にあります。 たとえば、ツールが既定の場所にある場合は、 **cd %ProgramFiles%\Update Services\Tools**のように入力します。
    - Windows Server 2012 を使用している場合は、WSUS サーバーに [KB2819484](https://support.microsoft.com/help/2819484/cab-file-that-is-exported-by-using-the-wsusutil-exe-command-is-display) がインストールされていることを確認してください。
@@ -86,7 +86,7 @@ Configuration Manager バージョン 2002 以降、ツールを使用して、�
 1. 他の製品の更新プログラムを承認した場合は、WSUSContent フォルダーの内容を、最上位レベルの切断された WSUS サーバーの WSUSContent フォルダーにコピーします。
 1. **OfflineUpdateExporter** に使用されているターゲット フォルダーを、切断されたネットワーク上の最上位レベルの Configuration Manager サイト サーバーにコピーします。
 
-## <a name="import-the-office-365-updates"></a>Office 365 更新プログラムのインポート
+## <a name="import-the-microsoft-365-apps-updates"></a>Microsoft 365 Apps 更新プログラムをインポートする
 
 1. 切断された最上位レベルの WSUS サーバーで、インターネットに接続されている WSUS サーバー上で生成した **export.xml.gz** から、更新プログラムのメタデータをインポートします。
    
@@ -96,9 +96,9 @@ Configuration Manager バージョン 2002 以降、ツールを使用して、�
     
     既定では、WsusUtil.exe ツールは %*ProgramFiles*%\Update Services\Tools にあります。
 
-1. インポートが完了したら、切断された最上位レベルの Configuration Manager サイト サーバーで、サイト コントロール プロパティを構成する必要があります。 この構成変更により、Configuration Manager に Office 365 のコンテンツが指定されます。 プロパティの構成を変更するには:
+1. インポートが完了したら、切断された最上位レベルの Configuration Manager サイト サーバーで、サイト コントロール プロパティを構成する必要があります。 この構成変更により、Configuration Manager に Microsoft 365 Apps のコンテンツが指定されます。 プロパティの構成を変更するには:
    1. [O365OflBaseUrlConfigured PowerShell スクリプト](#bkmk_o365_script)を、最上位レベルの切断された Configuration Manager サイト サーバーにコピーします。
-   1. `"D:\Office365updates\content"` を、OfflineUpdateExporter によって生成された、Office コンテンツとメタデータを含むコピーしたディレクトリの完全なパスに変更します。
+   1. `"D:\Office365updates\content"` を、OfflineUpdateExporter によって生成された、Microsoft 365 Apps コンテンツとメタデータを含むコピーしたディレクトリの完全なパスに変更します。
       > [!IMPORTANT]
       > O365OflBaseUrlConfigured プロパティに対して機能するのは、ローカル パスのみです。
    1. スクリプトを `O365OflBaseUrlConfigured.ps1` として保存します
@@ -108,7 +108,7 @@ Configuration Manager バージョン 2002 以降、ツールを使用して、�
 1. 最上位レベルのサイトを右クリックし、 **[サイト コンポーネントの構成]**  >  **[ソフトウェアの更新ポイント]** の順に選択します。
 1. **[分類]** タブで、 *[更新プログラム]* をオンにします。 **[製品]** タブで、 *[Office 365 クライアント]* をオンにします。
 1. Configuration Manager の[ソフトウェア更新プログラムを同期します](synchronize-software-updates.md#manually-start-software-updates-synchronization)
-1. 同期が完了したら、通常のプロセスを使用して Office 365 更新プログラムを展開します。
+1. 同期が完了したら、通常のプロセスを使用して Microsoft 365 Apps 更新プログラムを展開します。
 
 ## <a name="proxy-configuration"></a><a name="bkmk_O365_ki"></a>プロキシの構成
 

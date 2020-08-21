@@ -2,7 +2,7 @@
 title: Technical Preview リリース
 titleSuffix: Configuration Manager
 description: Configuration Manager の新機能を体験する Technical Preview Branch について説明します。
-ms.date: 07/14/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 64e784ec7313dfa778ee39f6e1f52e7c09fcfd95
-ms.sourcegitcommit: 488db8a6ab272f5d639525d70718145c63d0de8f
+ms.openlocfilehash: 76d1edf8598e1abd71b6fd1db7faffa1750110d4
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86384827"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129122"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager の Technical Preview
 
@@ -94,7 +94,6 @@ Configuration Manager の Technical Preview Branch では、次の製品とテ�
 リリース後、最長 1 年間、ベースライン バージョンをインストールできます。 新しい Technical Preview サイトをインストールする場合は、最新のベースライン バージョンを使用してください。 次の Configuration Manager Technical Preview Branch バージョンは、コンソール内更新と、新しいベースライン バージョンの両方として使用できます。
 
 - **Technical Preview バージョン 2007**
-- **Technical Preview バージョン 2002**
 
 ベースライン バージョンは [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) からダウンロードしてください。
 
@@ -121,13 +120,15 @@ bullet format:
 
 最新の Configuration Manager Technical Preview バージョンでは、以下の機能を使用できます。
 
-### <a name="technical-preview-version-2007"></a>Technical Preview バージョン 2007
+### <a name="technical-preview-version-2008"></a>Technical Preview バージョン 2008
 
-- [テナントのアタッチ:Microsoft Endpoint Manager 管理センターでハードウェア インベントリを表示する](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
-- [クライアント データ ソース ダッシュボードの機能強化](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
-- [一部のコンソール領域で固定幅フォントが使用される](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
-- [タスク シーケンス ポリシー サイズの管理](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
-- [管理センターのデバイス タイムラインの機能強化](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
+- [コレクション クエリのプレビュー](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [機能更新プログラムの SetupDiag エラーを分析する](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [シナリオの正常性の監視](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [コレクション評価ビュー](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [コンソールのタスク シーケンス サイズの確認](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [期限切れの収集診断ファイルの削除タスク](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [現在のフォルダーにオブジェクトをインポートする](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 > [!NOTE]
 > Technical Preview の以前のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、Configuration Manager の Current Branch に追加された機能は、Technical Preview Branch でも引き続き利用できます。
@@ -140,68 +141,18 @@ Each month, add features from the list above to a new H3 section at the top of t
 When there's a new CB, add any features not in that CB to the table in H2 "Features in previous technical previews"
 -->
 
-以下の機能は、Current Branch バージョン 2002 以降の Configuration Manager Technical Preview Branch の以前のバージョンでリリースされました。
+以下の機能は、Current Branch バージョン 2006 以降の Configuration Manager Technical Preview Branch の以前のバージョンでリリースされました。
 
 > [!TIP]
 > 新しい Current Branch バージョンが利用できるようになると、そのバージョンで利用できる機能が最新の "*新機能*" 記事に記載されます。 詳しくは、[増分バージョンの新機能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)に関する記事をご覧ください。
 
-### <a name="technical-preview-version-2006"></a>Technical Preview バージョン 2006
+### <a name="technical-preview-version-2007"></a>Technical Preview バージョン 2007
 
-- [共同管理デバイスでポータル サイト アプリを使用する](2020/technical-preview-2006.md#bkmk_portal) <!--3601237-->
-- [CMG を介した利用可能なアプリの改善](2020/technical-preview-2006.md#bkmk_availapp) <!--7033501-->
-- [イントラネット クライアントで CMG ソフトウェアの更新ポイントを使用できる](2020/technical-preview-2006.md#bkmk_cmg-sup) <!--7102873-->
-- [CMG を介したタスク シーケンスの改善](2020/technical-preview-2006.md#bkmk_osdcmg) <!--6983320-->
-- [リモート ワーカーに合わせた最適化を行うための管理分析情報](2020/technical-preview-2006.md#bkmk_wfhmi) <!--6982226-->
-- [VPN 境界の種類の改善](2020/technical-preview-2006.md#bkmk_vpn) <!--7020519-->
-- [テナント接続:Microsoft Endpoint Manager admin center での Configuration Manager 操作の改善](2020/technical-preview-2006.md#bkmk_apps) <!--7518897-->
-- [CMG によるエンドポイント保護ポリシーのサポート](2020/technical-preview-2006.md#bkmk_epcmg) <!--4773948-->
-- [テナント接続のオンボード中に以前に作成した Azure AD アプリケーションをインポートする](2020/technical-preview-2006.md#bkmk_aad-app) <!--6479246-->
-- [従量制課金接続でのクライアント アップグレードの改善](2020/technical-preview-2006.md#bkmk_meter) <!--6976145-->
-- [デバイスの再起動の管理の改善](2020/technical-preview-2006.md#bkmk_restart) <!--3601213-->
-- [Windows Virtual Desktop のサポートの改善](2020/technical-preview-2006.md#bkmk_wvd) <!--6527576-->
-- [Configuration Manager コミュニティ ハブの項目への直接リンク](2020/technical-preview-2006.md#bkmk_deeplink) <!--4224406-->
-
-### <a name="technical-preview-version-2005"></a>Technical Preview バージョン 2005
-
-- [テナントのアタッチ:管理センターのデバイス タイムライン](2020/technical-preview-2005.md#bkmk_timeline) <!--7141381-->
-- [テナントのアタッチ:管理センターからアプリケーションをインストールする](2020/technical-preview-2005.md#bkmk_apps) <!--6024389-->
-- [テナントのアタッチ:管理センターからの CMPivot](2020/technical-preview-2005.md#bkmk_cmpivot) <!--6024392-->
-- [テナントのアタッチ:管理センターからスクリプトを実行する](2020/technical-preview-2005.md#bkmk_scripts) <!--6234688-->
-- [VPN 境界の種類](2020/technical-preview-2005.md#bkmk_vpn) <!--7020519-->
-- [ソフトウェア センターでの Azure AD 認証](2020/technical-preview-2005.md#bkmk_availapp) <!--6935376-->
-- [従量制課金接続でのクライアントのインストールとアップグレード](2020/technical-preview-2005.md#bkmk_meter) <!--6976145-->
-- [クラウドベース コンテンツに対するタスク シーケンス メディアのサポート](2020/technical-preview-2005.md#bkmk_tsmedia) <!--6209223-->
-- [クラウド管理ゲートウェイ コマンドレットの強化](2020/technical-preview-2005.md#bkmk_pwshcmg) <!--6978300-->
-- [コミュニティ ハブと GitHub](2020/technical-preview-2005.md#community-hub-and-github) <!--3555935-->
-- [Microsoft 365 Apps for enterprise](2020/technical-preview-2005.md#bkmk_365_apps) <!--6298093-->
-- [セットアップとアップグレードの失敗を Microsoft に報告する](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) <!--5622909-->
-- [Azure AD アプリの秘密鍵の有効期限切れ通知](2020/technical-preview-2005.md#bkmk_alertkey) <!--6386392-->
-- [BitLocker タスク シーケンス ステップの強化](2020/technical-preview-2005.md#bkmk_tsbitlocker) <!--6995601-->
-- [コンテンツ ライブラリ クリーンアップ ツールの改善](2020/technical-preview-2005.md#bkmk_content) <!--6887878-->
-- [Windows 10 インプレース アップグレード中にコマンド プロンプトを削除する](2020/technical-preview-2005.md#bkmk_ipucmd) <!--2837795-->
-
-### <a name="technical-preview-version-2004"></a>Technical Preview バージョン 2004
-
-- [Microsoft Endpoint Manager テナントのアタッチ: ConfigMgr クライアントの詳細](2020/technical-preview-2004.md#bkmk_mem) <!--6374854-->
-- [Microsoft からの通知](2020/technical-preview-2004.md#notifications-from-microsoft) <!--3953121-->
-- [コンソールからの探索データのコピー](2020/technical-preview-2004.md#bkmk_copydisco) <!--6890051-->
-- [CMPivot の改善](2020/technical-preview-2004.md#improvements-to-cmpivot) <!--6518631-->
-- [PowerShell バージョン 7 のサポート](2020/technical-preview-2004.md#bkmk_pwsh7) <!--6023299-->
-- [ディスクのフォーマットとパーティション作成タスク シーケンスのステップの改善](2020/technical-preview-2004.md#bkmk_osdpart) <!--6610288-->
-- [OS 展開のマネジメント インサイト規則](2020/technical-preview-2004.md#bkmk_osdmi) <!--6982275-->
-- [タスク シーケンスの展開の種類の PowerShell コマンドレット](2020/technical-preview-2004.md#bkmk_osdpwsh) <!--7019342-->
-
-### <a name="technical-preview-version-2003"></a>Technical Preview バージョン 2003
-
-- [Microsoft エンドポイント マネージャー コンソールを使用して構成マネージャー クライアントを Microsoft Defender ATP にオンボードする](2020/technical-preview-2003.md#bkmk_atp) <!--5691658-->
-- [構成アイテムの修復の追跡](2020/technical-preview-2003.md#bkmk_track) <!--4261411 in 2002-->
-- [デバイスの境界グループを表示する](2020/technical-preview-2003.md#bkmk_boundary) <!--6521835 in 2002-->
-- [新しいフィードバック ウィザード](2020/technical-preview-2003.md#bkmk_feedback) <!--3180826-->
-- [Microsoft Edge 管理ダッシュボードの機能強化](2020/technical-preview-2003.md#bkmk_edge) <!--5907383-->
-- [CMPivot の改善](2020/technical-preview-2003.md#bkmk_cmpivot) <!--6518631-->
-- [Microsoft に送信されたフィードバックのクエリ](2020/technical-preview-2003.md#bkmk_smile) <!--6488450-->
-- [タスク シーケンスの進行状況用の新しい SDK メソッド](2020/technical-preview-2003.md#bkmk_tsapi) <!--6448458-->
-- [OS 展開の機能強化](2020/technical-preview-2003.md#bkmk_osd) <!--6452769-->
+- [テナントのアタッチ:Microsoft Endpoint Manager 管理センターでハードウェア インベントリを表示する](2020/technical-preview-2007.md#bkmk_mem) <!--6479284-->
+- [クライアント データ ソース ダッシュボードの機能強化](2020/technical-preview-2007.md#bkmk_content) <!--7102084-->
+- [一部のコンソール領域で固定幅フォントが使用される](2020/technical-preview-2007.md#bkmk_font) <!--7632637-->
+- [タスク シーケンス ポリシー サイズの管理](2020/technical-preview-2007.md#bkmk_tspol) <!--6888853-->
+- [管理センターのデバイス タイムラインの機能強化](2020/technical-preview-2007.md#bkmk_timeline)<!--7141381-->
 
 ## <a name="features-in-previous-technical-previews"></a>以前の Technical Preview の機能
 
@@ -215,16 +166,25 @@ With each CB release, review and remove from this list for anything that's now a
 
 | 機能        | Technical Preview のバージョン |
 |----------------|---------------------------|
+| 共同管理デバイスでポータル サイト アプリを使用する <!--3601237--> | [Tech Preview 2006](2020/technical-preview-2006.md#bkmk_portal) |
+| CMG を介した利用可能なアプリの改善 <!--7033501--> | [Tech Preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
+| テナント接続:Microsoft Endpoint Manager admin center での Configuration Manager 操作の改善 <!--7518897--> | [Tech Preview 2006](2020/technical-preview-2006.md#bkmk_apps) |
+| テナントのアタッチ:管理センターのデバイス タイムライン <!--7141381--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
+| テナントのアタッチ:管理センターからアプリケーションをインストールする <!--6024389--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_apps) |
+| テナントのアタッチ:管理センターからの CMPivot <!--6024392--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
+| テナントのアタッチ:管理センターからスクリプトを実行する <!--6234688--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
+| クラウド管理ゲートウェイ コマンドレットの強化 <!--6978300--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
+| セットアップとアップグレードの失敗を Microsoft に報告する <!--5622909--> | [Tech Preview 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |
+| コンテンツ ライブラリ クリーンアップ ツールの改善 <!--6887878--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_content) |
+| コンソールからの探索データのコピー <!--6890051--> | [Tech Preview 2004](2020/technical-preview-2004.md#bkmk_copydisco) |
+| PowerShell バージョン 7 のサポート <!--6023299--> | [Tech Preview 2004](2020/technical-preview-2004.md#bkmk_pwsh7) |
+| 新しいフィードバック ウィザード <!--3180826--> | [Tech Preview 2003](2020/technical-preview-2003.md#bkmk_feedback) |
+| Microsoft に送信されたフィードバックのクエリ <!--6488450--> | [Tech Preview 2003](2020/technical-preview-2003.md#bkmk_smile) |
 | フィードバックにファイルを添付する <!--3556011--> | [Tech Preview 1910](2019/technical-preview-1910.md#attach-files-to-feedback) |
 | マルチキャスト対応の配布ポイントの機能強化 <!--3785535--> | [Tech Preview 1908.2](2019/technical-preview-1908-2.md#bkmk_multicast) |
 | 段階的展開テンプレート <!--4961086--> | [Tech Preview 1908](2019/technical-preview-1908.md#phased-deployment-templates) |
 | クラウド管理ゲートウェイを使用し、場所を問わずリモート制御する <!--4575930--> | [Tech Preview 1906](2019/technical-preview-1906.md#remote-control-anywhere-using-cloud-management-gateway) |
-| コミュニティ ハブの機能強化 <!--3555935--> | [Tech Preview 1906](2019/technical-preview-1906.md#bkmk_hub) |
-| コミュニティ ハブの機能強化 <!--4224401--> | [Tech Preview 1905](2019/technical-preview-1905.md#bkmk_hub) |
-| コミュニティ ハブと GitHub <!--3555935--> | [Tech Preview 1904](2019/technical-preview-1904.md#community-hub-and-github) |
 | クラウド サービスのコスト見積もりツール <!--3555774--> | [Tech Preview 1903](2019/technical-preview-1903.md#bkmk_cmg) |
-| コミュニティ ハブからレポートのダウンロード <!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) |
-| コミュニティ ハブ <!--3556020, fka 1357766--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) |
 | クライアント ベースの PXE レスポンダー サービス <!--3556018, fka 1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
 | PXE ネットワーク ブートでの IPv6 のサポート <!--3601254, fka 1269793--> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
 | Azure Active Directory の使用 <!--3607315, fka 1322145--> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |

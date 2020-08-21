@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 00accfc5150226830b68beb194fa168c08148b84
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 2adf22fd9c17863d7c29e2a29d2125d22f2d944f
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110425"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127673"
 ---
 # <a name="deploy-software-updates"></a>ソフトウェアの更新を展開する  
 
@@ -70,7 +70,7 @@ Configuration Manager コンソールでソフトウェア更新プログラム�
 
 > [!Note]
 > - 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
-> - Office 365 クライアント更新プログラムを手動で展開するときは、 **[ソフトウェア ライブラリ]** ワークスペースの **[Office 365 クライアント管理]** の **[Office 365 の更新プログラム]** ノードで検索します。 
+> - Microsoft 365 Apps クライアント更新プログラムを手動で展開するときは、 **[ソフトウェア ライブラリ]** ワークスペースの **[Office 365 クライアント管理]** の **[Office 365 の更新プログラム]** ノードで検索します。 
 
 ## <a name="automatically-deploy-software-updates"></a><a name="bkmk_auto"></a> ソフトウェア更新プログラムの自動展開
 

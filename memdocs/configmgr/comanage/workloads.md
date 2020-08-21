@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 928ef8a8ebc90807912f22901743725df9aa67e7
-ms.sourcegitcommit: 79fb3b0f0486de1644904be348b7e08048e93b18
+ms.openlocfilehash: b03b57ff9797eb4fbe5a269723e98d39ae438803
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82842225"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127224"
 ---
 # <a name="co-management-workloads"></a>共同管理ワークロード
 
@@ -104,7 +104,7 @@ Intune 機能の詳細については、「[Microsoft Intune でのデバイス 
 
 <!--1357841-->
 
-このワークロードでは、共同管理デバイス上の Office 365 アプリが管理されます。
+このワークロードでは、共同管理デバイス上の Microsoft 365 Apps が管理されます。
 
 - ワークロードを移動した後は、デバイスの **Intune ポータル サイト**にアプリが表示されます  
 

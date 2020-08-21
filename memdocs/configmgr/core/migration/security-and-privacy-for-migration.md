@@ -10,12 +10,12 @@ ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ad92e4906c45b5c720ab35efc055449a27cc0850
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f219c6c6d4c9a5cbf04b1295c99184f345e68b83
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906214"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692861"
 ---
 # <a name="security-and-privacy-for-migration-to-configuration-manager-current-branch"></a>Configuration Manager Current Branch への移行のセキュリティとプライバシー
 
@@ -48,9 +48,9 @@ ms.locfileid: "82906214"
 
  セキュリティとプライバシー情報の詳細については、次のトピックのいずれかを参照してください。  
 
--   Configuration Manager 2007 のプライバシー情報の詳細については、Configuration Manager 2007 ドキュメント ライブラリの「[Configuration Manager 2007 のセキュリティとプライバシー](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680768(v=technet.10))」を参照してください。  
+-   Configuration Manager 2007 のプライバシー情報の詳細については、Configuration Manager 2007 ドキュメント ライブラリの「[Configuration Manager 2007 のセキュリティとプライバシー](/previous-versions/system-center/configuration-manager-2007/bb680768(v=technet.10))」を参照してください。  
 
--   System Center 2012 Configuration Manager のプライバシー情報の詳細については、System Center 2012 Configuration Manager ドキュメント ライブラリの「[System Center 2012 Configuration Manager のセキュリティとプライバシー](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682033(v=technet.10))」を参照してください。  
+-   System Center 2012 Configuration Manager のプライバシー情報の詳細については、System Center 2012 Configuration Manager ドキュメント ライブラリの「[System Center 2012 Configuration Manager のセキュリティとプライバシー](/previous-versions/system-center/system-center-2012-R2/gg682033(v=technet.10))」を参照してください。  
 
 -   System Center Configuration Manager のプライバシー情報の詳細については、「[System Center Configuration Manager のセキュリティとプライバシー](../../core/plan-design/security/security-and-privacy.md)」を参照してください。  
 
@@ -58,4 +58,4 @@ ms.locfileid: "82906214"
 
 移行は既定では有効化されず、いくつかの構成手順を実行しなければなりません。 移行情報はマイクロソフトに送信されません。  
 
-ソース階層からデータを移行する前に、プライバシーの要件を考慮してください。  
+ソース階層からデータを移行する前に、プライバシーの要件を考慮してください。

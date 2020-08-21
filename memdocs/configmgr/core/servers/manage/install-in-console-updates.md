@@ -2,7 +2,7 @@
 title: コンソール内の更新プログラム
 titleSuffix: Configuration Manager
 description: Microsoft クラウドから Configuration Manager に更新プログラムをインストールする
-ms.date: 06/02/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a0d7f36c921f782c0baad740d8e643f54cee0309
-ms.sourcegitcommit: 5e339c07001e911cf75ef922e6c66a7efdeab6f1
+ms.openlocfilehash: 65071493834c33dac7581075b835e023c74f5706
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84637671"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128088"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Configuration Manager のコンソール内更新プログラムのインストール
 
@@ -96,13 +96,13 @@ Configuration Manager は Microsoft クラウド サービスと同期して更�
 
 更新プログラムを開始する前に、実行するアクションの適用可能な更新のチェックリストを確認します。
 
+- [2006 に更新するためのチェックリスト](checklist-for-installing-update-2006.md)
+
 - [2002 に更新するためのチェックリスト](checklist-for-installing-update-2002.md)
 
 - [1910 に更新するためのチェックリスト](checklist-for-installing-update-1910.md)  
 
 - [1906 に更新するためのチェックリスト](checklist-for-installing-update-1906.md)  
-
-- [1902 に更新するためのチェックリスト](checklist-for-installing-update-1902.md)
 
 ### <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step2"></a> 手順 2: 更新プログラムをインストールする前の前提条件チェッカーの実行  
 
@@ -362,13 +362,13 @@ Configuration Manager コンソールにある階層の最上位サイトで、 
 
 サイトが更新された後、該当するバージョンの更新後のチェックリストを確認します。  
 
+- [バージョン 2006 の更新後のチェックリスト](checklist-for-installing-update-2006.md#post-update-checklist)
+
 - [バージョン 2002 の更新後のチェックリスト](checklist-for-installing-update-2002.md#post-update-checklist)
 
 - [バージョン 1910 の更新後のチェックリスト](checklist-for-installing-update-1910.md#post-update-checklist)  
 
 - [バージョン 1906 の更新後のチェックリスト](checklist-for-installing-update-1906.md#post-update-checklist)  
-
-- [バージョン 1902 の更新後のチェックリスト](checklist-for-installing-update-1902.md#post-update-checklist)  
 
 ## <a name="enable-optional-features-from-updates"></a><a name="bkmk_options"></a> 更新プログラムのオプション機能の有効化  
 
@@ -378,7 +378,7 @@ Configuration Manager コンソールにある階層の最上位サイトで、 
 
 省略可能でない機能は、自動的にインストールされます。 そのような機能は **[機能]** ノードに表示されません。  
 
-> [!Important]  
+> [!IMPORTANT]
 > 複数サイトの階層では、中央管理サイトからのみオプション機能またはプレリリース機能を有効にします。 この動作によって、階層全体で競合が発生しないようにします。 <!--507197-->  
 
 新機能またはプレリリース機能を有効にすると、Configuration Manager の階層マネージャー (HMAN) は機能が利用可能になる前に変更を処理する必要があります。 多くの場合、変更の処理はすぐに行われます。 HMAN の処理サイクルによっては、完了までに最大 30 分かかることがあります。 変更が処理された後、その機能を使用するには、まずコンソールを再起動します。
@@ -391,19 +391,20 @@ Configuration Manager コンソールにある階層の最上位サイトで、 
 
 <!--Note to include in target articles
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](install-in-console-updates.md#bkmk_options).  
 
 -->
 
 - [コミュニティ ハブ](community-hub.md)<!--3555935, C098DA03-C33C-4E15-B337-6C0FEEB3CB8A-->
+- [オーケストレーション グループ](../../../sum/deploy-use/orchestration-groups.md)<!--3098816, 290B66D8-C735-4895-B59A-DD732D84A697-->
+- [タスク シーケンスの展開の種類](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!-- 3555953, CB0CDFFB-9C6F-4B18-8954-A43A387302A2-->
 - [BitLocker の管理](../../../protect/plan-design/bitlocker-management.md) <!-- 3601034,6DD56E46-C3EC-4E38-A16F-E98644BB6434 -->
 - [コレクションのメンバーシップの結果の Azure Active Directory グループとの同期](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync) <!--3607475,C2127144-C8DE-49F6-9CB3-D4F5B59F9515-->
 - [Azure Active Directory ユーザー グループの探索](../deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco) <!--3611956,023715E7-BFBA-4E9E-A80F-B5B626464ADD-->
 - [アプリケーション グループ](../../../apps/deploy-use/create-app-groups.md) <!--3555907,EE16A1D8-EF1B-4094-845F-AC107E7C621D-->
 - [タスク シーケンス デバッガー](../../../osd/deploy-use/debug-task-sequence.md) <!--3612274,C3F37661-69E4-4D53-A39C-5D02F97E0E71-->
 - [パッケージ変換マネージャー](../../../apps/pcm/package-conversion-manager.md) <!--1357861,4E0C09AF-7FC1-4412-A8BB-166D9BCD0093-->
-- [共同管理デバイス向けのクライアント アプリ](../../../comanage/workloads.md#client-apps) (以前の名称は *共同管理デバイス向けのモバイル アプリ*でした) <!--1357892,CC3AE625-BF72-49B1-8AB1-AF0DCF2D6F4C-->
 - [サード パーティ製ソフトウェアの更新プログラム](../../../sum/deploy-use/third-party-software-updates.md)<!--1357605,1352101,1358714;B5E192AE-C81F-4348-9EF9-07A3C0FBE597-->
 - [デバイスごとにユーザーのアプリケーション要求を承認する](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings) <!--1357015,4BA987C9-08FC-48E2-BFFE-C9DCF35B496A-->  
 - [スクリプトを作成して実行する](../../../apps/deploy-use/create-deploy-scripts.md) <!--1236459,566F8720-F415-4E10-9A51-CDE682BA2B2E-->
@@ -416,7 +417,7 @@ Configuration Manager コンソールにある階層の最上位サイトで、 
 - [クラスター対応のコレクションのサービス (サーバー グループ)](../../../sum/deploy-use/service-a-server-group.md) <!--1081776,290B66D8-C735-4895-B59A-DD732D84A697-->
 - [Windows Hello for Business](../../../protect/deploy-use/windows-hello-for-business-settings.md) (以前の *Passport for Work*) <!--1245704,8BCA2642-3719-4862-A355-9D39C979E1B4-->
 
-> [!Tip]  
+> [!TIP]
 > 有効化に同意が必要な機能の詳細については、[プレリリース機能](pre-release-features.md)に関するページを参照してください。  
 >
 > Technical Preview Branch でのみ利用できる機能の詳細については、[Technical Preview](../../get-started/technical-preview.md) に関するページを参照してください。

@@ -10,12 +10,12 @@ ms.assetid: 27dd26d1-e99c-4431-b2f8-60406394b6db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8e2f7bbb51c72fa3d0f2a36e8a5419552d468b4c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 405303b3988e8c853ba30e8fb6d620d782b0474e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691220"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694901"
 ---
 # <a name="set-up-hybrid-azure-ad-for-co-management"></a>共同管理用にハイブリッド Azure AD を設定する
 
@@ -26,8 +26,8 @@ ms.locfileid: "81691220"
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Configuring-Devices-in-Azure-Active-Directory/player]
 
 ハイブリッド Azure AD 参加プロセスでは、オンプレミスのドメイン参加済みデバイスを Azure AD に自動的に登録します。 このプロセスについて詳しくは、以下の記事をご覧ください。
-- [Azure Active Directory のデバイス管理の概要](https://docs.microsoft.com/azure/active-directory/device-management-introduction) 
-- [ハイブリッド Azure AD 参加を計画する方法](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
+- [Azure Active Directory のデバイス管理の概要](/azure/active-directory/device-management-introduction) 
+- [ハイブリッド Azure AD 参加を計画する方法](/azure/active-directory/devices/hybrid-azuread-join-plan)
 
 ハイブリッド Azure AD 参加は、共同管理用の重要な基礎の 1 つです。 このプロセスは、一部の顧客にとって困難な場合があります。例を以下に示します。
 - 組織でサード パーティの ID ソリューションが使用されている 
@@ -41,14 +41,14 @@ ms.locfileid: "81691220"
 デバイスは、保護する必要がある ID を作成するときのユーザーに似ています。 いつでもどこでもデバイスの ID を保護できるようにするには、Azure AD にそのデバイスの ID を取り込む必要があります。
 
 使用するドメインの種類に基づいて、主な 2 つの実行方法があります。 次のドメインの種類のいずれかに対して、ハイブリッド Azure AD 参加を構成します。  
-- [フェデレーション ドメイン](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
-- [マネージド ドメイン](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains)  
+- [フェデレーション ドメイン](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+- [マネージド ドメイン](/azure/active-directory/devices/hybrid-azuread-join-managed-domains)  
 
 上記の 2 つの方法では最適なエクスペリエンスが提供されます。 完全な手動プロセスを含む詳細については、次の記事を参照してください。
-- [ハイブリッド Azure AD 参加済みデバイスを手動で構成する](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
-- [ハイブリッド Azure AD の ADFS パススルー認証](https://docs.microsoft.com/windows-server/identity/ad-fs/ad-fs-overview)。Azure AD 検出が含まれます  
+- [ハイブリッド Azure AD 参加済みデバイスを手動で構成する](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
+- [ハイブリッド Azure AD の ADFS パススルー認証](/windows-server/identity/ad-fs/ad-fs-overview)。Azure AD 検出が含まれます  
 
-トラブルシューティングのガイダンスについては、[Windows 10 ハイブリッド Azure AD 参加のトラブルシューティング ガイド](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)に関するページを参照してください。
+トラブルシューティングのガイダンスについては、[Windows 10 ハイブリッド Azure AD 参加のトラブルシューティング ガイド](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)に関するページを参照してください。
 
 
 
@@ -66,5 +66,4 @@ ms.locfileid: "81691220"
 
 プロセスの任意の時点で Azure AD の設定サポートが必要な場合は、[Microsoft FastTrack](https://Microsoft.com/FastTrack/) に移動し、サインインしてサポートを要求してください。 
 
-詳細については、[FastTrack からのサポートの取得](quickstart-fasttrack.md)に関するページを参照してください。 
-
+詳細については、[FastTrack からのサポートの取得](quickstart-fasttrack.md)に関するページを参照してください。

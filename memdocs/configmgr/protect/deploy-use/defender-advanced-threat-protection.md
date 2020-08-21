@@ -10,20 +10,20 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: cbf7dd3e35db8d2020e96e2511017e43863f724e
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 5feaf05a6829d902b1d8dcbe57722dfce410de6f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85613463"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693541"
 ---
 # <a name="microsoft-defender-advanced-threat-protection"></a>Microsoft Defender Advanced Threat Protection
 
 *適用対象:Configuration Manager (Current Branch)*
 
-Endpoint Protection は、[Microsoft Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (以前は Windows Defender ATP と呼ばれていました) を管理および監視するのに役立ちます。 Microsoft Defender ATP は、企業が自社ネットワークに対する高度な攻撃を検出して調査し、対処するのに役立ちます。 Configuration Manager ポリシーは、Windows 10 クライアントのオンボードと監視に役立ちます。
+Endpoint Protection は、[Microsoft Defender Advanced Threat Protection (ATP)](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) (以前は Windows Defender ATP と呼ばれていました) を管理および監視するのに役立ちます。 Microsoft Defender ATP は、企業が自社ネットワークに対する高度な攻撃を検出して調査し、対処するのに役立ちます。 Configuration Manager ポリシーは、Windows 10 クライアントのオンボードと監視に役立ちます。
 
-Microsoft Defender ATP は、[Microsoft Defender セキュリティ センター](https://securitycenter.windows.com)のサービスです。 Configuration Manager は、クライアントのオンボード構成ファイルを追加して展開することにより、展開の状態と Microsoft Defender ATP エージェントの正常性を監視できます。 Microsoft Defender ATP は、Configuration Manager クライアントを実行している PC または [Microsoft Intune によって管理](https://docs.microsoft.com/intune/protect/advanced-threat-protection)されている PC でサポートされています。
+Microsoft Defender ATP は、[Microsoft Defender セキュリティ センター](https://securitycenter.windows.com)のサービスです。 Configuration Manager は、クライアントのオンボード構成ファイルを追加して展開することにより、展開の状態と Microsoft Defender ATP エージェントの正常性を監視できます。 Microsoft Defender ATP は、Configuration Manager クライアントを実行している PC または [Microsoft Intune によって管理](/intune/protect/advanced-threat-protection)されている PC でサポートされています。
 
 ## <a name="prerequisites"></a>[前提条件]
 
@@ -220,6 +220,6 @@ Configuration Manager を使用してデバイスを ATP にオンボードす�
 
 ## <a name="next-steps"></a>次のステップ
 
-- [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
+- [Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)
 
-- [Microsoft Defender Advanced Threat Protection のオンボードの問題のトラブルシューティング](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)
+- [Microsoft Defender Advanced Threat Protection のオンボードの問題のトラブルシューティング](/windows/security/threat-protection/microsoft-defender-atp/troubleshoot-onboarding)

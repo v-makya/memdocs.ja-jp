@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 835dcd0c86244c1731cb6c6e040d577160759614
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 6c42015880cae09be48feff9c42b6b2a0d2c8544
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83267792"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129316"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Configuration Manager による Windows 10 更新プログラムの配信の最適化
 
@@ -70,7 +70,7 @@ Windows Update のすべてのインストール ファイルに配信の最適�
 > [!IMPORTANT]
 > - 配信の最適化は有効にする必要があり (既定)、バイパスすることはできません。 詳細については、[Windows 配信の最適化のリファレンス](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference)に関する記事をご覧ください。
 > - 差分コンテンツに対する[ソフトウェア更新プログラムのクライアント設定](../../core/clients/deploy/about-client-settings.md#software-updates)を変更する場合は、[配信の最適化のクライアント設定](../../core/clients/deploy/about-client-settings.md#delivery-optimization)を確認してください。
-> - Office COM を有効にしている場合、Office 365 クライアントの更新プログラムに対して配信の最適化を使用することはできません。 Office COM は、Office 365 クライアントの更新プログラムを管理するために Configuration Manager によって使用されます。 Office COM の登録を解除すれば、Office 365 の更新プログラムに対して配信の最適化を使用できるようになります。 Office COM を無効にすると、Office 365 のソフトウェア更新プログラムは、Office 自動更新 2.0 の既定のスケジュールされたタスクによって管理されます。 これは、Office 365 の更新プログラムのインストール プロセスが Configuration Manager によって指示または監視されないことを意味します。 Configuration Manager では、コンソール内の Office 365 クライアント管理ダッシュボードを設定するために、引き続きハードウェア インベントリから情報が収集されます。 Office COM の登録を解除する方法の詳細については、「[Office 365 クライアントを有効にして、Configuration Manager ではなく Office CDN から更新を受信できるようにする](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager)」を参照してください。
+> - Office COM を有効にしている場合、Microsoft 365 Apps クライアントの更新プログラムに対して配信の最適化を使用することはできません。 Office COM は、Microsoft 365 Apps クライアントの更新プログラムを管理するために Configuration Manager によって使用されます。 Office COM の登録を解除すれば、Microsoft 365 Apps の更新プログラムに対して配信の最適化を使用できるようになります。 Office COM を無効にすると、Microsoft 365 Apps のソフトウェア更新プログラムは、Office 自動更新 2.0 の既定のスケジュールされたタスクによって管理されます。 これは、Microsoft 365 Apps 更新プログラムのインストール プロセスが Configuration Manager によって指示または監視されないことを意味します。 Configuration Manager では、コンソール内の Office 365 クライアント管理ダッシュボードを設定するために、引き続きハードウェア インベントリから情報が収集されます。 Office COM の登録を解除する方法の詳細については、「[Office 365 クライアントを有効にして、Configuration Manager ではなく Office CDN から更新を受信できるようにする](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager)」を参照してください。
 > - コンテンツの保存に CMG を使用する場合、[クライアント設定](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)の **[Download delta content when available]\(デルタ コンテンツが使用可能な場合はダウンロードする\)** が有効になっていると、サードパーティの更新プログラムのコンテンツはクライアントにダウンロードされません。 <!--6598587-->
 
 
@@ -98,8 +98,8 @@ Windows Update のすべてのインストール ファイルに配信の最適�
 |---------|---------|---------|---------|
 | サブネット間でサポート | はい | はい | いいえ |
 | 帯域幅調整 | ○ (ネイティブ) | ○ (BITS を使用) | ○ (BITS を使用) |
-| 一部のコンテンツをサポート | はい (この列の次の行に記載されている、サポートされているすべてのコンテンツの種類に対して)。 | Office 365 および高速更新の場合のみ | はい (この列の次の行に記載されている、サポートされているすべてのコンテンツの種類に対して)。 |
-| サポートされているコンテンツの種類 | **ConfigMgr 経由:** </br> - 高速更新 </br> - すべての Windows 更新プログラム (バージョン 1910 以降)。 これには Office 更新プログラムは含まれません。</br> </br> **Microsoft クラウド経由:**</br> - Windows 更新プログラムとセキュリティ更新プログラム</br> - ドライバー</br> - Windows ストア アプリ</br> - ビジネス向け Windows ストアのアプリ | Configuration Manager のすべてのコンテンツの種類 ([Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) でダウンロードされるイメージを含む) | Configuration Manager のすべてのコンテンツの種類 (イメージを除く) |
+| 一部のコンテンツをサポート | はい (この列の次の行に記載されている、サポートされているすべてのコンテンツの種類に対して)。 | Microsoft 365 Apps および高速更新の場合のみ | はい (この列の次の行に記載されている、サポートされているすべてのコンテンツの種類に対して)。 |
+| サポートされているコンテンツの種類 | **ConfigMgr 経由:** </br> - 高速更新 </br> - すべての Windows 更新プログラム (バージョン 1910 以降)。 これには Microsoft 365 Apps 更新プログラムは含まれません。</br> </br> **Microsoft クラウド経由:**</br> - Windows 更新プログラムとセキュリティ更新プログラム</br> - ドライバー</br> - Windows ストア アプリ</br> - ビジネス向け Windows ストアのアプリ | Configuration Manager のすべてのコンテンツの種類 ([Windows PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) でダウンロードされるイメージを含む) | Configuration Manager のすべてのコンテンツの種類 (イメージを除く) |
 | ディスク制御におけるキャッシュ サイズ | はい | はい | はい |
 | ピア ソースの検出 | 自動 | 手動 (クライアント エージェント設定) | 自動 |
 | ピア検出 | 配信の最適化クラウド サービスを使用 (インターネット アクセスが必要) | 管理ポイントを使用 (クライアントの境界グループに基づく) | マルチキャスト |

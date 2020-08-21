@@ -10,12 +10,12 @@ ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb95a05fd3d347b70dd5d53ce972bce0c23c18cc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: be9db7d0ee68f22073a3537e53fc93bf8faff9e0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127885"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693524"
 ---
 # <a name="bitlocker-settings-reference"></a>BitLocker 設定のリファレンス
 
@@ -119,7 +119,7 @@ Windows 10 デバイスの場合、 **[Drive encryption method and cipher streng
 > [!NOTE]
 > ドライブが既に暗号化されいるときにこの設定を無効にした場合は、BitLocker はドライブの暗号化を解除します。  
 
-お使いのデバイスに[トラステッド プラットフォーム モジュール (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-top-node) がない場合は、 **[互換性のある TPM が装備されていない BitLocker を許可する (パスワードが必要)]** オプションを使用します。 この設定により、デバイスに TPM がない場合でも、BitLocker で OS ドライブを暗号化できます。 このオプションを有効にした場合、Windows で、BitLocker パスワードを指定するよう求めるプロンプトがユーザーに出されます。
+お使いのデバイスに[トラステッド プラットフォーム モジュール (TPM)](/windows/security/information-protection/tpm/trusted-platform-module-top-node) がない場合は、 **[互換性のある TPM が装備されていない BitLocker を許可する (パスワードが必要)]** オプションを使用します。 この設定により、デバイスに TPM がない場合でも、BitLocker で OS ドライブを暗号化できます。 このオプションを有効にした場合、Windows で、BitLocker パスワードを指定するよう求めるプロンプトがユーザーに出されます。
 
 互換性のある TPM を装備したデバイスでは、暗号化されたデータの保護を強化するためにスタートアップ時に 2 種類の認証方法を使用できます。 コンピューターの起動時に、認証に TPM のみを使用することも、個人識別番号 (PIN) の入力を要求することもできます。 次の設定を構成します。
 

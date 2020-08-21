@@ -10,12 +10,12 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0665c6378ac81d6f6f254501760647048ce66b0b
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4e43f5a36f2a1bf44959b9645c2fb48a22cc71f1
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81695330"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126775"
 ---
 # <a name="introduction-to-collections-in-configuration-manager"></a>Configuration Manager のコレクションの概要
 
@@ -34,7 +34,7 @@ ms.locfileid: "81695330"
 |操作|例|  
 |---------|-------|  
 |リソースのグループ化|組織の階層に基づいてリソースをグループ化したコレクションを作成できます。<br /><br /> たとえば、"ロンドン本社" Active Directory 組織単位 (OU) にあるすべてのコンピューターのコレクションを作成することができます。 この種類のコレクションを作成する方法の詳細については、[コレクションの作成方法](../../../../core/clients/manage/collections/create-collections.md)に関するページを参照してください。<br /><br /> このコレクションは、たとえば、Endpoint Protection の設定を構成したり、デバイス電源管理設定を構成したり、Configuration Manager クライアントをインストールしたりする場合に使用できます。|  
-|アプリケーションの展開|Microsoft Office 2013 がインストールされていないすべてのコンピューターのコレクションを作成し、このソフトウェアをそのコレクションのすべてのコンピューターにインストールすることができます。<br /><br /> アプリケーションの要件を使用してこのタスクを実行することもできます。 詳細については、[Configuration Manager でアプリケーションを作成する方法](../../../../apps/deploy-use/create-applications.md)に関するページを参照してください。|  
+|アプリケーションの展開|Microsoft 365 Apps がインストールされていないすべてのコンピューターのコレクションを作成し、このソフトウェアをそのコレクションのすべてのコンピューターにインストールすることができます。<br /><br /> アプリケーションの要件を使用してこのタスクを実行することもできます。 詳細については、[Configuration Manager でアプリケーションを作成する方法](../../../../apps/deploy-use/create-applications.md)に関するページを参照してください。|  
 |[クライアント設定の管理](../../../../core/clients/deploy/about-client-settings.md)|Configuration Manager の既定のクライアント設定はすべてのデバイスとすべてのユーザーに適用されますが、デバイスのコレクションまたはユーザーのコレクションに適用されるカスタム クライアント設定を作成することもできます。<br /><br /> たとえば、リモート コントロールを一部のデバイスを除くすべてのデバイスで使用可能にする場合、リモート コントロールを許可するよう既定のクライアント設定を構成し、その後、リモート コントロールを許可しないカスタム クライアント設定を構成し、それらを例外的なクライアントのコレクションに展開することができます。 |  
 |[電源管理](../power/introduction-to-power-management.md)|コレクションごとに特定の電源設定を構成することができます。|  
 |[役割に基づいた管理](../../../../core/servers/deploy/configure/configure-role-based-administration.md)|コレクションを使用して Configuration Manager コンソールの各種機能にアクセスできるユーザーのグループを制御します。|  

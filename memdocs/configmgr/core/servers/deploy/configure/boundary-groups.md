@@ -2,7 +2,7 @@
 title: 境界グループの構成
 titleSuffix: Configuration Manager
 description: 境界グループを利用して、境界と呼ばれる関連するネットワークの場所を論理的に整理することにより、クライアントがサイト システムを容易に検索できるようにします。
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c9567cc441636bbda31262e0857e2fc6484c2af7
-ms.sourcegitcommit: 555cb8102715afbe06c4de5fdbc943608f00b52c
+ms.openlocfilehash: 7a925c29b5d186f3ca6f320741f5ca602b0bbb79
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153413"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128394"
 ---
 # <a name="configure-boundary-groups-for-configuration-manager"></a>Configuration Manager の境界グループの構成
 
@@ -312,7 +312,7 @@ $component.put()
 - クラウド配布ポイント
 - Microsoft Update (バージョン 1902 で追加)
 
-## <a name="software-update-points"></a>ソフトウェアの更新ポイント
+## <a name="software-update-points"></a><a name="bkmk_sup"></a> ソフトウェアの更新ポイント 
 
 クライアントは境界グループを使用して新しいソフトウェア更新ポイントを見つけます。 クライアントで検索できるサーバーを制御するには、ソフトウェアの更新ポイントをそれぞれ異なる境界グループに追加します。
 
@@ -365,6 +365,13 @@ $component.put()
 境界グループの構成を確認します。 この変更に取り掛かる前に、ソフトウェアの更新ポイントが正しい境界グループにあることを確認してください。
 
 詳細については、「[手動でのクライアントの新しいソフトウェアの更新ポイントへの切り替え](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs)」を参照してください。
+
+### <a name="intranet-clients-can-use-a-cmg-software-update-point"></a><a name="bkmk_cmg-sup"></a> イントラネット クライアントで CMG ソフトウェアの更新ポイントを使用できる
+<!--7102873-->
+バージョン 2006 以降では、境界グループに割り当てられ、ソフトウェアの更新ポイントで [ **[Configuration Manager のクラウド管理ゲートウェイ トラフィックを許可する]** オプションが有効](../../../clients/manage/cmg/setup-cloud-management-gateway.md#bkmk_role)になっている場合、イントラネット クライアントは CMG ソフトウェアの更新ポイントにアクセスできます。 次のシナリオにおいて、イントラネット デバイスによる CMG ソフトウェアの更新ポイントに対するスキャンを許可することができます。
+
+- インターネットのコンピューターが VPN に接続されると、インターネット経由で CMG ソフトウェアの更新ポイントに対するスキャンが続行されます。
+- 境界グループの唯一のソフトウェアの更新ポイントが CMG ソフトウェアの更新ポイントである場合は、すべてのイントラネット デバイスとインターネット デバイスでそれに対するスキャンが実行されます。
 
 ## <a name="management-points"></a>管理ポイント
 

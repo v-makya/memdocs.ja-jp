@@ -2,7 +2,7 @@
 title: Windows 10 のサポート
 titleSuffix: Configuration Manager
 description: Configuration Manager でクライアントとして、または OSD 用にサポートされている Windows 10 のバージョンについて説明します
-ms.date: 05/27/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a67a22f788af39dacb9f3a39e91e0f28444c6988
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 6a30fc55fb4129b8ea3493b76fd6871a2a62f881
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83879072"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126741"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager での Windows 10 のサポート  
 
@@ -26,7 +26,7 @@ ms.locfileid: "83879072"
 - [Configuration Manager クライアントとしての Windows 10](#windows-10-as-a-client)
 - [Windows 10 用のアセスメント & デプロイメント キット (ADK)](#windows-10-adk)
 
-> [!Tip]
+> [!TIP]
 > クライアントとしての Windows Server のビルドは、関連する Windows 10 バージョンと同じものがサポートされています。 たとえば、Windows Server 2016 は Windows 10 LTSB 2016 と同じビルド バージョンで、Windows Server バージョン 1803 は Windows 10 バージョン 1803 と同じビルド バージョンです。
 >
 > サイト システムとしての Windows Server の詳細については、「[Configuration Manager サイト システム サーバーでサポートされるオペレーティング システム](supported-operating-systems-for-site-system-servers.md#bkmk_core)」を参照してください。
@@ -39,7 +39,7 @@ Configuration Manager バージョンは、[そのバージョンのサポート
 
 - Configuration Manager の現在のブランチの最新バージョンでは、セキュリティ更新プログラムと重要な更新プログラムの両方が受信されます。これらには、Windows 10 のバージョンに関する問題の修正プログラムが含まれる場合があります。 Microsoft で Configuration Manager の現在のブランチの新しいバージョンがリリースされた際、以前のバージョンでは、セキュリティ更新プログラムのみが受信されます。 詳細については、[Configuration Manager の Current Branch バージョンのサポート](../../servers/manage/current-branch-versions-supported.md)に関するページをご覧ください。  
 
-    > [!Note]  
+    > [!NOTE]
     > Windows 10 を最新状態に保つ最良の方法は、Configuration Manager を最新状態に保つことです。 詳細については、「[Configuration Manager とサービスとしての Windows](../../understand/configuration-manager-and-windows-as-service.md)」を参照してください。  
 
 - この情報は、「[クライアントとデバイスのサポートされるオペレーティング システム](supported-operating-systems-for-clients-and-devices.md)」の補足です。  
@@ -48,19 +48,20 @@ Configuration Manager バージョンは、[そのバージョンのサポート
 
 次の表は、さまざまなバージョンの Configuration Manager でクライアントとして使用できる Windows 10 のバージョン一覧です。
 
-| Windows 10 バージョン | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 |
-|---------------------|-----|-----|-----|-----|-----|
-| **Enterprise 2015 LTSB** <!--10/14/2025-->   | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) |
-| **Enterprise 2016 LTSB** <!--10/13/2026-->   | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) |
-| **Enterprise LTSC 2019** <!--01/09/2029-->   | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) |
-| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) |
-| **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) |
-| **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) |
-| **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![サポートされていません](media/Red_X.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) |
-| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) |
-| **2004**<br>(10.0.19041)   <!--??/??/2021-->   | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポート](media/green_check.png) |
+| Windows 10 バージョン | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 | ConfigMgr 2006 |
+|---------------------|-----|-----|-----|-----|-----|-----|
+| **1709**<br>(10.0.16299)   <!--10/13/2020-->   | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) |
+| **1803**<br>(10.0.17134)   <!--11/10/2020-->   | ![サポート](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) |
+| **1809**<br>(10.0.17763)   <!--05/11/2021-->   | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) |
+| **1903**<br>(10.0.18362)   <!--12/08/2020-->   | ![サポートされていません](media/Red_X.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) |
+| **1909**<br>(10.0.18363)   <!--05/10/2022-->   | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポート](media/green_check.png) |
+| **2004**<br>(10.0.19041)   <!--12/14/2021-->   | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) |
 
-<!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
+Configuration Manager Current Branch の現在サポートされているすべてのバージョンでは、次の Windows 10 LTSB/LTSC エディションがサポートされています。
+
+- **Enterprise 2015 LTSB** <!--10/14/2025-->
+- **Enterprise 2016 LTSB** <!--10/13/2026-->
+- **Enterprise LTSC 2019** <!--01/09/2029-->
 
 Windows ライフサイクルの詳細については、「[Windows ライフサイクルのファクト シート](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)」を参照してください。
 
@@ -107,13 +108,13 @@ Configuration Manager を使用してオペレーティング システムを展
 
 次の表は、さまざまなバージョンの Configuration Manager で使用できる Windows 10 ADK のバージョン一覧です。
 
-| Windows 10 ADK バージョン  | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 |
-|--------------------|-----|-----|-----|-----|-----|
-| **1709**<br>(10.1.16299) | ![サポートされていません](media/Red_X.png)   | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) |
-| **1803**<br>(10.1.17134) | ![下位互換性あり](media/blue_compat.png) | ![下位互換性あり](media/blue_compat.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) |
-| **1809**<br>(10.1.17763) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![下位互換性あり](media/blue_compat.png) | ![下位互換性あり](media/blue_compat.png) | ![サポートされていません](media/Red_X.png) |
-| **1903**<br>(10.1.18362) | ![サポートされていません](media/Red_X.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) |
-| **2004**<br>(10.1.19041) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポート](media/green_check.png) |
+| Windows 10 ADK バージョン  | ConfigMgr 1810 | ConfigMgr 1902 | ConfigMgr 1906 | ConfigMgr 1910 | ConfigMgr 2002 | ConfigMgr 2006 |
+|--------------------|-----|-----|-----|-----|-----|-----|
+| **1709**<br>(10.1.16299) | ![サポートされていません](media/Red_X.png)   | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) |
+| **1803**<br>(10.1.17134) | ![下位互換性あり](media/blue_compat.png) | ![下位互換性あり](media/blue_compat.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) |
+| **1809**<br>(10.1.17763) | ![サポート](media/green_check.png) | ![サポート](media/green_check.png) | ![下位互換性あり](media/blue_compat.png) | ![下位互換性あり](media/blue_compat.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) |
+| **1903**<br>(10.1.18362) | ![サポートされていません](media/Red_X.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポート](media/green_check.png) | ![下位互換性あり](media/blue_compat.png) |
+| **2004**<br>(10.1.19041) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされています](media/green_check.png) | ![サポート](media/green_check.png) |
 
 |キー|
 |--|

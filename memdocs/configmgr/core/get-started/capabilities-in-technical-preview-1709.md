@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: bedb515c8446e13189fb84644bc0ce7563cc1574
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: b3cb491ff3bfb10935566c33e321542435d2e0af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078772"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692912"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-configuration-manager"></a>Configuration Manager の Technical Preview 1709 の機能
 
@@ -113,22 +113,22 @@ ms.locfileid: "82078772"
 コンプライアンス ポリシーは、デバイスが条件付きアクセス ポリシーによって "準拠している" と見なされるために遵守する必要がある規則および設定を定義します。 コンプライアンス ポリシーを使用して、条件付きアクセスとは別に、デバイスのコンプライアンスに関する問題を監視および修復することもできます。
 
 #### <a name="windows-update-for-business-policies"></a>Windows Update for Business ポリシー
-Windows Update for Business ポリシーでは、Windows Update for Business によって直接管理されている Windows 10 デバイスの Windows 10 機能更新プログラムまたは品質更新プログラムに対し、遅延ポリシーを構成できます。 遅延については、「[Windows Update for Business 遅延ポリシーの構成](https://docs.microsoft.com/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)」をご覧ください。  
+Windows Update for Business ポリシーでは、Windows Update for Business によって直接管理されている Windows 10 デバイスの Windows 10 機能更新プログラムまたは品質更新プログラムに対し、遅延ポリシーを構成できます。 遅延については、「[Windows Update for Business 遅延ポリシーの構成](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)」をご覧ください。  
 
 ### <a name="remote-actions-available-in-intune-on-azure-for-co-managed-devices"></a>共同管理対象デバイスに対して Azure の Intune で利用できるリモート操作
 Windows 10 デバイスの共同管理を有効にすると、Azure の Intune から次のリモート操作を実行できます。  
-- [出荷時の設定に戻す](https://docs.microsoft.com/intune/devices-wipe#wipe)
-- [選択的ワイプ](https://docs.microsoft.com/intune/apps-selective-wipe)
-- [デバイスの削除](https://docs.microsoft.com/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
-- [デバイスの再起動](https://docs.microsoft.com/intune/device-restart)
-- [新たに開始](https://docs.microsoft.com/intune/device-fresh-start)
+- [出荷時の設定に戻す](/intune/devices-wipe#wipe)
+- [選択的ワイプ](/intune/apps-selective-wipe)
+- [デバイスの削除](/intune/devices-wipe#delete-devices-from-the-azure-active-directory-portal)
+- [デバイスの再起動](/intune/device-restart)
+- [新たに開始](/intune/device-fresh-start)
 
 ### <a name="prepare-intune-for-co-management"></a>共同管理用に Intune を準備する
 ワークロードを Configuration Manager から Intune に切り替える前に、デバイスが引き続き確実に保護されるように、Intune で必要なプロファイルとポリシーを作成します。
 Configuration Manager のオブジェクトに基づいて、Intune のオブジェクトを作成できます。 または、現在の戦略がレガシ管理または従来の管理に基づいている場合は、最新の管理に必要なポリシーとプロファイルの再考が必要な場合があります。 次のリソースを使って、ポリシーとプロファイルを作成します。    
-<!-- - [Device compliance policies](https://docs.microsoft.com/intune/compliance-policy-create-windows)  -->
-- [Windows Update for Business ポリシー](https://docs.microsoft.com/intune/windows-update-for-business-configure)  
-- [デバイス構成プロファイル](https://docs.microsoft.com/intune/device-profile-create)  
+<!-- - [Device compliance policies](/intune/compliance-policy-create-windows)  -->
+- [Windows Update for Business ポリシー](/intune/windows-update-for-business-configure)  
+- [デバイス構成プロファイル](/intune/device-profile-create)  
 
 ### <a name="architectural-overview-for-co-management"></a>共同管理のアーキテクチャの概要
 次の図では、共同管理のアーキテクチャの概要と、既存の構成および Intune インフラストラクチャに共同管理がどのように組み込まれるのかを示します。
@@ -185,17 +185,17 @@ ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualA
 
 #### <a name="new-windows-10-devices"></a>新しい Windows 10 デバイス
 新しい Windows 10 デバイスの場合は、AutoPilot サービスを使って Out of Box Experience を構成できます。これには、AD および Azure AD へのデバイスの参加と、Intune へのデバイスの登録が含まれます。 その後、Intune にアプリを作成して Configuration Manager クライアントを展開します。  
-1. 新しい Windows 10 デバイス用に AutoPilot を有効にします。 詳しくは、「[Windows AutoPilot の概要](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot)」をご覧ください。  
-2. Azure AD で自動登録を構成し、デバイスが Intune に自動的に登録されるようにします。 詳しくは、「 [Windows デバイスの登録](https://docs.microsoft.com/intune/windows-enroll)」をご覧ください。
-3. Configuration Manager クライアント パッケージで Intune にアプリを作成し、共同管理する Windows 10 デバイスにアプリを展開します。 [Azure AD を使ってインターネットからクライアントをインストールする](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure)手順の間に、[コマンド ラインを使って Configuration Manager クライアントをインストール](#command-line-to-install-configuration-manager-client)します。   
+1. 新しい Windows 10 デバイス用に AutoPilot を有効にします。 詳しくは、「[Windows AutoPilot の概要](/windows/deployment/windows-10-auto-pilot)」をご覧ください。  
+2. Azure AD で自動登録を構成し、デバイスが Intune に自動的に登録されるようにします。 詳しくは、「 [Windows デバイスの登録](/intune/windows-enroll)」をご覧ください。
+3. Configuration Manager クライアント パッケージで Intune にアプリを作成し、共同管理する Windows 10 デバイスにアプリを展開します。 [Azure AD を使ってインターネットからクライアントをインストールする](/sccm/core/clients/deploy/deploy-clients-cmg-azure)手順の間に、[コマンド ラインを使って Configuration Manager クライアントをインストール](#command-line-to-install-configuration-manager-client)します。   
 
 #### <a name="windows-10-devices-not-enrolled-in-intune-or-a-configuration-manager-client"></a>Intune に登録されていないか、Configuration Manager クライアントがインストールされている Windows 10 デバイス
 Intune に登録されていないか、Configuration Manager クライアントがインストールされている Windows 10 デバイスの場合は、自動登録を使って Intune にデバイスを登録できます。 その後、Intune にアプリを作成して Configuration Manager クライアントを展開します。
-1. Azure AD で自動登録を構成し、デバイスが Intune に自動的に登録されるようにします。 詳しくは、「 [Windows デバイスの登録](https://docs.microsoft.com/intune/windows-enroll)」をご覧ください。  
-2. Configuration Manager クライアント パッケージで Intune にアプリを作成し、共同管理する Windows 10 デバイスにアプリを展開します。 [Azure AD を使ってインターネットからクライアントをインストールする](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure)手順の間に、[コマンド ラインを使って Configuration Manager クライアントをインストール](#command-line-to-install-configuration-manager-client)します。
+1. Azure AD で自動登録を構成し、デバイスが Intune に自動的に登録されるようにします。 詳しくは、「 [Windows デバイスの登録](/intune/windows-enroll)」をご覧ください。  
+2. Configuration Manager クライアント パッケージで Intune にアプリを作成し、共同管理する Windows 10 デバイスにアプリを展開します。 [Azure AD を使ってインターネットからクライアントをインストールする](/sccm/core/clients/deploy/deploy-clients-cmg-azure)手順の間に、[コマンド ラインを使って Configuration Manager クライアントをインストール](#command-line-to-install-configuration-manager-client)します。
 
 #### <a name="windows-10-devices-enrolled-in-intune"></a>Intune に登録されている Windows 10 デバイス
-Intune に既に登録されている Windows 10 デバイスの場合は、Intune でアプリを作成して Configuration Manager クライアントを展開します。 [Azure AD を使ってインターネットからクライアントをインストールする](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-cmg-azure)手順の間に、[コマンド ラインを使って Configuration Manager クライアントをインストール](#command-line-to-install-configuration-manager-client)します。  
+Intune に既に登録されている Windows 10 デバイスの場合は、Intune でアプリを作成して Configuration Manager クライアントを展開します。 [Azure AD を使ってインターネットからクライアントをインストールする](/sccm/core/clients/deploy/deploy-clients-cmg-azure)手順の間に、[コマンド ラインを使って Configuration Manager クライアントをインストール](#command-line-to-install-configuration-manager-client)します。  
 
 ### <a name="switch-configuration-manager-workloads-to-intune"></a>Configuration Manager のワークロードを Intune に切り替える
 前のセクションでは、共同管理のために Windows 10 デバイスを準備しました。 これらのデバイスは AD と Azure AD に結合されると同時に Intune に登録され、Configuration Manager クライアントがインストールされています。 Windows 10 デバイスが AD に参加し、Configuration Manager クライアントがインストールされていても、まだ Azure AD に参加していないか、Intune に登録されていない場合があります。 次の手順では、共同管理を有効にし、残りの Windows 10 デバイス (Intune に登録されていない Configuration Manager クライアント) を共同管理用に準備して、特定の Configuration Manager ワークロードの Intune への切り替えを開始できるようにします。
@@ -219,4 +219,4 @@ Select the co-management object, and then on the Home tab, click **Properties**.
 After you have enabled co-management, you can monitor which devices are managed by Configuration Manager and which are managed by Intune. You can also see which Configuration Manager workloads are managed by which product.-->
 
 ## <a name="see-also"></a>関連項目
-Technical Preview ブランチのインストールまたは更新については、「[Configuration Manager の Technical Preview](technical-preview.md)」をご覧ください。 
+Technical Preview ブランチのインストールまたは更新については、「[Configuration Manager の Technical Preview](technical-preview.md)」をご覧ください。

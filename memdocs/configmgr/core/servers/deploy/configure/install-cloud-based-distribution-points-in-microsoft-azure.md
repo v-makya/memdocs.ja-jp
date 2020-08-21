@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35379aed71544a25a98ec4dfa421be70c1bae851
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 4a1e19025af82c9beeed8c227871df94b4674791
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83427705"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692708"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Configuration Manager 用にクラウド配布ポイントをインストールする
 
@@ -91,7 +91,7 @@ ms.locfileid: "83427705"
 
 - サイト サーバーにオンプレミス配布ポイント サイト システム ロールが与えられている場合、そのロールのプロパティのオプションを構成し、**BranchCache を有効にして構成**します。 詳細については、[配布ポイントの構成](install-and-configure-distribution-points.md#bkmk_config-general)に関するページを参照してください。
 
-- サイト サーバーに配布ポイント ロールがない場合、Windows に BranchCache 機能をインストールします。 詳細については、[BranchCache 機能のインストール](https://docs.microsoft.com/windows-server/networking/branchcache/deploy/install-the-branchcache-feature)に関するページを参照してください。
+- サイト サーバーに配布ポイント ロールがない場合、Windows に BranchCache 機能をインストールします。 詳細については、[BranchCache 機能のインストール](/windows-server/networking/branchcache/deploy/install-the-branchcache-feature)に関するページを参照してください。
 
 既にクラウド配布ポイントにコンテンツを配布し、BranchCache を有効にすることにしている場合、最初にこの機能をインストールします。 その後もう一度、クラウド配布ポイントにコンテンツを配布します。
 
@@ -234,7 +234,7 @@ Configuration Manager では、Azure サービスを定期的にチェックし�
 インストール中、クラウド配布ポイント別のしきい値を指定するか、クラウド配布ポイントのプロパティの **[アラート]** タブを使用します。  
 
 > [!NOTE]  
-> クラウド配布ポイントのアラートは、Azure からの使用量の統計情報によって異なります。また、アラートが利用できるようになるまでに、最大 24 時間かかる場合があります。 Azure の Storage Analytics に関する詳細については、「[Storage Analytics](https://docs.microsoft.com/rest/api/storageservices/storage-analytics)」を参照してください。  
+> クラウド配布ポイントのアラートは、Azure からの使用量の統計情報によって異なります。また、アラートが利用できるようになるまでに、最大 24 時間かかる場合があります。 Azure の Storage Analytics に関する詳細については、「[Storage Analytics](/rest/api/storageservices/storage-analytics)」を参照してください。  
 
 クラウド配布ポイントを監視するプライマリ サイトにより 1 時間ごとに Azure からトランザクション データがダウンロードされます。 このトランザクション データがサイト サーバーの `CloudDP-<ServiceName>.log` ファイルに保存されます。 Configuration Manager によって、この情報がストレージと比較評価され、各クラウド配布ポイントにクォータが転送されます。 警告アラートまたは重大なアラートに指定されている量にデータ転送が達した場合または超えた場合、Configuration Manager が該当するアラートを生成します。  
 
@@ -345,7 +345,7 @@ Select-AzureSubscription $azureSubscriptionName
 Set-AzureServiceDiagnosticsExtension -StorageAccountName $storage_name -StorageAccountKey $key -DiagnosticsConfigurationPath $public_config –ServiceName $service_name -Slot 'Production' -Verbose
 ```
 
-次のサンプルは **diagnostics.wadcfgx** ファイルのレイです。上記の PowerShell スクリプトの **public_config** 変数で参照されています。 詳細については、[Azure Diagnostics 拡張機能の構成スキーマ](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics-schema)に関するページを参照してください。  
+次のサンプルは **diagnostics.wadcfgx** ファイルのレイです。上記の PowerShell スクリプトの **public_config** 変数で参照されています。 詳細については、[Azure Diagnostics 拡張機能の構成スキーマ](/azure/monitoring-and-diagnostics/azure-diagnostics-schema)に関するページを参照してください。  
 
 ``` XML
 <?xml version="1.0" encoding="utf-8"?>

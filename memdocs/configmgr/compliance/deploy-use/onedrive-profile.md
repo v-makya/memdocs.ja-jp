@@ -10,12 +10,12 @@ ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 47d44c96e0ae63504278c58a5838c54648665505
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4d13d9dfd75abb656a765ce8c91ce6f177636cd3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692310"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127173"
 ---
 # <a name="onedrive-for-business-profiles"></a>OneDrive for Business プロファイル
 
@@ -23,7 +23,7 @@ Configuration Manager バージョン 1902 以降、 Windows の既知のフォ�
 
 ## <a name="prerequisites"></a>[前提条件]
 
-- [Office 365 テナント ID を確認する](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
+- [Microsoft 365 テナント ID を検索します](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)  
 
 - OneDrive 同期クライアント バージョン 18.111.0603.0004 以降を展開します。 詳細については、「[Configuration Manager を使用した OneDrive アプリの展開](https://docs.microsoft.com/onedrive/deploy-on-windows)」を参照してください。  
 
@@ -44,7 +44,7 @@ Configuration Manager を使用して、Windows の既知のフォルダーを O
 
 5. **[設定]** ページで次を実行します。
 
-    1. Office 365 テナント ID を指定します。  
+    1. ご自分の Microsoft 365 テナント ID を指定します。  
 
     2. 次のオプションのいずれかを選択して、既知のフォルダーを OneDrive に移動します。  
 

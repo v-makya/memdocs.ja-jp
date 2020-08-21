@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39d6bf22cb24492a0f4e3f59313184ce522b5d09
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: e15f8511464b6d8b8486bb874a256df1c375e31b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455006"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694578"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>認証のため Azure AD を使用して、Configuration Manager の Windows 10 クライアントをインストールして割り当てる
 
@@ -40,7 +40,7 @@ Azure AD 認証を使用して Windows 10 デバイスで Configuration Manager 
 
   - サインインしたユーザーは Azure AD の ID である必要があります。
 
-  - ユーザーがフェデレーション ID または同期 ID である場合、Configuration Manager の [Active Directory ユーザー探索](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)と [Azure AD ユーザー探索](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)の両方を構成する必要があります。 ハイブリッド ID の詳細については、「[ハイブリッド ID 導入戦略の定義](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy)」を参照してください。<!--497750-->
+  - ユーザーがフェデレーション ID または同期 ID である場合、Configuration Manager の [Active Directory ユーザー探索](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)と [Azure AD ユーザー探索](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)の両方を構成する必要があります。 ハイブリッド ID の詳細については、「[ハイブリッド ID 導入戦略の定義](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy)」を参照してください。<!--497750-->
 
 - 管理ポイント サイト システムの役割に関する[既存の前提条件](../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012MPpreq)に加え、このサーバーでは **ASP.NET 4.5** も有効にします。 ASP.NET 4.5 を有効にするときに自動的に選択される他のすべてのオプションを含めます。  
 
@@ -70,13 +70,13 @@ Azure AD 認証を使用して Windows 10 デバイスで Configuration Manager 
     - **[新しい Windows 10 ドメインに参加しているデバイスを自動的に Azure Active Directory に登録する]** : **[はい]** または **[いいえ]** に設定します。 既定の設定は **[はい]** です。 この動作は、Windows 10 バージョン 1709 の既定でもあります。
 
         > [!TIP]
-        > ハイブリッド参加済みデバイスは、オンプレミスの Active Directory ドメインに参加し、Azure AD に登録されます。 詳細については、「[ハイブリッド Azure AD 参加済みデバイス](https://docs.microsoft.com/azure/active-directory/devices/concept-azure-ad-join-hybrid)」を参照してください。<!-- MEMDocs#325 -->
+        > ハイブリッド参加済みデバイスは、オンプレミスの Active Directory ドメインに参加し、Azure AD に登録されます。 詳細については、「[ハイブリッド Azure AD 参加済みデバイス](/azure/active-directory/devices/concept-azure-ad-join-hybrid)」を参照してください。<!-- MEMDocs#325 -->
 
     - **クライアントでクラウド管理ゲートウェイを使用できるようにする** **[はい]** (既定値)、または **[いいえ]** に設定します。  
 
 2. クライアント設定を必要なデバイスのコレクションに展開します。 ユーザー コレクションには、これらの設定を展開しないでください。
 
-デバイスがハイブリッド参加済みであることを確認するには、コマンド プロンプトで `dsregcmd.exe /status` を実行します。 デバイスが Azure AD 参加済みまたはハイブリッド参加済みである場合、結果の **[AzureAdjoined]** フィールドに **[YES]** と表示されます。 詳細については、[dsregcmd コマンド - デバイスの状態](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd)に関するページを参照してください。
+デバイスがハイブリッド参加済みであることを確認するには、コマンド プロンプトで `dsregcmd.exe /status` を実行します。 デバイスが Azure AD 参加済みまたはハイブリッド参加済みである場合、結果の **[AzureAdjoined]** フィールドに **[YES]** と表示されます。 詳細については、[dsregcmd コマンド - デバイスの状態](/azure/active-directory/devices/troubleshoot-device-dsregcmd)に関するページを参照してください。
 
 ## <a name="install-and-register-the-client-using-azure-ad-identity"></a>Azure AD の ID を使用してクライアントをインストールして登録する
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ae2846c2a5f7fea86287a05c8cc8f6013d660df6
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128952"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692640"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1806 の新機能
 
@@ -280,9 +280,9 @@ Security Content Automation Protocol (SCAP) コンテンツをコンプライア
 
 詳細については、以下の記事を参照してください。  
 
-- [段階的な展開の作成](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [段階的な展開の作成](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
-- [段階的な展開の管理と監視](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [段階的な展開の管理と監視](../../../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/mem/configmgr/apps/toc.json&bc=/mem/configmgr/apps/breadcrumb/toc.json)  
 
 
 ### <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>デバイス上のすべてのユーザーに対して Windows アプリ パッケージをプロビジョニングする
@@ -308,7 +308,7 @@ Configuration Manager は、新しい Windows 10 アプリ パッケージ (.msi
 
 ### <a name="uninstall-application-on-approval-revocation"></a>承認を取り消したときにアプリケーションをアンインストールする
 <!--1357891-->
-アプリケーションの承認を取り消したときの動作が変更されました。 アプリケーションの要求を拒否すると、クライアントによってユーザーのデバイスからアプリケーションがアンインストールされます。 この動作には、[オプション機能](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_options)の **[デバイスごとにユーザーのアプリケーション要求を承認します]** の有効化が必要です。 
+アプリケーションの承認を取り消したときの動作が変更されました。 アプリケーションの要求を拒否すると、クライアントによってユーザーのデバイスからアプリケーションがアンインストールされます。 この動作には、[オプション機能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)の **[デバイスごとにユーザーのアプリケーション要求を承認します]** の有効化が必要です。 
 
 詳細については、「[アプリケーションの展開](../../../apps/deploy-use/deploy-applications.md#bkmk_approval)」をご覧ください。
 
@@ -348,7 +348,7 @@ Package Conversion Manager は統合ツールとなりました。これを使�
 
 ### <a name="improvements-to-windows-10-in-place-upgrade-task-sequence"></a>Windows 10 一括アップグレード タスク シーケンスの機能強化
 <!--1358500-->
-Windows 10 の一括アップグレード用の既定のタスク シーケンス テンプレートに、アップグレード プロセスが失敗した場合に追加する推奨アクションを備えた、新しい別のグループが含まれるようになりました。 これらのアクションによって、トラブルシューティングが容易になりました。 このようなツールの 1 つが、Windows の [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag) です。 これは、Windows 10 がアップグレードに失敗した詳細な理由を取得する、スタンドアロンの診断ツールです。 
+Windows 10 の一括アップグレード用の既定のタスク シーケンス テンプレートに、アップグレード プロセスが失敗した場合に追加する推奨アクションを備えた、新しい別のグループが含まれるようになりました。 これらのアクションによって、トラブルシューティングが容易になりました。 このようなツールの 1 つが、Windows の [SetupDiag](/windows/deployment/upgrade/setupdiag) です。 これは、Windows 10 がアップグレードに失敗した詳細な理由を取得する、スタンドアロンの診断ツールです。 
 
 詳細については、[OS をアップグレードするタスク シーケンスの作成](../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md#recommended-task-sequence-steps-on-failure)に関するページを参照してください。
 
@@ -584,7 +584,7 @@ WSUS クリーンアップ ウィザードでは、ソフトウェアの更新�
 
 このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Summary of changes in Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701)」(Configuration Manager Current Branch バージョン 1806 での変更の概要) をご覧ください。
 
-Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell 1806 リリース ノート](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps)を参照してください。
+Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell 1806 リリース ノート](/powershell/sccm/1806_release_notes?view=sccm-ps)を参照してください。
 
 2018 年 10 月 24 日以降、コンソールで、[Configuration Manager Current Branch バージョン 1806 の更新プログラムのロールアップ](https://support.microsoft.com/help/4462978) (4462978) が利用できるようになりました。
 

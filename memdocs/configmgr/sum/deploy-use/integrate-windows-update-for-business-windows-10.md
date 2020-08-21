@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 8bfd535c93cb9f1dcfc42705f3cce61874dfe226
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8ea95a04977038514c00f0199df42c8070e813c3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709320"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127656"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Windows Update for Business との統合
 
@@ -38,7 +38,7 @@ Windows Update for Business (WUfB) を使用すると、組織内の Windows 10 
 
 - 更新プログラムのコンプライアンス状態に基づく Defender の全体的な Endpoint Protection のレポートでは、スキャン データの不足により正確な結果が返されません。  
 
-- Configuration Manager では、Office、IE、および Visual Studio などの Microsoft 更新プログラムを、WUfB に接続して更新プログラムを受信するクライアントに展開できません。  
+- Configuration Manager では、Microsoft 365 Apps、IE、および Visual Studio などの Microsoft 更新プログラムを、WUfB に接続して更新プログラムを受信するクライアントに展開できません。  
 
 - Configuration Manager では、WSUS に発行され、かつ Configuration Manager を介して管理されるサード パーティの更新プログラムを、WUfB に接続して更新プログラムを受信するクライアントに引き続き展開できます。 WUfB に接続しているクライアントにサード パーティ製の更新プログラムをインストールしない場合は、[[クライアントのソフトウェア更新プログラムを有効にする]](../../core/clients/deploy/about-client-settings.md#software-updates) というクライアント設定を無効にします。
 

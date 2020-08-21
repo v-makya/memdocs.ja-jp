@@ -5,18 +5,18 @@ description: Configuration Manager バージョン 1610 で収集される診断
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 87049bb9799ba5764a3cdd5a14fbf622e7056f3c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 02b1eb010cc874e75b733b567ce4f41e59eab82e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81698140"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128799"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-configuration-manager"></a>Configuration Manager バージョン 1610 で収集される診断結果および使用状況データのレベル
 
@@ -365,7 +365,7 @@ Configuration Manager バージョン 1610 では、このレベルには次の�
 
 - **その他**
 
-    - Wake On Lan (WOL) サイトの数
+    - Wake on LAN (WOL) サイトの数
 
     - ***[新規]*** 使用状況とパフォーマンスの統計情報のレポート  
 

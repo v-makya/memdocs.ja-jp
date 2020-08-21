@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 52c2b70d2b094d5a89d80aafa61f1db67a53816f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b488e0953648b42baa59dc347b0bc942bac291fe
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987715"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692572"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Configuration Manager でクラウド配布ポイントを使用する
 
@@ -89,7 +89,7 @@ ms.locfileid: "83987715"
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 
 <!--1322209-->
-バージョン 1806 以降では、**Azure Resource Manager** の展開を使用して、クラウド配布ポイントを作成します。 [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager でクラウド配布ポイントを展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
+バージョン 1806 以降では、**Azure Resource Manager** の展開を使用して、クラウド配布ポイントを作成します。 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager でクラウド配布ポイントを展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
 
 > [!Note]  
 > この機能では、Azure クラウド サービス プロバイダー (CSP) のサポートは有効になりません。 Azure Resource Manager でのクラウド配布ポイントの展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、「[Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)」(Azure CSP で使用可能な Azure サービス) を参照してください。  
@@ -244,9 +244,9 @@ Configuration Manager には、コストの管理とデータ アクセスの監
 
 - クラウド配布ポイントは、デプロイ モデルに応じて、次の標準的な BLOB ストレージを使用します。  
 
-    - Azure Resource Manager の展開では、Azure ローカル冗長ストレージ (LRS) を使用します。 この変更により、ストレージ アカウントのコストが削減されます。 クラシック デプロイでは、GRS の追加機能を使用していませんでした。 詳細については、[ローカル冗長ストレージ](https://docs.microsoft.com/azure/storage/common/storage-redundancy-lrs)に関するページを参照してください。  
+    - Azure Resource Manager の展開では、Azure ローカル冗長ストレージ (LRS) を使用します。 この変更により、ストレージ アカウントのコストが削減されます。 クラシック デプロイでは、GRS の追加機能を使用していませんでした。 詳細については、[ローカル冗長ストレージ](/azure/storage/common/storage-redundancy-lrs)に関するページを参照してください。  
 
-    - Configuration Manager バージョン 1810 以前を使用した従来の展開では、Azure geo 冗長ストレージ (GRS) を使用します。 詳細については、[geo 冗長ストレージ](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs)に関するページを参照してください。  
+    - Configuration Manager バージョン 1810 以前を使用した従来の展開では、Azure geo 冗長ストレージ (GRS) を使用します。 詳細については、[geo 冗長ストレージ](/azure/storage/common/storage-redundancy-grs)に関するページを参照してください。  
 
 #### <a name="other-costs"></a>その他のコスト
 
@@ -375,11 +375,11 @@ Configuration Manager バージョン 1810 以前で、Azure の従来の展開�
 
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>Azure 仮想マシンを維持する必要がありますか?
 
-維持する必要はありません。 クラウド配布ポイントの設計では、PaaS (サービスとしてのプラットフォーム) として Azure が使用されます。 Configuration Manager は、指定されたサブスクリプションを使用して、必要な VM、ストレージ、ネットワークを作成します。 Azure は仮想マシンをセキュリティで保護し、更新します。 IaaS (サービスとしてのインフラストラクチャ) と同様に、これらの VM はオンプレミス環境には含まれません。 クラウド配布ポイントは、クラウドに Configuration Manager 環境を拡張する PaaS です。 詳細については、「[PaaS クラウド サービス モデルのセキュリティ上の利点](https://docs.microsoft.com/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model)」を参照してください。  
+維持する必要はありません。 クラウド配布ポイントの設計では、PaaS (サービスとしてのプラットフォーム) として Azure が使用されます。 Configuration Manager は、指定されたサブスクリプションを使用して、必要な VM、ストレージ、ネットワークを作成します。 Azure は仮想マシンをセキュリティで保護し、更新します。 IaaS (サービスとしてのインフラストラクチャ) と同様に、これらの VM はオンプレミス環境には含まれません。 クラウド配布ポイントは、クラウドに Configuration Manager 環境を拡張する PaaS です。 詳細については、「[PaaS クラウド サービス モデルのセキュリティ上の利点](/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model)」を参照してください。  
 
 ### <a name="does-the-cloud-distribution-point-use-azure-cdn"></a>クラウド配布ポイントでは、Azure CDN が使用されますか?
 
-Azure Content Delivery Network (CDN) は、世界各地に戦略的に配置された物理ノードにコンテンツをキャッシュすることで、高帯域幅コンテンツを迅速に配信するためのグローバル ソリューションです。 詳細については、[Azure CDN の概要](https://docs.microsoft.com/azure/cdn/cdn-overview)ページを参照してください。
+Azure Content Delivery Network (CDN) は、世界各地に戦略的に配置された物理ノードにコンテンツをキャッシュすることで、高帯域幅コンテンツを迅速に配信するためのグローバル ソリューションです。 詳細については、[Azure CDN の概要](/azure/cdn/cdn-overview)ページを参照してください。
 
 Configuration Manager のクラウド配布ポイントでは現在、Azure CDN をサポートしていません。
 

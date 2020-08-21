@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 1aae76845d18d8191b6f773df5491d3a144940c1
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: d28638cdf332adbb1d57526179222bb96d6d5c92
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694550"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128071"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Configuration Manager のレポートの概要
 
@@ -124,7 +124,7 @@ Reporting Service ベースのレポートの場合、Configuration Manager で�
 
  レポート ビルダーのインストールにより、20 言語のサポートが追加されます。 レポート ビルダーを実行すると、ローカル コンピューターの OS の言語でデータが表示されます。 レポート ビルダーがその言語をサポートしていない場合、データは英語で表示されます。 レポート ビルダーは SQL Server Reporting Services の全機能をサポートしており、以下の機能が含まれています。
 
-- Microsoft Office のような外観の直観的なレポート オーサリング環境  
+- Microsoft 365 Apps のような外観の直観的なレポート作成環境の提供  
 
 - SQL Server レポート定義言語 (RDL) の柔軟なレポート レイアウト  
 

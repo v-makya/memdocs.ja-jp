@@ -10,12 +10,12 @@ ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 07c5488b0ea28f37f7f8a07b532c67fb64aad810
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2eea75f39430f1cc38ff994280425ca918eaa432
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694010"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694561"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>Configuration Manager でクライアントを Windows コンピューターに展開する方法
 
@@ -63,7 +63,7 @@ ms.locfileid: "81694010"
     > [!NOTE]  
     > 構成マネージャー クライアントをインストールするためにクライアント プッシュが使われた場合、サイト サーバーによってクライアントへのリモート接続が作成されます。 バージョン 1806 以降のサイトでは、接続を確立する前の NTLM へのフォールバックを許可しないことによって、Kerberos の相互認証を要求できます。 この機能強化は、サーバーとクライアント間の通信をセキュリティで保護するのに役立ちます。  
     >
-    > セキュリティ ポリシーによっては、お客様の環境が既に以前の NTLM 認証よりも Kerberos を優先する、または要求するものになっている場合があります。 これらの認証プロトコルに関するセキュリティの考慮事項について詳しくは、[NTLM を制限する Windows セキュリティ ポリシーの設定](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations)に関するページをご覧ください。  
+    > セキュリティ ポリシーによっては、お客様の環境が既に以前の NTLM 認証よりも Kerberos を優先する、または要求するものになっている場合があります。 これらの認証プロトコルに関するセキュリティの考慮事項について詳しくは、[NTLM を制限する Windows セキュリティ ポリシーの設定](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations)に関するページをご覧ください。  
     >
     > この機能を使用するには、信頼された Active Directory フォレスト内にクライアントがいる必要があります。 Windows の Kerberos は、相互認証について Active Directory に依存しています。  
 
@@ -326,7 +326,7 @@ Azure AD の ID を使って最新の Windows 10 デバイスに構成マネー�
     > [!NOTE]  
     > Azure AD 認証を使用する最新の Windows 10 クライアントで使うコマンドの例については、[共同管理用にインターネット ベースのデバイスを準備する方法](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client)に関するページをご覧ください。  
 
-3. 登録済みの Windows コンピューターのグループに[アプリを割り当て](https://docs.microsoft.com/mem/intune/apps/apps-deploy)ます。  
+3. 登録済みの Windows コンピューターのグループに[アプリを割り当て](../../../../intune/apps/apps-deploy.md)ます。  
 
 ## <a name="os-image-installation"></a><a name="BKMK_ClientImage"></a> OS イメージのインストール
 
@@ -543,4 +543,4 @@ Configuration Manager インストール メディア上には、`ConfigMgrInsta
 
 4. **[CCMSetup]** ボックスに、必要な CCMSetup コマンドライン プロパティを入力します。 CCMSetup コマンド ライン プロパティの詳細と使用例については、[クライアント インストールのパラメーターとプロパティ](about-client-installation-properties.md)に関するページをご覧ください。  
 
-5. 構成マネージャー クライアントのインストール プロパティをプロビジョニングするコンピューターに、GPO を割り当てます。  
+5. 構成マネージャー クライアントのインストール プロパティをプロビジョニングするコンピューターに、GPO を割り当てます。

@@ -10,12 +10,12 @@ ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd238319ba064f57911eee58e1299e17a2ce5b60
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: db59ad55c52f8d937b23704af310dc8879fe8a6d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81694600"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692878"
 ---
 # <a name="evaluate-configuration-manager-by-building-your-own-lab-environment"></a>独自のラボ環境を構築して Configuration Manager を評価する
 
@@ -48,7 +48,7 @@ ms.locfileid: "81694600"
  このラボを構築すると、機能し、作業できる環境が整います。 ただし、この環境は、システム パフォーマンス、ハード ディスク領域の管理、SQL Server の記憶域などの要因に対して最適化されません。  
 
 ##  <a name="recommended-reading-before-you-build-the-lab"></a><a name="BKMK_EvalRec"></a>ラボを構築する前の推奨資料  
- 「[Configuration Manager のドキュメント](https://docs.microsoft.com/sccm/)」には豊富なコンテンツがあります。 ラボを構築する前に、このライブラリから次のトピックを読むことをお勧めします。  
+ 「[Configuration Manager のドキュメント](/sccm/)」には豊富なコンテンツがあります。 ラボを構築する前に、このライブラリから次のトピックを読むことをお勧めします。  
 
 -   「[Configuration Manager の概要](../../core/understand/introduction.md)」。Configuration Manager コンソール、エンドユーザー ポータル、シナリオ例の主要な概念について説明しています。  
 
@@ -60,4 +60,4 @@ ms.locfileid: "81694600"
 
 -   「[System Center Configuration Manager でのコンテンツ管理の基本的な概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)」。コンテンツ管理について説明しています。  
 
--   「[クライアントが Configuration Manager のサイト リソースやサービスを検索する方法を理解する](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)」。展開全体での日常のタスクを適切にサポートする方法を説明しています。  
+-   「[クライアントが Configuration Manager のサイト リソースやサービスを検索する方法を理解する](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)」。展開全体での日常のタスクを適切にサポートする方法を説明しています。

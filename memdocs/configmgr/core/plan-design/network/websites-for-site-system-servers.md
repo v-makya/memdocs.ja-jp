@@ -10,12 +10,12 @@ ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 344ba7f6a6b0ee7683c3ac7661338f01be601a10
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: a8091ecf4abc113d41f053c1152152262131a4bb
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701450"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146084"
 ---
 # <a name="websites-for-site-system-servers-in-configuration-manager"></a>Configuration Manager のサイト システム サーバーについての Web サイト
 
@@ -83,7 +83,7 @@ ms.locfileid: "81701450"
 -   カスタム Web サイトの IIS に設定する TCP/IP ポートは、サイト用のクライアント要求ポートと一致する必要があります。  
 
 ## <a name="switch-between-default-and-custom-websites"></a>既定の Web サイトとカスタム Web サイトの切り替え  
-カスタム Web サイトを使用するためのチェック ボックス (サイトの [プロパティ] の [全般] タブにあるチェック ボックス) のオンとオフは、プライマリ サイトでいつでも切り替えることができますが、この変更は十分に検討したうえで行ってください。 この構成が変更されると、プライマリ サイトと子セカンダリ サイトの適用可能なサイト システムの役割は、すべてアンインストールされてから再インストールされます。  
+カスタム Web サイトを使用するためのチェック ボックス (サイトの [プロパティ] の [ポート] タブにあるチェック ボックス) のオンとオフは、プライマリ サイトでいつでも切り替えることができますが、この変更は十分に検討したうえで行ってください。 この構成が変更されると、プライマリ サイトと子セカンダリ サイトの適用可能なサイト システムの役割は、すべてアンインストールされてから再インストールされます。  
 
 次の役割は、 **自動的に再インストール**されます。  
 

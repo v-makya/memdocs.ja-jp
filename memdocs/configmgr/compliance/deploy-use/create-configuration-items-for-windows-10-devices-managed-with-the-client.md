@@ -10,12 +10,12 @@ ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: ade07cf23807d340ee5e0c7955a042a44f9031c5
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 9589b9e542c9d323ab7a23af169725c1a54bfb70
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240441"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694765"
 ---
 # <a name="create-configuration-items-for-windows-10-devices"></a>Windows 10 デバイスの構成項目を作成する
 
@@ -140,9 +140,9 @@ Configuration Manager の Windows 情報保護構成項目では、以下が管�
   
 Configuration Manager で WIP を構成する方法については、以下をご覧ください。
 
-- [Windows 情報保護 (WIP) を使用したエンタープライズ データの保護](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
-- [Configuration Manager を使用した Windows 情報保護 (WIP) ポリシーの作成と展開](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
-- [Windows 情報保護 (WIP) 使用時の制限](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/limitations-with-wip)
+- [Windows 情報保護 (WIP) を使用したエンタープライズ データの保護](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Configuration Manager を使用した Windows 情報保護 (WIP) ポリシーの作成と展開](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
+- [Windows 情報保護 (WIP) 使用時の制限](/windows/security/information-protection/windows-information-protection/limitations-with-wip)
 
 ## <a name="see-also"></a>関連項目  
 [Configuration Manager クライアントを使用して管理されているデバイスの構成項目](../../compliance/deploy-use/create-configuration-items.md)

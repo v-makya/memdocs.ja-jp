@@ -10,12 +10,12 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e4e84b55c929dd878cb0720b3f61dfceedcf449
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8585f04e6cedf9cb5158dbebc41b00565eabd989
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904090"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692725"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>Configuration Manager を使用するために必要な Windows Server の準備
 
@@ -98,7 +98,7 @@ Configuration Manager のサイト システム サーバーとして Windows �
 ##  <a name="iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> IIS の要求フィルター (配布ポイント用)  
 特定のファイル名拡張子とフォルダーの場所は、IIS の要求フィルターによって、HTTP または HTTPS 通信によるアクセスがブロックされるように既定で設定されています。 そのままでは、ブロックされた拡張子やフォルダーの場所を含んだパッケージをクライアントが配布ポイントからダウンロードできません。  
 
-IIS の要求フィルター構成によってブロックされる拡張子がパッケージのソース ファイルに含まれている場合、それらを許可するように要求フィルターを設定する必要があります。 そのためには、配布ポイント コンピューターの IIS マネージャーで [要求フィルター機能を編集](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) します。  
+IIS の要求フィルター構成によってブロックされる拡張子がパッケージのソース ファイルに含まれている場合、それらを許可するように要求フィルターを設定する必要があります。 そのためには、配布ポイント コンピューターの IIS マネージャーで [要求フィルター機能を編集](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)) します。  
 
 また、Configuration Manager では、パッケージとアプリケーションに次のファイル名拡張子が使用されます。 これらのファイル拡張子が要求フィルターの構成でブロックされないよう注意してください。  
 
@@ -136,4 +136,4 @@ IIS の要求フィルター構成によってブロックされる拡張子が�
 - HEAD
 - PROPFIND
 
-詳細については、TechNet の「[Configure Request Filtering in IIS](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs)」 (IIS で要求フィルターを構成する) を参照してください。 
+詳細については、TechNet の「[Configure Request Filtering in IIS](/previous-versions/orphan-topics/ws.11/hh831621(v=ws.11)#http-verbs)」 (IIS で要求フィルターを構成する) を参照してください。

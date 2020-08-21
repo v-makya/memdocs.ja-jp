@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3dd4c3f22a0f2c24153e6d26be2e3098511c5dc4
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: e408bbe7ea88d70c5a9d02368c2d820584cae2b8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905320"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694442"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-configuration-manager"></a>Configuration Manager の Technical Preview 1710 の機能
 
@@ -97,17 +97,17 @@ PowerShell スクリプトの展開は、Technical Preview [Tech Preview 1706](c
 
 Exploit Guard ポリシーのコンプライアンス データは、Configuration Manager コンソールを使用して展開できます。
 
-Exploit Guard と特定のコンポーネントおよび規則の詳細については、Windows ドキュメント ライブラリの「[Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard)」をご覧ください。
+Exploit Guard と特定のコンポーネントおよび規則の詳細については、Windows ドキュメント ライブラリの「[Windows Defender Exploit Guard](/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard)」をご覧ください。
 
 ### <a name="prerequisites"></a>[前提条件]
 マネージド デバイスでは、Windows 10 1709 Fall Creators Update 以降を実行し、構成するコンポーネントと規則に応じて次の要件を満たす必要があります。
 
 |Exploit Guard コンポーネント |追加の前提条件|
 |------------------------|------------------------|
-| 攻撃の回避  | デバイスで [Windows Defender AV のリアルタイム保護]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)を有効にする必要があります。  |
-| フォルダー アクセスの制御  | デバイスで [Windows Defender AV のリアルタイム保護]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)を有効にする必要があります。   |
+| 攻撃の回避  | デバイスで [Windows Defender AV のリアルタイム保護]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)を有効にする必要があります。  |
+| フォルダー アクセスの制御  | デバイスで [Windows Defender AV のリアルタイム保護]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)を有効にする必要があります。   |
 | 悪用に対する保護  | なし  |
-| ネットワーク保護  |  デバイスで [Windows Defender AV のリアルタイム保護]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)を有効にする必要があります。  |
+| ネットワーク保護  |  デバイスで [Windows Defender AV のリアルタイム保護]( /windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)を有効にする必要があります。  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Exploit Guard ポリシーを作成する  <!--1355468 -->
 1. Configuration Manager コンソールで、 **[資産とコンプライアンス]**  >  **[Endpoint Protection]** の順に移動し、 **[Windows Defender Exploit Guard]** をクリックします。
@@ -125,7 +125,7 @@ Exploit Guard ポリシーを作成したら、Deploy Exploit Guard Policy ウ�
 
 ## <a name="limited-support-for-cng-certificates"></a>CNG 証明書の制限付きサポート
 <!-- 1356191 -->
-このリリース以降では、次のシナリオに [Cryptography API:Next Generation (CNG)](https://docs.microsoft.com/windows/win32/seccng/cng-features) 証明書テンプレートを使用できるようになりました。
+このリリース以降では、次のシナリオに [Cryptography API:Next Generation (CNG)](/windows/win32/seccng/cng-features) 証明書テンプレートを使用できるようになりました。
 
 - HTTPS 管理ポイントを使用したクライアントの登録と通信。   
 - HTTPS 配布ポイントを使用したソフトウェアの配布とアプリケーションの展開。   
@@ -210,7 +210,7 @@ Windows Defender Application Guard の基本を理解するには、[こちら�
     > [!NOTE]
     > Windows 10 PC の場合、クライアントでネットワーク分離リストが 1 つだけ保存されます。 今回のリリースでは、2 種類のネットワーク分離リスト (Windows 情報保護のリストと Windows Defender Application Guard のリスト) を作成し、クライアントに展開できます。 両方のポリシーを展開する場合、ネットワーク分離リストが一致している必要があります。 一致しないリストを同じクライアントに展開すると失敗します。
 
-    ネットワーク定義の指定方法について詳しくは、Windows 情報保護のドキュメントの「[Windows 情報保護 (WIP) を使用したエンタープライズ データの保護](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)」を参照してください。
+    ネットワーク定義の指定方法について詳しくは、Windows 情報保護のドキュメントの「[Windows 情報保護 (WIP) を使用したエンタープライズ データの保護](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)」を参照してください。
 
 6. 完了したら、ウィザードを終了し、1 つ以上の Windows 10 デバイスにポリシーを展開します。
 
@@ -219,4 +219,4 @@ Windows Defender Application Guard の基本を理解するには、[こちら�
 Windows Defender Application Guard の詳細については、[このブログ記事](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97)を参照してください。 また、Windows Defender Application Guard のスタンドアロン モードの詳細については、[このブログ記事](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903)を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
-Technical Preview ブランチのインストールまたは更新については、「[Configuration Manager の Technical Preview](technical-preview.md)」をご覧ください。    
+Technical Preview ブランチのインストールまたは更新については、「[Configuration Manager の Technical Preview](technical-preview.md)」をご覧ください。

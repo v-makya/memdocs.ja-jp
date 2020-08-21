@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ace27e9035af6696e455382a32365be0e3824d65
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905197"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694374"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Configuration Manager Technical Preview バージョン 1807 の機能 
 
@@ -73,7 +73,7 @@ Technical Preview Branch バージョン 1806 および 1806.2 を使用して O
 
 **[コミュニティ]** ワークスペースには、次のノードも含まれています。
 
-- **ドキュメント**:Configuration Manager の[ドキュメント ライブラリ](https://docs.microsoft.com/sccm/)が表示されます。  
+- **ドキュメント**:Configuration Manager の[ドキュメント ライブラリ](/sccm/)が表示されます。  
 
 - **フィードバック**:Configuration Manager の [UserVoice サイト](https://configurationmanager.uservoice.com/)が表示されます  
 
@@ -82,7 +82,7 @@ Technical Preview Branch バージョン 1806 および 1806.2 を使用して O
 
 - クライアント OD で Configuration Manager コンソールを使用します。  
 
-    - 推奨されない代替方法: サーバー OS で、[Internet Explorer のセキュリティ強化構成](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10))を無効にします。
+    - 推奨されない代替方法: サーバー OS で、[Internet Explorer のセキュリティ強化構成](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10))を無効にします。
 
 - コンソールを使用するコンピューターは、インターネットにアクセスし、次のサイトに接続できる必要があります。  
     - `https://aka.ms`  
@@ -121,7 +121,7 @@ Technical Preview Branch バージョン 1806 および 1806.2 を使用して O
 ## <a name="co-managed-device-sync-activity-from-intune"></a><a name="bkmk_comgmt"></a> Intune での共同管理されたデバイス同期アクティビティ
 <!--1358565-->
 
-Configuration Manager コンソールに、共同管理されたデバイスが Microsoft Intune でアクティブになっているかどうかが表示されます。 この状態は、[Intune データ ウェアハウス](https://docs.microsoft.com/intune/reports-nav-create-intune-reports)のデータに基づきます。 Configuration Manager コンソールの **[クライアントのステータス]** ダッシュボードには、 **[Intune を使用する非アクティブなクライアント]** が表示されます。 この新しいカテゴリは、Configuration Manager では非アクティブでも、過去 1 週間以内に Intune サービスと同期されている、共同管理されたデバイスに関するものです。
+Configuration Manager コンソールに、共同管理されたデバイスが Microsoft Intune でアクティブになっているかどうかが表示されます。 この状態は、[Intune データ ウェアハウス](/intune/reports-nav-create-intune-reports)のデータに基づきます。 Configuration Manager コンソールの **[クライアントのステータス]** ダッシュボードには、 **[Intune を使用する非アクティブなクライアント]** が表示されます。 この新しいカテゴリは、Configuration Manager では非アクティブでも、過去 1 週間以内に Intune サービスと同期されている、共同管理されたデバイスに関するものです。
 
 
 ### <a name="try-it-out"></a>試してみましょう。

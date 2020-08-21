@@ -10,12 +10,12 @@ ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2e74f969016d79254ceb8e8323b6e3914969ecc7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1a55efa6b23aa489ea65b3296e33847163a5c4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81689270"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695241"
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-configuration-manager"></a>Configuration Manager でのユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け
 
@@ -162,4 +162,4 @@ Configuration Manager では、ユーザーとユーザーとデバイスのア�
 
 ## <a name="next-steps"></a>次のステップ
 
-また、Microsoft Intune を使用して、登録されたデバイスの主な用途を見つけることもできます。 詳細については、Intune ドキュメントの「[Intune デバイスのプライマリ ユーザーを確認する](https://docs.microsoft.com/intune/find-primary-user)」を参照してください。
+また、Microsoft Intune を使用して、登録されたデバイスの主な用途を見つけることもできます。 詳細については、Intune ドキュメントの「[Intune デバイスのプライマリ ユーザーを確認する](/intune/find-primary-user)」を参照してください。

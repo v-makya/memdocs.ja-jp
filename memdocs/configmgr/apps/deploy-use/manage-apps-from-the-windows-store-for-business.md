@@ -10,16 +10,16 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d6a61324f8c777ba5ed09dd26816152d6f17af9
-ms.sourcegitcommit: 2aa97d1b6409575d731c706faa2bc093c2b298c4
+ms.openlocfilehash: a8125f55215fd597d9611723e1d36629850bff44
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643218"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695224"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-and-education-with-configuration-manager"></a>Configuration Manager を使用してビジネス向けおよび教育機関向け Microsoft Store のアプリを管理する
 
-[ビジネス向けおよび教育機関向け Microsoft Store ](https://docs.microsoft.com/microsoft-store/) では、組織向けの Windows アプリを検索して取得できます。 Configuration Manager にストアを接続すると、取得したアプリの一覧が同期されます。 Configuration Manager コンソールでこれらのアプリを表示し、他のアプリと同様に展開します。
+[ビジネス向けおよび教育機関向け Microsoft Store ](/microsoft-store/) では、組織向けの Windows アプリを検索して取得できます。 Configuration Manager にストアを接続すると、取得したアプリの一覧が同期されます。 Configuration Manager コンソールでこれらのアプリを表示し、他のアプリと同様に展開します。
 
 ## <a name="online-and-offline-apps"></a><a name="bkmk_apps"></a> オンライン アプリとオフライン アプリ
 
@@ -29,7 +29,7 @@ ms.locfileid: "82643218"
 
 - **オフライン**:アプリとライセンスをキャッシュし、オンプレミス ネットワーク内で直接展開できます。 デバイスをストアに接続したり、インターネットに接続したりする必要はありません。
 
-詳細については、「[ビジネス向け Microsoft Store および教育機関向け Microsoft Store の概要](https://docs.microsoft.com/microsoft-store/microsoft-store-for-business-overview)」を参照してください。
+詳細については、「[ビジネス向け Microsoft Store および教育機関向け Microsoft Store の概要](/microsoft-store/microsoft-store-for-business-overview)」を参照してください。
 
 ### <a name="summary-of-capabilities"></a>機能の概要
 
@@ -64,7 +64,7 @@ Configuration Manager では、Configuration Manager クライアントを使用
 
 - ローカル Administrator アカウントがデバイスでサインインしたときは、ビジネス向けおよび教育機関向け Microsoft Store アプリにアクセスできません。  
 
-- デバイスにはビジネス向けおよび教育機関向け Microsoft Store へのライブ インターネット接続が必要です。 プロキシの構成などについて詳しくは、[前提条件](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business)に関するページをご覧ください。  
+- デバイスにはビジネス向けおよび教育機関向け Microsoft Store へのライブ インターネット接続が必要です。 プロキシの構成などについて詳しくは、[前提条件](/microsoft-store/prerequisites-microsoft-store-for-business)に関するページをご覧ください。  
 
 ### <a name="notes-for-devices-running-earlier-versions-of-windows-10"></a>以前のバージョンの Windows 10 を実行しているデバイスに関する注意
 
@@ -110,17 +110,17 @@ Configuration Manager では、Configuration Manager クライアントを使用
 
 Configuration Manager サイトを Azure AD とビジネス向けおよび教育機関向け Microsoft Store に接続します。 このプロセスについて詳しくは、「[Azure サービスの構成](../../core/servers/deploy/configure/azure-services-wizard.md)」をご覧ください。 **ビジネス向け Microsoft Store** サービスへの接続を作成します。
 
-サービス接続ポイントとターゲット デバイスがクラウド サービスにアクセスできることを確認します。 詳細については、[ビジネスおよび教育機関向け Microsoft Store のプロキシ構成の前提条件](https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)に関するページをご覧ください。
+サービス接続ポイントとターゲット デバイスがクラウド サービスにアクセスできることを確認します。 詳細については、[ビジネスおよび教育機関向け Microsoft Store のプロキシ構成の前提条件](/microsoft-store/prerequisites-microsoft-store-for-business#proxy-configuration)に関するページをご覧ください。
 
 ### <a name="supplemental-information-and-configuration"></a><a name="bkmk_config"></a> 補足情報と構成
 
 Azure サービス ウィザードの **[アプリ]** ページで、最初に **[Azure 環境]** と **[Web アプリ]** を構成します。 その後、ページの下部にある **[詳細情報]** セクションを読みます。 この情報には、ビジネス向けおよび教育機関向け Microsoft Store ポータルでの次の追加アクションが含まれます。  
 
-- ストア管理ツールとして Configuration Manager を構成します。 詳しくは、[管理プロバイダーの構成](https://docs.microsoft.com/microsoft-store/configure-mdm-provider-microsoft-store-for-business)に関するページをご覧ください。  
+- ストア管理ツールとして Configuration Manager を構成します。 詳しくは、[管理プロバイダーの構成](/microsoft-store/configure-mdm-provider-microsoft-store-for-business)に関するページをご覧ください。  
 
-- オフラインのライセンスされたアプリのサポートを有効にします。 詳しくは、「[オフライン アプリの配布](https://docs.microsoft.com/microsoft-store/distribute-offline-apps)」をご覧ください。  
+- オフラインのライセンスされたアプリのサポートを有効にします。 詳しくは、「[オフライン アプリの配布](/microsoft-store/distribute-offline-apps)」をご覧ください。  
 
-- 少なくとも 1 つのアプリを取得します。 詳しくは、「[アプリを探して入手する](https://docs.microsoft.com/microsoft-store/find-and-acquire-apps-overview)」をご覧ください。  
+- 少なくとも 1 つのアプリを取得します。 詳しくは、「[アプリを探して入手する](/microsoft-store/find-and-acquire-apps-overview)」をご覧ください。  
 
 Azure サービス ウィザードの **[構成]** ページで、次の情報を指定します。  
 
@@ -161,7 +161,7 @@ Azure サービス ウィザードの **[構成]** ページで、次の情報�
 
 オンライン アプリを展開した後、そのアプリに対する更新プログラムは Microsoft Store から直接提供されます。 さらに、Configuration Manager はオンライン アプリのバージョンの準拠状況をチェックしません。アプリがインストール済みであることが Windows によって報告されるだけです。  
 
-オフライン アプリを構成マネージャー クライアントを使用した Windows 10 デバイスに展開する場合、Configuration Manager の展開の外部のアプリケーションをユーザーが更新できないようにしてください。 オフライン アプリの更新の制御は、教室などのマルチ ユーザー環境で特に重要です。 Microsoft Store を無効にする 1 つのオプションは、[グループ ポリシー](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy)を使用することです。
+オフライン アプリを構成マネージャー クライアントを使用した Windows 10 デバイスに展開する場合、Configuration Manager の展開の外部のアプリケーションをユーザーが更新できないようにしてください。 オフライン アプリの更新の制御は、教室などのマルチ ユーザー環境で特に重要です。 Microsoft Store を無効にする 1 つのオプションは、[グループ ポリシー](/windows/configuration/stop-employees-from-using-microsoft-store#block-microsoft-store-using-group-policy)を使用することです。
 
 ビジネス向けおよび教育機関向け Microsoft Store 管理者がオフライン アプリを取得した後に、そのアプリをストアを経由してユーザーに公開しないでください。 この構成により、ユーザーがオンラインでインストールまたは更新できないようになります。 ユーザーは Configuration Manager を介してオフライン アプリの更新プログラムのみを受信します。
 

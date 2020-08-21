@@ -2,7 +2,7 @@
 title: サイズとスケール
 titleSuffix: Configuration Manager
 description: ご利用の環境でデバイスをサポートするために必要になるサイト システムの役割とサイトの数を決定します。
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5109ababd00011784618f9c989e1d2b756a322d9
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: 0d8057d61ebaaa8a545d21b31331faec1c04884e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715630"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126700"
 ---
 # <a name="size-and-scale-numbers-for-configuration-manager"></a>Configuration Manager のサイズとスケール番号
 
@@ -184,6 +184,8 @@ Configuration Manager の各展開には、サポートできるサイト、サ�
 SMS プロバイダーの各インスタンスでは、複数の要求からの同時接続をサポートしています。 この接続に関する唯一の制限は、Windows で使用できるサーバー接続の数と、接続要求を処理するためにサーバーで使用可能なリソースです。
 
 詳細については、「[SMS プロバイダーの計画](../hierarchy/plan-for-the-sms-provider.md)」を参照してください。
+
+管理サービスは、SMS プロバイダーのあらゆるインスタンス上の REST API です。 秒あたり最大 5,000 件の要求と、クライアント IP アドレスあたり 200 件の要求をサポートします。
 
 ## <a name="client-numbers-for-sites-and-hierarchies"></a><a name="bkmk_clientnumbers"></a> サイトおよび階層のクライアント数
 

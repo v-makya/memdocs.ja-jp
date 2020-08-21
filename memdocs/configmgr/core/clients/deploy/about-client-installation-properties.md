@@ -2,20 +2,20 @@
 title: クライアント インストール パラメーターとプロパティ
 titleSuffix: Configuration Manager
 description: Configuration Manager クライアントをインストールするための ccmsetup コマンド ライン パラメーターとプロパティについて説明します。
-ms.date: 07/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1de2cd1645687740986cc62514dbc990461cbbf6
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 2d26be4d3e3381a80fcbaa547cfcc7a3b8db42f5
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240577"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127020"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-configuration-manager"></a>Configuration Manager のクライアント インストールのパラメーターとプロパティについて
 
@@ -36,9 +36,9 @@ CCMSetup.exe コマンドは、クライアントのインストールに必要�
 > [!NOTE]
 > client.msi を直接インストールすることはできません。  
 
-CCMSetup.exe には、インストールをカスタマイズするためのコマンド ライン "*パラメーター*" が用意されています。 パラメーターは、先頭にスラッシュ (`/`) が付いていて、慣例により小文字で表されます。 コロン (`:`) の直後に値を置くことで、必要に応じてパラメーターの値を指定できます。 詳細については、「[CCMSetup.exe のコマンドライン パラメーター](#ccmsetupexe-command-line-parameters)」をご覧ください。
+CCMSetup.exe には、インストールをカスタマイズするためのコマンド ライン "*パラメーター*" が用意されています。 パラメーターは、先頭にスラッシュ (`/`) が付いていて、通常小文字で表記されます。 コロン (`:`) の直後に値を置くことで、必要に応じてパラメーターの値を指定できます。 詳細については、「[CCMSetup.exe のコマンドライン パラメーター](#ccmsetupexe-command-line-parameters)」をご覧ください。
 
-CCMSetup.exe コマンド ラインに "*プロパティ*" を指定して、client.msi の動作を変更することもできます。慣例により、プロパティは大文字で表されます。 プロパティの値を指定するには、等号 (`=`) の直後にその値を置きます。 詳細については、「[Client.msi のプロパティ](#clientMsiProps)」をご覧ください。
+CCMSetup.exe コマンド ラインで "*プロパティ*" を指定して client.msi の動作を変更することもできます。 プロパティは通常、大文字で表記されます。 プロパティの値を指定するには、等号 (`=`) の直後にその値を置きます。 詳細については、「[Client.msi のプロパティ](#clientMsiProps)」をご覧ください。
 
 > [!IMPORTANT]  
 > client.msi のプロパティを指定する前に、CCMSetup のパラメーターを指定します。  
@@ -76,16 +76,100 @@ ccmsetup.exe の使用可能なコマンド ライン パラメーターを表�
 
 例: `ccmsetup.exe /?`
 
-### <a name="source"></a>/source
+### <a name="allowmetered"></a>/AllowMetered
 
-ファイルのダウンロード場所を指定します。 ローカルまたは UNC パスを使用します。 デバイスにより、サーバー メッセージ ブロック (SMB) プロトコルを使用してファイルがダウンロードされます。 **/source** を使用するには、クライアント インストール用の Windows ユーザー アカウントに、その場所に対する**読み取り**アクセス許可が必要です。
+<!--6976145-->
 
-ccmsetup によってコンテンツがダウンロードされる方法の詳細については、[境界グループ - クライアントのインストール](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)に関するページを参照してください。 この記事には、 **/mp** と **/source** パラメーターの両方を使用した場合の ccmsetup の動作の詳細も含まれています。
+バージョン 2006 以降では、このパラメーターを使用して、従量制課金ネットワーク上のクライアントの動作を制御します。 このパラメーターには値を指定できません。 従量制課金ネットワークでのクライアント通信を ccmsetup に許可すると、コンテンツのダウンロード、サイトへの登録、初期ポリシーのダウンロードが実行されます。 それ以降のクライアント通信は、そのポリシーのクライアント設定の構成に従います。 詳細については、「[クライアント設定について](../../clients/deploy/about-client-settings.md#client-communication-on-metered-internet-connections)」を参照してください。
 
-> [!TIP]  
-> コマンド ラインで **/source** パラメーターを複数回使用して、ダウンロードの代替場所を指定することができます。  
+既存のデバイスにそのクライアントを再インストールすると、次の優先順位でその構成が決定されます。
 
-例: `ccmsetup.exe /source:"\\server\share"`
+1. 既存のローカル クライアント ポリシー
+1. Windows レジストリに格納されている最後のコマンド ライン
+1. ccmsetup コマンド ラインのパラメーター
+
+### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+
+このパラメーターでは、[**自動クライアント アップグレード**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)を有効にした場合にクライアントが自動的にアップグレードされるかどうかを指定します。
+
+サポートされる値:
+
+- `TRUE`: クライアントは自動的にアップグレードされません
+- `FALSE`: クライアントは自動的にアップグレードされます (既定)
+
+次に例を示します。  
+
+`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
+
+詳細については、[拡張相互運用性クライアント](../../understand/interoperability-client.md)に関するページをご覧ください。
+
+> [!NOTE]  
+> **/AlwaysExcludeUpgrade** パラメーターを使用する場合、自動アップグレードは引き続き実行されます。 ただし、アップグレードを行うために CCMSetup を実行すると、 **/AlwaysExcludeUpgrade** パラメーターが設定されていることが確認され、**ccmsetup.log** に次の行が記録されます。
+>
+> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
+>
+> CCMSetup はその後すぐに終了し、アップグレードは実行されません。
+
+### <a name="bitspriority"></a>/BITSPriority
+
+デバイスによって HTTP 接続経由でクライアント インストール ファイルがダウンロードされる場合、このパラメーターを使用してダウンロードの優先順位を指定します。 次のいずれかの値を指定します。
+
+- `FOREGROUND`
+
+- `HIGH`
+
+- `NORMAL` (既定)
+
+- `LOW`
+
+例: `ccmsetup.exe /BITSPriority:HIGH`
+
+### <a name="config"></a>/config
+
+このパラメーターでは、クライアント インストールのプロパティの一覧が記載されたテキスト ファイルを指定します。
+
+- CCMSetup がサービスとして実行されている場合は、このファイルを CCMSetup システム フォルダー `%Windir%\Ccmsetup` に配置します。
+
+- [ **/noservice**](#noservice) パラメーターを指定する場合は、このファイルを CCMSetup.exe と同じフォルダーに配置します。
+
+例: `CCMSetup.exe /config:"configuration file name.txt"`
+
+正しいファイル形式を指定するには、サイト サーバー上の Configuration Manager インストール ディレクトリの `\bin\<platform>` フォルダーにある **mobileclienttemplate.tcf** ファイルを使用します。 このファイルには、セクションとその使用方法に関するコメントが含まれています。 `[Client Install]` セクションで、次のテキストの後にクライアント インストールのプロパティを指定します: `Install=INSTALL=ALL`。
+
+`[Client Install]` セクションのエントリの例: `Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
+
+### <a name="downloadtimeout"></a>/downloadtimeout
+
+CCMSetup によるクライアント インストール ファイルのダウンロードが失敗する場合、このパラメーターによってタイムアウトの最大値を分単位で指定します。 このタイムアウトの後、CCMSetup はインストール ファイルのダウンロードを試行しなくなります。 既定値は **1440** 分 (1 日) です。
+
+再試行の間隔を指定するには、[ **/retry**](#retry) パラメーターを使用します。
+
+例: `ccmsetup.exe /downloadtimeout:100`
+
+### <a name="excludefeatures"></a>/ExcludeFeatures
+
+このパラメーターでは、指定した機能を CCMSetup.exe でインストールしないように指定します。
+
+例: `CCMSetup.exe /ExcludeFeatures:ClientUI` は、クライアントにソフトウェア センターをインストールしません。  
+
+> [!NOTE]  
+> `ClientUI` は、 **/ExcludeFeatures** パラメーターでサポートされる唯一の値です。
+
+### <a name="forceinstall"></a>/forceinstall
+
+CCMSetup.exe で既存のクライアントをすべてアンインストールし、新しいクライアントをインストールするように指定します。  
+
+### <a name="forcereboot"></a>/forcereboot
+
+インストールの完了に必要であれば強制的にコンピューターを再起動させる場合は、このパラメーターを使用します。 このパラメーターを指定しない場合は、再起動が必要になると CCMSetup は終了します。 次回手動で再起動した後に続行します。
+
+例: `CCMSetup.exe /forcereboot`
+
+### <a name="logon"></a>/logon
+
+任意のバージョンのクライアントが既にインストールされている場合は、このパラメーターでクライアント インストールを停止するように指定します。  
+
+例: `ccmsetup.exe /logon`  
 
 ### <a name="mp"></a>/mp
 
@@ -123,6 +207,18 @@ FQDN を使用した例: `ccmsetup.exe /mp:smsmp01.contoso.com`
 > [!Important]
 > **/mp** パラメーターにクラウド管理ゲートウェイの URL を指定する場合は、先頭が `https://` である必要があります。
 
+### <a name="nocrlcheck"></a>/NoCRLCheck
+
+PKI 証明書を使用して HTTPS で通信するときは、クライアントが証明書失効リスト (CRL) を確認しないように指定します。 このパラメーターを指定しない場合、クライアントでは、HTTPS 接続を確立する前に CRL が確認されます。 クライアントの CRL チェックの詳細については、「[PKI 証明書失効の計画](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs)」を参照してください。
+
+例: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
+
+### <a name="noservice"></a>/noservice
+
+このパラメーターを指定すると、CCMSetup がサービスとして実行 (既定の動作) されなくなります。 CCMSetup がサービスとして実行される場合、コンピューターのローカル システム アカウントのコンテキストで実行されます。 このアカウントには、インストールに必要なネットワーク リソースにアクセスするための十分な権限がない可能性があります。 **/noservice** を使用すると、CCMSetup.exe は、インストールを開始するために使用するユーザー アカウントの関連で実行されます。
+
+例: `ccmsetup.exe /noservice`  
+
 ### <a name="regtoken"></a>/regtoken
 
 <!--5686290-->
@@ -146,12 +242,6 @@ CCMSetup.exe によるインストール ファイルのダウンロードが失
 
 例: `ccmsetup.exe /retry:20`  
 
-### <a name="noservice"></a>/noservice
-
-このパラメーターを指定すると、CCMSetup がサービスとして実行 (既定の動作) されなくなります。 CCMSetup がサービスとして実行される場合、コンピューターのローカル システム アカウントのコンテキストで実行されます。 このアカウントには、インストールに必要なネットワーク リソースにアクセスするための十分な権限がない可能性があります。 **/noservice** を使用すると、CCMSetup.exe は、インストールを開始するために使用するユーザー アカウントの関連で実行されます。
-
-例: `ccmsetup.exe /noservice`  
-
 ### <a name="service"></a>/service
 
 ローカル システム アカウントを使用するサービスとして CCMSetup を実行することを指定します。  
@@ -160,77 +250,6 @@ CCMSetup.exe によるインストール ファイルのダウンロードが失
 > スクリプトを使用して **/service** パラメーターと共に CCMSetup.exe を実行した場合は、サービスが開始した後に CCMSetup.exe は終了します。 この場合、スクリプトにインストールの詳細が正しく報告されない可能性があります。
 
 例: `ccmsetup.exe /service`  
-
-### <a name="uninstall"></a>/uninstall
-
-構成マネージャー クライアントをアンインストールするには、このパラメーターを使用します。 詳細については、「[クライアントをアンインストールする](../manage/manage-clients.md#BKMK_UninstalClient)」をご覧ください。
-
-例: `ccmsetup.exe /uninstall`  
-
-### <a name="logon"></a>/logon
-
-任意のバージョンのクライアントが既にインストールされている場合は、このパラメーターでクライアント インストールを停止するように指定します。  
-
-例: `ccmsetup.exe /logon`  
-
-### <a name="forcereboot"></a>/forcereboot
-
-インストールの完了に必要であれば強制的にコンピューターを再起動させる場合は、このパラメーターを使用します。 このパラメーターを指定しない場合は、再起動が必要になると CCMSetup は終了します。 次回手動で再起動した後に続行します。
-
-例: `CCMSetup.exe /forcereboot`
-
-### <a name="bitspriority"></a>/BITSPriority
-
-デバイスによって HTTP 接続経由でクライアント インストール ファイルがダウンロードされる場合、このパラメーターを使用してダウンロードの優先順位を指定します。 次のいずれかの値を指定します。
-
-- `FOREGROUND`
-
-- `HIGH`
-
-- `NORMAL` (既定)
-
-- `LOW`
-
-例: `ccmsetup.exe /BITSPriority:HIGH`
-
-### <a name="downloadtimeout"></a>/downloadtimeout
-
-CCMSetup によるクライアント インストール ファイルのダウンロードが失敗する場合、このパラメーターによってタイムアウトの最大値を分単位で指定します。 このタイムアウトの後、CCMSetup はインストール ファイルのダウンロードを試行しなくなります。 既定値は **1440** 分 (1 日) です。
-
-再試行の間隔を指定するには、[ **/retry**](#retry) パラメーターを使用します。
-
-例: `ccmsetup.exe /downloadtimeout:100`
-
-### <a name="usepkicert"></a>/UsePKICert
-
-クライアントが PKI クライアント認証証明書を使用するようにするには、このパラメーターを指定します。 このパラメーターを指定しない場合、またはクライアントで有効な証明書が見つからない場合は、自己署名証明書による HTTP 接続が使用されます。
-
-例: `CCMSetup.exe /UsePKICert`  
-
-> [!NOTE]
-> 一部のシナリオでは、このパラメーターを指定する必要はなく、引き続きクライアント証明書を使用します。 たとえば、クライアント プッシュおよびソフトウェアの更新に基づいたクライアント インストールです。 クライアントを手動でインストールし、 **/mp** パラメーターを使用して HTTPS が有効な管理ポイントを指定する場合は、このパラメーターを使用します。
->
-> また、インターネットのみの通信用にクライアントをインストールする場合も、このパラメーターを指定してください。 **CCMALWAYSINF=1** プロパティを、インターネット ベースの管理ポイント (**CCMHOSTNAME**) とサイト コード (**SMSSITECODE**) のプロパティと共に使用します。 インターネット ベースのクライアント管理の詳細については、「[インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)」を参照してください。  
-
-### <a name="nocrlcheck"></a>/NoCRLCheck
-
-PKI 証明書を使用して HTTPS で通信するときは、クライアントが証明書失効リスト (CRL) を確認しないように指定します。 このパラメーターを指定しない場合、クライアントでは、HTTPS 接続を確立する前に CRL が確認されます。 クライアントの CRL チェックの詳細については、「[PKI 証明書失効の計画](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs)」を参照してください。
-
-例: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
-
-### <a name="config"></a>/config
-
-このパラメーターでは、クライアント インストールのプロパティの一覧が記載されたテキスト ファイルを指定します。
-
-- CCMSetup がサービスとして実行されている場合は、このファイルを CCMSetup システム フォルダー `%Windir%\Ccmsetup` に配置します。
-
-- [ **/noservice**](#noservice) パラメーターを指定する場合は、このファイルを CCMSetup.exe と同じフォルダーに配置します。
-
-例: `CCMSetup.exe /config:"configuration file name.txt"`
-
-正しいファイル形式を指定するには、サイト サーバー上の Configuration Manager インストール ディレクトリの `\bin\<platform>` フォルダーにある **mobileclienttemplate.tcf** ファイルを使用します。 このファイルには、セクションとその使用方法に関するコメントが含まれています。 `[Client Install]` セクションで、次のテキストの後にクライアント インストールのプロパティを指定します: `Install=INSTALL=ALL`。
-
-`[Client Install]` セクションのエントリの例: `Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
 ### <a name="skipprereq"></a>/skipprereq
 
@@ -244,40 +263,33 @@ PKI 証明書を使用して HTTPS で通信するときは、クライアント
 
 クライアントの前提条件の詳細については、[Windows クライアントの前提条件](prerequisites-for-deploying-clients-to-windows-computers.md)に関する記事をご覧ください。
 
-### <a name="forceinstall"></a>/forceinstall
+### <a name="source"></a>/source
 
-CCMSetup.exe で既存のクライアントをすべてアンインストールし、新しいクライアントをインストールするように指定します。  
+ファイルのダウンロード場所を指定します。 ローカルまたは UNC パスを使用します。 デバイスにより、サーバー メッセージ ブロック (SMB) プロトコルを使用してファイルがダウンロードされます。 **/source** を使用するには、クライアント インストール用の Windows ユーザー アカウントに、その場所に対する**読み取り**アクセス許可が必要です。
 
-### <a name="excludefeatures"></a>/ExcludeFeatures
+ccmsetup によってコンテンツがダウンロードされる方法の詳細については、[境界グループ - クライアントのインストール](../../servers/deploy/configure/boundary-groups.md#bkmk_ccmsetup)に関するページを参照してください。 この記事には、 **/mp** と **/source** パラメーターの両方を使用した場合の ccmsetup の動作の詳細も含まれています。
 
-このパラメーターでは、指定した機能を CCMSetup.exe でインストールしないように指定します。
+> [!TIP]  
+> コマンド ラインで **/source** パラメーターを複数回使用して、ダウンロードの代替場所を指定することができます。  
 
-例: `CCMSetup.exe /ExcludeFeatures:ClientUI` は、クライアントにソフトウェア センターをインストールしません。  
+例: `ccmsetup.exe /source:"\\server\share"`
 
-> [!NOTE]  
-> `ClientUI` は、 **/ExcludeFeatures** パラメーターでサポートされる唯一の値です。
+### <a name="uninstall"></a>/uninstall
 
-### <a name="alwaysexcludeupgrade"></a>/AlwaysExcludeUpgrade
+構成マネージャー クライアントをアンインストールするには、このパラメーターを使用します。 詳細については、「[クライアントをアンインストールする](../manage/manage-clients.md#BKMK_UninstalClient)」をご覧ください。
 
-このパラメーターでは、[**自動クライアント アップグレード**](../manage/upgrade/upgrade-clients-for-windows-computers.md#bkmk_autoupdate)を有効にした場合にクライアントが自動的にアップグレードされるかどうかを指定します。
+例: `ccmsetup.exe /uninstall`  
 
-サポートされる値:
+### <a name="usepkicert"></a>/UsePKICert
 
-- `TRUE`: クライアントは自動的にアップグレードされません
-- `FALSE`: クライアントは自動的にアップグレードされます (既定)
+クライアントが PKI クライアント認証証明書を使用するようにするには、このパラメーターを指定します。 このパラメーターを指定しない場合、またはクライアントで有効な証明書が見つからない場合は、自己署名証明書による HTTP 接続が使用されます。
 
-次に例を示します。  
+例: `CCMSetup.exe /UsePKICert`  
 
-`CCMSetup.exe /AlwaysExcludeUpgrade:TRUE`
-
-詳細については、[拡張相互運用性クライアント](../../understand/interoperability-client.md)に関するページをご覧ください。
-
-> [!NOTE]  
-> **/AlwaysExcludeUpgrade** パラメーターを使用する場合、自動アップグレードは引き続き実行されます。 ただし、アップグレードを行うために CCMSetup を実行すると、 **/AlwaysExcludeUpgrade** パラメーターが設定されていることが確認され、**ccmsetup.log** に次の行が記録されます。
+> [!NOTE]
+> 一部のシナリオでは、このパラメーターを指定する必要はなく、引き続きクライアント証明書を使用します。 たとえば、クライアント プッシュおよびソフトウェアの更新に基づいたクライアント インストールです。 クライアントを手動でインストールし、 **/mp** パラメーターを使用して HTTPS が有効な管理ポイントを指定する場合は、このパラメーターを使用します。
 >
-> `Client is stamped with /alwaysexcludeupgrade. Stop proceeding.`
->
-> CCMSetup はその後すぐに終了し、アップグレードは実行されません。
+> また、インターネットのみの通信用にクライアントをインストールする場合も、このパラメーターを指定してください。 **CCMALWAYSINF=1** プロパティを、インターネット ベースの管理ポイント (**CCMHOSTNAME**) とサイト コード (**SMSSITECODE**) のプロパティと共に使用します。 インターネット ベースのクライアント管理の詳細については、「[インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)」を参照してください。  
 
 ## <a name="ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> CCMSetup.exe のリターン コード
 

@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e7bc30c4350d96654a0f6a6ae548d63c2928e791
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 87056482f098a440e5950b76520ab410844a1888
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904657"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129003"
 ---
 # <a name="whats-new-in-version-1802-of-configuration-manager"></a>Configuration Manager のバージョン 1802 の新機能
 
@@ -236,7 +236,7 @@ Windows 10 の一括アップグレード用の既定のタスク シーケン�
 
 ### <a name="use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices"></a>ソフトウェア センターを使用してユーザーが利用できるアプリケーションを参照し、Azure AD に参加しているデバイスにインストールする
 <!-- 1322613 -->
-ユーザーが利用できるようにアプリケーションを展開した場合、ユーザーは Azure Active Directory (Azure AD) デバイスのソフトウェア センターでアプリケーションを参照してインストールできるようになりました。 詳細については、[Azure AD 参加デバイスにユーザーが利用できるアプリケーションを展開する方法](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)に関するページを参照してください。
+ユーザーが利用できるようにアプリケーションを展開した場合、ユーザーは Azure Active Directory (Azure AD) デバイスのソフトウェア センターでアプリケーションを参照してインストールできるようになりました。 詳細については、「[ユーザーが利用できるアプリケーションを展開する](../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)」を参照してください。
 
 ### <a name="hide-installed-applications-in-software-center"></a>ソフトウェア センターでインストール済みのアプリケーションを非表示にする
 <!--1357592-->

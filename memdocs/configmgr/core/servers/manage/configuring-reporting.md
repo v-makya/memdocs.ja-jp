@@ -10,12 +10,12 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b7ada6f54a7642817a321937a4d7128994d5538
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: e53c61052b8ee1b217a5268e8877dc4f4415f477
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823981"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692623"
 ---
 # <a name="configure-reporting-in-configuration-manager"></a>Configuration Manager でのレポートの構成
 
@@ -39,7 +39,7 @@ SQL Server Reporting Services は、サーバー ベースのレポート プラ
 
 レポートを実行すると、Reporting Services コンポーネントは、データを取得するために Configuration Manager サイト データベースに接続されます。  
 
-Configuration Manager サイトにレポート サービス ポイントをインストールする前に、ターゲットのサイト システムに SQL Server Reporting Services をインストールして構成します。 詳細については、「[SQL Server Reporting Services のインストール](https://docs.microsoft.com/sql/reporting-services/install-windows/install-reporting-services)」をご覧ください。  
+Configuration Manager サイトにレポート サービス ポイントをインストールする前に、ターゲットのサイト システムに SQL Server Reporting Services をインストールして構成します。 詳細については、「[SQL Server Reporting Services のインストール](/sql/reporting-services/install-windows/install-reporting-services)」をご覧ください。  
 
 ### <a name="verify-sql-server-reporting-services-installation"></a>SQL Server Reporting Services のインストール状態の検証
 
@@ -241,7 +241,7 @@ Configuration Manager のインストール パスの **Logs** ディレクト�
 SQL Server Reporting Services 内でレポートを作成する場合、多くのオプションがあります。 Configuration Manager コンソールでレポートを作成または編集する場合、Configuration Manager はレポート ビルダーを開いて、作成環境として使用します。 Configuration Manager レポートをどのように作成するかにかかわらず、サイト データベース サーバーでのサーバー認証のために自己署名入り証明書が必要です。
 
 > [!NOTE]  
-> SQL Server Reporting Services を使用したレポートの作成について詳しくは、「[レポートビルダーの作成環境](https://docs.microsoft.com/sql/reporting-services/tools/report-builder-authoring-environment-ssrs)」をご覧ください。  
+> SQL Server Reporting Services を使用したレポートの作成について詳しくは、「[レポートビルダーの作成環境](/sql/reporting-services/tools/report-builder-authoring-environment-ssrs)」をご覧ください。  
 
 Configuration Manager によって、サイト サーバー上の証明書と SMS プロバイダーの役割が自動的にインストールされます。 これらのサーバーのいずれかから Configuration Manager コンソールを実行する場合は、そこからレポートを作成または編集できます。
 

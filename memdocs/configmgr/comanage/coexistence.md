@@ -10,12 +10,12 @@ ms.assetid: ed4dc65e-e5d5-4f75-88ac-f4849ec8fc10
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f22ba6f29e0c85e19ab66d1b052085db5303cc2c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 055d79c56417135e2b08a31bc05a3ca30b5fd581
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81690310"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695105"
 ---
 # <a name="third-party-mdm-coexistence-with-configuration-manager"></a>サード パーティ製 MDM と Configuration Manager の共存
 
@@ -23,12 +23,12 @@ Windows 10 デバイスを Configuration Manager と Microsoft Intune の両方�
 
 Configuration Manager クライアントは、Azure Active Directory に参加しており、Windows 10 バージョン 1709 以降を実行しているデバイス上でサード パーティ製 MDM サービスと共存できます。 そのデバイスは次の種類のいずれかになります。
 
-- [Azure AD のみに参加](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)。 (この種類は "クラウド ドメイン参加済み" とも呼ばれます)  
+- [Azure AD のみに参加](/azure/active-directory/devices/azureadjoin-plan)。 (この種類は "クラウド ドメイン参加済み" とも呼ばれます)  
 
-- [Hybrid ドメイン参加済み](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan): デバイスがオンプレミスの Active Directory に参加し、Azure Active Directory に登録されている場合。  
+- [Hybrid ドメイン参加済み](/azure/active-directory/devices/hybrid-azuread-join-plan): デバイスがオンプレミスの Active Directory に参加し、Azure Active Directory に登録されている場合。  
 
 > [!Note]  
-> [個人所有デバイス](https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device)はサポートされません。  
+> [個人所有デバイス](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device)はサポートされません。  
 
 サード パーティ製 MDM サービスでもデバイスが管理されていることが Configuration Manager クライアントで検出されると、Configuration Manager では、特定のワークロードの場所が自動的に無効になります。 この動作により、MDM サービスはこれらの機能を引き継ぐことができます。 クライアント上で設定が競合し、デバイスやユーザー エクスペリエンスに悪影響を与える可能性も防ぎます。 このケースでは、Configuration Manager の次のワークロードが無効になります。
 

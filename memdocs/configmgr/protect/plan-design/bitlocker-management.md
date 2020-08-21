@@ -2,7 +2,7 @@
 title: BitLocker 管理の計画
 titleSuffix: Configuration Manager
 description: Configuration Manager を使用して BitLocker ドライブ暗号化を管理する計画を立てます
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c03d5d06dc6b49ceff6af8ce862eb19cb4a517a
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 8370c3352778fa6bb7c6229beb1c7610c419a86d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531470"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129299"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker 管理の計画
 
@@ -25,7 +25,7 @@ ms.locfileid: "84531470"
 
 バージョン 1910 以降は、Configuration Manager を使用して、Active Directory に参加しているオンプレミスの Windows クライアント用の BitLocker ドライブ暗号化 (BDE) を管理します。 Azure Active Directory に参加している、またはワークグループのクライアントはサポートされていません。 Configuration Manager には、Microsoft BitLocker Administration and Monitoring (MBAM) の代わりに使用できる完全な BitLocker ライフサイクル管理機能が用意されています。
 
-> [!Note]  
+> [!NOTE]
 > Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options)」 (更新プログラムのオプション機能の有効化) を参照してください。  
 
 詳細については、「[BitLocker の概要](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)」を参照してください。
@@ -81,6 +81,8 @@ Windows 10 または Windows 8.1 が動作しているマネージド Windows �
   - HTTPS 用の管理ポイントを構成します。 このオプションは、Configuration Manager バージョン 1910 または 2002 に適用されます。
 
   詳細については、「[回復データの暗号化](../deploy-use/bitlocker/encrypt-recovery-data.md)」をご覧ください。
+
+- BitLocker 回復サービスはデータベース レプリカを使用する管理ポイントにインストールされますが、クライアントは回復キーをエスクローできません。 そのため、BitLocker によってドライブが暗号化されません。 回復サービスを使用するには、レプリカ構成に含まれていない管理ポイントが少なくとも 1 つ必要です。 データベース レプリカを使用する管理ポイント上で、BitLocker 回復サービスを無効にしてください。<!-- 7813149 -->
 
 - BitLocker 管理レポートを使用するには、レポート サービス ポイントのサイト システムの役割をインストールします。 詳しくは、[レポートの構成](../../core/servers/manage/configuring-reporting.md)に関するページをご覧ください。
 

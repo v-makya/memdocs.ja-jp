@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4708c0d8e9a7d2a3b87310b64311d67d8b84a16a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126792"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694425"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager の Technical Preview 1806 の機能
 
@@ -81,10 +81,10 @@ SCUP では引き続き、他のカタログとシナリオがサポートされ
 
     > [!Tip]  
     > ソフトウェアの更新ポイントでは HTTPS が必要です。これは、署名証明書を処理するために使用される WSUS API の前提条件だからです。 クライアントが HTTPS 対応である必要はありません。 WSUS での HTTPS の有効化の詳細については、次の記事を参照してください。  
-    > - [Secure Sockets Layer (SSL) プロトコルを使用して WSUS をセキュリティで保護する](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
-    > - [WSUS サポートのブログ記事](https://docs.microsoft.com/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
+    > - [Secure Sockets Layer (SSL) プロトコルを使用して WSUS をセキュリティで保護する](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) 
+    > - [WSUS サポートのブログ記事](/archive/blogs/sus/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names)
 
-- ソフトウェア更新ポイントの WSUSContent フォルダーに、サード パーティのソフトウェア更新プログラムのソース バイナリ コンテンツを格納するのに十分なディスク領域がある必要があります。 必要な記憶域の容量は、ベンダー、更新プログラムの種類、および展開のために発行する特定の更新プログラムによって異なります。 WSUSContent フォルダーを、空き領域がより多い別のドライブに移動する必要がある場合は、WSUS サポート チームのブログ記事「[How to change the location where WSUS stores updates locally](https://docs.microsoft.com/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally)」 (WSUS で更新プログラムをローカルに格納する場所を変更する方法) を参照してください。  
+- ソフトウェア更新ポイントの WSUSContent フォルダーに、サード パーティのソフトウェア更新プログラムのソース バイナリ コンテンツを格納するのに十分なディスク領域がある必要があります。 必要な記憶域の容量は、ベンダー、更新プログラムの種類、および展開のために発行する特定の更新プログラムによって異なります。 WSUSContent フォルダーを、空き領域がより多い別のドライブに移動する必要がある場合は、WSUS サポート チームのブログ記事「[How to change the location where WSUS stores updates locally](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally)」 (WSUS で更新プログラムをローカルに格納する場所を変更する方法) を参照してください。  
 
 - **[ソフトウェア更新プログラム]** グループのクライアント設定 [[サード パーティ製のソフトウェア更新プログラムを有効にする]](../clients/deploy/about-client-settings.md#enable-third-party-software-updates) を有効化して展開している。  
 
@@ -354,4 +354,4 @@ CMG を作成するときに、[設定] ページで[信頼されたルート証
 
 
 ## <a name="next-steps"></a>次のステップ
-Technical Preview ブランチのインストールまたは更新については、「[Configuration Manager の Technical Preview](technical-preview.md)」をご覧ください。    
+Technical Preview ブランチのインストールまたは更新については、「[Configuration Manager の Technical Preview](technical-preview.md)」をご覧ください。

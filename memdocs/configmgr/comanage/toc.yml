@@ -6,7 +6,7 @@
       href: overview.md
 - name: クイックスタート
   items:
-    - name: クイックスタートの概要
+    - name: クイック スタートの概要
       href: quickstarts.md
     - name: イミディエイト モード
       items:
@@ -20,7 +20,7 @@
           href: quickstart-hybrid-aad.md
         - name: Windows Autopilot
           href: quickstart-autopilot.md
-    - name: はじめに
+    - name: 作業の開始
       items:
         - name: 共同管理へのパス
           href: quickstart-paths.md
@@ -42,7 +42,7 @@
       href: workloads.md
     - name: サード パーティ製 MDM の共存
       href: coexistence.md
-- name: 攻略ガイド
+- name: 操作方法ガイド
   items:
     - name: 共同管理を有効にする
       href: how-to-enable.md
@@ -50,5 +50,7 @@
       href: how-to-prepare-Win10.md
     - name: ワークロードを Intune に切り替える
       href: how-to-switch-workloads.md
+    - name: ポータル サイトのアプリ
+      href: company-portal.md
     - name: 共同管理の監視
       href: how-to-monitor.md

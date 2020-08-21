@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ddd01055ac6edf2872854c93cc5172b396052ad2
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 2712613eb6d03253c05a011037ac8492992e1f03
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270856"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695190"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Configuration Manager で Windows アプリケーションを作成する
 
@@ -58,7 +58,7 @@ Configuration Manager では、Windows 10 のすべてのサポート対象バ�
 
 Configuration Manager では、Windows 10 のアプリ パッケージ (.msix) 形式とアプリ バンドル (.msixbundle) 形式がサポートされます。 Windows 10 バージョン 1809 以降で、これらの形式がサポートされています。
 
-- MSIX の概要については、「[A closer look at MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix)」(MSIX を詳しく調べる) をご覧ください。  
+- MSIX の概要については、「[A closer look at MSIX](/archive/blogs/sgern/a-closer-look-at-msix)」(MSIX を詳しく調べる) をご覧ください。  
 
 - 新しい MSIX アプリを作成する方法については、「[MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376)」(Insider ビルド 17682 で導入された MSIX のサポート) をご覧ください。  
 
@@ -79,7 +79,7 @@ Configuration Manager では、Windows 10 のアプリ パッケージ (.msix) �
 
   - Microsoft Store から [MSIX Packaging Tool](https://www.microsoft.com/store/productId/9N5LW3JBCXKF) をインストールします  
 
-  - [MSIX Packaging Tool ドライバー](https://docs.microsoft.com/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)をインストールします<!--SCCMDocs-pr issue #3091-->  
+  - [MSIX Packaging Tool ドライバー](/windows/msix/packaging-tool/tool-known-issues#frameworks-and-drivers)をインストールします<!--SCCMDocs-pr issue #3091-->  
 
 このデバイスには、他のアプリやサービスをインストールしないでください。 これは参照システムです。
 
@@ -104,8 +104,8 @@ Configuration Manager では、Windows 10 のアプリ パッケージ (.msix) �
 
 この MSIX アプリを使用するには、クライアントによって信頼されるように、最初にデジタル署名する必要があります。 このプロセスについて詳しくは、以下の記事をご覧ください。
 
-- [MSIX – MSIX Packaging Tool – MSIX パッケージの署名](https://docs.microsoft.com/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
-- [SignTool を使用してアプリ パッケージに署名する方法](https://docs.microsoft.com/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
+- [MSIX – MSIX Packaging Tool – MSIX パッケージの署名](/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
+- [SignTool を使用してアプリ パッケージに署名する方法](/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
 
 アプリに署名した後、Configuration Manager でアプリケーションに新しい展開の種類を作成します。 詳細については、「[アプリケーションの展開の種類を作成する](../deploy-use/create-applications.md#bkmk_create-dt)」を参照してください。
 
@@ -182,4 +182,4 @@ UWP 基幹業務アプリにデジタル署名します。 アプリを展開す
 
 - コンピューター単位の MSI パッケージはデバイスのすべてのユーザーにインストールされます。  
 
-- Configuration Manager ではアプリの更新プログラムがサポートされます。 各バージョンの MSI 製品コードは同じである必要があります。  
+- Configuration Manager ではアプリの更新プログラムがサポートされます。 各バージョンの MSI 製品コードは同じである必要があります。

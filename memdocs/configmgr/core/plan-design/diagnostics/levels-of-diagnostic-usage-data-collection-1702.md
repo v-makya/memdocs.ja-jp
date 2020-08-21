@@ -5,18 +5,18 @@ description: Configuration Manager バージョン 1702 で収集される診断
 ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: d43ab033-2902-4681-8716-b4b17a6df372
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 155d62b3b8876f3bdf7dab218451c38e7cca6aed
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4443d2319bceca2e92f1655660ec384674dac1e7
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81698130"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128782"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1702-of-configuration-manager"></a>Configuration Manager バージョン 1702 で収集される診断結果および使用状況データのレベル
 
@@ -395,7 +395,7 @@ Configuration Manager バージョン 1702 では、このレベルには次の�
 
     - ***[新規]*** 同期スケジュールと平均時間を含む、データ ウェアハウス サービス ポイントの構成
 
-    - Wake On Lan (WOL) サイトの数
+    - Wake on LAN (WOL) サイトの数
 
     - 使用状況とパフォーマンスの統計情報のレポート  
 

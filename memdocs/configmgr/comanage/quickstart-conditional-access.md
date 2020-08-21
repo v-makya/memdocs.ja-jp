@@ -10,12 +10,12 @@ ms.assetid: 4cf640b3-610c-4c3c-b966-c62e9f5654ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 94f002ecd12d08ffd5f3d4767e315e0d83714929
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: f2ada7bfcef5714d8df3c476a6bbba695dc398e0
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764052"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88127275"
 ---
 # <a name="conditional-access-with-co-management"></a>共同管理での条件付きアクセス
 
@@ -81,7 +81,7 @@ For more information, see [Wipro drives mobile productivity with Microsoft cloud
 
 - Nestlé では、150,000 人を超える従業員のためにアプリ ベースの条件付きアクセスを使用しています  
 
-- 自動化ソフトウェア会社の Cadence では、現在、"マネージド デバイスのみから、Teams などの Office 365 アプリや会社のイントラネットにアクセスできる" ようにしています。 従業員が "Workday や Salesforce などに他のクラウドベース アプリにより安全にアクセスできるようにもしています"。 Intune での Cadence のエクスペリエンスの詳細については、「[Cadence increases the pace of business with mobile collaboration tools in Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365)」 (Cadence では Microsoft 365 でモバイル コラボレーション ツールを使用することでビジネスのペースを上げた) を参照してください。
+- 自動化ソフトウェア会社の Cadence では、現在、"マネージド デバイスのみから、Teams などの Microsoft 365 Apps や会社のイントラネットにアクセスできる" ようにしています。 従業員が "Workday や Salesforce などに他のクラウドベース アプリにより安全にアクセスできるようにもしています"。 Intune での Cadence のエクスペリエンスの詳細については、「[Cadence increases the pace of business with mobile collaboration tools in Microsoft 365](https://customers.microsoft.com/story/cadence-partner-professional-services-microsoft-365)」 (Cadence では Microsoft 365 でモバイル コラボレーション ツールを使用することでビジネスのペースを上げた) を参照してください。
 
 Intune は、Cisco ISE、Aruba Clear Pass、Citrix NetScaler などのパートナーとも完全に統合されています。 これらのパートナーと共に、Intune 登録とこれらの他のプラットフォーム全体でのデバイスのコンプライアンス状態に基づいて、アクセス制御を維持できます。
 

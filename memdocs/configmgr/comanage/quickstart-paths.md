@@ -10,12 +10,12 @@ ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d481976a6c86da67670871690ba16985a67c80d8
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: a685e10ecdb2f6fac8d5634fd932facf52fddcb0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746461"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694952"
 ---
 # <a name="paths-to-co-management"></a>共同管理へのパス
 
@@ -34,10 +34,10 @@ ms.locfileid: "84746461"
 
 設定には以下が必要です。
 - Hybrid Azure AD
-    - 次の [Azure AD ハイブリッド ID オプション](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin)のいずれか:  
-       - [シームレス シングル サインオン (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) を使った[パスワード ハッシュ同期](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization)
-       - [シームレス シングル サインオン (SSO)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) を使った[パススルー認証](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta)
-       - [フェデレーション SSO (Active Directory フェデレーション サービス (AD FS) を使用)](https://docs.microsoft.com/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
+    - 次の [Azure AD ハイブリッド ID オプション](/azure/active-directory/hybrid/plan-connect-user-signin)のいずれか:  
+       - [シームレス シングル サインオン (SSO)](/azure/active-directory/hybrid/how-to-connect-sso) を使った[パスワード ハッシュ同期](/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization)
+       - [シームレス シングル サインオン (SSO)](/azure/active-directory/hybrid/how-to-connect-sso) を使った[パススルー認証](/azure/active-directory/hybrid/how-to-connect-pta)
+       - [フェデレーション SSO (Active Directory フェデレーション サービス (AD FS) を使用)](/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
     - Azure AD Connect
     - Azure AD Premium ライセンス
     - ハイブリッド Azure AD 参加を構成する (オプションを 1 つ選択する):
@@ -61,4 +61,3 @@ ms.locfileid: "84746461"
 4. [Intune を使用して Configuration Manager クライアントを展開する](how-to-prepare-Win10.md)  
 
 このパスのチュートリアルについては、「[Tutorial:新しいインターネットベースのデバイスの共同管理を有効にする](tutorial-co-manage-new-devices.md)」をご覧ください。
-

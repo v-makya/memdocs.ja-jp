@@ -10,12 +10,12 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 23cc7d0c642637a310f53280bafed6a2a28d2834
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: ea1965d6cae90808156957be1c9634e4c1631aa8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406684"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694527"
 ---
 # <a name="create-a-configuration-manager-lab-in-azure"></a>Configuration Manager ラボを Azure で作成する
 
@@ -66,7 +66,7 @@ ms.locfileid: "83406684"
 
         - **管理者ユーザー名**:管理者権限を持つ、VM のユーザーの名前。 このユーザーを使用して、VM にサインインします。  
 
-        - **管理者パスワード**:パスワードは、Azure の複雑さの要件を満たす必要があります。 詳細については、[adminPassword](https://docs.microsoft.com/rest/api/compute/virtualmachines/createorupdate#osprofile) に関するページを参照してください。  
+        - **管理者パスワード**:パスワードは、Azure の複雑さの要件を満たす必要があります。 詳細については、[adminPassword](/rest/api/compute/virtualmachines/createorupdate#osprofile) に関するページを参照してください。  
 
     > [!Important]  
     > Azure では次の設定が必要です。 既定値を使用します。 これらの値は変更しないでください。  
@@ -86,7 +86,7 @@ Azure では設定を検証してから、デプロイを開始します。 Azur
 
 構成スクリプトの状態を確認するには、`<prefix>PS1` サーバーに接続し、`%windir%\TEMP\ProvisionScript\PS1.json` ファイルを表示します。 すべての手順が完了と示されたら、プロセスは完了です。
 
-VM に接続するには、まず、Azure ポータルから各 VM のパブリック IP アドレスを取得します。 VM に接続する場合、ドメイン名は `contoso.com` となります。 デプロイ テンプレートで指定した資格情報を使用します。 詳細については、「[Windows が実行されている Azure 仮想マシンに接続してログオンする方法](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon)」を参照してください。
+VM に接続するには、まず、Azure ポータルから各 VM のパブリック IP アドレスを取得します。 VM に接続する場合、ドメイン名は `contoso.com` となります。 デプロイ テンプレートで指定した資格情報を使用します。 詳細については、「[Windows が実行されている Azure 仮想マシンに接続してログオンする方法](/azure/virtual-machines/windows/connect-logon)」を参照してください。
 
 
 

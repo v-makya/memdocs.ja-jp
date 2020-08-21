@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b7643c73d2e9dad00e926bdc3db905016c45860a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 062ae289ff53952d670592be6ff0027a91a627d4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905215"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694408"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-configuration-manager"></a>Configuration Manager の Technical Preview 1806.2 の機能
 
@@ -147,7 +147,7 @@ Configuration Manager コンソールで、 **[ソフトウェア ライブラ�
 <!--1357427-->
 Configuration Manager は、新しい Windows 10 アプリ パッケージ (.msix) とアプリ バンドル (.msixbundle) 形式の展開をサポートするようになりました。 現在、最新の [Windows Insider Preview](https://insider.windows.com/) のビルドでは、これらの新しい形式がサポートされています。
 
-MSIX の概要については、「[A closer look at MSIX](https://docs.microsoft.com/archive/blogs/sgern/a-closer-look-at-msix)」(MSIX を詳しく調べる) をご覧ください。
+MSIX の概要については、「[A closer look at MSIX](/archive/blogs/sgern/a-closer-look-at-msix)」(MSIX を詳しく調べる) をご覧ください。
 
 新しい MSIX アプリを作成する方法については、「[MSIX support introduced in Insider Build 17682](https://techcommunity.microsoft.com/t5/MSIX-Blog/MSIX-support-introduced-in-Insider-Build-17682/ba-p/202376)」(Insider ビルド 17682 で導入された MSIX のサポート) をご覧ください。
 
@@ -168,7 +168,7 @@ MSIX の概要については、「[A closer look at MSIX](https://docs.microsof
 <!--1358204-->
 構成マネージャー クライアントをインストールする[クライアント プッシュ](../clients/deploy/plan/client-installation-methods.md#client-push-installation) メソッドを使用する場合、サイト サーバーでは、インストールを開始するクライアントへのリモート接続が作成されます。 このリリース以降、サイトでは、接続を確立する前の NTLM へのフォールバックを許可しないことによって、Kerberos の相互認証を要求できます。 この機能強化は、サーバーとクライアント間の通信をセキュリティで保護するのに役立ちます。 
 
-セキュリティ ポリシーによっては、お客様の環境は既に以前の NTLM 認証よりも Kerberos に適している場合、または Kerberos を必要としている場合があります。 これらの認証プロトコルに関するセキュリティの考慮事項について詳しくは、[NTLM を制限する Windows セキュリティ ポリシーの設定](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations)に関するページをご覧ください。
+セキュリティ ポリシーによっては、お客様の環境は既に以前の NTLM 認証よりも Kerberos に適している場合、または Kerberos を必要としている場合があります。 これらの認証プロトコルに関するセキュリティの考慮事項について詳しくは、[NTLM を制限する Windows セキュリティ ポリシーの設定](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations)に関するページをご覧ください。
 
 
 ### <a name="prerequisite"></a>前提条件
@@ -218,7 +218,7 @@ Windows デスクトップ アプリケーションを展開するために引�
 
 - [Windows 10 デバイスの共同管理](../../comanage/overview.md)  
 
-- [Microsoft Intune アプリの管理とは](https://docs.microsoft.com/intune/app-management)  
+- [Microsoft Intune アプリの管理とは](/intune/app-management)  
 
 
 
@@ -319,7 +319,7 @@ Windows デスクトップ アプリケーションを展開するために引�
 
     - [Azure Resource Manager を使用するクラウド配布ポイント](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)の展開  
 
-- ユーザーは、Windows AutoPilot を使用して、オンプレミス ネットワークに接続された、Azure Active Directory に参加しているデバイスに Windows 10 をプロビジョニングしています。 これらのデバイスで Configuration Manager クライアントをインストールまたはアップグレードするために、**クライアントに匿名接続を許可する**ために構成したクラウド配布ポイントやオンプレミスの配布ポイントが必要なくなりました。 代わりに、**HTTP サイト システム用に Configuration Manager で生成された証明書を使用する**サイトのオプションを有効にします。これにより、クラウド ドメイン参加しているクライアントが、オンプレミスの HTTP が有効な配布ポイントと通信できるようになります。 詳細については、「[改善されたセキュアなクライアント通信](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications)」をご覧ください。<!--515854-->  
+- ユーザーは、Windows AutoPilot を使用して、オンプレミス ネットワークに接続された、Azure Active Directory に参加しているデバイスに Windows 10 をプロビジョニングしています。 これらのデバイスで Configuration Manager クライアントをインストールまたはアップグレードするために、**クライアントに匿名接続を許可する**ために構成したクラウド配布ポイントやオンプレミスの配布ポイントが必要なくなりました。 代わりに、**HTTP サイト システム用に Configuration Manager で生成された証明書を使用する**サイトのオプションを有効にします。これにより、クラウド ドメイン参加しているクライアントが、オンプレミスの HTTP が有効な配布ポイントと通信できるようになります。 詳細については、「[改善されたセキュアなクライアント通信](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications)」をご覧ください。<!--515854-->  
 
 
 
@@ -338,4 +338,4 @@ Windows デスクトップ アプリケーションを展開するために引�
 
 
 ## <a name="next-steps"></a>次のステップ
-Technical Preview ブランチのインストールまたは更新については、「[Configuration Manager の Technical Preview](technical-preview.md)」をご覧ください。    
+Technical Preview ブランチのインストールまたは更新については、「[Configuration Manager の Technical Preview](technical-preview.md)」をご覧ください。

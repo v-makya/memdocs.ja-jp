@@ -2,7 +2,7 @@
 title: クラウド管理ゲートウェイの計画
 titleSuffix: Configuration Manager
 description: インターネットを基盤とするクライアントの管理を簡素化するクラウド管理ゲートウェイ (CMG) を計画し、設計します。
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d6165678331811f4b04e8b1f540f3dcbb7f015d
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 7c57e6568ce60680d9febc533c60533055595bc3
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502257"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126935"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager でクラウド管理ゲートウェイを計画する
 
@@ -125,6 +125,8 @@ Azure で複数の CMG サービスを作成できます。また、複数の CM
 
 バージョン 1902 以降、CMG を境界グループに関連付けることができるようになりました。 クライアントにこの構成を使用すると、[境界グループのリレーションシップ](../../../servers/deploy/configure/boundary-groups.md)に従って、クライアント通信に対して CMG を既定に設定したり、それにフォールバックしたりすることができます。 この動作は、ブランチ オフィスと VPN のシナリオで特に役立ちます。 クライアント トラフィックに高価で低速な WAN リンクを使用せず、代わりに Microsoft Azure の高速なサービスを使用できます。<!--3640932-->
 
+バージョン 2006 より、イントラネット クライアントは、境界グループに割り当てられたときに、CMG ソフトウェアの更新ポイントにアクセスできます。 詳細については、[境界グループの構成](../../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup)に関するページを参照してください。 <!--7102873-->
+
 > [!NOTE]
 > インターネットベース クライアントはどの境界グループにも分類されません。
 >
@@ -223,7 +225,7 @@ Configuration Manager の**クラウド管理**用 Azure サービスでは、�
 |機能  |サポート  |
 |---------|---------|
 | ソフトウェア更新プログラム     | ![サポート](media/green_check.png) |
-| エンドポイント保護     | ![サポート対象](media/green_check.png) <sup>[注 1](#bkmk_note1)</sup> |
+| エンドポイント保護     | ![サポート](media/green_check.png) <sup>[注記&nbsp;1](#bkmk_note1)</sup> |
 | ハードウェアとソフトウェアのインベントリ     | ![サポート](media/green_check.png) |
 | クライアント ステータスと通知     | ![サポート](media/green_check.png) |
 | スクリプトの実行     | ![サポート](media/green_check.png) |
@@ -233,10 +235,11 @@ Configuration Manager の**クラウド管理**用 Azure サービスでは、�
 | クライアント インストール<br>([トークン認証](../../deploy/deploy-clients-cmg-token.md)を使用) | ![サポート](media/green_check.png) (2002) |
 | ソフトウェア配布 (デバイスを対象に)     | ![サポート](media/green_check.png) |
 | ソフトウェア配布 (ユーザーを対象とし、必須)<br>(Azure AD 統合で)     | ![サポート](media/green_check.png) |
-| ソフトウェア配布 (ユーザーを対象とし、利用可能)<br>([すべての要件](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![サポート](media/green_check.png) |
+| ソフトウェア配布 (ユーザーを対象とし、利用可能)<br>([すべての要件](../../../../apps/deploy-use/deploy-applications.md#deploy-user-available-applications)) | ![サポート](media/green_check.png) |
 | Windows 10 [一括アップグレード タスク シーケンス](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) | ![サポート](media/green_check.png) |
-| ブート イメージを使用せずに、 **[タスク シーケンスを開始する前にすべてのコンテンツをローカルにダウンロードする]** オプションを指定して展開されるタスク シーケンス | ![サポート](media/green_check.png) |
-| [いずれかのダウンロード オプション](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg)でブート イメージを使用していないタスク シーケンス | ![サポート](media/green_check.png) (1910)|
+| **[タスク シーケンスを開始する前にすべてのコンテンツをローカルにダウンロードする]** オプションを指定して展開される、起動イメージのないタスク シーケンス | ![サポート](media/green_check.png) |
+| [いずれかのダウンロード オプション](../../../../osd/deploy-use/deploy-a-task-sequence.md#deploy-windows-10-in-place-upgrade-via-cmg)を指定して展開される、起動イメージのないタスク シーケンス | ![サポート](media/green_check.png) (1910) |
+| ソフトウェア センターから開始される、起動イメージのあるタスク シーケンス | ![サポートされています](media/green_check.png) (2006) |
 | その他のタスク シーケンス シナリオ     | ![サポートされていません](media/Red_X.png) |
 | クライアント プッシュ     | ![サポートされていません](media/Red_X.png) |
 | サイトの自動割り当て     | ![サポートされていません](media/Red_X.png) |
@@ -257,12 +260,18 @@ Configuration Manager の**クラウド管理**用 Azure サービスでは、�
 |![サポートされていません](media/Red_X.png) = この機能は CMG でサポートされていません |
 
 #### <a name="note-1-support-for-endpoint-protection"></a><a name="bkmk_note1"></a> 注 1:エンドポイント保護のサポート
+
+バージョン 2006 以降、CMG を介して通信するクライアントでは、Active Directory へのアクティブな接続なしで、すぐにエンドポイント保護ポリシーを適用できます。<!--4773948-->
+
 <!-- 4350561 -->
-ドメインに参加しているデバイスでエンドポイント保護ポリシーを適用するには、デバイスからドメインへのアクセスが必要です。 内部ネットワークへのアクセス頻度が低いデバイスでは、エンドポイント保護ポリシーの適用で遅延が発生することがあります。 デバイスがエンドポイント保護ポリシーを受信した後、直ちにそのポリシーを適用する必要がある場合は、次のいずれかのオプションを検討してください。
+バージョン 2002 以前の場合、ドメインに参加しているデバイスでエンドポイント保護ポリシーを適用するには、デバイスからドメインへのアクセスが必要です。 内部ネットワークへのアクセス頻度が低いデバイスでは、エンドポイント保護ポリシーの適用で遅延が発生することがあります。 デバイスがエンドポイント保護ポリシーを受信した後、直ちにそのポリシーを適用する必要がある場合は、次のいずれかのオプションを検討してください。
+
+- サイトとクライアントをバージョン 2006 に更新します。
 
 - 共同管理を使用し、[エンドポイント保護のワークロード](../../../../comanage/workloads.md#endpoint-protection)を Intune に切り替え、クラウドから [Microsoft Defender ウイルス対策](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)を管理する。
 
 - ネイティブの[マルウェア対策ポリシー](../../../../protect/deploy-use/endpoint-antimalware-policies.md)機能の代わりに[構成項目](../../../../compliance/deploy-use/create-configuration-items.md)を使用して、エンドポイント保護ポリシーを適用する。
+
 
 ## <a name="cost"></a>コスト
 

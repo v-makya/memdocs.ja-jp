@@ -2,7 +2,7 @@
 title: コミュニティ ハブと GitHub
 titleSuffix: Configuration Manager
 description: Configuration Manager のコミュニティ ハブの有効化と使用
-ms.date: 07/27/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88cead9a-64fe-471e-b57c-81707cefe46c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c0b812fa3b373d6bd5bd2bebed8b1540ceb7bdd6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ae0abdd4a159759037768c8f27d5643bdf612f6e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262083"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128173"
 ---
 # <a name="community-hub-and-github"></a>コミュニティ ハブと GitHub
 <!--3555935, 3555936-->
@@ -66,6 +66,37 @@ IT 管理者のコミュニティでは、長年にわたって豊富な知識�
 
 [![コミュニティ ハブからダウンロードされたすべての項目](./media/3555935-community-hub-downloads.png)](./media/3555935-community-hub-downloads.png#lightbox)
 
+
+## <a name="direct-links-to-community-hub-items"></a><a name="bkmk_deeplink"></a> コミュニティ ハブの項目への直接リンク
+<!--4224406-->
+" *(バージョン 2006 で導入)* " 直接リンクを使用すると、Configuration Manager コンソールのコミュニティ ハブ ノードの項目に簡単に移動したり、参照したりできます。 この機能の目的は、コラボレーションを簡単にし、コミュニティ ハブの項目へのリンクを同僚と共有できるようにすることです。 現在、これらのディープ リンクは、コンソールのコミュニティ ハブ ノードの項目に対してのみ使用できます。
+
+### <a name="prerequisites-for-direct-links"></a>直接リンクの前提条件
+
+- Configuration Manager コンソール バージョン 2006 以降
+- コミュニティ ハブのリンクに従っている場合、ローカルのビルトイン管理者アカウントを使用することはできません。
+
+### <a name="sharing-and-opening-direct-links"></a>直接リンクを共有および開く
+
+項目を共有するには:
+1. ハブの項目にアクセスし、 **[共有]** を選択します。
+1. コピーしたリンクを貼り付けて、他のユーザーと共有します。
+
+共有リンクを開くには:
+1. Configuration Manager コンソールがインストールされているコンピューターからリンクをクリックします。
+   - たとえば、このリンクを使用して、[Edge の自動更新を構成するスクリプト](https://communityhub.microsoft.com/item/7200) (`https://communityhub.microsoft.com/item/7200`) を共有できます。
+1. プロンプトが表示されたら、 **[Launch the Community hub]\(コミュニティ ハブの起動\)** を選択します。
+1. コンソールによって、コミュニティ ハブのスクリプトが直接開かれます。
+
+## <a name="known-issues"></a><a name="bkmk_known"></a> 既知の問題
+
+### <a name="unable-to-access-community-hub-node-when-running-console-as-a-different-user"></a>別のユーザーとしてコンソールを実行しているときに、コミュニティ ハブ ノードにアクセスできない
+<!--7826897-->
+権限の低いユーザーとしてサインインし、 **[別のユーザー として実行]** を選択して Configuration Manager コンソールを開いた場合、**コミュニティ ハブ** ノードにアクセスできない可能性があります。
+
+### <a name="downloaded-reports-dont-get-removed-from-your-downloads-page"></a>ダウンロードされたレポートがダウンロード ページから削除されない
+<!--7851305-->
+ダウンロードしたレポートを **[監視]**  >  **[レポート]** ノードから削除した場合、レポートは **[コミュニティ ハブ]**  >  **[Your downloads]\(ダウンロード\)** ページから削除されず、レポートを再度ダウンロードすることはできません。 
 
 ## <a name="next-steps"></a>次のステップ
 

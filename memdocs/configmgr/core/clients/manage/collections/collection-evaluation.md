@@ -10,12 +10,12 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: af90154b848ddcd7cbff21917ef122ab10585098
-ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
+ms.openlocfilehash: 15b58b841ca87cf2b5e04c98dfd35c487c941e78
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663862"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693320"
 ---
 # <a name="collection-evaluation-in-configuration-manager"></a>Configuration Manager でのコレクションの評価
 
@@ -27,7 +27,7 @@ Configuration Manager では、"*コレクションの評価*" を使用し、�
 
 ## <a name="evaluation-process"></a>評価プロセス
 
-[colleval.log](https://docs.microsoft.com/mem/configmgr/core/plan-design/hierarchy/log-files#BKMK_ServerLogs) には、コレクション エバリュエーターによってコレクションが作成、変更、および削除された日時が記録されます。
+[colleval.log](../../../plan-design/hierarchy/log-files.md#BKMK_ServerLogs) には、コレクション エバリュエーターによってコレクションが作成、変更、および削除された日時が記録されます。
 
 大まかに言うと、個々のコレクションの評価と更新は以下の手順で行われます。
 
@@ -105,5 +105,5 @@ Configuration Manager では、"*増分*" または "*完全*" の 2 種類の�
 ## <a name="next-steps"></a>次のステップ
 - [コレクションを作成する方法](create-collections.md)
 - [コレクションのベスト プラクティス](best-practices-for-collections.md)
-- [Collection Evaluation Viewer](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer)
+- [Collection Evaluation Viewer](../../../support/ceviewer.md)
 - TechEd Australia での「[ConfigMgrDogs Troubleshoot ConfigMgr 2012 (ConfigMgrDogs による ConfigMgr 2012 のトラブルシューティング)](https://channel9.msdn.com/Events/TechEd/Australia/2014/DCI411)」セッション

@@ -2,20 +2,20 @@
 title: インターネット アクセス要件
 titleSuffix: Configuration Manager
 description: Configuration Manager の機能をすべて利用するためのインターネット エンドポイントについて説明します。
-ms.date: 07/07/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: b34fe701-5d05-42be-b965-e3dccc9363ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 71f2a75d59af6f8d5c77e96d780e6d02352e5045
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: bc3e1312c214f871635a65d8d0031e06ea4ad8d9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137349"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126463"
 ---
 # <a name="internet-access-requirements"></a>インターネット アクセス要件
 
@@ -201,8 +201,6 @@ WSUS および自動更新が Microsoft Update クラウド サービスと通�
 
 - `http://*.download.windowsupdate.com`  
 
-- `http://test.stats.update.microsoft.com`  
-
 - `http://ntservicepack.microsoft.com`  
 
 ソフトウェア更新プログラムの詳細については、[ソフトウェア更新プログラムの計画](../../../sum/plan-design/plan-for-software-updates.md)に関するページを参照してください。
@@ -224,7 +222,7 @@ WSUS および自動更新が Microsoft Update クラウド サービスと通�
 
 - `https://<FQDN for software update point on parent site>`  
 
-## <a name="manage-office-365"></a>Office 365 の管理
+## <a name="manage-microsoft-365-apps"></a>Microsoft 365 Apps の管理
 
 > [!NOTE]
 > 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
@@ -275,15 +273,21 @@ Configuration Manager コンソールを使用するコンピューターでは�
 
 ## <a name="desktop-analytics"></a>Desktop Analytics
 
-Desktop Analytics クラウド サービスに必要なエンドポイントの詳細については、「[データ共有を有効にする](../../../desktop-analytics/enable-data-sharing.md#endpoints)」を参照してください。
+詳しくは、[データ共有の有効化](../../../desktop-analytics/enable-data-sharing.md#endpoints)に関する記事をご覧ください。
+
+[!INCLUDE [Internet endpoints for Desktop Analytics](includes/internet-endpoints-desktop-analytics.md)]
 
 ## <a name="tenant-attach"></a>テナントのアタッチ
 
-テナントのアタッチ機能に必要なエンドポイントの詳細については、[テナントのアタッチの有効化](../../../tenant-attach/device-sync-actions.md#internet-endpoints)に関するページをご覧ください。
+詳細については、[テナントのアタッチの有効化](../../../tenant-attach/device-sync-actions.md)に関するページを参照してください。
+
+[!INCLUDE [Internet endpoints for tenant attach](includes/internet-endpoints-tenant-attach.md)]
 
 ## <a name="endpoint-analytics"></a>エンドポイント分析
 
-エンドポイント分析に必要なエンドポイントの詳細については、[エンドポイント分析のプロキシ構成](../../../../analytics/troubleshoot.md#bkmk_endpoints)に関する記事をご覧ください。
+詳細については、[エンドポイント分析のプロキシ構成](../../../../analytics/troubleshoot.md#bkmk_endpoints)に関するページを参照してください。
+
+[!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 
 ## <a name="asset-intelligence"></a>資産インテリジェンス
 

@@ -1,21 +1,21 @@
 ---
 title: Office 365 クライアント管理ダッシュボード
 titleSuffix: Configuration Manager
-description: Office 365 クライアント管理ダッシュボードから Office 365 クライアントの情報を確認します
+description: Office 365 クライアント管理ダッシュボードから Microsoft 365 Apps クライアントの情報を確認します
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 08/11/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
-ms.openlocfilehash: 7e6ed38d0f4217bfc70d3ddb196527d421e5d7c1
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: ce3947c8ca3c562869fdfed2ddba4d9b160902be
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110391"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129385"
 ---
 # <a name="office-365-client-management-dashboard"></a>Office 365 クライアント管理ダッシュボード
 
@@ -24,7 +24,7 @@ ms.locfileid: "82110391"
 > [!Note]
 > 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
 
-Configuration Manager バージョン 1802 以降では、Office 365 クライアント管理ダッシュボードから Office 365 クライアントの情報を確認できます。 Office 365 クライアント管理ダッシュボードでは、グラフ セクションを選択すると関連するデバイスの一覧が表示されます。 <!--1357281 -->
+Configuration Manager バージョン 1802 以降では、Office 365 クライアント管理ダッシュボードから Microsoft 365 Apps クライアントの情報を確認できます。 Office 365 クライアント管理ダッシュボードでは、グラフ セクションを選択すると関連するデバイスの一覧が表示されます。 <!--1357281 -->
 
 ## <a name="prerequisites"></a>[前提条件]
 
@@ -53,13 +53,13 @@ Office 365 クライアント管理ダッシュ ボードに表示されるデ�
 > [!NOTE]
 > これらのシナリオでは、クライアント デバイスのインターネット接続は必要ありません。
 
-### <a name="enable-data-collection-for-office-365-proplus"></a>Office 365 ProPlus のデータ収集を有効にする
+### <a name="enable-data-collection-for-microsoft-365-apps"></a>Microsoft 365 Apps のデータ収集を有効にする
 
 *(前提条件としてバージョン 1910 で導入)*
 
-バージョン 1910 以降では、 **[Office 365 ProPlus Pilot と正常性] ダッシュボード**に情報を設定するために、Office 365 ProPlus のデータ収集を有効にする必要があります。 データは Configuration Manager サイト データベースに格納され、Microsoft に送信されることはありません。
+バージョン 1910 以降では、**Office 365 ProPlus のパイロットと正常性ダッシュボード**に情報を設定するために、Microsoft 365 Apps のデータ収集を有効にする必要があります。 データは Configuration Manager サイト データベースに格納され、Microsoft に送信されることはありません。
 
-このデータは、「[Office 365 ProPlus から Microsoft に送信された診断データ](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft)」で説明されている診断データとは異なります。
+このデータは、[Microsoft 365 Apps から Microsoft に送信される診断データ](https://docs.microsoft.com/deployoffice/privacy/overview-privacy-controls#diagnostic-data-sent-from-office-365-proplus-to-microsoft)に関する記事で説明されている診断データとは異なります。
 
 データ収集を有効にするには、グループ ポリシーを使用するか、レジストリを編集します。
 
@@ -80,28 +80,28 @@ reg add HKCU\Software\Policies\Microsoft\office\16.0\OSM /v EnableLogging /t REG
 
 ## <a name="viewing-the-office-365-client-management-dashboard"></a>Office 365 クライアント管理ダッシュボードの表示
 
-Office 365 クライアント管理ダッシュボードを表示するには、Configuration Manager コンソールで **[ソフトウェア ライブラリ]**  >  **[概要]**  >  **[Office 365 クライアント管理]** に移動します。 ダッシュボードの上部にある **[コレクション]** ドロップダウン設定を使用して、特定のコレクションのメンバーでダッシュボードのデータをフィルター処理します。 Configuration Manager バージョン 1802 以降では、Office 365 クライアント管理ダッシュボードに、グラフ セクションが選択されたときに関連するデバイスのリストが表示されます。
+Office 365 クライアント管理ダッシュボードを表示するには、Configuration Manager コンソールで **[ソフトウェア ライブラリ]**  >  **[概要]**  >  **[Office 365 クライアント管理]** に移動します。 ダッシュボードの上部にある **[コレクション]** ドロップダウン設定を使用して、特定のコレクションのメンバーでダッシュボードのデータをフィルター処理します。 Configuration Manager バージョン 1802 以降では、ダッシュボードでグラフ セクションを選択すると、関連するデバイスのリストが表示されます。
 
 Office 365 クライアント管理ダッシュボードには、次の情報のグラフが表示されます。
 
-- Office 365 クライアントの数
-- Office 365 クライアントのバージョン
-- Office 365 クライアントの言語
-- Office 365 クライアントのチャネル。詳細については、「[Office 365 ProPlus 更新プログラム チャネルの概要](/DeployOffice/overview-of-update-channels-for-office-365-proplus)」をご覧ください。
+- Microsoft 365 Apps クライアントの数
+- Microsoft 365 Apps クライアントのバージョン
+- Microsoft 365 Apps クライアントの言語
+- Microsoft 365 Apps クライアントのチャネル。詳細については、「[Microsoft 365 Apps の更新チャネルの概要](/DeployOffice/overview-of-update-channels-for-office-365-proplus)」をご覧ください。
 
 
-## <a name="integration-for-office-365-proplus-readiness"></a><a name="bkmk_o365_readiness"></a> Office 365 ProPlus の準備の統合
+## <a name="integration-for-microsoft-365-apps-readiness"></a><a name="bkmk_o365_readiness"></a>Microsoft 365 Apps の準備の統合
 <!--3735402-->
-Configuration Manager バージョン 1902 以降では、ダッシュボードを使って Office 365 ProPlus へのアップグレードの準備ができている信頼性の高いデバイスを特定できます。 この統合により、環境内での Office アドインとマクロに関する潜在的な互換性の問題の分析情報が得られます。 そして、Configuration Manager を使用して Office を展開し、デバイスを準備します。
+Configuration Manager バージョン 1902 以降では、ダッシュボードを使用して、Microsoft 365 Apps へのアップグレードの準備ができている信頼性の高いデバイスを特定できます。 この統合により、環境内でのアドインとマクロに関する潜在的な互換性の問題の分析情報が得られます。 その後、Configuration Manager を使用して Microsoft 365 Apps を展開し、デバイスを準備します。
 
 Office 365 クライアント管理ダッシュボードには、 **[O365 ProPlus Upgrade Readiness]** という新しいタイルが含まれています。 このタイルは次の状態のデバイスの横棒グラフです。
 - 未評価
 - アップグレードの準備完了
 - レビューが必要
 
-デバイスの一覧にドリルスルーするには、状態を選択します。 この準備状況レポートは、デバイスに関する詳細を示します。 Office のアドインとマクロの両方の互換性状態の列が含まれています。
+デバイスの一覧にドリルスルーするには、状態を選択します。 この準備状況レポートは、デバイスに関する詳細を示します。 アドインとマクロの両方の互換性状態の列が含まれています。
 
-### <a name="prerequisites-for-office-365-proplus-readiness-integration"></a>Office 365 ProPlus の準備の統合のための前提条件
+### <a name="prerequisites-for-microsoft-365-apps-readiness-integration"></a>Microsoft 365 Apps の準備の統合のための前提条件
 
 - クライアント設定でハードウェア インベントリを有効にしてください。 詳細については、「[前提条件](#prerequisites)」のセクションを参照してください。  
 
@@ -116,7 +116,7 @@ Office 365 クライアント管理ダッシュボードには、 **[O365 ProPlu
 - Excel マクロ対応のブック (.xlsm) や Word マクロ対応の文書 (.docm) などの、マクロ対応の Office ファイル形式  
 - マクロのコンテンツの有無を示さない古い Office 形式。 たとえば、Excel 97-2003 ブック (.xls) などです。
 
-マクロの互換性についてより詳しい情報が必要な場合は、マクロ ファイル内のコードを分析するための **Office 用準備ツールキット**を展開します。 潜在的な互換性の問題の有無が確認されます。 たとえば、最新バージョンの Office で変更された関数をファイルが使用します。 Office 用準備ツールキットを実行して**最近このコンピューター上で使用された Office ドキュメントおよびインストールされたアドイン**に関するオプションを選択するか、コマンド ラインで `-mru` フラグを使用したら、Configuration Manager のハードウェア インベントリ エージェントによって結果を取得できるようになります。 この追加データにより、デバイスの準備状況の計算が強化されます。 詳細については、[Office 用準備ツールキットを使用した Office 365 ProPlus でのアプリケーションの互換性の評価](https://aka.ms/readinesstoolkit)に関する記事をご覧ください。
+マクロの互換性についてより詳しい情報が必要な場合は、マクロ ファイル内のコードを分析するための **Office 用準備ツールキット**を展開します。 潜在的な互換性の問題の有無が確認されます。 たとえば、最新バージョンの Office で変更された関数をファイルが使用します。 Office 用準備ツールキットを実行して**最近このコンピューター上で使用された Office ドキュメントおよびインストールされたアドイン**に関するオプションを選択するか、コマンド ラインで `-mru` フラグを使用したら、Configuration Manager のハードウェア インベントリ エージェントによって結果を取得できるようになります。 この追加データにより、デバイスの準備状況の計算が強化されます。 詳細については、[Office 用準備ツールキットを使用した Microsoft 365 Apps でのアプリケーションの互換性の確認](https://aka.ms/readinesstoolkit)に関する記事を参照してください。
 
 スキャンを実行するために、すべてのターゲット デバイスに準備ツール キットをインストールすることは必要ないので注意してください。 次のサンプル コマンド ライン オプションを使用すれば、必要な各デバイスをスキャンできます。  出力フラグは必須ですが、ダッシュボードでの結果の生成にファイルは使用されないので、任意の有効な場所を選択できます。
 
@@ -126,12 +126,12 @@ ReadinessReportCreator.exe -mru -output c:\temp -silent
 
 詳細については、「[社内の複数ユーザーから準備に関する情報を収集する](/deployoffice/use-the-readiness-toolkit-to-assess-application-compatibility-for-office-365-pro#getting-readiness-information-for-multiple-users-in-an-enterprise)」を参照してください。
 
-## <a name="office-365-proplus-upgrade-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a> Office 365 ProPlus アップグレードの準備ダッシュボード
+## <a name="microsoft-365-apps-readiness-dashboard"></a><a name="bkmk_readiness-dash"></a> Microsoft 365 Apps の準備ダッシュボード
 
 *(バージョン 1906 で導入)*
 
 <!--4021125-->
-Office 365 ProPlus にアップグレードする準備ができているデバイスを特定するために、バージョン 1906 以降では準備ダッシュボードが用意されています。 これには、Configuration Manager の Current Branch バージョン 1902 でリリースされた **[Office 365 ProPlus upgrade readiness]\(Office 365 ProPlus アップグレード準備\)** タイルが含まれています。 このダッシュボードの次の新しいタイルは、Office のアドインとマクロの準備評価に役立ちます。
+Microsoft 365 Apps へのアップグレードの準備ができているデバイスを特定するために、バージョン 1906 以降では準備ダッシュボードが用意されています。 これには、Configuration Manager の Current Branch バージョン 1902 でリリースされた **[Office 365 ProPlus upgrade readiness]\(Office 365 ProPlus アップグレード準備\)** タイルが含まれています。 このダッシュボード上の次の新しいタイルは、アドインとマクロの準備評価に役立ちます。
 
 - 展開
 - デバイスの準備
@@ -148,31 +148,31 @@ Office 365 ProPlus にアップグレードする準備ができているデバ�
 
 [Configuration Manager での Office Readiness を使用した互換性評価および Microsoft Office 365 ProPlus のアップグレードのベストプラクティス](https://myignite.techcommunity.microsoft.com/sessions/79338?source=sessions)
 
-### <a name="using-the-office-365-proplus-upgrade-readiness-dashboard"></a>Office 365 ProPlus アップグレードの準備ダッシュボードの使用
+### <a name="using-the-microsoft-365-apps-upgrade-readiness-dashboard"></a>[Microsoft 365 Apps upgrade readiness]\(Microsoft 365 Apps Upgrade Readiness\) ダッシュボードの使用
 
 [前提条件](#prerequisites)が満たされていることを確認したら、次の手順に従ってダッシュボードを使用します。
  
 1. Configuration Manager コンソールで、 **[ソフトウェア ライブラリ]** ワークスペースに移動し、 **[Office 365 クライアント管理]** を展開します。
-1. **[Office 365 ProPlus Upgrade Readiness]** ノードを選択します。
+1. **[Microsoft 365 Apps Upgrade Readiness]** ノードを選択します。
 1. **[コレクション]** と **[Target Office Architecture]\(ターゲット Office アーキテクチャ)** を変更して、ダッシュボードでリレーされる情報を変更します。
 
-![Office 365 ProPlus アップグレードの準備ダッシュボード](./media/4021125-office-365-upgrade-readiness-dashboard.png)
+[![[Microsoft 365 Apps upgrade readiness]\(Microsoft 365 Apps Upgrade Readiness\) ダッシュボード](./media/4021125-office-365-upgrade-readiness-dashboard.png)](./media/4021125-office-365-upgrade-readiness-dashboard.png#lightbox)
 
-![Office 365 ProPlus アップグレードの準備ダッシュボード](./media/4021125-office-365-to-add-ins.png)
+[![[Microsoft 365 Apps upgrade readiness]\(Microsoft 365 Apps Upgrade Readiness\) ダッシュボードのアドイン](./media/4021125-office-365-to-add-ins.png)](./media/4021125-office-365-to-add-ins.png#lightbox)
 
-![Office 365 ProPlus アップグレードの準備ダッシュボード](./media/4021125-office-365-macro-advisories.png)
+[![[Microsoft 365 Apps upgrade readiness]\(Microsoft 365 Apps Upgrade Readiness\) ダッシュボードのマクロ アドバイザリ](./media/4021125-office-365-macro-advisories.png)](./media/4021125-office-365-macro-advisories.png#lightbox)
 
 ### <a name="device-readiness-information"></a>デバイスの準備情報
 
 各デバイス上のアドインとマクロのインベントリが評価されると、次にその情報に従ってデバイスがグループ化されます。 状態が **[アップグレードの準備完了]** と表示されているデバイスには、互換性の問題はほとんどありません。
 
-グラフの **[アップグレードの準備完了]** カテゴリを選択すると、限定コレクション内のデバイスに関する詳細が表示されます。 デバイスの一覧を確認し、ご自分のビジネス要件に応じて選択を行い、その選択を基に新しいデバイス コレクションを作成することができます。 新しいコレクションを使用して、Configuration Manager で Office 365 ProPlus を展開します。
+グラフの **[アップグレードの準備完了]** カテゴリを選択すると、限定コレクション内のデバイスに関する詳細が表示されます。 デバイスの一覧を確認し、ご自分のビジネス要件に応じて選択を行い、その選択を基に新しいデバイス コレクションを作成することができます。 新しいコレクションを使用して、Configuration Manager で Microsoft 365 Apps を展開します。
 
-互換性の問題が発生している可能性のあるデバイスは、 **[レビューが必要]** とマークされます。 これらのデバイスでは、Office 365 ProPlus にアップグレードする前に、アクションを実行することが必要な場合があります。 たとえば、重要なアドインをより新しいバージョンに更新します。
+互換性の問題が発生している可能性のあるデバイスは、 **[レビューが必要]** とマークされます。 これらのデバイスでは、Microsoft 365 Apps にアップグレードする前に、アクションを実行することが必要な場合があります。 たとえば、重要なアドインをより新しいバージョンに更新します。
 
 ### <a name="add-in-information"></a>アドインの情報
 
- 各デバイス上で、インストールされているすべてのアドインのインベントリが収集されます。 次に、このインベントリは、Office 365 ProPlus でのアドインのパフォーマンスに関して Microsoft が持っている情報と比較されます。 アップグレード後に問題を引き起こす可能性があるアドインが見つかった場合は、そのアドインを備えているすべてのデバイスにレビューのフラグが付けられます。
+ 各デバイス上で、インストールされているすべてのアドインのインベントリが収集されます。 次に、このインベントリは、Microsoft 365 Apps でのアドインのパフォーマンスに関して Microsoft が持っている情報と比較されます。 アップグレード後に問題を引き起こす可能性があるアドインが見つかった場合は、そのアドインを備えているすべてのデバイスにレビューのフラグが付けられます。
 
 ### <a name="macro-information"></a>マクロの情報
 
@@ -181,7 +181,7 @@ Configuration Manager では、各デバイスで最近使用されたファイ�
 - マクロ対応の Office ファイル形式。
 - 以前の Office 形式。これは、マクロのコンテンツがあるかどうかを示すものではありません。
 
-このレポートを使用すると、マクロを含む可能性のあるファイルが最近どのデバイスで使用されたかを特定できます。 次に、Configuration Manager を使用して **Office 用準備ツール キット**を展開することで、より詳細な情報が必要なデバイスをスキャンし、互換性に関する潜在的な問題がないかどうかを確認することができます。 たとえば、より新しいバージョンの Office で変更された関数がファイルで使用されている場合が挙げられます。
+このレポートを使用すると、マクロを含む可能性のあるファイルが最近どのデバイスで使用されたかを特定できます。 次に、Configuration Manager を使用して **Office 用準備ツール キット**を展開することで、より詳細な情報が必要なデバイスをスキャンし、互換性に関する潜在的な問題がないかどうかを確認することができます。 たとえば、より新しいバージョンの Microsoft 365 Apps で変更された関数がファイルで使用されている場合が挙げられます。
 
 スキャンを実行する方法の詳細については、「[詳細なマクロの準備状況](#bkmk_ort)」を参照してください。
 
@@ -189,7 +189,7 @@ Configuration Manager では、各デバイスで最近使用されたファイ�
 <!--4488272, 4488301-->
 *(バージョン 1910 で導入)*
 
-バージョン 1910 以降では、 **[Office 365 ProPlus Pilot と正常性] ダッシュボード**を使用すれば、Office 365 ProPlus 展開を容易に計画し、試作し、実施することができます。 このダッシュボードからは、Office 365 ProPlus がインストールされたデバイスの正常性に関する分析情報が提供され、展開計画に影響を与える可能性のある問題の特定に役立ちます。 **[Office 365 ProPlus Pilot と正常性] ダッシュボード**には、アドイン インベントリに基づくパイロット デバイスの推奨事項が表示されます。 ダッシュボードには、次のタイルがあります。
+バージョン 1910 以降では、**Office 365 ProPlus のパイロットと正常性ダッシュボード**を使用すれば、Microsoft 365 Apps の展開を容易に計画、試作、実施することができます。 このダッシュボードからは、Microsoft 365 Apps がインストールされたデバイスの正常性に関する分析情報が提供され、展開計画に影響を与える可能性のある問題の特定に役立ちます。 **[Office 365 ProPlus Pilot と正常性] ダッシュボード**には、アドイン インベントリに基づくパイロット デバイスの推奨事項が表示されます。 ダッシュボードには、次のタイルがあります。
 
 - パイロット生成
 - 推奨されるパイロット デバイス
@@ -215,15 +215,15 @@ Configuration Manager では、各デバイスで最近使用されたファイ�
 
 ### <a name="recommended-pilot-devices"></a>推奨されるパイロット デバイス
 
-**推奨されるパイロット デバイス**は、パイロットの生成時に使用した限定コレクションを通してインストール済みのすべてのアドインを表す、デバイスの最小セットです。 ドリルダウンして、これらのデバイスの一覧を取得します。 次に、詳細を使用して、必要に応じてパイロットからデバイスを除外します。 すべてのアドインが既に Office 365 ProPlus デバイスにインストールされている場合、それらのアドインがインストールされたデバイスは計算に含まれません。 これは、Office 365 ProPlus がインストールされているデバイス上のすべてのアドインが表示されているため、パイロット コレクションでは結果が得られない可能性があることも意味しています。
+**推奨されるパイロット デバイス**は、パイロットの生成時に使用した限定コレクションを通してインストール済みのすべてのアドインを表す、デバイスの最小セットです。 ドリルダウンして、これらのデバイスの一覧を取得します。 次に、詳細を使用して、必要に応じてパイロットからデバイスを除外します。 すべてのアドインが既に Microsoft 365 Apps デバイスにインストールされている場合、それらのアドインがインストールされたデバイスは計算に含まれません。 これは、Microsoft 365 Apps がインストールされているデバイス上のすべてのアドインが表示されているため、パイロット コレクションでは結果が得られない可能性があることも意味しています。
 
 ### <a name="deploy-pilot"></a>パイロットの展開
 
-パイロット デバイスを受け入れたら、段階的展開ウィザードを使用して Office 365 Proplus をパイロット コレクションに展開します。 管理者は、展開を管理するために、ウィザードでパイロットと限定コレクションを定義できます。
+パイロット デバイスを受け入れたら、段階的展開ウィザードを使用して Microsoft 365 Apps をパイロット コレクションに展開します。 管理者は、展開を管理するために、ウィザードでパイロットと限定コレクションを定義できます。
 
 ### <a name="health-data"></a>正常性データ
 
-Office 365 Proplus をインストールしたら、パイロット デバイスで正常性データを有効にします。 正常性データを使用すると、どのアドインとマクロが正常性の目標を満たしていないかを把握できます。 **[配置準備が完了したデバイス]** グラフでは、正常性の分析情報を使用して、展開の準備ができているパイロット以外のデバイスが識別されます。 **[正常性データを送信しているデバイス]** グラフでは、正常性データを送信しているデバイスの数が取得されます。
+Microsoft 365 Apps をインストールしたら、パイロット デバイス上で正常性データを有効にします。 正常性データを使用すると、どのアドインとマクロが正常性の目標を満たしていないかを把握できます。 **[配置準備が完了したデバイス]** グラフでは、正常性の分析情報を使用して、展開の準備ができているパイロット以外のデバイスが識別されます。 **[正常性データを送信しているデバイス]** グラフでは、正常性データを送信しているデバイスの数が取得されます。
 
 ### <a name="devices-not-meeting-health-goals"></a>正常性の目標を満たしていないデバイス
 
@@ -252,4 +252,4 @@ Office 365 Proplus をインストールしたら、パイロット デバイス
 
 ## <a name="next-steps"></a>次のステップ
 
-[Configuration Manager での Office 365 ProPlus の管理](manage-office-365-proplus-updates.md)
+[Configuration Manager での Microsoft 365 Apps 更新プログラムの管理](manage-office-365-proplus-updates.md)

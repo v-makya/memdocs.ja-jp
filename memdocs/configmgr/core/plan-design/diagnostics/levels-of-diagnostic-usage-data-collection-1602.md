@@ -5,18 +5,18 @@ description: Configuration Manager バージョン 1602 で収集される診断
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 1210a1ca-78c7-4d17-81cf-ac1bc5c5cf3e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 03d2a443987a927c10cd32688f58ce7783b6e679
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 48c03b26ae04d4e4bc256a146ad48206b4de1d9d
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81697100"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126666"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1602-of-configuration-manager"></a>Configuration Manager バージョン 1602 で収集される診断結果および使用状況データのレベル
 
@@ -85,7 +85,7 @@ Configuration Manager バージョン 1602 では、**基本**、**エンハン�
 - ***[新規]*** ネットワーク探索の使用 (有効または無効)
 - ***[新規]*** VMM 管理コンソール:
 
-  -  コンソール接続に関する統計情報 (オペレーティング システムのバージョン、言語、SKU、アーキテクチャに加えて、システム メモリ、論理プロセッサの数、接続サイト ID、インストールされてた .NET のバージョン、コンソールの言語パック)
+  -  コンソール接続に関する統計情報 (OS のバージョン、言語、SKU、アーキテクチャに加えて、システム メモリ、論理プロセッサの数、接続サイト ID、インストールされてた .NET のバージョン、コンソールの言語パック)
 
 ##  <a name="level-2---enhanced"></a><a name="bkmk_level2"></a> レベル 2 - エンハンス
 エンハンス レベルはセットアップ終了後の既定値です。 このレベルには、基本レベルで収集されたデータと機能固有のデータ (頻度と使用期間)、Configuration Manager クライアントの設定 (コンポーネント名、状態、ポーリング間隔などの特定の設定)、およびソフトウェアの更新に関する基本情報が含まれます。

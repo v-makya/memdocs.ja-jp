@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: d1f18c135f200b2a9e40b970871c73a0d98893a2
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: b70a375eb35599a487eeeee95235d638de35e5e1
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429803"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125867"
 ---
 # <a name="desktop-analytics-faq"></a>Desktop Analytics の FAQ
 
@@ -126,7 +126,7 @@ Microsoft Data Management Service および Analytics Azure Storage の場合: �
 #### <a name="upgrade-readiness"></a>Upgrade Readiness
 
 - Internet Explorer のサイト検出データ
-- Office アドイン分析情報 (現在は、[Configuration Manager で使用可能](#bkmk_office))
+- Microsoft 365 Apps アドイン分析情報 (現在は、[Configuration Manager で使用可能](#bkmk_office))
 - フィードバック ハブの分析情報
 
 #### <a name="update-compliance"></a>Update Compliance
@@ -151,9 +151,9 @@ Microsoft Data Management Service および Analytics Azure Storage の場合: �
 
 ## <a name="other"></a>その他
 
-### <a name="can-i-use-desktop-analytics-for-my-office-365-proplus-upgrades"></a><a name="bkmk_office"></a> Office 365 ProPlus のアップグレードに Desktop Analytics を使用できますか?
+### <a name="can-i-use-desktop-analytics-for-my-microsoft-365-apps-upgrades"></a><a name="bkmk_office"></a> Microsoft 365 Apps のアップグレードに Desktop Analytics を使用できますか?
 
-いいえ。Desktop Analytics は Windows が対象です。 Microsoft は、多くのお客様と密接に協力して Desktop Analytics を開発しました。 お客様からのフィードバックは、Desktop Analytics によって Windows の展開を確実に管理する方法に関するものです。 また、[Office 365 ProPlus の準備](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness)を Configuration Manager および Intune の Office 管理ツールともっと緊密に統合してほしいという要望もありました。 Microsoft では、Desktop Analytics での Windows のシナリオに重点を置いて、これらの領域に関する取り組みを続けています。
+いいえ。Desktop Analytics は Windows が対象です。 Microsoft は、多くのお客様と密接に協力して Desktop Analytics を開発しました。 お客様からのフィードバックは、Desktop Analytics によって Windows の展開を確実に管理する方法に関するものです。 また、[Microsoft 365 Apps の準備](../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness)を Configuration Manager および Intune の Microsoft 365 Apps 管理ツールともっと緊密に統合してほしいという要望もありました。 Microsoft では、Desktop Analytics での Windows のシナリオに重点を置いて、これらの領域に関する取り組みを続けています。
 
 ### <a name="how-can-i-provide-feedback-about-desktop-analytics"></a>Desktop Analytics に関するフィードバックを提供するにはどうすればよいですか?
 

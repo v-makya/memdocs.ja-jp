@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 60ca31b73e31ea59b7a854f87262be7fdc4ab5c5
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 42dc0f65e9e3765de35e6db7f5272aeeaab63fa2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240339"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695292"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Configuration Manager でアプリケーションを作成する
 
@@ -688,7 +688,7 @@ Configuration Manager では、展開の種類のインストールの前に、�
 新しいアプリケーションは **[アプリケーション]** ノードに表示されます。  
 
 > [!TIP]  
-> Windows PowerShell コマンドレットの **Import-CMApplication** は、上の手順と同じ機能があります。 詳細については、「[Import-CMApplication](https://docs.microsoft.com/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps)」をご覧ください。  
+> Windows PowerShell コマンドレットの **Import-CMApplication** は、上の手順と同じ機能があります。 詳細については、「[Import-CMApplication](/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps)」をご覧ください。  
 
 アプリケーションのエクスポート方法の詳細については、[アプリケーションの管理タスク](management-tasks-applications.md)に関するページを参照してください。
 

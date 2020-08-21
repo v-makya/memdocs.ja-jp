@@ -2,20 +2,20 @@
 title: Azure サービスの構成
 titleSuffix: Configuration Manager
 description: Configuration Manager 環境を、クラウド管理、ビジネス向け Microsoft Store、Log Analytics 用の Azure サービスと接続します。
-ms.date: 06/10/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6ca5307de5c7df54c3cf7924bc91b0175b1bfa39
-ms.sourcegitcommit: 2f1963ae208568effeb3a82995ebded7b410b3d4
+ms.openlocfilehash: ebdd07874f09ff6d97747826d6056df177e2c735
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84715324"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128479"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configuration Manager と共に使用するように Azure サービスを構成する
 
@@ -229,6 +229,17 @@ Azure サービス ウィザードのアプリ ページで **[ネイティブ �
 最後に、[概要]、[進行状況]、および [完了] の各ページを使用して Azure サービス ウィザードを完了します。 Configuration Manager での Azure サービスの構成が完了しました。 他の Azure サービスを構成する場合にも、この手順を繰り返します。
 
 ## <a name="renew-secret-key"></a><a name="bkmk_renew"></a>秘密鍵を更新する
+
+有効期限が切れる前に、Azure AD アプリの秘密鍵を更新する必要があります。 鍵の有効期限が切れると、Configuration Manager で Azure AD での認証が行えず、これにより、接続された Azure サービスの動作が停止します。
+
+バージョン 2006 以降では、Configuration Manager コンソールにより、次のような場合に通知が表示されます。<!--6386392-->
+
+- 1 つ以上の Azure AD アプリの秘密鍵の有効期限が間もなく切れる
+- 1 つ以上の Azure AD アプリの秘密鍵が期限切れになっている
+
+両方の場合を軽減するには、秘密鍵を更新します。
+
+これらの通知を操作する方法の詳細については、「[Configuration Manager コンソールの通知](../../manage/admin-console-notifications.md)」を参照してください。
 
 ### <a name="renew-key-for-created-app"></a>作成済みのアプリのキーを更新する
 

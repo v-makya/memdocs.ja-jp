@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5ee84a41a5c47ce554e4618b897c8e4933bdbe73
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 29b5dd8fdceb803de77aff9adbd0614d1e201b18
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129054"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694257"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager から削除された機能と非推奨の機能
 
@@ -80,7 +80,7 @@ Configuration Manager では、Configuration Manager コンソール内からの
 
 Configuration Manager では、ネットワーク アクセス保護のサポートが削除されました。 この機能は Windows Server 2012 R2 で非推奨となり、Windows 10 からは削除されています。  
 
-ネットワーク アクセス保護の代替方法については、「 *ネットワーク ポリシーとアクセス サービスの概要* 」で [非推奨の機能](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11))に関する説明を参照してください。
+ネットワーク アクセス保護の代替方法については、「 *ネットワーク ポリシーとアクセス サービスの概要* 」で [非推奨の機能](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11))に関する説明を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

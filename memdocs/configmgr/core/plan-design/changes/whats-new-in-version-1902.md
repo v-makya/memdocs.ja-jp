@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 4972f6e8689ad44dbd1a19adcde104cd5f59038c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c192db8ccab336d05ef965e837fe17fc16a19200
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702400"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128935"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1902 の新機能
 
@@ -121,7 +121,7 @@ Configuration Manager では、データ転送の合計が制限を超えたと�
 <!--3610960-->
 Configuration Manager で、階層内の中央管理サイトから CMPivot を実行できるようになりました。 まだ、プライマリ サイトでクライアントへの通信が処理されます。 中央管理サイトから CMPivot を実行するとき、高速メッセージ サブスクリプション チャネル経由でプライマリ サイトとの通信が行われます。 この通信では、サイト間の標準の SQL レプリケーションは利用されません。
 
-詳細については、[リアルタイム データに対する CMPivot](../../servers/manage/cmpivot.md#bkmk_cmpivot1902) に関するページをご覧ください。
+詳細については、[リアルタイム データに対する CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1902) に関するページをご覧ください。
 
 ### <a name="edit-or-copy-powershell-scripts"></a>PowerShell スクリプトの編集またはコピー
 
@@ -413,7 +413,7 @@ Midwest Management Summit (MMS) Desert Edition 2018 でのお客様のフィー�
 - **[監視]** ワークスペースの **[展開]** ノードの整数値によるビューの並べ替え
 - 多数の結果に対する警告を移動
 
-詳細については、「[Configuration Manager コンソールの使用](../../servers/manage/admin-console.md#tips)」を参照してください。
+詳細については、[Configuration Manager コンソールのヒント](../../servers/manage/admin-console-tips.md)に関する記事を参照してください。
 
 ### <a name="configuration-manager-console-notifications"></a>Configuration Manager コンソールの通知
 
@@ -425,7 +425,7 @@ Midwest Management Summit (MMS) Desert Edition 2018 でのお客様のフィー�
 
 この通知は、コンソール ウィンドウの上部のリボンの下のバーに表示されます。 これにより Configuration Manager の更新プログラムが利用可能になったときに、以前のエクスペリエンスが置き換えられます。 これらのコンソール内通知には引き続き重要な情報が表示されますが、コンソールでの作業には干渉しません。 重要な通知は消去できません。 コンソールのタイトル バーの新しい通知領域に、すべての通知が表示されます。
 
-詳細については、「[Configuration Manager コンソールの使用](../../servers/manage/admin-console.md)」を参照してください。
+詳細については、「[Configuration Manager コンソールの通知](../../servers/manage/admin-console-notifications.md)」を参照してください。
 
 ### <a name="confirmation-of-console-feedback"></a>コンソール フィードバックの確認
 
@@ -453,7 +453,7 @@ Configuration Manager コンソールの最新の接続を表示できるよう�
 <!--3600878-->
 Configuration Manager コンソールのデバイス ビューで MAC アドレスを検索できるようになりました。 このプロパティは、OS の展開管理者が PXE ベースの展開のトラブルシューティングを行うときに役立ちます。 デバイスの一覧を表示するには、ビューに **[MAC アドレス]** 列を追加します。 検索フィールドを使用して、**MAC アドレス**の検索条件を追加します。
 
-詳細については、「[Configuration Manager コンソールの使用](../../servers/manage/admin-console.md#tips)」を参照してください。
+詳細については、[Configuration Manager コンソールのヒント](../../servers/manage/admin-console-tips.md)に関する記事を参照してください。
 
 ### <a name="use-net-47-for-improved-console-accessibility"></a>コンソールのユーザー補助機能向上のために .NET 4.7 を使用する
 

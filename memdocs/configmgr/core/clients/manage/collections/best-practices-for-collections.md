@@ -10,12 +10,12 @@ ms.assetid: 7a2abb79-9ae5-4a25-9e18-5dcf528de3bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3ee640a70eea9f2e8470e852409911d28e542bc2
-ms.sourcegitcommit: 1d8bf691780b94a945e94945115d4d1df4242808
+ms.openlocfilehash: b1bc72a3691e4a6f47c29a5a91ef11c92f0f7e7c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663377"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693286"
 ---
 # <a name="best-practices-for-collections-in-configuration-manager"></a>Configuration Manager のコレクションのベスト プラクティス
 
@@ -96,7 +96,7 @@ Configuration Manager のコレクションの包含規則と除外規則を使�
 
 ## <a name="use-ceviewer-to-monitor-collection-evaluation"></a>CEViewer を使用してコレクションの評価を監視する
 
-[Collection Evaluation Viewer (CEViewer)](https://docs.microsoft.com/mem/configmgr/core/support/ceviewer) を使用すると、評価されているコレクションの数と、各コレクションの更新にかかる時間を監視できます。 CEViewer は、サイト サーバー上の *CD.Latest* フォルダーにあります。
+[Collection Evaluation Viewer (CEViewer)](../../../support/ceviewer.md) を使用すると、評価されているコレクションの数と、各コレクションの更新にかかる時間を監視できます。 CEViewer は、サイト サーバー上の *CD.Latest* フォルダーにあります。
 
 SQL で同様のチェックを手動で実行するには、次のクエリを使用できます。
 
@@ -111,5 +111,3 @@ FROM (
 WHERE ([t2].[IncrementalEvaluationStartTime] IS NOT NULL) AND ([t2].[LastIncrementalRefreshTime] IS NOT NULL) and (refreshtype='4' or refreshtype='6')
 ORDER BY [t2].[value] DESC
 ```
-
-

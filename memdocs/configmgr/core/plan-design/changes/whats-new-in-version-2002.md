@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5b2fcaeb9cb5bd4ce3e41aed8e1bafcc7f76bbb4
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 66fcd9b7d4d25decb3aeef7cf38b469363eeb1fa
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262117"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88128901"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 2002 の新機能
 
@@ -147,7 +147,7 @@ Configuration Manager で Desktop Analytics の [接続の正常性] ダッシ�
 
 CMPivot エンティティの移動が容易になりました。 CMPivot エンティティを検索できるようになりました。 エンティティとエンティティ オブジェクトの種類を簡単に区別できるように、新しいアイコンも追加されました。
 
-詳細については、[CMPivot](../../servers/manage/cmpivot.md#bkmk_2002) に関するページを参照してください。
+詳細については、[CMPivot](../../servers/manage/cmpivot-changes.md#bkmk_2002) に関するページを参照してください。
 
 ## <a name="content-management"></a><a name="bkmk_content"></a> コンテンツ管理
 
@@ -391,9 +391,9 @@ Power BI Report Server を Configuration Manager レポートと統合できる�
 
 <!--3555935, 3555936-->
 
-"_2020 年 6 月に初めて導入_"
+" *(2020 年 6 月に初めて導入)* "
 
-IT 管理者のコミュニティには、長年にわたる豊富な知識が蓄積されています。 スクリプトやレポートなどの項目を最初から作り直す代わりに、私たちは、ユーザーが互いに共有できる Configuration Manager **コミュニティ ハブ**を構築しました。 他のユーザーの作業を活用することで、作業時間を節約できます。 コミュニティ ハブでは、他のユーザーの作業を基礎にし、他のユーザーはあなたの作業を基礎にすることで、創造力が促進されます。 GitHub には、既に共有のために作成された業界標準のプロセスとツールがあります。 そこで、コミュニティ ハブでは、この新しいコミュニティを推進するための基本要素として、これらのツールが Configuration Manager コンソールで直接活用されます。
+IT 管理者のコミュニティには、長年にわたる豊富な知識が蓄積されています。 スクリプトやレポートなどの項目を最初から作り直す代わりに、私たちは、ユーザーが互いに共有できる Configuration Manager **コミュニティ ハブ**を構築しました。 他のユーザーの作業を活用することで、作業時間を節約できます。 コミュニティ ハブでは、他のユーザーの作業を基礎にし、他のユーザーはあなたの作業を基礎にすることで、創造力が促進されます。 GitHub には、既に共有のために作成された業界標準のプロセスとツールがあります。 そこで、コミュニティ ハブでは、この新しいコミュニティを推進するための基本要素として、これらのツールが Configuration Manager コンソールで直接活用されます。 最初のリリースでは、コミュニティ ハブで利用できるコンテンツは、Microsoft によってのみアップロードされます。
 
 詳細については、「[コミュニティ ハブと GitHub](../../servers/manage/community-hub.md)」をご覧ください。
 
@@ -442,6 +442,7 @@ Configuration Manager 向け Windows PowerShell コマンドレットの変更�
 |---------|---------|---------|---------|
 | [4575339](https://support.microsoft.com/help/4575339) | Microsoft Endpoint Configuration Manager 管理センターにデバイスが 2 回表示される | 2020 年 7 月 23 日 | いいえ |
 | [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck コマンドレットが Configuration Manager (バージョン 2002) で失敗する | 2020 年 7 月 24 日 | いいえ |
+| [4576782](https://support.microsoft.com/help/4576782) | [アプリケーション] ブレードが Microsoft Endpoint Manager 管理センターでタイムアウトになる | 2020 年 8 月 11 日 | いいえ |
 
 <!--
 > [!NOTE]

@@ -2,20 +2,20 @@
 title: リリース ノート
 titleSuffix: Configuration Manager
 description: 製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題について説明します。
-ms.date: 05/21/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 131b6104d5724c8a4eeb0bb68c4afd9a5319abb7
-ms.sourcegitcommit: 2f9999994203194a8c47d8daa6406c987a002e02
+ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83823964"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88126293"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager のリリース ノート
 
@@ -29,10 +29,10 @@ Configuration Manager 製品のリリース ノートには、緊急の問題の
 
 異なるバージョンで導入された新しい機能については、以下の記事をご覧ください。
 
+- [バージョン 2006 の新機能](../../../plan-design/changes/whats-new-in-version-2006.md)
 - [バージョン 2002 の新機能](../../../plan-design/changes/whats-new-in-version-2002.md)
 - [バージョン 1910 の新機能](../../../plan-design/changes/whats-new-in-version-1910.md)
 - [バージョン 1906 の新機能](../../../plan-design/changes/whats-new-in-version-1906.md)  
-- [バージョン 1902 の新機能](../../../plan-design/changes/whats-new-in-version-1902.md)
 
 Desktop Analytics の新機能の詳細については、「[Desktop Analytics の新機能](../../../../desktop-analytics/whats-new.md)」を参照してください。
 
@@ -121,24 +121,15 @@ Windows Server 2019 を実行しているドメイン コントローラーを�
 
 - 拡張 HTTP 用にサイトを構成し、管理ポイントが HTTP に設定されている。<!-- 6358851 -->
 
-    この問題を回避するには、管理ポイントを HTTP または HTTPS に構成します。
+    この問題を回避するには、バージョン 2006 に更新します。 あるいは、管理ポイントを HTTPS 用に構成します。
 
 - 認証用の一括登録トークンを使用してクライアントをインストールし、登録した。<!-- 6377921 -->
 
-    この問題を回避するには、次のいずれかの認証方法を使用します。
+    この問題を回避するには、バージョン 2006 に更新します。 あるいは、次のいずれかの認証方法を使用します。
 
   - 内部ネットワークにデバイスを事前登録する
   - クライアント認証証明書を使用してデバイスを構成する
   - デバイスを Azure AD に参加させる
-
-### <a name="after-passive-site-server-is-promoted-the-default-boot-image-packages-still-have-package-source-on-the-previous-active-server"></a>パッシブ サイト サーバーの昇格後も、既定のブート イメージ パッケージには前のアクティブ サーバー上のパッケージ ソースが含まれています
-
-<!--3453224, SCCMDocs-pr issue 3097-->
-*適用対象:Configuration Manager バージョン 1810*
-
-パッシブ モードのサイト サーバー (サーバー B) がある場合、これをアクティブに昇格しても、既定のブート イメージのコンテンツの場所として引き続き前のアクティブ サーバー(サーバー A) が参照されます。 サーバー A にハードウェア障害がある場合は、既定のブート イメージを更新したり変更したりできません。
-
-この問題の回避策はありません。
 
 ## <a name="software-updates"></a>ソフトウェア更新プログラム
 
@@ -171,7 +162,7 @@ Windows Server 2019 を実行しているドメイン コントローラーを�
 ### <a name="an-extended-security-update-for-windows-7-causes-them-to-show-as-unable-to-enroll"></a><a name="dawin7-diagtrack"></a> Windows 7 向けの拡張セキュリティ更新プログラムによって、**登録できない**と表示される
 
 <!-- 7283186 -->
-_適用対象:Configuration Manager バージョン 1902、1906、1910、および 2002_
+_適用対象:Configuration Manager バージョン 2002 以前_
 
 2020 年 4 月の Windows 7 向け拡張セキュリティ更新プログラム (ESU) では、diagtrack.dll の最低限必要なバージョンが 10586 から 10240 に変更されました。 この変更により、Windows 7 デバイスが、Desktop Analytics **接続正常性**ダッシュボードに、**登録できない**と表示されます。 この状態のデバイス ビューにドリルダウンすると、**DiagTrack サービス構成**プロパティにより、次の状態が表示されます: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`。
 

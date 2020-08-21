@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: d1e7b2c359e21ac4a12219d27655603954702fa8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 9ba4466a40d49c4b78b75e6f85137dfd0a4ff5ce
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410872"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129139"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager のクラウド管理ゲートウェイを設定する
 
@@ -141,7 +141,7 @@ CMG 接続ポイントは、CMG と通信するためのサイト システム�
 
 CMG サービス正常性のトラブルシューティングを行うには、**CMGService.log** と **SMS_Cloud_ProxyConnector.log** を使用します。 詳細については、[ログ ファイル](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway)に関するページを参照してください。
 
-## <a name="configure-client-facing-roles-for-cmg-traffic"></a>CMG トラフィック用にクライアントと直接接続する役割を構成する
+## <a name="configure-client-facing-roles-for-cmg-traffic"></a><a name="bkmk_role"></a> CMG トラフィック用にクライアントと直接接続する役割を構成する
 
 CMG トラフィックを受け入れるように管理ポイントおよびソフトウェアの更新ポイント サイト システムを構成します。 インターネット ベースのクライアントにサービスを提供するすべての管理ポイントおよびソフトウェアの更新ポイントについて、プライマリ サイトで以下の手順を実行します。  
 
@@ -158,7 +158,7 @@ CMG トラフィックを受け入れるように管理ポイントおよびソ�
 必要に応じて追加の管理ポイント、およびすべてのソフトウェアの更新ポイントについて、これらの手順を繰り返します。
 
 ## <a name="configure-boundary-groups"></a>境界グループの構成
-
+ 
 <!--3640932-->
 バージョン 1902 以降、CMG を境界グループに関連付けることができるようになりました。 クライアントにこの構成を使用すると、境界グループのリレーションシップに従って、クライアント通信に対して CMG を既定に設定したり、それにフォールバックしたりすることができます。
 

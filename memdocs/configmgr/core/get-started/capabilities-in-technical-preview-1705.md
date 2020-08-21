@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3259bd1b20740046e70b1ef53281b0ff235a3896
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 0ddad23dfde87fa402c01d4eaa21a1b76db27d93
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905479"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692929"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Configuration Manager の Technical Preview 1705 の機能
 
@@ -121,12 +121,12 @@ ms.locfileid: "82905479"
 
 - このリリースでは、非同期コミット レプリカをサイト データベースとして使用するためのフェールオーバーはサポートされていません。
   > [!CAUTION]  
-  > Configuration Manager では、非同期コミット レプリカが最新のものかどうかを確認するために状態を検証せず、また、[このようなレプリカは意図的に非同期にできる](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes)ため、非同期コミット レプリカをサイト データベースとして使用すると、サイトとデータの整合性が危険にさらされる場合があります。  
+  > Configuration Manager では、非同期コミット レプリカが最新のものかどうかを確認するために状態を検証せず、また、[このようなレプリカは意図的に非同期にできる](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes)ため、非同期コミット レプリカをサイト データベースとして使用すると、サイトとデータの整合性が危険にさらされる場合があります。  
 
 - 可用性グループでは、使用する SQL Server のバージョンでサポートされているのと同じ数と種類のレプリカを使用できます    (以前のサポートでは、同期コミット レプリカは 2 つに制限されていました)。
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>非同期コミット レプリカを構成する
-非同期レプリカを[ Configuration Manager で使用する可用性グループ](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)に追加するために、同期レプリカの構成に必要な構成スクリプトを実行する必要はありません  (これは、その非同期レプリカをサイト データベースとして使用するためのサポートがないためです)。詳細については、[可用性グループへのセカンダリ レプリカの追加](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014)に関するページを参照してください。
+非同期レプリカを[ Configuration Manager で使用する可用性グループ](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)に追加するために、同期レプリカの構成に必要な構成スクリプトを実行する必要はありません  (これは、その非同期レプリカをサイト データベースとして使用するためのサポートがないためです)。詳細については、[可用性グループへのセカンダリ レプリカの追加](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014)に関するページを参照してください。
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>非同期レプリカを使用してサイトを回復する
 非同期レプリカを使用してサイト データベースを回復する前に、サイト データベースへの追加の書き込みを防止するために、アクティブなプライマリ サイトを停止する必要があります。 サイトの停止後、[手動で回復したデータベース](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered)の代わりに、非同期レプリカを使用することができます。
@@ -246,7 +246,7 @@ Windows Defender Application Guard の詳細については、[このブログ�
 開始する前に、クライアント インストール ソース ファイルが、クライアントをインストールするデバイスのローカルに保存されていることを確認します。
 次に、次のインストール コマンド ラインを使用して (例の値は、独自の値に置き換えてください)、「[クライアントを Windows コンピューターに展開する方法](../clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)」の手順に従います。
 
-**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=\<GUID> AADRESOURCEURI=<https://contososerver>**
+**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=\<GUID> AADRESOURCEURI=<code>https://contososerver</code>**
 
 - **/NoCrlCheck**:管理ポイントまたはクラウド管理ゲートウェイが非公開のサーバー証明書を使用する場合、クライアントが CRL の場所に到達できない場合があります。
 - **/Source**:ローカル フォルダー: クライアント インストール ファイルの場所。
@@ -254,7 +254,7 @@ Windows Defender Application Guard の詳細については、[このブログ�
 - **SMSMP**:ルックアップ管理ポイントの名前。イントラネットを指定することもできます。
 - **SMSSiteCode**:Configuration Manager サイトのサイト コード。
 - **AADTENANTID**、**AADTENANTNAME**:Configuration Manager にリンクした Azure AD テナントの ID と名前。 これを見つけるには、Azure AD に参加しているデバイスで、コマンド プロンプトから dsregcmd.exe/status を実行します。
-- **AADCLIENTAPPID**:Azure AD クライアント アプリ ID。 これを見つけるには、「[リソースにアクセスできる Azure Active Directory アプリケーションとサービス プリンシパルをポータルで作成する](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)」を参照してください。
+- **AADCLIENTAPPID**:Azure AD クライアント アプリ ID。 これを見つけるには、「[リソースにアクセスできる Azure Active Directory アプリケーションとサービス プリンシパルをポータルで作成する](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in)」を参照してください。
 - **AADResourceUri**:搭載された Azure AD サーバー アプリの識別子 URI。
 
 ## <a name="use-azure-services-wizard-to-configure-a-connection-to-oms"></a>Azure サービス ウィザードを使用して、OMS への接続を構成する
@@ -265,7 +265,7 @@ Technical Preview リリース 1705 からは、**Azure サービス ウィザ�
 -   Configuration Manager では、Log Analytics や Upgrade Readiness などの機能のために OMS に接続されます。
 
 ### <a name="prerequisites-for-the-oms-connector"></a>OMS コネクタの前提条件
-OMS への接続を構成するための前提条件は、[Current Branch バージョン 1702 のドキュメント](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)に記載されているものと変わりません。 ここではその情報を再掲します。  
+OMS への接続を構成するための前提条件は、[Current Branch バージョン 1702 のドキュメント](/azure/azure-monitor/platform/collect-sccm)に記載されているものと変わりません。 ここではその情報を再掲します。  
 
 -   Configuration Manager のアクセス許可を OMS に提供します。
 

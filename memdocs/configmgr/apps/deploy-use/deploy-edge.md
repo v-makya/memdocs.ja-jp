@@ -10,18 +10,18 @@ ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 423864c2c954cc67da4ef54d55d7263ae346e786
-ms.sourcegitcommit: 24ce7df7dadf2385afe364b817ec58feeb04c700
+ms.openlocfilehash: cc10f262e4639ffdd8513bece662116f5ed39516
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86212292"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695376"
 ---
 # <a name="microsoft-edge-management"></a>Microsoft Edge の管理
 
 *適用対象:Configuration Manager (Current Branch)*
 
-まったく新しい Microsoft Edge をビジネスにご利用いただけます。 Configuration Manager バージョン 1910 以降では、[Microsoft Edge バージョン 77 以降](https://docs.microsoft.com/deployedge/)をユーザーに展開できるようになりました。 PowerShell スクリプトは、選択した Edge ビルドをインストールするために使用されます。 また、このスクリプトでは、Configuration Manager を使用して管理できるように、Edge の自動更新がオフにされます。
+まったく新しい Microsoft Edge をビジネスにご利用いただけます。 Configuration Manager バージョン 1910 以降では、[Microsoft Edge バージョン 77 以降](/deployedge/)をユーザーに展開できるようになりました。 PowerShell スクリプトは、選択した Edge ビルドをインストールするために使用されます。 また、このスクリプトでは、Configuration Manager を使用して管理できるように、Edge の自動更新がオフにされます。
 
 ## <a name="deploy-microsoft-edge"></a><a name="bkmk_Microsoft_Edge"></a>Microsoft Edge を展開する
 <!--4561024-->
@@ -31,7 +31,7 @@ ms.locfileid: "86212292"
 
 Microsoft Edge 展開の対象となるクライアントの場合:
 
-- PowerShell [実行ポリシー](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)は制限ありに設定できません。
+- PowerShell [実行ポリシー](/powershell/module/microsoft.powershell.core/about/about_execution_policies)は制限ありに設定できません。
   - インストールのために PowerShell が実行されます。
 
 - Microsoft Edge インストーラーと [CMPivot](../../core/servers/manage/cmpivot.md) は、**Microsoft コード署名**証明書で署名されています。 その証明書が**信頼された発行元**ストアに登録されていない場合は、追加する必要があります。 そうしないと、PowerShell 実行ポリシーが **AllSigned** に設定されている場合に、Microsoft Edge インストーラーと CMPivot が実行されません。 <!--7585106-->
@@ -47,7 +47,7 @@ Configuration Manager コンソールを実行しているデバイスは次の�
 
 #### <a name="configuration-manager-version-1910"></a>Configuration Manager バージョン 1910
 
-バージョン 1910 では、Microsoft Edge が展開されると、インストール スクリプトによって Microsoft Edge の自動更新が無効になり、Configuration Manager で管理できるようになります。 この動作はグループ ポリシーを使用して変更できます。 詳細については、「[Microsoft Edge の展開を計画する](https://docs.microsoft.com/deployedge/deploy-edge-plan-deployment#define-and-configure-policies)」および「[Microsoft Edge - 更新ポリシー](https://docs.microsoft.com/DeployEdge/microsoft-edge-update-policies)」を参照してください。
+バージョン 1910 では、Microsoft Edge が展開されると、インストール スクリプトによって Microsoft Edge の自動更新が無効になり、Configuration Manager で管理できるようになります。 この動作はグループ ポリシーを使用して変更できます。 詳細については、「[Microsoft Edge の展開を計画する](/deployedge/deploy-edge-plan-deployment#define-and-configure-policies)」および「[Microsoft Edge - 更新ポリシー](/DeployEdge/microsoft-edge-update-policies)」を参照してください。
 
 #### <a name="configuration-manager-version-2002-and-later"></a>Configuration Manager バージョン 2002 以降
 <!--4561024-->

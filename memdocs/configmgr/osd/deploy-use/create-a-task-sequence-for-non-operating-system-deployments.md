@@ -2,7 +2,7 @@
 title: OS 以外の展開用タスク シーケンスの作成
 titleSuffix: Configuration Manager
 description: ソフトウェアの配布やタスクの自動化など、OS を展開する以外のタスク シーケンスを作成する
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 92aaec8a-8751-442a-b64b-62ab05b5bf50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 583a90452fe077057b93150e9cb635fe9269de5a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1fcae4d520b1e81d0ef3470cd12ee68488b4f589
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81709070"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125528"
 ---
 # <a name="create-a-task-sequence-for-non-os-deployments"></a>OS 以外の展開用タスク シーケンスの作成
 
@@ -40,6 +40,8 @@ Configuration Manager のタスク シーケンスは、お客様の環境でさ
 - 操作を複数のタスク シーケンスに分割する
 - 段階的な方法でタスク シーケンスを作成してテストする
 
+## <a name="supported-steps"></a>サポートされているステップ
+
 OS 以外の展開用のカスタム タスク シーケンスでは、以下のステップの使用がサポートされています。  
 
 - [準備の確認](../understand/task-sequence-steps.md#BKMK_CheckReadiness)  
@@ -58,10 +60,14 @@ OS 以外の展開用のカスタム タスク シーケンスでは、以下の
 
 - [コマンド ラインの実行](../understand/task-sequence-steps.md#BKMK_RunCommandLine)  
 
-- [PowerShell スクリプトの実行](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript)  
+- [Powershell スクリプトの実行](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript)  
 
 - [タスク シーケンスの実行](../understand/task-sequence-steps.md#child-task-sequence)  
 
 - [動的変数の設定](../understand/task-sequence-steps.md#BKMK_SetDynamicVariables)  
 
 - [タスク シーケンス変数の設定](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
+
+## <a name="next-steps"></a>次のステップ
+
+[カスタム タスク シーケンスの作成](create-a-custom-task-sequence.md)
