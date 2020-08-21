@@ -10,18 +10,18 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e68a3274a32d28ac0b4ad2a611c59870ee338472
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124543"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697638"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Configuration Manager でブート イメージを管理する
 
 *適用対象:Configuration Manager (Current Branch)*
 
-Configuration Manager のブート イメージは、OS の展開中に使用される [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) のイメージです。 ブート イメージは、コンピューターを WinPE で起動するために使用されます。 この最小限の OS には、限られたコンポーネントとサービスが含まれています。 Configuration Manager では、WinPE を使用して、Windows インストール用にセットアップ先のコンピューターを準備します。
+Configuration Manager のブート イメージは、OS の展開中に使用される [Windows PE](/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) のイメージです。 ブート イメージは、コンピューターを WinPE で起動するために使用されます。 この最小限の OS には、限られたコンポーネントとサービスが含まれています。 Configuration Manager では、WinPE を使用して、Windows インストール用にセットアップ先のコンピューターを準備します。
 
 ## <a name="default-boot-images"></a><a name="BKMK_BootImageDefault"></a> 既定のブート イメージ
 
@@ -94,7 +94,7 @@ Windows ADK インストール ディレクトリにある最新バージョン�
 
 - [ブート イメージのカスタマイズ](customize-boot-images.md)
 - [Windows 10 ADK のサポート](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk)
-- [DISM でサポートされているプラットフォーム](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)
+- [DISM でサポートされているプラットフォーム](/windows-hardware/manufacture/desktop/dism-supported-platforms)
 
 <a name="bkmk_note1"></a>
 
@@ -206,11 +206,11 @@ PXE を使用してオペレーティング システムを展開する方法の
 - **WinPE の既定のキーボード レイアウトを設定する**: <!--4910348-->バージョン 1910 以降では、ブート イメージの既定のキーボード レイアウトを構成します。 en-us 以外の言語を選択した場合でも、Configuration Manager によって、使用可能な入力ロケールに en-us が含められます。 デバイス上の初期のキーボード レイアウトは選択されたロケールですが、ユーザーは必要に応じてデバイスを en-us に切り替えることができます。
 
 > [!Tip]
-> スクリプトからこれらの設定を構成するには、PowerShell コマンドレット [Set-CMBootImage](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) を使用します。
+> スクリプトからこれらの設定を構成するには、PowerShell コマンドレット [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) を使用します。
 
 #### <a name="optional-components"></a>オプション コンポーネント
 
-**[オプション コンポーネント]** タブで、Configuration Manager で使用するために Windows PE に追加するコンポーネントを指定します。 使用可能なオプション コンポーネントの詳細については、[WinPE: パッケージの追加 (オプション コンポーネント リファレンス)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) に関するページを参照してください。  
+**[オプション コンポーネント]** タブで、Configuration Manager で使用するために Windows PE に追加するコンポーネントを指定します。 使用可能なオプション コンポーネントの詳細については、[WinPE: パッケージの追加 (オプション コンポーネント リファレンス)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) に関するページを参照してください。  
 
 以下のコンポーネントは Configuration Manager では必須であり、常にブート イメージに追加されます。
 
@@ -303,4 +303,4 @@ PXE またはメディアから開始される OS の展開の場合、次の手
 
 1. ブート イメージを更新する前に、適切なタスク シーケンス リソース ファイル (tsres.dll) がサイト サーバーの対応する言語フォルダー内にあることを確認します。 たとえば、英語のリソース ファイルがある場所は `<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll` です。  
 
-2. 起動前コマンドの一部として、**SMSTSLanguageFolder** 環境変数を適切な言語 ID に設定します。 言語 ID は、16 進数形式ではなく 10 進数を使用して指定する必要があります。 たとえば、言語 ID を英語に設定するには、フォルダー名の 16 進数の 00000409 ではなく、10 進数の **1033** を指定します。  
+2. 起動前コマンドの一部として、**SMSTSLanguageFolder** 環境変数を適切な言語 ID に設定します。 言語 ID は、16 進数形式ではなく 10 進数を使用して指定する必要があります。 たとえば、言語 ID を英語に設定するには、フォルダー名の 16 進数の 00000409 ではなく、10 進数の **1033** を指定します。

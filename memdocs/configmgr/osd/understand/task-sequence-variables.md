@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 667d7451f467592bd0645b54d7068a20628ec98e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88124143"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697349"
 ---
 # <a name="task-sequence-variables"></a>タスク シーケンス変数
 
@@ -803,7 +803,7 @@ GPT ハード ディスク上で EFI パーティションを作成するかど�
 
 この変数を使用するには、**ドライバー パッケージの適用**ステップで、 **[再帰処理オプションを指定して DISM を実行し、ドライバー パッケージをインストール]** の設定を有効にします。
 
-詳しくは、「[Windows 10 DISM Command-Line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options)」(Windows 10 DISM のコマンド ライン オプション) をご覧ください。
+詳しくは、「[Windows 10 DISM Command-Line Options](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options)」(Windows 10 DISM のコマンド ライン オプション) をご覧ください。
 
 ### <a name="osdjoinaccount"></a><a name="OSDJoinAccount"></a> OSDJoinAccount
 

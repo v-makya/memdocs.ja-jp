@@ -10,12 +10,12 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 433896e55b7701009e2870af8b0015fb15c1eda3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7013ae10de753cbcb664771bd30dc51b259aa390
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123938"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88697553"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>Configuration Manager でタスク シーケンス変数を使用する方法
 
@@ -78,7 +78,7 @@ ms.locfileid: "88123938"
 
 - タスク シーケンス変数名をスペースで始めたり終わらせたりすることはできません。 また、変数名にスペースを埋め込むこともできません。 変数名の先頭または末尾のスペースは、タスク シーケンスでは無視されます。  
 
-作成できるタスク シーケンス変数の数に制限はありません。 ただし、タスク シーケンス環境のサイズによって制限されます。 タスク シーケンス環境の合計サイズの制限は、8 KB です。 詳細については、「[タスク シーケンス ポリシーのサイズを小さくする](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize)」を参照してください。
+作成できるタスク シーケンス変数の数に制限はありません。 ただし、タスク シーケンス環境のサイズによって制限されます。 タスク シーケンス環境の合計サイズの制限は、8 KB です。 詳細については、「[タスク シーケンスのポリシーのサイズを小さくする](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_policysize)」を参照してください。
 
 ### <a name="read-only-variables"></a><a name="bkmk_read-only"></a> 読み取り専用変数
 
@@ -167,7 +167,7 @@ ms.locfileid: "88123938"
     (Get-Culture).TwoLetterISOLanguageName
     ```
 
-    このコマンドレットの詳細については、「[Get-Culture](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-culture)」をご覧ください。 2 文字の ISO 言語名の詳細については、「[ISO 639-1 コード一覧](https://wikipedia.org/wiki/List_of_ISO_639-1_codes)」をご覧ください。
+    このコマンドレットの詳細については、「[Get-Culture](/powershell/module/microsoft.powershell.utility/get-culture)」をご覧ください。 2 文字の ISO 言語名の詳細については、「[ISO 639-1 コード一覧](https://wikipedia.org/wiki/List_of_ISO_639-1_codes)」をご覧ください。
 
 1. **[タスク シーケンス変数に出力]** オプションに対して、`CurrentOSLanguage` を指定します。
 

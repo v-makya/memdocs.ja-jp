@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: b7b3ef78924389232ea292d16c6840fbef9bb321
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 991f367dbd842037aecf4f808f27c4fb2961cc38
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88123593"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696720"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Configuration Manager でソフトウェア更新プログラムを計画する
 
@@ -220,7 +220,7 @@ System Center Updates Publisher (SCUP) は、独立系ソフトウェア ベン�
 
 ソフトウェアの更新ポイントの役割は、WSUS の最小要件を満たし、Configuration Manager サイト システムでサポートされている構成のサイト システムにインストールします。  
 
--   Windows Server での WSUS サーバーの役割の最小要件について詳しくは、「[Review considerations and system requirements](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements)」(考慮事項とシステム要件を確認する) をご覧ください。  
+-   Windows Server での WSUS サーバーの役割の最小要件について詳しくは、「[Review considerations and system requirements](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#11-review-considerations-and-system-requirements)」(考慮事項とシステム要件を確認する) をご覧ください。  
 
 -   Configuration Manager サイト システムでサポートされる構成の詳細については、「[Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md)」 (サイトおよびサイト システムの前提条件) を参照してください。  
 
@@ -235,7 +235,7 @@ Windows Server 2012 以降で WSUS を使う場合は、追加のアクセス許
 
 -   WSUS データベース (SUSDB) のユーザーとして、**NT AUTHORITY\SYSTEM** アカウントを追加します。 少なくとも webService データベース ロールのメンバーシップを構成します。  
   
-Windows Server に WSUS をインストールする方法について詳しくは、「[Install the WSUS Server Role](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role)」(WSUS サーバーの役割をインストールする) をご覧ください。  
+Windows Server に WSUS をインストールする方法について詳しくは、「[Install the WSUS Server Role](/windows-server/administration/windows-server-update-services/deploy/1-install-the-wsus-server-role)」(WSUS サーバーの役割をインストールする) をご覧ください。  
 
 プライマリ サイトに複数のソフトウェアの更新ポイントをインストールする場合、同じ Active Directory フォレストの各ソフトウェアの更新ポイントで、同じ WSUS データベースを使用します。 同じデータベースを共有すると、クライアントが新しいソフトウェアの更新ポイントに切り替えるときのパフォーマンスが向上します。 詳しくは、「[ソフトウェアの更新ポイント用に共有 WSUS データベースを使用する](software-updates-best-practices.md#bkmk_shared-susdb)」をご覧ください。  
 
