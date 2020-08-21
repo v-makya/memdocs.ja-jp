@@ -2,20 +2,20 @@
 title: タスク シーケンスのステップ
 titleSuffix: Configuration Manager
 description: Configuration Manager タスク シーケンスに追加できるステップについて説明します。
-ms.date: 07/06/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61070d98c5b7d453f493cf7ea2995705ee43f325
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: bab2050448e1c870aac8f3237c21b19498cdb674
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546622"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124238"
 ---
 # <a name="task-sequence-steps"></a>タスク シーケンスのステップ
 
@@ -216,6 +216,9 @@ Windows Vista 以前の OS の展開に必要となる、起動に不可欠な�
 #### <a name="join-a-domain"></a>ドメインに参加
 
 対象コンピューターを指定したドメインに参加させるには、このオプションを選択します。 ドメイン (`fabricam.com` など) を指定するか参照します。 組織単位の LDAP (Lightweight Directory Access Protocol) パスを指定または参照します。 例: `LDAP//OU=computers, DC=Fabricam.com, C=com`。  
+
+> [!NOTE]
+> Azure Active Directory (Azure AD) に参加しているクライアントが OS 展開タスク シーケンスを実行する場合、新しい OS のクライアントは Azure AD に自動的には参加しません。 Azure AD に参加していない場合でも、クライアントは引き続き管理されます。
 
 #### <a name="account"></a>アカウント
 
@@ -773,7 +776,6 @@ OS イメージを作成したユーザーの省略可能な名前。 イメー�
 コンピューターのタイム ゾーンの設定をキャプチャします。  
 
 
-
 ## <a name="check-readiness"></a><a name="BKMK_CheckReadiness"></a> 準備の確認
 
 このステップでは、指定した展開の前提条件をターゲット コンピューターが満たしていることを確認します。  
@@ -791,6 +793,8 @@ OS イメージを作成したユーザーの省略可能な名前。 イメー�
 - **接続されているネットワーク アダプター**
   - **ネットワーク アダプターがワイヤレスではない**
 
+バージョン 2006 以降では、デバイスで UEFI が使用されているかどうか、**コンピューターが UEFI モードになっている**かどうかを決定するチェックが、このステップに含まれています。<!--6452769-->
+
 > [!IMPORTANT]
 > Configuration Manager のこの新機能を利用するには、サイトを更新した後、クライアントも最新バージョンに更新します。 サイトとコンソールを更新すると Configuration Manager コンソールに新しい機能が表示されますが、クライアントのバージョンも最新になるまでは完全なシナリオは機能しません。
 
@@ -804,14 +808,15 @@ OS イメージを作成したユーザーの省略可能な名前。 イメー�
 - [_TS_CRSPEED](task-sequence-variables.md#TSCRSPEED)
 - [_TS_CRDISK](task-sequence-variables.md#TSCRDISK)
 - [_TS_CROSTYPE](task-sequence-variables.md#TSCROSTYPE)
-- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH)
-- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER)
-- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER)
-- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER)
-- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE)
-- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER)
-- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)
-- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)
+- [_TS_CRARCH](task-sequence-variables.md#TSCRARCH) (バージョン 2002 以降)
+- [_TS_CRMINOSVER](task-sequence-variables.md#TSCRMINOSVER) (バージョン 2002 以降)
+- [_TS_CRMAXOSVER](task-sequence-variables.md#TSCRMAXOSVER) (バージョン 2002 以降)
+- [_TS_CRCLIENTMINVER](task-sequence-variables.md#TSCRCLIENTMINVER) (バージョン 2002 以降)
+- [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE) (バージョン 2002 以降)
+- [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER) (バージョン 2002 以降)
+- [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK) (バージョン 2002 以降)
+- [_TS_CRUEFI](task-sequence-variables.md#TSCRUEFI) (バージョン 2006 以降)
+- [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED) (バージョン 2002 以降)
 
 ### <a name="cmdlets-for-check-readiness"></a>準備の確認のコマンドレット
 
@@ -869,6 +874,10 @@ OS イメージを作成したユーザーの省略可能な名前。 イメー�
 #### <a name="network-adapter-connected"></a>接続されているネットワーク アダプター
 
 バージョン 2002 以降では、ネットワークに接続されているネットワーク アダプターがデバイスにあることを確認します。 また、依存チェックを選択して、**ネットワーク アダプターがワイヤレス**でないことを確認することもできます。
+
+#### <a name="computer-is-in-uefi-mode"></a>コンピューターが UEFI モードになっている
+
+バージョン 2006 以降では、デバイスが UEFI または BIOS 用に構成されているかどうかを決定します。
 
 ### <a name="options-for-check-readiness"></a>準備の確認のオプション
 
@@ -1054,12 +1063,9 @@ Configuration Manager によって、数字のサフィックスが変数名に�
 
 ## <a name="enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a> BitLocker の有効化
 
-このステップでは、BitLocker 暗号化をハード ドライブの少なくとも 2 つのパーティションで有効にします。 片方のアクティブなパーティションには Windows のブートストラップ コードを格納します。 もう 1 つのパーティションには OS を格納します。 ブートストラップのパーティションは暗号化されていない必要があります。  
+BitLocker ドライブ暗号化とは、ディスク ボリュームの内容を低レベルで暗号化する処理のことです。 このステップでは、BitLocker 暗号化をハード ドライブの少なくとも 2 つのパーティションで有効にします。 片方のアクティブなパーティションには Windows のブートストラップ コードを格納します。 もう 1 つのパーティションには OS を格納します。 ブートストラップのパーティションは暗号化されていない必要があります。  
 
-Windows PE のドライブで BitLocker を有効にするには、**BitLocker の事前プロビジョニング** ステップを使用します。 詳細については、「[Pre-provision BitLocker](#BKMK_PreProvisionBitLocker)」(BitLocker の事前プロビジョニング) を参照してください。  
-
-> [!NOTE]  
-> BitLocker ドライブ暗号化とは、ディスク ボリュームの内容を低レベルで暗号化する処理のことです。  
+Windows PE のドライブで BitLocker を有効にするには、[[BitLocker の事前プロビジョニング]](#BKMK_PreProvisionBitLocker) ステップを使用します。
 
 このステップは完全な OS でのみ実行されます。 Windows PE では実行されません。
 
@@ -1071,7 +1077,9 @@ Windows PE のドライブで BitLocker を有効にするには、**BitLocker �
 - アクティブ  
 - 所有権を許可  
 
-このステップは、残りの TPM 初期化をすべて完了します。 残りのステップでは、物理的な操作や再起動は必要ありません。 必要な場合、**BitLocker の有効化**ステップでは以降の残りの TPM 初期化ステップが透過的に完了されます。  
+バージョン 2006 以降では、TPM がないコンピューターの場合や TPM が有効ではない場合は、この手順をスキップできます。 新しい設定により、BitLocker を完全にはサポートできないデバイスでも、タスク シーケンスの動作が管理しやすくなります。<!--6995601-->
+
+このステップは、残りの TPM 初期化をすべて完了します。 残りのアクションに、物理的な操作や再起動は必要ありません。 必要な場合、 **[BitLocker の有効化]** ステップでは、次のような残りの TPM 初期化アクションが透過的に実行されます。
 
 - 承認キー ペアの作成  
 - 所有権の承認値の作成、およびこの値をサポートするために拡張されている Active Directory への仲介  
@@ -1118,6 +1126,18 @@ BitLocker を使用して、コンピューター システムの複数のドラ
 
 特定のドライブ (OS データ ドライブ以外) を暗号化するには、 **[特定のドライブ]** を選択します。 その後、一覧からドライブを選択します。  
 
+#### <a name="disk-encryption-mode"></a>ディスク暗号化モード
+
+<!--6995601-->
+バージョン 2006 以降では、次の暗号化アルゴリズムのいずれかを選択します。
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+既定で、または指定されていない場合は、このステップで OS バージョンの既定の暗号化方法が引き続き使用されます。 指定したアルゴリズムをサポートしていないバージョンの Windows でこのステップを実行すると、OS の既定値にフォールバックします。 このような場合、タスク シーケンス エンジンにより、ステータス メッセージ 11911 が送信されます。
+
 #### <a name="use-full-disk-encryption"></a>ディスク全体の暗号化を使用する
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1136,6 +1156,10 @@ BitLocker に対してリカバリ パスワードを作成して Active Directo
 
 大容量のハード ドライブを暗号化する場合、暗号化処理の完了に数時間かかることがあります。 このオプションを選ばないと、タスク シーケンスは直ちに続行されます。  
 
+#### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>TPM がないか、TPM が有効ではない場合は、コンピューターでこの手順はスキップされます。
+
+<!--6995601-->
+バージョン 2006 以降では、サポート対象の、または有効な TPM が含まれないコンピューターでのドライブ暗号化をスキップするには、このオプションを選びます。 たとえば、仮想マシンに OS を展開するときは、このオプションを使います。 既定では、 **[BitLocker の有効化]** ステップに対して、この設定は無効になっています。 この設定を有効にしていても、機能している TPM がデバイスにない場合は、エラーがタスク シーケンス エンジンにより smsts.log に記録され、ステータス メッセージ 11912 が送信されます。 このステップの後もタスク シーケンスは続行します。
 
 
 ## <a name="format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a> ディスクのフォーマットとパーティション作成
@@ -1174,6 +1198,31 @@ BitLocker に対してリカバリ パスワードを作成して Active Directo
 #### <a name="disk-number"></a>ディスク番号
 
 フォーマットするディスクの物理ディスク番号です。 この番号は、Windows のディスク列挙の順番に基づいています。  
+
+#### <a name="variable-name-to-store-disk-number"></a>ディスク番号を格納する変数名
+
+<!--6610288-->
+
+バージョン 2006 以降では、タスク シーケンス変数を使用して、フォーマットするターゲット ディスクを指定します。 この変数オプションによって、動的な動作が含まれる、さらに複雑なタスク シーケンスがサポートされます。 たとえば、カスタム スクリプトでディスクを検出し、ハードウェアの種類に基づいて変数を設定することができます。 その後、このステップの複数のインスタンスを使用して、さまざまなハードウェアの種類とパーティションを構成できます。
+
+このプロパティを選択する場合は、カスタム変数名を入力します。 タスク シーケンスの前のステップを追加して、このカスタム変数の値を物理ディスクの整数値に設定します。
+
+次のモックのステップは 1 つの例を示しています。
+
+- **PowerShell スクリプトの実行**: ターゲット ディスクを収集するためのカスタム スクリプト
+  - `myOSDisk` を `1` に設定します
+  - `myDataDisk` を `2` に設定します
+
+- OS ディスクの **[ディスクのフォーマットとパーティション作成]** : `myOSDisk` 変数を指定します
+  - ディスク 1 をシステム ディスクとして構成します
+
+- データ ディスクの **[ディスクのフォーマットとパーティション作成]** : `myDataDisk` 変数を指定します
+  - ディスク 2 を Raw ストレージ用に構成します
+
+この例のバリエーションでは、さまざまな種類のハードウェアにディスク番号とパーティション作成計画を使用します。
+
+> [!NOTE]
+> 引き続き既存のタスク シーケンス変数 **OSDDiskIndex** を使用できます。 ただし、 **[ディスクのフォーマットとパーティション作成]** ステップの各インスタンスでは、同じインデックス値が使用されます。 プログラムによってこのステップの複数のインスタンスのディスク番号を設定する場合は、この変数プロパティを使用します。
 
 #### <a name="disk-type"></a>ディスクの種類
 
@@ -1489,6 +1538,9 @@ Configuration Manager は、無効なアプリケーションまたは次のよ�
 
 このステップでは、対象コンピューターをワークグループまたはドメインに追加します。  
 
+> [!NOTE]
+> Azure Active Directory (Azure AD) に参加しているクライアントが OS 展開タスク シーケンスを実行する場合、新しい OS のクライアントは Azure AD に自動的には参加しません。 Azure AD に参加していない場合でも、クライアントは引き続き管理されます。
+
 このタスク シーケンス ステップは完全な OS でのみ実行されます。 Windows PE では実行されません。
 
 タスク シーケンス エディターでこのステップを追加するには、 **[追加]** を選び、 **[全般]** を選んで、 **[ドメインまたはワークグループに参加]** を選びます。
@@ -1635,6 +1687,18 @@ Configuration Manager は、無効なアプリケーションまたは次のよ�
 
 BitLocker を有効にするドライブを指定します。 ドライブ上の使用領域のみが暗号化されます。  
 
+#### <a name="disk-encryption-mode"></a>ディスク暗号化モード
+
+<!--6995601-->
+バージョン 2006 以降では、次の暗号化アルゴリズムのいずれかを選択します。
+
+- AES_128
+- AES_256
+- XTS_AES256
+- XTS_AES128
+
+既定で、または指定されていない場合は、このステップで OS バージョンの既定の暗号化方法が引き続き使用されます。 指定したアルゴリズムをサポートしていないバージョンの Windows でこのステップを実行すると、OS の既定値にフォールバックします。 このような場合、タスク シーケンス エンジンにより、ステータス メッセージ 11911 が送信されます。
+
 #### <a name="use-full-disk-encryption"></a>ディスク全体の暗号化を使用する
 
 <!--SCCMDocs-pr issue 2671-->
@@ -1642,7 +1706,7 @@ BitLocker を有効にするドライブを指定します。 ドライブ上の
 
 #### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>TPM がないか、TPM が有効ではない場合は、コンピューターでこの手順はスキップされます。
 
-サポートされる TPM または有効な TPM が含まれないコンピューターでのドライブ暗号化をスキップする場合は、このオプションを選びます。 たとえば、仮想マシンに OS を展開するときは、このオプションを使います。  
+サポートされる TPM または有効な TPM が含まれないコンピューターでのドライブ暗号化をスキップする場合は、このオプションを選びます。 たとえば、仮想マシンに OS を展開するときは、このオプションを使います。 既定では、 **[BitLocker の事前プロビジョニング]** ステップについて、この設定が有効になっています。 このステップは、TPM がないデバイスや初期化されない TPM では失敗します。 バージョン 2006 以降では、機能している TPM がデバイスにない場合は、タスク シーケンス エンジンによりエラーが smsts.log に記録され、ステータス メッセージ 11912 が送信されます。
 
 
 
@@ -2169,10 +2233,10 @@ Windows PowerShell のコマンド ラインで使用するパラメーターで
 
 バージョン 1906 以降では、次の PowerShell コマンドレットを使用してこのステップを管理します。<!-- 2839943, SCCMDocs#1118 -->
 
-- **Get-CMTSStepRunTaskSequence**
-- **New-CMTSStepRunTaskSequence**
-- **Remove-CMTSStepRunTaskSequence**
-- **Set-CMTSStepRunTaskSequence**
+- [Get-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmtsstepruntasksequence?view=sccm-ps)
+- [New-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmtsstepruntasksequence?view=sccm-ps)
+- [Remove-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/remove-cmtsstepruntasksequence?view=sccm-ps)
+- [Set-CMTSStepRunTaskSequence](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmtsstepruntasksequence?view=sccm-ps)
 
 詳細については、[1906 リリース ノートの新しいコマンドレット](https://docs.microsoft.com/powershell/sccm/1906-release-notes?view=sccm-ps#new-cmdlets)に関する記事をご覧ください。
 
@@ -2241,15 +2305,19 @@ Windows PowerShell のコマンド ラインで使用するパラメーターで
 
     true と評価される規則に対して設定する 1 つ以上の変数を指定するか、規則を使わずに変数を設定します。 既存の変数を選ぶか、カスタム変数を作成します。  
 
-    - **既存のタスク シーケンス変数**: 既存のタスク シーケンス変数の一覧から 1 つまたは複数の変数を選びます。 配列変数は選択できません。  
+  - **既存のタスク シーケンス変数**: 既存のタスク シーケンス変数の一覧から 1 つまたは複数の変数を選びます。 配列変数は選択できません。  
 
-    - **カスタム タスク シーケンス変数**: カスタム タスク シーケンス変数を定義します。 既存のタスク シーケンス変数を指定することもできます。 この設定は、変数の配列は既存のタスク シーケンス変数の一覧に含まれないため、**OSDAdapter** などの既存の変数配列を指定する場合に便利です。  
+  - **カスタム タスク シーケンス変数**: カスタム タスク シーケンス変数を定義します。 既存のタスク シーケンス変数を指定することもできます。 この設定は、変数の配列は既存のタスク シーケンス変数の一覧に含まれないため、**OSDAdapter** などの既存の変数配列を指定する場合に便利です。  
 
-規則に変数を選択した後、各変数の値を指定します。 規則が true と評価されると、変数は指定された値に設定されます。 変数ごとに **[秘密の値]** を選択して変数の値を非表示にできます。 既定では、**OSDCaptureAccountPassword** 変数など、いくつかの既存の変数の値を非表示にします。  
+規則に変数を選択した後、各変数の値を指定します。 規則が true と評価されると、変数は指定された値に設定されます。 変数ごとに **[この値を表示しない]** を選択して、変数の値を非表示にすることができます。 既定では、**OSDCaptureAccountPassword** 変数など、いくつかの既存の変数の値を非表示にします。  
 
 > [!IMPORTANT]  
-> Configuration Manager は、**動的変数の設定**ステップでタスク シーケンスをインポートするとき、**シークレット値**としてマークされているすべての変数値を削除します。 タスク シーケンスをインポートした後で、動的変数の値を再入力します。  
+> **[動的変数の設定]** ステップでタスク シーケンスをインポートするときに、 **[この値を表示しない]** としてマークされている変数の値が Configuration Manager によって削除されます。 タスク シーケンスをインポートした後で、動的変数の値を再入力します。
 
+**[この値を表示しない]** オプションを使用すると、タスク シーケンス エディターに変数の値が表示されません。 タスク シーケンス ログ ファイル (**smsts.log**) またはタスク シーケンス デバッガーを使用しても、変数の値は表示されません。 この値は、実行時にタスク シーケンスで引き続き使用できます。 これらの変数を非表示にしておく必要がなくなった場合は、最初に削除します。 その後、非表示にするオプションを選択しないで変数を再定義します。  
+
+> [!WARNING]  
+> **[コマンド ラインの実行]** ステップのコマンド ラインに変数を含めた場合、タスク シーケンス ログ ファイルには、変数の値を含む完全なコマンド ラインが表示されます。 機密データがログ ファイルに表示されないようにするには、タスク シーケンスの変数 **OSDDoNotLogCommand** を `TRUE` に設定します。
 
 
 ## <a name="set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a> タスク シーケンス変数の設定
@@ -2289,8 +2357,13 @@ Windows PowerShell のコマンド ラインで使用するパラメーターで
 <!--1358330-->
 このオプションを有効にすると、タスク シーケンス変数に格納される機密データがマスクされます。 たとえば、パスワードを指定するときに使用します。
 
-> [!Note]  
+> [!NOTE]
 > このオプションを有効にしてから、タスク シーケンス変数の値を設定します。 そうしないと、変数の値が意図したとおりに設定されず、タスク シーケンスを実行したときに予期しない動作を引き起こす可能性があります。<!--SCCMdocs issue #800-->
+
+**[この値を表示しない]** オプションを使用すると、タスク シーケンス エディターに変数の値が表示されません。 タスク シーケンス ログ ファイル (**smsts.log**) またはタスク シーケンス デバッガーを使用しても、変数の値は表示されません。 この値は、実行時にタスク シーケンスで引き続き使用できます。 これらの変数を非表示にしておく必要がない場合は、最初に削除します。 その後、非表示にするオプションを選択せずに、変数を再定義します。
+
+> [!WARNING]
+> **[コマンド ラインの実行]** ステップのコマンド ラインに変数を含めた場合、タスク シーケンス ログ ファイルには、変数の値を含む完全なコマンド ラインが表示されます。 機密データがログ ファイルに表示されないようにするには、タスク シーケンスの変数 **OSDDoNotLogCommand** を `TRUE` に設定します。<!-- 6963278 -->
 
 #### <a name="value"></a>値  
 
@@ -2388,6 +2461,8 @@ Windows PowerShell のコマンド ラインで使用するパラメーターで
 タスク シーケンスのステップでは、サイトの割り当てと既定の構成が自動的に指定されます。 このフィールドを使用して、クライアントのインストール時に使用する追加のインストールのプロパティを指定します。 複数のインストールのプロパティを入力するには、各プロパティの間にスペースを入力します。  
 
 クライアントのインストール時に使用するコマンド ライン オプションを指定します。 たとえば、「`/skipprereq: silverlight.exe`」と入力すると、CCMSetup.exe に Microsoft Silverlight 前提条件をインストールしないように通知します。 CCMSetup.exe の使用可能なコマンド ライン オプションの詳細については、「[クライアント インストールのプロパティについて](../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
+
+Azure AD に参加しているか、トークンベースの認証を使用しているインターネットベースのクライアントで OS 展開タスク シーケンスを実行する場合は、 **[Windows と ConfigMgr のセットアップ]** ステップで [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) プロパティを指定する必要があります。 たとえば、「 `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939` 」のように入力します。
 
 ### <a name="options-for-setup-windows-and-configmgr"></a>Windows と ConfigMgr のセットアップのオプション
 

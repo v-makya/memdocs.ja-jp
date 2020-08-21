@@ -5,17 +5,17 @@ description: Configuration Manager で、OS の展開中に使用する Windows 
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76e0fd3ad8ceaecb43d2a61c3abe15accda5e5d8
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: e68a3274a32d28ac0b4ad2a611c59870ee338472
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912387"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124543"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Configuration Manager でブート イメージを管理する
 
@@ -80,11 +80,15 @@ Windows ADK インストール ディレクトリにある最新バージョン�
 
 サイトのインストール中に、Configuration Manager は、Windows ADK のサポートされているバージョンから、WinPE バージョンに基づくブート イメージを自動的に追加します。 Configuration Manager のバージョンによっては、サポートされているバージョンの Windows ADK とは異なるバージョンの WinPE に基づくブート イメージを追加できます。 サポートされていないバージョンの WinPE が含まれるブート イメージを追加しようとすると、エラーが発生します。 次のリストに、現在サポートされている Windows ADK と WinPE バージョンを示します。
 
-| Windows の種類 | サポートされているバージョン |
-|--------------|--------------------|
-| Windows ADK バージョン | Windows 10 用 Windows ADK |
-| Configuration Manager コンソールでカスタマイズできる Windows PE ブート イメージのバージョン | Windows PE 10 |
-| Configuration Manager コンソールで "*カスタマイズできない*" Windows PE ブート イメージのバージョン | - Windows PE 3.1<sup>[注 1](#bkmk_note1)</sup> <br> - Windows PE 5 |
+- Windows ADK バージョン: Windows 10 用 Windows ADK
+
+- Configuration Manager コンソールでカスタマイズできる Windows PE ブート イメージのバージョン: Windows PE 10
+
+- Configuration Manager コンソールで "*カスタマイズできない*" Windows PE ブート イメージのバージョン
+
+  - Windows PE 3.1<sup>[注 1](#bkmk_note1)</sup>
+
+  - Windows PE 5
 
 たとえば、Configuration Manager コンソールを使用して、Windows ADK for Windows 10 (Windows PE 10 の構築用) で構築したブート イメージをカスタマイズします。 Windows PE 5 に基づくブート イメージの場合、Windows ADK for Windows 8 の DISM のバージョンを使用して別のコンピューターからカスタマイズします。 その後、カスタム ブート イメージを Configuration Manager コンソールに追加します。 詳細については、以下の記事を参照してください。
 

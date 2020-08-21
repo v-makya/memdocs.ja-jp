@@ -2,20 +2,20 @@
 title: タスク シーケンス変数リファレンス
 titleSuffix: Configuration Manager
 description: Configuration Manager のタスク シーケンスを制御およびカスタマイズするための変数について説明します。
-ms.date: 04/01/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b3ddd1a4b59ba750e9fca5f8386762b4a5dddb13
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 667d7451f467592bd0645b54d7068a20628ec98e
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429823"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124143"
 ---
 # <a name="task-sequence-variables"></a>タスク シーケンス変数
 
@@ -372,6 +372,13 @@ Configuration Manager サイトのサイト コードを格納します。
 *[準備の確認](task-sequence-steps.md#BKMK_CheckReadiness)ステップに適用されます。*
 
 **接続されているネットワーク アダプター** チェックで true (`1`) または false (`0`) が返されたかどうかに関する読み取り専用の変数です。 チェックを有効にしない場合、読み取り専用変数の値は空白になります。
+
+### <a name="_ts_cruefi"></a><a name="TSCRUEFI"></a> _TS_CRUEFI
+
+*バージョン 2006 以降* <!--6452769-->
+*[準備の確認](task-sequence-steps.md#BKMK_CheckReadiness)ステップに適用されます。*
+
+**[コンピューターが UEFI モードになっている]** によって BIOS (`0`) または UEFI (`1`) が返されたかどうかに関する読み取り専用の変数です。 チェックを有効にしない場合、読み取り専用変数の値は空白になります。
 
 ### <a name="_ts_crwired"></a><a name="TSCRWIRED"></a> _TS_CRWIRED
 

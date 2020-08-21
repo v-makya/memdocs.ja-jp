@@ -10,12 +10,12 @@ ms.assetid: 58849e40-30d5-4153-84b3-ca4af3a4f09d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f92e76047a70f6d86406b1a364603163d902e62
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7ad20f80f4727fe18947bed05ded6e7b107fab12
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81703220"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124086"
 ---
 # <a name="user-experiences-for-os-deployment"></a>OS 展開のユーザー エクスペリエンス
 
@@ -146,8 +146,7 @@ PXE のエクスペリエンスは、ハードウェア モデルによって異
 
 - 明示的に無効にしたステップ。 無効にされたステップはタスク シーケンス中に実行されません。
 
-    > [!NOTE]
-    > 無効なグループ内の有効なステップは、引き続き合計数に含まれます。
+- バージョン 2006 以降では、無効なグループ内の有効なステップはカウントされません。<!--6448412--> バージョン 2002 では、無効なグループ内の有効なステップは、合計数に含まれます。
 
 ## <a name="task-sequence-error"></a>タスク シーケンス エラー
 

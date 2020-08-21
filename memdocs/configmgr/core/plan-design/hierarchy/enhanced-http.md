@@ -2,7 +2,7 @@
 title: 拡張 HTTP
 titleSuffix: Configuration Manager
 description: 先進認証を使用して、PKI サーバー認証証明書を必要とせずにクライアント通信をセキュリティ保護します。
-ms.date: 07/10/2020
+ms.date: 08/07/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79b4119a12826596fcc91fa1b4ead4e151e2ddd8
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 5d28e0ccef767770092d03898489104ae6f8c674
+ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262100"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87997905"
 ---
 # <a name="enhanced-http"></a>拡張 HTTP
 
@@ -118,6 +118,11 @@ Configuration Manager コンソールでこれらの証明書を確認できま�
 
 この構成でクライアントが管理ポイントおよび配布ポイントと通信する方法の詳細については、「[クライアントからサイト システムとサービスへの通信](communications-between-endpoints.md#Planning_Client_to_Site_System)」をご覧ください。
 
+## <a name="validate-the-certificate"></a>証明書を検証する
+
+拡張 HTTP を有効にすると、サイト サーバーによって **SMS ロール SSL 証明書**という名前の自己署名証明書が生成されます。 この証明書は、ルート **SMS 発行**証明書によって発行されます。 管理ポイントによって、この証明書は、ポート 443 にバインドされている IIS の既定の Web サイトに追加されます。
+
+構成の状態を確認するには、**mpcontrol.log** を確認します。
 
 ## <a name="see-also"></a>関連項目
 

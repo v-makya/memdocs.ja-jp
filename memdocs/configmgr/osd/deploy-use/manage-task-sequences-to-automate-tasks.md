@@ -2,20 +2,20 @@
 title: タスク シーケンスの管理
 titleSuffix: Configuration Manager
 description: ご利用の環境でタスク シーケンスを作成、編集、展開、インポート、エクスポートして管理し、タスクを自動化します。
-ms.date: 02/26/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f79829b7cd6ec70764a20fb05f4438176c41b470
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+ms.openlocfilehash: 609f5d010018fa23dd4a533b2f1079f07d8c2283
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85591036"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125067"
 ---
 # <a name="manage-task-sequences-to-automate-tasks"></a>タスクを自動化するためのタスク シーケンスの管理
 
@@ -40,6 +40,30 @@ Configuration Manager 環境のステップを自動化するには、タスク 
 ## <a name="edit"></a><a name="BKMK_ModifyTaskSequence"></a> 編集  
 
 タスク シーケンスは、ステップを追加または削除する、グループを追加または削除する、あるいはステップの順序を変更するという方法で変更します。 詳細については、「[タスク シーケンス エディターを使用する](../understand/task-sequence-editor.md)」を参照してください。
+
+## <a name="reduce-the-size-of-task-sequence-policy"></a><a name="bkmk_policysize"></a> タスク シーケンスのポリシーのサイズを小さくする
+
+<!--6982275-->
+タスク シーケンスのポリシーのサイズが 32 MB を超えると、クライアントは大きなポリシーを処理できません。 その後、クライアントはタスク シーケンスの展開の実行に失敗します。
+
+サイト データベースに格納されているタスク シーケンスのサイズは小さくなりますが、それでも大きすぎて問題が発生する場合があります。 クライアントによってタスク シーケンス ポリシー全体が処理される場合、拡張されたサイズが 32 MB を超えると問題が発生する可能性があります。
+
+バージョン 2006 以降、クライアントで 32 MB のタスク シーケンス ポリシーのサイズを確認するには、[マネジメントの分析情報](../../core/servers/manage/management-insights.md#operating-system-deployment)を使用します。
+
+タスク シーケンス展開のポリシーの全体的なサイズを減らすには、次のアクションを行います。
+
+- 機能のセグメントを子タスク シーケンスに分割し、[[タスク シーケンスの実行]](../understand/task-sequence-steps.md#child-task-sequence) ステップを使用します。 各タスク シーケンスには、ポリシーのサイズに対して個別の 32 MB の制限があります。
+
+    > [!NOTE]
+    > タスク シーケンスのステップとグループの合計数を減らすと、ポリシーのサイズに与える影響が最小限に抑えられます。 ポリシーの各ステップは、通常は数 KB です。 ステップのグループを子タスク シーケンスに移動すると、より効果的です。
+
+- 展開先のソフトウェアの更新プログラムの数を、タスク シーケンスと同じコレクションまで減らします。
+
+- [[PowerShell スクリプトの実行]](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript) ステップでスクリプトを入力するのではなく、パッケージを使用してそれを参照します。
+
+- 実行時のタスク シーケンス環境のサイズには、8 KB の制限があります。 カスタムのタスク シーケンス変数の使用状況を確認します。これは、ポリシーのサイズにも影響することがあります。
+
+- 最後の手段として、複雑な動的タスク シーケンスを、異なるコレクションへ異なる展開を含む個別のタスク シーケンスに分割します。
 
 ## <a name="software-center-properties"></a><a name="bkmk_prop-general"></a>ソフトウェア センターのプロパティ
 

@@ -2,59 +2,61 @@
 title: ネットワーク経由で OSD に PXE を使用する
 titleSuffix: Configuration Manager
 description: PXE による OS の展開を使用して、コンピューターのオペレーティング システムを更新するか、新しいコンピューターに新しいバージョンの Windows をインストールします。
-ms.date: 02/26/2020
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 11045ff31dc3832ac97d62f491561b3cf989813c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 7d2d467a053689edad1dcf62fa9bb140d5f259d9
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079350"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88124620"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>Configuration Manager で PXE を使用して Windows をネットワーク経由で展開する
 
 *適用対象:Configuration Manager (Current Branch)*
 
-System Center Configuration Manager での PXE (Preboot execution environment) によるオペレーティング システムの展開では、クライアント コンピューターはネットワーク経由でオペレーティング システムを要求し、展開することができます。 この展開シナリオでは、OS イメージとブート イメージを PXE 対応配布ポイントに送信します。
+System Center Configuration Manager での PXE (Preboot execution environment) によるオペレーティング システムの展開では、クライアント コンピューターはネットワーク経由でオペレーティング システムを要求し、展開することができます。 この展開方法では、OS イメージとブート イメージを PXE 対応配布ポイントに送信します。
 
-> [!NOTE]  
+> [!NOTE]
 > x64 BIOS コンピューターのみを対象とする OS の展開を作成する場合は、配布ポイントに x64 ブート イメージと x86 ブート イメージの両方を用意する必要があります。
 
 PXE を使用した OS の展開は、次のシナリオで使用できます。
 
-- [新しいバージョンの Windows で既存のコンピューターを更新する](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+- [新しいバージョンの Windows で既存のコンピューターを更新する](refresh-an-existing-computer-with-a-new-version-of-windows.md)
 
-- [新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする](install-new-windows-version-new-computer-bare-metal.md)  
+- [新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする](install-new-windows-version-new-computer-bare-metal.md)
 
 いずれかの OS の展開シナリオのステップを完了させてから、この記事のセクションを参照して、PXE による展開を準備します。
 
 > [!WARNING]
-> PXE 展開を使用し、最初のブート デバイスとしてネットワーク アダプターを使用するデバイス ハードウェアを構成すると、これらのデバイスでは、ユーザーの操作なしで OS 展開のタスク シーケンスを自動的に開始できます。 展開の検証では、この構成は管理されません。 この構成により、プロセスが簡略化され、ユーザーの操作が減少する可能性がありますが、デバイスが誤って再イメージ化されるリスクが高くなります。
+> PXE 展開を使用し、最初のブート デバイスとしてネットワーク アダプターを使用するデバイス ハードウェアを構成すると、これらのデバイスでは、ユーザーの操作なしで OS 展開のタスク シーケンスを自動的に開始できます。 [展開の検証](../../core/servers/manage/settings-to-manage-high-risk-deployments.md)では、この構成は管理されません。 この構成により、プロセスが簡略化され、ユーザーの操作が減少する可能性がありますが、デバイスが誤って再イメージ化されるリスクが高くなります。
 
-## <a name="configure-at-least-one-distribution-point-to-accept-pxe-requests"></a><a name="BKMK_Configure"></a> PXE 要求を許可するために少なくとも 1 つの配布ポイントを構成する
+バージョン 2006 以降、PXE ベースのタスク シーケンスによってクラウドベースのコンテンツをダウンロードできます。 PXE 対応配布ポイントには引き続きブート イメージが必要であり、デバイスには管理ポイントへのイントラネット接続が必要です。 その後、コンテンツが有効なクラウド管理ゲートウェイ (CMG) またはクラウド配布ポイントから追加のコンテンツを取得できます。<!--6209223--> 詳細については、「[クラウドベースのコンテンツのサポート](use-bootable-media-to-deploy-windows-over-the-network.md#support-for-cloud-based-content)」を参照してください。
 
-PXE ブート要求を作成する Configuration Manager クライアントにオペレーティング システムを展開するには、PXE 要求を受け入れるように 1 つ以上の配布ポイントを構成する必要があります。 構成された配布ポイントは、PXE ブート要求に応答し、実行する適切な展開アクションを決定します。 詳細については、[配布ポイントのインストールと変更に関するトピック](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe)を参照してください。  
+## <a name="configure-distribution-points-for-pxe"></a><a name="BKMK_Configure"></a> PXE 用の配布ポイントを構成する
 
-> [!NOTE]  
-> 複数のサブネットをサポートする目的で PXE 対応配布ポイントを 1 つ構成するとき、DHCP オプションの使用はサポートされません。 PXE 対応配布ポイントへの PXE 要求の転送を許可するようにルーター上で IP ヘルパーを構成してください。
->
-> バージョン 1810 では、DHCP サーバーも実行しているサーバーで、WDS なしで PXE レスポンダーを使用することはサポートされていません。
->
-> バージョン 1902 以降では、Windows 展開サービスのない配布ポイントで PXE レスポンダーを有効にするときは、DHCP サービスと同じサーバーでもかまわなくなりました。<!--3734270, SCCMDocs-pr #3416--> この構成をサポートするには、次の設定を追加します。  
->
-> - レジストリ キー `HKLM\Software\Microsoft\SMS\DP` で DWord 値 **DoNotListenOnDhcpPort** を `1` に設定します。
-> - DHCP オプション 60 を `PXEClient` に設定します。  
-> - サーバーで SCCMPXE サービスと DHCP サービスを再起動します。  
+PXE ブート要求を作成する Configuration Manager クライアントにオペレーティング システムを展開するには、PXE 要求を受け入れるように 1 つ以上の配布ポイントを構成します。 その後、配布ポイントでは PXE ブート要求に応答し、適切な展開アクションを決定します。 詳細については、[配布ポイントのインストールと変更に関するトピック](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe)を参照してください。
+
+> [!NOTE]
+> 1 つの PXE 対応配布ポイントを構成して複数のサブネットをサポートする場合、DHCP オプションを使用することはサポートされていません。 PXE 対応配布ポイントにクライアント PXE 要求を転送するネットワークを許可するには、ルーター上で IP ヘルパーを構成します。
+
+バージョン 1810 では、DHCP サーバーも実行しているサーバーで、WDS なしで PXE レスポンダーを使用することはサポートされていません。
+
+バージョン 1902 以降では、Windows 展開サービスのない配布ポイントで PXE レスポンダーを有効にするときは、DHCP サービスと同じサーバーでもかまわなくなりました。<!--3734270, SCCMDocs-pr #3416--> この構成をサポートするには、次の設定を追加します。
+
+- レジストリ キー `HKLM\Software\Microsoft\SMS\DP` で DWord 値 **DoNotListenOnDhcpPort** を `1` に設定します。
+- DHCP オプション 60 を `PXEClient` に設定します。
+- サーバーで SCCMPXE サービスと DHCP サービスを再起動します。
 
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>PXE 対応のブート イメージの作成
 
-PXE を使用して OS を展開するには、1 つ以上の PXE 対応配布ポイントに配布される、x86 と x64 の両方の PXE 対応ブート イメージが必要です。 この情報を使用して、ブート イメージで PXE を有効にして、配布ポイントにブート イメージを配布します。
+PXE を使用して OS を展開するには、1 つまたは複数の PXE 対応配布ポイントに x86 と x64 の両方の PXE 対応ブート イメージを配布します。
 
 - ブート イメージで PXE を有効にするには、 **[データ ソース]** タブのブート イメージ プロパティで、 **[このブート イメージを PXE 対応の配布ポイントから展開する]** を選択します。
 
@@ -66,7 +68,7 @@ PXE を使用して OS を展開するには、1 つ以上の PXE 対応配布�
 
 ## <a name="create-an-exclusion-list-for-pxe-deployments"></a><a name="BKMK_PXEExclusionList"></a> PXE 展開の除外リストの作成
 
-> [!Note]  
+> [!NOTE]
 > 状況によっては、[重複するハードウェア識別子を管理する](../../core/clients/manage/manage-clients.md#manage-duplicate-hardware-identifiers)プロセスが容易になります。<!-- SCCMDocs issue 802 -->
 >
 > 一部のシナリオでは、動作ごとに結果が異なる場合があります。 除外リストにある MAC アドレスを持つクライアントは、何があっても決して起動されることはありません。
@@ -75,22 +77,18 @@ PXE を使用して OS を展開するには、1 つ以上の PXE 対応配布�
 
 PXE を使用してオペレーティング システムを展開する場合、配布ポイントで除外リストを作成できます。 除外リストには、配布ポイントが無視すべきコンピューターの MAC アドレスを追加します。 リストに追加されたコンピューターは、Configuration Manager が PXE 展開で使用する展開タスク シーケンスを受け取りません。
 
-### <a name="process-to-create-the-exclusion-list"></a>除外リストを作成するプロセス
+1. PXE 対応配布ポイントにテキスト ファイルを作成します。 たとえば、このファイルに **pxeExceptions.txt** という名前を付けます。
 
-1. PXE 対応の配布ポイントにテキスト ファイルを作成します。 例として、このテキスト ファイルを **pxeExceptions.txt**と名づけます。  
+1. メモ帳などのプレーン テキスト エディターを使用して、ファイルを編集します。 PXE 対応配布ポイントで無視される必要があるコンピューターの MAC アドレスを追加します。 MAC アドレス値はコロンを使って区切り、各アドレスを別の行に入力します。 例: `01:23:45:67:89:ab`
 
-2. メモ帳などのプレーン テキスト エディターを使用して、PXE 対応配布ポイントが無視するべきコンピューターの MAC アドレスを追加します。 MAC アドレス値はコロンを使って区切り、各アドレスを別の行に入力します。 例: `01:23:45:67:89:ab`  
+1. PXE 対応配布ポイントにテキスト ファイルを保存します。 これはサーバー上の任意の場所に保存できます。
 
-3. PXE 対応の配布ポイント サイト システム サーバーにテキスト ファイルを保存します。 テキスト ファイルはサーバーの任意の場所に保存できます。  
+1. PXE 対応配布ポイントでレジストリを編集します。 次のレジストリ パスを参照します: `HKLM\Software\Microsoft\SMS\DP`。 **MACIgnoreListFile** 文字列値を作成します。 PXE 対応配布ポイントにテキスト ファイルへの完全パスを追加します。
 
-4. PXE 対応配布ポイントのレジストリを編集して、**MACIgnoreListFile** レジストリ キーを作成します。 PXE 対応の配布ポイント サイト システム サーバーでテキスト ファイルのフル パスの文字列値を追加します。 次のレジストリ パスを使用します。  
+    > [!WARNING]
+    > レジストリ エディターの使用方法を誤ると、重大な問題が発生し、Windows の再インストールが必要になることがあります。 レジストリ エディターの使用方法を誤った結果生じた問題については、解決できる保証はありません。 レジストリ エディターは、各自の責任で使用してください。
 
-    `HKLM\Software\Microsoft\SMS\DP`  
-
-    > [!WARNING]  
-    > レジストリ エディターの使用方法を誤ると、重大な問題が発生し、Windows の再インストールが必要になることがあります。 レジストリ エディターの使用方法を誤った結果生じた問題については、解決できる保証はありません。 レジストリ エディターは、各自の責任で使用してください。  
-
-5. このレジストリの変更後に、WDS サービスまたは PXE レスポンダー サービスを再起動します。 サーバーを再起動する必要はありません。<!--512129-->  
+1. このレジストリの変更後に、WDS サービスまたは PXE レスポンダー サービスを再起動します。 サーバーを再起動する必要はありません。<!--512129-->
 
 ## <a name="ramdisk-tftp-block-size-and-window-size"></a><a name="BKMK_RamDiskTFTP"></a> RamDisk TFTP ブロック サイズとウィンドウ サイズ
 
@@ -107,7 +105,8 @@ PXE による OS の展開を使用するには、OS を PXE ブート要求か�
 - メディアと PXE のみ (非表示)
 
 ## <a name="option-82-during-pxe-dhcp-handshake"></a>PXE DHCP ハンドシェイク中のオプション 82
-バージョン 1906 以降では、PXE DHCP ハンドシェイク中のオプション 82 が、WDS を使用せずに PXE レスポンダーでサポートされます。 オプション 82 が必要な場合は、WDS を使用せずに PXE レスポンダーを使用するようにしてください。 オプション 82 は WDS ではサポートされません。
+
+バージョン 1906 以降、Configuration Manager では、PXE DHCP ハンドシェイク中のオプション 82 が、WDS を使用せずに PXE レスポンダーでサポートされます。 オプション 82 が必要な場合は、WDS を使用せずに PXE レスポンダーを使用するようにしてください。 Configuration Manager では、WDS を使用したオプション 82 はサポートされません。
 
 ## <a name="deploy-the-task-sequence"></a><a name="BKMK_Deploy"></a> タスク シーケンスの展開
 
@@ -119,8 +118,8 @@ PXE による OS の展開を使用するには、OS を PXE ブート要求か�
 
 Configuration Manager コレクションまたはコンピューターに割り当てられた最終の PXE 展開の状態をクリアすることにより、必要な PXE 展開を再展開することができます。 **必須の PXE 展開の消去**アクションの詳細については、[クライアントの管理](../../core/clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode)または[コレクションの管理](../../core/clients/manage/collections/manage-collections.md#bkmk_device)に関するトピックを参照してください。 この操作でその展開の状態がリセットされ、最新の必要な展開が再インストールされます。
 
-> [!IMPORTANT]  
-> PXE プロトコルはセキュリティ保護されていません。 PXE サーバーと PXE クライアントのどちらも、サイトへの不正なアクセスを防御するデータセンターといった物理的に安全なネットワークに置かれていることを確認します。
+> [!IMPORTANT]
+> PXE プロトコルはセキュリティ保護されていません。 PXE サーバーと PXE クライアントは、サイトへの不正なアクセスを防御するために、データ センターなどの物理的にセキュリティで保護されたネットワークに置かれていることを確認します。
 
 ## <a name="how-the-boot-image-is-selected-for-pxe"></a>PXE にブート イメージが選択されるしくみ
 
@@ -140,3 +139,7 @@ Configuration Manager コレクションまたはコンピューターに割り�
     複数のブート イメージが見つかった場合は、"*最も高い*" または最新のタスク シーケンス展開 ID が使用されます。 複数サイトの階層の場合、その文字列比較で文字が*アルファベット順で後の方*の文字があるサイトが優先されます。 たとえば、他の点では双方が一致している場合、サイト AAA からの昨日の展開よりも、サイト ZZZ からの 1 年前の展開が選択されます。<!-- SCCMDocs issue 877 -->  
 
 4. 同じアーキテクチャのブート イメージが見つからなかった場合、Configuration Manager は、クライアントのアーキテクチャと互換性があるブート イメージを探します。 手順 2. で見つかったタスク シーケンスの一覧で探します。 たとえば、64 ビット BIOS/MBR クライアントは、32 ビットおよび 64 ビットのブート イメージと互換性があります。 32 ビット BIOS/MBR クライアントは、32 ビットのブート イメージのみと互換性があります。 UEFI クライアントは、一致するアーキテクチャとのみ互換性があります。 64 ビット UEFI クライアントは、64 ビットのブート イメージとのみ互換性があり、32 ビット UEFI クライアントは、32 ビットのブート イメージとのみ互換性があります。
+
+## <a name="next-steps"></a>次のステップ
+
+[OS 展開のユーザー エクスペリエンス](../understand/user-experience.md#pxe)

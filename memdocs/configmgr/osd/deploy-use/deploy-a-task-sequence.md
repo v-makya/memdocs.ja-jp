@@ -2,20 +2,20 @@
 title: タスク シーケンスの展開
 titleSuffix: Configuration Manager
 description: この情報を使用して、タスク シーケンスをコレクション内のコンピューターに展開します。
-ms.date: 11/29/2019
+ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
-ms.topic: conceptual
+ms.topic: how-to
 ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13c16e89cc75bff1ccecd03a98cd12782c419a40
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: fea9088a11310aedc95d2fdbeacdb98650eef361
+ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455179"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88125204"
 ---
 # <a name="deploy-a-task-sequence"></a>タスク シーケンスの展開
 
@@ -146,9 +146,21 @@ ms.locfileid: "84455179"
 
     - **Windows Embedded デバイスに対してフィルター処理を書き込む**: この設定は、書き込みフィルターを使用して有効になっている Windows Embedded デバイス上のインストールの動作を制御します。 インストールの期限またはメンテナンス期間中に変更をコミットするオプションを選択します。 このオプションを選択する場合、再起動が必要で、変更はデバイスに保持されます。 それ以外の場合、アプリケーションは一時的なオーバーレイにインストールされ、後でコミットされます。 タスク シーケンスを Windows Embedded デバイスに展開する場合、デバイスが、メンテナンス期間が構成されたコレクションのメンバーであることを確認します。  
 
-    - **クライアントのタスク シーケンスをインターネット上で実行できるようにする**: インターネット ベースのクライアント上でタスク シーケンスを実行できるようにするかどうかを指定します。 OS のインストールなど、ブート メディアを必要とする操作は、この設定ではサポートされません。 このオプションは、標準 OS で操作を実行する一般的なソフトウェアのインストールまたはスクリプトベースのタスク シーケンスにのみ使用してください。  
+    - **クライアントのタスク シーケンスをインターネット上で実行できるようにする**: インターネット ベースのクライアント上でタスク シーケンスを実行できるようにするかどうかを指定します。
 
-        - クラウド管理ゲートウェイ経由のインターネット ベース クライアントへの Windows 10 一括アップグレード タスク シーケンスの展開でこの設定がサポートされます。 詳細については、「[CMG を通して Windows 10 の一括アップグレードを展開する](#deploy-windows-10-in-place-upgrade-via-cmg)」を参照してください。  
+        クラウド管理ゲートウェイ (CMG) 経由のインターネット ベース クライアントへの Windows 10 一括アップグレード タスク シーケンスの展開で、この設定がサポートされます。 詳細については、「[CMG を通して Windows 10 の一括アップグレードを展開する](#deploy-windows-10-in-place-upgrade-via-cmg)」を参照してください。
+
+        バージョン 2006 以降では、ブート イメージを含むタスク シーケンスを CMG を介して通信するデバイスに展開できます。 ユーザーは、ソフトウェア センターからタスク シーケンスを開始する必要があります。<!--6997525-->
+
+        > [!NOTE]
+        > Azure Active Directory (Azure AD) に参加しているクライアントが OS 展開タスク シーケンスを実行する場合、新しい OS のクライアントは Azure AD に自動的には参加しません。 Azure AD に参加していない場合でも、クライアントは引き続き管理されます。
+        >
+        > Azure AD に参加しているか、トークンベースの認証を使用しているインターネットベースのクライアントで OS 展開タスク シーケンスを実行する場合は、[[Windows と ConfigMgr のセットアップ]](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) ステップで **CCMHOSTNAME** プロパティを指定する必要があります。
+
+        バージョン 2002 以降、ブート メディアを必要とする操作は、この設定ではサポートされません。 このオプションは、標準 OS で操作を実行する一般的なソフトウェアのインストールまたはスクリプトベースのタスク シーケンスにのみ使用してください。
+
+        > [!NOTE]
+        > すべてのインターネット ベースのタスク シーケンスのシナリオでは、ソフトウェア センターからタスク シーケンスを開始します。 ここでは、Windows PE、PXE、またはタスク シーケンス メディアはサポートされていません。
 
 8. **[アラート]** ページで、このタスク シーケンスによる展開に必要なアラート設定を指定します。  
 

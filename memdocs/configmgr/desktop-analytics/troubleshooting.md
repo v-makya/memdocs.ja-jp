@@ -2,7 +2,7 @@
 title: Desktop Analytics のトラブルシューティング
 titleSuffix: Configuration Manager
 description: Desktop Analytics に関する問題のトラブルシューティングに役立つ技術的な詳細。
-ms.date: 07/01/2020
+ms.date: 08/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 68506ba11e356a1e9f14d58880a80bdf3cfcb5f4
-ms.sourcegitcommit: fb03634b8494903fc6855ad7f86c8694ffada8df
+ms.openlocfilehash: e83e8d5d967b4cd3bbcb817c149cd40284bb5f9c
+ms.sourcegitcommit: 66c58078a32af3872d98f7c62af4f8047ee81b50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85828977"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089947"
 ---
 # <a name="troubleshoot-desktop-analytics"></a>Desktop Analytics のトラブルシューティング
 
@@ -73,6 +73,9 @@ Desktop Analytics では、次のアプリケーションが Azure AD に追加�
 セットアップの完了後にこれらのアプリをプロビジョニングする必要がある場合は、 **[接続済みサービス]** ペインに移動します。 **[ユーザーとアプリのアクセスを構成]** を選択し、アプリをプロビジョニングします。  
 
 - **Configuration Manager 用の Azure AD アプリ**。 セットアップの完了後に接続の問題をプロビジョニングまたはトラブルシューティングする必要がある場合は、「[Configuration Manager用のアプリを作成してインポートする](#create-and-import-app-for-configuration-manager)」をご覧ください。 このアプリでは、**Configuration Manager Service** API での **CM コレクションデータの書き込み**と **CM コレクション データの読み取り**が必要です。  
+
+    > [!NOTE]
+    > Desktop Analytics では、1 つの Azure AD テナントに報告する複数の Configuration Manager 階層がサポートされています。<!-- 4814075 --> 環境内に複数の階層が同じ商用 ID で構成されている場合に、Azure AD テナントと Desktop Analytics インスタンスを共有するには、階層ごとに[異なるアプリ](connect-configmgr.md#bkmk_connect)を使用します。
 
 ### <a name="create-and-import-app-for-configuration-manager"></a>Configuration Manager用のアプリを作成してインポートする
 
