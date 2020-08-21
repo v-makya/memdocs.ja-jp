@@ -10,12 +10,12 @@ ms.assetid: 31de47c9-891b-4de7-8d5e-fbbc1bff7c60
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5d9d7cea7e5653b338a3eb4adb01d9fded99035e
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 8e1334603bcf60ea3eb8c3d18b73d511570cdc5d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704060"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699740"
 ---
 # <a name="how-to-enable-tls-12"></a>TLS 1.2 を有効にする方法
 
@@ -86,7 +86,7 @@ TLS 1.2 は、SSL 2.0、SSL 3.0、TLS 1.0、TLS 1.1 などの以前の暗号化�
 
 ### <a name="what-determines-which-encryption-protocol-is-used"></a>使用される暗号化プロトコルはどのようにして決定されますか?
 
-暗号化された会話の場合、HTTPS では、クライアントとサーバーの両方でサポートされている最も高いバージョンのプロトコルが、常にネゴシエートされます。 接続が確立されるとき、クライアントからサーバーに使用可能な最も高いプロトコルでメッセージが送信されます。 サーバーで同じバージョンがサポートされている場合は、そのバージョンを使用してメッセージが送信されます。 このネゴシエートされたバージョンが、接続に使用されます。 クライアントによって示されたバージョンがサーバーでサポートされていない場合は、サーバーのメッセージで、使用できる最も高いバージョンが指定されます。 TLS ハンドシェイク プロトコルについて詳しくは、「[TLS を使用してセキュリティで保護されたセッションを確立する](https://docs.microsoft.com/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls)」を参照してください。
+暗号化された会話の場合、HTTPS では、クライアントとサーバーの両方でサポートされている最も高いバージョンのプロトコルが、常にネゴシエートされます。 接続が確立されるとき、クライアントからサーバーに使用可能な最も高いプロトコルでメッセージが送信されます。 サーバーで同じバージョンがサポートされている場合は、そのバージョンを使用してメッセージが送信されます。 このネゴシエートされたバージョンが、接続に使用されます。 クライアントによって示されたバージョンがサーバーでサポートされていない場合は、サーバーのメッセージで、使用できる最も高いバージョンが指定されます。 TLS ハンドシェイク プロトコルについて詳しくは、「[TLS を使用してセキュリティで保護されたセッションを確立する](/windows/win32/secauthn/tls-handshake-protocol#establishing-a-secure-session-by-using-tls)」を参照してください。
 
 ### <a name="what-determines-which-protocol-version-the-client-and-server-can-use"></a>クライアントとサーバーが使用できるプロトコル バージョンはどのようにして決定されますか?
 
@@ -103,7 +103,7 @@ TLS 1.2 は、SSL 2.0、SSL 3.0、TLS 1.0、TLS 1.1 などの以前の暗号化�
 ## <a name="additional-resources"></a>その他のリソース
 
 - [暗号化コントロールのテクニカル リファレンス](cryptographic-controls-technical-reference.md)
-- [.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス](https://docs.microsoft.com/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
+- [.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス](/dotnet/framework/network-programming/tls#configuring-security-via-the-windows-registry)
 - [KB 3135244:Microsoft SQL Server 用の TLS 1.2 のサポート](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)
 
 ## <a name="next-steps"></a>次のステップ

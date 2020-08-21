@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b25b0137e24212cbad2ba688735e45d9fe9aac0
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: a6e406d55524caca71bf75b087c9fd78a470c939
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556032"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699383"
 ---
 # <a name="accessibility-features-in-configuration-manager"></a>Configuration Manager でのユーザー補助機能
 
@@ -28,7 +28,7 @@ Configuration Manager には、すべての人に利用してもらうための�
 > [!Note]  
 > バージョン 1902 以降では、Configuration Manager コンソールのユーザー補助機能向上のため、コンソールが実行されているコンピューターの .NET がバージョン 4.7 以降に更新されます。 <!-- SCCMDocs-pr issue #3228 -->  
 > 
-> .NET 4.7.1 および 4.7.2 で行われたユーザー補助の変更について詳しくは、「[.NET Framework のアクセシビリティの新機能](https://docs.microsoft.com/dotnet/framework/whats-new/whats-new-in-accessibility)」をご覧ください。  
+> .NET 4.7.1 および 4.7.2 で行われたユーザー補助の変更について詳しくは、「[.NET Framework のアクセシビリティの新機能](/dotnet/framework/whats-new/whats-new-in-accessibility)」をご覧ください。  
 
 
 
@@ -98,5 +98,4 @@ Configuration Manager ユーザー インターフェイスのナビゲーショ
 - [ソフトウェア センターのユーザー ガイド](software-center.md)
 
 > [!NOTE]  
-> この記事の情報は、米国内で Microsoft 製品のライセンスを入手したユーザーにのみ適用されることがあります。 米国以外でこの製品を入手した場合には、ソフトウェア パッケージに付属している子会社の情報カードを使用するか、または [Microsoft アクセシビリティ Web サイト](https://www.microsoft.com/accessibility/)で Microsoft サポート サービスの窓口を参照してください。 このセクションに記載されている製品とサービスが利用できるかどうかを確認するには、各地の子会社にお問い合わせください。 アクセシビリティに関する情報は、日本語やフランス語などの他の言語でも提供されています。  
-
+> この記事の情報は、米国内で Microsoft 製品のライセンスを入手したユーザーにのみ適用されることがあります。 米国以外でこの製品を入手した場合には、ソフトウェア パッケージに付属している子会社の情報カードを使用するか、または [Microsoft アクセシビリティ Web サイト](https://www.microsoft.com/accessibility/)で Microsoft サポート サービスの窓口を参照してください。 このセクションに記載されている製品とサービスが利用できるかどうかを確認するには、各地の子会社にお問い合わせください。 アクセシビリティに関する情報は、日本語やフランス語などの他の言語でも提供されています。

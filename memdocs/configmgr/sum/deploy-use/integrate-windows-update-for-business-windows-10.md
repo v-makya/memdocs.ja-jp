@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 8ea95a04977038514c00f0199df42c8070e813c3
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127656"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699808"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Windows Update for Business との統合
 
@@ -24,7 +24,7 @@ ms.locfileid: "88127656"
 Windows Update for Business (WUfB) を使用すると、組織内の Windows 10 ベースのデバイスが Windows Update (WU) サービスに直接接続しているときに、最新のセキュリティ防御と Windows の機能によってこれらのデバイスが常に最新に保たれるようにすることができます。 Configuration Manager では、WUfB を使用してソフトウェア更新プログラムを取得する Windows 10 コンピューターと、WSUS を使用して取得する Windows 10 コンピューターを区別することができます。  
 
 > [!WARNING]
-> ご利用のデバイスに共同管理を使用していて、[Windows Update ポリシー](../../comanage/workloads.md#windows-update-policies)を Intune に移行している場合は、デバイスの [Windows Update for Business ポリシーは Intune から](https://docs.microsoft.com/intune/windows-update-for-business-configure)提供されます。
+> ご利用のデバイスに共同管理を使用していて、[Windows Update ポリシー](../../comanage/workloads.md#windows-update-policies)を Intune に移行している場合は、デバイスの [Windows Update for Business ポリシーは Intune から](/intune/windows-update-for-business-configure)提供されます。
 > - Configuration Manager クライアントが共同管理されたデバイスにまだインストールされている場合は、累積的更新プログラムと機能更新プログラムの設定は Intune によって管理されます。 ただし、サード パーティ製の修正プログラムは、Configuration Manager で引き続き管理されます ([**クライアント設定**](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates)で有効にした場合)。  
 
  WUfB または Windows Insider などの WU から更新プログラムを受信するように Configuration Manager クライアントが設定されている場合に、以下に示す Configuration Manager の一部の機能が使用できなくなりました。  
@@ -52,7 +52,7 @@ Windows Update for Business (WUfB) を使用すると、組織内の Windows 10 
 
 - Windows 10 Desktop Pro または Windows 10 Enterprise Edition バージョン 1511 以降を実行するクライアント
 
-- [Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) が展開され、クライアントが WUfB を使用して Windows 10 の更新プログラムとアップグレードを取得している。  
+- [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) が展開され、クライアントが WUfB を使用して Windows 10 の更新プログラムとアップグレードを取得している。  
 
 ### <a name="to-identify-clients-that-use-wufb"></a>WUfB を使用するクライアントを識別するには  
 
@@ -74,7 +74,7 @@ Configuration Manager バージョン 1706 以降、Windows Update for Business 
 
 > [!NOTE]
 > Configuration Manager バージョン 1802 以降では、Windows Insider の遅延ポリシーを設定できます。 <!--507201-->  
-Windows Insider プログラムの詳細については、[Windows Insider Program for Business の概要](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business)に関するページを参照してください。
+Windows Insider プログラムの詳細については、[Windows Insider Program for Business の概要](/windows/deployment/update/waas-windows-insider-for-business)に関するページを参照してください。
 
 ### <a name="prerequisites-for-deferral-policies"></a>遅延ポリシーの前提条件
 

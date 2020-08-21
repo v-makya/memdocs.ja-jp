@@ -9,12 +9,12 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e32956d2ca9385c22e9073cfa2665e1f61b3ebd3
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 8325102e9a818191eae5061b7adf60dbbb7269b5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078636"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700703"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>セットアップ ウィザードを使用した Configuration Manager サイトのインストール
 
@@ -37,7 +37,7 @@ Configuration Manager コンソール内からセカンダリ サイトをイン
 >   - [Microsoft Endpoint Configuration Manager - macOS クライアント (64 ビット)](https://www.microsoft.com/download/details.aspx?id=100850)
 >   - [UNIX および Linux 用のクライアント](https://www.microsoft.com/download/details.aspx?id=47719)
 > - [**リリース ノート**](release-notes.md) <!-- https://go.microsoft.com/fwlink/?LinkID=626571 -->
-> - [**ドキュメントを読む**](https://docs.microsoft.com/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
+> - [**ドキュメントを読む**](/sccm)<!-- https://go.microsoft.com/fwlink/p/?LinkId=626547 -->
 > - **インストールに関するサポートを利用する**:[TechNet フォーラム:Configuration Manager (Current Branch) – サイトとクライアントの展開](https://social.technet.microsoft.com/Forums/en-us/home?forum=ConfigMgrDeployment) <!--NOTE: this link requires en-us locale to work-->   <!-- https://go.microsoft.com/fwlink/p/?LinkId=626549 -->
 > - **Configuration Manager コミュニティ**:[System Center コミュニティ:参加する方法](https://social.technet.microsoft.com/wiki/contents/articles/11504.system-center-community-how-to-participate.aspx) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626544 -->
 > - [**Configuration Manager ホーム**](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) <!-- https://go.microsoft.com/fwlink/p/?LinkId=626545 -->
@@ -418,4 +418,4 @@ Configuration Manager コンソールを使用して、セカンダリ サイト
 2. インストールするセカンダリ サイトを選択し、リボンの **[インストール ステータスの表示]** を選択します。  
 
     > [!TIP]  
-    > 一度に複数のセカンダリ サイトをインストールする場合、一度に 1 つのサイトに対して前提条件のチェックが実行されます。 現在のサイトのチェックが完了するまで、次のサイトのチェックは開始されません。  
+    > 一度に複数のセカンダリ サイトをインストールする場合、一度に 1 つのサイトに対して前提条件のチェックが実行されます。 現在のサイトのチェックが完了するまで、次のサイトのチェックは開始されません。

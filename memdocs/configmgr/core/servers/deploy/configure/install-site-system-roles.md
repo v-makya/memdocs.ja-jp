@@ -10,12 +10,12 @@ ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 102d07f29b9addd1f2c37dd741db09e972cd5802
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 30b57de75e637aa083070832783647b8ad35b4a7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701660"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700533"
 ---
 # <a name="install-site-system-roles-for-configuration-manager"></a>Configuration Manager のサイト システム役割のインストール
 
@@ -56,7 +56,7 @@ Configuration Manager では、**サイト システムのインストール ア
 1. ウィザードを完了します。 特定のロールには、追加のページが表示される場合があります。 詳細については、[サイト システムの役割の構成オプション](configuration-options-for-site-system-roles.md)に関するページを参照してください。
 
 > [!TIP]
-> Windows PowerShell コマンドレットの **New-CMSiteSystemServer** を使用すると、この手順と同じ機能が実行されます。 詳細については、「[New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)」を参照してください。
+> Windows PowerShell コマンドレットの **New-CMSiteSystemServer** を使用すると、この手順と同じ機能が実行されます。 詳細については、「[New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)」を参照してください。
 
 ## <a name="install-roles-on-a-new-site-system-server"></a><a name="bkmk_createnew"></a> 新しいサイト システム サーバーに役割をインストールする
 
@@ -76,7 +76,7 @@ Configuration Manager では、**サイト システムのインストール ア
 1. ウィザードを完了します。 特定のロールには、追加のページが表示される場合があります。 詳細については、[サイト システムの役割の構成オプション](configuration-options-for-site-system-roles.md)に関するページを参照してください。
 
 > [!TIP]
-> Windows PowerShell コマンドレットの **New-CMSiteSystemServer** を使用すると、この手順と同じ機能が実行されます。 詳細については、「[New-CMSiteSystemServer](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)」を参照してください。
+> Windows PowerShell コマンドレットの **New-CMSiteSystemServer** を使用すると、この手順と同じ機能が実行されます。 詳細については、「[New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

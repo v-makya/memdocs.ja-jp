@@ -10,12 +10,12 @@ ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d36e29f0f915c0f2a35070c667525853e5981564
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 877345e64045530193a4cdd735cdd399235b90c7
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702270"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700267"
 ---
 # <a name="choose-a-device-management-solution"></a>デバイス管理ソリューションの選択
 
@@ -25,7 +25,7 @@ Microsoft では、PC、サーバー、デバイスを管理するためのさ�
 
 さまざまなシナリオに合わせて最適に機能するいくつかの Microsoft ソリューションがあります。 1 つだけを選択する必要はありません。
 
-- 小規模な組織では、Windows Admin Center のようなツールが最適である場合があります。
+- 小規模な組織では、Windows 管理センターのようなツールが最適である場合があります。
 - IT 組織の約 75% では、デバイスを管理するために Configuration Manager が使用されています。
 - Microsoft Azure には、Azure Stack を使用した、クラウドまたはオンプレミスのさまざまなソリューションが用意されています。これは主にサーバー管理を対象とします。
 - Microsoft Intune では、クライアントのクラウド管理を利用できます。
@@ -35,7 +35,7 @@ Microsoft では、PC、サーバー、デバイスを管理するためのさ�
 
 |  | クラウド専用 | クラウド接続 | オンプレミス | 切断 |
 |---------|---------|---------|---------|---------|
-| **Hyper-V ホスト** | 適用なし | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows Admin Center<br/> - Virtual Machine Manager |
+| **Hyper-V ホスト** | 適用なし | - Azure Stack<br/> - Windows 管理センター<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows 管理センター<br/> - Virtual Machine Manager | - Azure Stack<br/> - Windows 管理センター<br/> - Virtual Machine Manager |
 | **Windows Server** | - Azure の管理<br/> - Configuration Manager | - Azure の管理<br/> - Configuration Manager | - Azure の管理<br/> - Configuration Manager | Configuration Manager |
 | **Linux サーバー** | Azure の管理 | Azure の管理 | Azure の管理 |  |
 | **Windows 10** | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | - Intune<br/> - Configuration Manager | Configuration Manager |
@@ -44,11 +44,11 @@ Microsoft では、PC、サーバー、デバイスを管理するためのさ�
 
 詳細については、以下の記事を参照してください。
 
-- [Azure Stack とは](https://docs.microsoft.com/azure-stack/operator/azure-stack-overview)
-- [Windows Admin Center とは](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/what-is)
-- [Virtual Machine Manager とは](https://docs.microsoft.com/system-center/vmm/overview)
-- [Azure の管理製品](https://docs.microsoft.com/azure/)
-- [Windows Virtual Desktop とは](https://docs.microsoft.com/azure/virtual-desktop/overview)
+- [Azure Stack とは](/azure-stack/operator/azure-stack-overview)
+- [Windows 管理センターとは](/windows-server/manage/windows-admin-center/understand/what-is)
+- [Virtual Machine Manager とは](/system-center/vmm/overview)
+- [Azure の管理製品](/azure/)
+- [Windows Virtual Desktop とは](/azure/virtual-desktop/overview)
 
 Configuration Manager および Intune ソリューションについて詳しくは、次のセクションに進んでください。
 
@@ -108,9 +108,9 @@ Configuration Manager および Intune ソリューションについて詳し�
 サポートされるプラットフォームの完全な一覧については、次の記事をご覧ください。
 
 - [Configuration Manager のクライアントとデバイスのサポートされるオペレーティング システム](configs/supported-operating-systems-for-clients-and-devices.md)
-- [Intune でサポートされる構成](https://docs.microsoft.com/intune/supported-devices-browsers)
+- [Intune でサポートされる構成](/intune/supported-devices-browsers)
 
-Microsoft では、Intune を使って Android、iOS、および Windows 10 モバイル デバイスを管理することをお勧めします。 詳細については、[Microsoft Intune の概要](https://docs.microsoft.com/intune/what-is-intune)に関する記事をご覧ください。
+Microsoft では、Intune を使って Android、iOS、および Windows 10 モバイル デバイスを管理することをお勧めします。 詳細については、[Microsoft Intune の概要](/intune/what-is-intune)に関する記事をご覧ください。
 
 ### <a name="compare-solutions-by-management-functionality"></a><a name="bkmk_comp2"></a> 管理機能でソリューションを比較する  
 

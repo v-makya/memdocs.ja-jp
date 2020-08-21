@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 542069b82ea4c68a48ccc47b79007fd2fa25322a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1c54648f1f98ad5fef8efd16d2abe53f204a38f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906022"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700669"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>適切な Configuration Manager のブランチを選択する
 
@@ -85,7 +85,7 @@ LTSB はバージョン 1606 に基づいています。 このブランチは�
 新しいサイトとして、またはサポートされる System Center 2012 Configuration Manager サイトからのアップグレードとして、LTSB をインストールするには、System Center 2016 で入手するバージョン 1606 の[基準メディア](../servers/manage/updates.md#bkmk_Baselines)を使用します。 基準メディアを使用して、Current Branch のバージョン 1606 を実行する新しいサイトをインストールするか、Long-Term Servicing Branch を実行する新しいサイトをインストールすることができます。
 
 > [!TIP]  
-> System Center 2016 の詳細については、[System Center 2016 のドキュメント](https://docs.microsoft.com/system-center/index)をご覧ください。 このドキュメントでは、System Center 2016 の入手方法についても説明しています。この製品を入手するには、Microsoft ライセンス契約または同様の権利が必要です。  
+> System Center 2016 の詳細については、[System Center 2016 のドキュメント](/system-center/index)をご覧ください。 このドキュメントでは、System Center 2016 の入手方法についても説明しています。この製品を入手するには、Microsoft ライセンス契約または同様の権利が必要です。  
 >  
 > ボリューム ライセンス サービス センター (VLSC) で Configuration Manager バージョン 1606 を見つけるには、[VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) の **[Downloads and Keys]\(ダウンロードとキー\)** タブに移動し、`System Center 2016` を検索して、**System Center 2016 Datacenter** または **System Center 2016 Standard** を選択します。  
 >  

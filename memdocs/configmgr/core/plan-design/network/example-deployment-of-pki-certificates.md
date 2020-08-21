@@ -10,12 +10,12 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 45ef103645630b8e203710ec0ff36a71b3cef4cf
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 7781c20ca542d19c562574c554a08c38493911f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904245"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700080"
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-configuration-manager-windows-server-2008-certification-authority"></a>Configuration Manager PKI 証明書の展開手順の例:Windows Server 2008 証明機関
 
@@ -52,7 +52,7 @@ ms.locfileid: "82904245"
 |証明書の要件|証明書の説明|  
 |-----------------------------|-----------------------------|  
 |IIS を実行するサイト システム用のWeb サーバー証明書の展開|この証明書は、データの暗号化およびクライアントに対するサーバーの認証に使用されます。 Configuration Manager の外部から、インターネット インフォメーション サービス (IIS) を実行しており Configuration Manager で HTTPS を使用するように設定されているサイト システム サーバーにインストールする必要があります。<br /><br /> この証明書の設定およびインストール手順は、このトピックの「[IIS を実行するサイト システム用の Web サーバー証明書の展開](#BKMK_webserver2008_cm2012) 」を参照してください。|  
-|クラウドベースの配布ポイントに接続するクライアント用のサービス証明書|この証明書の構成およびインストール手順については、このトピックの「[クラウドベースの配布ポイント用のサービス証明書の展開](#BKMK_clouddp2008_cm2012) 」を参照してください。<br /><br /> **重要:** この証明書は、Windows Azure 管理証明書と併用されます。 この管理証明書の詳細については、「[Windows Azure の管理証明書を作成する方法](https://docs.microsoft.com/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate)」および「[Windows Azure サブスクリプションへの管理証明書の追加方法](https://docs.microsoft.com/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate)」を参照してください。|  
+|クラウドベースの配布ポイントに接続するクライアント用のサービス証明書|この証明書の構成およびインストール手順については、このトピックの「[クラウドベースの配布ポイント用のサービス証明書の展開](#BKMK_clouddp2008_cm2012) 」を参照してください。<br /><br /> **重要:** この証明書は、Windows Azure 管理証明書と併用されます。 この管理証明書の詳細については、「[Windows Azure の管理証明書を作成する方法](/azure/cloud-services/cloud-services-certs-create#create-a-new-self-signed-certificate)」および「[Windows Azure サブスクリプションへの管理証明書の追加方法](/azure/cloud-services/cloud-services-configure-ssl-certificate-portal#step-3-upload-a-certificate)」を参照してください。|  
 |Windows コンピューター用のクライアント証明書|この証明書は、HTTPS を使用するように設定されたサイト システムに対する Configuration Manager クライアント コンピューターの認証に使用されます。 管理ポイントおよび状態移行ポイントが HTTPS を使用するように設定されたときに動作状況を監視するためにも使用されます。 Configuration Manager の外部からコンピューターにインストールする必要があります。<br /><br /> この証明書の設定およびインストール手順は、このトピックの「[Windows コンピューター用のクライアント証明書の展開](#BKMK_client2008_cm2012)」を参照してください。|  
 |配布ポイント用のクライアント証明書|この証明書には、次の 2 つの目的があります。<br /><br /> 証明書は、配布ポイントがステータス メッセージを 管理ポイントに送信する前に、HTTPS が有効な管理ポイントに対する配布ポイントの認証に使用されます。<br /><br /> **[クライアントの PXE サポートを有効にする]** の配布ポイントのオプションがオンになっていると、オペレーティング システムの展開中に HTTPS が有効な管理ポイントに接続できるように、PXE ブートを実行するコンピューターに証明書が送信されます。<br /><br /> この証明書を設定しインストールする手順については、このトピックの「[配布ポイント用のクライアント証明書の展開](#BKMK_clientdistributionpoint2008_cm2012)」を参照してください。|  
 |モバイル デバイス用の登録証明書|この証明書は、HTTPS を使用するように設定されたサイト システムに対する Configuration Manager モバイル デバイス クライアントの認証に使用されます。 Configuration Manager でのモバイル デバイス登録の一環としてインストールする必要があり、構成済みの証明書テンプレートをモバイル デバイス クライアント設定として選択します。<br /><br /> この証明書を設定する手順については、このトピックの「[モバイル デバイス用の登録証明書の展開](#BKMK_mobiledevices2008_cm2012)」を参照してください。|  

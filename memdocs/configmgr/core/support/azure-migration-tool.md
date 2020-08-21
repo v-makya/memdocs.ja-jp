@@ -10,12 +10,12 @@ ms.assetid: 1c975c5e-efd1-4d47-a315-39ccb32633dc
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 00f07e20c24ea9bb7d06b18f300e0206696c5e20
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4d5f0c9127cc5c5819368eb0454d7bc63546ccc1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81707940"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699502"
 ---
 # <a name="extend-and-migrate-on-premises-site-to-microsoft-azure"></a>オンプレミスのサイトを拡張して Microsoft Azure に移行する
 
@@ -68,7 +68,7 @@ Microsoft.KeyVault/vaults/deploy/action <br>
 Microsoft.KeyVault/vaults/read <br>
 
 
-アクセス許可とロールの割り当ての詳細については、[RBAC を使用した Azure リソースへのアクセスの管理](https://docs.microsoft.com/azure/role-based-access-control/role-assignments-portal)に関するページを参照してください。
+アクセス許可とロールの割り当ての詳細については、[RBAC を使用した Azure リソースへのアクセスの管理](/azure/role-based-access-control/role-assignments-portal)に関するページを参照してください。
 
 ## <a name="run-the-tool"></a>ツールを実行します。
 
@@ -105,15 +105,15 @@ Microsoft.KeyVault/vaults/read <br>
     |**サブネット**|使用するサブネットを選択します。 新しいサブネットを作成する必要がある場合は、[Azure portal](https://portal.azure.com) を使用します。|
     |**コンピューター名**|Azure のパッシブ サイト サーバー VM の名前を入力します。 これは [Azure portal](https://portal.azure.com) に表示される名前と同じです。|
     |**ローカル管理者ユーザー名**|Azure VM によってドメイン参加前に作成されるローカル管理ユーザーの名前を入力します。|
-    |**ローカル管理者パスワード**|ローカル管理ユーザーのパスワードです。 Azure デプロイ中にパスワードを保護するには、パスワードをシークレットとして [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview) に保存します。 次に、ここで参照を使用します。 必要に応じて、[Azure portal](https://portal.azure.com) から新しく作成します。|
+    |**ローカル管理者パスワード**|ローカル管理ユーザーのパスワードです。 Azure デプロイ中にパスワードを保護するには、パスワードをシークレットとして [Azure Key Vault](/azure/key-vault/key-vault-overview) に保存します。 次に、ここで参照を使用します。 必要に応じて、[Azure portal](https://portal.azure.com) から新しく作成します。|
     |**ドメイン FQDN**|参加する Active Directory ドメインの完全修飾ドメイン名です。 既定では、ツールによって、現在のコンピューターからこの値が取得されます。|
     |**ドメイン ユーザー名**|ドメインへの参加が許可されているドメイン ユーザーの名前です。 既定では、ツールによって、現在サインインしているユーザーの名前が使用されます。|
-    |**ドメイン パスワード**|ドメインに参加するドメイン ユーザーのパスワードです。 **[開始]** を選択すると、ツールによってそれが検証されます。 Azure デプロイ中にパスワードを保護するには、パスワードをシークレットとして [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-overview) に保存します。 次に、ここで参照を使用します。 必要に応じて、[Azure portal](https://portal.azure.com) から新しく作成します。|
+    |**ドメイン パスワード**|ドメインに参加するドメイン ユーザーのパスワードです。 **[開始]** を選択すると、ツールによってそれが検証されます。 Azure デプロイ中にパスワードを保護するには、パスワードをシークレットとして [Azure Key Vault](/azure/key-vault/key-vault-overview) に保存します。 次に、ここで参照を使用します。 必要に応じて、[Azure portal](https://portal.azure.com) から新しく作成します。|
     |**ドメイン DNS IP**|ドメインに参加するために使用されます。 既定では、ツールによって、現在のコンピューターから現在の DNS が使用されます。|
     |**種類**|読み取り専用です。 種類として *[パッシブ サイト サーバー]* が表示されます。|
 
     > [!IMPORTANT]
-    > 既定では、仮想マシンの **[既存の Windows Server ライセンスを使用]** は **[いいえ]** に設定されています。 ソフトウェア アシュアランス付きのオンプレミスの Windows Server ライセンスを使用する場合は、仮想マシンがプロビジョニングされた後に、[Azure portal](https://portal.azure.com) でこの設定を構成します。 詳細については、「[Windows Server 向け Azure ハイブリッド特典](https://docs.microsoft.com/windows-server/get-started/azure-hybrid-benefit)」を参照してください。
+    > 既定では、仮想マシンの **[既存の Windows Server ライセンスを使用]** は **[いいえ]** に設定されています。 ソフトウェア アシュアランス付きのオンプレミスの Windows Server ライセンスを使用する場合は、仮想マシンがプロビジョニングされた後に、[Azure portal](https://portal.azure.com) でこの設定を構成します。 詳細については、「[Windows Server 向け Azure ハイブリッド特典](/windows-server/get-started/azure-hybrid-benefit)」を参照してください。
 
 1. Azure VM のプロビジョニングを開始するには、 **[開始]** を選択します。 デプロイの状態を監視するには、ツールの **[Deployments in Azure]\(Azure でのデプロイ)** に切り替えます。 最新の状態を取得するには、 **[Refresh deployment status]\(デプロイの状態を更新する\)** を選択します。
 

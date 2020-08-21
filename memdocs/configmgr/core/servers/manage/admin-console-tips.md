@@ -10,12 +10,12 @@ ms.assetid: 2162d67d-31a9-45b2-bb9e-835f3ac6e6fe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7f46c283bd533d67387ab0abac35e7625438addc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a0a434f013da48d660efa78f5e2cdca6ced0826d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129572"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700720"
 ---
 # <a name="configuration-manager-console-changes-and-tips"></a>Configuration Manager コンソールの変更とヒント
 
@@ -186,7 +186,7 @@ Configuration Manager コンソールのデバイス ビューで MAC アドレ�
 1. このアクションによって、更新プログラムが必要なデバイスを確認できる **[デバイス]** の下の一時ノードに移動されます。 一覧から新しいコレクションを作成するなど、ノードに対して操作を行うこともできます。
 
 > [!NOTE]
-> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
+> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
 
 ### <a name="maximize-the-browse-registry-window"></a>[レジストリの参照] ウィンドウの最大化
 

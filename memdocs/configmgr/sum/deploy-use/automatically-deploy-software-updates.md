@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: 1a64d49edca146c70a56b07cb304d1744b86a1bf
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 3f49d7d001de07a7d3d6a7bdbb5f9ff90de018c9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127748"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699876"
 ---
 #  <a name="automatically-deploy-software-updates"></a>ソフトウェア更新プログラムの自動展開  
 
@@ -49,7 +49,7 @@ ADR を使用して、ソフトウェア更新プログラムを自動的に承�
 
          - **Office 365 クライアントの更新プログラム** テンプレートには、Microsoft 365 Apps クライアントに向けた更新プログラムを展開するときに使用する、一般的な設定が用意されています。
              > [!Note]
-             > 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 ADR が "タイトル" のプロパティに依存している場合は、2020 年 6 月 9 日から編集する必要があります。 `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` は、新しいタイトルの例です。 タイトルの変更に対する ADR の修正の詳細については、[Microsoft 365 アプリのチャネルの更新](manage-office-365-proplus-updates.md#bkmk_channel)に関するセクションを参照してください。 名前の変更の詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。
+             > 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 ADR が "タイトル" のプロパティに依存している場合は、2020 年 6 月 9 日から編集する必要があります。 `Microsoft 365 Apps Update - Semi-annual Channel Version 1908 for x64 based Edition (Build 11929.50000)` は、新しいタイトルの例です。 タイトルの変更に対する ADR の修正の詳細については、[Microsoft 365 アプリのチャネルの更新](manage-office-365-proplus-updates.md#bkmk_channel)に関するセクションを参照してください。 名前の変更の詳細については、「[Office 365 ProPlus の名前の変更](/deployoffice/name-change)」を参照してください。
 
          - **SCEP および Windows Defender ウイルス対策の更新**テンプレートには、Endpoint Protection の定義ファイルの更新を展開するときに使用する一般的な設定が用意されています。  
 
@@ -244,7 +244,7 @@ ADR を作成した後、ルールにさらに他の展開を追加します。 
      - アラート
      - ダウンロードの設定  
 
-Windows PowerShell コマンドレットを使用してプログラムで展開を追加することもできます。 この方法について詳しくは、「[New-CMSoftwareUpdateDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment)」をご覧ください。
+Windows PowerShell コマンドレットを使用してプログラムで展開を追加することもできます。 この方法について詳しくは、「[New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment)」をご覧ください。
 
 展開プロセスの詳細については、「 [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess)」を参照してください。
 

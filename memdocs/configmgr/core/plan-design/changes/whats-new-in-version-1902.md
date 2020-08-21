@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: c192db8ccab336d05ef965e837fe17fc16a19200
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f758456ad75c4acde1b050be75d653cc0e1dcfa1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128935"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700369"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1902 の新機能
 
@@ -349,9 +349,9 @@ OS イメージ更新スケジュールを作成するときに、 **[イメー�
 <!--3556021-->
 Configuration Manager を使用して、Windows の既知のフォルダーを OneDrive for Business に移動します。 これらのフォルダーには、デスクトップ、ドキュメント、およびピクチャが含まれます。 Windows 10 へのアップグレードを簡単にするために、タスク シーケンスを展開する前にこれらの設定を Windows 7 クライアントに展開します。
 
-OneDrive for Business のこの機能の詳細については、「[Windows の既知のフォルダーを OneDrive にリダイレクトして移動する](https://docs.microsoft.com/onedrive/redirect-known-folders)」を参照してください。
+OneDrive for Business のこの機能の詳細については、「[Windows の既知のフォルダーを OneDrive にリダイレクトして移動する](/onedrive/redirect-known-folders)」を参照してください。
 
-最初に、[Office 365 テナント ID を確認します](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)。 次に、OneDrive 同期クライアント バージョン 18.111.0603.0004 以降を展開します。 詳細については、「[Configuration Manager を使用した OneDrive アプリの展開](https://docs.microsoft.com/onedrive/deploy-on-windows)」を参照してください。  
+最初に、[Office 365 テナント ID を確認します](/onedrive/find-your-office-365-tenant-id)。 次に、OneDrive 同期クライアント バージョン 18.111.0603.0004 以降を展開します。 詳細については、「[Configuration Manager を使用した OneDrive アプリの展開](/onedrive/deploy-on-windows)」を参照してください。  
 
 OneDrive for Business プロファイルを作成して展開するには、Configuration Manager コンソールで **[資産とコンプライアンス]** ワークスペースに移動します。 **[コンプライアンス設定]** を展開し、 **[OneDrive for Business プロファイル]** ノードを選びます。  
 
@@ -479,7 +479,7 @@ Configuration Manager コンソールをインストールするときに必要�
 
 このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Summary of changes in Configuration Manager current branch, version 1902 (Configuration Manager Current Branch バージョン 1902 での変更の概要)](https://support.microsoft.com/help/4498910)」をご覧ください。
 
-Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 1902 のリリース ノート](https://docs.microsoft.com/powershell/sccm/1902-release-notes?view=sccm-ps)を参照してください。
+Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 1902 のリリース ノート](/powershell/sccm/1902-release-notes?view=sccm-ps)を参照してください。
 
 2019 年 6 月 17 日以降、コンソールで次の更新プログラムのロールアップ (4500571) を利用できるようになりました: [Configuration Manager Current Branch バージョン 1902 の更新プログラムのロールアップ](https://support.microsoft.com/help/4500571)。
 

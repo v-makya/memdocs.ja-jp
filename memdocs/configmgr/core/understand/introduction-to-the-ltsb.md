@@ -10,12 +10,12 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d4f5ff0e1c8c92fbadc286e9909388eb66aa8f7b
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 1370c1bf80283ff30ad54378ad58ecd9a5d24d47
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906100"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699366"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-configuration-manager"></a>Configuration Manager の Long-Term Servicing Branch の概要
 
@@ -26,7 +26,7 @@ Configuration Manager の Long-Term Servicing Branch (LTSB) は、ブランチ�
 Configuration Manager バージョン 1606 では、Configuration Manager の Current Branch と比較すると、LTSB の機能が制限されています。
 
 > [!TIP]   
-> Configuration Manager LTSB は、System Center スイートの長期サービス チャネル (LTSC) に関連していません。 詳しくは、「[System Center リリース オプションの概要](https://docs.microsoft.com/system-center/ltsc-and-sac-overview)」をご覧ください。
+> Configuration Manager LTSB は、System Center スイートの長期サービス チャネル (LTSC) に関連していません。 詳しくは、「[System Center リリース オプションの概要](/system-center/ltsc-and-sac-overview)」をご覧ください。
 
 ## <a name="features-that-arent-available"></a>利用できない機能
 
@@ -53,7 +53,7 @@ Configuration Manager の Current Branch では、LTSB を使用する場合に�
 
 ## <a name="find-ltsb-documentation"></a>LTSB のドキュメントを検索する
 
-LTSB は、Current Branch バージョン 1606 に基づいています。 LTSB 固有の注意事項と制限事項が記載された [Current Branch の ドキュメント](https://docs.microsoft.com/mem/configmgr/)を使用してください。 以下に関する記事で、これらの注意事項と制限事項を確認できます。
+LTSB は、Current Branch バージョン 1606 に基づいています。 LTSB 固有の注意事項と制限事項が記載された [Current Branch の ドキュメント](../../index.yml)を使用してください。 以下に関する記事で、これらの注意事項と制限事項を確認できます。
 
 - [LTSB のインストール](install-the-ltsb.md)
 - [LTSB の Current Branch へのアップグレード](convert-to-current-branch.md)

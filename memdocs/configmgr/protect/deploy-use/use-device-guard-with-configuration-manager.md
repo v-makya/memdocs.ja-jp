@@ -10,12 +10,12 @@ ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f9aff29d2773c4994272317d5fcd486b83cba8d7
-ms.sourcegitcommit: f94cdca69981627d6a3471b04ac6f0f5ee8f554f
+ms.openlocfilehash: 0dcd519a7703b5de94f779dc5dbe48aa0d34a3bc
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82210181"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700465"
 ---
 # <a name="windows-defender-application-control-management-with-configuration-manager"></a>Configuration Manager を使用した Windows Defender Application Control の管理
 
@@ -26,7 +26,7 @@ Windows Defender Application Control は、マルウェアおよびその他の�
 
 Windows Defender アプリケーション制御はソフトウェア ベースのセキュリティ層です。この層で、PC 上での実行を許可するソフトウェアの明示的一覧を強制します。 アプリケーション制御自体には、ハードウェアの前提条件もファームウェアの前提条件もありません。 アプリケーション制御ポリシーを Configuration Manager で展開すると、この記事で説明する Windows バージョンと SKU の最小要件を満たす対象コレクションの PC でポリシーが有効になります。 任意で、Configuration Manager で展開したアプリケーション制御ポリシーのハイパーバイザー ベースの保護を対応ハードウェア上でグループ ポリシーにより有効にできます。
 
-Windows Defender Application Control の詳細については、「[Windows Defender Application Control 展開ガイド](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)」を参照してください。
+Windows Defender Application Control の詳細については、「[Windows Defender Application Control 展開ガイド](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)」を参照してください。
 
    > [!NOTE]
    > - Windows 10 バージョン 1709 以降、構成可能なコードの整合性ポリシーは Windows Defender アプリケーション制御と呼ばれます。
@@ -131,7 +131,7 @@ Windows Defender Application Control ポリシーの処理を監視するには�
 <!--Reworked article to put this inline while working on VSO 1355092
 ## Automatically let software run if it is trusted by Intelligent Security Graph
 
-You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
+You can let locked-down devices run software with a good reputation as determined by the Microsoft Intelligent Security Graph (ISG). The ISG includes [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and other Microsoft services. The devices must be running Windows Defender SmartScreen for this software to be trusted.
 
 1. Open the **Create Windows Defender Application Policy** wizard.
 2. On the **Inclusions** page, check the box for **Authorize software that is trusted by the Intelligent Security Graph**.
@@ -153,6 +153,3 @@ You can let locked-down devices run software with a good reputation as determine
 ## <a name="next-steps"></a>次のステップ
 
  [マルウェア対策ポリシーとファイアウォール設定の管理](endpoint-antimalware-firewall.md)
-
-
-

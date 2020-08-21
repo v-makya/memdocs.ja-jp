@@ -10,12 +10,12 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6c43ca9e1007c62835015a8c26a478af7da34ebb
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: d028dc6149ae1fee2d61634b96ccf450fc8f4b24
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87819994"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700601"
 ---
 # <a name="use-group-policy-settings-to-manage-endpoint-protection-in-previous-versions-of-windows"></a>グループ ポリシー設定を使用して、以前のバージョンの Windows で Endpoint Protection を管理する
 
@@ -42,7 +42,7 @@ ms.locfileid: "87819994"
     - [ローカル デバイス](#load-endpoint-protection-group-policy-settings-into-your-local-device)
 
 > [!NOTE]
-> グループ ポリシー設定を使用して Windows 10、Windows Server 2019、および Windows Server 2016 で Microsoft Defender ウイルス対策を管理する方法については、「[グループ ポリシー設定を使用して Microsoft Defender ウイルス対策を構成および管理する](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus)」を参照してください。
+> グループ ポリシー設定を使用して Windows 10、Windows Server 2019、および Windows Server 2016 で Microsoft Defender ウイルス対策を管理する方法については、「[グループ ポリシー設定を使用して Microsoft Defender ウイルス対策を構成および管理する](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus)」を参照してください。
 
 ## <a name="copy-endpoint-protection-policy-definitions"></a>Endpoint Protection ポリシー定義をコピーする
 
@@ -75,7 +75,7 @@ Endpoint Protection によって管理される下位レベルの Windows デバ
     
     ここで、**DC** はドメイン コントローラーの名前、**contoso.com** はお使いのドメインです。
 
-3. [グループ ポリシー管理コンソール](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11)を開き、ドメインに新しいグループ ポリシー オブジェクト (GPO) を作成します (**Endpoint Protection** など)。
+3. [グループ ポリシー管理コンソール](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11)を開き、ドメインに新しいグループ ポリシー オブジェクト (GPO) を作成します (**Endpoint Protection** など)。
 4. Endpoint Protection の GPO を右クリックし、 **[編集]** クリックします。
 5. [グループ ポリシー管理エディター] で、 **[コンピューターの構成]**  >  **[ポリシー]**  >  **[管理用テンプレート: ポリシー定義]**  >  **[Windows コンポーネント]**  >  **[Endpoint Protection]** に移動します。
 

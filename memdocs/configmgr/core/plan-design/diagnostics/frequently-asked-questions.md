@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60634ed8e275ff8496a08969054aa912a81b9d07
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: eb14f909238e86a7aa4a87493b17a218a21f0909
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688480"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700199"
 ---
 # <a name="frequently-asked-questions-about-diagnostics-and-usage-data"></a>診断および使用状況データに関してよく寄せられる質問
 
@@ -43,7 +43,7 @@ Microsoft では、Configuration Manager の診断および使用状況のデー
 
 ## <a name="is-diagnostics-and-usage-data-sent-when-setup-runs"></a><a name="bkmk_update"></a> 設定の実行時に、診断と使用状況データが送信されますか。
 
-いいえ。 診断および使用状況データは、サイトがインストールされて使用できる状態になったら送信されます。
+できませんね。 診断および使用状況データは、サイトがインストールされて使用できる状態になったら送信されます。
 
 ## <a name="how-frequently-is-the-data-sent"></a><a name="bkmk_frequency"></a> データはどのくらいの頻度で送信されますか。
 
@@ -55,17 +55,17 @@ Microsoft では、Configuration Manager の診断および使用状況のデー
 
 ## <a name="can-the-data-be-used-to-form-a-network-map"></a><a name="bkmk_network"></a> データを使用してネットワーク マップを作成できますか。
 
-いいえ。 このデータには、IP アドレスや詳細な地理情報など、ネットワークの詳細情報は含まれません。 詳細については、「[診断と使用状況のデータのレベル](levels-overview.md#bkmk_versions)」を参照し、さらに使用しているバージョンの詳細を確認してください。
+できませんね。 このデータには、IP アドレスや詳細な地理情報など、ネットワークの詳細情報は含まれません。 詳細については、「[診断と使用状況のデータのレベル](levels-overview.md#bkmk_versions)」を参照し、さらに使用しているバージョンの詳細を確認してください。
 
 データには、各サイトからのタイムゾーン情報が含まれます。 この情報により、階層の複数のサイトの広範な位置情報とグローバル分散を理解できます。
 
 ## <a name="can-you-see-data-in-custom-sql-tables"></a><a name="bkmk_tables"></a> カスタム SQL テーブルのデータを確認できますか。
 
-いいえ。 Configuration Manager では、SQL ストアド プロシージャを使用して、診断と使用状況データを収集します。 このストアド プロシージャは、データベースの既定の製品テーブルに対して実行されます。 これらすべての SQL テーブルには、**TEL_** の接頭語が付きます。 SQL スキーマ検出クエリの一部として、すべてのテーブル名は既知の既定値と比較するためにハッシュされます。 この動作により、データベースにカスタム テーブルが存在することが決定されます。 カスタム テーブルの存在を参照することで、Microsoft は、既定のデータベース スキーマが拡張されたこと把握します。 それには、それらのテーブルに格納されるデータは含まれていません。
+できませんね。 Configuration Manager では、SQL ストアド プロシージャを使用して、診断と使用状況データを収集します。 このストアド プロシージャは、データベースの既定の製品テーブルに対して実行されます。 これらすべての SQL テーブルには、**TEL_** の接頭語が付きます。 SQL スキーマ検出クエリの一部として、すべてのテーブル名は既知の既定値と比較するためにハッシュされます。 この動作により、データベースにカスタム テーブルが存在することが決定されます。 カスタム テーブルの存在を参照することで、Microsoft は、既定のデータベース スキーマが拡張されたこと把握します。 それには、それらのテーブルに格納されるデータは含まれていません。
 
 ## <a name="can-you-see-other-databases"></a><a name="bkmk_databases"></a> 他のデータベースは表示できますか。
 
-いいえ。 データを収集するストアド プロシージャは、Configuration Manager サイト データベースに限定されます。 Microsoft は、他のデータベースの名前も、他のデータベース内のデータも表示することはできません。
+できませんね。 データを収集するストアド プロシージャは、Configuration Manager サイト データベースに限定されます。 Microsoft は、他のデータベースの名前も、他のデータベース内のデータも表示することはできません。
 
 ## <a name="is-any-data-sent-to-other-integrated-cloud-services"></a><a name="bkmk_cloud"></a> 他の統合クラウド サービスに送信されるデータはありますか。
 
@@ -74,11 +74,11 @@ Microsoft では、Configuration Manager の診断および使用状況のデー
 たとえば、次のクラウド サービスは Microsoft Endpoint Manager に含まれています。
 
 - [Desktop Analytics のデータのプライバシー](../../../desktop-analytics/privacy.md)
-- [Intune におけるプライバシーと個人データ](https://docs.microsoft.com/intune/protect/privacy-personal-data)
-- [Windows Autopilot の要件](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements)
+- [Intune におけるプライバシーと個人データ](/intune/protect/privacy-personal-data)
+- [Windows Autopilot の要件](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
 
 ## <a name="does-configuration-manager-collect-any-personal-data"></a><a name="bkmk_personal"></a> Configuration Manager では個人データが収集されますか。
 
-いいえ。 構成によって、個人データまたは顧客データが収集または送信されることはありません。 これはお客様が直接展開、管理、操作するオンプレミスの製品です。 Microsoft が収集する診断結果と使用状況データにより、今後のリリースのインストールのエクスペリエンス、品質、セキュリティが向上します。
+できませんね。 構成によって、個人データまたは顧客データが収集または送信されることはありません。 これはお客様が直接展開、管理、操作するオンプレミスの製品です。 Microsoft が収集する診断結果と使用状況データにより、今後のリリースのインストールのエクスペリエンス、品質、セキュリティが向上します。
 
 Configuration Manager のデータの詳細については、「[診断と使用状況のデータのレベル](levels-overview.md)」を参照してください。

@@ -4,18 +4,18 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 07/13/2020
-ms.openlocfilehash: 80302a1c369c36a08cc1a55e20cf339dbc8d2883
-ms.sourcegitcommit: 6d987bb69d0eb9955a3003202864f58d6aaa426a
+ms.openlocfilehash: 8e95fce122a3e153f2aa391dcd5e40439f8e5820
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381048"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88704091"
 ---
 <!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
 
 ## <a name="queries"></a>クエリ
 
-クエリは、用語検索、傾向の識別、パターン分析、データに基づくその他の多くの分析情報の提供に使用することができます。 CMPivot では、表形式の式ステートメントに [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query) データ フロー モデルのサブセットを使用します。 表形式の式ステートメントは、通常、クライアント エンティティと表形式のデータ演算子 (フィルターやプロジェクションなど) を組み合わせた構造をしています。 組み合わせはパイプ文字 (|) で表され、表形式のデータの流れを視覚的に左から右に表現する整然とした形式をステートメントに与えています。 各演算子は、"パイプから" の表形式のデータセットと、演算子の本体からの追加入力 (他の表形式のデータ セットを含む) を受け取り、次に続く演算子に表形式のデータ セットを出力します (`entity | operator1 | operator2 | ...`)。
+クエリは、用語検索、傾向の識別、パターン分析、データに基づくその他の多くの分析情報の提供に使用することができます。 CMPivot では、表形式の式ステートメントに [Azure Log Analytics](/azure/kusto/query) データ フロー モデルのサブセットを使用します。 表形式の式ステートメントは、通常、クライアント エンティティと表形式のデータ演算子 (フィルターやプロジェクションなど) を組み合わせた構造をしています。 組み合わせはパイプ文字 (|) で表され、表形式のデータの流れを視覚的に左から右に表現する整然とした形式をステートメントに与えています。 各演算子は、"パイプから" の表形式のデータセットと、演算子の本体からの追加入力 (他の表形式のデータ セットを含む) を受け取り、次に続く演算子に表形式のデータ セットを出力します (`entity | operator1 | operator2 | ...`)。
 
 次の例では、エンティティは `CCMRecentlyUsedApplications` (最近使用したアプリケーションへの参照) であり、演算子は where (レコードごとの述語に従ってレコードをフィルター処理して入力から除外する演算子) です。
 

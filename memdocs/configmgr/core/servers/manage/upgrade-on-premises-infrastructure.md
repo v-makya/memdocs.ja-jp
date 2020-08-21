@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 033c5de1a85ce2fa8b11fe7a187fcc4d5c023931
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7efc775199a34a66a8cd4a83b85baccd4a3ab5cb
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704300"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699485"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Configuration Manager をサポートするオンプレミス インフラストラクチャのアップグレード
 
@@ -52,9 +52,9 @@ Configuration Manager では、次の状況で、サイト サーバーと任意
 
 - [Windows Server アップグレード センター](https://aka.ms/upgradecenter)  
 
-- [Windows Server 2016 のアップグレードと変換オプション](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths)  
+- [Windows Server 2016 のアップグレードと変換オプション](/windows-server/get-started/supported-upgrade-paths)  
 
-- [Windows Server 2012 R2 のアップグレード オプション](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))  
+- [Windows Server 2012 R2 のアップグレード オプション](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))  
 
 ### <a name="upgrade-to-windows-server-2016-or-2019"></a><a name="bkmk_2016-2019"></a> Windows Server 2016 または 2019 へのアップグレード
 
@@ -140,7 +140,7 @@ Windows Server 2008 R2 または Windows Server 2012 から Windows Server 2012 
 
 - Windows Server 2012 の場合: WSUS ロールがサーバーにインストールされている場合は削除します。 SUSDB を残しておき、WSUS を再インストールした後で再アタッチできます。  
 
-- Windows Server 2008 R2 の場合: Windows Server 2012 R2 にアップグレードする前に、サーバーから WSUS 3.2 をアンインストールする必要があります。 SUSDB を残しておき、WSUS を再インストールした後で再アタッチできます。 詳細については、「[Windows Server Update Services の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)」をご覧ください。  
+- Windows Server 2008 R2 の場合: Windows Server 2012 R2 にアップグレードする前に、サーバーから WSUS 3.2 をアンインストールする必要があります。 SUSDB を残しておき、WSUS を再インストールした後で再アタッチできます。 詳細については、「[Windows Server Update Services の概要](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)」をご覧ください。  
 
 - サイト サーバーの OS をアップグレードしている場合は、サイトの[ファイルベースのレプリケーション](../../plan-design/hierarchy/file-based-replication.md)が正常であることを確認します。 送信側と受信側両方のサイトで、バックログのすべての受信トレイを確認します。 スタックすなわち保留中のレプリケーション ジョブが多数ある場合は、それらがなくなるまで待ちます。<!-- SCCMDocs#1792 -->
     - 送信側サイトで、**sender.log** を確認します。
@@ -242,15 +242,15 @@ Configuration Manager は次のバージョンへの SQL Server の一括アッ�
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-SQL CE の互換性レベルとその設定方法の詳細については、「[ALTER DATABASE 互換性レベル (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017)」を参照してください。
+SQL CE の互換性レベルとその設定方法の詳細については、「[ALTER DATABASE 互換性レベル (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017)」を参照してください。
 
 SQL Server のアップグレードについて詳しくは、次の SQL Server の記事をご覧ください。  
 
-- [SQL Server 2017 へのアップグレード](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
+- [SQL Server 2017 へのアップグレード](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [SQL Server 2016 へのアップグレード](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+- [SQL Server 2016 へのアップグレード](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
 
-- [SQL Server 2014 へのアップグレード](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [SQL Server 2014 へのアップグレード](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>サイト データベース サーバー上の SQL Server をアップグレードするには  
 
@@ -261,4 +261,4 @@ SQL Server のアップグレードについて詳しくは、次の SQL Server 
 3. Configuration Manager サービスを再起動します。  
 
 > [!NOTE]  
-> 中央管理サイトで使用中の SQL Server のエディションを Standard から Datacenter または Enterprise に変更するときに、データベースのパーティションは変更されません。 このデータベース パーティションにより、階層がサポートするクライアントの数が制限されます。  
+> 中央管理サイトで使用中の SQL Server のエディションを Standard から Datacenter または Enterprise に変更するときに、データベースのパーティションは変更されません。 このデータベース パーティションにより、階層がサポートするクライアントの数が制限されます。

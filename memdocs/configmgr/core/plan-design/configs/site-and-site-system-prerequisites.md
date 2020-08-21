@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d4fb94d0ab64cb7c3dc3128c982b0c2b162b22b7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: ce3420a6e229b5987616c5c0c1c41d50cdc499c8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81702160"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700352"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Configuration Manager のサイトとサイト システムの前提条件
 
@@ -93,7 +93,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 .NET Framework のバージョンの詳細については、次の記事を参照してください。
 
-- [.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework のバージョンおよび依存関係](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [ライフサイクルに関する FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="windows-adk"></a>Windows ADK  
@@ -129,7 +129,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 .NET Framework のバージョンの詳細については、次の記事を参照してください。
 
-- [.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework のバージョンおよび依存関係](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [ライフサイクルに関する FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="visual-c-redistributable"></a>Visual C++ 再頒布可能ファイル
@@ -214,7 +214,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 .NET Framework のバージョンの詳細については、次の記事を参照してください。
 
-- [.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework のバージョンおよび依存関係](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [ライフサイクルに関する FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS の構成  
@@ -270,7 +270,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 .NET Framework のバージョンの詳細については、次の記事を参照してください。
 
-- [.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework のバージョンおよび依存関係](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [ライフサイクルに関する FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS の構成
@@ -312,7 +312,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 .NET Framework のバージョンの詳細については、次の記事を参照してください。
 
-- [.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework のバージョンおよび依存関係](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [ライフサイクルに関する FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
@@ -334,7 +334,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 .NET Framework のバージョンの詳細については、次の記事を参照してください。
 
-- [.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework のバージョンおよび依存関係](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [ライフサイクルに関する FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS の構成
@@ -446,7 +446,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 .NET Framework のバージョンの詳細については、次の記事を参照してください。
 
-- [.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework のバージョンおよび依存関係](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [ライフサイクルに関する FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS の構成
@@ -497,7 +497,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 .NET Framework のバージョンの詳細については、次の記事を参照してください。
 
-- [.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework のバージョンおよび依存関係](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [ライフサイクルに関する FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS の構成
@@ -560,7 +560,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 .NET Framework のバージョンの詳細については、次の記事を参照してください。
 
-- [.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework のバージョンおよび依存関係](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [ライフサイクルに関する FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS の構成
@@ -592,7 +592,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 .NET Framework のバージョンの詳細については、次の記事を参照してください。
 
-- [.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework のバージョンおよび依存関係](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [ライフサイクルに関する FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services  
@@ -621,7 +621,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 .NET Framework のバージョンの詳細については、次の記事を参照してください。
 
-- [.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework のバージョンおよび依存関係](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [ライフサイクルに関する FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="visual-c-redistributable"></a>Visual C++ 再頒布可能ファイル
@@ -651,7 +651,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 .NET Framework のバージョンの詳細については、次の記事を参照してください。
 
-- [.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework のバージョンおよび依存関係](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [ライフサイクルに関する FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="windows-server-update-services"></a>Windows Server Update Services  
@@ -690,7 +690,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 .NET Framework のバージョンの詳細については、次の記事を参照してください。
 
-- [.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
+- [.NET Framework のバージョンおよび依存関係](/dotnet/framework/migration-guide/versions-and-dependencies)
 - [ライフサイクルに関する FAQ - .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 
 ### <a name="iis-configuration"></a>IIS の構成
@@ -716,4 +716,3 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
 新しいサイトをインストールするときに、Configuration Manager によって SQL Server Native Client が再頒布可能コンポーネントとして自動的にインストールされます。 サイトをインストールした後は、Configuration Manager は SQL Server Native Client をアップグレードしません。 このコンポーネントが最新であることを確認してください。 詳細については、[SQL Server Native Client の前提条件の確認](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client) に関するページを参照してください。
-

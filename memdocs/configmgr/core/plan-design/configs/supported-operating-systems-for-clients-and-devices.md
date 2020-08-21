@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 497a43fe6647f1dc2787f16a76f45ddd26d24796
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e573a2887bd527daac9a05fec2e83ef39fbfc4e1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128850"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700318"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager でクライアントとデバイスに対してサポートされる OS のバージョン
 
@@ -44,7 +44,7 @@ Configuration Manager は、Windows および macOS コンピューター上の�
 #### <a name="windows-virtual-desktop"></a>Windows Virtual Desktop
 
 <!--3556025-->
-[Windows Virtual Desktop](https://docs.microsoft.com/azure/virtual-desktop/) は、Microsoft Azure 上で実行されるデスクトップおよびアプリの仮想化サービスです。 バージョン 1906 以降では、Configuration Manager を使用して、Azure で Windows が実行されているこれらの仮想デバイスを管理できます。
+[Windows Virtual Desktop](/azure/virtual-desktop/) は、Microsoft Azure 上で実行されるデスクトップおよびアプリの仮想化サービスです。 バージョン 1906 以降では、Configuration Manager を使用して、Azure で Windows が実行されているこれらの仮想デバイスを管理できます。
 
 ターミナル サーバーと同様に、これらの仮想デバイスの中には、アクティブ ユーザーの同時実行セッションが複数許可されるものもあります。 クライアントのパフォーマンスを支援する目的で、Configuration Manager では、このような複数のユーザー セッションを許可するあらゆるデバイスでユーザー ポリシーが無効になりました。 ユーザー ポリシーを有効にした場合でも、Windows 10 Enterprise マルチセッションやターミナル サーバーを含む、これらのデバイスでは、クライアントによって既定でポリシーが無効化されます。
 
@@ -106,7 +106,7 @@ Configuration Manager では Windows Server Datacenter エディションがテ�
 
 #### <a name="note-2"></a><a name="bkmk_note2"></a> 注 2
 
-[クライアント プッシュ インストール](../../clients/deploy/plan/client-installation-methods.md#client-push-installation)をサポートするには、[ファイルおよび記憶域サービス] サーバー ロールのファイル サーバー サービスを追加します。 Server Core への Windows 機能のインストールについて詳しくは、「[Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets)」(Windows PowerShell コマンドレットを使用して役割、役割サービス、機能をインストールする) をご覧ください。  
+[クライアント プッシュ インストール](../../clients/deploy/plan/client-installation-methods.md#client-push-installation)をサポートするには、[ファイルおよび記憶域サービス] サーバー ロールのファイル サーバー サービスを追加します。 Server Core への Windows 機能のインストールについて詳しくは、「[Install roles, role services, and features by using Windows PowerShell cmdlets](/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#install-roles-role-services-and-features-by-using-windows-powershell-cmdlets)」(Windows PowerShell コマンドレットを使用して役割、役割サービス、機能をインストールする) をご覧ください。  
 
 #### <a name="note-3"></a><a name="bkmk_note3"></a> 注 3
 
@@ -135,7 +135,7 @@ Windows Embedded デバイスを管理するには、デバイス上に Configur
 - **Windows 10 Enterprise** (x86、x64)  
 
 - **Windows 10 IoT Enterprise** (x86、x64)  
-    このバージョンには、長期的なサービス チャネル (LTSC) が含まれています。 詳細については、「[Windows 10 IoT Enterprise の概要](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise)」を参照してください。<!--SCCMDocs issue 560-->  
+    このバージョンには、長期的なサービス チャネル (LTSC) が含まれています。 詳細については、「[Windows 10 IoT Enterprise の概要](/windows/iot-core/windows-iot-enterprise)」を参照してください。<!--SCCMDocs issue 560-->  
 
 - **Windows Embedded 8.1 Industry** (x86、x64)
 
@@ -335,7 +335,7 @@ Configuration Manager には、クライアント ソフトウェアをインス
 - **Windows 10 Pro Enterprise** (x86、x64)  
 
 - **Windows 10 IoT Enterprise** (x86、x64)  
-    このバージョンには、長期的なサービス チャネル (LTSC) が含まれています。 詳細については、「[Windows 10 IoT Enterprise の概要](https://docs.microsoft.com/windows/iot-core/windows-iot-enterprise)」を参照してください。<!--SCCMDocs issue 560-->  
+    このバージョンには、長期的なサービス チャネル (LTSC) が含まれています。 詳細については、「[Windows 10 IoT Enterprise の概要](/windows/iot-core/windows-iot-enterprise)」を参照してください。<!--SCCMDocs issue 560-->  
 
 - **Windows 10 IoT Mobile Enterprise**  
 

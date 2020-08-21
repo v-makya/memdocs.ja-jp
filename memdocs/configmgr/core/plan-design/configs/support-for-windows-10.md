@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6a30fc55fb4129b8ea3493b76fd6871a2a62f881
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1e35a66c05a09455b3f2aded3d81daa2ccd5eff0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126741"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700250"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager での Windows 10 のサポート  
 
@@ -91,7 +91,7 @@ Configuration Manager は、Windows 10 ARM64 デバイス上のクライアン�
 
 Configuration Manager バージョン 1906 以降では、[Windows Insider ビルドの更新とサービス](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB)を実行できます。 この機能は、お客様の便宜のために提供されています。 この機能は動作するはずですが、サポートはベスト エフォートで提供されます。 この機能が停止した場合、それに対して Configuration Manager により修正プログラムが発行されない可能性があります。  
 
-Windows Insider に関するフィードバックをご提供いただける場合は、[フィードバック Hub](https://docs.microsoft.com/windows-insider/at-work-pro/wip-4-biz-feedback) をご利用ください。
+Windows Insider に関するフィードバックをご提供いただける場合は、[フィードバック Hub](/windows-insider/at-work-pro/wip-4-biz-feedback) をご利用ください。
 
 ## <a name="windows-10-adk"></a>Windows 10 ADK
 
@@ -99,7 +99,7 @@ Configuration Manager を使用してオペレーティング システムを展
 
 - [OS の展開のインフラストラクチャ要件](../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md#windows-adk-for-windows-10)
 
-- [Windows ADK for Windows 10 をダウンロードする](https://docs.microsoft.com/windows-hardware/get-started/adk-install)
+- [Windows ADK for Windows 10 をダウンロードする](/windows-hardware/get-started/adk-install)
 
     > [!IMPORTANT]
     > Windows 10 バージョン 1809 以降、Windows PE は個別のインストーラーとなっています。 それ以外に機能の違いはありません。
@@ -118,7 +118,7 @@ Configuration Manager を使用してオペレーティング システムを展
 
 |キー|
 |--|
-| ![サポートされています](media/green_check.png) = **サポートされています** <br/> この表では、Configuration Manager のバージョンとの関連でのみ、Windows ADK のサポート仕様をまとめています。 Microsoft では、展開している Windows のバージョンに合う Windows ADK を使用することをお勧めします。 Windows 10 の最新バージョンを展開するときは、Windows ADK の最新バージョンを使用してください。 Windows ADK の最新バージョンでは、古いバージョンの OS (Windows 8.1 など) の展開がサポートされている場合があります。<!-- SCCMDocs issue 1229 --> Windows ADK コンポーネントのサポートについては、「[DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)」(DISM でサポートされているプラットフォーム) および「[USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1)」(USMT の要件) を参照してください。 |
+| ![サポートされています](media/green_check.png) = **サポートされています** <br/> この表では、Configuration Manager のバージョンとの関連でのみ、Windows ADK のサポート仕様をまとめています。 Microsoft では、展開している Windows のバージョンに合う Windows ADK を使用することをお勧めします。 Windows 10 の最新バージョンを展開するときは、Windows ADK の最新バージョンを使用してください。 Windows ADK の最新バージョンでは、古いバージョンの OS (Windows 8.1 など) の展開がサポートされている場合があります。<!-- SCCMDocs issue 1229 --> Windows ADK コンポーネントのサポートについては、「[DISM supported platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms)」(DISM でサポートされているプラットフォーム) および「[USMT requirements](/windows/deployment/usmt/usmt-requirements#bkmk-1)」(USMT の要件) を参照してください。 |
 | ![下位互換性あり](media/blue_compat.png)  = **下位互換性あり** <br/> この組み合わせはテストされていませんが、動作するはずです。 既知の問題や注意事項が記述されます。 |
 | ![サポートされていません](media/Red_X.png) = **サポートされていません** |
 

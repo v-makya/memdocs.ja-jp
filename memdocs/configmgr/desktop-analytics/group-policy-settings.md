@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 2ee472b89f45e744e43915e51e98f11841208b73
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d00edbfc30a87660adc65758dc9fbcb9113197f0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125802"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700652"
 ---
 # <a name="group-policy-settings-for-desktop-analytics"></a>Desktop Analytics のグループ ポリシーの設定
 
@@ -37,10 +37,10 @@ Configuration Manager によって、次のレジストリ キーの一方また
 | ポリシー | パス | 適用対象 | 値 |
 |--------|------|------------|-------|
 | **CommercialId** | ローカル | すべての Windows バージョン | デバイスが Desktop Analytics に表示されるようにするために、ご自分の組織の商用 ID を使用して構成します。 |
-| **AllowTelemetry**  | GPO | Windows 10 | 使用する診断データについて、 **[基本]** (必須) の場合は `1` を、 **[拡張]** の場合は `2` を、 **[完全]** (省略可能) の場合は `3` を設定します。 Desktop Analytics には、少なくとも基本の診断データが必要です。 Microsoft では、Desktop Analytics で **[省略可能 (制限あり)]** ([拡張 (制限付き)]) レベルを使うことをお勧めします。 詳しくは、「[組織内の Windows 診断データの構成](https://docs.microsoft.com/windows/configuration/configure-windows-diagnostic-data-in-your-organization)」をご覧ください。 |
-| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10 バージョン 1803 以降 | この設定は、AllowTelemetry 設定が `2` の場合にのみ適用されます。 これにより、Microsoft に送信される拡張診断データのイベントが、Desktop Analytics に必要なイベントのみに制限されます。 詳細については、「[拡張診断データの制限ポリシーを使用して収集される Windows 10 診断データのイベントとフィールド](https://docs.microsoft.com/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields)」をご覧ください。 |
+| **AllowTelemetry**  | GPO | Windows 10 | 使用する診断データについて、 **[基本]** (必須) の場合は `1` を、 **[拡張]** の場合は `2` を、 **[完全]** (省略可能) の場合は `3` を設定します。 Desktop Analytics には、少なくとも基本の診断データが必要です。 Microsoft では、Desktop Analytics で **[省略可能 (制限あり)]** ([拡張 (制限付き)]) レベルを使うことをお勧めします。 詳しくは、「[組織内の Windows 診断データの構成](/windows/configuration/configure-windows-diagnostic-data-in-your-organization)」をご覧ください。 |
+| **LimitEnhancedDiagnosticDataWindowsAnalytics** | GPO | Windows 10 バージョン 1803 以降 | この設定は、AllowTelemetry 設定が `2` の場合にのみ適用されます。 これにより、Microsoft に送信される拡張診断データのイベントが、Desktop Analytics に必要なイベントのみに制限されます。 詳細については、「[拡張診断データの制限ポリシーを使用して収集される Windows 10 診断データのイベントとフィールド](/windows/configuration/enhanced-diagnostic-data-windows-analytics-events-and-fields)」をご覧ください。 |
 | **AllowDeviceNameInTelemetry** | GPO | Windows 10 バージョン 1803 以降 | デバイスがデバイス名を送信できるようにします。 既定では、デバイス名は Microsoft に送信されません。 デバイス名を送信しない場合、それは Desktop Analytics で "不明" として表示されます。 詳細については、「[デバイス名](enroll-devices.md#device-name)」をご覧ください。 |
-| **CommercialDataOptIn** | ローカル | Windows 8.1 以前 | Desktop Analytics では値 `1` が必要です。 詳細については、[Windows 7 での商用データのオプトイン](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\))に関する記事をご覧ください。 |
+| **CommercialDataOptIn** | ローカル | Windows 8.1 以前 | Desktop Analytics では値 `1` が必要です。 詳細については、[Windows 7 での商用データのオプトイン](/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\))に関する記事をご覧ください。 |
 | **RequestAllAppraiserVersions** | 両方 | Windows 8.1 以前 | Desktop Analytics では、データ収集を正常に機能させるために値 `1` が必要です。 |
 | **DisableEnterpriseAuthProxy** | GPO | すべての Windows バージョン | 環境で、インターネット アクセスのために Windows 統合認証を使用するユーザー認証済みプロキシが必要な場合、データ収集を正常に機能させるために、Desktop Analytics で値 `0` が必要です。 詳細については、「[プロキシ サーバー認証](enable-data-sharing.md#proxy-server-authentication)」をご覧ください。 |
 
@@ -103,6 +103,6 @@ Configuration Manager によって、ターゲット コレクションで商用
 | 表示名 | レジストリ値 | Desktop Analytics に登録されたデバイスへの影響 |
 |--------------|----------------|-------------------------------------------------|
 | **[Configure telemetry opt-in change notifications]\(テレメトリのオプトイン変更通知を構成する\)** | DisableTelemetryOptInChangeNotification | Windows 10 バージョン 1803 以降では、診断データ レベルが変更されると、Windows によってユーザーに通知が送られます。 通知を無効にするには、このポリシーを使用します。 |
-| **[Configure telemetry opt-in setting user interface]\(テレメトリのオプトイン設定のユーザー インターフェイスを構成する\)** | DisableTelemetryOptInSettingsUx | 診断データのレベルを構成する場合は、デバイスに対して上限を設定します。 Windows 10 バージョン 1803 以降では、ユーザーは下位レベルを設定できます。 ユーザーが診断レベルを変更できないようにするには、このポリシーを使用します。 詳しくは、「[組織内の Windows 診断データの構成](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management)」をご覧ください。 |
+| **[Configure telemetry opt-in setting user interface]\(テレメトリのオプトイン設定のユーザー インターフェイスを構成する\)** | DisableTelemetryOptInSettingsUx | 診断データのレベルを構成する場合は、デバイスに対して上限を設定します。 Windows 10 バージョン 1803 以降では、ユーザーは下位レベルを設定できます。 ユーザーが診断レベルを変更できないようにするには、このポリシーを使用します。 詳しくは、「[組織内の Windows 診断データの構成](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management)」をご覧ください。 |
 | **[Disable deleting diagnostic data]\(診断データの削除を無効にする\)** | DisableDeviceDelete | Windows 10 バージョン 1809 以降では、ユーザーは **[Diagnostic & feedback]\(診断とフィードバック\)** 設定ページから診断データを削除できます。 Microsoft がデバイスから収集した診断データを削除できないようにするには、このポリシーを使用します。 |
 | **[Disable diagnostic data viewer]\(診断データ ビューアーを無効にする\)** | DisableDiagnosticDataViewer | Windows 10 バージョン 1809 以降では、ユーザーは **[Diagnostic & feedback]\(診断とフィードバック\)** 設定ページから診断データ ビューアーを有効にし、開くことができます。 Windows 設定の診断データ ビューアーを無効にし、Microsoft がデバイスから収集した診断データがこのビューアーで表示されないようにするには、このポリシーを使用します。|

@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 46d2af2d89e41e931add0f77931b442b68835235
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8d766a172f934e27398ec2633ef0ec23ba4ade5e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906475"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700686"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Configuration Manager サイトのバックアップ
 
@@ -47,7 +47,7 @@ ms.locfileid: "82906475"
 ####  <a name="using-data-protection-manager-to-back-up-your-site-database"></a>Data Protection Manager を使用したサイト データベースのバックアップ
 System Center Data Protection Manager (DPM) を使用して Configuration Manager サイト データベースをバックアップできます。
 
-DPM でサイト データベース コンピューターの新しい保護グループを作成します。 新しい保護グループの作成ウィザードの **[グループ メンバーの選択]** ページで、データ ソース一覧から SMS ライター サービスを選択します。 次に、該当するメンバーとしてサイト データベースを選択します。 DPM の使用に関する詳細は、[Data Protection Manager](https://docs.microsoft.com/system-center/dpm) のドキュメント ライブラリを参照してください。  
+DPM でサイト データベース コンピューターの新しい保護グループを作成します。 新しい保護グループの作成ウィザードの **[グループ メンバーの選択]** ページで、データ ソース一覧から SMS ライター サービスを選択します。 次に、該当するメンバーとしてサイト データベースを選択します。 DPM の使用に関する詳細は、[Data Protection Manager](/system-center/dpm) のドキュメント ライブラリを参照してください。  
 
 > [!IMPORTANT]  
 >  Configuration Manager では、名前付きインスタンスを使用する SQL Server クラスターの DPM バックアップはサポートしません。 SQL Server の既定のインスタンスを使用する SQL Server クラスター上の DPM バックアップはサポートします。  
@@ -144,7 +144,7 @@ AfterBackup.bat ファイルを使用して、バックアップが完了する�
 AfterBackup.bat ファイルが存在しない場合は、バックアップ タスクでその実行がスキップされます。バックアップ処理自体には、何も影響ありません。 バックアップ タスクによってこのスクリプトが正常に実行されたことを確認するには、 **[監視]** ワークスペースの **[コンポーネントのステータス]** ノードに移動して、**SMS_SITE_BACKUP** のステータス メッセージを確認します。 AfterBackup.bat コマンド ファイルの実行が正常に開始された場合は、ID **5040** のメッセージが表示されます。  
 
 > [!TIP]  
->  AfterBackup.bat を使用してサイト サーバーのバックアップ ファイルをアーカイブするには、バッチ ファイルで、コピー コマンド ツールを使用する必要があります。 このようなツールには、Windows Server の [Robocopy](https://docs.microsoft.com/windows-server/administration/windows-commands/robocopy) などがあります。 たとえば、次のコマンドを使用して、AfterBackup.bat ファイルを作成します: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
+>  AfterBackup.bat を使用してサイト サーバーのバックアップ ファイルをアーカイブするには、バッチ ファイルで、コピー コマンド ツールを使用する必要があります。 このようなツールには、Windows Server の [Robocopy](/windows-server/administration/windows-commands/robocopy) などがあります。 たとえば、次のコマンドを使用して、AfterBackup.bat ファイルを作成します: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
 
 AfterBackup.bat を使用する本来の目的は、バックアップ スナップショットをアーカイブすることですが、バックアップするたびに何らかの後処理を行うための AfterBackup.bat を作成することもできます。  
 
@@ -165,7 +165,7 @@ SQL Server Reporting Services で定義済みまたは作成したカスタム �
 > [!IMPORTANT]  
 >  Configuration Manager を新しいバージョンにアップグレードすると、定義済みのレポートが新しいレポートで上書きされる可能性があります。 定義済みレポートを変更した場合は、必ずレポートのバックアップを作成した後、Reporting Services で復元してください。  
 
-Reporting Services のカスタム レポートのバックアップの詳細については、「[Reporting Services のバックアップおよび復元操作](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services)」を参照してください。  
+Reporting Services のカスタム レポートのバックアップの詳細については、「[Reporting Services のバックアップおよび復元操作](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services)」を参照してください。  
 
 ### <a name="back-up-content-files"></a>コンテンツ ファイルのバックアップ  
 Configuration Manager のコンテンツ ライブラリは、すべてのソフトウェアの展開などで使用するコンテンツ ファイルがすべて保管されている場所です。 コンテンツ ライブラリは、サイト サーバーと各配布ポイントにあります。 サイト サーバーのバックアップ メンテナンス タスクでは、コンテンツ ライブラリやパッケージ ソース ファイルはバックアップされません。 サイト サーバーで障害が発生したときに、コンテンツ ライブラリに関する情報は、サイト データベースに復元されますが、コンテンツ ライブラリとパッケージ ソース ファイルは手動で復元する必要があります。  
@@ -231,9 +231,9 @@ SMS ライターのライター ID は、**03ba67dd-dc6d-4729-a038-251f7018463b*
 SMS ライターは、ローカル システム アカウントで実行する必要があります。  
 
 ### <a name="volume-shadow-copy-service"></a>ボリューム シャドウ コピー サービス  
-VSS は、システムのアプリケーションがボリュームに書き込んでいる間にボリュームをバックアップできるようにするフレームワークを実装する COM API のセットです。 VSS は、ディスクのデータを更新するユーザー アプリケーション (SMS ライター サービス) と、アプリケーションのバックアップを取るユーザー アプリケーション (Backup Manager サービス) を連携させるインターフェイスとして機能します。 詳細については、「[Volume Shadow Copy Service](https://docs.microsoft.com/windows-server/storage/file-server/volume-shadow-copy-service)」 (ボリューム シャドウ コピー サービス) を参照してください。  
+VSS は、システムのアプリケーションがボリュームに書き込んでいる間にボリュームをバックアップできるようにするフレームワークを実装する COM API のセットです。 VSS は、ディスクのデータを更新するユーザー アプリケーション (SMS ライター サービス) と、アプリケーションのバックアップを取るユーザー アプリケーション (Backup Manager サービス) を連携させるインターフェイスとして機能します。 詳細については、「[Volume Shadow Copy Service](/windows-server/storage/file-server/volume-shadow-copy-service)」 (ボリューム シャドウ コピー サービス) を参照してください。  
 
 
 
 ## <a name="next-steps"></a>次のステップ
-バックアップを作成したら、そのバックアップを使用して[サイトの回復](recover-sites.md)を練習しまししょう。 この練習は、回復プロセスが必要な状況になる前に、プロセスに慣れておくのに役立ちます。 また、目的に合わせてバックアップが成功したことを確認することにも役立ちます。  
+バックアップを作成したら、そのバックアップを使用して[サイトの回復](recover-sites.md)を練習しまししょう。 この練習は、回復プロセスが必要な状況になる前に、プロセスに慣れておくのに役立ちます。 また、目的に合わせてバックアップが成功したことを確認することにも役立ちます。

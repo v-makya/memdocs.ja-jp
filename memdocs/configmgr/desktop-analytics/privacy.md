@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: eb393b05e1ee93239b43725a67b9a1b3e54e71ed
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: 5250d3296df19c454f55ed166e998f8c940c98db
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997965"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700797"
 ---
 # <a name="desktop-analytics-data-privacy"></a>Desktop Analytics のデータのプライバシー
 
 Desktop Analytics では、以下の信条を軸として、顧客データのプライバシー保護が確約されています。
 
-- **透明性:** Windows 診断イベントは、完全に文書化されます。 会社のセキュリティおよびコンプライアンス チームと共にそれらをレビューしてください。 Windows 診断データ ビューアーを使用して、特定のデバイスから送信された診断データを確認できます。 詳細については、「[診断データ ビューアーの概要](https://docs.microsoft.com/windows/configuration/diagnostic-data-viewer-overview)」を参照してください。  
+- **透明性:** Windows 診断イベントは、完全に文書化されます。 会社のセキュリティおよびコンプライアンス チームと共にそれらをレビューしてください。 Windows 診断データ ビューアーを使用して、特定のデバイスから送信された診断データを確認できます。 詳細については、「[診断データ ビューアーの概要](/windows/configuration/diagnostic-data-viewer-overview)」を参照してください。  
 
 - **制御:** Microsoft と共有する診断データのレベルは、ユーザーが制御します。 Windows 10 バージョン 1709 には、より詳細な診断データの送信を、Desktop Analytics で必要とされる最小限のものに制限する新しいポリシーが追加されています。  
 
@@ -30,7 +30,7 @@ Desktop Analytics では、以下の信条を軸として、顧客データの�
 
 - **信頼:** Desktop Analytics では、Microsoft の[プライバシーに関する声明](https://privacy.microsoft.com/privacystatement)と[オンライン サービス利用条件](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46)がサポートされています。  
 
-詳細については、[GDPR の下で Microsoft が処理者である Windows サービス](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr)に関する記事を参照してください。<!-- 5353168 -->
+詳細については、[GDPR の下で Microsoft が処理者である Windows サービス](/windows/privacy/gdpr-it-guidance#windows-services-where-microsoft-is-the-processor-under-the-gdpr)に関する記事を参照してください。<!-- 5353168 -->
 
 ## <a name="data-flow"></a>データ フロー
 
@@ -57,7 +57,7 @@ Desktop Analytics では、以下の信条を軸として、顧客データの�
 
 3. デバイスによって、診断データが Windows の Microsoft 診断データ管理サービスに送信されます。 すべての診断データは HTTPS 経由で暗号化され、デバイスからこのサービスへの転送中は証明書のピン留めを使用します。 Microsoft Data Management Service は米国でホストされています。
 
-      - アプリケーション エラー、カーネル エラー、応答しないアプリケーション、およびその他のアプリケーション固有の問題については、Windows エラー報告 API を使用して、アプリケーション固有の問題のレポートが Microsoft に送信されます。 このデータフローに関する詳細については、「[WER の使用](https://docs.microsoft.com/windows/win32/wer/using-wer)」をご覧ください。
+      - アプリケーション エラー、カーネル エラー、応答しないアプリケーション、およびその他のアプリケーション固有の問題については、Windows エラー報告 API を使用して、アプリケーション固有の問題のレポートが Microsoft に送信されます。 このデータフローに関する詳細については、「[WER の使用](/windows/win32/wer/using-wer)」をご覧ください。
       
 4. Microsoft は、毎日、IT に焦点を絞った分析情報のスナップショットを作成します。 このスナップショットは、Windows の診断データと、登録されているデバイスの入力の組み合わせです。 このプロセスは一時的なストレージで発生し、Desktop Analytics によってのみ使用されます。 一時的なストレージは、米国の Microsoft データセンターでホストされます。 すべてのデータは、SSL (HTTPS) で暗号化されたチャネルを介して送信されます。 スナップショットは、商用 ID によって分離されます。  
 
@@ -71,23 +71,23 @@ Desktop Analytics のプライバシー関連のよく寄せられる質問に�
 
 関連するプライバシー面の詳細については、次の記事を参照してください。
 
-- [IT 意思決定者向けの Windows 10 と GDPR](https://docs.microsoft.com/windows/privacy/gdpr-it-guidance)  
+- [IT 意思決定者向けの Windows 10 と GDPR](/windows/privacy/gdpr-it-guidance)  
 
-- [組織内の Windows 診断データの構成](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
+- [組織内の Windows 診断データの構成](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)  
 
-- [Windows 7、Windows 8、および Windows 8.1 Appraiser の診断データ イベントとフィールド](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)  
+- [Windows 7、Windows 8、および Windows 8.1 Appraiser の診断データ イベントとフィールド](/previous-versions/windows/it-pro/windows-8.1-and-8/appraiser-diagnostic-data-events-and-fields)  
 
-- [Windows 10 バージョン 1809 の基本レベルの Windows 診断イベントとフィールド](https://docs.microsoft.com/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
+- [Windows 10 バージョン 1809 の基本レベルの Windows 診断イベントとフィールド](/windows/privacy/basic-level-windows-diagnostic-events-and-fields-1809)  
 
-- [Windows Analytics で使用される Windows 10 バージョン 1709 の拡張診断データ イベントとフィールド](https://docs.microsoft.com/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
+- [Windows Analytics で使用される Windows 10 バージョン 1709 の拡張診断データ イベントとフィールド](/windows/privacy/enhanced-diagnostic-data-windows-analytics-events-and-fields)  
 
-- [Windows セットアップのエラー報告](https://docs.microsoft.com/windows/deployment/upgrade/windows-error-reporting)
+- [Windows セットアップのエラー報告](/windows/deployment/upgrade/windows-error-reporting)
 
-- [診断データ ビューアーの概要](https://docs.microsoft.com/windows/privacy/diagnostic-data-viewer-overview)  
+- [診断データ ビューアーの概要](/windows/privacy/diagnostic-data-viewer-overview)  
 
 - [ライセンス条項とドキュメント](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)  
 
-- [Log Analytics データ セキュリティ](https://docs.microsoft.com/azure/azure-monitor/platform/data-security)
+- [Log Analytics データ セキュリティ](/azure/azure-monitor/platform/data-security)
 
 - [Microsoft Azure データセンターのセキュリティとプライバシー](https://azure.microsoft.com/global-infrastructure/)  
 

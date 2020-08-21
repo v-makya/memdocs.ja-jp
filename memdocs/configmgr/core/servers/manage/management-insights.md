@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3d65c83d0a9fd009fa21a3b9e623145f87cc9498
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: de3c75982e19e6183260a2a5f99f65b9c785d27f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128123"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700516"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Configuration Manager でのマネジメント インサイト
 
@@ -131,7 +131,7 @@ Configuration Manager のマネジメント インサイトからは、環境の
 
 - **クラウド管理ゲートウェイの有効化**: クラウド管理ゲートウェイ (CMG) では、インターネット上で Configuration Manager クライアントを管理する簡単な方法が提供されます。 Microsoft Azure のクラウド サービスとして CMG を展開することで、インターネット上を移動するクライアントに対してコンテンツを引き続き管理して提供できます。 CMG を使用すれば、インターネットに公開されている追加のオンプレミス インフラストラクチャは一切必要ではありません。 詳細については、[CMG の計画](../../clients/manage/cmg/plan-cloud-management-gateway.md)に関するページを参照してください。<!-- 451B9B3A-D86A-4EF1-ACC3-FE6A207886BA -->
 
-- **デバイスがハイブリッド Azure Active Directory に参加できるようにする**: Azure AD に参加しているデバイスを使用すると、ユーザーはドメインの資格情報でサインインできます。また、デバイスが組織のセキュリティとコンプライアンスの基準を満たすことを確実にすることができます。 詳しくは、「[Azure Active Directory ハイブリッド ID の設計上の考慮事項](https://docs.microsoft.com/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview)」をご覧ください。<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
+- **デバイスがハイブリッド Azure Active Directory に参加できるようにする**: Azure AD に参加しているデバイスを使用すると、ユーザーはドメインの資格情報でサインインできます。また、デバイスが組織のセキュリティとコンプライアンスの基準を満たすことを確実にすることができます。 詳しくは、「[Azure Active Directory ハイブリッド ID の設計上の考慮事項](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview)」をご覧ください。<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
 
 - **HTTPS 構成が適切でないサイト**: バージョン 2002 以降では、この分析情報により、ご利用の階層において、HTTPS 用に正しく構成されていないサイトが一覧表示されます。 この構成では、サイトが[コレクション メンバーシップの結果を Azure AD グループと同期](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync)することが阻止されます。 そのため、Azure AD 同期によって、一部のデバイスしかアップロードされない場合があります。 これらのクライアントの管理が正常に機能しない可能性があります。<!--6268489--> [拡張 HTTP](../../plan-design/hierarchy/enhanced-http.md) を構成するか、HTTPS 用に少なくとも 1 つの管理ポイントを有効にします。 HTTPS 通信用にサイトが既に構成されている場合、この分析情報は表示されません。<!-- 73884047-3395-430E-B971-F853806D4349 -->
 
@@ -162,7 +162,7 @@ Configuration Manager のマネジメント インサイトからは、環境の
 
 <!--3607758-->
 
-バージョン 2002 以降では、このグループは Microsoft プレミア フィールド エンジニアリングから提供されています。 これらの分析情報は、Microsoft Premier によって[サービス ハブ](https://docs.microsoft.com/services-hub/health/getting_started_with_on_demand_assessments)で提供される多くのチェックのサンプルです。
+バージョン 2002 以降では、このグループは Microsoft プレミア フィールド エンジニアリングから提供されています。 これらの分析情報は、Microsoft Premier によって[サービス ハブ](/services-hub/health/getting_started_with_on_demand_assessments)で提供される多くのチェックのサンプルです。
 
 - **Active Directory セキュリティ グループ探索があまりに頻繁に実行されるように構成されている**:通常は、3 時間ごとよりも頻繁に Active Directory セキュリティ グループ探索を実行するように構成する必要はありません。 頻度の高い構成にすると、Active Directory、ネットワーク、Configuration Manager に悪影響を及ぼす可能性があります。 完全同期スケジュールを使用する代わりに、増分同期を有効にします。 詳細については、「[Active Directory グループの探索](../deploy/configure/about-discovery-methods.md#bkmk_aboutGroup)」をご覧ください。<!-- 4E739B65-AEC9-4B1D-8B36-AC6AC4A72022 -->
 
@@ -182,7 +182,7 @@ Configuration Manager のマネジメント インサイトからは、環境の
 
 - **すべてのサイトを同じバージョンに更新する**:階層内で同じバージョンの Configuration Manager を使用します。 この構成により、すべてのサイトで同じ機能が提供されるようになります。 同じ階層内の異なるバージョンのサイトに、相互運用性のシナリオが導入されています。 新しいバージョンの Configuration Manager には、新機能と既知の問題の解決が含まれています。 詳細については、[異なるバージョン間の相互運用性](../../plan-design/hierarchy/interoperability-between-different-versions.md)に関する記事を参照してください。<!-- 88C630A5-6D6B-4DDB-95D7-78E12107970D -->
 
-これらの分析情報の詳細については、「[Configuration Manager 管理分析情報の修復手順](https://docs.microsoft.com/services-hub/health/remediation-steps-configmgr)」を参照してください。
+これらの分析情報の詳細については、「[Configuration Manager 管理分析情報の修復手順](/services-hub/health/remediation-steps-configmgr)」を参照してください。
 
 > [!TIP]
 > Microsoft Unified または Microsoft Premier のお客様の場合は、[Services Hub](https://serviceshub.microsoft.com/assessments/) にサインインして、追加のオンデマンド評価を行ってください。

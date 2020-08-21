@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0103ba8923698a31b86e7d34119caaeb54d54c90
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128530"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699332"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager における Microsoft 接続済みキャッシュ
 
@@ -61,7 +61,7 @@ ms.locfileid: "88128530"
 
   - 既定の Web サイトはポート 80 で有効
 
-  - IIS [アプリケーション要求ルーティング処理](https://docs.microsoft.com/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) 機能をプレインストールしないでください。 接続済みキャッシュにより、ARR のインストールとその設定の構成が行われます。 Microsoft は、接続済みキャッシュによる ARR の構成が、サーバー上でこの機能を使用する他のアプリケーションと競合しないことを保証することはできません。
+  - IIS [アプリケーション要求ルーティング処理](/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) 機能をプレインストールしないでください。 接続済みキャッシュにより、ARR のインストールとその設定の構成が行われます。 Microsoft は、接続済みキャッシュによる ARR の構成が、サーバー上でこの機能を使用する他のアプリケーションと競合しないことを保証することはできません。
 
   - 配布ポイントには、Microsoft クラウドへのインターネット アクセスが必要です。 特定の URL は、特定のクラウド対応のコンテンツによって異なる場合があります。 配信の最適化のためにエンドポイントも許可してください。 詳細については、「[Internet access requirements (インターネット アクセスの要件)](../network/internet-endpoints.md)」を参照してください。
 
@@ -136,7 +136,7 @@ Configuration Manager SDK を使用して、配布ポイントで Microsoft 接�
   - クライアント アプリ: Microsoft Store アプリと更新プログラム
   - エンドポイント保護:Windows Defender の定義更新プログラム
 
-Windows 10 バージョン 1809 以降で、**Get-DeliveryOptimizationStatus** Windows PowerShell コマンドレットを使ってこの動作を確認します。 コマンドレットの出力で、**BytesFromCacheServer** の値を確認します。 詳細については、「[配信の最適化を監視する](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization)」をご覧ください。
+Windows 10 バージョン 1809 以降で、**Get-DeliveryOptimizationStatus** Windows PowerShell コマンドレットを使ってこの動作を確認します。 コマンドレットの出力で、**BytesFromCacheServer** の値を確認します。 詳細については、「[配信の最適化を監視する](/windows/deployment/update/waas-delivery-optimization-setup#monitor-delivery-optimization)」をご覧ください。
 
 キャッシュ サーバーによって任意の HTTP エラーが返された場合、配信の最適化クライアントは元のクラウド ソースに戻されます。
 
@@ -184,7 +184,7 @@ Windows 10 バージョン 1809 以降で、**Get-DeliveryOptimizationStatus** W
 
 - この機能では、Intune Win32 アプリの種類のみがサポートされます。
 
-  - この目的のために、Intune で新しいアプリを作成して割り当て (展開) します。 (Intune バージョン 1811 より前に作成されたアプリは機能しません。)詳細については、[Intune の Win32 アプリの管理](https://docs.microsoft.com/intune/apps/apps-win32-app-management)に関する記事を参照してください。
+  - この目的のために、Intune で新しいアプリを作成して割り当て (展開) します。 (Intune バージョン 1811 より前に作成されたアプリは機能しません。)詳細については、[Intune の Win32 アプリの管理](/intune/apps/apps-win32-app-management)に関する記事を参照してください。
 
   - アプリのサイズは 100 MB 以上である必要があります。
   

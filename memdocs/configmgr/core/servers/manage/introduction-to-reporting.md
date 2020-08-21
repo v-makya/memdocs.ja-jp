@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d28638cdf332adbb1d57526179222bb96d6d5c92
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 25ccc3936d156a4d9b5442190ea957b2d1eaf1f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128071"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699706"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Configuration Manager のレポートの概要
 
@@ -39,7 +39,7 @@ Configuration Manager では、SQL Server Reporting Services をプライマリ 
 
 - さまざまな種類のよく使われる形式でレポートをエクスポートします。  
 
-詳細については、「[SQL Server Reporting Services (SSRS) について](https://docs.microsoft.com/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)」を参照してください。
+詳細については、「[SQL Server Reporting Services (SSRS) について](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)」を参照してください。
 
 ## <a name="power-bi-report-server"></a>Power BI Report Server
 
@@ -47,7 +47,7 @@ Configuration Manager では、SQL Server Reporting Services をプライマリ 
 
 バージョン 2002 以降では、Power BI Report Server を Configuration Manager レポートと統合します。 この統合により、最新の視覚化とパフォーマンスの向上が実現します。 SQL Server Reporting Services に既に存在するものと同様の Power BI レポートのコンソールのサポートが追加されます。 詳細については、「[Power BI Report Server との統合](powerbi-report-server.md)」を参照してください。
 
-Power BI Report Server は、レポートを表示および管理する Web ポータルを備えたオンプレミスのレポート サーバーです。 これには、Power BI のレポート、ページ分割されたレポート、モバイル レポート、および KPI を作成するツールが含まれています。 詳細については、「[Power BI Report Server について](https://docs.microsoft.com/power-bi/report-server/get-started)」を参照してください。
+Power BI Report Server は、レポートを表示および管理する Web ポータルを備えたオンプレミスのレポート サーバーです。 これには、Power BI のレポート、ページ分割されたレポート、モバイル レポート、および KPI を作成するツールが含まれています。 詳細については、「[Power BI Report Server について](/power-bi/report-server/get-started)」を参照してください。
 
 ## <a name="reporting-services-point"></a>レポート サービス ポイント
 

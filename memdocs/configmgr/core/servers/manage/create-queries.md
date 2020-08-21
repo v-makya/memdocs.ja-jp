@@ -10,12 +10,12 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 63f815394414167ad4f887c5970538eab22c931a
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8d15252c3b3c93c7e90e517c502c4c3dd2dfcf20
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906159"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700046"
 ---
 # <a name="create-queries-in-configuration-manager"></a>Configuration Manager でのクエリの作成
 
@@ -49,9 +49,9 @@ ms.locfileid: "82906159"
     > [!TIP]  
     > 独自の WQL クエリを作成するために、次のリファレンス ドキュメントをご利用いただけます。  
     >   
-    > -   [WQL (WMI 用の SQL)](https://docs.microsoft.com/windows/win32/wmisdk/wql-sql-for-wmi)  
-    > -   [WHERE 句](https://docs.microsoft.com/windows/win32/wmisdk/where-clause)  
-    > -   [WQL オペレーター](https://docs.microsoft.com/windows/win32/wmisdk/wql-operators)  
+    > -   [WQL (WMI 用の SQL)](/windows/win32/wmisdk/wql-sql-for-wmi)  
+    > -   [WHERE 句](/windows/win32/wmisdk/where-clause)  
+    > -   [WQL オペレーター](/windows/win32/wmisdk/wql-operators)  
 
 8.  **[&lt;クエリ名\> ステートメントのプロパティ]** ダイアログ ボックスの **[条件]** タブで、クエリ結果の絞り込みに使用する条件を指定します。 たとえば、サイト コード **XYZ** を含むリソースのみが返されるようにすることができます。 1 つのクエリに複数の条件を構成することができます。  
 

@@ -10,12 +10,12 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 35269e7c727031a9cd66072985f3d9ec362978cf
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 3598c95d1431915431d96b16c10c7c913741fe3d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81706320"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699995"
 ---
 # <a name="introduction-to-certificate-profiles-in-configuration-manager"></a>Configuration Manager の証明書プロファイルの概要
 
@@ -59,11 +59,11 @@ ms.locfileid: "81706320"
 
 ## <a name="requirements"></a>要件
 
-SCEP を使用する証明書プロファイルを展開するには、証明書登録ポイントをサイト システム サーバーにインストールします。 また、NDES 用のポリシー モジュール (Configuration Manager ポリシー モジュール) を Windows Server 2012 R2 以降を実行するサーバーにインストールします。 このサーバーには、Active Directory 証明書サービスの役割が必要です。 また、証明書が必要なデバイスにアクセスできる動作中の NDES も必要です。 デバイスでインターネットからの証明書を登録する必要がある場合は、NDES サーバーにインターネットからアクセスできる必要があります。 たとえば、インターネットから NDES サーバーへのトラフィックを安全に有効にするには、[Azure アプリケーション プロキシ](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy)を使用できます。
+SCEP を使用する証明書プロファイルを展開するには、証明書登録ポイントをサイト システム サーバーにインストールします。 また、NDES 用のポリシー モジュール (Configuration Manager ポリシー モジュール) を Windows Server 2012 R2 以降を実行するサーバーにインストールします。 このサーバーには、Active Directory 証明書サービスの役割が必要です。 また、証明書が必要なデバイスにアクセスできる動作中の NDES も必要です。 デバイスでインターネットからの証明書を登録する必要がある場合は、NDES サーバーにインターネットからアクセスできる必要があります。 たとえば、インターネットから NDES サーバーへのトラフィックを安全に有効にするには、[Azure アプリケーション プロキシ](/azure/active-directory/manage-apps/application-proxy)を使用できます。
 
 PFX 証明書には、証明書登録ポイントも必要です。 また、証明書の証明機関 (CA) と関連するアクセス資格情報も指定します。 証明機関として Microsoft または Entrust のいずれかを指定できます。  
 
-Configuration Manager で証明書を展開するためのネットワーク デバイス登録サービスとポリシー モジュールのしくみについては、「[Using a Policy Module with the Network Device Enrollment Service](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\))」 (ポリシー モジュールとネットワーク デバイス登録サービスの使用) を参照してください。
+Configuration Manager で証明書を展開するためのネットワーク デバイス登録サービスとポリシー モジュールのしくみについては、「[Using a Policy Module with the Network Device Enrollment Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016\(v=ws.11\))」 (ポリシー モジュールとネットワーク デバイス登録サービスの使用) を参照してください。
 
 要件に応じて、Configuration Manager では、さまざまなデバイスの種類やオペレーティング システム上で異なる証明書ストアへの証明書の展開をサポートします。 次のデバイスとオペレーティング システムがサポートされています。  
 

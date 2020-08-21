@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: b70a375eb35599a487eeeee95235d638de35e5e1
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b24369f2c2f21208f188cf5c0c2ef3a28db83c04
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88125867"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700822"
 ---
 # <a name="desktop-analytics-faq"></a>Desktop Analytics の FAQ
 
@@ -73,7 +73,7 @@ Desktop Analytics は、インプレース アップグレードを最適にサ�
 
 ### <a name="can-i-use-desktop-analytics-with-windows-10-ltsc"></a>Windows 10 LTSC で Desktop Analytics を使用できますか?
 
-Desktop Analytics では、Windows 10 長期サービス チャネル (LTSC) デバイスはサポートされていません。 詳しくは、[サービスとしての Windows の概要](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)に関する記事をご覧ください。
+Desktop Analytics では、Windows 10 長期サービス チャネル (LTSC) デバイスはサポートされていません。 詳しくは、[サービスとしての Windows の概要](/windows/deployment/update/waas-overview#long-term-servicing-channel)に関する記事をご覧ください。
 
 ### <a name="can-i-reduce-the-amount-of-time-it-takes-for-data-to-refresh-in-my-desktop-analytics-portal"></a>Desktop Analytics ポータルでデータが更新されるまでにかかる時間を短縮できますか?
 
@@ -106,7 +106,7 @@ Microsoft Data Management Service および Analytics Azure Storage の場合: �
 
 ### <a name="can-i-use-update-compliance-together-with-desktop-analytics"></a>Desktop Analytics と共に Update Compliance を使用できますか?
 
-はい。 現在 Azure portal で [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started) を使用している場合は、現在も 2020 年 1 月以降も引き続きそうすることができます。
+はい。 現在 Azure portal で [Update Compliance](/windows/deployment/update/update-compliance-get-started) を使用している場合は、現在も 2020 年 1 月以降も引き続きそうすることができます。
 
 詳細については、[KB 4521815:Windows Analytics の廃止 (2020 年 1 月 31 日)](https://support.microsoft.com/help/4521815/windows-analytics-retirement) に関するページをご確認ください。
 

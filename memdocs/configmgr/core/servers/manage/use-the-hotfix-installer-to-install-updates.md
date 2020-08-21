@@ -10,12 +10,12 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a8eed671b723091f2a43350f42ca82d90e0d9da3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 8c5cc09b7c2723a5dbdd1030cb0053ae75b1ff22
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906130"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699468"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-configuration-manager"></a>修正プログラム インストーラーを使用して、Configuration Manager の更新プログラムをインストールする
 
@@ -207,7 +207,7 @@ Updates Publisher のカタログは **SCUPCatalog.cab** という名前で、�
 > [!IMPORTANT]  
 > SCUPCatalog.cab ファイルは、更新バンドルがインストールされているサイト サーバー固有のパスを使用して作成されるため、他のサイト サーバーで使用することはできません。  
 
-ウィザードが終了したら、Updates Publisher にカタログをインポートしてから、Configuration Manager のソフトウェア更新プログラムを使用して更新プログラムを展開できます。 Updates Publisher については、「[Updates Publisher 2011](https://docs.microsoft.com/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))」を参照してください。  
+ウィザードが終了したら、Updates Publisher にカタログをインポートしてから、Configuration Manager のソフトウェア更新プログラムを使用して更新プログラムを展開できます。 Updates Publisher については、「[Updates Publisher 2011](/previous-versions/system-center/updates-publisher-2011/hh134742(v=technet.10))」を参照してください。  
 
 Updates Publisher に SCUPCatalog.cab ファイルをインポートして更新プログラムを発行するには、次の手順に従います。  
 
@@ -261,4 +261,4 @@ Configuration Manager クライアントへのパッケージの展開方法に�
 > [!NOTE]  
 > サイト データベースを更新するには、そのサイトのサイト サーバーに更新プログラムを展開します。  
 
-コレクションの作成方法については、[コレクションの作成方法](../../../core/clients/manage/collections/create-collections.md)に関するページを参照してください。  
+コレクションの作成方法については、[コレクションの作成方法](../../../core/clients/manage/collections/create-collections.md)に関するページを参照してください。

@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7fa4fbc7cb4e66a1ad47cb0c14a5f7e52abb5bf5
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 1e24a7fe6a81408de48a73889db923cc8c5094ea
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126428"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700550"
 ---
 # <a name="log-file-reference"></a>ログ ファイルのリファレンス
 
@@ -784,7 +784,7 @@ Configuration Manager クライアント上のログ ファイルは、ディレ
 |MP_ClientIDManager.log|タスク シーケンスで PXE またはブート メディアから開始される、クライアント ID 要求への管理ポイントの応答を記録します。|サイト システム サーバー|  
 |MP_DriverManager.log|ドライバーの自動適用を要求するタスク シーケンス アクションへの管理ポイントの応答を記録します。|サイト システム サーバー|  
 |OfflineServicingMgr.log|オフライン サービスのスケジュールと、オペレーティング システムの Windows Imaging Format (WIM) ファイルへの更新プログラムの適用操作を記録します。|サイト システム サーバー|  
-|Setupact.log|Windows Sysprep とセットアップのログの詳細を記録します。 詳細については、[ログ ファイル](https://docs.microsoft.com/windows/deployment/upgrade/log-files)に関するページを参照してください。|クライアント|  
+|Setupact.log|Windows Sysprep とセットアップのログの詳細を記録します。 詳細については、[ログ ファイル](/windows/deployment/upgrade/log-files)に関するページを参照してください。|クライアント|  
 |Setupapi.log|Windows Sysprep とセットアップのログの詳細を記録します。|クライアント|  
 |Setuperr.log|Windows Sysprep とセットアップのログの詳細を記録します。|クライアント|  
 |smpisapi.log|クライアントの状態のキャプチャと復元操作、およびしきい値の詳細を記録します。|クライアント|  
@@ -894,7 +894,7 @@ Configuration Manager クライアント上のログ ファイルは、ディレ
 |DISM.log|DISM を使用するすべてのアクションを記録します。 必要に応じて、詳細情報について DISM.log から CBS.log が示されます。|クライアント|
 |setupact.log|Windows インストール プロセス中に発生するほとんどのエラーのプライマリ ログ ファイルです。 このログ ファイルは、%windir%\$Windows.~BT\sources\panther フォルダーにあります。|クライアント|
 
-詳細については、「[Online Servicing-Related Log Files (オンライン サービス関連のログ ファイル)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files)」を参照してください。
+詳細については、「[Online Servicing-Related Log Files (オンライン サービス関連のログ ファイル)](/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files)」を参照してください。
 
 ### <a name="windows-update-agent"></a><a name="BKMK_WULog"></a> Windows 更新エージェント
 
@@ -904,7 +904,7 @@ Configuration Manager クライアント上のログ ファイルは、ディレ
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|Windows 更新エージェントが、いつ WSUS サーバーに接続してコンプライアンス評価用のソフトウェア更新プログラムを取得したかと、エージェント コンポーネントの更新プログラムがあるかどうかを記録します。|クライアント|  
 
-詳細については、「[Windows Update のログ ファイル](https://docs.microsoft.com/windows/deployment/update/windows-update-logs)」を参照してください。
+詳細については、「[Windows Update のログ ファイル](/windows/deployment/update/windows-update-logs)」を参照してください。
 
 ### <a name="wsus-server"></a><a name="BKMK_WSUSLog"></a> WSUS サーバー
 

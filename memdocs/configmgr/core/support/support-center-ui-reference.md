@@ -10,12 +10,12 @@ ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 43bb35243b4f7e7b1e45b66319efd4ec21e92542
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 79d483f95c12c1da1e34ca556836a1f42bbffbef
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701340"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699451"
 ---
 # <a name="support-center-user-interface-reference"></a>サポート センターのユーザー インターフェイス リファレンス
 
@@ -585,16 +585,16 @@ Configuration Manager クライアントに関する最も一般的な問題を�
 このビューには、サポート センターの **[クライアント]** タブと同じ情報が表示されます。
 
 #### <a name="operating-system"></a>オペレーティング システム
-クライアントのオペレーティング システムについての詳細です。 [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem) クラスが使用されます。
+クライアントのオペレーティング システムについての詳細です。 [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) クラスが使用されます。
 
 #### <a name="computer"></a>コンピューター
-クライアント コンピューターに関する詳細です。 [Win32_OperatingSystem](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-operatingsystem) クラスが使用されます。
+クライアント コンピューターに関する詳細です。 [Win32_OperatingSystem](/windows/desktop/CIMWin32Prov/win32-operatingsystem) クラスが使用されます。
 
 #### <a name="services"></a>サービス
-クライアント コンピューターで実行されているサービスに関する詳細です。 [Win32_Service](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-service) クラスが使用されます。
+クライアント コンピューターで実行されているサービスに関する詳細です。 [Win32_Service](/windows/desktop/CIMWin32Prov/win32-service) クラスが使用されます。
 
 #### <a name="network-adapters"></a>ネットワーク アダプター
-クライアント コンピューターにインストールされているネットワーク アダプターに関する詳細です。 [Win32_NetworkAdapterConfiguration](https://docs.microsoft.com/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) クラスが使用されます。
+クライアント コンピューターにインストールされているネットワーク アダプターに関する詳細です。 [Win32_NetworkAdapterConfiguration](/windows/desktop/CIMWin32Prov/win32-networkadapterconfiguration) クラスが使用されます。
 
 
 ### <a name="logs-tab"></a><a name="bkmk_viewer-logs"></a> [ログ] タブ

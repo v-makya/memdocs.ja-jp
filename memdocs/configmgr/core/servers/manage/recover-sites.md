@@ -10,12 +10,12 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 37e4db2ad801c5923ba3db54554af0bb13968048
-ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
+ms.openlocfilehash: 9e71baef06349a00d49bc7fdc799d078c29939d8
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301437"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699519"
 ---
 # <a name="recover-a-configuration-manager-site"></a>Configuration Manager サイトの回復
 
@@ -181,7 +181,7 @@ Configuration Manager サイト データベースを既に回復してあるも
     Configuration Manager 以外の方法を使用してサイト データベースを復元した場合は、セットアップを実行し、このオプションを選択して、サイト データベースの回復を完了します。  
 
     > [!NOTE]  
-    > DPM を使用してサイト データベースをバックアップするときに、Configuration Manager で復元プロセスを続行する前に、DPM の手順を使用して指定の場所にサイト データベースを復元します。 DPM の詳細については、[Data Protection Manager](https://docs.microsoft.com/system-center/dpm) のドキュメント ライブラリを参照してください。  
+    > DPM を使用してサイト データベースをバックアップするときに、Configuration Manager で復元プロセスを続行する前に、DPM の手順を使用して指定の場所にサイト データベースを復元します。 DPM の詳細については、[Data Protection Manager](/system-center/dpm) のドキュメント ライブラリを参照してください。  
 
 - 階層においてプライマリ サイト データベースを回復する場合、回復プロセスは最後のバックアップ後にサイト データベースに対して行われた変更を CAS から取得します。 CAS を復元する場合、回復プロセスは基準プライマリ サイトから変更を取得します。 スタンドアロンのプライマリ サイトのサイト データベースを回復する場合は、最後のバックアップ以後に行われたサイトの変更を回復することはできません。  
 
@@ -193,7 +193,7 @@ Configuration Manager サイト データベース サーバーのデータが�
 
 Configuration Manager は、SQL Server におけるサイト データベースの変更の追跡を有効にします。 そのため、過去のある時点以後にデータベース テーブルで行われた変更に関する情報を、Configuration Manager が照会することができます。 保有期間とは、この変更の追跡データを残しておく期間のことです。 既定では、サイト データベースの追跡データの保有期間は 5 日に構成されています。 サイト データベースを回復するときは、バックアップがこの保有期間内に作成されたかどうかによって、回復プロセスが異なります。 たとえば、SQL Server で障害が発生した時点で、最も新しいバックアップが作成後 7 日経過している場合は、保有期間外に作成されていることになります。
 
-SQL Server の変更追跡の内部構造については、SQL Server チームのブログ投稿「[Change Tracking Cleanup - part 1](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-1)」(変更追跡のクリーンアップ - パート 1) と「[Change Tracking Cleanup - part 2](https://docs.microsoft.com/archive/blogs/sql_server_team/change-tracking-cleanup-part-2)」(変更追跡のクリーンアップ - パート 2) を参照してください。
+SQL Server の変更追跡の内部構造については、SQL Server チームのブログ投稿「[Change Tracking Cleanup - part 1](/archive/blogs/sql_server_team/change-tracking-cleanup-part-1)」(変更追跡のクリーンアップ - パート 1) と「[Change Tracking Cleanup - part 2](/archive/blogs/sql_server_team/change-tracking-cleanup-part-2)」(変更追跡のクリーンアップ - パート 2) を参照してください。
 
 ### <a name="reinitialization-of-site-or-global-data"></a>サイト データまたはグローバル データの再初期化
 
@@ -378,7 +378,7 @@ IIS を実行するサイト システムを回復し、HTTPS 用に構成した
 
 ### <a name="recover-custom-reports"></a>カスタム レポートを回復する
 
-SQL Server Reporting Services でカスタム レポートを作成するお客様がいます。 このコンポーネントで障害が発生したときは、レポート サーバーのバックアップからレポートを回復します。 Reporting Services のカスタム レポートの復元の詳細については、「[Reporting Services のバックアップおよび復元操作](https://docs.microsoft.com/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services)」を参照してください。
+SQL Server Reporting Services でカスタム レポートを作成するお客様がいます。 このコンポーネントで障害が発生したときは、レポート サーバーのバックアップからレポートを回復します。 Reporting Services のカスタム レポートの復元の詳細については、「[Reporting Services のバックアップおよび復元操作](/sql/reporting-services/install-windows/backup-and-restore-operations-for-reporting-services)」を参照してください。
 
 ### <a name="recover-content-files"></a>コンテンツ ファイルを回復する
 
@@ -410,7 +410,7 @@ System Center Updates Publisher データベース ファイルがバックア�
 
 ### <a name="regenerate-the-certificates-for-distribution-points"></a>配布ポイント用の証明書の再生成
 
-サイトの復元後、1 つまたは複数の配布ポイントに対する `Failed to decrypt cert PFX data` というエントリが **distmgr.log** に一覧表示されていることがあります。 このエントリは、配布ポイントの証明書データをサイトで解読できないことを示します。 この問題を解決するには、影響を受ける配布ポイントの証明書を再生成または再インポートします。 それには、[Set-CMDistributionPoint](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell コマンドレットを使います。
+サイトの復元後、1 つまたは複数の配布ポイントに対する `Failed to decrypt cert PFX data` というエントリが **distmgr.log** に一覧表示されていることがあります。 このエントリは、配布ポイントの証明書データをサイトで解読できないことを示します。 この問題を解決するには、影響を受ける配布ポイントの証明書を再生成または再インポートします。 それには、[Set-CMDistributionPoint](/powershell/module/configurationmanager/set-cmdistributionpoint) PowerShell コマンドレットを使います。
 
 ### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>クラウドベースの配布ポイントに使用される証明書を更新する
 

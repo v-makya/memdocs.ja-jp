@@ -10,12 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1ace560130e43fd5675b51b6d507e84043c01407
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 81371828078264e185dc0a1883dd383257949ef4
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904085"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700097"
 ---
 # <a name="schema-extensions-for-configuration-manager"></a>Configuration Manager のスキーマ拡張
 
@@ -25,7 +25,7 @@ Configuration Manager をサポートするように Active Directory スキー�
 
 -   Active Directory スキーマは拡張することをお勧めしますが、必須ではありません。  
 
-[Active Directory スキーマを拡張する](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema)前に、Active Directory ドメイン サービスに精通し、 [Active Directory スキーマの変更](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10))に慣れておく必要があります。  
+[Active Directory スキーマを拡張する](/sccm/core/plan-design/network/extend-the-active-directory-schema)前に、Active Directory ドメイン サービスに精通し、 [Active Directory スキーマの変更](/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10))に慣れておく必要があります。  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Configuration Manager 向けの Active Directory スキーマの拡張に関する考慮事項  
 
@@ -142,4 +142,4 @@ Configuration Manager のスキーマを拡張すると、次のクラスと属�
 > - 属性: cn=MS-SMS-Site-Boundaries  
 >   -   クラス: cn=MS-SMS-Server-Locator-Point  
 
-上記のリストが最新のものであることをご確認ください。そのためには、Configuration Manager インストール メディアの **\SMSSETUP\BIN\x64** フォルダーから **ConfigMgr_ad_schema.LDF** ファイルを確認します。  
+上記のリストが最新のものであることをご確認ください。そのためには、Configuration Manager インストール メディアの **\SMSSETUP\BIN\x64** フォルダーから **ConfigMgr_ad_schema.LDF** ファイルを確認します。

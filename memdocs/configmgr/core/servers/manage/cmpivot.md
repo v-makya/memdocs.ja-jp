@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 06e2a90e8c481fba834cbd1b6b1f5233572e4b17
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 11b5a58a6d9501b0368fcb0b47bf31df1bd8a6af
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128335"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700584"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>Configuration Manager でのリアルタイム データ用の CMPivot
 
@@ -90,7 +90,7 @@ CMPivot に必要なアクセス許可は次のとおりです。
 
      - いずれかの**エントリ**をクリックして、クエリ文字列にそのエントリを追加します。  
 
-     - **テーブル演算子**、**集計関数**、および**スカラー関数**へのリンクでは、Web ブラウザーの言語リファレンス ドキュメントが開かれます。 CMPivot には [Kusto Query Language (KQL)](https://docs.microsoft.com/azure/kusto/query/) が使用されます。  
+     - **テーブル演算子**、**集計関数**、および**スカラー関数**へのリンクでは、Web ブラウザーの言語リファレンス ドキュメントが開かれます。 CMPivot には [Kusto Query Language (KQL)](/azure/kusto/query/) が使用されます。  
 
 3. クライアントからの結果を表示するために CMPivot ウィンドウは開いたままにします。 CMPivot ウィンドウを閉じたら、このセッションは完了です。
    - クエリを送信すると、クライアントはサーバーに状態のメッセージ応答を送信します。  
@@ -123,7 +123,7 @@ CMPivot ウィンドウには、次の要素があります。
 
 5. [クエリ] ウィンドウは、コレクション内のクライアント上で実行するクエリをビルドまたは入力する場所です。  
 
-    - CMPivot には [Kusto Query Language (KQL)](https://docs.microsoft.com/azure/kusto/query/) のサブセットが使用されます。  
+    - CMPivot には [Kusto Query Language (KQL)](/azure/kusto/query/) のサブセットが使用されます。  
 
     - クエリ ウィンドウのコンテンツを切り取ったり、コピーしたり、貼り付けます。  
     <!-- markdownlint-disable MD038 -->
@@ -272,5 +272,3 @@ Configuration Manager 1810 以降、CMPivot では、拡張されたハードウ
 - [CMPivot に対する変更](cmpivot-changes.md)
 - [CMPivot のトラブルシューティング](cmpivot-tsg.md)
 - [PowerShell スクリプトの作成と実行](../../../apps/deploy-use/create-deploy-scripts.md)
-
-

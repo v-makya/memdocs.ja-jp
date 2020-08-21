@@ -10,12 +10,12 @@ ms.assetid: 395403dc-6997-4415-93fd-6b1eeb6ba31a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 06e308a54ee9636a7781667823e7b7f98ae6f25c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: cb2529dbbe923a5035f0b7586dab696cd6fc917e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701270"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699417"
 ---
 # <a name="configuration-manager-tools"></a>Configuration Manager ツール
 
@@ -25,7 +25,7 @@ Configuration Manager ツールには、[クライアント ベースのツー�
 
 Configuration Manager バージョン 1806 以降、これらのツールはサイト サーバーの `CD.Latest\SMSSETUP\Tools` フォルダーに含まれるようになりました。 追加でインストールする必要はありません。<!--1357145--> これらのバージョンのツールは、Configuration Manager バージョン 1806 以降で使用してください。
 
-[クライアントとデバイスでサポートされるオペレーティング システム](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)に関するページでサポート対象クライアントとして示されているすべての Windows オペレーティング システムは、これらのツールを使用できます。
+[クライアントとデバイスでサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)に関するページでサポート対象クライアントとして示されているすべての Windows オペレーティング システムは、これらのツールを使用できます。
 
 > [!Note]  
 > [System Center 2012 R2 Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=50012) は、Microsoft ダウンロード センターから引き続き入手できます。 Configuration Manager バージョンが 1806 以降の場合は、サイト サーバーの CD.Latest フォルダーにあるツールのバージョンを使用してください。 一部のツールは以前はツールキットに含まれていましたが、バージョン 1806 には含まれていませんでした。 これらの以前のバージョンのツールはサポートされなくなりました。
@@ -35,9 +35,9 @@ Configuration Manager バージョン 1806 以降、これらのツールはサ�
 
 これらのツールは、`ClientTools` サブフォルダー内にあります。
 
-- [CMTrace](cmtrace.md):Configuration Manager ログ ファイルの表示、監視、および分析を行います  
+- [CMTrace](cmtrace.md): Configuration Manager ログ ファイルの表示、監視、および分析を行います  
 
-- [Client Spy](clispy.md):ソフトウェアの配布、インベントリ、および測定に関する問題を解決します
+- [Client Spy](clispy.md): ソフトウェアの配布、インベントリ、および測定に関する問題を解決します
 
 - [Deployment Monitoring Tool](deployment-monitoring-tool.md):アプリケーション、更新プログラム、およびベースラインの展開の問題を解決します  
 
@@ -45,7 +45,7 @@ Configuration Manager バージョン 1806 以降、これらのツールはサ�
 
 - [Power Viewer Tool](power-viewer-tool.md):電源管理機能の状態を表示します  
 
-- [Send Schedule Tool](send-schedule-tool.md):構成基準のスケジュールと評価をトリガーします  
+- [Send Schedule Tool](send-schedule-tool.md): 構成基準のスケジュールと評価をトリガーします  
 
 > [!Note]  
 > `ClientTools` フォルダーには、Microsoft.Diagnostics.Tracing.EventSource.dll ファイルも含まれています。 一部のクライアント ツールにはこのライブラリが必要です。 直接使用することはできません。  
@@ -55,7 +55,7 @@ Configuration Manager バージョン 1806 以降、これらのツールはサ�
 
 これらのツールは、`ServerTools` サブフォルダー内にあります。
 
-- [DP Job Queue Manager](dp-job-manager.md):配布ポイントに対するコンテンツ配布ジョブの問題を解決します  
+- [DP Job Queue Manager](dp-job-manager.md): 配布ポイントに対するコンテンツ配布ジョブの問題を解決します  
 
 - [Collection Evaluation Viewer](ceviewer.md):コレクション評価の詳細を表示します  
 
@@ -67,7 +67,7 @@ Configuration Manager バージョン 1806 以降、これらのツールはサ�
 
 - [Role-based Administration and Auditing Tool](rbaviewer.md):管理者の監査ロールの構成を支援します  
 
-- [Run Meter Summarization Tool](run-meter-summ.md):使用状況測定の概要作成タスクを実行し、使用状況測定データを分析します
+- [Run Meter Summarization Tool](run-meter-summ.md): 使用状況測定の概要作成タスクを実行し、使用状況測定データを分析します
 
 > [!Note]  
 > ServerTools フォルダーには、以下のファイルも含まれています。
@@ -86,13 +86,13 @@ Configuration Manager バージョン 1806 以降、これらのツールはサ�
 
 - [オンプレミスのサイトを拡張して Microsoft Azure に移行する](azure-migration-tool.md): Configuration Manager 用の Azure 仮想マシン (VM) をプログラムで作成するのに役立ちます。 <!--3556022--> 
 
-- [Content Library Cleanup Tool](../plan-design/hierarchy/content-library-cleanup-tool.md):`CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` で **ContentLibraryCleanup.exe** を使用して、配布ポイントから孤立したコンテンツを削除します。  
+- [Content Library Cleanup Tool](../plan-design/hierarchy/content-library-cleanup-tool.md): `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup` で **ContentLibraryCleanup.exe** を使用して、配布ポイントから孤立したコンテンツを削除します。  
 
-- [Hierarchy Maintenance Tool](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md):サイト サーバー上の `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` 共有フォルダーで **Preinst.exe** を使用して、階層マネージャー コンポーネントにコマンドを渡します。  
+- [Hierarchy Maintenance Tool](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): サイト サーバー上の `\<SiteServerName>\SMS_<SiteCode>\bin\X64\00000409` 共有フォルダーで **Preinst.exe** を使用して、階層マネージャー コンポーネントにコマンドを渡します。  
 
-- [Update Reset Tool](../servers/manage/update-reset-tool.md):コンソール内の更新プログラムにダウンロードやレプリケートの問題がある場合に、`CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` で **CMUpdateReset.exe** を使用して問題を解決します。  
+- [Update Reset Tool](../servers/manage/update-reset-tool.md): コンソール内の更新プログラムにダウンロードやレプリケートの問題がある場合に、`CD.Latest\SMSSETUP\TOOLS\CMUpdateReset` で **CMUpdateReset.exe** を使用して問題を解決します。  
 
-- [Service Connection Tool](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md):サービス接続ポイントがオフラインの場合に、`CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` で **ServiceConnectionTool.exe** を使用してサイトを最新の状態に保ちます。   
+- [Service Connection Tool](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md): サービス接続ポイントがオフラインの場合に、`CD.Latest\SMSSETUP\TOOLS\ServiceConnectionTool` で **ServiceConnectionTool.exe** を使用してサイトを最新の状態に保ちます。   
 
 - [Microsoft Deployment Toolkit (MDT)](../../mdt/use-the-mdt.md): デスクトップ OS とサーバー OS のデプロイを自動化するための、ツール、プロセス、ガイダンスのコレクションです。
 

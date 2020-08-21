@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f4089f52d912491b3b1396906fe391c5c334e061
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814907"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699587"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Power BI Report Server との統合
 
@@ -23,13 +23,13 @@ ms.locfileid: "84814907"
 
 <!--3721603-->
 
-バージョン 2002 以降では、[Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/get-started) を Configuration Manager レポートと統合できるようになりました。 この統合により、最新の視覚化とパフォーマンスの向上が実現します。 SQL Server Reporting Services に既に存在するものと同様の Power BI レポートのコンソールのサポートが追加されます。
+バージョン 2002 以降では、[Power BI Report Server](/power-bi/report-server/get-started) を Configuration Manager レポートと統合できるようになりました。 この統合により、最新の視覚化とパフォーマンスの向上が実現します。 SQL Server Reporting Services に既に存在するものと同様の Power BI レポートのコンソールのサポートが追加されます。
 
 Power BI Desktop レポート ファイル (.PBIX) が保存され、Power BI Report Server に配置されます。 このプロセスは、SQL Server Reporting Services レポート ファイル (.RDL) と似ています。 また、Configuration Manager コンソールから直接、ブラウザーでレポートを起動することもできます。
 
 ## <a name="prerequisites"></a>[前提条件]
 
-- Power BI Report Server ライセンス。 詳細については、「[Power BI Report Server のライセンス](https://docs.microsoft.com/power-bi/report-server/get-started#licensing-power-bi-report-server)」を参照してください。
+- Power BI Report Server ライセンス。 詳細については、「[Power BI Report Server のライセンス](/power-bi/report-server/get-started#licensing-power-bi-report-server)」を参照してください。
 
 - [Microsoft Power BI Report Server - 2019 年 9 月](https://www.microsoft.com/download/details.aspx?id=57270)以降をダウンロードします。
 
@@ -40,7 +40,7 @@ Power BI Desktop レポート ファイル (.PBIX) が保存され、Power BI Re
 
     > [!IMPORTANT]
     > - [Microsoft ダウンロード センター](https://www.microsoft.com/download/)の Power BI Desktop バージョンのみを使用し、Microsoft Store のバージョンは使用しないでください。
-    > - [**Power BI Report Server 用に最適化済み**と記載されている Power BI Desktop](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop) のバージョンのみを使用してください。
+    > - [**Power BI Report Server 用に最適化済み**と記載されている Power BI Desktop](/power-bi/report-server/install-powerbi-desktop) のバージョンのみを使用してください。
 
 - Power BI 統合では、レポートに同じロール ベース管理を使用します。
     > [!NOTE]
@@ -54,7 +54,7 @@ Power BI Desktop レポート ファイル (.PBIX) が保存され、Power BI Re
 
 サイトにレポート サービス ポイントが既にある場合にのみ、このプロセスを使用してください。 同じサーバー上で、このプロセスのすべての手順を実行します。
 
-1. **Reporting Server Configuration Manager** で、**暗号化キー**をバックアップします。 詳細については、「[SSRS の暗号化キー - 暗号化キーのバックアップと復元](https://docs.microsoft.com/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys)」を参照してください。
+1. **Reporting Server Configuration Manager** で、**暗号化キー**をバックアップします。 詳細については、「[SSRS の暗号化キー - 暗号化キーのバックアップと復元](/sql/reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys)」を参照してください。
 
     > [!WARNING]
     > この手順を省略すると、SQL Server Reporting Services のカスタム レポートにアクセスできなくなります。

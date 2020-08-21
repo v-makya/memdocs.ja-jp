@@ -2,7 +2,7 @@
 title: バージョン 2006 の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager Current Branch のバージョン 2006 で導入された変更点および新機能について説明します。
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f624a207b5e9afded9b86312d1608a35005355f6
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: bdfb122173c913274373f41c3932f1ac094ec953
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179343"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700284"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 2006 の新機能
 
@@ -27,11 +27,8 @@ Configuration Manager Current Branch の更新プログラム 2006 はコンソ�
 
 Configuration Manager の新機能をすべて利用するには、サイトを更新した後、クライアントも最新バージョンに更新します。 サイトとコンソールを更新すると Configuration Manager コンソールに新しい機能が表示されますが、クライアントのバージョンも最新になるまでは完全なシナリオは機能しません。
 
-<!-- commenting this for now as it doesn't work 7422960
 > [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
- -->
+> このページが更新されたときに通知を受け取るには、次の URL をコピーして RSS フィード リーダーに貼り付けます。`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a>Microsoft Endpoint Manager テナントのアタッチ
 
@@ -92,6 +89,14 @@ Configuration Manager による Windows Virtual Desktop のサポートの詳細
 
 ## <a name="cloud-attached-management"></a><a name="bkmk_cloud"></a> クラウド接続の管理
 
+### <a name="use-the-company-portal-app-on-co-managed-devices"></a>共同管理デバイスでポータル サイト アプリを使用する
+
+<!--CMADO-3601237,INADO-4297660-->
+
+ポータル サイトは、Microsoft Endpoint Manager 用のクロスプラットフォームのアプリ ポータル エクスペリエンスになりました。 ポータル サイトも使用するように共同管理デバイスを構成することで、すべてのデバイスで一貫したユーザー エクスペリエンスを実現できます。
+
+詳細については、「[共同管理デバイスでポータル サイト アプリを使用する](../../../comanage/company-portal.md)」を参照してください。
+
 ### <a name="use-microsoft-azure-china-21vianet-for-co-management"></a>Microsoft Azure China 21Vianet を使用した共同管理
 <!--7133238-->
 共同管理を有効にするときに、Azure の環境として Azure China Cloud を選択できるようになりました。 詳細については、「[How to enable co-management](../../../comanage/how-to-enable.md)」 (共同管理を有効にする方法) を参照してください。
@@ -120,11 +125,11 @@ Windows 診断データのデスクトップ分析要件に合わせるために
 | バージョン 2006 以降 | バージョン 2002 以前 |
 |---------|---------|
 | 必須 | Basic |
-| 省略可能 (制限あり) | 拡張 (制限あり) |
+| 省略可能 (制限あり) | 拡張 (制限付き) |
 | 該当なし | 拡張 |
 | Optional | [完全] |
 
-以前に**拡張**レベルでデバイスを構成したことがある場合、バージョン 2006 にアップグレードすると、それらは**省略可能 (制限あり)** に戻ります。 その後、Microsoft に送信されるデータが少なくなります。 この変更は、Desktop Analytics に表示される内容には影響しません。
+以前に**拡張**レベルでデバイスを構成したことがある場合、バージョン 2006 にアップグレードすると、 **[省略可能 (制限あり)]** に戻ります。 その後、Microsoft に送信するデータが少なくなります。 この変更は、Desktop Analytics に表示される内容には影響しません。
 
 詳細については、「[Desktop Analytics のためにデータ共有を有効にする](../../../desktop-analytics/enable-data-sharing.md)」を参照してください。
 
@@ -324,7 +329,7 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 2006 のリリース ノート](https://docs.microsoft.com/powershell/sccm/2006-release-notes?view=sccm-ps)を参照してください。
+Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 2006 のリリース ノート](/powershell/sccm/2006-release-notes?view=sccm-ps)を参照してください。
 
 管理サービスの REST API の変更に関する詳細については、[管理サービスのリリース ノート](../../../develop/adminservice/release-notes.md#bkmk_2006)を参照してください。
 

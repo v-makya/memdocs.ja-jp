@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ebdd07874f09ff6d97747826d6056df177e2c735
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7cb0a2c71a3ea326348b87d6b34e3109a8ef9f20
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128479"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700131"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configuration Manager と共に使用するように Azure サービスを構成する
 
@@ -39,10 +39,10 @@ ms.locfileid: "88128479"
 
   - [アプリ承認のメール通知](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 
-- **Log Analytics コネクタ**:[Azure Log Analytics に接続します](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)。 コレクションのデータを Log Analytics に同期します。  
+- **Log Analytics コネクタ**:[Azure Log Analytics に接続します](/azure/azure-monitor/platform/collect-sccm)。 コレクションのデータを Log Analytics に同期します。  
 
     > [!Note]  
-    > この記事で "*Log Analytics コネクタ*" と呼んでいるものは、以前は "*OMS コネクタ*" という名前でした。 機能に違いはありません。 詳しくは、[Azure 管理の監視](https://docs.microsoft.com/azure/azure-monitor/terminology#log-analytics)に関するページをご覧ください。  
+    > この記事で "*Log Analytics コネクタ*" と呼んでいるものは、以前は "*OMS コネクタ*" という名前でした。 機能に違いはありません。 詳しくは、[Azure 管理の監視](/azure/azure-monitor/terminology#log-analytics)に関するページをご覧ください。  
 
 - **ビジネス向け Microsoft Store**:[ビジネス向け Microsoft Store](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md) に接続します。 Configuration Manager で展開できる、組織のストア アプリを取得します。  
 
@@ -78,10 +78,10 @@ Configuration Manager は、ウィザードで追加の Azure サービスを作
 
 Azure アプリの詳細については、まず、以下の記事を参照してください。
 
-- [Azure App Service での認証および承認](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)
-- [Web Apps の概要](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)
+- [Azure App Service での認証および承認](/azure/app-service/app-service-authentication-overview)
+- [Web Apps の概要](/azure/app-service-web/app-service-web-overview)
 - [Azure AD でのアプリケーションの登録の基本](/azure/active-directory/develop/authentication-scenarios)  
-- [Azure Active Directory テナントにアプリケーションを登録する](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration)
+- [Azure Active Directory テナントにアプリケーションを登録する](/azure/active-directory/active-directory-app-registration)
 
 ## <a name="before-you-begin"></a>始める前に
 
@@ -93,7 +93,7 @@ Azure アプリの詳細については、まず、以下の記事を参照し�
 
 一部のサービスでは、Azure AD アプリに特定のアクセス許可を割り当てる必要があります。 各サービスの情報を確認して、必要なアクセス許可を判別してください。 たとえば、Web アプリをインポートする前に、Azure 管理者はまず、[Azure Portal](https://portal.azure.com) でそれを作成する必要があります。
 
-Log Analytics コネクタを構成する場合は、関連するワークスペースを含むリソース グループに対して、新たに登録した Web アプリの "*共同作成者*" アクセス許可を付与します。 これにより、Configuration Manager からそのワークスペースへのアクセスが許可されます。 アクセス許可を割り当てるときは、Azure portal の **[ユーザーの追加]** 領域でアプリの登録名を検索します。 このプロセスは、[Log Analytics へのアクセス許可を Configuration Manager に提供する](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics)場合と同じです。 Azure 管理者は、アプリを Configuration Manager にインポートする前に、これらのアクセス許可を割り当てる必要があります。
+Log Analytics コネクタを構成する場合は、関連するワークスペースを含むリソース グループに対して、新たに登録した Web アプリの "*共同作成者*" アクセス許可を付与します。 これにより、Configuration Manager からそのワークスペースへのアクセスが許可されます。 アクセス許可を割り当てるときは、Azure portal の **[ユーザーの追加]** 領域でアプリの登録名を検索します。 このプロセスは、[Log Analytics へのアクセス許可を Configuration Manager に提供する](/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics)場合と同じです。 Azure 管理者は、アプリを Configuration Manager にインポートする前に、これらのアクセス許可を割り当てる必要があります。
 
 ## <a name="start-the-azure-services-wizard"></a>Azure サービス ウィザードの起動
 
@@ -174,7 +174,7 @@ Azure サービス ウィザードのサーバー アプリのダイアログま
 **[OK]** を選択して Azure AD で Web アプリを作成し、サーバー アプリケーションの作成ダイアログを閉じます。 この操作で、[サーバー アプリのダイアログ](#server-app-dialog)に戻ります。
 
 > [!NOTE]
-> Azure AD の条件付きアクセス ポリシーを定義してあり、**すべてのクラウド アプリ**に適用する場合は、このポリシーから、作成したサーバー アプリケーションを除外する必要があります。 特定のアプリを除外する方法の詳細については、「[Azure AD 条件付きアクセスのドキュメント](https://docs.microsoft.com/azure/active-directory/conditional-access/)」を参照してください。
+> Azure AD の条件付きアクセス ポリシーを定義してあり、**すべてのクラウド アプリ**に適用する場合は、このポリシーから、作成したサーバー アプリケーションを除外する必要があります。 特定のアプリを除外する方法の詳細については、「[Azure AD 条件付きアクセスのドキュメント](/azure/active-directory/conditional-access/)」を参照してください。
 
 ### <a name="native-client-app"></a>ネイティブ クライアント アプリ
 
@@ -222,7 +222,7 @@ Azure サービス ウィザードのアプリ ページで **[ネイティブ �
 
 - **クラウド管理**サービス、 **[探索]** ページ:[Azure AD ユーザー探索を構成する](configure-discovery-methods.md#azureaadisc)  
 
-- **Log Analytics コネクタ** サービス、 **[構成]** ページ:[Log Analytics への接続を構成する](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)  
+- **Log Analytics コネクタ** サービス、 **[構成]** ページ:[Log Analytics への接続を構成する](/azure/azure-monitor/platform/collect-sccm)  
 
 - **ビジネス向け Microsoft Store** サービス、 **[構成]** ページ:[ビジネス向け Microsoft Store の同期を構成する](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#bkmk_config)  
 

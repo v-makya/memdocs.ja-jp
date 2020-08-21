@@ -10,12 +10,12 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b75ebe7e768080a1239e817c514b634cdcf64179
-ms.sourcegitcommit: b7e5b053dfa260e7383a9744558d50245f2bccdc
+ms.openlocfilehash: 2495c0d7b5b19b5d6f7741d3b28b6a9a0e213fc3
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587168"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700148"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Configuration Manager で使用されるポート
 
@@ -759,7 +759,7 @@ SQL Server が複数のサイトからデータベースをホストする場合
 
 SQL Server 上でホスト ベースのファイアウォールを有効にする場合は、正しいポートを許可するようにそのファイアウォールを構成します。 SQL Server と通信するコンピューター間のネットワーク ファイアウォールも構成します。  
 
-特定のポートを使用する SQL Server を構成する方法の例については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port)」をご覧ください。  
+特定のポートを使用する SQL Server を構成する方法の例については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port)」をご覧ください。  
 
 ### <a name="discovery-and-publishing"></a><a name="bkmk_discovery"> </a> 検出と公開
 

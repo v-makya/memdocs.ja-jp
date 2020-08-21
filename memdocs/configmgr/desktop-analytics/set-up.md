@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: a90f3260782f08fdf8f7424a95e09b34e38e97d3
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: facfb2be1972933524c7ad632537fc8306939c1c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268150"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700754"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>Desktop Analytics の設定方法
 
@@ -39,7 +39,7 @@ ms.locfileid: "83268150"
 
         このオプションを選択しない場合でも、Desktop Analytics によって、セキュリティ グループのメンバーとしてユーザーが追加されます。 **グローバル管理者**が、ユーザーに **Desktop Analytics 管理者**ロールを手動で割り当てる必要があります。
 
-        Azure Active Directory での管理者ロールのアクセス許可の割り当てと、**Desktop Analytics 管理者**に割り当てられるアクセス許可の詳細については、「[Azure Active Directory での管理者ロールのアクセス許可](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)」を参照してください。  
+        Azure Active Directory での管理者ロールのアクセス許可の割り当てと、**Desktop Analytics 管理者**に割り当てられるアクセス許可の詳細については、「[Azure Active Directory での管理者ロールのアクセス許可](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)」を参照してください。  
 
     - ワークスペースと展開計画を作成して管理するために、Desktop Analytics によって、 **[ワークスペースの所有者]** セキュリティ グループが Azure Active Directory 内に事前構成されます。
 
@@ -82,4 +82,4 @@ Azure portal に、Desktop Analytics の **[ホーム]** ページが表示さ�
 
 次の記事に進み、Configuration Manager を Desktop Analytics に接続します。
 > [!div class="nextstepaction"]  
-> [Configuration Manager を接続する](connect-configmgr.md)  
+> [Configuration Manager を接続する](connect-configmgr.md)

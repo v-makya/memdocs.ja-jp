@@ -10,12 +10,12 @@ ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b01ea9b089da3cfcfc3e8d23e7ad25d27ab2fec7
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: c83d0da07474c8b078ee226d249b73f00562e0f5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81692760"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700165"
 ---
 # <a name="plan-for-the-sms-provider"></a>SMS プロバイダーの計画
 
@@ -165,7 +165,7 @@ SMS プロバイダーをサポートするには、ターゲット サーバー
 
 - **証明書認証**:信頼された PKI 証明機関によって発行された有効な証明書による認証が必要です。 この証明書は Configuration Manager では構成しません。 Configuration Manager では、管理者は PKI を使用して Windows にサインインする必要があります。  
 
-- **Windows Hello for Business 認証**:デバイスに関連付けられた、生体認証か PIN を使用する強力な 2 要素認証による認証が必要です。 詳細については、「[Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)」を参照してください。  
+- **Windows Hello for Business 認証**:デバイスに関連付けられた、生体認証か PIN を使用する強力な 2 要素認証による認証が必要です。 詳細については、「[Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification)」を参照してください。  
 
 ### <a name="exclusions"></a>除外
 

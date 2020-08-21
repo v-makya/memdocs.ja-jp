@@ -10,12 +10,12 @@ ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a32f0a59a0b3ce3ad864fecf61fe7281b8ebbdd2
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 068511c5b3b0c15eb355c484b241a76d9dd512e2
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704420"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700182"
 ---
 # <a name="plan-for-the-site-database-for-configuration-manager"></a>Configuration Manager のサイト データベースの計画
 
@@ -31,7 +31,7 @@ ms.locfileid: "81704420"
 
 -  SQL 可用性グループを使用しない場合は、データベース復旧モデルを SIMPLE に設定する必要があります。  
 
-SQL の回復モードについては、「[復旧モデル (SQL Server)](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server)」をご覧ください。
+SQL の回復モードについては、「[復旧モデル (SQL Server)](/sql/relational-databases/backup-restore/recovery-models-sql-server)」をご覧ください。
 
 次の SQL Server 構成を使用して、サイト データベースをホストできます。  
 
@@ -61,4 +61,4 @@ SQL の回復モードについては、「[復旧モデル (SQL Server)](https:
 -   サイト データベースとサイト サーバーを併置する場合は、クラスター化された SQL Server をサイト データベース サーバーにすることはできません。  
 
 
-通常、サイト システム サーバーは、1 つだけの Configuration Manager サイトのサイト システムの役割をサポートしています。 ただし、SQL Server を実行するクラスター化または非クラスター化サーバーで、SQL Server のさまざまなインスタンスを使用して、さまざまな Configuration Manager サイトのデータベースをホストできます。 この場合は、SQL Server の各インスタンスが、通信用に別々のポートを使用するように構成する必要があります。  
+通常、サイト システム サーバーは、1 つだけの Configuration Manager サイトのサイト システムの役割をサポートしています。 ただし、SQL Server を実行するクラスター化または非クラスター化サーバーで、SQL Server のさまざまなインスタンスを使用して、さまざまな Configuration Manager サイトのデータベースをホストできます。 この場合は、SQL Server の各インスタンスが、通信用に別々のポートを使用するように構成する必要があります。

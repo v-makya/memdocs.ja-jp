@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 09f829bd1695426211ff94381a63b8f23d1b4fe8
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 59f3d1a8a7b217a794440e2f75e0bb09e28634a9
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411016"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700798"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics とは
 
@@ -69,22 +69,22 @@ Desktop Analytics を使用するには、環境が次の前提条件を満た�
 
 ### <a name="technical"></a>技術面
 
-- [グローバル管理者](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions)のアクセス許可を持つアクティブなグローバル Azure サブスクリプション。 [Microsoft アカウント](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts)はサポートされていません。  
+- [グローバル管理者](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions)のアクセス許可を持つアクティブなグローバル Azure サブスクリプション。 [Microsoft アカウント](/windows/security/identity-protection/access-control/microsoft-accounts)はサポートされていません。  
 
     > [!IMPORTANT]
-    > Desktop Analytics は、Windows 診断データを利用する Azure グローバルにホストされる Windows サービスです。 Desktop Analytics は米国政府機関のお客様が利用できる Azure グローバル サービスですが、[US Government Community コンプライアンス (GCC)](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) の属性を満たしていません。 Microsoft の製品およびサービスのコンプライアンス認証の一覧については、[Microsoft セキュリティ センター](https://docs.microsoft.com/microsoft-365/compliance/offering-home?view=o365-worldwide)に関するページをご覧ください。 Desktop Analytics は、GCC High または米国国防総省 (DOD) のお客様はご利用いただけません。 Desktop Analytics ワークスペースをホストするための Azure Government サブスクリプションの使用はサポートされていません。
+    > Desktop Analytics は、Windows 診断データを利用する Azure グローバルにホストされる Windows サービスです。 Desktop Analytics は米国政府機関のお客様が利用できる Azure グローバル サービスですが、[US Government Community コンプライアンス (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) の属性を満たしていません。 Microsoft の製品およびサービスのコンプライアンス認証の一覧については、[Microsoft セキュリティ センター](/microsoft-365/compliance/offering-home?view=o365-worldwide)に関するページをご覧ください。 Desktop Analytics は、GCC High または米国国防総省 (DOD) のお客様はご利用いただけません。 Desktop Analytics ワークスペースをホストするための Azure Government サブスクリプションの使用はサポートされていません。
 
     - **[ワークスペースの設定]** を実行するための**ワークスペースの所有者**アクセス許可、および以下のロール:  
 
-      - [**Desktop Analytics 管理者**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)ロール。
+      - [**Desktop Analytics 管理者**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)ロール。
 
-      - 既存のワークスペースを使用したり、既存のリソース グループに新しいワークスペースを作成したりするための、リソース グループに対する [**Log Analytics 共同作成者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor)および[**ユーザーアクセス管理者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)。
+      - 既存のワークスペースを使用したり、既存のリソース グループに新しいワークスペースを作成したりするための、リソース グループに対する [**Log Analytics 共同作成者**](/azure/role-based-access-control/built-in-roles#log-analytics-contributor)および[**ユーザーアクセス管理者**](/azure/role-based-access-control/built-in-roles#user-access-administrator)。
 
-      - 新しいリソース グループにワークスペースを作成するための、サブスクリプションに対する[**所有者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)、または[**共同作成者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)と[**ユーザー アクセス管理者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)のアクセス許可。  
+      - 新しいリソース グループにワークスペースを作成するための、サブスクリプションに対する[**所有者**](/azure/role-based-access-control/built-in-roles#owner)、または[**共同作成者**](/azure/role-based-access-control/built-in-roles#contributor)と[**ユーザー アクセス管理者**](/azure/role-based-access-control/built-in-roles#user-access-administrator)のアクセス許可。  
 
     - オンボード後にポータルにアクセスするには、以下が必要です。
 
-      - [**Desktop Analytics 管理者**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)ロールと、作成された Log Analytics ワークスペースに対する[**所有者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)または[**共同作成者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)アクセス許可。
+      - [**Desktop Analytics 管理者**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#desktop-analytics-administrator-permissions)ロールと、作成された Log Analytics ワークスペースに対する[**所有者**](/azure/role-based-access-control/built-in-roles#owner)または[**共同作成者**](/azure/role-based-access-control/built-in-roles#contributor)アクセス許可。
 
 - Configuration Manager バージョン 1902 および更新プログラムのロールアップ (4500571) 以降。 詳しくは、[Configuration Manager の更新](connect-configmgr.md#bkmk_hotfix)に関する記事をご覧ください。  
 
@@ -103,7 +103,7 @@ Desktop Analytics を使用するには、環境が次の前提条件を満た�
     - デバイスには、Configuration Manager クライアント バージョン 1902 および更新プログラムのロールアップ (4500571) 以降も必要です。 詳しくは、[Configuration Manager の更新](connect-configmgr.md#bkmk_hotfix)に関する記事をご覧ください。  
 
     > [!Note]  
-    > Desktop Analytics では、Windows 10 の長期サービス チャネル (LTSC) への、またはそこからのアップグレードはサポートされていません。 詳しくは、[サービスとしての Windows の概要](https://docs.microsoft.com/windows/deployment/update/waas-overview#long-term-servicing-channel)に関する記事をご覧ください。
+    > Desktop Analytics では、Windows 10 の長期サービス チャネル (LTSC) への、またはそこからのアップグレードはサポートされていません。 詳しくは、[サービスとしての Windows の概要](/windows/deployment/update/waas-overview#long-term-servicing-channel)に関する記事をご覧ください。
     >
     > Desktop Analytics は、インプレース アップグレードのシナリオを最適にサポートするように設計されています。 32 ビットから 64 ビット アーキテクチャなど、大幅な変更を行う必要がある場合は、イメージング シナリオを使用します。 これらの従来の OS 展開シナリオでは、Desktop Analytics の分析情報が依然として有益ですが、インプレース アップグレード固有のガイダンスは無視してかまいません。 詳しくは、「[Configuration Manager を使用して、エンタープライズ オペレーティング システムを展開するシナリオ](../osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)」をご覧ください。
 
@@ -139,7 +139,7 @@ Desktop Analytics を使用するには、環境が次の前提条件を満た�
   - Windows Virtual Desktop Access E3 または E5  
 
 > [!NOTE]
-> これらのライセンス サブスクリプションのコスト以外に、Azure Log Analytics で Desktop Analytics を使用するための追加料金は発生しません。 Desktop Analytics によって取り込まれるデータ型は、Log Analytics データ インジェストおよびリテンション期間の料金がいずれも無料となります。 このデータはまた、課金対象外のデータ型であるため、Log Analytics の日次データ インジェスト上限の影響下にありません。 詳細については、[Log Analytics の使用状況とコスト](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage)に関するページを参照してください。
+> これらのライセンス サブスクリプションのコスト以外に、Azure Log Analytics で Desktop Analytics を使用するための追加料金は発生しません。 Desktop Analytics によって取り込まれるデータ型は、Log Analytics データ インジェストおよびリテンション期間の料金がいずれも無料となります。 このデータはまた、課金対象外のデータ型であるため、Log Analytics の日次データ インジェスト上限の影響下にありません。 詳細については、[Log Analytics の使用状況とコスト](/azure/azure-monitor/platform/manage-cost-storage)に関するページを参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

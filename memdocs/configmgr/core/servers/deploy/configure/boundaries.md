@@ -10,12 +10,12 @@ ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 41c0d08c5f445cd6d643542cfaa646bc2d89de76
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 13312c20edbda290daaa0d51908adeb7ab4a6860
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128428"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700063"
 ---
 # <a name="define-network-locations-as-boundaries-for-configuration-manager"></a>Configuration Manager の境界としてネットワークの場所を定義する
 
@@ -59,7 +59,7 @@ Active Directory サイトの境界は、純粋な Azure Active Directory (Azure
 > [!TIP]
 > デバイスの現在の Active Directory サイトを確認するには、Windows コマンド `nltest /dsgetsite` を使用します。
 >
-> クライアントがクラウド ドメイン参加済みかどうかを調べるには、Windows コマンド `dsregcmd /status` を使用します。 詳細については、[dsregcmd コマンド - デバイスの状態](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd)に関するページを参照してください。
+> クライアントがクラウド ドメイン参加済みかどうかを調べるには、Windows コマンド `dsregcmd /status` を使用します。 詳細については、[dsregcmd コマンド - デバイスの状態](/azure/active-directory/devices/troubleshoot-device-dsregcmd)に関するページを参照してください。
 
 ### <a name="ipv6-prefix"></a>IPv6 プレフィックス
 

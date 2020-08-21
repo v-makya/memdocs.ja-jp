@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f877de32c9915f91d1e2d7f2d90b9b40ab69df11
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: f6d3f6dbbbb407ee63eb8253cbf3ca740a10479c
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82906569"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699791"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Configuration Manager のプライバシーに関する詳細
 
@@ -47,7 +47,7 @@ Configuration Manager は、サイトの SQL Server データベースからの�
 
 Log Analytics コネクタは、Configuration Manager から Azure クラウド サービスに、コレクションなどのデータを同期します。 Azure サブスクリプション ID と秘密鍵は、管理者が機能を構成するときに Configuration Manager データベースに保管されます。 Azure Active Directory のクライアント シークレットと Azure ワークスペースの共有キーは、オンプレミスの Configuration Manager データベースに保存されます。 Configuration Manager と Azure の間のすべての通信では、HTTPS が使用されます。 無作為に選択された診断と使用状況のデータを除き、コレクションに関する追加情報は Microsoft に提供されません。 
 
-Log Analytics で収集される情報について詳しくは、「[Log Analytics データのセキュリティ](https://docs.microsoft.com/azure/log-analytics/log-analytics-data-security)」をご覧ください。
+Log Analytics で収集される情報について詳しくは、「[Log Analytics データのセキュリティ](/azure/log-analytics/log-analytics-data-security)」をご覧ください。
 
 
 

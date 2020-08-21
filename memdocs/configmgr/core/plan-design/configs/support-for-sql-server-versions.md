@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b30380f4e272050b7224b52d092f39aa8ab5bad4
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: bda64f11d5d2ee9498ce69224ec9a52efc0df902
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383174"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700335"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager のサポートされている SQL Server バージョン
 
@@ -63,9 +63,9 @@ SQL Server のトランザクション レプリケーションは、[データ�
 
 - Configuration Manager によってサポートされている SQL Server のバージョンを使用していること。
 - 使用する SQL Server のバージョンが、Microsoft によって引き続きサポートされていること。
-- SQL Server で、SQL Server の 2 つのバージョン間のレプリケーションをサポートしていること。 詳しくは、[SQL Serverレプリケーションの旧バージョンとの互換性](https://docs.microsoft.com/sql/relational-databases/replication/replication-backward-compatibility)に関する記事をご覧ください。
+- SQL Server で、SQL Server の 2 つのバージョン間のレプリケーションをサポートしていること。 詳しくは、[SQL Serverレプリケーションの旧バージョンとの互換性](/sql/relational-databases/replication/replication-backward-compatibility)に関する記事をご覧ください。
 
-SQL Server 2016 以前では、SQL の各バージョンと Service Pack は、[Microsoft ライフサイクル ポリシー](https://aka.ms/sqllifecycle)に従ってサポートされています。 特定の SQL Server Service Pack のサポートには、基本の Service Pack バージョンへの後方互換性が失われる場合を除き、累積的な更新プログラムが含まれます。 SQL Server 2017 以降では、Service Pack は[最新のサービス モデル](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server)に従うようになるためリリースされません。 SQL Server チームは引き続き、利用可能になった[累積的な更新プログラムを事前にインストールする](https://docs.microsoft.com/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)ことをお勧めします。
+SQL Server 2016 以前では、SQL の各バージョンと Service Pack は、[Microsoft ライフサイクル ポリシー](https://aka.ms/sqllifecycle)に従ってサポートされています。 特定の SQL Server Service Pack のサポートには、基本の Service Pack バージョンへの後方互換性が失われる場合を除き、累積的な更新プログラムが含まれます。 SQL Server 2017 以降では、Service Pack は[最新のサービス モデル](/archive/blogs/sqlreleaseservices/announcing-the-modern-servicing-model-for-sql-server)に従うようになるためリリースされません。 SQL Server チームは引き続き、利用可能になった[累積的な更新プログラムを事前にインストールする](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)ことをお勧めします。
 
 特に指定のない限り、次のバージョンの SQL Server はすべてのアクティブ バージョンの Configuration Manager でサポートされます。 SQL Server の新しいバージョンのサポートが追加されている場合、そのサポートが追加される Configuration Manager のバージョンが示されます。 同様に、サポートが非推奨とされる場合は、Configuration Manager の影響を受けるバージョンの詳細を確認してください。
 
@@ -74,7 +74,7 @@ SQL Server 2016 以前では、SQL の各バージョンと Service Pack は、[
 
 ### <a name="sql-server-2019-standard-enterprise"></a>SQL Server 2019:Standard、Enterprise
 
-Configuration Manager バージョン 1910 以降では、お使いの累積的な更新プログラムのバージョンが SQL のライフサイクルでサポートされている限り、累積的な更新プログラム 5 (CU5) 以降でこのバージョンを使用できます。 CU5 は、SQL Server 2019 の最小要件です。これによって[スカラー UDF のインライン化](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining)に関する問題が解決されるためです。
+Configuration Manager バージョン 1910 以降では、お使いの累積的な更新プログラムのバージョンが SQL のライフサイクルでサポートされている限り、累積的な更新プログラム 5 (CU5) 以降でこのバージョンを使用できます。 CU5 は、SQL Server 2019 の最小要件です。これによって[スカラー UDF のインライン化](/sql/relational-databases/user-defined-functions/scalar-udf-inlining)に関する問題が解決されるためです。
 
 このバージョンの SQL は、次のサイトで使用できます。
 
@@ -85,13 +85,13 @@ Configuration Manager バージョン 1910 以降では、お使いの累積的�
 <!--
 #### Known issue with SQL Server 2019
 
-There's a known issue<!--6436234 with the new [scalar UDF inlining](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
+There's a known issue<!--6436234 with the new [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining) feature in SQL 2019. To work around this issue and disable UDF lining, run the following script on the SQL 2019 server:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF  
 ```
 
-While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](https://docs.microsoft.com/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
+While not always necessary, you may need to restart the SQL server after you run this script. For more information, see [Disabling Scalar UDF Inlining without changing the compatibility level](/sql/relational-databases/user-defined-functions/scalar-udf-inlining?view=sql-server-ver15#disabling-scalar-udf-inlining-without-changing-the-compatibility-level).
 
 You can safely disable this SQL feature for the site database server because Configuration Manager doesn't use it.
 
@@ -187,7 +187,7 @@ Configuration Manager は、中国の GB18030 規格についてこの照合順�
 
 ### <a name="database-compatibility-level"></a>データベース互換性レベル
 
-Configuration Manager では、サイト データベースの互換性レベルがご利用の Configuration Manager バージョンでサポートされている最小の SQL Server バージョン以上である必要があります。 たとえば、バージョン 1702 以降では、[データベースの互換性レベル](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database)が 110 以上である必要があります。 <!-- SMS.506266-->
+Configuration Manager では、サイト データベースの互換性レベルがご利用の Configuration Manager バージョンでサポートされている最小の SQL Server バージョン以上である必要があります。 たとえば、バージョン 1702 以降では、[データベースの互換性レベル](/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database)が 110 以上である必要があります。 <!-- SMS.506266-->
 
 ### <a name="sql-server-features"></a>SQL Server の機能
 
@@ -205,7 +205,7 @@ Configuration Manager は、データベースへの接続を検証するため�
 
 ### <a name="sql-server-memory"></a>SQL Server のメモリ
 
-SQL Server Management Studio を使用して SQL Server のメモリを予約します。 **[サーバー メモリ オプション]** の下の **[最小サーバー メモリ]** を設定します。 この設定を構成する方法について詳しくは、[SQL Server メモリに関するサーバー構成オプション](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options)に関するページをご覧ください。  
+SQL Server Management Studio を使用して SQL Server のメモリを予約します。 **[サーバー メモリ オプション]** の下の **[最小サーバー メモリ]** を設定します。 この設定を構成する方法について詳しくは、[SQL Server メモリに関するサーバー構成オプション](/sql/database-engine/configure-windows/server-memory-server-configuration-options)に関するページをご覧ください。  
 
 - **データベース サーバーをサイト サーバーと同じコンピューターにインストールする場合**: SQL Server 用のメモリをアドレス指定可能なシステム メモリの 50% から 80% に制限します。  
 
@@ -219,11 +219,11 @@ SQL Server Management Studio を使用して SQL Server のメモリを予約し
 
 ### <a name="sql-nested-triggers"></a>SQL の入れ子になったトリガー
 
-SQL の入れ子になったトリガーを有効にする必要があります。 詳細については、「[nested triggers サーバー構成オプションの構成](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option)」をご覧ください。
+SQL の入れ子になったトリガーを有効にする必要があります。 詳細については、「[nested triggers サーバー構成オプションの構成](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option)」をご覧ください。
 
 ### <a name="sql-server-clr-integration"></a>SQL Server の CLR 統合
 
-サイト データベースには、SQL Server 共通言語ランタイム (CLR) を有効にする必要があります。 このオプションは、Configuration Manager のインストール時に自動的に有効になります。 CLR の詳細については、「[SQL Server の CLR 統合の概要](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)」をご覧ください。  
+サイト データベースには、SQL Server 共通言語ランタイム (CLR) を有効にする必要があります。 このオプションは、Configuration Manager のインストール時に自動的に有効になります。 CLR の詳細については、「[SQL Server の CLR 統合の概要](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)」をご覧ください。  
 
 ### <a name="sql-server-service-broker-ssb"></a>SQL Server Service Broker (SSB)
 
@@ -231,7 +231,7 @@ SQL Server Service Broker は、サイト間レプリケーションと単一の
 
 ### <a name="trustworthy-setting"></a>TRUSTWORTHY 設定
 
-Configuration Manager により、SQL [TRUSTWORTHY データベース プロパティ](https://docs.microsoft.com/sql/relational-databases/security/trustworthy-database-property)が自動的に有効になります。 このプロパティは、Configuration Manager が**オン**になっている場合に必要です。
+Configuration Manager により、SQL [TRUSTWORTHY データベース プロパティ](/sql/relational-databases/security/trustworthy-database-property)が自動的に有効になります。 このプロパティは、Configuration Manager が**オン**になっている場合に必要です。
 
 ## <a name="optional-configurations-for-sql-server"></a><a name="bkmk_optional"></a> SQL Server のオプション構成
 
@@ -255,7 +255,7 @@ SQL Server を実行するコンピューターが、ローカル システム �
 
 サイト データベースの SPN について詳しくは、「[サイト データベース サーバーの SPN の管理](../../servers/manage/modify-your-infrastructure.md#bkmk_SPN)」をご覧ください。  
 
-SQL Server サービスで使用されるアカウントを変更する方法について詳しくは、「[SCM サービス - サービス開始アカウントを変更する](https://docs.microsoft.com/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account)」をご覧ください。  
+SQL Server サービスで使用されるアカウントを変更する方法について詳しくは、「[SCM サービス - サービス開始アカウントを変更する](/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account)」をご覧ください。  
 
 ### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services
 
@@ -290,7 +290,7 @@ SQL Server を実行しているコンピューターが複数のサイトから
 
 SQL Server を実行しているコンピューターのファイアウォールが有効に設定されている場合は、展開で使用されているポートと、SQL Server と通信するコンピューター間のネットワーク上のあらゆる場所にあるポートを許可するように構成してください。  
 
-特定のポートを使用する SQL Server を構成する方法の例については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port)」をご覧ください。  
+特定のポートを使用する SQL Server を構成する方法の例については、「[特定の TCP ポートで受信待ちするようにサーバーを構成する](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port)」をご覧ください。  
 
 ## <a name="upgrade-options-for-sql-server"></a>SQL Server のアップグレード オプション
 

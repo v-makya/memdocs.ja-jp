@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: db70eab54f319197f267173fe857d0fb147a7eba
-ms.sourcegitcommit: 7a099ff53668f50b37adab97ecd7ba98c5324676
+ms.openlocfilehash: ecd8b83224cbcbfe367a3b1db160d680952a4407
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746563"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700839"
 ---
 # <a name="monitor-connection-health"></a>接続の正常性の監視
 
@@ -334,7 +334,7 @@ Census は、デバイスをインベントリする Windows コンポーネン�
 <!--1004-->
 このチェックが成功しなかった場合、ユーザーはデバイス上で、低レベルの Windows 診断データを選択しています。 また、グループ ポリシー オブジェクトの競合が原因である場合もあります。 詳細については、「[Windows の設定](enroll-devices.md#windows-settings)」をご覧ください。
 
-お客様のビジネス要件によっては、グループ ポリシーを使用してユーザーの選択を無効にすることができます。 **[Configure telemetry opt-in setting user interface]\(テレメトリのオプトイン設定のユーザー インターフェイスを構成する\)** 設定を使用します。 詳しくは、「[組織内の Windows 診断データの構成](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management)」をご覧ください。
+お客様のビジネス要件によっては、グループ ポリシーを使用してユーザーの選択を無効にすることができます。 **[Configure telemetry opt-in setting user interface]\(テレメトリのオプトイン設定のユーザー インターフェイスを構成する\)** 設定を使用します。 詳しくは、「[組織内の Windows 診断データの構成](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management)」をご覧ください。
 
 ### <a name="check-user-proxy"></a>ユーザーのプロキシを確認します
 
@@ -455,7 +455,7 @@ Desktop Analytics では、より信頼性の高いデバイス ID のために�
 
 **Microsoft アカウント サインイン アシスタント** サービスが無効になっていないことを確認します。 スタートアップの種類は、 **[手動 (トリガー開始)]** にする必要があります。
 
-エンド ユーザーの Microsoft アカウント アクセスを無効にするには、このエンドポイントをブロックするのではなく、ポリシー設定を使用します。 詳しくは、「[エンタープライズでの Microsoft アカウント](https://docs.microsoft.com/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)」をご覧ください。
+エンド ユーザーの Microsoft アカウント アクセスを無効にするには、このエンドポイントをブロックするのではなく、ポリシー設定を使用します。 詳しくは、「[エンタープライズでの Microsoft アカウント](/windows/security/identity-protection/access-control/microsoft-accounts#block-all-consumer-microsoft-account-user-authentication)」をご覧ください。
 
 ### <a name="windows-diagnostic-data-opt-in"></a>Windows 診断データのオプトイン
 

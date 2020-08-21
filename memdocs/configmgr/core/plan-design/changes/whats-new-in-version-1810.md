@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a0d7f561a324d20f503b8fee3e8a869774c70d89
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128969"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699842"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1810 の新機能
 
@@ -236,7 +236,7 @@ PowerShell プロファイルは、PowerShell の開始時に実行されるス�
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>既存デバイス向けの Windows Autopilot のタスク シーケンスのサポート
 
 <!--3607717, fka 1358333-->
-[既存デバイス向けの Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) を、Windows 10 バージョン 1809 以降で利用できるようになりました。 この新しい機能を使用すると、単一のネイティブな Configuration Manager タスク シーケンスを使用して、[Windows Autopilot ユーザー駆動モード](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)用に Windows 7 デバイスを再イメージ化およびプロビジョニングできます。
+[既存デバイス向けの Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) を、Windows 10 バージョン 1809 以降で利用できるようになりました。 この新しい機能を使用すると、単一のネイティブな Configuration Manager タスク シーケンスを使用して、[Windows Autopilot ユーザー駆動モード](/windows/deployment/windows-autopilot/user-driven)用に Windows 7 デバイスを再イメージ化およびプロビジョニングできます。
 
 詳細については、「[Windows Autopilot for existing devices](../../../../autopilot/existing-devices.md)」 (既存のデバイス向け Windows Autopilot) を参照してください。
 
@@ -287,7 +287,7 @@ Windows 10 サービス プランに追加のフィルターが追加されま�
 <!--1358146-->
 ソフトウェア更新プログラムの段階的な展開を作成します。 段階的な展開を使用すると、カスタマイズ可能な条件およびグループに基づいて、調整およびシーケンス化されたソフトウェアの展開をまとめることができます。
 
-詳しくは、「[段階的展開の作成](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)」をご覧ください。
+詳しくは、「[段階的展開の作成](../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/mem/configmgr/sum/toc.json&bc=/mem/configmgr/sum/breadcrumb/toc.json)」をご覧ください。
 
 
 ### <a name="improvement-to-maintenance-windows-for-software-updates"></a>ソフトウェア更新プログラムのメンテナンス期間の改善
@@ -427,7 +427,7 @@ SMS プロバイダーで、WMI over HTTPS に対する読み取り専用の API
 
 このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Summary of changes in Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4482169)」(Configuration Manager Current Branch バージョン 1810 での変更の概要) をご覧ください。
 
-Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 1810 のリリース ノート](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps)を参照してください。
+Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 1810 のリリース ノート](/powershell/sccm/1810-release-notes?view=sccm-ps)を参照してください。
 
 2019 年 3 月 25 日以降、コンソールで次の更新プログラムのロールアップ (4488598) を利用できるようになりました: [Configuration Manager Current Branch バージョン 1810 の更新プログラムのロールアップ 2](https://support.microsoft.com/help/4488598)。 これは、以前の更新プログラムのロールアップ KB 4486457 に代わるものです。
 

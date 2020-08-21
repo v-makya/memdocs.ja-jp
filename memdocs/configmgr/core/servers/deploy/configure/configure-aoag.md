@@ -10,12 +10,12 @@ ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 12753b3800b3b304bd13c992b57d22bf9e1bfad8
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2e85b36d0caeb6ceb99f56220e271774dc0db0f6
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81704800"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699247"
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>Configuration Manager の SQL Server Always On 可用性グループを構成する
 
@@ -45,7 +45,7 @@ Configuration Manager で使用する可用性グループを構成して管理�
     ALTER DATABASE [CM_xxx] SET RECOVERY FULL;
     ```
 
-    可用性グループでは、FULL バックアップ モデルのみがサポートされます。 詳細については、[データベースの復旧モデルの表示または変更](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server)に関するページを参照してください。
+    可用性グループでは、FULL バックアップ モデルのみがサポートされます。 詳細については、[データベースの復旧モデルの表示または変更](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server)に関するページを参照してください。
 
 3. SQL Server を使用してサイト データベースの完全バックアップを作成します。 次のいずれかのオプションを選択します。
 
@@ -55,13 +55,13 @@ Configuration Manager で使用する可用性グループを構成して管理�
 
     詳細については、SQL Server のドキュメントの次の記事を参照してください。
 
-    - [データベースの完全バックアップの作成](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
-    - [SSMS を使用してデータベース バックアップを復元する](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
+    - [データベースの完全バックアップの作成](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)
+    - [SSMS を使用してデータベース バックアップを復元する](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
 
     > [!NOTE]  
     > 既存のレプリカで可用性グループからスタンドアロンに移行する予定の場合は、まず、可用性グループからデータベースを削除します。
 
-4. グループの最初のプライマリ レプリカをホストするサーバーで、[新しい可用性グループ ウィザード](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio)を使用して可用性グループを作成します。 ウィザード:
+4. グループの最初のプライマリ レプリカをホストするサーバーで、[新しい可用性グループ ウィザード](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio)を使用して可用性グループを作成します。 ウィザード:
 
     - **[データベースの選択]** ページで、Configuration Manager サイトのデータベースを選択します。  
 
@@ -82,7 +82,7 @@ Configuration Manager で使用する可用性グループを構成して管理�
 
     2. [検証スクリプト](sql-server-alwayson-for-a-highly-available-site-database.md#prerequisites)を実行し、各レプリカのサイト データベースが正しく構成されていることを確認します。
 
-    3. セカンダリ レプリカで構成を設定する必要がある場合は、続行する前に、プライマリ レプリカをセカンダリ レプリカに手動でフェールオーバーします。 構成できるのはプライマリ レプリカのデータベースだけです。 詳細については、SQL Server ドキュメントの「[可用性グループの計画的な手動フェールオーバーの実行](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server)」を参照してください。
+    3. セカンダリ レプリカで構成を設定する必要がある場合は、続行する前に、プライマリ レプリカをセカンダリ レプリカに手動でフェールオーバーします。 構成できるのはプライマリ レプリカのデータベースだけです。 詳細については、SQL Server ドキュメントの「[可用性グループの計画的な手動フェールオーバーの実行](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server)」を参照してください。
 
 6. すべてのレプリカが要件を満たすようになったら、Configuration Manager で可用性グループを使用する準備は完了です。
 
@@ -121,7 +121,7 @@ Configuration Manager で使用する可用性グループを構成して管理�
 
 1. SQL Server の手順を使ってセカンダリ レプリカを追加します。
 
-    1. [Always On 可用性グループにセカンダリ レプリカを追加します](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server)。
+    1. [Always On 可用性グループにセカンダリ レプリカを追加します](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server)。
 
     1. SQL Management Studio でステータスを監視します。 可用性グループが完全な正常性に戻るまで待ちます。
 
@@ -137,7 +137,7 @@ Configuration Manager セットアップでは、SQL データベースの移動
 
 バージョン 1906 以降では、Configuration Manager セットアップを使用して、レプリカ メンバーを削除することができます。 同じプロセスを使用して、[新しい同期レプリカ メンバーを追加](#bkmk_sync-add)します。
 
-バージョン 1902 以前でこのプロセスを手動で実行する方法の詳細については、[可用性グループからのセカンダリ レプリカの削除](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server)に関するページを参照してください。  
+バージョン 1902 以前でこのプロセスを手動で実行する方法の詳細については、[可用性グループからのセカンダリ レプリカの削除](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server)に関するページを参照してください。  
 
 
 ## <a name="asynchronous-replicas"></a><a name="bkmk_async"></a> 非同期レプリカ
@@ -146,7 +146,7 @@ Configuration Manager で使用する可用性グループでは、非同期レ�
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>非同期コミット レプリカを構成する
 
-詳細については、[可用性グループへのセカンダリ レプリカの追加](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server)に関するページを参照してください。
+詳細については、[可用性グループへのセカンダリ レプリカの追加](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server)に関するページを参照してください。
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>非同期レプリカを使用してサイトを回復する
 
@@ -163,14 +163,14 @@ Configuration Manager で使用する可用性グループでは、非同期レ�
 
 1. `preinst.exe /stopsite` コマンドを使用して、Configuration Manager サイトを停止します。 詳細については、[階層のメンテナンス ツール](../../manage/hierarchy-maintenance-tool-preinst.exe.md)に関するページを参照してください。
 
-2. SQL Server を使用して、プライマリ レプリカからサイト データベースの完全バックアップを作成します。 詳細については、[データベースの完全バックアップの作成](https://docs.microsoft.com/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)に関するページを参照してください。
+2. SQL Server を使用して、プライマリ レプリカからサイト データベースの完全バックアップを作成します。 詳細については、[データベースの完全バックアップの作成](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)に関するページを参照してください。
 
-3. SQL Server を使用して、サイト データベースをホストするサーバーにサイト データベースのバックアップを復元します。 詳細については、「[SSMS を使用してデータベース バックアップを復元する](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)」を参照してください。
+3. SQL Server を使用して、サイト データベースをホストするサーバーにサイト データベースのバックアップを復元します。 詳細については、「[SSMS を使用してデータベース バックアップを復元する](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)」を参照してください。
 
     > [!Note]  
     > 可用性グループのプライマリ レプリカ サーバーでサイト データベースの単一インスタンスをホストする場合は、この手順をスキップします。
 
-4. サイト データベースをホストするサーバーで、サイト データベースのバックアップ モデルを **FULL** から **SIMPLE** に変更します。 詳細については、[データベースの復旧モデルの表示または変更](https://docs.microsoft.com/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server)に関するページを参照してください。
+4. サイト データベースをホストするサーバーで、サイト データベースのバックアップ モデルを **FULL** から **SIMPLE** に変更します。 詳細については、[データベースの復旧モデルの表示または変更](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server)に関するページを参照してください。
 
 5. Configuration Manager サイトのインストール フォルダーから **Configuration Manager セットアップ** (`\BIN\X64\setup.exe`) を実行します。
 
@@ -188,4 +188,4 @@ Configuration Manager で使用する可用性グループでは、非同期レ�
 
 9. 新しいデータベースの場所の情報を入力した後、通常のプロセスと構成でセットアップを完了します。 セットアップが完了すると、サイトが再起動され、新しいデータベースの場所の使用が開始されます。
 
-10. 可用性グループのメンバーだったサーバーをクリーンアップする場合は、[可用性グループの削除](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server)に関するページのガイダンスに従ってください。
+10. 可用性グループのメンバーだったサーバーをクリーンアップする場合は、[可用性グループの削除](/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server)に関するページのガイダンスに従ってください。

@@ -10,12 +10,12 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b012dd1e7da0d6a3efb4d1cc33b8a79ef319bc0a
-ms.sourcegitcommit: fddbb6c20cf7e19944944d4f81788adf249c963f
+ms.openlocfilehash: 262234edbd6fac6973653ca6cac62853fde23b2d
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83268999"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700114"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-configuration-manager"></a>クライアントが Configuration Manager のサイト リソースやサービスを検索する方法を理解する
 
@@ -62,7 +62,7 @@ Configuration Manager クライアントは、そのクライアントが使用�
 
 優先管理ポイントを使用できます。 優先管理ポイントは、クライアントの割り当て済みサイトの管理ポイントであり、クライアントがサイト システム サーバーを見つけるために使用している境界グループに関連付けられています。 優先管理ポイントは、配布ポイントや状態移行ポイントを境界グループに関連付けるのと同じような方法で、境界グループにサイト システム サーバーとして関連付けられています。 階層の優先管理ポイントを有効にすると、クライアントは、割り当て済みサイトの管理ポイントを使用するときに、割り当て済みサイトの他の管理ポイントを使用する前に優先管理ポイントを使用しようとします。  
 
-[管理ポイントのアフィニティ](https://docs.microsoft.com/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3)に関するブログの情報を使用して、管理ポイントのアフィニティを構成することもできます。 管理ポイントのアフィニティは、割り当て済み管理ポイントの既定の動作を上書きし、クライアントが特定の 1 つ以上の管理ポイントを使用できるようにします。  
+[管理ポイントのアフィニティ](/archive/blogs/jchalfant/management-point-affinity-added-in-configmgr-2012-r2-cu3)に関するブログの情報を使用して、管理ポイントのアフィニティを構成することもできます。 管理ポイントのアフィニティは、割り当て済み管理ポイントの既定の動作を上書きし、クライアントが特定の 1 つ以上の管理ポイントを使用できるようにします。  
 
 クライアントは、管理ポイントへの接続が必要になるたびに、Windows Management Instrumentation (WMI) にローカルに格納している管理ポイント リストを確認します。 クライアントは、インストール時に最初の管理ポイント リストを作成します。 その後、クライアントは階層内の各管理ポイントの詳細でリストを定期的に更新します。  
 
@@ -244,4 +244,4 @@ DNS に発行するイントラネットの管理ポイントごとに、上記�
 
 既定では、プライマリ サイトで、HTTP 用に構成されているサイトの最初の管理ポイントと HTTPS 用に構成されている最初の管理ポイントを WINS に発行します。  
 
-クライアントが WINS で HTTP 管理ポイントを探さないようにする場合は、クライアントの CCMSetup.exe の Client.msi のプロパティで **SMSDIRECTORYLOOKUP=NOWINS**と指定します。  
+クライアントが WINS で HTTP 管理ポイントを探さないようにする場合は、クライアントの CCMSetup.exe の Client.msi のプロパティで **SMSDIRECTORYLOOKUP=NOWINS**と指定します。

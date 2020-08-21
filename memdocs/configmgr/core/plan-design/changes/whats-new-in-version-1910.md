@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 1567531ed83586f47ba2f79372e0b7962c1341dc
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 6406a208de448e40e1d686440f41610266cde042
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128918"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700301"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1910 の新機能
 
@@ -42,10 +42,10 @@ Microsoft Endpoint Manager は、すべてのデバイスを管理するため�
 
 次の Microsoft 管理ソリューションはすべて Microsoft Endpoint Manager ブランドの一部になりました。
 
-- [Configuration Manager](https://docs.microsoft.com/configmgr)
-- [Intune](https://docs.microsoft.com/intune)
+- [Configuration Manager](/configmgr)
+- [Intune](/intune)
 - [Desktop Analytics](../../../desktop-analytics/overview.md)
-- [Autopilot](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)
+- [Autopilot](/intune/enrollment/enrollment-autopilot)
 - [デバイス管理の管理コンソール](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/microsoft-intune-rolls-out-an-improved-streamlined-endpoint/ba-p/937760)に含まれるその他の機能
 
 詳細については、Microsoft 365 担当の Microsoft コーポレート バイス プレジデントである Brad Anderson による次の投稿を参照してください。
@@ -346,7 +346,7 @@ Configuration Manager コンソールの **[クライアント診断]** には�
 
 ## <a name="other-updates"></a>その他の更新内容
 
-Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 1910 のリリース ノート](https://docs.microsoft.com/powershell/sccm/1910-release-notes?view=sccm-ps)を参照してください。
+Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 1910 のリリース ノート](/powershell/sccm/1910-release-notes?view=sccm-ps)を参照してください。
 
 管理サービスの REST API の変更に関する詳細については、[管理サービスのリリース ノート](../../../develop/adminservice/release-notes.md#bkmk_1910)を参照してください。
 

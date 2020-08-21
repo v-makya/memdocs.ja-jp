@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 18e703691696a2cfc02a5b9715fb6062360229e2
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: 63aba639eea221c3a13f7ebeabaa1b96a8439a72
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353464"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700771"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Ready for Modern Desktop の提供終了に関する FAQ
 
@@ -49,10 +49,10 @@ Desktop Analytics を使うと、商用デバイスで見つかった資産の�
 
 *Ready for Modern Desktop* ディレクトリには、Windows 10 および Office 365 ProPlus を実行している商用デバイスでサポートされ、使用されているソフトウェア ソリューションが掲載されていました。 このディレクトリは、Windows 10 および Office 365 の最新バージョンの展開を検討している IT 管理者を支援するものです。
 
-IT 管理者からは、これらの分析情報を既に使用しているツールと統合して展開計画を立てたいというフィードバックをいただいています。 Windows 10 と Office 365 ProPlus のアップグレード プロジェクトを計画および管理するには、Configuration Manager で [Desktop Analytics](https://aka.ms/dadocs) と [Office 365 ProPlus の準備機能](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)を使用します。 
+IT 管理者からは、これらの分析情報を既に使用しているツールと統合して展開計画を立てたいというフィードバックをいただいています。 Windows 10 と Office 365 ProPlus のアップグレード プロジェクトを計画および管理するには、Configuration Manager で [Desktop Analytics](https://aka.ms/dadocs) と [Office 365 ProPlus の準備機能](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)を使用します。 
 
 > [!Note]
-> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](https://docs.microsoft.com/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
+> 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
 
 ### <a name="what-is-desktop-analytics"></a>Desktop Analytics とは
 
@@ -114,12 +114,12 @@ Microsoft では、ソフトウェア ベンダーからのサポートに関す
 
 開発者センターを介して、正常性およびメトリック レポートで御社のソリューションのパフォーマンスを評価してください。 
 
-- [Windows ストア](https://docs.microsoft.com/windows/uwp/publish/health-report)
-- [デスクトップ](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program)
-- [Office アドイン](https://docs.microsoft.com/office/dev/store/update-unpublish-and-view-metrics) 
+- [Windows ストア](/windows/uwp/publish/health-report)
+- [デスクトップ](/windows/desktop/appxpkg/windows-desktop-application-program)
+- [Office アドイン](/office/dev/store/update-unpublish-and-view-metrics) 
 
 ### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-office-365-proplus"></a>Windows 10 と Office 365 ProPlus 用の互換性のある資産を開発するにはどうすればよいですか?
 
 現時点で御社のデスクトップ アプリケーションに互換性があることを確認し、Windows 10 との互換性を今後も維持してください。 詳細については、「[アプリケーションの互換性](https://developer.microsoft.com/windows/desktop/app-compatibility)」を参照してください。
 
-Office 365 ProPlus 用のソリューションを開発している場合は、「[Office での COM、VSTO、および VBA アドインの開発に関するベストプラクティス](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)」を参照してください。
+Office 365 ProPlus 用のソリューションを開発している場合は、「[Office での COM、VSTO、および VBA アドインの開発に関するベストプラクティス](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)」を参照してください。

@@ -10,12 +10,12 @@ ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e8e65571a3902661176ca3840690c159faef416
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 4f9266668a488b6331857bf860d874a48161fcd0
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688590"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700216"
 ---
 # <a name="support-for-windows-features-and-networks-in-configuration-manager"></a>Configuration Manager での Windows 機能とネットワークのサポート
 
@@ -49,11 +49,11 @@ BranchCache の要件を満たしている場合、リモートの場所にあ�
 - BranchCache に対応したクライアントが、BranchCache 分散キャッシュ モード用に構成されている必要があります。  
 - BranchCache をサポートするには、BITS クライアント設定に対する OS 設定を有効にする必要があります。  
 
-詳細については、Windows ドキュメントの[BranchCache のクライアントの構成](https://docs.microsoft.com/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache)に関するページを参照してください。
+詳細については、Windows ドキュメントの[BranchCache のクライアントの構成](/windows/deployment/update/waas-branchcache#configure-clients-for-branchcache)に関するページを参照してください。
 
 Configuration Manager がサポートされているすべてのバージョンの Windows では、BranchCache が既定でサポートされています。
 
-BranchCache の詳細については、Windows Server ドキュメントの [Windows の BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) に関するページを参照してください。  
+BranchCache の詳細については、Windows Server ドキュメントの [Windows の BranchCache](/windows-server/networking/branchcache/branchcache) に関するページを参照してください。  
 
 ## <a name="computers-in-workgroups"></a><a name="bkmk_Workgroups"></a> ワークグループ内のコンピューター  
 
@@ -75,7 +75,7 @@ Configuration Manager では、Windows Server 2012 以降の配布ポイント�
 
 - [Configuration Manager 配布ポイントと Windows Server 2012 のデータ重複除去](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-distribution-points-and-windows-server/ba-p/273385) (Configuration Manager チームのブログ)
 
-- [データ重複除去の概要](https://docs.microsoft.com/windows-server/storage/data-deduplication/overview) (Windows Server のドキュメント)
+- [データ重複除去の概要](/windows-server/storage/data-deduplication/overview) (Windows Server のドキュメント)
 
 ## <a name="directaccess"></a><a name="bkmk_DA"></a> DirectAccess  
 
@@ -129,4 +129,4 @@ System Center Configuration Manager でディレクトリとファイルのア�
 
      さらに、構成マネージャー クライアントのキャッシュは、SIS が有効なボリュームではサポートされていません。  
 
-- **リムーバブル ディスク ドライブ**:Configuration Manager では、リムーバブル ディスク ドライブへの Configuration Manager サイト システムまたはクライアントのインストールはサポートされていません。  
+- **リムーバブル ディスク ドライブ**:Configuration Manager では、リムーバブル ディスク ドライブへの Configuration Manager サイト システムまたはクライアントのインストールはサポートされていません。

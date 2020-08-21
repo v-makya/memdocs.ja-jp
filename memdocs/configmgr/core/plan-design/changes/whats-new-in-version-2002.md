@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66fcd9b7d4d25decb3aeef7cf38b469363eeb1fa
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128901"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88700567"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 2002 の新機能
 
@@ -426,7 +426,7 @@ Microsoft Azure へのオンプレミス サイトの拡張と移行を行うツ
 - [CMPivot スタンドアロン](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
 - [共同管理デバイス向けのクライアント アプリ](../../../comanage/workloads.md#client-apps) (以前の名称は *共同管理デバイス向けのモバイル アプリ*でした)<!-- 1357892/3600959 -->
 
-Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 2002 のリリース ノート](https://docs.microsoft.com/powershell/sccm/2002-release-notes?view=sccm-ps)を参照してください。
+Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 2002 のリリース ノート](/powershell/sccm/2002-release-notes?view=sccm-ps)を参照してください。
 
 管理サービスの REST API の変更に関する詳細については、[管理サービスのリリース ノート](../../../develop/adminservice/release-notes.md#bkmk_2002)を参照してください。
 
