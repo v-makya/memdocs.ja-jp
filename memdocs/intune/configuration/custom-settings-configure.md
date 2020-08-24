@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune でカスタム デバイス設定を使用する - Azure | Microsoft Docs
-description: Microsoft Intune を使用し、Windows Phone、Windows 8.1、Windows 10 以降、Android デバイス管理者、Android Enterprise、macOS、iOS/iPadOS デバイスのカスタム設定を使用するプロファイルを追加または作成します。
+description: Microsoft Intune を使用して Windows 8.1、Windows 10 以降、Android デバイス管理者、Android Enterprise、macOS、iOS/iPadOS のデバイスに対してカスタム設定を使用するためのプロファイルを追加または作成します。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ddbb82d3cd5c86ff32917013edd4f16b303678fe
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: aaa0deaf2c6332965f40ae02a47b7541cf2f9e8e
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990100"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146407"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Intune でカスタム設定を持つプロファイルを作成する
 
@@ -45,7 +45,6 @@ Microsoft Intune には、デバイスのさまざまな機能を制御する多
         - **iOS/iPadOS**
         - **macOS**
         - **Windows 10 以降**
-        - **Windows Phone 8.1**
 
     - **[プロファイル]** : **[カスタム]** を選択します。
 
@@ -65,7 +64,6 @@ Microsoft Intune には、デバイスのさまざまな機能を制御する多
     - [macOS](custom-settings-macos.md)
     - [Windows 10](custom-settings-windows-10.md)
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
-    - [Windows Phone 8.1](custom-settings-windows-phone-8-1.md)
 
 8. **[次へ]** を選択します。
 9. **スコープ タグ** (オプション) で、`US-NC IT Team` や `JohnGlenn_ITDepartment` など、特定の IT グループにプロファイルをフィルター処理するためのタグを割り当てます。 スコープ タグの詳細については、[分散 IT に RBAC とスコープのタグを使用する](../fundamentals/scope-tags.md)に関するページを参照してください。

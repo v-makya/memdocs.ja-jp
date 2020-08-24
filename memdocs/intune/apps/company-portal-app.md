@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/04/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33977676b4c144573965477154a7939f6061280a
-ms.sourcegitcommit: 41b2b50d5870dc127a8848a6657d56112f92515a
+ms.openlocfilehash: a82fbfa9e494828450729e29467580c29a590282
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87758348"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179555"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune ポータル サイト アプリ、ポータル サイト Web サイト、および Intune アプリをカスタマイズする方法
 
@@ -232,18 +232,16 @@ Windows ポータル サイト アプリで使用できるキーボード ショ
 
 一部のプラットフォームおよび構成では、セルフサービス デバイス アクションは許可されていません。 次の表では、セルフサービス アクションについての詳細を示します。
 
-| 操作 | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
+| 操作 | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | macOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | インベントリから削除 | 利用可能<sup>(1)</sup> | 利用可能<sup>(9)</sup> | 利用可能 | 利用可能<sup>(7)</sup> |
 | ワイプ | 利用可能 | 利用可能<sup>(5)</sup><sup>(9)</sup> | N/A | 利用可能<sup>(7)</sup> |
 | 名前の変更 <sup>(4)</sup> | 利用可能 | 利用可能 | 利用可能 | 利用可能 |
 | 同期 | 利用可能 | 利用可能 | 利用可能 | 利用可能 |
-| リモート ロック | Windows Phone のみ | 利用可能 | 利用可能 | 利用可能 |
-| パスコードのリセット | Windows Phone のみ | 使用可能<sup>(8)</sup> | N/A | 利用可能<sup>(6)</sup> |
-| キー回復 | NA | N/A | 利用可能<sup>(2)</sup> | N/A |
+| キー回復 | NA | NA | 利用可能<sup>(2)</sup> | N/A |
 
 <sup>(1)</sup> Azure AD に参加している Windows デバイスでは、**インベントリからの削除**は常にブロックされます。<br>
-<sup>(2)</sup> MacOS の**キー回復**は、Web ポータルでのみ使用できます。<br>
+<sup>(2)</sup> macOS の**キー回復**は、Web ポータルでのみ使用できます。<br>
 <sup>(3)</sup> デバイス登録マネージャーの登録を使用している場合は、すべてのリモート アクションが無効になります。<br>
 <sup>(4)</sup>**名前の変更**では、ポータル サイト アプリまたは Web ポータル内のデバイス名が変更されるだけで、デバイス上では変更されません。<br>
 <sup>(5)</sup>**ワイプ**は、ユーザーが登録した iOS/iPadOS デバイス上では利用できません。<br>

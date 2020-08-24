@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/27/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: d120ee0f55651ab1661e426e5889aaf8a4c7e670
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 7088bfd5b27d986e12a175de1bdea0bf060c3ad3
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262865"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252522"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Windows Hello for Business と Microsoft Intune の統合  
 
@@ -45,17 +45,15 @@ Intune と Hello for Business の統合には 2 通りの方法があります�
 この記事の残りの部分では、組織全体を対象とする既定の Windows Hello for Business ポリシーの作成に焦点を当てます。
 
 > [!IMPORTANT]
-> Anniversary Update バージョンより前の Windows 10 のデスクトップおよびモバイルでは、リソースの認証に使用可能な 2 つの異なる PIN を設定することができました。
+> Anniversary Update より前では、リソースの認証に使用可能な 2 つの異なる PIN を設定することができました。
 >
 > - **デバイス PIN**: デバイスのロック解除とクラウド リソースへの接続に使用できました。
 > - **勤務先 PIN**: ユーザーの個人用デバイス (BYOD) 上の Azure AD リソースへのアクセスに使用されていました。
-> 
+>
 > Anniversary Update では、これら 2 つの PIN が 1 つのデバイス PIN にまとめられました。
 > デバイス PIN の制御用に設定済みの Intune の構成ポリシー、さらに構成済みの Windows Hello for Business ポリシーの両方により、この新しい PIN の値が設定されるようになりました。
-> 両方の種類のポリシーをデバイス PIN の制御用に設定している場合、Windows Hello for Business が Windows 10 デスクトップおよびモバイル デバイスの両方に適用されます。
+> 両方の種類のポリシーを PIN の制御用に設定している場合、Windows Hello for Business ポリシーが適用されます。
 > ポリシーの競合を解消して PIN ポリシーが適切に適用されるようにするために、構成ポリシーの設定に合わせて Windows Hello for Business ポリシーを更新し、ユーザーにポータル サイト アプリでデバイスを同期するように伝えてください。
-
-
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Windows Hello for Business のポリシーの作成
 
@@ -65,13 +63,13 @@ Intune と Hello for Business の統合には 2 通りの方法があります�
 
 3. **[Windows Hello for Business の構成]** を次のオプションから選択します。
 
-     - **Enabled**。 Windows Hello for Business の設定を構成する場合は、この設定を選択します。  *Enabled* を選択した場合、Windows Hello の追加設定が表示されます。追加設定はデバイスに対して構成できます。
+   - **Enabled**。 Windows Hello for Business の設定を構成する場合は、この設定を選択します。  *Enabled* を選択した場合、Windows Hello の追加設定が表示されます。追加設定はデバイスに対して構成できます。
 
-    - **Disabled**。 デバイスの登録中に Windows Hello for Business を有効にしない場合、このオプションを選択します。 無効にしたとき、プロビジョニングが必須の可能性がある Azure Active Directory に参加した携帯電話以外では、ユーザーは Windows Hello for Business をプロビジョニングできません。 *Disabled* に設定されると、このポリシーで Windows Hello for Business が有効にならない場合でも、Windows Hello for Business に後続の設定を構成できます。
+   - **Disabled**。 デバイスの登録中に Windows Hello for Business を有効にしない場合、このオプションを選択します。 無効である場合、ユーザーが Windows Hello for Business をプロビジョニングすることはできません。 *Disabled* に設定されると、このポリシーで Windows Hello for Business が有効にならない場合でも、Windows Hello for Business に後続の設定を構成できます。
 
-    - **[Not configured]** (未構成)。 Windows Hello for Business の設定の制御に Intune を使用しない場合は、この設定を選択します。 Windows 10 デバイス上の既存の Windows Hello for Business の設定は変更されません。 ウィンドウ上の他のすべての設定が使用できなくなります。
+   - **[Not configured]** (未構成)。 Windows Hello for Business の設定の制御に Intune を使用しない場合は、この設定を選択します。 Windows 10 デバイス上の既存の Windows Hello for Business の設定は変更されません。 ウィンドウ上の他のすべての設定が使用できなくなります。
 
-4. 前の手順で **[有効]** を選択した場合は、すべての登録済みの Windows 10 デバイスと Windows 10 モバイル デバイスに適用される必須設定を構成します。 これらの設定を構成した後、 **[保存]** を選択します。
+4. 前の手順で **[有効]** を選択した場合は、すべての登録済みの Windows 10 デバイスに適用される必須設定を構成します。 これらの設定を構成した後、 **[保存]** を選択します。
 
    - **[トラステッド プラットフォーム モジュール (TPM) の使用]** :
 

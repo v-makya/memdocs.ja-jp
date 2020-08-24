@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49d731ef6e9508367ded8ed5d711b744be7d2db1
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 2eb5a5e87b54fd8a92fc40c6d1295250d90b05c4
+ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501186"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>iOS および Android 用の Edge と Microsoft Intune を使用して Web アクセスを管理する
 
@@ -40,7 +40,7 @@ Office 365 データの豊富で広範な保護機能は、Enterprise Mobility +
 > 保護されたブラウザーで開く必要がある場合、iOS デバイス上の新しい Web クリップ (ピン留めされた Web アプリ) は、Intune Managed Browser ではなく iOS および Android 用の Edge で開かれます。 以前の iOS Web クリップの場合は、これらの Web クリップのターゲットを再設定して、Managed Browser ではなく iOS および Android 用の Edge で開くようにする必要があります。
 
 ## <a name="apply-conditional-access"></a>条件付きアクセスを適用する
-組織は Azure AD 条件付きアクセス ポリシーを使用して、ユーザーが iOS および Android 用の Edge を使用して職場または学校のコンテンツにのみアクセスできるようにすることができます。 これを行うには、可能性のあるすべてのユーザーを対象とする条件付きアクセス ポリシーが必要です。 このポリシーの作成の詳細については、[条件付きアクセスを使用してクラウド アプリへのアクセスにアプリ保護ポリシーを要求する方法](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)に関するページを参照してください。
+組織は Azure AD 条件付きアクセス ポリシーを使用して、ユーザーが iOS および Android 用の Edge を使用して職場または学校のコンテンツにのみ確実にアクセスできるようにすることができます。 これを行うには、可能性のあるすべてのユーザーを対象とする条件付きアクセス ポリシーが必要です。 このポリシーの作成の詳細については、[条件付きアクセスを使用してクラウド アプリへのアクセスにアプリ保護ポリシーを要求する方法](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)に関するページを参照してください。
 
 1. [シナリオ 2:ブラウザー アプリとしてアプリ保護ポリシーが適用された承認済みアプリを要求する方法](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies)の説明に従い、iOS および Android 用の Edge が Office 365 エンドポイントに接続することを許可し、他のモバイル デバイス Web ブラウザーはブロックします。
 

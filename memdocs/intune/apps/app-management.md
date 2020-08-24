@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99dc504f8fc3148463288820dc810bab892e3081
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912389"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252307"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Microsoft Intune アプリの管理とは
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Microsoft Intune を使用すれば、IT 管理者として、会社の従業員が使用するクライアント アプリを管理することができます。 この機能は、デバイス管理とデータ保護に加え用意されています。 管理者の優先事項の 1 つは、エンド ユーザーが仕事を行う上で必要なアプリに確実にアクセスできるようにすることです。 この目標を達成するには以下の理由により、課題があります。
 - さまざまなデバイス プラットフォームとアプリの種類が存在する。
@@ -44,29 +41,30 @@ Microsoft Intune を使用すれば、IT 管理者として、会社の従業員
 MAM を使用すると、アプリケーション内の組織のデータを管理および保護することができます。 **登録を必要としない MAM** (MAM-WE) を使用すると、機密データが含まれる職場または学校関連のアプリを、**Bring Your Own Device** (BYOD) シナリオにおける個人用デバイスを含む、ほぼすべての[デバイス](app-management.md#app-management-capabilities-by-platform)で管理できます。 Microsoft Office アプリなどの多くの仕事効率化アプリを、Intune MAM で管理することができます。 一般使用が可能な [Microsoft Intune によって保護されたアプリ](apps-supported-intune-apps.md)の公式一覧を参照してください。
 
 Intune MAM では次の 2 つの構成をサポートしています。
-- **Intune MDM + MAM**: IT 管理者は、Intune モバイル デバイス管理 (MDM) に登録されているデバイスで MAM とアプリ保護ポリシーを使用したアプリの管理のみを行うことができます。 MDM と MAM を使用してアプリを管理するには、Azure Portal (https://portal.azure.com ) の Intune コンソールを使用する必要があります。
-- **デバイス登録なしの MAM**: デバイス登録がない MAM や MAM-WE では、IT 管理者は、Intune MDM に登録されていないデバイス上で MAM とアプリ保護ポリシーを使用してアプリの管理を行うことしかできません。 つまり、サードパーティ EMM プロバイダーに登録されているデバイスで Intune によりアプリを管理できます。 MAM-WE を使用してアプリを管理するには、Azure Portal (https://portal.azure.com ) の Intune コンソールを使用する必要があります。 また、Intune では、サードパーティ製エンタープライズ モビリティ管理 (EMM) プロバイダーに登録されているデバイス上でも、MDM に全く登録されていないデバイス上でもアプリを管理することができます。 BYOD および Microsoft の EMS に関する詳細については、「[Microsoft Enterprise Mobility + Security (EMS) で BYOD を有効にするための技術の決定事項](../fundamentals/byod-technology-decisions.md)」を参照してください。
+
+- **Intune MDM + MAM**: IT 管理者は、Intune モバイル デバイス管理 (MDM) に登録されているデバイスで MAM とアプリ保護ポリシーを使用したアプリの管理のみを行うことができます。 MDM + MAM を使用してアプリを管理する場合、顧客は [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で Intune を使用する必要があります。
+- **デバイス登録なしの MAM**: デバイス登録がない MAM や MAM-WE では、IT 管理者は、Intune MDM に登録されていないデバイス上で MAM とアプリ保護ポリシーを使用してアプリの管理を行うことしかできません。 つまり、サードパーティ EMM プロバイダーに登録されているデバイスで Intune によりアプリを管理できます。 MAM-WE を使用してアプリを管理する場合、顧客は [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で Intune を使用する必要があります。 また、Intune では、サードパーティ製エンタープライズ モビリティ管理 (EMM) プロバイダーに登録されているデバイス上でも、MDM に全く登録されていないデバイス上でもアプリを管理することができます。 BYOD および Microsoft の EMS に関する詳細については、「[Microsoft Enterprise Mobility + Security (EMS) で BYOD を有効にするための技術の決定事項](../fundamentals/byod-technology-decisions.md)」を参照してください。
 
 ## <a name="app-management-capabilities-by-platform"></a>プラットフォーム別のアプリ管理機能
 
 Intune では、アプリを実行するデバイス上で必要なアプリを取得するのに役立つさまざまな機能を提供しています。 次の表に、アプリの管理機能の概要を示します。
 
-| アプリの管理機能 | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Windows Phone 8.1 |
-|-------------------------- | -------------------------- | ---------- | ----- | ---------- | ----------------- |
-| デバイスとユーザーにアプリを追加して割り当てる | はい | はい | はい | はい | はい |
-| Intune に登録されていないデバイスにアプリを割り当てる | はい | はい | いいえ | いいえ | いいえ |
-| アプリ構成ポリシーを使用してアプリのスタートアップ動作を制御する | はい | はい | いいえ | いいえ | いいえ |
-| モバイル アプリ プロビジョニング ポリシーを使用して期限切れのアプリを更新する | いいえ | はい | いいえ | いいえ | いいえ |
-| アプリ保護ポリシーでアプリ内の会社のデータを保護する | はい | はい | いいえ | いいえ <sup>1</sup> | いいえ |
-| インストール済みのアプリから会社のデータのみを削除する (アプリの選択的ワイプ) | はい | はい | いいえ | はい | はい |
-| アプリの割り当てを監視する | はい | はい | はい | はい | はい |
-| アプリ ストアからのボリューム購入アプリを割り当てて追跡する | いいえ | いいえ | いいえ | はい | いいえ |
-| デバイスへのアプリのインストールを強制する (必須) <sup>2</sup> | はい | はい | はい | はい | はい |
-| 会社のポータルからデバイスへのオプション インストール (利用可能なインストール) | はい <sup>3</sup> | はい | はい | はい | はい |
-| Web 上のアプリへのインストール ショートカット (Web リンク) | はい <sup>4</sup> | はい | はい | はい | はい |
-| 社内 (基幹業務) アプリ | はい | はい | はい | はい | いいえ |
-| ストアからのアプリ | はい | はい | いいえ | はい | はい |
-| アプリを更新する | はい | はい | いいえ | はい | はい |
+| アプリの管理機能 | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 |
+|-------------------------- | -------------------------- | ---------- | ----- | ---------- |
+| デバイスとユーザーにアプリを追加して割り当てる | はい | はい | はい | はい |
+| Intune に登録されていないデバイスにアプリを割り当てる | はい | はい | いいえ | いいえ |  |
+| アプリ構成ポリシーを使用してアプリのスタートアップ動作を制御する | はい | はい | いいえ | いいえ |
+| モバイル アプリ プロビジョニング ポリシーを使用して期限切れのアプリを更新する | いいえ | はい | いいえ | いいえ |
+| アプリ保護ポリシーでアプリ内の会社のデータを保護する | はい | はい | いいえ | いいえ <sup>1</sup> |
+| インストール済みのアプリから会社のデータのみを削除する (アプリの選択的ワイプ) | はい | はい | いいえ | はい |
+| アプリの割り当てを監視する | はい | はい | はい | はい |
+| アプリ ストアからのボリューム購入アプリを割り当てて追跡する | いいえ | いいえ | いいえ | はい |
+| デバイスへのアプリのインストールを強制する (必須) <sup>2</sup> | はい | はい | はい | はい |
+| 会社のポータルからデバイスへのオプション インストール (利用可能なインストール) | はい <sup>3</sup> | はい | はい | はい |
+| Web 上のアプリへのインストール ショートカット (Web リンク) | はい <sup>4</sup> | はい | はい | はい |
+| 社内 (基幹業務) アプリ | はい | はい | はい | はい |
+| ストアからのアプリ | はい | はい | いいえ | はい |
+| アプリを更新する | はい | はい | いいえ | はい |
 
 <sup>1</sup> Windows 10 を実行しているデバイスでアプリを保護するには、[Windows 情報保護](../protect/windows-information-protection-configure.md)の使用を検討してください。<br>
 <sup>2</sup> Intune のみで管理されているデバイスに適用されます。<br>
@@ -113,13 +111,15 @@ Intune では、アプリを実行するデバイス上で必要なアプリを�
 ### <a name="try-the-interactive-guide"></a>対話型ガイドを試す
 「[Microsoft Endpoint Manager を使用してモバイル アプリケーションとデスクトップ アプリケーションを管理および保護する](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager)」の対話型ガイドでは、Microsoft Endpoint Manager 管理センターを使用して、Intune での登録したデバイスの管理、ポリシー準拠の強制、組織のデータの保護を行う方法を説明します。</br></br>
 
-> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager]
+<div align=”center”>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+</div>
 
 ## <a name="additional-information"></a>追加情報
 コンソール内の次の項目では、アプリに関連する機能が提供されます。
 - **ビジネス向け Microsoft Store**:ビジネス向け Microsoft ストアとの統合を設定します。 その後、購入済みのアプリケーションを Intune に同期して割り当て、ライセンスの使用状況を追跡できるようになります。 詳しくは、[ビジネス向け Microsoft Store 一括購入アプリ](windows-store-for-business.md)に関するページをご覧ください。
 - **[Windows Enterprise 証明書]** :基幹業務アプリを Windows マネージド デバイスに配布するために使うコード署名証明書の状態を適用または表示します。
-- **[Windows Symantec 証明書]** :XAP および WP8.x appx ファイルを Windows 10 Mobile デバイスに配布するために必要となる、Symantec コード署名証明書の状態を適用または表示します。
+- **[Windows Symantec 証明書]** :Symantec コード署名証明書の状態を適用または表示します。
 - **[Windows サイドローディング キー]** :Windows サイドローディング キーを追加します。これを使うと、Windows ストアでアプリを公開およびダウンロードするのではなく、アプリを直接デバイスにインストールできます。 詳しくは、[Windows アプリのサイドロード](app-sideload-windows.md)に関するページをご覧ください。
 - **[Apple VPP トークン]** : iOS/iPadOS Volume Purchase Program (VPP) のライセンスを適用および表示します。 詳しくは、[iOS/iPadOS 大量購入アプリ](vpp-apps-ios.md)に関するページをご覧ください。
 - **[マネージド Google Play]** : マネージド Google Play は、Google のエンタープライズ アプリ ストアであり、Android Enterprise 用の唯一のアプリケーション ソースです。 詳細は、「[Intune で managed Google Play アプリを Android エンタープライズ デバイスに追加する](apps-add-android-for-work.md)」を参照してください。

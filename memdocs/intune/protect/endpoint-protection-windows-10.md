@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/23/2020
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fedca34aaf390dfec655e3166f3a153af93a7ce0
-ms.sourcegitcommit: 7b3eed763b394075766ea080968889a8538bfe56
+ms.openlocfilehash: 69b4df0b5ceb947ab875f82a0d6f5ac59ce89eef
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506592"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252624"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Intune を使用してデバイスを保護するための Windows 10 (以降) の設定
 
@@ -453,13 +453,16 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
   
   別の暗号化方式がアクティブになっている場合に Windows の暗号化を有効にすると、デバイスが不安定になる可能性があります。  
 
-- **[メモリ カードの暗号化 (モバイルのみ)]**  
-  "*この設定は、Windows 10 モバイルにのみ適用されます。* "  
-  **既定値**:未構成  
+<!-- Support Deprecated for Windows 10 Mobile as of August 2020
+
+- **Encrypt storage card (mobile only)**  
+  *This setting only applies to Windows 10 mobile.*  
+  **Default**: Not configured  
   BitLocker CSP: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)  
 
-  - デバイスで使用するリムーバブル メモリ カードの暗号化を**要求**します。  
-  - **[未構成]** - メモリ カードの暗号化は要求されません。暗号化をオンにするようにユーザーに求めることはありません。  
+  - **Require** to encrypt any removable storage cards used by the device.  
+  - **Not configured** - Don't require storage card encryption, and don't prompt the user to turn it on.  
+-->
 
 ### <a name="bitlocker-base-settings"></a>BitLocker の基本設定  
 
@@ -642,7 +645,7 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
     **既定値**:未構成  
 
     - **[有効]** - Azure Active Directory (Azure AD) に BitLocker 回復情報が保存されます。  
-    - **[未構成]** - BitLocker 回復情報は AAD に格納されません。  
+    - **[未構成]** - BitLocker 回復情報は Azure AD に格納されません。  
 
   - **[Azure Active Directory に保存する BitLocker 回復情報]**  
     **既定値**: [回復パスワードとキー パッケージをバックアップする]  
@@ -739,7 +742,7 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
     **既定値**:未構成  
 
     - **[有効]** - Azure Active Directory (Azure AD) に BitLocker 回復情報が保存されます。  
-    - **[未構成]** - BitLocker 回復情報は AAD に格納されません。
+    - **[未構成]** - BitLocker 回復情報は Azure AD に格納されません。
 
   - **[Azure Active Directory に保存する BitLocker 回復情報]**  
     **既定値**: [回復パスワードとキー パッケージをバックアップする]  

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7926bd972fd24f39bd4e3f520fd250526502812a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c41f22e2aa60803067b9015f2ae3a84db43ff894
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983939"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179538"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Microsoft Intune を使用して Windows 10 ポータル サイト アプリを追加する
 
@@ -71,7 +71,7 @@ Intune がユニバーサル アプリ用に依存関係をどのように処理
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問 
 ### <a name="how-do-i-update-the-company-portal-app-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>ユーザーがストアから古いアプリを既にインストールしている場合に、ユーザーのデバイスのポータル サイト アプリを更新する方法
-ユーザーが Microsoft Store から Windows 8.1 または Windows Phone 8.1 ポータル サイト アプリを既にインストールしている場合は、お客様またはお客様のユーザーが特に操作を行わなくても、ご利用のアプリは最新バージョンに自動的に更新されます。 更新が実行されない場合は、デバイスでストア アプリの自動更新を有効にしているかどうかをユーザーに確認してください。   
+ユーザーが Microsoft Store から Windows 8.1 ポータル サイト アプリを既にインストールしている場合は、お客様またはお客様のユーザーが特に操作を行わなくても、彼らのアプリは最新バージョンに自動的に更新されます。 更新が実行されない場合は、デバイスでストア アプリの自動更新を有効にしているかどうかをユーザーに確認してください。   
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>サイドロードした Windows 8.1 のポータル サイト アプリを Windows 10 のポータル サイト アプリにアップグレードする方法
 推奨される移行パスとして、割り当てアクションを **[アンインストール]** に設定して、Windows 8.1 ポータル サイト アプリの割り当てを削除します。 この設定を選択したら、前述のオプションのいずれかを使用して、Windows 10 ポータル サイト アプリを割り当てることができます。  
@@ -80,8 +80,8 @@ Intune がユニバーサル アプリ用に依存関係をどのように処理
 
 アプリをサイドロードする必要があり、Symantec コード署名証明書で Windows 8.1 ポータル サイト アプリに署名し割り当てた場合は、次のセクションの手順に従ってください。
 
-### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>署名およびサイドロードした Windows Phone 8.1 ポータル サイト アプリまたは Windows 8.1 ポータル サイト アプリを Windows 10 ポータル サイト アプリにアップグレードする方法
-推奨される移行パスとして、割り当てアクションを **[アンインストール]** に設定して、Windows Phone 8.1 ポータル サイト アプリまたは Windows 8.1 ポータル サイト アプリの既存の割り当てを削除します。 この設定を選択したら、通常、Windows 10 ポータル サイト アプリを割り当てることができます。  
+### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>署名およびサイドロードした Windows 8.1 のポータル サイト アプリを Windows 10 のポータル サイト アプリにアップグレードする方法
+推奨される移行パスとして、割り当てアクションを **[アンインストール]** に設定して、Windows 8.1 ポータル サイト アプリの既存の割り当てを削除します。 この設定を選択したら、通常、Windows 10 ポータル サイト アプリを割り当てることができます。  
 
 これ以外の場合は、アップグレードのパスが確実に考慮されるように、Windows 10 ポータル サイト アプリを適切に更新し、署名する必要があります。  
 
@@ -99,7 +99,7 @@ Intune がユニバーサル アプリ用に依存関係をどのように処理
 |---|---|
 | InputWin10AppxBundle  |  ソース appxbundle ファイルへのパス |
 | OutputWin10AppxBundle | 署名された appxbundle ファイルの出力パス 
-| Win81Appx  | Windows 8.1 または Windows Phone 8.1 ポータル サイト (.APPX) ファイルへのパス |
+| Win81Appx  | Windows 8.1 ポータル サイト (.APPX) ファイルへのパス |
 | PfxFilePath  |  Symantec エンタープライズ モバイル コード署名証明書 (.PFX) ファイルへのパス  |
 | PfxPassword  | Symantec エンタープライズ モバイル コード署名証明書のパスワード |
 | PublisherId | エンタープライズの発行者 ID 指定しない場合、Symantec エンタープライズ モバイル コード署名証明書の Subject フィールドが使用されます。 |

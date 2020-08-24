@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33464c6e0abff9f28e18f9bf6a82e2601dbf115f
-ms.sourcegitcommit: 7ee69b207261ffc282e535f793a536540d160557
+ms.openlocfilehash: b1db36b0ea3d2ba691811958a01043a606b4681a
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87400734"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88251974"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Microsoft Intune で認証に証明書を使用する
 
@@ -80,14 +80,14 @@ Microsoft の証明機関 (CA) を使用する場合:
 | プラットフォーム              | 信頼された証明書プロファイル | PKCS 証明書プロファイル | SCEP 証明書プロファイル | PKCS のインポートされた証明書プロファイル  |
 |--|--|--|--|---|
 | Android デバイス管理者 | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png)|  ![サポート](./media/certificates-configure/green-check.png) |
-| Android エンタープライズ <br> - フル マネージド (デバイスの所有者)   | ![サポート](./media/certificates-configure/green-check.png) |   | ![サポート](./media/certificates-configure/green-check.png) |   |
-| Android エンタープライズ <br> - 専用 (デバイスの所有者)   | ![サポート](./media/certificates-configure/green-check.png)  | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png)  |   |
-| Android エンタープライズ <br> - 仕事用プロファイル    | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) |
-| iOS/iPadOS                   | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) |
-| macOS                 | ![サポート](./media/certificates-configure/green-check.png) |  ![サポート](./media/certificates-configure/green-check.png) |![サポート](./media/certificates-configure/green-check.png)|![サポート](./media/certificates-configure/green-check.png)|
-| Windows Phone 8.1     |![サポート](./media/certificates-configure/green-check.png)  |  | ![サポート](./media/certificates-configure/green-check.png)| ![サポート](./media/certificates-configure/green-check.png) |
+| Android エンタープライズ <br> - フル マネージド (デバイスの所有者)   | ![サポート](./media/certificates-configure/green-check.png) |   | ![サポート](./media/certificates-configure/green-check.png) |  ![サポート](./media/certificates-configure/green-check.png)  |
+| Android エンタープライズ <br> - 専用 (デバイスの所有者)   | ![サポート](./media/certificates-configure/green-check.png)  | ![サポート](./media/certificates-configure/green-check.png) | ![サポートされています](./media/certificates-configure/green-check.png)  | ![サポート](./media/certificates-configure/green-check.png)|
+| Android エンタープライズ <br> - 会社所有の仕事用プロファイル   | ![サポート](./media/certificates-configure/green-check.png)  |  | ![サポート](./media/certificates-configure/green-check.png)  | ![サポート](./media/certificates-configure/green-check.png)  |
+| Android エンタープライズ <br> - 仕事用プロファイル    | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポートされています](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) |
+| iOS/iPadOS                   | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポートされています](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) |
+| macOS                 | ![サポート](./media/certificates-configure/green-check.png) |  ![サポートされています](./media/certificates-configure/green-check.png) |![サポート](./media/certificates-configure/green-check.png)|![サポート](./media/certificates-configure/green-check.png)|
 | Windows 8.1 以降 |![サポート](./media/certificates-configure/green-check.png)  |  |![サポート](./media/certificates-configure/green-check.png) |   |
-| Windows 10 以降  | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) |
+| Windows 10 以降  | ![サポート](./media/certificates-configure/green-check.png) | ![サポートされています](./media/certificates-configure/green-check.png) | ![サポートされています](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) |
 
 ## <a name="export-the-trusted-root-ca-certificate"></a>信頼されたルート CA 証明書をエクスポートする
 

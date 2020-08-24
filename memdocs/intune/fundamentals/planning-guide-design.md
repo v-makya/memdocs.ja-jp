@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 3/22/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d29294f1d9556f195fe70f0e2cb36cc8c9ddcfba
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 37ea8cf3f8615630ccc5b1f5fcc72f69c66db3ef
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357728"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179572"
 ---
 # <a name="create-a-design"></a>設計の作成
 
@@ -311,7 +311,7 @@ Wi-Fi プロファイルの設計の例を次に示します。
 | **種類** | **プロファイル名** | **デバイスのプラットフォーム** | **ユース ケース** |
 |:---:|:---:|:---:|:---:|
 | Wi-Fi | アジア Wi-Fi プロファイル | Android | 企業、BYOD アジア地域|
-| Wi-Fi | 北米 Wi-Fi プロファイル | Android、iOS/iPadOS、Windows 10 Mobile | 企業、BYOD 北米地域 |
+| Wi-Fi | 北米 Wi-Fi プロファイル | Android、iOS/iPadOS | 企業、BYOD 北米地域 |
 
 [上記の表のテンプレートをダウンロード](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)して、Wi-Fi プロファイルのニーズを確認することができます。
 
@@ -323,7 +323,7 @@ VPN プロファイルの設計を文書化する例を次に示します。
 
 | **種類** | **プロファイル名** | **デバイスのプラットフォーム** | **ユース ケース** |
 |:---:|:---:|:---:|:---:|
-| VPN | VPN Cisco any connect Profile | Android、iOS/iPadOS、Windows 10 Mobile | 企業、BYOD 北米およびドイツ|
+| VPN | VPN Cisco any connect Profile | Android、iOS/iPadOS | 企業、BYOD 北米およびドイツ|
 | VPN | Pulse Secure | Android | 企業、BYOD アジア地域 |
 
 [上記の表のテンプレートをダウンロード](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)して、VPN プロファイルのニーズを確認することができます。
@@ -374,7 +374,7 @@ Intune では、複数の方法でユーザーまたはデバイスにアプリ�
 | **アプリケーション** | **目的** | **プラットフォーム** | **ユース ケース** | **アプリ保護ポリシー** |
 |:---:|:---:|:---:|:---:|:---:|
 | Outlook Mobile  | 利用可能 | iOS | 企業 - エグゼクティブ | 脱獄不可、ファイルを暗号化 |                                                         
-| Word | 利用可能 | iOS/iPadOS、Android - Samsung Knox、非 Knox、Windows 10 Mobile | 企業、BYOD | 脱獄不可、ファイルを暗号化 |                                                         
+| Word | 利用可能 | iOS/iPadOS、Android - Samsung Knox、非 Knox | 企業、BYOD | 脱獄不可、ファイルを暗号化 |                                                         
 
 
 [上記の表のテンプレートをダウンロード](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)して、アプリ保護ポリシーのニーズを確認することができます。
@@ -388,7 +388,7 @@ Intune では、複数の方法でユーザーまたはデバイスにアプリ�
 
 | **ポリシー名** | **デバイスのプラットフォーム** | **設定** | **対象グループ** |
 |:---:|:---:|:---:|:---:|
-| コンプライアンス ポリシー | iOS/iPadOS、Android - Samsung Knox、非 Knox、Windows 10 Mobile | PIN - 必要、脱獄不可 | 企業、BYOD |
+| コンプライアンス ポリシー | iOS/iPadOS、Android - Samsung Knox、非 Knox | PIN - 必要、脱獄不可 | 企業、BYOD |
 
 
 [上記の表のテンプレートをダウンロード](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)して、コンプライアンス ポリシーのニーズを確認することができます。

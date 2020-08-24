@@ -6,7 +6,7 @@ keywords: Intune データ ウェアハウス
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 08/13/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db6feb746aa7177f56ff6e87565d67e207d4d9ef
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 1fb6ec17ce058247529ab1e51d50d876e4c97408
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165449"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252675"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Microsoft Intune データ ウェアハウスのデータ モデル
 
@@ -60,6 +60,9 @@ Intune データ ウェアハウスは、データを毎日サンプリングし
 ## <a name="time-daily-snapshots"></a>時間: 毎日のスナップショット
 
 このウェアハウスは、Intune データのダウンストリームです。 Intune では、午前 0 時 (UTC) に毎日のスナップショットを取得し、ウェアハウスにスナップショットを保存します。 スナップショットの保有期間はファクト テーブルによって異なります。 7 日間や 30 日間、またはさらに長い期間のものもあります。
+
+> [!NOTE]
+> Data Warehouse は、Jamf デバイスと同期しません。 Jamf の詳細については、[Jamf Pro と Microsoft Intune の統合のトラブルシューティング](..\protect\troubleshoot-jamf.md)に関するページおよび「[Jamf Pro から Intune に送られるデータ](..\protect\data-jamf-sends-to-intune.md)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

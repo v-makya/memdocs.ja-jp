@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 529d7a7da1257b9ebce1e1ab3cec706e8f100403
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 0f4080c5cfcc6635478bd88b7d9edf42dd3d8576
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270941"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179487"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Intune で Windows 10 デバイスに対して PowerShell スクリプトを使用する
 
-Windows 10 デバイスで実行するために Intune に PowerShell スクリプトをアップロードするには、Microsoft Intune 管理拡張機能を使用します。 管理拡張機能は Windows 10 モバイル デバイス管理 (MDM) を拡張するもので、最新の管理に簡単に移行できます。
+Windows 10 デバイスで実行するために Intune に PowerShell スクリプトをアップロードするには、Microsoft Intune 管理拡張機能を使用します。 管理拡張機能は Windows デバイス管理 (MDM) を拡張するもので、最新の管理に簡単に移行できます。
 
 この機能は、以下に適用されます。
 

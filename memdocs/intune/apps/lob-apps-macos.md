@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 08/18/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 673adad15e92fb06cf5cf7c3589b06ab8b1b337a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 407189163107da24e19b84c2011fa47f6a796475
+ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990659"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88591695"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>macOS の基幹業務 (LOB) アプリを Microsoft Intune に追加する方法
 
@@ -42,8 +42,7 @@ ms.locfileid: "83990659"
 基幹業務ファイルを Microsoft Intune にアップロードするには、外部ツールをダウンロードし、ダウンロードしたツールを実行可能ファイルとしてマークし、 *.pkg* ファイルをツールで前処理しておく必要があります。 *.pkg* ファイルの前処理は、macOS デバイス上で行う必要があります。 Mac 用の Intune アプリ ラッピング ツールを使って、Mac アプリを Microsoft Intune で管理できるようにします。
 
 > [!IMPORTANT]
-> *.pkg* ファイルは、Apple Developer アカウントから取得した "Developer ID Installer" 証明書を使用して署名されている必要があります。 Microsoft Intune への macOS LOB アプリのアップロードに使うことができるのは、 *.pkg* ファイルだけです。 *.dmg* から *.pkg* など、他の形式への変換はサポートされていません。
->
+> *.pkg* ファイルは、Apple Developer アカウントから取得した "Developer ID Installer" 証明書を使用して署名されている必要があります。 Microsoft Intune への macOS LOB アプリのアップロードに使うことができるのは、 *.pkg* ファイルだけです。 ただし、 *.dmg* から *.pkg* へなど、他の形式への変換はサポートされていません。 pkg 以外のアプリケーションの種類の変換の詳細については、「[DMG または APP 形式アプリを Intune マネージド Mac に展開する方法](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-deploy-dmg-or-app-format-apps-to-intune-managed-macs/ba-p/1503416)」を参照してください。
 
 1. [Mac 用 Intune アプリ ラッピング ツール](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac)をダウンロードします。
 
@@ -56,7 +55,7 @@ ms.locfileid: "83990659"
    - 次のコマンドを実行して、ツールを実行可能ファイルにします。<br> 
        `chmod +x IntuneAppUtil`
 
-3. **Mac 用 Intune アプリ ラッピング ツール**内で `IntuneAppUtil` コマンドを使って、 *.intunemac* ファイルから *.pkg* LOB アプリ ファイルをラッピングします。<br>
+3. **Mac 用 Intune アプリ ラッピング ツール**内で `IntuneAppUtil` コマンドを使って、*.intunemac* ファイルから *.pkg* LOB アプリ ファイルをラッピングします。<br>
 
     macOS 用 Intune アプリ ラッピング ツールMicrosoft Intune アプリ ラッピング ツールで使用するサンプル コマンド:
     > [!IMPORTANT]
@@ -93,8 +92,8 @@ ms.locfileid: "83990659"
     - **名前**:アプリの名前を入力します。これは会社のポータルに表示されます。 使用するアプリ名はすべて一意にします。 同じアプリ名が 2 つ存在する場合、いずれか 1 つのアプリのみが会社のポータルに表示されます。
     - **説明**:アプリの説明を入力します。 説明はポータル サイトに表示されます。
     - **[発行元]** : アプリの発行元の名前を入力します。
-    - **[最低限のオペレーティング システム]** :アプリをインストールできる最小限のオペレーティング システム バージョンを一覧から選択します。 これよりも前のオペレーティング システムがアプリの割り当て先デバイスにインストールされている場合、そのアプリはインストールされません。
-    - **[カテゴリ]** :1 つまたは複数の組み込みアプリ カテゴリを選択するか、ご自身で作成したカテゴリを選択します。 カテゴリを使用すれば、ユーザーはポータル サイトを参照する際にアプリを見つけやすくなります。
+    - **[オペレーティング システムの最小要件]**: アプリをインストールできる最小限のオペレーティング システム バージョンを一覧から選択します。 これよりも前のオペレーティング システムがアプリの割り当て先デバイスにインストールされている場合、そのアプリはインストールされません。
+    - **[カテゴリ]** : 1 つまたは複数の組み込みアプリ カテゴリを選択するか、ご自身で作成したカテゴリを選択します。 カテゴリを使用すれば、ユーザーはポータル サイトを参照する際にアプリを見つけやすくなります。
     - **[会社のポータルでおすすめアプリとして表示します]** : ユーザーがアプリを参照するとき、会社のポータルのメイン ページにアプリが目立つように表示されます。
     - **[情報 URL]** : このアプリに関する情報が含まれる Web サイトの URL を入力することもできます。 この URL はポータル サイトに表示されます。
     - **[プライバシー URL]** : このアプリのプライバシー情報が含まれる Web サイトの URL を入力することもできます。 この URL はポータル サイトに表示されます。
@@ -133,7 +132,7 @@ ms.locfileid: "83990659"
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 
 > [!NOTE]
-> Intune サービスで新しい *.pkg* ファイルをデバイスに正常に展開するには、パッケージの `version` と、 *.pkg* パッケージ内の *packageinfo* ファイルの `CFBundleVersion` 文字列をインクリメントする必要があります。
+> Intune サービスで新しい *.pkg* ファイルをデバイスに正常に展開するには、パッケージの `version` と、*.pkg* パッケージ内の *packageinfo* ファイルの `CFBundleVersion` 文字列をインクリメントする必要があります。
 
 ## <a name="next-steps"></a>次のステップ
 

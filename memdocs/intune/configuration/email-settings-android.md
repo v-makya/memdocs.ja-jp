@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36e17dc12622b3bb95c35a4472556f1c4f31ccd0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 195e7d42a7244976e7a631c0e8397875b8541273
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80087010"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146050"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Intune で電子メール、認証、および同期を構成するための Android デバイスの設定
 
@@ -81,4 +81,4 @@ Intune での電子メール プロファイルの詳細については、[電�
 
 [プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
 
-また、[Android エンタープライズ - 仕事用プロファイル](email-settings-android-enterprise.md)、[iOS および iPadOS](email-settings-ios.md)、[Windows 10 以降](email-settings-windows-10.md)、および [Windows Phone 8.1](email-settings-windows-phone-8-1.md) 用の電子メール プロファイルを作成することもできます。
+また、[Android Enterprise - 仕事用プロファイル](email-settings-android-enterprise.md)、[iOS/iPadOS](email-settings-ios.md)、[Windows 10 以降](email-settings-windows-10.md)用の電子メール プロファイルを作成することもできます。

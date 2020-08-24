@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/24/2019
+ms.date: 08/12/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5e7cd5e5fa5f04e674b2fd9d37c8895b72372c4c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2a79b5c433a286321426f2b14f63768e575b5556
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881400"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179470"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Intune ポータル サイトでの Windows デバイスの登録  
 
@@ -75,10 +75,8 @@ Windows 10 デバイスの登録は、ポータル サイトの Web サイト "*
     * __1607 以降の場合__: [ **[設定]**  >  **[職場または学校へのアクセス]** の順に選択](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device)して、デバイスを登録します。   
     * __1511 以前の場合__: [ **[設定]**  >  **[アカウント]** の順に選択](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device)して、デバイスを登録します。  
 
-## <a name="enroll-non-windows-10-devices"></a>Windows 10 以外のデバイスを登録する  
-ポータル サイト Web サイトで他のサポートされている Windows デバイスを登録するには、次の記事を使用してください。   
-* [Windows 8.1 または Windows RT 8.1 デバイス](enroll-your-W81-or-rt81-windows.md)  
-* [Windows Phone 8.1 デバイス](enroll-your-wp81-windows.md)    
+## <a name="enroll-other-windows-devices"></a>他の Windows デバイスを登録する  
+[Windows 8.1 または Windows RT 8.1 のデバイス](enroll-your-W81-or-rt81-windows.md)の登録は、ポータル サイトの Web サイトを介して行うことができます。 
 
 ## <a name="it-administrator-support"></a>IT 管理者のサポート  
 デバイス登録中に問題に遭遇した IT 管理者は、「[Microsoft Intune の Windows デバイスの登録に関する問題のトラブルシューティング](https://support.microsoft.com/help/4469913)」を参照してください。 この記事では、一般的なエラー、その原因、解決する手順の一覧が示されています。  
@@ -91,4 +89,4 @@ Windows 10 デバイスの登録は、ポータル サイトの Web サイト "*
 * [ポータル サイト アプリをインストールし、Intune に iOS または Mac OS X デバイスを登録するとどうなりますか](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)  
 * [デバイスを登録した場合に組織が確認できる情報](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
 
-サポートが必要な場合は、 社内サポートに問い合わせてください。 組織の IT 部門の連絡先情報を検索するには、[ポータル サイトの Web サイトに移動してください](https://go.microsoft.com/fwlink/?linkid=2010980)。  
+お困りの際は、 社内サポートに問い合わせてください。 組織の IT 部門の連絡先情報を検索するには、[ポータル サイトの Web サイトに移動してください](https://go.microsoft.com/fwlink/?linkid=2010980)。  

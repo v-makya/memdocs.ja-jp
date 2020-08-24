@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4beb6c5a91f9f379006df482ff10066831389b6
-ms.sourcegitcommit: 79ffc8afed164c408db6994806d71f64d1fc0b8f
+ms.openlocfilehash: 1cb05cb518d4edfb443bf4f70ff1c51154e17f4c
+ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85216401"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217642"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>アプリ保護ポリシーを作成して割り当てる方法
 
@@ -103,7 +103,7 @@ iOS/iPadOS アプリと Android アプリ向けのアプリ保護ポリシーを
     - **Android の条件付き起動** - 詳細については、「[Android アプリ保護ポリシーの設定 - 条件付き起動](app-protection-policy-settings-android.md#conditional-launch)」を参照してください。
 
 9. **[次へ]** をクリックして、 **[割り当て]** ページを表示します。<br>
-   **[割り当て]** ページでは、アプリ保護ポリシーをユーザーのグループに割り当てることができます。
+   **[割り当て]** ページでは、アプリ保護ポリシーをユーザーのグループに割り当てることができます。 ポリシーを有効にするには、ポリシーをユーザー グループに適用する必要があります。
 
 10. **次へ:確認と作成** をクリックして、このアプリ保護ポリシーに入力した値と設定を確認します。
 
@@ -111,6 +111,9 @@ iOS/iPadOS アプリと Android アプリ向けのアプリ保護ポリシーを
 
     > [!TIP]
     > これらのポリシー設定は、作業コンテキストでアプリを使用する場合にのみ適用されます。 エンド ユーザーが、個人のタスクを実行するためにアプリを使用する場合、これらのポリシーによる影響を受けることはありません。 作成した新しいファイルは、個人用ファイルだと見なされることに注意してください。
+
+    > [!IMPORTANT]
+    > アプリ保護ポリシーが既存のデバイスに適用されるまでに時間がかかることがあります。 アプリ保護ポリシーが適用されると、エンド ユーザーにデバイスに関する通知が表示されます。 Condidtional アクセス ルールを適用する前に、アプリ保護ポリシーをデバイスに適用します。
 
 エンド ユーザーは App Store または Google Play からアプリをダウンロードできます。 詳細については、次をご覧ください。
 * [アプリ保護ポリシーを使用して Android アプリを管理するときの注意点](../fundamentals/end-user-mam-apps-android.md)

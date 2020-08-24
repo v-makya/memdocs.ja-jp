@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 08/13/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ed7852a5aaf09a99823035d12bf2aa9139c1c02
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5be1c4fd42d27386b4fdc51cac6167625432491f
+ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990231"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559567"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>ビジネス向け Microsoft Store のボリューム購入アプリを Microsoft Intune で管理する方法
 
@@ -53,7 +53,7 @@ ms.locfileid: "83990231"
 - 登録デバイスは、1511 リリースの Windows 10 以降を使用している必要があります。
 
 > [!NOTE]
-> 管理対象デバイスで (手動、またはポリシーやグループ ポリシーを使用して) ストアを無効にした場合、オンラインでライセンス付与されているアプリのインストールは失敗します。
+> マネージド デバイスで (手動、またはポリシーやグループ ポリシーを使用して) ストアへのアクセスを無効にした場合、オンラインでライセンス付与されているアプリのインストールは失敗します。
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Intune にビジネス向け Microsoft ストア アカウントを関連付ける
 
@@ -78,6 +78,7 @@ Intune コンソールで同期を有効にする前に、以下の手順に従�
 6. **[同期]** をクリックして、Microsoft ストアから購入したアプリを Intune に取り込みます。
 
 ## <a name="synchronize-apps"></a>アプリを同期する
+ビジネス向け Microsoft Store アカウントを Intune 管理者資格情報と既に関連付けている場合は、次の手順に従って、ビジネス向け Microsoft Store アプリを Intune と手動で同期させることができます。
 
 1. **[テナント管理]**  >  **[コネクタとトークン]**  >  **[Microsoft Store for Business]** を選択します。
 2. **[同期]** をクリックして、Microsoft ストアから購入したアプリを Intune に取り込みます。
@@ -92,7 +93,7 @@ Intune コンソールで同期を有効にする前に、以下の手順に従�
 オフライン アプリの対象は、ユーザー グループ、デバイス グループ、またはユーザーとデバイスのグループとすることができます。
 オフライン アプリは、デバイス上の特定のユーザーまたはデバイス上のすべてのユーザーに対してインストールできます。
 
-ビジネス向け Microsoft ストア アプリを割り当てると、アプリをインストールする各ユーザーによってライセンスが使用されます。 割り当てられたアプリに対して使用可能なライセンスをすべて使用すると、それ以上コピーを割り当てることはできません。 次の操作のいずれかを選択します。
+ビジネス向け Microsoft ストア アプリを割り当てると、アプリをインストールする各ユーザーによってライセンスが使用されます。 割り当てられたアプリに対して使用可能なライセンスをすべて使用すると、それ以上コピーを割り当てることはできません。 次のいずれかのアクションを実行します。
 
 * 一部のデバイスからアプリをアンインストールする。
 * 現在の割り当ての範囲を絞り、十分なライセンスがあるユーザーのみを対象にする。
@@ -109,4 +110,4 @@ Microsoft Store から同期されているビジネス用アプリを削除す�
 
 ## <a name="next-steps"></a>次のステップ
 
-* [Microsoft Intune によるボリューム購入アプリとブックの管理](vpp-apps.md)
+* [Microsoft Intune でボリューム購入アプリとブックを管理する](vpp-apps.md)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ee0603a96d7276e9e1ef0fb9bff60ac44a3ef84
-ms.sourcegitcommit: 64727a4b025a589e270842da39516c4c42563a34
+ms.openlocfilehash: bc307f22e3caa77357d8d3054a432c8d42c38fc4
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84301386"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146509"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Intune でのポリシーとプロファイルのトラブルシューティング
 
@@ -144,7 +144,7 @@ Windows 10 デバイスでは、ポリシーの割り当てを解除 (展開を�
 
 たとえば、Windows 8.1 で、デスクトップを右からスワイプして、 **[チャーム]** バーを開きます。 **[設定]**  >  **[コントロール パネル]**  >  **[ユーザー アカウント]** を選択します。 左側で **[セキュリティ ポリシーのリセット]** リンクを選択し、 **[ポリシーのリセット]** を選択します。
 
-Android、iOS/iPadOS、Windows Phone 8.1 などの他のプラットフォームは、より制限の緩いポリシーを適用するために、いったんインベントリから削除し、再登録しなければならない場合があります。
+Android や iOS/iPadOS などの他のプラットフォームは、より制限の緩いポリシーを適用するために、いったんインベントリから削除し、再登録しなければならない場合があります。
 
 [デバイス登録に関するトラブルシューティング](../enrollment/troubleshoot-device-enrollment-in-intune.md)に関するページが役に立つ場合があります。
 

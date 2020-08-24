@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e19315f07d803e2aab53b3724fde85f1975c0c5
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: ad02078d2a8b9926de463e01d3dcbc675c721e4a
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87264551"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179521"
 ---
 # <a name="configure-microsoft-defender-atp-in-intune"></a>Intune で Microsoft Defender ATP を構成する
 
@@ -92,10 +92,10 @@ Intune と Microsoft Defender ATP の間の接続を確立したときに、Micr
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 2. **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]** の順に選択します。
-3. **名前**と**説明**を入力します。
-4. **[プラットフォーム]** では、 **[Windows 10 以降]** を選択します。
-5. **[プロファイルの種類]** では、 **[Microsoft Defender ATP (Windows 10 デスクトップ)]** を選択します。
-6. 次のように設定を構成します。
+3. **[プラットフォーム]** では、 **[Windows 10 以降]** を選択します。
+4. **[プロファイルの種類]** では、 **[Microsoft Defender ATP (Windows 10 デスクトップ)]** を選択してから、 **[作成]** を選択します。
+5. **[基本]** ページで、プロファイルの "*名前*" と "*説明*" (必要に応じて) を入力して、 **[次へ]** を選択します。
+6. **[構成設定]** ページで、以下を構成します。
 
    - **[Microsoft Defender ATP クライアント構成パッケージの種類]** : **[Onboard]\(オンボード\)** を選択し、プロファイルに構成パッケージを追加します。 **[Offboard]** \(オフボード\) を選択し、プロファイルから構成パッケージを削除します。
   
@@ -107,8 +107,14 @@ Intune と Microsoft Defender ATP の間の接続を確立したときに、Micr
 
      これらの Microsoft Defender ATP の設定について詳しくは、[Microsoft Endpoint Configuration Manager を使用する Windows 10 コンピューターのオンボード](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm)に関する記事をご覧ください。
 
-7. **[OK]** 、 **[作成]** の順に選択して変更内容を保存します。これで、プロファイルが作成されます。
-8. Microsoft Defender ATP を使用して評価するデバイスに[デバイス構成プロファイルを割り当てます](../configuration/device-profile-assign.md)。
+7. **[次へ]** を選択して、 **[スコープ タグ]** ページを開きます。 スコープ タグは省略可能です。 **[次へ]** を選択して続行します。
+
+8. **[割り当て]** ページで、このプロファイルを受け取るグループを選択します。 プロファイルの割り当ての詳細については、[ユーザーおよびデバイス プロファイルの割り当て](../configuration/device-profile-assign.md)に関するページを参照してください。
+
+   **[次へ]** を選択します。
+
+9. **[確認および作成]** ページで、完了したら、 **[作成]** を選択します。 作成したプロファイルのポリシーの種類を選択すると、新しいプロファイルが一覧に表示されます。
+ **[OK]** 、 **[作成]** の順に選択して変更内容を保存します。これで、プロファイルが作成されます。
 
 ### <a name="onboard-android-devices"></a>Android デバイスをオンボードする
 

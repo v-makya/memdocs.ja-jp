@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a0d1ee33e3aca6dbb6ff6e349eb9a578aad6ae88
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 36dca5ce8bb0fc3523bcd72441e3ecf22931609b
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048074"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146033"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティの攻撃の回避ポリシー設定
 
@@ -177,11 +177,14 @@ ms.locfileid: "88048074"
 ### <a name="microsoft-defender-application-control"></a>Microsoft Defender アプリケーション制御
 
 - **App Locker アプリケーション コントロール**  
+  CSP:[AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+
   - **[未構成]** ("*既定値*")
   - **コンポーネントとストア アプリの適用**
   - **コンポーネントとストア アプリの監査**
   - **コンポーネント、ストア アプリ、Smartlocker の適用**
-  - **コンポーネント、ストア アプリ、Smartlocker の監査** CSP:[AppLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+  - **コンポーネント、ストア アプリ、Smartlocker の監査**
+   
 
 - **ユーザーが SmartScreen 警告を無視できないようにする**  
   CSP:[SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)

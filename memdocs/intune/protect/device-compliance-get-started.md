@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 08/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 832ddbde9e3cf4782c7d3867ad6a09cc250960c7
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 6bb3397432f1c171418ea99510cb04f1bdefc639
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088328"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252794"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>コンプライアンス ポリシーを使用して、Intune で管理するデバイスのルールを設定する
 
@@ -31,9 +31,7 @@ Intune のコンプライアンス ポリシーとは次のようなものです
 
 - 準拠ユーザーおよびデバイスであるために満たす必要があるルールや設定を定義します。
 - 非準拠のデバイスに適用されるアクションが含まれます。 非準拠に対するアクションにより、ユーザーに非準拠の条件を通知し、非準拠のデバイスでデータを保護することができます。
-- [条件付きアクセスと組み合わせ](#integrate-with-conditional-access)、ルールを満たしておらず、非準拠の印が付けられたユーザーとデバイスをブロックできます。
-
-  条件付きアクセスは、サードパーティ モバイル デバイス管理パートナーで管理しているデバイスからのコンプライアンスの状態データとも連動できます。 この機能を有効にするには、Azure AD と Intune の両方にパートナーのサポートを追加します。 詳細については、デバイス コンプライアンス パートナーのサポートを追加する方法に関するページを参照してください。 
+- [条件付きアクセスと組み合わせて](#integrate-with-conditional-access)、ルールを満たしていないユーザーとデバイスをブロックすることができます。
 
 Intune のコンプライアンス ポリシーには、次の 2 つの部分があります。
 
@@ -126,7 +124,6 @@ Intune のデバイス コンプライアンス ポリシーは次を行いま�
   - [Android](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
   - [Windows 8.1 以降](compliance-policy-create-windows-8-1.md)
   - [Windows 10 以降](compliance-policy-create-windows.md)
 
@@ -163,13 +160,13 @@ Intune には、デバイスのコンプライアンス状態を監視し、ポ�
 
 |**ポリシー設定**| **プラットフォーム** |
 | --- | ----|
-| **PIN またはパスワードの構成** | - **Android 4.0 以降**: 検疫済み<br>- **Samsung KNOX Standard 4.0 以降**: 検疫済み<br>- **Android エンタープライズ**: 検疫済み  <br>  <br>- **iOS 8.0 以降**: 修復<br>- **macOS 10.11 以降**: 修復  <br>  <br>- **Windows 8.1 以降**: 修復<br>- **Windows Phone 8.1 以降**: 修復|
-| **デバイスの暗号化** | - **Android 4.0 以降**: 検疫済み<br>- **Samsung KNOX Standard 4.0 以降**: 検疫済み<br>- **Android エンタープライズ**: 検疫済み<br><br>- **iOS 8.0 以降**: 修復 (PIN の設定による)<br>- **macOS 10.11 以降**: 修復 (PIN の設定による)<br><br>- **Windows 8.1 以降**: 適用できません<br>- **Windows Phone 8.1 以降**: 修復 |
-| **脱獄またはルート化されたデバイス** | - **Android 4.0 以降**: 検疫済み (設定ではありません)<br>- **Samsung KNOX Standard 4.0 以降**: 検疫済み (設定ではありません)<br>- **Android エンタープライズ**: 検疫済み (設定ではありません)<br><br>- **iOS 8.0 以降**: 検疫済み (設定ではありません)<br>- **macOS 10.11 以降**: 適用できません<br><br>- **Windows 8.1 以降**: 適用できません<br>- **Windows Phone 8.1 以降**: 適用できません |
-| **電子メールのプロファイル** | - **Android 4.0 以降**: 適用できません<br>- **Samsung KNOX Standard 4.0 以降**: 適用できません<br>- **Android エンタープライズ**: 適用できません<br><br>- **iOS 8.0 以降**: 検疫済み<br>- **macOS 10.11 以降**: 検疫済み<br><br>- **Windows 8.1 以降**: 適用できません<br>- **Windows Phone 8.1 以降**: 適用できません |
-| **最小 OS バージョン** | - **Android 4.0 以降**: 検疫済み<br>- **Samsung KNOX Standard 4.0 以降**: 検疫済み<br>- **Android エンタープライズ**: 検疫済み<br><br>- **iOS 8.0 以降**: 検疫済み<br>- **macOS 10.11 以降**: 検疫済み<br><br>- **Windows 8.1 以降**: 検疫済み<br>- **Windows Phone 8.1 以降**: 検疫済み |
-| **最大 OS バージョン** | - **Android 4.0 以降**: 検疫済み<br>- **Samsung KNOX Standard 4.0 以降**: 検疫済み<br>- **Android エンタープライズ**: 検疫済み<br><br>- **iOS 8.0 以降**: 検疫済み<br>- **macOS 10.11 以降**: 検疫済み<br><br>- **Windows 8.1 以降**: 検疫済み<br>- **Windows Phone 8.1 以降**: 検疫済み |
-| **Windows 正常性構成証明書** | - **Android 4.0 以降**: 適用できません<br>- **Samsung KNOX Standard 4.0 以降**: 適用できません<br>- **Android エンタープライズ**: 適用できません<br><br>- **iOS 8.0 以降**: 適用できません<br>- **macOS 10.11 以降**: 適用できません<br><br>- **Windows 10 および Windows 10 Mobile**: 検疫済み<br>- **Windows 8.1 以降**: 検疫済み<br>- **Windows Phone 8.1 以降**: 適用できません |
+| **PIN またはパスワードの構成** | - **Android 4.0 以降**: 検疫済み<br>- **Samsung KNOX Standard 4.0 以降**: 検疫済み<br>- **Android エンタープライズ**: 検疫済み  <br>  <br>- **iOS 8.0 以降**: 修復<br>- **macOS 10.11 以降**: 修復  <br>  <br>- **Windows 8.1 以降**: 修復|
+| **デバイスの暗号化** | - **Android 4.0 以降**: 検疫済み<br>- **Samsung KNOX Standard 4.0 以降**: 検疫済み<br>- **Android エンタープライズ**: 検疫済み<br><br>- **iOS 8.0 以降**: 修復 (PIN の設定による)<br>- **macOS 10.11 以降**: 修復 (PIN の設定による)<br><br>- **Windows 8.1 以降**: 適用できません|
+| **脱獄またはルート化されたデバイス** | - **Android 4.0 以降**: 検疫済み (設定ではありません)<br>- **Samsung KNOX Standard 4.0 以降**: 検疫済み (設定ではありません)<br>- **Android エンタープライズ**: 検疫済み (設定ではありません)<br><br>- **iOS 8.0 以降**: 検疫済み (設定ではありません)<br>- **macOS 10.11 以降**: 適用できません<br><br>- **Windows 8.1 以降**: 適用できません |
+| **電子メールのプロファイル** | - **Android 4.0 以降**: 適用できません<br>- **Samsung KNOX Standard 4.0 以降**: 適用できません<br>- **Android エンタープライズ**: 適用できません<br><br>- **iOS 8.0 以降**: 検疫済み<br>- **macOS 10.11 以降**: 検疫済み<br><br>- **Windows 8.1 以降**: 適用できません |
+| **最小 OS バージョン** | - **Android 4.0 以降**: 検疫済み<br>- **Samsung KNOX Standard 4.0 以降**: 検疫済み<br>- **Android エンタープライズ**: 検疫済み<br><br>- **iOS 8.0 以降**: 検疫済み<br>- **macOS 10.11 以降**: 検疫済み<br><br>- **Windows 8.1 以降**: 検疫済み|
+| **最大 OS バージョン** | - **Android 4.0 以降**: 検疫済み<br>- **Samsung KNOX Standard 4.0 以降**: 検疫済み<br>- **Android エンタープライズ**: 検疫済み<br><br>- **iOS 8.0 以降**: 検疫済み<br>- **macOS 10.11 以降**: 検疫済み<br><br>- **Windows 8.1 以降**: 検疫済み |
+| **Windows 正常性構成証明書** | - **Android 4.0 以降**: 適用できません<br>- **Samsung KNOX Standard 4.0 以降**: 適用できません<br>- **Android エンタープライズ**: 適用できません<br><br>- **iOS 8.0 以降**: 適用できません<br>- **macOS 10.11 以降**: 適用できません<br><br>- **Windows 10**: 検疫済み<br>- **Windows 8.1 以降**: 検疫済み |
 
 ---------------------------
 

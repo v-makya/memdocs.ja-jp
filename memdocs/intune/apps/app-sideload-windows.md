@@ -1,12 +1,12 @@
 ---
-title: Windows アプリと Windows Phone アプリのサイドロード
+title: Windows アプリをサイドロードする
 titleSuffix: Microsoft Intune
 description: Intune を使用して展開できるように、基幹業務アプリに署名する方法について説明します。
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8194c3fcc90942b791d5300a37b3c093a5229cc9
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: da43cab373021107a940ce0bd71c0f4986d5e907
+ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989587"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179623"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Intune を使用して Windows デバイスに展開できるように基幹業務アプリに署名する
 
@@ -53,7 +53,7 @@ Windows 10 でのサイドローディングは、以前のバージョンの Wi
 Windows 10 デバイスで証明機関がまだ信頼されていない場合は、appx パッケージに署名して Intune サービスにアップロードした後、コード署名証明書を Intune ポータルにアップロードする必要があります。
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
-2. **[テナント管理]**  >  **[Connectors and tokens]\(コネクタとトークン\)**  >  **[Windows enterprise certifcates]\(Windows エンタープライズ証明書\)** をクリックします。
+2. **[テナント管理]**  >  **[Connectors and tokens]\(コネクタとトークン\)**  >  **[Windows enterprise certificates]\(Windows エンタープライズ証明書\)** をクリックします。
 3. **[Code-signing certificate file]\(コード署名証明書ファイル\)** の下のファイルを選択します。
 4. *.cer* ファイルを選択して **[開く]** をクリックします。
 5. **[アップロード]** をクリックして証明書ファイルを Intune に追加します。
@@ -64,13 +64,13 @@ Intune では、アップロードされた最新の .cer ファイルのみが�
 
 ## <a name="how-to-renew-the-symantec-enterprise-code-signing-certificate"></a>Symantec エンタープライズ コード署名証明書を更新する方法
 
-Windows Phone 8.1 モバイル アプリの展開に使用された証明書は、2019 年 2 月 28 日に廃止され、Symantec から更新されなくなりました。 Windows 10 Mobile に展開する場合は、[Windows 10 サイドローディング](app-sideload-windows.md#windows-10-sideloading)の指示に従って、引き続き Symantec Desktop Enterprise コード署名証明書を使用できます。
+Windows Phone 8.1 モバイル アプリの展開に使用された証明書は、2019 年 2 月 28 日に廃止され、Symantec から更新されなくなりました。 また、2020 年 8 月 10 日をもって、Intune での Windows 10 Mobile のサポートは終了しました。
 
 ## <a name="how-to-install-the-updated-certificate-for-line-of-business-lob-apps"></a>基幹業務 (LOB) アプリの更新された証明書をインストールする方法
 
 Windows Phone 8.1
 
-既存の Symantec Mobile Enterprise コード署名証明書の有効期限が切れた後は、Intune サービスではこのプラットフォームに対して LOB アプリを展開できなくなります。 それでもまだ、SD カードを使用するか、デバイスにファイルをダウンロードすることによって、署名されていない XAP/APPX ファイルをサイドロードすることはできます。 詳しくは、[Windows Phone に XAP ファイルをインストールする方法](https://answers.microsoft.com/en-us/mobiledevices/forum/mdlumia-mdapps/how-to-install-xap-file-in-windows-phone-8/da09ee72-51ae-407c-9b85-bc148df89280)に関するページをご覧ください。
+既存の Symantec Mobile Enterprise コード署名証明書の有効期限が切れた後は、Intune サービスではこのプラットフォームに対して LOB アプリを展開できなくなります。
 
 Windows 8.1 Desktop/Windows 10 Desktop および Mobile
 
@@ -102,7 +102,7 @@ Intune がユニバーサル アプリ用に依存関係をどのように処理
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>ユーザーがストアから古いアプリを既にインストールしている場合に、ユーザーのデバイスのポータル サイトを更新する方法
 
-貴社のユーザーがストアから Windows 8.1 または Windows Phone 8.1 ポータル サイト アプリを既にインストールしている場合は、お客様またはお客様のユーザーが特に操作を行わなくても新しいバージョンに自動的に更新されます。 更新が実行されない場合は、デバイスでストア アプリの自動更新を有効にしているかどうかをユーザーに確認してください。
+お客様のユーザーがストアから Windows 8.1 ポータル サイト アプリを既にインストールしている場合、それらは、お客様またはお客様のユーザーが特に操作を行わなくても新しいバージョンに自動的に更新されます。 更新が実行されない場合は、デバイスでストア アプリの自動更新を有効にしているかどうかをユーザーに確認してください。
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>サイドロードした Windows 8.1 のポータル サイト アプリを Windows 10 のポータル サイト アプリにアップグレードする方法
 
@@ -112,9 +112,9 @@ Intune がユニバーサル アプリ用に依存関係をどのように処理
 
 アプリをサイドロードする必要があり、Symantec コード署名証明書で Windows 8.1 ポータル サイトに署名し展開した場合は、以下のセクションの手順に従ってください。  
 
-### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>署名およびサイドロードした Windows Phone 8.1 ポータル サイト アプリまたは Windows 8.1 ポータル サイト アプリを Windows 10 ポータル サイト アプリにアップグレードする方法
+### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>署名およびサイドロードした Windows 8.1 のポータル サイト アプリを Windows 10 のポータル サイト アプリにアップグレードする方法
 
-推奨される移行パスとして、展開アクションを "アンインストール" に設定して、Windows Phone 8.1 ポータル サイト アプリまたは Windows 8.1 ポータル サイト アプリの既存の展開を削除します。 これが完了したら、通常どおり Windows 10 ポータル サイト アプリを展開できるようになります。  
+推奨される移行パスとして、展開アクションを "アンインストール" に設定して、Windows 8.1 ポータル サイト アプリの既存の展開を削除します。 これが完了したら、通常どおり Windows 10 ポータル サイト アプリを展開できるようになります。  
 
 これ以外の場合は、アップグレードのパスが確実に考慮されるように Windows 10 ポータル サイト アプリを適切に更新し、署名する必要があります。  
 
@@ -130,7 +130,7 @@ Intune がユニバーサル アプリ用に依存関係をどのように処理
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | InputWin10AppxBundle  |                                             ソース appxbundle ファイルが配置されるパス。                                              |
 | OutputWin10AppxBundle |                                                  署名された appxbundle ファイルの出力パス                                                  |
-|       Win81Appx       |                          Windows 8.1 または Windows Phone 8.1 ポータル サイト (.APPX) ファイルが配置されるパス。                           |
+|       Win81Appx       |                          Windows 8.1 ポータル サイト (.APPX) ファイルが配置されるパス。                           |
 |      PfxFilePath      |                                   Symantec エンタープライズ モバイル コード署名証明書 (.PFX) ファイルへのパス                                    |
 |      PfxPassword      |                                     Symantec エンタープライズ モバイル コード署名証明書のパスワード                                      |
 |      PublisherId      |      エンタープライズの発行者 ID 指定しない場合、Symantec エンタープライズ モバイル コード署名証明書の 'Subject' フィールドが使用されます。       |

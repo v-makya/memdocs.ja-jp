@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/11/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 099643f1e55c6f3e58c0cd685c2339abf00dd7dc
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: aec16e4c3c1eae5614fdf000740dcf8363bec1ca
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506215"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88145982"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune で iOS および iPadOS デバイスの電子メール設定を追加する
 
@@ -162,4 +162,4 @@ Microsoft Intune では、電子メール サーバーに接続する電子メ�
 
 プロファイルは作成されましたが、まだ何も行われていません。 次に、[プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
 
-[Android](email-settings-android.md)、[Android Enterprise](email-settings-android-enterprise.md)、[Windows 10](email-settings-windows-10.md)、および [Windows Phone 8.1](email-settings-windows-phone-8-1.md) デバイス上で電子メール設定を構成します。
+[Android](email-settings-android.md)、[Android Enterprise](email-settings-android-enterprise.md)、[Windows 10](email-settings-windows-10.md) の各デバイス上で電子メール設定を構成します。

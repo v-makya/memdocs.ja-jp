@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/11/2020
+ms.date: 08/11/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bf114edf17fa1f8959b5f26b83c771b711b83f5
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 43101602defab75c15c542ec922cba6f2bf96cf0
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093181"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146322"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune でデバイス プロファイルを使用してデバイスに機能と設定を適用する
 
@@ -59,7 +59,6 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 - Android エンタープライズ
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 - Windows 8.1
 - Windows 10 以降
 
@@ -73,7 +72,6 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 - Android エンタープライズ
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 
 ## <a name="delivery-optimization"></a>配信の最適化
 
@@ -155,7 +153,6 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 - Android デバイス管理者
 - Android エンタープライズ
 - iOS/iPadOS
-- Windows Phone 8.1
 - Windows 10 以降
 
 ## <a name="endpoint-protection"></a>エンドポイント保護
@@ -187,7 +184,7 @@ Microsoft Defender Advanced Threat Protection (WDATP) と Microsoft Intune を�
 
 ## <a name="identity-protection"></a>ID 保護
 
-[ID 保護](../protect/identity-protection-configure.md)により、Windows 10 デバイスと Windows 10 Mobile デバイスにおける Windows Hello for Business の操作が制御されます。 この設定を構成し、Windows Hello for Business をユーザーやデバイスが利用できるようにし、デバイスの PIN とジェスチャの要件を指定します。  
+Windows 10 デバイス上の Windows Hello for Business エクスペリエンスは、[ID 保護](../protect/identity-protection-configure.md)により制御されます。 この設定を構成し、Windows Hello for Business をユーザーやデバイスが利用できるようにし、デバイスの PIN とジェスチャの要件を指定します。  
 
 この機能では以下をサポートします。  
 
@@ -278,7 +275,6 @@ Windows デバイスの更新プログラム ポリシーについては、[配�
 - Android エンタープライズ
 - iOS/iPadOS
 - macOS
-- Windows Phone 8.1
 - Windows 8.1
 - Windows 10 以降
 

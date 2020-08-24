@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99fa22d351d8d0672d2745f18bb70dfd096ac1d7
-ms.sourcegitcommit: 16bc2ed5b64eab7f5ae74391bd9d7b66c39d8ca6
+ms.openlocfilehash: d1ede68097ef3afe0358154ff7b8802a0b3a7285
+ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86437421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501169"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Android 用 Microsoft Intune アプリ SDK 開発者ガイド
 
@@ -1184,7 +1184,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 | `AUTHORIZATION_NEEDED` | この結果は、トークンがアプリの登録済みの `MAMServiceAuthenticationCallback` インスタンスによって提供されていないこと、または指定されたトークンが無効なことを示します。  アプリは、可能な場合は、有効なトークンを取得し、`updateToken()` を呼び出す必要があります |
 | `NOT_LICENSED` | Intune で、ユーザーがライセンスされていない、または Intune MAM サービスへの接続に失敗しました。  管理されていない (標準の) 状態で、アプリが続行され、ユーザーがブロックされていない必要があります。  将来的にユーザーがライセンスされる場合、登録が定期的に再試行されます。 |
 | `ENROLLMENT_SUCCEEDED` | 登録の試行が成功したか、ユーザーが既に登録されています。  登録に成功する場合は、この通知の前にポリシーの更新通知が送信されます。  会社のデータへのアクセスが許可されます。 |
-| `ENROLLMENT_FAILED` | 登録の試行が失敗しました。  さらに詳細な情報がデバイス ログにあります。  ユーザーが Intune にライセンスされていることが以前に判断されたために、アプリはこの状態で、会社データへのアクセスを許可しません。|
+| `ENROLLMENT_FAILED` | 登録の試行が失敗しました。  さらに詳細な情報がデバイス ログにあります。  ユーザーが Intune にライセンスされていることが以前に判断されたために、アプリはこの状態で、会社データへのアクセスを許可しません。 ご利用のアプリが "enrollment_succeeded" を取得するまで、会社データへのアクセスが許可されないことがすべてのアプリで保証される必要があります。|
 | `WRONG_USER` | デバイスごとに 1 つのユーザーだけが、MAM サービスにアプリを登録できます。 この結果は、この結果の配信対象ユーザー (2 番目のユーザー) は MAM ポリシーの対象になっていますが、別のユーザーが既に登録されている、ということを示します。 2 番目のユーザーには MAM ポリシーを適用できないため、後で (おそらく、アプリからユーザーを削除することによって) このユーザーの登録が成功するまで (成功しない限り)、アプリでこのユーザーのデータへのアクセスを許可しないようにする必要があります。 この `WRONG_USER` を提供すると同時に、MAM では、既存のアカウントを削除するオプションが表示されます。 人間のユーザーが肯定的に応答した場合は、少し後で 2 番目のユーザーを実際に登録することができます。 2 番目のユーザーが登録されている限り、MAM では定期的に登録が再試行されます。 |
 | `UNENROLLMENT_SUCCEEDED` | 登録解除が正常に完了しました。|
 | `UNENROLLMENT_FAILED` | 登録解除要求が失敗しました。  さらに詳細な情報がデバイス ログにあります。 一般に、アプリが有効な (null でも空でもない) UPN を渡す限り、この問題は発生しません。 アプリで実行できる信頼性の高い直接的な修復方法はありません。 有効な UPN の登録を解除するときにこの値を受け取った場合は、Intune MAM チームにバグとして報告してください。|

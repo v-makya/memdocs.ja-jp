@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eccb45ee4a0aade230ba8c18f68c4f0bc992e011
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 50c1842357a79ce3228b7b0a5283dc9a4e98b2d6
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491322"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252341"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>ワイプ、インベントリからの削除、デバイス登録の手動解除を使用し、デバイスを削除する
 
@@ -132,14 +132,14 @@ Android の仕事用プロファイルのデバイスから会社データを削
 
 ### <a name="windows"></a>Windows
 
-|データ型|Windows 8.1 (MDM) と Windows RT 8.1|Windows RT|Windows Phone 8.1 および Windows Phone 8|Windows 10|
+|データ型|Windows 8.1 (MDM) と Windows RT 8.1|Windows RT|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Intune でインストールされた会社のアプリと関連するデータ。|EFS で保護されているファイルのキーは失効します。 ユーザーがファイルを開くことはできません。|会社のアプリは削除されません。|元々ポータル サイトでインストールされたアプリはアンインストールされます。 会社のアプリ データは削除されます。|アプリはアンインストールされます。 サイドローディング キーは削除されます。<br>Windows 10 バージョン 1709 (Creators Update) 以降の場合、Microsoft 365 アプリは削除されていません。 Intune 管理拡張機能がインストールされている Win32 アプリは、未登録デバイスではアンインストールされません。 管理者は、割り当ての除外を利用して、Win32 アプリを BYOD デバイスに提供しないようにすることができます。|
-|Settings|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|
-|Wi-fi と VPN プロファイルの設定|削除されます。|削除されます。|サポートされていません。|削除されます。|
-|証明書プロファイルの設定|証明書は削除され、失効されます。|証明書は削除され、失効されます。|サポートされていません。|証明書は削除され、失効されます。|
-|電子メール|EFS 対応の電子メールを削除します。 これには、Windows 用メール アプリケーションの電子メールと添付ファイルが含まれます。|サポートされていません。|Intune を介してプロビジョニングされている電子メール プロファイルは削除されます。 デバイスにキャッシュされた電子メールは削除されます。|EFS 対応の電子メールを削除します。 これには、Windows 用メール アプリケーションの電子メールと添付ファイルが含まれます。 Intune によってプロビジョニングされたメール アカウントを削除します。|
-|Azure AD の参加解除|いいえ。|いいえ。|Azure AD レコードは削除されます。|Azure AD レコードは削除されます。|
+|Intune でインストールされた会社のアプリと関連するデータ。|EFS で保護されているファイルのキーは失効します。 ユーザーがファイルを開くことはできません。|会社のアプリは削除されません。|アプリはアンインストールされます。 サイドローディング キーは削除されます。<br>Windows 10 バージョン 1709 (Creators Update) 以降の場合、Microsoft 365 アプリは削除されていません。 Intune 管理拡張機能がインストールされている Win32 アプリは、未登録デバイスではアンインストールされません。 管理者は、割り当ての除外を利用して、Win32 アプリを BYOD デバイスに提供しないようにすることができます。|
+|Settings|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|Intune ポリシーで設定された構成は強制されなくなります。 ユーザーが設定を変更できます。|
+|Wi-fi と VPN プロファイルの設定|削除されます。|削除されます。|削除されます。|
+|証明書プロファイルの設定|証明書は削除され、失効されます。|証明書は削除され、失効されます。|証明書は削除され、失効されます。|
+|電子メール|EFS 対応の電子メールを削除します。 これには、Windows 用メール アプリケーションの電子メールと添付ファイルが含まれます。|サポートされていません。|EFS 対応の電子メールを削除します。 これには、Windows 用メール アプリケーションの電子メールと添付ファイルが含まれます。 Intune によってプロビジョニングされたメール アカウントを削除します。|
+|Azure AD の参加解除|いいえ。|いいえ。|Azure AD レコードは削除されます。|
 
 > [!NOTE]
 > 初期セットアップ (OOBE) 時に Azure AD に参加した Windows 10 の場合は、インベントリから削除コマンドを使用すると、デバイスからすべての Azure AD アカウントが削除されます。 [セーフ モードでの PC の起動](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode)に関する記事の手順に従って、ローカル管理者としてログインし、ユーザーのローカル データへのアクセスを回復します。 
@@ -167,7 +167,8 @@ Intune ポータルからデバイスを削除する必要がある場合は、�
 3. **[次の多くの日数にわたってチェックインしていないデバイスを削除する]** ボックスに、30 から 270 までの数値を入力します。
 4. **[保存]** を選びます。
 
-
+> [!NOTE]
+> デバイスのクリーンアップ ルールは、[フルマネージド](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll)、[専用](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll)、[仕事用プロファイルを備えた会社所有](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll)などの Android Enterprise シナリオでは使用できません。 
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Azure Active Directory ポータルからデバイスを削除する
 

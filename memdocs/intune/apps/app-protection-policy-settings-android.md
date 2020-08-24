@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/16/2020
+ms.date: 08/14/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96f5b4c8400e993de4ecde0aa3d7c30f82a20e6b
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d8fd15b7bdc52d3cd8dc00f77dced42e9bb6bd66
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262712"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252154"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Microsoft Intune の Android アプリ保護ポリシー設定
 この記事では、Android デバイスのアプリ保護ポリシーの設定について説明します。 説明されているポリシーの設定は、Azure portal の **[設定]** ウィンドウでアプリ保護ポリシー用に[構成](app-protection-policies.md)することができます。
@@ -127,7 +127,7 @@ Intune アプリ保護ポリシーによってデータ転送が許可される�
 
 
 ## <a name="conditional-launch"></a>条件付き起動
-条件付き起動設定を構成し、アクセス保護ポリシーのサインイン セキュリティ要件を設定します。 
+条件付き起動設定を構成して、アプリ保護ポリシーのサインイン セキュリティ要件を設定します。 
 
 既定では、値とアクションが事前構成された設定がいくつか提供されます。 *[OS の最小バージョン]* など、一部の設定を削除できます。 **[1 つ選んでください]** ドロップダウンから追加の設定を選択することもできます。 
 

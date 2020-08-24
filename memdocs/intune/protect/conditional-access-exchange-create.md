@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b0a22d24a67364df3d3aa064489db67e2c97e98
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
+ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462237"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88252760"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Intune の Exchange On-Premises アクセスを構成する
 
@@ -69,14 +69,13 @@ Exchange Online Dedicated 環境を使用していて、それが新しい構成
 
 ### <a name="support-for-mobile-devices"></a>モバイル デバイスのサポート
 
-- **Windows Phone 8.1 以降** - 条件付きアクセス ポリシーを作成するには、[条件付きアクセス ポリシーの作成](../protect/create-conditional-access-intune.md)に関する記事を参照してください
+- **Windows Phone** - 条件付きアクセス ポリシーを作成するには、[条件付きアクセス ポリシーの作成](../protect/create-conditional-access-intune.md)に関する記事を参照してください
 - **iOS/iPadOS のネイティブ電子メール アプリ** - 条件付きアクセス ポリシーを作成するには、[条件付きアクセス ポリシーの作成](../protect/create-conditional-access-intune.md)に関する記事を参照してください
 - **Android 4 以降の Gmail などの EAS メール クライアント** - 条件付きアクセス ポリシーを作成するには、[条件付きアクセス ポリシーの作成](../protect/create-conditional-access-intune.md)に関する記事を参照してください
 
 - **Android デバイス管理者の EAS メール クライアント** - 条件付きアクセス ポリシーを作成するには、「[条件付きアクセス ポリシーを作成する](../protect/create-conditional-access-intune.md)」を参照してください
 
 - **Android 仕事用プロファイル デバイスの EAS メール クライアント** - Android 仕事用プロファイル デバイスでは、*Gmail* と *Nine Work for Android Enterprise* のみがサポートされています。 Android 仕事用プロファイルで条件付きアクセスを機能させるには、*Gmail* アプリまたは *Nine Work for Android Enterprise* アプリ用の電子メール プロファイルを配置する必要があります。また、これらのアプリを必要なインストールとしてデプロイする必要があります。 アプリを展開した後、デバイスベースの条件付きアクセスを設定できます。
-
 
 #### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>Android 仕事用プロファイル デバイスの条件付きアクセスを設定するには
 

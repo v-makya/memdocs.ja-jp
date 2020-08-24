@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b846aa1ead9bb2d1c1b15d783e646e59047c16ee
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0e18395aae96adec3bf4bbf60bdcccdd205dc90d
+ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988418"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88146339"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Microsoft Intune を使用してデバイス上の Windows 10 エディションをアップグレードするか S モードから切り替える
 
@@ -50,7 +50,7 @@ S モードに関して[よく寄せられる質問](https://support.microsoft.c
 デバイスをアップグレードする前に、次の前提条件が満たされていることを確認します。
 
 - ポリシーで対象とするすべてのデバイスにアップデートされたバージョンの Windows をインストールするための有効なプロダクト キー (Windows 10 Desktop エディションの場合)。 マルチ ライセンス認証キー (MAK) またはキー マネジメント サーバー (KMS) キーのどちらかを使用できます。
-- Windows 10 Mobile エディションと Windows 10 Holographic エディションの場合は、Microsoft ライセンス ファイルを使用できます。 このライセンス ファイルには、ポリシーで対象としているすべてのデバイス上に更新されたエディションをインストールするためのライセンス情報が含まれています。
+- Windows 10 Holographic エディションの場合は、Microsoft ライセンス ファイルを使用できます。 このライセンス ファイルには、ポリシーで対象としているすべてのデバイス上に更新されたエディションをインストールするためのライセンス情報が含まれています。
 - ポリシーを割り当てる Windows 10 デバイスが Microsoft Intune に登録されます。 エディションのアップグレード ポリシーは、Intune PC クライアント ソフトウェアを実行する PC で使用できません。
 
 ## <a name="supported-upgrade-paths"></a>サポートされるアップグレード パス
@@ -70,7 +70,6 @@ Windows 10 エディションのアップグレード プロファイルでサ�
 | Windows 10 Core | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education | 
 | Windows 10 Core N エディション | Windows 10 Education N エディション <br/>Windows 10 Enterprise N エディション <br/>Windows 10 Pro Education N エディション | 
 | Windows 10 Holographic | Windows 10 Holographic for Business |
-| Windows 10 Mobile | Windows 10 Mobile Enterprise |
 
 <!--The following table provides information about the supported upgrade paths for Windows 10 editions in this policy:
 
@@ -125,7 +124,7 @@ Windows 10 エディションのアップグレード プロファイルでサ�
 
 11. **[確認と作成]** で、設定を確認します。 **[作成]** を選択すると、変更内容が保存され、プロファイルが割り当てられます。 また、ポリシーがプロファイル リストに表示されます。
 
-ポリシーは、次に各デバイスがチェックインするときに適用されます。
+次に各デバイスがチェックインするときに、ポリシーが適用されます。
 
 ## <a name="next-steps"></a>次のステップ
 
