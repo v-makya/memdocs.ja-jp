@@ -223,7 +223,7 @@ _バージョン 1906 以降_
 
 このクライアント設定を構成すると、トースト通知からの再起動が必要な、すべての必要な展開のユーザー エクスペリエンスが変更されます。
 
-:::image type="content" source="media/3555947-restart-toast-initial.png" alt-text=""再起動が必要" というトースト通知":::
+:::image type="content" source="media/3555947-restart-toast-initial.png" alt-text="再起動が必要 というトースト通知":::
 
 さらに詳細なソフトウェア センターのダイアログ ウィンドウになります。
 
