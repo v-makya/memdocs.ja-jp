@@ -2,7 +2,7 @@
 title: リリース ノート
 titleSuffix: Configuration Manager
 description: 製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題について説明します。
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9c1152b14da7c0a473e266b1ac1e6da2778aa105
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: a29c165e13e82144d7fea767ca719a0c84c88023
+ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126293"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512650"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager のリリース ノート
 
@@ -112,6 +112,20 @@ Windows Server 2019 を実行しているドメイン コントローラーを�
 この問題を回避するには、`AdminConsole\bin` ディレクトリに `scripts` という名前のフォルダーを作成します。 ローカライズされたフォルダーのファイルを、新しく作成した `scripts` フォルダーにコピーします。 ファイルがコピーされたら、Microsoft Edge バージョン 77 以降を展開します。
 
 ## <a name="os-deployment"></a>OS の展開
+
+### <a name="client-policy-error-when-you-deploy-a-task-sequence"></a>タスク シーケンスを展開するときのクライアント ポリシー エラー
+
+<!-- 7970134 -->
+
+*適用対象:Configuration Manager バージョン 2006 早期更新リング*
+
+タスク シーケンスをクライアントに展開するとき、必要なタスク シーケンスが期限までにインストールされず、利用可能なタスク シーケンスがソフトウェア センターに表示されません。 ステータス メッセージ 10803 と、次のエラー メッセージのような説明が表示されます。
+
+"*クライアントはポリシーのダウンロードに失敗しました。データ転送サービスは "BITS エラー: サーバーの応答が有効ではありませんでした。サーバーは定義されたプロトコルに従っていませんでした。" (-2145386469) を返しました。* "
+
+この問題は、HTTPS 用の管理ポイントを構成していて、デバイスで Configuration Manager クライアント バージョン 1906 以前が使用されている場合に発生します。
+
+この問題を回避するには、デバイスの Configuration Manager クライアントをバージョン 1910 以降に更新します。
 
 ### <a name="task-sequences-cant-run-over-cmg"></a>タスクシーケンスが CMG で実行できない
 

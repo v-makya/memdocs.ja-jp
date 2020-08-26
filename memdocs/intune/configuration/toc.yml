@@ -51,7 +51,7 @@
           displayName: 'psk, oma-uri, eap'
         - name: Wi-Fi のトラブルシューティング
           href: troubleshoot-wi-fi-profiles.md
-    - name: Windows の管理用テンプレート
+    - name: 管理用テンプレート
       displayName: 'admx, gpo, group policy'
       items:
         - name: 管理用テンプレートを作成する

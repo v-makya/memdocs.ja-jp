@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 51a974247d7281d6134b699a5865f801d1ed6094
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82905701"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88695683"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Configuration Manager の Technical Preview 1609 の機能
 
@@ -91,7 +91,7 @@ Intune で Configuration Manager を使用すると、OMA-URI を使用しなく
 
 さまざまなデバイス プラットフォームの構成アイテムで使用できる多くの新しい設定が追加されました。
 これらの設定は、以前はスタンドアロン構成での Microsoft Intune にありましたが、Intune を Configuration Manager で使用する際にも使用できるようになりました。
-これらのいずれかの設定のヘルプが必要な場合は、「[Microsoft Intune ポリシーを使用してデバイスの設定と機能を管理する](/mem/intune/configuration/device-profiles)」を開き、対象のプラットフォームの設定のサブトピックを選択します。
+これらのいずれかの設定のヘルプが必要な場合は、「[Microsoft Intune ポリシーを使用してデバイスの設定と機能を管理する](../../../intune/configuration/device-profiles.md)」を開き、対象のプラットフォームの設定のサブトピックを選択します。
 
 
 ### <a name="new-settings-for-android-devices"></a>Android デバイス向けの新しい設定
@@ -238,7 +238,7 @@ Intune で Configuration Manager を使用すると、OMA-URI を使用しなく
 ### <a name="changes-in-ui-and-behavior-for-boundary-groups-and-content-locations"></a>境界グループの UI と動作およびコンテンツの場所の変更
 境界グループとクライアントのコンテンツ検索方法への主な変更を次に示します。 これらの変更と概念の多くが連動しています。
 - **高速または低速の構成の削除:** 個々の配布ポイントに高速または低速を設定する必要がなくなりました。  代わりに、境界グループに関連付けられている各サイト システムが同じように処理されます。 この変更により、境界グループ プロパティの **[参照]** タブで高速または低速の構成がサポートされなくなりました。
-- **各サイトに新しい既定の境界グループ:** 各プライマリ サイトに ***Default-Site-Boundary-Group\<sitecode>*** という名前の新しい既定の境界グループが追加されました。  クライアントが境界グループに割り当てられているネットワークの場所にいない場合、そのクライアントは、割り当てられたサイトの既定のグループに関連付けられているサイト システムを使用します。 フォールバックするコンテンツの場所の概念に代わるものとして、この境界グループを使用することを計画してください。    
+- **各サイトに新しい既定の境界グループ:** 各プライマリ サイトに、***Default-Site-Boundary-Group\<sitecode>*** という名前の新しい既定の境界グループがあります。  クライアントが境界グループに割り当てられているネットワークの場所にいない場合、そのクライアントは、割り当てられたサイトの既定のグループに関連付けられているサイト システムを使用します。 フォールバックするコンテンツの場所の概念に代わるものとして、この境界グループを使用することを計画してください。    
   -  **[代替のコンテンツ ソースの場所の使用を許可する]** の削除:フォールバックに使用する配布ポイントを明示的に構成する必要がなくなったため、これを設定するオプションが UI から削除されました。
 
   さらに、アプリケーションの展開の種類で **[代替のコンテンツ ソースの場所の使用をクライアントに許可する]** の設定をオンにした場合の結果が変更されています。 展開の種類でこの設定をオンにすると、クライアントがコンテンツ ソースの場所として既定のサイトの境界グループを使用できるようになりました。
@@ -317,8 +317,8 @@ Intune で Configuration Manager を使用すると、OMA-URI を使用しなく
 
 ### <a name="update-existing-boundary-groups-to-the-new-model"></a><a name="bkmk_update"></a>既存の境界グループを新しいモデルに更新する
 バージョン 1609 をインストールしてサイトを更新するときに、次の構成が自動的に行われます。 これらは、新しい境界グループおよびリレーションシップを構成するまで、現在のフォールバック動作をそのまま利用できるようにすることを目的としています。  
-- サイトで保護されていない配布ポイントがそのサイトの *Default-Site-Boundary-Group\<sitecode>* 境界グループに追加されます。
-- 低速接続が設定されているサイト サーバーを含む既存の各境界グループのコピーが作成されます。 新しいグループの名前は ***\<元の境界グループ名>-Slow-Tmp*** です。  
+- サイトで保護されていない配布ポイントは、そのサイトの *Default-Site-Boundary-Group\<sitecode>* 境界グループに追加されます。
+- 低速接続が設定されているサイト サーバーを含む既存の各境界グループのコピーが作成されます。 新しいグループの名前は ***\<original boundary group name>-Slow-Tmp*** になります。  
   -   高速接続が設定されているサイト システムは、元の境界グループに残されます。
   -   低速接続が設定されているサイト システムのコピーが、境界グループのコピーに追加されます。 低速接続で設定されている元のサイト システムは、後方互換性のために元の境界グループに残っていますが、その境界グループからは使用されません。
   -   この境界グループのコピーには、それに関連付けられている境界はありません。 ただし、元のグループとフォールバックの時間が 0 に設定された新しい境界グループのコピー間にフォールバック リンクが作成されます。
@@ -347,7 +347,7 @@ Configuration Manager の Technical Preview 1609 では、新しいダッシュ�
 - Office 365 クライアントのバージョン
 - Office 365 クライアントの言語
 - Office 365 クライアントのチャネル     
-詳細については、「[Office 365 ProPlus 更新プログラム チャネルの概要](https://docs.microsoft.com/deployoffice/overview-update-channels)」をご覧ください。
+詳細については、「[Office 365 ProPlus 更新プログラム チャネルの概要](/deployoffice/overview-update-channels)」をご覧ください。
 - Office 365 クライアントが使用可能な製品のセットで選択した自動展開規則
 
 ダッシュボードでは、次の操作を実行できます。

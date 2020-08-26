@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6c42015880cae09be48feff9c42b6b2a0d2c8544
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f16a5736d0bebbcb4f3b03989c6983cd55ac8f54
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129316"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696992"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Configuration Manager による Windows 10 更新プログラムの配信の最適化
 
@@ -49,12 +49,12 @@ Configuration Manager では、次のような多くのピアツーピア テク
 
 ### <a name="windows-delivery-optimization"></a>Windows 配信の最適化
 
-[配信の最適化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)は Windows 10 に組み込まれている主要なダウンロード テクノロジであり、ピアツーピアの配布方法です。 Windows 10 クライアントは、同じ更新プログラムをダウンロードするローカル ネットワーク上の他のデバイスからコンテンツを取得できます。 [配信の最適化で使用可能な Windows のオプション](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delivery-optimization-options)を使用すると、クライアントをグループとして構成できます。 このグループ化によって、ピアツーピア要求を満たすために最適な候補であるデバイスを組織で特定できます。 配信の最適化では、デバイスを最新の状態に保つために使用される帯域幅を大幅に削減して、ダウンロード時間を短縮します。
+[配信の最適化](/windows/deployment/update/waas-delivery-optimization)は Windows 10 に組み込まれている主要なダウンロード テクノロジであり、ピアツーピアの配布方法です。 Windows 10 クライアントは、同じ更新プログラムをダウンロードするローカル ネットワーク上の他のデバイスからコンテンツを取得できます。 [配信の最適化で使用可能な Windows のオプション](/windows/deployment/update/waas-delivery-optimization-reference#delivery-optimization-options)を使用すると、クライアントをグループとして構成できます。 このグループ化によって、ピアツーピア要求を満たすために最適な候補であるデバイスを組織で特定できます。 配信の最適化では、デバイスを最新の状態に保つために使用される帯域幅を大幅に削減して、ダウンロード時間を短縮します。
 
 > [!NOTE]  
-> 配信の最適化は、クラウド管理ソリューションです。 ピアツーピア機能を利用するには、配信の最適化クラウド サービスへのインターネット アクセスが必要です。 必要なインターネット エンドポイントの詳細については、[配信の最適化に関してよく寄せられる質問](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)に関するページをご覧ください。 
+> 配信の最適化は、クラウド管理ソリューションです。 ピアツーピア機能を利用するには、配信の最適化クラウド サービスへのインターネット アクセスが必要です。 必要なインターネット エンドポイントの詳細については、[配信の最適化に関してよく寄せられる質問](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)に関するページをご覧ください。 
 
-最良の結果を得るには、配信の最適化の[ダウンロード モード](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#download-mode)を**グループ (2)** に設定して、*グループ ID* を定義する必要があります。 グループ モードでは、同じグループに属するデバイス (リモート オフィスにあるデバイスを含む) 間の内部サブネットをピアリングによって通過できます。 ドメインおよび AD DS サイトに関係なく独自のカスタム グループを作成するには、[グループ ID オプション](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids)を使用します。 配信の最適化による帯域幅の最適化を目標とするほとんどの組織には、グループ ダウンロード モードが推奨されます。
+最良の結果を得るには、配信の最適化の[ダウンロード モード](/windows/deployment/update/waas-delivery-optimization-reference#download-mode)を**グループ (2)** に設定して、*グループ ID* を定義する必要があります。 グループ モードでは、同じグループに属するデバイス (リモート オフィスにあるデバイスを含む) 間の内部サブネットをピアリングによって通過できます。 ドメインおよび AD DS サイトに関係なく独自のカスタム グループを作成するには、[グループ ID オプション](/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids)を使用します。 配信の最適化による帯域幅の最適化を目標とするほとんどの組織には、グループ ダウンロード モードが推奨されます。
 
 クライアントがさまざまなネットワークをローミングする場合、これらのグループ ID を手動で構成することは困難です。 Configuration Manager バージョン 1802 では、[境界グループと配信の最適化を統合](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#delivery-optimization)することにより、このプロセスの管理を簡略化する新機能が追加されました。 起動したクライアントは、その管理ポイントと通信してポリシーを取得し、ネットワークと境界グループの情報を提供します。 Configuration Manager は、各境界グループに対して一意の ID を作成します。 サイトでは、クライアントの位置情報を使用して、Configuration Manager の境界 ID に基づくクライアントの配信の最適化グループ ID を自動的に構成します。 別の境界グループにローミングしたクライアントは、その管理ポイントと通信し、新しい境界グループ ID が自動的に再構成されます。 この統合により、配信の最適化では、Configuration Manager の境界グループ情報を利用して更新プログラムのダウンロード元となるピアを検出できます。
 
@@ -66,13 +66,22 @@ Windows Update のすべてのインストール ファイルに配信の最適�
 
 - **[使用可能な場合、クライアントが差分コンテンツをダウンロードできるようにする]** を **[はい]** に設定します。
 - **[クライアントが差分コンテンツの要求を受信するために使用するポート]** を 8005 (既定) またはカスタム ポート番号に設定します。
-
+ 
 > [!IMPORTANT]
-> - 配信の最適化は有効にする必要があり (既定)、バイパスすることはできません。 詳細については、[Windows 配信の最適化のリファレンス](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference)に関する記事をご覧ください。
+> - 配信の最適化は有効にする必要があり (既定)、バイパスすることはできません。 詳細については、[Windows 配信の最適化のリファレンス](/windows/deployment/update/waas-delivery-optimization-reference)に関する記事をご覧ください。
 > - 差分コンテンツに対する[ソフトウェア更新プログラムのクライアント設定](../../core/clients/deploy/about-client-settings.md#software-updates)を変更する場合は、[配信の最適化のクライアント設定](../../core/clients/deploy/about-client-settings.md#delivery-optimization)を確認してください。
-> - Office COM を有効にしている場合、Microsoft 365 Apps クライアントの更新プログラムに対して配信の最適化を使用することはできません。 Office COM は、Microsoft 365 Apps クライアントの更新プログラムを管理するために Configuration Manager によって使用されます。 Office COM の登録を解除すれば、Microsoft 365 Apps の更新プログラムに対して配信の最適化を使用できるようになります。 Office COM を無効にすると、Microsoft 365 Apps のソフトウェア更新プログラムは、Office 自動更新 2.0 の既定のスケジュールされたタスクによって管理されます。 これは、Microsoft 365 Apps 更新プログラムのインストール プロセスが Configuration Manager によって指示または監視されないことを意味します。 Configuration Manager では、コンソール内の Office 365 クライアント管理ダッシュボードを設定するために、引き続きハードウェア インベントリから情報が収集されます。 Office COM の登録を解除する方法の詳細については、「[Office 365 クライアントを有効にして、Configuration Manager ではなく Office CDN から更新を受信できるようにする](https://docs.microsoft.com/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager)」を参照してください。
+> - Office COM を有効にしている場合、Microsoft 365 Apps クライアントの更新プログラムに対して配信の最適化を使用することはできません。 Office COM は、Microsoft 365 Apps クライアントの更新プログラムを管理するために Configuration Manager によって使用されます。 Office COM の登録を解除すれば、Microsoft 365 Apps の更新プログラムに対して配信の最適化を使用できるようになります。 Office COM を無効にすると、Microsoft 365 Apps のソフトウェア更新プログラムは、Office 自動更新 2.0 の既定のスケジュールされたタスクによって管理されます。 これは、Microsoft 365 Apps 更新プログラムのインストール プロセスが Configuration Manager によって指示または監視されないことを意味します。 Configuration Manager では、コンソール内の Office 365 クライアント管理ダッシュボードを設定するために、引き続きハードウェア インベントリから情報が収集されます。 Office COM の登録を解除する方法の詳細については、「[Office 365 クライアントを有効にして、Configuration Manager ではなく Office CDN から更新を受信できるようにする](/deployoffice/manage-office-365-proplus-updates-with-configuration-manager#enable-office-365-clients-to-receive-updates-from-the-office-cdn-instead-of-configuration-manager)」を参照してください。
 > - コンテンツの保存に CMG を使用する場合、[クライアント設定](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)の **[Download delta content when available]\(デルタ コンテンツが使用可能な場合はダウンロードする\)** が有効になっていると、サードパーティの更新プログラムのコンテンツはクライアントにダウンロードされません。 <!--6598587-->
 
+#### <a name="configuration-recommendations-for-clients-downloading-delta-content"></a>差分コンテンツをダウンロードするクライアントのための構成に関する推奨事項
+<!--7913814-->
+クライアントでソフトウェア更新プログラムのコンテンツに対して **[使用可能な場合、クライアントが差分コンテンツをダウンロードできるようにする]** [クライアント設定](../../core/clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available)が有効になっている場合、[配布ポイントのフォールバック](../../core/servers/deploy/configure/boundary-group-procedures.md#bkmk_site-fallback)の動作に制限があります。 これらのクライアントでソフトウェア更新プログラムのコンテンツを正しくダウンロードできるようにするには、次の構成をお勧めします。
+
+- クライアントが境界グループにあり、その境界グループに関連付けられている必要なコンテンツがある信頼できる配布ポイントがあることを確認します。
+- インターネットから直接ダウンロードできるクライアントに対して Microsoft Update が有効になっているフォールバックを使用して、ソフトウェア更新プログラムを展開します。
+   - このフォールバック動作の展開設定は、 **[現在、近隣、またはサイトの境界グループ内の配布ポイントでソフトウェア更新プログラムを利用できない場合は、Microsoft 更新プログラムからコンテンツをダウンロードします]** であり、これは **[ダウンロード設定]** ページにあります。 詳細については、「[ソフトウェアの更新の展開方法](manually-deploy-software-updates.md#process-to-manually-deploy-the-software-updates-in-a-software-update-group)」を参照してください。
+
+上記のいずれかのオプションが可能でない場合は、クライアント設定で **[使用可能な場合、クライアントが差分コンテンツをダウンロードできるようにする]** を無効にして、フォールバック機能を許可できます。 この場合、クライアントでは差分チャネルが使用されないため、配信の最適化ピアリングは利用されません。
 
 ### <a name="configuration-manager-peer-cache"></a>Configuration Manager のピア キャッシュ
 
@@ -83,7 +92,7 @@ Windows Update のすべてのインストール ファイルに配信の最適�
 
 
 ### <a name="windows-branchcache"></a>Windows BranchCache
-[BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) は Windows における帯域幅最適化テクノロジです。 各クライアントにはキャッシュがあります。また、各クライアントはコンテンツの代替ソースとして機能します。 同じネットワーク上のデバイスがこのコンテンツを要求できます。 常に配布ポイントへのアクセスが必要な方法とは異なり、[Configuration Manager で BranchCache を使用](../../core/plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache)すると、ピアが互いにコンテンツをソーシングできます。 BranchCache を使用すると、ファイルが個々のクライアントにキャッシュされ、他のクライアントは必要に応じてファイルを取得できます。 この方法では、単一の取得ポイントを使用するのではなく、キャッシュが分散されます。 これにより、帯域幅が大幅に削減され、クライアントが要求したコンテンツを受け取る時間も短縮されます。
+[BranchCache](/windows-server/networking/branchcache/branchcache) は Windows における帯域幅最適化テクノロジです。 各クライアントにはキャッシュがあります。また、各クライアントはコンテンツの代替ソースとして機能します。 同じネットワーク上のデバイスがこのコンテンツを要求できます。 常に配布ポイントへのアクセスが必要な方法とは異なり、[Configuration Manager で BranchCache を使用](../../core/plan-design/configs/support-for-windows-features-and-networks.md#bkmk_branchcache)すると、ピアが互いにコンテンツをソーシングできます。 BranchCache を使用すると、ファイルが個々のクライアントにキャッシュされ、他のクライアントは必要に応じてファイルを取得できます。 この方法では、単一の取得ポイントを使用するのではなく、キャッシュが分散されます。 これにより、帯域幅が大幅に削減され、クライアントが要求したコンテンツを受け取る時間も短縮されます。
 
 
 
@@ -113,7 +122,7 @@ Windows Update のすべてのインストール ファイルに配信の最適�
 
 Microsoft では、必要に応じて Configuration Manager と高速インストール ファイルおよびピア キャッシュ テクノロジを使用して Windows 10 品質更新プログラムの配信を最適化することをお勧めします。 この方法では、品質更新プログラムをインストールするためにサイズの大きいコンテンツをダウンロードする Windows 10 デバイスに関連する課題が軽減されます。 毎月の品質更新プログラムを展開して Windows 10 デバイスを最新の状態に保つことも推奨されます。 このプラクティスにより、デバイスに必要な毎月の品質更新プログラムのコンテンツの差分が削減されます。 このコンテンツの差分の削減により、配布ポイントまたはピア ソースからダウンロードするコンテンツのサイズが小さくなります。 
 
-高速インストール ファイルの性質上、コンテンツ サイズは従来の自己完結型ファイルよりも大幅に大きくなります。 このサイズが原因で、Windows Update サービスから Configuration Manager サイト サーバーへの更新プログラムのダウンロードに時間がかかります。 サイト サーバーと配布ポイントの両方に必要なディスク領域も増加します。 品質更新プログラムのダウンロードと配布に必要な合計時間も長くなる可能性があります。 ただし、Windows 10 デバイスによる品質更新プログラムのダウンロードとインストール時におけるデバイス側のメリットは顕著です。 詳細については、「[高速インストール ファイルの使用](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708456(v=ws.10)?#using-express-installation-files)」をご覧ください。
+高速インストール ファイルの性質上、コンテンツ サイズは従来の自己完結型ファイルよりも大幅に大きくなります。 このサイズが原因で、Windows Update サービスから Configuration Manager サイト サーバーへの更新プログラムのダウンロードに時間がかかります。 サイト サーバーと配布ポイントの両方に必要なディスク領域も増加します。 品質更新プログラムのダウンロードと配布に必要な合計時間も長くなる可能性があります。 ただし、Windows 10 デバイスによる品質更新プログラムのダウンロードとインストール時におけるデバイス側のメリットは顕著です。 詳細については、「[高速インストール ファイルの使用](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708456(v=ws.10)#using-express-installation-files)」をご覧ください。
 
 更新プログラムのサイズが大きくなるというサーバー側のトレードオフが高速サポートの採用を妨げる要因であるとしても、デバイス側のメリットの方がお客様のビジネスおよび環境にとって重要である場合、Microsoft では [Windows Update for Business](integrate-windows-update-for-business-windows-10.md) と Configuration Manager の使用をお勧めします。 Windows Update for Business は、高速のメリットをすべて提供します。環境全体で高速インストール ファイルをダウンロード、格納、および配布する必要はありません。 クライアントは Windows Update サービスから直接コンテンツをダウンロードするため、配信の最適化を引き続き利用できます。
 
@@ -162,11 +171,11 @@ Windows Update エージェント (WUA) は最初に高速コンテンツを要�
 
 
 #### <a name="is-there-any-way-to-see-how-much-content-is-downloaded-from-peers-using-delivery-optimization"></a>配信の最適化を使用してピアからダウンロードしたコンテンツの量を確認する方法はありますか?
-Windows 10 バージョン 1703 (およびそれ以降) には、2 つの新しい PowerShell コマンドレット (**Get-DeliveryOptimizationPerfSnap** と **Get-DeliveryOptimizationStatus**) が含まれています。 これらのコマンドレットは、配信の最適化とキャッシュの使用状況に関する分析情報を提供します。 詳しくは、[Windows 10 更新プログラムの配信の最適化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#the-cloud-service-doesnt-see-other-peers-on-the-network)に関するページをご覧ください
+Windows 10 バージョン 1703 (およびそれ以降) には、2 つの新しい PowerShell コマンドレット (**Get-DeliveryOptimizationPerfSnap** と **Get-DeliveryOptimizationStatus**) が含まれています。 これらのコマンドレットは、配信の最適化とキャッシュの使用状況に関する分析情報を提供します。 詳しくは、[Windows 10 更新プログラムの配信の最適化](/windows/deployment/update/waas-delivery-optimization#the-cloud-service-doesnt-see-other-peers-on-the-network)に関するページをご覧ください
 
 
 #### <a name="how-do-clients-communicate-with-delivery-optimization-over-the-network"></a>クライアントはネットワーク経由で配信の最適化とどのように通信しますか?
-ネットワーク ポート、プロキシの要件、およびファイアウォールのホスト名について詳しくは、[配信の最適化についてよく寄せられる質問](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)をご覧ください。
+ネットワーク ポート、プロキシの要件、およびファイアウォールのホスト名について詳しくは、[配信の最適化についてよく寄せられる質問](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)をご覧ください。
 
 ## <a name="log-files"></a>ログ ファイル
 

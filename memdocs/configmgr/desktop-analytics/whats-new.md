@@ -2,7 +2,7 @@
 title: Desktop Analytics の新機能
 titleSuffix: Configuration Manager
 description: Desktop Analytics クラウド サービスの最新のマンスリー リリースの新機能の概要です。
-ms.date: 07/01/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ec554d755b92d1c710def580a34fdbbddc7b4d45
-ms.sourcegitcommit: 2c5fd7c8603b88b753765f3cc298d0a0bacaf521
+ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85819978"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614742"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Desktop Analytics の新機能
 
@@ -27,6 +27,18 @@ Desktop Analytics の各月の新機能について説明します。
 
 このページが更新されたときに通知を受け取るには、次の URL をコピーして RSS フィード リーダーに貼り付けます。`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+desktop+analytics+-+Configuration+Manager%22&locale=en-us`
 <!-- a locale is required for the RSS search string -->
+
+## <a name="august-2020"></a>2020 年 8 月
+
+### <a name="apps-deployed-from-configuration-manager-are-important-by-default"></a>Configuration Manager から展開されるアプリは、既定で重要である
+
+<!-- 4859763 -->
+
+アプリの**重要度**の構成は、Desktop Analytics でパイロット展開に含めるデバイスを決定する際に不可欠です。 管理者は、Desktop Analytics ですべてのアプリの重要度を手動で構成する必要がありました。 パイロットを検証した後でのみ、運用環境の展開を続行できます。
+
+現在は、Configuration Manager で展開するすべてのアプリが、Desktop Analytics によって既定で重要として自動的に構成されます。 この動作により、環境内のアプリをより迅速に構成し、運用環境に迅速に展開することができます。
+
+詳細については、[資産のアプリ](about-assets.md#apps)に関する記事をご覧ください。
 
 ## <a name="july-2020"></a>2020 年 7 月
 

@@ -2,7 +2,7 @@
 title: Power BI サンプル レポートのインストール
 titleSuffix: Configuration Manager
 description: Power BI サンプル レポートを Configuration Manager にインストールする方法について説明します
-ms.date: 08/12/2020
+ms.date: 08/18/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: 7e9bc22c-67ac-4a86-b613-944a4928e583
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 450c76617cf12a3201aa990c90843cb2e0f0edee
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 025788a4ed4a26123f24ec667348eae97821295e
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179436"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88699689"
 ---
 # <a name="install-power-bi-sample-reports"></a>Power BI サンプル レポートのインストール
 <!--5679791-->
 *適用対象:Configuration Manager (Current Branch)*
 
-バージョン 2002 以降では、[Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/get-started) を Configuration Manager レポートと統合できるようになりました。 Configuration Manager にインストールできる、ダウンロード可能なサンプル レポートがあります。 この記事では、Power BI サンプル レポートを Configuration Manager にインストールする方法について説明します。
+バージョン 2002 以降では、[Power BI Report Server](/power-bi/report-server/get-started) を Configuration Manager レポートと統合できるようになりました。 Configuration Manager にインストールできる、ダウンロード可能なサンプル レポートがあります。 この記事では、Power BI サンプル レポートを Configuration Manager にインストールする方法について説明します。
 
 ## <a name="prerequisites"></a>[前提条件]
 
@@ -34,7 +34,7 @@ ms.locfileid: "88179436"
     > [!IMPORTANT]
     > [Microsoft ダウンロード センター](https://www.microsoft.com/download/)の Power BI Desktop バージョンのみを使用してください。 Microsoft Store のバージョンは使用しないでください。
     >
-    > [Power BI Report Server 用に最適化済み](https://docs.microsoft.com/power-bi/report-server/install-powerbi-desktop)の Power BI Desktop のバージョンのみを使用してください。
+    > [Power BI Report Server 用に最適化済み](/power-bi/report-server/install-powerbi-desktop)の Power BI Desktop のバージョンのみを使用してください。
 
 ## <a name="download-the-sample-reports"></a>サンプル レポートをダウンロードする
 
@@ -64,9 +64,14 @@ ms.locfileid: "88179436"
 
 1. メッセージが表示されたら Configuration Manager データベース名とデータベース サーバー名を指定し、 **[読み込み]** を選択します。
 
-    データ モデルの読み込み時または適用時は、エラーが発生しても無視します。
-
     :::image type="content" source="media/sample-report-database.png" alt-text="データベースとデータベース サーバーの名前を指定する" lightbox="media/sample-report-database.png":::
+
+    > [!NOTE]
+    > データ モデルの読み込み時または適用時は、エラーが発生しても無視します。 たとえば、以下のエラーが表示された場合: "1 つ以上のデータベースからテーブルへの接続は、DirectQuery モードではサポートされていません"、 **[閉じる]** を選択します。 その後、データ ソースの設定を更新します。
+    >
+    > 1. Power BI Desktop のリボンで **[クエリの編集]** を選択し、 **[データ ソースの設定]** を選択します。
+    > 1. **[ソースの変更]** を選択し、サーバーとデータベースの名前を確認して、 **[OK]** を選択します。
+    > 1. データ ソース設定ウィンドウを閉じて、 **[変更の適用]** を選択します。
 
 1. レポート データが読み込まれたら、 **[ファイル]**  >  **[名前を付けて保存]** を選択した後、 **[Power BI Report Server]** を選択します。
 

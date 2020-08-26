@@ -5,17 +5,17 @@ description: Configuration Manager から Microsoft Intune に切り替えるこ
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 04/15/2020
+ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: b03b57ff9797eb4fbe5a269723e98d39ae438803
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: e44576401d601c8c510aaf50b28e5924f5c4d6db
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127224"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88694867"
 ---
 # <a name="co-management-workloads"></a>共同管理ワークロード
 
@@ -43,19 +43,19 @@ ms.locfileid: "88127224"
 
 コンプライアンス ポリシーは、デバイスが条件付きアクセス ポリシーによって "準拠している" と見なされるために遵守する必要がある規則および設定を定義します。 また、コンプライアンス ポリシーを使用して、条件付きアクセスとは別に、デバイスのコンプライアンスに関する問題を監視および修復します。 Configuration Manager バージョン 1910 より、コンプライアンス ポリシー評価の規則として、カスタム構成基準の評価を追加できるようになりました。 詳細については、「[コンプライアンス ポリシー評価の一部としてカスタム構成基準を含める](../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines)」を参照してください。
 
-Intune 機能の詳細については、「[デバイス コンプライアンス ポリシー](https://docs.microsoft.com/intune/device-compliance-get-started)」を参照してください。  
+Intune 機能の詳細については、「[デバイス コンプライアンス ポリシー](/intune/device-compliance-get-started)」を参照してください。  
 
 ## <a name="windows-update-policies"></a>Windows Update のポリシー
 
 Windows Update for Business ポリシーでは、Windows Update for Business によって直接管理されている Windows 10 デバイスの Windows 10 機能更新プログラムまたは品質更新プログラムに対し、遅延ポリシーを構成できます。
 
-Intune 機能の詳細については、[Windows Update for Business 遅延ポリシーの構成](https://docs.microsoft.com/intune/windows-update-for-business-configure)に関するページを参照してください。  
+Intune 機能の詳細については、[Windows Update for Business 遅延ポリシーの構成](/intune/windows-update-for-business-configure)に関するページを参照してください。  
 
 ## <a name="resource-access-policies"></a>リソースのアクセス ポリシー
 
 リソースのアクセス ポリシーで、デバイスに対する VPN、Wi-Fi、電子メール、および証明書の設定を構成します。
 
-Intune 機能の詳細については、[リソース アクセス プロファイルの展開](https://docs.microsoft.com/intune/device-profiles)に関するページを参照してください。
+Intune 機能の詳細については、[リソース アクセス プロファイルの展開](/intune/device-profiles)に関するページを参照してください。
 
 > [!Note]  
 > リソース アクセス ワークロードもデバイス構成の一部です。 これらのポリシーは、[デバイス構成](#device-configuration)ワークロードを切り替えると、Intune によって管理されます。
@@ -76,7 +76,7 @@ Endpoint Protection ワークロードには、マルウェア対策保護機能
 - Windows Defender セキュリティ センター  
 - Windows Defender Advanced Threat Protection (現在は Microsoft Defender Threat Protection という名称です)
 
-Intune 機能の詳細については、[Microsoft Intune のエンドポイント保護](https://docs.microsoft.com/intune/endpoint-protection-windows-10)に関するページを参照してください。
+Intune 機能の詳細については、[Microsoft Intune のエンドポイント保護](/intune/endpoint-protection-windows-10)に関するページを参照してください。
 
 > [!Note]  
 > このワークロードを切り替えると、Intune ポリシーによって上書きされるまで、Configuration Manager ポリシーはデバイスに残ります。 この動作により、移行中にデバイスが確実に保護ポリシーを保持することができます。
@@ -95,7 +95,7 @@ Intune 機能の詳細については、[Microsoft Intune のエンドポイン�
 
 Intune がデバイス構成機関であっても、Configuration Manager から共同管理デバイスに引き続き設定を展開できます。 この例外は、組織で必要な設定を構成するために使用できるかもしれませんが、Intune ではまだ利用できません。 この例外は、[Configuration Manager の構成基準](../compliance/deploy-use/create-configuration-baselines.md)で指定します。 ベースラインを作成するときに、 **[Always apply this baseline even for co-managed clients]\(共同管理クライアントにもこのベースラインを常に適用する\)** のオプションを有効にします。 これは後で、既存のベースラインのプロパティの **[全般]** タブで変更することができます。  
 
-Intune 機能の詳細については、「[Microsoft Intune でのデバイス プロファイルの作成](https://docs.microsoft.com/intune/device-profile-create)」を参照してください。  
+Intune 機能の詳細については、「[Microsoft Intune でのデバイス プロファイルの作成](/intune/device-profile-create)」を参照してください。  
 
 > [!NOTE]
 > デバイス構成ワークロードを切り替えると、Endpoint Protection ワークロードには含まれていない Windows Information Protection 機能のポリシーも組み込まれます。<!-- 4184095 -->
@@ -112,7 +112,7 @@ Intune 機能の詳細については、「[Microsoft Intune でのデバイス 
 
 - **Office 365 アプリケーションがデバイス上の Intune で管理されているか**という新しいグローバル条件があります。 この条件は、新しい Office 365 アプリケーションの要件として既定で追加されます。 このワークロードを移行すると、共同管理されたクライアントでアプリケーションの要件が満たされなくなります。 そのため、Configuration Manager で展開される Office 365 がインストールされません。  
 
-Intune 機能の詳細については、「[Assign Office 365 apps to Windows 10 devices with Microsoft Intune](https://docs.microsoft.com/intune/apps-add-office365)」 (Microsoft Intune で Windows 10 デバイスに Office 365 アプリを割り当てる) を参照してください。
+Intune 機能の詳細については、「[Assign Office 365 apps to Windows 10 devices with Microsoft Intune](/intune/apps-add-office365)」 (Microsoft Intune で Windows 10 デバイスに Office 365 アプリを割り当てる) を参照してください。
 
 ## <a name="client-apps"></a>クライアント アプリ
 
@@ -120,7 +120,7 @@ Intune 機能の詳細については、「[Assign Office 365 apps to Windows 10
 
 Intune を使用して、共同管理されている Windows 10 デバイス上のクライアント アプリと PowerShell スクリプトを管理します。 このワークロードを移行すると、Intune から展開された使用可能なアプリが、すべてポータル サイトで使用可能になります。 Configuration Manager から展開するアプリは、ソフトウェア センターで使用できます。
 
-Intune 機能の詳細については、「[Microsoft Intune アプリの管理とは](https://docs.microsoft.com/intune/app-management)」を参照してください。
+Intune 機能の詳細については、「[Microsoft Intune アプリの管理とは](/intune/app-management)」を参照してください。
 
 > [!Tip]  
 > この機能はバージョン 1806 で[プレリリース機能](../core/servers/manage/pre-release-features.md)として初めて導入されました。 バージョン 2002 以降、プレリリース機能ではなくなりました。  
@@ -131,9 +131,10 @@ Intune 機能の詳細については、「[Microsoft Intune アプリの管理�
 
 ## <a name="diagram-for-app-workloads"></a>アプリのワークロードの図
 
-![共同管理アプリのワークロードの図](media/co-management-apps.svg)
+:::image type="content" source="media/co-management-apps.svg" alt-text="共同管理アプリのワークロードの図" lightbox="media/co-management-apps.svg":::
 
-[図をフル サイズで表示する](media/co-management-apps.svg)
+> [!TIP]
+> バージョン 2006 以降の Intune ポータル サイトは、Configuration Manager アプリも表示されるように構成できます。 このアプリ ポータル エクスペリエンスを変更すると、上の図で説明した動作が変更されます。 詳細については、「[共同管理デバイスでポータル サイト アプリを使用する](company-portal.md)」を参照してください。<!--CMADO-3601237,INADO-4297660-->
 
 ## <a name="known-issues"></a>既知の問題
 
@@ -147,11 +148,13 @@ Endpoint Protection ワークロードを Intune に移行すると、クライ�
    <?xml version="1.0" encoding="UTF-8"?>
    <SecurityPolicy xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData" Name="FEP clean-up policy"><PolicySection Name="FEP.AmPolicy"><LocalGroupPolicySettings><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware"/><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Windows Defender"/></LocalGroupPolicySettings></PolicySection></SecurityPolicy>
    ```
+
 1. 管理者特権を使用してコマンド プロンプトを開いて `ConfigSecurityPolicy.exe` を実行します。 通常、この実行可能ファイルは、次のいずれかのディレクトリにあります。
    - C:\Program Files\Windows Defender
    - C:\Program Files\Microsoft Security Client
+
 1. コマンド プロンプトで、xml ファイルを渡してポリシーをクリーンアップします。 たとえば、`ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml` となります。  
 
 ## <a name="next-steps"></a>次のステップ
 
-[ワークロードを切り替える方法](how-to-switch-workloads.md)  
+[ワークロードを切り替える方法](how-to-switch-workloads.md)

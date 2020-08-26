@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: f100d28b3fd4ce0d310ddb2f0b4e777c72f72881
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: a9d0beeee1e00315a913adfc5dde6bd69f75cd6f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076205"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88692997"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-configuration-manager"></a>Configuration Manager の Technical Preview 1701 の機能
 
@@ -116,7 +116,7 @@ ms.locfileid: "82076205"
      &lt;/setting>
 
    - **編集後の値:**      
-     &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value><https://management.usgovcloudapi.net/&lt;/value>>  
+     &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value&gt;https://management.usgovcloudapi.net/&lt;/value&gt;  
      &lt;/setting>
 
    設定名 *FairFaxAuthorityResource* の値が、"<https://login.microsoftonline.com/>" と同一になるように変更します。
@@ -125,9 +125,9 @@ ms.locfileid: "82076205"
      &lt;value>&lt;/value>
 
    - **編集後の値:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
-     &lt;value><https://login.microsoftonline.com/&lt;/value>>
+     &lt;value&gt;[https://login.microsoftonline.com](https://login.microsoftonline.com)&lt; /value&gt;
 
-2. 2 つの変更を含むファイルを保存したら、同じコンピューター上で Configuration Manager コンソールを再起動し、そのコンソールを使用して OMS コネクタをインストールします。 コネクタをインストールするには、「[Microsoft Operations Management Suite に Configuration Manager からのデータを同期](https://docs.microsoft.com/azure/azure-monitor/platform/collect-sccm)」の情報を使用し、Microsoft Azure Government クラウド上にある **Operations Management Suite のワークスペース**を選択します。
+2. 2 つの変更を含むファイルを保存したら、同じコンピューター上で Configuration Manager コンソールを再起動し、そのコンソールを使用して OMS コネクタをインストールします。 コネクタをインストールするには、「[Microsoft Operations Management Suite に Configuration Manager からのデータを同期](/azure/azure-monitor/platform/collect-sccm)」の情報を使用し、Microsoft Azure Government クラウド上にある **Operations Management Suite のワークスペース**を選択します。
 
 3. OMS コネクタをインストールしたら、サイトに接続されているコンソールを使用する際に Government クラウドへの接続を使用できます。
 

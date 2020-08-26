@@ -2,7 +2,7 @@
 title: Desktop Analytics の資産
 titleSuffix: Configuration Manager
 description: Desktop Analytics のデバイス、ドライバー、およびアプリについて説明します。
-ms.date: 05/11/2020
+ms.date: 08/19/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: f87c4cc1bcbe8039acb5876dc8e26ac597f12e59
-ms.sourcegitcommit: 3217778ebe7fd0318810696e8931e427a85da897
+ms.openlocfilehash: d4328aee2bc08054fbeaa7147ceed30fe61b61a7
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85107305"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614817"
 ---
 # <a name="assets-in-desktop-analytics"></a>Desktop Analytics の資産
 
@@ -42,6 +42,9 @@ ms.locfileid: "85107305"
 
 **[注目]** アプリは、2% を超える登録済みアプリにインストールされています。
 
+> [!TIP]
+> 特定の展開プランについて、この値を構成できます。 展開プランのプロパティの **[準備ルール]** で、 **[アプリの低インストール数しきい値を定義します]** の値を指定します。
+
 **[App versions details]\(アプリのバージョンの詳細\)** 設定は既定でオフになっているため、このタブでは同じ名前と発行元を持つアプリのすべてのバージョンが結合されます。<!-- 5542186 --> この既定の動作は、表示されるアプリの合計数を減らすのに役立ちます。これにより、アプリに注釈を付ける作業を減らすことができます。 **[注目すべきアプリ]** タイル内のアプリの数にも、この設定が反映されます。 たとえば、Microsoft Edge の何百ものインスタンスを一覧表示する代わりに、すべてのバージョンに対する 1 つのインスタンスが表示されます。 すべてのバージョンに対して 1 回で決定を行うことができます。 アプリの特定のバージョンに関する決定を行う必要がある場合は、この設定を有効にします。 また、展開プランを使用するときにも、この設定を構成することができます。 詳細については、「[資産の計画](about-deployment-plans.md#plan-assets)」を参照してください。
 
 一覧からアプリを選択し、 **[編集]** を選択します。 この操作を行うと、アプリの詳細が表示されます。 **[重要度]** ドロップダウン メニューを選択し、値を設定します。 **[所有者]** を割り当てることもできます。 変更する場合は、 **[保存]** を選択します。
@@ -53,6 +56,9 @@ ms.locfileid: "85107305"
 - 無視
 - 未レビュー
 - 重要でない<!-- 3587232 -->
+
+> [!NOTE]
+> Configuration Manager でアプリを展開した場合、Desktop Analytics によって既定で**重要**として自動的に構成されます。 この動作により、環境内のアプリをより迅速に構成し、運用環境に迅速に展開することができます。<!-- 4859763 -->
 
 **[App versions details]\(アプリのバージョンの詳細\)** 設定がオフの場合、アプリの詳細ウィンドウには、結合されているアプリのバージョンと言語の数が表示されます。 アプリの詳細に対する変更を保存すると、すべてのバージョンに適用されます。 たとえば、 **[重要度]** または **[所有者]** を設定します。 一部の値には [複数] と表示されます。これは、すべてのバージョン間に一貫した値が複数あるという意味です。
 

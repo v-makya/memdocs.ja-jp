@@ -2,7 +2,7 @@
 title: 2006 のチェックリスト
 titleSuffix: Configuration Manager
 description: Configuration Manager バージョン 2006 に更新する前に実行するアクションについて説明します。
-ms.date: 08/11/2020
+ms.date: 08/17/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6d359306-69ae-4873-ba90-964b6ae51d79
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7a3c66863e7768c5ca90151bf85d61aa1e3a0e17
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 05264780ef3971a7aa8b2d1778f0fe27c90b0b71
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129560"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88696465"
 ---
 # <a name="checklist-for-installing-update-2006-for-configuration-manager"></a>Configuration Manager の更新プログラム 2006 をインストールするためのチェックリスト
 
@@ -81,7 +81,11 @@ Configuration Manager の Current Branch を使用している場合、バージ
 
 早期更新リングにオプトインするには:
 
-1. Windows PowerShell を開き、**、管理者として実行します**
+1. **管理者として** Windows PowerShell バージョン 5 セッションを開きます
+
+    > [!IMPORTANT]
+    > Configuration Manager の現在のブランチでは、現在 PowerShell バージョン 7 はサポートされていません。 PowerShell バージョン 7 を既にインストールしてある場合、PowerShell バージョン 5 をまだ使用できます。 詳細については、「[PowerShell 7 を Windows PowerShell 5.1 とサイド バイ サイドで使用する](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51)」を参照してください。
+
 1. 次の構文を使って、**EnableEarlyUpdateRing2006.ps1** スクリプトを実行します。
 
     `EnableEarlyUpdateRing2006.ps1 <SiteServer_Name> | SiteServer_IP>`

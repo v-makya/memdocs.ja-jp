@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 73b8111cbada129997cec965ca685f1ef22b1f3a
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 7a4c42891276b36fd888f0f70495bdcd504f23a1
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81705310"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693014"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-configuration-manager"></a>Configuration Manager の Technical Preview 1702 の機能
 
@@ -76,7 +76,7 @@ Configuration Manager で Azure AD を使用するには、以下が必要です
 - Azure AD に参加している Azure VM 上で実行されている Configuration Manager サイト。
 - 同じ Azure AD 環境で実行されている Configuration Manager クライアント。
 
-Azure AD Domain Services を構成する方法については、「[Azure AD ドメイン サービスの使用開始](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance)」を参照してください。
+Azure AD Domain Services を構成する方法については、「[Azure AD ドメイン サービスの使用開始](/azure/active-directory-domain-services/create-instance)」を参照してください。
 
 ### <a name="discover-resources"></a>リソースの探索
 Azure AD 内で実行するように Configuration Manager を設定したら、次の Active Directory 探索方法を使用して Azure AD のリソースを検索できます。  
@@ -101,7 +101,7 @@ Azure AD にはグループを格納する OU がありません。 その代わ
 
 Azure AD の詳細については、以下を参照してください。  
 - 「[Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds)」(azure.microsoft.com)。
-- 「[Active Directory Domain Services のドキュメント](https://docs.microsoft.com/azure/active-directory-domain-services)」(docs.microsoft.com)。
+- 「[Active Directory Domain Services のドキュメント](/azure/active-directory-domain-services)」(docs.microsoft.com)。
 
 ## <a name="conditional-access-device-compliance-policy-improvements"></a>条件付きアクセス デバイス コンプライアンス ポリシーの改善
 
@@ -204,7 +204,7 @@ Windows Update for Business 更新プログラムのコンプライアンス評�
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>アプリケーションをインストールする前に実行中の実行可能ファイルを確認する
 
-展開の種類の " *\<展開の種類の名前>* " **[プロパティ]** ダイアログ ボックスの[インストールの処理] タブ上で、(実行中の場合) その展開の種類のインストールをブロックする実行可能ファイルを 1 つまたは複数指定できるようになりました。 ユーザーは、その展開の種類をインストールするには、実行中の実行可能ファイルを終了する必要があります (または、展開の目的が必須の場合は自動的に終了することができます)。
+展開の種類の **[ *\<deployment type name>* のプロパティ]** ダイアログ ボックスの [インストールの処理] タブで、実行可能ファイルが実行中の場合、その展開の種類のインストールをブロックする実行可能ファイルの 1 つを指定できるようになりました。 ユーザーは、その展開の種類をインストールするには、実行中の実行可能ファイルを終了する必要があります (または、展開の目的が必須の場合は自動的に終了することができます)。
 
 ### <a name="try-it-out"></a>試してみましょう
 
@@ -226,12 +226,12 @@ S/MIME をサポートする PFX 証明書プロファイルを作成できる�
 
 iOS デバイスでは、PFX 証明書プロファイルを電子メール プロファイルに割り当てて、S/MIME 暗号化を有効にすることができます。  これで、iOS のネイティブ電子メール クライアントで S/MIME を有効にして、正しい S/MIME 暗号化証明書を関連付けることができます。
 
-Configuration Manager の証明書の詳細については、「[証明書プロファイルの概要]( https://docs.microsoft.com/sccm/protect/deploy-use/introduction-to-certificate-profiles)」を参照してください。
+Configuration Manager の証明書の詳細については、「[証明書プロファイルの概要]( /sccm/protect/deploy-use/introduction-to-certificate-profiles)」を参照してください。
 
 
 ## <a name="new-compliance-settings-for-ios-devices"></a>iOS デバイスの新しいコンプライアンス設定
 
-iOS デバイスの構成アイテムで使用できる新しい設定が追加されました。 これらの設定は、以前はスタンドアロン構成での Microsoft Intune にありましたが、Intune を Configuration Manager で使用する際にも使用できるようになりました。 これらの設定の詳細については、「[Microsoft Intune の iOS ポリシー設定](/mem/intune/configuration/device-restrictions-ios)」を参照してください。
+iOS デバイスの構成アイテムで使用できる新しい設定が追加されました。 これらの設定は、以前はスタンドアロン構成での Microsoft Intune にありましたが、Intune を Configuration Manager で使用する際にも使用できるようになりました。 これらの設定の詳細については、「[Microsoft Intune の iOS ポリシー設定](../../../intune/configuration/device-restrictions-ios.md)」を参照してください。
 
 - **管理対象アプリから iCloud にデータを同期**
 - **ハンドオフして別のデバイスで作業を継続**
@@ -347,7 +347,7 @@ Android 6 以降を実行するデバイスでは、仕事用プロファイル�
 #### <a name="perform-selective-wipe"></a>選択的なワイプを実行する
 管理者は仕事用プロファイルのみを管理するので、Android for Work として登録されたデバイスに対してのみ、選択的なワイプを実行できます。 そのため、個人用プロファイルはワイプから保護されます。 Android for Work デバイスで選択的なワイプを実行すると、すべてのアプリとデータを含む仕事用プロファイルが削除され、デバイスの登録が削除されます。
 
-Android for Work デバイスで選択的なワイプを実行するには、Configuration Manager コンソールで通常の[選択的なワイプ プロセス](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)を使用します。
+Android for Work デバイスで選択的なワイプを実行するには、Configuration Manager コンソールで通常の[選択的なワイプ プロセス](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)を使用します。
 
 #### <a name="known-issues-for-android-for-work"></a>Android for Work の既知の問題
 **Android for Work 電子メール プロファイルで同期スケジュールを設定すると、展開に失敗する** Android for Work 電子メール プロファイルの ConfigMgr UI のオプションの 1 つが "スケジュール" です。 他のプラットフォームでは、管理者はスケジュールを設定し、展開先のモバイル デバイスに電子メールやその他の電子メール アカウント データを同期できます。 ただし、Android for Work 電子メール プロファイルの場合は動作しません。"未構成" 以外のオプションを選択すると、プロファイルはいかなるデバイスにも展開されません。

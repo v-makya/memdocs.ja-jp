@@ -2,7 +2,7 @@
 title: クライアント設定
 titleSuffix: Configuration Manager
 description: クライアントの動作を制御する既定の設定とカスタム設定について説明します。
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e70a44fee7b4805884faeda0a5fb1eab72d3371e
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127003"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693422"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Configuration Manager のクライアント設定について
 
@@ -167,7 +167,7 @@ Windows コンピューターの構成マネージャー クライアント キ�
 
 ### <a name="automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory"></a>新しい Windows 10 ドメインに参加しているデバイスを自動的に Azure Active Directory に登録する
 
-ハイブリッド結合をサポートするように Azure Active Directory を構成すると、Configuration Manager はこの機能対応に Windows 10 デバイスを構成します。 詳しくは、「[ハイブリッド Azure Active Directory 参加済みデバイスの構成方法](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)」をご覧ください。
+ハイブリッド結合をサポートするように Azure Active Directory を構成すると、Configuration Manager はこの機能対応に Windows 10 デバイスを構成します。 詳しくは、「[ハイブリッド Azure Active Directory 参加済みデバイスの構成方法](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)」をご覧ください。
 
 ### <a name="enable-clients-to-use-a-cloud-management-gateway"></a>クライアントでクラウド管理ゲートウェイを使用できるようにする
 
@@ -341,11 +341,11 @@ Configuration Manager クライアントで Windows PowerShell スクリプト�
 ## <a name="delivery-optimization"></a>配信の最適化
 
 <!-- 1324696 -->
-Configuration Manager の境界グループを使って、企業ネットワークおよびリモート オフィスへのコンテンツ配布を定義して調整します。 [Windows の配信最適化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)は、Windows 10 デバイス間でコンテンツを共有するための、クラウド ベースのピア ツー ピア テクノロジです。 ピア間でコンテンツを共有するときは、境界グループの使用に向けて配信の最適化を構成します。
+Configuration Manager の境界グループを使って、企業ネットワークおよびリモート オフィスへのコンテンツ配布を定義して調整します。 [Windows の配信最適化](/windows/deployment/update/waas-delivery-optimization)は、Windows 10 デバイス間でコンテンツを共有するための、クラウド ベースのピア ツー ピア テクノロジです。 ピア間でコンテンツを共有するときは、境界グループの使用に向けて配信の最適化を構成します。
 
 > [!Note]
 > - 配信の最適化は Windows 10 クライアントでのみ利用できます。
-> - ピアツーピア機能を利用するには、配信の最適化クラウド サービスへのインターネット アクセスが必要です。 必要なインターネット エンドポイントの詳細については、[配信の最適化に関してよく寄せられる質問](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)に関するページをご覧ください。
+> - ピアツーピア機能を利用するには、配信の最適化クラウド サービスへのインターネット アクセスが必要です。 必要なインターネット エンドポイントの詳細については、[配信の最適化に関してよく寄せられる質問](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions)に関するページをご覧ください。
 > - コンテンツの保存に CMG を使用する場合、[クライアント設定](#allow-clients-to-download-delta-content-when-available)の **[Download delta content when available]\(デルタ コンテンツが使用可能な場合はダウンロードする\)** が有効になっていると、サードパーティの更新プログラムのコンテンツはクライアントにダウンロードされません。 <!--6598587--> 
 
 ### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>配信の最適化グループ ID の Configuration Manager 境界グループを使用します
@@ -641,6 +641,17 @@ Configuration Manager コンソールで開始されるリモート アシスタ
 
 ## <a name="software-center"></a>ソフトウェア センター
 
+### <a name="select-the-user-portal"></a>ユーザー ポータルを選択する
+
+<!--CMADO-3601237,INADO-4297660-->
+バージョン 2006 以降では、Intune ポータル サイトを共同管理デバイスに展開する場合、この設定を **[ポータル サイト]** に構成します。 この設定により、ユーザーは Intune ポータル サイトからの通知のみを受け取るようになります。
+
+共同管理デバイスに Intune ポータル サイトをインストールしても、この設定を **[ソフトウェア センター]** に構成した場合は、両方のポータルからの通知がユーザーに表示されます。 ユーザーにとって、このエクスペリエンスは混乱を招く可能性があります。
+
+[ポータル サイト] にクライアントの設定を変更した場合、ユーザーが Configuration Manager の通知を選択すると、Intune ポータル サイトが起動されます。 Intune ポータル サイトでサポートされていないシナリオに対する通知の場合、通知を選択するとソフト ウェアセンターが起動されます。
+
+ポータル サイトの動作は、共同管理ワークロードの構成によって異なります。 詳細については、「[共同管理デバイスでポータル サイト アプリを使用する](../../../comanage/company-portal.md)」を参照してください。
+
 ### <a name="select-these-new-settings-to-specify-company-information"></a>新しい設定を選択して会社の情報を指定する
 
 ソフトウェア センターを組織のブランドにするには、このオプションを **[はい]** に設定してから、次の設定を指定します。
@@ -927,11 +938,11 @@ Configuration Manager バージョン 1902 以降では、Windows 10 バージ�
 
 - **標準**:Windows セットアップで使用されるシステム リソースが増え、より迅速に更新されます。 プロセッサ時間の使用量が増えるため、インストールの合計時間は短くなりますが、ユーザーの停止時間は長くなります。  
 
-    - デバイス上の setupconfig.ini ファイルを、`/Priority Normal` [Windows セットアップ コマンド ライン オプション](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)を使って構成します。
+    - デバイス上の setupconfig.ini ファイルを、`/Priority Normal` [Windows セットアップ コマンド ライン オプション](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)を使って構成します。
 
 - **低**:バックグラウンドでダウンロードと更新が行われている間、ユーザーはデバイスでの作業を続行できます。 インストールの合計時間は長くなりますが、ユーザーの停止時間は短くなります。 このオプションを使用する場合は、タイムアウトを回避するために、更新の最大実行時間を長くする必要がある場合があります。  
 
-    - setupconfig.ini ファイルから `/Priority` [Windows セットアップ コマンド ライン オプション](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)を削除します。
+    - setupconfig.ini ファイルから `/Priority` [Windows セットアップ コマンド ライン オプション](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)を削除します。
 
 
 ### <a name="enable-third-party-software-updates"></a>サードパーティ製ソフトウェア更新プログラムを有効にする
@@ -940,7 +951,7 @@ Configuration Manager バージョン 1902 以降では、Windows 10 バージ�
 
 ### <a name="enable-dynamic-update-for-feature-updates"></a><a name="bkmk_du"></a>[Enable Dynamic Update for feature updates]\(機能更新の動的更新を有効にする\)
 <!--4062619-->
-Configuration Manager バージョン 1906 以降では、[Windows 10 の動的更新](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847)を構成することができます。 動的更新を設定すると、Windows セットアップ中に言語パック、オンデマンド機能、ドライバー、累積された更新プログラムをインストールできます。これは、クライアントに対して更新プログラムをインターネットからダウンロードするよう指示することで行われます。 この設定を **[はい]** または **[いいえ]** のいずれかに設定すると、機能更新プログラムインストール中に使用される [setupconfig](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options) ファイルが Configuration Manager によって変更されます。
+Configuration Manager バージョン 1906 以降では、[Windows 10 の動的更新](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847)を構成することができます。 動的更新を設定すると、Windows セットアップ中に言語パック、オンデマンド機能、ドライバー、累積された更新プログラムをインストールできます。これは、クライアントに対して更新プログラムをインターネットからダウンロードするよう指示することで行われます。 この設定を **[はい]** または **[いいえ]** のいずれかに設定すると、機能更新プログラムインストール中に使用される [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) ファイルが Configuration Manager によって変更されます。
 
 - **[構成されていません]** - 既定の値。 setupconfig ファイルは変更されていません。
   - 既定では、サポートされている Windows 10 のすべてのバージョンで、動的更新が有効になります。
