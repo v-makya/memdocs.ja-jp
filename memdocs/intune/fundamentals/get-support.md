@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2020
+ms.date: 08/25/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fef418394a37f0074ddb17cc170a61603b1d7f8
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093097"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820665"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Microsoft Intune のサポートを受ける方法
 
@@ -83,8 +83,6 @@ Intune 用に新しく作成されたテナントを使用するとき、*ヘル
 
     > [!div class="mx-imgBorder"]
     > ![管理の種類を確認する](./media/get-support/confirm-management-selection.png)
-
-  - **[トラブルシューティング + サポート]**  >  **[ヘルプとサポート]** から [ヘルプとサポート] を開くと、選択した管理の種類が *[ヘルプとサポート]* に表示されません。
 
   - *[デバイス]* 、 *[アプリ]* 、 *[ユーザー]* などの他のノードまで展開してから *[ヘルプとサポート]* を選択しても、管理の種類は選択できません。また、 *[ヘルプとサポート]* に種類も表示されません。 この場合は *[Intune]* が想定されます。 コンテキストを Intune にしない場合は、 **[?]** オプションを使用し、別の管理の種類を選択できるようにします。
 

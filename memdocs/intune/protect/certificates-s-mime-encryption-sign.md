@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fedb6c6f7cd9e396d990b4129f81fab4d812ec9c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3d935e79dfe2fd0d786dae596cafe173b66018c9
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988625"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663296"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Intune で電子メールに署名し、暗号化する S/MIME の概要
 
@@ -30,7 +30,6 @@ ms.locfileid: "83988625"
 - iOS/iPadOS
 - macOS
 - Windows 10 以降
-- Windows Phone
 
 iOS/iPadOS デバイスでは、S/MIME と証明書を使用して送受信されるメールの署名と暗号化を行う、Intune で管理されたメール プロファイルを作成できます。 他のプラットフォームでは、S/MIME はサポートされている場合とサポートされていない場合があります。 サポートされている場合は、S/MIME の署名と暗号化を使用する証明書をインストールします。 その後、エンド ユーザーは電子メール アプリケーションで S/MIME を有効にできます。
 
@@ -44,13 +43,13 @@ Exchange を使用した S/MIME メールの署名と暗号化の詳細につい
 
 署名証明書を使うには、証明機関 (CA) で署名用のテンプレートを作成します。 Microsoft Active Directory 証明機関の場合は、「[Configure the server certificate template](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template)」(サーバー証明書テンプレートを構成する) で証明書テンプレートの作成手順が示されています。
 
-Intune での署名証明書は、PKCS 証明書を使います。 「[Intune で PKCS 証明書を構成して使用する](certficates-pfx-configure.md)」では、Intune 環境に PKCS 証明書を展開して使う方法が説明されています。 次の手順が含まれます。
+Intune での署名証明書は、PKCS 証明書を使います。 「[Intune で PKCS 証明書を構成して使用する](certficates-pfx-configure.md)」では、Intune 環境に PKCS 証明書を展開して使う方法が説明されています。 その手順は次のとおりです。
 
 - PKCS 証明書の要求をサポートするための Microsoft Intune Certificate Connector をダウンロードしてインストールします。 このコネクタのネットワーク要件は、[マネージド デバイス](../fundamentals/intune-endpoints.md#access-for-managed-devices)と同じです。
 - お使いのデバイス用の信頼されたルート証明書プロファイルを作成します。 このステップには、お使いの証明機関に対する信頼されたルート証明書と中間証明書の使用と、デバイスへのプロファイルの展開が含まれます。
 - 作成した証明書テンプレートを使って、PKCS 証明書プロファイルを作成します。 このプロファイルは、署名証明書をデバイスに発行し、PKCS 証明書プロファイルをデバイスに展開します。
 
-特定のユーザーに対する署名証明書をインポートすることもできます。 署名証明書は、ユーザーが登録するすべてのデバイスに展開されます。 証明書を Intune にインポートするには、[GitHub にある PowerShell コマンドレット](https://github.com/Microsoft/Intune-Resource-Access)を使います。 Intune にインポートされた PKCS 証明書をメールの署名に使われるように展開するには、「[Intune で PKCS 証明書を構成して使用する](certficates-pfx-configure.md)」の手順に従います。 次の手順が含まれます。
+特定のユーザーに対する署名証明書をインポートすることもできます。 署名証明書は、ユーザーが登録するすべてのデバイスに展開されます。 証明書を Intune にインポートするには、[GitHub にある PowerShell コマンドレット](https://github.com/Microsoft/Intune-Resource-Access)を使います。 Intune にインポートされた PKCS 証明書をメールの署名に使われるように展開するには、「[Intune で PKCS 証明書を構成して使用する](certficates-pfx-configure.md)」の手順に従います。 その手順は次のとおりです。
 
 - PFX Certificate Connector for Microsoft Intune をダウンロードしてインストールします。 このコネクタは、インポートされた PKCS 証明書をデバイスに提供します。
 - S/MIME メール署名証明書を Intune にインポートします。
@@ -66,7 +65,7 @@ Intune ではメール暗号化証明書を作成しないことをお勧めし�
 
 Intune を使って S/MIME 証明書を展開するには、ユーザーのすべての暗号化証明書を Intune にインポートする必要があります。 その後、Intune はユーザーが登録する各デバイスにすべての証明書を展開します。 証明書を Intune にインポートするには、[GitHub にある PowerShell コマンドレット](https://github.com/Microsoft/Intune-Resource-Access)を使います。
 
-Intune にインポートされた、メールの暗号化に使われる PKCS 証明書を展開するには、「[Intune で PKCS 証明書を構成して使用する](certficates-pfx-configure.md)」の手順に従います。 次の手順が含まれます。
+Intune にインポートされた、メールの暗号化に使われる PKCS 証明書を展開するには、「[Intune で PKCS 証明書を構成して使用する](certficates-pfx-configure.md)」の手順に従います。 その手順は次のとおりです。
 
 - PFX Certificate Connector for Microsoft Intune をダウンロードしてインストールします。 このコネクタは、インポートされた PKCS 証明書をデバイスに提供します。
 - S/MIME メール暗号化証明書を Intune にインポートします。

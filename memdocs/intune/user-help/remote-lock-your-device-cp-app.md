@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/07/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1616fe4104707668463843dfb890c2f8e0b0c4a8
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 84bf5d6be2761d368e514be31c6fd426b6c508f0
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880958"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820614"
 ---
 # <a name="lock-your-device-from-the-company-portal-app-for-windows-10"></a>Windows 10 用ポータル サイト アプリからデバイスをロックする
 
@@ -35,9 +35,7 @@ Windows 10 用ポータル サイト アプリから紛失または盗難にあ�
 
 * Android
 * iOS
-* macOS
-* Windows 10 Mobile (デバイスにパスコードが設定されている場合)
-* Windows Phone 8.1 (デバイスにパスコードが設定されている場合) 
+* macOS  
   
 ## <a name="remote-lock-device"></a>デバイスのリモート ロック
 会社のアプリからデバイスをロックするには、次の手順を完了します。  
@@ -49,11 +47,13 @@ Windows 10 用ポータル サイト アプリから紛失または盗難にあ�
 
    ![ポータル サイト アプリで [リモート ロック] アイコンが強調表示されている [デバイスの詳細] ページのスクリーンショット。](./media/1804_remote_lock_Windows_CPapp_05.png)  
 
-3. **[ロック]** を選択して、デバイスをロックすることを確認します。 アプリによってデバイスのロックが試行され、 **[ホーム]** ページにリダイレクトされます。  
+3. **[ロック]** を選択して、デバイスをロックすることを確認します。 アプリによってデバイスのロックが試行され、**[ホーム]** ページにリダイレクトされます。  
 
 
    ![ポータル サイト アプリ、[デバイスの詳細] ページ、リモート ロックの確認プロンプトのスクリーンショット。](./media/1804_remote_lock_Windows_CPapp_06.png)  
 
 4. デバイスを検索する場合は、パスコードを入力してロックを解除します。  
+
+## <a name="next-steps"></a>次のステップ
 
 サポートが必要な場合は、 社内サポートに問い合わせてください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。

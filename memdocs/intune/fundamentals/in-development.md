@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b7f1a4280b409ec4a12c6371fd2e6cba8a571ca
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 0d443cb784c19956f52347a10f4123c622ab82a8
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048023"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820065"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune 用に開発中
 
@@ -72,9 +72,6 @@ Windows ポータル サイトでは、Configuration Manager アプリケーシ�
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>デバイスの構成
 
-### <a name="set-device-compliance-state-from-third-party-mdm-partners---6361689-----"></a>サード パーティの MDM パートナーからデバイス コンプライアンスの状態を設定する<!-- 6361689   -->
-サード パーティの MDM ソリューションを所有している Microsoft 365 のお客様は、Microsoft Intune デバイス コンプライアンス サービスとの統合により、iOS および Android 上の Microsoft 365 アプリに条件付きアクセス ポリシーを適用できます。 サード パーティの MDM ベンダーは、Intune デバイス コンプライアンス サービスを利用して、デバイス コンプライアンス データを Intune に送信します。 その後、Intune によって、デバイスが信頼されているかどうか、Azure AD で条件付きアクセス属性が設定されているかどうかを判断するために評価されます。  お客様は、Microsoft エンドポイント マネージャー管理センターまたは Azure AD ポータル内から Azure AD 条件付きアクセス ポリシーを設定する必要があります。
-
 ### <a name="create-pkcs-certificate-profiles-for-android-enterprise-fully-managed-devices-cobo---4839686---"></a>Android Enterprise フル マネージド デバイス (COBO) 用の PKCS 証明書プロファイルを作成する<!-- 4839686 -->
 PKCS 証明書プロファイルを作成して、Android Enterprise デバイス所有者および仕事用プロファイルのデバイスに証明書を展開できます ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  **[Android Enterprise] > [デバイスの所有者のみ]** 、または **[Android Enterprise] > [仕事用プロファイルのみ]** (プラットフォーム) > **[PKCS]** (プロファイル))。
 
@@ -84,47 +81,6 @@ PKCS 証明書の詳細については、「[Intune で PKCS 証明書を構成�
 
 適用対象:
 - Android Enterprise フル マネージド (COBO)
-
-### <a name="use-netmotion-as-a-vpn-connection-type-for-iosipados-and-macos-devices---1333631---"></a>iOS および iPadOS、macOS デバイスの VPN 接続の種類として NetMotion を使用する<!-- 1333631 -->
-VPN プロファイルを作成するときに、VPN 接続の種類として NetMotion を使用できます ( **[デバイス]**  >  **[デバイス構成]**  >  **[プロファイルの作成]**  >  **[iOS/iPadOS]** または **[macOS]** (プラットフォーム) > **[VPN]** (プロファイル) > **[NetMotion]** (接続の種類))。
-
-Intune での VPN プロファイルの詳細については、[VPN サーバーに接続するための VPN プロファイルの作成](../configuration/vpn-settings-configure.md)に関する記事をご覧ください。
-
-適用対象:
-- iOS/iPadOS
-- macOS
-
-### <a name="more-protected-extensible-authentication-protocol-peap-options-for-windows-10-wi-fi-profiles---3805024---"></a>Windows 10 Wi-Fi プロファイル用の保護された拡張認証プロトコル (PEAP) オプションの追加<!-- 3805024 -->
-Windows 10 デバイスで、Wi-Fi 接続を認証するために拡張認証プロトコル (EAP) を使用する Wi-Fi プロファイルを作成できます ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  **[Windows 10 以降]** (プラットフォーム) > **[Wi-Fi]** (プロファイル) > **[Enterprise]** )。 保護された EAP (PEAP) を選択する場合、次のような新しい設定を使用できます。
-
-- **PEAP フェーズ 1 でサーバー検証を実行する**:PEAP ネゴシエーション フェーズ 1 では、デバイスによって証明書が検証され、サーバーが確認されます。
-  - **PEAP フェーズ 1 でのサーバー検証に関するユーザー プロンプトを無効にする**:PEAP ネゴシエーション フェーズ 1 では、信頼された証明機関に対して新しい PEAP サーバーの承認を求めるユーザー プロンプトは表示されません。
-- **暗号化バインドを要求する**:PEAP ネゴシエーション中に、暗号化バインドを使用しない PEAP サーバーへの接続を禁止します。
-
-現在構成できる設定を確認するには、[Windows 10 以降のデバイス向けの Wi-Fi 設定の追加](../configuration/wi-fi-settings-windows.md)に関する記事をご覧ください。
-
-適用対象: 
-- Windows 10 以降
-
-### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576---"></a>macOS Microsoft Enterprise SSO プラグインを構成する<!-- 5627576 -->
-Microsoft Azure AD チームでは、リダイレクト シングル サインオン (SSO) アプリ拡張機能を開発しました。これにより、macOS 10.15 以降のユーザーが、Apple の SSO 機能をサポートし、認証に Azure AD を使用する Microsoft アプリ、組織アプリ、Web サイトに対して、1 回のサインオンでアクセスできるようになります。 Microsoft Enterprise SSO プラグインのリリースに伴い、新しい Microsoft Azure AD アプリ拡張機能の種類を使用して SSO 拡張機能を構成できるようになります ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  **[macOS]** (プラットフォーム) > **[デバイスの機能]** (プロファイル) > **[シングル サインオン アプリの拡張機能]** > [SSO アプリ拡張機能の種類] > **[Microsoft Azure AD]** )。
-
-Microsoft Azure AD SSO アプリ拡張機能の種類を使用した SSO を実現するには、ユーザーが各自の macOS デバイスにポータル サイト アプリをインストールしてサインインする必要があります。 
-
-macOS SSO アプリ拡張機能について詳しくは、「[シングル サインオン アプリ拡張機能](../configuration/device-features-configure.md#single-sign-on-app-extension)」をご覧ください。
-
-適用対象:
-- macOS 10.15 以降
-
-### <a name="use-sso-app-extensions-on-more-iosipados-apps-with-the-microsoft-enterprise-sso-plug-in---7369991---"></a>Microsoft Enterprise SSO プラグインを使用して、さらに多くの iOS および iPadOS アプリで SSO アプリ拡張機能を使用する<!-- 7369991 -->
-[Apple デバイス用の Microsoft Enterprise SSO プラグイン](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)は、SSO アプリ拡張機能がサポートされているすべてのアプリで使用できます。 Intune の場合、この機能は、Apple デバイス用の Microsoft Authentication Library (MSAL) を使用しない iOS および iPadOS のモバイル アプリで、プラグインが動作するということを意味します。 アプリで MSAL を使用する必要はありませんが、Azure AD エンドポイントを使用して認証する必要があります。
-
-プラグインで SSO を使用するように iOS または iPadOS アプリを構成するには、iOS または iPadOS の構成プロファイルにアプリ バンドル ID を追加します ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  **[iOS/iPadOS]** (プラットフォーム) > **[デバイスの機能]** (プロファイル) > **[シングル サインオン アプリの拡張機能]**  >  **[Microsoft Azure AD]** (SSO アプリ拡張機能の種類) > **[アプリ バンドル ID]** )。
-
-構成できる現在の SSO アプリ拡張機能設定を確認するには、「[シングル サインオン アプリの拡張機能](../configuration/ios-device-features-settings.md#single-sign-on-app-extension)」にアクセスしてください。
-
-適用対象:
-- iOS/iPadOS
 
 <!-- ***********************************************-->
 <!-- ## Device enrollment-->
@@ -155,9 +111,6 @@ Configuration Manager のオンプレミスの[スクリプト実行](../../conf
 
 ### <a name="deploy-software-updates-to-macos-devices----3194876---"></a>ソフトウェア更新プログラムを macOS デバイスに展開する <!-- 3194876 -->
 macOS デバイスのグループにソフトウェア更新プログラムを展開できます。 この機能には、クリティカル、ファームウェア、構成ファイル、およびその他の更新プログラムが含まれます。 次のデバイス チェックイン時に更新プログラムを送信したり、週単位でのスケジュールを選択して設定した期間内または期間外に更新プログラムを展開したりできます。 これは、標準の勤務時間外にデバイスを更新する場合や、ヘルプ デスクのスタッフが常時配置されている場合に役立ちます。 また、更新プログラムが展開されるすべての macOS デバイスの詳細なレポートも取得します。 デバイスごとにレポートの詳細を表示して、特定の更新プログラムの状態を確認することができます。
-
-### <a name="associated-licenses-revoked-before-deletion-of-apple-vpp-token--6195322---"></a>Apple VPP トークンの削除前に関連ライセンスが失効する<!--6195322 -->
-今後の更新では、Microsoft Endpoint Manager で Apple VPP トークンを削除すると、そのトークンに関連付けられているすべての Intune 割り当てライセンスが、削除前に自動的に失効します。
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
@@ -192,13 +145,6 @@ Microsoft Defender ATP の脅威と脆弱性の管理 (TVM) によって、デ�
 近日中に、Microsoft Defender ATP によって脆弱性の詳細を含むエンドポイント マネージャー セキュリティ タスク ( **[エンドポイント マネージャー]**  >  **[エンドポイント セキュリティ]**  >  **[セキュリティ タスク]** ) を生成し、影響を受けたデバイスを表示できるようになります。 IT 管理者は、セキュリティ タスクを受け入れ、必要な構成を展開できます。 
 
 セキュリティ タスク詳細については、「[Intune を使用して Microsoft Defender ATP によって検出された脆弱性を修復する](../protect/atp-manage-vulnerabilities.md)」をご覧ください。
-
-### <a name="changes-for-endpoint-security-antivirus-policy-exclusions--5583940-6018119----"></a>エンドポイント セキュリティ ウイルス対策ポリシーの除外に関する変更<!--5583940, 6018119  -->
-エンドポイント セキュリティ ウイルス対策ポリシーの一部として構成する Microsoft Defender ウイルス対策の除外リストの管理について、2 点の変更が導入されます。 ( **[エンドポイント セキュリティ]**  >  **[ウイルス対策]**  >  **[ポリシーの作成]**  >  **[Windows 10 以降]** (プラットフォーム))。 これら 2 つの変更はポリシー間の競合を防ぐのに役立ちます。また、競合していた既存のポリシーが除外リストと競合しなくなります。
-
-- まず、Windows 10 以降向けに新しいプロファイルの種類が追加されます。 **[Microsoft Defender ウイルス対策の除外]** です。  この新しいプロファイルの種類には、Defender "*プロセス*、"*ファイル拡張子*"、および "*ファイル*" と、Microsoft Defender を使用してスキャンしたくない "*フォルダー*" の一覧を指定するための設定のみが含まれます。 これは、除外リストを他のポリシー構成から分離し、除外リストの管理を簡素化するのに役立ちます。
-- 2 番目の変更点は、異なるプロファイルで定義した除外リストが、特定のユーザーまたはデバイスに適用される個々のポリシーに基づいて、デバイスまたはユーザーごとに単一の除外リストにマージされされることです。 たとえば、3 つの独立したポリシーで 1 人のユーザーを対象とする場合、その 3 つのポリシーからの除外リストが Microsoft Defender ウイルス対策の除外の単一スーパーセットにマージされ、その後ユーザーに適用されます。 このマージには、新しいプロファイルの種類から追加された除外リストと、"*Microsoft Defender ウイルス対策*" プロファイルで構成された既存のポリシーからの除外リストが含まれます。
-
 
 
 <!-- ***********************************************-->

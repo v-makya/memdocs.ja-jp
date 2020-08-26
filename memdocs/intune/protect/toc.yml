@@ -103,6 +103,8 @@
               href: advanced-threat-protection-monitor.md
         - name: ファイアウォール規則の移行
           href: endpoint-security-firewall-rule-tool.md
+        - name: テナントのアタッチ
+          href: tenant-attach-intune.md
         - name: ディスクの暗号化
           items:
             - name: BitLocker ポリシーの管理
@@ -308,8 +310,10 @@
           items:
             - name: macOS Defender ウイルス対策の設定
               href: antivirus-microsoft-defender-settings-macos.md
-            - name: Windows 10 Microsoft Defender ウイルス対策の設定
+            - name: Windows 10 Defender ウイルス対策の設定
               href: antivirus-microsoft-defender-settings-windows.md
+            - name: テナントのアタッチ Defender ウイルス対策の設定
+              href: antivirus-microsoft-defender-settings-windows-tenant-attach.md
             - name: Windows セキュリティ エクスペリエンスの設定
               href: antivirus-security-experience-windows-settings.md
         - name: ディスク暗号化プロファイルの設定

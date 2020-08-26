@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37ea8cf3f8615630ccc5b1f5fcc72f69c66db3ef
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 6412b0d23edb9f93becb3973cc1ae02c0a068dea
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179572"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663244"
 ---
 # <a name="create-a-design"></a>設計の作成
 
@@ -296,8 +296,8 @@ Intune は、企業所有のデバイスと個人のデバイスの両方をサ�
 
 | **種類** | **プロファイル名** | **デバイスのプラットフォーム** | **ユース ケース** |   
 |:---:|:---:|:---:|:---:|
-| ルート CA | 企業ルート CA | Android、iOS/iPadOS、Windows モバイル | 企業、BYOD  |                                                           
-| SCEP | ユーザー証明書 | Android、iOS/iPadOS、Windows モバイル | 企業、BYOD |                                                           
+| ルート CA | 企業ルート CA | Android、iOS/iPadOS | 企業、BYOD  |                                                           
+| SCEP | ユーザー証明書 | Android、iOS/iPadOS | 企業、BYOD |                                                           
 
 
 [上記の表のテンプレートをダウンロード](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0)して、証明書プロファイルのニーズを確認することができます。

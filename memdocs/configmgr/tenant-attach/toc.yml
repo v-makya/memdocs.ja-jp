@@ -14,6 +14,14 @@
       href: cmpivot-overview-attached.md
     - name: CMPivot サンプル スクリプト
       href: cmpivot-samples-attached.md
+- name: テナントに接続されているデバイスのエンドポイント セキュリティ (プレビュー)
+  items:
+    - name: エンドポイントのセキュリティを有効にする
+      href: atp-onboard.md
+    - name: エンドポイント セキュリティ ウイルス対策ポリシーを作成して展開する
+      href: deploy-antivirus-policy.md
+    - name: Microsoft Defender ウイルス対策ポリシーの設定
+      href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
 - name: トラブルシューティング
   items:
     - name: テナントのアタッチとデバイス アクション
