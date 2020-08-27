@@ -74,6 +74,6 @@
         - name: Azure AD で Microsoft Graph の Intune API にアクセスする
           href: intune-graph-apis.md
         - name: Intune API リファレンス
-          href: 'https://developer.microsoft.com/graph/docs/api-reference/beta/resources/intune_graph_overview'
+          href: /graph/api/resources/intune-graph-overview?view=graph-rest-beta
         - name: デバイスの構成に使用される Graph API
           href: graph-apis-used-by-intune-device-configuration-windows.md

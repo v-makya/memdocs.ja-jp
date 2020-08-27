@@ -13,12 +13,12 @@ metadata:
   ms.author: erikre
   ms.manager: dougeby
   ms.date: 09/25/2019
-  ms.openlocfilehash: 5b18568176ae4114676b20b8ca0300bc4189c3dd
-  ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+  ms.openlocfilehash: c48daf6dcb3670c51dd6228bd73a8973aee7849e
+  ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "79333908"
+  ms.lasthandoff: 08/26/2020
+  ms.locfileid: "88913309"
 landingContent:
 - title: アプリの使用を開始する
   linkLists:
@@ -79,7 +79,7 @@ landingContent:
     - text: デバイス登録なしのマネージド アプリ
       url: app-configuration-policies-managed-app.md
     - text: Managed Browser の構成
-      url: app-configuration-managed-browser.md
+      url: ./manage-microsoft-edge.md
     - text: VPP アプリとブックの管理
       url: vpp-apps.md
 - title: アプリの保護
