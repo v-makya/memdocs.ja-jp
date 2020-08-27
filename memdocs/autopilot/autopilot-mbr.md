@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 4c8e66e9fb0ac4527f10824332f8ac5ae1646181
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 4ae8ffdf39b7812a869d3a7ef5b5289f46f8369a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757396"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908357"
 ---
 # <a name="windows-autopilot-motherboard-replacement-scenario-guidance"></a>Windows 自動操縦用マザーボードの交換シナリオのガイダンス
 
@@ -69,11 +69,11 @@ Intune から自動操縦デバイスを登録解除するには、IT 管理者�
 11. デバイスが以前にユーザーに割り当てられていた場合は、[ユーザーの割り当て解除] をクリックします。このオプションを指定しない場合、このオプションは淡色表示され、無視することができます。
 12. 未割り当てデバイスが選択された状態で、上部のメニューにある [削除] ボタンをクリックして、このデバイスを削除します。
 
-**注**: これらの手順により、自動操縦からデバイスの登録が解除されますが、Intune からデバイスの登録を解除し、デバイスを AAD から切断することもできます。  自動操縦によるデバイスの登録解除のみが必要になるように見えるかもしれませんが、Intune には、上記のすべての手順を実行する必要がある特定の障壁があります。これは、デバイスが紛失または回復不能になった場合に備えて、自動操縦データベース (Intune または AAD) に孤立したデバイスが存在する  デバイスが回復不能な状態になった場合は、適切な[Microsoft サポートエイリアス](autopilot-support.md)に問い合わせてください。
+**注**: これらの手順により、自動操縦からデバイスの登録が解除されますが、Intune からデバイスの登録を解除し、デバイスを AAD から切断することもできます。  自動操縦によるデバイスの登録解除のみが必要になるように見えるかもしれませんが、Intune には、上記のすべての手順を実行する必要がある特定の障壁があります。これは、デバイスが紛失または回復不能になった場合に備えて、自動操縦データベース (Intune または AAD) に孤立したデバイスが存在する  デバイスが回復不能な状態になった場合は、適切な [Microsoft サポートエイリアス](autopilot-support.md) に問い合わせてください。
 
 登録解除プロセスには約15分かかります。  [同期] ボタンをクリックし、デバイスが存在しない状態になるまで表示を "更新" することで、プロセスを高速化できます。
 
-Intune から登録解除されたデバイスの詳細については、[こちら](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-device-group)を参照してください。
+Intune から登録解除されたデバイスの詳細については、 [こちら](/intune/enrollment-autopilot#create-an-autopilot-device-group)を参照してください。
 
 ### <a name="deregister-from-mpc"></a>MPC から登録を解除する
 
@@ -122,9 +122,9 @@ Microsoft Partner Center (MPC) から自動操縦デバイスの登録を解除�
 
 修復技術者は、新しいデバイス ID を取得するために、修復されたデバイスにサインインする必要があります。  修理担当者が顧客のログイン資格情報にアクセスできない場合は、次の手順に従って、アクセスできるようにデバイスを再イメージ化する必要があります。
 
-1. 修復技術者は、 [WinPE ブート可能な USB ドライブ](https://docs.microsoft.com/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#create-a-bootable-windows-pe-winpe-partition)を作成します。
+1. 修復技術者は、 [WinPE ブート可能な USB ドライブ](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#create-a-bootable-windows-pe-winpe-partition)を作成します。
 2. 修復技術者は、デバイスを WinPE に対して起動します。
-3. 修復技術者は、[デバイスに新しい Windows イメージを適用](https://docs.microsoft.com/windows-hardware/manufacture/desktop/work-with-windows-images)します。
+3. 修復技術者は、 [デバイスに新しい Windows イメージを適用](/windows-hardware/manufacture/desktop/work-with-windows-images)します。
 
     **注**: 理想的には、同じバージョンの Windows をデバイス上のデバイスに再イメージ化する必要があるため、修復機能とお客様が修復のためにデバイスが到着したときにこの情報を取得するためには、調整が必要になります。  これには、たとえば、修復機能をカスタマイズしたイメージ (ppk ファイル) を USB スティックを使用して送信する顧客が含まれることがあります。
  
@@ -133,7 +133,7 @@ Microsoft Partner Center (MPC) から自動操縦デバイスの登録を解除�
 
 OA3 ツール (ADK の一部) にアクセスできる修復機能では、ツールを使用して4K ハードウェアハッシュ (4K HH) をキャプチャできます。
 
-または、次の手順に従って、 [WindowsAutoPilotInfo PowerShell スクリプト](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)を使用して 4k HH をキャプチャすることもできます。
+または、次の手順に従って、 [WindowsAutoPilotInfo PowerShell スクリプト](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) を使用して 4k HH をキャプチャすることもできます。
 
 1. [PowerShell ギャラリー](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)またはコマンドラインからスクリプトをインストールします (コマンドラインのインストールを以下に示します)。
 2. デバイスが完全な OS または監査モードの場合は、スクリプトディレクトリに移動して、デバイスで実行します。 次の例を参照してください。
@@ -146,9 +146,9 @@ OA3 ツール (ADK の一部) にアクセスできる修復機能では、ツ�
     Get-WindowsAutopilotInfo.ps1 -OutputFile AutopilotHWID.csv
     ```
 
->NuGet パッケージのインストールを求めるメッセージが表示されたら、[**はい]** を選択します。<br>
+>NuGet パッケージのインストールを求めるメッセージが表示されたら、[ **はい]** を選択します。<br>
 >スクリプトをインストールした後に Get-WindowsAutopilotInfo.ps1 が見つからないというエラーが表示された場合は、C:\Program Files\WindowsPowerShell\Scripts が PATH 変数に存在することを確認します。<br>
->インストールスクリプトコマンドレットが失敗した場合は、既定の PowerShell リポジトリ (**register-psrepository**) が登録されていることを確認するか、既定のリポジトリを**register-psrepository-default-Verbose**に登録します。
+>インストールスクリプトコマンドレットが失敗した場合は、既定の PowerShell リポジトリ (**register-psrepository**) が登録されていることを確認するか、既定のリポジトリを **register-psrepository-default-Verbose**に登録します。
 
 このスクリプトは、完全な 4K HH などのデバイス情報を含む .csv ファイルを作成します。  後でアクセスできるように、このファイルを保存します。 サービスファシリティは、次に示すように、この 4K HH を使用してデバイスを登録します。 ファイルを保存するときは、-OutputFile パラメーターを使用して、ファイルの書式設定が正しいことを確認してください。 コマンドの出力をファイルに手動でパイプしようとしないでください。
 
@@ -164,7 +164,7 @@ OEM がデバイスを再登録できない場合、修復機能または CSP �
 Intune から自動操縦デバイスを登録するために、IT 管理者は次のことを行います。
 1. Intune にサインインします。
 2. [デバイスの > 登録] に移動し、[Windows の登録] [デバイス] > [インポート] の順に > ます。
-3. [**インポート**] ボタンをクリックして、再登録するデバイスのデバイス id を含む csv ファイルをアップロードします (デバイス id は、このドキュメントで前述した PowerShell スクリプトまたは OA3 ツールによってキャプチャされた 4k HH です)。
+3. [ **インポート** ] ボタンをクリックして、再登録するデバイスのデバイス id を含む csv ファイルをアップロードします (デバイス id は、このドキュメントで前述した PowerShell スクリプトまたは OA3 ツールによってキャプチャされた 4k HH です)。
 
 次のビデオでは、MSfB を使用してデバイスを登録する方法 (再) の概要について説明します。<br>
 
@@ -175,7 +175,7 @@ Intune から自動操縦デバイスを登録するために、IT 管理者は�
 MPC から自動操縦デバイスを登録するために、OEM または CSP は次のことを行います。
 
 1. MPC にサインインします。
-2. Customer > Devices ページに移動し、[**デバイスの追加**] ボタンをクリックして csv ファイルをアップロードします。
+2. Customer > Devices ページに移動し、[ **デバイスの追加** ] ボタンをクリックして csv ファイルをアップロードします。
 
 ![device](images/device2.png)<br>
 ![device](images/device3.png)
@@ -194,7 +194,7 @@ MPC から自動操縦デバイスを登録するために、OEM または CSP �
 
 ![reset](images/reset.png)
 
-ただし、サインインするためのユーザー資格情報がないため、修復機能が Windows にアクセスできない可能性があります。この場合、[展開イメージのサービスと管理ツール](https://docs.microsoft.com/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image)など、デバイスを再イメージ化するには、他の方法を使用する必要があります。
+ただし、サインインするためのユーザー資格情報がないため、修復機能が Windows にアクセスできない可能性があります。この場合、 [展開イメージのサービスと管理ツール](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image)など、デバイスを再イメージ化するには、他の方法を使用する必要があります。
 
 ## <a name="return-the-repaired-device-to-the-customer"></a>修復されたデバイスを顧客に返す
 
@@ -217,8 +217,8 @@ MPC から自動操縦デバイスを登録するために、OEM または CSP �
 - 修復されたデバイスは、新しい 4K HH (デバイス ID) をキャプチャする前に、BIOS に事前に挿入されているプロダクトキー (DPK) を持っている必要があります。
 
 表の説明:<br>
-- サポートされている =**はい**: デバイスを自動操縦用に再び有効にすることができます
-- サポートされている =**いいえ**: デバイスを自動操縦用に再び有効にすることはできません
+- サポートされている = **はい**: デバイスを自動操縦用に再び有効にすることができます
+- サポートされている = **いいえ**: デバイスを自動操縦用に再び有効にすることはできません
 
 <table border="1">
 <th>シナリオ<th>サポートされています<th>Microsoft の推奨事項

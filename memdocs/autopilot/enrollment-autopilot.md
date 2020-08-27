@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce002acf118fb39712f8195247f556b01faa830f
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: d29830b919393c247ed2696eb9e55adc114015aa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865522"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908516"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-windows-autopilot"></a>Windows Autopilot を使用して、Intune での Windows デバイスを登録する
 
@@ -36,13 +36,13 @@ Autopilot の展開の種類には次の 4 種類があります。
 - [既存のデバイスの Autopilot](existing-devices.md)では、最新バージョンの Windows 10 を既存のデバイスに簡単に展開できます。
 - [ユーザー駆動モード](user-driven.md)は従来のユーザー向けです。
 
-この記事では、Windows PC に Autopilot を設定する方法について説明します。 Autopilot と Hololens の詳細については、[Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot) に関するページを参照してください。
+この記事では、Windows PC に Autopilot を設定する方法について説明します。 Autopilot と Hololens の詳細については、[Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot) に関するページを参照してください。
 
 ## <a name="prerequisites"></a>[前提条件]
 
 - [Intune のサブスクリプション](../intune/fundamentals/licenses.md)
 - [Windows の自動登録が有効である](../intune/enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
-- [Azure Active Directory Premium サブスクリプション](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Azure Active Directory Premium サブスクリプション](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 ## <a name="how-to-get-the-csv-for-import-in-intune"></a>Intune でのインポート用に CSV を取得する方法
 
@@ -93,7 +93,7 @@ CSV ファイルの情報をインポートすることにより、Windows Autop
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Autopilot Deployment プロファイルを作成する
 Autopilot Deployment プロファイルは、Autopilot デバイスを構成する場合に使用されます。 テナントごとに最大 350 個のプロファイルを作成できます。
-1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[デプロイ プロファイル]**  >  **[プロファイルの作成]**  >  **[Windows PC]** または **[HoloLens]** を選択します。 この記事では、Windows PC に Autopilot を設定する方法について説明します。 Autopilot と Hololens の詳細については、[Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot) に関するページを参照してください。
+1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[デプロイ プロファイル]**  >  **[プロファイルの作成]**  >  **[Windows PC]** または **[HoloLens]** を選択します。 この記事では、Windows PC に Autopilot を設定する方法について説明します。 Autopilot と Hololens の詳細については、[Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot) に関するページを参照してください。
 2. **[基本]** ページ上で、 **[名前]** と省略可能な **[説明]** に入力します。
 
     ![基本ページのスクリーンショット](media/enrollment-autopilot/create-profile-basics.png)
@@ -114,12 +114,12 @@ Autopilot Deployment プロファイルは、Autopilot デバイスを構成す�
     - **[使用許諾契約書 (EULA)]** : (Windows 10、バージョン 1709 以降) EULA をユーザーに表示するかどうかを選択します。
     - **[プライバシーの設定]** : プライバシーの設定をユーザーに表示するかどうかを選択します。
     >[!IMPORTANT]
-    >診断データ設定の既定値は Windows のバージョンによって異なります。 Windows 10 バージョン 1903 を実行しているデバイスの場合、Out-of-Box Experience 中、既定値は [完全] に設定されます。 詳しくは、[Windows 診断データ](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data)に関するページをご覧ください <br>
+    >診断データ設定の既定値は Windows のバージョンによって異なります。 Windows 10 バージョン 1903 を実行しているデバイスの場合、Out-of-Box Experience 中、既定値は [完全] に設定されます。 詳しくは、[Windows 診断データ](/windows/privacy/windows-diagnostic-data)に関するページをご覧ください <br>
     
-    - **[アカウントの変更オプションを非表示にする] (Windows 10 バージョン 1809 以降が必要)** : **[非表示]** を選択すると、会社のサインイン ページとドメイン エラー ページにアカウント変更オプションが表示されなくなります。 これらのオプションでは、[Azure Active Directory で会社のブランドを構成する](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding)必要があります。
+    - **[アカウントの変更オプションを非表示にする] (Windows 10 バージョン 1809 以降が必要)** : **[非表示]** を選択すると、会社のサインイン ページとドメイン エラー ページにアカウント変更オプションが表示されなくなります。 これらのオプションでは、[Azure Active Directory で会社のブランドを構成する](/azure/active-directory/fundamentals/customize-branding)必要があります。
     - **[ユーザー アカウントの種類]** : ユーザーのアカウントの種類を選択します (**管理者**ユーザーまたは**標準**ユーザー)。 デバイスを参加させるユーザーをローカル管理グループに追加することで、それらのユーザーをローカル管理者にすることができます。 ユーザーをデバイスの既定の管理者にすることはできません。
     - **[White Glove OOBE を許可する]** (Windows 10 バージョン 1903 以降が必要、[追加の物理的要件](white-glove.md#prerequisites)): **[はい]** を選択して、White Glove のサポートを許可します。
-    - **[デバイス名のテンプレートを適用する]** (Windows 10 バージョン 1809 以降と [Azure AD の結合の種類] が必要) **[はい]** を選択すると、登録中にデバイスに名前を付けるときに使用するテンプレートが作成されます。 名前を 15 文字以下にする必要があります。また、文字、数字、ハイフンを含めることができます。 数字だけで名前を作ることはできません。 [%SERIAL% マクロ](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp)を使用し、ハードウェア固有のシリアル番号を追加します。 または、[%RAND:x% マクロ](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp)を使用して、数字のランダム文字列を追加します。x は追加する桁数です。 [ドメイン参加プロファイル](../intune/enrollment/windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile)には、ハイブリッド デバイスのプレフィックスのみを指定できます。 
+    - **[デバイス名のテンプレートを適用する]** (Windows 10 バージョン 1809 以降と [Azure AD の結合の種類] が必要) **[はい]** を選択すると、登録中にデバイスに名前を付けるときに使用するテンプレートが作成されます。 名前を 15 文字以下にする必要があります。また、文字、数字、ハイフンを含めることができます。 数字だけで名前を作ることはできません。 [%SERIAL% マクロ](/windows/client-management/mdm/accounts-csp)を使用し、ハードウェア固有のシリアル番号を追加します。 または、[%RAND:x% マクロ](/windows/client-management/mdm/accounts-csp)を使用して、数字のランダム文字列を追加します。x は追加する桁数です。 [ドメイン参加プロファイル](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile)には、ハイブリッド デバイスのプレフィックスのみを指定できます。 
     - **[言語 (リージョン)]** \*: デバイスで使用する言語を選択します。 このオプションは、 **[配置モード]** に **[自己展開]** を選択した場合のみ使用できます。
     - **[キーボードを自動的に構成する]** \*: **[言語 (リージョン)]** を選択している場合は、 **[はい]** を選択してキーボード選択ページをスキップします。 このオプションは、 **[配置モード]** に **[自己展開]** を選択した場合のみ使用できます。
 8. **[次へ]** を選択します。
@@ -176,7 +176,7 @@ Windows Autopilot によって展開された各デバイスについての詳�
 
 ## <a name="assign-a-user-to-a-specific-autopilot-device"></a>特定の Autopilot デバイスにユーザーを割り当てる
 
-特定の Autopilot デバイスにユーザーを割り当てることができます。 この割り当てにより、Windows のセットアップ中、[社名](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding)サインイン ページに Azure Active Directory からユーザーが事前入力されます。 カスタムの挨拶の名前を設定することもできます。 それによって、データが事前入力されることも、Windows サインインが変更されることもありません。 ライセンスが与えられた Intune ユーザーのみ、この方法で割り当てることができます。
+特定の Autopilot デバイスにユーザーを割り当てることができます。 この割り当てにより、Windows のセットアップ中、[社名](/azure/active-directory/fundamentals/customize-branding)サインイン ページに Azure Active Directory からユーザーが事前入力されます。 カスタムの挨拶の名前を設定することもできます。 それによって、データが事前入力されることも、Windows サインインが変更されることもありません。 ライセンスが与えられた Intune ユーザーのみ、この方法で割り当てることができます。
 
 必要条件:Azure Active Directory ポータル サイトが構成されていること。Windows 10 バージョン 1809 以降。
 
@@ -223,7 +223,7 @@ Intune に登録されていない Windows Autopilot デバイスは削除する
 
 ## <a name="windows-autopilot-for-existing-devices"></a>既存のデバイス向け Windows Autopilot
 
-Configuration Manager で[既存のデバイス向け Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) を使用することにより登録を行う場合は、correlator ID で Windows デバイスをグループ化することができます。 correlator ID は、Autopilot 構成ファイルのパラメーターです。 [Azure AD デバイス属性 enrollmentProfileName](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) は等しい "OfflineAutopilotprofile-\<correlator ID\>" に自動的に設定されます。 これにより、enrollmentprofileName 属性を使用して correlator ID に基づく任意の Azure AD 動的グループを作成することができます。
+Configuration Manager で[既存のデバイス向け Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) を使用することにより登録を行う場合は、correlator ID で Windows デバイスをグループ化することができます。 correlator ID は、Autopilot 構成ファイルのパラメーターです。 [Azure AD デバイス属性 enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) は等しい "OfflineAutopilotprofile-\<correlator ID\>" に自動的に設定されます。 これにより、enrollmentprofileName 属性を使用して correlator ID に基づく任意の Azure AD 動的グループを作成することができます。
 
 >[!WARNING] 
 > correlator ID は Intune 内にあらかじめリストされていないので、デバイスで必要な correlator ID がレポートされる場合があります。 ユーザーが Autopilot または Apple ADE プロファイル名と一致する correlator ID を作成した場合、デバイスは enrollmentProfileName 属性に基づいて任意の動的 Azure AD デバイス グループに追加されます。 この競合を避けるには:

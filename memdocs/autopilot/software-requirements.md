@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 5e449505d9d8a15bab50906ea45dd12482cc27ef
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 2eb4f23fbe6126c095f049f36b08adac15c1e02c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88253326"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907940"
 ---
 # <a name="windows-autopilot-software-requirements"></a>Windows の自動操縦ソフトウェアの要件
 
@@ -34,7 +34,7 @@ Windows の自動操縦は、Windows 10、Azure Active Directory、MDM サービ
 
 ## <a name="software-requirements"></a>ソフトウェア要件
 
-- [サポートされているバージョン](https://docs.microsoft.com/windows/release-information/)の Windows 10 半期チャネルが必要です。 Windows 10 Enterprise 2019 長期的なサービスチャネル (LTSC) もサポートされています。
+- [サポートされているバージョン](/windows/release-information/)の Windows 10 半期チャネルが必要です。 Windows 10 Enterprise 2019 長期的なサービスチャネル (LTSC) もサポートされています。
 - 次のエディションがサポートされています。
   - Windows 10 Pro
   - Windows 10 Pro Education
@@ -49,4 +49,3 @@ Windows の自動操縦は、Windows 10、Azure Active Directory、MDM サービ
 ## <a name="next-steps"></a>次のステップ
 
 [Windows Autopilot ネットワーク要件](networking-requirements.md)
-

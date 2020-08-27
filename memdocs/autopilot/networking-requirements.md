@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 18031ff51e8086d29f706110946adeacb63d908e
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 3c24610a2ac10dfae6a8ba73062edf29188938ea
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88590906"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907990"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Windows Autopilot ネットワーク要件
 
@@ -38,11 +38,11 @@ Windows の自動操縦は、さまざまなインターネットベースのサ
 - インターネットアクセスを取得するには、認証が必要です。 
 
 > [!NOTE]
-> OOBE.XML では、スマートカードと証明書ベースの認証はサポートされていません。 詳細については、「 [スマートカードと証明書ベースの認証](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication)」を参照してください。
+> OOBE.XML では、スマートカードと証明書ベースの認証はサポートされていません。 詳細については、「 [スマートカードと証明書ベースの認証](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication)」を参照してください。
 
 これらの各サービスと固有の要件について詳しくは、以下の詳細を確認してください。
 
-<table><th>サービス<th>Information
+<table><th>サービス<th>情報
 <tr><td><b>Windows 自動操縦展開サービス<b><td>ネットワーク接続が確立されると、各 Windows 10 デバイスは Windows 自動操縦展開サービスにアクセスします。 Windows 10 バージョン1903以降では、、の各 Url が使用されます。 https://ztd.dds.microsoft.com https://cs.dds.microsoft.com <br>
 
 <tr><td><b>Windows ライセンス認証<b><td>Windows の自動操縦には Windows ライセンス認証サービスが必要です。 アクティベーションサービスにアクセスできる必要がある Url の詳細について <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">は、「Windows のライセンス認証」または「検証がエラーコード0x8004FE33 で失敗</a>する」を参照してください。<br>
@@ -53,7 +53,7 @@ Windows の自動操縦は、さまざまなインターネットベースのサ
 
 Windows Update にアクセスできない場合でも、自動操縦プロセスは続行されますが、重要な更新プログラムは使用できません。
 
-<tr><td><b>配信の最適化<b><td>自動操縦は、アプリと更新プログラムをダウンロードするときに <a href="https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization">配信最適化</a> サービスに問い合わせます。 この連絡先は、少数のデバイスのみがインターネットからダウンロードする必要があるように、コンテンツのピアツーピア共有を確立します。
+<tr><td><b>配信の最適化<b><td>自動操縦は、アプリと更新プログラムをダウンロードするときに <a href="/windows/deployment/update/waas-delivery-optimization">配信最適化</a> サービスに問い合わせます。 この連絡先は、少数のデバイスのみがインターネットからダウンロードする必要があるように、コンテンツのピアツーピア共有を確立します。
 - Windows 更新プログラム - Microsoft Store アプリとアプリの更新プログラム - Office 更新プログラム - Intune Win32 アプリ<br>
 
 配信最適化サービスにアクセスできない場合でも、自動操縦プロセスは、(ピアツーピアではなく) クラウドから配信の最適化のダウンロードを続行します。
@@ -69,7 +69,7 @@ Windows Update にアクセスできない場合でも、自動操縦プロセ�
 <tr><td><b>Windows Notification Services (WNS)<b><td>このサービスを使って、Windows がアプリとサービスから通知を受け取ることができるようにします。 詳細については、「 <a href="https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store">Microsoft Store</a>」を参照してください。<br>
 
 WNS サービスが使用できない場合でも、自動操縦プロセスは通知なしで続行されます。
-<tr><td><b>Microsoft Store、Microsoft Store for Business<b><td>Microsoft Store 内のアプリは、Intune (MDM) 経由でトリガーしてデバイスにプッシュすることができます。ユーザーが最初にログインするとき、アプリの更新プログラムとその他のアプリも必要になることがあります。 詳細については、「 <a href="https://docs.microsoft.com/microsoft-store/prerequisites-microsoft-store-for-business">ビジネス向け Microsoft Store および教育機関向けの前提条件</a> (Azure AD と Windows Notification Services も含まれます)」を参照してください。<br>
+<tr><td><b>Microsoft Store、Microsoft Store for Business<b><td>Microsoft Store 内のアプリは、Intune (MDM) 経由でトリガーしてデバイスにプッシュすることができます。ユーザーが最初にログインするとき、アプリの更新プログラムとその他のアプリも必要になることがあります。 詳細については、「 <a href="/microsoft-store/prerequisites-microsoft-store-for-business">ビジネス向け Microsoft Store および教育機関向けの前提条件</a> (Azure AD と Windows Notification Services も含まれます)」を参照してください。<br>
 
 Microsoft Store にアクセスできない場合でも、自動操縦プロセスは Microsoft Store アプリなしで続行されます。
 
@@ -87,4 +87,3 @@ Microsoft Store にアクセスできない場合でも、自動操縦プロセ�
 **次の手順**
 
 [Windows Autopilot のライセンス要件](licensing-requirements.md)
-

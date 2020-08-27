@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 911ff589acb5d215931dd4a2e72a05bff760a533
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: c8bf506d0b9c7285087999967dd188122494661d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88253342"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908000"
 ---
 # <a name="windows-autopilot-licensing-requirements"></a>Windows Autopilot のライセンス要件
 
@@ -36,17 +36,16 @@ Windows の自動操縦は、Windows 10 および Azure Active Directory で使�
 - [Microsoft 365 アカデミック A1、A3、または A5 サブスクリプション](https://www.microsoft.com/education/buy-license/microsoft365/default.aspx)
 - [Microsoft 365 Enterprise E3 または E5 サブスクリプション](https://www.microsoft.com/microsoft-365/enterprise)。すべての Windows 10、Office 365、EM + S の機能 (Azure AD と Intune) が含まれています。
 - [Enterprise Mobility + Security E3 または E5 サブスクリプション](https://www.microsoft.com/cloud-platform/enterprise-mobility-security)。必要なすべての Azure AD と Intune の機能が含まれています。
-- [Intune for Education サブスクリプション](https://docs.microsoft.com/intune-education/what-is-intune-for-education)。必要なすべての Azure AD と Intune の機能が含まれます。
+- [Intune for Education サブスクリプション](/intune-education/what-is-intune-for-education)。必要なすべての Azure AD と Intune の機能が含まれます。
 - [Azure Active Directory Premium P1、P2](https://azure.microsoft.com/services/active-directory/) 、 [Microsoft Intune サブスクリプション](https://www.microsoft.com/cloud-platform/microsoft-intune) (または代替 MDM サービス)。
 
 > [!NOTE]
-> Microsoft 365 サブスクリプションを使用している場合でも、 [Intune のライセンスをユーザーに割り当てる](https://docs.microsoft.com/intune/fundamentals/licenses-assign)必要があります。
+> Microsoft 365 サブスクリプションを使用している場合でも、 [Intune のライセンスをユーザーに割り当てる](/intune/fundamentals/licenses-assign)必要があります。
 
 また、次のものも推奨されます (必須ではありません)。
 - [Microsoft 365 enterprise 用アプリ](https://www.microsoft.com/p/office-365-proplus/CFQ7TTC0K8R0)。 Intune (またはその他の MDM サービス) を使用して簡単に展開できます。
-- Windows 10 Pro から Windows 10 Enterprise にデバイスを自動的にステップアップする[Windows サブスクリプションのライセンス認証](https://docs.microsoft.com/windows/deployment/windows-10-enterprise-subscription-activation)。
+- Windows 10 Pro から Windows 10 Enterprise にデバイスを自動的にステップアップする[Windows サブスクリプションのライセンス認証](/windows/deployment/windows-10-enterprise-subscription-activation)。
 
 **次の手順**
 
 [Windows 自動操縦の構成要件](configuration-requirements.md)
-

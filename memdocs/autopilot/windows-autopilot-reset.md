@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 8388febead5953fd6c76e7e40571d3b2e1b91e4d
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: e084663527d48c83d42d426792da0bedddd35942
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757017"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907930"
 ---
 # <a name="windows-autopilot-reset"></a>Windows Autopilot のリセット
 
@@ -47,7 +47,7 @@ AutoPilot リセットがデバイスで使用されると、デバイスのプ�
 Windows の自動操縦リセットでは、2つのシナリオがサポートされます。
 
 -   組織の IT 担当者または他の管理者によって開始された[ローカルリセット](#reset-devices-with-local-windows-autopilot-reset)。
--   [リモートリセット](#reset-devices-with-remote-windows-autopilot-reset)は、Microsoft Intune などの MDM サービスを介して IT 担当者によってリモートで開始されます。
+-   [リモートリセット](#reset-devices-with-remote-windows-autopilot-reset) は、Microsoft Intune などの MDM サービスを介して IT 担当者によってリモートで開始されます。
 
 各シナリオでは、追加の要件と構成の詳細が適用されます。詳細については、上のリンクを参照してください。
 
@@ -55,7 +55,7 @@ Windows の自動操縦リセットでは、2つのシナリオがサポート�
 
 **適用対象: Windows 10 バージョン1709以降**
 
-このタスクを実行するには、Intune サービス管理者ロールが必要です。  詳しくは、「[Intune にユーザーを追加して管理アクセス許可を付与する](https://docs.microsoft.com/intune/users-add)」をご覧ください。
+このタスクを実行するには、Intune サービス管理者ロールが必要です。  詳しくは、「[Intune にユーザーを追加して管理アクセス許可を付与する](/intune/users-add)」をご覧ください。
 
 IT 管理者は、ローカルの Windows 自動操縦リセットを実行して、個人のファイル、アプリ、設定をすばやく削除し、Windows 10 デバイスをロック画面からいつでもリセットして、元の設定と管理登録 (Azure Active Directory およびデバイス管理) を適用して、デバイスを使用できるようにします。 ローカル自動操縦リセットを使用すると、デバイスは完全に構成されているか、または既知の承認済みの状態に戻ります。
 
@@ -66,7 +66,7 @@ Windows 10 でローカル自動再設定のリセットを有効にするには
 
 ### <a name="enable-local-windows-autopilot-reset"></a>ローカルの Windows 自動再設定のリセットを有効にする
 
-ローカルの Windows 自動操縦のリセットを有効にするには、Disable自動再展開の**資格情報**ポリシーを構成する必要があります。 このポリシーは、[ポリシー CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialproviders)、 **Credentialproviders/Disable自動再展開資格情報**に記載されています。 既定では、ローカルの Windows 自動操縦は無効になっています。 これにより、ローカルの自動操縦リセットが誤ってトリガーされることがなくなります。
+ローカルの Windows 自動操縦のリセットを有効にするには、Disable自動再展開の **資格情報** ポリシーを構成する必要があります。 このポリシーは、 [ポリシー CSP](/windows/client-management/mdm/policy-csp-credentialproviders)、 **Credentialproviders/Disable自動再展開資格情報**に記載されています。 既定では、ローカルの Windows 自動操縦は無効になっています。 これにより、ローカルの自動操縦リセットが誤ってトリガーされることがなくなります。
 
 ポリシーは、次のいずれかの方法で設定できます。
 
@@ -77,7 +77,7 @@ Windows 10 でローカル自動再設定のリセットを有効にするには
 
 - Windows 構成デザイナー
 
-    [Windows 構成デザイナーを使用](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package)して、 **> ポリシー > Credentialproviders > Disable自動 redeploymentcredentials**設定を0に設定してから、プロビジョニングパッケージを作成することができます。
+    [Windows 構成デザイナーを使用](/windows/configuration/provisioning-packages/provisioning-create-package)して、 **> ポリシー > Credentialproviders > Disable自動 redeploymentcredentials**設定を0に設定してから、プロビジョニングパッケージを作成することができます。
 
 - 学校用 PC のセットアップ アプリ
 
@@ -109,21 +109,21 @@ Windows 10 でローカル自動再設定のリセットを有効にするには
 
 リモートの Windows 自動操縦リセットを実行すると、Microsoft Intune のような MDM サービスを使用してリセットプロセスを開始できます。これにより、IT スタッフや他の管理者が各コンピューターにアクセスしてプロセスを開始する必要がなくなります。
 
-リモートの Windows 自動操縦リセット用にデバイスを有効にするには、デバイスを MDM で管理し、Azure AD に参加させる必要があります。 この機能は、[自動展開モード](self-deploying.md)を使用して登録されたデバイスではサポートされていません。
+リモートの Windows 自動操縦リセット用にデバイスを有効にするには、デバイスを MDM で管理し、Azure AD に参加させる必要があります。 この機能は、 [自動展開モード](self-deploying.md)を使用して登録されたデバイスではサポートされていません。
 
 ### <a name="triggering-a-remote-windows-autopilot-reset"></a>リモートの Windows 自動操縦リセットのトリガー
 
 Intune を使用してリモートの Windows 自動操縦リセットをトリガーするには、次の手順を実行します。
  
--   Intune コンソールの [**デバイス**] タブに移動します。 
--   [**すべてのデバイス**] ビューで、対象のリセットデバイスを選択し、[**詳細**] をクリックしてデバイスの操作を表示します。 
--   リセットタスクを開始するには、[**自動再設定**] を選択します。 
+-   Intune コンソールの [ **デバイス** ] タブに移動します。 
+-   [ **すべてのデバイス** ] ビューで、対象のリセットデバイスを選択し、[ **詳細** ] をクリックしてデバイスの操作を表示します。 
+-   リセットタスクを開始するには、[ **自動再設定** ] を選択します。 
 
 >[!NOTE]
 >Windows 10 ビルド17672以降を実行していないデバイスでは、Microsoft Intune で自動操縦リセットオプションが有効になりません。
 
 >[!IMPORTANT]
->自動再設定の機能はグレー表示されます。**ただし**、自動再設定を使用してデバイスをリセットするか、デバイスを手動で sysprep する必要があります。
+>自動再設定の機能はグレー表示されます。 **ただし** 、自動再設定を使用してデバイスをリセットするか、デバイスを手動で sysprep する必要があります。
 
 リセットが完了すると、デバイスは再び使用できる状態になります。
  
@@ -131,12 +131,12 @@ Intune を使用してリモートの Windows 自動操縦リセットをトリ�
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
-Windows 自動操縦リセットでは、 [Windows 回復環境 (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)が正しく構成され、デバイスで有効になっている必要があります。 構成されていない場合は、などのエラー `Error code: ERROR_NOT_SUPPORTED (0x80070032)` が報告されます。
+Windows 自動操縦リセットでは、 [Windows 回復環境 (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) が正しく構成され、デバイスで有効になっている必要があります。 構成されていない場合は、などのエラー `Error code: ERROR_NOT_SUPPORTED (0x80070032)` が報告されます。
 
-WinRE が有効になっていることを確認するには、 [REAgentC.exe ツール](https://docs.microsoft.com/windows-hardware/manufacture/desktop/reagentc-command-line-options)を使用して次のコマンドを実行します。
+WinRE が有効になっていることを確認するには、 [REAgentC.exe ツール](/windows-hardware/manufacture/desktop/reagentc-command-line-options) を使用して次のコマンドを実行します。
 
 ```
 reagentc /enable
 ```
 
-WinRE を有効にした後に Windows の自動操縦リセットが失敗した場合、または WinRE を有効にできない場合は、 [Microsoft サポート](https://support.microsoft.com)に問い合わせてください。
+WinRE を有効にした後に Windows の自動操縦リセットが失敗した場合、または WinRE を有効にできない場合は、 [Microsoft サポート](https://support.microsoft.com) に問い合わせてください。

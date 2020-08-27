@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed3a554ee374df1513a07fa2365e147f34d787f0
-ms.sourcegitcommit: 5291e1946eddbb97670f8e02beb5beef82b22f38
+ms.openlocfilehash: 2c78b65dc5b4b228df9dc5884adbc75e63c282ef
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87953528"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907960"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Intune と Windows Autopilot を使用して Hybrid Azure AD 参加済みデバイスをデプロイする
 Intune と Windows Autopilot を使用して、Hybrid Azure Active Directory (Azure AD) 参加済みデバイスを設定できます。 そのためには、この記事の手順のようにします。
 
 ## <a name="prerequisites"></a>[前提条件]
 
-[Hybrid Azure AD 参加済みデバイス](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)を正しく構成します。 Get-MsolDevice コマンドレットを使用して、[デバイスの登録を確認](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration)します。
+[Hybrid Azure AD 参加済みデバイス](/azure/active-directory/devices/hybrid-azuread-join-plan)を正しく構成します。 Get-MsolDevice コマンドレットを使用して、[デバイスの登録を確認](/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration)します。
 
 登録するデバイスでは次のことも必要です。
 - Windows 10 v1809 以降を実行している。
-- [文書化されている Windows Autopilot のネットワーク要件に従って](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements)インターネットにアクセスできる。
+- [文書化されている Windows Autopilot のネットワーク要件に従って](/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements)インターネットにアクセスできる。
 - Active Directory ドメイン コントローラーにアクセスできる。したがって、組織のネットワークに接続されている必要があります (そこで、AD ドメインと AD ドメイン コントローラーの DNS レコードを解決し、ドメイン コントローラーと通信してユーザーの認証を行うことができます。
 - 参加を試みるドメインのドメイン コントローラーを ping できる。
 - プロキシを使用する場合は、WPAD プロキシ設定オプションを有効にして構成する必要がある。
@@ -103,7 +103,7 @@ Active Directory 用の Intune コネクタは、Windows Server 2016 以降を�
 
 Intune コネクタには、[Intune と同じエンドポイント](../intune/fundamentals/intune-endpoints.md)が必要です。
 
-1. [IE セキュリティ強化の構成] をオフにします。 Windows Server では既定で、Internet Explorer セキュリティ強化の構成がオンになっています。 Intune Connector for Active Directory にサインインできない場合、管理者向けの [IE セキュリティ強化の構成] をオフにします。 [Internet Explorer セキュリティ強化の構成をオフにする方法](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)。 
+1. [IE セキュリティ強化の構成] をオフにします。 Windows Server では既定で、Internet Explorer セキュリティ強化の構成がオンになっています。 Intune Connector for Active Directory にサインインできない場合、管理者向けの [IE セキュリティ強化の構成] をオフにします。 [Internet Explorer セキュリティ強化の構成をオフにする方法](/archive/blogs/chenley/how-to-turn-off-internet-explorer-enhanced-security-configuration)。 
 2. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[デバイス]**  >  **[Windows]**  >  **[Windows の登録]**  >  **[Active Directory の Intune コネクタ]**  >  **[追加]** を選択します。 
 3. 手順に従ってコネクタをダウンロードします。
 4. ダウンロードしたコネクタのセットアップ ファイル *ODJConnectorBootstrapper.exe* を開いて、コネクタをインストールします。
@@ -183,7 +183,7 @@ Autopilot Deployment プロファイルは、Autopilot デバイスを構成す�
 4. **[次へ]** を選択します。
 5. **[Out-of-box experience (OOBE)]** ページの **[配置モード]** で、 **[ユーザー ドリブン]** を選択します。
 6. **[Azure AD への参加の種類]** ボックスで、 **[ハイブリッド Azure AD 参加済み]** を選択します。
-7. VPN サポートを活用する組織のネットワークから離してデバイスを展開する場合、 **[ドメインの接続チェックをスキップする]** オプションを **[はい]** に設定します。  詳細については、「[ハイブリッド Azure Active Directory のユーザー主導モードと VPN サポートの結合](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join-with-vpn-support)」を参照してください。
+7. VPN サポートを活用する組織のネットワークから離してデバイスを展開する場合、 **[ドメインの接続チェックをスキップする]** オプションを **[はい]** に設定します。  詳細については、「 [ハイブリッド Azure Active Directory のユーザー主導モードと VPN サポートの結合](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join-with-vpn-support) 」を参照してください。
 8. 必要に応じて、 **[Out-of-box experience (OOBE)]** ページで残りのオプションを構成します。
 9. **[次へ]** を選択します。
 10. **[スコープ タグ]** ページで、このプロファイルの[スコープ タグ](../intune/fundamentals/scope-tags.md)を選択します。
@@ -210,7 +210,7 @@ Autopilot Deployment プロファイルは、Autopilot デバイスを構成す�
    - **[プラットフォーム]** : **[Windows 10 以降]** を選択します。
    - **[プロファイルの種類]** : **[ドメイン参加 (プレビュー)]** を選択します。
 3. **[設定]** を選択し、**コンピューター名のプレフィックス**と**ドメイン名**を指定します。
-4. (省略可能) [DN 形式](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name)で**組織単位** (OU) を指定します。 次のような方法があります。
+4. (省略可能) [DN 形式](/windows/desktop/ad/object-names-and-identities#distinguished-name)で**組織単位** (OU) を指定します。 次のような方法があります。
    - Intune コネクタを実行している Windows 2016 デバイスに制御を委任した OU を指定します。
    - オンプレミスの Active Directory でルート コンピューターに制御を委任した OU を指定します。
    - この値を空白のままにすると、コンピューター オブジェクトが Active Directory の既定のコンテナー ([変更しないかぎり](https://support.microsoft.com/en-us/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom) CN=Computers) に作成されます。

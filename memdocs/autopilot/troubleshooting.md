@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: c89731edddd94da99e114cf98c10547c096ebb53
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: f6a9e3008a493185a2338a5af1106806d86dd130
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252015"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907910"
 ---
 # <a name="troubleshooting-windows-autopilot"></a>Windows 自動操縦のトラブルシューティング
 
@@ -115,7 +115,7 @@ Windows 10 バージョン1803以降では、イベントログエントリが�
 
 自動操縦展開サービスから受け取った自動操縦プロファイル設定は、デバイスのレジストリに格納されます。 この情報については、 **HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot**を参照してください。 使用できるレジストリエントリは次のとおりです。
 
-| [値] | 説明 |
+| 値 | 説明 |
 |-------|-------------|
 | AadTenantId | ユーザーがサインインした Azure AD テナントの GUID。 このエントリがデバイスの登録に使用されたテナントと一致しない場合、ユーザーはエラーを受け取ります。 |
 | CloudAssignedTenantDomain | デバイスが登録されている Azure AD テナント (例、"contosomn.onmicrosoft.com")。 デバイスが自動操縦に登録されていない場合、この値は空白になります。 |
@@ -126,7 +126,7 @@ Windows 10 バージョン1803以降では、イベントログエントリが�
 
 ### <a name="windows-10-semi-annual-channel-supported-versions"></a>Windows 10 半期チャネルでサポートされるバージョン
 
-[サポートされているバージョン](https://docs.microsoft.com/windows/release-information/)の Windows 10 半期チャネルを実行しているデバイスでは、ETW トレースを使用して、自動操縦と関連コンポーネントから詳細情報を取得できます。 ETW トレースファイルは、Windows パフォーマンスアナライザーまたは同様のツールを使用して表示できます。 詳細については、 [高度なトラブルシューティングのブログ](https://blogs.technet.microsoft.com/mniehaus/2017/12/13/troubleshooting-windows-autopilot-level-300400/)を参照してください。
+[サポートされているバージョン](/windows/release-information/)の Windows 10 半期チャネルを実行しているデバイスでは、ETW トレースを使用して、自動操縦と関連コンポーネントから詳細情報を取得できます。 ETW トレースファイルは、Windows パフォーマンスアナライザーまたは同様のツールを使用して表示できます。 詳細については、 [高度なトラブルシューティングのブログ](/archive/blogs/mniehaus/troubleshooting-windows-autopilot-level-300400)を参照してください。
 
 ## <a name="troubleshooting-azure-ad-join-issues"></a>Azure AD 参加に関する問題のトラブルシューティング
 
@@ -144,7 +144,7 @@ Intune の登録に関する問題については、 [このサポート技術�
 
 エラーコード80180018は、通常、"問題が発生しました" というエラーページで報告されます。 このエラーは、MDM の登録に失敗したことを意味します。
 
-エラーが発生してすぐに自動再起動が失敗する場合 **。管理者アカウントでサインインして、手動で理由とリセットを確認**してください。詳細については、「 [自動操縦リセットのトラブルシューティング](https://docs.microsoft.com/education/windows/autopilot-reset#troubleshoot-autopilot-reset) 」を参照してください。
+エラーが発生してすぐに自動再起動が失敗する場合 **。管理者アカウントでサインインして、手動で理由とリセットを確認**してください。詳細については、「 [自動操縦リセットのトラブルシューティング](/education/windows/autopilot-reset#troubleshoot-autopilot-reset) 」を参照してください。
 
 ## <a name="profile-download"></a>プロファイルのダウンロード
 
@@ -152,7 +152,7 @@ Intune の登録に関する問題については、 [このサポート技術�
 
 プロファイルをダウンロードする場合は、PC で実行されている Windows 10 のバージョンによって異なります。 次の表を参照してください。
 
-| Windows 10 のバージョン | プロファイルのダウンロード動作 |
+| Windows 10 バージョン | プロファイルのダウンロード動作 |
 | --- | --- |
 | 1709 | このプロファイルは、OOBE ネットワーク接続ページの後にダウンロードされます。 このページは、ワイヤード (有線) 接続を使用しているときは表示されません。 この場合、EULA 画面の前にプロファイルがダウンロードされます。 |
 | 1803 | プロファイルは、できるだけ早くダウンロードされます。 ワイヤード (有線) の場合は、OOBE の開始時にダウンロードされます。 ワイヤレスの場合は、[ネットワーク接続] ページの後にダウンロードされます。 |
@@ -162,9 +162,9 @@ OOBE 中にコンピューターを再起動する必要がある場合は、次
 - Shift + F10 キーを押してコマンドプロンプトを開きます。
 - すぐに再起動するには、 **shutdown/r/t 0** を入力してください。直ちにシャットダウンするには、 **/s/t 0 をシャットダウン** してください。
 
-詳細については、「 [Windows セットアップ コマンド ライン オプション](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)」を参照してください。
+詳細については、「 [Windows セットアップ コマンド ライン オプション](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)」を参照してください。
 
 ## <a name="related-topics"></a>関連トピック
 
 [Windows 自動操縦-既知の問題](known-issues.md)<br>
-[Windows 10 での MDM エラーの診断](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
+[Windows 10 での MDM エラーの診断](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>

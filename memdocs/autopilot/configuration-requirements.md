@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 0a5ab9e2de31dfe48c6f569fb03c22a7206369d0
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 8731532ff052c626514d9f1a80e3a93c0cbde6dc
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88253323"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908320"
 ---
 # <a name="windows-autopilot-configuration-requirements"></a>Windows 自動操縦の構成要件
 
@@ -30,14 +30,14 @@ ms.locfileid: "88253323"
 
 Windows 自動操縦を使用する前に、一般的な自動操縦シナリオをサポートするためにいくつかの構成タスクが必要です。 
 
-- Azure Active Directory の自動登録を構成します。 Microsoft Intune については、「 [Windows 10 の自動登録を有効にする](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) 」を参照してください。 別の MDM サービスを使用している場合は、そのサービスに必要な特定の Url または構成についてベンダーに問い合わせてください。
-- Azure Active Directory カスタムブランド化を構成します。 組織固有のログオンページを表示するには、表示するイメージとテキストを使用して Azure Active Directory を構成する必要があります。 詳細については、「 [クイックスタート: Azure AD のサインインページに会社のブランドを追加する](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding)」を参照してください。 自動操縦の主要な要素には、"正方形のロゴ"、"サインインページのテキスト"、および Azure Active Directory テナント名が含まれます。 テナント名は、Azure AD テナントのプロパティで個別に構成されます。
-- 省略可能: Windows 10 Pro から Windows 10 Enterprise に自動的にステップアップするには、 [Windows サブスクリプションのアクティブ化](https://docs.microsoft.com/windows/deployment/windows-10-enterprise-subscription-activation)を有効にします。
+- Azure Active Directory の自動登録を構成します。 Microsoft Intune については、「 [Windows 10 の自動登録を有効にする](/intune/windows-enroll#enable-windows-10-automatic-enrollment) 」を参照してください。 別の MDM サービスを使用している場合は、そのサービスに必要な特定の Url または構成についてベンダーに問い合わせてください。
+- Azure Active Directory カスタムブランド化を構成します。 組織固有のログオンページを表示するには、表示するイメージとテキストを使用して Azure Active Directory を構成する必要があります。 詳細については、「 [クイックスタート: Azure AD のサインインページに会社のブランドを追加する](/azure/active-directory/fundamentals/customize-branding)」を参照してください。 自動操縦の主要な要素には、"正方形のロゴ"、"サインインページのテキスト"、および Azure Active Directory テナント名が含まれます。 テナント名は、Azure AD テナントのプロパティで個別に構成されます。
+- 省略可能: Windows 10 Pro から Windows 10 Enterprise に自動的にステップアップするには、 [Windows サブスクリプションのアクティブ化](/windows/deployment/windows-10-enterprise-subscription-activation)を有効にします。
 
 その場合、特定のシナリオには追加の要件があります。 一般に、次の2つのタスクがあります。
 
 - デバイス登録。 Windows の自動操縦のシナリオをサポートするには、Windows 自動操縦にデバイスを追加する必要があります。 詳細については、「 [Windows 自動操縦にデバイスを追加する](add-devices.md)」を参照してください。
-- プロファイルの構成。 デバイスが Windows 自動操縦装置に追加されたら、設定のプロファイルを各デバイスに適用する必要があります。 詳細については、「 [自動操縦プロファイルの構成](profiles.md) 」をご覧ください。  このプロファイル割り当てを自動化 Microsoft Intune ことができます。 詳細については、「 [自動操縦デバイスグループを作成](https://docs.microsoft.com/intune/enrollment-Autopilot#create-an-Autopilot-device-group) する」および「 [デバイスグループに自動操縦展開プロファイルを割り当てる](https://docs.microsoft.com/intune/enrollment-Autopilot#assign-an-Autopilot-deployment-profile-to-a-device-group)」を参照してください。
+- プロファイルの構成。 デバイスが Windows 自動操縦装置に追加されたら、設定のプロファイルを各デバイスに適用する必要があります。 詳細については、「 [自動操縦プロファイルの構成](profiles.md) 」をご覧ください。  このプロファイル割り当てを自動化 Microsoft Intune ことができます。 詳細については、「 [自動操縦デバイスグループを作成](/intune/enrollment-Autopilot#create-an-Autopilot-device-group) する」および「 [デバイスグループに自動操縦展開プロファイルを割り当てる](/intune/enrollment-Autopilot#assign-an-Autopilot-deployment-profile-to-a-device-group)」を参照してください。
 
 詳細については、「 [Windows 自動操縦のシナリオ](windows-Autopilot-scenarios.md)」を参照してください。
 

@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b2c9d3b8741fdae30b42aede8f5c7443e35d8bc7
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 09632eccf99774d4170fe60f51b6703cd8b90fed
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251961"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907920"
 ---
 # <a name="windows-autopilot-user-driven-mode"></a>Windows Autopilot ユーザードリブン モード
 
@@ -41,7 +41,7 @@ Windows 自動操縦のユーザー主導モードでは、新しい Windows 10 
 
 既定のエクスペリエンス (OOBE) では、追加のプロンプトを表示しないようにすることができます。使用可能なオプションについては、「 [自動操縦プロファイルの構成](profiles.md) 」を参照してください。
 
-Windows 自動操縦のユーザー主導モードでは、Azure Active Directory およびハイブリッド Azure Active Directory 参加しているデバイスがサポートされます。 これら2つの結合オプションの詳細については、「 [デバイス id とは](https://docs.microsoft.com/azure/active-directory/devices/overview)」を参照してください。
+Windows 自動操縦のユーザー主導モードでは、Azure Active Directory およびハイブリッド Azure Active Directory 参加しているデバイスがサポートされます。 これら2つの結合オプションの詳細については、「 [デバイス id とは](/azure/active-directory/devices/overview)」を参照してください。
 
 ユーザー主導のプロセス中に完了したプロセスフローは次のとおりです。
 
@@ -67,7 +67,7 @@ Windows 自動操縦のユーザー主導モードでは、Azure Active Director
 
 Windows 自動操縦を使用してユーザー主導の展開を完了するには、次の準備手順に従います。
 
-1. ユーザー主導モードの展開を実行するユーザーが、デバイスを Azure Active Directory に参加させることができることを確認します。 詳細については、Azure Active Directory のドキュメントの [デバイス設定の構成](https://docs.microsoft.com/azure/active-directory/device-management-azure-portal#configure-device-settings) に関するドキュメントを参照してください。
+1. ユーザー主導モードの展開を実行するユーザーが、デバイスを Azure Active Directory に参加させることができることを確認します。 詳細については、Azure Active Directory のドキュメントの [デバイス設定の構成](/azure/active-directory/device-management-azure-portal#configure-device-settings) に関するドキュメントを参照してください。
 2. 必要な設定を使用して、ユーザー主導モードの自動操縦プロファイルを作成します。 Microsoft Intune では、プロファイルの作成時にこのモードが明示的に選択されます。 Microsoft Store for Business とパートナーセンターでは、ユーザー主導モードが既定値であるため、選択する必要はありません。
 3. Intune を使用している場合は Azure Active Directory でデバイスグループを作成し、そのグループに自動操縦プロファイルを割り当てます。
 
@@ -84,7 +84,7 @@ Windows 自動操縦を使用してユーザー主導の展開を完了するに
 
 ## <a name="user-driven-mode-for-hybrid-azure-active-directory-join"></a>ハイブリッド Azure Active Directory 結合のユーザー主導モード
 
-Windows の自動操縦には、デバイスを参加させることが Azure Active Directory 必要があります。 オンプレミスの Active Directory 環境がある場合は、オンプレミスドメインにデバイスを参加させることができます。 デバイスを参加させるには、 [Azure Active Directory (Azure AD) にハイブリッド参加](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)するように自動操縦デバイスを構成する必要があります。 
+Windows の自動操縦には、デバイスを参加させることが Azure Active Directory 必要があります。 オンプレミスの Active Directory 環境がある場合は、オンプレミスドメインにデバイスを参加させることができます。 デバイスを参加させるには、 [Azure Active Directory (Azure AD) にハイブリッド参加](/azure/active-directory/devices/hybrid-azuread-join-plan)するように自動操縦デバイスを構成する必要があります。 
 
 ### <a name="requirements"></a>必要条件
 
@@ -97,7 +97,7 @@ Windows 自動操縦を使用して、ユーザー主導のハイブリッド Az
 - デバイスは、Active Directory ドメインコントローラーにアクセスできる必要があります。 組織のネットワークに接続されている必要があります。 AD ドメインおよび AD ドメインコントローラーの DNS レコードを解決できる必要があります。 ユーザーを認証するために、ドメインコントローラーと通信できる必要があります。
 - [ドキュメント「Windows 自動操縦ネットワークの要件](networking-requirements.md)」に従って、デバイスがインターネットにアクセスできる必要があります。
 - Active Directory 用の Intune コネクタをインストールする必要があります。
- - 注: Intune コネクタは、オンプレミスの AD 参加を実行します。 そのため、ユーザーはオンプレミスの AD 参加アクセス許可を必要としません。 これは、ユーザーの代わりに [この操作を実行するように](https://docs.microsoft.com/intune/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit) コネクタが構成されていることを前提としています。 
+ - 注: Intune コネクタは、オンプレミスの AD 参加を実行します。 そのため、ユーザーはオンプレミスの AD 参加アクセス許可を必要としません。 これは、ユーザーの代わりに [この操作を実行するように](/intune/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit) コネクタが構成されていることを前提としています。 
 - プロキシを使用する場合は、WPAD プロキシ設定オプションを有効にして構成する必要がある。
 
 **デバイス参加の Azure AD**: ハイブリッド Azure AD 参加プロセスでは、システムコンテキストを使用してデバイス Azure AD 参加を実行します。 ユーザーベースの Azure AD 結合アクセス許可の設定の影響を受けません。 既定では、すべてのユーザーがデバイスを Azure AD に参加させることができます。
@@ -145,7 +145,7 @@ VPN を使用してハイブリッド Azure AD 参加を試行する前に、ユ
 自動的に接続される VPN 構成では、検証手順が異なる場合があります。
 
 > [!NOTE]
-> このシナリオでは Always On VPN を使用できます。 詳細については、 [ALWAYS ON VPN のデプロイ](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) に関するドキュメントを参照してください。 Intune では、必要なコンピューターごとの VPN プロファイルをまだ展開できないことに注意してください。 
+> このシナリオでは Always On VPN を使用できます。 詳細については、 [ALWAYS ON VPN のデプロイ](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) に関するドキュメントを参照してください。 Intune では、必要なコンピューターごとの VPN プロファイルをまだ展開できないことに注意してください。 
 
 プロセスを検証するには、windows 10 の累積的な更新プログラムが Windows 10 1903 または Windows 10 1909 にインストールされていることを確認します。 最初にから最新の累積をダウンロードすることにより、OOBE 中に更新プログラムを手動でインストールでき https://catalog.update.microsoft.com ます。 次の手順に従います。
 
@@ -163,7 +163,4 @@ VPN を使用してハイブリッド Azure AD 参加を試行する前に、ユ
 
 ### <a name="step-by-step-instructions"></a>詳細な手順
 
-「 [Intune と Windows 自動操縦を使用したハイブリッド Azure AD 参加済みデバイスのデプロイ](https://docs.microsoft.com/intune/windows-autopilot-hybrid)」を参照してください。
-
-
-
+「 [Intune と Windows 自動操縦を使用したハイブリッド Azure AD 参加済みデバイスのデプロイ](/intune/windows-autopilot-hybrid)」を参照してください。

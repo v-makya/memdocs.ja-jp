@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: da15ea9ceae46c9c54858a6be0f724c5d67d22ce
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 8c339e2a55fd8876ce8a144bb72c7c0a37de8346
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252175"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907836"
 ---
 # <a name="overview-of-windows-autopilot"></a>Windows Autopilot の概要
 
@@ -56,7 +56,7 @@ Windows 自動操縦では、新しい Windows デバイスを初めて展開す
 Windows 自動操縦を使用すると、Windows 自動操縦リセットを使用して新しいユーザーのデバイスをすばやく準備できます。 中断/修正シナリオでリセットを使用して、デバイスをすぐにビジネス対応状態に戻すこともできます。
 
 Windows Autopilot では、次のことを実行できます。
-* Azure Active Directory (Azure AD) または Active Directory (Hybrid Azure AD Join による) へデバイスを自動的に参加させる。 これら2つの結合オプションの相違点の詳細については、「 [Azure Active Directory でのデバイス管理の概要](https://docs.microsoft.com/azure/active-directory/device-management-introduction)」を参照してください。
+* Azure Active Directory (Azure AD) または Active Directory (Hybrid Azure AD Join による) へデバイスを自動的に参加させる。 これら2つの結合オプションの相違点の詳細については、「 [Azure Active Directory でのデバイス管理の概要](/azure/active-directory/device-management-introduction)」を参照してください。
 * Microsoft Intune などの MDM サービスにデバイスを自動登録します ([*構成には Azure AD Premium サブスクリプションが必要です*](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Windows-10-Azure-AD-and-Microsoft-Intune-Automatic-MDM/ba-p/244067))。
 * 管理者アカウントの作成を制限する。
 * デバイスのプロファイルに基づいて構成グループを作成し、デバイスをこのグループに自動的に割り当てる。
@@ -72,9 +72,9 @@ IT 担当者側から見ると、エンド ユーザーから要求される作�
 
 ## <a name="requirements"></a>必要条件
 
-Windows 自動操縦を使用するには、 [サポートされているバージョン](https://docs.microsoft.com/windows/release-information/) の windows 10 半期チャネルが必要です。 Windows 10 Enterprise LTSC 2019 もサポートされています。 詳細については、「 [Windows 自動操縦用ソフトウェア](software-requirements.md)、 [ネットワーク](networking-requirements.md)、 [構成](configuration-requirements.md)、および [ライセンス](licensing-requirements.md) の要件」を参照してください。
+Windows 自動操縦を使用するには、 [サポートされているバージョン](/windows/release-information/) の windows 10 半期チャネルが必要です。 Windows 10 Enterprise LTSC 2019 もサポートされています。 詳細については、「 [Windows 自動操縦用ソフトウェア](software-requirements.md)、 [ネットワーク](networking-requirements.md)、 [構成](configuration-requirements.md)、および [ライセンス](licensing-requirements.md) の要件」を参照してください。
 
 ## <a name="related-topics"></a>関連トピック
 
-[Windows Autopilot を使用して、Intune での Windows デバイスを登録する](https://docs.microsoft.com/intune/enrollment-autopilot)<br>
+[Windows Autopilot を使用して、Intune での Windows デバイスを登録する](/intune/enrollment-autopilot)<br>
 [Windows の自動操縦のシナリオと機能](windows-autopilot-scenarios.md)

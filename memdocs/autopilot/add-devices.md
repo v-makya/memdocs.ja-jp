@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: fc892a4372aa7d72f294ddf93f811d641ca961b5
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: b8737646946e1c575ddb8ebdd26397712c412e20
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051426"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908570"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Windows 自動操縦にデバイスを追加する
 
@@ -40,9 +40,9 @@ OEM が組織に代わってデバイスを登録する前に、組織は OEM �
 
 ## <a name="reseller-distributor-or-partner-registration"></a>リセラー、代理店、またはパートナー登録
 
-お客様は、リセラー、代理店、またはその他のパートナーからデバイスを購入できます。  これらの再販業者、販売代理店、パートナーは、[クラウドソリューションパートナー (CSP) プログラム](https://partner.microsoft.com/cloud-solution-provider)の一部である限り、お客様に代わってデバイスを登録することができます。  
+お客様は、リセラー、代理店、またはその他のパートナーからデバイスを購入できます。  これらの再販業者、販売代理店、パートナーは、 [クラウドソリューションパートナー (CSP) プログラム](https://partner.microsoft.com/cloud-solution-provider)の一部である限り、お客様に代わってデバイスを登録することができます。  
 
-Oem と同様、CSP パートナーには、組織に代わってデバイスを登録するためのアクセス許可を付与する必要があります。  これは、[お客様の同意ページ](registration-auth.md#csp-authorization)で説明されている手順に従います。  CSP パートナーが組織との関係を確立する要求を開始し、組織のグローバル管理者によって承認されます。  CSP パートナーは、承認が完了すると、web サイトから直接、または同じタスクを自動化できる利用可能な Api を介して、[パートナーセンター](https://partner.microsoft.com/pcv/dashboard/overview)を使用してデバイスを追加します。
+Oem と同様、CSP パートナーには、組織に代わってデバイスを登録するためのアクセス許可を付与する必要があります。  これは、 [お客様の同意ページ](registration-auth.md#csp-authorization)で説明されている手順に従います。  CSP パートナーが組織との関係を確立する要求を開始し、組織のグローバル管理者によって承認されます。  CSP パートナーは、承認が完了すると、web サイトから直接、または同じタスクを自動化できる利用可能な Api を介して、 [パートナーセンター](https://partner.microsoft.com/pcv/dashboard/overview)を使用してデバイスを追加します。
 
 CSP パートナーと組織の間の関係を確立するときに、Windows の自動操縦によって委任された管理者のアクセス許可は必要ありません。  全体管理者によって実行される承認プロセスの一環として、全体管理者は [委任された管理アクセス許可を含める] チェックボックスをオフにすることができます。
 
@@ -53,9 +53,9 @@ CSP パートナーと組織の間の関係を確立するときに、Windows �
 
 既存のデバイスが、サポートされているバージョンの Windows 10 半期チャネルを既に実行していて、Intune などの MDM サービスに登録されている場合、MDM サービスはデバイスにハードウェア ID (ハードウェアハッシュとも呼ばれます) を要求できます。  その後、デバイスを Windows 自動操縦に自動的に登録することができます。
 
-Microsoft Intune でこの操作を行う方法については、「すべての対象デバイスを自動操縦に変換する」設定を説明している「[自動操縦展開プロファイルの作成](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-deployment-profile)」を参照してください。 
+Microsoft Intune でこの操作を行う方法については、「すべての対象デバイスを自動操縦に変換する」設定を説明している「 [自動操縦展開プロファイルの作成](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) 」を参照してください。 
 
-また、[既存のデバイスに対して Windows 自動操縦](existing-devices.md)を使用する場合は、デバイスを Windows 自動操縦装置に事前登録する必要がないことに注意してください。  代わりに、すべての Windows 自動操縦プロファイル設定を含む構成ファイル (AutopilotConfigurationFile.js) が使用されます。デバイスは、"すべての対象デバイスを自動操縦に変換する" 設定を使用して、Windows 自動操縦に登録できます。
+また、 [既存のデバイスに対して Windows 自動操縦](existing-devices.md) を使用する場合は、デバイスを Windows 自動操縦装置に事前登録する必要がないことに注意してください。  代わりに、すべての Windows 自動操縦プロファイル設定を含む構成ファイル (AutopilotConfigurationFile.js) が使用されます。デバイスは、"すべての対象デバイスを自動操縦に変換する" 設定を使用して、Windows 自動操縦に登録できます。
 
 ## <a name="manual-registration"></a>手動登録
 
@@ -74,14 +74,14 @@ Windows 自動展開サービスにデバイスを定義するには、デバイ
 
 ### <a name="collecting-the-hardware-id-from-existing-devices-using-microsoft-endpoint-configuration-manager"></a>Microsoft エンドポイントを使用して既存のデバイスからハードウェア ID を収集する Configuration Manager
 
-Microsoft Endpoint Configuration Manager は、既存の Windows 10 デバイスのハードウェアハッシュを自動的に収集します。 詳細については、「 [Windows 自動操縦の Configuration Manager から情報を収集](https://docs.microsoft.com/configmgr/comanage/how-to-prepare-win10#windows-autopilot)する」を参照してください。 ハッシュ情報は Configuration Manager から CSV ファイルに抽出できます。
+Microsoft Endpoint Configuration Manager は、既存の Windows 10 デバイスのハードウェアハッシュを自動的に収集します。 詳細については、「 [Windows 自動操縦の Configuration Manager から情報を収集](/configmgr/comanage/how-to-prepare-win10#windows-autopilot)する」を参照してください。 ハッシュ情報は Configuration Manager から CSV ファイルに抽出できます。
 
 > [!Note]
-> Intune に CSV ファイルをアップロードする前に、最初の行にデバイスのシリアル番号、Windows 製品 ID、ハードウェアハッシュ、グループタグ、割り当てられたユーザーが含まれていることを確認してください。 CSV ファイルの先頭にヘッダー情報がある場合は、そのヘッダー情報を削除してください。 詳細について[は、「Intune での Windows デバイスの登録」を](https://docs.microsoft.com/intune/enrollment/enrollment-autopilot)参照してください。
+> Intune に CSV ファイルをアップロードする前に、最初の行にデバイスのシリアル番号、Windows 製品 ID、ハードウェアハッシュ、グループタグ、割り当てられたユーザーが含まれていることを確認してください。 CSV ファイルの先頭にヘッダー情報がある場合は、そのヘッダー情報を削除してください。 詳細について [は、「Intune での Windows デバイスの登録」を](/intune/enrollment/enrollment-autopilot)参照してください。
 
 ### <a name="collecting-the-hardware-id-from-existing-devices-using-powershell"></a>PowerShell を使用した既存のデバイスからのハードウェア ID の収集
 
-既存のデバイスのハードウェア ID またはハードウェアハッシュは、デバイスがサポートされているバージョンの Windows 10 半期チャネルを実行している限り、Windows Management Instrumentation (WMI) を介して利用できます。 この情報と、デバイスのシリアル番号 (コンピューターが属するコンピューターを一目で確認するのに役立ちます) を収集するために、Get-WindowsAutoPilotInfo.ps1 という名前の PowerShell スクリプト[が PowerShell ギャラリー web サイトに公開されて](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)います。
+既存のデバイスのハードウェア ID またはハードウェアハッシュは、デバイスがサポートされているバージョンの Windows 10 半期チャネルを実行している限り、Windows Management Instrumentation (WMI) を介して利用できます。 この情報と、デバイスのシリアル番号 (コンピューターが属するコンピューターを一目で確認するのに役立ちます) を収集するために、Get-WindowsAutoPilotInfo.ps1 という名前の PowerShell スクリプト [ が PowerShell ギャラリー web サイトに公開されて](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)います。
 
 このスクリプトを使用するには、PowerShell ギャラリーからダウンロードし、各コンピューターで実行するか、PowerShell ギャラリーから直接インストールすることができます。 ローカルコンピューターからハードウェアハッシュを直接インストールしてキャプチャするには、管理者特権の Windows PowerShell プロンプトから次のコマンドを使用します。
 
@@ -93,10 +93,10 @@ Install-Script -Name Get-WindowsAutoPilotInfo
 Get-WindowsAutoPilotInfo.ps1 -OutputFile AutoPilotHWID.csv
 ```
 
-WMI アクセス許可が適用されていて、そのリモートコンピューターの Windows ファイアウォール経由で WMI にアクセスできる限り、コマンドをリモートで実行することもできます。 スクリプトの実行の詳細については、 [WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)スクリプトのヘルプ ("get-help Get-WindowsAutoPilotInfo.ps1" を使用) を参照してください。
+WMI アクセス許可が適用されていて、そのリモートコンピューターの Windows ファイアウォール経由で WMI にアクセスできる限り、コマンドをリモートで実行することもできます。 スクリプトの実行の詳細については、 [WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) スクリプトのヘルプ ("get-help Get-WindowsAutoPilotInfo.ps1" を使用) を参照してください。
 
 >[!IMPORTANT]
->ハードウェア ID をキャプチャし、自動操縦用デバイスプロファイルを作成する前に、デバイスをインターネットに接続しないでください。 これには、ハードウェア ID の収集、のアップロードも含まれます。MSfB または Intune に CSV を、プロファイルを割り当て、プロファイルの割り当てを確認します。 このプロセスが完了する前にデバイスをインターネットに接続すると、デバイスは、明示的が削除されるまでデバイスに保存されている空のプロファイルをダウンロードします。 Windows 10 バージョン1809では、OOBE を再起動することで、キャッシュされたプロファイルをクリアできます。 以前のバージョンでは、保存されたプロファイルをクリアする唯一の方法は、OS の再インストール、PC の再イメージ化、または**sysprep/generalize/oobe**の実行です。 <br>
+>ハードウェア ID をキャプチャし、自動操縦用デバイスプロファイルを作成する前に、デバイスをインターネットに接続しないでください。 これには、ハードウェア ID の収集、のアップロードも含まれます。MSfB または Intune に CSV を、プロファイルを割り当て、プロファイルの割り当てを確認します。 このプロセスが完了する前にデバイスをインターネットに接続すると、デバイスは、明示的が削除されるまでデバイスに保存されている空のプロファイルをダウンロードします。 Windows 10 バージョン1809では、OOBE を再起動することで、キャッシュされたプロファイルをクリアできます。 以前のバージョンでは、保存されたプロファイルをクリアする唯一の方法は、OS の再インストール、PC の再イメージ化、または **sysprep/generalize/oobe**の実行です。 <br>
 >Intune でプロファイルの準備が完了したら、デバイスがインターネットに接続されている必要があります。
 
 >[!NOTE]
@@ -115,7 +115,7 @@ WMI アクセス許可が適用されていて、そのリモートコンピュ�
     - Microsoft Endpoint Manager 管理センターは、Intune のデバイス登録に使用されます。
 -   [パートナーセンター](https://msdn.microsoft.com/partner-center/autopilot)。  これは、ユーザーに代わってデバイスを登録するために CSP パートナーによって使用されます。
 -   [& Office 365 管理者を Microsoft 365 Business](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa)します。 通常、これは、Microsoft 365 Business を使用してデバイスを管理する中小企業 (Smb) によって使用されます。
--   [ビジネス向け Microsoft Store](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles)。  アプリと設定の管理には、既に MSfB を使用している可能性があります。
+-   [ビジネス向け Microsoft Store](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles)。  アプリと設定の管理には、既に MSfB を使用している可能性があります。
 
 各プラットフォームの機能の概要については、以下を参照してください。<br>
 <br>
@@ -173,7 +173,7 @@ WMI アクセス許可が適用されていて、そのリモートコンピュ�
 デバイス Id の詳細については、次のトピックも参照してください。
 - [デバイスの識別](#device-identification)
 - [Windows 自動操縦用デバイスのガイドライン](autopilot-device-guidelines.md)
-- [顧客アカウントへのデバイスの追加](https://docs.microsoft.com/partner-center/autopilot)
+- [顧客アカウントへのデバイスの追加](/partner-center/autopilot)
 
 
 ## <a name="summary"></a>まとめ
@@ -182,7 +182,7 @@ Windows 自動操縦を使用して新しいデバイスを展開する場合は
 
 1.  [デバイスを登録](#registering-devices)します。 この手順は、デバイスを購入した OEM、リセラー、またはディストリビューターによって実行されるのが理想的ですが、ハードウェア id を収集して手動でアップロードすることで、組織が行うこともできます。
 2.  デバイス[プロファイルを構成](profiles.md)して、デバイスの展開方法と表示するユーザーエクスペリエンスを指定します。
-3.  デバイスを起動します。 デバイスがインターネットにアクセスできるネットワークに接続されている場合、デバイスが登録されているかどうか、およびデバイスが登録されているかどうかを確認するために、Windows 自動展開サービスに連絡します。これは、エンドユーザーエクスペリエンスをカスタマイズするために使用される、[登録ステータスページ](enrollment-status.md)などのプロファイル設定をダウンロードします。
+3.  デバイスを起動します。 デバイスがインターネットにアクセスできるネットワークに接続されている場合、デバイスが登録されているかどうか、およびデバイスが登録されているかどうかを確認するために、Windows 自動展開サービスに連絡します。これは、エンドユーザーエクスペリエンスをカスタマイズするために使用される、 [登録ステータスページ](enrollment-status.md)などのプロファイル設定をダウンロードします。
 
 ## <a name="other-configuration-settings"></a>その他の構成設定
 

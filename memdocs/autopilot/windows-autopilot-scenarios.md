@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 063d791b4b2373f195625c996c6b4a1667015ad3
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: b8b91e25d01a64cfeee601c898c355111b960b7c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757009"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907873"
 ---
 # <a name="windows-autopilot-scenarios-and-capabilities"></a>Windows の自動操縦のシナリオと機能
 
@@ -27,7 +27,7 @@ ms.locfileid: "87757009"
 
 ## <a name="scenarios"></a>シナリオ
 
-Windows の自動操縦では、組織の一般的なニーズに対応するように設計された、拡大するシナリオの一覧がサポートされています。 これらのニーズは、組織の種類や、Windows 10 への移行の進行状況と、[最新の管理への移行](https://docs.microsoft.com/windows/client-management/manage-windows-10-in-your-organization-modern-management)によって異なる場合があります。
+Windows の自動操縦では、組織の一般的なニーズに対応するように設計された、拡大するシナリオの一覧がサポートされています。 これらのニーズは、組織の種類や、Windows 10 への移行の進行状況と、 [最新の管理への移行](/windows/client-management/manage-windows-10-in-your-organization-modern-management)によって異なる場合があります。
 
 このガイドでは、次の Windows 自動操縦シナリオについて説明します。
 
@@ -49,9 +49,9 @@ Windows の自動操縦では、組織の一般的なニーズに対応するよ
 
 ### <a name="windows-autopilot-is-self-updating-during-oobe"></a>Windows 自動操縦は、OOBE 中に自己更新する
 
-Windows 10 バージョン1903以降では、デバイスがネットワークに接続され、[重要なドライバーおよび Windows のゼロ日前修正プログラム (ZDP) の更新](https://docs.microsoft.com/windows-hardware/customize/desktop/windows-updates-during-oobe)が完了した後、自動操縦機能と重要な更新プログラムが OOBE 中に自動的にダウンロードされます。 ユーザーまたは IT 管理者は、Windows 自動操縦の展開が適切に動作するために必要なため、これらの自動操縦の更新プログラムをオプトアウトすることはできません。  Windows は、デバイスが更新プログラムを確認し、ダウンロードし、インストールしていることをユーザーに通知します。
+Windows 10 バージョン1903以降では、デバイスがネットワークに接続され、 [重要なドライバーおよび Windows のゼロ日前修正プログラム (ZDP) の更新](/windows-hardware/customize/desktop/windows-updates-during-oobe) が完了した後、自動操縦機能と重要な更新プログラムが OOBE 中に自動的にダウンロードされます。 ユーザーまたは IT 管理者は、Windows 自動操縦の展開が適切に動作するために必要なため、これらの自動操縦の更新プログラムをオプトアウトすることはできません。  Windows は、デバイスが更新プログラムを確認し、ダウンロードし、インストールしていることをユーザーに通知します。
 
-詳細については、「 [Windows 自動操縦の更新プログラム](autopilot-update.md)」を参照してください。
+詳細については、「 [Windows 自動操縦の更新プログラム](autopilot-update.md) 」を参照してください。
 
 ### <a name="cortana-voiceover-and-speech-recognition-during-oobe"></a>OOBE 中の Cortana voiceover と音声認識
 
@@ -61,7 +61,7 @@ Windows 10 では、Windows 10 Pro、教育、および Enterprise のすべて�
 
 HKLM\Software\Microsoft\Windows\CurrentVersion\OOBE\EnableVoiceForAllEditions
 
-キー値は、 **0** = disabled で**1** = enabled の DWORD です。
+キー値は、  **0** = disabled で **1** = enabled の DWORD です。
 
 | 値 | 説明 |
 | --- | --- |
@@ -69,7 +69,7 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\OOBE\EnableVoiceForAllEditions
 | 1 | Cortana voiceover が有効になっています |
 | 値なし | デバイスは、エディションの既定の動作にフォールバックします。 |
 
-このキー値を変更するには、WCD ツールを使用して、[ここ](https://docs.microsoft.com/windows/configuration/wcd/wcd-oobe#nforce)に記載されているように ppkg として作成します。
+このキー値を変更するには、WCD ツールを使用して、 [ここ](/windows/configuration/wcd/wcd-oobe#nforce)に記載されているように ppkg として作成します。
 
 ### <a name="bitlocker-encryption"></a>BitLocker 暗号化
 
