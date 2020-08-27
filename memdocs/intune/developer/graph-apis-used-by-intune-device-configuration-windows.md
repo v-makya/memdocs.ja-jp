@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 737301d8171cd123224017a32c03db8365f4a90c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: eb30db6043a1b2f02db8baa93f324fa38449769c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364750"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915655"
 ---
 # <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Intune で使用される Graph API と対応する Windows 10 CSP
 
-Microsoft Intune は、 [Graph API のエンティティ](https://docs.microsoft.com/graph/api/resources/intune-graph-overview)(別の Docs サイトを開きます) を使用して、Windows 10 以降を実行しているデバイス (**Intune** > **デバイスの構成**) を構成します。 Graph API は、構成サービスプロバイダー (Csp) を使用して、デバイスの構成設定の読み取り、設定、変更、削除を行います。
+Microsoft Intune は、 [Graph API エンティティ](/graph/api/resources/intune-graph-overview)(別の Docs サイトを開きます) を**Intune**使用し  >  て、Windows 10 以降を実行しているデバイス (Intune**デバイス構成**) を構成します。 Graph API は、構成サービスプロバイダー (Csp) を使用して、デバイスの構成設定の読み取り、設定、変更、削除を行います。
 
 この一覧の適用対象:
 
@@ -37,13 +37,13 @@ Microsoft Intune は、 [Graph API のエンティティ](https://docs.microsoft
 
 ## <a name="windows-10-csps"></a>Windows 10 Csp
 
-Windows 10 構成サービスプロバイダーの詳細については、[構成サービスプロバイダーのリファレンス](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)(別のドキュメントサイトを開きます) を参照してください。
+Windows 10 構成サービスプロバイダーの詳細については、 [構成サービスプロバイダーのリファレンス](/windows/client-management/mdm/configuration-service-provider-reference) (別のドキュメントサイトを開きます) を参照してください。
 
 ## <a name="graph-api-properties-to-csp-mapping"></a>CSP マッピングへのプロパティの Graph API
 
 次の一覧は、Windows 10 デバイス構成の Microsoft Intune で使用される Graph API エンティティの大部分を示しています。 また、対応する Windows 10 CSP とオフセット URI も表示されます。
 
-Windows 10 のバージョンを確認するには、次の Api が適用されます。 Windows 10[構成サービスプロバイダーのリファレンス](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)を使用してください (別の Docs サイトを開きます)。
+Windows 10 のバージョンを確認するには、次の Api が適用されます。 Windows 10 [構成サービスプロバイダーのリファレンス](/windows/client-management/mdm/configuration-service-provider-reference) を使用してください (別の Docs サイトを開きます)。
 
 ### <a name="editionupgradeconfigurationlicense"></a>EditionUpgradeConfiguration 
 **CSP**:./Device/Vendor/MSFT/WindowsLicensing  
@@ -61,7 +61,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 **CSP**:./Device/Vendor/MSFT/WindowsLicensing  
 **オフセット URI**:/SMode/SwitchingPolicy
 
-### <a name="sharedpcconfigurationaccountmanagerpolicy"></a>SharedPCConfiguration.AccountManagerPolicy 
+### <a name="sharedpcconfigurationaccountmanagerpolicy"></a>SharedPCConfiguration. AccountManagerPolicy 
 **CSP**:./Vendor/MSFT/SharedPC  
 **オフセット URI**:/DeletionPolicy、/disklevelcache、/InactiveThreshold、/diskleveldelete
 
@@ -113,7 +113,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 **CSP**:./Vendor/MSFT/SharedPC  
 **オフセット URI**:/RestrictLocalStorage
 
-### <a name="sharedpcconfigurationmaintenancestarttime"></a>SharedPCConfiguration.MaintenanceStartTime 
+### <a name="sharedpcconfigurationmaintenancestarttime"></a>SharedPCConfiguration. MaintenanceStartTime 
 **CSP**:./Vendor/MSFT/SharedPC  
 **オフセット URI**:/MaintenanceStartTime
 
@@ -258,7 +258,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderemailcontentexecutiontype"></a>Windows10EndpointProtectionConfiguration. DefenderEmailContentExecutionType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です: Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection//defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/Configuration. defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/構成. defenderUntrustedUSBProcessType
+**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です。 Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/、defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection、defenderScriptObfuscatedMacroCodeType、windows10endpointprotection、defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection、windows10endpointprotection、defenderPreventCredentialStealingType、windows10endpointprotection、、、、、、、および defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxml"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXml 
 **CSP**:./DEVICE/VENDOR/MSFT/POLICY **Offset URI**:/Config/ExploitGuard/ExploitProtectionSettings
@@ -283,7 +283,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappsexecutablecontentcreationorlaunchtype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsExecutableContentCreationOrLaunchType
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です: Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection//defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/Configuration. defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/構成. defenderUntrustedUSBProcessType
+**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です。 Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/、defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection、defenderScriptObfuscatedMacroCodeType、windows10endpointprotection、defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection、windows10endpointprotection、defenderPreventCredentialStealingType、windows10endpointprotection、、、、、、、および defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappslaunchchildprocess"></a>Windows10EndpointProtectionConfiguration. DefenderOfficeAppsLaunchChildProcess 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -291,7 +291,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappslaunchchildprocesstype"></a>Windows10EndpointProtectionConfiguration. DefenderOfficeAppsLaunchChildProcessType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です: Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection//defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/Configuration. defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/構成. defenderUntrustedUSBProcessType
+**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です。 Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/、defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection、defenderScriptObfuscatedMacroCodeType、windows10endpointprotection、defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection、windows10endpointprotection、defenderPreventCredentialStealingType、windows10endpointprotection、、、、、、、および defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappsotherprocessinjection"></a>Windows10EndpointProtectionConfiguration. Defenderofficeappsoprocessインジェクション 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -299,7 +299,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappsotherprocessinjectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsOtherProcessInjectionType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です: Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection//defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/Configuration. defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/構成. defenderUntrustedUSBProcessType 
+**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です。 Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/、defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection、defenderScriptObfuscatedMacroCodeType、windows10endpointprotection、defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection、windows10endpointprotection、defenderPreventCredentialStealingType、windows10endpointprotection、、、、、、、および defenderUntrustedUSBProcessType 
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficemacrocodeallowwin32imports"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeMacroCodeAllowWin32Imports 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -307,17 +307,17 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficemacrocodeallowwin32importstype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeMacroCodeAllowWin32ImportsType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です: Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection//defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/Configuration. defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/構成. defenderUntrustedUSBProcessType
+**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です。 Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/、defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection、defenderScriptObfuscatedMacroCodeType、windows10endpointprotection、defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection、windows10endpointprotection、defenderPreventCredentialStealingType、windows10endpointprotection、、、、、、、および defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdefenderpreventcredentialstealingtype"></a>Windows10EndpointProtectionConfiguration.DefenderPreventCredentialStealingType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です: Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection//defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/Configuration. defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/構成. defenderUntrustedUSBProcessType
+**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です。 Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/、defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection、defenderScriptObfuscatedMacroCodeType、windows10endpointprotection、defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection、windows10endpointprotection、defenderPreventCredentialStealingType、windows10endpointprotection、、、、、、、および defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdefenderprocesscreation"></a>Windows10EndpointProtectionConfiguration. DefenderProcessCreation 
 **CSP**:./Device/Vendor/MSFT/Policy  
 **オフセット URI**:/Config/Defender/AttackSurfaceReductionRules
 
-### <a name="windows10endpointprotectionconfigurationdefenderprocesscreationtype"></a>Windows10EndpointProtectionConfiguration.DefenderProcessCreationType 
+### <a name="windows10endpointprotectionconfigurationdefenderprocesscreationtype"></a>Windows10EndpointProtectionConfiguration の種類 
 **CSP**:./Device/Vendor/MSFT/Policy  
 **オフセット URI**:/Config/Defender/AttackSurfaceReductionRules
 
@@ -331,7 +331,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderscriptdownloadedpayloadexecutiontype"></a>Windows10EndpointProtectionConfiguration.DefenderScriptDownloadedPayloadExecutionType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です: Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection//defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/Configuration. defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/構成. defenderUntrustedUSBProcessType
+**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です。 Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/、defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection、defenderScriptObfuscatedMacroCodeType、windows10endpointprotection、defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection、windows10endpointprotection、defenderPreventCredentialStealingType、windows10endpointprotection、、、、、、、および defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdefenderscriptobfuscatedmacrocode"></a>Windows10EndpointProtectionConfiguration.DefenderScriptObfuscatedMacroCode 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -339,7 +339,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderscriptobfuscatedmacrocodetype"></a>Windows10EndpointProtectionConfiguration.DefenderScriptObfuscatedMacroCodeType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です: Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection//defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/Configuration. defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/構成. defenderUntrustedUSBProcessType
+**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です。 Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/、defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection、defenderScriptObfuscatedMacroCodeType、windows10endpointprotection、defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection、windows10endpointprotection、defenderPreventCredentialStealingType、windows10endpointprotection、、、、、、、および defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterblockexploitprotectionoverride"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterBlockExploitProtectionOverride 
 **CSP**:./DEVICE/VENDOR/MSFT/POLICY **Offset URI**:/Config/WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride
@@ -414,7 +414,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderuntrustedusbprocesstype"></a>Windows10EndpointProtectionConfiguration. DefenderUntrustedUSBProcessType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です: Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/DefenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection/defenderScriptObfuscatedMacroCodeType、windows10endpointprotection//defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection/Configuration. defenderEmailContentExecutionType、windows10endpointprotection/defenderPreventCredentialStealingType、windows10endpointprotection/構成. defenderUntrustedUSBProcessType
+**オフセット URI**:/CONFIG/DEFENDER/ATTACKSURFACEREDUCTIONRULES (CSP/構成にはグラフのプロパティが必要です。 Windows10endpointprotection/defenderOfficeAppsOtherProcessInjectionType、Windows10endpointprotection/defenderOfficeAppsExecutableContentCreationOrLaunchType、Windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType、windows10endpointprotection/、defenderOfficeMacroCodeAllowWin32ImportsType、windows10endpointprotection、defenderScriptObfuscatedMacroCodeType、windows10endpointprotection、defenderScriptDownloadedPayloadExecutionType、windows10endpointprotection、windows10endpointprotection、defenderPreventCredentialStealingType、windows10endpointprotection、、、、、、、および defenderUntrustedUSBProcessType
 
 ### <a name="windows10endpointprotectionconfigurationdeviceguardenablesecurebootwithdma"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableSecureBootWithDMA 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -565,7 +565,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 
 ### <a name="windows10endpointprotectionconfigurationlanmanagerauthenticationlevel"></a>Windows10EndpointProtectionConfiguration. LanManagerAuthenticationLevel 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkSecurity\_LANManagerAuthenticationLevel
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkSecurity \_ lanmanagerauthenticationlevel
 
 ### <a name="windows10endpointprotectionconfigurationlanmanagerworkstationdisableinsecureguestlogons"></a>Windows10EndpointProtectionConfiguration ワークステーションの Disableinsecureguestログオン 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -577,195 +577,195 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsadministratoraccountname"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsaccountname 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts\_Renameアドミニストレーターアカウント
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts \_ renameアドミニストレーターアカウント
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsadministratorelevationpromptbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAdministratorElevationPromptBehavior
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl\_BehaviorOfTheElevationPromptForAdministrators
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ BehaviorOfTheElevationPromptForAdministrators
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowanonymousenumerationofsamaccountsandshares"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkAccess\_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkAccess \_ DoNotAllowAnonymousEnumerationOfSamAccountsAndShares
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowpku2uauthenticationrequests"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowPKU2UAuthenticationRequests 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkSecurity\_AllowPKU2UAuthenticationRequests
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkSecurity \_ AllowPKU2UAuthenticationRequests
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowremotecallstosecurityaccountsmanager"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkAccess\_RestrictClientsAllowedToMakeRemoteCallsToSAM
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkAccess \_ RestrictClientsAllowedToMakeRemoteCallsToSAM
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowremotecallstosecurityaccountsmanagerhelperbool"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkAccess\_RestrictClientsAllowedToMakeRemoteCallsToSAM
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkAccess \_ RestrictClientsAllowedToMakeRemoteCallsToSAM
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowsystemtobeshutdownwithouthavingtologon"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Shutdown\_AllowSystemToBeShutDownWithoutHavingToLogOn
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Shutdown \_ AllowSystemToBeShutDownWithoutHavingToLogOn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowuiaccessapplicationelevation"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsAllowUIAccessApplicationElevation 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl\_AllowUIAccessApplicationsToPromptForElevation
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ allowuiaccessapplicationstopromptforelevation
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowuiaccessapplicationsforsecurelocations"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsallowuiaccessの場所 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl\_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowundockwithouthavingtologon"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUndockWithoutHavingToLogon 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Devices\_AllowUndockWithoutHavingToLogon
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Devices \_ AllowUndockWithoutHavingToLogon
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockmicrosoftaccounts"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsblockmicrosoft アカウント 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts\_Blockmicrosoft Accounts
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts \_ blockmicrosoft Accounts
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockremotelogonwithblankpassword"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsblockremotelogonwithpassword 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts\_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts \_ LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockremoteopticaldriveaccess"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsblockremoteop・ドライブアクセス 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Devices\_RestrictCDROMAccessToLocallyLoggedOnUserOnly
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Devices \_ RestrictCDROMAccessToLocallyLoggedOnUserOnly
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockusersinstallingprinterdrivers"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsblockのドライバー 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Devices\_PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Devices \_ PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclearvirtualmemorypagefile"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClearVirtualMemoryPageFile 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Shutdown\_ClearVirtualMemoryPageFile
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Shutdown \_ ClearVirtualMemoryPageFile
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclientdigitallysigncommunicationsalways"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClientDigitallySignCommunicationsAlways 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_DigitallySignCommunicationsAlways
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient \_ DigitallySignCommunicationsAlways
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclientsendunencryptedpasswordtothirdpartysmbservers"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_SendUnencryptedPasswordToThirdPartySMBServers
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient \_ SendUnencryptedPasswordToThirdPartySMBServers
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdetectapplicationinstallationsandpromptforelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl\_DetectApplicationInstallationsAndPromptForElevation
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ DetectApplicationInstallationsAndPromptForElevation
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableadministratoraccount"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsdisableアドミニストレーターアカウント 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts\_Enableアドミニストレーター accountstatus
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts \_ enableアドミニストレーター accountstatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableclientdigitallysigncommunicationsifserveragrees"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_DigitallySignCommunicationsIfServerAgrees
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient \_ DigitallySignCommunicationsIfServerAgrees
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableguestaccount"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsDisableGuestAccount 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts\_EnableGuestAccountStatus
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts \_ enableguestaccountstatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableserverdigitallysigncommunicationsalways"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer\_DigitallySignCommunicationsAlways
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer \_ DigitallySignCommunicationsAlways
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableserverdigitallysigncommunicationsifclientagrees"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer\_DigitallySignCommunicationsIfClientAgrees
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer \_ DigitallySignCommunicationsIfClientAgrees
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotallowanonymousenumerationofsamaccounts"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkAccess\_DoNotAllowAnonymousEnumerationOfSAMAccounts
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkAccess \_ DoNotAllowAnonymousEnumerationOfSAMAccounts
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotrequirectrlaltdel"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotRequireCtrlAltDel 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_DoNotRequireCTRLALTDEL
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ DoNotRequireCTRLALTDEL
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotstorelanmanagerhashvalueonnextpasswordchange"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkSecurity\_DoNotStoreLANManagerHashValueOnNextPasswordChange
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkSecurity \_ DoNotStoreLANManagerHashValueOnNextPasswordChange
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsenableadministratoraccount"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsenablelocalhost アカウント 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts\_Enableアドミニストレーター accountstatus
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts \_ enableアドミニストレーター accountstatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsenableguestaccount"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsEnableGuestAccount 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts\_EnableGuestAccountStatus
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts \_ enableguestaccountstatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsformatandejectofremovablemediaalloweduser"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Devices\_AllowedToFormatAndEjectRemovableMedia
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Devices \_ AllowedToFormatAndEjectRemovableMedia
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsguestaccountname"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsGuestAccountName 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts\_RenameGuestAccount
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/Accounts \_ renameguestaccount
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionshidelastsignedinuser"></a>Windows10EndpointProtectionConfiguration. Localsecurityoption佐々木 Delastsignedinuser 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_は、
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ は、
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionshideusernameatsignin"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsHideUsernameAtSignIn 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_DoNotDisplayUsernameAtSignIn
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ DoNotDisplayUsernameAtSignIn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsinformationdisplayedonlockscreen"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsInformationDisplayedOnLockScreen 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_DisplayUserInformationWhenTheSessionIsLocked
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ displayuserinformationwhenthesessionislocked
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsinformationshownonlockscreen"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsInformationShownOnLockScreen ロック 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_DisplayUserInformationWhenTheSessionIsLocked
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ displayuserinformationwhenthesessionislocked
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionslogonmessagetext"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsLogOnMessageText 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_MessageTextForUsersAttemptingToLogOn
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ MessageTextForUsersAttemptingToLogOn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionslogonmessagetitle"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsLogOnMessageTitle 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_MessageTitleForUsersAttemptingToLogOn
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ MessageTitleForUsersAttemptingToLogOn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsmachineinactivitylimit"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsMachineInactivityLimit 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_MachineInactivityLimit
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ machineinactivitylimit
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsmachineinactivitylimitinminutes"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMachineInactivityLimitInMinutes 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_MachineInactivityLimit
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ machineinactivitylimit
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsminimumsessionsecurityforntlmsspbasedclients"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkSecurity\_MinimumSessionSecurityForNTLMSSPBasedClients
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkSecurity \_ MinimumSessionSecurityForNTLMSSPBasedClients
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsminimumsessionsecurityforntlmsspbasedservers"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkSecurity\_MinimumSessionSecurityForNTLMSSPBasedServers
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkSecurity \_ MinimumSessionSecurityForNTLMSSPBasedServers
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsonlyelevatesignedexecutables"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsOnlyElevateSignedExecutables 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl\_OnlyElevateExecutableFilesThatAreSignedAndValidated
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ OnlyElevateExecutableFilesThatAreSignedAndValidated
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsrestrictanonymousaccesstonamedpipesandshares"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkAccess\_RestrictAnonymousAccessToNamedPipesAndShares
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/NetworkAccess \_ RestrictAnonymousAccessToNamedPipesAndShares
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionssmartcardremovalbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsSmartCardRemovalBehavior 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon\_SmartCardRemovalBehavior
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/InteractiveLogon \_ SmartCardRemovalBehavior
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsstandarduserelevationpromptbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsStandardUserElevationPromptBehavior 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl\_BehaviorOfTheElevationPromptForStandardUsers
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ BehaviorOfTheElevationPromptForStandardUsers
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsswitchtosecuredesktopwhenpromptingforelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl\_SwitchToTheSecureDesktopWhenPromptingForElevation
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ SwitchToTheSecureDesktopWhenPromptingForElevation
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsuseadminapprovalmode"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsUseAdminApprovalMode 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl\_UseAdminApprovalMode
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ useadminapprovalmode
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsuseadminapprovalmodeforadministrators"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsUseAdminApprovalModeForAdministrators 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl\_RunAllAdministratorsInAdminApprovalMode
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ runalladministratorsinadminapprovalmode
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsvirtualizefileandregistrywritefailurestoperuserlocations"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations 
 **CSP**:./Vendor/MSFT/Policy  
-**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl\_Virtualizefileandregistrywritefailurest user場所
+**オフセット URI**:/Config/LocalPoliciesSecurityOptions/UserAccountControl \_ virtualizefileandregistrywritefailurestoperuserlocations
 
 ### <a name="windows10endpointprotectionconfigurationnetworkicmpredirectsoverrideospfgeneratedroutes"></a>Windows10EndpointProtectionConfiguration.NetworkIcmpRedirectsOverrideOspfGeneratedRoutes 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -821,7 +821,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementclientbasicauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientBasicAuthentication 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/Config/RemoteManagement/AllowBasicAuthentication\_クライアント
+**オフセット URI**:/Config/RemoteManagement/AllowBasicAuthentication \_ Client
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementclientdigestauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientDigestAuthentication 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -829,11 +829,11 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementclientunencryptedtraffic"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientUnencryptedTraffic 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/Config/RemoteManagement/AllowUnencryptedTraffic\_クライアント
+**オフセット URI**:/Config/RemoteManagement/AllowUnencryptedTraffic \_ Client
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementservicebasicauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceBasicAuthentication 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/Config/RemoteManagement/AllowBasicAuthentication\_Service
+**オフセット URI**:/Config/RemoteManagement/AllowBasicAuthentication \_ Service
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementservicestoringrunascredentials"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceStoringRunAsCredentials 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -841,7 +841,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementserviceunencryptedtraffic"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceUnencryptedTraffic 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**オフセット URI**:/Config/RemoteManagement/AllowUnencryptedTraffic\_Service
+**オフセット URI**:/Config/RemoteManagement/AllowUnencryptedTraffic \_ Service
 
 ### <a name="windows10endpointprotectionconfigurationrpcunauthenticatedclientoptions"></a>Windows10EndpointProtectionConfiguration.RpcUnauthenticatedClientOptions 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -1030,7 +1030,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 **オフセット URI**:/Config/SystemServices/ConfigureXboxLiveNetworkingServiceStartupMode
 
 ### <a name="windows10enterprisemodernappmanagementconfigurationuninstallbuiltinapps"></a>Windows10EnterpriseModernAppManagementConfiguration.UninstallBuiltInApps
-**CSP**: n/a GRAPH API**オフセット URI**のみを呼び出す: n/a Graph API 呼び出しのみ
+**CSP**: n/a GRAPH API **オフセット URI**のみを呼び出す: n/a Graph API 呼び出しのみ
 
 ### <a name="windows10generalconfigurationaccountsblockaddingnonmicrosoftaccountemail"></a>Windows10GeneralConfiguration.AccountsBlockAddingNonMicrosoftAccountEmail 
 **CSP**:./Vendor/MSFT/Policy  
@@ -1172,7 +1172,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 **CSP**:./Vendor/MSFT/Policy  
 **オフセット URI**:/Config/Cryptography/AllowFipsAlgorithmPolicy
 
-### <a name="windows10generalconfigurationdataprotectionblockdirectmemoryaccess"></a>Windows10GeneralConfiguration.DataProtectionBlockDirectMemoryAccess 
+### <a name="windows10generalconfigurationdataprotectionblockdirectmemoryaccess"></a>Windows10GeneralConfiguration. DataProtectionBlockDirectMemoryAccess 
 **CSP**:./Device/Vendor/MSFT/Policy  
 **オフセット URI**:/Config/Dataprotection/allowdirectmemoryaccess
 
@@ -1236,7 +1236,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 **CSP**:./Device/Vendor/MSFT/Policy  
 **オフセット URI**:/config/defendermonitoring
 
-### <a name="windows10generalconfigurationdefenderrequirecloudprotection"></a>Windows10GeneralConfiguration.DefenderRequireCloudProtection 
+### <a name="windows10generalconfigurationdefenderrequirecloudprotection"></a>Windows10GeneralConfiguration. DefenderRequireCloudProtection 
 **CSP**:./Device/Vendor/MSFT/Policy  
 **オフセット URI**:/config/defenderprotection
 
@@ -2517,7 +2517,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 **CSP**:./Vendor/MSFT/Policy  
 **オフセット URI**:/Config/ApplicationManagement/RestrictAppToSystemVolume
 
-### <a name="windows10generalconfigurationsystembootstartdriverinitialization"></a>Windows10GeneralConfiguration. SystemBootStartDriverInitialization 
+### <a name="windows10generalconfigurationsystembootstartdriverinitialization"></a>Windows10GeneralConfiguration.SystemBootStartDriverInitialization 
 **CSP**:./Device/Vendor/MSFT/Policy  
 **オフセット URI**:/Config/System/BootStartDriverInitialization
 
@@ -2641,11 +2641,11 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 **CSP**:./Vendor/MSFT/SecureAssessment  
 **オフセット URI**:/allowtext提案
 
-### <a name="windows10secureassessmentconfigurationconfigurationaccount"></a>Windows10SecureAssessmentConfiguration 
+### <a name="windows10secureassessmentconfigurationconfigurationaccount"></a>Windows10SecureAssessmentConfiguration.ConfigurationAccount 
 **CSP**:./Vendor/MSFT/SecureAssessment  
 **オフセット URI**:/teaccount
 
-### <a name="windows10secureassessmentconfigurationconfigurationaccounttype"></a>Windows10SecureAssessmentConfiguration 
+### <a name="windows10secureassessmentconfigurationconfigurationaccounttype"></a>Windows10SecureAssessmentConfiguration.ConfigurationAccountType 
 **CSP**:./Vendor/MSFT/SecureAssessment  
 **オフセット URI**:/teaccount
 
@@ -2926,13 +2926,13 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 **オフセット URI**:/Config/Update/PauseFeatureUpdatesStartTime
 
 ### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackStartDateTime
-**CSP**: n/a-**オフセット URI**のみを Graph API します: n/a-Graph API のみ
+**CSP**: n/a- **オフセット URI**のみを Graph API します: n/a-Graph API のみ
 
 ### <a name="windowsupdateforbusinessconfigurationfeatureupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration によって元に戻されます。 
-**CSP**: n/a-**オフセット URI**のみを Graph API します: n/a-Graph API のみ
+**CSP**: n/a- **オフセット URI**のみを Graph API します: n/a-Graph API のみ
 
 ### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackwindowindays"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackWindowInDays
-**CSP**: n/a-**オフセット URI**のみを Graph API します: n/a-Graph API のみ
+**CSP**: n/a- **オフセット URI**のみを Graph API します: n/a-Graph API のみ
 
 ### <a name="windowsupdateforbusinessconfigurationinstallationschedule"></a>WindowsUpdateForBusinessConfiguration
 **CSP**:./DEVICE/VENDOR/MSFT/POLICY **Offset URI**:/Config/Update/activetime start、/Config/update/active、/Config/Update/scheduledinstallday、/config/scheduledinstalltime
@@ -2958,10 +2958,10 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 **オフセット URI**:/Config/Update/PauseQualityUpdatesStartTime
 
 ### <a name="windowsupdateforbusinessconfigurationqualityupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesRollbackStartDateTime
-**CSP**: n/a-**オフセット URI**のみを Graph API します: n/a-Graph API のみ
+**CSP**: n/a- **オフセット URI**のみを Graph API します: n/a-Graph API のみ
 
 ### <a name="windowsupdateforbusinessconfigurationqualityupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesWillBeRolledBack 
-**CSP**: n/a-**オフセット URI**のみを Graph API します: n/a-Graph API のみ
+**CSP**: n/a- **オフセット URI**のみを Graph API します: n/a-Graph API のみ
 
 ### <a name="windowsupdateforbusinessconfigurationscheduleimminentrestartwarninginminutes"></a>WindowsUpdateForBusinessConfiguration.ScheduleImminentRestartWarningInMinutes 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -2984,7 +2984,7 @@ Windows 10 のバージョンを確認するには、次の Api が適用され�
 **オフセット URI**:/Config/Update/SetDisablePauseUXAccess
 
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 
 - [デバイス構成の概要](../configuration/device-profiles.md)
-- [構成サービスプロバイダリファレンス](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)(別の Docs サイトを開きます)
+- [構成サービスプロバイダリファレンス](/windows/client-management/mdm/configuration-service-provider-reference) (別の Docs サイトを開きます)
