@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 4bdfbabf27906eb8a79ec8ba24f51c3e176dc028
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bac86ca5a74d35b64e211936806ef1735f4e0eea
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700407"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970466"
 ---
 # <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions"></a><a name="bkmk_attach"></a> Microsoft Endpoint Manager テナントの接続: デバイスの同期とデバイスの操作
 <!--3555758 live 3/4/2020-->
@@ -39,6 +39,8 @@ Configuration Manager バージョン2002以降では、Configuration Manager �
 ## <a name="internet-endpoints"></a>インターネットエンドポイント
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
+
+サービス接続ポイントを使用すると、これらのエンドポイントへの送信接続が長くなります。 サービス接続ポイントに使用されているプロキシが、送信接続のタイムアウトを短すぎないことを確認します。 これらのインターネットエンドポイントへの発信接続には、3分をお勧めします。 <!--7820969-->
 
 ## <a name="enable-device-upload-when-co-management-is-already-enabled"></a><a name="bkmk_edit"></a> 共同管理が既に有効になっている場合にデバイスのアップロードを有効にする
 
