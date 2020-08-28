@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 3c24610a2ac10dfae6a8ba73062edf29188938ea
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1b217f7b299447b53c760cbba85b873d0626d741
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907990"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993752"
 ---
 # <a name="windows-autopilot-networking-requirements"></a>Windows Autopilot ネットワーク要件
 
@@ -73,7 +73,7 @@ WNS サービスが使用できない場合でも、自動操縦プロセスは�
 
 Microsoft Store にアクセスできない場合でも、自動操縦プロセスは Microsoft Store アプリなしで続行されます。
 
-<tr><td><b>Office 365<b><td>Intune デバイス構成の一部として、enterprise 用 Microsoft 365 アプリのインストールが必要になる場合があります。 詳細については、「 <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">Office 365 の url と IP アドレス範囲</a>」を参照してください。 この記事には、すべての Office サービス、DNS 名、IP アドレスが含まれています。 また、上記のサービスと重複する可能性のある Azure AD およびその他のサービスも含まれています。
+<tr><td><b>Microsoft 365<b><td>Intune デバイス構成の一部として、enterprise 用 Microsoft 365 アプリのインストールが必要になる場合があります。 詳細については、「 <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">Office 365 の url と IP アドレス範囲</a>」を参照してください。 この記事には、すべての Office サービス、DNS 名、IP アドレスが含まれています。 また、上記のサービスと重複する可能性のある Azure AD およびその他のサービスも含まれています。
 <tr><td><b>証明書失効リスト (Crl)<b><td>これらのサービスの一部は、証明書失効リスト (CRL) にサービスで使用される証明書がないか確認する必要もあります。完全な一覧については、「 <a href="https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2#bkmk_crl">office 365 の url と IP アドレスの範囲</a> 」と「 <a href="https://aka.ms/o365chains">Office 365 証明書チェーン</a>」を参照してください。
 <tr><td><b>ハイブリッド Azure AD 参加<b><td>デバイスは、ハイブリッド Azure AD 参加できます。 ハイブリッド Azure AD 参加するには、コンピューターが企業ネットワーク上にある必要があります。 詳細については<a href="user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join">、「Windows 自動操縦のユーザー主導モード」を</a>参照してください。
 <tr><td><b>自動展開モードと自動操縦用ホワイトグローブ<b><td>Intel、AMD、または Qualcomm によってのみ提供されるファームウェア TPM デバイスは、起動時に必要なすべての証明書を含みません。また、最初に使用するときに製造元から取得できる必要があります。 (他の製造元のデバイスを含む) 個別の TPM チップを搭載したデバイスには、これらの証明書がプレインストールされています。 詳細については、「 <a href="https://docs.microsoft.com/windows/security/information-protection/tpm/tpm-recommendations">TPM の推奨事項</a>」を参照してください。 各ファームウェア TPM プロバイダーについて、証明書が正常に要求されるように、これらの Url にアクセスできることを確認します。

@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b8737646946e1c575ddb8ebdd26397712c412e20
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c0e4e0b2d440856f24199d89485ac521208964e8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908570"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993236"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Windows 自動操縦にデバイスを追加する
 
@@ -114,8 +114,8 @@ WMI アクセス許可が適用されていて、そのリモートコンピュ�
 -   [Microsoft Intune](enrollment-autopilot.md)。  これは、すべてのお客様に推奨されるメカニズムです。
     - Microsoft Endpoint Manager 管理センターは、Intune のデバイス登録に使用されます。
 -   [パートナーセンター](https://msdn.microsoft.com/partner-center/autopilot)。  これは、ユーザーに代わってデバイスを登録するために CSP パートナーによって使用されます。
--   [& Office 365 管理者を Microsoft 365 Business](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa)します。 通常、これは、Microsoft 365 Business を使用してデバイスを管理する中小企業 (Smb) によって使用されます。
--   [ビジネス向け Microsoft Store](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles)。  アプリと設定の管理には、既に MSfB を使用している可能性があります。
+-   [Premium Microsoft 365 Business](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa)ます。  これは通常、Microsoft 365 Business Premium を使用してデバイスを管理する中小企業 (Smb) によって使用されます。
+-   [ビジネス向け Microsoft Store](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles)。  アプリと設定の管理には、既に MSfB を使用している可能性があります。
 
 各プラットフォームの機能の概要については、以下を参照してください。<br>
 <br>
@@ -156,7 +156,7 @@ WMI アクセス許可が適用されていて、そのリモートコンピュ�
 </tr>
 
 <tr>
-<td><a href="https://docs.microsoft.com/microsoft-365/business/create-and-edit-autopilot-profiles">Microsoft 365 Business</a></td>
+<td><a href="https://docs.microsoft.com/microsoft-365/business/create-and-edit-autopilot-profiles">Microsoft 365 Business Premium</a></td>
 <td>はい-最大で1000</td>
 <td>はい<b><sup>3</sup></b></td>
 <td>4K HH</td>

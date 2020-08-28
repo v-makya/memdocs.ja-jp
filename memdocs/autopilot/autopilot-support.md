@@ -14,12 +14,12 @@ ms.reviewer: ''
 manager: laurawi
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: f4727acde8a42a56e79dbbe22ae4ab0ce1ca9245
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: bfd8f4f88b5462fb6fdc21287ad77bb133b83f90
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87757376"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993189"
 ---
 # <a name="windows-autopilot-support-information"></a>Windows 自動操縦のサポート情報
 
@@ -35,8 +35,8 @@ Windows の自動操縦に関連する問題について、以下のリソース
 | Oem ダイレクト API を使用してデバイスを登録する | 連絡先 MSOEMOPS@microsoft.com 。 応答時間は優先度によって異なります。 <br>低 ~ 120 時間 <br>標準-72 時間 <br>高–24時間 <br>即時–4時間 |
 | 企業顧客 | テクニカルアカウントマネージャー (TAM)、または Account Ts ストラテジスト (ATS)、またはカスタマーサービスサポート (CSS) の担当者にお問い合わせください。 |
 | エンドユーザー | IT 管理者にお問い合わせください。 |
-| Microsoft パートナーセンター (MPC) ユーザー | MPC で利用できる[ヘルプリソース](https://partner.microsoft.com/support)を使用します。 |
+| Microsoft パートナーセンター (MPC) ユーザー | MPC で利用できる [ヘルプリソース](https://partner.microsoft.com/support) を使用します。 |
 | Microsoft Store for Business (MSfB) ユーザー | MSfB で利用できるヘルプリソースを使用します。 |
-| Intune ユーザー | [Microsoft Azure portal で、[[ヘルプとサポート](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview)] をクリックします。 |
-| Microsoft 365 Business | サポートには、ログイン時に Microsoft 365 Business ポータルから直接アクセス https://support.microsoft.com/en-us できます。 |
+| Intune ユーザー | [Microsoft Azure portal で、[ [ヘルプとサポート](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview)] をクリックします。 |
+| Microsoft 365 Business Premium | サポートには、ログイン時に Microsoft 365 Business Premium ポータルから直接アクセス  https://support.microsoft.com/en-us できます。 |
 | MDA テストに関連するクエリ | 連絡先 MDAHelp@microsoft.com 。 |

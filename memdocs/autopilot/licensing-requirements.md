@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: c8bf506d0b9c7285087999967dd188122494661d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 22f9b5f8e93339bc41403b2acf6e4ce53395a139
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908000"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993779"
 ---
 # <a name="windows-autopilot-licensing-requirements"></a>Windows Autopilot のライセンス要件
 
@@ -34,7 +34,7 @@ Windows の自動操縦は、Windows 10 および Azure Active Directory で使�
 - [Premium サブスクリプションの Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business)
 - [Microsoft 365 F1 または F3 サブスクリプション](https://www.microsoft.com/microsoft-365/enterprise/firstline)
 - [Microsoft 365 アカデミック A1、A3、または A5 サブスクリプション](https://www.microsoft.com/education/buy-license/microsoft365/default.aspx)
-- [Microsoft 365 Enterprise E3 または E5 サブスクリプション](https://www.microsoft.com/microsoft-365/enterprise)。すべての Windows 10、Office 365、EM + S の機能 (Azure AD と Intune) が含まれています。
+- [Microsoft 365 Enterprise E3 または E5 サブスクリプション](https://www.microsoft.com/microsoft-365/enterprise)。すべての Windows 10、Microsoft 365、および EM + S の機能 (Azure AD および Intune) が含まれます。
 - [Enterprise Mobility + Security E3 または E5 サブスクリプション](https://www.microsoft.com/cloud-platform/enterprise-mobility-security)。必要なすべての Azure AD と Intune の機能が含まれています。
 - [Intune for Education サブスクリプション](/intune-education/what-is-intune-for-education)。必要なすべての Azure AD と Intune の機能が含まれます。
 - [Azure Active Directory Premium P1、P2](https://azure.microsoft.com/services/active-directory/) 、 [Microsoft Intune サブスクリプション](https://www.microsoft.com/cloud-platform/microsoft-intune) (または代替 MDM サービス)。
