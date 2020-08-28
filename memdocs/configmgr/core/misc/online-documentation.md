@@ -9,12 +9,12 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f24768521cd179c3a6403aff057de48ae46e7e7
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3b598cfad1d3a73f77e91bf3b41baab60c6c3616
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695513"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819696"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Configuration Manager のオンライン ドキュメント
 
@@ -106,4 +106,4 @@ Configuration Manager を障碍のある方にとってより使いやすくす�
 
 ### <a name="downloadable-documentation"></a>ダウンロード可能なドキュメント
 
-System Center 2012 R2 Configuration Manager テクニカル ドキュメントのコピーは、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=29901)からダウンロードできます。
+System Center 2012 R2 Configuration Manager テクニカル ドキュメントのコピーは、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=29256)からダウンロードできます。

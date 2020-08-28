@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c9268514b43f4f728d3fff4715d4d71308a712f3
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dbe827371f84bb90e2a7f2468aa139cba073fe49
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699077"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819747"
 ---
 # <a name="compatibility-assessment-in-desktop-analytics"></a>Desktop Analytics での互換性評価
 
@@ -245,4 +245,4 @@ Desktop Analytics では、その OS バージョンに移行されないすべ�
 
 ## <a name="see-also"></a>関連項目
 
-Windows 10 用の FastTrack センター特典を使用すると、**Desktop App Assure** にアクセスできます。 この特典は、Windows 10 および Microsoft 365 Apps for enterprise アプリの互換性に関する問題に対応するように設計された新しいサービスです。 詳細については、「[Desktop App Assure](/fasttrack/win-10-desktop-app-assure)」を参照してください。
+Windows 10 用の FastTrack センター特典を使用すると、**Desktop App Assure** にアクセスできます。 この特典は、Windows 10 および Microsoft 365 Apps for enterprise アプリの互換性に関する問題に対応するように設計された新しいサービスです。 詳細については、「[Desktop App Assure](/fasttrack/win-10-app-assure)」を参照してください。
