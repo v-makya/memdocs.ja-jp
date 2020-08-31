@@ -1,6 +1,6 @@
 ---
-title: Intune 用 Microsoft Defender ウイルス対策の Windows 10 ウイルス対策ポリシーの設定 | Microsoft Docs
-description: Windows 10 の Microsoft Defender ウイルス対策プロファイルの設定一覧を参照してください。 これらの設定は、Microsoft Intune のエンドポイント セキュリティ ウイルス対策ポリシーの一部として構成できます。
+title: テナントにアタッチされたデバイスの Microsoft Defender ウイルス対策からの Windows 10 ウイルス対策ポリシー設定 | Microsoft Docs
+description: Configuration Manager によって管理される Windows 10 デバイスの Microsoft Defender ウイルス対策プロファイルの設定の一覧を確認してください。 Configuration Manager のテナントのアタッチを構成した後、これらの設定を Microsoft Intune のエンドポイント セキュリティのウイルス対策ポリシーの一部として構成できます。
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -16,24 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 92fa75794022123fd9456c40a50780a50f604662
+ms.openlocfilehash: 966c3f21505cbbe1573abd47fb7081c5e97cc3c1
 ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819781"
+ms.locfileid: "88823559"
 ---
-# <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune の Windows 10 Microsoft Defender ウイルス対策ポリシーの設定
+# <a name="settings-for-microsoft-defender-antivirus-policy-for-tenant-attached-devices-in-microsoft-intune"></a>Microsoft Intune のテナントにアタッチされたデバイスの Microsoft Defender ウイルス対策ポリシーの設定
 
-[エンドポイント セキュリティ ポリシー](../protect/endpoint-security-policy.md)の一部として Microsoft Intune で Windows 10 用の Microsoft Defender ウイルス対策プロファイルに構成できる、エンドポイント セキュリティ ウイルス対策ポリシー設定を確認します。
+Intune の **[Microsoft Defender Antivirus Policy (ConfigMgr)]\(Microsoft Defender ウイルス対策ポリシー (ConfigMgr)\)** プロファイルで管理できる Microsoft Defender ウイルス対策設定を確認してください。 プロファイルは、Intune の[エンドポイント セキュリティのウイルス対策ポリシー](../protect/endpoint-security-antivirus-policy.md)を構成するときに使用できます。このポリシーは、[テナントのアタッチ](../protect/tenant-attach-intune.md) シナリオを構成したときに、Configuration Manager で管理するデバイスに展開されます。
 
 ## <a name="cloud-protection"></a>クラウド保護
-
-これらの設定は、次のプロファイルで使用できます。
-
-- Microsoft Defender ウイルス対策
-
-**設定**:
 
 - **Turn on cloud-delivered protection (クラウドによる保護を有効にする)**  
   CSP:[AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
@@ -41,8 +35,8 @@ ms.locfileid: "88819781"
   既定では、Windows 10 デスクトップ デバイス上の Defender から、検出された問題に関する情報が Microsoft に送信されます。 Microsoft ではその情報を分析し、お客様や他のユーザーに影響する問題の詳細を把握して、改善されたソリューションを提供しています。
 
   - **未構成** (*既定値*) - 設定はシステムの既定値に復元されます。
-  - **いいえ** - 設定は無効になります。 デバイス ユーザーはこの設定を変更できません。
-  - **はい** - クラウドで提供される保護が有効になります。  デバイス ユーザーはこの設定を変更できません。
+  - **許可されていません。** Microsoft Active Protection Service を無効にします。
+  - **[許可]** 。  Microsoft Active Protection Service を有効にします。
 
 - **Cloud-delivered protection level (クラウドによる保護レベル)**  
   CSP:[CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
@@ -56,16 +50,9 @@ ms.locfileid: "88819781"
 - **Defender クラウド延長タイムアウト (秒単位)**  
   CSP:[CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
-  Defender ウイルス対策を使用すると、疑わしいファイルが 10 秒間自動的にブロックされ、その間にクラウド内でそれらがスキャンされて、安全であることが確認されます。 このタイムアウトに最大 50 秒を追加できます。
+  Defender ウイルス対策を使用すると、疑わしいファイルが 10 秒間自動的にブロックされ、クラウド内のファイルがスキャンされ、安全であることを確認されます。 この設定では、このタイムアウトに最大 50 秒を追加できます。
 
 ## <a name="microsoft-defender-antivirus-exclusions"></a>Windows Defender ウイルス対策の除外
-
-これらの設定は、次のプロファイルで使用できます。
-
-- Microsoft Defender ウイルス対策
-- Windows Defender ウイルス対策の除外
-
-**設定**:
 
 このグループの各設定について、設定を展開し、 **[追加]** を選択して、除外の値を指定できます。
 
@@ -86,19 +73,13 @@ ms.locfileid: "88819781"
 
 ## <a name="real-time-protection"></a>リアルタイム保護
 
-これらの設定は、次のプロファイルで使用できます。
-
-- Microsoft Defender ウイルス対策
-
-**設定**:
-
 - **リアルタイム保護を有効にする**  
   CSP:[AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   リアルタイム監視機能を使用するには、Windows 10 デスクトップ デバイス上に Defender が必要です。
   - **未構成** (*既定値*) - 設定はシステムの既定値に復元されます
-  - **いいえ** - 設定は無効になります。 デバイス ユーザーはこの設定を変更できません。
-  - **はい** - リアルタイム監視の使用を強制します。 デバイス ユーザーはこの設定を変更できません。
+  - **許可されていません。** リアルタイム監視サービスを無効にします。
+  - **[許可]** 。 リアルタイム監視サービスを有効にして実行します。
 
 - **Enable on access protection (常時保護を有効にする)**  
   CSP:[AllowOnAccessProtection](https://go.microsoft.com/fwlink/?linkid=2113935)
@@ -106,16 +87,16 @@ ms.locfileid: "88819781"
   オンデマンドではなく、継続的にアクティブなウイルス対策を構成します。
 
   - **未構成** (*既定値*) - このポリシーを選択しても、デバイス上のこの設定の状態は変更されません。 デバイス上の既存の状態は変更されません。
-  - **いいえ** - デバイス上で常時保護をブロックします。 デバイス ユーザーはこの設定を変更できません。
-  - **はい** - デバイス上で常時保護がアクティブになります。
+  - **許可されていません。** リアルタイム監視サービスを無効にします。
+  - **[許可]** 。
 
 - **受信ファイルと送信ファイルの監視**  
   CSP:[Defender/RealTimeScanDirection](https://go.microsoft.com/fwlink/?linkid=2113943)
 
   この設定を構成して、どの NTFS ファイルとプログラムの動作を監視するかを決定します。
-  - **すべてのファイルを監視する** (*既定*)
-  - **受信ファイルのみを監視する**
-  - **送信ファイルのみを監視する**
+  - **すべてのファイルを監視します (双方向)。** (*既定値*)
+  - **受信ファイルを監視します。**
+  - **送信ファイルを監視します。**
 
 - **動作の監視を有効にする**  
   CSP:[AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
@@ -123,17 +104,13 @@ ms.locfileid: "88819781"
   既定では、Windows 10 デスクトップ デバイス上の Defender には動作監視機能が使用されます。
 
   - **未構成** (*既定値*) - 設定はシステムの既定値に復元されます。
-  - **いいえ** - 設定は無効になります。 デバイス ユーザーはこの設定を変更できません。
-  - **はい** - リアルタイム動作の監視の使用を強制します。 デバイス ユーザーはこの設定を変更できません。
+  - **許可されていません。** 動作の監視を無効にします。
+  - **[許可]** 。 リアルタイム動作の監視を有効にします。
 
-- **Turn on network protection (ネットワーク保護を有効にする)**  
-  CSP:[EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
-
-  インターネット上のフィッシング詐欺、悪用ホスト サイト、および悪意のあるコンテンツにアクセスしないように、アプリを使用するデバイス ユーザーを保護します。 保護には、サード パーティ製のブラウザーが危険なサイトに接続するのを防ぐことが含まれます。
-
+- **侵入防止システムを許可する**  
   - **未構成** (*既定値*) - 設定はシステムの既定値に復元されます。
-  - **いいえ** - 設定は無効になります。 デバイス ユーザーはこの設定を変更できません。
-  - **はい** - ネットワーク保護は有効になります。 デバイス ユーザーはこの設定を変更できません。
+  - **許可されていません。**
+  - **[許可]** 。
 
 - **すべてのダウンロード ファイルと添付ファイルをスキャンする**  
   CSP:[EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=2113939)
@@ -141,8 +118,8 @@ ms.locfileid: "88819781"
   ダウンロードしたすべてのファイルと添付ファイルをスキャンするように Defender を構成します。
 
   - **未構成** (*既定値*) - 設定はシステムの既定値に復元されます。
-  - **いいえ** - 設定は無効になります。 デバイス ユーザーはこの設定を変更できません。
-  - **はい** - すべてのダウンロードされたファイルと添付ファイルが Defender によってスキャンされます。 デバイス ユーザーはこの設定を変更できません。
+  - **許可されていません。**
+  - **[許可]** 。
 
 - **Scan scripts that are used in Microsoft browsers (Microsoft のブラウザーで使用されているスクリプトをスキャンする)**  
   CSP:[AllowScriptScanning](https://go.microsoft.com/fwlink/?linkid=2114054)
@@ -150,8 +127,8 @@ ms.locfileid: "88819781"
   スクリプトをスキャンするように Defender を構成します。
 
   - **未構成** (*既定値*) - 設定はシステムの既定値に復元されます。
-  - **いいえ** - 設定は無効になります。 デバイス ユーザーはこの設定を変更できません。
-  - **はい** - Defender によってスクリプトがスキャンされます。 デバイス ユーザーはこの設定を変更できません。
+  - **許可されていません。**
+  - **[許可]** 。
 
 - **ネットワーク ファイルをスキャンする**  
   CSP:[AllowScanningNetworkFiles](https://go.microsoft.com/fwlink/?linkid=2114049&)
@@ -159,8 +136,8 @@ ms.locfileid: "88819781"
   ネットワーク ファイルをスキャンするように Defender を構成します。
 
   - **未構成** (*既定値*) - 設定はシステムの既定値に復元されます。
-  - **いいえ** - 設定は無効になります。 デバイス ユーザーはこの設定を変更できません。
-  - **はい** - ネットワーク ファイルのスキャンを有効にします。 デバイス ユーザーはこの設定を変更できません。
+  - **許可されていません。** ネットワーク ファイルのスキャンを無効にします。
+  - **[許可]** 。 ネットワーク ファイルをスキャンします。
 
 - **Scan emails (メールをスキャンする)**  
   CSP:[AllowEmailScanning](https://go.microsoft.com/fwlink/?linkid=2114052)
@@ -168,16 +145,10 @@ ms.locfileid: "88819781"
   着信メールをスキャンするように Defender を構成します。
 
   - **未構成** (*既定値*) - 設定はシステムの既定値に復元されます。
-  - **いいえ** - 設定は無効になります。 デバイス ユーザーはこの設定を変更できません。
-  - **はい** - メールのスキャンを有効にします。 デバイス ユーザーはこの設定を変更できません。
+  - **許可されていません。** メールのスキャンを無効にします。
+  - **[許可]** 。 メールのスキャンを有効にします。
 
 ## <a name="remediation"></a>修復
-
-これらの設定は、次のプロファイルで使用できます。
-
-- Microsoft Defender ウイルス対策
-
-**設定**:
 
 - **Number of days (0-90) to keep quarantined malware (検査されたマルウェアを保持する日数 (0-90))**  
   CSP:[DaysToRetainCleanedMalware](https://go.microsoft.com/fwlink/?linkid=2114055)
@@ -187,10 +158,10 @@ ms.locfileid: "88819781"
 - **サンプル送信の同意**  
 
   - **[未構成]** ("*既定値*")
-  - **安全なサンプルを自動的に送信する**
-  - **[常に確認する]**
-  - **送信しない**
-  - **すべてのサンプルを自動的に送信する**
+  - **[常に確認する]** 。
+  - **[安全なサンプルを自動的に送信する]** 。
+  - **[送信しない]** 。
+  - **[すべてのサンプルを自動的に送信する]** 。
 
 - **Action to take on potentially unwanted apps (望ましくない可能性のあるアプリに対して実行するアクション)**  
   CSP:[PUAProtection](https://go.microsoft.com/fwlink/?linkid=2114051)
@@ -198,9 +169,14 @@ ms.locfileid: "88819781"
   望ましくない可能性のあるアプリケーション (PUA) の検出レベルを指定します。 望ましくない可能性のあるソフトウェアをダウンロードするか、デバイスにインストールしようとすると、Defender からユーザーに警告されます。
 
   - **未構成** (*既定値*) - 設定はシステムの既定値 (PUA の保護が無効) に復元されます。
-  - **無効化**
-  - **有効** - 検出された項目はブロックされ、履歴に他の脅威と共に表示されます。
-  - **監査モード** - Defender で、望ましくない可能性のあるアプリケーションが検出されますが、対策は何も行われません。 イベント ビューアーで Defender によって作成されたイベントを検索することで、Defender でアプリケーションに対して実行されたアクションに関する情報を確認できます。
+  - **PUA の保護がオフになります。** Windows Defender によって、望ましくない可能性のあるアプリケーションから保護されません。
+  - **PUA の保護がオンになります。** 検出された項目はブロックされます。 これらはその他の脅威と共に履歴に表示されます。
+  - **[監査モード]** 。 Defender で、望ましくない可能性のあるアプリケーションが検出されますが、対策は何も行われません。 イベント ビューアーで Defender によって作成されたイベントを検索することで、Defender でアプリケーションに対して実行されたアクションに関する情報を確認できます。
+
+- **コンピューターをクリーンアップする前に、システム復元ポイントを作成する**  
+  - **はい** (*既定値*):
+  - **いいえ**
+  - **未構成**
 
 - **Actions for detected threats (検出された脅威に対するアクション)**  
   CSP:[ThreatSeverityDefaultAction](https://go.microsoft.com/fwlink/?linkid=2113938)
@@ -208,14 +184,14 @@ ms.locfileid: "88819781"
   マルウェアの脅威レベルに基づいて、Defender で検出されたマルウェアに対して実行されるアクションを指定します。
   
   Defender では、検出されたマルウェアが次の重大度レベルのいずれかに分類されます。
-  - **重要度レベル低**
-  - **"中程度" の重大度**
-  - **重要度レベル高**
-  - **"重大" の重大度**
+  - **低レベルの脅威**
+  - **中レベルの脅威**
+  - **高レベルの脅威**
+  - **重大な脅威**
 
   各レベルに対して実行するアクションを指定します。 各重大度レベルの既定値は *[未構成]* です。
 
-  - **未構成**
+  - **[未構成]** ("*既定値*")
   - **クリーン** - サービスによってファイルの回復とウイルス駆除が試行されます。
   - **検査** - 検査するファイルが移動されます。
   - **削除** - デバイスからファイルが削除されます。
@@ -225,29 +201,23 @@ ms.locfileid: "88819781"
 
 ## <a name="scan"></a>スキャン
 
-これらの設定は、次のプロファイルで使用できます。
-
-- Microsoft Defender ウイルス対策
-
-**設定**:
-
 - **アーカイブ ファイルをスキャンする**  
   CSP:[AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
 
   ZIP ファイルや CAB ファイルなどのアーカイブ ファイルをスキャンするように Defender を構成します。
 
-  - **未構成** (*既定値*) - 設定はクライアントの既定値に戻ります。つまり、アーカイブ ファイルはスキャンされますが、ユーザーは設定を無効にすることができます。
+  - **未構成** (*既定値*) - 設定はクライアントの既定値に戻ります。つまり、アーカイブ ファイルはスキャンされますが、ユーザーはスキャンを無効にすることができます。
 詳細情報
-  - **いいえ** - ファイルのアーカイブはスキャンされません。 デバイス ユーザーはこの設定を変更できません。
-  - **はい** - アーカイブ ファイルのスキャンを有効にします。 デバイス ユーザーはこの設定を変更できません。
+  - **[許可しない]** 。アーカイブ ファイルのスキャンを無効にします。
+  - **[許可]** 。 アーカイブ ファイルをスキャンします。
 
-- **Use low CPU priority for scheduled scans (スケジュールされたスキャン用に低い CPU 優先度を使用する)**  
+- **スケジュールされたスキャン用に低い CPU 優先度を有効にする**  
   CSP:[EnableLowCPUPriority](https://go.microsoft.com/fwlink/?linkid=2113944)
 
   スケジュールされたスキャン用に CPU 優先度を構成します。
   - **未構成** (*既定値*) - 設定はシステムの既定値に戻ります。つまり、CPU の優先度は変更されません。
-  - **いいえ** - 設定は無効になります。 デバイス ユーザーはこの設定を変更できません。
-  - **はい** - スケジュールされたスキャン中に低い CPU 優先度が使用されます。 デバイス ユーザーはこの設定を変更できません。
+  - **Disabled**
+  - **Enabled**
 
 - **Disable catch-up full scan (キャッチアップ フル スキャンを無効にする)**  
   CSP:[DisableCatchupFullScan](https://go.microsoft.com/fwlink/?linkid=2114042)
@@ -255,8 +225,8 @@ ms.locfileid: "88819781"
   スケジュールされたフル スキャンのキャッチアップ スキャンを構成します。 キャッチアップ スキャンとは、定期的にスケジュールされたスキャンが実行されなかった場合に開始されるスキャンです。 スケジュールされたスキャンが実行されなかった理由は、通常、スキャンの予定時刻にコンピューターの電源が切られていたためです。
 
   - **未構成** (*既定値*) - 設定はクライアントの既定値に戻されます。つまり、フル スキャンのキャッチアップ スキャンは有効になりますが、ユーザーはそれを無効にすることができます。
-  - **いいえ** - 設定は無効になります。 デバイス ユーザーはこの設定を変更できません。
-  - **はい** - スケジュールされたフル スキャンのキャッチアップ スキャンが適用され、ユーザーがそれを無効にすることはできません。 2 回続けてスキャンの予定時刻にコンピューターがオフラインになっていた場合は、次回のコンピューターへのサインイン時にキャッチアップ スキャンが開始されます。 スケジュールされたスキャンが構成されていない場合は、キャッチアップ スキャンは実行されません。 デバイス ユーザーはこの設定を変更できません。
+  - **Disabled**
+  - **Enabled**
 
 - **Disable catchup quick scan (キャッチアップ クイック スキャンを無効にする)**  
   CSP:[DisableCatchupQuickScan](https://go.microsoft.com/fwlink/?linkid=2113941)
@@ -264,28 +234,28 @@ ms.locfileid: "88819781"
   スケジュールされたクイック スキャンのキャッチアップ スキャンを構成します。 キャッチアップ スキャンとは、定期的にスケジュールされたスキャンが実行されなかった場合に開始されるスキャンです。 スケジュールされたスキャンが実行されなかった理由は、通常、スキャンの予定時刻にコンピューターの電源が切られていたためです。
 
   - **未構成** (*既定値*) - 設定はクライアントの既定値に戻されます。つまり、キャッチアップ クイック スキャンは有効になりますが、ユーザーはそれを無効にすることができます。
-  - **いいえ** - 設定は無効になります。 デバイス ユーザーはこの設定を変更できません。
-  - **はい** - スケジュールされたクイック スキャンのキャッチアップ スキャンが適用され、ユーザーがそれを無効にすることはできません。 2 回続けてスキャンの予定時刻にコンピューターがオフラインになっていた場合は、次回のコンピューターへのサインイン時にキャッチアップ スキャンが開始されます。 スケジュールされたスキャンが構成されていない場合は、キャッチアップ スキャンは実行されません。 デバイス ユーザーはこの設定を変更できません。
+  - **Disabled**
+  - **Enabled**
 
-- **CPU usage limit per scan (スキャンごとの CPU 使用率の制限)**  
+- **CPU usage limit (0-100 percent) per scan (スキャンあたりの CPU 使用率の制限 (0-100%))**  
   CSP:[AvgCPULoadFactor](https://go.microsoft.com/fwlink/?linkid=2114046)
 
   Defender スキャンの平均 CPU 負荷率を 0 から 100 の割合で指定します。
 
-- **フル スキャン中にマップされたネットワーク ドライブをスキャンする**  
+- **Enable mapped network drives be scanned during a full scan (フル スキャン中にマップされたネットワーク ドライブをスキャンできるようにする)**  
   CSP:[AllowFullScanOnMappedNetworkDrives](https://go.microsoft.com/fwlink/?linkid=2113945)
 
   マップされたネットワーク ドライブをスキャンするように Defender を構成します。
 
   - **未構成** (*既定値*) - 設定はシステムの既定値に復元されます。つまり、マップされたネットワーク ドライブのスキャンは無効になります。
-  - **いいえ** - 設定は無効になります。 デバイスのユーザーは設定を変更できません。
-  - **はい** - マップされたネットワーク ドライブのスキャンを有効にします。 デバイス ユーザーはこの設定を変更できません。
+  - **許可されていません。** マップされたネットワーク ドライブのスキャンを無効にします。
+  - **[許可]** 。 マップされたネットワーク ドライブをスキャンします。
 
 - **Run daily quick scan at (毎日スキャンを実行する時刻)**  
   CSP:[ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053)
 
   Defender クイック スキャンを実行する時刻を選択します。
-  既定では、この設定は**未構成**です
+  既定では、このオプションは **[未構成]** です。
 
 - **スキャンの種類**  
   CSP:[ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
@@ -304,46 +274,49 @@ ms.locfileid: "88819781"
 
 - **Check for signature updates before running scan (スキャンを実行する前に署名の更新を確認する)**  
   - **未構成** (*既定値*)
-  - **いいえ**
-  - **あり**
+  - **Disabled**
+  - **Enabled**
+
+- **スケジュールされたスキャンとセキュリティ インテリジェンスの更新の開始時刻をランダム化する**  
+  -**未構成** - (*既定値*) - **[はい]** 
+  - **[いいえ]**
+
+- **フル スキャン中にリムーバブル ドライブをスキャンする**
+  - **未構成** (*既定値*)
+  - **許可されていません。** リムーバブル ドライブのスキャンを無効にします。
+  - **[許可]** 。 リムーバブル ドライブをスキャンします。
 
 ## <a name="updates"></a>更新プログラム
-
-これらの設定は、次のプロファイルで使用できます。
-
-- Microsoft Defender ウイルス対策
-
-**設定**:
 
 - **Enter how often (0-24 hours) to check for security intelligence updates (セキュリティ インテリジェンスの更新を確認する頻度 (0-24 時間) の入力)**  
   CSP:[SignatureUpdateInterval](https://go.microsoft.com/fwlink/?linkid=2113936)
 
   署名の確認に使用する間隔を 0 から 24 (時間単位) の範囲で指定します。 値を 0 にすると、新しい署名は確認されなくなります。 値が 2 の場合、2 時間ごとに確認されます。
 
-- **定義ファイルの更新をダウンロードするためのファイル共有を定義する**  
-  CSP:[SignatureUpdateFallbackOrder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+- **定義更新のフォールバック順序 (デバイス)**
 
-  定義ファイルの更新を取得するダウンロード元の場所として、UNC ファイル共有など、場所を管理します。 指定した更新元の 1 つから定義ファイルの更新が正しくダウンロードされたら、リストの残りの更新元には接続されません。
+- **定義更新ファイル共有ソース (デバイス)**
 
-  個別の場所を**追加**したり、.csv ファイルとして場所の一覧を**インポート**したりすることができます。
+- **セキュリティ インテリジェンスの場所 (デバイス)**  
 
-- **定義ファイルの更新をダウンロードするためのソースの順序を定義する**  
-  CSP:[SignatureUpdateFileSharesSources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+## <a name="user-experience"></a>ユーザー エクスペリエンス
 
-  定義ファイルの更新を取得する目的で、指定したダウンロード元に接続する順序を指定します。 指定した更新元の 1 つから定義ファイルの更新が正しくダウンロードされたら、リストの残りの更新元には接続されません。
+- **Microsoft Defender アプリへのユーザー アクセスをブロックする**  
+  - **未構成** (*既定値*)
+  - **許可されていません。** ユーザーが UI にアクセスできないようにします。
+  - **[許可]** 。 ユーザーが UI にアクセスできるようにします。
 
-## <a name="user-experience"></a>ユーザー側の表示と操作
+- **ユーザーがフル スキャン、セキュリティ インテリジェンスの更新、または Windows Defender オフラインを実行する必要がある場合に、クライアント コンピューターに通知メッセージを表示する**  
+  - **未構成** (*既定値*)
+  - **はい**
+  - **いいえ**
 
-これらの設定は、次のプロファイルで使用できます。
+- **クライアントのユーザー インターフェイスを無効にする**  
+  - **未構成** (*既定値*)
+  - **はい**
+  - **いいえ**
 
-- Microsoft Defender ウイルス対策
-
-**設定**:
-
-- **Allow user access to Microsoft Defender app (Microsoft Defender アプリへのユーザー アクセスを許可する)**  
-  CSP:[AllowUserUIAccess](https://go.microsoft.com/fwlink/?linkid=2114043)  
-
-  - **未構成** (*既定値*) - この設定を選択すると、UI と通知が許可されるクライアントの既定値に戻ります。
-  - **いいえ** - Defender ユーザー インターフェイス (UI) にアクセスできず、通知は抑制されます。
-  - **あり**
-
+- **Allow users to view full History results (すべてのユーザーがすべての履歴結果を表示できるようにする)**
+  - **未構成** (*既定値*)
+  - **はい**
+  - **いいえ**

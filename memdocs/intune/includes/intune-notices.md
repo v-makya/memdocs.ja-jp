@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: af506f9eee80d167b42827f93958fc2a3a5741a4
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 7027eac119ef36adfdb9a0057a74d276696620b3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051632"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820064"
 ---
 以下の通知では、今後の Intune の変更と機能に備えるために役立つ重要な情報が提供されます。
 
@@ -37,10 +37,10 @@ Windows 10 Mobile の Microsoft メインストリーム サポートは、2019 
 Android デバイス管理者の管理は、Android デバイスを管理する方法の 1 つとして Android 2.2 でリリースされました。 その後、Android 5 で、より最新の管理フレームワークである [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (Google Mobile Services に確実に接続できるデバイス向け) がリリースされました。 Google は、新しい Android リリースでのデバイス管理者の管理サポートを縮小して、管理を移行することを奨励しています。
 
 #### <a name="how-does-this-affect-me"></a>ユーザーへの影響
-Google によるこれらの変更により、2020 年第 4 四半期には、影響を受ける、デバイス管理者によって管理されているデバイスに対して広範な管理機能がお使いいただけなくなります。 
+Google によるこれらの変更により、2020 年 10 月には、影響を受ける、デバイス管理者によって管理されるデバイスで、広範な管理機能を使用できなくなります。 
 
 > [!NOTE]
-> 以前、この日付は 2020 年第 3 四半期と伝えられていましたが、[Google の最新情報](https://www.blog.google/products/android-enterprise/da-migration/)によると、第 4 四半期まで引き延ばされました。
+> 以前、この日付は 2020 年第 4 四半期と伝えられていましたが、[Google の最新情報](https://www.blog.google/products/android-enterprise/da-migration/)によると変更されています。
 
 ##### <a name="device-types-that-will-be-impacted"></a>影響を受けるデバイスの種類
 デバイス管理者のサポート縮小によって影響を受けるデバイスは、次の 3 つの条件すべてに該当するデバイスです。
@@ -96,14 +96,14 @@ Google によるこれらの変更により、2020 年第 4 四半期には、�
 - 新たに登録されるデバイス、新しく割り当てられる設定、更新された設定については、影響を受けるコンプライアンス設定が、コンプライアンス違反の理由として [デバイスの更新設定] ページに表示され、デバイスはコンプライアンスに対応していませんが、設定アプリでは、より厳格なパスワード要件が適用されることはありません。
 
 #### <a name="cause-of-impact"></a>影響の原因 
-デバイスへの影響が出始めるのは、2020 年第 4 四半期からです。 そのときに、([Google の要求に応じて](https://www.blog.google/products/android-enterprise/da-migration/)) ポータル サイト API のターゲットをレベル 28 からレベル 29 に上げるポータル サイト アプリの更新があります。 
+デバイスへの影響が出始めるのは、2020 年 10 月からです。 そのときに、([Google の要求に応じて](https://www.blog.google/products/android-enterprise/da-migration/)) ポータル サイト API のターゲットをレベル 28 からレベル 29 に上げるポータル サイト アプリの更新があります。 
 
 その時点で、ユーザーが次の両方のアクションを完了すると、デバイス管理者によって管理されるデバイスで、Samsung 製以外のものは影響を受けることになります。
 - Android 10 以降に更新する。
 - ポータル サイト アプリを、API レベル 29 を対象とするバージョンに更新する。
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>この変更に対して必要な準備
-2020 年第 4 四半期に始まる機能の縮小を回避するために、次のことをお勧めします。
+2020 年 10 月に実施される機能の縮小を回避するために、次のことをお勧めします。
 - **新規登録**: 新しいデバイスを [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) 管理 (利用可能な場合) および[アプリ保護ポリシー](../apps/app-protection-policies.md)にオンボードします。 新しいデバイスをデバイス管理者の管理にオンボードしないようにしてください。 
 - **以前に登録されたデバイス**: デバイス管理者によって管理されているデバイスが Android 10 以降を実行している場合、または Android 10 以降に更新する可能性がある場合 (特に Samsung デバイスではない場合)、そのデバイスをデバイス管理者の管理から [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) 管理または[アプリ保護ポリシー](../apps/app-protection-policies.md)に移行します。 [Android デバイスをデバイス管理者から仕事用プロファイル管理に移動する](../enrollment/android-move-device-admin-work-profile.md)には、合理化されたフローを利用できます。
 

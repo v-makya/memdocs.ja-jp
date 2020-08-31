@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4abfd387c803535329fa51c7cafca295ae1078c
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 9f54bf7f281fca65e01d839e926200bc68c49765
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262525"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663449"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Intune で条件付きアクセスによる Microsoft Defender ATP のコンプライアンスを強制する
 
@@ -65,7 +65,7 @@ Intune で Microsoft Defender ATP を使用する場合は、以下が構成済�
 
 - Enterprise Mobility + Security E3 および Windows E5 (または Microsoft 365 Enterprise E5) のライセンス済みテナント
 - [Intune で管理されている](../enrollment/windows-enroll.md) Windows 10 デバイスまたは Android デバイス (Azure AD にも参加している) を含む Microsoft Intune 環境
-- [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) および Microsoft Defender セキュリティ センター (ATP ポータル) へのアクセス
+- Microsoft Defender セキュリティ センター (ATP ポータル) にアクセスできる [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) 環境
 
 > [!NOTE]
 > Microsoft Defender ATP は、iOS/iPadOS および Android の Intune アプリ保護ポリシーではサポートされていません。

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32d46374186596e8c8721b77510738caadcf78b8
-ms.sourcegitcommit: 02635469d684d233fef795d2a15615658e62db10
+ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84814944"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820189"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune で一般的な iOS および iPadOS 機能を使用するための iOS および iPadOS デバイスの設定
 
@@ -301,10 +301,10 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 
 - **[SSO アプリ拡張機能の種類]** : SSO アプリ拡張機能の種類を選択します。 次のようなオプションがあります。
 
-  - **[未構成]** :Intune では、この設定は変更または更新されません。 既定では、OS によって、アプリ拡張機能が使用されません。 アプリの拡張機能を無効にするには、SSO アプリの拡張機能の種類を **[未構成]** に切り替えます。
+  - **[未構成]** :Intune では、この設定は変更または更新されません。 既定では、OS によってアプリ拡張機能は使用されません。 アプリの拡張機能を無効にするには、SSO アプリの拡張機能の種類を **[未構成]** に切り替えます。
   - **Microsoft Azure AD**:リダイレクト型 SSO アプリ拡張機能である Microsoft Enterprise SSO プラグインが使用されます。 このプラグインにより、[Apple の Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) 機能をサポートするすべてのアプリケーションで Active Directory アカウントの SSO が提供されます。 この SSO アプリ拡張機能の種類を使用して、Azure AD を使用して認証する Microsoft アプリ、組織アプリ、Web サイトで SSO を有効にします。
 
-    SSO プラグインは、高度な認証ブローカーとして機能し、セキュリティとユーザー エクスペリエンスの向上を提供します。 以前に Microsoft Authenticator アプリで仲介型認証を使用していたすべてのアプリは、引き続き [Apple デバイス用の Microsoft Enterprise SSO プラグイン](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)で SSO を取得します。
+    SSO プラグインは、高度な認証ブローカーとして機能し、セキュリティとユーザー エクスペリエンスの向上を提供します。 認証に Microsoft Authenticator アプリを使用していたすべてのアプリでは、引き続き [Apple デバイス用の Microsoft Enterprise SSO プラグイン](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)で SSO が取得されます。
 
     > [!IMPORTANT]
     > Microsoft Azure AD SSO アプリ拡張機能の種類で SSO を実現するには、まず iOS または iPadOS の Microsoft Authenticator アプリをデバイスにインストールします。 Authenticator アプリによって、Microsoft Enterprise SSO プラグインがデバイスに配信され、MDM SSO アプリ拡張機能の設定によってプラグインがアクティブ化されます。 Authenticator と SSO アプリ拡張機能プロファイルをデバイスにインストールすると、ユーザーは資格情報を入力してサインインし、自分のデバイスでセッションを確立する必要があります。 その後、このセッションは、ユーザーの再認証を必要とせずに、さまざまなアプリケーションで使用されます。 Authenticator の詳細については、「[Microsoft Authenticator アプリとは](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview)」を参照してください。
@@ -371,7 +371,12 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 
 - **[Active Directory サイト コード]** (Kerberos のみ): Kerberos 拡張機能が使用する Active Directory サイトの名前を入力します。 Kerberos 拡張機能によって Active Directory サイト コードが自動的に検出される可能性があるため、この値を変更する必要がない場合があります。
 - **[キャッシュ名]** (Kerberos のみ): Kerberos キャッシュの汎用セキュリティ サービス (GSS) 名を入力します。 多くの場合、この値を設定する必要はありません。
-- **[アプリ バンドル ID]** (Kerberos のみ): デバイスでシングル サインオンを使用するアプリ バンドル ID を **[追加]** します。 これらのアプリには、Kerberos チケット保証チケット、認証チケットへのアクセス権が付与されます。また、アクセスが許可されているサービスに対するユーザーの認証を行います。
+- **[アプリ バンドル ID]** (Microsoft Azure AD、Kerberos): デバイスの拡張機能を通じてシングル サインオンを行う必要がある追加アプリのバンドル ID を入力します。
+
+  Microsoft Azure AD SSO アプリ拡張機能の種類を使用している場合、これらのアプリでは Microsoft Enterprise SSO プラグインを使用してユーザーの認証が行われ、サインインは必要ありません。 入力したアプリ バンドル ID は、Microsoft 認証ライブラリ (MSAL) などの Microsoft のライブラリを使用していない場合、Microsoft Azure AD SSO アプリ拡張機能を使用するためのアクセス許可が付与されます。 これらのアプリのエクスペリエンスは、Microsoft のライブラリと比べると、シームレスではない可能性があります。 MSAL 認証を使用している古いアプリ、または最新の Microsoft ライブラリを使用していないアプリは、Microsoft Azure SSO アプリ拡張機能で適切に動作するように、この一覧に追加する必要があります。  
+
+  Kerberos SSO アプリ拡張機能の種類を使用している場合、これらのアプリでは、Kerberos チケット保証チケットと、認証チケットにアクセスすることができ、アクセスが許可されているサービスに対するユーザーの認証が行われます。
+
 - **[ドメイン領域マッピング]** (Kerberos のみ): 領域にマップするドメインの DNS サフィックスを **[追加]** します。 ホストの DNS 名が領域名と一致しない場合、この設定を使用します。 ほとんどの場合、このカスタム ドメインから領域へのマッピングを作成する必要はありません。
 - **[PKINIT 証明書]** (Kerberos のみ): Kerberos 認証に使用できる Public Key Cryptography for Initial Authentication (PKINIT) 証明書を **[選択]** します。 Intune で追加した [PKCS](../protect/certficates-pfx-configure.md) または [SCEP](../protect/certificates-scep-configure.md) 証明書から選択できます。 証明書の詳細については、「[Microsoft Intune で認証に証明書を使用する](../protect/certificates-configure.md)」を参照してください。
 

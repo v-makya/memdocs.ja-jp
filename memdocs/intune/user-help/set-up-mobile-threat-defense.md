@@ -1,11 +1,11 @@
 ---
 title: モバイル デバイスに Mobile Threat Defense をインストールする
-description: モバイル デバイスに Mobile Threat Defense をインストールする方法を説明します。
+description: モバイル脅威防御アプリの概要と、そのセットアップ方法について説明します。
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/27/2020
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,22 +15,40 @@ ms.assetid: ''
 searchScope:
 - User help
 ROBOTS: ''
-ms.custom: intune-enduser
+ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 5df46a4632b198b4b4916f5ce5165b3f116ccac9
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 23d449b6b5edf43ea709f8fce194ac5a8afe8eb4
+ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881881"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725351"
 ---
-# <a name="install-mobile-threat-defense"></a>Mobile Threat Defense をインストールする   
+# <a name="install-mobile-threat-defense-app"></a>Mobile Threat Defense アプリのインストール  
 
-組織のセキュリティ要件の一部として、Mobile Threat Defense (MTD) ベンダー アプリのインストールが必要になる場合があります。 この種類のアプリでは、疑わしいアプリ、ネットワーク、OS の脆弱性など、デバイス上の脅威が検出され、アラートが生成されます。  
+> [!TIP]
+> 市場にはさまざまな MTD アプリがあります。 どれを使用するかは、組織から指定されているはずです。 MTD アプリのインストールを求めるメッセージが表示されても、すぐにアプリのセットアップまたはインストールにリダイレクトされない場合は、IT サポート担当者に問い合わせてください。  
 
-必要な MTD アプリがない場合は、職場または学校アカウントを使用して保護されたアプリにサインインできなくなります。 この記事では、[MTD アプリをインストール](set-up-mobile-threat-defense.md#install-app)して、ブロックを解除する方法について説明します。  
+組織のセキュリティ要件の一部として、モバイル脅威防御 (MTD) ベンダー アプリのインストールが必要になる場合があります。 この種類のアプリでは、疑わしいアプリ、ネットワーク、OS の脆弱性など、デバイス上の脅威が検出され、アラートが生成されます。  
 
-インストールできるさまざまな MTD ベンダー アプリがあり、すべて名前が異なります。 いずれを使用するかは組織から通知されます。 アプリのインストールを求めるメッセージが表示されても、以降の手順やアプリを入手するためのリンクが表示されない場合は、IT サポート担当者にお問い合わせください。 
+必要な MTD アプリがない場合は、職場または学校アカウントを使用して保護されたマネージド アプリ (Microsoft Excel や OneDrive など) にサインインできなくなります。 この記事では、[MTD アプリをセットアップ](set-up-mobile-threat-defense.md#set-up-mtd-app)して、再びアクセスできるようにする方法について説明します。    
+
+## <a name="mtd-apps-for-ios"></a>iOS 用 MTD アプリ
+iOS デバイスでは、次の MTD アプリがよく使用されます。 アプリを選択すると、App Store での一覧が表示されます。   
+
+* [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139367)
+* [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139141)
+* [Sandblast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139231)
+* [Zimperium zIPS](https://go.microsoft.com/fwlink/?linkid=2139232)
+
+
+## <a name="mtd-apps-for-android"></a>Android 用 MTD アプリ 
+Android デバイスでは、次の MTD アプリがよく使用されます。 アプリを選択すると、Google Play ストアでの一覧が表示されます。  
+
+* [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
+* [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139454)
+* [Sandblast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
+* [Zimperium mobile IPS (zIPS)](https://go.microsoft.com/fwlink/?linkid=2139142)  
 
 
 ## <a name="information-your-organization-can-see"></a>組織が参照できる情報   
@@ -43,14 +61,20 @@ ms.locfileid: "83881881"
 * アプリのバンドルと動的なサイズ:デバイスでのアプリの使用領域。 
 
 
-## <a name="install-app"></a>アプリのインストール    
-保護されたアプリにサインインすると、自動的に MTD アプリのインストールを求められます。 画面の手順に従ってインストールを完了します。 詳細については、このセクションの手順を参照してください。  
- 
-デバイスを登録するように求められる場合もあります。 登録は、ID を確認し、学校または職場アカウントをデバイスに接続するために必要です。 登録されていない場合は、MTD アプリをインストールする前に、そのセットアップが自動的に案内されます。 **[アクセスの取得]** 画面が表示されたら、インストール手順を開始できます。  
+## <a name="set-up-mtd-app"></a>MTD アプリをセットアップする 
+保護されたアプリにサインインすると、MTD アプリのインストールを求められます。 画面の手順に従ってインストールを完了し、保護されたアプリにアクセスできるようにします。 
+
+その他のコンテキストについては、このセクションの [iOS](set-up-mobile-threat-defense.md#ios-setup) または [Android](set-up-mobile-threat-defense.md#android-setup) に関する手順を参照してください。 これらの手順は補足であり、画面に表示される指示の代わりになるものではありません。 
+
+MTD アプリのインストールを求められても、どれをインストールすればよいかわからない場合は、IT サポート担当者に問い合わせてください。  
+
+### <a name="device-registration"></a>デバイス登録  
+デバイスの登録は、ID を確認し、学校または職場アカウントをデバイスに接続するために必要です。 デバイスが登録されていない場合は、MTD アプリをインストールする前に、その手順が画面上で自動的に案内されます。   
 
 デバイス登録の詳細については、「[個人デバイスを組織のネットワークに登録する](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)」を参照してください。  
 
 ### <a name="ios-setup"></a>iOS のセットアップ  
+これらの手順は、保護されたアプリにサインインした後で表示される **[アクセスの取得]** 画面で始まります。  
 
 1. **[アクセスの取得]** 画面の指示に従って、組織から要求された MTD アプリをインストールします。   
 2. **[アクセスの取得]** 画面に戻り、 **[開く]** を選択します。  
@@ -63,6 +87,7 @@ ms.locfileid: "83881881"
     * MTD アプリにアクセスして、既存の脅威を確認します。 脅威を解決してアクセスを回復するために推奨される手順を実行します。    
 
 ### <a name="android-setup"></a>Android のセットアップ 
+これらの手順は、保護されたアプリにサインインした後で表示される **[アクセスの取得]** 画面で始まります。  
 
 1. **[アクセスの取得]** 画面の指示に従って、組織から要求された MTD アプリをインストールします。  
 2. **[アクセスの取得]** 画面に戻り、 **[開く]** を選択します。  
@@ -74,24 +99,42 @@ ms.locfileid: "83881881"
     * **[アクセスの取得]** 画面で、 **[再確認]** を選択します。  
     * MTD アプリにアクセスして、既存の脅威を確認します。 脅威を解決してアクセスを回復するために推奨される手順を実行します。  
 
-### <a name="installation-failed"></a>インストールの失敗  
 
-インストールが失敗した場合は、IT サポート担当者にお問い合わせください。 組織の連絡先情報を検索するには、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)に移動してください。  
-
-アプリのログを IT サポート担当者に送信して、インストールについてより多くのコンテキストを提供することもできます。  
-* Android ユーザー:ポータル サイトから[ログをアップロードして電子メールで送信](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android)します。   
-
-* iOS デバイス ユーザー:Microsoft Edge for iOS から[ログを取得して送信](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs)します。  
-
-## <a name="resolve-a-threat"></a>脅威を解決する  
-脅威が組織で定義されている脅威レベルを超えた場合、組織は次のいずれかを行います。  
+## <a name="resolving-a-threat"></a>脅威の解決
+脅威が検出され、組織で定義されている脅威レベルを超えた場合、組織では次のいずれかのことが行われます。  
    
 * アクセスをブロックする:職場または学校アカウントにサインインしているときに、組織の保護されたアプリの使用をブロックします。  
 * データをワイプする:組織の 1 つ以上の保護されたアプリから、職場または学校のデータを削除します。  
 
-脅威を解決し、アクセスを回復するには、デバイス上で MTD アプリを開きます。 提供された情報を読み、脅威がデバイスに与える影響とその解決方法について学習します。 この手順に従って脅威を解決したら、MTD アプリに戻り、新しいスキャンを開始します。 組織へのアクセスが回復するまで数分かかる場合があります。  
+脅威を解決し、保護されたアプリへのアクセスを回復するには:  
+
+1. デバイスで MTD アプリを開きます。     
+2. アプリで脅威についての詳細を読みます。脅威を未解決のまま放置した場合のデバイスへの影響と、その解決方法について説明されています。 
+3. デバイスで必要な変更を行った後、MTD アプリに戻り、新しいスキャンを開始します。 すべての脅威が解決されるまで、この手順を繰り返します。 変更が組織と同期されるまでに、数分かかることがあります。 それらの変更が同期されると、保護されたアプリに再びアクセスできるようになります。 
+
+## <a name="get-support"></a>サポートを受ける
+組織の連絡先情報を検索するには、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)に移動してください。 次のことについて問い合わせます。
+
+* 使用している MTD アプリの確認  
+* インストール  
+* 失敗したインストール  
+* 脅威の検出と解決  
+* MTD アプリのアンインストール   
+ 
+
+### <a name="share-app-logs-with-it-support"></a>アプリのログを IT サポートと共有する  
+アプリのログを IT サポート担当者に送信し、失敗したインストールについてより多くのコンテキストを提供することもできます。  
+* Android ユーザー:ポータル サイトから[ログをアップロードして電子メールで送信](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android)します。   
+
+* iOS デバイス ユーザー:Microsoft Edge for iOS から[ログを取得して送信](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs)します。  
+
 
 ## <a name="next-steps"></a>次のステップ  
+
+マネージド アプリの動作方法、その入手方法、およびそれを使用していることを認識する方法についての詳細は、次の記事を参照してください。  
+
+* [Android デバイスで管理対象アプリを使用する](use-managed-apps-on-your-device-android.md)
+* [iOS デバイスで管理対象アプリを使用する](use-managed-apps-on-your-device-ios.md)  
 
 サポートが必要な場合は、 社内サポートに問い合わせてください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。
 

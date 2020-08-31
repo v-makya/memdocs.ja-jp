@@ -27,7 +27,7 @@
 - Windows 10 Teams (Surface Hub)
 
    Windows 10 Teams が実行されているデバイスの管理について詳しくは、[MDM での Surface Hub の管理](https://docs.microsoft.com/surface-hub/manage-settings-with-mdm-for-surface-hub)に関する記事をご覧ください
-- Windows 10 1709 (RS3) 以降、Windows Phone 8.1、Windows 8.1 RT、Windows 8.1 (維持モード) が稼働している PC
+- Windows 10 1709 (RS3) 以降、Windows 8.1 RT、Windows 8.1 (維持モード) が実行されている PC
 
 > [!NOTE]
 > Windows のエディションによっては、MDM によって構成されすべてのオペレーティング システム機能がサポートされていない場合があります。 [Windows 構成サービス プロバイダーのリファレンスド キュメント](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers)をご覧ください。各 CSP には、サポートされている Windows のエディションが明記されています。

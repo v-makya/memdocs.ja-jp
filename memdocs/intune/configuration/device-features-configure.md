@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 08/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 349fdc7b0f13f0999b8c9993bcaba1d458ebac59
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 28bf8edb1b7c80e2362e9b145f38bd383dffa625
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989193"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820580"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Intune での iOS、iPadOS、または macOS デバイスの機能設定の追加
 
@@ -153,7 +153,7 @@ Intune で構成できる設定の一覧については、[iOS/iPadOS でのシ�
 
 Intune では、これらの設定を使用して、組織、ID プロバイダー、Microsoft、または Apple によって作成された SSO アプリ拡張機能を構成します。 SSO アプリ拡張機能では、ユーザーの認証が処理されます。 これらの設定により、リダイレクトの種類と資格情報の種類の SSO アプリ拡張機能が構成されます。
 
-- リダイレクトの種類は、OpenID Connect、OAuth、および SAML2 などの最新の認証プロトコル向けに設計されています。 macOS デバイスでは、汎用のリダイレクト拡張機能を使用できます。 iOS/iPadOS デバイスでは、Microsoft の Azure AD SSO 拡張機能 ([Microsoft Enterprise SSO プラグイン](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) と汎用のリダイレクト拡張機能から選択できます。
+- リダイレクトの種類は、OpenID Connect、OAuth、および SAML2 などの最新の認証プロトコル向けに設計されています。 Microsoft Azure AD SSO 拡張機能 ([Microsoft Enterprise SSO プラグイン](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) と汎用のリダイレクト拡張機能から選択できます。
 - 資格情報の種類は、チャレンジと応答の認証フロー向けに設計されています。 Apple で提供される Kerberos 固有の資格情報拡張機能と汎用の資格情報拡張機能から選択できます。
 
 Intune で構成できる設定の一覧については、[iOS/iPadOS SSO アプリ拡張機能](ios-device-features-settings.md#single-sign-on-app-extension)と [macOS SSO アプリ拡張機能](macos-device-features-settings.md#single-sign-on-app-extension)の記事を参照してください。

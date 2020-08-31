@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dd7730e8ac25c41140f3e375383bf185eae91e6
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 21bc1b47f64318579da439e37f8dcf66d5a0a6ce
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217215"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820512"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Apple Volume Purchase Program で購入した iOS アプリと macOS アプリを Microsoft Intune で管理する方法
 
@@ -175,7 +175,7 @@ Apple Business Manager を使用して、パブリック アプリおよびプ�
 
 ## <a name="deleting-vpp-tokens"></a>VPP トークンの削除
 <!-- 820879 -->  
-コンソールを使用して、Apple Volume Purchasing Program (VPP) トークンを削除できます。 VPP トークンのインスタンスが重複している場合に、これが必要になることがあります。 トークンを削除すると、関連付けられているすべてのアプリと割り当ても削除されます。 ただし、トークンを削除しても、アプリのライセンスが取り消されたり、アプリがアンインストールされることはありません。 
+コンソールを使用して、Apple Volume Purchasing Program (VPP) トークンを削除できます。 VPP トークンのインスタンスが重複している場合に、これが必要になることがあります。 トークンを削除すると、関連付けられているすべてのアプリと割り当ても削除されます。 トークンを削除すると、関連付けられているアプリ ライセンスは取り消されますが、アプリはアンインストールされません。  
 
 >[!NOTE]
 >トークンが削除された後では、Intune はアプリのライセンスを取り消すことができません。 

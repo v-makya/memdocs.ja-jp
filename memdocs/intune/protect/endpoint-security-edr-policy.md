@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: b1711dad8163409d05c5299e8d3b54ad619b48ec
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: cba7b357dfae0c9dae06e8a21ddd0583fd96bcae
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462067"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820529"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティのエンドポイントの検出と応答ポリシー
 
@@ -43,24 +43,11 @@ EDR ポリシーは、Intune で管理する Azure Active Directory (Azure AD) �
 
 - **Microsoft Defender Advanced Threat Protection のテナント** – EDR ポリシーを作成する前に、Microsoft Defender ATP テナントを Microsoft Endpoint Manager テナント (Intune サブスクリプション) と統合する必要があります。 Intune ドキュメントの [Microsoft Defender ATP の使用](advanced-threat-protection.md)に関するページを参照してください。
 
-**Configuration Manager のデバイスをサポートするには**:
+**Configuration Manager クライアントのサポート**:
 
-Configuration Manager デバイスに対する EDR ポリシーの使用をサポートするには、Configuration Manager 環境で次の追加構成が必要です。 この記事では、[構成のガイダンス](#set-up-configuration-manager-to-support-edr-policy)を示しています。
+- **Configuration Manager デバイスのテナントのアタッチを設定する** - Configuration Manager によって管理されるデバイスへの EDR ポリシーの展開をサポートするには、*テナントのアタッチ*を構成します。 これには、Intune からのエンドポイント セキュリティ ポリシーをサポートするための Configuration Manager デバイス コレクションの構成が含まれます。
 
-- **バージョン 2002 以降の Configuration Manager** - サイトで Configuration Manager 2002 以降を実行する必要があります。
-
-- **Configuration Manager の更新プログラムのインストール** - Microsoft Endpoint Manager admin center で作成した EDR ポリシーの使用のサポートを Configuration Manager 2002 で有効にするには、Configuration Manager コンソール内から次の更新プログラムをインストールします。
-  - **Configuration Manager 2002 修正プログラム (KB4563473)**
-
-- **テナントのアタッチの構成** - テナントのアタッチを使用すると、Configuration Manager のデバイスのコレクションを Microsoft Endpoint Manager admin center に同期できます。 そうすると、admin center を使用して、EDR ポリシーをそれらのコレクションに展開することができます。
-
-  テナントのアタッチは、多くの場合、共同管理と共に構成しますが、テナントのアタッチを単独で構成することもできます。
-
-- **Configuration Manager コレクションの同期** – テナントのアタッチを構成するときに、Microsoft Endpoint Manager admin center と同期する Configuration Manager デバイス コレクションを選択できます。 後で戻って、同期するデバイス コレクションを変更することもできます。Configuration Manager デバイスの EDR ポリシーは、同期しているコレクションにのみ割り当てることができます。
-
-  同期するコレクションを選択した後、Microsoft Defender ATP で使用できるようにコレクションを有効にする必要があります。
-
-- **Azure AD に対するアクセス許可** - テナントのアタッチの設定を完了し、Microsoft Endpoint Manager admin center と同期する Configuration Manager コレクションを構成するには、Azure サブスクリプションに対するグローバル管理者のアクセス許可を持つアカウントが必要です。
+  Configuration Manager コレクションの Microsoft Endpoint Manager admin center への同期や、エンドポイント セキュリティ ポリシーと連携できるようにするテナントのアタッチを設定するには、[エンドポイント保護ポリシーをサポートするようにテナントのアタッチを構成する](../protect/tenant-attach-intune.md)方法に関するページを参照してください。
 
 ## <a name="edr-profiles"></a>EDR プロファイル
 
@@ -73,7 +60,7 @@ Configuration Manager デバイスに対する EDR ポリシーの使用をサ�
 
 **Configuration Manager** - Configuration Manager で管理するデバイスについては、以下がサポートされます。
 
-- プラットフォーム:**Windows 10 および Windows Server** - Configuration Manager は Configuration Manager コレクション内のデバイスにポリシーを展開します。
+- プラットフォーム:**Windows 10 および Windows Server (ConfigMgr)** - Configuration Manager は Configuration Manager コレクション内のデバイスにポリシーを展開します。
 - プロファイル:**エンドポイントの検出と応答 (ConfigMgr)**
 
 ## <a name="set-up-configuration-manager-to-support-edr-policy"></a>EDR ポリシーをサポートするよう Configuration Manager を設定する
@@ -86,8 +73,6 @@ Configuration Manager デバイスに EDR ポリシーを展開する前に、�
 
 1. [Configuration Manager の更新プログラムをインストールする](#task-1-install-the-update-for-configuration-manager)
 2. [テナントのアタッチを有効にする](#task-2-configure-tenant-attach-and-synchronize-collections)  
-3. [同期するコレクションを選択する](#task-3-select-collections-to-synchronize)
-4. [Microsoft Defender ATP に対してコレクションを有効にする](#task-4-enable-collections-for-microsoft-defender-atp)
 
 > [!TIP]
 > Microsoft Defender ATP と Configuration Manager の併用方法の詳細については、Configuration Manager コンテンツの以下の記事を参照してください。
@@ -111,8 +96,6 @@ Configuration Manager バージョン 2002 には、Microsoft Endpoint Manager a
 
 ### <a name="task-2-configure-tenant-attach-and-synchronize-collections"></a>タスク 2: テナントのアタッチを構成し、コレクションを同期する
 
-共同管理を以前に有効にしている場合、テナントのアタッチは既に設定されているため、[タスク 3](#task-3-select-collections-to-synchronize) に進んでください。
-
 テナントのアタッチでは、Microsoft Endpoint Manager admin center と同期する、Configuration Manager の展開のデバイスのコレクションを指定します。 コレクションが同期されたら、admin center を使用して、これらのデバイスに関する情報を確認し、Intune からこれらのデバイスに EDR ポリシーを展開します。  
 
 テナントのアタッチ シナリオの詳細については、Configuration Manager コンテンツの[テナントのアタッチの有効化](../../configmgr/tenant-attach/device-sync-actions.md)に関するページを参照してください。
@@ -129,82 +112,26 @@ Configuration Manager バージョン 2002 には、Microsoft Endpoint Manager a
 3. **[テナントのオンボード]** ページで、ご利用の環境に対して **[AzurePublicCloud]** を選択します。 Azure Government クラウドはサポートされていません。
    1. **[サインイン]** をクリックします。 ご利用の "*全体管理者*" アカウントを使用してサインインします。
 
-   2. **[テナントのオンボード]** ページで **[Upload to Microsoft Endpoint Manager admin center]\(Microsoft Endpoint Manager admin center にアップロードする\)** オプションを確実に選択します。
+Intune で管理するデバイスについては、以下がサポートされます。
 
-   3. **[共同管理のための自動クライアント登録を有効にする]** チェック ボックスをオフにします。
+- プラットフォーム:**Windows 10 以降** - Intune は Azure AD グループ内のデバイスにポリシーを展開します。
+  - プロファイル:**エンドポイントの検出と応答 (MDM)**
 
-      このオプションを選択すると、ウィザードによって、共同管理の設定を完了するための追加のページが表示されます。 詳細については、Configuration Manager コンテンツの[共同管理の有効化](../../configmgr/comanage/how-to-enable.md)に関するページを参照してください。
+### <a name="devices-managed-by-configuration-manager-in-preview"></a>Configuration Manager によって管理されるデバイス " *(プレビュー段階)* "
 
-     ![テナントのアタッチを構成する](media/endpoint-security-edr-policy/tenant-onboarding.png)
+Configuration Manager で管理するデバイスについては、"*テナントのアタッチ*" シナリオを通じて以下がサポートされます。
 
-4. **[次へ]** 、 **[はい]** の順にクリックして、 **[AAD アプリケーションの作成]** 通知を受け入れます。 このアクションにより、サービス プリンシパルがプロビジョニングされ、Microsoft Endpoint Manager admin center へのコレクションの同期を容易にするために Azure AD アプリケーション登録が作成されます。
-
-5. **[Configure upload]\(アップロードを構成する\)** ページで、同期するコレクションを構成します。構成を 1 つまたはいくつかのデバイス コレクションに制限したり、 **[All my devices managed by Microsoft Endpoint Configuration Manager]\(Microsoft Endpoint Configuration Manager によって管理されているすべてのデバイス\)** に対して推奨されるデバイス アップロード設定を使用したりすることができます。
-
-6. **[概要]** をクリックしてご自分の選択内容を確認して、 **[次へ]** をクリックします。
-
-7. ウィザードが完了したら、 **[閉じる]** をクリックします。
-
-   テナントのアタッチが構成され、選択したコレクションが Microsoft Endpoint Manager admin center に同期されるようになりました。
-
-#### <a name="enable-tenant-attach-when-you-use-co-management"></a>共同管理を使用する場合にテナントのアタッチを有効にする
-
-1. Configuration Manager 管理者コンソールで、 **[管理]**  >  **[概要]**  >  **[クラウド サービス]**  >  **[共同管理]** の順に移動します。
-
-2. ご自分の共同管理設定を右クリックし、 **[プロパティ]** を選択します。
-
-3. **[アップロードを構成する]** タブで、 **[Upload to Microsoft Endpoint Manager admin center]\(Microsoft Endpoint Manager 管理センターにアップロードする\)** を選択します。 **[適用]** をクリックします。
-   - デバイスのアップロード用の既定の設定は、 **[Microsoft Endpoint Configuration Manager によって管理されているすべてのデバイス]** となります。 また、構成を 1 つまたはいくつかのデバイス コレクションに制限することもできます。
-
-     ![共同管理の [プロパティ] タブを表示する](media/endpoint-security-edr-policy/configure-upload.png)
-
-4. メッセージが表示されたら、ご利用の "*全体管理者*" アカウントを使用してサインインします。
-
-5. **[はい]** をクリックして、 **[AAD アプリケーションの作成]** 通知を受け入れます。 このアクションでは、サービス プリンシパルがプロビジョニングされ、同期を容易にするための Azure AD アプリケーション登録が作成されます。
-
-6. 変更を行ったら、 **[OK]** をクリックして、共同管理プロパティを終了します。
-
-   テナントのアタッチが構成され、選択したコレクションが Microsoft Endpoint Manager admin center に同期されるようになりました。
-
-### <a name="task-3-select-collections-to-synchronize"></a>タスク 3: 同期するコレクションを選択する
-
-テナントのアタッチが構成されている場合は、同期するコレクションを選択できます。コレクションをまだ同期していない場合や、同期するコレクションを再構成する必要がある場合は、Configuration Manager コンソールで共同管理のプロパティを編集して、その操作を行うことができます。
-
-#### <a name="select-collections"></a>コレクションを選択する
-
-1. Configuration Manager 管理者コンソールで、 **[管理]**  >  **[概要]**  >  **[クラウド サービス]**  >  **[共同管理]** の順に移動します。
-
-2. ご自分の共同管理設定を右クリックし、 **[プロパティ]** を選択します。
-
-3. **[アップロードを構成する]** タブで、 **[Upload to Microsoft Endpoint Manager admin center]\(Microsoft Endpoint Manager 管理センターにアップロードする\)** を選択します。 **[適用]** をクリックします。
-
-   デバイスのアップロード用の既定の設定は、 **[Microsoft Endpoint Configuration Manager によって管理されているすべてのデバイス]** となります。 また、構成を 1 つまたはいくつかのデバイス コレクションに制限することもできます。
-
-### <a name="task-4-enable-collections-for-microsoft-defender-atp"></a>タスク 4: Microsoft Defender ATP に対してコレクションを有効にする
-
-Microsoft Endpoint Manager admin center に同期するようにコレクションを構成した後も、それらのコレクションをオンボードおよび Microsoft Defender ATP ポリシーの対象として有効にする必要があります。  そのためには、Configuration Manager コンソールで各コレクションのプロパティを編集します。
-
-#### <a name="enable-collections-for-use-with-advanced-threat-protection"></a>Advanced Threat Protection で使用できるようにコレクションを有効にする
-
-1. 最上位サイトに接続されている Configuration Manager コンソールで、Microsoft Endpoint Manager admin center に同期するデバイス コレクションを右クリックし、 **[プロパティ]** を選択します。
-
-2. **[Cloud Sync]\(クラウド同期\)** タブで、**このコレクションを使用可能にして Intune で Microsoft Defender ATP ポリシーを割り当てる**オプションを有効にします。
-
-   - Configuration Manager 階層がテナントにアタッチされていない場合は、このオプションを選択することはできません。
-  
-   ![クラウドの同期を構成する](media/endpoint-security-edr-policy/cloud-sync.png)
-
-3. **[OK]** を選択して構成を保存します。
-
-   これで、このコレクション内のデバイスが Microsoft Defender ATP ポリシーを受け取ることができるようになりました。
+- プラットフォーム:**Windows 10 および Windows Server (ConfigMgr)** - Configuration Manager は Configuration Manager コレクション内のデバイスにポリシーを展開します。
+  - プロファイル:**エンドポイントの検出と応答 (ConfigMgr) (プレビュー)**
 
 ## <a name="create-and-deploy-edr-policies"></a>EDR ポリシーを作成して展開する
 
-Microsoft Defender ATP サブスクリプションが Intune と統合されている場合は、EDR ポリシーを作成して展開できます。 作成できる EDR ポリシーには、2 つの異なる種類があります。 1 つ目のポリシーの種類は、MDM を通じて Intune で管理するデバイス向けです。 2 つ目の種類は、Configuration Manager で管理するデバイス向けです。
+Microsoft Defender ATP サブスクリプションを Intune と統合している場合は、EDR ポリシーを作成して展開できます。 作成できる EDR ポリシーには、2 つの異なる種類があります。 1 つ目のポリシーの種類は、MDM を通じて Intune で管理するデバイス向けです。 2 つ目の種類は、Configuration Manager で管理するデバイス向けです。
 
-新しい EDR ポリシーの作成時に、ポリシーのプラットフォームを選択する際、作成するポリシーの種類を選択します。
+ポリシーのプラットフォームを選択することにより、新しい EDR ポリシーの構成時に作成するポリシーの種類を選択します。
 
-Configuration Manager によって管理されるデバイスにポリシーを展開する前に、Microsoft Endpoint Manager admin center の [EDR ポリシーをサポートするように Configuration Manager を設定](#set-up-configuration-manager-to-support-edr-policy)する必要があります。
+Configuration Manager によって管理されるデバイスにポリシーを展開する前に、Microsoft Endpoint Manager admin center の EDR ポリシーをサポートするように Configuration Manager を設定する必要があります。 [エンドポイント保護ポリシーをサポートするようにテナントのアタッチを構成する](../protect/tenant-attach-intune.md)方法に関するページを参照してください。
+
 
 ### <a name="create-edr-policies"></a>EDR ポリシーを作成する
 
@@ -219,7 +146,7 @@ Configuration Manager によって管理されるデバイスにポリシーを�
      - プロファイル:**エンドポイントの検出と応答 (MDM)**
 
    - Configuration Manager - Configuration Manager は Configuration Manager コレクション内のデバイスにポリシーを展開します。 ポリシーを作成するときに、次を選択します。
-     - プラットフォーム:**Windows 10 および Windows Server**
+     - プラットフォーム:**Windows 10 および Windows Server (ConfigMgr)**
      - プロファイル:**エンドポイントの検出と応答 (ConfigMgr)**
 
 4. **[作成]** を選択します。
@@ -257,8 +184,7 @@ Microsoft Endpoint Manager admin center では、展開する EDR ポリシー�
 
   **[ATP センサーがあるデバイス]** のグラフには、**Windows 10 以降**のプロファイルを使用して Microsoft Defender ATP に正常にオンボードしたデバイスのみが表示されます。 このグラフにデバイスを完全に表現できるようにするには、オンボード プロファイルをすべてのデバイスに展開します。 グループ ポリシーや PowerShell のように、外部から Microsoft Defender ATP にオンボードするデバイスは、**ATP センサーのないデバイス**としてカウントされます。
 
-- **Windows 10 および Windows Server** プラットフォーム (Configuration Manager) を対象とするポリシーの場合、ポリシーへのコンプライアンスの概要は表示されますが、ドリルインして詳細を表示することはできません。 表示が制限されているのは、Configuration Manager デバイスへのポリシーの展開を管理しているのは Configuration Manager であり、admin center が Configuration Manager から受け取る状態の詳細が限られているからです。
-
+- **Windows 10 および Windows Server (ConfigMgr)** プラットフォーム (Configuration Manager) を対象とするポリシーの場合、ポリシーへのコンプライアンスの概要は表示されますが、ドリルインして詳細を表示することはできません。 表示が制限されているのは、Configuration Manager デバイスへのポリシーの展開を管理しているのは Configuration Manager であり、admin center が Configuration Manager から受け取る状態の詳細が限られているからです。
 
 両方のプラットフォームとプロファイルで構成できる[設定を確認](endpoint-security-edr-profile-settings.md)してください。
 

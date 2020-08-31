@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 233bc5bbdf983069ed60c8a9afbe165fb2e6b9b1
-ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
+ms.openlocfilehash: 088c3d6a281efcb1877d80d68382b1dc848ae321
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405819"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663380"
 ---
 # <a name="troubleshoot-conditional-access"></a>条件付きアクセスに関するトラブルシューティング
 この記事では、条件付きアクセスで保護されているリソースにユーザーがアクセスできなかった場合、または保護されているリソースにユーザーがアクセスできるがブロックする必要がある場合の対処方法について説明します。
@@ -45,7 +45,7 @@ Intune と条件付きアクセスを使用すると、次のようなサービ�
 
 - 既定で、ユーザーにデバイス コンプライアンス ポリシーを割り当てる必要がある。 これは、Intune 管理ポータルの **[デバイスのポリシー準拠]**  >  **[コンプライアンス ポリシー設定]** の下にある、設定 **[コンプライアンス ポリシーが割り当てられていないデバイスをマークする]** の構成によって異なる可能性がありあます。
 
-- ユーザーが Outlook ではなくデバイスのネイティブ メール クライアントを使用する場合、デバイスで Exchange ActiveSync を有効にする必要がある。 これは、iOS、iPadOS、Windows Phone、Android Knox デバイスで自動的に発生します。
+- ユーザーが Outlook ではなくデバイスのネイティブ メール クライアントを使用する場合、デバイスで Exchange ActiveSync を有効にする必要がある。 iOS/iPadOS および Android Knox デバイスの場合、これは自動的に行われます。
 
 - オンプレミスの Exchange の場合は、Intune Exchange Connector が適切に構成されている必要があります。 詳細については、[Microsoft Intune での Exchange Connector のトラブルシューティング](troubleshoot-exchange-connector.md)に関するページをご覧ください。
 
@@ -94,7 +94,7 @@ Intune と条件付きアクセスを使用すると、次のようなサービ�
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>デバイスが準拠していないが、ユーザーがブロックされていない
 
-- Windows PC では、条件付きアクセスによって、ネイティブ電子メール アプリ、先進認証を使用する Office 2013、または Office 2016 のみがブロックされます。 Windows PC 上の以前のバージョンの Outlook またはすべてのメール アプリをブロックするには、[Azure Active Directory の条件付きアクセス用の SharePoint Online および Exchange Online の設定](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication)に関するページに従って、AAD Device Registration および Active Directory フェデレーション サービス (AD FS) を構成する必要があります。
+- Windows PC では、条件付きアクセスによって、ネイティブ電子メール アプリ、先進認証を使用する Office 2013、または Office 2016 のみがブロックされます。 Windows PC 上の以前のバージョンの Outlook またはすべてのメール アプリをブロックするには、[Azure Active Directory の条件付きアクセス用の SharePoint Online および Exchange Online の設定](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication)に関するページに従って、Azure AD Device Registration および Active Directory フェデレーション サービス (AD FS) を構成する必要があります。
 
 - デバイスが選択的にワイプされるか、Intune から削除された場合、削除後に数時間にわたってアクセス許可を持ち続ける可能性があります。 これは、Exchange によってアクセス権が 6 時間キャッシュされるためです。 このシナリオでは、使用中止となったデバイスのデータの保護には別の手段を検討してください。
 

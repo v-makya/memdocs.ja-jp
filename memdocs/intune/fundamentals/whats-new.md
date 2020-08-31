@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/30/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 894ef12107b8e8b520ca69a463be47ef339bd9b4
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: aa6839cef79623b456cd31eec6b894eae7687de3
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051633"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820274"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
@@ -55,6 +55,127 @@ ms.locfileid: "88051633"
 ### Scripts
 
 <!-- ########################## -->
+## <a name="week-of-august-24-2020-2008-service-release"></a>2020 年 8 月 24 日の週 (2008 サービス リリース)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>アプリ管理
+
+#### <a name="associated-licenses-revoked-before-deletion-of-apple-vpp-token--6195322----"></a>Apple VPP トークンの削除前に関連ライセンスが失効する<!--6195322  -->
+Microsoft エンドポイント マネージャーで Apple VPP トークンを削除すると、そのトークンに関連付けられているすべての Intune 割り当てライセンスが、削除前に自動的に失効します。
+
+#### <a name="improvement-to-update-device-settings-page-in-company-portal-app-for-android-to-shows-descriptions----7414768-wnstaged---"></a>Android 用ポータル サイト アプリの [デバイス設定の更新] ページを説明が表示されるように改善 <!-- 7414768 wnstaged -->
+Android デバイス上のポータル サイト アプリの **[デバイス設定の更新]** ページには、準拠するために更新する必要がある設定の一覧が表示されます。 ユーザーは問題を展開して詳細情報を確認し、 **[解決]** ボタンを表示します。
+
+このユーザー エクスペリエンスが改善されました。 一覧表示される設定が既定で展開されて、説明が表示され、 **[解決]** ボタン (適用できる場合) が表示されるようになりました。 以前は、問題は既定では折りたたまれていました。 この新しい既定の動作によってクリック回数が減るため、ユーザーがより迅速に問題を解決できるようになります。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>デバイスの構成
+
+#### <a name="use-netmotion-as-a-vpn-connection-type-for-iosipados-and-macos-devices---1333631-----"></a>iOS/iPadOS および macOS デバイスの VPN 接続の種類として NetMotion を使用する<!-- 1333631   -->
+VPN プロファイルを作成するときに、VPN 接続の種類として NetMotion を使用できます ( **[デバイス]**  >  **[デバイス構成]**  >  **[プロファイルの作成]**  >  **[iOS/iPadOS]** または **[macOS]** (プラットフォーム) > **[VPN]** (プロファイル) > **[NetMotion]** (接続の種類))。
+
+Intune での VPN プロファイルの詳細については、[VPN サーバーに接続するための VPN プロファイルの作成](../configuration/vpn-settings-configure.md)に関する記事をご覧ください。
+
+適用対象:
+- iOS/iPadOS
+- macOS
+
+#### <a name="more-protected-extensible-authentication-protocol-peap-options-for-windows-10-wi-fi-profiles---3805024----"></a>Windows 10 Wi-Fi プロファイル用の保護された拡張認証プロトコル (PEAP) オプションの追加<!-- 3805024  -->
+Windows 10 デバイスで、Wi-Fi 接続を認証するために拡張認証プロトコル (EAP) を使用する Wi-Fi プロファイルを作成できます ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  **[Windows 10 以降]** (プラットフォーム) > **[Wi-Fi]** (プロファイル) > **[Enterprise]** )。
+
+保護された EAP (PEAP) を選択する場合、次のような新しい設定を使用できます。
+- **PEAP フェーズ 1 でサーバー検証を実行する**:PEAP ネゴシエーション フェーズ 1 では、サーバーが証明書の検証によって検証されます。
+  - **PEAP フェーズ 1 でのサーバー検証に関するユーザー プロンプトを無効にする**:PEAP ネゴシエーション フェーズ 1 では、信頼された証明機関に対して新しい PEAP サーバーの承認を求めるユーザー プロンプトは表示されません。
+- **暗号化バインドを要求する**:PEAP ネゴシエーションの間に、暗号化バインドを使用していない PEAP サーバーへの接続を禁止します。
+
+構成できる設定を確認するには、[Windows 10 以降のデバイス向けの Wi-Fi 設定の追加](../configuration/wi-fi-settings-windows.md)に関する記事をご覧ください。
+
+適用対象: 
+- Windows 10 以降
+
+#### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576--idstaged---"></a>macOS Microsoft Enterprise SSO プラグインを構成する<!-- 5627576  idstaged -->
+Microsoft Azure AD チームでは、リダイレクト シングル サインオン (SSO) アプリ拡張機能を開発しました。これにより、macOS 10.15 以降のユーザーが、Apple の SSO 機能をサポートし、認証に Azure AD を使用する Microsoft アプリ、組織アプリ、Web サイトに対して、1 回のサインオンでアクセスできるようになります。 Microsoft Enterprise SSO プラグインのリリースに伴い、新しい Microsoft Azure AD アプリ拡張機能の種類を使用して SSO 拡張機能を構成できるようになります ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  **[macOS]** (プラットフォーム) > **[デバイスの機能]** (プロファイル) > **[シングル サインオン アプリの拡張機能]** > [SSO アプリ拡張機能の種類] > **[Microsoft Azure AD]** )。
+
+Microsoft Azure AD SSO アプリ拡張機能の種類を使用した SSO を実現するには、ユーザーが各自の macOS デバイスにポータル サイト アプリをインストールしてサインインする必要があります。 
+
+macOS SSO アプリ拡張機能について詳しくは、「[シングル サインオン アプリ拡張機能](../configuration/device-features-configure.md#single-sign-on-app-extension)」をご覧ください。
+
+適用対象:
+- macOS 10.15 以降
+
+#### <a name="prevent-users-from-unlocking-android-enterprise-work-profile-devices-using-face-and-iris-scanning--6069759-idmiss---"></a>ユーザーが顔や虹彩のスキャンを使用して Android Enterprise 仕事用プロファイル デバイスのロックを解除できないようにする<!--6069759 idmiss -->
+ユーザーが顔や虹彩のスキャンを使用して、デバイス レベルまたは仕事用プロファイル レベルで、仕事用プロファイルのマネージド デバイスのロックを解除することを、禁止できるようになりました。 これは、 **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  **[Android Enterprise]** (プラットフォーム) > **[仕事用プロファイル] > [デバイスの制限]** (プロファイル) > **[仕事用プロファイルの設定]** および **[パスワード]** セクションで設定できます。
+
+詳細については、「[Android Enterprise device settings to allow or restrict features using Intune (Intune を使用して機能を許可または制限する Android Enterprise デバイス設定)](../configuration/device-restrictions-android-for-work.md#work-profile-only)」を参照してください。
+
+適用対象: 
+- Android Enterprise 仕事用プロファイル
+
+#### <a name="use-sso-app-extensions-on-more-iosipados-apps-with-the-microsoft-enterprise-sso-plug-in---7369991----"></a>Microsoft Enterprise SSO プラグインを使用して、さらに多くの iOS および iPadOS アプリで SSO アプリ拡張機能を使用する<!-- 7369991  -->
+[Apple デバイス用の Microsoft Enterprise SSO プラグイン](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)は、SSO アプリ拡張機能がサポートされているすべてのアプリで使用できます。 Intune の場合、この機能は、Apple デバイス用の Microsoft Authentication Library (MSAL) を使用しない iOS および iPadOS のモバイル アプリで、プラグインが動作するということを意味します。 アプリで MSAL を使用する必要はありませんが、Azure AD エンドポイントを使用して認証する必要があります。
+
+プラグインで SSO を使用するように iOS または iPadOS アプリを構成するには、iOS または iPadOS の構成プロファイルにアプリ バンドル ID を追加します ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  **[iOS/iPadOS]** (プラットフォーム) > **[デバイスの機能]** (プロファイル) > **[シングル サインオン アプリの拡張機能]**  >  **[Microsoft Azure AD]** (SSO アプリ拡張機能の種類) > **[アプリ バンドル ID]** )。
+
+構成できる現在の SSO アプリ拡張機能設定を確認するには、「[シングル サインオン アプリの拡張機能](../configuration/ios-device-features-settings.md#single-sign-on-app-extension)」にアクセスしてください。
+
+適用対象:
+- iOS/iPadOS
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>デバイス セキュリティ
+
+#### <a name="deploy-endpoint-security-antivirus-policy-to-tenant-attached-devices-preview---5475441----"></a>エンドポイント セキュリティ ウイルス対策ポリシーをテナントに接続されたデバイスに展開する (プレビュー)<!-- 5475441  -->
+プレビューとして、エンドポイント セキュリティの[ウイルス対策用ポリシー](../protect/endpoint-security-antivirus-policy.md)を、Configuration Manager で管理しているデバイスに展開することができます。 このシナリオでは、サポートされているバージョンの Configuration Manager と Intune サブスクリプションの間に、テナントの接続を構成する必要があります。 次のバージョンの Configuration Manager がサポートされています。
+
+- Configuration Manager Current Branch 2006
+
+詳細については、テナントの接続をサポートするための [Intune エンドポイント セキュリティ ポリシーの要件](../protect/tenant-attach-intune.md#specific-requirements-for-intune-endpoint-security-policies)に関する記事を参照してください。
+
+#### <a name="changes-for-endpoint-security-antivirus-policy-exclusions--5583940-6018119------"></a>エンドポイント セキュリティ ウイルス対策ポリシーの除外に関する変更<!--5583940, 6018119    -->
+[エンドポイント セキュリティ ウイルス対策ポリシー](../protect/endpoint-security-antivirus-policy.md)の一部として構成する Microsoft Defender ウイルス対策の除外リストの管理について、2 点の変更が導入されました。 これらの変更は、異なるポリシー間の競合を回避し、以前に展開したポリシーに存在する可能性がある除外リストの競合を解決するのに役立ちます。
+
+どちらの変更も、次の [Microsoft Defender ウイルス対策構成サービス プロバイダー](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions) (CSP) のポリシー設定に適用されます。
+
+- Defender/ExcludedPaths
+- Defender/ExcludedExtensions
+- Defender/ExcludedProcesses
+
+変更点は次のとおりです。
+
+- 新しいプロファイルの種類: **Microsoft Defender ウイルス対策の除外** - Windows 10 以降で、ウイルス対策の除外のみを対象とするポリシーを定義するには、この新しいプロファイルの種類を使用します。 このプロファイルは、除外リストを他のポリシー構成から分離し、除外リストの管理を簡素化するのに役立ちます。
+
+  構成できる除外には、Microsoft Defender でスキャンしない Defender の "*プロセス*"、"*ファイル拡張子*"、"*ファイル*" と "*フォルダー*" が含まれます。
+
+- **ポリシーの結合** – Intune では、異なるプロファイルで定義した除外リストを、1 つの除外リストに結合して、各デバイスまたはユーザーに適用できるようになりました。 たとえば、3 つの異なるポリシーで 1 人のユーザーが対象になっている場合、それら 3 つのポリシーからの除外リストが "*Microsoft Defender ウイルス対策の除外*" の単一のスーパーセットに結合されて、そのユーザーに適用されます。
+
+
+<!-- ########################## -->
+## <a name="week-of-august-17-2020"></a>2020 年 8 月 17 日の週
+
+### <a name="intune-apps"></a>Intune アプリ
+
+#### <a name="custom-brand-image-now-displayed-in-the-windows-company-portal-profile-page---4280187---"></a>Windows ポータル サイトのプロファイル ページに、カスタム ブランド イメージが表示されるようになりました。<!-- 4280187 -->
+Microsoft Intune 管理者は、Windows ポータル サイト アプリ内のユーザーのプロファイル ページに背景イメージとして表示されるカスタム ブランド イメージを、Intune にアップロードできます。 詳細については、「[Intune ポータル サイト アプリ、ポータル サイト Web サイト、および Intune アプリをカスタマイズする方法](../apps/company-portal-app.md#branding)」を参照してください。
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>アプリ管理
+
+#### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>ポータル サイトに Configuration Manager アプリケーションのサポートが追加される<!-- 4297660 -->
+ポータル サイトでは、Configuration Manager アプリケーションがサポートされるようになりました。 エンド ユーザーはこの機能によって、共同管理されている顧客に対して、ポータル サイト上で Configuration Manager および Intune の両方にデプロイされているアプリケーションを表示できるようになります。 このサポートによって、管理者は異なるエンド ユーザー ポータルのエクスペリエンスを統合できます。 詳細については、「[共同管理デバイスでポータル サイト アプリを使用する](/mem/configmgr/comanage/company-portal)」を参照してください。 
+
+### <a name="device-security"></a>デバイス セキュリティ
+
+#### <a name="set-device-compliance-state-from-third-party-mdm-providers---6361689---"></a>サード パーティの MDM プロバイダーからデバイス コンプライアンスの状態を設定する<!-- 6361689 -->
+
+Intune では、[デバイス コンプライアンスの詳細のソースとしてサードパーティの MDM ソリューション](../protect/device-compliance-partners.md)がサポートされるようになりました。 Microsoft Intune との統合により、このサードパーティのコンプライアンス データを使用して、iOS および Android 上の Microsoft 365 アプリに条件付きアクセス ポリシーを適用できます。  Intune により、サードパーティ プロバイダーからのコンプライアンスの詳細が評価され、デバイスが信頼されているかどうかが判断された後、Azure AD で条件付きアクセス属性が設定されます。  お客様は引き続き、Microsoft エンドポイント マネージャー管理センターまたは Azure AD ポータル内から、Azure AD 条件付きアクセス ポリシーを作成します。
+
+このリリースでは、パブリック プレビューとして、次のサードパーティ MDM プロバイダーがサポートされています。
+
+- VMware Workspace ONE UEM (旧称 AirWatch)
+
+*この更新は、世界中のお客様にロールアウトされています。翌週中には、この機能を利用できるようになるはずです。*
+
+<!-- ########################## -->
 ## <a name="week-of-august-10-2020"></a>2020 年 8 月 10 日の週
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -70,7 +191,7 @@ Microsoft エンドポイント マネージャーの管理センターからテ
 ### <a name="monitor-and-troubleshoot"></a>監視とトラブルシューティング
 
 #### <a name="power-bi-compliance-report-template-v20---636958---"></a>Power BI コンプライアンス レポート テンプレート V2.0<!-- 636958 -->
-Power BI テンプレート アプリを使用すると、Power BI パートナーはコーディングをほとんどまたはまったく行わずに Power BI アプリを構築し、それを Power BI の顧客にデプロイすることができます。 管理者は、Power BI コンプライアンス レポート テンプレートのバージョンを V1.0 から V2.0 に更新できます。 V2.0 では、設計が改善され、テンプレートの一部として表示される計算とデータが変更されます。 詳細については、「[Power BI でデータ ウェアハウスに接続する](../developer/reports-proc-get-a-link-powerbi.md)」と「[テンプレート アプリを更新する](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app)」を参照してください。 また、ブログ記事「[Announcing a New Version of the PowerBI Compliance Report with Intune Data Warehouse](https://aka.ms/new_compliance_report)」 (Intune データ ウェアハウスを使用した PowerBI コンプライアンス レポートの新しいバージョンの発表) を参照してください。
+Power BI テンプレート アプリを使用すると、Power BI パートナーはコーディングをほとんどまたはまったく行わずに Power BI アプリを構築し、それを Power BI の顧客にデプロイすることができます。 管理者は、Power BI コンプライアンス レポート テンプレートのバージョンを V1.0 から V2.0 に更新できます。 V2.0 では、設計が改善され、テンプレートの一部として表示される計算とデータが変更されます。 詳細については、「[Power BI でデータ ウェアハウスに接続する](../developer/reports-proc-get-a-link-powerbi.md)」と「[テンプレート アプリを更新する](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app)」を参照してください。 また、ブログ記事「[Intune Data Warehouse を使用した Power BI コンプライアンス レポートの新しいバージョンの発表](https://aka.ms/new_compliance_report)」を参照してください。
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>2020 年 7 月 13 日の週 (2007 サービス リリース)
@@ -231,7 +352,7 @@ Intune DeviceComplianceOrg のログには、以前は ComplianceState、OwnerTy
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="role-based-access-control"></a>ロール ベースのアクセス制御
 
-#### <a name="assign-profile-and-update-profile-permission-changes--7177586-idready-wnready-wnstaged--"></a>[プロファイルの割り当て] と [プロファイルの更新] アクセス許可の変更<!--7177586 idready wnready wnstaged-->
+#### <a name="assign-profile-and-update-profile-permission-changes--7177586-----"></a>[プロファイルの割り当て] と [プロファイルの更新] アクセス許可の変更<!--7177586   -->
 自動デバイス登録フローの割り当てプロファイルおよび更新プロファイルで、ロールベースのアクセス制御のアクセス許可が変更されました。
 
 プロファイルの割り当て:このアクセス許可を持つ管理者は、自動デバイス登録の場合、複数のトークンへのプロファイルの割り当てと、1 つのトークンへの既定のプロファイルの割り当てもできます。
@@ -243,7 +364,7 @@ Intune DeviceComplianceOrg のログには、以前は ComplianceState、OwnerTy
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="scripting"></a>スクリプト
 
-#### <a name="additional-data-warehouse-v10-properties---6125732-wnready---"></a>追加の Data Warehouse v1.0 プロパティ<!-- 6125732 wnready -->
+#### <a name="additional-data-warehouse-v10-properties---6125732----"></a>追加の Data Warehouse v1.0 プロパティ<!-- 6125732  -->
 Intune Data Warehouse v1.0 を使用して、追加のプロパティを使用できます。 次のプロパティが、[device](../developer/reports-ref-devices.md#devices) エンティティを介して公開されるようになりました。
 - `ethernetMacAddress` - このデバイスの一意のネットワーク識別子。
 - `office365Version` - デバイスにインストールされている Office 365 のバージョン。
@@ -368,7 +489,7 @@ SCEP 証明書で Windows Wi-Fi プロファイルを認証することができ
 - Windows 10 以降
 
 #### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686----"></a>macOS デバイス用の有線ネットワーク デバイス構成プロファイル<!-- 3508686  -->
-有線ネットワークを構成する新しい macOS デバイス構成プロファイルを使用することができます ( **[デバイス]** > **構成プロファイル > **[プロファイルの作成]**  >  **[macOS]** (プラットフォーム) > **[ワイヤード (有線) ネットワーク]** (プロファイル))。 この機能を使用して、有線ネットワークを管理する 802.1x プロファイルを作成し、この有線ネットワークを macOS デバイスに展開します。
+有線ネットワークを構成する新しい macOS デバイス構成プロファイルを使用することができます ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  **[macOS]** (プラットフォーム) > **[ワイヤード (有線) ネットワーク]** (プロファイル))。 この機能を使用して、有線ネットワークを管理する 802.1x プロファイルを作成し、この有線ネットワークを macOS デバイスに展開します。
 
 この機能の詳細については、[macOS の有線ネットワーク](../configuration/wired-networks-configure.md)に関するページを参照してください。
 
@@ -446,7 +567,7 @@ iOS または iPadOS および macOS デバイスに対して、次のような�
 #### <a name="shared-ipads-for-business--6367326-----"></a>法人向け共有 iPad<!--6367326   -->
 Intune と Apple Business Manager を使用して、複数の従業員がデバイスを共有できるように共有 iPad を簡単かつ安全に設定することができます。 Apple の [共有 iPad](https://developer.apple.com/education/shared-ipad/) では、ユーザー データを保持しながら、複数のユーザーに対してパーソナライズされたエクスペリエンスが提供されます。 ユーザーは、管理対象 Apple ID を使用して、組織内の共有 iPad にサインインした後、アプリ、データ、設定にアクセスできます。 共有 iPad はフェデレーション ID と連動します。
 
-この機能を表示するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) >  **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]** の順に移動し、トークンを選択して**、 **[プロファイル]**  >  **[プロファイルの作成]**  >  **[iOS]** の順に移動します。 **[管理の設定]** ページで、 **[ユーザー アフィニティを使用しないで登録する]** を選択すると、 **[共有 iPad]** オプションが表示されます。
+この機能を表示するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) >  **[デバイス]**  >  **[iOS]**  >  **[iOS の登録]**  >  **[Enrollment Program トークン]**  > **トークンを選択** >  **[プロファイル]**  >  **[プロファイルの作成]**  >  **[iOS]** の順に移動します。 **[管理の設定]** ページで、 **[ユーザー アフィニティを使用しないで登録する]** を選択すると、 **[共有 iPad]** オプションが表示されます。
 
 必須: iPadOS 13.4 以降。 このリリースでは、ユーザーが管理対象 Apple ID を使用せずにデバイスにアクセスできるように、共有 iPad での一時的なセッションのサポートが追加されました。 ログアウト時に、デバイスではすべてのユーザー データが消去されるため、デバイスをすぐに使用できる状態になり、デバイスのワイプは不要になります。 
 
@@ -548,7 +669,7 @@ Windows ポータル サイト アプリのアイコンが更新されました�
 
 [エンドポイント検出と応答](../protect/endpoint-security-edr-policy.md) (EDR) のエンドポイント セキュリティ ポリシーを使用して、Microsoft Defender Advanced Threat Protection (Defender ATP) の展開のためにデバイスをオンボードして構成します。 EDR では、Intune (MDM) で管理されている Windows デバイスのポリシーと、Configuration Manager によって管理される Windows デバイス用の個別のポリシーがサポートされます。 
 
-Configuration Manager デバイスのポリシーを使用するには、[EDR ポリシーをサポートするように Configuration Manager を設定](../protect/endpoint-security-edr-policy.md#set-up-configuration-manager-to-support-edr-policy)する必要があります。 設定には次が含まれます。
+Configuration Manager デバイスのポリシーを使用するには、[EDR ポリシーをサポートするように Configuration Manager を設定](../protect/tenant-attach-intune.md)する必要があります。 設定には次が含まれます。
 
 - "*テナントのアタッチ*" 用に Configuration Manager 構成する。
 - Configuration Manager のコンソール内の更新プログラムをインストールして、EDR ポリシーのサポートを有効にする。 この更新プログラムは、"*テナントのアタッチ*" を有効にした階層にのみ適用されます。
@@ -643,8 +764,8 @@ macOS Catalina 10.15 のリリースでは、Apple によって新しいセキ�
 #### <a name="enrollment-restrictions-support-scope-tags--4209550----"></a>登録制限でスコープ タグがサポートされます<!--4209550  -->
 登録制限にスコープ タグを割り当てられるようになりました。 そのためには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) >  **[デバイス]**  >  **[登録制限]**  >  **[制限の作成]** の順に移動します。 いずれかの種類の制限を作成すると、 **[スコープ タグ]** ページが表示されます。 詳細は、「[登録制限を設定する](../enrollment/enrollment-restrictions-set.md)」を参照してください。
 
-#### <a name="autopilot-support-for-hololens-2-devices--6305220----"></a>Hololens 2 デバイスの Autopilot サポート<!--6305220  -->
-Windows Autopilot で、Hololens 2 デバイスがサポートされるようになりました。 Hololens での Autopilot の使用の詳細については、[Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot)に関する記事を参照してください。
+#### <a name="autopilot-support-for-hololens-2-devices--6305220----"></a>HoloLens 2 デバイスの Autopilot サポート<!--6305220  -->
+Windows Autopilot で、HoloLens 2 デバイスがサポートされるようになりました。 HoloLens での Autopilot の使用の詳細については、[Windows Autopilot for HoloLens 2](https://docs.microsoft.com/hololens/hololens2-autopilot)に関する記事を参照してください。
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>デバイス管理
@@ -752,7 +873,7 @@ Microsoft Office 365 ProPlus は **Microsoft 365 Apps for enterprise** に名前
 アプリ構成ポリシーを使用して、Android Enterprise を実行するデバイス上で Outlook の S/MIME 設定を管理できます。 また、デバイスのユーザーが Outlook の設定で S/MIME を有効または無効にすることを許可するかどうかも選択できます。 Android 用のアプリ構成ポリシーを使用するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[アプリ]**  >  **[アプリ構成ポリシー]**  >  **[追加]**  >  **[マネージド デバイス]** の順に移動します。 Outlook の設定を構成する方法の詳細については、「[Microsoft Outlook の構成設定](../apps/app-configuration-policies-outlook.md)」を参照してください。
 
 #### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>マネージド Google Play アプリのプレリリース テスト<!-- 2681933  -->
-[アプリのプレリリース テストに Google Play のクローズド テスト トラック](https://support.google.com/googleplay/android-developer/answer/3131213)を使用している組織は、Intune でこれらのトラックを管理できます。 テストを実行するために、Google Play の実稼働前のトラックに発行されたアプリをパイロット グループに選択的に割り当てることができます。 Intune では、アプリに実稼働前のビルド テスト トラックが発行されているかどうかや、そのトラックを AAD ユーザーまたはデバイス グループに割り当てることができるかどうかを確認できます。 この機能は、現在サポートされているすべての Android Enterprise シナリオ (仕事用プロファイル、フル マネージド、および専用) で利用できます。 [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[アプリ]**  >  **[Android]**  >  **[追加]** を選択して、マネージド Google Play アプリを追加できます。 詳細については、「[マネージド Google Play のクローズド テスト トラックの操作](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks)」を参照してください。
+[アプリのプレリリース テストに Google Play のクローズド テスト トラック](https://support.google.com/googleplay/android-developer/answer/3131213)を使用している組織は、Intune でこれらのトラックを管理できます。 テストを実行するために、Google Play の実稼働前のトラックに発行されたアプリをパイロット グループに選択的に割り当てることができます。 Intune では、アプリに運用前のビルド テスト トラックが発行されているかどうかや、そのトラックを Azure AD ユーザーまたはデバイス グループに割り当てることができるかどうかを確認できます。 この機能は、現在サポートされているすべての Android Enterprise シナリオ (仕事用プロファイル、フル マネージド、および専用) で利用できます。 [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[アプリ]**  >  **[Android]**  >  **[追加]** を選択して、マネージド Google Play アプリを追加できます。 詳細については、「[マネージド Google Play のクローズド テスト トラックの操作](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks)」を参照してください。
 
 #### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft Teams が Office 365 Suite for macOS に含まれるようになりました<!-- 5903936  -->
 Microsoft エンドポイント マネージャーで Microsoft Office for macOS が割り当てられているユーザーは、既存の Microsoft Office アプリ (Word、Excel、PowerPoint、Outlook、OneNote) に加えて、Microsoft Teams を受け取るようになります。 Intune は、他の Office for macOS アプリがインストールされている既存の Mac デバイスを認識し、次回デバイスが Intune にチェックインするときに Microsoft Teams のインストールを試行します。 [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) で、 **[アプリ]**  >  **[macOS]**  >  **[追加]** の順に選択して、**Office 365 Suite** for macOS を見つけることができます。 詳しくは、「[Microsoft Intune を使用して macOS デバイスに Office 365 を割り当てる](../apps/apps-add-office365-macos.md)」をご覧ください。

@@ -14,30 +14,30 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 723d81655e0d0c3101cf199057e1c4dbba8e2925
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: a677dec0d722f0ef17a8c16248a41dea1b0be947
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908418"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068122"
 ---
 # <a name="windows-autopilot-update"></a>Windows の自動操縦更新
 
 **適用対象**
 
--   Windows 10 バージョン 1903
+- Windows 10 バージョン 1903
 
-Windows 自動操縦の更新プログラムを使用すると、最新の自動操縦機能と重大な問題の修正を取得できます。最新の Windows OS バージョンに移行する必要はありません。 自動操縦の更新により、組織は現在の OS バージョンを維持しながら、新しい自動操縦機能やバグ修正の恩恵を受けることができます。
- 
-自動操縦の展開プロセス中に、Windows の自動操縦更新プログラムは、重要な [Windows ゼロデイ修正プログラム (ZDP) の更新](/windows-hardware/customize/desktop/windows-updates-during-oobe) チェック後に新しいノードとして追加されました。 更新プロセス中に、Windows の自動操縦デバイスは Windows Update に接続して、新しい自動操縦更新プログラムがあるかどうかを確認します。  自動操縦更新プログラムが利用可能な場合、デバイスは更新プログラムをダウンロードしてインストールし、自動的に再起動します。 次の例を参照してください。
+Windows 自動操縦更新プログラムによって、組織の自動操縦用デバイスに最新の自動操縦機能と修正プログラムがインストールされます。 デバイスは、最新の Windows OS バージョンには移動されません。 自動操縦更新を使用すると、デバイスの現在の OS バージョンを維持しながら、新しい自動操縦機能やバグ修正の恩恵を受けることができます。
 
-   ![自動操縦更新プログラム1](images/update1.png)<br>
-   ![自動操縦更新2](images/update2.png)<br>
-   ![自動操縦用更新プログラム3](images/update3.png)
+Windows 自動操縦更新プロセスは、重要な [Windows ゼロデイパッチ (ZDP) の更新](/windows-hardware/customize/desktop/windows-updates-during-oobe) チェック後に行われます。 更新プロセス中、デバイスは新しい自動操縦更新プログラムの Windows Update を確認します。 自動操縦更新プログラムが利用可能な場合、デバイスは更新プログラムをダウンロードしてインストールし、自動的に再起動します。 次の例を参照してください。
+
+ ![自動操縦更新プログラム1](images/update1.png)<br>
+ ![自動操縦更新2](images/update2.png)<br>
+ ![自動操縦用更新プログラム3](images/update3.png)
 
 次の図は、windows 自動操縦更新ノードを使用した、既定のエクスペリエンス (OOBE) 中の一般的な Windows 自動操縦展開オーケストレーションを示しています。
 
-   ![自動操縦更新フロー](images/update-flow.png)
+ ![自動操縦更新フロー](images/update-flow.png)
 
 ## <a name="release-cadence"></a>リリース サイクル
 

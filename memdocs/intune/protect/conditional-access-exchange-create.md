@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb70d5842ce13b5baa9dc60ec2ed9cd698bad75c
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19a2d82f23abef49f193859c46a17cbb44a61f49
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252760"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663346"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Intune の Exchange On-Premises アクセスを構成する
 
@@ -59,7 +59,7 @@ Exchange Online Dedicated 環境を使用していて、それが新しい構成
   - Intune に**登録**されているか、ドメインに参加している PC である。
   - **Azure Active Directory に登録されている**。 また、クライアントの Exchange ActiveSync ID を Azure Active Directory に登録する必要があります。
 
-- Azure AD Device Registration サービス (DRS) は、Intune や Office 365 のお客様に対して自動的にアクティブ化されます。 ADFS Device Registration Service をデプロイ済みのお客様には、オンプレミスの Active Directory に登録されたデバイスは表示されません。 **これは、Windows PC と Windows Phone デバイスには適用されません。**
+- Azure AD Device Registration サービス (DRS) は、Intune や Office 365 のお客様に対して自動的にアクティブ化されます。 ADFS Device Registration Service をデプロイ済みのお客様には、オンプレミスの Active Directory に登録されたデバイスは表示されません。 **これは、Windows の PC とデバイスには適用されません。**
 
 - そのデバイスに展開されているデバイス コンプライアンス ポリシーに**準拠**している。
 
@@ -69,7 +69,6 @@ Exchange Online Dedicated 環境を使用していて、それが新しい構成
 
 ### <a name="support-for-mobile-devices"></a>モバイル デバイスのサポート
 
-- **Windows Phone** - 条件付きアクセス ポリシーを作成するには、[条件付きアクセス ポリシーの作成](../protect/create-conditional-access-intune.md)に関する記事を参照してください
 - **iOS/iPadOS のネイティブ電子メール アプリ** - 条件付きアクセス ポリシーを作成するには、[条件付きアクセス ポリシーの作成](../protect/create-conditional-access-intune.md)に関する記事を参照してください
 - **Android 4 以降の Gmail などの EAS メール クライアント** - 条件付きアクセス ポリシーを作成するには、[条件付きアクセス ポリシーの作成](../protect/create-conditional-access-intune.md)に関する記事を参照してください
 

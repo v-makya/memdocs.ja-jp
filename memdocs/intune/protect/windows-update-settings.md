@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6cb913d0f3d3f806a8a9a2592624b2bcf376f40
-ms.sourcegitcommit: 5d32dd481e2a944465755ce74e14c835cce2cd1c
+ms.openlocfilehash: ba826620d1589d081f683e3b4c807115c4a137ae
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551912"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819713"
 ---
 # <a name="windows-update-settings-for-intune"></a>Intune での Windows Update の設定  
 
@@ -179,12 +179,12 @@ Update の設定では、デバイスによってダウンロードされるも�
   - **[許可]** - デバイス ユーザーが、Windows Update スキャンを使用して更新プログラムを検索してダウンロードし、機能をインストールできるようにします。
   - **[ブロック]** - デバイス ユーザーが Windows Update スキャンにアクセスしたり、更新プログラムをダウンロードしたり、機能をインストールしたりできないようにします。  
 
-- **作業時間外に再起動するにはユーザーの承認が必要です**  
+- **Require user approval to dismiss restart notification (再起動通知を無視するためにユーザーの承認が必要)**  
   **既定値**:未構成  
   Windows Update の CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
-  - **未構成**  
-  - **[必須]** - 作業時間外のデバイスの再起動の承認をユーザーに要求します。  
+  - **[いいえ]** - 25 秒後に自動的に無視。
+  - **[はい]** - ユーザーによる無視が必要です。
    
 - **無視できるアラームを使用して必要な自動再起動の前にユーザーに通知する (時間)**  
   **既定値**:4  
@@ -239,7 +239,7 @@ Update の設定では、デバイスによってダウンロードされるも�
   - **猶予期間**  
     **既定値**: *[未構成]* Windows Update の CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    再起動が自動的に実行されるまでの、期限後の最小日数を指定します (2-7)。
+    再起動が自動的に実行されるまでの、期限後の最小日数を指定します (0 - 7)。
 
   - **期限前に自動的に再起動する**  
     **既定値**:[はい] Windows Update の CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)

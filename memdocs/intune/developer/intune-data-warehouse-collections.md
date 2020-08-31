@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 08/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2718c73cb34e01c84ef07d5085c698028ca285c
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: b6d3f3ea7423cf87d2644611bcbd6e298ac60699
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461999"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820325"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune データ ウェアハウスのコレクション
 
@@ -253,14 +253,15 @@ ms.locfileid: "86461999"
 | SubscriberCarrier          | デバイスの通信事業者                                                                                                                                                       |
 | PhoneNumber                | デバイスの電話番号                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
-| CellularTechnology         | デバイスの携帯電話テクノロジ                                                                                                                                                    |
-| WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
+| CellularTechnology         | デバイスの携帯電話テクノロジ。                                                                                                                                                    |
+| WiFiMacAddress             | Wi-Fi MAC。                                                                                                                                                                              |
+| windowsOsEdition             | Windows オペレーティング システムのエディション。                                                                                                                                                                              |
 
 
 ## <a name="devicetypes"></a>deviceTypes
 **deviceType** エンティティは、他のデータ ウェアハウス エンティティによって参照されるデバイスの種類を表します。 デバイスの種類により、一般的に、デバイスのモデル、メーカー、あるいは両方の組み合わせが説明されます。
 
-|    プロパティ    |                                  Description                                 |
+|    プロパティ    |                                  [説明]                                 |
 |----------------|------------------------------------------------------------------------------|
 | DeviceTypeID   | デバイスの種類を示す一意識別子                                       |
 | DeviceTypeKey  | データ ウェアハウスにおけるデバイスの種類を示す一意識別子 - 代理キー |
@@ -322,7 +323,7 @@ ms.locfileid: "86461999"
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
 **EnrollmentActivity** エンティティは、デバイス登録のアクティビティを示します。
 
-| プロパティ                      | Description                                                               |
+| プロパティ                      | [説明]                                                               |
 |-------------------------------|---------------------------------------------------------------------------|
 | dateKey                       | この登録アクティビティが記録された日付のキー。               |
 | deviceEnrollmentTypeKey       | 登録の種類のキー。                                        |
@@ -479,7 +480,7 @@ ms.locfileid: "86461999"
 > [!Note]  
 > アプリ インスタンスが一日に複数回チェックインするとき、データ ウェアハウスは単一チェックインとしてそれを保存します。
 
-| プロパティ | Description | 例 |
+| プロパティ | 説明 | 例 |
 |---------|------------|--------|
 | DateKey |MAM アプリ チェックインがデータ ウェアハウスに記録されたときの日付キー。 | 20160703 |
 | ApplicationInstanceKey |この MAM アプリ チェックインに関連付けられているアプリ インスタンスのキー。 | 123 |
@@ -493,7 +494,7 @@ ms.locfileid: "86461999"
 
 **MamDeviceHealth** エンティティは、モバイル アプリケーション管理 (MAM) ポリシーが展開されているデバイスを表します。脱獄されているものも含まれます。
 
-| プロパティ | Description | 例 |
+| プロパティ | 説明 | 例 |
 |---------|------------|--------|
 | DeviceHealthKey |データ ウェアハウスにおけるデバイスとそれに関連付けられている正常性を示す一意識別子 - 代理キー。 |123 |
 | DeviceHealth |デバイスとそれに関連付けられている正常性を示す一意識別子 - DeviceHealthKey に似ていますが、この識別子はナチュラル キーです。 |b66bc706-ffff-7777-0340-032819502773 |
@@ -505,7 +506,7 @@ ms.locfileid: "86461999"
 **MamPlatform** エンティティは、モバイル アプリケーション管理 (MAM) アプリがインストールされたプラットフォームの名前と種類を一覧表示します。
 
 
-|          プロパティ          |                                    Description                                    |                         例                         |
+|          プロパティ          |                                    説明                                    |                         例                         |
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        PlatformKey         |     データ ウェアハウスにおけるプラットフォームを示す一意識別子 - 代理キー。      |                           123                           |
 |          プラットフォーム          | プラットフォームを示す一意識別子 - PlatformKey に似ていますが、ナチュラル キーです。 |                           123                           |
@@ -540,7 +541,7 @@ ms.locfileid: "86461999"
 ## <a name="managementstates"></a>managementStates
 **ManagementState** エンティティは、デバイスの状態に関する詳細を提供します。 リモート アクションが適用され、デバイスが脱獄またはルート化されているとき、詳細が役立ちます。
 
-|       プロパティ      |                                     Description                                    |
+|       プロパティ      |                                     [説明]                                    |
 |---------------------|------------------------------------------------------------------------------------|
 | managementStateID   | 管理状態を示す一意識別子。                                       |
 | managementStateKey  | データ ウェアハウスにおける管理状態を示す一意識別子 - 代理キー。 |
@@ -575,7 +576,7 @@ MobileAppInstallState エンティティは、デバイス、ユーザー、ま�
 ## <a name="mobileappinstallstatuscounts"></a>mobileAppInstallStatusCounts
 Microsoft Intune によるモバイル アプリケーション管理を使用している特定のターゲット デバイスの種類に対するモバイル アプリのインストール状態を表します。
 
-|      プロパティ      |                                                          Description                                                          |
+|      プロパティ      |                                                          [説明]                                                          |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | DateKey            | アプリのインストール状態が記録されたときの日付のキー。                                                                     |
 | AppKey             | AppRevision のインスタンスの識別に使用する、モバイル アプリのキー。                                                          |

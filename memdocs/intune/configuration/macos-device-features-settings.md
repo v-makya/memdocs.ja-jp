@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/15/2020
+ms.date: 08/20/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91bf09a122031b7186840bc17cd44cc5738b2ffe
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093546"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819662"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune での macOS デバイスの機能設定
 
@@ -267,6 +267,15 @@ Intune では、次のことができます。
 - **[SSO アプリ拡張機能の種類]** : SSO アプリ拡張機能の種類を選択します。 次のようなオプションがあります。
 
   - **[未構成]** :アプリの拡張機能は使用されません。 アプリの拡張機能を無効にするには、SSO アプリの拡張機能の種類を **[未構成]** に切り替えます。
+  - **Microsoft Azure AD**:リダイレクト型 SSO アプリ拡張機能である Microsoft Enterprise SSO プラグインが使用されます。 このプラグインにより、[Apple の Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) 機能をサポートするすべての macOS アプリケーションで Active Directory アカウントに対する SSO が提供されます。 この SSO アプリ拡張機能の種類を使用して、Azure AD を使用して認証する Microsoft アプリ、組織アプリ、Web サイトで SSO を有効にします。
+
+    SSO プラグインは、高度な認証ブローカーとして機能し、セキュリティとユーザー エクスペリエンスの向上を提供します。
+
+    > [!IMPORTANT]
+    > Microsoft Azure AD SSO アプリ拡張機能の種類で SSO を実現するには、macOS ポータル サイト アプリをデバイスにインストールします。 ポータル サイト アプリにより、Microsoft Enterprise SSO プラグインがデバイスに提供されます。 MDM SSO アプリ拡張機能の設定によって、プラグインがアクティブ化されます。 ポータル サイト アプリと SSO アプリ拡張機能プロファイルがデバイスにインストールされた後は、ユーザーは自分の資格情報でサインインし、デバイスでセッションを作成する必要があります。 このセッションはさまざまなアプリケーションで使用され、ユーザーは認証を再度行う必要がありません。
+    >
+    > ポータル サイト アプリの詳細については、「[ポータル サイト アプリをインストールし、Intune に macOS デバイスを登録するとどうなるか](../user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md)」を参照してください。 ポータル サイト アプリを[ダウンロード](https://go.microsoft.com/fwlink/?linkid=853070)してください。
+
   - **[リダイレクト]** : 最新の認証フローで SSO を使用するには、汎用のカスタマイズ可能なリダイレクト アプリ拡張機能を使用します。 組織のアプリ拡張機能の拡張機能 ID とチーム ID を確認しておきます。
   - **[資格情報]** : 汎用のカスタマイズ可能な資格情報アプリ拡張機能を使用し、チャレンジと応答の認証フローで SSO を使用します。 組織の SSO アプリ拡張機能の拡張機能 ID とチーム ID を確認しておきます。  
   - **Kerberos**: macOS Catalina 10.15 以降に含まれる Apple の組み込みの Kerberos 拡張機能を使用します。 このオプションは、 **[資格情報]** アプリ拡張機能の Kerberos 固有のバージョンです。
@@ -274,14 +283,14 @@ Intune では、次のことができます。
   > [!TIP]
   > **[リダイレクト]** と **[資格情報]** の種類の場合、拡張機能を通過させる自分の構成値を追加します。 **[資格情報]** を使用する場合は、Apple から提供されている組み込みの構成設定を **[Kerberos]** の種類で使用することを検討してください。
 
-- **[拡張機能 ID]** (リダイレクトと資格情報): SSO アプリの拡張機能を識別するバンドル識別子 (`com.apple.ssoexample` など) を入力します。
-- **[チーム ID]** (リダイレクトと資格情報): SSO アプリ拡張機能のチーム ID を入力します。 チーム識別子は、`ABCDE12345` など、Apple によって生成される 10 文字の英数字 (数字と文字) の文字列です。 
+- **[拡張機能 ID]** (リダイレクト、資格情報): SSO アプリの拡張機能を識別するバンドル識別子 (`com.apple.ssoexample` など) を入力します。
+- **[チーム ID]** (リダイレクト、資格情報): SSO アプリ拡張機能のチーム ID を入力します。 チーム識別子は、`ABCDE12345` など、Apple によって生成される 10 文字の英数字 (数字と文字) の文字列です。 
 
   詳細については、「[チーム ID を確認する](https://help.apple.com/developer-account/#/dev55c3c710c)」(Apple の Web サイトが開きます) を参照してください。
 
-- **[領域]** (資格情報と Kerberos): 認証領域の名前を入力します。 領域名は、`CONTOSO.COM` のように大文字で指定する必要があります。 通常、領域名は DNS ドメイン名と同じですが、すべて大文字で指定します。
+- **[領域]** (資格情報、Kerberos): 認証領域の名前を入力します。 領域名は、`CONTOSO.COM` のように大文字で指定する必要があります。 通常、領域名は DNS ドメイン名と同じですが、すべて大文字で指定します。
 
-- **[ドメイン]** (資格情報と Kerberos): SSO を介して認証できるサイトのドメイン名またはホスト名を入力します。 たとえば、Web サイトが `mysite.contoso.com` の場合、`mysite` はホスト名、`contoso.com` はドメイン名です。 ユーザーがこれらのサイトのいずれかに接続すると、アプリ拡張機能によって認証チャレンジが処理されます。 この認証により、ユーザーは Face ID、Touch ID、または Apple ピンコードおよびパスコードを使用してサインインできます。
+- **[ドメイン]** (資格情報、Kerberos): SSO を介して認証できるサイトのドメイン名またはホスト名を入力します。 たとえば、Web サイトが `mysite.contoso.com` の場合、`mysite` はホスト名、`contoso.com` はドメイン名です。 ユーザーがこれらのサイトのいずれかに接続すると、アプリ拡張機能によって認証チャレンジが処理されます。 この認証により、ユーザーは Face ID、Touch ID、または Apple ピンコードおよびパスコードを使用してサインインできます。
 
   - シングル サインオンアプリ拡張機能の Intune プロファイルのすべてのドメインは一意である必要があります。 さまざまな種類の SSO アプリ拡張機能を使用している場合でも、サインオン アプリ拡張機能のプロファイルでドメインを繰り返し指定することはできません。
   - これらのドメインでは大文字と小文字が区別されません。
@@ -291,7 +300,7 @@ Intune では、次のことができます。
   - Intune シングル サインオン アプリ拡張機能プロファイル内のすべての URL は一意である必要があります。 さまざまな種類の SSO アプリ拡張機能を使用している場合でも、SSO アプリ拡張機能のプロファイルでドメインを繰り返し指定することはできません。
   - URL は、`http://` または `https://` で始まる必要があります。
 
-- **[追加の構成]** (リダイレクトと資格情報): SSO アプリ拡張機能に渡す追加の拡張機能固有のデータを入力します。
+- **[追加の構成]** (Microsoft Azure AD、リダイレクト、資格情報):SSO アプリ拡張機能に渡す追加の拡張機能固有のデータを入力します。
   - **キー**:追加する項目の名前 (`user name` など) を入力します。
   - **種類**:データの種類を入力します。 次のようなオプションがあります。
 
@@ -331,7 +340,13 @@ Intune では、次のことができます。
 - **[Active Directory サイト コード]** (Kerberos のみ): Kerberos 拡張機能が使用する Active Directory サイトの名前を入力します。 Kerberos 拡張機能によって Active Directory サイト コードが自動的に検出される可能性があるため、この値を変更する必要がない場合があります。
 - **[キャッシュ名]** (Kerberos のみ): Kerberos キャッシュの汎用セキュリティ サービス (GSS) 名を入力します。 多くの場合、この値を設定する必要はありません。  
 - **[パスワード要件のメッセージ]** (Kerberos のみ): ユーザーに表示される組織のパスワード要件のテキスト バージョンを入力します。 このメッセージは、Active Directory のパスワードの複雑さの要件を必須にしない場合、またはパスワードの最小文字数を入力しない場合に表示されます。  
-- **[アプリ バンドル ID]** (Kerberos のみ): デバイスでシングル サインオンを使用するアプリ バンドル ID を **[追加]** します。 これらのアプリには、Kerberos チケット保証チケットと認証チケットへのアクセスが許可されます。 また、アプリでは、アクセスする権限があるサービスに対するユーザーの認証も行います。
+- **[共有デバイス モードを有効にする]** (Microsoft Azure AD のみ): Azure AD の共有デバイス モード機能用に構成された macOS デバイスに Microsoft Enterprise SSO プラグインをデプロイする場合は、 **[はい]** を選択します。 共有モードのデバイスでは、多くのユーザーが、共有デバイス モードをサポートしているアプリケーションにグローバルにサインインおよびサインアウトすることができます。 **[未構成]** に設定すると、Intune では、この設定は変更または更新されません。 
+
+  **[はい]** に設定すると、既存のすべてのユーザー アカウントがデバイスからワイプされます。 データの損失を避けるため、または出荷時の設定にリセットされないよう、この設定によってデバイスがどのように変更されるかを理解してください。
+
+  共有デバイスモードの詳細については、「[共有デバイス モードの概要](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices)」を参照してください。
+
+- **[アプリ バンドル ID]** (Microsoft Azure AD、Kerberos): デバイスでシングル サインオンを使用するアプリ バンドル ID を **[追加]** します。 これらのアプリには、Kerberos チケット保証チケットと認証チケットへのアクセスが許可されます。 また、アプリでは、アクセスする権限があるサービスに対するユーザーの認証も行います。
 - **[ドメイン領域マッピング]** (Kerberos のみ): 領域にマップするドメインの DNS サフィックスを **[追加]** します。 ホストの DNS 名が領域名と一致しない場合、この設定を使用します。 ほとんどの場合、このカスタム ドメインから領域へのマッピングを作成する必要はありません。
 - **[PKINIT 証明書]** (Kerberos のみ): Kerberos 認証に使用できる Public Key Cryptography for Initial Authentication (PKINIT) 証明書を **[選択]** します。 Intune で追加した [PKCS](../protect/certficates-pfx-configure.md) または [SCEP](../protect/certificates-scep-configure.md) 証明書から選択できます。 証明書の詳細については、「[Microsoft Intune で認証に証明書を使用する](../protect/certificates-configure.md)」を参照してください。
 

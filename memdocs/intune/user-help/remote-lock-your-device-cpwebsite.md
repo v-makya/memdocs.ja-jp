@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9d932fffa7381cca26699bb37e10783bcd7803dd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 57d4cc3889c60f9b62d0bb0617731b9ab0058f4c
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880932"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820648"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>ポータル サイト Web サイトからデバイスをリモートでロックする
 
@@ -35,9 +35,7 @@ ms.locfileid: "83880932"
 * Android
 * iOS
 * macOS
-* Windows 10
-* Windows 10 Mobile (デバイスにパスコードが設定されている場合)
-* Windows Phone 8.1 (デバイスにパスコードが設定されている場合)  
+* Windows 10  
 
 1. [ポータル サイト Web サイト](https://portal.manage.microsoft.com)で、 __[メニュー]__ ボタン、 __[デバイス]__ の順に選択します。  
 
@@ -53,6 +51,8 @@ ms.locfileid: "83880932"
 
 4. デバイスをロックしていることを警告するメッセージが表示されます。 **[リモート ロック]** をタップして確定します。
 
+## <a name="check-the-status-of-remote-lock"></a>リモート ロックの状態を確認する
+
 確定後、ポータル サイトでは、デバイスのロックが試行されます。 この間、"リモート ロック保留中" というメッセージが表示されます。 デバイスがロックされると、状態が "リモート ロック成功" になります。  
 
 リモート ロックの状態は次の 3 つの場所に表示されます。
@@ -66,4 +66,6 @@ ms.locfileid: "83880932"
 
 デバイスが見つかった場合は、パスコードを入力するだけでリモート ロックしたデバイスのロックを解除できます。  
 
-サポートが必要な場合は、 社内サポートに問い合わせてください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。
+## <a name="next-steps"></a>次のステップ
+
+ご不明な点がある場合やサポートが必要な場合は、 IT サポート担当者にお問い合わせください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。  

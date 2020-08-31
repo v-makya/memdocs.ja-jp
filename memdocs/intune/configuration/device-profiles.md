@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune のデバイスの機能と設定 - Azure | Microsoft Docs
-description: さまざまな Microsoft Intune デバイス プロファイルの概要。 機能、制限事項、電子メール、WiFi、VPN、教育、証明書、Windows 10 のアップグレード、BitLocker と Microsoft Defender、Windows Information Protection、管理用テンプレート、および Microsoft Endpoint Manager admin center のカスタム デバイス構成設定に関する情報が得られます。 これらのプロファイルを使用して、社内のデータとデバイスを管理および保護します。
+description: さまざまな Microsoft Intune デバイス プロファイルの概要。 GPO、機能、制限事項、電子メール、WiFi、VPN、教育、証明書、Windows 10 のアップグレード、BitLocker と Microsoft Defender、Windows Information Protection、管理用テンプレート、および Microsoft Endpoint Manager admin center のカスタム デバイス構成設定に関する情報が得られます。 これらのプロファイルを使用して、社内のデータとデバイスを管理および保護します。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 08/20/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43101602defab75c15c542ec922cba6f2bf96cf0
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146322"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820495"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune でデバイス プロファイルを使用してデバイスに機能と設定を適用する
 
@@ -41,9 +41,7 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 
 ## <a name="administrative-templates"></a>管理用テンプレート
 
-[管理用テンプレート](administrative-templates-windows.md)には数百の設定が含まれており、これらを Internet Explorer、Microsoft Edge、OneDrive、リモート デスクトップ、Word、Excel、その他の Office プログラム用に構成することができます。
-
-これらのテンプレートでは、管理者にグループ ポリシーと同様の設定の簡易ビューが提供されますが、それらは 100% クラウドベースです。
+[管理用テンプレート](administrative-templates-windows.md)には数百の設定が含まれており、これらを Internet Explorer、Microsoft Edge、OneDrive、リモート デスクトップ、Word、Excel、その他の Office プログラム用に構成することができます。 これらのテンプレートでは、管理者にグループ ポリシーと同様の設定の簡易ビューが提供されますが、それらは 100% クラウドベースです。
 
 この機能では以下をサポートします。
 

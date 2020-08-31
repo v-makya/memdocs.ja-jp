@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2020
+ms.date: 08/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26b3af529fddb2c6d3515a365be9e8204fe02312
-ms.sourcegitcommit: c1afc8abd0d7da48815bd2b0e45147774c72c2df
+ms.openlocfilehash: 29ce01f9544db19757f58695eae624b2ac25995b
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87815448"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819917"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune で iOS および iPadOS デバイスに対する VPN 設定を構成する
 
@@ -50,6 +50,7 @@ Microsoft Intune には、ご利用の iOS/iPadOS デバイスに展開できる
 - **Citrix VPN**
 - **Citrix SSO**
 - **Zscaler**:条件付きアクセスを使用する、またはユーザーが Zscaler サインイン画面をバイパスできるようにするには、Zscaler Private Access (ZPA) をご使用の Azure AD アカウントと統合する必要があります。 詳しい手順については、[Zscaler ドキュメント](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad)をご覧ください。
+- **NetMotion Mobility**
 - **IKEv2**: [IKEv2 設定](#ikev2-settings) (この記事内) でそのプロパティについて説明します。
 - **Custom VPN**
 
@@ -104,7 +105,7 @@ Microsoft Intune には、ご利用の iOS/iPadOS デバイスに展開できる
 
   - この設定を削除するには、プロファイルを再作成し、 **[同意する]** は選択しないでください。 次に、プロファイルを再割り当てします。
 
-## <a name="ikev2-settings"></a>IKEv2 設定
+### <a name="ikev2-settings"></a>IKEv2 設定
 
 これらの設定は、 **[接続の種類]**  >  **[IKEv2]** を選択した場合に適用されます。
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/20/2020
+ms.date: 08/24/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,18 @@ ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5259fe84b11ce5d1ec4a3110dcbc188afb2e6d3e
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 000ee384ff289b9511b2dde3b1468525ffed63d4
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565684"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820002"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Microsoft Intune でユーザーおよびデバイス プロファイルを割り当てる
 
-プロファイルを作成します。そこには入力したすべての設定が含まれます。 次の手順では、自分の Azure Active Directory (Azure AD) のユーザーまたはデバイス グループへのプロファイルの展開または "割り当て" を行います。 これが割り当てられると、ユーザーとデバイスでお客様のプロファイルを受け取り、入力した設定が適用されます。
+プロファイルを作成します。そこには入力したすべての設定が含まれます。 次の手順では、ユーザーまたはデバイス グループへのプロファイルの展開または "割り当て" を行います。 これが割り当てられると、ユーザーとデバイスでお客様のプロファイルを受け取り、入力した設定が適用されます。
 
 この記事では、プロファイルを割り当てる方法を示し、プロファイルでのスコープのタグの使用についての情報が含まれます。
 
@@ -39,27 +39,22 @@ ms.locfileid: "86565684"
 
 ## <a name="before-you-begin"></a>始める前に
 
-プロファイルを割り当てるための適切なロールを持っていることを確認してください。 詳細については、「[Microsoft Intune でのロールベースのアクセス制御 (RBAC)](../fundamentals/role-based-access-control.md)」を参照してください。
+プロファイルを割り当てるための正しいロールを持っていることを確認してください。 詳細については、「[Microsoft Intune でのロールベースのアクセス制御 (RBAC)](../fundamentals/role-based-access-control.md)」を参照してください。
 
 ## <a name="assign-a-device-profile"></a>デバイス プロファイルを割り当てる
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 2. **[デバイス]**  >  **[構成プロファイル]** の順に選択します。 プロファイルがすべて一覧表示されます。
-3. 割り当てるプロファイルを選択して、 **[割り当て]** を選択します。
-4. グループを**含める**か**除外する**かを選んでから、自分のグループを選択します。 グループを選択するときに、Azure AD グループを選択します。 複数のグループを選択する場合は、**Ctrl** キーを押しながら自分のグループを選択します。
+3. 割り当てるプロファイルを選択して、 **[プロパティ]**  >  **[割り当て]**  >  **[編集]** を選択します。
 
-    :::image type="content" source="./media/device-profile-assign/group-include-exclude.png" alt-text="Microsoft Intune で、プロファイル割り当てにグループを含める、またはグループを除外するオプションのスクリーンショット":::
+    :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Microsoft Intune とエンドポイント マネージャーでユーザーとグループにプロファイルを展開するには、[割り当て] を選択する。":::
 
-5. 変更内容を**保存**します。
+4. **[組み込まれたグループ]** または **[除外されたグループ]** を選択した後、 **[含めるグループを選択]** を選択します。 グループを選択するときに、Azure AD グループを選択します。 複数のグループを選択する場合は、**Ctrl** キーを押しながら自分のグループを選択します。
 
-### <a name="evaluate-how-many-users-are-targeted"></a>対象となるユーザー数を評価する
+    :::image type="content" source="./media/device-profile-assign/select-included-excluded-groups-profile-assignment.png" alt-text="Microsoft Intune およびエンドポイント マネージャーでプロファイルの割り当てまたは展開を行うときに、ユーザーとグループを含めたり除外したりする。":::
 
-プロファイルを割り当てるときに、影響を受けるユーザー数を**評価**することもできます。 この機能によってユーザーが計算されます。デバイスは計算されません。
-
-1. 管理センターで、 **[デバイス]**  >  **[構成プロファイル]** の順に選択します。
-2. プロファイル > **[割り当て]**  >  **[評価]** を選択します。 このプロファイルの対象となるユーザー数を示すメッセージが表示されます。
-
-**[評価]** ボタンが灰色表示されている場合は、プロファイルが 1 つまたは複数のグループに割り当てられていることを確認してください。
+5. **[確認と保存]** を選択します。 このステップでは、プロファイルは割り当てられません。
+6. **[保存]** を選びます。 保存した時点で、プロファイルが割り当てられます。 デバイスが Intune サービスにチェックインされると、グループはプロファイル設定を受け取ります。
 
 ## <a name="use-scope-tags-or-applicability-rules"></a>スコープのタグまたは適用性ルールを使用する
 

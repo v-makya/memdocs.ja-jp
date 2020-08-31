@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/24/2018
+ms.date: 08/20/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5346a288a8411a66ab79b0816385a530eeabb8c2
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: ba2f9d2e3f9e89d37b1dc8361cd80451155a6869
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881854"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88820682"
 ---
 # <a name="sync-your-windows-device-manually"></a>Windows デバイスを手動で同期する
 
@@ -36,8 +36,6 @@ Intune では、ポータル サイト アプリから、デスクトップ タ�
 
 * [Windows 10 デスクトップ](#windows-10-desktop)  
 * [Microsoft HoloLens](#microsoft-hololens)   
-* [Windows 10 Mobile](#windows-10-mobile)  
-* [Windows Phone 8.1](#windows-phone-81)    
 
 ## <a name="sync-directly-from-company-portal-app-for-windows"></a>Windows 用 Intune ポータル サイト アプリから直接同期する
 Creators Update (バージョン 1709) 以降を実行する Windows 10 デバイスを手動で同期するには、次の手順のようにします。
@@ -57,12 +55,12 @@ Creators Update (バージョン 1709) 以降を実行する Windows 10 デバ�
 1. タスク バーまたはスタート メニューでポータル サイトのアプリ アイコンを見つけます。  
 2. アプリ アイコンを右クリックし、メニュー (ジャンプ リストとも呼ばれています) を表示します。  
 
-    ![デバイスのデスクトップ上の Windows タスク バーのスクリーンショット。 ポータル サイトのアプリ アイコンをクリックすると、メニューにオプションの [タスク バーにピン留め]、[ウィンドウを閉じる]、[このデバイスを同期] アクションが表示されます。](./media/sync-device-from-start-menu-1807.png)  
+    ![デバイスのデスクトップ上の Windows タスク バーのスクリーンショット。 ポータル サイトのアプリ アイコンが選択されると、メニューにオプションの [タスク バーにピン留め]、[ウィンドウを閉じる]、[このデバイスを同期] アクションが表示されます。](./media/sync-device-from-start-menu-1807.png)  
 
 3. **[このデバイスを同期]** を選択します。 ポータル サイト アプリが開き、 **[設定]** ページが表示され、同期が開始されます。  
 
 ## <a name="sync-from-settings-app"></a>設定アプリから同期する 
-Microsoft HoloLens、Windows 10 Desktop、Windows 10 Mobile、または Windows Phone 8.1 のデバイスを設定アプリから手動で同期するには、次の手順のようにします。  
+設定アプリから Microsoft HoloLens と Windows 10 デスクトップ デバイスを手動で同期するには、次の手順を実行します。  
 
 ### <a name="windows-10-desktop"></a>Windows 10 Desktop
 1. お使いのデバイスで、 **[スタート]**  >  **[設定]** を選びます。
@@ -81,23 +79,36 @@ Microsoft HoloLens、Windows 10 Desktop、Windows 10 Mobile、または Windows 
 
     ![アカウントの種類として職場のアクセスを選択する](./media/win10pc-sync-3-work-access.png)
 
-#### <a name="access-work-or-school-steps"></a>[職場または学校にアクセスする] の手順
+### <a name="microsoft-hololens"></a>Microsoft HoloLens  
+以下の手順は、Windows 10 Anniversary Update (RS1 とも呼ばれます) を実行する HoloLens デバイスに適用されます。  
 
-1. **[職場または学校にアクセスする]** をクリックします。
+1. デバイスで設定アプリを開きます。  
+
+2. **[アカウント]**  >  **[職場のアクセス]** を選びます。  
+
+    ![アカウント リンクが強調表示された HoloLens 設定アプリのスクリーンショット](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
+
+3. 接続されたアカウントの **[同期]** を選びます。  
+
+    ![[同期] ボタンが強調表示された HoloLens 設定アプリのスクリーンショット](./media/RS1_holoLens_SyncRS1_Sync_08.png)   
+
+#### <a name="access-work-or-school-steps"></a>[職場または学校にアクセスする] の手順  
+
+1. **[職場または学校にアクセスする]** を選択します。
 
     ![[職場または学校にアクセスする] オプションを示すスクリーンショット](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-2. 横にブリーフケース アイコンが表示されたアカウントを選びます。 このアカウントがまったく表示されない場合は、会社での設定の構成方法が異なる可能性があります。 代わりに、横に Microsoft ロゴが表示されたアカウントをクリックします。
+2. 横にブリーフケース アイコンが表示されたアカウントを選びます。 このアカウントがまったく表示されない場合は、会社での設定の構成方法が異なる可能性があります。 代わりに、横に Microsoft ロゴが表示されたアカウントを選択します。
 
      ![ブリーフケースまたは Microsoft のロゴの横にあるアカウント名を選択する](./media/win10pc-rs1-sync-info-button.png)
 
-3. **[情報]** をクリックします。 
+3. **[情報]** を選択します。 
 
-4. **[同期]** をクリックします。 
+4. **[同期]** を選択します。 
 
 #### <a name="work-access-steps"></a>[職場のアクセス] の手順
 
-1. **[職場のアクセス]** をクリックします。
+1. **[職場のアクセス]** を選びます。
 
     ![アカウントの種類として職場のアクセスを選択する](./media/win10pc-sync-3-work-access.png)
 
@@ -105,49 +116,10 @@ Microsoft HoloLens、Windows 10 Desktop、Windows 10 Mobile、または Windows 
 
     ![デバイス管理の会社名の選択](./media/win10pc-sync-4-tap-com-name.png)
 
-3. **[同期]** をクリックします。同期が完了するまで、ボタンは無効のままです。
+3. **[同期]** を選択します。同期が完了するまで、ボタンは無効のままです。
 
     ![[同期] ボタンの選択](./media/win10pc-sync-5-tap-sync.png)  
-
-
-### <a name="windows-10-mobile"></a>Windows 10 Mobile
-
-   1. お使いのデバイスで、 **[すべてのアプリ]**  >  **[設定]**  >  **[アカウント]** の順に移動します。
-
-       ![[設定] 画面の [アカウント] の選択](./media/win10m-sync-1-settings-accounts.png)
-
-   2. **[職場のアクセス]** を選びます。
-
-       ![アカウントの種類として職場のアクセスを選択する](./media/win10m-sync-2-work-access.png)
-
-   3. **[デバイス管理に登録する]** で、会社名を選びます。
-
-       ![デバイス管理の会社名の選択](./media/win10m-sync-3-tap-comp-name.png)
-
-   4. **[同期]** アイコンを選びます。 同期が完了するまで、ボタンは無効のままです。
-
-       ![[同期] アイコンの選択](./media/win10m-sync-4-tap-sync.png)  
-### <a name="microsoft-hololens"></a>Microsoft HoloLens  
-以下の手順は、Windows 10 Anniversary Update (RS1 とも呼ばれます) を実行する HoloLens デバイスに適用されます。 
-1. デバイスで設定アプリを開きます。  
-
-2. **[アカウント]**  >  **[職場のアクセス]** を選びます。  
-    ![アカウント リンクが強調表示された HoloLens 設定アプリのスクリーンショット](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
-
-3. 接続されたアカウントの **[同期]** を選びます。![[同期] ボタンが強調表示された HoloLens 設定アプリのスクリーンショット](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
-
-### <a name="windows-phone-81"></a>Windows Phone 8.1
-
-1. **[すべてのアプリ]**  >  **[設定]**  >  **[会社アカウント]** の順にタップします。
-
-    ![設定の一覧](./media/wp81-1-sync-settings-workplace.png)
-
-2. 会社の名前を選びます。
-
-    ![職場のアカウントの会社名の選択](./media/wp81-2-sync-tap-compname.png)
-
-3. **[同期]** アイコンを選びます。
-
-    ![[同期] アイコンの選択](./media/wp81-3-sync-tap-sync-button.png)
+    
+## <a name="next-steps"></a>次のステップ  
 
 サポートが必要な場合は、 社内サポートに問い合わせてください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。

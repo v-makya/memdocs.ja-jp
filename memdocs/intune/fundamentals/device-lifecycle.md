@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9580a5cb99192f81fc83f8d61119f5368f0a5ee
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 0c8d60a4a943ba2af9ea99f9eb887a9b77a49fcf
+ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088396"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88693507"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Microsoft Intune モバイル デバイス管理 (MDM) ライフサイクルの概要
 
@@ -36,7 +36,7 @@ ms.locfileid: "86088396"
 
 デバイスを登録することは、最初の手順にすぎません。 Intune で用意されているあらゆるサービスを利用し、デバイスがセキュリティで保護され企業の標準に準拠するように保証するには、さまざまなポリシーから選択することができます。 これにより、マネージド デバイスの動作のほぼすべての側面を構成できます。 たとえば、会社のデータが格納されているデバイスに対してユーザーはパスワードを使用する必要がありますか? パスワードを設定できます。 企業 Wi-Fi を備えていますか? 自動的に構成することができます。 使用できる構成オプションの種類を次に示します。
 
-- [**デバイス構成**](../configuration/device-profiles.md)。 このポリシーでは、管理するデバイスの機能を構成できます。 たとえば、Windows Phone でパスワードの使用を求めたり、iPhone でカメラの使用を無効にしたりすることが可能です。
+- [**デバイス構成**](../configuration/device-profiles.md)。 このポリシーでは、管理するデバイスの機能を構成できます。 たとえば、Android フォンでパスワードの使用を求めたり、iPhone でカメラの使用を無効にしたりすることが可能です。
 - [**会社のリソースへのアクセス**](../configuration/device-profiles.md)。 ユーザーが自分の個人用デバイスから自分の作業にアクセスできるようにする場合、これには課題が伴う場合があります。 たとえば、会社の電子メールへのアクセスを必要とするすべてのデバイスが正しく構成されていることを確認するにはどうしますか。 ユーザーが複雑な設定を知らなくても VPN 接続を使用して社内ネットワークにアクセスできるかどうかはどのように確認できますか? Intune では、共通の企業リソースにアクセスするように管理対象デバイスを自動的に構成することにより、この作業負荷を軽減することができます。
 - [**Windows PC の管理ポリシー (Intune クライアント ソフトウェアを使用)** ](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)。 Windows PC を Intune に登録するとほとんどのデバイス管理機能を利用できますが、Intune では引き続き Intune クライアント ソフトウェアによる Windows PC の管理をサポートします。 PC で実行できるタスクの一部について情報が必要な場合は、ここから始めてください。
 

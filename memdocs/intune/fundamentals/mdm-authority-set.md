@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e1ac5180a30959618f37d909511785b4de1c407
-ms.sourcegitcommit: 8fc7f2864c5e3f177e6657b684c5f208d6c2a1b4
+ms.openlocfilehash: 380e39406dcc0b5bd286605804e3aa3c52750dd1
+ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/19/2020
-ms.locfileid: "88591243"
+ms.locfileid: "88614738"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>モバイル デバイス管理機関の設定
 
@@ -38,7 +38,7 @@ ms.locfileid: "88591243"
 
 - **Basic Mobility and Security for Office 365** - この構成を有効にしている場合、MDM 機関は "Office 365" に設定されます。 Intune の使用を開始するには、Intune のライセンスを購入する必要があります。
 
-- **Basic Mobility and Security for Office 365 共存** - Basic Mobility and Security for Office 365 を既に使用している場合は自分のテナントに Intune を追加し、管理機関をユーザーごとに Intune または Basic Mobility and Security for Office 365 に設定し、その MDM 登録デバイスの管理に使用されるサービスを指示できます。 各ユーザーの管理機関は、ユーザーに割り当てられたライセンスに基づいて定義されます。ユーザーに Microsoft 365 Basic または Standard のライセンスのみが与えられている場合、そのデバイスは Basic Mobility and Security for Office 365 によって管理されます。 ユーザーが Intune の権利を与えるライセンスを所持している場合、そのユーザーのデバイスは Intune によって管理されます。 以前は Basic Mobility and Security for Office 365 によって管理されていたユーザーに、Intune の権利を与えるライセンスを追加すると、そのユーザーのデバイスは Intune の管理に切り替わります。 ユーザーを Intune に切り替える前に、Intune の構成をユーザーに割り当てて Basic Mobility and Security for Office 365 を置き換えるようにしてください。そうしないと、デバイスで Basic Mobility and Security for Office 365 の構成が失われ、Intune から置き換えとなるものが受信されません。
+- **Basic Mobility and Security for Office 365 との[共存](#coexistence)** - Basic Mobility and Security for Office 365 を既に使用している場合は自分のテナントに Intune を追加し、管理機関をユーザーごとに Intune または Basic Mobility and Security for Office 365 に設定し、その MDM 登録デバイスの管理に使用されるサービスを指示できます。 各ユーザーの管理機関は、ユーザーに割り当てられたライセンスに基づいて定義されます。ユーザーに Microsoft 365 Basic または Standard のライセンスのみが与えられている場合、そのデバイスは Basic Mobility and Security for Office 365 によって管理されます。 ユーザーが Intune の権利を与えるライセンスを所持している場合、そのユーザーのデバイスは Intune によって管理されます。 以前は Basic Mobility and Security for Office 365 によって管理されていたユーザーに、Intune の権利を与えるライセンスを追加すると、そのユーザーのデバイスは Intune の管理に切り替わります。 ユーザーを Intune に切り替える前に、Intune の構成をユーザーに割り当てて Basic Mobility and Security for Office 365 を置き換えるようにしてください。そうしないと、デバイスで Basic Mobility and Security for Office 365 の構成が失われ、Intune から置き換えとなるものが受信されません。
 
 ## <a name="set-mdm-authority-to-intune"></a>MDM 機関を Intune に設定する
 
@@ -85,9 +85,9 @@ Android または Apple デバイスの管理が有効になっていると、In
 ### <a name="preparation"></a>準備
 
 Basic Mobility and Security との共存を有効にする前に、次の点を考慮してください。
-- Intune で管理する予定のユーザーに対して、十分な Intune 対応のライセンスがあることを確認します。
-- Intune 対応のライセンスが割り当てられているユーザーを確認します。 共存を有効にした後、Intune 対応のライセンスが既に割り当てられているユーザーは自分のデバイスを Intune に切り替えることができます。 予期しないデバイス切り替えを回避するために、共存を有効にするまでは、Intune 対応のライセンスを割り当てないことをお勧めします。
-- Intune ポリシーを作成して展開することで、Office 365 Security & Compliance ポータルを通して最初に展開したデバイス セキュリティ ポリシーを置き換えます。 この置き換えは、Basic Mobility and Security から Intune に移行させる予定のすべてのユーザーに対しても行う必要があります。 それらのユーザーに Intune ポリシーが割り当てられていない場合、共存が有効にされると、彼らは Basic Mobility and Security の設定を失ってしまう可能性があります。 これらの設定は、マネージド電子メール プロファイルのように、置き換えないと失われます。
+- Intune で管理する予定のユーザーに対して、十分な [Intune ライセンス](licenses.md)があることを確認します。
+- Intune ライセンスが割り当てられているユーザーを確認します。 共存を有効にした後、Intune ライセンスが既に割り当てられているユーザーは自分のデバイスを Intune に切り替えることができます。 予期しないデバイス切り替えを回避するために、共存を有効にするまでは、Intune ライセンスを割り当てないことをお勧めします。
+- Intune ポリシーを作成して展開することで、Office 365 Security & Compliance ポータルを通して最初に展開したデバイス セキュリティ ポリシーを置き換えます。 この置き換えは、Basic Mobility and Security から Intune に移行させる予定のすべてのユーザーに対しても行う必要があります。 それらのユーザーに Intune ポリシーが割り当てられていない場合、共存が有効にされると、彼らは Basic Mobility and Security の設定を失ってしまう可能性があります。 これらの設定は、マネージド電子メール プロファイルのように、置き換えないと失われます。 デバイスのセキュリティ ポリシーを Intune ポリシーに置き換える場合でも、デバイスを Intune の管理に移動した後で、ユーザーはメール プロファイルの再認証を求められることがあります。
 
 ### <a name="add-intune-mdm-authority"></a>Intune MDM 機関を追加する
 
@@ -101,7 +101,7 @@ Basic Mobility and Security との共存を有効にする前に、次の点を�
 
 ### <a name="migrate-users-and-devices-optional"></a>ユーザーとデバイスの移行 (オプション)
 
-Intune MDM 機関が有効になると、共存がアクティブ化され、Intune を使用してユーザーの管理を開始できるようになります。 オプションとして、これまで Basic Mobility and Security で管理されていたデバイスを Intune による管理に移行したい場合は、該当するユーザーに Intune 対応のライセンスを割り当てます。 ユーザーのデバイスは、次回の MDM チェックイン時に Intune に切り替わります。 Basic Mobility and Security を通してこれらのデバイスに適用されていた設定は、もはや適用されなくなり、デバイスから削除されます。
+Intune MDM 機関が有効になると、共存がアクティブ化され、Intune を使用してユーザーの管理を開始できるようになります。 オプションとして、これまで Basic Mobility and Security で管理されていたデバイスを Intune による管理に移動する場合は、該当するユーザーに Intune ライセンスを割り当てます。 ユーザーのデバイスは、次回の MDM チェックイン時に Intune に切り替わります。 Basic Mobility and Security を通してこれらのデバイスに適用されていた設定は、もはや適用されなくなり、デバイスから削除されます。
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>MDM 証明書の有効期限が切れた後のモバイル デバイスのクリーンアップ
 

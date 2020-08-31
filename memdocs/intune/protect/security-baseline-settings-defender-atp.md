@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 8046318c55e2a9791f01fca4a5a54de3f1487782
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: d29240dcbcbbcd5a4399dbfb3648c2a6df47764c
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022189"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663431"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -110,6 +110,9 @@ Microsoft Edge を使用しているとき、ご利用の環境は Windows Defen
   この設定は、Windows Mobile および Mobile Enterprise SKU デバイスにのみ適用されます。
   - **はい** (*既定値*) - モバイル デバイスの場合は、ストレージ カードでの暗号化が必須です。
   - **未構成** - 設定は OS の既定値に戻されます。この場合、ストレージ カードの暗号化は必須ではありません。
+
+  > [!NOTE]
+  > [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) と [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) のサポートは、2020 年 8 月に終了しました。
 
 - **OS および固定データ ドライブのディスク全体の暗号化を有効にする**  
   CSP:[RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)

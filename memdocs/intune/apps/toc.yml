@@ -53,11 +53,11 @@
               href: windows-store-for-business.md
             - name: 管理対象の Google Play アプリ
               href: apps-add-android-for-work.md
-        - name: Office 365 スイート
+        - name: Microsoft 365 スイート
           items:
-            - name: Windows 10 用の Office 365 アプリ
+            - name: Windows 10 用の Microsoft 365 アプリ
               href: apps-add-office365.md
-            - name: macOS 用の Office 365 アプリ
+            - name: macOS 用の Microsoft 365 アプリ
               href: apps-add-office365-macos.md
         - name: Android エンタープライズ システム アプリ
           href: apps-ae-system.md

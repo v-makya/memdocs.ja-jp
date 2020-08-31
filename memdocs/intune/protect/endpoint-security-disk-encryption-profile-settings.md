@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 3760aa9820495db6c2460bf2e6d2e9a08d705a10
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 37e9f68951c3576393e6ed3eb3346847029736c4
+ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462033"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88663210"
 ---
 # <a name="disk-encryption-policy-settings-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティのディスク暗号化ポリシー設定
 
@@ -92,6 +92,9 @@ ms.locfileid: "86462033"
   この設定は、Windows Mobile および Mobile Enterprise SKU デバイスにのみ適用されます。
   - **[未構成]** ("*既定値*") - この設定は OS の既定値に戻されます。この場合、メモリ カードの暗号化は要求されません。
   - **[はい]** - モバイル デバイスでは、メモリ カードでの暗号化が必要です。
+
+  > [!NOTE]
+  > [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) と [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) のサポートは、2020 年 8 月に終了しました。
 
 - **[Hide prompt about third-party encryption]\(サードパーティの暗号化に関するプロンプトを非表示にする\)**  
   CSP:[AllowWarningForOtherDiskEncryption](https://go.microsoft.com/fwlink/?linkid=872525)
