@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: d23880def99fd12bffe83efffe9768f94481d07e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904815"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993558"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Configuration Manager のバージョン 1610 の新機能
 
@@ -183,9 +183,9 @@ Configuration Manager コンソールで Office 365 クライアント管理ダ�
 - Office 365 クライアントの数
 - Office 365 クライアントのバージョン
 - Office 365 クライアントの言語
-- Office 365 クライアントのチャネル     
+- Office 365 クライアントのチャネル
 
-詳細については、[Office 365 ProPlus の更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md)に関するページを参照してください。
+詳細については、[Microsoft 365 Apps 更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md)に関する記事をご覧ください。
 
 ## <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>BIOS からUEFI への変換を管理するためのタスク シーケンス手順
 **コンピューターの再起動**のステップで、UEFI に移行するためにハード ドライブに FAT32 パーティションを準備するため、新しい変数 TSUEFIDrive を使用して、オペレーティング システムの展開タスク シーケンスをカスタマイズできるようになりました。 次の手順では、タスク シーケンスのステップを作成して BIOS からUEFI への変換のためにハード ドライブを準備する方法の例を示します。 詳細については、「[BIOS から UEFI への変換を管理するためのタスク シーケンス手順](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)」を参照してください。

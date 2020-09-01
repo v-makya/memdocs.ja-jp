@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bc848cd1f6365b5a94c915a00517ca0a4abb8e4a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694374"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995315"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Configuration Manager Technical Preview バージョン 1807 の機能 
 
@@ -42,14 +42,14 @@ Steps to workaround, if any.
 
 ## <a name="known-issues"></a>既知の問題 
 
-### <a name="issues-with-office-365-software-updates"></a><a name="ki_o365"></a> Office 365 のソフトウェア更新プログラムに関する問題
+### <a name="issues-with-microsoft-365-software-updates"></a><a name="ki_o365"></a> Microsoft 365 のソフトウェア更新プログラムに関する問題
 <!--521365-->
-Technical Preview Branch バージョン 1806 および 1806.2 を使用して Office 365 の更新プログラムを管理すると、クライアントでのインストールが失敗する可能性があります。 
+Technical Preview Branch バージョン 1806 および 1806.2 を使用して Microsoft 365 の更新プログラムを管理する場合、クライアントでのインストールが失敗する可能性があります。 
 
 #### <a name="workaround"></a>回避策
-- Office 365 の既存の展開パッケージとソフトウェア更新プログラム グループを削除します。  
+- Microsoft 365 の既存の展開パッケージとソフトウェア更新プログラム グループを削除します。  
 
-- 2018 年 7 月 31 日以降は、Office 365 のソフトウェア更新プログラムを同期し、最新の更新プログラムのみを展開します。  
+- 2018 年 7 月 31 日以降は、Microsoft 365 のソフトウェア更新プログラムを同期し、最新の更新プログラムのみを展開します。  
 
 
 

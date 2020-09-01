@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9a54ee5fb427f276ec755e748513b178d0c026ab
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 334397cfa52c90694823107c2144bfbbcbd509ac
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698573"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993626"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Configuration Manager のバージョン 1602 の新機能
 
@@ -98,8 +98,8 @@ Configuration Manager の更新プログラム 1602 は、以前にインスト�
 
 ## <a name="software-updates"></a>ソフトウェア更新プログラム  
 
-### <a name="manage-office-365-client-updates"></a>Office 365 のクライアント更新プログラムの管理  
- Configuration Manager では、ソフトウェア更新プログラムの管理ワークフローを使用して、Office 365 のクライアント更新プログラムを管理できます。 詳細については、[Configuration Manager での Office 365 ProPlus の更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md)に関する記事を参照してください。  
+### <a name="manage-microsoft-365-client-updates"></a>Microsoft 365 のクライアント更新プログラムを管理する  
+ Configuration Manager では、ソフトウェア更新プログラムの管理ワークフローを使用して、Microsoft 365 のクライアント更新プログラムを管理できます。 詳細については、[Configuration Manager での Office 365 アプリの更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md)に関する記事をご覧ください。  
 
 ## <a name="compliance-settings"></a>コンプライアンス設定  
 
@@ -119,7 +119,7 @@ Configuration Manager の更新プログラム 1602 は、以前にインスト�
 
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>デバイスの正常性に基づいてアクセスを制限する  
- 正常性構成証明サービスで報告されるデバイスの正常性に基づいて、電子メールおよび Office 365 サービスへのアクセスを制限できるようになりました。 さらに、Intune で管理されているデバイスが、デバイスの正常性レポートに含まれます。  
+ 正常性構成証明サービスから報告されるデバイスの正常性に基づいて、電子メールおよび Microsoft 365 サービスへのアクセスを制限できるようになりました。 さらに、Intune で管理されているデバイスが、デバイスの正常性レポートに含まれます。  
 
  新しいコンプライアンス ルールが Configuration Manager コンソールに追加されました。このルールを使用すると、デバイスの正常性の状態に基づいてアクセスを許可するかブロックするかを指定できます。 正常性構成証明サービスの詳細、およびデバイスの正常性が Intune でどのように報告されるのかについての詳細は、「[System Center Configuration Manager の正常性構成証明書](../../../core/servers/manage/health-attestation.md)」を参照してください。  
 

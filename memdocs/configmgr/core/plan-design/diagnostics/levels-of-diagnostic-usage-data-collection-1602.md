@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 48c03b26ae04d4e4bc256a146ad48206b4de1d9d
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: f4b96d3f7fc4f1c02142bfdb4027abd320b22a1f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126666"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994907"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1602-of-configuration-manager"></a>Configuration Manager バージョン 1602 で収集される診断結果および使用状況データのレベル
 
@@ -238,7 +238,7 @@ Configuration Manager バージョン 1602 以降、このレベルには次の�
 
   -   クラスターの修正プログラム適用の統計情報
 
-  -   展開された Office 365 更新プログラムの数
+  -   展開された Microsoft 365 更新プログラムの数
 
   -   ***[新規]*** ソフトウェアの更新ポイントで同期される分類
 

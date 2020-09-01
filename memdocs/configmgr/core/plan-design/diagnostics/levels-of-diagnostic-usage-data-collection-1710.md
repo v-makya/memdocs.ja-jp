@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 925595b0e810f89bed6d79de1e0cd89450e45e9a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 007897778f49bd3bbc62c9ba31f0b58c90dfd1f3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128748"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994737"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-configuration-manager"></a>Configuration Manager バージョン 1710 で収集される診断結果および使用状況データのレベル
 
@@ -137,7 +137,7 @@ Configuration Manager バージョン 1710 では、このレベルには次の�
 
    - アプリケーション カタログの個別のブランドの数
 
-   - ダッシュボードを使用して作成された Office 365 アプリケーションの数
+   - ダッシュボードを使用して作成された Microsoft 365 アプリケーションの数
 
    - パッケージの数 (種類別)  
 
@@ -383,7 +383,7 @@ Configuration Manager バージョン 1710 では、このレベルには次の�
 
     - アクティブな Windows 10 サービス プランに使用される構成  
 
-    - 展開された Office 365 更新プログラムの数  
+    - 展開された Microsoft 365 更新プログラムの数  
 
     - 同期されている Microsoft Surface ドライバーの数
 

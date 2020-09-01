@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: e44576401d601c8c510aaf50b28e5924f5c4d6db
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0425b937062acd96b8df66df38ec53a04e91b4de
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694867"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995230"
 ---
 # <a name="co-management-workloads"></a>共同管理ワークロード
 
@@ -110,9 +110,9 @@ Intune 機能の詳細については、「[Microsoft Intune でのデバイス 
 
 - デバイスが再起動されない場合、Office 更新プログラムがクライアントに表示されるまでに約 24 時間かかる場合があります  
 
-- **Office 365 アプリケーションがデバイス上の Intune で管理されているか**という新しいグローバル条件があります。 この条件は、新しい Office 365 アプリケーションの要件として既定で追加されます。 このワークロードを移行すると、共同管理されたクライアントでアプリケーションの要件が満たされなくなります。 そのため、Configuration Manager で展開される Office 365 がインストールされません。  
+- **Office 365 アプリケーションがデバイス上の Intune で管理されているか**という新しいグローバル条件があります。 この条件は、新しい Microsoft 365 アプリケーションの要件として既定で追加されます。 このワークロードを移行すると、共同管理されたクライアントでアプリケーションの要件が満たされなくなります。 そのため、Configuration Manager で展開される Microsoft 365 がインストールされません。  
 
-Intune 機能の詳細については、「[Assign Office 365 apps to Windows 10 devices with Microsoft Intune](/intune/apps-add-office365)」 (Microsoft Intune で Windows 10 デバイスに Office 365 アプリを割り当てる) を参照してください。
+Intune 機能の詳細については、「[Microsoft Intune を使用して Windows 10 デバイスに Microsoft 365 アプリを割り当てる](https://docs.microsoft.com/intune/apps-add-office365)」をご覧ください。
 
 ## <a name="client-apps"></a>クライアント アプリ
 

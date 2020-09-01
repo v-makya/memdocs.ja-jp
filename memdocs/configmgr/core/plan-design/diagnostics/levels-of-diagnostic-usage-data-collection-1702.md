@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4443d2319bceca2e92f1655660ec384674dac1e7
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: c3859d77726b49973257da47233fedde28f705a1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128782"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994822"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1702-of-configuration-manager"></a>Configuration Manager バージョン 1702 で収集される診断結果および使用状況データのレベル
 
@@ -340,7 +340,7 @@ Configuration Manager バージョン 1702 では、このレベルには次の�
 
     - アクティブな Windows 10 サービス プランに使用される構成  
 
-    - 展開された Office 365 更新プログラムの数  
+    - 展開された Microsoft 365 更新プログラムの数  
 
     - 更新プログラムのグループと割り当ての数  
 

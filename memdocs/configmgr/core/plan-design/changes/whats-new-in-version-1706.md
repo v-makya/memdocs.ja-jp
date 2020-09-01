@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2e823aad8fcf69861d21a99f0e65dcf8aaa40dcd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692827"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993388"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Configuration Manager のバージョン 1706 の新機能
 
@@ -44,9 +44,9 @@ Version 1706 drops support for the following products:
 
 ## <a name="site-infrastructure"></a>サイトのインフラストラクチャ
 
-### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>クライアント ピア キャッシュで、Windows 10 と Office 365 の高速インストール ファイルに対応  
+### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>Windows 10 および Microsoft 365 の高速インストール ファイルに対するクライアント ピア キャッシュのサポート  
 <!-- 1352486 -->
-今回のリリースから、ピア キャッシュで、Windows 10 のコンテンツ高速インストール ファイルと Office 365 の更新ファイルを配信できるようになりました。 この変更サポートするために追加の構成は必要ありません。
+今回のリリースから、ピア キャッシュで、Windows 10 のコンテンツ高速インストール ファイルと Microsoft 365 の更新ファイルを配信できるようになりました。 この変更サポートするために追加の構成は必要ありません。
 
 ### <a name="updates-for-the-data-warehouse"></a>データ ウェアハウスの更新
 <!-- 1277922 -->
@@ -227,8 +227,8 @@ Windows Update for Business によって直接管理されている Windows 10 �
 
 詳細については、「[Windows 10 における Windows Update for Business との統合](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies)」を参照してください。
 
-### <a name="improved-user-notifications-for-office-365-updates"></a>Office 365 更新プログラムのユーザーへの通知の改善
-クライアントが Office 365 更新プログラムをインストールする場合に、Office クイック実行ユーザー エクスペリエンスを活用するように改善されました。 これには、ポップアップとアプリ内通知、およびカウントダウン エクスペリエンスが含まれます。 詳細については、「[Office 365 の更新プログラムの動作とクライアント通知を再起動する](../../../sum/deploy-use/manage-office-365-proplus-updates.md)」
+### <a name="improved-user-notifications-for-microsoft-365-updates"></a>Microsoft 365 更新プログラムのユーザーへの通知の改善
+クライアントが Microsoft 365 更新プログラムをインストールする場合に、Office クイック実行ユーザー エクスペリエンスを活用するように改善されました。 これには、ポップアップとアプリ内通知、およびカウントダウン エクスペリエンスが含まれます。 詳細については、[Microsoft 365 の更新プログラムに対する再起動動作とクライアント通知](../../../sum/deploy-use/manage-office-365-proplus-updates.md)に関する記事をご覧ください
 
 ## <a name="reporting"></a>レポート
 

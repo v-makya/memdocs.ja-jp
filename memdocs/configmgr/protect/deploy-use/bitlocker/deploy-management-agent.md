@@ -2,7 +2,7 @@
 title: BitLocker 管理の展開
 titleSuffix: Configuration Manager
 description: BitLocker 管理エージェントを Configuration Manager クライアントに展開し、回復サービスを管理ポイントに展開します
-ms.date: 07/27/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a7eca5c2f5c00ae559a8567d5fce1e4e36df19c0
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 67130932ee20849530c6e865971c7776c3e6b6b1
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129275"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819934"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker 管理の展開
 
@@ -118,6 +118,8 @@ BitLocker 管理ポリシーを作成して展開する前に、次の操作を�
 
 複数のポリシーを作成する場合は、それらの相対的な優先順位を構成できます。 複数のポリシーを 1 つのクライアントに展開する場合は、優先順位の値を使用してその設定が決められます。
 
+バージョン 2006 以降では、Windows PowerShell コマンドレットを使用してこのタスクを実行できます。 詳細については、「[New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps)」をご覧ください。
+
 ## <a name="deploy-a-policy"></a>ポリシーの展開
 
 1. **[BitLocker 管理]** ノードで既存のポリシーを選択します。 リボンで、 **[展開]** を選択します。
@@ -135,6 +137,7 @@ BitLocker 管理ポリシーを作成して展開する前に、次の操作を�
 > [!IMPORTANT]
 > リモート デスクトップ プロトコル接続がアクティブな場合、MBAM クライアントによって BitLocker ドライブ暗号化アクションは開始されません。 BitLocker ドライブ暗号化が開始される前に、すべてのリモート コンソール接続が閉じられ、ユーザーが物理コンソール セッションにログオンしている必要があります。
 
+バージョン 2006 以降では、Windows PowerShell コマンドレットを使用してこのタスクを実行できます。 詳細については、「[New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps)」をご覧ください。
 
 ## <a name="monitor"></a>モニター
 

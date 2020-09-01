@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a947b332addbc3404617abdbbe199ede4e74dc63
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5c125bc92c8949384486c7efc03cea122258092e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692793"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993507"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Configuration Manager のバージョン 1702 の新機能
 
@@ -220,11 +220,11 @@ HTTP カタログの要求時に [ドライバーの自動適用] タスク シ�
 
 ## <a name="software-updates"></a>ソフトウェア更新プログラム
 
-### <a name="deploy-office-365-apps-to-clients"></a>クライアントに Office 365 アプリを展開する
-1702 以降、Office 365 クライアント管理ダッシュボードから Office 365 のインストーラーを起動できます。インストーラーを使用すると、Office 365 のインストール設定を構成し、Office コンテンツ配信ネットワーク (CDN) からファイルをダウンロードし、Configuration Manager でファイルをアプリケーションとして展開できます。 詳細については、[Office 365 ProPlus の更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy)に関するページを参照してください。
+### <a name="deploy-microsoft-365-apps-to-clients"></a>Microsoft 365 アプリをクライアントに展開する
+1702 以降、Office 365 クライアント管理ダッシュボードから Office 365 のインストーラーを起動できます。これによって、インストール設定を構成し、Office コンテンツ配信ネットワーク (CDN) からファイルをダウンロードし、Configuration Manager でファイルをアプリケーションとして展開できます。 詳細については、[Microsoft 365 Apps 更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy)に関する記事をご覧ください。
 
 > [!IMPORTANT]
-> Configuration Manager で Office 365 アプリケーション ウィザードを使用して作成し、展開した Office 365 は、 **[Office 365 クライアント エージェントの管理を有効にする]** ソフトウェア更新プログラム クライアント エージェント設定を有効にしない限り、Configuration Manager で自動的に管理されません。 詳細については、「[System Center Configuration Manager のクライアント設定について](../../clients/deploy/about-client-settings.md)」を参照してください。
+> Configuration Manager で Office 365 アプリケーション ウィザードを使用して作成し、展開した Microsoft 365 アプリは、 **[Office 365 クライアント エージェントの管理を有効にする]** ソフトウェア更新プログラム クライアント エージェント設定を有効にしない限り、Configuration Manager で自動的に管理されません。 詳細については、「[System Center Configuration Manager のクライアント設定について](../../clients/deploy/about-client-settings.md)」を参照してください。
 
 ### <a name="manage-express-installation-files-for-windows-10-updates"></a>Windows 10 更新プログラムに対する高速インストール ファイルの管理
 バージョン 1702 以降、Configuration Manager では Windows 10 更新プログラムに対する高速インストール ファイルがサポートされています。 サポートされているバージョンの Windows 10 を使用する場合は、当月の Windows 10 累積的な更新プログラムと、前月の更新プログラムとの差分のみをダウンロードする Configuration Manager 設定を使用できます。 高速インストール ファイルを使用しない場合、Configuration Manager では完全な Windows 10 累積的な更新プログラム (以前の月の更新プログラムをすべて含む) が毎月ダウンロードされます。 高速インストール ファイルを使用すると、クライアント上でのダウンロード量を少なくし、インストールに要する時間を短縮できます。 詳細については、[「Windows 10 更新プログラムに対する高速インストール ファイルの管理」](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md) を参照してください。

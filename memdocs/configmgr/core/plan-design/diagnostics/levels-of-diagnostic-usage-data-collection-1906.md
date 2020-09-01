@@ -10,12 +10,12 @@ ms.assetid: 370fc61f-2d8a-45b4-adc7-7b5d5ede2bf4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9c4b82bba24eccf9be5f410b5d2854d782230a72
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 41465fe916ef985ec0e33596be23f16910149a7a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126649"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994601"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1906"></a>バージョン 1906 の診断情報と使用状況データ
 
@@ -156,7 +156,7 @@ Configuration Manager バージョン 1906 では、このレベルには次の�
 
 - アプリケーション カタログの個別のブランドの数  
 
-- ダッシュボードを使用して作成された Office 365 アプリケーションの数  
+- ダッシュボードを使用して作成された Microsoft 365 アプリケーションの数  
 
 - パッケージの数 (種類別)  
 
@@ -206,7 +206,7 @@ Configuration Manager バージョン 1906 では、このレベルには次の�
 
 - ***[新規]*** アプリケーション グループの承認機能の使用に関して集計された統計情報
 
-- ***[新規]*** Office アドインで集計された統計情報、Office 準備ツールキットの使用状況、Office 365 ProPlus でのクライアントの数
+- ***[新規]*** Office アドインで集計された統計情報、Office 準備ツールキットの使用状況、Microsoft 365 Apps for enterprise でのクライアントの数
 
 ### <a name="client"></a>クライアント  
 
@@ -440,7 +440,7 @@ Configuration Manager バージョン 1906 では、このレベルには次の�
 
 - アクティブな Windows 10 サービス プランに使用される構成  
 
-- 展開された Office 365 更新プログラムの数  
+- 展開された Microsoft 365 更新プログラムの数  
 
 - 同期されている Microsoft Surface ドライバーの数  
 

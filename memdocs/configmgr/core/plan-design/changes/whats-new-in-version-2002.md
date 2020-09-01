@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 38ea77e44b1d1754d80d0ec902929f5de620c063
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700567"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993337"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 2002 の新機能
 
@@ -312,13 +312,13 @@ Configuration Manager では、サービス スタックの更新プログラム
 
 詳細については、[ソフトウェア更新プログラムの計画](../../../sum/plan-design/plan-for-software-updates.md#bkmk_ssu)に関するページを参照してください。
 
-### <a name="office-365-updates-for-disconnected-software-update-points"></a>切断されたソフトウェアの更新ポイント用の Office 365 更新プログラム
+### <a name="microsoft-365-updates-for-disconnected-software-update-points"></a>切断されたソフトウェアの更新ポイント用の Microsoft 365 更新プログラム
 
 <!-- 4065163 -->
 
-新しいツールを使用して、インターネットに接続されている WSUS サーバーから、切断された Configuration Manager 環境に Office 365 更新プログラムをインポートすることができます。 以前は、更新されたソフトウェアのメタデータをエクスポートし、切断された環境にインポートした場合、Office 365 更新プログラムを展開できませんでした。 Office 365 更新プログラムには Office API と Office CDN からダウンロードした追加のメタデータが必要ですが、これは、切断された環境では不可能です。
+新しいツールを使用して、インターネットに接続されている WSUS サーバーから、切断された Configuration Manager 環境に Microsoft 365 更新プログラムをインポートすることができます。 以前は、更新されたソフトウェアのメタデータをエクスポートし、切断された環境にインポートした場合、Microsoft 365 更新プログラムを展開できませんでした。 Microsoft 365 更新プログラムには Office API と Office CDN からダウンロードした追加のメタデータが必要ですが、これは、切断された環境では不可能です。
 
-詳細については、「[切断されているソフトウェアの更新ポイントからの Office 365 更新プログラムの同期](../../../sum/get-started/synchronize-office-updates-disconnected.md)」を参照してください。
+詳細については、[切断されたソフトウェアの更新ポイントからの Microsoft 365 更新プログラムの同期](../../../sum/get-started/synchronize-office-updates-disconnected.md)に関する記事をご覧ください。
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
 

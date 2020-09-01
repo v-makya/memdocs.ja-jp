@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 59d343d09f827edec5db0dd5302c75c00a0c8455
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7f6cc0caf4df54196dbdb1859a69f19b3bbcacaa
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694510"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995485"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager の Technical Preview 1511 の機能
 
@@ -50,24 +50,24 @@ WUfB を介して接続されているコンピューターの場合、Configura
 
 5.  WUfB を介して管理されているコンピューターの対応ステータスには **[不明]** と表示され、全体のコンプライアンス対応率をカウントする際に、これらのコンピューターは除外されます。  
 
-##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Configuration Manager を使用した Office 365 ProPlus クライアント更新プログラムの管理  
- Configuration Manager では、Configuration Manager ソフトウェア更新管理のワークフローを使用して、Office 365 デスクトップ クライアントの更新プログラムを管理できます。    
-Microsoft から、Windows Server Updates Services (WSUS) に新しい Office 365 デスクトップ クライアントの更新プログラムが公開されると、Office 365 の更新プログラムがカタログの同期の一部として構成されている場合、Configuration Manager で、この更新プログラムをそのカタログと同期することができます。  Configuration Manager サイト サーバーでは、Office 365 クライアントの更新プログラムをダウンロードして、そのパッケージを Configuration Manager 配布ポイントに配布します。  次に、Configuration Manager クライアントにより、更新プログラムの取得場所とそのインストール プロセスの開始時期が、Office 365 デスクトップ クライアントに通知されます。  
+##  <a name="managing-microsoft-365-apps-for-enterprise-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Configuration Manager を使用した Microsoft 365 Apps for enterprise クライアント更新プログラムの管理  
+Configuration Manager では、Configuration Manager ソフトウェアの更新管理ワークフローを使用して、Microsoft 365 デスクトップ クライアントの更新プログラムを管理できるようになりました。
+Microsoft から Windows Server Updates Services (WSUS) に新しい Microsoft 365 デスクトップ クライアントの更新プログラムが公開されると、Microsoft 365 の更新プログラムがカタログの同期の一部として構成されている場合、Configuration Manager で更新プログラムをそのカタログと同期することができます。  Configuration Manager サイト サーバーでは、Microsoft 365 クライアントの更新プログラムをダウンロードして、そのパッケージを Configuration Manager 配布ポイントに配布します。  次に、構成マネージャー クライアントにより、更新プログラムの取得場所とそのインストール プロセスの開始時期が、Microsoft 365 デスクトップ クライアントに通知されます。  
 
 **このシナリオの前提条件:**  
 
 ### <a name="try-it-out"></a>試してみましょう。  
  次のタスクを実行してから、このトピックの先頭付近にあるフィードバック情報を使用してその動作を報告してください。  
 
-1. Office 365 の更新プログラムを Configuration Manager サイト サーバーと同期して、Configuration Manager コンソールから表示できます。  
+1. Microsoft 365 の更新プログラムを Configuration Manager サイト サーバーと同期して、Configuration Manager コンソールから表示できます。  
 
-2. Office 365 の更新プログラムを承認して、正常に展開できます。  
+2. Microsoft 365 の更新プログラムを承認して、正常に展開できます。  
 
-3. クライアントに Office 365 の更新プログラムを正常にダウンロードできます。  
+3. クライアントに Microsoft 365 の更新プログラムを正常にダウンロードできます。  
 
-4. コンソール内の監視機能またはレポートを使用して、Office 365 の更新プログラムのコンプライアンス対応を確認できます。  
+4. コンソール内の監視機能またはレポートを使用して、Microsoft 365 更新プログラムのコンプライアンス対応を確認できます。  
 
-   詳しい手順については、「[Configuration Manager Technical Preview による Office 365 クライアント更新プログラムの管理](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)」をご覧ください。  
+   詳しい手順については、[Configuration Manager Technical Preview での Microsoft 365 クライアント更新プログラムの管理](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)に関する記事をご覧ください。  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> 高可用性データベース用の SQL Server AlwaysOn のサポート  
  Configuration Manager は、SQL Server AlwaysOn 可用性グループを使用したサイト データベースのホスティングをサポートします。  新しいサイトをインストールするときに、SQL Server の通常のインスタンスではなく、可用性グループを使用するようにセットアップに指示できます。  

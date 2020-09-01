@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: bdfb122173c913274373f41c3932f1ac094ec953
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fc12c81a1ec58d17580b91e21a1ba7d2e0cb0cbc
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700284"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819679"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 2006 の新機能
 
@@ -31,6 +31,13 @@ Configuration Manager の新機能をすべて利用するには、サイトを�
 > このページが更新されたときに通知を受け取るには、次の URL をコピーして RSS フィード リーダーに貼り付けます。`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2006+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a>Microsoft Endpoint Manager テナントのアタッチ
+
+### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> テナントのアタッチ:Microsoft Endpoint Manager admin center の Microsoft Defender ウイルス対策ポリシー
+<!--4812909-->
+Microsoft エンドポイント マネージャー コンソールで Microsoft Defender ウイルス対策ポリシーを作成し、構成マネージャー コレクションに展開できるようになりました。 詳細な手順や使用可能な設定などについて詳しくは、次の記事を参照してください。
+- [テナントのアタッチ:管理センターから Microsoft Defender ATP に構成マネージャー クライアントをオンボードする (プレビュー)](../../../tenant-attach/atp-onboard.md)
+- [テナントのアタッチ:管理センターからエンドポイント セキュリティ ウイルス対策ポリシーを展開する (プレビュー)](../../../tenant-attach/deploy-antivirus-policy.md)
+- [Microsoft Intune のテナントにアタッチされたデバイスの Microsoft Defender ウイルス対策ポリシーの設定](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)。 
 
 ### <a name="install-applications-from-the-admin-center"></a>管理センターからアプリケーションをインストールする
 <!--7518897, 6024389-->

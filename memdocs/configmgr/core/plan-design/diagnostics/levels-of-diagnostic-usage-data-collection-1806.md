@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e1f10f291619ecf6ff3d5b997046f035c02bf7e7
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 66fc996fe78f0b8171eec61fba277f9d51b0389f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128663"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994652"
 ---
 # <a name="diagnostic-and-usage-data-for-1806"></a>1806 での診断情報と使用状況データ
 
@@ -146,7 +146,7 @@ Configuration Manager バージョン 1806 では、このレベルには次の�
 
 - アプリケーション カタログの個別のブランドの数
 
-- ダッシュボードを使用して作成された Office 365 アプリケーションの数
+- ダッシュボードを使用して作成された Microsoft 365 アプリケーションの数
 
 - パッケージの数 (種類別)  
 
@@ -412,7 +412,7 @@ Configuration Manager バージョン 1806 では、このレベルには次の�
 
 - アクティブな Windows 10 サービス プランに使用される構成  
 
-- 展開された Office 365 更新プログラムの数  
+- 展開された Microsoft 365 更新プログラムの数  
 
 - 同期されている Microsoft Surface ドライバーの数
 

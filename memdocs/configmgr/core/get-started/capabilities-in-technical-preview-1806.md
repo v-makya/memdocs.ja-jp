@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 01c482700b56a1835e46cf5d48da75710f380496
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694425"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995400"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager の Technical Preview 1806 の機能
 
@@ -176,14 +176,15 @@ SCUP では引き続き、他のカタログとシナリオがサポートされ
 
 
 
-## <a name="transition-office-365-workload-to-intune-using-co-management"></a>共同管理を使用して Intune に Office 365 ワークロードを移行する
+## <a name="transition-microsoft-365-workload-to-intune-using-co-management"></a>共同管理を使用して Intune に Microsoft 365 ワークロードを移行する
 <!--1357841-->
-共同管理を有効にした後に、Configuration Manager から Microsoft Intune に Office 365 ワークロードを移行できるようになりました。 このワークロードを移行するには、共同管理プロパティ ページに移動して、スライド バーを Configuration Manager から [パイロット] または [すべて] に移動します。 詳細については、「[Windows 10 デバイスの共同管理](../../comanage/overview.md)」を参照してください。
+共同管理を有効にした後に、Configuration Manager から Microsoft Intune に Microsoft 365 ワークロードを移行できるようになりました。 このワークロードを移行するには、共同管理プロパティ ページに移動して、スライド バーを Configuration Manager から [パイロット] または [すべて] に移動します。 詳細については、「[Windows 10 デバイスの共同管理](../../comanage/overview.md)」を参照してください。
 
-**Office 365 アプリケーションがデバイス上の Intune で管理されているか**という新しいグローバル条件もあります。 この条件は、新しい Office 365 アプリケーションの要件として既定で追加されます。 このワークロードを移行すると、共同管理されたクライアントでアプリケーションの要件が満たされなくなるため、Configuration Manager で展開される Office 365 がインストールされません。
+**Office 365 アプリケーションがデバイス上の Intune で管理されているか**という新しいグローバル条件もあります。 この条件は、新しい Microsoft 365 アプリケーションの要件として既定で追加されます。 このワークロードを移行すると、共同管理されたクライアントでアプリケーションの要件が満たされなくなるため、Configuration Manager で展開される Microsoft 365 がインストールされません。
 
 ### <a name="known-issue"></a>既知の問題
-- 現在、このワークロードの移行は Office 365 の展開にのみ適用されます。 Configuration Manager では引き続き Office 365 の更新プログラムが管理されます。<!--510876--> 可能な回避策を含む詳細については、Configuration Manager バージョン 1802 のリリース ノート「[Office 365 クライアント設定の変更が適用されない](../servers/deploy/install/release-notes.md)」を参照してください。
+
+- 現在、このワークロードの移行は Microsoft 365 の展開にのみ適用されます。 Configuration Manager では引き続き Microsoft 365 の更新プログラムが管理されます。<!--510876--> 可能な回避策を含む詳細については、Configuration Manager バージョン 1802 のリリース ノートの [Microsoft 365 クライアント設定の変更が適用されない場合](../servers/deploy/install/release-notes.md)に関する記事をご覧ください。
 
 
 
@@ -240,7 +241,7 @@ Office カスタマイズ ツールが、Configuration Manager コンソール�
  タスクを実行してみます。 試した結果の[フィードバック](capabilities-in-technical-preview-1804.md#bkmk_feedback)をお送りください。
 
 1. Configuration Manager コンソールで、 **[ソフトウェア ライブラリ]** ワークスペースに移動し、 **[Office 365 クライアント管理]** ノードを選択します。
-2. ダッシュボードの **[Office 365 インストーラー]** タイルをクリックして、Office 365 クライアント インストール ウィザードを起動します。 詳細については、「[Office 365 アプリを展開する](../../sum/deploy-use/manage-office-365-proplus-updates.md)」を参照してください。
+2. ダッシュボードの **[Office 365 インストーラー]** タイルをクリックして、Office 365 クライアント インストール ウィザードを起動します。 詳細については、[Microsoft 365 アプリの展開](../../sum/deploy-use/manage-office-365-proplus-updates.md)に関する記事をご覧ください。
 3. **[Office の設定]** ページで、 **[Go To Office Web Page]\(Office Web ページへ移動\)** をクリックします。 オンラインの Office カスタマイズ ツールを使用して、この展開の設定を指定します。 
 4. 完了したら、右上隅にある **[送信]** をクリックします。 Office 365 クライアントのインストール ウィザードを終了します。
 

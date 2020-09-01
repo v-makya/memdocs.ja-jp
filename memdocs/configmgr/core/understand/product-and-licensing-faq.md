@@ -10,12 +10,12 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bf69dfd73472cb252d2d821dd8e5fb5eb5a6302f
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: faf8401e6aa89a60f2acbea8e0d97f9efaf09a84
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695768"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994465"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager のブランチとライセンスに関してよく寄せられる質問
 
@@ -66,7 +66,7 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 -->
 
 > [!IMPORTANT]
-> Configuration Manager は [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business) プランに含まれていません。
+> Configuration Manager は [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business) プランに含まれていません。
 
 ### <a name="what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager"></a><a name="bkmk_mem"></a> Microsoft Endpoint Manager の共同管理のライセンスを使用すると、何が変わりますか?
 
@@ -102,6 +102,7 @@ https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-pla
 |ソフトウェア更新管理|はい|はい|
 |インベントリ|はい|はい|
 |アプリ管理|はい|はい|
+|リモートの完全/選択的ワイプ|はい|はい|
 |リモート アシスタンス<br>(TeamViewer ライセンスが必要)|はい|はい|
 |Desktop Analytics<br>(Windows サブスクリプションのライセンスが必要|はい|該当なし|
 |テナントのアタッチ|はい|該当なし|

@@ -10,12 +10,12 @@ ms.assetid: bce9e299-7b3a-4f51-8863-a322877daa2c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7c66200041bcc643dc7306b76c540daf2b0b1058
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bfd7818622ca536fd3a7a00de95bd5400b060fd5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128624"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994618"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1902"></a>バージョン 1902 の診断情報と使用状況データ
 
@@ -154,7 +154,7 @@ Configuration Manager バージョン 1902 では、このレベルには次の�
 
 - アプリケーション カタログの個別のブランドの数  
 
-- ダッシュボードを使用して作成された Office 365 アプリケーションの数  
+- ダッシュボードを使用して作成された Microsoft 365 アプリケーションの数  
 
 - パッケージの数 (種類別)  
 
@@ -441,7 +441,7 @@ Configuration Manager バージョン 1902 では、このレベルには次の�
 
 - アクティブな Windows 10 サービス プランに使用される構成  
 
-- 展開された Office 365 更新プログラムの数  
+- 展開された Microsoft 365 更新プログラムの数  
 
 - 同期されている Microsoft Surface ドライバーの数  
 

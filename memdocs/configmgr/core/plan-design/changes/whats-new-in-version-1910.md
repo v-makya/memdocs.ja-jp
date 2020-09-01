@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6406a208de448e40e1d686440f41610266cde042
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3c99716070bf32ae27a7bd8b7a114d8b920814e2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700301"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993473"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1910 の新機能
 
@@ -134,7 +134,7 @@ Configuration Manager 配布ポイントで Microsoft Connected Cache を有効�
 
 コンプライアンス ポリシー評価の規則として、カスタム構成基準の評価を追加できるようになりました。 構成基準を作成または編集するとき、 **[コンプライアンス ポリシー評価の一部としてこの基準を評価する]** オプションを使用できるようになりました。 コンプライアンス ポリシー ルールを追加または編集するとき、 **[コンプライアンス ポリシーの評価に構成済みのベースラインを含める]** という条件があります。
 
-共同管理デバイスの場合、全体のコンプライアンス対応状態の一部として Configuration Manager コンプライアンス評価の結果を受け取るように Intune を設定すると、この情報は Azure Active Directory に送信されます。 その後、Office 365 リソースに対する条件付きアクセスで利用できます。
+共同管理デバイスの場合、全体のコンプライアンス対応状態の一部として Configuration Manager コンプライアンス評価の結果を受け取るように Intune を設定すると、この情報は Azure Active Directory に送信されます。 その後、Microsoft 365 リソースに対する条件付きアクセスのために使用できます。
 
 詳細については、「[コンプライアンス ポリシー評価の一部としてカスタム構成基準を含める](../../../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines)」を参照してください。
 

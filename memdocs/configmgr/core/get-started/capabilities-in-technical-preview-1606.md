@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 18ea44f662591a21750fb630425ddfb975678aa2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9278e6cb148768e993706fe112bbfd70121cc6b9
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695598"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995468"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Configuration Manager の Technical Preview 1606 の機能
 
@@ -215,11 +215,11 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 
 クライアントがクラウド プロキシ サービスの新しい場所の情報を取得したら、不要になった内部のプライベート ネットワーク上にあってインターネットにアクセスを持つクライアントの状態を確認してください。 **[管理] > [Cloud Services] > [クラウド プロキシ サービス]** の順に移動して、リスト ウィンドウでサービスを選択し、詳細ペインでトラフィックの情報を表示することで、クラウド プロキシ サービスのトラフィックを監視することもできます。   
 
-## <a name="manage-the-office-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>Configuration Manager で Office 365 のクライアント エージェントを管理  
+## <a name="manage-the-microsoft-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>Configuration Manager で Microsoft 365 のクライアント エージェントを管理する  
 
-Technical Preview 1606 を起動すると、グループ ポリシーの代わりに Configuration Manager クライアント エージェント設定を使用して、Office 365 クライアントが Configuration Manager から更新プログラムを受信できるようにすることができます。 この設定を構成し、Office 365 の更新プログラムを展開すると、Configuration Manager クライアント エージェントは、Office 365 のクライアント エージェントと通信して、配布ポイントから Office 365 の更新プログラムをダウンロードしてインストールします。 Configuration Manager は、クライアント エージェント設定のインベントリも取得します。
+Technical Preview 1606 から、グループ ポリシーの代わりに Configuration Manager クライアント エージェント設定を使用して、Microsoft 365 クライアントが Configuration Manager から更新プログラムを受信できるようにすることができます。 この設定を構成して Microsoft 365 更新プログラムを展開すると、Configuration Manager クライアント エージェントによって Microsoft 365 クライアント エージェントとの通信が行われ、配布ポイントからの Microsoft 365 更新プログラムのダウンロードとインストールが行われます。 Configuration Manager は、クライアント エージェント設定のインベントリも取得します。
 
-詳細については、「[System Center Configuration Manager での Office 365 ProPlus の更新プログラムの管理](../../sum/deploy-use/manage-office-365-proplus-updates.md)」をご覧ください。
+詳細については、[Microsoft 365 Apps for enterprise の管理](../../sum/deploy-use/manage-office-365-proplus-updates.md)に関するページをご覧ください。
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Configuration Manager クライアント設定で Office 365 クライアント エージェントを管理するように設定する
 1.  Configuration Manager コンソールで、 **[管理]**  >  **[概要]**  >  **[クライアント設定]** の順にクリックします。

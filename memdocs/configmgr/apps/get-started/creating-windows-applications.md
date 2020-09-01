@@ -10,12 +10,12 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2712613eb6d03253c05a011037ac8492992e1f03
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 77fee5931046bc706f965a9a5d738f5a7e2223f4
+ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695190"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88819628"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>Configuration Manager で Windows アプリケーションを作成する
 
@@ -127,6 +127,11 @@ Configuration Manager では、Windows 10 のアプリ パッケージ (.msix) �
 アプリには、OS 展開のタスク シーケンスを除く展開の種類しか追加できません。 影響の大きいタスク シーケンス、OS 展開のタスク シーケンス、OS アップグレード タスク シーケンスはサポートされていません。 <!--A user-targeted deployment still runs in the user context of the local System account.-->
 
 この展開の種類をアプリに追加するときには、 **[タスク シーケンス]** ページでプロパティを構成します。 詳細については、「[展開の種類の **[タスク シーケンス]** オプション](../deploy-use/create-applications.md#bkmk_dt-ts)」を参照してください。
+
+バージョン 2006 以降では、次の Windows PowerShell コマンドレットを使用して、タスク シーケンスの展開の種類を追加および構成してください。
+
+- [Add-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/add-cmtasksequencedeploymenttype?view=sccm-ps)
+- [Set-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/set-cmtasksequencedeploymenttype?view=sccm-ps)
 
 ### <a name="prerequisites-for-a-task-sequence-deployment-type"></a>タスク シーケンスの展開の種類に関する前提条件
 

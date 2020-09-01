@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692640"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995009"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1806 の新機能
 
@@ -235,7 +235,7 @@ CMG を作成するときに、[設定] ページで[信頼されたルート証
 
 - **デバイス構成**<!--1357903-->:このワークロードでは、アプリケーションの展開に Configuration Manager を引き続き使用したうえで、Intune を使用して MDM ポリシーを展開できるようになります。  
 
-- **Office 365**<!--1357841-->:デバイスでは、Configuration Manager から Office 365 展開はインストールされません。  
+- **Office 365**<!--1357841-->:デバイスによって、Configuration Manager から Microsoft 365 展開がインストールされません。  
 
 - **モバイル アプリ**<!--1357892-->:Intune から展開された使用可能なアプリが、すべてポータル サイトで使用可能になります。 Configuration Manager から展開するアプリは、ソフトウェア センターで使用できます。 この機能は[プレリリース版の機能](../../servers/manage/pre-release-features.md)です。  
 
@@ -294,9 +294,9 @@ Security Content Automation Protocol (SCAP) コンテンツをコンプライア
 
 ### <a name="office-customization-tool-integration-with-the-office-365-installer"></a>Office 365 インストーラーと Office カスタマイズ ツールの統合
 <!--1358149-->
-Office カスタマイズ ツールが、Configuration Manager コンソールの Office 365 インストーラーと統合されました。 Office 365 の展開を作成するときに、最新の Office の管理容易性設定を動的に構成します。 Microsoft は、Office 365 の新しいビルドをリリースするとき、Office カスタマイズ ツールを更新します。 この統合により、Office 365 で新しい管理容易性設定が利用可能になるのと同時にそれを活用できます。 
+Office カスタマイズ ツールが、Configuration Manager コンソールの Office 365 インストーラーと統合されました。 Microsoft 365 の展開を作成するときに、最新の Office の管理性設定を動的に構成します。 Microsoft では、Microsoft 365 の新しいビルドをリリースする際に、Office カスタマイズ ツールを更新します。 この統合により、Microsoft 365 の新しい管理性設定が使用可能になると、すぐに活用できるようになります。 
 
-詳細については、「[Office 365 アプリを展開する](../../../sum/deploy-use/manage-office-365-proplus-updates.md)」を参照してください。
+詳細については、[Microsoft 365 アプリの展開](../../../sum/deploy-use/manage-office-365-proplus-updates.md)に関する記事をご覧ください。
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>新しい Windows アプリ パッケージ形式のサポート

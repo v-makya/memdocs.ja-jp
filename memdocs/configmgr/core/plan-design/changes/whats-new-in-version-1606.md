@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2fa46770adfbf3e688bbdc561d8193967f3913cd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3817551c75557a275c98e8c62faef46185438a25
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698590"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993609"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Configuration Manager のバージョン 1606 の新機能
 
@@ -126,10 +126,10 @@ Configuration Manager コンソールの **[クライアント設定]** で、�
 
 ## <a name="software-updates"></a>ソフトウェア更新プログラム
 
-### <a name="client-setting-to-manage-the-office-365-client-agent"></a>Office 365 のクライアント エージェントを管理するクライアント設定
-構成マネージャー クライアントの設定を使用して Office 365 のクライアント エージェントを管理できるようになりました。 これを設定し、Office 365 の更新プログラムを展開すると、Configuration Manager クライアント エージェントは、Office 365 のクライアント エージェントと連携して、配布ポイントから Office 365 の更新プログラムをダウンロードしてインストールします。
+### <a name="client-setting-to-manage-the-microsoft-365-client-agent"></a>Microsoft 365 のクライアント エージェントを管理するクライアント設定
+構成マネージャー クライアントの設定を使用して Microsoft 365 のクライアント エージェントを管理できるようになりました。 これを設定し、Microsoft 365 の更新プログラムを展開すると、Configuration Manager クライアント エージェントは、Microsoft 365 のクライアント エージェントと連携して、配布ポイントから Microsoft 365 の更新プログラムをダウンロードしてインストールします。
 
-詳細については、「[Configuration Manager での Office 365 ProPlus の更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md)」をご覧ください。
+詳細については、「[Configuration Manager での Microsoft 365 Apps 更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md)」をご覧ください。
 
 ### <a name="manually-switch-clients-to-a-new-software-update-point"></a>手動でのクライアントの新しいソフトウェアの更新ポイントへの切り替え
 アクティブなソフトウェアの更新ポイントに問題がある場合に、Configuration Manager クライアントが新しいソフトウェアの更新ポイントに切り替えるためのオプションを有効にできるようになりました。 有効にすると、クライアントは次のスキャンにおいて他のソフトウェア更新ポイントを探します。

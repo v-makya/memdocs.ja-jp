@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6ff280a01b7388f3e4d296625a94c0184a0e6b09
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9ea860568d7f094588e628955f128e5b8a3aa154
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692980"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995417"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-configuration-manager"></a>Configuration Manager の Technical Preview 1707 の機能
 
@@ -54,9 +54,9 @@ ms.locfileid: "88692980"
  -  Task 2              
 -->
 
-## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>クライアント ピア キャッシュで、Windows 10 と Office 365 の高速インストール ファイルに対応
+## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>Windows 10 および Microsoft 365 の高速インストール ファイルに対するクライアント ピア キャッシュのサポート
 <!-- 1352486 -->
-今回のリリースから、ピア キャッシュで、Windows 10 のコンテンツ高速インストール ファイルと Office 365 の更新ファイルを配信できるようになりました。 追加の構成は必要ありません。
+今回のリリースから、ピア キャッシュで、Windows 10 のコンテンツ高速インストール ファイルと Microsoft 365 の更新ファイルを配信できるようになりました。 追加の構成は必要ありません。
 
 ## <a name="surface-device-dashboard"></a>Surface デバイス ダッシュボード
 <!--1355788-->
@@ -70,7 +70,7 @@ Surface デバイス ダッシュボードに、お使いの環境で検出さ�
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Windows Defender Application Guard ポリシーの構成と展開
 <!-- 1351960 -->
 
-[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) は、信頼できない Web サイトをオペレーティング システムの他の部分からはアクセスできない安全な分離コンテナーで開くことでユーザーを保護する Windows の新機能です。 この Technical Preview では、設定する Configuration Manager のコンプライアンス設定を使用して、この機能を構成し、コレクションに展開するためのサポートが追加されました。 この機能は、Windows 10 Fall Creator's Update (コードネーム: RS3) の 64 ビット バージョンのプレビューでリリースされます。 この機能を今すぐテストするには、この更新プログラムのプレビュー バージョンを使用している必要があります。
+[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) は、信頼できない Web サイトをオペレーティング システムの他の部分からはアクセスできない安全な分離コンテナーで開くことでユーザーを保護する Windows の新機能です。 この Technical Preview では、設定する Configuration Manager のコンプライアンス設定を使用して、この機能を構成し、コレクションに展開するためのサポートが追加されました。 この機能は、Windows 10 Fall Creator's Update (コード ネーム: RS3) の 64 ビット バージョンのプレビューでリリースされます。 この機能を今すぐテストするには、この更新プログラムのプレビュー バージョンを使用している必要があります。
 
 ### <a name="before-you-start"></a>開始する前に
 

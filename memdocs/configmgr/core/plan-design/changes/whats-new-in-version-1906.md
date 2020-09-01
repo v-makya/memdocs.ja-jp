@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3736e5343e10bdfc8d5be8abf79ee27e46749834
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698716"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995111"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1906 の新機能
 
@@ -94,7 +94,7 @@ Configuration Manager 更新プログラムを適用するとき、インスト�
     > [!Note]  
     > この変更は、SQL Server クラスターには適用されません。
 
-- サイトの回復では、SQL Always On グループにデータベースを再作成できます。 このプロセスは、手動と自動の両方のシード処理で機能します。<!-- SCCMDocs-pr#3846 -->
+- Site Recovery によって、SQL Always On グループにデータベースを再作成できます。 このプロセスは、手動と自動の両方のシード処理で機能します。<!-- SCCMDocs-pr#3846 -->
 
 - 新しいセットアップの前提条件の確認:<!-- SCCMDocs-pr#3899 -->  
 
@@ -505,7 +505,7 @@ Configuration Manager バージョン 1906 に更新し、同期のために **W
    - **[ソフトウェア ライブラリ]**  >  **[Windows 10 のサービス]**  >  **[すべての Windows 10 更新プログラム]**
    - **[ソフトウェア ライブラリ]**  >  **[Office 365 クライアント管理]**  >  **[Office 365 の更新プログラム]**
 
-詳しくは、[ソフトウェア更新プログラムの監視](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates)、[サービスとしての Windows の管理](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)、[Office 365 ProPlus の更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md)に関する記事をご覧ください。
+詳細については、[ソフトウェア更新プログラムの監視](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates)、[サービスとしての Windows の管理](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)、[Microsoft 365 Apps の更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md)に関する記事をご覧ください。
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a> Office 管理
@@ -514,7 +514,7 @@ Configuration Manager バージョン 1906 に更新し、同期のために **W
 
 <!--4021125-->
 
-新しい準備ダッシュボードでは、Office 365 ProPlus にアップグレードできるデバイスを判断できます。 これには、Configuration Manager の Current Branch バージョン 1902 でリリースされた **[Office 365 ProPlus upgrade readiness]\(Office 365 ProPlus アップグレード準備\)** タイルが含まれています。 Configuration Manager コンソールで、 **[ソフトウェア ライブラリ]** ワークスペースに移動し、 **[Office 365 クライアント管理]** を展開し、 **[Office 365 ProPlus Upgrade Readiness]\(Office 365 ProPlus アップグレード準備\)** ノードを選択します。
+Microsoft 365 Apps for enterprise へのアップグレードの準備ができているデバイスを特定するために、新しい準備ダッシュボードが用意されています。 これには、Configuration Manager の Current Branch バージョン 1902 でリリースされた **[Office 365 ProPlus upgrade readiness]\(Office 365 ProPlus アップグレード準備\)** タイルが含まれています。 Configuration Manager コンソールで、 **[ソフトウェア ライブラリ]** ワークスペースに移動し、 **[Office 365 クライアント管理]** を展開し、 **[Office 365 ProPlus Upgrade Readiness]\(Office 365 ProPlus アップグレード準備\)** ノードを選択します。
 
 ダッシュボード、前提条件、このデータを使用方法について詳しくは、「[Office 365 ProPlus 準備の統合](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash)」をご覧ください。
 

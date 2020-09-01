@@ -2,7 +2,7 @@
 title: Desktop Analytics の新機能
 titleSuffix: Configuration Manager
 description: Desktop Analytics クラウド サービスの最新のマンスリー リリースの新機能の概要です。
-ms.date: 08/19/2020
+ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: c41c6333cfee1b6a24bb84c0f020c14c303fd904
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: dd188b80375861cd08784d0574e737bfce7f2d92
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614742"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993148"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Desktop Analytics の新機能
 
@@ -39,6 +39,12 @@ Desktop Analytics の各月の新機能について説明します。
 現在は、Configuration Manager で展開するすべてのアプリが、Desktop Analytics によって既定で重要として自動的に構成されます。 この動作により、環境内のアプリをより迅速に構成し、運用環境に迅速に展開することができます。
 
 詳細については、[資産のアプリ](about-assets.md#apps)に関する記事をご覧ください。
+
+<!-- 6049643 -->
+
+### <a name="improved-processing-of-diagnostic-data-during-snapshot-generation"></a>スナップショット生成中の診断データの処理の改善
+
+Microsoft では、Desktop Analytics に登録されたデバイスから Windows 診断データを収集して処理する方法を改善しました。 これらの改善により、毎日のスナップショット生成の信頼性が向上します。また、開発中の新機能のための準備が行われます。 この作業の結果として、Microsoft では、展開プランの**過去 30 日間にこのアプリを起動したデバイス**の数を一時的に無効にしました。 詳細については、[資産のアプリ](about-assets.md#usage)に関する記事をご覧ください。
 
 ## <a name="july-2020"></a>2020 年 7 月
 
@@ -66,7 +72,7 @@ Desktop Analytics ポータルで、通知バナーを表示できるように�
 
 ### <a name="improvement-to-prerequisites"></a>前提条件の改善
 
-Desktop Analytics では、Azure Active Directory (Azure AD) テナントに Office 365 サービスをデプロイする必要がなくなりました。 Azure AD の **Office 365 クライアント管理**アプリは **Desktop Analytics** アプリになり、このサービスから Configuration Manager が情報と状態を取得できるようになりました。
+Desktop Analytics では、Azure Active Directory (Azure AD) テナントに Microsoft 365 サービスをデプロイする必要がなくなりました。 Azure AD の **Office 365 クライアント管理**アプリは **Desktop Analytics** アプリになり、このサービスから Configuration Manager が情報と状態を取得できるようになりました。
 
 ## <a name="may-2020"></a>2020 年 5 月
 

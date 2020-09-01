@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0ddad23dfde87fa402c01d4eaa21a1b76db27d93
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692929"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995451"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Configuration Manager の Technical Preview 1705 の機能
 
@@ -136,20 +136,20 @@ ms.locfileid: "88692929"
 サイトを停止することは、サイト サーバーでサイト コンポーネント マネージャー サービス (sitecomp) に続いて SMS_Executive サービスを停止することと同じです。
 
 
-## <a name="improved-user-notifications-for-office-365-updates"></a>Office 365 更新プログラムのユーザーへの通知の改善
-クライアントが Office 365 更新プログラムをインストールする場合に、Office クイック実行ユーザー エクスペリエンスを活用するように改善されました。 これには、ポップアップとアプリ内通知、およびカウントダウン エクスペリエンスが含まれます。 以前のリリースでは、Office 365 更新プログラムがクライアントに送信されると、開いていた Office アプリケーションが警告なしで自動的に閉じられていました。 この更新により、Office アプリケーションが予期せずに閉じられることはなくなります。
+## <a name="improved-user-notifications-for-microsoft-365-updates"></a>Microsoft 365 更新プログラムのユーザーへの通知の改善
+クライアントが Microsoft 365 更新プログラムをインストールする場合に、Office クイック実行ユーザー エクスペリエンスを活用するように改善されました。 これには、ポップアップとアプリ内通知、およびカウントダウン エクスペリエンスが含まれます。 以前のリリースでは、Microsoft 365 更新プログラムがクライアントに送信されると、開いていた Office アプリケーションが警告なしで自動的に閉じられていました。 この更新により、Office アプリケーションが予期せずに閉じられることはなくなります。
 
 ### <a name="prerequisites"></a>[前提条件]
-この更新プログラムは、Office 365 ProPlus クライアントに適用されます。
+この更新プログラムは、Microsoft 365 Apps for enterprise クライアントに適用されます。
 
 ### <a name="known-issues"></a>既知の問題
-クライアントが初めて Office 365 の更新割り当てを評価し、その更新プログラムの期限が過去にスケジュールされている場合、今すぐにスケジュールされている場合、または 30 分以内にスケジュールされている場合、Office 365 のユーザー エクスペリエンスに一貫性がなくなる場合があります。 たとえば、クライアントが更新プログラムに対して 30 分間のカウント ダウン ダイアログを受け取った場合でも、実際の適用はカウント ダウンが終わる前に開始できます。 この動作を回避するには、次を考慮してください。
-- 現在の時刻から 60 分以上先にスケジュールされた期限付きで Office 365 の更新プログラムを展開します。
+クライアントが初めて Microsoft 365 の更新割り当てを評価したときに、その更新プログラムの期限が過去にスケジュールされている場合、今すぐにスケジュールされている場合、または 30 分以内にスケジュールされている場合は、Microsoft 365 のユーザー エクスペリエンスに一貫性がなくなる場合があります。 たとえば、クライアントが更新プログラムに対して 30 分間のカウント ダウン ダイアログを受け取った場合でも、実際の適用はカウント ダウンが終わる前に開始できます。 この動作を回避するには、次を考慮してください。
+- 現在の時刻から 60 分以上後にスケジュールした期限と共に Microsoft 365 の更新プログラムを展開します。
 - コレクションに対して勤務時間外にメンテナンス期間を設定するか、展開に対して適用猶予期間を設定します。
 
 ### <a name="try-it-out"></a>試してみましょう。
 次のタスクを試した後、どのように動作したかについて、リボンの **[ホーム]** タブから **[フィードバック]** を送信してください。
-- 現在の時刻から 60 分以上先の時間に設定した期限付きで Office 365 更新プログラムをクライアントに展開します。 クライアントで新しい動作を確認します。
+- 現在の時刻から 60 分以上後の時刻に設定した期限と共に Microsoft 365 更新プログラムをクライアントに展開します。 クライアントで新しい動作を確認します。
 
 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Windows Defender Application Guard ポリシーの構成と展開

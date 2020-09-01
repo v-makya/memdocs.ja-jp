@@ -10,12 +10,12 @@ ms.assetid: 264ea96f-f26a-4fb7-a23f-ecf36054e54b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7db3c587d592f7ef972e53a8bbdc2b27da1abbf4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ed0cb60e07482ec3a9088eaa468bce9e5e9c9408
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126547"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994533"
 ---
 # <a name="diagnostic-and-usage-data-for-version-2002"></a>バージョン 2002 の診断情報と使用状況データ
 
@@ -176,7 +176,7 @@ Configuration Manager バージョン 2002 では、このレベルには次の�
 
 - アプリケーション カタログの個別のブランドの数  
 
-- ダッシュボードを使用して作成された Office 365 アプリケーションの数  
+- ダッシュボードを使用して作成された Microsoft 365 アプリケーションの数  
 
 - パッケージの数 (種類別)  
 
@@ -226,7 +226,7 @@ Configuration Manager バージョン 2002 では、このレベルには次の�
 
 - アプリケーション グループの承認機能の使用に関して集計された統計情報
 
-- Office アドインで集計された統計情報、Office 準備ツールキットの使用状況、Office 365 ProPlus でのクライアントの数
+- Office アドインで集計された統計情報、Office 準備ツールキットの使用状況、Microsoft 365 Apps for enterprise でのクライアントの数
 
 - Office アドインの正常性に関して集計された統計情報
 
@@ -480,7 +480,7 @@ Configuration Manager バージョン 2002 では、このレベルには次の�
 
 - アクティブな Windows 10 サービス プランに使用される構成  
 
-- 展開された Office 365 更新プログラムの数  
+- 展開された Microsoft 365 更新プログラムの数  
 
 - 同期されている Microsoft Surface ドライバーの数  
 

@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e573a2887bd527daac9a05fec2e83ef39fbfc4e1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 575c29e738b399a98dc92fc003fad07b86fab402
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700318"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994941"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager でクライアントとデバイスに対してサポートされる OS のバージョン
 
@@ -354,7 +354,7 @@ Configuration Manager は、Configuration Manager クライアントをインス
 
 ### <a name="supported-versions-of-exchange-server"></a>サポートされている Exchange Server のバージョン
 
-- **Exchange Online (Office 365)** :このバージョンには、Business Productivity Online Standard Suite が含まれます  
+- **Exchange Online (Microsoft 365)** :このバージョンには、Business Productivity Online Standard Suite が含まれます  
 
 - **Exchange Server 2016**  
 

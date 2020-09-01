@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695683"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995536"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Configuration Manager の Technical Preview 1609 の機能
 
@@ -347,36 +347,36 @@ Configuration Manager の Technical Preview 1609 では、新しいダッシュ�
 - Office 365 クライアントのバージョン
 - Office 365 クライアントの言語
 - Office 365 クライアントのチャネル     
-詳細については、「[Office 365 ProPlus 更新プログラム チャネルの概要](/deployoffice/overview-update-channels)」をご覧ください。
+詳細については、[Microsoft 365 アプリの更新チャネルの概要](https://docs.microsoft.com/deployoffice/overview-update-channels)に関するページをご覧ください。
 - Office 365 クライアントが使用可能な製品のセットで選択した自動展開規則
 
 ダッシュボードでは、次の操作を実行できます。
 - ダッシュボードの上部にある **[コレクション]** ドロップダウン設定を使用して、特定のコレクションのメンバーでダッシュボードのデータをフィルター処理します。
-- ダッシュボードの右上にある **[Office 365 インストーラー]** をクリックして、Office 365 クライアントのインストール ウィザードを起動して、Office 365 アプリをクライアントに展開します。 詳細については、「[クライアントに Office 365 アプリを展開する](#deploy-office-365-apps-to-clients)」をご覧ください。
-- ダッシュボードの右中央で、 **[ADR の作成]** をクリックして自動展開規則の作成ウィザードを開き、新しい自動展開規則 (ADR) を作成します。 Office 365 アプリに ADR を作成するには、製品を選択するときに **[Office 365 クライアント]** を選択します。 詳細については、「[ソフトウェア更新プログラムの自動展開](../../sum/deploy-use/automatically-deploy-software-updates.md)」を参照してください。
+- ダッシュボードの右上にある **[Office 365 インストーラー]** をクリックして、Office 365 クライアントのインストール ウィザードを起動し、Microsoft 365 アプリをクライアントに展開します。 詳細については、「[Microsoft 365 アプリをクライアントに展開する](#deploy-microsoft-365-apps-to-clients)」をご覧ください。
+- ダッシュボードの右中央で、 **[ADR の作成]** をクリックして自動展開規則の作成ウィザードを開き、新しい自動展開規則 (ADR) を作成します。 Microsoft 365 アプリ用に ADR を作成するには、製品を選択するときに **[Office 365 クライアント]** を選択します。 詳細については、「[ソフトウェア更新プログラムの自動展開](../../sum/deploy-use/automatically-deploy-software-updates.md)」を参照してください。
 - ダッシュボードの右下で、 **[クライアント エージェント設定の作成]** をクリックしてクライアント エージェントの設定を開きます。 詳細については、「[クライアント設定について](../clients/deploy/about-client-settings.md)」を参照してください。
 
 
 
-Office 365 ProPlus の更新プログラムの詳細については、「[Manage Office 365 ProPlus updates with Configuration Manager](../../sum/deploy-use/manage-office-365-proplus-updates.md)」 (Configuration Manager での Office 365 ProPlus の更新プログラムの管理) をご覧ください。
+Microsoft 365 Apps for enterprise の更新プログラムの詳細については、[Configuration Manager で Microsoft 365 Apps の更新プログラムを管理する方法](../../sum/deploy-use/manage-office-365-proplus-updates.md)に関する記事をご覧ください。
 
-## <a name="deploy-office-365-apps-to-clients"></a>クライアントに Office 365 アプリを展開する
-このリリースでは、Office 365 クライアント管理ダッシュボードから Office 365 のインストーラーを起動できます。インストーラーを使用すると、Office 365 のインストール設定を構成し、Office コンテンツ配信ネットワーク (CDN) からファイルをダウンロードし、Configuration Manager でファイルをアプリケーションとして展開できます。
+## <a name="deploy-microsoft-365-apps-to-clients"></a>Microsoft 365 アプリをクライアントに展開する
+このリリースでは、Office 365 クライアント管理ダッシュボードから Office 365 のインストーラーを起動できます。これによって、Microsoft 365 のインストール設定を構成し、Office コンテンツ配信ネットワーク (CDN) からファイルをダウンロードし、Configuration Manager でファイルをアプリケーションとして展開できます。
 
-### <a name="limitations-of-office-365-deployment"></a>Office 365 展開の制限事項
+### <a name="limitations-of-microsoft-365-deployment"></a>Microsoft 365 展開の制限事項
 - Office 365 アプリのインストール ウィザードで既存のクライアント設定 (XML) をインポートしようとすると、問題が発生する場合があります。 手動では問題なくクライアント設定を構成できます。
 
-#### <a name="to-deploy-office-365-apps-to-clients"></a>クライアントに Office 365 アプリを展開するには
+#### <a name="to-deploy-microsoft-365-apps-to-clients"></a>Microsoft 365 アプリをクライアントに展開するには
 1. Configuration Manager コンソールで **[ソフトウェア ライブラリ]**  >  **[概要]**  >  **[Office 365 クライアント管理]** に移動します。
 2. 右上のウィンドウで **[Office 365 インストーラー]** をクリックします。 Office 365 クライアントのインストール ウィザードが開きます。
 3. **[アプリケーションの設定]** ページでアプリの名前と説明を入力し、ファイルをダウンロードする場所を入力して、 **[次へ]** をクリックします。 場所は &#92;&#92;*server*&#92;*share* の形式で指定する必要があります。
-4. **[クライアント設定のインポート]** ページで、Office 365 クライアントの設定を既存の XML 構成ファイルからインポートするか、手動で設定を指定するかどうかを選び、 **[次へ]** をクリックします。
+4. **[クライアント設定のインポート]** ページで、Microsoft 365 クライアントの設定を既存の XML 構成ファイルからインポートするか、手動で設定を指定するかどうかを選び、 **[次へ]** をクリックします。
 既存の構成ファイルを使用する場合は、ファイルの場所を入力し、ステップ 7 に進みます。 場所は &#92;&#92;*server*&#92;*share*&#92;*filename*.XML の形式で指定する必要があります。
 
     > [!IMPORTANT]
     >この Technical Preview で既存のクライアント設定 (XML) をインポートしようとすると、問題が発生する場合があります。
 
-5. **[クライアント プロダクト]** ページで、使用する Office 365 スイートを選び、含めたいアプリケーションを選び、含める必要がある追加の Office 製品を選び、 **[次へ]** をクリックします。
+5. **[クライアント製品]** ページで、使用する Microsoft 365 スイートを選び、含めたいアプリケーションを選び、含める必要がある追加の Office 製品を選んでから、 **[次へ]** をクリックします。
 6. **[クライアント設定]** ページで、含める設定を選び、 **[次へ]** をクリックします。
 7. **[展開]** ページで、アプリケーションを展開するかどうかを選び **[次へ]** をクリックします。
 ウィザードでパッケージを展開しないことを選択した場合は、ステップ 9 に進みます。
@@ -385,7 +385,7 @@ Office 365 ProPlus の更新プログラムの詳細については、「[Manage
 10. 他のアプリケーションと同様に、Configuration Manager で **[ソフトウェア ライブラリ]**  >  **[概要]**  >  **[アプリケーション管理]**  >  **[アプリケーション]** の順に選択して、アプリケーションを展開または編集することができます。
 
 >[!NOTE]
->Office 365 アプリを展開すると、アプリを維持するための自動展開規則を作成できます。 Office 365 アプリに ADR を作成するには、製品を選択するときに **[ADR の作成]** をクリックし、 **[Office 365 クライアント]** を選択します。 詳細については、「[ソフトウェア更新プログラムの自動展開](../../sum/deploy-use/automatically-deploy-software-updates.md)」を参照してください。
+>Microsoft 365 アプリを展開したら、アプリを維持するための自動展開規則を作成できます。 Microsoft 365 アプリ用に ADR を作成するには、製品を選択するときに **[ADR の作成]** をクリックし、 **[Office 365 クライアント]** を選択します。 詳細については、「[ソフトウェア更新プログラムの自動展開](../../sum/deploy-use/automatically-deploy-software-updates.md)」を参照してください。
 
 ## <a name="improvements-for-bios-to-uefi-conversion"></a><a name="BKMK_UEFIConversion"></a>BIOS から UEFI への変換の改善
 コンピューターの再起動のステップで、UEFI に移行するためにハード ドライブに FAT32 パーティションを準備するため、新しい変数 TSUEFIDrive を使用して、オペレーティング システムの展開タスク シーケンスをカスタマイズできるようになりました。 次の手順では、タスク シーケンスのステップを作成して BIOS からUEFI への変換のためにハード ドライブを準備する方法の例を示します。

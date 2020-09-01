@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f758456ad75c4acde1b050be75d653cc0e1dcfa1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 54794a575cda4197bc11160d1c5e374d06c143c6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700369"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995247"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1902 の新機能
 
@@ -351,27 +351,27 @@ Configuration Manager を使用して、Windows の既知のフォルダーを O
 
 OneDrive for Business のこの機能の詳細については、「[Windows の既知のフォルダーを OneDrive にリダイレクトして移動する](/onedrive/redirect-known-folders)」を参照してください。
 
-最初に、[Office 365 テナント ID を確認します](/onedrive/find-your-office-365-tenant-id)。 次に、OneDrive 同期クライアント バージョン 18.111.0603.0004 以降を展開します。 詳細については、「[Configuration Manager を使用した OneDrive アプリの展開](/onedrive/deploy-on-windows)」を参照してください。  
+まず、[Microsoft 365 テナント ID を見つけます](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)。 次に、OneDrive 同期クライアント バージョン 18.111.0603.0004 以降を展開します。 詳細については、「[Configuration Manager を使用した OneDrive アプリの展開](https://docs.microsoft.com/onedrive/deploy-on-windows)」を参照してください。  
 
 OneDrive for Business プロファイルを作成して展開するには、Configuration Manager コンソールで **[資産とコンプライアンス]** ワークスペースに移動します。 **[コンプライアンス設定]** を展開し、 **[OneDrive for Business プロファイル]** ノードを選びます。  
 
 詳細については、「[OneDrive for Business プロファイル](../../../compliance/deploy-use/onedrive-profile.md)」の記事の「Windows の既知のフォルダーを OneDrive にリダイレクト」セクションをご覧ください。
 
-### <a name="integration-for-office-365-proplus-readiness"></a>Office 365 ProPlus の準備の統合
+### <a name="integration-for-microsoft-365-apps-for-enterprise-readiness"></a>Microsoft 365 Apps for enterprise の準備の統合
 
 <!--3735402-->
-Office 365 ProPlus へのアップグレードの準備ができている信頼性の高いデバイスを特定するには、Configuration Manager を使用します。 統合により、環境内で使用されている Office のアドインとマクロの潜在的な互換性の問題の分析情報が得られます。 そして、Configuration Manager を使用して Office を展開し、デバイスを準備します。
+Configuration Manager を使用して、Microsoft 365 Apps for enterprise へのアップグレードの準備ができている信頼性の高いデバイスを特定します。 統合により、環境内で使用されている Office のアドインとマクロの潜在的な互換性の問題の分析情報が得られます。 そして、Configuration Manager を使用して Office を展開し、デバイスを準備します。
 
-既存の Office 365 クライアント管理ダッシュボードに、 **[Office 365 ProPlus Upgrade Readiness]** という新しいタイルが追加されました。
+既存の Microsoft 365 クライアント管理ダッシュボードに、 **[Office 365 ProPlus Upgrade Readiness]** という新しいタイルが追加されました。
 
-詳細については、[Office 365 クライアント管理ダッシュボード](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness)に関するページをご覧ください。
+詳細については、[Microsoft 365 クライアント管理ダッシュボード](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness)に関する記事をご覧ください
 
-### <a name="additional-languages-for-office-365-updates"></a>Office 365 更新プログラムの追加言語
+### <a name="additional-languages-for-microsoft-365-updates"></a>Microsoft 365 更新プログラムの追加言語
 
 <!--3555955-->
-Office 365 クライアント更新プログラムでサポートされるすべての言語が Configuration Manager でサポートされるようになりました。 更新のワークフローでは、**Office 365 クライアント更新**での多数の言語に対して、**Windows Update** では 38 の言語に分割されています。
+Microsoft 365 クライアント更新プログラムでサポートされるすべての言語が Configuration Manager でサポートされるようになりました。 更新のワークフローでは、**Office 365 クライアント更新**での多数の言語に対して、**Windows Update** では 38 の言語に分割されています。
 
-詳しくは、[Office 365 更新の管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang)に関するページをご覧ください。
+詳細については、[Microsoft 365 更新プログラムの管理](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang)に関する記事をご覧ください
 
 ### <a name="office-products-on-lifecycle-dashboard"></a>ライフサイクル ダッシュボードでの Office 製品
 

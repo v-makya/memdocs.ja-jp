@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 63aba639eea221c3a13f7ebeabaa1b96a8439a72
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 484b1d808484984b4beaf434c0c27f2f1bec4e10
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700771"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995196"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Ready for Modern Desktop の提供終了に関する FAQ
 
@@ -45,11 +45,11 @@ Desktop Analytics を使うと、商用デバイスで見つかった資産の�
 
 ### <a name="what-happened-to-the-ready-for-windows-website"></a>Ready for Windows Web サイトはどうなりましたか?
 
-多くのお客様は、Windows 10 と Office 365 ProPlus を最新の状態に保つことについて課題を抱えています。 通常、このプロセスは手動で行われるため、主な課題はアプリケーションのテストです。 IT 管理者とアプリケーション所有者が既存のアプリケーションを継続的に分析し、発生した問題を修正することは時間がかかります。
+多くのお客様は、Windows 10 と Microsoft 365 Apps for enterprise を最新の状態に保つことに関する課題を抱えています。 通常、このプロセスは手動で行われるため、主な課題はアプリケーションのテストです。 IT 管理者とアプリケーション所有者が既存のアプリケーションを継続的に分析し、発生した問題を修正することは時間がかかります。
 
-*Ready for Modern Desktop* ディレクトリには、Windows 10 および Office 365 ProPlus を実行している商用デバイスでサポートされ、使用されているソフトウェア ソリューションが掲載されていました。 このディレクトリは、Windows 10 および Office 365 の最新バージョンの展開を検討している IT 管理者を支援するものです。
+*Ready for Modern Desktop* ディレクトリには、Windows 10 および Microsoft 365 Apps for enterprise を実行している商用デバイスでサポートされ、使用されているソフトウェア ソリューションが掲載されていました。 このディレクトリは、Windows 10 および Microsoft 365 の最新バージョンの展開を検討している IT 管理者を支援するものです。
 
-IT 管理者からは、これらの分析情報を既に使用しているツールと統合して展開計画を立てたいというフィードバックをいただいています。 Windows 10 と Office 365 ProPlus のアップグレード プロジェクトを計画および管理するには、Configuration Manager で [Desktop Analytics](https://aka.ms/dadocs) と [Office 365 ProPlus の準備機能](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)を使用します。 
+IT 管理者からは、これらの分析情報を既に使用しているツールと統合して展開計画を立てたいというフィードバックをいただいています。 Windows 10 と Microsoft 365 Apps for enterprise のアップグレード プロジェクトを計画および管理するには、Configuration Manager で [Desktop Analytics](https://aka.ms/dadocs) と [Microsoft 365 Apps の準備機能](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)を使用します。 
 
 > [!Note]
 > 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
@@ -100,11 +100,11 @@ Desktop Analytics を使うと、[デバイスとそれにインストールさ�
 
 ### <a name="can-i-still-list-my-software-solution-in-desktop-analytics"></a>まだ Desktop Analytics に自社のソフトウェア ソリューションを掲載できますか?
 
-御社の製品が 32 ビットまたは 64 ビットの Windows 10 または Office 365 ProPlus で動作するというサポートに関する声明を公開してください。 御社のソリューションを Desktop Analytics で紹介するには、Microsoft の担当者にお問い合わせください。
+御社の製品が 32 ビットまたは 64 ビットの Windows 10 または Microsoft 365 Apps for enterprise で動作するという、サポートに関する声明を公開してください。 御社のソリューションを Desktop Analytics で紹介するには、Microsoft の担当者にお問い合わせください。
 
 ### <a name="how-can-listing-my-solutions-benefit-me"></a>自社のソリューションを掲載すると、どのようなメリットがありますか?
 
-数千人の IT 管理者が、Configuration Manager と Desktop Analytics を使用して数百万台のデバイスを管理しています。 これらのツールを使用すると、自信を持って組織の計画を立て、Windows 10 および Office 365 ProPlus の最新バージョンにアップグレードすることができます。 また、ソフトウェア ソリューションの購入に関する判断にも使用されます。
+数千人の IT 管理者が、Configuration Manager と Desktop Analytics を使用して数百万台のデバイスを管理しています。 これらのツールを使用すると、自信を持って組織の計画を立て、Windows 10 および Microsoft 365 Apps for enterprise の最新バージョンにアップグレードすることができます。 また、ソフトウェア ソリューションの購入に関する判断にも使用されます。
 
 Microsoft では、ソフトウェア ベンダーからのサポートに関する声明を、商用デバイスから受け取った導入情報と統合しています。 世界中の組織が、Desktop Analytics や Office readiness ツールでこのデータを使用しています。 
 
@@ -118,8 +118,8 @@ Microsoft では、ソフトウェア ベンダーからのサポートに関す
 - [デスクトップ](/windows/desktop/appxpkg/windows-desktop-application-program)
 - [Office アドイン](/office/dev/store/update-unpublish-and-view-metrics) 
 
-### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-office-365-proplus"></a>Windows 10 と Office 365 ProPlus 用の互換性のある資産を開発するにはどうすればよいですか?
+### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-microsoft-365-apps-for-enterprise"></a>Windows 10 と Microsoft 365 Apps for enterprise 用の互換性のある資産を開発するにはどうすればよいですか?
 
 現時点で御社のデスクトップ アプリケーションに互換性があることを確認し、Windows 10 との互換性を今後も維持してください。 詳細については、「[アプリケーションの互換性](https://developer.microsoft.com/windows/desktop/app-compatibility)」を参照してください。
 
-Office 365 ProPlus 用のソリューションを開発している場合は、「[Office での COM、VSTO、および VBA アドインの開発に関するベストプラクティス](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)」を参照してください。
+Microsoft 365 Apps for enterprise 用のソリューションを開発している場合は、「[Office での COM、VSTO、および VBA アドインの開発に関するベストプラクティス](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)」を参照してください。

@@ -2,7 +2,7 @@
 title: Wake On LAN の構成
 titleSuffix: Configuration Manager
 description: Configuration Manager で Wake On LAN 設定を選択します。
-ms.date: 08/11/2020
+ms.date: 08/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcf6005d0364106df8717a1151dbad617e455ff9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 33283b13bc28c7d102f014ac3cb4048681343ac2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127037"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907849"
 ---
 # <a name="how-to-configure-wake-on-lan-in-configuration-manager"></a>Configuration Manager で Wake On LAN を構成する方法
 
@@ -27,7 +27,7 @@ ms.locfileid: "88127037"
 <!--3607710-->
 Configuration Manager 1810 以降、新しい方法でスリープ状態のコンピューターを復帰させることができます。 クライアントとサイト サーバーのサブネットが異なる場合でも、Configuration Manager コンソールからクライアントを復帰させることができます。 メンテナンスを実行したり、デバイスにクエリを実行したりする必要がある場合、スリープ状態にあるリモート クライアントで制限されることがありません。 サイト サーバーでは、クライアント通知チャネルを利用し、同じリモート サブネット上で起動状態にある他のクライアントが識別されます。次に、そのクライアントを利用し、Wake On LAN 要求 (マジック パケット) が送信されます。 クライアント通知チャネルを利用することで MAC フラップが回避されます。MAC フラップは、ポートがルーターによってシャットダウンされる原因になることがあります。 新しいバージョンの Wake on LAN は[以前のバージョン](#bkmk_wol-previous)と同じ時刻で有効にできます。
 
-### <a name="limitations"></a>制限事項
+### <a name="prerequisites-and-limitations"></a>前提条件と制限事項
 <!--7323898, 7363492-->
 - ターゲット サブネットの少なくとも 1 つのクライアントが起動状態にある必要があります。
 - この機能では、次のネットワーク テクノロジがサポートされていません。
@@ -38,6 +38,8 @@ Configuration Manager 1810 以降、新しい方法でスリープ状態のコ�
 - コンピューターは、**Wake Up** クライアント通知経由で通知されたときにのみ復帰します。
     - 期限に到達したときに復帰させるには、以前のバージョンの Wake On LAN が使用されます。
     -  以前のバージョンが有効になっていない場合、 **[展開が必要なときに Wake-on-LAN を使用してクライアントを起動する]** または **[ウェイクアップ パケットを送信する]** という設定で作成された展開ではクライアントが復帰しません。  
+- DHCP リース期間を無制限に設定することはできません。 <!--8018584-->
+   - DHCP リースが無制限に設定されている環境では、SleepAgent_&lt;*domain*\>@SYSTEM_0.log が非常に大きくなり、場合によってはブロードキャスト ストームが発生する可能性があります。  
 
 ### <a name="security-role-permissions"></a>セキュリティ ロールのアクセス許可
 
