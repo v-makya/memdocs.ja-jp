@@ -2,11 +2,11 @@
 
 ## [デバイスの登録とは](use-managed-devices-to-get-work-done.md)
 
-## [企業は Intune でどのような情報を確認できるか](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+## [組織で表示できる情報](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 ## [デバイスのパスワード要件](password-does-not-meet-it-administrator-requirements.md)
 
-## [ポータル サイトにサインインする](sign-in-to-the-company-portal.md)  
+## [ポータル サイトにアクセスする方法](sign-in-to-the-company-portal.md)  
 
 ## [Mobile Threat Defense アプリのインストール](set-up-mobile-threat-defense.md)  
 
@@ -20,7 +20,7 @@
 #### 派生した資格情報で登録する
 ##### [Entrust Datacard で登録する](enroll-android-device-entrust-datacard.md)
 ##### [Intercede に登録する](enroll-android-device-intercede.md)
-##### [Disa Purebred を使用して登録する](enroll-android-device-disa-purebred.md)
+##### [DISA Purebred を使用して登録する](enroll-android-device-disa-purebred.md)
 ### [新しいデバイス管理のセットアップに移動する](move-to-new-device-management-setup.md)
 ### [デバイスで管理対象アプリを使用する](use-managed-apps-on-your-device-android.md)
 ### [デバイスを暗号化する](encrypt-your-device-android.md)
@@ -64,7 +64,6 @@
 
 ## [iOS デバイスを使用する](using-your-iOS-device-with-intune.md)
 ### [iOS デバイスのリセットの影響](effects-of-device-reset-company-portal-ios.md)
-### [ポータル サイトをインストールしてサインインする](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### デバイスを登録する
 #### [iOS デバイスを登録する](enroll-your-device-in-intune-ios.md)
 #### [組織が提供する iOS デバイスを登録する](enroll-your-device-dep-ios.md)
@@ -143,7 +142,7 @@
 #### [ポータル サイト アプリからログを送信する](send-logs-to-your-it-admin-cp-windows.md)
 #### [デバイス設定アプリからログを送信する](send-logs-to-your-it-admin-settings-windows.md)
 #### [使用しているバージョンの Windows がサポートされていない](your-windows-version-isnt-yet-supported.md)
-#### [Windows 10 デバイスに Office 365 をインストールする](install-office-windows.md)
+#### [Windows 10 デバイスに Office をインストールする](install-office-windows.md)
 #### [デバイスを暗号化する必要がある](you-need-to-enable-windows-encryption.md)
 #### [デバイスにはマルウェア対策ソフトウェアが必要](your-device-needs-antimalware-software.md)
 #### [セキュア ブートを有効にする](you-need-to-enable-secure-boot-windows.md)
