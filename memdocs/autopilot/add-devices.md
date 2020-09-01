@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: b3f25f424857d99919450ec1426ee1023bae3aca
-ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.openlocfilehash: 0070492304fc75bf51b6eda929c274076c7b2452
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057374"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193816"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Windows 自動操縦にデバイスを追加する
 
@@ -75,7 +75,7 @@ Windows 自動操縦装置を使用してデバイスを識別するには、デ
 
 ハードウェアハッシュには、デバイスの詳細が含まれています。
 - manufacturer
-- model
+- 対象となるのは、モデル
 - デバイスのシリアル番号
 - ハードドライブのシリアル番号
 - ID が生成された日時の詳細
@@ -130,10 +130,10 @@ Get-WindowsAutoPilotInfo.ps1 -OutputFile AutoPilotHWID.csv
 
 既存のデバイスからハードウェアハッシュをキャプチャした後は、次のいずれかの方法でアップロードできます。
 
-- [Microsoft Intune](enrollment-autopilot.md) は、すべてのお客様に推奨されるメカニズムです。
- - Microsoft Endpoint Manager 管理センターは、Intune のデバイス登録に使用されます。
-- [パートナーセンター](https://msdn.microsoft.com/partner-center/autopilot) は、ユーザーにデバイスを登録するために CSP パートナーによって使用されます。
-- [Microsoft 365 Business & Office 365 Admin](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa) は、通常、Microsoft 365 Business を使用してデバイスを管理する中小企業 (smb) によって使用されます。
+- [Microsoft Intune](enrollment-autopilot.md)。 これは、すべてのお客様に推奨されるメカニズムです。
+  - Microsoft Endpoint Manager 管理センターは、Intune のデバイス登録に使用されます。
+- [パートナーセンター](https://msdn.microsoft.com/partner-center/autopilot)。 これは、ユーザーに代わってデバイスを登録するために CSP パートナーによって使用されます。
+- [& Office 365 管理者を Microsoft 365 Business](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa)します。通常、これは、Microsoft 365 Business を使用してデバイスを管理する中小企業 (Smb) によって使用されます。
 - [ビジネス向け Microsoft Store](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles)。 アプリと設定の管理には、既に MSfB を使用している可能性があります。
 
 各プラットフォームの機能の概要については、以下を参照してください。<br>

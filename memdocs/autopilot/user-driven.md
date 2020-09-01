@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 09632eccf99774d4170fe60f51b6703cd8b90fed
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: f5299db1c151d3338fb2060246a7d07beb462779
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907920"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193654"
 ---
 # <a name="windows-autopilot-user-driven-mode"></a>Windows Autopilot ユーザードリブン モード
 
@@ -90,10 +90,11 @@ Windows の自動操縦には、デバイスを参加させることが Azure Ac
 
 Windows 自動操縦を使用して、ユーザー主導のハイブリッド Azure AD 参加した展開を実行するには:
 
+- デバイスでは、Windows 10 バージョン1809以降を実行している必要があります。 
 - ユーザー主導モードの Windows 自動操縦プロファイルを作成する必要があります。 
  - **Hybrid Azure AD** 結合は、自動操縦プロファイルと **同じよう Azure AD に [結合** ] で選択したオプションとして指定する必要があります。
 - Intune を使用している場合は、Azure Active Directory のデバイスグループが、そのグループに割り当てられた Windows 自動操縦プロファイルと共に存在している必要があります。
-- デバイスでは、Windows 10 バージョン1809以降を実行している必要があります。
+- Intune を使用する場合は、ドメイン参加プロファイルを作成して割り当てます。 ドメイン参加構成プロファイルには、オンプレミスの Active Directory ドメイン情報が含まれます
 - デバイスは、Active Directory ドメインコントローラーにアクセスできる必要があります。 組織のネットワークに接続されている必要があります。 AD ドメインおよび AD ドメインコントローラーの DNS レコードを解決できる必要があります。 ユーザーを認証するために、ドメインコントローラーと通信できる必要があります。
 - [ドキュメント「Windows 自動操縦ネットワークの要件](networking-requirements.md)」に従って、デバイスがインターネットにアクセスできる必要があります。
 - Active Directory 用の Intune コネクタをインストールする必要があります。
