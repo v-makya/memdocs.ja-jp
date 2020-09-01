@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 0070492304fc75bf51b6eda929c274076c7b2452
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: da7ab26cc748b64426ec256a0814beae4ced1a5f
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193816"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89280934"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Windows 自動操縦にデバイスを追加する
 
@@ -92,7 +92,7 @@ Microsoft Endpoint Configuration Manager は、既存の Windows 10 デバイス
 
 ### <a name="collecting-the-hardware-hash-from-existing-devices-using-powershell"></a>PowerShell を使用した既存のデバイスからのハードウェアハッシュの収集
 
-既存のデバイスのハードウェアハッシュは、そのデバイスでサポートされているバージョンの Windows 10 半期チャネルが実行されている限り、Windows Management Instrumentation (WMI) を介して利用できます。 PowerShell スクリプト ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) を使用して、デバイスのハードウェアハッシュとシリアル番号を取得できます。 シリアル番号は、ハードウェアハッシュが属するデバイスをすばやく確認するのに役立ちます。
+既存のデバイスのハードウェアハッシュは、そのデバイスでサポートされているバージョンの Windows 10 半期チャネルが実行されている限り、Windows Management Instrumentation (WMI) を介して利用できます。 PowerShell スクリプト ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) を使用して、デバイスのハードウェアハッシュとシリアル番号を取得できます。 シリアル番号は、ハードウェアハッシュが属するデバイスをすばやく確認するのに役立ちます。
 
 このスクリプトを使用するには、次のいずれかの方法を使用できます。
 - PowerShell ギャラリーからダウンロードし、各コンピューターで実行します。
@@ -202,6 +202,6 @@ Windows 自動操縦を使用して新しいデバイスを展開する場合は
 2. [デバイスプロファイルを構成](profiles.md)します。 デバイスの展開方法と、表示するユーザーエクスペリエンスを指定します。
 3. デバイスを起動します。 デバイスがインターネットにアクセスできるネットワークに接続されている場合、デバイスが登録されているかどうかを確認するために、Windows 自動展開サービスに連絡します。 登録されている場合は、エンドユーザーエクスペリエンスをカスタマイズするために使用される、 [登録ステータスページ](enrollment-status.md)などのプロファイル設定がダウンロードされます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Bitlocker 暗号化設定](bitlocker.md): 自動暗号化を開始する前に適用する bitlocker 暗号化設定を構成できます。
