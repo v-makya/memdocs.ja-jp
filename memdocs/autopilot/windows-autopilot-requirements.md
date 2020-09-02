@@ -17,12 +17,12 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: aafd83f1aa09881c9e7c4196b91798ab0d278a87
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 37d249c75f18d52f7fa17a0e271f45b17465da1a
+ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993657"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385334"
 ---
 # <a name="windows-autopilot-requirements"></a>Windows Autopilot の要件
 
@@ -53,14 +53,14 @@ Windows の自動操縦は、さまざまなインターネットベースのサ
 - インターネット DNS 名による DNS 名前解決が行われるようにする
 - ポート 80 (HTTP)、443 (HTTPS)、123 (UDP/NTP) を介したすべてのホストへのアクセスを許可する
 
-インターネットアクセスが制限されている環境や、インターネットアクセスを取得する前に認証を必要とする環境では、必要なサービスへのアクセスをホワイトリストに登録するために追加の構成が必要になる場合があります。 
+インターネットアクセスが制限されている環境や、インターネットアクセスを取得する前に認証を必要とする環境では、必要なサービスへのアクセスを許可するために追加の構成が必要になる場合があります。 
 
 > [!NOTE]
 > OOBE.XML では、スマートカードと証明書ベースの認証はサポートされていません。 詳細については、「 [スマートカードと証明書ベースの認証](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication)」を参照してください。
 
 これらの各サービスと固有の要件について詳しくは、以下の詳細を確認してください。
 
-<table><th>サービス<th>情報
+<table><th>サービス<th>Information
 <tr><td><b>Windows 自動操縦展開サービス<b><td>ネットワーク接続が確立されると、各 Windows 10 デバイスは Windows 自動操縦展開サービスにアクセスします。  Windows 10 バージョン1903以降では、、の各 Url が使用されます。 https://ztd.dds.microsoft.com https://cs.dds.microsoft.com <br>
 
 <tr><td><b>Windows ライセンス認証<b><td>Windows の自動操縦には、Windows ライセンス認証サービスも必要です。 ライセンス認証サービスにアクセスできる必要がある Url の詳細については、「 <a href="https://support.microsoft.com/help/921471/windows-activation-or-validation-fails-with-error-code-0x8004fe33">Windows のライセンス認証または検証がエラーコード0x8004FE33 で失敗</a> する」を参照してください。<br>
