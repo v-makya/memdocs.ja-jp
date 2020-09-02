@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3267bf4e59d6745e480a81f8bdc39cfa2827ea4
-ms.sourcegitcommit: 7f542c97ac55bbd329f5befda97d671213c24e9a
+ms.openlocfilehash: 3cabf3bad447ef3db8250d14fcb376cb86aefad3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506334"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907551"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Intune で通信費管理サービスをセットアップする
 
@@ -184,8 +184,8 @@ Datalert サービスがアクティブになりました。 データ使用量�
 
 エンド ユーザー エクスペリエンスのために、次の記事が役に立ちます。
 
-- [通信費管理サービスに iOS/iPadOS デバイスを登録する](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-with-telecom-expense-management-ios)
-- [通信費管理サービスに Android デバイスを登録する](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-with-telecom-expense-management-android)
+- [通信費管理サービスに iOS/iPadOS デバイスを登録する](../user-help/enroll-your-device-with-telecom-expense-management-ios.md)
+- [通信費管理サービスに Android デバイスを登録する](../user-help/enroll-your-device-with-telecom-expense-management-android.md)
 
 ## <a name="turn-off-the-datalert-service"></a>Datalert サービスを無効にする
 

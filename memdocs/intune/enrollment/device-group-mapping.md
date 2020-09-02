@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 761e668ae2c774bb52dbe6971d343d60b3e95516
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e6dae19e466d3d0e88ae07d1c82a63b098439632
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986106"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908617"
 ---
 # <a name="categorize-devices-into-groups"></a>デバイスをグループに分類する
 
@@ -55,7 +55,7 @@ ms.locfileid: "83986106"
 ### <a name="step-2-create-azure-active-directory-security-groups"></a>手順 2: Azure Active Directory セキュリティ グループを作成する
 この手順では、デバイス カテゴリとデバイス カテゴリ名に基づいて、Azure Portal で動的グループを作成します。
 
-次に進む前に、Azure AD ドキュメントの「[属性を利用した高度なルールの作成](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects)」を参照してください。
+次に進む前に、Azure AD ドキュメントの「[属性を利用した高度なルールの作成](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects)」を参照してください。
 
 このセクションの情報を参考にして、**deviceCategory** 属性を使用して高度なルールのデバイス グループを作成します。 例: **device.deviceCategory -eq** "*Azure Portal から取得したデバイス カテゴリ名*"。
 

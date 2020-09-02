@@ -15,12 +15,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 80a26e10a3c05436699d3cafb3c4564e73099c07
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: c77a7355d63eb7f670949846c15670148b61c971
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165840"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907179"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Intune での Android エンタープライズ デバイス上のアプリケーション保護ポリシーと仕事用プロファイル
 
@@ -106,7 +106,7 @@ Outlook や OneDrive などの Office アプリケーションには、"複数 I
 
 仕事用プロファイルを使用する場合、この複数 ID の動作の無効化が必要になることがあります。 これを無効にした場合、仕事用プロファイル内のアプリのバッジ付きインスタンスは、組織 ID でのみ構成できます。 Office Android アプリをサポートするには、[許可されたアカウント] アプリ構成設定を使用します。
 
-詳しくは、[iOS/iPadOS および Android 用 Outlook のアプリ構成設定の展開](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)に関する記事をご覧ください。
+詳しくは、[iOS/iPadOS および Android 用 Outlook のアプリ構成設定の展開](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)に関する記事をご覧ください。
 
 ## <a name="when-to-use-intune-app"></a>Intune APP の使用に適した状況
 

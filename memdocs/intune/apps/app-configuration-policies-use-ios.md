@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b60d37c4da0b706dc109b5800b362d448224f116
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: a8480ec3f7d83ad5819e21ad34b9dfbc67f38999
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410968"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907342"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>管理対象の iOS/iPadOS デバイス用アプリ構成ポリシーを追加する
 
@@ -227,7 +227,7 @@ DEP (Apple の Device Enrollment Program) の登録には、アプリ ストア 
 
 ## <a name="additional-information"></a>追加情報
 
-- [iOS/iPadOS および Android 用 Outlook のアプリ構成設定の展開](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [iOS/iPadOS および Android 用 Outlook のアプリ構成設定の展開](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## <a name="next-steps"></a>次のステップ
 

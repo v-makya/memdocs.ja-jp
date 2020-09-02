@@ -17,12 +17,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e50d518c3709d71085a57ad9a430444564c24cb9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a385b990dfb3c81ea10454b2134f92dec5a2f073
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357559"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907669"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Intune の展開計画に関するその他のリソース
 
@@ -50,7 +50,7 @@ ms.locfileid: "79357559"
 
 以下のリソースで追加情報を確認してください。Intune の展開計画、設計、実装プロセス時に役立つ場合があります。
 
-- [Microsoft Intune のドキュメント](https://docs.microsoft.com/intune/) - Intune のドキュメントの完全なセット。
+- [Microsoft Intune のドキュメント](/intune/) - Intune のドキュメントの完全なセット。
 
 - [Microsoft Trust Center](https://www.microsoft.com/TrustCenter) - すべての Microsoft クラウド製品とサービスにおける、セキュリティ、プライバシー、コンプライアンス、透明度についての Microsoft のアプローチを理解できます。
 

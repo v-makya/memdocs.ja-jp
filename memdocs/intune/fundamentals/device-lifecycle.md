@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c8d60a4a943ba2af9ea99f9eb887a9b77a49fcf
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 64e15e05ba7613b8bf2941d00a48c19292fafc90
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693507"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909756"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Microsoft Intune モバイル デバイス管理 (MDM) ライフサイクルの概要
 
-管理するすべてのデバイスには、*ライフサイクル*があります。 Intune は、登録から始まり、構成と保護を経て、不要になったデバイスの使用中止まで、ライフサイクルの管理に役立ちます。 例: 会社が購入した iPad をまず、会社による管理を許可するため、自分の Microsoft Intune アカウントに登録する必要があります。次に、会社の優先設定に合わせて構成する必要があります。次に、ユーザーがそれに保存するデータを保護する必要があります。最後に、その iPad が不要になったらとき、[それをインベントリから削除するか、それに入っている機密データをすべてワイプする](https://docs.microsoft.com/mem/intune/remote-actions/devices-wipe)必要があります。
+管理するすべてのデバイスには、*ライフサイクル*があります。 Intune は、登録から始まり、構成と保護を経て、不要になったデバイスの使用中止まで、ライフサイクルの管理に役立ちます。 例: 会社が購入した iPad をまず、会社による管理を許可するため、自分の Microsoft Intune アカウントに登録する必要があります。次に、会社の優先設定に合わせて構成する必要があります。次に、ユーザーがそれに保存するデータを保護する必要があります。最後に、その iPad が不要になったらとき、[それをインベントリから削除するか、それに入っている機密データをすべてワイプする](../remote-actions/devices-wipe.md)必要があります。
 
 ![デバイスのライフサイクル](./media/device-lifecycle/device-lifecycle.png "Intune デバイスのライフサイクル")
 

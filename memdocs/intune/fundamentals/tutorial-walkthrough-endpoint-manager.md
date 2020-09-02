@@ -18,16 +18,16 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81ea88bc72e6bcd52dbfe51cb4fa12803605de18
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 650188df0c5e19b3eeb9bfa06197b77414cecb20
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355544"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910181"
 ---
 # <a name="tutorial-walkthrough-intune-in-microsoft-endpoint-manager"></a>チュートリアル:Microsoft Endpoint Manager の Intune のチュートリアル
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) には、クラウド コンピューティングのさまざまなシナリオと可能性を支援する 100 を超えるサービスが含まれています。 Microsoft Intune は、Azure で利用できるサービスの 1 つです。 Intune を利用すると、会社のデバイス、アプリ、データが会社のセキュリティ要件を確実に満たすようにできます。 確認する必要がある要件や、それらの要件が満たされない場合の対応の設定を制御できます。 [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)には、Microsoft Intune サービス、およびその他のデバイス管理関連の設定があります。 Intune で使用できる機能を理解しておくと、モバイル デバイス管理 (MDM) とモバイル アプリケーション管理 (MAM) のさまざまなタスクを実行するときに役に立ちます。
+[Azure](/learn/modules/welcome-to-azure) には、クラウド コンピューティングのさまざまなシナリオと可能性を支援する 100 を超えるサービスが含まれています。 Microsoft Intune は、Azure で利用できるサービスの 1 つです。 Intune を利用すると、会社のデバイス、アプリ、データが会社のセキュリティ要件を確実に満たすようにできます。 確認する必要がある要件や、それらの要件が満たされない場合の対応の設定を制御できます。 [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)には、Microsoft Intune サービス、およびその他のデバイス管理関連の設定があります。 Intune で使用できる機能を理解しておくと、モバイル デバイス管理 (MDM) とモバイル アプリケーション管理 (MAM) のさまざまなタスクを実行するときに役に立ちます。
 
 > [!NOTE]
 > Microsoft エンドポイント マネージャーは、すべてのエンドポイントを管理するための単一の統合エンドポイント管理プラットフォームです。 この Microsoft Endpoint Manager 管理センターでは、ConfigMgr と Microsoft Intune が統合されています。

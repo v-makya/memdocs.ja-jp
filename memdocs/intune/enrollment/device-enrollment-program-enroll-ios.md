@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05a0c4e5a78281f78a986d0512abfeca155494dd
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: a28d2810c3a93cd60013ae347c054783515196d7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051674"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907298"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Apple の自動デバイス登録を使用して iOS または iPadOS デバイスを自動登録する
 
@@ -154,7 +154,7 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
 4. **[Next:Device Management Settings]\(次へ: デバイス管理の設定\)** を選択します。
 
 5. **[ユーザー アフィニティ]** で、このプロファイルに対応するデバイスを割り当て済みユーザーとともに登録する必要があるかどうかを選択します。
-    - **[ユーザー アフィニティとともに登録する]** - このオプションは、ユーザーに属しているデバイスであって、かつアプリのインストールなどのサービスにポータル サイトを使用する必要があるデバイスの場合に選択します。 ADFS を使用しており、セットアップ アシスタントを使用して認証している場合、[WS-Trust 1.3 ユーザー名/混合エンドポイント](https://technet.microsoft.com/library/adfs2-help-endpoints) [詳細](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) が必要です。
+    - **[ユーザー アフィニティとともに登録する]** - このオプションは、ユーザーに属しているデバイスであって、かつアプリのインストールなどのサービスにポータル サイトを使用する必要があるデバイスの場合に選択します。 ADFS を使用しており、セットアップ アシスタントを使用して認証している場合、[WS-Trust 1.3 ユーザー名/混合エンドポイント](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) [詳細](/powershell/module/adfs/get-adfsendpoint?view=win10-ps) が必要です。
 
     - **[ユーザー アフィニティなしで登録する]** - このオプションは、1 人のユーザーに関連付けられていないデバイスの場合に選択します。 ローカルのユーザー データにアクセスしないデバイスには、このオプションを使用します。 エンド ユーザーが iOS ポータル サイトにサインインし、自分自身をデバイスのプライマリ ユーザーとして設定できるようにするには、マネージド デバイスのアプリ構成ポリシーで `IntuneUDAUserlessDevice` キーを iOS ポータル サイトに送信します。 最初にサインインしたユーザーのみがプライマリ ユーザーとして設定されることに注意してください。 最初のユーザーがサインアウトし、2 番目のユーザーがサインインした場合、最初のユーザーは引き続きデバイスのプライマリ ユーザーになります。 詳細については、「[iOS と iPadOS の DEP デバイスをサポートするようにポータル サイト アプリを構成する](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices)」をご覧ください。 
 

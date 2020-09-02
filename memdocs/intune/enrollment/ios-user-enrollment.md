@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73a222ee8f847071174ea7dee1c438b69a1bd0ae
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 72bbc3d720f7abb22296d21bfe4869240200c912
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093782"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907737"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>iOS/iPadOS と iPadOS のユーザー登録を設定する (プレビュー)
 
@@ -46,7 +46,7 @@ Apple のユーザー登録プロセスを使用して、iOS/iPadOS デバイス
 
     ![Apple 登録プロファイルを作成する](./media/ios-user-enrollment/create-profile.png)
 
-2. **[基本]** ページ上で、管理用にプロファイルの **[名前]** と **[説明]** を入力します。 ユーザーには、これらの詳細は表示されません。 この **[名前]** フィールドを使用して、Azure Active Directory で動的グループを作成できます。 この登録プロファイルに対応するデバイスを割り当てるために enrollmentProfileName パラメーターを定義する場合はプロファイル名を使用します。 Azure Active Directory の動的グループの詳細については[こちら](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices)を参照してください。
+2. **[基本]** ページ上で、管理用にプロファイルの **[名前]** と **[説明]** を入力します。 ユーザーには、これらの詳細は表示されません。 この **[名前]** フィールドを使用して、Azure Active Directory で動的グループを作成できます。 この登録プロファイルに対応するデバイスを割り当てるために enrollmentProfileName パラメーターを定義する場合はプロファイル名を使用します。 Azure Active Directory の動的グループの詳細については[こちら](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices)を参照してください。
 
     ![[基本] ページ](./media/ios-user-enrollment/basics-page.png)
 
@@ -58,7 +58,7 @@ Apple のユーザー登録プロセスを使用して、iOS/iPadOS デバイス
 
     - **デバイスの登録**:このプロファイル内のすべてのユーザーは、[デバイスの登録] を使用します。
     - **ユーザー登録**:このプロファイル内のすべてのユーザーは、[ユーザー登録] を使用します。
-    - **Determine based on user choice (ユーザーの選択に基づいて決定する)** :このグループのすべてのユーザーには、使用する登録の種類の選択肢が表示されます。 ユーザーが自分のデバイスを登録すると、 **[I own this device]\(このデバイスを所有している\)** と **[(Company) owns this device]\((会社が) このデバイスを所有している\)** から選択できるようになります。 後者を選択した場合は、デバイスの登録を使用してデバイスが登録されます。 ユーザーが **[I own this device]\(このデバイスを所有している\)** を選択した場合は、さらにデバイス全体をセキュリティで保護するか、職場関連のアプリとデータのみをセキュリティで保護するかを選択できます。 デバイスを所有するかどうかのエンド ユーザーによる選択で、デバイスに実装されている登録の種類が決まります。 このユーザーの選択は、Intune の [デバイスの所有者] 属性にも反映されます。 ユーザー エクスペリエンスの詳細については、[iOS/iPadOS デバイスから会社のリソースへのアクセスを設定する方法](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)に関する記事をご覧ください。
+    - **Determine based on user choice (ユーザーの選択に基づいて決定する)** :このグループのすべてのユーザーには、使用する登録の種類の選択肢が表示されます。 ユーザーが自分のデバイスを登録すると、 **[I own this device]\(このデバイスを所有している\)** と **[(Company) owns this device]\((会社が) このデバイスを所有している\)** から選択できるようになります。 後者を選択した場合は、デバイスの登録を使用してデバイスが登録されます。 ユーザーが **[I own this device]\(このデバイスを所有している\)** を選択した場合は、さらにデバイス全体をセキュリティで保護するか、職場関連のアプリとデータのみをセキュリティで保護するかを選択できます。 デバイスを所有するかどうかのエンド ユーザーによる選択で、デバイスに実装されている登録の種類が決まります。 このユーザーの選択は、Intune の [デバイスの所有者] 属性にも反映されます。 ユーザー エクスペリエンスの詳細については、[iOS/iPadOS デバイスから会社のリソースへのアクセスを設定する方法](../user-help/enroll-your-device-in-intune-macos-cp.md)に関する記事をご覧ください。
     
 5. **[次へ]** を選択します。
 
@@ -81,5 +81,3 @@ Apple のユーザー登録プロセスを使用して、iOS/iPadOS デバイス
 2. 一覧のプロファイルを、適用する順序でドラッグ アンド ドロップします。
 
 ユーザーのプロファイル間で競合が生じた場合は、優先順位の高いプロファイルがユーザーに適用されます。
-
-

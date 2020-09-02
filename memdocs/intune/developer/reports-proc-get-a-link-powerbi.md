@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3a20477b643da961f5c7281d92f3d24a4e7313d
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 2e61e7e8bae436e567bceec5f098170cfb7b7c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443847"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907754"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Power BI でデータ ウェアハウスに接続する
 
@@ -42,7 +42,7 @@ Power BI コンプライアンス アプリを使用すると、Intune テナン
 また、登録、コンプライアンス、デバイス構成プロファイル、ソフトウェア更新プログラムの強調表示された傾向も確認できます。 サンプル グラフとレポートでは、わかりやすいフィルターをキャンバスに適用できます。 高度なフィルターを使用するには、Power BI Desktop の **[フィルター]** ウィンドウを確認します。
 
 > [!NOTE]
-> Power BI テンプレート アプリを使用すると、Power BI パートナーはコーディングをほとんどまたはまったく行わずに Power BI アプリを構築し、それを Power BI の顧客にデプロイすることができます。 たとえば、V2.0 の Power BI コンプライアンス レポート テンプレートを使用できます。 V2.0 では、設計が改善され、テンプレートの一部として表示される計算とデータが変更されます。 詳細については、「[テンプレート アプリを更新する](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app)」、[Intune コンプライアンス (Data Warehouse) アプリ](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd)、「[Power BI テンプレート アプリとは](https://docs.microsoft.com/power-bi/service-template-apps-overview)」を参照してください。
+> Power BI テンプレート アプリを使用すると、Power BI パートナーはコーディングをほとんどまたはまったく行わずに Power BI アプリを構築し、それを Power BI の顧客にデプロイすることができます。 たとえば、V2.0 の Power BI コンプライアンス レポート テンプレートを使用できます。 V2.0 では、設計が改善され、テンプレートの一部として表示される計算とデータが変更されます。 詳細については、「[テンプレート アプリを更新する](/power-bi/service-template-apps-install-distribute#update-a-template-app)」、[Intune コンプライアンス (Data Warehouse) アプリ](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd)、「[Power BI テンプレート アプリとは](/power-bi/service-template-apps-overview)」を参照してください。
 
 Power BI ファイルをダウンロードする方法と、Power BI で OData リンクを使用する方法については、次の手順を参照してください。
 

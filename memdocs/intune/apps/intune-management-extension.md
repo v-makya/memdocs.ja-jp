@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f4080c5cfcc6635478bd88b7d9edf42dd3d8576
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 80f49d00f042037d0833df9536d792fda6f9068b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179487"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910368"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Intune で Windows 10 デバイスに対して PowerShell スクリプトを使用する
 
@@ -51,14 +51,14 @@ Intune 管理拡張機能には次の前提条件があります。 前提条件
   
 - 次を含む、Azure Active Directory (AD) に参加しているデバイス:  
   
-  - Hybrid Azure AD 参加済み: Azure Active Directory (AD) だけでなく、オンプレミスの Active Directory (AD) にも参加しているデバイス。 [Hybrid Azure Active Directory 参加の実装の計画](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)について、ガイダンスを参照してください。
+  - Hybrid Azure AD 参加済み: Azure Active Directory (AD) だけでなく、オンプレミスの Active Directory (AD) にも参加しているデバイス。 [Hybrid Azure Active Directory 参加の実装の計画](/azure/active-directory/devices/hybrid-azuread-join-plan)について、ガイダンスを参照してください。
   
   > [!TIP]
-  > 必ずデバイスを Azure AD に[参加](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)させます。 Azure AD への[登録](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)のみが行われているデバイスは、スクリプトを受信しません。  
+  > 必ずデバイスを Azure AD に[参加](/azure/active-directory/user-help/user-help-join-device-on-network)させます。 Azure AD への[登録](/azure/active-directory/user-help/user-help-register-device-on-network)のみが行われているデバイスは、スクリプトを受信しません。  
 
 - 次を含む、Intune に登録されたデバイス:
 
-  - グループ ポリシー (GPO) に登録されたデバイス。 ガイダンスについては、「[Enroll a Windows 10 device automatically using Group Policy](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)」(グループ ポリシーを使用して Windows 10 デバイスを自動的に登録する) を参照してください。
+  - グループ ポリシー (GPO) に登録されたデバイス。 ガイダンスについては、「[Enroll a Windows 10 device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)」(グループ ポリシーを使用して Windows 10 デバイスを自動的に登録する) を参照してください。
   
   - 次の状況で、Intune に手動で登録されたデバイス:
   
@@ -70,9 +70,9 @@ Intune 管理拡張機能には次の前提条件があります。 前提条件
 
   - Configuration Manager と Intune を使用して共同管理しているデバイス。 Win32 アプリをインストールする場合、 **[アプリ]** のワークロードが **[パイロット Intune]** または **[Intune]** に設定されていることを確認します。 **[アプリ]** ワークロードが **[Configuration Manager]** に設定されている場合でも、PowerShell スクリプトが実行されます。 Intune 管理拡張機能はPowerShell スクリプトのターゲットをデバイスにすると、デバイスに展開されます。 ただし、前述のように、デバイスは Azure AD 参加済みまたは Hybrid Azure AD Join を使用したデバイスである必要があり、Windows 10 バージョン 1607 以降が実行されている必要があります。 ガイダンスについては、次の記事を参照してください。 
   
-    - [共同管理とは](https://docs.microsoft.com/configmgr/comanage/overview) 
-    - [クライアント アプリ ワークロード](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
-    - [Configuration Manager のワークロードを Intune に切り替える方法](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
+    - [共同管理とは](/configmgr/comanage/overview) 
+    - [クライアント アプリ ワークロード](/configmgr/comanage/workloads#client-apps)
+    - [Configuration Manager のワークロードを Intune に切り替える方法](/configmgr/comanage/how-to-switch-workloads)
   
 > [!NOTE]
 > Window 10 VM の使用の詳細については、「[Intune での Windows 10 仮想マシンの使用](../fundamentals/windows-10-virtual-machines.md)」を参照してください。
@@ -169,7 +169,7 @@ Azure Portal でユーザーとデバイスの PowerShell スクリプトの実�
 
 ## <a name="intune-management-extension-logs"></a>Intune 管理拡張機能のログ
 
-クライアント コンピューター上のエージェント ログは、一般的に `\ProgramData\Microsoft\IntuneManagementExtension\Logs` にあります。 [CMTrace.exe](https://docs.microsoft.com/configmgr/core/support/cmtrace) を使用してこれらのログ ファイルを表示できます。
+クライアント コンピューター上のエージェント ログは、一般的に `\ProgramData\Microsoft\IntuneManagementExtension\Logs` にあります。 [CMTrace.exe](/configmgr/core/support/cmtrace) を使用してこれらのログ ファイルを表示できます。
 
 ![Microsoft Intune での cmtrace エージェント ログのスクリーンショットまたはサンプル](./media/apps-win32-app-management/apps-win32-app-10.png)  
 
@@ -210,7 +210,7 @@ Azure Portal でユーザーとデバイスの PowerShell スクリプトの実�
     > [!TIP]
     > **Microsoft Intune 管理拡張機能**はサービス アプリ (services.msc) に表示されているその他のサービスと同様、デバイスで実行されるサービスです。 デバイスが再起動した後、このサービスも再開する可能性があります。Intune サービスで割り当てられている PowerShell スクリプトがないかを確認してください。 **Microsoft Intune 管理拡張機能**サービスが手動に設定されている場合は、デバイスの再起動後にサービスが再開しない可能性があります。
 
-- 必ずデバイスを [Azure AD に参加](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)させます。 職場や組織にのみ参加しているデバイス ([Azure AD に登録されている](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)) はスクリプトを受信しません。
+- 必ずデバイスを [Azure AD に参加](/azure/active-directory/user-help/user-help-join-device-on-network)させます。 職場や組織にのみ参加しているデバイス ([Azure AD に登録されている](/azure/active-directory/user-help/user-help-register-device-on-network)) はスクリプトを受信しません。
 - Intune 管理拡張機能クライアントは、1 時間に 1 回、Intune でスクリプトまたはポリシーに変更があったかどうかを確認します。
 - Intune 管理拡張機能が `%ProgramFiles(x86)%\Microsoft Intune Management Extension` にダウンロードされていることを確認します。
 - Surface Hub または S モードの Windows 10 ではスクリプトは実行しません。
@@ -219,7 +219,7 @@ Azure Portal でユーザーとデバイスの PowerShell スクリプトの実�
 
 - スクリプトに関する問題を分離するには、次の操作を行います。
 
-  - デバイスの PowerShell の実行構成を確認します。 [PowerShell の実行ポリシー](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6)について、ガイダンスを参照してください。
+  - デバイスの PowerShell の実行構成を確認します。 [PowerShell の実行ポリシー](/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6)について、ガイダンスを参照してください。
   - Intune 管理拡張機能を使用するサンプル スクリプトを実行します。 たとえば、`C:\Scripts` ディレクトリを作成し、すべてのユーザーにフル コントロールを付与します。 以下のスクリプトを実行します。
 
     ```powershell
@@ -228,7 +228,7 @@ Azure Portal でユーザーとデバイスの PowerShell スクリプトの実�
 
     成功すると、output.txt が作成されて、"Script worked" というテキストが含まれるはずです。
 
-  - Intune なしでスクリプトの実行をテストするには、[psexec ツール](https://docs.microsoft.com/sysinternals/downloads/psexec)をローカル環境で使用し、システム アカウントでスクリプトを実行します。
+  - Intune なしでスクリプトの実行をテストするには、[psexec ツール](/sysinternals/downloads/psexec)をローカル環境で使用し、システム アカウントでスクリプトを実行します。
 
     `psexec -i -s`  
     

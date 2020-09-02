@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 424b835669986d1ede6e2300e9dfaba619034c30
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 6c605598897edca4e9aecfa090811ee9fe282e09
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079741"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907635"
 ---
 # <a name="data-intune-sends-to-apple"></a>Intune から Apple に送られるデータ
 
@@ -33,7 +33,7 @@ ms.locfileid: "82079741"
 
 - [Apple Device Enrollment Program (DEP)](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Apple MDM プッシュ通知証明書 (APNS)](../enrollment/apple-mdm-push-certificate-get.md)
-- [Apple School Manager (ASM)](https://docs.microsoft.com/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
+- [Apple School Manager (ASM)](/schooldatasync/apple-school-manager-integration-with-intune-for-education-and-school-data-sync)
 - [Apple Volume Purchase Program (VPP)](../apps/vpp-apps-ios.md)
 
 Microsoft Intune が接続を確立する前に、各 Apple サービスの Apple アカウントを作成する必要があります。
@@ -71,5 +71,3 @@ Microsoft Intune が接続を確立する前に、各 Apple サービスの Appl
 | VPP | シリアル番号 | マネージド デバイスのシリアル番号。 |
 
 Microsoft Intune で Apple サービスの使用を停止してデータを削除するには、Microsoft Intune の Apple トークンを無効にして、Apple アカウントを削除する必要があります。 詳細については、Apple アカウントのアカウントの管理方法を参照してください。
-
-

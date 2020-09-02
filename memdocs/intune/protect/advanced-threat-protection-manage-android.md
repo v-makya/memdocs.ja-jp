@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e3b12251117e689f3b4a5456cf20bae3797083a
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 49423d1d1b887aaf3ed3323ff36678bb7319b1ad
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87264535"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909467"
 ---
 # <a name="configure-microsoft-defender-atp-on-android-devices-you-manage-with-intune"></a>Intune で管理する Android デバイスに対して Microsoft Defender ATP を構成する
 
@@ -31,7 +31,7 @@ Microsoft Intune と Microsoft Defender Advanced Threat Protection (ATP) を統�
 
 ## <a name="configure-web-protection-on-devices-that-run-android"></a>Android を実行するデバイスで Web 保護を構成する
 
-既定では、Android 用 Microsoft Defender ATP には Web 保護機能が含まれており、有効になります。 [Web 保護](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview)は、Web の脅威からデバイスを保護し、フィッシング攻撃からユーザーを保護するのに役立ちます。
+既定では、Android 用 Microsoft Defender ATP には Web 保護機能が含まれており、有効になります。 [Web 保護](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview)は、Web の脅威からデバイスを保護し、フィッシング攻撃からユーザーを保護するのに役立ちます。
 
 既定では有効になっていますが、一部の Android デバイスでこの保護を無効にする正当な理由があります。 たとえば、Microsoft Defender ATP アプリ スキャン機能のみを使用するか、Web 保護で有害な URL をスキャンするときに VPN を使用しないようにするかを選択できます。
 
@@ -127,5 +127,5 @@ Intune では、Web 保護機能のすべてまたは一部をオフにするこ
 
 Microsoft Defender ATP のドキュメントで詳細を確認します。
 
-- [Microsoft Defender ATP の条件付きアクセス](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Microsoft Defender ATP のリスク ダッシュボード](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Microsoft Defender ATP の条件付きアクセス](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Microsoft Defender ATP のリスク ダッシュボード](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

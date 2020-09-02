@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 752e2b1948c1c56c77866b69365d0da2859dd279
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 09da822557e27eca29da2afc342c93a76d698d6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531642"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909926"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>ポリシー セットを使用して管理オブジェクトのコレクションをグループ化する
 
@@ -71,7 +71,7 @@ ms.locfileid: "84531642"
 5. **次へ:デバイス管理** をクリックします。<br>
    **[デバイス管理]** ページでは、[デバイス構成プロファイル](../configuration/device-profiles.md)や[デバイス コンプライアンス ポリシー](../protect/device-compliance-get-started.md)などのデバイス管理オブジェクトを、ポリシー セットに追加することができます。 他のポリシー、証明書、セキュリティ ベースライン プロファイルなど、関連付けられているすべてのオブジェクトを含めるようにしてください。
 6. **次へ:デバイスの登録** をクリックします。<br>
-   **[デバイスの登録]** ページでは、[デバイスの種類の制限](../enrollment/enrollment-restrictions-set.md)、[Windows Autopilot Deployment プロファイル](../enrollment/enrollment-autopilot.md)、[登録ステータス ページ プロファイル](../enrollment/windows-enrollment-status.md)など、デバイス登録オブジェクトをポリシー セットに追加できます。
+   **[デバイスの登録]** ページでは、[デバイスの種類の制限](../enrollment/enrollment-restrictions-set.md)、[Windows Autopilot Deployment プロファイル](../../autopilot/enrollment-autopilot.md)、[登録ステータス ページ プロファイル](../enrollment/windows-enrollment-status.md)など、デバイス登録オブジェクトをポリシー セットに追加できます。
 7. **次へ:割り当て** をクリックします。<br>
    **[割り当て]** ページでは、ユーザーとデバイスにポリシー セットを割り当てることができます。 デバイスが Intune で管理されているかどうかに関係なく、デバイスにポリシー セットを割り当てることができることに注意してください。
 8. **次へ:確認および作成** をクリックし、プロファイルに対して入力した値を確認します。

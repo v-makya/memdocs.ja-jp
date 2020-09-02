@@ -17,20 +17,20 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b26bf4910e6745a60634a2b313a37beeb33192d3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9c7300c03ce0ba703f423aa420e9e47534ef2968
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986897"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908685"
 ---
 # <a name="work-with-existing-on-premises-proxy-servers"></a>既存のオンプレミス プロキシ サーバーと連携する
 
 この記事では、送信プロキシ サーバーと連携するように Active Directory 用の Intune コネクタを構成する方法について説明します。 ネットワーク環境に既存のプロキシがあるお客様を対象としています。
 
-既定では、Active Directory 用の Intune コネクタにより、Web プロキシの自動検出 (WPAD) を使用して、ネットワーク上のプロキシ サーバーの自動検出が試みられます。 これがネットワーク上で構成されている場合、追加の構成は必要ない可能性があります。  変更が必要な場合は、以下のセクションで、[プロキシ設定を構成するための標準的な .NET Framework 機能](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)を利用して既定の設定をオーバーライド方法について説明します。  そのドキュメントでは、その他のオプションについて説明されています。
+既定では、Active Directory 用の Intune コネクタにより、Web プロキシの自動検出 (WPAD) を使用して、ネットワーク上のプロキシ サーバーの自動検出が試みられます。 これがネットワーク上で構成されている場合、追加の構成は必要ない可能性があります。  変更が必要な場合は、以下のセクションで、[プロキシ設定を構成するための標準的な .NET Framework 機能](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)を利用して既定の設定をオーバーライド方法について説明します。  そのドキュメントでは、その他のオプションについて説明されています。
 
-コネクタのしくみの詳細については、「[Azure AD アプリケーション プロキシ コネクタを理解する](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connectors)」を参照してください。
+コネクタのしくみの詳細については、「[Azure AD アプリケーション プロキシ コネクタを理解する](/azure/active-directory/manage-apps/application-proxy-connectors)」を参照してください。
 
 ## <a name="completely-bypass-outbound-proxies"></a>送信プロキシを完全にバイパスする
 

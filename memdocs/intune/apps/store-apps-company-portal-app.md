@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c41f22e2aa60803067b9015f2ae3a84db43ff894
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 2e359a87cb9e62b6d7542d82d9819b5c132a8bc2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179538"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910266"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Microsoft Intune を使用して Windows 10 ポータル サイト アプリを追加する
 
@@ -67,7 +67,7 @@ ms.locfileid: "88179538"
 
 11. 選択した一連のユーザーまたはデバイス グループに、必要なアプリとしてポータル サイト アプリを割り当てます。  
 
-Intune がユニバーサル アプリ用に依存関係をどのように処理するかについて詳しくは、「[Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/)」 (Microsoft Intune MDM 経由で依存関係を使用して appxbundle を展開する) をご覧ください。  
+Intune がユニバーサル アプリ用に依存関係をどのように処理するかについて詳しくは、「[Deploying an appxbundle with dependencies via Microsoft Intune MDM](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm)」 (Microsoft Intune MDM 経由で依存関係を使用して appxbundle を展開する) をご覧ください。  
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問 
 ### <a name="how-do-i-update-the-company-portal-app-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>ユーザーがストアから古いアプリを既にインストールしている場合に、ユーザーのデバイスのポータル サイト アプリを更新する方法
@@ -110,4 +110,3 @@ Intune がユニバーサル アプリ用に依存関係をどのように処理
 ## <a name="next-steps"></a>次のステップ
 
 - [アプリをグループに割り当てる](apps-deploy.md)
-

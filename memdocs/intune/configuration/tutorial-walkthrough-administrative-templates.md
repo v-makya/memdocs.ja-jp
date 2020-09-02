@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682934276a080323976e7045a14450dc382f4574
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: da725c63c340a3ff64e1f69f96f59bd5dea30eb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406540"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907896"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>チュートリアル:クラウドを使用して、ADMX テンプレートと Microsoft Intune で Windows 10 デバイスにグループ ポリシーを構成する
 
@@ -37,7 +37,7 @@ ADMX テンプレートは次のサービスで使用できます。
 - **Office**: [Microsoft 365 アプリ、Office 2019、Office 2016](https://www.microsoft.com/download/details.aspx?id=49030)でダウンロードします。
 - **Windows**: Windows 10 OS に組み込まれています。
 
-ADMX ポリシーの詳細については、「[ADMX ベースのポリシーについて](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)」を参照してください。
+ADMX ポリシーの詳細については、「[ADMX ベースのポリシーについて](/windows/client-management/mdm/understanding-admx-backed-policies)」を参照してください。
 
 これらのテンプレートは Microsoft Intune に組み込まれており、**管理用テンプレート** プロファイルとして使用できます。 このプロファイル内に、含めたい設定を構成します。その後、このプロファイルをデバイスに "割り当て" ます。
 
@@ -57,7 +57,7 @@ ADMX ポリシーの詳細については、「[ADMX ベースのポリシーに
 
 ## <a name="prerequisites"></a>[前提条件]
 
-- Microsoft 365 E3 または E5 サブスクリプション (これらには Intune と Azure Active Directory (AD) Premium が含まれます)。 E3 または E5 サブスクリプションをお持ちでない場合は、[無料で試用](https://docs.microsoft.com/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide)できます。
+- Microsoft 365 E3 または E5 サブスクリプション (これらには Intune と Azure Active Directory (AD) Premium が含まれます)。 E3 または E5 サブスクリプションをお持ちでない場合は、[無料で試用](/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide)できます。
 
   さまざまな Microsoft 365 ライセンスの内容について詳しくは、「[エンタープライズを Microsoft 365 で変革](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans)」を参照してください。
 
@@ -190,10 +190,10 @@ Intune では、作成したユーザーとグループにポリシーが適用�
 
 - 動的グループは、Azure AD Premium の機能です。 Azure AD Premium をお持ちでない場合は、割り当てられたグループを作成するライセンスのみが付与されます。 動的なグループの詳細については、以下を参照してください。
 
-  - [Azure Active Directory での動的グループ メンバーシップ (パート 1)](https://blogs.technet.microsoft.com/pauljones/2017/08/28/dynamic-group-membership-in-azure-active-directory-part-1/)
-  - [Azure Active Directory での動的グループ メンバーシップ (パート 2)](https://blogs.technet.microsoft.com/pauljones/2017/08/29/dynamic-group-membership-in-azure-active-directory-part-2/)
+  - [Azure Active Directory での動的グループ メンバーシップ (パート 1)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-1)
+  - [Azure Active Directory での動的グループ メンバーシップ (パート 2)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-2)
 
-- Azure AD Premium には、[多要素認証 (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) や[条件付きアクセス](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)など、アプリとデバイスを管理するときに一般的に使用されるその他のサービスが含まれています。
+- Azure AD Premium には、[多要素認証 (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) や[条件付きアクセス](/azure/active-directory/conditional-access/overview)など、アプリとデバイスを管理するときに一般的に使用されるその他のサービスが含まれています。
 
 - 多くの管理者の疑問は、どのような場合にユーザー グループを使用し、どのような場合にデバイス グループを使用するのかということです。 いくつかのガイダンスについては、「[ユーザー グループとデバイス グループ](device-profile-assign.md#user-groups-vs-device-groups)」を参照してください。
 
@@ -420,7 +420,7 @@ Endpoint Manager admin center で、管理用テンプレートのデバイス�
 > [!div class="mx-imgBorder"]
 > ![Microsoft Intune で OneDrive 管理用テンプレートを作成する](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png)
 
-OneDrive クライアント設定の詳細については、「[グループ ポリシーを使用し、OneDrive 同期設定を制御する](https://docs.microsoft.com/onedrive/use-group-policy)」を参照してください。
+OneDrive クライアント設定の詳細については、「[グループ ポリシーを使用し、OneDrive 同期設定を制御する](/onedrive/use-group-policy)」を参照してください。
 
 ### <a name="assign-your-template"></a>テンプレートの割り当て
 
@@ -438,7 +438,7 @@ OneDrive クライアント設定の詳細については、「[グループ ポ
 このセクションでは以下のリソースを使用します。 このセクションでこれらのリソースをインストールします。
 
 - [Intune PowerShell SDK](https://github.com/microsoft/Intune-PowerShell-SDK)
-- [Microsoft Graph API for Intune](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
+- [Microsoft Graph API for Intune](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
 
 1. **管理者コンピューター**で、管理者として **Windows PowerShell** を開きます。
 
@@ -458,7 +458,7 @@ OneDrive クライアント設定の詳細については、「[グループ ポ
 
     3. 変更するには「`Y`」を入力します。
 
-    PowerShell の実行ポリシーを使用すると、悪意のあるスクリプトの実行を防ぐことができます。 詳細については、「[実行ポリシーについて](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)」を参照してください。
+    PowerShell の実行ポリシーを使用すると、悪意のあるスクリプトの実行を防ぐことができます。 詳細については、「[実行ポリシーについて](/powershell/module/microsoft.powershell.core/about/about_execution_policies)」を参照してください。
 
 3. 次のように入力します: `Install-Module -Name Microsoft.Graph.Intune`
 
@@ -581,7 +581,7 @@ Intune でポリシーとプロファイルを作成する場合、考慮する�
 
 ## <a name="next-steps"></a>次のステップ
 
-このチュートリアルでは、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) について理解し、クエリ ビルダーを使用して動的グループを作成しました。そして、Intune で管理用テンプレートを作成して [ADMX 設定](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)を構成しました。 また、オンプレミスでの ADMX テンプレートの使用を Intune によるクラウドでの使用と比較しました。 さらに、PowerShell コマンドレットを使用して管理用テンプレートを作成しました。
+このチュートリアルでは、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) について理解し、クエリ ビルダーを使用して動的グループを作成しました。そして、Intune で管理用テンプレートを作成して [ADMX 設定](/windows/client-management/mdm/understanding-admx-backed-policies)を構成しました。 また、オンプレミスでの ADMX テンプレートの使用を Intune によるクラウドでの使用と比較しました。 さらに、PowerShell コマンドレットを使用して管理用テンプレートを作成しました。
 
 Intune での管理用テンプレートの詳細については、次を参照してください:
 

@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: samyada
-ms.openlocfilehash: 325460e4d487ade7337fc99b8a77fd3182d6cc17
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a75fe5bac4bb99b30e21ec842dcbbe3be83e9e5b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430117"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909450"
 ---
 # <a name="settings-for-microsoft-defender-atp-for-mac-in-microsoft-intune"></a>Microsoft Intune での Microsoft Defender ATP for Mac の設定
 
-Microsoft Intune で、Mac 用の Microsoft Defender ATP 用に構成できる "*ウイルス対策*" プロファイル設定を確認します。 これらの設定の詳細については、Windows ドキュメントの「[Microsoft Defender Advanced Threat Protection for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)」を参照してください。
+Microsoft Intune で、Mac 用の Microsoft Defender ATP 用に構成できる "*ウイルス対策*" プロファイル設定を確認します。 これらの設定の詳細については、Windows ドキュメントの「[Microsoft Defender Advanced Threat Protection for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)」を参照してください。
 
 Intune で[エンドポイント セキュリティ ポリシー](../protect/endpoint-security-policy.md)を使用する方法について説明します。
 

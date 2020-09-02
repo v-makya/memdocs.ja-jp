@@ -16,12 +16,12 @@ ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e8fdd0de8b276017a51c2fd464eef4b1d8505bc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 82834dc3a7fc60292228acbd62c7c6a8b8a94ee3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075389"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909790"
 ---
 # <a name="microsoft-intune-classic-groups-in-the-azure-portal"></a>Azure Portal での Microsoft Intune クラシック グループ
 
@@ -47,9 +47,9 @@ Azure AD セキュリティ グループは、ユーザーとデバイスの両�
 ## <a name="how-to-get-started"></a>開始する方法
 
 - Azure AD のセキュリティ グループとそのしくみの詳細については、次のトピックを参照してください。
-  - [Azure Active Directory グループを利用したリソースへのアクセス管理](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/)
-  - [Azure Active Directory でのグループの管理](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/)
-  - [属性を利用した高度なルールの作成](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/)
+  - [Azure Active Directory グループを利用したリソースへのアクセス管理](/azure/active-directory/fundamentals/active-directory-manage-groups)
+  - [Azure Active Directory でのグループの管理](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
+  - [属性を利用した高度なルールの作成](/azure/active-directory/users-groups-roles/groups-dynamic-membership)
 - グループを作成する必要がある管理者が、**Intune サービス管理者** Azure AD ロールに追加されていることを確認します。 Azure AD サービス管理者ロールには**グループの管理**アクセス許可がありません。
 - Intune グループで **[特定のメンバーを除外]** オプションを使用している場合は、除外を必要としないようにグループを再設計できるかどうか、またはビジネス ニーズを満たすために高度なルールが必要かどうかを判断してください。
 

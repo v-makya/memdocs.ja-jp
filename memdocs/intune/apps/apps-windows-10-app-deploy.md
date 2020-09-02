@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 170a5b22362ee3bd9e347af2addc03ef3b542de2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985931"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907807"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Microsoft Intune を使用する Windows 10 アプリの展開 
 
@@ -69,7 +69,7 @@ Windows 10 LOB アプリに署名して、Intune 管理コンソールにアッ�
 
 ## <a name="microsoft-store-for-business-apps"></a>ビジネス向け Microsoft ストア アプリ
 
-ビジネス向け Microsoft Store アプリは、ビジネス向け Microsoft Store 管理ポータルから購入したモダン アプリです。 これらは、管理のために Microsoft Intune に同期されます。 アプリは、オンライン ライセンス付きかオフライン ライセンス付きのいずれかです。 Microsoft Store では更新プログラムが直接管理されます。管理者による追加の操作は必要ありません。また、カスタムの Uniform Resource Identifier (URI) を使用して、特定のアプリが更新されないようにすることもできます。 詳細については、「[Enterprise app management - Prevent app from automatic updates](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates)」 (「エンタープライズ アプリの管理」の「アプリが自動更新されないようにする」) を参照してください。 ユーザーがすべてのビジネス向け Microsoft Store アプリの更新プログラムを無効にすることもできます。 
+ビジネス向け Microsoft Store アプリは、ビジネス向け Microsoft Store 管理ポータルから購入したモダン アプリです。 これらは、管理のために Microsoft Intune に同期されます。 アプリは、オンライン ライセンス付きかオフライン ライセンス付きのいずれかです。 Microsoft Store では更新プログラムが直接管理されます。管理者による追加の操作は必要ありません。また、カスタムの Uniform Resource Identifier (URI) を使用して、特定のアプリが更新されないようにすることもできます。 詳細については、「[Enterprise app management - Prevent app from automatic updates](/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates)」 (「エンタープライズ アプリの管理」の「アプリが自動更新されないようにする」) を参照してください。 ユーザーがすべてのビジネス向け Microsoft Store アプリの更新プログラムを無効にすることもできます。 
 
 ### <a name="categorize-microsoft-store-for-business-apps"></a>ビジネス向け Microsoft Store アプリの分類 
 ビジネス向け Microsoft Store アプリを分類するには: 
@@ -106,7 +106,7 @@ Windows 10 LOB アプリに署名して、Intune 管理コンソールにアッ�
   - エラー:デバイス コンテキストのインストールでユーザーを対象とすることはできません。
 
 > [!IMPORTANT]
-> Autopilot のホワイト グローブ プロビジョニング シナリオと組み合わせて使用する場合、デバイス グループを対象とするデバイス コンテキストで展開される LOB アプリおよびビジネス向け Microsoft Store アプリの要件はありません。 詳細については、[Windows Autopilot のホワイトグローブ展開](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove)に関する記事を参照してください。
+> Autopilot のホワイト グローブ プロビジョニング シナリオと組み合わせて使用する場合、デバイス グループを対象とするデバイス コンテキストで展開される LOB アプリおよびビジネス向け Microsoft Store アプリの要件はありません。 詳細については、[Windows Autopilot のホワイトグローブ展開](/windows/deployment/windows-autopilot/white-glove)に関する記事を参照してください。
 
 > [!Note]
 > 特定の展開を使用してアプリの割り当てを保存した後は、モダン アプリを除き、その割り当てのコンテキストを変更することはできません。 モダン アプリの場合、コンテキストをユーザー コンテキストからデバイス コンテキストに変更できます。 
