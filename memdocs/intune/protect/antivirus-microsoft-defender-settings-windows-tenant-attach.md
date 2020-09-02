@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 966c3f21505cbbe1573abd47fb7081c5e97cc3c1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3bb1d4806271ab40c60f0ad419e4e708d36bbc97
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88823559"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194125"
 ---
 # <a name="settings-for-microsoft-defender-antivirus-policy-for-tenant-attached-devices-in-microsoft-intune"></a>Microsoft Intune のテナントにアタッチされたデバイスの Microsoft Defender ウイルス対策ポリシーの設定
 
@@ -30,7 +30,7 @@ Intune の **[Microsoft Defender Antivirus Policy (ConfigMgr)]\(Microsoft Defend
 ## <a name="cloud-protection"></a>クラウド保護
 
 - **Turn on cloud-delivered protection (クラウドによる保護を有効にする)**  
-  CSP:[AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP:[AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   既定では、Windows 10 デスクトップ デバイス上の Defender から、検出された問題に関する情報が Microsoft に送信されます。 Microsoft ではその情報を分析し、お客様や他のユーザーに影響する問題の詳細を把握して、改善されたソリューションを提供しています。
 
@@ -39,7 +39,7 @@ Intune の **[Microsoft Defender Antivirus Policy (ConfigMgr)]\(Microsoft Defend
   - **[許可]** 。  Microsoft Active Protection Service を有効にします。
 
 - **Cloud-delivered protection level (クラウドによる保護レベル)**  
-  CSP:[CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+  CSP:[CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   疑わしいファイルのブロック時とスキャン時に適用する Defender ウイルス対策の度合いを構成します。
   - **未構成** (*既定値*) - 既定の Defender のブロック レベル。
@@ -48,7 +48,7 @@ Intune の **[Microsoft Defender Antivirus Policy (ConfigMgr)]\(Microsoft Defend
   - **ゼロ トレランス** - 不明な実行可能ファイルをすべてブロックします。
 
 - **Defender クラウド延長タイムアウト (秒単位)**  
-  CSP:[CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
+  CSP:[CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
   Defender ウイルス対策を使用すると、疑わしいファイルが 10 秒間自動的にブロックされ、クラウド内のファイルがスキャンされ、安全であることを確認されます。 この設定では、このタイムアウトに最大 50 秒を追加できます。
 
@@ -57,24 +57,24 @@ Intune の **[Microsoft Defender Antivirus Policy (ConfigMgr)]\(Microsoft Defend
 このグループの各設定について、設定を展開し、 **[追加]** を選択して、除外の値を指定できます。
 
 - **Defender の除外されるプロセス**  
-  CSP:[ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+  CSP:[ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
 
   スキャン中に無視するプロセスによって開かれるファイルの一覧を指定します。 プロセス自体はスキャンから除外されません。
 
 - **スキャンおよびリアルタイム保護から除外するファイル拡張子**  
-  CSP:[ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+  CSP:[ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
 
   スキャン中に無視するファイルの種類について拡張子の一覧を指定します。
 
 - **Defender の除外されるファイルとフォルダー**  
-  CSP:[ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+  CSP:[ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
   スキャン中に無視するファイルとディレクトリ パスの一覧を指定します。
 
 ## <a name="real-time-protection"></a>リアルタイム保護
 
 - **リアルタイム保護を有効にする**  
-  CSP:[AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  CSP:[AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   リアルタイム監視機能を使用するには、Windows 10 デスクトップ デバイス上に Defender が必要です。
   - **未構成** (*既定値*) - 設定はシステムの既定値に復元されます

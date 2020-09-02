@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 481113dc64418b1579dbf9b478cd3ebd85b6cb72
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: cbf23dc82f5524bcd8c778c41e964c7a9e46c21e
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179326"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057272"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Windows デバイスを Intune ポータル サイトで使用する
 
@@ -33,7 +33,7 @@ ms.locfileid: "88179326"
 ## <a name="how-to-get-company-portal"></a>ポータル サイトを取得する方法
 ポータル サイトには Web サイト バージョンがあり、アプリ ダウンロードとしても使用できます。 [ポータル サイト Web サイトにアクセスする](https://go.microsoft.com/fwlink/?linkid=2010980)には、職場や学校の資格情報を使用してサインインします。  
 
-詳細な手順とスクリーンショットについては、「[ポータル サイトにサインインする](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal)」を参照してください。
+詳細な手順とスクリーンショットについては、「[ポータル サイトにサインインする](./sign-in-to-the-company-portal.md)」を参照してください。
 
 ## <a name="supported-versions"></a>サポートされるバージョン
 
@@ -67,7 +67,7 @@ ms.locfileid: "88179326"
 * [Windows デバイスを更新する](you-need-to-update-your-windows-device.md)
 * [ポータル サイト アプリからログを送信する](send-logs-to-your-it-admin-cp-windows.md)
 * [デバイス設定アプリからログを送信する](send-logs-to-your-it-admin-settings-windows.md)
-* [Windows 10 デバイスに Office 365 をインストールする](install-office-windows.md)
+* [Windows 10 デバイスに Office をインストールする](install-office-windows.md)
 * [デバイスを暗号化する必要がある](you-need-to-enable-windows-encryption.md)
 * [マルウェア対策ソフトウェアを入手する](your-device-needs-antimalware-software.md)
 * [セキュア ブートを有効にする](you-need-to-enable-secure-boot-windows.md)

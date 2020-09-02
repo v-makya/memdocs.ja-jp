@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d56b06b49846201d6198c1abc81185bf74765ae3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 5c3d5bd14efddc74e1898f374bbaac2aa962ebf7
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88823496"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193667"
 ---
 # <a name="configure-tenant-attach-to-support-endpoint-security-policies-from-intune"></a>Intune のエンドポイント セキュリティ ポリシーをサポートするようにテナントのアタッチを構成する
 
@@ -187,4 +187,4 @@ Microsoft Endpoint Manager admin center と同期するようにコレクショ�
 
 - "*ウイルス対策*" と "*エンドポイントの検出と応答*" のために[エンドポイント セキュリティ ポリシー](endpoint-security-policy.md#create-an-endpoint-security-policy)を構成します。
 
-- Microsoft Defender ATP ドキュメントの[エンドポイントの検出と応答](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response)に関するページで詳細を確認する。
+- Microsoft Defender ATP ドキュメントの[エンドポイントの検出と応答](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response)に関するページで詳細を確認する。

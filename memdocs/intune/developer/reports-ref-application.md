@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 402285b871db6c3ff18e8f89ec0553a51dab9c13
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 42d77d8424464973f7a0c114193c11c9440664cf
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165551"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992961"
 ---
 # <a name="reference-for-application-entities"></a>アプリケーション エンティティのリファレンス
 
@@ -77,7 +77,7 @@ ms.locfileid: "84165551"
 | 3 |iOS ストア アプリ | iOS ストア アプリ。 |
 | 4 |iOS LOB アプリ | iOS の基幹業務アプリ。 |
 | 5 |管理対象 iOS ストア アプリ (MAM) | 管理を有効にしている iOS ストア アプリ。 |
-| 6 |O365 Pro Plus Suite | Windows 10 用の Microsoft 365 アプリ。 |
+| 6 |Microsoft 365 Apps for enterprise | Windows 10 用の Microsoft 365 アプリ。 |
 | 7 |Web アプリ | Web アプリ。 |
 | 8 |Windows Phone 8.1 ストア アプリ | Windows Phone 8.1 ストア アプリ。 |
 | 9 |Windows ストア アプリ | Windows ストア アプリ。 |

@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 63400c81ee678a98a83ed17cf192335acf9c047b
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 2460a132711fb19d12f33bbada23756fc2344cca
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820300"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194248"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティのウイルス対策ポリシー
 
@@ -39,7 +39,7 @@ Intune エンドポイント セキュリティのウイルス対策ポリシー
 
 - **macOS**
   - サポートされているバージョンの macOS
-  - Intune でデバイスのウイルス対策設定を管理するには、そのデバイスに Microsoft Defender ATP がインストールされている必要があります。 関連項目 [macOS 用の Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (Microsoft Defender ATP ドキュメント)
+  - Intune でデバイスのウイルス対策設定を管理するには、そのデバイスに Microsoft Defender ATP がインストールされている必要があります。 関連項目 [macOS 用の Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (Microsoft Defender ATP ドキュメント)
 
 - **Windows 10 以降**
   - 追加の前提条件は必要ありません。
@@ -65,7 +65,7 @@ Intune で管理するデバイスについては、以下のプロファイル�
 
   - プロファイル:**ウイルス対策** - macOS 用の[ウイルス対策ポリシー設定](../protect/antivirus-microsoft-defender-settings-macos.md)を管理します。
 
-    [Microsoft Defender ATP for Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) を使用する場合は、`.plist` ファイルを使用してこれらの設定を構成する代わりに、Intune からウイルス対策設定を構成し、管理対象の macOS デバイスに展開することができます。
+    [Microsoft Defender ATP for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) を使用する場合は、`.plist` ファイルを使用してこれらの設定を構成する代わりに、Intune からウイルス対策設定を構成し、管理対象の macOS デバイスに展開することができます。
 
 **Windows 10**:
 
@@ -77,7 +77,7 @@ Intune で管理するデバイスについては、以下のプロファイル�
 
     *Microsoft Defender ウイルス対策*プロファイルは、デバイス構成ポリシーの*デバイス制限プロファイル*にあるウイルス対策設定の別のインスタンスです。
   
-    *デバイス制限プロファイル*のウイルス対策設定とは異なり、これらの設定は、共同管理されているデバイスで使用できます。 これらの設定を使用するには、Endpoint Protection の[共同管理ワークロードのスライダー](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)が Intune に設定されている必要があります。
+    *デバイス制限プロファイル*のウイルス対策設定とは異なり、これらの設定は、共同管理されているデバイスで使用できます。 これらの設定を使用するには、Endpoint Protection の[共同管理ワークロードのスライダー](/configmgr/comanage/how-to-switch-workloads)が Intune に設定されている必要があります。
 
   - プロファイル:**Microsoft Defender ウイルス対策の除外** - [ウイルス対策の除外](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions)のみのポリシー設定を管理します。
   
@@ -117,9 +117,9 @@ Intune で管理するデバイスについては、以下のプロファイル�
 
 [Microsoft Defender ウイルス対策ポリシー](../protect/antivirus-microsoft-defender-settings-windows.md)
 
-- **Defender の除外されるプロセス** - CSP:[Defender/ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
-- **スキャンおよびリアルタイム保護から除外するファイル拡張子** - CSP:[Defender/ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
-- **Defender の除外されるファイルとフォルダー** - CSP:[Defender/ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+- **Defender の除外されるプロセス** - CSP:[Defender/ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+- **スキャンおよびリアルタイム保護から除外するファイル拡張子** - CSP:[Defender/ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+- **Defender の除外されるファイルとフォルダー** - CSP:[Defender/ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
 ## <a name="antivirus-policy-reports"></a>ウイルス対策ポリシー レポート
 

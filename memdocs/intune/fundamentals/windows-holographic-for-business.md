@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a463742a9511f21a98c277394f8c0d29084d379
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: b7486fa6770db03bb47ccf3e069499c02c6d598c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791741"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88916046"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Intune を使用して Windows Holographic デバイスと HoloLens デバイスのさまざまなデバイス管理機能を管理および使用する
 
-Microsoft Intune には、[Microsoft HoloLens](https://docs.microsoft.com/hololens/) など、Windows Holographic for Business を実行するデバイスを管理するのに役立つ機能が多数含まれています。 Intune では、デバイスが組織のルールと対応していることを確認したり、VPN または WiFi プロファイルを追加してデバイスをカスタマイズできます。 別の主な機能には、デバイスをキオスクとして使用したり、特定のアプリまたは特定のアプリのセットを実行できるというのがあります。
+Microsoft Intune には、[Microsoft HoloLens](/hololens/) など、Windows Holographic for Business を実行するデバイスを管理するのに役立つ機能が多数含まれています。 Intune では、デバイスが組織のルールと対応していることを確認したり、VPN または WiFi プロファイルを追加してデバイスをカスタマイズできます。 別の主な機能には、デバイスをキオスクとして使用したり、特定のアプリまたは特定のアプリのセットを実行できるというのがあります。
 
 この記事のタスクは、ソフトウェアの更新プログラムや Windows Hello for Business を使用することを含む、Windows Holographic for Business を実行するデバイスの管理、カスタマイズおよびセキュリティ保護で役立ちます。
 
@@ -35,9 +35,9 @@ Intune で Windows Holographic デバイスを使用する場合、エディシ�
 
 Azure Active Directory (AD) は、Windows Holographic for Business を実行するデバイスの管理と制御に役立つ優れたリソースです。 Intune と Azure AD を使用して、次の操作を行うことができます。 
 
-- **[Azure Active Directory へのデバイスの参加](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)** :Azure Active Directory (AD) では、Windows Holographic for Business を実行するデバイスを含む、職場所有の Windows 10 デバイスを追加することができます。 この機能を利用して、Azure AD でデバイスを制御することができます。 ユーザーがセキュリティとコンプライアンスの標準を満たすデバイスから会社のリソースにアクセスしていることを確認できます。
+- **[Azure Active Directory へのデバイスの参加](/azure/active-directory/devices/azureadjoin-plan)** :Azure Active Directory (AD) では、Windows Holographic for Business を実行するデバイスを含む、職場所有の Windows 10 デバイスを追加することができます。 この機能を利用して、Azure AD でデバイスを制御することができます。 ユーザーがセキュリティとコンプライアンスの標準を満たすデバイスから会社のリソースにアクセスしていることを確認できます。
 
-  詳細については、「[Azure Active Directory のデバイス管理とは](https://docs.microsoft.com/azure/active-directory/devices/overview)」を参照してください。
+  詳細については、「[Azure Active Directory のデバイス管理とは](/azure/active-directory/devices/overview)」を参照してください。
 
 - **[Windows デバイスの一括登録](../enrollment/windows-bulk-enroll.md)** :Azure Active Directory (AD) と Intune に多数の新しい Windows デバイスを参加させることができます。 この機能は一括登録と呼ばれ、プロビジョニング パッケージを使用します。 これらのパッケージでは、Windows Holographic for Business を実行するデバイスを Azure AD テナントに参加させ、Intune に登録します。
 
@@ -117,7 +117,7 @@ Intune には、組織内のさまざまなデバイスで有効または無効�
 
 OMA-URI (Open Mobile Alliance Uniform Resource Identifier) 設定を構成するために、Intune でカスタム プロファイルを作成できます。 OMA-URI 設定を利用し、Windows Holographic for Business のさまざまな機能を制御できます。たとえば、VPN を有効にしたり、Microsoft Update の更新プログラムを確認したりできます。
 
-[Windows Defender Application Control (WDAC) CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) を使用して、HoloLens 2 デバイスでアプリを開くことを許可またはブロックする[例](../configuration/custom-profile-hololens.md)を参照してください。
+[Windows Defender Application Control (WDAC) CSP](/windows/client-management/mdm/applicationcontrol-csp) を使用して、HoloLens 2 デバイスでアプリを開くことを許可またはブロックする[例](../configuration/custom-profile-hololens.md)を参照してください。
 
 ### <a name="configure-kiosk-mode"></a>[キオスク モードを構成する](../configuration/kiosk-settings-holographic.md)
 

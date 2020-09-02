@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a23db0f04895bda6f187e466965a959c891f1ad
-ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
+ms.openlocfilehash: ec355eb1b388e384b5250e9c17f739cd05941ee7
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725436"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194231"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune ポータル サイト アプリ、ポータル サイト Web サイト、および Intune アプリをカスタマイズする方法
 
@@ -136,7 +136,7 @@ Android 用 Intune アプリのブランド イメージの例を次に示しま
 ポータル サイトに表示する他のアプリのソースを選択できます。
 
 > [!NOTE]
-> Intune ポータル サイトでは、Configuration Manager アプリケーションがサポートされています。 エンド ユーザーはこの機能によって、共同管理されている顧客に対して、ポータル サイト上で Configuration Manager および Intune の両方にデプロイされているアプリケーションを表示できるようになります。 詳細については、「[共同管理デバイスでポータル サイト アプリを使用する](/mem/configmgr/comanage/company-portal)」を参照してください。
+> Intune ポータル サイトでは、Configuration Manager アプリケーションがサポートされています。 エンド ユーザーはこの機能によって、共同管理されている顧客に対して、ポータル サイト上で Configuration Manager および Intune の両方にデプロイされているアプリケーションを表示できるようになります。 詳細については、「[共同管理デバイスでポータル サイト アプリを使用する](../../configmgr/comanage/company-portal.md)」を参照してください。
 
 次の表は、アプリのソースに固有の構成の詳細を示しています。
 

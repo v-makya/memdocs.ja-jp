@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 23d449b6b5edf43ea709f8fce194ac5a8afe8eb4
-ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
+ms.openlocfilehash: 37b7006ef912d87276c11e09cb6db0c0f14059c4
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725351"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193914"
 ---
 # <a name="install-mobile-threat-defense-app"></a>Mobile Threat Defense アプリのインストール  
 
@@ -71,7 +71,7 @@ MTD アプリのインストールを求められても、どれをインスト�
 ### <a name="device-registration"></a>デバイス登録  
 デバイスの登録は、ID を確認し、学校または職場アカウントをデバイスに接続するために必要です。 デバイスが登録されていない場合は、MTD アプリをインストールする前に、その手順が画面上で自動的に案内されます。   
 
-デバイス登録の詳細については、「[個人デバイスを組織のネットワークに登録する](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)」を参照してください。  
+デバイス登録の詳細については、「[個人デバイスを組織のネットワークに登録する](/azure/active-directory/user-help/user-help-register-device-on-network)」を参照してください。  
 
 ### <a name="ios-setup"></a>iOS のセットアップ  
 これらの手順は、保護されたアプリにサインインした後で表示される **[アクセスの取得]** 画面で始まります。  
@@ -124,9 +124,9 @@ MTD アプリのインストールを求められても、どれをインスト�
 
 ### <a name="share-app-logs-with-it-support"></a>アプリのログを IT サポートと共有する  
 アプリのログを IT サポート担当者に送信し、失敗したインストールについてより多くのコンテキストを提供することもできます。  
-* Android ユーザー:ポータル サイトから[ログをアップロードして電子メールで送信](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android)します。   
+* Android ユーザー:ポータル サイトから[ログをアップロードして電子メールで送信](./send-logs-to-your-it-admin-by-email-android.md)します。   
 
-* iOS デバイス ユーザー:Microsoft Edge for iOS から[ログを取得して送信](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs)します。  
+* iOS デバイス ユーザー:Microsoft Edge for iOS から[ログを取得して送信](/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs)します。  
 
 
 ## <a name="next-steps"></a>次のステップ  
@@ -137,4 +137,3 @@ MTD アプリのインストールを求められても、どれをインスト�
 * [iOS デバイスで管理対象アプリを使用する](use-managed-apps-on-your-device-ios.md)  
 
 サポートが必要な場合は、 社内サポートに問い合わせてください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。
-

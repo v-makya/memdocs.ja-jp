@@ -18,20 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9622a89b8b689dab7ea2d6d332d1d29c38f5668
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a8bfddd247f2f86d8fc5a9162a5c68efd5e7ffb5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80085751"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996284"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Intune でサポートされるオペレーティング システムとブラウザー
 
 Microsoft Intune をセットアップする前に、サポートされているオペレーティング システムとブラウザーを確認してください。
 
-デバイスへの Intune のインストールについては、「[マネージド デバイスを使用して作業する](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)」と [Intune のネットワーク帯域幅の使用法](network-bandwidth-use.md)に関するページを参照してください。
+デバイスへの Intune のインストールについては、「[マネージド デバイスを使用して作業する](../user-help/use-managed-devices-to-get-work-done.md)」と [Intune のネットワーク帯域幅の使用法](network-bandwidth-use.md)に関するページを参照してください。
 
-構成サービス プロバイダー サポートの詳細については、「[Configuration service provider reference (構成サービス プロバイダー リファレンス)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)」を参照してください。
+構成サービス プロバイダー サポートの詳細については、「[Configuration service provider reference (構成サービス プロバイダー リファレンス)](/windows/client-management/mdm/configuration-service-provider-reference)」を参照してください。
 
 > [!NOTE]
 > Intune では、アプリケーションやデバイスで Android 向けポータル サイト アプリや Android 向け Intune App SDK を経由して会社のリソースにアクセスするためには Android 5.x (Lollipop) 以上が必要になりました。 Polycom Android ベースの Teams デバイスで 4.4 を実行している場合、この要件は適用されません。 その場合、デバイスは引き続きサポートされます。 
@@ -103,7 +103,7 @@ Microsoft Intune をセットアップする前に、サポートされている
 
 <!--  ### Exchange ActiveSync management
 
-You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#mobile-device-management-with-exchange-activesync-and-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Office 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
+You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#mobile-device-management-with-exchange-activesync-and-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Microsoft 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
 
 ## <a name="intune-supported-web-browsers"></a>Intune でサポートされている Web ブラウザー
 
@@ -131,6 +131,6 @@ Intune クラシック ポータルは、Intune PC ソフトウェア クライ�
 - Silverlight が有効な Mozilla Firefox (バージョン 56 より前のバージョン)
 
 > [!Note]
-> Intune クラシック ポータルで Microsoft Edge とモバイル ブラウザーがサポートされないのは、[Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx) がサポートされていないためです。
+> Intune クラシック ポータルで Microsoft Edge とモバイル ブラウザーがサポートされないのは、[Microsoft Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838158(v=vs.95)) がサポートされていないためです。
 
 このポータルには、サービス管理者のアクセス許可を持つユーザーまたは全体管理者の役割を持つテナント管理者のみがサインインできます。 管理コンソールにアクセスするには、アカウントに Intune を使用するライセンスがあり、サインイン状態が**許可済み**になっている必要があります。

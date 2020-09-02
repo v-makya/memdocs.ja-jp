@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4f4ef6bab42f2f1b97c32a422d92247a3e564f7
-ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
+ms.openlocfilehash: c068a092ad0f7087ad28b8424cc2640214972f82
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84680406"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996692"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限するように macOS デバイスを設定する
 
@@ -176,7 +176,7 @@ macOS デバイスでは、アプリとプロセスによって、カメラ、�
 ### <a name="settings-apply-to-user-approved-device-enrollment-automated-device-enrollment"></a>これらの設定は次に適用されます。ユーザーが承認したデバイス登録と、自動化されたデバイス登録
 
 - **[Apps and processes]\(アプリとプロセス\)** :アプリまたはプロセスを **[追加]** して、アクセスを構成します。 次の項目も入力します。
-  - **名前**:アプリまたはプロセスの名前を入力します。 たとえば、「`Microsoft Remote Desktop`」や「`Microsoft Office 365`」と入力します。
+  - **名前**:アプリまたはプロセスの名前を入力します。 たとえば、「`Microsoft Remote Desktop`」や「`Microsoft 365`」と入力します。
   
   - **[ID の種類]** :次のようなオプションがあります。
     - **[バンドル ID]** :アプリの場合は、このオプションを選択します。
