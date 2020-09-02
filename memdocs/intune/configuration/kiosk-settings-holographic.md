@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d18ea0a12f0525b71fbcb8660187af36f1148bee
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 8127281069ce4209adfc2aec82a93f5a60669307
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093156"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911864"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Intune でキオスクとして実行するための Windows Holographic for Business デバイスの設定
 
@@ -74,7 +74,7 @@ Intune での Windows キオスク機能の詳細については、[キオスク
   - **[自動ログオン]\(Windows 10 バージョン 1803 以降)** :Windows Holographic for Business ではサポートされていません。
   - **[ローカル ユーザー アカウント]** :(デバイスの) ローカル ユーザー アカウントを**追加**します。 入力したアカウントでキオスクにサインインします。
   - **[Azure AD user or group (Windows 10 version 1803 and later)]\(Azure AD ユーザーまたはグループ (Windows 10 バージョン 1803 以降)\)** :デバイスへのサインインにはユーザーの資格情報が必要です。 一覧から Azure AD のユーザーまたはグループを選択するには、 **[追加]** を選択します。 複数のユーザーおよびグループを選択することができます。 **[選択]** を選んで変更を保存します。
-  - **[HoloLens の訪問者]** :訪問者のアカウントはゲスト アカウントであり、「[共有 PC モードの概念](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts)」の説明のとおり、ユーザーの資格情報や認証は必要ありません。
+  - **[HoloLens の訪問者]** :訪問者のアカウントはゲスト アカウントであり、「[共有 PC モードの概念](/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts)」の説明のとおり、ユーザーの資格情報や認証は必要ありません。
 
 - **[ブラウザーとアプリケーション]** : キオスク デバイスで実行するアプリを追加します。 複数のアプリを追加することができます。
 
@@ -84,7 +84,7 @@ Intune での Windows キオスク機能の詳細については、[キオスク
       - **[通常モード (通常版の Microsoft Edge)]** : すべての参照機能を使って完全版の Microsoft Edge を実行します。 ユーザー データと状態がセッション間で保存されます。
       - **[公共閲覧用 (InPrivate)]** : マルチタブ版の Microsoft Edge InPrivate を実行します。キオスク用の操作に変更されており、全画面モードで実行されます。
 
-      以上のオプションの詳細については、「[Microsoft Edge キオスク モードの展開](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types)」を参照してください。
+      以上のオプションの詳細については、「[Microsoft Edge キオスク モードの展開](/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types)」を参照してください。
 
       > [!NOTE]
       > この設定を行うことで、デバイス上で Microsoft Edge ブラウザーを有効にできます。 Microsoft Edge 固有の設定を構成するには、デバイス制限プロファイルを作成します ( **[デバイス]**  >  **[構成プロファイル]**  >  **[プロファイルの作成]**  >  **[Windows 10]** (プラットフォームとして) > **[デバイス制限]**  >  **[Microsoft Edge ブラウザー]** )。 [Microsoft Edge ブラウザー](device-restrictions-windows-holographic.md#microsoft-edge-browser)には、使用可能な Holographic for Business の設定の一覧と説明が表示されます。
@@ -97,12 +97,12 @@ Intune での Windows キオスク機能の詳細については、[キオスク
     - **[AUMID による追加]** :このオプションを使用して、メモ帳や電卓などの受信トレイ Windows アプリを追加します。 次のプロパティを入力します。
 
       - **[アプリケーション名]** :必須。 アプリケーションの名前を入力します。
-      - **[アプリケーション ユーザー モデル ID (AUMID)]** :必須。 Windows アプリのアプリケーション ユーザー モデル ID (AUMID) を入力します。 この ID を取得する場合は、「[Find the Application User Model ID of an installed app](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app)」 (インストール済みアプリのアプリケーション ユーザー モデル ID を見つける) を参照してください。
+      - **[アプリケーション ユーザー モデル ID (AUMID)]** :必須。 Windows アプリのアプリケーション ユーザー モデル ID (AUMID) を入力します。 この ID を取得する場合は、「[Find the Application User Model ID of an installed app](/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app)」 (インストール済みアプリのアプリケーション ユーザー モデル ID を見つける) を参照してください。
 
     - **[自動起動]** : 任意。 アプリとブラウザーを追加した後、ユーザーがサインインしたときに自動的に開くアプリまたはブラウザーを 1 つ選択します。 自動的に起動できるアプリまたはブラウザーは 1 つだけです。
     - **[タイル サイズ]** :必須。 アプリを追加した後、アプリのタイル サイズを小、中、ワイド、または大から選択します。
 
-- **[代替のスタート画面のレイアウトを使用する]** :アプリの順序を含む、アプリをスタート メニューに表示する方法を説明する XML ファイルを入力するには、 **[はい]** を選択します。 [スタート] メニューでさらにカスタマイズが必要な場合は、このオプションを使用します。 [[スタート画面のレイアウトのカスタマイズとエクスポート]](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) ではいくつかのガイダンスが提供され、Windows Holographic for Business デバイス用の特定の XML ファイルが含まれます。
+- **[代替のスタート画面のレイアウトを使用する]** :アプリの順序を含む、アプリをスタート メニューに表示する方法を説明する XML ファイルを入力するには、 **[はい]** を選択します。 [スタート] メニューでさらにカスタマイズが必要な場合は、このオプションを使用します。 [[スタート画面のレイアウトのカスタマイズとエクスポート]](/hololens/hololens-kiosk#start-layout-for-hololens) ではいくつかのガイダンスが提供され、Windows Holographic for Business デバイス用の特定の XML ファイルが含まれます。
 
 - **[Windows タスク バー]** :Windows Holographic for Business ではサポートされていません。
 - **[ダウンロード フォルダーへのアクセスを許可する]** : Windows Holographic for Business ではサポートされていません。

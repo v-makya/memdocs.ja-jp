@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5d673c5688c4ab4f3219256412a098855af63ec
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a82eb416021e86347818c333e74f31318b0661ce
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461880"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908651"
 ---
 # <a name="what-is-device-enrollment-in-intune"></a>Intune のデバイス登録とは
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -59,16 +59,16 @@ Intune では、従業員のデバイスやアプリ、従業員が会社のデ�
 |**[BYOD](#bring-your-own-device)** | × | [はい] | × | [詳細情報](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| × |× |× |[詳細情報](device-enrollment-manager-enroll.md)|
 |**自動登録** | × |[はい] |× | [詳細情報](windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Autopilot** |[はい] |[はい] |× | [詳細情報](enrollment-autopilot.md)
+|**Autopilot** |[はい] |[はい] |× | [詳細情報](../../autopilot/enrollment-autopilot.md)
 |**一括登録** |× |× |× | [詳細情報](windows-bulk-enroll.md) |
-|**共同管理** |× |[はい] |× | [詳細情報](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
-|**GPO** |× |[はい] |× | [詳細情報](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+|**共同管理** |× |[はい] |× | [詳細情報](/configmgr/core/clients/manage/co-management-overview)
+|**GPO** |× |[はい] |× | [詳細情報](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## <a name="android-enrollment-methods"></a>Android の登録方法
 
 | **個人** | **登録方法** | **リセットが必要** | **ユーザー アフィニティ** | **Locked** | **詳細**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android のデバイス管理**|**ポータル サイトからユーザーが開始** | × | [はい] | × | [詳細情報](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
+|**Android のデバイス管理**|**ポータル サイトからユーザーが開始** | × | [はい] | × | [詳細情報](../user-help/enroll-device-android-company-portal.md)|
 |**Android エンタープライズの仕事用プロファイル**|**ポータル サイトからユーザーが開始**| × | [はい] | × | [詳細情報](android-work-profile-enroll.md)|
 
 

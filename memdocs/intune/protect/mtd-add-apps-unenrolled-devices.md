@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f667b6ad9ba9f7c353d89b4d3fc4ff749499bfaf
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: ee05e72a4837ea894c7163551d0ce79a40ed1d82
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972039"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912153"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>Mobile Threat Defense アプリを未登録のデバイスに追加する
 
@@ -50,7 +50,7 @@ Mobile Threat Defense で Intune アプリ保護ポリシーを使用すると�
 ただし、エンド ユーザーが Intune ポータル サイト経由でアプリを入手できるようにする場合、「[iOS ストア アプリを Microsoft Intune に追加する](../apps/store-apps-ios.md)」の指示を参照してください。 「**アプリ情報を構成する**」セクションで情報を入力するときは、この [Microsoft Authenticator - iOS アプリ ストア URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) を使用します。 最後の手順として、忘れずに [Intune でグループにアプリを割り当ててください](../apps/apps-deploy.md)。
 
 > [!NOTE]
-> iOS デバイスでは、Azure AD によってチェックされた ID がユーザーに与えられるように、[Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) が必要です。 Intune ポータル サイトは Android デバイスでブローカーとして機能するため、ユーザーに Azure AD によってチェックされた ID が与えられます。
+> iOS デバイスでは、Azure AD によってチェックされた ID がユーザーに与えられるように、[Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) が必要です。 Intune ポータル サイトは Android デバイスでブローカーとして機能するため、ユーザーに Azure AD によってチェックされた ID が与えられます。
 
 ## <a name="making-mobile-threat-defense-apps-available-via-intune-optional"></a>Mobile Threat Defense アプリを Intune から入手できるようにする (任意)
 

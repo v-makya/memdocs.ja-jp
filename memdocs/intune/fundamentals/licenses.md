@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdf4fb6499299cd09fcac5673e252dd064120620
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: a447112bc721a87283210ca560b5d6bdbd38d26e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764256"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912357"
 ---
 # <a name="microsoft-intune-licensing"></a>Microsoft Intune のライセンス
 Microsoft Intune は、学校や中小企業のための使いやすい管理機能から大企業が必要とする高度な機能まで、さまざまな顧客のニーズと組織の規模に合わせて利用できます。 Microsoft Intune が含まれるライセンスのほとんどでは、サブスクリプションが有効である限り、Microsoft Endpoint Configuration Manager を使用する権限も与えられます。 Intune を管理するには、管理者にライセンスが割り当てられている必要があります。
@@ -48,7 +48,7 @@ Intune for Education は次のライセンスに含まれています。
 ## <a name="additional-information"></a>追加情報
 - Microsoft Intune ユーザーとデバイスのサブスクリプションは、上記のバンドルに加えて、スタンドアロンとして入手できます。
 - Microsoft Intune デバイス専用のサブスクリプションは、キオスク、専用デバイス、phone ルーム デバイス、IoT、ユーザーベースのセキュリティと管理機能を必要としない、一時使用のその他のデバイスを管理する目的で利用できます。
-- [Microsoft API](https://docs.microsoft.com/legal/microsoft-apis/terms-of-use) 経由で Microsoft Intune サービスにアクセスするなど、ユーザーまたはデバイスで Microsoft Intune サービスを直接的または間接的に利用する場合、適切な Microsoft Intune ライセンスが必要になります。
+- [Microsoft API](/legal/microsoft-apis/terms-of-use) 経由で Microsoft Intune サービスにアクセスするなど、ユーザーまたはデバイスで Microsoft Intune サービスを直接的または間接的に利用する場合、適切な Microsoft Intune ライセンスが必要になります。
 - 前の表にないライセンスには、Intune が含まれていません。
 
 製品のエディション、製品ライセンス更新、ボリューム ライセンス プラン、特定のユース ケースに関連するその他の情報など、最新の情報が必要であれば、[Microsoft ライセンス](https://www.microsoft.com/licensing/default) ページにアクセスしてください。  

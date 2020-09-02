@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2614dfc903bf7f10633bf05414ed8a71cdd2e03b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5b70f36873200d0adbbc356d9a482cf13cc2ea49
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990626"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913326"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Windows の基幹業務アプリを Microsoft Intune に追加する
 
@@ -50,7 +50,7 @@ ms.locfileid: "83990626"
    アプリの詳細が表示されます。
 
     > [!NOTE]
-    > Windows アプリのファイル拡張子には、 **.msi**、 **.appx**、 **.appxbundle**、 **.msix**、 **.msixbundle** が含まれます。 **.msix** の詳細については、[MSIX のドキュメント](https://docs.microsoft.com/windows/msix/)および「[MSIX アプリの配布](https://docs.microsoft.com/windows/msix/desktop/managing-your-msix-deployment-enterprise)」を参照してください。
+    > Windows アプリのファイル拡張子には、 **.msi**、 **.appx**、 **.appxbundle**、 **.msix**、 **.msixbundle** が含まれます。 **.msix** の詳細については、[MSIX のドキュメント](/windows/msix/)および「[MSIX アプリの配布](/windows/msix/desktop/managing-your-msix-deployment-enterprise)」を参照してください。
 
 3. 操作を完了したら、 **[アプリ パッケージ ファイル]** ペインの **[OK]** を選択してアプリを追加します。
 
@@ -62,7 +62,7 @@ ms.locfileid: "83990626"
     - **[発行元]** : アプリの発行元の名前を入力します。
     - **アプリのインストール コンテキスト**: このアプリに関連付けるインストール コンテキストを選択します。 デュアル モード アプリの場合は、このアプリに必要なコンテキストを選択します。 他のすべてのアプリの場合は、パッケージに基づいて事前に選択されているため、変更することはできません。
     - **[アプリのバージョンを無視する]** :アプリ開発者がアプリを自動的に更新する場合は、 **[はい]** に設定します。 このオプションは、モバイル .msi アプリにのみ適用されます。
-    - **コマンドライン引数**:必要に応じて、実行時に .msi ファイルに適用するコマンド ライン引数を入力します。  たとえば、「 **/q**」と入力します。 **/i** や **/x** などの msiexec コマンドまたは引数は、自動的に使用されるため、含めないでください。 詳細については、「[Command-Line Options (コマンド ライン オプション)](https://docs.microsoft.com/windows/desktop/Msi/command-line-options)」をご覧ください。 .MSI ファイルで追加のコマンドライン オプションが必要な場合は、[Win32 アプリ管理](app-management.md)の使用を検討してください。
+    - **コマンドライン引数**:必要に応じて、実行時に .msi ファイルに適用するコマンド ライン引数を入力します。  たとえば、「 **/q**」と入力します。 **/i** や **/x** などの msiexec コマンドまたは引数は、自動的に使用されるため、含めないでください。 詳細については、「[Command-Line Options (コマンド ライン オプション)](/windows/desktop/Msi/command-line-options)」をご覧ください。 .MSI ファイルで追加のコマンドライン オプションが必要な場合は、[Win32 アプリ管理](app-management.md)の使用を検討してください。
     - **[カテゴリ]** : 1 つまたは複数の組み込みアプリ カテゴリを選択するか、ご自身で作成したカテゴリを選択します。 カテゴリを使用すれば、ユーザーはポータル サイトを参照する際にアプリを見つけやすくなります。
     - **[会社のポータルでおすすめアプリとして表示します]** : ユーザーがアプリを参照するとき、会社のポータルのメイン ページにアプリが目立つように表示されます。
     - **[情報 URL]** : このアプリに関する情報が含まれる Web サイトの URL を入力することもできます。 この URL はポータル サイトに表示されます。

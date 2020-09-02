@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ad78240aa9f2a1ef515be2635cfad0ce68e8ecc8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820189"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909008"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune で一般的な iOS および iPadOS 機能を使用するための iOS および iPadOS デバイスの設定
 
@@ -304,10 +304,10 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
   - **[未構成]** :Intune では、この設定は変更または更新されません。 既定では、OS によってアプリ拡張機能は使用されません。 アプリの拡張機能を無効にするには、SSO アプリの拡張機能の種類を **[未構成]** に切り替えます。
   - **Microsoft Azure AD**:リダイレクト型 SSO アプリ拡張機能である Microsoft Enterprise SSO プラグインが使用されます。 このプラグインにより、[Apple の Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) 機能をサポートするすべてのアプリケーションで Active Directory アカウントの SSO が提供されます。 この SSO アプリ拡張機能の種類を使用して、Azure AD を使用して認証する Microsoft アプリ、組織アプリ、Web サイトで SSO を有効にします。
 
-    SSO プラグインは、高度な認証ブローカーとして機能し、セキュリティとユーザー エクスペリエンスの向上を提供します。 認証に Microsoft Authenticator アプリを使用していたすべてのアプリでは、引き続き [Apple デバイス用の Microsoft Enterprise SSO プラグイン](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)で SSO が取得されます。
+    SSO プラグインは、高度な認証ブローカーとして機能し、セキュリティとユーザー エクスペリエンスの向上を提供します。 認証に Microsoft Authenticator アプリを使用していたすべてのアプリでは、引き続き [Apple デバイス用の Microsoft Enterprise SSO プラグイン](/azure/active-directory/develop/apple-sso-plugin)で SSO が取得されます。
 
     > [!IMPORTANT]
-    > Microsoft Azure AD SSO アプリ拡張機能の種類で SSO を実現するには、まず iOS または iPadOS の Microsoft Authenticator アプリをデバイスにインストールします。 Authenticator アプリによって、Microsoft Enterprise SSO プラグインがデバイスに配信され、MDM SSO アプリ拡張機能の設定によってプラグインがアクティブ化されます。 Authenticator と SSO アプリ拡張機能プロファイルをデバイスにインストールすると、ユーザーは資格情報を入力してサインインし、自分のデバイスでセッションを確立する必要があります。 その後、このセッションは、ユーザーの再認証を必要とせずに、さまざまなアプリケーションで使用されます。 Authenticator の詳細については、「[Microsoft Authenticator アプリとは](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview)」を参照してください。
+    > Microsoft Azure AD SSO アプリ拡張機能の種類で SSO を実現するには、まず iOS または iPadOS の Microsoft Authenticator アプリをデバイスにインストールします。 Authenticator アプリによって、Microsoft Enterprise SSO プラグインがデバイスに配信され、MDM SSO アプリ拡張機能の設定によってプラグインがアクティブ化されます。 Authenticator と SSO アプリ拡張機能プロファイルをデバイスにインストールすると、ユーザーは資格情報を入力してサインインし、自分のデバイスでセッションを確立する必要があります。 その後、このセッションは、ユーザーの再認証を必要とせずに、さまざまなアプリケーションで使用されます。 Authenticator の詳細については、「[Microsoft Authenticator アプリとは](/azure/active-directory/user-help/user-help-auth-app-overview)」を参照してください。
 
   - **[リダイレクト]** : 最新の認証フローで SSO を使用するには、汎用のカスタマイズ可能なリダイレクト アプリ拡張機能を使用します。 組織のアプリ拡張機能の拡張機能 ID を確認しておきます。
   - **[資格情報]** : 汎用のカスタマイズ可能な資格情報アプリ拡張機能を使用し、チャレンジと応答の認証フローで SSO を使用します。 組織のアプリ拡張機能の拡張機能 ID を確認しておきます。
@@ -318,7 +318,7 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
 
 - **共有デバイス モード** (Microsoft Azure AD のみ):Azure AD の共有デバイス モード機能用に構成された iOS/iPadOS デバイスに Microsoft Enterprise SSO プラグインをデプロイする場合は、 **[有効]** を選択します。 共有モードのデバイスでは、多くのユーザーが、共有デバイス モードをサポートしているアプリケーションにグローバルにサインインおよびサインアウトすることができます。 **[未構成]** に設定すると、Intune では、この設定は変更または更新されません。 既定で、iOS/iPadOS デバイスは複数のユーザー間で共有されることを想定していません。
 
-  共有デバイス モードと、それを有効にする方法の詳細については、「[共有デバイス モードの概要](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices)」および「[iOS デバイスの共有デバイス モード](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices)」を参照してください。  
+  共有デバイス モードと、それを有効にする方法の詳細については、「[共有デバイス モードの概要](/azure/active-directory/develop/msal-shared-devices)」および「[iOS デバイスの共有デバイス モード](/azure/active-directory/develop/msal-ios-shared-devices)」を参照してください。  
 
   この機能は、以下に適用されます。
   

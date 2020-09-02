@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e98171955ed4f026da4c983e6ca8959cfe2606a
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 9fb3556d363d2e831861a15aeadfb78bc2fa7dbb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217231"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914108"
 ---
 # <a name="deploying-apps-using-intune-on-the-gcc-high-and-dod-environments"></a>Intune を使用して GCC High 環境および DoD 環境でアプリを展開する 
 
@@ -38,7 +38,7 @@ Intune を使用して、GCC High 環境または DoD 環境向けに基幹業�
 
 ## <a name="distribute-offline-apps-from-the-store-for-business-using-intune"></a>Intune を使用してビジネス向けストアからオフライン アプリを配布する  
 
-ビジネス向け Microsoft Store から[オフライン ライセンス付きアプリのダウンロード](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app)をする必要がある場合は、次の手順を実行してアプリケーションをダウンロードします。 
+ビジネス向け Microsoft Store から[オフライン ライセンス付きアプリのダウンロード](/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app)をする必要がある場合は、次の手順を実行してアプリケーションをダウンロードします。 
 
 1. [ビジネス向けストア](https://businessstore.microsoft.com/)にサインインします。
 2. **[管理]**  >  **[設定]** の順に選択します。
@@ -48,7 +48,7 @@ Intune を使用して、GCC High 環境または DoD 環境向けに基幹業�
 
 ## <a name="syncing-intune-to-the-store-for-business"></a>Intune をビジネス向けストアと同期させる 
 
-商用 (非政府) 環境では、管理者は Intune をビジネス向け Microsoft Store と同期させることができます。 この機能は政府機関の環境では使用できません。 商用環境での Intune と政府機関の環境での Intune の違いについて詳しくは、「[米国政府機関サービス向け Enterprise Mobility + Security の説明](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description)」を参照してください。  
+商用 (非政府) 環境では、管理者は Intune をビジネス向け Microsoft Store と同期させることができます。 この機能は政府機関の環境では使用できません。 商用環境での Intune と政府機関の環境での Intune の違いについて詳しくは、「[米国政府機関サービス向け Enterprise Mobility + Security の説明](/enterprise-mobility-security/solutions/ems-govt-service-description)」を参照してください。  
 
 Intune をビジネス向け Microsoft ストアのアカウントに同期するには、「[ビジネス向け Microsoft ストアから購入したアプリを Microsoft Intune で管理する方法](windows-store-for-business.md)」を参照してください。  
 
@@ -60,4 +60,3 @@ Intune をビジネス向け Microsoft ストアのアカウントに同期す�
 
 アプリの展開と割り当てに関する詳細については、「[Microsoft Intune を使用してアプリをグループに割り当てる](apps-deploy.md)」を参照してください。
 
- 

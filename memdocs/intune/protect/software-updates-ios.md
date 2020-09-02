@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d1aefab1e222ddb20b1c033c787ba7d323f59e5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0a81e0e59eca03c9c15d7553376ea0c524251a18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988290"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914856"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>Intune で iOS/iPadOS ソフトウェアの更新ポリシーを追加する
 
@@ -35,7 +35,7 @@ ms.locfileid: "83988290"
 既定では、デバイスは 8 時間ごとに Intune にチェックインします。 更新ポリシーを介して更新プログラムが利用可能になると、デバイスにより、更新プログラムがダウンロードされます。 その後、スケジュール構成内で次にチェックインしたときに、デバイスにより、更新プログラムがインストールされます。 更新プロセスでは通常、ユーザーによる操作は必要ありませんが、デバイスにパスコードが与えられている場合は、ソフトウェア更新を開始するために、ユーザーがそのコードを入力する必要があります。 プロファイルは、ユーザーが OS を手動で更新するのを防止するものではありません。 ユーザーが OS を手動で更新するのを防ぐには、ソフトウェア更新プログラムで表示を制限するデバイス構成ポリシーを使用します。
 
 > [!NOTE]
-> [自律的シングル App モード (ASAM)](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam) を使用している場合、結果の動作が望ましくない場合があるため、OS の更新の影響を考慮する必要があります。
+> [自律的シングル App モード (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam) を使用している場合、結果の動作が望ましくない場合があるため、OS の更新の影響を考慮する必要があります。
 ASAM で実行しているアプリで、OS の更新の影響を評価するためのテストを行うことを検討してください。
 
 ## <a name="configure-the-policy"></a>ポリシーを構成する

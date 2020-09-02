@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50c1842357a79ce3228b7b0a5283dc9a4e98b2d6
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19c5c1f8e7a68a31150baa079ce9b766b6df72df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252341"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906754"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>ワイプ、インベントリからの削除、デバイス登録の手動解除を使用し、デバイスを削除する
 
@@ -168,7 +168,7 @@ Intune ポータルからデバイスを削除する必要がある場合は、�
 4. **[保存]** を選びます。
 
 > [!NOTE]
-> デバイスのクリーンアップ ルールは、[フルマネージド](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll)、[専用](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll)、[仕事用プロファイルを備えた会社所有](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll)などの Android Enterprise シナリオでは使用できません。 
+> デバイスのクリーンアップ ルールは、[フルマネージド](../enrollment/android-fully-managed-enroll.md)、[専用](../enrollment/android-kiosk-enroll.md)、[仕事用プロファイルを備えた会社所有](../enrollment/android-corporate-owned-work-profile-enroll.md)などの Android Enterprise シナリオでは使用できません。 
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Azure Active Directory ポータルからデバイスを削除する
 
@@ -206,4 +206,3 @@ Windows 10 デバイスの場合に適用されます。 詳細については [
 ## <a name="next-steps"></a>次のステップ
 
 削除されたデバイスを再登録する場合は、[登録オプション](../enrollment/enrollment-options.md)に関するページを参照してください。
-

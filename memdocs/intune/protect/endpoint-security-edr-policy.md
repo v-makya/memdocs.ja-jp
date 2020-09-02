@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: cba7b357dfae0c9dae06e8a21ddd0583fd96bcae
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ff880b564562b3e6d67dc852f97ef7a9f5d6b814
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820529"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915043"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティのエンドポイントの検出と応答ポリシー
 
@@ -191,4 +191,4 @@ Microsoft Endpoint Manager admin center では、展開する EDR ポリシー�
 ## <a name="next-steps"></a>次のステップ
 
 - [エンドポイント セキュリティ ポリシーを構成する](endpoint-security-policy.md#create-an-endpoint-security-policy)
-- Microsoft Defender ATP ドキュメントの[エンドポイントの検出と応答](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response)に関するページで詳細を確認する。
+- Microsoft Defender ATP ドキュメントの[エンドポイントの検出と応答](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response)に関するページで詳細を確認する。

@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6fb5702b7c809c7810004a53d084f19fa94dea9e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: f08282fe6bd8675474415290d50c0b07b4e1fc25
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431853"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915060"
 ---
 # <a name="account-protection-policy-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティのアカウント保護ポリシー
 
@@ -30,7 +30,7 @@ ms.locfileid: "83431853"
 - *Windows Hello for Business* は、パスワードを PC やモバイル デバイスでの強力な 2 要素認証に置き換えます。
 - *Credential Guard* は、デバイスで使用する資格情報とシークレットの保護に役立ちます。
 
-詳細については、Windows の ID およびアクセス管理に関するドキュメントの「[ID およびアクセス管理](https://docs.microsoft.com/windows/security/identity-protection/)」をご覧ください。
+詳細については、Windows の ID およびアクセス管理に関するドキュメントの「[ID およびアクセス管理](/windows/security/identity-protection/)」をご覧ください。
 
 [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) の**エンドポイント セキュリティ** ノードにある *[管理]* で、アカウント保護のエンドポイント セキュリティ ポリシーを見つけます。
 

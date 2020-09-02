@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d935e79dfe2fd0d786dae596cafe173b66018c9
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: c27a78d78678234b30ea80cfc192cb4250eca2e1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663296"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915570"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Intune で電子メールに署名し、暗号化する S/MIME の概要
 
@@ -33,7 +33,7 @@ ms.locfileid: "88663296"
 
 iOS/iPadOS デバイスでは、S/MIME と証明書を使用して送受信されるメールの署名と暗号化を行う、Intune で管理されたメール プロファイルを作成できます。 他のプラットフォームでは、S/MIME はサポートされている場合とサポートされていない場合があります。 サポートされている場合は、S/MIME の署名と暗号化を使用する証明書をインストールします。 その後、エンド ユーザーは電子メール アプリケーションで S/MIME を有効にできます。
 
-Exchange を使用した S/MIME メールの署名と暗号化の詳細については、「[S/MIME によるメッセージの署名と暗号化](https://docs.microsoft.com/Exchange/policy-and-compliance/smime)」を参照してください。
+Exchange を使用した S/MIME メールの署名と暗号化の詳細については、「[S/MIME によるメッセージの署名と暗号化](/Exchange/policy-and-compliance/smime)」を参照してください。
 
 この記事では、S/MIME 証明書を使用してデバイス上で電子メールに署名および暗号化する方法の概要を説明します。
 
@@ -41,7 +41,7 @@ Exchange を使用した S/MIME メールの署名と暗号化の詳細につい
 
 署名に使われる証明書を使用することで、クライアントのメール アプリはメール サーバーと安全に通信できます。
 
-署名証明書を使うには、証明機関 (CA) で署名用のテンプレートを作成します。 Microsoft Active Directory 証明機関の場合は、「[Configure the server certificate template](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template)」(サーバー証明書テンプレートを構成する) で証明書テンプレートの作成手順が示されています。
+署名証明書を使うには、証明機関 (CA) で署名用のテンプレートを作成します。 Microsoft Active Directory 証明機関の場合は、「[Configure the server certificate template](/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template)」(サーバー証明書テンプレートを構成する) で証明書テンプレートの作成手順が示されています。
 
 Intune での署名証明書は、PKCS 証明書を使います。 「[Intune で PKCS 証明書を構成して使用する](certficates-pfx-configure.md)」では、Intune 環境に PKCS 証明書を展開して使う方法が説明されています。 その手順は次のとおりです。
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 685f2a51c7a2bfacbc95fb2a7615f0e459b97245
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: fb62a7b592b492d4092b7af7ee29b2bfd50c66e8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126517"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915179"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Android デバイスをデバイス管理者から仕事用プロファイル管理に移動する
 
@@ -40,7 +40,7 @@ ms.locfileid: "84126517"
 - [Intune テナント アカウントを Android Enterprise アカウント](connect-intune-android-enterprise.md)に接続して、Android 仕事用プロファイル管理を設定します。
 - Android 仕事用プロファイルに移動するユーザーのグループに対して、[Android Enterprise 仕事用プロファイルの登録を設定します](android-work-profile-enroll.md)。
 - ユーザー デバイスの制限を引き上げることを検討します。 デバイス管理者の管理からデバイスの登録を解除しても、デバイス レコードがすぐに削除されない場合があります。 この期間中の影響を軽減するために、必要に応じて、デバイスの制限容量を増やしてユーザーが仕事用プロファイル管理に登録できるようにします。
-  - ユーザーごとのデバイスの最大数について [Azure Active Directory デバイス設定を構成します](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)。
+  - ユーザーごとのデバイスの最大数について [Azure Active Directory デバイス設定を構成します](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)。
   - デバイス制限を設定して、[Intune デバイス制限の制約](enrollment-restrictions-set.md#create-a-device-limit-restriction)を調整します。 
 
 ## <a name="create-device-compliance-policy"></a>デバイス コンプライアンス ポリシーを作成する

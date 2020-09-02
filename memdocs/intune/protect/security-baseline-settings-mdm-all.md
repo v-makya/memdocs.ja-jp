@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bfbb73772124ded12d520c6c5742d1576f50f82
-ms.sourcegitcommit: cb9b452f8e566fe026717b59c142b65f426e5033
+ms.openlocfilehash: 01df8f50da5b0665c1c29949c1ee2c954e47cc9f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491305"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914890"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Intune 用の Windows MDM セキュリティ ベースラインの設定
 
@@ -57,7 +57,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="above-lock"></a>Above Lock (上でロック)
 
-詳細については、Windows の「[Policy CSP - AboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock)」(ポリシー CSP - AboveLock) を参照してください。  
+詳細については、Windows の「[Policy CSP - AboveLock](/windows/client-management/mdm/policy-csp-abovelock)」(ポリシー CSP - AboveLock) を参照してください。  
 
 - **[Block display of toast notifications]\(トースト通知の表示をブロックする\)** :  
   このポリシー設定を使用すると、アプリの通知がロック画面に表示されないようにすることができます。 このポリシー設定を有効にした場合、アプリ通知はロック画面に表示されません。 このポリシー設定を無効にした場合、または構成しなかった場合、ロック画面に通知を表示するアプリをユーザーが選択できます。  
@@ -76,7 +76,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="app-runtime"></a>[アプリ実行時]
 
-詳細については、Windows の「[Policy CSP - AppRuntime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-appruntime)」(ポリシー CSP - AppRuntime) を参照してください。
+詳細については、Windows の「[Policy CSP - AppRuntime](/windows/client-management/mdm/policy-csp-appruntime)」(ポリシー CSP - AppRuntime) を参照してください。
 
 - **[Microsoft accounts optional for Windows Store apps]\(Windows ストア アプリで Microsoft アカウントの省略を許可する\)** :  
   このポリシー設定を使用すると、サインインにアカウントを必要とする Windows ストア アプリに対して Microsoft アカウントを省略可能にするかどうかを制御できます。 このポリシーは、それがサポートされている Windows ストア アプリにのみ影響します。 このポリシー設定を有効にした場合、通常はサインインに Microsoft アカウントが必要な Windows ストア アプリではなく、エンタープライズ アカウントを使用してユーザーがサインインできるようになります。 このポリシー設定を無効にした場合、または構成しなかった場合、ユーザーは Microsoft アカウントを使用してサインインする必要があります。  
@@ -86,7 +86,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="application-management"></a>アプリケーション管理
 
-詳細については、Windows の「[Policy CSP - ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement)」(ポリシー CSP - ApplicationManagement) を参照してください。
+詳細については、Windows の「[Policy CSP - ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement)」(ポリシー CSP - ApplicationManagement) を参照してください。
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
@@ -118,7 +118,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="auto-play"></a>Auto Play (自動再生)
 
-詳細については、Windows の「[Policy CSP - Autoplay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay)」(ポリシー CSP - Autoplay) を参照してください。
+詳細については、Windows の「[Policy CSP - Autoplay](/windows/client-management/mdm/policy-csp-autoplay)」(ポリシー CSP - Autoplay) を参照してください。
 
 - **[Auto play default auto run behavior]\(自動再生の既定の自動実行の動作\)**  
   この設定は、自動実行コマンドの既定の動作に影響します。 自動実行コマンドは、autorun.inf ファイルに保存されており、インストール プログラムやその他のルーチンを開始できます。 これを*有効*にすると、管理者は Windows Vista 以降を実行するデバイスの自動実行の既定の動作を変更することができます。 次の動作に設定できます: a) 自動実行コマンドを完全に無効にする、b) 自動実行コマンドを自動的に実行する Windows Vista 以前の動作に戻す。 *無効*または*未構成*にすると、Windows Vista 以降を実行するコンピューターで自動実行コマンドを実行するかユーザーはたずねられます。  
@@ -140,7 +140,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="bitlocker"></a>BitLocker
 
-詳細については、Windows ドキュメントの「[ポリシー CSP - BitLocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker)」を参照してください。
+詳細については、Windows ドキュメントの「[ポリシー CSP - BitLocker](/windows/client-management/mdm/policy-csp-bitlocker)」を参照してください。
 
 - **[BitLocker removable drive policy]/(Bitlocker のリムーバブル ドライブのポリシー\)**  
   このポリシー設定は、暗号化方法および暗号化強度を制御するために使用します。 このポリシーの値は、BitLocker が暗号化に使用する暗号化強度を決定します。 企業では、セキュリティを強化するために、暗号化のレベルを制御したい場合があります (AES-256 は AES-128 よりも強力です)。 この設定を有効にした場合は、固定データ ドライブやオペレーティング システム ドライブ、リムーバブル データ ドライブのそれぞれに、暗号化アルゴリズムとキーの暗号化強度を構成できます。 固定ドライブやオペレーティング システム ドライブには、XTS-AES アルゴリズムを使用することをお勧めします。 リムーバブル ドライブには、Windows 10 バージョン 1511 以降を実行していないその他のデバイスでドライブを使用する場合は、AES-CBC 128 ビットまたは AES-CBC 256 ビットを使用する必要があります。 ドライブが既に暗号化されているか、暗号化が進行中の場合は、暗号化の種類を変更しても影響はありません。 このような場合、このポリシー設定は無視されます。  
@@ -193,7 +193,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="browser"></a>ブラウザー
 
-詳細については、Windows の「[Policy CSP - Browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser)」(ポリシー CSP - Browser) を参照してください。
+詳細については、Windows の「[Policy CSP - Browser](/windows/client-management/mdm/policy-csp-browser)」(ポリシー CSP - Browser) を参照してください。
 
 - **[Require SmartScreen for Microsoft Edge]\(Microsoft Edge で SmartScreen が必要\)**  
   Microsoft Edge では、(オンになった) Microsoft Defender SmartScreen を使用して、フィッシング詐欺にあう可能性や悪意のあるソフトウェアから既定でユーザーを保護しています。 また、既定では、ユーザーは Microsoft Defender SmartScreen を無効 (オフ) にできません。 このポリシーを有効にすると、Microsoft Defender SmartScreen がオフになり、ユーザーがそれをオンにできないようになります。 ユーザーが Microsoft Defender SmartScreen のオンとオフを選択できるようにする場合は、このポリシーを構成しないでください。  
@@ -227,7 +227,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="connectivity"></a>接続
 
-詳細については、Windows の「[Policy CSP - Connectivity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity)」(ポリシー CSP - Connectivity) を参照してください。
+詳細については、Windows の「[Policy CSP - Connectivity](/windows/client-management/mdm/policy-csp-connectivity)」(ポリシー CSP - Connectivity) を参照してください。
 
 - **[Block Internet download for web publishing and online ordering wizards]\(Web 発行およびオンライン注文ウィザードのインターネット ダウンロードをブロックする\)** :  
   このポリシー設定では、Web 発行およびオンライン注文のウィザード用にプロバイダーの一覧を Windows でダウンロードする必要があるかどうかを指定します。 これらのウィザードを使用すると、ユーザーは、オンライン ストレージや写真印刷などのサービスを提供する会社の一覧から選択できるようになります。 既定では、レジストリで指定されているプロバイダーに加えて、Windows の Web サイトからダウンロードされたプロバイダーが表示されます。 このポリシー設定を有効にした場合、プロバイダーはダウンロードされず、ローカル レジストリにキャッシュされたサービス プロバイダーのみが表示されます。 このポリシー設定を無効にした場合、または構成しなかった場合、ユーザーが Web 発行ウィザードまたはオンライン注文ウィザードを使用するときに、プロバイダーの一覧がダウンロードされます。 レジストリでサービス プロバイダーを指定する方法などの詳細については、Web 発行ウィザードおよびオンライン注文ウィザードのドキュメントを参照してください。  
@@ -260,7 +260,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="credentials-delegation"></a>資格情報の委任
 
-詳細については、Windows の「[Policy CSP - CredentialsDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsdelegation)」(ポリシー CSP - CredentialsDelegation) を参照してください。
+詳細については、Windows の「[Policy CSP - CredentialsDelegation](/windows/client-management/mdm/policy-csp-credentialsdelegation)」(ポリシー CSP - CredentialsDelegation) を参照してください。
 
 - **[Remote host delegation of non-exportable credentials]\(リモート ホストでエクスポートできない資格情報を委任する\)**  
   リモート ホストでは、エクスポートできない資格情報を委任できます。 資格情報の委任を使用する場合、エクスポート可能なバージョンの資格情報がデバイスからリモート ホストに提供されます。これにより、ユーザーはリモート ホスト上の攻撃者に資格情報が盗まれるというリスクにさらされます。 このポリシー設定を有効にした場合、ホストは制限付き管理モードまたは Remote Credential Guard モードをサポートします。 このポリシー設定を無効にするか、構成しなかった場合、制限付き管理モードと Remote Credential Guard モードはサポートされません。 ユーザーは常に資格情報をホストに渡す必要があります。  
@@ -270,7 +270,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="credentials-ui"></a>Credentials UI (資格情報 UI)
 
-詳細については、Windows の「[Policy CSP - CredentialsUI](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsui)」(ポリシー CSP - CredentialsUI) を参照してください。
+詳細については、Windows の「[Policy CSP - CredentialsUI](/windows/client-management/mdm/policy-csp-credentialsui)」(ポリシー CSP - CredentialsUI) を参照してください。
 
 - **[Enumerate administrators]\(管理者の列挙\)** :  
   このポリシー設定により、ユーザーが実行中のアプリケーションの昇格を試みたときに、管理者アカウントが表示されるかどうかを制御します。 既定では、ユーザーが実行中のアプリケーションの昇格を試みたときに、管理者アカウントは表示されません。 このポリシー設定を有効にした場合、PC 上のローカル管理者アカウントがすべて表示され、ユーザーがその 1 つを選択して、正しいパスワードを入力できます。 このポリシー設定を無効にした場合、ユーザーは常に昇格させるユーザー名とパスワードを入力する必要があります。  
@@ -280,7 +280,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="data-protection"></a>データ保護
 
-詳細については、Windows の「[Policy CSP - DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection)」(ポリシー CSP - DataProtection) を参照してください。
+詳細については、Windows の「[Policy CSP - DataProtection](/windows/client-management/mdm/policy-csp-dataprotection)」(ポリシー CSP - DataProtection) を参照してください。
 
 - **[Block direct memory access]\(ダイレクト メモリ アクセスをブロックする\)** :  
   このポリシー設定では、ユーザーが Windows にログインするまで、ホット プラグ可能なすべての PCI ダウンストリーム ポートへのダイレクト メモリ アクセス (DMA) をブロックできます。 ユーザーがログインすると、Windows はホット プラグ PCI ポートに接続されている PCI デバイスを列挙します。 ユーザーがコンピューターをロックするたびに、ユーザーが再ログインするまで、子デバイスが接続されていないホット プラグ PCI ポートで DMA がブロックされます。 コンピューターのロックが解除された際に既に列挙されていたデバイスは、取り外されるまで機能を維持します。 このポリシー設定は、BitLocker またはデバイスの暗号化が有効な場合にのみ適用されます。  
@@ -290,7 +290,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="device-guard"></a>[Device Guard]
 
-詳細については、Windows の「[Policy CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard)」(ポリシー CSP - DeviceGuard) を参照してください。
+詳細については、Windows の「[Policy CSP - DeviceGuard](/windows/client-management/mdm/policy-csp-deviceguard)」(ポリシー CSP - DeviceGuard) を参照してください。
 
 - **[Credential Guard を有効にする]** :  
   ユーザーはこの設定で、次回の再起動時に資格情報が保護されるよう、仮想化ベースのセキュリティで Credential Guard をオンにできます。  
@@ -318,11 +318,11 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="device-installation"></a>デバイスのインストール
 
-詳細については、Windows の「[Policy CSP - DeviceInstallation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation)」(ポリシー CSP - DeviceInstallation) を参照してください。
+詳細については、Windows の「[Policy CSP - DeviceInstallation](/windows/client-management/mdm/policy-csp-deviceinstallation)」(ポリシー CSP - DeviceInstallation) を参照してください。
 
 - **[Hardware device installation by device identifiers]\(デバイス識別子を使用してハードウェア デバイスをインストールする\)** :  
   このポリシー設定を使用すると、Windows によるインストールが禁止されているデバイスのプラグ アンド プレイ ハードウェア ID と互換 ID の一覧を指定できます。 このポリシー設定は、Windows がデバイスをインストールできるようにするその他のポリシー設定よりも優先されます。 このポリシー設定を有効にした場合、ハードウェア ID または互換性 ID が作成した一覧に含まれているデバイスはインストールできません。 リモート デスクトップ サーバーでこのポリシー設定を有効にした場合、ポリシー設定は、リモート デスクトップ クライアントからリモート デスクトップ サーバーへの指定されたデバイスのリダイレクトに影響します。 この設定を無効にした場合、または構成しなかった場合は、他のポリシー設定に従って、デバイスのインストールや更新が許可されるかどうかが決まります。  
-  [詳細情報](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids)
+  [詳細情報](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdeviceids)
 
   **既定値**:Block hardware device installation (ハードウェア デバイスのインストールをブロックする)
 
@@ -340,7 +340,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 - **[Hardware device installation by setup classes]\(セットアップ クラスを使用してハードウェア デバイスをインストールする\)** :  
   このポリシー設定を使用すると、Windows によるインストールが禁止されているデバイス ドライバーのデバイス セットアップ クラス GUID (グローバル一意識別子) の一覧を指定できます。 このポリシー設定は、Windows がデバイスをインストールできるようにするその他のポリシー設定よりも優先されます。 このポリシー設定を有効にした場合、デバイス セットアップ クラス GUID が作成した一覧に含まれているデバイス ドライバーはインストールすることも更新することもできません。 リモート デスクトップ サーバーでこのポリシー設定を有効にした場合、ポリシー設定は、リモート デスクトップ クライアントからリモート デスクトップ サーバーへの指定されたデバイスのリダイレクトに影響します。 この設定を無効にした場合、または構成しなかった場合は、他のポリシー設定に従って、デバイスのインストールや更新が許可されるかどうかが決まります。  
-  [詳細情報](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
+  [詳細情報](/windows/client-management/mdm/policy-csp-deviceinstallation#deviceinstallation-preventinstallationofmatchingdevicesetupclasses)
 
   **既定値**:Block hardware device installation (ハードウェア デバイスのインストールをブロックする)
 
@@ -358,7 +358,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="device-lock"></a>デバイスのロック
 
-詳細については、Windows の「[Policy CSP - DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock)」(ポリシー CSP - DeviceLock) を参照してください。
+詳細については、Windows の「[Policy CSP - DeviceLock](/windows/client-management/mdm/policy-csp-devicelock)」(ポリシー CSP - DeviceLock) を参照してください。
 
 - **[Prevent use of camera]\(カメラの使用を禁止する\)** :  
   PC 設定のロック画面カメラ切り替えスイッチを無効にし、ロック画面でカメラが起動されないようにします。 既定では、ユーザーはロック画面で使用可能なカメラを起動できます。 この設定を有効にした場合、ユーザーは、PC 設定でロック画面カメラへのアクセスを有効または無効にできず、ロック画面でカメラを呼び出せません。  
@@ -436,11 +436,11 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="dma-guard"></a>DMA ガード
 
-詳細については、Windows ドキュメントの「[Policy CSP - DmaGuard (ポリシー CSP - DmaGuard)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard)」をご覧ください。
+詳細については、Windows ドキュメントの「[Policy CSP - DmaGuard (ポリシー CSP - DmaGuard)](/windows/client-management/mdm/policy-csp-dmaguard)」をご覧ください。
 
 - **[Kernel DMA Protection と互換性のない外部デバイスの列挙]** :  
   このポリシーの目的は、外部 DMA 対応デバイスのセキュリティを強化することです。 これにより、DMA の再マッピング/デバイス メモリの分離およびサンドボックス化と互換性のない外部 DMA 対応デバイスの列挙をより詳細に制御できます。 このポリシーが有効になるのは、Kernel DMA Protection がシステム ファームウェアによってサポートされていて、それによって有効にされた場合のみです。 Kernel DMA Protection は、ポリシーやエンド ユーザーによる制御ができないプラットフォーム機能です。 これは、製造時にシステムによってサポートされている必要があります。 システムで Kernel DMA Protection がサポートされているかどうかを確認するには、MSINFO32.exe の概要ページにある Kernel DMA Protection フィールドを調べます。  
-  [詳細情報](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  [詳細情報](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   **既定値**:すべてブロックする
 
@@ -449,7 +449,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="event-log-service"></a>イベント ログ サービス
 
-詳細については、Windows の「[Policy CSP - EventLogService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-eventlogservice)」(ポリシー CSP - EventLogService) を参照してください。
+詳細については、Windows の「[Policy CSP - EventLogService](/windows/client-management/mdm/policy-csp-eventlogservice)」(ポリシー CSP - EventLogService) を参照してください。
 
 - **[Security log maximum file size in KB]\(セキュリティ ログの最大ファイル サイズ (KB)\)** :  
   このポリシー設定では、ログ ファイルの最大サイズを KB 単位で指定します。 このポリシー設定を有効にすると、最大ログ ファイル サイズを 1 MB (1024 KB) から 2 TB (2147483647 KB) の範囲で、KB 単位で構成できます。 このポリシー設定を無効にした場合、または構成しなかった場合、ログ ファイルの最大サイズはローカルで構成された値に設定されます。 この値は、ローカル管理者が [ログ プロパティ] ダイアログを使用して変更でき、既定値は 20 MB です。  
@@ -471,7 +471,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="experience"></a>エクスペリエンス
 
-詳細については、Windows の「[Policy CSP - Experience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience)」(ポリシー CSP - Experience) を参照してください。
+詳細については、Windows の「[Policy CSP - Experience](/windows/client-management/mdm/policy-csp-experience)」(ポリシー CSP - Experience) を参照してください。
 
 - **[Block Windows Spotlight]\(Windows スポットライトをブロックする\)** :  
   IT 管理者がすべての Windows スポットライト機能をオフ (ブロック) できるようにします。 これには、ロック画面、Windows ヒント、Microsoft のコンシューマー機能、およびその他の関連機能のウィンドウ スポットライトが含まれます。  
@@ -495,7 +495,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="exploit-guard"></a>Exploit Guard
 
-詳細については、Windows の「[Policy CSP - ExploitGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard)」(ポリシー CSP - ExploitGuard) を参照してください。
+詳細については、Windows の「[Policy CSP - ExploitGuard](/windows/client-management/mdm/policy-csp-exploitguard)」(ポリシー CSP - ExploitGuard) を参照してください。
 
 - **[XML をアップロードする]** :  
   IT 管理者が、組織内のすべてのデバイスに対して、目的のシステムとアプリケーションの軽減策オプションを表す構成をプッシュできるようにします。 この構成は XML で表されます。 Exploit Protection は、拡散と感染のためにエクスプロイトを使用するマルウェアからデバイスを保護するのに役立ちます。 Windows セキュリティ アプリまたは PowerShell を使用して、一連の軽減策 (構成と呼ばれます) を作成します。 次に、この構成を XML ファイルとしてエクスポートし、ネットワーク上の複数のマシンと共有して、すべてのマシンに同じ軽減策設定が適用されるようにすることができます。 既存の EMET 構成 XML ファイルを変換して Exploit Protection 構成 XML にインポートすることもできます。  
@@ -505,7 +505,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="file-explorer"></a>エクスプローラー
 
-詳細については、Windows の「[Policy CSP - FileExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-fileexplorer)」(ポリシー CSP - FileExplorer) を参照してください。  
+詳細については、Windows の「[Policy CSP - FileExplorer](/windows/client-management/mdm/policy-csp-fileexplorer)」(ポリシー CSP - FileExplorer) を参照してください。  
 
 - **[Block data execution prevention]\(データ実行防止をブロックする\)** :  
   データ実行防止を無効にすると、特定のレガシ プラグイン アプリケーションを、エクスプローラーを終了せずに機能させることができます。  
@@ -521,7 +521,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="firewall"></a>ファイアウォール
 
-詳細については、Windows プロトコルのドキュメントの「[2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc)」を参照してください。
+詳細については、Windows プロトコルのドキュメントの「[2.2.2 FW_PROFILE_TYPE]( /openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc)」を参照してください。
 
 - **[ファイアウォール プロファイル ドメイン]** :  
   ルールが属するプロファイルを指定します: ドメイン、プライベート、パブリック。 この値は、ドメインに接続されているネットワークのプロファイルを表します。  
@@ -579,7 +579,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="internet-explorer"></a>Internet Explorer
 
-詳細については、Windows の「[Policy CSP - InternetExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer)」(ポリシー CSP - InternetExplorer) を参照してください。
+詳細については、Windows の「[Policy CSP - InternetExplorer](/windows/client-management/mdm/policy-csp-internetexplorer)」(ポリシー CSP - InternetExplorer) を参照してください。
 
 - **[Internet Explorer の制限付きゾーンでのスクリプトによるステータス バーの更新]** :  
   このポリシー設定を使用すると、スクリプトを介してゾーン内のステータス バーを更新できるかどうかを管理できます。
@@ -1340,7 +1340,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="local-policies-security-options"></a>ローカル ポリシーのセキュリティ オプション
 
-詳細については、Windows のドキュメントの「[Policy CSP - LocalPoliciesSecurityOptions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)」(ポリシー CSP - LocalPoliciesSecurityOptions) を参照してください。
+詳細については、Windows のドキュメントの「[Policy CSP - LocalPoliciesSecurityOptions](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)」(ポリシー CSP - LocalPoliciesSecurityOptions) を参照してください。
 
 - **[名前付きパイプと共有への匿名アクセスを制限する]** :  
   このセキュリティ設定を有効にすると、次の設定と一致する共有およびパイプへの匿名アクセスが制限されます: (1) 匿名でアクセスできる名前付きパイプ (2) 匿名でアクセスできる共有。  
@@ -1548,14 +1548,14 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="microsoft-defender"></a>Microsoft Defender
 
-詳細については、Windows ドキュメントの「[Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender)」(ポリシー CSP - Defender) を参照してください。
+詳細については、Windows ドキュメントの「[Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender)」(ポリシー CSP - Defender) を参照してください。
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 - **[Adobe Reader による子プロセスの作成をブロックする]** :  
 このルールでは、Adobe Reader による追加のプロセス作成をブロックすることで攻撃を防ぎます。 マルウェアは、ソーシャル エンジニアリングまたは悪用によって、追加のペイロードをダウンロードして起動し、Adobe Reader から抜け出すことができます。 Adobe Reader による子プロセスの生成をブロックすることで、それをベクトルとして使用しようとしているマルウェアの拡散を防ぎます。
-[詳細情報](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+[詳細情報](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   **既定値**:[ウェイクアップ時間 (デスクトップ コンピューター)] を有効にして、デスクトップ コンピューターが、スケジュールされた更新またはソフトウェアのインストールを実行するために、スリープ状態または休止状態から復帰する時刻を指定します。
 
@@ -1670,7 +1670,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
   **既定値**:[ウェイクアップ時間 (デスクトップ コンピューター)] を有効にして、デスクトップ コンピューターが、スケジュールされた更新またはソフトウェアのインストールを実行するために、スリープ状態または休止状態から復帰する時刻を指定します。
 
 - **[Defender potentially unwanted app action]\(Defender の望ましくないアプリに対するアクション\)** :  
-  CSP:[Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
+  CSP:[Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
 
   Microsoft Defender ウイルス対策に備わっている望ましくない可能性があるアプリケーション (PUA) 保護機能では、PUA を特定して、ご使用のネットワーク内のエンドポイントへのダウンロードやインストールをブロックできます。 これらのアプリケーションはウイルス、マルウェア、または他の種類の脅威とは見なされませんが、パフォーマンスや使用に悪影響を与えるアクションをエンドポイントで実行する可能性があります。 PUA は、評価が低いと考えられるアプリケーションを指すこともあります。 一般的な PUA の動作は次のとおりです。さまざまな種類のソフトウェア バンドル。Web ブラウザーへの広告挿入。問題を検出し、エラーの修正に対して支払いを要求するが、エンドポイント上に残っていて変更や最適化を何も行わないドライバーやレジストリのオプティマイザー ("偽装ウイルス対策" プログラムとも呼ばれます)。 これらのアプリケーションは、ネットワークがマルウェアに感染するリスクを高め、識別困難なマルウェア感染を引き起こし、アプリケーションのクリーンアップで IT リソースを浪費させる可能性があります。
 
@@ -1715,7 +1715,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="ms-security-guide"></a>MS Security Guide (MS セキュリティ ガイド)
 
-詳細については、Windows の「[Policy CSP - MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide)」(ポリシー CSP - MSSecurityGuide) を参照してください。
+詳細については、Windows の「[Policy CSP - MSSecurityGuide](/windows/client-management/mdm/policy-csp-mssecurityguide)」(ポリシー CSP - MSSecurityGuide) を参照してください。
 
 - **[Apply UAC restrictions to local accounts on network logon]\(ネットワーク ログオン時にローカル アカウントに UAC 制限を適用する\)** :  
   [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067188)
@@ -1744,7 +1744,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="mss-legacy"></a>MSS Legacy (MSS レガシ)
 
-詳細については、Windows の「[Policy CSP - MSSLegacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy)」(ポリシー CSP - MSSLegacy) を参照してください。
+詳細については、Windows の「[Policy CSP - MSSLegacy](/windows/client-management/mdm/policy-csp-msslegacy)」(ポリシー CSP - MSSLegacy) を参照してください。
 
 - **[Network IP source routing protection level]\(ネットワーク IP ソース ルーティングの保護レベル\)** :  
   [詳細情報](https://go.microsoft.com/fwlink/?linkid=2067220)
@@ -1768,7 +1768,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="power"></a>電源
 
-詳細については、Windows の「[Policy CSP - Power](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power)」(ポリシー CSP - Power) を参照してください。
+詳細については、Windows の「[Policy CSP - Power](/windows/client-management/mdm/policy-csp-power)」(ポリシー CSP - Power) を参照してください。
 
 - **[Require password on wake while plugged in]\(電源接続中のスリープ解除時にパスワードを要求する\)** :  
   このポリシー設定では、システムのスリープ状態を解除するときに、ユーザーにパスワードを要求するかどうかを指定します。 このポリシー設定を有効にした場合、または構成しなかった場合、ユーザーはシステムのスリープ状態を解除するときにパスワードを要求されます。 このポリシー設定を無効にすると、ユーザーはシステムのスリープ状態を解除するときにパスワードを要求されません。  
@@ -1799,7 +1799,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="remote-assistance"></a>リモート アシスタンス
 
-詳細については、Windows ドキュメントの[ポリシー CSP - RemoteAssistance](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance) に関するページをご覧ください。
+詳細については、Windows ドキュメントの[ポリシー CSP - RemoteAssistance](/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance) に関するページをご覧ください。
 
 - **[要請されたリモート アシスタンス]** :  
   このポリシー設定を使用すると、このコンピューター上で要請されたリモート アシスタンスを有効または無効に設定することができます。
@@ -1836,7 +1836,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="remote-desktop-services"></a>リモート デスクトップ サービス
 
-詳細については、Windows ドキュメントの「[Policy CSP - RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices)」(ポリシー CSP - RemoteDesktopServices) を参照してください。
+詳細については、Windows ドキュメントの「[Policy CSP - RemoteDesktopServices](/windows/client-management/mdm/policy-csp-remotedesktopservices)」(ポリシー CSP - RemoteDesktopServices) を参照してください。
 
 - **[Block password saving]\(パスワードの保存をブロックする\)** :  
   リモート デスクトップ接続からこのコンピューターにパスワードを保存できるかどうかを制御します。 この設定を有効にすると、リモート デスクトップ接続のパスワードを保存するためのチェック ボックスが使用できなくなり、以降、ユーザーはパスワードを保存できなくなります。 ユーザーがリモート デスクトップ接続で RDP ファイルを開いて設定を保存した場合、RDP ファイルに以前から存在していたパスワードはすべて削除されます。 この設定を無効または未構成にする場合、ユーザーはリモート デスクトップ接続でパスワードを保存できます。  
@@ -1878,7 +1878,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="remote-management"></a>リモート管理
 
-詳細については、Windows ドキュメントの「[Policy CSP - RemoteManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotemanagement)」(ポリシー CSP - RemoteManagement) を参照してください。
+詳細については、Windows ドキュメントの「[Policy CSP - RemoteManagement](/windows/client-management/mdm/policy-csp-remotemanagement)」(ポリシー CSP - RemoteManagement) を参照してください。
 
 - **[Block storing run as credentials]\(実行アカウントの資格情報の保存をブロックする\)** :  
   クライアントの基本認証。  
@@ -1918,7 +1918,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="remote-procedure-call"></a>リモート プロシージャ コール
 
-詳細については、Windows ドキュメントの「[Policy CSP - RemoteProcedureCall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteprocedurecall)」(ポリシー CSP - RemoteProcedureCall) を参照してください。
+詳細については、Windows ドキュメントの「[Policy CSP - RemoteProcedureCall](/windows/client-management/mdm/policy-csp-remoteprocedurecall)」(ポリシー CSP - RemoteProcedureCall) を参照してください。
 
 - **[RPC unauthenticated client options]\(RPC の認証されていないクライアント オプション\)** :  
   このポリシー設定では、RPC サーバーに接続する認証されていない RPC クライアントを RPC サーバー ランタイムが処理する方法を制御します。 このポリシー設定は、すべての RPC アプリケーションに影響します。 ドメイン環境では、このポリシー設定はグループ ポリシーの処理自体を含む広範な機能に影響する可能性があるため、注意して使用する必要があります。 このポリシー設定の変更を元に戻すには、影響を受けた各コンピューターでの手動操作が必要になることがあります。 このポリシー設定をドメイン コントローラーに適用しないでください。 このポリシー設定を無効にすると、RPC サーバー ランタイムでは、Windows クライアントに対しては "認証済み" の値が使用され、このポリシー設定をサポートする Windows Server バージョンに対しては "なし" の値が使用されます。 このポリシー設定を構成しない場合、設定は無効のままになります。 RPC サーバー ランタイムは、Windows クライアントでは [認証済み] の値の使用が、このポリシー設定をサポートする Server SKU では [なし] の値の使用が有効にされた場合と同じように動作します。 このポリシー設定を有効にすると、コンピューター上で実行されている RPC サーバーに接続する、認証されていない RPC クライアントを制限するよう、RPC サーバー ランタイムに指示されます。 サーバーとの通信時に名前付きパイプを使用している場合、または RPC セキュリティを使用している場合に、クライアントは認証済みとして認識されます。 このポリシー設定で選択した値によっては、未認証のクライアントがアクセスできるよう明示的に要求した RPC インターフェイスが、この制限から除外される場合があります。
@@ -1935,7 +1935,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="search"></a>検索
 
-詳細については、Windows ドキュメントの「[Policy CSP - Search](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search)」(ポリシー CSP - Search) を参照してください。
+詳細については、Windows ドキュメントの「[Policy CSP - Search](/windows/client-management/mdm/policy-csp-search)」(ポリシー CSP - Search) を参照してください。
 
 - **[Disable indexing encrypted items]\(暗号化されたアイテムのインデックス作成を無効にする\)** :  
   アイテムのインデックス作成を許可または禁止します。 これは Windows Search Indexer 用のスイッチです。Windows 情報保護 (WIP) で保護されたファイルなど、暗号化されたアイテムにインデックスを付けるかどうかを制御します。 このポリシーが有効な場合、WIP で保護されたアイテムにインデックスが付けられ、それらのメタデータは暗号化されていない場所に保存されます。 メタデータには、ファイル パスや変更日などがあります。 このポリシーが無効な場合、WIP で保護されたアイテムにはインデックスが付けられず、Cortana またはエクスプローラーの結果に表示されません。 また、デバイスに WIP で保護されたメディア ファイルが多数ある場合は、写真や Groove アプリのパフォーマンスにも影響が出る可能性があります。  
@@ -1945,7 +1945,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="smart-screen"></a>スマート スクリーン
 
-詳細については、Windows ドキュメントの「[Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen)」 (ポリシー CSP - SmartScreen) を参照してください。
+詳細については、Windows ドキュメントの「[Policy CSP - SmartScreen](/windows/client-management/mdm/policy-csp-smartscreen)」 (ポリシー CSP - SmartScreen) を参照してください。
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
@@ -1991,7 +1991,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="system"></a>System (システム)
 
-詳細については、Windows ドキュメントの「[Policy CSP - System ](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system)」(ポリシー CSP - System) を参照してください。
+詳細については、Windows ドキュメントの「[Policy CSP - System ](/windows/client-management/mdm/policy-csp-system)」(ポリシー CSP - System) を参照してください。
 
 - **[System boot start driver initialization]\(システム ブート開始ドライバーの初期化\)** :  
   このポリシー設定を使用すると、起動時マルウェア対策のブート開始ドライバーによって決まる分類に基づいて、どのブート開始ドライバーを初期化するかを指定できます。 起動時マルウェア対策のブート開始ドライバーは、各ブート開始ドライバーに次のような分類を返します。
@@ -2011,7 +2011,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="wi-fi"></a>Wi-Fi
 
-詳細については、Windows ドキュメントの「[Policy CSP - Wifi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi)」(ポリシー CSP - Wifi) を参照してください。
+詳細については、Windows ドキュメントの「[Policy CSP - Wifi](/windows/client-management/mdm/policy-csp-wifi)」(ポリシー CSP - Wifi) を参照してください。
 
 - **[インターネット共有をブロックする]** :  
   インターネット共有がデバイスで可能かどうかを指定します。  
@@ -2027,7 +2027,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="windows-connection-manager"></a>Windows 接続マネージャー
 
-詳細については、Windows ドキュメントの「[Policy CSP - WindowsConnectionManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsconnectionmanager)」(ポリシー CSP - WindowsConnectionManager) を参照してください。
+詳細については、Windows ドキュメントの「[Policy CSP - WindowsConnectionManager](/windows/client-management/mdm/policy-csp-windowsconnectionmanager)」(ポリシー CSP - WindowsConnectionManager) を参照してください。
 
 - **[Block connection to non-domain networks]\(非ドメイン ネットワークへの接続をブロックする\)** :  
   このポリシー設定は、コンピューターがドメイン ベースのネットワークと非ドメイン ベースのネットワークに同時に接続することを禁止します。 このポリシー設定を有効にした場合、コンピューターは次の状況で自動または手動のネットワーク接続試行に応答します。
@@ -2086,7 +2086,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="windows-ink-workspace"></a>Windows Ink ワークスペース
 
-詳細については、Windows ドキュメントの「[Policy CSP - WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace)」(ポリシー CSP - WindowsInkWorkspace) を参照してください。
+詳細については、Windows ドキュメントの「[Policy CSP - WindowsInkWorkspace](/windows/client-management/mdm/policy-csp-windowsinkworkspace)」(ポリシー CSP - WindowsInkWorkspace) を参照してください。
 
 - **[Ink Workspace]\(Ink ワークスペース\)** :  
   ユーザーに Ink ワークスペースへのアクセスを許可するかどうかを指定します。
@@ -2103,7 +2103,7 @@ Windows 10 以降が実行されているデバイスに対して Microsoft Intu
 
 ## <a name="windows-powershell"></a>Windows PowerShell
 
-詳細については、Windows ドキュメントの「[Policy CSP - WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell)」 (ポリシー CSP - WindowsPowerShell) を参照してください。
+詳細については、Windows ドキュメントの「[Policy CSP - WindowsPowerShell](/windows/client-management/mdm/policy-csp-windowspowershell)」 (ポリシー CSP - WindowsPowerShell) を参照してください。
 
 - **[PowerShell script block logging]\(PowerShell スクリプト ブロックのログ記録\)** :  
   このポリシー設定は、Microsoft-Windows-PowerShell/Operational イベント ログへのすべての PowerShell スクリプト入力のログ記録を有効にします。 このポリシー設定を有効にした場合、Windows PowerShell は対話的に、またはオートメーションを介して呼び出された、コマンド、スクリプト ブロック、関数、およびスクリプトの処理をログに記録します。 このポリシー設定を無効にすると、PowerShell スクリプトの入力のログ記録は無効になります。 スクリプト ブロックの呼び出しのログ記録を有効にすると、PowerShell はさらに、コマンド、スクリプト ブロック、関数、またはスクリプトの呼び出しの開始時または停止時にイベントを記録します。 呼び出しのログ記録を有効にすると、大量のイベント ログが生成されます。 注:このポリシー設定は、グループ ポリシー エディターの [コンピューターの構成] と [ユーザーの構成] の両方の下にあります。 [コンピューターの構成] のポリシー設定は、[ユーザーの構成] のポリシー設定よりも優先されます。  

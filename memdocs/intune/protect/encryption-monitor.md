@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d14ee52decf1b6ef9b2566b3233a385c1331bcc5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86460469"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910980"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Intune でデバイスの暗号化を監視する
 
@@ -59,7 +59,7 @@ Microsoft Intune の暗号化レポートは、デバイスの暗号化状態に
     - バージョン 1709 以降の *Business*、*Enterprise*、*Education*、またはバージョン 1809 以降の *Pro*
     - デバイスには TPM チップが必要です
 
-    詳細については、Windows ドキュメントの [BitLocker 構成サービス プロバイダー (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)に関するページを参照してください。
+    詳細については、Windows ドキュメントの [BitLocker 構成サービス プロバイダー (CSP)](/windows/client-management/mdm/bitlocker-csp)に関するページを参照してください。
 
   - **準備中**: デバイスは暗号化のすべての機能を備えていませんが、それでもデバイスでは暗号化がサポートされています。 たとえば、Windows デバイスの暗号化は、ユーザーが手動で行ったり、TPM なしでの暗号化を許可するように設定できるグループ ポリシーを介して行ったりする場合があります。
   - **適用なし**:このデバイスを分類するための十分な情報がありません。

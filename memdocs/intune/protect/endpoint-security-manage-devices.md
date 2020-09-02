@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 55a73806e343ac23525dbd2a28950d46285bf9a3
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 98b1380254a784dfe8939c607ab574f7bdaa8752
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088532"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914992"
 ---
 # <a name="manage-devices-with-endpoint-security-in-microsoft-intune"></a>Microsoft Intune でエンドポイント セキュリティを使用してデバイスを管理する
 
-セキュリティ管理者は、Microsoft Endpoint Manager 管理センターの *[すべてのデバイス]* ビューを使用してデバイスを確認し、デバイスを管理するための操作を行います。 このビューには、Azure Active Directory (Azure AD) のすべてのデバイスの一覧が表示されます。 これには、Intune によって管理されるデバイス、Configuration Manager によって管理されるデバイス、Intune と Configuration Manager の両方で[共同管理](https://docs.microsoft.com/configmgr/comanage/overview)されるデバイスが含まれます。 Azure AD に統合されている場合、デバイスはクラウドとオンプレミスのインフラストラクチャに存在する可能性があります。
+セキュリティ管理者は、Microsoft Endpoint Manager 管理センターの *[すべてのデバイス]* ビューを使用してデバイスを確認し、デバイスを管理するための操作を行います。 このビューには、Azure Active Directory (Azure AD) のすべてのデバイスの一覧が表示されます。 これには、Intune によって管理されるデバイス、Configuration Manager によって管理されるデバイス、Intune と Configuration Manager の両方で[共同管理](/configmgr/comanage/overview)されるデバイスが含まれます。 Azure AD に統合されている場合、デバイスはクラウドとオンプレミスのインフラストラクチャに存在する可能性があります。
 
  ビューを見つけるには、[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)を開き、 **[エンドポイント セキュリティ]**  >  **[すべてのデバイス]** を選択します。
 
@@ -59,15 +59,13 @@ Microsoft Endpoint Manager 管理センターでデバイスを表示してい�
 
     Configuration Manager によって管理されるデバイスのコンプライアンス状態は、Microsoft Endpoint Manager 管理センターに表示されません。
 
-    詳細については、Configuration Manager ドキュメントの[テナントのアタッチを有効にする](https://docs.microsoft.com/configmgr/tenant-attach/device-sync-actions)方法に関するページを参照してください。
+    詳細については、Configuration Manager ドキュメントの[テナントのアタッチを有効にする](/configmgr/tenant-attach/device-sync-actions)方法に関するページを参照してください。
 
   - **MDM/ConfigMgr エージェント** – これらのデバイスは、Intune と Configuration Manager 間の共同管理下にあります。
 
-    共同管理を使用すると、[さまざまな共同管理ワークロードを選択](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)して、Configuration Manager または Intune によって管理される側面を決定できます。 これらの選択は、デバイスで適用されるポリシーと、コンプライアンス データを管理センターに報告する方法に影響を与えます。
+    共同管理を使用すると、[さまざまな共同管理ワークロードを選択](/configmgr/comanage/how-to-switch-workloads)して、Configuration Manager または Intune によって管理される側面を決定できます。 これらの選択は、デバイスで適用されるポリシーと、コンプライアンス データを管理センターに報告する方法に影響を与えます。
 
     たとえば、Intune を使用して、ウイルス対策、ファイアウォール、および暗号化のポリシーを構成できます。 これらのポリシーの種類は、*Endpoint Protection* のポリシーと見なされます。 共同管理されているデバイスで Configuration Manager のポリシーではなく Intune のポリシーを使用するには、Endpoint Protection の共同管理スライダーを *[Intune]* または *[パイロット Intune]* に設定します。 スライダーが [Configuration Manager] に設定されている場合、デバイスでは代わりに Configuration Manager のポリシーと設定が使用されます。
-
-  - **Workspace ONE** - これらのデバイスは、サードパーティ デバイス コンプライアンス パートナーである Workspace ONE によって管理されます。 詳細については、[デバイス コンプライアンス パートナー](../protect/device-compliance-partners.md)に関するページを参照してください。
 
 - **コンプライアンス**:コンプライアンスは、デバイスに割り当てられているコンプライアンス ポリシーに照らして評価されます。 これらのポリシーのソースとコンソール内の情報は、デバイスの管理方法 (Intune による管理、Configuration Manager による管理、または共同管理) によって異なります。 共同管理されるデバイスでコンプライアンスを報告するには、デバイスのコンプライアンスの共同管理スライダーを [Intune] または [パイロット Intune] に設定します。  
 

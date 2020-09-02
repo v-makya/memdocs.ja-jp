@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8ce02a86236e390983b4e1ecca8d48d4767e49e
-ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
+ms.openlocfilehash: 0f6c70bcfa1bf9d23ff3555498cb199ff032bb34
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87821633"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910538"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Intune を使ってマネージド Google Play アプリを Android Enterprise デバイスに追加する
 
@@ -183,7 +183,7 @@ Web リンクは、Microsoft Edge または選択して展開したその他の�
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices"></a>マネージド Google Play アプリを Android Enterprise 仕事用プロファイル デバイスと会社所有の仕事用プロファイル デバイスに割り当てる
 
-アプリが **[アプリ]** ワークロード ウィンドウの **[アプリ ライセンス]** ノードに表示される場合は、そのアプリをユーザーのグループに割り当てることで、[他のアプリの割り当てと同様の方法で割り当てる](/mem/intune/apps/apps-deploy)ことができます。
+アプリが **[アプリ]** ワークロード ウィンドウの **[アプリ ライセンス]** ノードに表示される場合は、そのアプリをユーザーのグループに割り当てることで、[他のアプリの割り当てと同様の方法で割り当てる](./apps-deploy.md)ことができます。
 
 アプリを割り当てると、対象のユーザーのデバイス上にインストールされます (あるいは、インストール可能になります)。 デバイスのユーザーがインストールの承認を求められることはありません。 Android Enterprise 仕事用プロファイル デバイスの詳細については、「[Set up enrollment of Android Enterprise work profile devices (Android Enterprise 仕事用プロファイル デバイスの登録を設定する)](../enrollment/android-work-profile-enroll.md)」を参照してください。 
 

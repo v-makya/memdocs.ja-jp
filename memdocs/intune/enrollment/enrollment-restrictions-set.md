@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b056eb0bab2416a87f443c025a76c22b580ed3c9
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: f13be3c277605f11a1b16e9bcd3484cf4cdc7027
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252449"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907060"
 ---
 # <a name="set-enrollment-restrictions"></a>登録制限を設定する
 
@@ -122,7 +122,7 @@ BYOD の登録中にユーザーがデバイス登録の上限に達すると、
 > - デバイス登録マネージャー登録
 >
 > これらの登録の種類は共有デバイス シナリオと見なされるため、デバイスの上限数の制限は適用されません。
-> これらの登録の種類のハード制限を [Azure Active Directory に](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)設定できます。
+> これらの登録の種類のハード制限を [Azure Active Directory に](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)設定できます。
 
 
 ## <a name="change-enrollment-restrictions"></a>登録制限を変更する
@@ -144,19 +144,19 @@ BYOD の登録中にユーザーがデバイス登録の上限に達すると、
 
 次の方法は、Windows の会社登録として認証されたものと見なされます。
 - 登録ユーザーは[デバイス登録マネージャー アカウント]( device-enrollment-manager-enroll.md)を使用しています。
-- デバイスは [Windows Autopilot](enrollment-autopilot.md) 経由で登録されます。
+- デバイスは [Windows Autopilot](../../autopilot/enrollment-autopilot.md) 経由で登録されます。
 - デバイスは、Windows Autopilot に登録されますが、Windows 設定からの MDM 登録のみオプションではありません。
 - デバイスの IMEI 番号は **[デバイスの登録]**  >  **[[業務用デバイスの ID]](corporate-identifiers-add.md)** に記載されています。
 - デバイスが[一括プロビジョニング パッケージ](windows-bulk-enroll.md)経由で登録されます。
-- デバイスが GPO または[共同管理用の Configuration Manager からの自動登録](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1)経由で登録されます。
+- デバイスが GPO または[共同管理用の Configuration Manager からの自動登録](/configmgr/comanage/quickstart-paths#bkmk_path1)経由で登録されます。
  
 次の登録は Intune で会社として見なされます。 しかし、Intune 管理者のデバイスごとのコントロールがないため、ブロックされます。
-- [自動 MDM 登録](windows-enroll.md#enable-windows-10-automatic-enrollment)と [Windows セットアップ中の Azure Active Directory 参加](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)\*。
-- [自動 MDM 登録](windows-enroll.md#enable-windows-10-automatic-enrollment)と [Windows 設定からの Azure Active Directory 参加](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)。
+- [自動 MDM 登録](windows-enroll.md#enable-windows-10-automatic-enrollment)と [Windows セットアップ中の Azure Active Directory 参加](/azure/active-directory/device-management-azuread-joined-devices-frx)\*。
+- [自動 MDM 登録](windows-enroll.md#enable-windows-10-automatic-enrollment)と [Windows 設定からの Azure Active Directory 参加](/azure/active-directory/user-help/user-help-register-device-on-network)。
  
 次の個人登録方法もブロックされます。
-- [自動 MDM 登録](windows-enroll.md#enable-windows-10-automatic-enrollment)と [Windows 設定からの職場アカウントの追加](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)\*。
-- Windows 設定からの [MDM 登録のみ]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device)オプション。
+- [自動 MDM 登録](windows-enroll.md#enable-windows-10-automatic-enrollment)と [Windows 設定からの職場アカウントの追加](/azure/active-directory/user-help/user-help-join-device-on-network)\*。
+- Windows 設定からの [MDM 登録のみ]( /windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device)オプション。
 
 \* これらは、Autopilot に登録されている場合、ブロックされません。
 

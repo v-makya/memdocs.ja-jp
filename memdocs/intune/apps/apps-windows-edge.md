@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: baaec1e48579313085c039872cc931891c367132
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: abf2ad4a1b0857f1a839de49bb709fc4ff27f369
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531538"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913955"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Microsoft Edge for Windows 10 を Microsoft Intune に追加する
 
@@ -121,7 +121,7 @@ Microsoft Edge バージョン 77 以降を Intune に追加するには、次�
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 **Windows 10 向け Microsoft Edge バージョン 77 以降:**<br>
-Intune では、Intune 管理拡張機能を使用して、割り当て済みの Windows 10 デバイスに Microsoft Edge インストーラーがダウンロードされて展開され、その後、展開設定が Microsoft Edge インストーラーに伝えられます。このインストーラーによって、Microsoft Edge ブラウザーが CDN から直接ダウンロードされてインストールされます。 [Intune 管理拡張機能の前提条件](intune-management-extension.md#prerequisites)と、Azure Update Service と CDN へのアクセスで説明されているベスト プラクティスを参照して、ご自分のネットワーク構成において Windows 10 デバイスでこれらの場所へのアクセスが確実に許可されるようにします。 さらに、CDN からインストール ファイルにアクセスして、ブラウザーをインストールできるようにするには、Windows Update エンドポイントへのアクセスを許可する必要があります。 詳細については、[Windows 10 Version 1809 の接続エンドポイントの管理 – Windows Update](https://docs.microsoft.com/windows/privacy/manage-windows-1809-endpoints#windows-update) に関するページと、「[Microsoft Intune のネットワーク エンドポイント](../fundamentals/intune-endpoints.md)」をご覧ください。
+Intune では、Intune 管理拡張機能を使用して、割り当て済みの Windows 10 デバイスに Microsoft Edge インストーラーがダウンロードされて展開され、その後、展開設定が Microsoft Edge インストーラーに伝えられます。このインストーラーによって、Microsoft Edge ブラウザーが CDN から直接ダウンロードされてインストールされます。 [Intune 管理拡張機能の前提条件](intune-management-extension.md#prerequisites)と、Azure Update Service と CDN へのアクセスで説明されているベスト プラクティスを参照して、ご自分のネットワーク構成において Windows 10 デバイスでこれらの場所へのアクセスが確実に許可されるようにします。 さらに、CDN からインストール ファイルにアクセスして、ブラウザーをインストールできるようにするには、Windows Update エンドポイントへのアクセスを許可する必要があります。 詳細については、[Windows 10 Version 1809 の接続エンドポイントの管理 – Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update) に関するページと、「[Microsoft Intune のネットワーク エンドポイント](../fundamentals/intune-endpoints.md)」をご覧ください。
 
 ## <a name="next-steps"></a>次のステップ
 - [アプリをグループに割り当てる](apps-deploy.md)

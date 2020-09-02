@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c6440b800b3bf652cb9adc8c565efcb48ef334
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 84fe1afcf04c6b3771d1541ad0488a95b9313dca
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165959"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908838"
 ---
 # <a name="use-the-microsoft-intune-data-warehouse"></a>Microsoft Intune データ ウェアハウスを使用する
 
@@ -43,7 +43,7 @@ Intune データ ウェアハウスを使用して、社内のモバイル環境
 - OData 標準を使用するデータ モデル
 
 > [!Note]
-> Microsoft Endpoint Configuration Manager と Microsoft Intune で共同管理モバイル デバイス管理 (MDM) を使用している場合は、Configuration Manager からデータを取得する必要があります。 Intune データが含まれるのは Intune データ ウェアハウスのみです。 カスタム レポートには Configuration Manager Power BI ダッシュボードを使用できます。 詳細については、[Configuration Manager 用 Power BI ソリューション テンプレートの発表](https://powerbi.microsoft.com/blog/sccm-solution-template)に関する記事と、[Dynamics 365 の Power BI コンテンツ](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page)に関するページを参照してください。
+> Microsoft Endpoint Configuration Manager と Microsoft Intune で共同管理モバイル デバイス管理 (MDM) を使用している場合は、Configuration Manager からデータを取得する必要があります。 Intune データが含まれるのは Intune データ ウェアハウスのみです。 カスタム レポートには Configuration Manager Power BI ダッシュボードを使用できます。 詳細については、[Configuration Manager 用 Power BI ソリューション テンプレートの発表](https://powerbi.microsoft.com/blog/sccm-solution-template)に関する記事と、[Dynamics 365 の Power BI コンテンツ](/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page)に関するページを参照してください。
 
 > [!Important]  
 > クエリ パラメーター  `api-version=v1.0` を設定することにより、Intune データ ウェアハウスの v1.0 バージョンを使用できるようになりました。 Data Warehouse 内のコレクションに対する更新は本質的に追加であり、既存のシナリオが使用できなくなることはありません。<br><br>

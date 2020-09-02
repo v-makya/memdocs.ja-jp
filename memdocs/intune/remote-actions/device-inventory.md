@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27d31e64e99e8dc796b0436052f7220260ab1029
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: e6aa3c887a22c468d8d482ce2d4ba0da8202fceb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795671"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906822"
 ---
 # <a name="see-device-details-in-intune"></a>Intune でデバイスの詳細を確認する
 
@@ -48,10 +48,10 @@ ms.locfileid: "84795671"
       - [Autopilot リセット](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (Windows のみ)
       - [クイック スキャン](../configuration/device-restrictions-windows-10.md) (Windows 10 のみ)
       - [フル スキャン](../configuration/device-restrictions-windows-10.md) (Windows 10 のみ)
-      - [Windows Defender のセキュリティ インテリジェンスの更新](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
-      - [BitLocker キーの交換](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [Windows Defender のセキュリティ インテリジェンスの更新](/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
+      - [BitLocker キーの交換](../protect/encrypt-devices.md#to-rotate-the-bitlocker-recovery-key)
       - [デバイス名の変更](device-rename.md)
-      - [新しいリモート アシスタンス セッション](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
+      - [新しいリモート アシスタンス セッション](./teamviewer-support.md)
    - **[プロパティ]** を使用して、[作成するデバイス カテゴリ](../enrollment/device-group-mapping.md)を割り当て、デバイスの所有権を個人のデバイス、または会社のデバイスに変更します。
    - **[ハードウェア]** には、デバイス ID、オペレーティング システムおよびバージョン、記憶域などの詳細に関して、多くの詳しい情報が含まれます。
    - **[検出されたアプリ]** には、Intune でデバイスにインストールされていると判断されたすべてのアプリと、アプリのバージョンが一覧表示されます。 詳細については、「[Intune discovered apps (Intune で検出されたアプリ)](../apps/app-discovered-apps.md)」を参照してください。

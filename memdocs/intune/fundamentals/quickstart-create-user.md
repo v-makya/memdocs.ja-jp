@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf5c76e276722fb9bab2b5d6fac511f0b22ae1f2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6def2806bc35acf8becbbedfb031af99378711ee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79356714"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913836"
 ---
 # <a name="quickstart-create-a-user-in-intune-and-assign-the-user-a-license"></a>クイック スタート:Intune でユーザーを作成してそのユーザーにライセンスを割り当てる
 
@@ -59,7 +59,7 @@ Intune デバイス管理に登録するユーザーには、ユーザー アカ
 2. **[ユーザー]**  >  **[アクティブ ユーザー]** を選択し、作成したユーザーを選択します。
 3. **[ライセンスとアプリ]** タブを選択します。
 4. **[場所の選択]** で、ユーザーの場所を選択します (まだ設定されていない場合)。
-2. **[ライセンス]** セクションの **[Intune]** チェック ボックスをオンにします。 別のライセンスに Intune が含まれている場合は、そのライセンスを選択できます。 表示された[製品名](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)が Azure の管理でサービス プランとして使用されます。
+2. **[ライセンス]** セクションの **[Intune]** チェック ボックスをオンにします。 別のライセンスに Intune が含まれている場合は、そのライセンスを選択できます。 表示された[製品名](/azure/active-directory/users-groups-roles/licensing-service-plan-reference)が Azure の管理でサービス プランとして使用されます。
 
     ![場所と Intune ライセンスを選択する](./media/quickstart-create-user/create-user-03.png)
 

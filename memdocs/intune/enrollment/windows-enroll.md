@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48560af1ff31d5660f00e775a2f510b88c08fd9c
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: cf74b7b96f51658f50ae8654b0c3a7e364cac63d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820597"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911805"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Windows デバイスの登録をセットアップする
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-この記事は、IT 管理者がそのユーザーの Windows の登録を簡略化する場合に役立ちます。 [Intune が設定](../fundamentals/setup-steps.md)されたら、ユーザーは職場または学校のアカウントで[サインイン](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal)し、Windows デバイスを登録します。  
+この記事は、IT 管理者がそのユーザーの Windows の登録を簡略化する場合に役立ちます。 [Intune が設定](../fundamentals/setup-steps.md)されたら、ユーザーは職場または学校のアカウントで[サインイン](../user-help/windows-enrollment-company-portal.md)し、Windows デバイスを登録します。  
 
 Intune 管理者は次の方法で登録を簡略化できます。
 
@@ -39,7 +39,7 @@ Intune 管理者は次の方法で登録を簡略化できます。
 
 Windows デバイスの登録を簡単にする方法は次の 2 つの要素で決まります。
 
-- **Azure Active Directory Premium を使用していますか?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) は、Enterprise Mobility + Security およびその他のライセンス プランに付属します。
+- **Azure Active Directory Premium を使用していますか?** <br>[Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) は、Enterprise Mobility + Security およびその他のライセンス プランに付属します。
 - **ユーザーはどのバージョンの Windows クライアントを登録しますか?** <br>Windows 10 デバイスは、職場または学校のアカウントを追加すると自動的に登録できます。 以前のバージョンでは、会社ポータル アプリを使用して登録する必要があります。
 
 ||**Azure AD Premium**|**その他の AD**|
@@ -125,7 +125,7 @@ Azure Active Directory には、iOS/iPadOS、Android、および Windows デバ�
 | --- | --- | --- | --- |
 | CNAME | EnterpriseRegistration。 company_domain.com | EnterpriseRegistration.windows.net | 1 時間|
 
-デバイス登録の詳細については、「[Azure portal を使用してデバイス ID を管理する](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)」をご覧ください
+デバイス登録の詳細については、「[Azure portal を使用してデバイス ID を管理する](/azure/active-directory/devices/device-management-azure-portal)」をご覧ください
 
 ## <a name="windows-10-auto-enrollment-and-device-registration"></a>Windows 10 の自動登録とデバイス登録
 

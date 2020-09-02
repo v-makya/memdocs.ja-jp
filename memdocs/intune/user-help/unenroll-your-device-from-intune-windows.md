@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9e9101a46cac488ef8a80858377cbabac8dc7936
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: d6cb9693f0bafcff22f3fce9d3f972e9eac41b22
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881580"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909093"
 ---
 # <a name="remove-your-windows-device-from-management"></a>管理から Windows デバイスを削除する
 
@@ -57,7 +57,7 @@ Windows 10 デバイスを管理から削除するには、次の手順を完了
 
     ![[デバイス] セクションが強調表示された、Windows 用ポータル サイト アプリの [ホーム] ページのサンプル スクリーンショット。](./media/1809_CheckAccess_Context_Select_Device.png)
 
-2. デバイスを右クリックするか、デバイスを押したままにしてその[コンテキスト メニュー](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus)を開きます。  
+2. デバイスを右クリックするか、デバイスを押したままにしてその[コンテキスト メニュー](//windows/uwp/design/controls-and-patterns/menus)を開きます。  
 
 3. **[削除]** を選びます。  
 

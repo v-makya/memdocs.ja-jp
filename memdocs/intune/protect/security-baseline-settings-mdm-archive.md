@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92eafef5bac7f1008284f896b85981d170331382
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 790382e3c7ad92133ffbb69fafa6b92e3d2076fa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079214"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912068"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
@@ -44,7 +44,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="above-lock"></a>Above Lock (上でロック)  
 
-詳細については、Windows の「[Policy CSP - AboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock)」(ポリシー CSP - AboveLock) を参照してください。  
+詳細については、Windows の「[Policy CSP - AboveLock](/windows/client-management/mdm/policy-csp-abovelock)」(ポリシー CSP - AboveLock) を参照してください。  
 
 - **Block display of toast notifications (トースト通知の表示をブロックする)**  
   このポリシー設定を使用すると、アプリの通知がロック画面に表示されないようにすることができます。 このポリシー設定を有効にした場合、アプリ通知はロック画面に表示されません。 このポリシー設定を無効にした場合、または構成しなかった場合、ロック画面に通知を表示するアプリをユーザーが選択できます。
@@ -53,7 +53,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="app-runtime"></a>[アプリ実行時]  
 
-詳細については、Windows の「[Policy CSP - AppRuntime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-appruntime
+詳細については、Windows の「[Policy CSP - AppRuntime](/windows/client-management/mdm/policy-csp-appruntime
 )」(ポリシー CSP - AppRuntime) を参照してください。  
 
 - **Microsoft accounts optional for Windows Store apps (Windows ストア アプリで Microsoft アカウントの省略を許可する)**  
@@ -63,7 +63,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="application-management"></a>アプリケーション管理  
 
-詳細については、Windows の「[Policy CSP - ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement)」(ポリシー CSP - ApplicationManagement) を参照してください。  
+詳細については、Windows の「[Policy CSP - ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement)」(ポリシー CSP - ApplicationManagement) を参照してください。  
 
 - **Block game DVR (desktop only) (ゲーム DVR をブロックする (デスクトップのみ))**  
   ゲームの録画とブロードキャストを許可するかどうか設定します。
@@ -72,7 +72,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="auto-play"></a>Auto Play (自動再生)  
 
-詳細については、Windows の「[Policy CSP - Autoplay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay)」(ポリシー CSP - Autoplay) を参照してください。  
+詳細については、Windows の「[Policy CSP - Autoplay](/windows/client-management/mdm/policy-csp-autoplay)」(ポリシー CSP - Autoplay) を参照してください。  
 
 - **Auto play default auto run behavior (自動再生の既定の自動実行の動作)**  
   この設定は、自動実行コマンドの既定の動作に影響します。 自動実行コマンドは、autorun.inf ファイルに保存されており、インストール プログラムやその他のルーチンを開始できます。 これを*有効*にすると、管理者は Windows Vista 以降を実行するデバイスの自動実行の既定の動作を変更することができます。 次の動作に設定できます: a) 自動実行コマンドを完全に無効にする、b) 自動実行コマンドを自動的に実行する Windows Vista 以前の動作に戻す。 *無効*または*未構成*にすると、Windows Vista 以降を実行するコンピューターで自動実行コマンドを実行するかユーザーはたずねられます。
@@ -91,7 +91,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="bitlocker"></a>Bitlocker  
 
-詳細については、Windows の「[Policy CSP - Bitlocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker
+詳細については、Windows の「[Policy CSP - Bitlocker](/windows/client-management/mdm/policy-csp-bitlocker
 )」(ポリシー CSP - Bitlocker) を参照してください。  
 
 - **Bit locker removable drive policy (Bitlocker のリムーバブル ドライブのポリシー)**  
@@ -121,7 +121,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="browser"></a>ブラウザー  
 
-詳細については、Windows の「[Policy CSP - Browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser)」(ポリシー CSP - Browser) を参照してください。  
+詳細については、Windows の「[Policy CSP - Browser](/windows/client-management/mdm/policy-csp-browser)」(ポリシー CSP - Browser) を参照してください。  
 
 - **Require SmartScreen for Microsoft Edge (Microsoft Edge で SmartScreen が必要)**  
 
@@ -151,7 +151,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="connectivity"></a>接続  
 
-詳細については、Windows の「[Policy CSP - Connectivity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity)」(ポリシー CSP - Connectivity) を参照してください。  
+詳細については、Windows の「[Policy CSP - Connectivity](/windows/client-management/mdm/policy-csp-connectivity)」(ポリシー CSP - Connectivity) を参照してください。  
 
 - **Block Internet download for web publishing and online ordering wizards (Web 発行およびオンライン注文ウィザードのインターネット ダウンロードをブロックする)**  
   このポリシー設定では、Web 発行およびオンライン注文のウィザード用にプロバイダーの一覧を Windows でダウンロードする必要があるかどうかを指定します。 これらのウィザードを使用すると、ユーザーは、オンライン ストレージや写真印刷などのサービスを提供する会社の一覧から選択できるようになります。 既定では、レジストリで指定されているプロバイダーに加えて、Windows の Web サイトからダウンロードされたプロバイダーが表示されます。 このポリシー設定を有効にした場合、プロバイダーはダウンロードされず、ローカル レジストリにキャッシュされたサービス プロバイダーのみが表示されます。 このポリシー設定を無効にした場合、または構成しなかった場合、ユーザーが Web 発行ウィザードまたはオンライン注文ウィザードを使用するときに、プロバイダーの一覧がダウンロードされます。 レジストリでサービス プロバイダーを指定する方法などの詳細については、Web 発行ウィザードおよびオンライン注文ウィザードのドキュメントを参照してください。  
@@ -165,7 +165,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="credentials-delegation"></a>資格情報の委任  
 
-詳細については、Windows の「[Policy CSP - CredentialsDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsdelegation
+詳細については、Windows の「[Policy CSP - CredentialsDelegation](/windows/client-management/mdm/policy-csp-credentialsdelegation
 )」(ポリシー CSP - CredentialsDelegation) を参照してください。  
 
 - **Remote host delegation of non-exportable credentials (リモート ホストでエクスポートできない資格情報を委任する)**  
@@ -176,7 +176,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="credentials-ui"></a>Credentials UI (資格情報 UI)  
 
-詳細については、Windows の「[Policy CSP - CredentialsUI](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsui)」(ポリシー CSP - CredentialsUI) を参照してください。  
+詳細については、Windows の「[Policy CSP - CredentialsUI](/windows/client-management/mdm/policy-csp-credentialsui)」(ポリシー CSP - CredentialsUI) を参照してください。  
 
 - **Enumerate administrators (管理者の列挙)** このポリシー設定により、ユーザーが実行中のアプリケーションの昇格を試みたときに、管理者アカウントが表示されるかどうかを制御します。 既定では、ユーザーが実行中のアプリケーションの昇格を試みたときに、管理者アカウントは表示されません。 このポリシー設定を有効にした場合、PC 上のローカル管理者アカウントがすべて表示され、ユーザーがその 1 つを選択して、正しいパスワードを入力できます。 このポリシー設定を無効にした場合、ユーザーは常に昇格させるユーザー名とパスワードを入力する必要があります。  
 
@@ -185,7 +185,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="data-protection"></a>データ保護  
 
-詳細については、Windows の「[Policy CSP - DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection
+詳細については、Windows の「[Policy CSP - DataProtection](/windows/client-management/mdm/policy-csp-dataprotection
 )」(ポリシー CSP - DataProtection) を参照してください。  
 
 - **Block direct memory access (ダイレクト メモリ アクセスをブロックする)**  
@@ -196,7 +196,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="device-guard"></a>[Device Guard]  
 
-詳細については、Windows の「[Policy CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard
+詳細については、Windows の「[Policy CSP - DeviceGuard](/windows/client-management/mdm/policy-csp-deviceguard
 )」(ポリシー CSP - DeviceGuard) を参照してください。  
 
 - **[Credential Guard]**  
@@ -214,7 +214,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="device-installation"></a>デバイスのインストール  
 
-詳細については、Windows の「[Policy CSP - DeviceInstallation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation)」(ポリシー CSP - DeviceInstallation) を参照してください。  
+詳細については、Windows の「[Policy CSP - DeviceInstallation](/windows/client-management/mdm/policy-csp-deviceinstallation)」(ポリシー CSP - DeviceInstallation) を参照してください。  
 
 - **Hardware device installation by device identifiers (デバイス識別子を使用してハードウェア デバイスをインストールする)**  
   このポリシー設定を使用すると、Windows によるインストールが禁止されているデバイスのプラグ アンド プレイ ハードウェア ID と互換 ID の一覧を指定できます。 このポリシー設定は、Windows がデバイスをインストールできるようにするその他のポリシー設定よりも優先されます。 このポリシー設定を有効にした場合、ユーザーが作成するリストにハードウェア ID または互換 ID が表示されたデバイスは、Windows でインストールできなくなります。 リモート デスクトップ サーバーでこのポリシー設定を有効にした場合、ポリシー設定は、リモート デスクトップ クライアントからリモート デスクトップ サーバーへの指定されたデバイスのリダイレクトに影響します。 この設定を無効にした場合、または構成しなかった場合は、他のポリシー設定に従って、デバイスのインストールや更新が許可されるかどうかが決まります。
@@ -251,7 +251,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="device-lock"></a>デバイスのロック  
 
-詳細については、Windows の「[Policy CSP - DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock)」(ポリシー CSP - DeviceLock) を参照してください。  
+詳細については、Windows の「[Policy CSP - DeviceLock](/windows/client-management/mdm/policy-csp-devicelock)」(ポリシー CSP - DeviceLock) を参照してください。  
 
 - **Prevent use of camera (カメラの使用を禁止する)**  
   PC 設定のロック画面カメラ切り替えスイッチを無効にし、ロック画面でカメラが起動されないようにします。 既定では、ユーザーはロック画面で使用可能なカメラを起動できます。 この設定を有効にした場合、ユーザーは、PC 設定でロック画面カメラへのアクセスを有効または無効にできなくなり、ロック画面でカメラを呼び出せなくなります。 
@@ -314,7 +314,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="event-log-service"></a>イベント ログ サービス  
 
-詳細については、Windows の「[Policy CSP - EventLogService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-eventlogservice)」(ポリシー CSP - EventLogService) を参照してください。  
+詳細については、Windows の「[Policy CSP - EventLogService](/windows/client-management/mdm/policy-csp-eventlogservice)」(ポリシー CSP - EventLogService) を参照してください。  
 
 - **Security log maximum file size in KB (セキュリティ ログの最大ファイル サイズ (KB))**  
   このポリシー設定では、ログ ファイルの最大サイズを KB 単位で指定します。 このポリシー設定を有効にすると、最大ログ ファイル サイズを 1 MB (1024 KB) から 2 TB (2147483647 KB) の範囲で、KB 単位で構成できます。 このポリシー設定を無効にした場合、または構成しなかった場合、ログ ファイルの最大サイズはローカルで構成された値に設定されます。 この値は、ローカル管理者が [ログ プロパティ] ダイアログを使用して変更でき、既定値は 20 MB です。
@@ -333,7 +333,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="experience"></a>エクスペリエンス  
 
-詳細については、Windows の「[Policy CSP - Experience](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience)」(ポリシー CSP - Experience) を参照してください。  
+詳細については、Windows の「[Policy CSP - Experience](/windows/client-management/mdm/policy-csp-experience)」(ポリシー CSP - Experience) を参照してください。  
 
 - **Block Windows Spotlight (Windows スポットライトをブロックする)**  
   ロック画面上の Windows スポットライト、Windows のヒント、Microsoft のコンシューマー向け機能、その他の関連機能など、すべての Windows スポットライト機能を IT 管理者がオフにできるようにします。
@@ -354,7 +354,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="exploit-guard"></a>Exploit Guard  
 
-詳細については、Windows の「[Policy CSP - ExploitGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard)」(ポリシー CSP - ExploitGuard) を参照してください。  
+詳細については、Windows の「[Policy CSP - ExploitGuard](/windows/client-management/mdm/policy-csp-exploitguard)」(ポリシー CSP - ExploitGuard) を参照してください。  
 
 - **[Exploit Protection XML]**  
   IT 管理者が、組織内のすべてのデバイスに対して、目的のシステムとアプリケーションの軽減策オプションを表す構成をプッシュできるようにします。 この構成は XML で表されます。 Exploit Protection は、拡散と感染のためにエクスプロイトを使用するマルウェアからデバイスを保護するのに役立ちます。 Windows セキュリティ アプリまたは PowerShell を使用して、一連の軽減策 (構成と呼ばれます) を作成します。 次に、この構成を XML ファイルとしてエクスポートし、ネットワーク上の複数のマシンと共有して、すべてのマシンに同じ軽減策設定が適用されるようにすることができます。 既存の EMET 構成 XML ファイルを変換して Exploit Protection 構成 XML にインポートすることもできます。
@@ -363,7 +363,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
  
 ### <a name="file-explorer"></a>エクスプローラー  
 
-詳細については、Windows の「[Policy CSP - FileExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-fileexplorer)」(ポリシー CSP - FileExplorer) を参照してください。  
+詳細については、Windows の「[Policy CSP - FileExplorer](/windows/client-management/mdm/policy-csp-fileexplorer)」(ポリシー CSP - FileExplorer) を参照してください。  
 
 - **Block data execution prevention (データ実行防止をブロックする)**  
   データ実行防止を無効にすると、特定のレガシ プラグイン アプリケーションを、エクスプローラーを終了せずに機能させることができます。
@@ -378,7 +378,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="internet-explorer"></a>Internet Explorer  
 
-詳細については、Windows の「[Policy CSP - InternetExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer)」(ポリシー CSP - InternetExplorer) を参照してください。  
+詳細については、Windows の「[Policy CSP - InternetExplorer](/windows/client-management/mdm/policy-csp-internetexplorer)」(ポリシー CSP - InternetExplorer) を参照してください。  
 
 - **Internet Explorer internet zone access to data sources (Internet Explorer のインターネット ゾーンにあるデータ ソースへのアクセス)**  
   このポリシー設定を使用すると、Internet Explorer が Microsoft XML パーサー (MSXML) または ActiveX Data Objects (ADO) を使用して別のセキュリティ ゾーンからデータにアクセスできるかどうかを管理できます。 このポリシー設定を有効にすると、ユーザーは、ゾーン内の別のサイトにあるデータに MSXML または ADO を使用してアクセスするゾーン内のページを読み込むことができます。 ドロップダウン ボックスで [ダイアログを表示する] を選択した場合、ゾーン内の他のサイトにあるデータに MSXML または ADO を使用してアクセスするゾーン内のページを読み込むことを許可するかどうかをユーザーにたずねます。 このポリシー設定を無効にすると、ゾーン内の他のサイトにあるデータに MSXML または ADO を使用してアクセスするゾーン内のページを読み込むことはできません。 このポリシー設定を構成しないと、ゾーン内の他のサイトにあるデータに MSXML または ADO を使用してアクセスするゾーン内のページを読み込むことはできません。
@@ -950,7 +950,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
   **既定値**:無効  
   
 ### <a name="local-policies-security-options"></a>ローカル ポリシーのセキュリティ オプション
-詳細については、Windows のドキュメントの「[Policy CSP - LocalPoliciesSecurityOptions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)」(ポリシー CSP - LocalPoliciesSecurityOptions) を参照してください。 
+詳細については、Windows のドキュメントの「[Policy CSP - LocalPoliciesSecurityOptions](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)」(ポリシー CSP - LocalPoliciesSecurityOptions) を参照してください。 
 
 - **名前付きパイプと共有への匿名アクセスを制限する**  
   このセキュリティ設定を有効にすると、次の設定と一致する共有およびパイプへの匿名アクセスが制限されます: (1) 匿名でアクセスできる名前付きパイプ (2) 匿名でアクセスできる共有
@@ -1094,7 +1094,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="ms-security-guide"></a>MS Security Guide (MS セキュリティ ガイド)  
 
-詳細については、Windows の「[Policy CSP - MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide)」(ポリシー CSP - MSSecurityGuide) を参照してください。  
+詳細については、Windows の「[Policy CSP - MSSecurityGuide](/windows/client-management/mdm/policy-csp-mssecurityguide)」(ポリシー CSP - MSSecurityGuide) を参照してください。  
 
 - **Apply UAC restrictions to local accounts on network logon (ネットワーク ログオン時にローカル アカウントに UAC 制限を適用する)**  
   **既定値**:Enabled
@@ -1113,7 +1113,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
   
 ### <a name="mss-legacy"></a>MSS Legacy (MSS レガシ)  
 
-詳細については、Windows の「[Policy CSP - MSSLegacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy)」(ポリシー CSP - MSSLegacy) を参照してください。  
+詳細については、Windows の「[Policy CSP - MSSLegacy](/windows/client-management/mdm/policy-csp-msslegacy)」(ポリシー CSP - MSSLegacy) を参照してください。  
 
 - **Network IP source routing protection level (ネットワーク IP ソース ルーティングの保護レベル)**  
   **既定値**:Highest protection (最高の保護)  
@@ -1129,7 +1129,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
   
 ### <a name="power"></a>電源  
 
-詳細については、Windows の「[Policy CSP - Power](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power)」(ポリシー CSP - Power) を参照してください。  
+詳細については、Windows の「[Policy CSP - Power](/windows/client-management/mdm/policy-csp-power)」(ポリシー CSP - Power) を参照してください。  
 
 - **Require password on wake while plugged in (電源接続中のスリープ解除時にパスワードを要求する)**  
   このポリシー設定では、システムのスリープ状態を解除するときに、ユーザーにパスワードを要求するかどうかを指定します。 このポリシー設定を有効にした場合、または構成しなかった場合、ユーザーはシステムのスリープ状態を解除するときにパスワードを要求されます。 このポリシー設定を無効にすると、ユーザーはシステムのスリープ状態を解除するときにパスワードを要求されません。
@@ -1153,7 +1153,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
   
 ### <a name="remote-desktop-services"></a>リモート デスクトップ サービス  
 
-詳細については、Windows ドキュメントの「[Policy CSP - RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices)」(ポリシー CSP - RemoteDesktopServices) を参照してください。  
+詳細については、Windows ドキュメントの「[Policy CSP - RemoteDesktopServices](/windows/client-management/mdm/policy-csp-remotedesktopservices)」(ポリシー CSP - RemoteDesktopServices) を参照してください。  
 
 - **Block password saving (パスワードの保存をブロックする)**  
   リモート デスクトップ接続からこのコンピューターにパスワードを保存できるかどうかを制御します。 この設定を有効にすると、リモート デスクトップ接続のパスワードを保存するためのチェック ボックスが使用できなくなり、以降、ユーザーはパスワードを保存できなくなります。 ユーザーがリモート デスクトップ接続で RDP ファイルを開いて設定を保存した場合、RDP ファイルに以前から存在していたパスワードはすべて削除されます。 この設定を無効または未構成にする場合、ユーザーはリモート デスクトップ接続でパスワードを保存できます。
@@ -1166,7 +1166,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
   **既定値**:Enabled
   
 - **Block drive redirection (ドライブのリダイレクトをブロックする)**  
-  このポリシー設定では、リモート デスクトップ サービス セッションで、クライアント ドライブのマッピングをしないようにするかどうかを指定します (ドライブ リダイレクト)。 既定の RD セッション ホスト サーバーでは、接続時に自動的にクライアント ドライブがマップされます。 マップされたドライブは、エクスプローラーまたは [コンピューター] のセッション フォルダー ツリーに、 *\<コンピューター名>* の *\<ドライブ文字>* という形式で表示されます。 このポリシー設定を使用して、この動作をオーバーライドできます。 このポリシー設定を有効にすると、クライアント ドライブのリダイレクトはリモート デスクトップ サービス セッションでは許可されません。また、クリップボードでのファイル コピーのリダイレクトは、Windows Server 2003、Windows 8、および Windows XP を実行しているコンピューターでは許可されません。 このポリシー設定を無効にすると、クライアント ドライブのリダイレクトは常に許可されます。 また、クリップボードのリダイレクトを許可すると、クリップボードでのファイル コピーのリダイレクトは常に許可されます。 このポリシー設定を構成しなかった場合、クライアント ドライブのリダイレクトおよびクリップボードでのファイル コピーのリダイレクトはグループ ポリシー レベルでは指定されません。
+  このポリシー設定では、リモート デスクトップ サービス セッションで、クライアント ドライブのマッピングをしないようにするかどうかを指定します (ドライブ リダイレクト)。 既定の RD セッション ホスト サーバーでは、接続時に自動的にクライアント ドライブがマップされます。 マップされたドライブは、エクスプローラーまたは [コンピューター] のセッション フォルダー ツリーに、 *\<computername>* の *\<driveletter>* という形式で表示されます。 このポリシー設定を使用して、この動作をオーバーライドできます。 このポリシー設定を有効にすると、クライアント ドライブのリダイレクトはリモート デスクトップ サービス セッションでは許可されません。また、クリップボードでのファイル コピーのリダイレクトは、Windows Server 2003、Windows 8、および Windows XP を実行しているコンピューターでは許可されません。 このポリシー設定を無効にすると、クライアント ドライブのリダイレクトは常に許可されます。 また、クリップボードのリダイレクトを許可すると、クリップボードでのファイル コピーのリダイレクトは常に許可されます。 このポリシー設定を構成しなかった場合、クライアント ドライブのリダイレクトおよびクリップボードでのファイル コピーのリダイレクトはグループ ポリシー レベルでは指定されません。
   
   **既定値**:Enabled
   
@@ -1187,7 +1187,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
   
 ### <a name="remote-management"></a>リモート管理  
 
-詳細については、Windows ドキュメントの「[Policy CSP - RemoteManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotemanagement)」(ポリシー CSP - RemoteManagement) を参照してください。  
+詳細については、Windows ドキュメントの「[Policy CSP - RemoteManagement](/windows/client-management/mdm/policy-csp-remotemanagement)」(ポリシー CSP - RemoteManagement) を参照してください。  
 
 - **Block storing run as credentials (実行アカウントの資格情報の保存をブロックする)**  
   クライアントの基本認証
@@ -1222,7 +1222,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="remote-procedure-call"></a>リモート プロシージャ コール  
 
-詳細については、Windows ドキュメントの「[Policy CSP - RemoteProcedureCall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteprocedurecall)」(ポリシー CSP - RemoteProcedureCall) を参照してください。  
+詳細については、Windows ドキュメントの「[Policy CSP - RemoteProcedureCall](/windows/client-management/mdm/policy-csp-remoteprocedurecall)」(ポリシー CSP - RemoteProcedureCall) を参照してください。  
 
 - **RPC unauthenticated client options (RPC の認証されていないクライアント オプション)**  
   このポリシー設定では、RPC サーバーに接続する認証されていない RPC クライアントを RPC サーバー ランタイムが処理する方法を制御します。 このポリシー設定は、すべての RPC アプリケーションに影響します。 ドメイン環境では、このポリシー設定はグループ ポリシーの処理自体を含む広範な機能に影響する可能性があるため、注意して使用する必要があります。 このポリシー設定の変更を元に戻すには、影響を受けた各コンピューターでの手動操作が必要になることがあります。 このポリシー設定は、ドメイン コントローラーには適用しないでください。 このポリシー設定を無効にすると、RPC サーバー ランタイムでは、Windows クライアントに対しては "認証済み" の値が使用され、このポリシー設定をサポートする Windows Server バージョンに対しては "なし" の値が使用されます。 このポリシー設定を構成しない場合、設定は無効のままになります。 RPC サーバー ランタイムは、Windows クライアントでは [認証済み] の値の使用が、このポリシー設定をサポートする Server SKU では [なし] の値の使用が有効にされた場合と同じように動作します。 このポリシー設定を有効にすると、コンピューター上で実行されている RPC サーバーに接続する、認証されていない RPC クライアントを制限するよう、RPC サーバー ランタイムに指示されます。 サーバーとの通信時に名前付きパイプを使用している場合、または RPC セキュリティを使用している場合に、クライアントは認証済みとして認識されます。 このポリシー設定で選択した値によっては、未認証のクライアントがアクセスできるよう明示的に要求した RPC インターフェイスが、この制限から除外される場合があります。  
@@ -1234,7 +1234,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="search"></a>検索  
 
-詳細については、Windows ドキュメントの「[Policy CSP - Search](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search)」(ポリシー CSP - Search) を参照してください。  
+詳細については、Windows ドキュメントの「[Policy CSP - Search](/windows/client-management/mdm/policy-csp-search)」(ポリシー CSP - Search) を参照してください。  
 
 - **Disable indexing encrypted items (暗号化されたアイテムのインデックス作成を無効にする)**  
   アイテムのインデックス作成を許可または禁止します。 これは Windows Search Indexer 用のスイッチです。Windows 情報保護 (WIP) で保護されたファイルなど、暗号化されたアイテムにインデックスを付けるかどうかを制御します。 このポリシーが有効な場合、WIP で保護されたアイテムにインデックスが付けられ、それらのメタデータは暗号化されていない場所に保存されます。 メタデータには、ファイル パスや変更日などがあります。 このポリシーが無効な場合、WIP で保護されたアイテムにはインデックスが付けられず、Cortana またはエクスプローラーの結果に表示されません。 また、デバイスに WIP で保護されたメディア ファイルが多数ある場合は、写真や Groove アプリのパフォーマンスにも影響が出る可能性があります。
@@ -1243,7 +1243,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
   
 ### <a name="smart-screen"></a>スマート スクリーン  
 
-詳細については、Windows ドキュメントの「[Policy CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen)」 (ポリシー CSP - SmartScreen) を参照してください。  
+詳細については、Windows ドキュメントの「[Policy CSP - SmartScreen](/windows/client-management/mdm/policy-csp-smartscreen)」 (ポリシー CSP - SmartScreen) を参照してください。  
 
 - **Block execution of unverified files (確認されていないファイルの実行をブロックする)**  
   確認されていないファイルをユーザーが実行しないようにします。 
@@ -1264,7 +1264,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
   
 ### <a name="system"></a>System (システム)  
 
-詳細については、Windows ドキュメントの「[Policy CSP - System ](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system)」(ポリシー CSP - System) を参照してください。  
+詳細については、Windows ドキュメントの「[Policy CSP - System ](/windows/client-management/mdm/policy-csp-system)」(ポリシー CSP - System) を参照してください。  
 
 - **System boot start driver initialization (システム ブート開始ドライバーの初期化)**  
   このポリシー設定を使用すると、起動時マルウェア対策のブート開始ドライバーによって決まる分類に基づいて、どのブート開始ドライバーを初期化するかを指定できます。 起動時マルウェア対策のブート開始ドライバーは、各ブート開始ドライバーに次のような分類を返します。 
@@ -1280,7 +1280,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="wi-fi"></a>Wi-Fi  
 
-詳細については、Windows ドキュメントの「[Policy CSP - Wifi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi)」(ポリシー CSP - Wifi) を参照してください。  
+詳細については、Windows ドキュメントの「[Policy CSP - Wifi](/windows/client-management/mdm/policy-csp-wifi)」(ポリシー CSP - Wifi) を参照してください。  
 
 - **インターネット共有をブロックする**  
   インターネット共有がデバイスで可能かどうかを指定します。  
@@ -1294,7 +1294,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
   
 ### <a name="windows-connection-manager"></a>Windows 接続マネージャー  
 
-詳細については、Windows ドキュメントの「[Policy CSP - WindowsConnectionManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsconnectionmanager)」(ポリシー CSP - WindowsConnectionManager) を参照してください。  
+詳細については、Windows ドキュメントの「[Policy CSP - WindowsConnectionManager](/windows/client-management/mdm/policy-csp-windowsconnectionmanager)」(ポリシー CSP - WindowsConnectionManager) を参照してください。  
 
 - **Block connection to non-domain networks (非ドメイン ネットワークへの接続をブロックする)**  
   このポリシー設定は、コンピューターがドメイン ベースのネットワークと非ドメイン ベースのネットワークに同時に接続することを禁止します。 このポリシー設定を有効にした場合、コンピューターは次の状況で自動または手動のネットワーク接続試行に応答します。 
@@ -1307,7 +1307,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
   
 ### <a name="windows-defender"></a>Windows Defender  
 
-詳細については、Windows ドキュメントの「[Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender)」(ポリシー CSP - Defender) を参照してください。  
+詳細については、Windows ドキュメントの「[Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender)」(ポリシー CSP - Defender) を参照してください。  
 
 - **受信メール メッセージをスキャンする**  
   メールのスキャンを許可または禁止します。
@@ -1421,7 +1421,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
 
 ### <a name="windows-ink-workspace"></a>Windows Ink ワークスペース  
 
-詳細については、Windows ドキュメントの「[Policy CSP - WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace)」(ポリシー CSP - WindowsInkWorkspace) を参照してください。  
+詳細については、Windows ドキュメントの「[Policy CSP - WindowsInkWorkspace](/windows/client-management/mdm/policy-csp-windowsinkworkspace)」(ポリシー CSP - WindowsInkWorkspace) を参照してください。  
 
 - **Ink Workspace (Ink ワークスペース)**  
   ユーザーに Ink ワークスペースへのアクセスを許可するかどうかを指定します。 
@@ -1433,7 +1433,7 @@ Intune 用の MDM セキュリティ ベースラインのアーカイブされ�
  
 ### <a name="windows-powershell"></a>Windows PowerShell  
 
-詳細については、Windows ドキュメントの「[Policy CSP - WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell)」 (ポリシー CSP - WindowsPowerShell) を参照してください。  
+詳細については、Windows ドキュメントの「[Policy CSP - WindowsPowerShell](/windows/client-management/mdm/policy-csp-windowspowershell)」 (ポリシー CSP - WindowsPowerShell) を参照してください。  
 
 - **Power shell shell script block logging (PowerShell シェル スクリプト ログ記録ブロック)**  
   このポリシー設定は、Microsoft-Windows-PowerShell/Operational イベント ログへのすべての PowerShell スクリプト入力のログ記録を有効にします。 このポリシー設定を有効にした場合、Windows PowerShell は対話的に、またはオートメーションを介して呼び出された、コマンド、スクリプト ブロック、関数、およびスクリプトの処理をログに記録します。 このポリシー設定を無効にすると、PowerShell スクリプトの入力のログ記録は無効になります。 スクリプト ブロックの呼び出しのログ記録を有効にすると、PowerShell はさらに、コマンド、スクリプト ブロック、関数、またはスクリプトの呼び出しの開始時または停止時にイベントを記録します。 呼び出しのログ記録を有効にすると、大量のイベント ログが生成されます。 注:このポリシー設定は、グループ ポリシー エディターの [コンピューターの構成] と [ユーザーの構成] の両方の下にあります。 [コンピューターの構成] のポリシー設定は、[ユーザーの構成] のポリシー設定よりも優先されます。

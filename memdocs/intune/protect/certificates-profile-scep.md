@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0119ace5e1ec511ec0e8235a1dcea4b7199c058
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: 5126f2e5cc145e864fb4f56e472dba7a5179540f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559540"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915587"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune で SCEP 証明書プロファイルを作成して割り当てる
 
@@ -104,16 +104,16 @@ Simple Certificate Enrollment Protocol (SCEP) 証明書をサポートするよ�
          - **CN={{IMEINumber}}** : 携帯電話の識別に使用される IMEI (International Mobile Equipment Identity) の一意の番号です。
          - **CN={{OnPrem_Distinguished_Name}}** : コンマで区切られた相対識別名のシーケンスです (*CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com* など)。
 
-           *{{OnPrem_Distinguished_Name}}* 変数を使用するには、[Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) を使用して、*onpremisesdistinguishedname* ユーザー属性をご自分の Azure AD に同期してください。
+           *{{OnPrem_Distinguished_Name}}* 変数を使用するには、[Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) を使用して、*onpremisesdistinguishedname* ユーザー属性をご自分の Azure AD に同期してください。
 
          - **CN={{onPremisesSamAccountName}}** : 管理者は、Azure AD Connect を使用して、Active Directory の samAccountName 属性を、Azure AD の *onPremisesSamAccountName* という属性に同期できます。 Intune では、証明書のサブジェクト内の証明書発行要求の一部として、その変数を置き換えることができます。 samAccountName 属性は、以前のバージョンの Windows (windows 2000 より前) のクライアントとサーバーをサポートするために使われるユーザー サインイン名です。 ユーザー サインイン名の形式は次のとおりです。*DomainName\testUser*、または *testUser* のみ。
 
-            *{{onPremisesSamAccountName}}* 変数を使用するには、[Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) を使用して、*onPremisesSamAccountName* ユーザー属性をご自分の Azure AD に同期してください。
+            *{{onPremisesSamAccountName}}* 変数を使用するには、[Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) を使用して、*onPremisesSamAccountName* ユーザー属性をご自分の Azure AD に同期してください。
 
          これらの変数と静的文字列の 1 つまたは複数を組み合わせて使用することで、次のようなサブジェクト名のカスタム形式を作成できます。  
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
-         その例には、CN 変数と E 変数に加えて、組織単位、組織、場所、州、国の各値を表す文字列を使用するサブジェクト名形式が含まれています。 [CertStrToName 関数](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx)の記事では、この関数とそのサポートされる文字列について説明されています。
+         その例には、CN 変数と E 変数に加えて、組織単位、組織、場所、州、国の各値を表す文字列を使用するサブジェクト名形式が含まれています。 [CertStrToName 関数](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea)の記事では、この関数とそのサポートされる文字列について説明されています。
          
          \* [Android フル マネージド、専用、会社所有の仕事用プロファイル] プロファイルには、**CN={{UserPrincipalName}}** 設定は動作しません。 Android の "Android フル マネージド、専用、会社所有の仕事用プロファイル" プロファイルは、"ユーザー" なしのデバイスに使用できるため、このプロファイルではユーザーのユーザー プリンシパル名を受け取れません。 ユーザーのいるデバイスに対してこのオプションが本当に必要な場合は、**CN={{UserName}}\@contoso.com** のような回避策を使用できます。これにより、手動で追加したユーザー名とドメイン (janedoe@contoso.com など) が指定されます
 
@@ -313,7 +313,7 @@ SCEP 証明書プロファイルを使用するには、信頼されたルート
 
 - デバイス登録後すぐに証明書をデバイスに公開するには、証明書プロファイルをデバイス グループではなくユーザー グループに割り当てます。 デバイス グループに割り当てた場合は、デバイスがポリシーを受け取る前に、デバイスの登録を完全に行う必要があります。
 
-- Intune と Configuration Manager に共同管理を使用する場合は、Configuration Manager でリソース アクセス ポリシーの[ワークロード スライダー](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)を **[Intune]** または **[パイロット Intune]** に設定します。 この設定により、Windows 10 クライアントは証明書を要求するプロセスを開始できます。
+- Intune と Configuration Manager に共同管理を使用する場合は、Configuration Manager でリソース アクセス ポリシーの[ワークロード スライダー](/configmgr/comanage/how-to-switch-workloads)を **[Intune]** または **[パイロット Intune]** に設定します。 この設定により、Windows 10 クライアントは証明書を要求するプロセスを開始できます。
 
 > [!NOTE]
 > - iOS/iPadOS デバイスでは、SCEP 証明書プロファイルまたは PKCS 証明書プロファイルが Wi-Fi プロファイルや VPN プロファイルなどの追加のプロファイルに関連付けられている場合、デバイスは、該当する追加のプロファイルの各々に対する証明書を受け取ります。 これにより、SCEP 証明書または PKCS 証明書の要求によって提供される複数の証明書を持つ iOS/iPadOS デバイスが存在するようになります。 

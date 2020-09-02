@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66ea84d8defa1d1d5b79f686537b391452cf3c30
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 88eabe07cadf45644f3e10be338a23454c5d1711
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990290"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911983"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Intune で Windows 情報保護 (WIP) ポリシーを作成して展開する
 
@@ -52,11 +52,11 @@ WIP ポリシーを追加するときのいくつかの概念について理解�
 WIP ポリシーを作成する前に、MAM プロバイダーを構成する必要があります。 [Intune で MAM プロバイダーを構成する方法](app-protection-policies-configure-windows-10.md)を理解します。  
 
 > [!IMPORTANT]
-> WIP は複数の ID をサポートしていません。存在できる管理対象 ID は一度に 1 つだけです。 WIP の機能と制限の詳細については、「[Windows 情報保護 (WIP) を使用した企業データの保護](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)」を参照してください。
+> WIP は複数の ID をサポートしていません。存在できる管理対象 ID は一度に 1 つだけです。 WIP の機能と制限の詳細については、「[Windows 情報保護 (WIP) を使用した企業データの保護](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)」を参照してください。
 
 さらに、次のライセンスと更新プログラムが必要です。
 
-- [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) ライセンス
+- [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) ライセンス
 - [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
 
@@ -68,7 +68,7 @@ WIP ポリシーを作成する前に、MAM プロバイダーを構成する必
 組織で Intune を設定した後は、WIP 固有のポリシーを作成できます。
 
 > [!TIP]  
-> 利用可能な設定とその構成方法を含む、Intune の WIP ポリシーの作成に関する情報については、Windows セキュリティ ドキュメント ライブラリの「[Azure Portal での Microsoft Intune を使用して MAM で Windows 情報保護 (WIP) ポリシーを作成する](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure)」を参照してください。 
+> 利用可能な設定とその構成方法を含む、Intune の WIP ポリシーの作成に関する情報については、Windows セキュリティ ドキュメント ライブラリの「[Azure Portal での Microsoft Intune を使用して MAM で Windows 情報保護 (WIP) ポリシーを作成する](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure)」を参照してください。 
 
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
@@ -194,4 +194,4 @@ WIP アプリ保護ポリシーを作成した後、MAM を使ってポリシー
 
 ## <a name="next-steps"></a>次のステップ
 
-Windows 情報保護の詳細については、「[Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)」(Windows 情報保護 (WIP) を使用してエンタープライズ データを保護する) を参照してください。
+Windows 情報保護の詳細については、「[Protect your enterprise data using Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)」(Windows 情報保護 (WIP) を使用してエンタープライズ データを保護する) を参照してください。

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 000ee384ff289b9511b2dde3b1468525ffed63d4
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 55835d5ee8527f54e530da5113f841ed108fa6f5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820002"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915808"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Microsoft Intune でユーザーおよびデバイス プロファイルを割り当てる
 
@@ -31,7 +31,7 @@ ms.locfileid: "88820002"
 この記事では、プロファイルを割り当てる方法を示し、プロファイルでのスコープのタグの使用についての情報が含まれます。
 
 > [!NOTE]  
-> プロファイルが削除されるか、デバイスに割り当てられなくなった場合の影響は、プロファイルの設定によって異なります。 設定は CSP に基づいており、CSP によってプロファイルの削除の処理方法は異なります。 たとえば、設定に既存の値が保持され、既定値には戻らない場合があります。 動作は、オペレーティング システムの各 CSP によって制御されます。 Windows CSP の一覧については、[構成サービス プロバイダー (CSP) のリファレンス](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)を参照してください。
+> プロファイルが削除されるか、デバイスに割り当てられなくなった場合の影響は、プロファイルの設定によって異なります。 設定は CSP に基づいており、CSP によってプロファイルの削除の処理方法は異なります。 たとえば、設定に既存の値が保持され、既定値には戻らない場合があります。 動作は、オペレーティング システムの各 CSP によって制御されます。 Windows CSP の一覧については、[構成サービス プロバイダー (CSP) のリファレンス](/windows/client-management/mdm/configuration-service-provider-reference)を参照してください。
 >
 > 設定を別の値に変更するには、新しいプロファイルを作成し、その設定を **[未構成]** に構成して、プロファイルを割り当てます。 デバイスに適用されたら、ユーザーが設定を適切な値に変更する必要があります。
 >

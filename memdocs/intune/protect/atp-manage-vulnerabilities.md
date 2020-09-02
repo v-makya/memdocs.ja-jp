@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1d410da2cbedb9bcd2418fac1ddb783529ee8c6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d5c57dcbe91d18b633831bafde3a0feae997ba76
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262593"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909382"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Intune を使用して Microsoft Defender ATP によって検出された脆弱性を修復する
 
 Intune と Microsoft Defender Advanced Threat Protection (ATP) を統合すると、ATP の脅威と脆弱性の管理 (TVM) を利用でき、Intune を使って TVM によって検出されたエンドポイントの脆弱性を修復できます。 この統合により、環境全体で修復の応答時間を向上させることができるリスク ベースのアプローチが、脆弱性の検出と優先順位付けに組み込まれます。
 
-[脅威と脆弱性の管理](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt)は、[Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection) の一部です。
+[脅威と脆弱性の管理](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt)は、[Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection) の一部です。
 
 ## <a name="how-integration-works"></a>統合のしくみ
 
@@ -108,4 +108,4 @@ Intune と [Microsoft Defender ATP](advanced-threat-protection.md) について�
 
 Intune の [Mobile Threat Defense](mobile-threat-defense.md) について確認する。
 
-Microsoft Defender ATP で[脅威と脆弱性の管理ダッシュボード](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights)について確認する。
+Microsoft Defender ATP で[脅威と脆弱性の管理ダッシュボード](/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights)について確認する。

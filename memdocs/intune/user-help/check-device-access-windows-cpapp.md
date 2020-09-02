@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 24d83e5ada6109caec2f6238df44559909580931
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: af883fc950a878a70bac2f9121967254583a90d7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878440"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914448"
 ---
 # <a name="check-access-from-company-portal-app-for-windows"></a>Windows 用ポータル サイト アプリからアクセスを確認する
 
@@ -68,7 +68,7 @@ Windows 用ポータル サイト アプリからアクセスを確認するに�
 
     ![[デバイス] セクションが強調表示された、Windows 用ポータル サイト アプリの [ホーム] ページのサンプル スクリーンショット。](./media/1809_CheckAccess_Context_Select_Device.png)  
 
-2. デバイスを右クリックするか、デバイスを押したままにしてその[コンテキスト メニュー](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus)を開きます。  
+2. デバイスを右クリックするか、デバイスを押したままにしてその[コンテキスト メニュー](//windows/uwp/design/controls-and-patterns/menus)を開きます。  
 
     ![Windows 用ポータル サイト アプリの [ホーム] ページのサンプル スクリーンショット。 デバイスのコンテキスト メニューは、ページの **[デバイス]** セクションに表示され、[名前の変更]、[削除]、[アクセスの確認] アクションが表示されます。](./media/1809_DeviceContextMenu_Windows_CP.png)  
 3. **[アクセスの確認]** を選択します。 アプリによってデバイスが組織の現在の要件と同期され、デバイスがその要件に一致していることが確認されます。 この確認には数分かかることがあります。  

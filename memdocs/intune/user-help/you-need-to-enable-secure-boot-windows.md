@@ -19,12 +19,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: ede37e43740d6b8e7627df017f0c7acc5f712b3c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 5b2c14e4447ddf968eaba1874260ad3f684dfb52
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880769"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913037"
 ---
 # <a name="you-need-to-enable-secure-boot"></a>セキュア ブートを有効にする必要がある
 
@@ -32,6 +32,6 @@ ms.locfileid: "83880769"
 
 セキュア ブートの有効化は高度なタスクです。 モバイル デバイスを使用している場合は、会社のサポートに問い合わせてください。
 
-PC を使用している場合は、会社のサポートに問い合わせるか、「[セキュア ブートの無効化](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx)」ページのセキュア ブートの再有効化に関するセクションを参照して、自分でセキュア ブートを有効にします。
+PC を使用している場合は、会社のサポートに問い合わせるか、「[セキュア ブートの無効化](/windows-hardware/manufacture/desktop/disabling-secure-boot)」ページのセキュア ブートの再有効化に関するセクションを参照して、自分でセキュア ブートを有効にします。
 
 サポートが必要な場合は、 社内サポートに問い合わせてください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。

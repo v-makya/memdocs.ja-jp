@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bc7f526db4cb9fd269d2d48845cc5dc4096b5df
-ms.sourcegitcommit: 0c5d09bfefbedeb561658cf7274483896e84e5d3
+ms.openlocfilehash: 80b725393323484ecb33aad947a95894604c4d5a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87412343"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906890"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Mobile Threat Defense の Intune との統合
 
@@ -35,7 +35,7 @@ Intune を使用すると、Mobile Threat Defense (MTD) ベンダーからのデ
 Intune では、Intune アプリ保護ポリシーを使用して、未登録デバイスに対するソースと同じデータを使用できます。 そのため、管理者は、この情報を使用して、[Microsoft Intune の保護されたアプリ](../apps/apps-supported-intune-apps.md)内の企業データを保護し、ブロックまたは選択的ワイプを発行することができます。
 
 > [!NOTE]
-> Intune GCC High および DoD オファリングと Mobile Threat Defense の統合は、現在はサポートされて "*いません*"。 [米国政府機関向けの Microsoft Intune における GCC High のサポート](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description)に関する記事を参照してください。
+> Intune GCC High および DoD オファリングと Mobile Threat Defense の統合は、現在はサポートされて "*いません*"。 [米国政府機関向けの Microsoft Intune における GCC High のサポート](/enterprise-mobility-security/solutions/ems-intune-govt-service-description)に関する記事を参照してください。
 
 ## <a name="protect-corporate-resources"></a>会社のリソースを保護する
 

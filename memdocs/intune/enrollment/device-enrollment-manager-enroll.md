@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb5dec2fd96c5b5dfe0b82bb30bf653250786c95
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f674cc7b0c7d7314c7152d530cff210319c568df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986763"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913139"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>デバイス登録マネージャー アカウントを使用してデバイスを Intune に登録する
 
@@ -49,7 +49,7 @@ DEM ユーザー アカウントと DEM ユーザー アカウントを使用し
 
 DEM アカウントを使用してデバイスを登録する場合、次の方法を使用できます。
 
-- [Windows Autopilot](enrollment-autopilot.md)
+- [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Windows デバイスの一括登録](windows-bulk-enroll.md)
 - ポータル サイトから DEM が開始
 
@@ -77,4 +77,3 @@ DEM アカウントを使用してデバイスを登録する場合、次の方�
 
 1. [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[デバイス]**  >  **[デバイスの登録]**  >  **[デバイス登録マネージャー]** を選択します。
 2. **[デバイス登録マネージャー]** ブレードで、DEM ユーザーを選択し、 **[削除]** を選択します。
-

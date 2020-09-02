@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92d1e1c5d1e2a66ed036d0ed7a5a75d40c737bf3
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 771c1133d10c256d29755ebc146197a6cb35ceee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428971"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914907"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Microsoft Intune での BitLocker ポリシーのトラブルシューティング
 
@@ -35,7 +35,7 @@ Microsoft Intune を使用して Windows 10 デバイスの BitLocker を管理�
 
 - **デバイス構成ポリシー** - エンドポイント保護を管理するためのデバイス構成プロファイルを作成するときに、Intune で特定の組み込みポリシー オプションを使用できます。 これらのオプションを見つけるには、[エンドポイント保護のデバイス プロファイルを作成](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings)し、 *[プラットフォーム]* に **[Windows 10 以降]** を選択し、 *[設定]* で **[Windows 暗号化]** カテゴリを選択します。 
 
-   使用可能なオプションと機能については、「[Windows の暗号化](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption)」を参照してください。
+   使用可能なオプションと機能については、「[Windows の暗号化](/intune/endpoint-protection-windows-10#windows-encryption)」を参照してください。
 
 - **セキュリティ ベースライン** - [セキュリティ ベースライン](security-baselines.md)は、Windows デバイスをセキュリティで保護するために、関連するセキュリティ チームによって推奨される設定および既定値の既知のグループです。 *MDM のセキュリティ ベースライン*や *Microsoft Defender ATP ベースライン*のように異なるベースライン ソースで同じ設定を管理できるだけでなく、互いに異なる設定も管理できます。 また、デバイス構成ポリシーで管理するのと同じ設定を管理することもできます。 
 
@@ -43,12 +43,12 @@ Intune に加えて、Modern Standby と HSTI に準拠しているハードウ�
 
 また、BitLocker の設定は、グループ ポリシーなどの他の方法で管理することも、デバイス ユーザーが手動で設定することもできます。
 
-デバイスに設定を適用する方法に関係なく、BitLocker ポリシーは [BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) を使用してデバイスで暗号化を構成します。 BitLocker CSP は Windows に組み込まれており、Intune が割り当てられたデバイスに BitLocker ポリシーを展開するときに、ポリシーの設定を有効にするために、Windows レジストリに適切な値を書き込むのが、そのデバイスの BitLocker CSP です。
+デバイスに設定を適用する方法に関係なく、BitLocker ポリシーは [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) を使用してデバイスで暗号化を構成します。 BitLocker CSP は Windows に組み込まれており、Intune が割り当てられたデバイスに BitLocker ポリシーを展開するときに、ポリシーの設定を有効にするために、Windows レジストリに適切な値を書き込むのが、そのデバイスの BitLocker CSP です。
 
 BitLocker の詳細については、次のリソースを参照してください。
 
-- [BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [BitLocker の概要と要件に関する FAQ](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
+- [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [BitLocker の概要と要件に関する FAQ](/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
 
 これらのポリシーの機能と仕組みの概要を理解したので、BitLocker 設定が Windows クライアントに正しく適用されているかどうかを確認する方法を見ていきましょう。
 
@@ -109,7 +109,7 @@ BitLocker ポリシーがデバイスに正常に展開されたら、BitLocker 
 
 ![BitLocker レジストリ キー](./media/troubleshooting-bitlocker-policies/registry.png)
 
-これらの値は、BitLocker CSP によって構成されます。 キーの値が、Intune Windows 暗号化ポリシーのソースで指定されている設定と一致していることを確認します。 これらの各設定の詳細については、「[BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)」を参照してください。
+これらの値は、BitLocker CSP によって構成されます。 キーの値が、Intune Windows 暗号化ポリシーのソースで指定されている設定と一致していることを確認します。 これらの各設定の詳細については、「[BitLocker CSP](/windows/client-management/mdm/bitlocker-csp)」を参照してください。
 
 > [!NOTE]
 > Windows イベント ビューアーには、Bitlocker に関連するさまざまな情報も含まれます。 多すぎてここに一覧表示することはできませんが、「**Bitlocker API**」を検索すると、多くの有用な情報が得られます。
@@ -136,7 +136,7 @@ EncryptionMethodWithXtsFdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
 EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encryption)
 ```
 
-それぞれの値の意味は、[BitLocker CSP のドキュメント](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)を参照して確認することができます。 この例では、次の図でスニペットが共有されています。
+それぞれの値の意味は、[BitLocker CSP のドキュメント](/windows/client-management/mdm/bitlocker-csp)を参照して確認することができます。 この例では、次の図でスニペットが共有されています。
 
 ![値の目的](./media/troubleshooting-bitlocker-policies/shared-example.png)
 
@@ -162,10 +162,10 @@ BitLocker ポリシーが Intune によって正常に展開された (BitLocker
 - **ポリシー全体の展開が失敗していますか、それとも特定の設定だけが適用されていませんか?** 一部のポリシー設定のみが適用されないシナリオに直面した場合は、次の考慮事項を確認してください。
 
   1. **すべての BitLocker 設定がすべての Windows バージョンでサポートされているわけではありません。**
-     ポリシーは 1 つのユニットとしてデバイスに送信されるので、一部の設定が適用され、他の設定が適用されない場合でも、ポリシー自体は受信されています。 このシナリオでは、デバイス上の Windows のバージョンが、問題のある設定をサポートしていない可能性があります。 各設定のバージョン要件の詳細については、Windows ドキュメントの「[BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)」を参照してください。
+     ポリシーは 1 つのユニットとしてデバイスに送信されるので、一部の設定が適用され、他の設定が適用されない場合でも、ポリシー自体は受信されています。 このシナリオでは、デバイス上の Windows のバージョンが、問題のある設定をサポートしていない可能性があります。 各設定のバージョン要件の詳細については、Windows ドキュメントの「[BitLocker CSP](/windows/client-management/mdm/bitlocker-csp)」を参照してください。
 
   2. **BitLocker は、すべてのハードウェアでサポートされているわけではありません**。
-     適切なバージョンの Windows を使用している場合でも、基になるデバイスのハードウェアが BitLocker 暗号化の要件を満たしていない可能性があります。 [BitLocker のシステム要件](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)については、Windows のドキュメントを参照してください。ただし、主な確認事項は、デバイスに互換性のある TPM チップ (1.2 以降) と Trusted Computing Group (TCG) 準拠の BIOS または UEFI ファームウェアが搭載されていることです。
+     適切なバージョンの Windows を使用している場合でも、基になるデバイスのハードウェアが BitLocker 暗号化の要件を満たしていない可能性があります。 [BitLocker のシステム要件](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)については、Windows のドキュメントを参照してください。ただし、主な確認事項は、デバイスに互換性のある TPM チップ (1.2 以降) と Trusted Computing Group (TCG) 準拠の BIOS または UEFI ファームウェアが搭載されていることです。
      
 **Bitlocker 暗号化がサイレント モードで実行されない** - 設定 [他のディスクの暗号化に対する警告] をブロックに設定して Endpoint Protection ポリシーを構成しても、暗号化ウィザードがまだ表示されます。
 
@@ -209,11 +209,11 @@ Intune で BitLocker ポリシーに関する問題のトラブルシューテ�
 
 BitLocker を使用する場合に役立つリソースを次に示します。
 
-- [BitLocker 製品ドキュメント](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [BitLocker のシステム要件](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
-- [BitLocker に関してよく寄せられる質問 (FAQ)](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
-- [BitLocker CSP のドキュメント](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)
-- [Intune Windows 暗号化ポリシー設定](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption)
-- [AAD/MDM を使用したハードウェアに依存しない自動 BitLocker 暗号化](https://blogs.technet.microsoft.com/home_is_where_i_lay_my_head/2017/06/07/hardware-independent-automatic-bitlocker-encryption-using-aadmdm/)
+- [BitLocker 製品ドキュメント](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [BitLocker のシステム要件](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
+- [BitLocker に関してよく寄せられる質問 (FAQ)](/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
+- [BitLocker CSP のドキュメント](/windows/client-management/mdm/bitlocker-csp)
+- [Intune Windows 暗号化ポリシー設定](/intune/endpoint-protection-windows-10#windows-encryption)
+- [AAD/MDM を使用したハードウェアに依存しない自動 BitLocker 暗号化](/archive/blogs/home_is_where_i_lay_my_head/hardware-independent-automatic-bitlocker-encryption-using-aadmdm)
 - [自動パイロット デバイスでの BitLocker 暗号化の CSP ポリシー](https://techcommunity.microsoft.com/t5/Windows-10-security/CSP-policy-for-bitLocker-encryption-on-autopilot-devices/m-p/284537)
-- [Intune での BitLocker ポリシーの作成と展開に関するチュートリアル](https://blogs.technet.microsoft.com/cbernier/2017/07/11/windows-10-intune-windows-bitlocker-management-yes/)
+- [Intune での BitLocker ポリシーの作成と展開に関するチュートリアル](/archive/blogs/cbernier/windows-10-intune-windows-bitlocker-management-yes)

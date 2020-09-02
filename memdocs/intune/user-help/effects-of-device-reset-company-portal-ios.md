@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1acbb00e5da0766685233cf7136caf8320564200
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 199bd8f267cc84492b21af83bf0761474080f11b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878081"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913411"
 ---
 # <a name="effects-of-company-portal-ios-device-reset"></a>Intune ポータル サイトでの iOS デバイスのリセットの影響 
 
@@ -42,6 +42,6 @@ Intune ポータル サイトで iPhone または iPad をリセットすると�
 
 - 職場または学校のメール アカウントは削除されます。 保存されていないメールは削除されます。   
 
-iOS デバイスによっては、デバイス リセット オプションを使用できない場合があります。 IT サポート担当者がこれらの制限について詳しく知りたい場合は、「[ワイプ、インベントリからの削除、デバイス登録の手動解除を使用し、デバイスを削除する](https://docs.microsoft.com/intune/devices-wipe)」を参照してください。  
+iOS デバイスによっては、デバイス リセット オプションを使用できない場合があります。 IT サポート担当者がこれらの制限について詳しく知りたい場合は、「[ワイプ、インベントリからの削除、デバイス登録の手動解除を使用し、デバイスを削除する](/intune/devices-wipe)」を参照してください。  
 
 質問がある場合は、IT サポート担当者に問い合わせてください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。

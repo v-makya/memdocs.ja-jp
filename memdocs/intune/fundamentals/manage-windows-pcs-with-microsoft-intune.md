@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4e917ca63bb671e8dfa46b280a4130051e75ef0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dae87983f442661046fa48c63b5691f1bef48240
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79342908"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915893"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Intune ソフトウェア クライアントを使用して Windows PC をコンピューターとして管理する
 
@@ -90,7 +90,7 @@ Intune クライアント ソフトウェアでは、ソフトウェアの更新
 
 Intune クライアント ソフトウェアを使って Windows PC を管理する場合は、 **[コンピューター管理]** セクションに表示されているポリシーのみを使うことができます。
 
-Intune では、Windows Server における Active Directory ドメイン サービス (AD DS) グループ ポリシー オブジェクト (GPO) と似た方法で、ポリシーを使って Windows PC を管理します。 Active Directory ドメインに参加しているコンピューターを Intune で管理する場合は、組織で使われている[他の GPO と Intune のポリシーが競合しないようにしてください](resolve-gpo-and-microsoft-intune-policy-conflicts.md)。 詳しくは、「[初心者向けのグループ ポリシー](https://technet.microsoft.com/library/hh147307.aspx)」をご覧ください。
+Intune では、Windows Server における Active Directory ドメイン サービス (AD DS) グループ ポリシー オブジェクト (GPO) と似た方法で、ポリシーを使って Windows PC を管理します。 Active Directory ドメインに参加しているコンピューターを Intune で管理する場合は、組織で使われている[他の GPO と Intune のポリシーが競合しないようにしてください](resolve-gpo-and-microsoft-intune-policy-conflicts.md)。 詳しくは、「[初心者向けのグループ ポリシー](/previous-versions/windows/it-pro/windows-7/hh147307(v=ws.10))」をご覧ください。
 
   ![新しい Windows PC ポリシーのテンプレートの選択](./media/manage-windows-pcs-with-microsoft-intune/select-template-for-pc-policy.png)
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e7f9c984b81bbe98269b0123371d8097d960ffb
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 57a7b232b7391d6b8716d4c2a56d69b44f6c07ee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462135"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914754"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Intune Exchange Connector に関するトラブルシューティング
 
@@ -31,7 +31,7 @@ ms.locfileid: "86462135"
 
 > [!IMPORTANT]
 >
-> 2020 年 7 月以降、Exchange Connector のサポートは非推奨とされ、Exchange の[ハイブリッド先進認証](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) に置き換えられます。また、Intune に Exchange Connector を追加する機能は削除されます。
+> 2020 年 7 月以降、Exchange Connector のサポートは非推奨とされ、Exchange の[ハイブリッド先進認証](/office365/enterprise/hybrid-modern-auth-overview) (HMA) に置き換えられます。また、Intune に Exchange Connector を追加する機能は削除されます。
 >
 > 以前に Exchange Connector を構成および使用していたお客様は、コネクタのサポートを引き続き利用できます。
 
@@ -66,7 +66,7 @@ Intune での Exchange コネクタの問題のトラブルシューティング
 
 - Intune Exchange コネクタがホストされているコンピューターと Exchange クライアント アクセス サーバー (CAS) は、ドメインに参加し、同じ LAN 上に存在している必要があります。 Intune Exchange コネクタによって使用されるアカウントに、必要なアクセス許可が追加されていることを確認します。
 
-- "*自動検出*" の設定を取得するには、通知アカウントが使用されます。 Exchange での自動検出について詳しくは、「[Exchange Server の自動検出サービス](https://docs.microsoft.com/exchange/architecture/client-access/autodiscover?view=exchserver-2016)」をご覧ください。
+- "*自動検出*" の設定を取得するには、通知アカウントが使用されます。 Exchange での自動検出について詳しくは、「[Exchange Server の自動検出サービス](/exchange/architecture/client-access/autodiscover?view=exchserver-2016)」をご覧ください。
 
 - Intune Exchange Connector では、通知メール メッセージと "*使用開始*" リンクを送信するために (Intune に登録する場合)、通知アカウントの資格情報を使用して EWS URL に要求が送信されます。 Android の非 Knox デバイスでは、"*使用開始*" リンクを使用して登録する必要があります。 そうしないと、これらのデバイスは条件付きアクセスによってブロックされます。
 
@@ -86,4 +86,4 @@ Intune での Exchange コネクタの問題のトラブルシューティング
 サポートまたは Intune コミュニティから支援を受けます。
 
 - Intune コンソールを使用して問題のトラブルシューティングを行う方法、または Microsoft のサポート ケースを開く方法については、[サポートの利用](../fundamentals/get-support.md)に関するページを参照してください。 
-- [Microsoft Intune フォーラム](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod)に問題を投稿してください。  
+- [Microsoft Intune フォーラム](/answers/products/mem)に問題を投稿してください。  

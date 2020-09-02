@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3c1b074e2fa35fa36bfb4f759ef348020c0dbed
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0814fd11b2597c2a78dda70ba560e17fe2b742a1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983219"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914377"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Microsoft Intune デバイスの管理とは
 
@@ -43,7 +43,7 @@ IT 管理者はデータをリスクから保護しながら、ユーザーが�
 
      デバイスを選択し、ハードウェアの詳細、インストールされているアプリ、ポリシーなど、[デバイスに関するその他の詳細情報を表示](device-inventory.md)します。
 
-   - **[Azure AD デバイス]** には、Azure Active Directory (Azure AD) に登録されている、または参加しているデバイスの一覧が示されます。 Azure AD のデバイス管理の概要については、[こちら](https://docs.microsoft.com/azure/active-directory/device-management-introduction)を参照してください。
+   - **[Azure AD デバイス]** には、Azure Active Directory (Azure AD) に登録されている、または参加しているデバイスの一覧が示されます。 Azure AD のデバイス管理の概要については、[こちら](/azure/active-directory/device-management-introduction)を参照してください。
    - **[デバイス アクション]** には、アクション、その状態、アクションを開始したユーザー、時刻など、さまざまなデバイスで実行されたリモート アクションの履歴が含まれます。
 
      ![デバイス アクションの監視のスクリーンショット](./media/device-management/monitor-device-actions.png)
@@ -57,7 +57,7 @@ IT 管理者はデータをリスクから保護しながら、ユーザーが�
 
 - [デバイス インベントリを表示する](device-inventory.md)
 - 以下のリモート デバイス アクションを実行します。
-  - [Autopilot リセット](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
+  - [Autopilot リセット](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
   - [BitLocker キーの交換](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (Windows のみ)
   - [削除](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [アクティベーション ロックを無効にする](device-activation-lock-disable.md) (iOS のみ)
@@ -72,7 +72,7 @@ IT 管理者はデータをリスクから保護しながら、ユーザーが�
   - [パスコードのリセット](device-passcode-reset.md)
   - [再起動](device-restart.md) (Windows のみ)
   - [削除](devices-wipe.md#retire)
-  - [Windows Defender のセキュリティ インテリジェンスの更新](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
+  - [Windows Defender のセキュリティ インテリジェンスの更新](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
   - [Windows 10 の PIN のリセット](device-windows-pin-reset.md)
   - [ワイプ](devices-wipe.md#wipe)
   - [カスタム通知の送信](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android、iOS/iPadOS)

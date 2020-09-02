@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d02329f65d7b7ecec1dbfeaf84ecbe5c8fb53013
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e986021bb4d575ec3269e97b228cc381e1f2cf72
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079486"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910895"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>クイック スタート:非準拠デバイスに通知を送信する
 
 このクイックスタートでは、Microsoft Intune を使用して、非準拠デバイスを使用している従業員のメンバーにメール通知を送信します。
 
-既定では、Intune は、準拠していないデバイスを検出すると、直ちにコンプライアンス違反としてマークします。 その後、Azure Active Directory (Azure AD) の[条件付きアクセス](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)によってデバイスがブロックされます。 Intune では、準拠していないデバイスに対して行う追加アクションを柔軟に決定できます。 たとえば、非準拠デバイスをブロックする前に、準拠するための猶予期間をユーザーに与えることができます。
+既定では、Intune は、準拠していないデバイスを検出すると、直ちにコンプライアンス違反としてマークします。 その後、Azure Active Directory (Azure AD) の[条件付きアクセス](/azure/active-directory/active-directory-conditional-access-azure-portal)によってデバイスがブロックされます。 Intune では、準拠していないデバイスに対して行う追加アクションを柔軟に決定できます。 たとえば、非準拠デバイスをブロックする前に、準拠するための猶予期間をユーザーに与えることができます。
 
 デバイスがコンプライアンスに対応していないときに行うアクションの 1 つは、デバイスのユーザーにメールを送ることです。 送信する前にメール通知をカスタマイズすることもできます。 具体的には、受信者、件名、メッセージ本文のほか、会社のロゴ、連絡先情報をカスタマイズできます。 Intune では、非準拠デバイスについての詳細もメール通知に含まれます。
 
@@ -37,7 +37,7 @@ Intune サブスクリプションがない場合は、[無料試用版アカウ
 
 ## <a name="prerequisites"></a>[前提条件]
 
-デバイス コンプライアンス ポリシーを使ってデバイスを企業リソースからブロックする場合は、Azure AD の条件付きアクセスを設定する必要があります。 「[デバイス コンプライアンス ポリシーの作成](quickstart-set-password-length-android.md)」クイックスタートを完了している場合は、Azure Active Directory を使用しています。 Azure AD について詳しくは、[Azure Active Directory での条件付きアクセス](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)および [Intune で条件付きアクセスを使用する一般的な方法](../protect/conditional-access-intune-common-ways-use.md)に関する記事をご覧ください。
+デバイス コンプライアンス ポリシーを使ってデバイスを企業リソースからブロックする場合は、Azure AD の条件付きアクセスを設定する必要があります。 「[デバイス コンプライアンス ポリシーの作成](quickstart-set-password-length-android.md)」クイックスタートを完了している場合は、Azure Active Directory を使用しています。 Azure AD について詳しくは、[Azure Active Directory での条件付きアクセス](/azure/active-directory/active-directory-conditional-access-azure-portal)および [Intune で条件付きアクセスを使用する一般的な方法](../protect/conditional-access-intune-common-ways-use.md)に関する記事をご覧ください。
 
 ## <a name="sign-in-to-intune"></a>Intune にサインインする
 

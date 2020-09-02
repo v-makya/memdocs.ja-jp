@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a7ce95d5c28b1b85f27fdd0aee74e3148abfb554
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: a6984f4e6eafee1f81340f483dc557fdb6091ec9
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882266"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910759"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>デバイスは暗号化されているが、アプリではそうなっていない
 
@@ -51,7 +51,7 @@ Intune ポータル サイトまたは Microsoft Intune アプリではデバイ
 
 バージョン 7.0 以上の一部の Android デバイスでは、特定の Android プラットフォームの標準に準拠していない方法でデータが暗号化されます。 これらの暗号化方法では、デバイスの情報が危険な状態になります。 そのため、これらのデバイスはサポートされていません。
 
-完全ではありませんが、サポートされている Android デバイスの一覧については、「[Intune でサポートされるオペレーティング システムとブラウザー](https://docs.microsoft.com/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices)」をご覧ください。 お使いのデバイスが一覧にない場合は、デバイスの製造元を参照するか、サポート担当者に問い合わせてください。
+完全ではありませんが、サポートされている Android デバイスの一覧については、「[Intune でサポートされるオペレーティング システムとブラウザー](/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices)」をご覧ください。 お使いのデバイスが一覧にない場合は、デバイスの製造元を参照するか、サポート担当者に問い合わせてください。
 
 > [!Note]
 > Microsoft では、製造元と協力して、テスト中に見つかった問題やユーザーから報告された問題に対処しています。 新しい情報が得られたらこの記事の内容を更新します。
@@ -62,4 +62,4 @@ Intune ポータル サイトまたは Microsoft Intune アプリではデバイ
 
 ## <a name="next-steps"></a>次のステップ
 
-サポートが必要な場合は、 会社のサポートに問い合わせるか (連絡先情報については[ポータル Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください)、または <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android チーム</a>にご連絡ください。  
+サポートが必要な場合は、 会社のサポートに問い合わせるか (連絡先情報については[ポータル Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください)、または <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android チーム</a>にご連絡ください。

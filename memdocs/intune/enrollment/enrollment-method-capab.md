@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9dca2303d960937a529a902391d6c05539fc9d4
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 701794ba476f87aaf079e39c834f3e8e3f2c280d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79359314"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913887"
 ---
 # <a name="intune-enrollment-method-capabilities-for-windows-devices"></a>Windows デバイスの Intune 登録方法別の機能
 [!INCLUDE[azure_portal](../includes/azure_portal.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "79359314"
 従業員のデバイスを Intune に登録する方法は複数あります。 次の表に示すように、各方法には異なるベスト プラクティスと機能があります。
 
 ## <a name="best-practices-by-enrollment-method"></a>登録方法別のベスト プラクティス
-| **ベスト プラクティス** | **[Azure AD 参加済み](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Autopilot を使用した Azure AD 参加済み (ユーザー駆動型モード)](enrollment-autopilot.md)** |**[Autopilot を使用した Azure AD 参加済み (自己展開モード)](enrollment-autopilot.md)** |**[一括](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[共同管理](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)** |
+| **ベスト プラクティス** | **[Azure AD 参加済み](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Autopilot を使用した Azure AD 参加済み (ユーザー駆動型モード)](../../autopilot/enrollment-autopilot.md)** |**[Autopilot を使用した Azure AD 参加済み (自己展開モード)](../../autopilot/enrollment-autopilot.md)** |**[一括](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[共同管理](/configmgr/core/clients/manage/co-management-overview)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |EDU でよく使用されます|![○](./media/enrollment-method-capab/xmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![○](./media/enrollment-method-capab/xmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![○](./media/enrollment-method-capab/xmark.png)|![○](./media/enrollment-method-capab/xmark.png)|![○](./media/enrollment-method-capab/xmark.png)|
 |デバイスは共有デバイスとして使用できます|![○](./media/enrollment-method-capab/xmark.png)|![○](./media/enrollment-method-capab/xmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![○](./media/enrollment-method-capab/xmark.png)|![○](./media/enrollment-method-capab/xmark.png)|![○](./media/enrollment-method-capab/xmark.png)|
@@ -39,7 +39,7 @@ ms.locfileid: "79359314"
 
 ## <a name="capabilities-by-enrollment-method"></a>登録方法別の機能
 
-| **機能** | **[Azure AD 参加済み](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Autopilot を使用した Azure AD 参加済み (ユーザー駆動型モード)](enrollment-autopilot.md)** |**[Autopilot を使用した Azure AD 参加済み (自己展開モード)](enrollment-autopilot.md)** |**[一括](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[共同管理](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)** |
+| **機能** | **[Azure AD 参加済み](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Autopilot を使用した Azure AD 参加済み (ユーザー駆動型モード)](../../autopilot/enrollment-autopilot.md)** |**[Autopilot を使用した Azure AD 参加済み (自己展開モード)](../../autopilot/enrollment-autopilot.md)** |**[一括](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[BYOD](device-enrollment.md#bring-your-own-device)** | **[GPO](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[共同管理](/configmgr/core/clients/manage/co-management-overview)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Conditional Access                                      |![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![○](./media/enrollment-method-capab/xmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)\*\*|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|
 |ユーザーはデバイスに関連付けられます                    |![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![○](./media/enrollment-method-capab/xmark.png)|![○](./media/enrollment-method-capab/xmark.png)|![○](./media/enrollment-method-capab/xmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|![チェックマーク](./media/enrollment-method-capab/checkmark.png)|
@@ -60,4 +60,3 @@ ms.locfileid: "79359314"
 ## <a name="next-steps"></a>次のステップ
 
 [Windows の登録をセットアップする](windows-enroll.md)
-

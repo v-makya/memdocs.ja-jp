@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0357f8fe751738bc3f8a5198db96b2113ee16bfc
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: 20d3f3967fa77ab90229915afc8b05043004b125
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559496"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909348"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune を使用してデバイスを準拠または非準拠としてマークするための Windows 10 以降の設定
 
@@ -49,14 +49,14 @@ Intune サービス管理者は、組織のリソースの保護に役立てる�
   - **[未構成]** ("*既定値*") - この設定に対して準拠であるか非準拠であるかの評価は行われません。
   - **[必須]** - システムがオフになっているとき、または休止状態のときに、デバイスがドライブに格納されているデータを不正アクセスから保護できます。
   
-  [Device HealthAttestation CSP - BitLockerStatus](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)
+  [Device HealthAttestation CSP - BitLockerStatus](/windows/client-management/mdm/healthattestation-csp)
 
 - **[デバイス上でセキュア ブートの有効化が必要]** :  
   - **[未構成]** ("*既定値*") - この設定に対して準拠であるか非準拠であるかの評価は行われません。
   - **[必要]** - システムは強制的に工場出荷時の信頼された状態に起動されます。 コンピューターを起動するために使用されるコア コンポーネントに、デバイスを製造した組織によって信頼されている正しい暗号署名が設定されている必要があります。 UEFI ファームウェアは、コンピューターを起動する前に署名を確認します。 ファイルが改ざんされ、その署名が破損している場合、システムは起動しません。
 
   > [!NOTE]
-  > **[デバイス上でセキュア ブートの有効化が必要]** の設定は一部の TPM 1.2 および 2.0 デバイスでサポートされています。 TPM 2.0 以降をサポートしていないデバイスでは、Intune のポリシーの状態が **[非準拠]** と表示されます。 サポートされているバージョンの詳細については、[デバイス正常性構成証明](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation)に関するページを参照してください。
+  > **[デバイス上でセキュア ブートの有効化が必要]** の設定は一部の TPM 1.2 および 2.0 デバイスでサポートされています。 TPM 2.0 以降をサポートしていないデバイスでは、Intune のポリシーの状態が **[非準拠]** と表示されます。 サポートされているバージョンの詳細については、[デバイス正常性構成証明](/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation)に関するページを参照してください。
 
 - **[コードの整合性が必要]** :  
   コードの整合性は、ドライバーまたはシステム ファイルがメモリに読み込まれるたびに、その整合性を検証する機能です。
@@ -65,7 +65,7 @@ Intune サービス管理者は、組織のリソースの保護に役立てる�
 
 その他のリソース:
 
-- 正常性構成証明サービスのしくみの詳細については、[HealthAttestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp) に関するページをご覧ください。
+- 正常性構成証明サービスのしくみの詳細については、[HealthAttestation CSP](/windows/client-management/mdm/healthattestation-csp) に関するページをご覧ください。
 - [サポートのヒント:Intune コンプライアンス ポリシーの一部としてデバイス正常性構成証明の設定を使用する](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643)。
 
 ## <a name="device-properties"></a>デバイスのプロパティ
@@ -140,8 +140,8 @@ Windows 10 以降を実行している共同マネージド デバイスにの�
     > [!TIP]
     > 英数字のパスワード ポリシーは複雑になる場合があります。 管理者には CSP で詳細を読むことをお勧めします。
     >
-    > - [DeviceLock/AlphanumericDevicePasswordRequired CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
-    > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
+    > - [DeviceLock/AlphanumericDevicePasswordRequired CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
+    > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
 
 - **[パスワードの最小文字数]** :  
   パスワードに必要な数字または文字の最小数を入力します。
@@ -169,7 +169,7 @@ Windows 10 以降を実行している共同マネージド デバイスにの�
   - **[未構成]** ("*既定値*")
   - **[必須]** - デバイス上のデータ ストレージを暗号化するには、 *[必須]* を選択します。
   
-   [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+   [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
   > **[Encryption of data storage on a device]\(デバイス上のデータ ストレージの暗号化\)** 設定では通常、デバイス上の暗号化の存在が確認されます。 より堅牢な暗号化設定が必要であれば、 **[BitLocker が必要]** の使用を検討してください。Windows デバイス ヘルス構成証明が活用され、TPM レベルで BitLocker の状態が検証されます。
@@ -180,28 +180,28 @@ Windows 10 以降を実行している共同マネージド デバイスにの�
   - **[未構成]** (*既定値*) - Intune では、Microsoft Defender ファイアウォールは制御されず、既存の設定も変更されません。
   - **[必要]** - Microsoft Defender ファイアウォールが有効になり、ユーザーはそれを無効にすることができなくなります。
 
-  [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
+  [Firewall CSP](/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > 再起動後、またはスリープからのウェイクアップ後にデバイスが直ちに同期される場合、この設定は**エラー**として報告される可能性があります。 このシナリオは、デバイス全体のコンプライアンス状態に影響しない場合があります。 コンプライアンス状態を再評価するには、手動で[デバイス同期](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows)します。
+  > 再起動後、またはスリープからのウェイクアップ後にデバイスが直ちに同期される場合、この設定は**エラー**として報告される可能性があります。 このシナリオは、デバイス全体のコンプライアンス状態に影響しない場合があります。 コンプライアンス状態を再評価するには、手動で[デバイス同期](../user-help/sync-your-device-manually-windows.md)します。
 
 - **トラステッド プラットフォーム モジュール (TPM)** :  
   - **[未構成]** (*既定値*) - Intune では、デバイスで TPM チップ バージョンが確認されません。
   - **[必要]** - Intune で TPM チップ バージョンのコンプライアンスが確認されます。 TPM チップ バージョンが **0** (ゼロ) より大きい場合、デバイスは準拠しています。 デバイスに TPM バージョンがない場合、デバイスは準拠していません。
 
-  [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/TPM/SpecificationVersion](/windows/client-management/mdm/devicestatus-csp)
   
 - **[ウイルス対策]** :  
   - **[未構成]** ("*規定値*") - Intune により、デバイスにインストールされているスパイウェア対策ソリューションが確認されません。
   - **[必須]** - [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/) に登録されている Symantec や Microsoft Defender などのウイルス対策ソリューションを使って、コンプライアンスを確認します。
 
-  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/Antivirus/Status](/windows/client-management/mdm/devicestatus-csp)
 
 - **[スパイウェア対策]** :  
   - **[未構成]** ("*規定値*") - Intune により、デバイスにインストールされているスパイウェア対策ソリューションが確認されません。
   - **[必須]** - [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/) に登録されている Symantec や Microsoft Defender などのスパイウェア対策ソリューションを使って、コンプライアンスを確認します。
 
-  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP - DeviceStatus/Antispyware/Status](/windows/client-management/mdm/devicestatus-csp)
 
 ### <a name="defender"></a>Defender
 
@@ -221,7 +221,7 @@ Windows 10 以降を実行している共同マネージド デバイスにの�
   - **[未構成]** (*既定値*) - Intune ではどのような要件も適用されません。
   - **[必要]** - Microsoft Defender のセキュリティ インテリジェンスを最新の状態にする必要があります。
 
-  [Defender CSP - Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  [Defender CSP - Defender/Health/SignatureOutOfDate CSP](/windows/client-management/mdm/defender-csp)
   
   詳細については、[Microsoft Defender ウイルス対策およびその他の Microsoft マルウェア対策のセキュリティ インテリジェンス更新プログラム](https://www.microsoft.com/en-us/wdsi/defenderupdates)に関するページを参照してください。
 
@@ -229,7 +229,7 @@ Windows 10 以降を実行している共同マネージド デバイスにの�
   - **[未構成]** (*既定値*) - Intune では、この機能は制御されず、既存の設定も変更されません。
   - **[必要]** - リアルタイム保護が有効になり、マルウェア、スパイウェア、その他の望ましくないソフトウェアがスキャンされます。  
 
-  [Policy CSP - Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [Policy CSP - Defender/AllowRealtimeMonitoring CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -251,7 +251,7 @@ Windows Holographic for Business では、**Windows 10 以降**のプラット�
 
 - **システム セキュリティ** > **暗号化** > **デバイス上のデータ ストレージの暗号化**。
 
-Microsoft HoloLens でデバイスの暗号化を確認するには、「[デバイスの暗号化を確認する](https://docs.microsoft.com/hololens/security-encryption-data-protection)」を参照してください。
+Microsoft HoloLens でデバイスの暗号化を確認するには、「[デバイスの暗号化を確認する](/hololens/security-encryption-data-protection)」を参照してください。
 
 ## <a name="surface-hub"></a>Surface Hub
 

@@ -19,12 +19,12 @@ ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aeb1f6ae1ca666a96eca583d2e3be9c565013e7c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1c43d2c4ae7ccda2cd0cf9283586a980eb166d22
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881316"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912085"
 ---
 # <a name="enroll-your-ios-device-in-telecom-expense-management"></a>通信費管理サービスに iOS デバイスを登録する
 
@@ -39,7 +39,7 @@ ms.locfileid: "83881316"
 ## <a name="enroll-into-datalert-using-your-microsoft-work-or-school-account"></a>職場または学校の Microsoft アカウントを使用して Datalert に登録する
 
 > [!NOTE]
-> この方法で登録するには、お使いの電話に [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) アプリがインストールされアクティブになっている必要があります。
+> この方法で登録するには、お使いの電話に [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) アプリがインストールされアクティブになっている必要があります。
 
 1. __[Enroll with Microsoft account]\(Microsoft アカウントでの登録)__ を選択します。
 

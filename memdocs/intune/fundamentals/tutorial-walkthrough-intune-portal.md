@@ -18,16 +18,16 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22910604d19aecb37adef2452d01d46c1435f7ef
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 544257bfb0fc844560cdbb1522345f4f8be63555
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79355258"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907009"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>チュートリアル:Azure portal での Microsoft Intune のチュートリアル
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) には、クラウド コンピューティングのさまざまなシナリオと可能性を支援する 100 を超えるサービスが含まれています。 Microsoft Intune は、Azure で利用できるサービスの 1 つです。 Intune を利用すると、会社のデバイス、アプリ、データが会社のセキュリティ要件を確実に満たすようにできます。 確認する必要がある要件や、それらの要件が満たされない場合の対応の設定を制御できます。 [Azure Portal](https://portal.azure.com) は、Microsoft Intune サービスのある場所です。 Intune で使用できる機能を理解しておくと、モバイル デバイス管理 (MDM) とモバイル アプリケーション管理 (MAM) のさまざまなタスクを実行するときに役に立ちます。
+[Azure](/learn/modules/welcome-to-azure) には、クラウド コンピューティングのさまざまなシナリオと可能性を支援する 100 を超えるサービスが含まれています。 Microsoft Intune は、Azure で利用できるサービスの 1 つです。 Intune を利用すると、会社のデバイス、アプリ、データが会社のセキュリティ要件を確実に満たすようにできます。 確認する必要がある要件や、それらの要件が満たされない場合の対応の設定を制御できます。 [Azure Portal](https://portal.azure.com) は、Microsoft Intune サービスのある場所です。 Intune で使用できる機能を理解しておくと、モバイル デバイス管理 (MDM) とモバイル アプリケーション管理 (MAM) のさまざまなタスクを実行するときに役に立ちます。
 
 このチュートリアルでは次のことを行います。
 > [!div class="checklist"]

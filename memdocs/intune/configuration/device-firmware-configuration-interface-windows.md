@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb45550f8c38237bebcc54db5531ab244ab10d84
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 6f30b2a3ecac3767da71c999b8920930532b8279
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531521"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915774"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Microsoft Intune で Windows デバイスに対してデバイスのファームウェア構成インターフェイス プロファイルを使う (パブリック プレビュー)
 
 Intune を使用して Autopilot デバイスを管理するときは、デバイスのファームウェア構成インターフェイス (DFCI) を使用して、デバイスの登録後に UEFI (BIOS) の設定を管理できます。 利点、シナリオ、前提条件の概要については、「[DFCI の概要](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/)」を参照してください。
 
-管理コマンドを Intune から UEFI (Unified Extensible Firmware Interface) に渡すことが、DFCI によって [Windows で可能](https://docs.microsoft.com/windows/client-management/mdm/uefi-csp)になります。
+管理コマンドを Intune から UEFI (Unified Extensible Firmware Interface) に渡すことが、DFCI によって [Windows で可能](/windows/client-management/mdm/uefi-csp)になります。
 
 Intune では、この機能を使用して BIOS の設定を制御します。 通常、ファームウェアは悪意のある攻撃に対して高い回復性があります。 エンド ユーザーによる BIOS の制御が制限され、侵害された状況に適しています。
 
@@ -45,11 +45,11 @@ Intune では、この機能を使用して BIOS の設定を制御します。 
 
 - デバイスは、[Microsoft クラウド ソリューション プロバイダー (CSP) パートナー](https://partner.microsoft.com/cloud-solution-provider)によって Windows Autopilot 用に登録されているか、OEM によって直接登録されている必要があります。 
 
-  [csv ファイルからインポートされたものなど](../enrollment/enrollment-autopilot.md#add-devices)、手動で Autopilot 用に登録されたデバイスでは、DFCI を使用できません。 仕様により、DFCI の管理には、OEM または Microsoft CSP パートナーによる Windows Autopilot への登録により、デバイスの商用購入の外部構成証明が必要です。
+  [csv ファイルからインポートされたものなど](../../autopilot/enrollment-autopilot.md#add-devices)、手動で Autopilot 用に登録されたデバイスでは、DFCI を使用できません。 仕様により、DFCI の管理には、OEM または Microsoft CSP パートナーによる Windows Autopilot への登録により、デバイスの商用購入の外部構成証明が必要です。
 
   デバイスが登録されると、そのシリアル番号が Windows Autopilot デバイスの一覧に表示されます。
 
-  要件など、Autopilot の詳細については、「[Windows Autopilot を使用して Intune に Windows デバイスを登録する](../enrollment/enrollment-autopilot.md)」を参照してください。
+  要件など、Autopilot の詳細については、「[Windows Autopilot を使用して Intune に Windows デバイスを登録する](../../autopilot/enrollment-autopilot.md)」を参照してください。
 
 ## <a name="create-your-azure-ad-security-groups"></a>Azure AD セキュリティ グループを作成する
 
@@ -66,7 +66,7 @@ DFCI を使用するには、次のプロファイルを作成し、グループ
 
 ### <a name="create-an-autopilot-deployment-profile"></a>Autopilot Deployment プロファイルを作成する
 
-このプロファイルでは、新しいデバイスが設定されて事前に構成されます。 [Autopilot Deployment プロファイル](../enrollment/enrollment-autopilot.md#create-an-autopilot-deployment-profile)に関する記事では、プロファイル作成手順の一覧が示されています。
+このプロファイルでは、新しいデバイスが設定されて事前に構成されます。 [Autopilot Deployment プロファイル](../../autopilot/enrollment-autopilot.md#create-an-autopilot-deployment-profile)に関する記事では、プロファイル作成手順の一覧が示されています。
 
 ### <a name="create-an-enrollment-state-page-profile"></a>登録ステータス ページ プロファイルを作成する
 

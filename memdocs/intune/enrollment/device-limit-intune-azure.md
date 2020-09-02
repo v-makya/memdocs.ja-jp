@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8610b619a4ac05f37b893060b3b3a2bcb1dae528
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: 63c9d9e4752e4b0d317667162255e368fc5a099c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864856"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908556"
 ---
 # <a name="understand-intune-and-azure-ads-device-limit-restrictions"></a>Intune と Azure AD のデバイスの上限数の制限を理解する
 
@@ -39,7 +39,7 @@ Intune のデバイスの上限数の制限では、1 人のユーザーが制�
 
 ## <a name="azure-device-limit-restriction"></a>Azure のデバイスの上限数の制限
 
-Azure のデバイスの上限数の制限では、Azure AD に参加させるか Azure AD に登録するデバイスの最大数を設定します。 **[ユーザーごとのデバイスの最大数]** を設定するには、Azure portal > **[Azure Active Directory]**  >  **[デバイス]** に移動します。 詳しくは、[デバイス設定の構成](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)に関するページを参照してください
+Azure のデバイスの上限数の制限では、Azure AD に参加させるか Azure AD に登録するデバイスの最大数を設定します。 **[ユーザーごとのデバイスの最大数]** を設定するには、Azure portal > **[Azure Active Directory]**  >  **[デバイス]** に移動します。 詳しくは、[デバイス設定の構成](/azure/active-directory/devices/device-management-azure-portal)に関するページを参照してください
 
 ## <a name="settings-applied-based-on-user-affinity"></a>ユーザー アフィニティに基づいて適用される設定
 
@@ -114,6 +114,6 @@ Azure のデバイスの上限数の制限については、 **[ユーザーご�
 
 ## <a name="next-steps"></a>次のステップ
 
-- [Azure でデバイスの上限数の制限を作成する。](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
+- [Azure でデバイスの上限数の制限を作成する。](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
 - [Azure でデバイス設定を構成する。](enrollment-restrictions-set.md#create-a-device-limit-restriction)
-- [登録とドメイン参加済みの詳細について確認する。](https://docs.microsoft.com/azure/active-directory/devices/overview#getting-devices-in-azure-ad)
+- [登録とドメイン参加済みの詳細について確認する。](/azure/active-directory/devices/overview#getting-devices-in-azure-ad)

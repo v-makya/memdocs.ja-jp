@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: c7e2964281e26e695dcd58629601a34043ab0e55
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820495"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913785"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune でデバイス プロファイルを使用してデバイスに機能と設定を適用する
 
@@ -138,7 +138,7 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 
 ## <a name="education"></a>Education
 
-[教育設定 - Windows 10](education-settings-configure.md) では、[Windows テスト アプリ](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)のオプションを構成します。 これらのオプションを構成するとき、テストが完了するまで他のアプリをデバイスで実行できません。
+[教育設定 - Windows 10](education-settings-configure.md) では、[Windows テスト アプリ](/education/windows/take-tests-in-windows-10)のオプションを構成します。 これらのオプションを構成するとき、テストが完了するまで他のアプリをデバイスで実行できません。
 
 [教育設定 - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) では、iOS/iPadOS Classroom アプリを使用し、教室で学習を指導し、生徒のデバイスを操作します。 多数の学生が 1 台のデバイスを共有できるように iPad デバイスを構成できます。
 
@@ -157,7 +157,7 @@ Microsoft Intune には、組織内のさまざまなデバイスで有効また
 
 [Endpoint Protection](../protect/endpoint-protection-configure.md) では、Windows 10 デバイス用の BitLocker および Microsoft Defender の設定が構成されます。 また、macOS デバイスでファイアウォール、ゲートウェイ、その他のリソースを構成します。
 
-Microsoft Defender Advanced Threat Protection (WDATP) と Microsoft Intune をオンボードするには、[モバイル デバイス管理ツール (MDM) を使用したエンドポイントの構成](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm)に関する記事を参照してください。
+Microsoft Defender Advanced Threat Protection (WDATP) と Microsoft Intune をオンボードするには、[モバイル デバイス管理ツール (MDM) を使用したエンドポイントの構成](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm)に関する記事を参照してください。
 
 この機能では以下をサポートします。
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ff2898f97bbef4cba0d14d4810a503d613cff18
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: f94fdd6dcad0b1d1e05caa38dbdfd63dd8746013
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82077922"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915230"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Azure での Intune の機能の移動先
 Intune から Azure Portal に移行する際に、いくつかのタスクがより論理的に整理されました。 しかし、このような改善を行えば、新しい構成を学ばなければなりません。 このリファレンス ガイドは、従来のポータルを使用した Intune の知識があり、Intune で行われていた内容を Azure portal ではどのように実行されるのかについて関心があるユーザーを対象にしています。 この記事にお探しの機能が記載されていない場合は、今後更新できるように記事の最後にコメントを残してください。
@@ -45,7 +45,7 @@ Intune から Azure Portal に移行する際に、いくつかのタスクが�
 
 
 ## <a name="where-do-i-manage-groups"></a>グループを管理する場所
-Azure Portal の Intune では、[Azure Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal) を使用してグループを管理します。
+Azure Portal の Intune では、[Azure Active Directory (AD)](/azure/active-directory/active-directory-groups-create-azure-portal) を使用してグループを管理します。
 
 ## <a name="where-did-enrollment-rules-go"></a>登録ルールの移動先
 従来のポータルでは、モバイルおよび最新の Windows/macOS デバイスの MDM の登録に適用されるルールを次のようにして設定できました。
@@ -73,7 +73,7 @@ Azure Portal の Intune では、[Azure Active Directory (AD)](https://docs.micr
 ## <a name="where-did-my-conditional-access-policies-go"></a>条件付きアクセス ポリシーの移動先
 テナントが Azure portal に移行された後も、テナントの条件付きアクセス ポリシーは引き続き適用されます。 ただし、Azure portal で Intune からそれらを表示または変更することはできません。
 
-Azure portal から条件付きアクセス ポリシーを表示および変更したい場合は、クラシック ポータルから古いポリシーを削除することが必要になります。 次に、Azure portal でそれらを再度作成します。 条件付きアクセス ポリシーの移行の詳細については、[Azure portal でのクラシック ポリシーの移行](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration)に関するページをご覧ください。 
+Azure portal から条件付きアクセス ポリシーを表示および変更したい場合は、クラシック ポータルから古いポリシーを削除することが必要になります。 次に、Azure portal でそれらを再度作成します。 条件付きアクセス ポリシーの移行の詳細については、[Azure portal でのクラシック ポリシーの移行](/azure/active-directory/active-directory-conditional-access-migration)に関するページをご覧ください。 
 
 ## <a name="where-did-my-compliance-policies-go"></a>コンプライアンス ポリシーの移動先
 テナントが Azure portal に移行された後も、テナントのコンプライアンス ポリシーは引き続き適用されます。 ただし、Azure portal で Intune からそれらを表示または変更することはできません。

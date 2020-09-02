@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98ab8fd069b0542a29f61d9b0f5b69d7b82a8a1c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5daf488d878881c35db689fae0279c0312eb4c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074777"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915791"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>チュートリアル:EMM とアプリ構成に Intune を使用するように Slack を構成する
 
@@ -45,7 +45,7 @@ Intune サブスクリプションがない場合は、[無料試用版アカウ
 また、[Slack Enterprise Grid](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-) プランも必要です。
 
 ## <a name="configure-your-slack-enterprise-grid-plan"></a>Slack Enterprise Grid プランを構成する
-[Slack の指示](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm)に従って Slack Enterprise Grid プランに対して EMM を有効にして、Grid プランの ID プロバイダー (IDP) として [Azure Active Directory に接続](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial)します。
+[Slack の指示](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm)に従って Slack Enterprise Grid プランに対して EMM を有効にして、Grid プランの ID プロバイダー (IDP) として [Azure Active Directory に接続](/azure/active-directory/saas-apps/slack-tutorial)します。
 
 ## <a name="sign-in-to-intune"></a>Intune にサインインする
 全体管理者または Intune サービス管理者として、[Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。 Intune の試用版サブスクリプションを作成した場合、サブスクリプションを作成したアカウントがグローバル管理者になります。

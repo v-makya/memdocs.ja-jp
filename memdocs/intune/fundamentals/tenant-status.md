@@ -16,19 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: cd4c64e08177387561323b1e59bef3b976bf0bf3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690675"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911184"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Intune の [テナントの状態] ページを使用する
 
 Microsoft Intune の [テナントの状態] ページは、ご利用のテナントに関する現在の重要な詳細を表示できる一元的なハブです。 詳細には、ライセンスの可用性と使用、コネクタの状態、および Intune サービスに関する重要な連絡が含まれます。
 
 > [!TIP]
-> テナントは Azure Active Directory (Azure AD) のインスタンスです。 Intune のサブスクリプションは、Azure AD テナントによってホストされます。 詳細については、Azure AD のドキュメントの「[テナントを設定する](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant)」を参照してください。
+> テナントは Azure Active Directory (Azure AD) のインスタンスです。 Intune のサブスクリプションは、Azure AD テナントによってホストされます。 詳細については、Azure AD のドキュメントの「[テナントを設定する](/azure/active-directory/develop/quickstart-create-new-tenant)」を参照してください。
 
 ダッシュボードを表示するには、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) にサインインし、 **[テナント管理]** に移動して、 **[テナントの状態]** を選択します。
 

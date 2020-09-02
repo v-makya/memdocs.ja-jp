@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42362d2c4ccc83718721f5ca314b232274ade46a
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 52dd81efb13bcfcda02c8574e065814f49b5564c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383225"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911847"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Microsoft Intune App SDK の概要
 
@@ -94,9 +94,9 @@ Microsoft が、アンケートに入力された電子メール アドレスを
 
 アプリの保護ポリシーに対してアプリを有効することに加えて、Azure Active Directory (AAD) アプリ ベースの条件付きアクセスを使ってアプリを正常に機能させるには、以下が必要です。
 
-* アプリのビルドには [Azure Active Directory Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) が使用されていて、AAD ブローカー認証に対してアプリが有効になっている。
+* アプリのビルドには [Azure Active Directory Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) が使用されていて、AAD ブローカー認証に対してアプリが有効になっている。
 
-* アプリの [AAD クライアント ID](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) は、iOS および Android のプラットフォーム全体で一意である必要がある。
+* アプリの [AAD クライアント ID](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) は、iOS および Android のプラットフォーム全体で一意である必要がある。
 
 ## <a name="configure-telemetry-for-your-app"></a>アプリの製品利用統計情報を構成する
 
@@ -108,7 +108,7 @@ Microsoft Intune はアプリの利用統計データを収集します。
 
 * **Android 用 Intune App SDK**:Intune App SDK for Android は、アプリからのデータ収集を制御しません。 ポータル サイト アプリケーションでは、既定で、製品利用統計情報がログに記録されます。 このデータは、Microsoft Intune に送信されます。 Microsoft ポリシーに基づき、個人を特定できる情報 (PII) は収集しません。 
 
-  * エンド ユーザーがこのデータの送信を選択しない場合、ポータル サイト アプリの [設定] で製品利用統計情報をオフにする必要があります。 詳しくは、「[Microsoft による使用状況データの収集を無効にする](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android)」をご覧ください。 
+  * エンド ユーザーがこのデータの送信を選択しない場合、ポータル サイト アプリの [設定] で製品利用統計情報をオフにする必要があります。 詳しくは、「[Microsoft による使用状況データの収集を無効にする](../user-help/turn-off-microsoft-usage-data-collection-android.md)」をご覧ください。 
 
 ## <a name="line-of-business-app-version-numbers"></a>基幹業務アプリのバージョン番号
 

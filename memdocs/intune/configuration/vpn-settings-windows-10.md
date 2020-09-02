@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25950311b5a6936340dbdba01961a5dab6f6ff91
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 25bb413aefa7d91ea825bbe96e057994b1375413
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461354"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915502"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Intune を使用して VPN 接続を追加するための Windows 10 デバイスと Windows Holographic デバイスの設定
 
@@ -82,14 +82,14 @@ Microsoft Intune を使用して、デバイスの VPN 接続を追加および�
 
     - **[コンピューターの証明書]** (IKEv2 のみ):デバイスを認証する既存のデバイス クライアント証明書プロファイルを選択します。
 
-      [デバイス トンネル接続](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config)を使用する場合は、このオプションを選択する必要があります。
+      [デバイス トンネル接続](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config)を使用する場合は、このオプションを選択する必要があります。
 
       Intune で証明書プロファイルを作成するには、[認証に証明書を使用する](../protect/certificates-configure.md)方法に関するページを参照してください。
 
     - **[EAP]** (IKEv2 のみ):認証する既存の拡張認証プロトコル (EAP) クライアント証明書プロファイルを選択します。 **[EAP XML]** 設定に認証のパラメーターを入力します。
   - **[ログオンするたびに資格情報を記憶する]** :選択すると、認証資格情報がキャッシュされます。
   - **[カスタム XML]** :VPN 接続を構成する任意のカスタム XML コマンドを入力します。
-  - **[EAP XML]** :VPN 接続を構成する任意の EAP XML コマンドを入力します。 詳細については、「[EAP の構成](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration)」を参照してください。
+  - **[EAP XML]** :VPN 接続を構成する任意の EAP XML コマンドを入力します。 詳細については、「[EAP の構成](/windows/client-management/mdm/eap-configuration)」を参照してください。
 
   - **[Device tunnel]\(デバイス トンネル\)** (IKEv2 のみ): **[有効]** にすると、ユーザーの操作やサインインを行わなくても、デバイスが VPN に自動的に接続されます。 この設定は、Azure Active Directory (AD) に参加している PC に適用されます。
 
@@ -159,7 +159,7 @@ Microsoft Intune を使用して、デバイスの VPN 接続を追加および�
 ### <a name="writing-custom-xml"></a>カスタムの XML の作成
 カスタム XML コマンドの作成方法については、各製造元の VPN ドキュメントをご覧ください。
 
-カスタム EAP XML の作成について詳しくは、「[EAP configuration](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration)」(EAP の構成) をご覧ください。
+カスタム EAP XML の作成について詳しくは、「[EAP configuration](/windows/client-management/mdm/eap-configuration)」(EAP の構成) をご覧ください。
 
 ## <a name="apps-and-traffic-rules"></a>アプリとトラフィックの規則
 

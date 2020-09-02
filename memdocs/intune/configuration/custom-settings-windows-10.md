@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96074f4bea22b7468b1f210d631f0912eeafe7b5
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 28a867c735a05cfa4a4765534d200b806711f9b5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428987"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913020"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Intune で Windows 10 デバイス用のカスタム設定を使用する
 
@@ -36,7 +36,7 @@ ms.locfileid: "83428987"
 
 Windows 10 のカスタム プロファイルでは、Open Mobile Alliance Uniform Resource Identifier (OMA-URI) の設定を使用してさまざまな機能を構成します。 通常、これらの設定は、デバイスの機能を制御するためにモバイル デバイスの製造元によって使われます。
 
-Windows 10 では、[ポリシー構成サービス プロバイダー (ポリシー CSP)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers) など、多くの構成サービス プロバイダー (CSP) 設定を使用できます。
+Windows 10 では、[ポリシー構成サービス プロバイダー (ポリシー CSP)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers) など、多くの構成サービス プロバイダー (CSP) 設定を使用できます。
 
 特定の設定を探している場合、[Windows 10 デバイス制限プロファイル](device-restrictions-windows-10.md)には多くの組み込み設定が含まれることに留意してください。 そのため、カスタム値の入力は必要ない場合があります。
 
@@ -67,11 +67,11 @@ Windows 10 では、[ポリシー構成サービス プロバイダー (ポリ�
 
 ## <a name="find-the-policies-you-can-configure"></a>構成できるポリシーを見つける
 
-「[Configuration service provider reference](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference)」(構成サービス プロバイダー リファレンス) には、Windows 10 でサポートされているすべての構成サービス プロバイダー (CSP) の詳細な一覧が記載されています。
+「[Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference)」(構成サービス プロバイダー リファレンス) には、Windows 10 でサポートされているすべての構成サービス プロバイダー (CSP) の詳細な一覧が記載されています。
 
-Windows 10 のバージョンによっては、一部の設定に互換性がありません。 各 CSP でサポートされるバージョンについては、「[Configuration service provider reference](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference)」(構成サービス プロバイダー リファレンス) を参照してください。
+Windows 10 のバージョンによっては、一部の設定に互換性がありません。 各 CSP でサポートされるバージョンについては、「[Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference)」(構成サービス プロバイダー リファレンス) を参照してください。
 
-また、「[Configuration service provider reference](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference)」(構成サービス プロバイダー リファレンス) に記載されているすべての設定が Intune でサポートされているわけではありません。 Intune で必要な設定がサポートされているかどうかを確認するには、その設定の記事を開きます。 各設定ページには、サポートされている操作が示されます。 Intune で利用するには、その設定で**追加**、**置換**、**取得**の操作がサポートされている必要があります。 **取得**の操作によって返された値が**追加**または**置換**の操作によって得た値と一致しない場合、Intune ではコンプライアンス エラーが報告されます。
+また、「[Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference)」(構成サービス プロバイダー リファレンス) に記載されているすべての設定が Intune でサポートされているわけではありません。 Intune で必要な設定がサポートされているかどうかを確認するには、その設定の記事を開きます。 各設定ページには、サポートされている操作が示されます。 Intune で利用するには、その設定で**追加**、**置換**、**取得**の操作がサポートされている必要があります。 **取得**の操作によって返された値が**追加**または**置換**の操作によって得た値と一致しない場合、Intune ではコンプライアンス エラーが報告されます。
 
 ## <a name="next-steps"></a>次のステップ
 

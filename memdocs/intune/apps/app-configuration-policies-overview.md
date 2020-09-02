@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eeab1155a7a0035c5e0db15c3a5402d3636edaca
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 7981f661dd345ea80f9ab92debc9657072de1f4e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461659"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907275"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Microsoft Intune 用アプリ構成ポリシー
 
@@ -71,7 +71,7 @@ Intune でアプリ構成ポリシーを使用するには、次の 2 つのオ�
 ![デバイス登録の種類](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
 > [!NOTE]
-> Microsoft Outlook などの複数 ID アプリの場合は、ユーザー設定を考慮することができます。 たとえば、優先受信トレイではユーザー設定が尊重され、構成は変更されません。 その他のパラメーターを使用すると、ユーザーが設定を変更できるかどうかを制御できます。 詳細については、[iOS/iPadOS および Android 用 Outlook のアプリ構成設定の展開](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)に関する記事を参照してください。
+> Microsoft Outlook などの複数 ID アプリの場合は、ユーザー設定を考慮することができます。 たとえば、優先受信トレイではユーザー設定が尊重され、構成は変更されません。 その他のパラメーターを使用すると、ユーザーが設定を変更できるかどうかを制御できます。 詳細については、[iOS/iPadOS および Android 用 Outlook のアプリ構成設定の展開](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)に関する記事を参照してください。
 
 ## <a name="android-app-configuration-policies"></a>Android アプリ構成ポリシー
 
@@ -176,7 +176,7 @@ Android デバイスからログを収集するには、管理者またはエン
     
 ## <a name="graph-api-support-for-app-configuration"></a>Graph API のアプリ構成のサポート
 
-アプリ構成タスクは、Graph API で実行することができます。 詳細については、[Graph API のリファレンスの MAM を対象とした構成](https://docs.microsoft.com/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta)に関するページを参照してください。Intune と Graph の詳細については、「[Microsoft Graph での Intune の操作](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta)」をご覧ください。
+アプリ構成タスクは、Graph API で実行することができます。 詳細については、[Graph API のリファレンスの MAM を対象とした構成](/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta)に関するページを参照してください。Intune と Graph の詳細については、「[Microsoft Graph での Intune の操作](/graph/api/resources/intune-graph-overview?view=graph-rest-beta)」をご覧ください。
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 

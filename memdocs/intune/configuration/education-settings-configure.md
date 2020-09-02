@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52eae65e6735ad655c2e8db53e34383ccc5e3b30
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7b1a605e456edb525afec306ff594ba7cc3895aa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988389"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912731"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Windows 10 デバイス上の Microsoft Intune でテスト アプリを使用する
 
@@ -30,7 +30,7 @@ Intune の [教育] プロファイルは、デバイス上でテストや試験
 
 - Windows 10 以降
 
-ユーザーがサインインすると、テスト アプリが自動的に開き、入力したテストが表示されます。 テスト中は他のアプリをデバイス上で実行できません。 テスト アプリの詳細については、「[Windows 10 でテストを受ける](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)」を参照してください。
+ユーザーがサインインすると、テスト アプリが自動的に開き、入力したテストが表示されます。 テスト中は他のアプリをデバイス上で実行できません。 テスト アプリの詳細については、「[Windows 10 でテストを受ける](/education/windows/take-tests-in-windows-10)」を参照してください。
 
 この記事では、Microsoft Intune でデバイス構成プロファイルを作成する手順を説明します。 また、Windows 10 デバイスに使用できる教育設定について読み、学習するための情報も含まれています。
 

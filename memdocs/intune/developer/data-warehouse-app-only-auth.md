@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: daa4d079d60dc7474e5ba6a140e07a77e25b347d
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 28b213ff690dcc745f023f8deb225b0bd6ef9bc1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165976"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908804"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Intune データ ウェアハウス アプリケーションのみの認証
 
@@ -31,7 +31,7 @@ Azure Active Directory (Azure AD) を使用してアプリケーションを設�
 
 ## <a name="authorization"></a>承認
 
-Azure Active Directory (Azure AD) では、OAuth 2.0 を使用して Azure AD テナントの Web アプリケーションと Web API へのアクセスを承認できます。 このガイドでは、C# を使用してアプリケーションを認証する方法について説明します。 OAuth 2.0 承認コード フローについては、OAuth 2.0 仕様のセクション 4.1 を参照してください。 詳細については、「[OAuth 2.0 と Azure Active Directory を使用した Web アプリケーションへのアクセスの承認](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)」を参照してください。
+Azure Active Directory (Azure AD) では、OAuth 2.0 を使用して Azure AD テナントの Web アプリケーションと Web API へのアクセスを承認できます。 このガイドでは、C# を使用してアプリケーションを認証する方法について説明します。 OAuth 2.0 承認コード フローについては、OAuth 2.0 仕様のセクション 4.1 を参照してください。 詳細については、「[OAuth 2.0 と Azure Active Directory を使用した Web アプリケーションへのアクセスの承認](/azure/active-directory/develop/active-directory-protocols-oauth-code)」を参照してください。
 
 
 ## <a name="azure-keyvault"></a>Azure KeyVault
@@ -51,7 +51,7 @@ Azure Active Directory (Azure AD) では、OAuth 2.0 を使用して Azure AD �
 
     - *Intune App-Only Auth* などのアプリ名。
     - **アプリケーションの種類**。 **[Web アプリ/API]** を選択して、Web アプリケーション、Web API、またはその両方を表すアプリを追加します。
-    - アプリケーションの**サインオン URL**。 ここは、認証プロセス中にユーザーが自動的に移動する場所です。 ユーザーは身元の証明を求められます。 詳細については、「[Azure Active Directory のアプリケーション アクセスとシングル サインオンとは](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)」を参照してください。
+    - アプリケーションの**サインオン URL**。 ここは、認証プロセス中にユーザーが自動的に移動する場所です。 ユーザーは身元の証明を求められます。 詳細については、「[Azure Active Directory のアプリケーション アクセスとシングル サインオンとは](/azure/active-directory/active-directory-appssoaccess-whatis)」を参照してください。
 
 7. **[作成]** ブレードの下にある **[作成]** をクリックします。
 
@@ -164,5 +164,4 @@ Azure Active Directory (Azure AD) では、OAuth 2.0 を使用して Azure AD �
     > その他の実装コードについては、[Intune データ ウェアハウスのコード例](https://github.com/Microsoft/Intune-Data-Warehouse/tree/master/Samples/CSharp )に関するページを参照してください。
 
 ## <a name="next-steps"></a>次のステップ
-Azure Key Vault の詳細については、「[Azure Key Vault とは](https://docs.microsoft.com/azure/key-vault/key-vault-whatis)」を参照してください。
-
+Azure Key Vault の詳細については、「[Azure Key Vault とは](/azure/key-vault/key-vault-whatis)」を参照してください。

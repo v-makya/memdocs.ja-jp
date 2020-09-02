@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f71bbc2022068616b90f37c209d41d28ea5970d0
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: c93f50f7c4b2537ab4dbd1d9462f13434e9c158e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912535"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911524"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Intune でストレージ、イベントハブ、または Log Analytics にログ データを送信する (プレビュー)
 
@@ -53,9 +53,9 @@ Microsoft Intune には、お客様の環境に関する情報を提供する組
 
 監査ログ データをルーティングする場所によっては、次のいずれかのサービスが必要になります。
 
-* *ListKeys* アクセス許可を持つ [Azure ストレージ アカウント](https://docs.microsoft.com/azure/storage/common/storage-account-overview)。 BLOB ストレージ アカウントではなく、一般的なストレージ アカウントを使用することをお勧めします。 ストレージの価格情報については、[Azure Storage 料金計算ツール](https://azure.microsoft.com/pricing/calculator/?service=storage)のページを参照してください。 
-* サードパーティ製ソリューションと統合するための [Azure イベント ハブ名前空間](https://docs.microsoft.com/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
-* Log Analytics にログを送信するための [Azure Log Analytics ワークスペース](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace)。
+* *ListKeys* アクセス許可を持つ [Azure ストレージ アカウント](/azure/storage/common/storage-account-overview)。 BLOB ストレージ アカウントではなく、一般的なストレージ アカウントを使用することをお勧めします。 ストレージの価格情報については、[Azure Storage 料金計算ツール](https://azure.microsoft.com/pricing/calculator/?service=storage)のページを参照してください。 
+* サードパーティ製ソリューションと統合するための [Azure イベント ハブ名前空間](/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)。
+* Log Analytics にログを送信するための [Azure Log Analytics ワークスペース](/azure/azure-monitor/learn/quick-create-workspace)。
 
 ## <a name="send-logs-to-azure-monitor"></a>ログを Azure Monitor に送信する
 
@@ -83,7 +83,7 @@ Microsoft Intune には、お客様の環境に関する情報を提供する組
         1. このオプションを選択し、 **[構成]** を選択します。 
         2. 新しいワークスペースを作成し、ワークスペースの詳細を入力します。 または、一覧から既存のワークスペースを選択し、 **[OK]** を選択します。
 
-            このような設定の詳細については、[Azure Log Analytics ワークスペース](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace)に関するページを参照してください。
+            このような設定の詳細については、[Azure Log Analytics ワークスペース](/azure/azure-monitor/learn/quick-create-workspace)に関するページを参照してください。
 
     - **[ログ]**  >  **[AuditLogs]** :[Intune 監査ログ](monitor-audit-logs.md)をストレージ アカウント、イベント ハブ、または Log Analytics に送信するには、このオプションを選択します。 監査ログには、Intune で変更を生成したすべてのタスクの履歴 (誰がいつ行ったのかなど) が表示されます。
 
@@ -187,7 +187,7 @@ Microsoft Intune ライセンスを既にお持ちの場合は、ストレージ
 
 ### <a name="log-analytics-cost-considerations"></a>Log Analytics のコストに関する考慮事項
 
-Log Analytics ワークスペースの管理に関連するコストをレビューするには、「[Log Analytics でデータ ボリュームと保有期間を制御してコストを管理する](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-cost-storage)」を参照してください。
+Log Analytics ワークスペースの管理に関連するコストをレビューするには、「[Log Analytics でデータ ボリュームと保有期間を制御してコストを管理する](/azure/log-analytics/log-analytics-manage-cost-storage)」を参照してください。
 
 ## <a name="frequently-asked-questions"></a>よく寄せられる質問
 
@@ -199,7 +199,7 @@ Log Analytics ワークスペースの管理に関連するコストをレビュ
 
 ### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-event-hub"></a>アクションの後、対応するログがイベント ハブに表示されるのはいつですか。
 
-通常、ログはアクションが実行されてから数分以内にイベント ハブに表示されます。 詳細については、[Azure Event Hubs の概要](https://docs.microsoft.com/azure/event-hubs/)に関するページを参照してください。
+通常、ログはアクションが実行されてから数分以内にイベント ハブに表示されます。 詳細については、[Azure Event Hubs の概要](/azure/event-hubs/)に関するページを参照してください。
 
 ### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-storage-account"></a>アクションの後、対応するログがストレージ アカウントに表示されるのはいつですか。
 
@@ -219,22 +219,22 @@ Azure ストレージ アカウントの場合、待ち時間はアクション�
 
 ### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Intune の監査ログを SIEM システムと統合するにはどうすればよいですか。
 
-Azure Monitor と Event Hubs を使用して、ログを SIEM システムにストリーム配信する。 まず、[ログをイベント ハブにストリーム](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)します。 次に、構成したイベント ハブを使用して [SIEM ツールを設定](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub)します。 
+Azure Monitor と Event Hubs を使用して、ログを SIEM システムにストリーム配信する。 まず、[ログをイベント ハブにストリーム](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)します。 次に、構成したイベント ハブを使用して [SIEM ツールを設定](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub)します。 
 
 ### <a name="what-siem-tools-are-currently-supported"></a>現在サポートされている SIEM ツールは何ですか。
 
-現在、Azure Monitor は、[Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk)、QRadar、および [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) でサポートされています (新しい Web サイトが開きます)。 コネクタのしくみの詳細については、「[外部ツールで使用する Azure 監視データのイベント ハブへのストリーミング](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs)」を参照してください。
+現在、Azure Monitor は、[Splunk](/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk)、QRadar、および [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) でサポートされています (新しい Web サイトが開きます)。 コネクタのしくみの詳細については、「[外部ツールで使用する Azure 監視データのイベント ハブへのストリーミング](/azure/azure-monitor/platform/stream-monitoring-data-event-hubs)」を参照してください。
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>外部の SIEM ツールを使用せずにイベント ハブのデータにアクセスできますか。
 
-はい。 カスタム アプリケーションからログにアクセスするには、[Event Hubs API](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph) を使用します。
+はい。 カスタム アプリケーションからログにアクセスするには、[Event Hubs API](/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph) を使用します。
 
 ### <a name="what-data-is-stored"></a>どのデータが保存されますか。
 
-Intune では、パイプラインを介して送信されたデータは保存されません。 Intune では、テナントの権限でデータが Azure Monitor パイプラインにルーティングされます。 詳細については、「[Azure Monitor の概要](https://docs.microsoft.com/azure/azure-monitor/overview)」を参照してください。
+Intune では、パイプラインを介して送信されたデータは保存されません。 Intune では、テナントの権限でデータが Azure Monitor パイプラインにルーティングされます。 詳細については、「[Azure Monitor の概要](/azure/azure-monitor/overview)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 
-* [アクティビティ ログをストレージ アカウントにアーカイブする](https://docs.microsoft.com/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
-* [アクティビティ ログをイベント ハブにルーティングする](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
-* [アクティビティ ログと Log Analytics の統合](https://docs.microsoft.com/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)
+* [アクティビティ ログをストレージ アカウントにアーカイブする](/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
+* [アクティビティ ログをイベント ハブにルーティングする](/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub)
+* [アクティビティ ログと Log Analytics の統合](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics)

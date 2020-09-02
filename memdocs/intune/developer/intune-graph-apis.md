@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 541c607bebb57b1ee23df1af3ab80d29cdd0c6fc
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 720328ebe260c967bef4a879bd0ee33ae2f332a0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866130"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915689"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Azure AD を使用して Microsoft Graph の Intune API にアクセスする方法
 
@@ -53,9 +53,9 @@ Microsoft Graph の Intune API へのアクセスには、以下のものが必�
 
 詳細については、次を参照してください。
 
-- [OAuth 2.0 と Azure Active Directory を使用した Web アプリケーションへのアクセスの承認](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
+- [OAuth 2.0 と Azure Active Directory を使用した Web アプリケーションへのアクセスの承認](/azure/active-directory/develop/active-directory-protocols-oauth-code)
 - [Azure AD 認証の概要](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth)
-- [Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
+- [Azure Active Directory とアプリケーションの統合](/azure/active-directory/develop/active-directory-integrating-applications)
 - [OAuth 2.0 について知る](https://oauth.net/2/)
 
 ## <a name="register-apps-to-use-the-microsoft-graph-api"></a>Microsoft Graph API を使用するアプリを登録する
@@ -80,7 +80,7 @@ Microsoft Graph API を使用するアプリを登録するには、次の作業
 
     2. **[アプリケーションの種類]** と **[リダイレクト URI]** の値。
 
-        これらは要件によって異なります。 たとえば Azure AD [Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) を使用している場合、 **[アプリケーションの種類]** は `Native` に、 **[リダイレクト URI]** は `urn:ietf:wg:oauth:2.0:oob` に設定します。
+        これらは要件によって異なります。 たとえば Azure AD [Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) を使用している場合、 **[アプリケーションの種類]** は `Native` に、 **[リダイレクト URI]** は `urn:ietf:wg:oauth:2.0:oob` に設定します。
 
         > [!NOTE]
         > Azure Active Directory (Azure AD) 認証ライブラリ (ADAL) と Azure AD Graph API は非推奨になります。 詳細については、[Microsoft Authentication Library (MSAL) と Microsoft Graph API を使用するようにアプリケーションを更新する](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363)方法に関するページを参照してください。
@@ -88,7 +88,7 @@ Microsoft Graph API を使用するアプリを登録するには、次の作業
 
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
 
-        詳細については、「[Azure AD の認証シナリオ](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios)」をご覧ください。
+        詳細については、「[Azure AD の認証シナリオ](/azure/active-directory/develop/active-directory-authentication-scenarios)」をご覧ください。
 
 5. [アプリケーション] ブレードで、次の作業を行います。
 
@@ -106,7 +106,7 @@ Microsoft Graph API を使用するアプリを登録するには、次の作業
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
-    関連する名前の左側にチェックを入れ、アプリに必要な役割を選択します。  Intune に固有のアクセス許可スコープの詳細については、「[Intune permission scopes (Intune のアクセス許可スコープ)](#intune-permission-scopes)」をご覧ください。  Graph API の他のアクセス許可スコープの詳細については、「[Microsoft Graph のアクセス許可のリファレンス](https://developer.microsoft.com/graph/docs/concepts/permissions_reference)」をご覧ください。
+    関連する名前の左側にチェックを入れ、アプリに必要な役割を選択します。  Intune に固有のアクセス許可スコープの詳細については、「[Intune permission scopes (Intune のアクセス許可スコープ)](#intune-permission-scopes)」をご覧ください。  Graph API の他のアクセス許可スコープの詳細については、「[Microsoft Graph のアクセス許可のリファレンス](/graph/permissions-reference)」をご覧ください。
 
     最善の結果を得るには、アプリケーションの実装に必要な最小限の役割を選択します。
 
@@ -141,8 +141,8 @@ Azure AD と Microsoft Graph では、アクセス許可スコープを使用し
 アクセス許可スコープ (_OAuth スコープ_とも呼ばれます) は、特定の Intune エンティティとそのプロパティへのアクセスを制御します。 このセクションでは、Intune API の機能に対するアクセス許可スコープの概要について説明します。
 
 詳細については、次をご覧ください。
-- [Azure AD 認証](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
-- [アプリケーションのアクセス許可スコープ](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
+- [Azure AD 認証](/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
+- [アプリケーションのアクセス許可スコープ](/azure/active-directory/develop/active-directory-v2-scopes)
 
 Microsoft Graph にアクセス許可を付与する場合は、次のスコープを指定して Intune の機能へのアクセスを制御できます。次の表では、Intune API のアクセス許可のスコープをまとめています。  1 番目の列には Azure Portal に表示される機能名を示し、2 番目の列にはアクセス許可スコープ名を掲載しています。
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab862efd37bfeffc392d1d18cbf1f8a2f3deb50e
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: d51f7fd47e876a2e91665fb1a6e72f377de31429
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565701"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88916012"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>DigiCert PKI Platform 用に Intune Certificate Connector をセットアップする
 
@@ -323,7 +323,7 @@ DigiCert CA の証明書プロファイル テンプレートには、証明書�
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
-Intune Certificate Connector のサービス ログは、NDES Connector コンピューターの **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\Logs\Logs** にあります。 [SvcTraceViewer](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) でこのログを開き、例外またはエラー メッセージを検索します。
+Intune Certificate Connector のサービス ログは、NDES Connector コンピューターの **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\Logs\Logs** にあります。 [SvcTraceViewer](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) でこのログを開き、例外またはエラー メッセージを検索します。
 
 | 問題/エラー メッセージ | 解決手順 |
 | --- | --- |

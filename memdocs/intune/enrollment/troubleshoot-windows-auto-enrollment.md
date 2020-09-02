@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 968aa9b2f7127e9b7f092f36a99b491a75f0b78c
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 6aff5dfe62c1c44ec22f56c287220b59b98a7536
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546868"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915485"
 ---
 # <a name="troubleshoot-windows-10-group-policy-based-auto-enrollment-in-intune"></a>Intune での Windows 10 グループ ポリシーベースの自動登録に関するトラブルシューティング
 
-グループ ポリシーを使用して、Active Directory (AD) ドメイン参加済みデバイスの MDM への自動登録をトリガーすることができます。 この機能の詳細については、「[グループ ポリシーを使用した Windows 10 デバイスの自動登録](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)」を参照してください。
+グループ ポリシーを使用して、Active Directory (AD) ドメイン参加済みデバイスの MDM への自動登録をトリガーすることができます。 この機能の詳細については、「[グループ ポリシーを使用した Windows 10 デバイスの自動登録](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)」を参照してください。
 
 ## <a name="verify-the-configuration"></a>構成を確認する
 
@@ -37,7 +37,7 @@ ms.locfileid: "87546868"
 
    ![Intune ライセンスの確認](./media/troubleshoot-windows-auto-enrollment/intune-license.png)
 
-- Intune にデバイスを登録するすべてのユーザーに対して、自動登録が有効になっていることを確認します。 詳細については、「[Azure AD と Microsoft Intune: 新しいポータルでの自動 MDM 登録](https://docs.microsoft.com/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal)」を参照してください。
+- Intune にデバイスを登録するすべてのユーザーに対して、自動登録が有効になっていることを確認します。 詳細については、「[Azure AD と Microsoft Intune: 新しいポータルでの自動 MDM 登録](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal)」を参照してください。
 
    ![自動登録の確認](./media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png)
 
@@ -106,7 +106,7 @@ ms.locfileid: "87546868"
 
   このエラーを確認するには、イベント ID 76 (イベント メッセージ:MDM の自動登録: Failed (Unknown Win32 Error code: 0x8018002b)) を検索します。 このイベントは、自動登録が失敗したことを示します。
 
-  このエラーの解決方法については、「[Microsoft Intune での Windows デバイスの登録に関する問題のトラブルシューティング](https://docs.microsoft.com/intune/troubleshoot-windows-enrollment-errors)」を参照してください。
+  このエラーの解決方法については、「[Microsoft Intune での Windows デバイスの登録に関する問題のトラブルシューティング](/intune/troubleshoot-windows-enrollment-errors)」を参照してください。
 
 - 登録がまったくトリガーされませんでした。 この場合、イベント ID 75 とイベント ID 76 はログに記録されません。
   

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd8070dd1584beac0744ebfae63aa4fd066fa2bf
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 4703288faac219b40fae08c6551425d6f0d5e4f3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022247"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909416"
 ---
 # <a name="block-apps-that-dont-use-modern-authentication-adal"></a>先進認証 (ADAL) を使用していないアプリをブロックする
 
@@ -41,9 +41,9 @@ ms.locfileid: "86022247"
 ## <a name="additional-information"></a>追加情報
 
 Azure AD 条件付きアクセスの詳細については、次のトピックを参照してください。
-- [Azure Active Directory の条件付きアクセスとは](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
+- [Azure Active Directory の条件付きアクセスとは](/azure/active-directory/conditional-access/overview)
 - [アプリベースの条件付きアクセスのしくみ](app-based-conditional-access-intune.md#how-app-based-conditional-access-works)
-- [SharePoint Online と Exchange Online に Azure Active Directory の条件付きアクセスを設定する](https://docs.microsoft.com/azure/active-directory/conditional-access/conditional-access-for-exo-and-spo)
+- [SharePoint Online と Exchange Online に Azure Active Directory の条件付きアクセスを設定する](/azure/active-directory/conditional-access/conditional-access-for-exo-and-spo)
 
 ## <a name="next-steps"></a>次のステップ
 

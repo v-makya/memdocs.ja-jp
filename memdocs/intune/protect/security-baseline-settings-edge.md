@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c20489b8da3080506065d68aeb1b19dae362c2fb
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 8fd6943be69f66d4cd6fde2e9c08bec9323005a5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556321"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914431"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="edge-october-2019"
@@ -74,7 +74,7 @@ Microsoft Intune でサポートされている Microsoft Edge Web ブラウザ�
     - **ネゴシエート** *(既定で選択されます)*
 
 - **既定の Adobe Flash 設定**  
-  CSP:[Browser/AllowFlash](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflash)、[Browser/AllowFlashClickToRun](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
+  CSP:[Browser/AllowFlash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash)、[Browser/AllowFlashClickToRun](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
 
   次の設定へのアクセスを有効にして、Adobe Flash プラグインを実行するための動作を構成できます。  
 
@@ -110,7 +110,7 @@ Microsoft Intune でサポートされている Microsoft Edge Web ブラウザ�
   - **未構成** - 既定で、Microsoft Edge では、ユーザーレベルのネイティブ メッセージング ホストを使用できます。
 
 - **パスワード マネージャーへのパスワードの保存を有効にする**  
-  Microsoft Edge CSP: [Browser/AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
+  Microsoft Edge CSP: [Browser/AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
 
   Microsoft Edge でユーザー パスワードを保存できるようにします。
 
@@ -119,7 +119,7 @@ Microsoft Intune でサポートされている Microsoft Edge Web ブラウザ�
   - **未構成** - ユーザーはパスワードを保存でき、この機能をオフにできます。
 
 - **サイトの Microsoft Defender SmartScreen プロンプトをバイパスしない**  
-  CSP:[Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  CSP:[Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
   悪意のある可能性がある Web サイトに関する Microsoft Defender SmartScreen の警告をユーザーがオーバーライドできるかどうかを決定できます。
 
@@ -128,7 +128,7 @@ Microsoft Intune でサポートされている Microsoft Edge Web ブラウザ�
   - **未構成** - ユーザーは Microsoft Defender SmartScreen の警告を無視することができ、サイトに移動できます
 
 - **ダウンロードに関する Microsoft Defender SmartScreen の警告をバイパスしない**  
-  CSP:[Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+  CSP:[Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
 
   未確認のダウンロードに関する Microsoft Defender SmartScreen の警告をユーザーがオーバーライドできるかどうかを指定します。
 
@@ -143,10 +143,10 @@ Microsoft Intune でサポートされている Microsoft Edge Web ブラウザ�
   - **無効** - ユーザーはサイト分離をオプトアウトできます。 サイト分離はオフになっていません。
   - **未構成** - ユーザーはサイト分離をオプトアウトできます。 サイト分離はオフになっていません。
 
-  Microsoft Edge では、[IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins) ポリシーがサポートされており、さらに細かいオリジンを分離することもできます。  Intune では、IsolateOrigins ポリシーの構成がサポートされていません。
+  Microsoft Edge では、[IsolateOrigins](/deployedge/microsoft-edge-policies#isolateorigins) ポリシーがサポートされており、さらに細かいオリジンを分離することもできます。  Intune では、IsolateOrigins ポリシーの構成がサポートされていません。
   
 - **Microsoft Defender SmartScreen の構成**  
-  CSP:[Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)  
+  CSP:[Browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)  
   
   Microsoft Defender SmartScreen では、ユーザーをフィッシング詐欺や悪意のあるソフトウェアから保護するのに役立つ警告メッセージが提供されます。 既定では、Microsoft Defender SmartScreen は有効になっています。
   
@@ -166,7 +166,7 @@ Microsoft Intune でサポートされている Microsoft Edge Web ブラウザ�
   このポリシーは、Microsoft Active Director ドメインに参加している Windows インスタンス、あるいはデバイス管理用に登録されている Windows 10 Pro または Enterprise インスタンスでのみ使用できます。
 
 - **SSL 警告ページから続行することをユーザーに許可する**  
-   CSP:[Browser/PreventCertErrorOverrides](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
+   CSP:[Browser/PreventCertErrorOverrides](/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
 
   ユーザーが SSL エラーのあるサイトにアクセスすると、Microsoft Edge で警告ページが表示されます。
   - **有効** - ユーザーは警告ページをクリックして進むことができます。
@@ -193,7 +193,7 @@ Microsoft Intune でサポートされている Microsoft Edge Web ブラウザ�
 
 - **サイトの Microsoft Defender SmartScreen プロンプトをバイパスしない**  
   **既定値**:Enabled  
-  Microsoft Edge CSP: [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  Microsoft Edge CSP: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
   このポリシー設定では、悪意のある可能性がある Web サイトに関する Microsoft Defender SmartScreen の警告をユーザーがオーバーライドできるかどうかを決定できます。 
   - この設定を有効にすると、ユーザーは Microsoft Defender SmartScreen の警告を無視できず、サイトへの移動をブロックされます。 
@@ -213,7 +213,7 @@ Microsoft Intune でサポートされている Microsoft Edge Web ブラウザ�
 
 - **ダウンロードに関する Microsoft Defender SmartScreen の警告をバイパスしない**  
   **既定値**:Enabled  
-  Microsoft Edge CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+  Microsoft Edge CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
 
   このポリシーを使用すると、未確認のダウンロードに関する Microsoft Defender SmartScreen の警告をユーザーがオーバーライドできるかどうかを指定できます。
   - このポリシーを有効にすると、組織内のユーザーは Microsoft Defender SmartScreen 警告を無視できず、未確認のダウンロードを完了できません。
@@ -221,13 +221,13 @@ Microsoft Intune でサポートされている Microsoft Edge Web ブラウザ�
 
 - **SSL 警告ページから続行することをユーザーに許可する**  
   **既定値**:無効  
-  Microsoft Edge CSP: [Browser/PreventCertErrorOverrides](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
+  Microsoft Edge CSP: [Browser/PreventCertErrorOverrides](/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
 
   ユーザーが SSL エラーのあるサイトにアクセスすると、Microsoft Edge で警告ページが表示されます。 このポリシーを "*有効*" または "*未構成*" に設定すると、ユーザーはこれらの警告ページをクリックして通過できます。 このポリシーを "*無効*" にすると、ユーザーは警告ページを通過できなくなります。 
 
 - **既定の Adobe Flash 設定**  
   **既定値**:Enabled  
-  Microsoft Edge CSP: [Browser/AllowFlash](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflash)、[Browser/AllowFlashClickToRun](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)  
+  Microsoft Edge CSP: [Browser/AllowFlash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash)、[Browser/AllowFlashClickToRun](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)  
 
   "PluginsAllowedForUrls" または "PluginsBlockedForUrls" でカバーされていない Web サイトで Adobe Flash プラグインを自動的に実行できるかどうかを指定します。 
 
@@ -264,7 +264,7 @@ Microsoft Intune でサポートされている Microsoft Edge Web ブラウザ�
 
 - **パスワード マネージャーへのパスワードの保存を有効にする**  
   **既定値**:無効  
-  Microsoft Edge CSP: [Browser/AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
+  Microsoft Edge CSP: [Browser/AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
 
   Microsoft Edge でユーザー パスワードを保存できるようにします。
   - このポリシーを有効にすると、ユーザーは Microsoft Edge でパスワードを保存できます。 次回サイトにアクセスしたときには、Microsoft Edge でパスワードが自動的に入力されます。
@@ -288,7 +288,7 @@ Microsoft Intune でサポートされている Microsoft Edge Web ブラウザ�
 
 - **Microsoft Defender SmartScreen の構成**  
   **既定値**:Enabled  
-  Microsoft Edge CSP: [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+  Microsoft Edge CSP: [Browser/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
   このポリシー設定を使用すると、Microsoft Defender SmartScreen を有効にするかどうかを構成できます。 Microsoft Defender SmartScreen では、ユーザーをフィッシング詐欺や悪意のあるソフトウェアから保護するのに役立つ警告メッセージが提供されます。
   

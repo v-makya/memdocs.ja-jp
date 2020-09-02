@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c9586b27ce5040eb683fa22510c7c9a51aeee1d
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 0206af58be08130e67907bad18d7afa10e236d44
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262542"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912408"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune のネットワーク エンドポイント  
 
@@ -91,7 +91,7 @@ Intune を使用して PowerShell スクリプトまたは Win32 アプリをデ
 
 ## <a name="windows-push-notification-services-wns"></a>Windows プッシュ通知サービス (WNS)  
 
-モバイル デバイス管理 (MDM) を使用して管理されている Intune の管理対象 Windows デバイスの場合、デバイス アクションとその他の即時アクティビティでは Windows プッシュ通知サービス (WNS) の使用が必要です。 詳細については、「[エンタープライズ ファイアウォールを介した Windows 通知トラフィックの許可](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)」を参照してください。  
+モバイル デバイス管理 (MDM) を使用して管理されている Intune の管理対象 Windows デバイスの場合、デバイス アクションとその他の即時アクティビティでは Windows プッシュ通知サービス (WNS) の使用が必要です。 詳細については、「[エンタープライズ ファイアウォールを介した Windows 通知トラフィックの許可](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)」を参照してください。  
 
 ## <a name="delivery-optimization-port-requirements"></a>配信の最適化でのポートの要件  
 
@@ -101,7 +101,7 @@ Intune を使用して PowerShell スクリプトまたは Win32 アプリをデ
 
 ### <a name="proxy-requirements"></a>プロキシの要件  
 
-配信の最適化を使用するには、バイト範囲要求を許可する必要があります。 詳細については、[Windows 更新プログラムのプロキシ要件](https://docs.microsoft.com/windows/deployment/update/windows-update-troubleshooting)に関するページを参照してください。
+配信の最適化を使用するには、バイト範囲要求を許可する必要があります。 詳細については、[Windows 更新プログラムのプロキシ要件](/windows/deployment/update/windows-update-troubleshooting)に関するページを参照してください。
 
 ### <a name="firewall-requirements"></a>ファイアウォールの要件  
 
@@ -125,10 +125,10 @@ Intune を使用して PowerShell スクリプトまたは Win32 アプリをデ
 
 ## <a name="android-port-information"></a>Android のポート情報
 
-Android デバイスの管理方法によっては、Google Android Enterprise ポートや Android プッシュ通知を開く必要がある場合があります。 サポートされている Android 管理方法の詳細については、[Android の登録に関するドキュメント](https://docs.microsoft.com/mem/intune/enrollment/android-enroll)を参照してください。 
+Android デバイスの管理方法によっては、Google Android Enterprise ポートや Android プッシュ通知を開く必要がある場合があります。 サポートされている Android 管理方法の詳細については、[Android の登録に関するドキュメント](../enrollment/android-enroll.md)を参照してください。 
 
 > [!NOTE]
-> 中国では Google モバイル サービスを使用できないため、Intune によって管理されている中国のデバイスでは、Google モバイル サービスを必要とする機能を使用できません。 これには次の機能があります。SafetyNet デバイス構成証明などの Google Play プロテクト機能、Google Play ストアからのアプリの管理、Android Enterprise 機能 (この [Google ドキュメント](https://support.google.com/work/android/answer/6270910)をご覧ください)。 さらに、Android 用 Intune ポータル サイト アプリでは、Microsoft Intune サービスと通信するために Google モバイル サービスが使用されます。 中国では Google Play サービスを使用できないため、一部のタスクは完了までに最大 8 時間かかることがあります。 詳細については、[こちらの記事](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)を参照してください。
+> 中国では Google モバイル サービスを使用できないため、Intune によって管理されている中国のデバイスでは、Google モバイル サービスを必要とする機能を使用できません。 これには次の機能があります。SafetyNet デバイス構成証明などの Google Play プロテクト機能、Google Play ストアからのアプリの管理、Android Enterprise 機能 (この [Google ドキュメント](https://support.google.com/work/android/answer/6270910)をご覧ください)。 さらに、Android 用 Intune ポータル サイト アプリでは、Microsoft Intune サービスと通信するために Google モバイル サービスが使用されます。 中国では Google Play サービスを使用できないため、一部のタスクは完了までに最大 8 時間かかることがあります。 詳細については、[こちらの記事](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)を参照してください。
 
 ### <a name="google-android-enterprise"></a>Google Android Enterprise 
 
@@ -140,4 +140,4 @@ Intune では、プッシュ通知に Google の Firebase Cloud Messaging (FCM) 
 
 ## <a name="endpoint-analytics"></a>エンドポイント分析
 
-エンドポイント分析に必要なエンドポイントの詳細については、[エンドポイント分析のプロキシ構成](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints)に関する記事をご覧ください。
+エンドポイント分析に必要なエンドポイントの詳細については、[エンドポイント分析のプロキシ構成](../../analytics/troubleshoot.md#bkmk_endpoints)に関する記事をご覧ください。

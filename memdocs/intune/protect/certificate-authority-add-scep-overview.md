@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c757688dec9d7c484ec2c71f86177ffbdf3a92d3
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: 8cb847410bf04b4d7d8132e2069b6ced1751b921
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872003"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913581"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>SCEP を使用して Intune でパートナーの証明機関を追加する
 
@@ -70,7 +70,7 @@ Azure Active Directory (Azure AD) アプリケーションを使って、デバ�
 
 サード パーティの SCEP サーバーが Intune でカスタム チャレンジの検証を実行できるようにするには、Azure AD でアプリを作成します。 このアプリは、SCEP 要求を検証する権限を Intune に委任します。
 
-Azure AD アプリを登録するのに必要なアクセス許可があることを確認してください。 Azure AD ドキュメントの「[必要なアクセス許可](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions)」をご覧ください。
+Azure AD アプリを登録するのに必要なアクセス許可があることを確認してください。 Azure AD ドキュメントの「[必要なアクセス許可](/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions)」をご覧ください。
 
 #### <a name="create-an-application-in-azure-active-directory"></a>Azure Active Directory でアプリケーションを作成する  
 

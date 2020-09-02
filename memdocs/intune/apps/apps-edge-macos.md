@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec48b7037788c8951cd5bc5fcd4206809ca69f6
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: d0b9af43c149912d4972e2f79f5e89840823ca94
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531590"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914040"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Microsoft Intune を使用して Microsoft Edge を macOS デバイスに追加する
 
@@ -95,6 +95,6 @@ Microsoft Edge バージョン 77 以降を Intune に追加するには、次�
 > 現在、Apple では、Intune で macOS デバイス上の Microsoft Edge をアンインストールする方法を提供していません。
 
 ## <a name="next-steps"></a>次のステップ
-- macOS デバイスで Microsoft Edge を構成する方法については、[macOS デバイスでの Microsoft Edge の構成](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac)に関するページを参照してください。
+- macOS デバイスで Microsoft Edge を構成する方法については、[macOS デバイスでの Microsoft Edge の構成](/deployedge/configure-microsoft-edge-on-mac)に関するページを参照してください。
 - アプリ割り当てをユーザーのグループに追加したり、除外したりする方法については、「[アプリ割り当ての組み込みと除外](apps-inc-exl-assignments.md)」を参照してください。
 - [アプリをグループに割り当てる](apps-deploy.md)

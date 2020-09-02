@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 835105b12da44f34f23c3d1162ced27a7eca6868
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 233ef8ce9c4ebd8ce5efe91715d653feaba2e88a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252539"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909144"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Microsoft Intune がインストールされた Windows 10 デバイス上で Windows Hello for Business を使用する
 
@@ -56,11 +56,11 @@ Intune では、"構成プロファイル" を使用して、お客様の組織�
 
    - **[Windows Hello for Business の構成]** :Windows Hello for Business を構成する方法を次から選択します。
 
-     - **[未構成]** (既定値):デバイス上に [Windows Hello for Business をプロビジョニング](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning)します。 Identity Protection プロファイルをユーザーのみに割り当てた場合は、デバイス コンテキストは既定で **[未構成]** になります。
+     - **[未構成]** (既定値):デバイス上に [Windows Hello for Business をプロビジョニング](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning)します。 Identity Protection プロファイルをユーザーのみに割り当てた場合は、デバイス コンテキストは既定で **[未構成]** になります。
 
      - **Disabled**:Windows Hello for Business を使用しない場合は、このオプションを選択します。 このオプションを選択すると、すべてのユーザーの Windows Hello for Business が無効になります。
 
-     - **有効**: Intune で Windows Hello for Business 設定を[プロビジョニング](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning)し、構成するには、このオプションを選択します。 構成が必要な設定を入力します。 すべての設定の一覧とその動作については、[Windows Hello for Business を有効にするための Windows 10 デバイス設定](identity-protection-windows-settings.md)に関するページを参照してください。
+     - **有効**: Intune で Windows Hello for Business 設定を[プロビジョニング](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning)し、構成するには、このオプションを選択します。 構成が必要な設定を入力します。 すべての設定の一覧とその動作については、[Windows Hello for Business を有効にするための Windows 10 デバイス設定](identity-protection-windows-settings.md)に関するページを参照してください。
 
    - **[サインインのセキュリティ キーを使用]** :テナント内のすべての PC のログオン資格情報として、Windows Hello セキュリティ キーを有効にします。
 

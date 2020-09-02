@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d54a03290b7d2020b6ec13b64f985613c0a292d
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 82ee499689a7c7ae85fb72cc4fc9b5f6d5ffc939
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912310"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908872"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin バインディング
 
@@ -56,7 +56,7 @@ Intune App SDK Xamarin バインディングで開発された Xamarin アプリ
 
 [ライセンス条項](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf)を確認します。 記録用にライセンス条項を印刷し、保持します。 Intune App SDK Xamarin バインディングをダウンロードし、使用すると、このライセンス条項に同意したことになります。 本ライセンス条項に同意されない場合、お客様は本ソフトウェアを使用できません。
 
-Intune SDK では、その[認証](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/)と条件付き起動シナリオが [Microsoft 認証ライブラリ (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/v2-overview) に依存しているため、[Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) を使用してアプリを構成する必要があります。 
+Intune SDK では、その[認証](/azure/active-directory/develop/authentication-vs-authorization)と条件付き起動シナリオが [Microsoft 認証ライブラリ (MSAL)](/azure/active-directory/develop/v2-overview) に依存しているため、[Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) を使用してアプリを構成する必要があります。 
 
 アプリケーションが MSAL を使用するように既に構成されており、独自のカスタム クライアント ID が Azure Active Directory での認証に利用される場合は、Intune モバイル アプリケーション管理 (MAM) サービスへのアクセス許可を Xamarin アプリに付与するための手順に確実に従います。 [Intune SDK の概要ガイド](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)の[アプリに対する Intune アプリ保護サービスへのアクセス権の付与](app-sdk-get-started.md)に関するセクションに記載されている手順を使用します。
 
@@ -69,7 +69,7 @@ Intune SDK では、その[認証](https://azure.microsoft.com/documentation/art
   * [MS Intune App SDK の NuGet プロファイル](https://www.nuget.org/profiles/msintuneappsdk)
   * [Intune App SDK Xamarin の GitHub リポジトリ](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
 * プロジェクトの NuGet 構成を、署名済みの変更されていない NuGet パッケージを信頼するように構成します。
-詳細については、[署名済みパッケージのインストール](https://docs.microsoft.com/nuget/consume-packages/installing-signed-packages)に関するページを参照してください。
+詳細については、[署名済みパッケージのインストール](/nuget/consume-packages/installing-signed-packages)に関するページを参照してください。
 * Xamarin アプリを含む出力ディレクトリをセキュリティで保護します。 出力にユーザー レベルのディレクトリを使用することを検討します。
 
 
@@ -212,9 +212,9 @@ Remapper をプロジェクトに追加すると、MAM に相当する置換を�
 ```
 
 置換が行われていない場合は、置換を行うまで次のコンパイル エラーが発生する可能性があります。
-* [コンパイラ エラー CS0239](https://docs.microsoft.com/dotnet/csharp/misc/cs0239): このエラーは次の形式でよく見られます: 「``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``」。
+* [コンパイラ エラー CS0239](/dotnet/csharp/misc/cs0239): このエラーは次の形式でよく見られます: 「``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``」。
 これは Remapper によって Xamarin クラスの継承が変更されるために発生する可能性があり、特定の関数が `sealed` になり、代わりにオーバーライドするための新しい MAM バリアントが追加されます。
-* [コンパイラ エラー CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): このエラーは次の形式でよく見られます。``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...`` Remapper によっていくつかの Xamarin クラスの継承が変更されるときに、特定のメンバー関数が `public` に変更されます。 これらの関数のいずれかをオーバーライドする場合は、これらのオーバーライドのアクセス修飾子も同じく `public` に変更する必要があります。
+* [コンパイラ エラー CS0507](/dotnet/csharp/language-reference/compiler-messages/cs0507): このエラーは次の形式でよく見られます。``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...`` Remapper によっていくつかの Xamarin クラスの継承が変更されるときに、特定のメンバー関数が `public` に変更されます。 これらの関数のいずれかをオーバーライドする場合は、これらのオーバーライドのアクセス修飾子も同じく `public` に変更する必要があります。
 
 > [!NOTE]
 > Remapper により、Visual Studio で IntelliSense のオートコンプリートに使用する依存関係が再度書き込まれます。 そのため、変更が正しく認識されるように IntelliSense に Remapper が追加されるときに、場合によっては、プロジェクトを再度読み込んでリビルドする必要があります。
@@ -235,4 +235,4 @@ Intune SDK Xamarin バインディングでアプリ保護ポリシーを有効�
 Xamarin Android アプリと Xamarin. Forms アプリの MAM 機能を強調表示したサンプル アプリケーションは、[GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps) から入手できます。
 
 ## <a name="support"></a>サポート
-お客様の組織が既に Intune をご利用の場合は、Microsoft のサポート担当者と連携してサポート チケットを開き、[GitHub のイシュー ページで](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues)イシューを作成してください。 できるだけ早くお手伝いします。 
+お客様の組織が既に Intune をご利用の場合は、Microsoft のサポート担当者と連携してサポート チケットを開き、[GitHub のイシュー ページで](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues)イシューを作成してください。 できるだけ早くお手伝いします。

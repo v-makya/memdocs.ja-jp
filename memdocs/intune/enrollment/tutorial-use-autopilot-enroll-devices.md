@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 619974819575936912b6a5c386116bdf26448252
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 45ec9e0353feffdc6beb068d5b99426a734d7096
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546845"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915434"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>チュートリアル:Autopilot を使用して Intune に Windows デバイスを登録する
 
@@ -40,12 +40,12 @@ ms.locfileid: "87546845"
 
 Intune サブスクリプションがない場合は、[無料試用版アカウントにサインアップ](../fundamentals/free-trial-sign-up.md)します。
 
-Autopilot の利点、シナリオ、および前提条件の概要については、「[Windows Autopilot の概要](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)」をご覧ください。
+Autopilot の利点、シナリオ、および前提条件の概要については、「[Windows Autopilot の概要](/windows/deployment/windows-autopilot/windows-10-autopilot)」をご覧ください。
 
 
 ## <a name="prerequisites"></a>[前提条件]
 - [Windows 自動登録を設定する](quickstart-setup-auto-enrollment.md)
-- [Azure Active Directory Premium サブスクリプション](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Azure Active Directory Premium サブスクリプション](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 
 ## <a name="add-devices"></a>デバイスを追加する
@@ -128,5 +128,3 @@ Windows Autopilot で使用できる他のオプションについての詳細�
 
 > [!div class="nextstepaction"]
 > [Autopilot の登録に関する詳細な記事](../../autopilot/enrollment-autopilot.md)
-
-

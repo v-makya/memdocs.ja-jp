@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: ''
-ms.openlocfilehash: f1d4e483f02cf73b2c7afe949e4145692adccc9d
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: c91c0f776ee46ddebbbb7bc27895b0f8795ae975
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088345"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911592"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Windows デバイスの Intune 登録方法
 
@@ -36,23 +36,23 @@ Intune でデバイスを管理するには、まず、デバイスを Intune �
 
 ユーザーは、以下の方法のいずれかを使用して、Windows デバイスを自己登録することができます。
 
-- [Bring Your Own Device (BYOD)](https://docs.microsoft.com/mem/intune/user-help/enroll-windows-10-device):ユーザーは、**ポータル サイト アプリ**をダウンロードし、インストールすることで個人所有のデバイスを登録します。このプロセスでは次の操作が行われます。
+- [Bring Your Own Device (BYOD)](../user-help/enroll-windows-10-device.md):ユーザーは、**ポータル サイト アプリ**をダウンロードし、インストールすることで個人所有のデバイスを登録します。このプロセスでは次の操作が行われます。
   - Azure Active Directory にデバイスを登録して、メールなどの企業リソースにアクセスできるようにする。
   - デバイスを個人所有デバイス (BYOD) として、Intune に登録する。
 管理者が自動登録 (Azure AD Premium サブスクリプションで利用可能) を構成している場合、ユーザーが資格情報を入力する必要があるのは 1 回のみとなります。 それ以外の場合、MDM の登録のみで個別に登録し、資格情報を再入力する必要があります。  
 - **MDM の登録のみ**では、ユーザーは、既存のワークグループ、Active Directory、または Azure Active Directory に参加済みの PC を Intune に登録することができます。 ユーザーは、既存の Windows PC で [設定] から登録します。 この方法は、デバイスが Azure Active Directory に登録されないため、お勧めできません。 条件付きアクセスなどの機能も使用できません。
-- [Azure Active Directory (Azure AD) に参加](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) - デバイスを Azure Active Directory に参加させ、ユーザーが Azure AD 資格情報を使用して、Windows にサインインできるようにします。 自動登録が有効になっている場合、デバイスは Intune に自動的に登録されます。 自動登録の利点は、ユーザーの単一ステップ プロセスです。 それ以外の場合、MDM の登録のみで個別に登録し、資格情報を再入力する必要があります。 ユーザーは、[設定] からまたは最初の Windows OOBE 時に、この方法で登録します。 デバイスは、Intune で会社所有デバイスとしてマークされます。
-- [Autopilot](enrollment-autopilot.md) - Azure AD 参加を自動化し、新しい企業所有デバイスを Intune に登録します。 この方法では、Out-of-Box Experience が簡略化され、カスタム オペレーティング システム イメージをデバイスに適用する必要がなくなります。 管理者は、Intune を使用して Autopilot デバイスを管理する場合、ポリシー、プロファイル、アプリなどを登録後に管理することができます。  Autopilot の展開の種類には次の 4 種類があります。[自己展開モード](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) (キオスク、デジタル信号、または共有デバイスの場合)、[ユーザー駆動型モード](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) (従来のユーザーの場合)、[White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) (パートナーまたは IT スタッフは Windows 10 PC が完全に構成されビジネスに即応できるように、それを事前プロビジョニングすることができる)、[既存デバイス向け Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) (最新バージョンの Windows 10 をご利用の既存のデバイスに簡単に展開できる)。
+- [Azure Active Directory (Azure AD) に参加](/azure/active-directory/user-help/user-help-join-device-on-network) - デバイスを Azure Active Directory に参加させ、ユーザーが Azure AD 資格情報を使用して、Windows にサインインできるようにします。 自動登録が有効になっている場合、デバイスは Intune に自動的に登録されます。 自動登録の利点は、ユーザーの単一ステップ プロセスです。 それ以外の場合、MDM の登録のみで個別に登録し、資格情報を再入力する必要があります。 ユーザーは、[設定] からまたは最初の Windows OOBE 時に、この方法で登録します。 デバイスは、Intune で会社所有デバイスとしてマークされます。
+- [Autopilot](../../autopilot/enrollment-autopilot.md) - Azure AD 参加を自動化し、新しい企業所有デバイスを Intune に登録します。 この方法では、Out-of-Box Experience が簡略化され、カスタム オペレーティング システム イメージをデバイスに適用する必要がなくなります。 管理者は、Intune を使用して Autopilot デバイスを管理する場合、ポリシー、プロファイル、アプリなどを登録後に管理することができます。  Autopilot の展開の種類には次の 4 種類があります。[自己展開モード](/windows/deployment/windows-autopilot/self-deploying) (キオスク、デジタル信号、または共有デバイスの場合)、[ユーザー駆動型モード](/windows/deployment/windows-autopilot/user-driven) (従来のユーザーの場合)、[White Glove](/windows/deployment/windows-autopilot/white-glove) (パートナーまたは IT スタッフは Windows 10 PC が完全に構成されビジネスに即応できるように、それを事前プロビジョニングすることができる)、[既存デバイス向け Autopilot](/windows/deployment/windows-autopilot/existing-devices) (最新バージョンの Windows 10 をご利用の既存のデバイスに簡単に展開できる)。
 
 ## <a name="administrator-based-enrollment-in-intune"></a>Intune の管理者ベースの登録
 
 管理者は、ユーザーの介入を必要としない、次の登録方法を設定できます。
 
-- [Hybrid Azure AD Join](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) では、管理者は、ハイブリッド Azure AD 参加済みのデバイスを自動的に登録するように Active Directory グループ ポリシーを構成できます。
-- [Configuration Manager の共同管理](https://docs.microsoft.com/configmgr/comanage/overview)では、管理者は、既存の Configuration Manager マネージド デバイスを Intune に登録して、Intune と Configuration Manager の 2 つの利点を得ることができます。
+- [Hybrid Azure AD Join](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) では、管理者は、ハイブリッド Azure AD 参加済みのデバイスを自動的に登録するように Active Directory グループ ポリシーを構成できます。
+- [Configuration Manager の共同管理](/configmgr/comanage/overview)では、管理者は、既存の Configuration Manager マネージド デバイスを Intune に登録して、Intune と Configuration Manager の 2 つの利点を得ることができます。
 - [デバイス登録マネージャー](device-enrollment-manager-enroll.md) (DEM) は特別なサービス アカウントです。 DEM アカウントには、許可されているユーザーが複数の会社所有デバイスを登録して管理できるようにするアクセス許可があります。 この種のデバイスは、POS アプリやユーティリティ アプリなどには適していますが、電子メールや会社のリソースにアクセスする必要があるユーザーには適していません。 この方法では、条件付きアクセスなどの機能の使用が許可されません。 
 - [一括登録](windows-bulk-enroll.md)では、許可されているユーザーは、数多くの新しい企業所有デバイスを Azure Active Directory と Intune に参加させることができます。 Windows Configuration Designer (WCD) アプリでプロビジョニング パッケージを作成します。 その後、既存の Windows PC からまたは最初の Windows OOBE エクスペリエンス時に USB メディアを使用して、プロビジョニング パッケージをインストールし、デバイスを Intune に自動的に登録します。 この方法では、条件付きアクセスの使用が許可されません。
-- [Windows IoT Core デバイスの登録](https://docs.microsoft.com/windows/iot-core/manage-your-device/intunedeviceenrollment)を行うには、Windows IoT Core ダッシュボードを使用してデバイスを準備してから、Windows Configuration Designer を使用してプロビジョニング パッケージを作成します。 次に、初回起動時に SD カード メディアを使用して、プロビジョニング パッケージをインストールしてデバイスを Intune に自動登録します。
+- [Windows IoT Core デバイスの登録](/windows/iot-core/manage-your-device/intunedeviceenrollment)を行うには、Windows IoT Core ダッシュボードを使用してデバイスを準備してから、Windows Configuration Designer を使用してプロビジョニング パッケージを作成します。 次に、初回起動時に SD カード メディアを使用して、プロビジョニング パッケージをインストールしてデバイスを Intune に自動登録します。
 
 ## <a name="next-steps"></a>次のステップ
 

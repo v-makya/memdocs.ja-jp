@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f920513fbef101c60ea5caa3e8c6659557213ba3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 08586879f3523d1188f18e2d7024f32fae83febc
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989213"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911201"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Jamf Pro で管理された Mac にコンプライアンスを適用します
 
@@ -124,5 +124,5 @@ Jamf で管理されるデバイスの削除方法については、[Jamf Pro �
 
 ## <a name="next-steps"></a>次のステップ
 
-- [Azure Active Directory の条件付きアクセス](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
-- [Azure Active Directory の条件付きアクセスの概要](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Azure Active Directory の条件付きアクセス](/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Azure Active Directory の条件付きアクセスの概要](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

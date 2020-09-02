@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bb3397432f1c171418ea99510cb04f1bdefc639
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 0ae39f91c4daa67c40c42022f63137f0b23daf80
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252794"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911065"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>コンプライアンス ポリシーを使用して、Intune で管理するデバイスのルールを設定する
 
@@ -143,8 +143,8 @@ Intune には、デバイスのコンプライアンス状態を監視し、ポ�
 
 次の Azure AD のドキュメントで条件付きアクセスの詳細を参照してください。
 
-- [条件付きアクセスとは](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
-- [デバイス ID とは](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
+- [条件付きアクセスとは](/azure/active-directory/conditional-access/overview)
+- [デバイス ID とは](/azure/active-directory/device-management-introduction)
 
 ### <a name="reference-for-non-compliance-and-conditional-access-on-the-different-platforms"></a>さまざまなプラットフォームでの非準拠と条件付きアクセスに関するリファレンス
 

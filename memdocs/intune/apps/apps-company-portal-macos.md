@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58e22af70a3cf119cb044a15b40ba581fe6452c
-ms.sourcegitcommit: 5c15b59cde085787b85f032f88add70a11d8e9a2
+ms.openlocfilehash: 1eb64f8ed2bc67b4800a4583010dea150ade421d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86452853"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914159"
 ---
 # <a name="add-the-macos-company-portal-app"></a>macOS のポータル サイト アプリを追加します
 
@@ -40,7 +40,7 @@ macOS のアプリにポータル サイトをインストールするには、�
 > ポータル サイト アプリは、直接登録またはデバイスの自動登録を使用して既に登録されている Intune を使用しているデバイスにのみ、自動的にインストールできます。 個人のデバイスの場合、または手動で登録されたものである場合、ポータル サイト アプリはダウンロードしてインストールし、登録を開始する必要があります。 「[ユーザーにポータル サイトをダウンロードしてインストールするよう指示する](#instruct-users-to-download-and-install-company-portal)」を参照してください。
 ## <a name="instruct-users-to-download-and-install-company-portal"></a>ユーザーにポータル サイトをダウンロードしてインストールするよう指示する
 
-ユーザーに、macOS 用のポータル サイトをダウンロード、インストール、サインインするように指示することができます。 ポータル サイトのダウンロード、インストール、サインインの手順については、「[ポータル サイト アプリを使用して macOS デバイスを登録する](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp)」を参照してください。
+ユーザーに、macOS 用のポータル サイトをダウンロード、インストール、サインインするように指示することができます。 ポータル サイトのダウンロード、インストール、サインインの手順については、「[ポータル サイト アプリを使用して macOS デバイスを登録する](../user-help/enroll-your-device-in-intune-macos-cp.md)」を参照してください。
 
 ##  <a name="install-company-portal-for-macos-as-a-macos-lob-app"></a>macOS の LOB アプリとして macOS のポータル サイトをインストールする
 
@@ -66,5 +66,5 @@ macOS のポータル サイトは、[macOS のシェル スクリプト](macos-
 > このスクリプトでは、macOS 用の現在のバージョンのポータル サイトのダウンロードに、インターネット アクセスを必要です。 
 ## <a name="next-steps"></a>次のステップ
 - アプリの割り当てに関する詳細については、[グループへのアプリの割り当て](apps-deploy.md)に関するページを参照してください。
-- デバイスの自動登録の構成の詳細については、[Device Enrollment Program - macOS の登録](https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-program-enroll-macos)に関する説明を参照してください。
-- macOS で Microsoft AutoUpdate の設定を構成する方法の詳細については、[Mac の更新プログラム](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-updates)に関するページを参照してください。
+- デバイスの自動登録の構成の詳細については、[Device Enrollment Program - macOS の登録](../enrollment/device-enrollment-program-enroll-macos.md)に関する説明を参照してください。
+- macOS で Microsoft AutoUpdate の設定を構成する方法の詳細については、[Mac の更新プログラム](/windows/security/threat-protection/microsoft-defender-atp/mac-updates)に関するページを参照してください。

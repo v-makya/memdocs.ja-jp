@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 858d813d3df2b020a869e1f18327d35e68bde7e0
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9fafc6a48e933fbcce692c560532736808cbf7c4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461727"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915247"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Android Enterprise 専用、フル マネージド、または仕事用プロファイルを備えた会社所有のデバイスを登録する
 
@@ -35,11 +35,11 @@ Intune で Android Enterprise [専用デバイス](android-kiosk-enroll.md)、[�
 | トークン エントリ | 6.0 |
 | QR コード | 7.0 |
 | ゼロ タッチ  | 8.0<br><br> 参加製造元で。 |
-| [Knox Mobile Enrollment](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)  | 6.0<br><br> Samsung Knox 2.8 以上のデバイスでのみ。 |
+| [Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md)  | 6.0<br><br> Samsung Knox 2.8 以上のデバイスでのみ。 |
 
 ## <a name="enroll-by-using-near-field-communication-nfc"></a>近距離無線通信 (NFC) を利用して登録する
 
-NFC 対応の 6 以降のデバイスについては、特殊な形式の NFC タグを作成して、デバイスをプロビジョニングできます。 独自のアプリや任意の NFC タグ作成ツールを利用できます。 詳細については、「[C-based Android Enterprise device enrollment with Microsoft Intune](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/)」 (C ベースの Android エンタープライズ デバイスを Microsoft Intune で登録する) と「[Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method)」 (Google の Android 管理 API ドキュメント) を参照してください。
+NFC 対応の 6 以降のデバイスについては、特殊な形式の NFC タグを作成して、デバイスをプロビジョニングできます。 独自のアプリや任意の NFC タグ作成ツールを利用できます。 詳細については、「[C-based Android Enterprise device enrollment with Microsoft Intune](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune)」 (C ベースの Android エンタープライズ デバイスを Microsoft Intune で登録する) と「[Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method)」 (Google の Android 管理 API ドキュメント) を参照してください。
 
 ## <a name="enroll-by-using-a-token"></a>トークンを利用して登録する
 
@@ -91,9 +91,8 @@ Google のゼロ タッチ システムを使用するには、デバイスが�
 4. **[適用]** を選択します。
 
 ## <a name="enroll-by-using-knox-mobile-enrollment"></a>Knox Mobile Enrollment を利用して登録する
-Samsung の Knox Mobile Enrollment を使用するには、デバイスで Android OS バージョン 6 以降と Samsung Knox 2.8 以上を実行している必要があります。 詳細については、「[Samsung の Knox Mobile Enrollment を使用して Android デバイスを自動的に登録する](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)」を参照してください。
+Samsung の Knox Mobile Enrollment を使用するには、デバイスで Android OS バージョン 6 以降と Samsung Knox 2.8 以上を実行している必要があります。 詳細については、「[Samsung の Knox Mobile Enrollment を使用して Android デバイスを自動的に登録する](./android-samsung-knox-mobile-enroll.md)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 - [Android アプリを展開する](../apps/apps-deploy.md)
 - [Android 構成ポリシーを追加する](../configuration/device-profiles.md)
-

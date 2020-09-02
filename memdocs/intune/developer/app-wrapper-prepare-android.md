@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69a694ab9da7987271214bc6919cd3b676f9814e
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 82c27aaef1f30e4f021f6370d5c7cf7ce157f3c0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166061"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908855"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Intune アプリ ラッピング ツールでアプリ保護ポリシーを利用するために Android アプリを準備する
 
@@ -99,7 +99,7 @@ Android 用 Microsoft Intune アプリ ラッピング ツールを使用して�
 | **&lt;CommonParameters&gt;** | (省略可能) コマンドは、verbose、debug などの一般的な PowerShell パラメーターをサポートします。 |
 
 
-- 共通パラメーターの一覧については、 [Microsoft スクリプト センター](https://technet.microsoft.com/library/hh847884.aspx)を参照してください。
+- 共通パラメーターの一覧については、 [Microsoft スクリプト センター](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7)を参照してください。
 
 - ツールの詳細な使用方法を確認するには、次のコマンドを入力します。
 

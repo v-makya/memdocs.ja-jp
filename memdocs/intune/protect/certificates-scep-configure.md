@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e4f98f0f1e60ff08e86dedb2dd34ac9f55157ac
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b3d422978fe6e2cbb123b87311e5c175483b9f66
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820393"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915995"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Intune を使用して SCEP をサポートするようにインフラストラクチャを構成する
 
@@ -40,7 +40,7 @@ Intune では、[アプリと企業リソースへの接続を認証する](cert
 
 次のオンプレミス インフラストラクチャは、Active Directory にドメイン参加しているサーバー (Web アプリケーション プロキシ サーバーを除く) で実行する必要があります。
 
-- **証明機関** – Windows Server 2008 R2 Service Pack 1 以降の Enterprise エディション上で実行する Microsoft Active Directory 証明書サービスのエンタープライズ証明機関 (CA) を使用します。 使用する Windows Server のバージョンが、Microsoft によって引き続きサポートされている必要があります。 スタンドアロン CA はサポートされません。 詳細については、「[証明機関のインストール](https://technet.microsoft.com/library/jj125375.aspx)」を参照してください。 ご使用の CA で Windows Server 2008 R2 SP1 が実行されている場合は、[KB2483564 の修正プログラムをインストール](https://support.microsoft.com/kb/2483564/)する必要があります。
+- **証明機関** – Windows Server 2008 R2 Service Pack 1 以降の Enterprise エディション上で実行する Microsoft Active Directory 証明書サービスのエンタープライズ証明機関 (CA) を使用します。 使用する Windows Server のバージョンが、Microsoft によって引き続きサポートされている必要があります。 スタンドアロン CA はサポートされません。 詳細については、「[証明機関のインストール](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj125375(v=ws.11))」を参照してください。 ご使用の CA で Windows Server 2008 R2 SP1 が実行されている場合は、[KB2483564 の修正プログラムをインストール](https://support.microsoft.com/kb/2483564/)する必要があります。
 
 - **NDES サーバー ロール** – Windows Server 2012 R2 以降で、ネットワーク デバイス登録サービス (NDES) サーバー ロールを構成する必要があります。 [NDES のインストール](#set-up-ndes)については、この記事内の後のセクションで説明します。
 
@@ -48,7 +48,7 @@ Intune では、[アプリと企業リソースへの接続を認証する](cert
   - エンタープライズ CA をホストするサーバーにインストールされている NDES を使用することはできません。
   - NDES をホストしているのと同じサーバーに、Microsoft Intune Certificate Connector をインストールします。
 
-  NDES の詳細については、Windows Server のドキュメントの「[ネットワーク デバイス登録サービスのガイダンス](https://technet.microsoft.com/library/hh831498.aspx)」、および「[ポリシー モジュールとネットワーク デバイス登録サービスの使用](https://technet.microsoft.com/library/dn473016.aspx)」を参照してください。
+  NDES の詳細については、Windows Server のドキュメントの「[ネットワーク デバイス登録サービスのガイダンス](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11))」、および「[ポリシー モジュールとネットワーク デバイス登録サービスの使用](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11))」を参照してください。
 
 - **Microsoft Intune Certificate Connector** – Intune で SCEP 証明書プロファイルを使用するには、Microsoft Intune Certificate Connector が必要です。 この記事では、[このコネクタをインストールする](#install-the-intune-certificate-connector)手順について説明します。
 
@@ -56,21 +56,21 @@ Intune では、[アプリと企業リソースへの接続を認証する](cert
   - このコネクタのネットワーク要件は、[マネージド デバイス](../fundamentals/intune-endpoints.md#access-for-managed-devices)と同じです。
   - コネクタは、NDES サーバー ロールと同じサーバー (Windows Server 2012 R2 以降が実行されているサーバー) 上で実行する必要があります。
   - コネクタで必要な .NET 4.5 Framework は、Windows Server 2012 R2 に自動的に含まれます。
-  - Internet Explorer セキュリティ強化の構成は、[NDES と Microsoft Intune Certificate Connector をホストするサーバーで無効にする必要があります](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx)。
+  - Internet Explorer セキュリティ強化の構成は、[NDES と Microsoft Intune Certificate Connector をホストするサーバーで無効にする必要があります](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10))。
 
 次のオンプレミス インフラストラクチャは省略可能です。
 
 インターネット上のデバイスで証明書を取得できるようにするには、企業ネットワークの外部に NDES URL を発行する必要があります。 Azure AD アプリケーション プロキシ、Web アプリケーション プロキシ サーバー、別のリバース プロキシのいずれかを使用できます。
 
-- **Azure AD アプリケーション プロキシ** (省略可能) – 専用 Web アプリケーション プロキシ (WAP) サーバーの代わりに Azure AD アプリケーション プロキシを使用して、NDES URL をインターネットに公開することができます。 これにより、イントラネットとインターネットに接続するどちらのデバイスでも証明書を取得できるようになります。 詳細については、「[オンプレミス アプリケーションへの安全なリモート アクセスを実現する方法](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy)」を参照してください。
+- **Azure AD アプリケーション プロキシ** (省略可能) – 専用 Web アプリケーション プロキシ (WAP) サーバーの代わりに Azure AD アプリケーション プロキシを使用して、NDES URL をインターネットに公開することができます。 これにより、イントラネットとインターネットに接続するどちらのデバイスでも証明書を取得できるようになります。 詳細については、「[オンプレミス アプリケーションへの安全なリモート アクセスを実現する方法](/azure/active-directory/manage-apps/application-proxy)」を参照してください。
 
 - **Web アプリケーション プロキシ サーバー** (省略可能) - NDES URL をインターネットに公開するには、Windows Server 2012 R2 以降を実行しているサーバーを Web アプリケーション プロキシ (WAP) サーバーとして使用します。  これにより、イントラネットとインターネットに接続するどちらのデバイスでも証明書を取得できるようになります。
 
-  WAP をホストするサーバーは、ネットワーク デバイス登録サービスで使用される長い URL のサポートを有効にする [更新プログラムをインストールする](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) 必要があります。 この更新プログラムは、 [2014 年 12 月の更新プログラムのロールアップ](https://support.microsoft.com/kb/3013769)に含まれます。または、 [KB3011135](https://support.microsoft.com/kb/3011135)から個別に入手できます。
+  WAP をホストするサーバーは、ネットワーク デバイス登録サービスで使用される長い URL のサポートを有効にする [更新プログラムをインストールする](/archive/blogs/ems/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2) 必要があります。 この更新プログラムは、 [2014 年 12 月の更新プログラムのロールアップ](https://support.microsoft.com/kb/3013769)に含まれます。または、 [KB3011135](https://support.microsoft.com/kb/3011135)から個別に入手できます。
 
   WAP サーバーは、外部クライアントに公開されている名前と一致する SSL 証明書を持ち、NDES サービスをホストするコンピューターで使用されている SSL 証明書を信頼する必要があります。 これらの証明書を使用すると、WAP サーバーがクライアントからの SSL 接続を終了して、NDES サービスへの新しい SSL 接続を作成できるようになります。
 
-  詳しくは、[Plan certificates for WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) (WAP の証明書の計画) に関するページおよび [general information about WAP servers](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)) (WAP サーバーについての一般情報) に関するページをご覧ください。
+  詳しくは、[Plan certificates for WAP](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) (WAP の証明書の計画) に関するページおよび [general information about WAP servers](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)) (WAP サーバーについての一般情報) に関するページをご覧ください。
 
 ### <a name="accounts"></a>[アカウント]
 
@@ -82,7 +82,7 @@ Intune では、[アプリと企業リソースへの接続を認証する](cert
   - **サービスとしてログオン**
   - **バッチ ジョブとしてログオン**
 
-  詳細については、[NDES サービス アカウントとして動作するドメイン ユーザー アカウントの作成](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)#to-create-a-domain-user-account-to-act-as-the-ndes-service-account)に関するセクションを参照してください。
+  詳細については、[NDES サービス アカウントとして動作するドメイン ユーザー アカウントの作成](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)#to-create-a-domain-user-account-to-act-as-the-ndes-service-account)に関するセクションを参照してください。
 
 - **NDES サービスをホストするコンピューターへのアクセス** - NDES をインストールするサーバーに Windows サーバー ロールをインストールして構成するアクセス許可を持つドメイン ユーザー アカウントが必要です。
 
@@ -90,7 +90,7 @@ Intune では、[アプリと企業リソースへの接続を認証する](cert
 
 ### <a name="network-requirements"></a>ネットワークの要件
 
-NDES サービスは、[Azure AD アプリケーション プロキシ、Web アクセス プロキシ](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-publish/)、サード パーティ製のプロキシなどのリバース プロキシを通じて公開することをお勧めします。 リバース プロキシを使用しない場合は、インターネット上のすべてのホストおよび IP アドレスからポート 443 上の NDES サーバーへの TCP トラフィックを許可します。
+NDES サービスは、[Azure AD アプリケーション プロキシ、Web アクセス プロキシ](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application)、サード パーティ製のプロキシなどのリバース プロキシを通じて公開することをお勧めします。 リバース プロキシを使用しない場合は、インターネット上のすべてのホストおよび IP アドレスからポート 443 上の NDES サーバーへの TCP トラフィックを許可します。
 
 NDES サービスと、環境内でサポートされている任意のインフラストラクチャとの間の通信に必要なすべてのポートとプロトコルを許可します。 たとえば、NDES サービスをホストするコンピューターは、CA、DNS サーバー、ドメイン コントローラー、Configuration Manager などの、環境内のその他のサービスやサーバーと通信する必要があります。
 
@@ -234,11 +234,11 @@ Intune の既定では、テンプレートで構成された値が使用され�
 
 ## <a name="set-up-ndes"></a>NDES を設定する
 
-次の手順は、Intune で使用するネットワーク デバイス登録サービス (NDES) を構成するのに役立ちます。 NDES の詳細については、「[ネットワーク デバイス登録サービスのガイダンス](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v%3dws.11))」を参照してください。
+次の手順は、Intune で使用するネットワーク デバイス登録サービス (NDES) を構成するのに役立ちます。 NDES の詳細については、「[ネットワーク デバイス登録サービスのガイダンス](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11))」を参照してください。
 
 ### <a name="install-the-ndes-service"></a>NDES サービスをインストールする
 
-1. NDES サービスをホストするサーバーに**エンタープライズ管理者**としてサインインし、[役割と機能の追加ウィザード](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11))を使用して NDES をインストールします。
+1. NDES サービスをホストするサーバーに**エンタープライズ管理者**としてサインインし、[役割と機能の追加ウィザード](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11))を使用して NDES をインストールします。
 
    1. ウィザードで、 **[Active Directory 証明書サービス]** を選択して AD CS 役割サービスにアクセスできるようにします。 **[ネットワーク デバイス登録サービス]** を選択し、 **[証明機関]** をオフにして、ウィザードを完了します。
 

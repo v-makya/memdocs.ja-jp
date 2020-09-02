@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: b4581ba6bdc8b5be41d5cf567c631ffaad40d418
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ce4795dd060d29b62887fbf5496b2f2706ba954f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79351969"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909110"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Intune で Windows Hello for Business を有効にするための Windows 10 デバイス設定
 
 この記事では、Windows 10 デバイス上の Intune で制御できる Windows Hello for Business の設定の一覧を示して説明します。 Intune 管理者として、モバイル デバイス管理 (MDM) ソリューションの一環としてこれらの設定を構成し、Windows 10 デバイスに割り当てます。 
 
-これらの設定に関する追加情報については、Windows Hello ドキュメント内の「[Windows Hello for Business のポリシー設定の構成](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings)」をご覧ください。
+これらの設定に関する追加情報については、Windows Hello ドキュメント内の「[Windows Hello for Business のポリシー設定の構成](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings)」をご覧ください。
 
 
 Intune の Windows Hello for Business プロファイルの詳細については、[ID 保護の構成](identity-protection-configure.md)に関するページを参照してください。
@@ -125,7 +125,7 @@ Intune の Windows Hello for Business プロファイルの詳細については
   - **[オンプレミスのリソースの証明書]**  
 
     - **[有効にする]** - オンプレミスのリソースを認証するために、Windows Hello for Business で証明書を使用することを許可します。
-    - **[未構成]** - オンプレミスのリソースを認証するために、Windows Hello for Business で証明書を使用できないようにします。 代わりに、デバイスでは、*キー信頼オンプレミス認証*の既定動作が使用されます。 詳細については、Windows Hello ドキュメントの「[オンプレミスの認証に証明書を使用する](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication)」を参照してください。  
+    - **[未構成]** - オンプレミスのリソースを認証するために、Windows Hello for Business で証明書を使用できないようにします。 代わりに、デバイスでは、*キー信頼オンプレミス認証*の既定動作が使用されます。 詳細については、Windows Hello ドキュメントの「[オンプレミスの認証に証明書を使用する](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication)」を参照してください。  
 
   **既定値**:未構成
 

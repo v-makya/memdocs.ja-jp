@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: cb51d5f73edbc28572ee01d49ba4bd5a62cf6393
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 226416c896a3d21ad8e2d11868433353c6965c6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989640"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910878"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Intune でエンドポイント保護設定を追加する
 
@@ -91,7 +91,7 @@ Windows 10 のエンドポイント保護規則を含むプロファイルの一
 
 - 規則を適用できなかったときは、プロファイル内のすべての規則が失敗として報告されます。 Intune では、失敗した個々の規則を識別することはできません。  
 
-Intune で管理できるファイアウォール規則については、Windows の[ファイアウォール構成サービス プロバイダー](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP) に関するページで詳しく説明されています。 Intune でサポートされる Windows 10 デバイスのカスタム ファイアウォール設定のリストを確認する場合は、[カスタム ファイアウォール規則](endpoint-protection-windows-10.md#firewall-rules)に関するセクションを参照してください。
+Intune で管理できるファイアウォール規則については、Windows の[ファイアウォール構成サービス プロバイダー](/windows/client-management/mdm/firewall-csp) (CSP) に関するページで詳しく説明されています。 Intune でサポートされる Windows 10 デバイスのカスタム ファイアウォール設定のリストを確認する場合は、[カスタム ファイアウォール規則](endpoint-protection-windows-10.md#firewall-rules)に関するセクションを参照してください。
 
 ### <a name="to-add-custom-firewall-rules-to-an-endpoint-protection-profile"></a>Endpoint Protection プロファイルにカスタム ファイアウォール規則を追加するには
 

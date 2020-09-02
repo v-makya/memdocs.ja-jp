@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4425178dde820bc1f9b0503d50406c007d090ca
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: b8d6bb9e69831d2804d93d3694671f8dd27da305
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252573"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915978"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Intune で Windows 10 ソフトウェア更新プログラムを管理する
 
@@ -38,7 +38,7 @@ Intune には、更新プログラムを管理するために、次のポリシ�
 
 Windows 10 更新リング用のポリシーと、Windows 10 機能の更新プログラム用のポリシーを、デバイスのグループに割り当てます。 同じ Intune 環境内で両方のポリシーの種類を使用して、Windows 10 デバイスのソフトウェア更新プログラムを管理し、ご自身のビジネス ニーズを反映した更新方法を作成することができます。
 
-詳しくは、「[Windows Update for Business を使った更新プログラムの管理](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb)」をご覧ください。
+詳しくは、「[Windows Update for Business を使った更新プログラムの管理](/windows/deployment/update/waas-manage-updates-wufb)」をご覧ください。
 
 ## <a name="prerequisites"></a>[前提条件]
 
@@ -182,7 +182,7 @@ Intune 管理者は、 **[アンインストール]** を使用して、アク�
 
   たとえば、機能更新プログラムのアンインストール期間が 20 日の更新プログラム リングについて考えます。 25 日後に、最新の機能更新プログラムをロールバックすることを決定し、[アンインストール] オプションを使用します。  20 日より前に機能更新プログラムをインストールしたデバイスでは、これらをアンインストールできません。メンテナンスの一環として必要なファイルが削除されているからです。 一方、最大 19 日前に機能更新プログラムをインストールしたデバイスでは、20 日のアンインストール期間が経過する前に正常にチェックインしてアンインストール コマンドを受信した場合には、更新プログラムをアンインストールできます。
 
-Windows Update のポリシーの詳細については、Windows クライアント管理のドキュメントで「[Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp)」 (CSP の更新) を参照してください。
+Windows Update のポリシーの詳細については、Windows クライアント管理のドキュメントで「[Update CSP](/windows/client-management/mdm/update-csp)」 (CSP の更新) を参照してください。
 
 ##### <a name="to-uninstall-the-latest-windows-10-update"></a>最新の Windows 10 更新プログラムをアンインストールするには
 
@@ -247,7 +247,7 @@ Intune で Windows 10 の機能更新プログラムを使用するには、次�
 
 ## <a name="validation-and-reporting-for-windows-10-updates"></a>Windows 10 の更新プログラムの検証とレポート
 
-Windows 10 の更新プログラム リングと Windows 10 の機能更新プログラムの両方について、[更新プログラムに関する Intune コンプライアンス レポート](windows-update-compliance-reports.md)を使用してデバイスの更新状態を監視します。 このソリューションには、[更新プログラムのコンプライアンス](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor)と Azure サブスクリプションを使用します。
+Windows 10 の更新プログラム リングと Windows 10 の機能更新プログラムの両方について、[更新プログラムに関する Intune コンプライアンス レポート](windows-update-compliance-reports.md)を使用してデバイスの更新状態を監視します。 このソリューションには、[更新プログラムのコンプライアンス](/windows/deployment/update/update-compliance-monitor)と Azure サブスクリプションを使用します。
 
 ## <a name="next-steps"></a>次のステップ
 

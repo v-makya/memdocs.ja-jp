@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d07b87bca934dac924f2d2c281ecb7b2a2e8a2c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a61e92265447f8ceced83d493b9397713b67dca6
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989785"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909433"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Intune を使用してアプリベースの条件付きアクセス ポリシーを設定する
 
@@ -32,7 +32,7 @@ ms.locfileid: "83989785"
 アプリベースの条件付きアクセス ポリシーを使用する前に、[Intune アプリ保護ポリシー](../apps/app-protection-policies.md)をアプリに適用する必要があります。
 
 > [!IMPORTANT]
-> この記事では、シンプルなアプリベースの条件付きアクセス ポリシーを追加する手順について説明します。 他のクラウド アプリに対しても同じ手順を使用できます。 詳細については、[条件付きアクセスの展開を計画する方法](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access)に関する記事をご覧ください
+> この記事では、シンプルなアプリベースの条件付きアクセス ポリシーを追加する手順について説明します。 他のクラウド アプリに対しても同じ手順を使用できます。 詳細については、[条件付きアクセスの展開を計画する方法](/azure/active-directory/conditional-access/plan-conditional-access)に関する記事をご覧ください
 
 ## <a name="create-app-based-conditional-access-policies"></a>アプリベースの条件付きアクセス ポリシーを作成する
 
@@ -72,4 +72,4 @@ Microsoft Endpoint Manager admin center から条件付きアクセス ポリシ
 ## <a name="see-also"></a>関連項目
 
 [アプリ保護ポリシーでアプリ データを保護する](../apps/app-protection-policies.md)
-[Azure Active Directory の条件付きアクセス](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
+[Azure Active Directory の条件付きアクセス](/azure/active-directory/active-directory-conditional-access)

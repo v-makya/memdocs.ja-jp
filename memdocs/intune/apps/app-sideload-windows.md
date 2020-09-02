@@ -16,19 +16,19 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da43cab373021107a940ce0bd71c0f4986d5e907
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: fb981563c2d98389f6d1dda4d050e391e9ad5637
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179623"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910470"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Intune を使用して Windows デバイスに展開できるように基幹業務アプリに署名する
 
 Intune 管理者は、ポータル サイト アプリを含め、基幹業務 (LOB) ユニバーサル アプリを Windows 8.1 Desktop デバイスまたは Windows 10 Desktop および Mobile デバイスに展開することができます。 *.appx* アプリを Windows 8.1 Desktop デバイスまたは Windows 10 Desktop および Mobile デバイスに展開するには、Windows デバイスによって既に信頼されている公開証明機関からのコード署名証明書を使用するか、独自の証明機関を使用することができます。
 
  > [!NOTE]
- > Windows 8.1 Desktop では、サイドローディングを有効にするエンタープライズ ポリシー、または (ドメイン参加済みデバイスに対して自動的に有効にされる) サイドローディング キーの使用が必要です。 詳しくは、[Windows 8 のサイドローディング](https://blogs.technet.microsoft.com/scd-odtsp/2012/09/27/windows-8-sideloading-requirements-from-technet/)に関するページをご覧ください。
+ > Windows 8.1 Desktop では、サイドローディングを有効にするエンタープライズ ポリシー、または (ドメイン参加済みデバイスに対して自動的に有効にされる) サイドローディング キーの使用が必要です。 詳しくは、[Windows 8 のサイドローディング](/archive/blogs/scd-odtsp/windows-8-sideloading-requirements-from-technet)に関するページをご覧ください。
 
 ## <a name="windows-10-sideloading"></a>Windows 10 でのサイドローディング
 
@@ -36,11 +36,11 @@ Windows 10 でのサイドローディングは、以前のバージョンの Wi
 
 - エンタープライズ ポリシーを使用して、デバイスのサイドローディングをロック解除できます。 Intune には、"信頼できるアプリのインストール" というデバイス構成ポリシーが用意されています。 appx アプリの署名に使用された証明書を既に信頼しているデバイスで必要なのは、これを <allow> に設定することだけです。
 
-- Symantec Phone 証明書とサイドローディング ライセンス キーは必要ありません。 ただし、オンプレミスの証明機関を使用できない場合は、公開証明機関からコード署名証明書を取得することが必要になる場合があります。 詳しくは、「[コード署名の概要](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing)」をご覧ください。
+- Symantec Phone 証明書とサイドローディング ライセンス キーは必要ありません。 ただし、オンプレミスの証明機関を使用できない場合は、公開証明機関からコード署名証明書を取得することが必要になる場合があります。 詳しくは、「[コード署名の概要](/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing)」をご覧ください。
 
 ### <a name="code-sign-your-app"></a>アプリにコード署名する
 
-最初の手順では、appx パッケージにコード署名します。 詳細については、「[SignTool を使ってアプリ パッケージに署名する](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool)」を参照してください。
+最初の手順では、appx パッケージにコード署名します。 詳細については、「[SignTool を使ってアプリ パッケージに署名する](/windows/uwp/packaging/sign-app-package-using-signtool)」を参照してください。
 
 ### <a name="upload-your-app"></a>アプリをアップロードする
 
@@ -98,7 +98,7 @@ Microsoft Store へのアクセスを提供したくない場合は、Intune を
       <img alt="Error message - The Windows app dependency must be provided." src="./media/app-sideload-windows/Win10CP-error-message.png" width="200">
 6. Intune に戻り、ポータル サイト アプリを新しいアプリとしてアップロードします。 これを必要なアプリとして対象の一連のターゲット ユーザーに展開します。  
 
-Intune がユニバーサル アプリ用に依存関係をどのように処理するかについて詳しくは、「[Deploying an appxbundle with dependencies via Microsoft Intune MDM (Microsoft Intune MDM 経由で依存関係を使用して appxbundle を展開する)](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/)」ご覧ください。  
+Intune がユニバーサル アプリ用に依存関係をどのように処理するかについて詳しくは、「[Deploying an appxbundle with dependencies via Microsoft Intune MDM (Microsoft Intune MDM 経由で依存関係を使用して appxbundle を展開する)](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm)」ご覧ください。  
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>ユーザーがストアから古いアプリを既にインストールしている場合に、ユーザーのデバイスのポータル サイトを更新する方法
 
@@ -136,4 +136,4 @@ Intune がユニバーサル アプリ用に依存関係をどのように処理
 |      PublisherId      |      エンタープライズの発行者 ID 指定しない場合、Symantec エンタープライズ モバイル コード署名証明書の 'Subject' フィールドが使用されます。       |
 |        SdkPath        | Windows SDK for Windows 10 のルート フォルダーへのパス この引数は省略可能で、既定値は ${env:ProgramFiles(x86)}\Windows Kits\10 です。 |
 
-実行が終了したら、スクリプトにより Windows 10 ポータル サイト アプリの署名されたバージョンが出力されます。 その後、アプリの署名されたバージョンを Intune 経由で LOB アプリとして展開できます。これにより、現在展開されているバージョンがこの新しいアプリにアップグレードされます。  
+実行が終了したら、スクリプトにより Windows 10 ポータル サイト アプリの署名されたバージョンが出力されます。 その後、アプリの署名されたバージョンを Intune 経由で LOB アプリとして展開できます。これにより、現在展開されているバージョンがこの新しいアプリにアップグレードされます。

@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: b4523db7f2c7bb27542e7cb3e909ece7c93a996f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455244"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915417"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Microsoft Enterprise Mobility + Security (EMS) で BYOD を有効にするための技術の決定事項
 
@@ -33,7 +33,7 @@ ms.locfileid: "84455244"
 * メール アカウントが Exchange Online でホストされていること
 
 ## <a name="common-reasons-to-manage-the-device-mdm"></a>デバイスを管理する場合の一般的な理由 (MDM)
-Exchange Online に[条件付きアクセス](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) ポリシーを展開することで、デバイス管理へのデバイスの登録をユーザーに簡単に促すことができます。 個人デバイスの管理が必要な理由としては次のようなものがあります。
+Exchange Online に[条件付きアクセス](/azure/active-directory/active-directory-conditional-access-azure-portal) ポリシーを展開することで、デバイス管理へのデバイスの登録をユーザーに簡単に促すことができます。 個人デバイスの管理が必要な理由としては次のようなものがあります。
 
 **WiFi/VPN** – ユーザーが生産性を向上させる企業接続プロファイルを必要としている場合は、シームレスに構成できます。
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7163a8a615edd8f1b813801aab1e499ab30e0c20
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4ce8f787c8ba2b08cc47d8f1431ea7d4bdce5e58
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991007"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914737"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Microsoft Intune での SCEP 証明書プロファイルのトラブルシューティングの概要
 
@@ -80,7 +80,7 @@ Intune の SCEP 通信プロセスの基本的な概要を次の図に示しま�
 
 - **NDESConnector_date_time.svclog**:
 
-  このログには、Microsoft Intune Certificate Connector から Intune クラウド サービスへの通信が示されます。 このログ ファイルを表示するには、[サービス トレース ビューアー ツール](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)を使用できます。
+  このログには、Microsoft Intune Certificate Connector から Intune クラウド サービスへの通信が示されます。 このログ ファイルを表示するには、[サービス トレース ビューアー ツール](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)を使用できます。
 
   関連するレジストリ キー:*HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -88,7 +88,7 @@ Intune の SCEP 通信プロセスの基本的な概要を次の図に示しま�
 
 - **CertificateRegistrationPoint_date_time.svclog**:
 
-  このログには、証明書の要求を受信および確認する NDES ポリシー モジュールが示されます。 このログ ファイルを表示するには、[サービス トレース ビューアー ツール](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)を使用できます。
+  このログには、証明書の要求を受信および確認する NDES ポリシー モジュールが示されます。 このログ ファイルを表示するには、[サービス トレース ビューアー ツール](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)を使用できます。
 
   場所: *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs* の NDES をホストするサーバー上
 
@@ -148,4 +148,4 @@ Windows を実行するデバイスの場合、Windows イベント ログを使
 
 ## <a name="next-steps"></a>次のステップ
 
-[SCEP 証明書プロファイルの展開](troubleshoot-scep-certificate-profile-deployment.md)を確認します 
+[SCEP 証明書プロファイルの展開](troubleshoot-scep-certificate-profile-deployment.md)を確認します

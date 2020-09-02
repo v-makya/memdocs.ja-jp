@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c6f2eb7d6174c706cdd8a3910df1d0ddc2e6ef0
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: acc61df344cb4134a863d75fff517047e78d067d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110683"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914788"
 ---
 # <a name="troubleshoot-pkcs-certificate-deployment-in-microsoft-intune"></a>Microsoft Intune での PKCS 証明書の展開のトラブルシューティング
 
@@ -39,7 +39,7 @@ PKCS 証明書プロファイルに関する問題の最も一般的な原因は
 - **証明機関**:証明機関のコンピューターの内部 FQDN。 たとえば、server1.domain.local。
 - **証明機関名**:証明機関 MMC に表示される証明機関名。 **[証明機関 (ローカル)]** 下を確認してください
 
-CA 上で [certutil コマンドライン プログラム](https://docs.microsoft.com/windows-server/administration/windows-commands/certutil)を使用して、[証明機関] および [証明機関名] の正しい名前を確認できます。
+CA 上で [certutil コマンドライン プログラム](/windows-server/administration/windows-commands/certutil)を使用して、[証明機関] および [証明機関名] の正しい名前を確認できます。
 
 ## <a name="pkcs-communication-overview"></a>PKCS 通信の概要
 
@@ -76,7 +76,7 @@ CA 上で [certutil コマンドライン プログラム](https://docs.microsof
 
 - **NDESConnector_date_time.svclog**:
 
-  このログには、Microsoft Intune Certificate Connector から Intune クラウド サービスへの通信が示されます。 このログ ファイルを表示するには、[サービス トレース ビューアー ツール](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)を使用できます。
+  このログには、Microsoft Intune Certificate Connector から Intune クラウド サービスへの通信が示されます。 このログ ファイルを表示するには、[サービス トレース ビューアー ツール](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)を使用できます。
 
   関連するレジストリ キー:*HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
@@ -84,7 +84,7 @@ CA 上で [certutil コマンドライン プログラム](https://docs.microsof
 
 - **CertificateRegistrationPoint_date_time.svclog**:
 
-  このログには、証明書の要求を受信および確認する NDES ポリシー モジュールが示されます。 このログ ファイルを表示するには、[サービス トレース ビューアー ツール](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)を使用できます。
+  このログには、証明書の要求を受信および確認する NDES ポリシー モジュールが示されます。 このログ ファイルを表示するには、[サービス トレース ビューアー ツール](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe)を使用できます。
 
   場所: *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs* の NDES をホストするサーバー上
 
@@ -217,7 +217,7 @@ IssuePfx - COMException: System.Runtime.InteropServices.COMException (0x80094015
 
 **解決方法**:
 
-NDES コネクタをホストするコンピューター上で、証明書の登録ポリシー サーバーの名前を手動で構成します。 名前を構成するには、[Add-CertificateEnrollmentPolicyServer](https://docs.microsoft.com/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) PowerShell コマンドレットを使用します。
+NDES コネクタをホストするコンピューター上で、証明書の登録ポリシー サーバーの名前を手動で構成します。 名前を構成するには、[Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) PowerShell コマンドレットを使用します。
 
 ### <a name="the-submission-is-pending"></a>送信が保留中です
 

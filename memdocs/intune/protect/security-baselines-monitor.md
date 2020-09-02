@@ -16,12 +16,12 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cecd39bcba7e16cc933086c99bbc0b403381d75d
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 1ccf9801c7a5977485c6c1864a69be2e46a4af55
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461795"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914873"
 ---
 # <a name="monitor-security-baselines-and-profiles-in-microsoft-intune"></a>Microsoft Intune でセキュリティのベースラインとプロファイルを監視する
 
@@ -168,7 +168,7 @@ Windows 10 デバイスには、組み込みの MDM 診断情報レポートが�
 
   たとえば、 **[Enrolled configuration sources and target resources]\(登録済みの構成ソースとターゲット リソース\)** セクションや **[Unmanaged policies]\(管理されていないポリシー\)** セクションを調べます。 エラーや競合の原因となっている理由を把握できます。
 
-[[Diagnose MDM failures in Windows 10]\(Windows 10 の MDM エラーを診断する\)](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) を使用すると、この組み込みレポートに関する詳細情報が表示されます。
+[[Diagnose MDM failures in Windows 10]\(Windows 10 の MDM エラーを診断する\)](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) を使用すると、この組み込みレポートに関する詳細情報が表示されます。
 
 > [!TIP]
 >

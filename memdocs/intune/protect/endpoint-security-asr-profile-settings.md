@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 36dca5ce8bb0fc3523bcd72441e3ecf22931609b
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: a2b404e1741c93a6dbf5023f394f3b9528020617
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146033"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913462"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Intune のエンドポイント セキュリティの攻撃の回避ポリシー設定
 
@@ -177,7 +177,7 @@ ms.locfileid: "88146033"
 ### <a name="microsoft-defender-application-control"></a>Microsoft Defender アプリケーション制御
 
 - **App Locker アプリケーション コントロール**  
-  CSP:[AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+  CSP:[AppLocker](/windows/client-management/mdm/applocker-csp)
 
   - **[未構成]** ("*既定値*")
   - **コンポーネントとストア アプリの適用**
@@ -397,7 +397,7 @@ ms.locfileid: "88146033"
   - **はい** - ユーザーが Windows にログインするまで、ホット プラグ可能なすべての PCI ダウンストリーム ポートへの直接メモリ アクセス (DMA) が禁止されます。 ユーザーがログインすると、ホスト プラグ PCI ポートに接続されている PCI デバイスが Windows によって列挙されます。 ユーザーがコンピューターをロックするたびに、ユーザーが再ログインするまで、子デバイスが接続されていないホット プラグ PCI ポートで DMA がブロックされます。 コンピューターのロックが解除されたときに既に列挙されていたデバイスは、取り外されるまで機能を維持します。
 
 - **Kernel DMA Protection と互換性のない外部デバイスの列挙**  
-  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP: [DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   このポリシーでは、外部 DMA 対応デバイスに対して追加のセキュリティを提供することができます。 これにより、DMA の再マッピング/デバイス メモリの分離およびサンドボックス化と互換性のない外部 DMA 対応デバイスの列挙をより詳細に制御できます。
 
@@ -408,40 +408,40 @@ ms.locfileid: "88146033"
   - **すべて許可**
 
 - **Bluetooth 接続をブロックする**  
-  CSP:[Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  CSP:[Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
   - **[未構成]** ("*既定値*")
   - **はい** - デバイスとの Bluetooth 接続をブロックします。
 
 - **Bluetooth の検出機能をブロックする**  
-  CSP:[Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  CSP:[Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
   - **[未構成]** ("*既定値*")
   - **はい** - このデバイスは他の Bluetooth 対応デバイスで検出されなくなります。
 
 - **Bluetooth の事前ペアリングをブロックする**  
-  CSP:[Bluetooth/AllowPrepairing](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
+  CSP:[Bluetooth/AllowPrepairing](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
 
   - **[未構成]** ("*既定値*")
   - **はい** - 特定の Bluetooth デバイスがホスト デバイスと自動的にペアリングできなくなります。
 
 - **Bluetooth 広告をブロックする**  
-  CSP:[Bluetooth/AllowAdvertising](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+  CSP:[Bluetooth/AllowAdvertising](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
 
   - **[未構成]** ("*既定値*")
   - **はい** - デバイスは Bluetooth 広告を送信できなくなります。  
 
 - **Bluetooth の近位接続をブロックする**  
-  CSP:[Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections) ユーザーがクイック ペアリングやその他の近接通信ベースのシナリオを利用することをブロックします
+  CSP:[Bluetooth/AllowPromptedProximalConnections](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections) ユーザーがクイック ペアリングやその他の近接通信ベースのシナリオを利用することをブロックします
 
   - **[未構成]** ("*既定値*")
   - **はい** - デバイス ユーザーがクイック ペアリングやその他の近接通信ベースのシナリオを使用できないようになります。  
 
-  [Bluetooth/AllowPromptedProximalConnections CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
+  [Bluetooth/AllowPromptedProximalConnections CSP](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **Bluetooth を使用できるサービス**  
-  CSP:[Bluetooth/ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist)。  
-  サービスの一覧の詳細については、[ServicesAllowedList 使用ガイド](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide) ページを参照してください
+  CSP:[Bluetooth/ServicesAllowedList](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist)。  
+  サービスの一覧の詳細については、[ServicesAllowedList 使用ガイド](/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide) ページを参照してください
 
   - **追加** - 許可される Bluetooth のサービスとプロファイルの一覧を 16 進数文字列 (例: `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`) で指定します。
   - **インポート** - Bluetooth のサービスとプロファイルの一覧 (`{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}` のような 16 進数文字) が含まれる .csv ファイルをインポートします。

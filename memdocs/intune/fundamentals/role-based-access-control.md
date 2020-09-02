@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cb4631b31d33e53b6ef172f142735d24a5c3cb6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0a0b1913b200c8316be98cc7df5de4b8d63d0d18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80220168"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911439"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Microsoft Intune でのロールベースのアクセス制御 (RBAC)
 
 ロールベースのアクセス制御 (RBAC) は、組織のリソースにアクセスできるユーザー、およびそれらのリソースを使ってできることを管理するのに役立ちます。  Intune ユーザーに[ロールを割り当て](assign-role.md)ることで、ユーザーが表示および変更できることを制限できます。 各ロールには、組織内でそのロールを持つユーザーがアクセスおよび変更できることを決定する一連のアクセス許可があります。
 
 ロールを作成、編集、または割り当てるには、アカウントに Azure AD の次のいずれかのアクセス許可が必要です。
-- **グローバル管理者**
+- **全体管理者**
 - **Intune サービス管理者** (**Intune 管理者** とも呼ばれます)
 
 Intune RBAC に関するアドバイスと提案については、例とチュートリアルを紹介する、この一連の 5 つのビデオをご覧ください:[1](https://www.youtube.com/watch?v=5deXLMLcnKY)、[2](https://www.youtube.com/watch?v=38dnMBLuxbQ)、[3](https://www.youtube.com/watch?v=6vqg9cAkMbY)、[4](https://www.youtube.com/watch?v=5yOLajFFMHE)、[5](https://www.youtube.com/watch?v=P5DDvsSF4Wk)。
 
-## <a name="roles"></a>役割
+## <a name="roles"></a>ロール
 ロールは、そのロールに割り当てられたユーザーに付与される一連のアクセス許可を定義します。
 組み込みロールとカスタム ロールの両方を使用できます。 組み込みロールは、Intune の一般的なシナリオをカバーしています。 必要な一連のアクセス許可だけを使用して、[独自のカスタム ロールを作成](create-custom-role.md)することができます。 いくつかの Azure Active Directory ロールには、Intune へのアクセス許可があります。
 ロールを表示するには、 **[Intune]**  >  **[ロール]**  >  **[すべてのロール]** の順に選択し、ロールを選択します。 次のページが表示されます。
@@ -43,13 +43,13 @@ Intune RBAC に関するアドバイスと提案については、例とチュ�
 - **アクセス許可**:ロールが持つアクセス許可の定義を切り替える長いセットを一覧表示します。
 - **割り当て**:どのユーザーがどのユーザー/デバイスへのアクセス権を持つかを定義する[ロールの割り当て]( assign-role.md)のリスト。 ロールは複数の割り当てを持つことができ、ユーザーは複数の割り当てを受けることができます。
 
-### <a name="built-in-roles"></a>組み込みロール
+### <a name="built-in-roles"></a>組み込みのロール
 追加の構成を行うことなく、組み込みロールをグループに割り当てることができます。 組み込みロールの名前、説明、種類、またはアクセス許可を削除または編集することはできません。
 
 - **ヘルプ デスク オペレーター**:ユーザーとデバイスに対するリモート タスクを実行し、ユーザーやデバイスにアプリケーションやポリシーを割り当てることができます。
 - **ポリシーおよびプロファイル マネージャー**:コンプライアンス ポリシー、構成プロファイル、Apple の登録、企業デバイスの識別子、セキュリティ ベースラインを管理します。
-- **読み取り専用オペレーター**:ユーザー、デバイス、登録、構成、アプリケーション情報を表示します。 Intune に変更を加えることはできません。
-- **アプリケーション マネージャー**:モバイルとマネージド アプリケーションを管理し、デバイス情報を読み取り、デバイス構成プロファイルを表示することができます。
+- **読み取り専用オペレーター**: ユーザー、デバイス、登録、構成、アプリケーション情報を表示します。 Intune に変更を加えることはできません。
+- **アプリケーション マネージャー**: モバイルとマネージド アプリケーションを管理し、デバイス情報を読み取り、デバイス構成プロファイルを表示することができます。
 - **Intune ロール管理者**:Intune のカスタム ロールを管理し、Intune の組み込みロールの割り当てを追加します。 アクセス許可を管理者に割り当てられるのは、Intune ロールだけです。
 - **学校管理者**:[Intune for Education](introduction-intune-education.md) で Windows 10 デバイスを管理します。
 - **エンドポイント セキュリティ マネージャー**:セキュリティ基準、デバイス コンプライアンス、条件付きアクセス、Microsoft Defender ATP などのセキュリティとコンプライアンスの機能を管理します。
@@ -68,10 +68,10 @@ Intune RBAC に関するアドバイスと提案については、例とチュ�
 | セキュリティ閲覧者 | 読み取り専用 | 読み取り専用 |
 | コンプライアンス管理者 | なし | 読み取り専用 |
 | コンプライアンス データ管理者 | なし | 読み取り専用 |
-| グローバル閲覧者 | 読み取り専用 | 読み取り専用 |
+| グローバル閲覧者 | [読み取り専用] | [読み取り専用] |
 
 > [!TIP]
-> Intune には 3 つの Azure AD 拡張機能も表示されます。**ユーザー**、**グループ**、**条件付きアクセス**です。これらは、Azure AD RBAC を使用して制御されされます。 また、**ユーザーアカウント管理者**は AAD ユーザー/グループのアクティビティのみを実行します。Intune のすべてのアクティビティを実行する完全なアクセス許可はありません。 詳細については、[Azure AD での RBAC](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles) に関するページを参照してください。
+> Intune には 3 つの Azure AD 拡張機能も表示されます。**ユーザー**、**グループ**、**条件付きアクセス**です。これらは、Azure AD RBAC を使用して制御されされます。 また、**ユーザーアカウント管理者**は AAD ユーザー/グループのアクティビティのみを実行します。Intune のすべてのアクティビティを実行する完全なアクセス許可はありません。 詳細については、[Azure AD での RBAC](/azure/active-directory/active-directory-assign-admin-roles) に関するページを参照してください。
 
 ## <a name="role-assignments"></a>ロールの割り当て
 ロールの割り当ては次を定義します。
@@ -96,5 +96,5 @@ Intune RBAC に関するアドバイスと提案については、例とチュ�
 - 異なる種類のオブジェクト (ポリシーやアプリなど) に対するアクセス許可やスコープのタグが、相互に適用されることはありません。 たとえば、ポリシーの読み取りアクセス許可では、ユーザーの割り当てでアプリへの読み取りアクセス許可は提供されません。
 
 ## <a name="next-steps"></a>次のステップ
-- [ロールをユーザーに割り当てる](assign-role.md)
-- [カスタム ロールを作成する](create-custom-role.md)
+- [ユーザーにロールを割り当てる](assign-role.md)
+- [カスタム ロールの作成](create-custom-role.md)

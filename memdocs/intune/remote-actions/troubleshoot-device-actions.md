@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ad644d8438b23f36eccad24bee31ee92de5c040
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: d5b80cd7c90b7899e25b14c4cb2de1590530f43a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078850"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910810"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Intune でのデバイス アクションのトラブルシューティング
 
@@ -99,7 +99,7 @@ Graph Explorer では、次のクエリを使用してコードを確認でき�
 ### <a name="i-cant-restart-a-windows-10-device-after-using-the-wipe-action"></a>ワイプ操作を使用した後で Windows 10 デバイスを再起動できません
 このようになる可能性があるのは、 **[デバイスをワイプして、デバイスの電源が切れてもワイプを続行します。このオプションを選択すると、一部の Windows 10 デバイスが再起動しなくなる可能性があることに注意してください。]** を、Windows 10 デバイスで選択した場合です。
 
-これは、Windows のインストールにオペレーティング システムの再インストールが妨げられるような重大な破損がある場合に、発生する可能性があります。 そのような場合、プロセスは失敗し、システムは [Windows 回復環境]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)のままになります。
+これは、Windows のインストールにオペレーティング システムの再インストールが妨げられるような重大な破損がある場合に、発生する可能性があります。 そのような場合、プロセスは失敗し、システムは [Windows 回復環境]( /windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)のままになります。
 
 ### <a name="i-cant-restart-a-bitlocker-encrypted-device-after-using-the-wipe-action"></a>ワイプ操作を使用した後、BitLocker で暗号化されたデバイスを再起動できません
 このようになる可能性があるのは、 **[デバイスをワイプして、デバイスの電源が切れてもワイプを続行します。このオプションを選択すると、一部の Windows 10 デバイスが再起動しなくなる可能性があることに注意してください。]** オプションを、BitLocker で暗号化されたデバイスで選択した場合です。

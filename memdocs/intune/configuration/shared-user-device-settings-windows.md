@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f013074ac67b7622b509d8b9781de3ab5f4041e0
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: d3a1a66988f922a293187f3ed30e3659dee567b1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429502"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915706"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Intune を使用して共有デバイスを管理するための Windows 10 以降の設定
 
@@ -32,7 +32,7 @@ Microsoft Surface などの、Windows 10 以降のデバイスは、多くのユ
 
 この記事では、管理者が Windows 10 (およびそれ以降の) デバイス構成プロファイルで使用する設定のリストを示して説明します。 Intune でプロファイルが作成されると、そのプロファイルを組織内のデバイス グループにデプロイするか割り当てます。 このプロファイルは、さまざまな種類のデバイスやさまざまなバージョンの OS から成るデバイス グループに割り当てることもできます。
 
-Intune でのこの機能の詳細については、[共有 PC またはマルチユーザー デバイスでのアクセス、アカウント、および電源機能の制御](shared-user-device-settings.md)に関するページを参照してください。 Windows CSP の詳細については、「[SharedPC CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp)」を参照してください。
+Intune でのこの機能の詳細については、[共有 PC またはマルチユーザー デバイスでのアクセス、アカウント、および電源機能の制御](shared-user-device-settings.md)に関するページを参照してください。 Windows CSP の詳細については、「[SharedPC CSP](/windows/client-management/mdm/sharedpc-csp)」を参照してください。
 
 ## <a name="before-your-begin"></a>作業を開始する前に
 
@@ -40,7 +40,7 @@ Intune でのこの機能の詳細については、[共有 PC またはマル�
 
 ## <a name="shared-multi-user-device-settings"></a>共有のマルチユーザー デバイスの設定
 
-これらの設定では、[SharedPC CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp) が使用されます。
+これらの設定では、[SharedPC CSP](/windows/client-management/mdm/sharedpc-csp) が使用されます。
 
 - **共有 PC モード**: **[有効にする]** にすると、共有 PC モードが有効になります。 このモードでは、一度に 1 人のユーザーのみがデバイスにサインインします。 別のユーザーは、最初のユーザーがサインアウトするまでサインインできません。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。
 - **Guest アカウント**:サインイン画面でゲスト オプションを作成する場合は、これを選択します。 Guest アカウントでは、ユーザーの資格情報や認証は必要ありません。 この設定では、使用されるたびに新しいローカル アカウントが作成されます。 次のようなオプションがあります。
@@ -92,10 +92,10 @@ Intune でのこの機能の詳細については、[共有 PC またはマル�
   - **有効**: より制限の厳しい、学校で使用されるデバイスの推奨設定を使用します。
   - **Disabled**:既定および推奨される教育ポリシーは使用されません。
 
-  教育ポリシーで行う内容について詳しくは、「[教育ユーザーのための Windows 10 構成の推奨事項](https://docs.microsoft.com/education/windows/configure-windows-for-education)」を参照してください。
+  教育ポリシーで行う内容について詳しくは、「[教育ユーザーのための Windows 10 構成の推奨事項](/education/windows/configure-windows-for-education)」を参照してください。
 
 > [!TIP]
-> [共有またはゲスト PC の設定](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc)に関する記事 (別のドキュメントの Web サイトが開きます) は、概念や、共有モードで設定できるグループ ポリシーなど、この Windows 10 機能について推奨されるリソースです。
+> [共有またはゲスト PC の設定](/windows/configuration/set-up-shared-or-guest-pc)に関する記事 (別のドキュメントの Web サイトが開きます) は、概念や、共有モードで設定できるグループ ポリシーなど、この Windows 10 機能について推奨されるリソースです。
 
 ## <a name="next-steps"></a>次のステップ
 

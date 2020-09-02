@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49d1b8f407814fd368a7ff45bb94bc4c5ef7fd9d
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 88b7f41b873697a7ec34bd1fc2f1098384ab1c18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556287"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915723"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Intune を使用して共有デバイスを管理するための Windows Holographic for Business の設定
 
@@ -32,7 +32,7 @@ Microsoft HoloLens などの Windows Holographic for Business デバイスは、
 
 この記事では、管理者が Windows Holographic for Business デバイス構成プロファイルで使用する設定の一覧を示して説明します。 Intune でプロファイルが作成されると、そのプロファイルを組織内のデバイス グループにデプロイするか割り当てます。 このプロファイルは、さまざまな種類のデバイスやさまざまなバージョンの OS から成るデバイス グループに割り当てることもできます。
 
-Intune でのこの機能の詳細については、[共有 PC またはマルチユーザー デバイスでのアクセス、アカウント、および電源機能の制御](shared-user-device-settings.md)に関するページを参照してください。 Windows CSP の詳細については、「[AccountManagement CSP](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp)」を参照してください。
+Intune でのこの機能の詳細については、[共有 PC またはマルチユーザー デバイスでのアクセス、アカウント、および電源機能の制御](shared-user-device-settings.md)に関するページを参照してください。 Windows CSP の詳細については、「[AccountManagement CSP](/windows/client-management/mdm/accountmanagement-csp)」を参照してください。
 
 ## <a name="before-your-begin"></a>作業を開始する前に
 

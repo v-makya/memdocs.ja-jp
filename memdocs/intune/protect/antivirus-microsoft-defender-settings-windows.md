@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 92fa75794022123fd9456c40a50780a50f604662
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ff5c8208cb1ee9357c501a3c457bc346879b241d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819781"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906703"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune の Windows 10 Microsoft Defender ウイルス対策ポリシーの設定
 
@@ -36,7 +36,7 @@ ms.locfileid: "88819781"
 **設定**:
 
 - **Turn on cloud-delivered protection (クラウドによる保護を有効にする)**  
-  CSP:[AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP:[AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   既定では、Windows 10 デスクトップ デバイス上の Defender から、検出された問題に関する情報が Microsoft に送信されます。 Microsoft ではその情報を分析し、お客様や他のユーザーに影響する問題の詳細を把握して、改善されたソリューションを提供しています。
 
@@ -45,7 +45,7 @@ ms.locfileid: "88819781"
   - **はい** - クラウドで提供される保護が有効になります。  デバイス ユーザーはこの設定を変更できません。
 
 - **Cloud-delivered protection level (クラウドによる保護レベル)**  
-  CSP:[CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+  CSP:[CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   疑わしいファイルのブロック時とスキャン時に適用する Defender ウイルス対策の度合いを構成します。
   - **未構成** (*既定値*) - 既定の Defender のブロック レベル。
@@ -54,7 +54,7 @@ ms.locfileid: "88819781"
   - **ゼロ トレランス** - 不明な実行可能ファイルをすべてブロックします。
 
 - **Defender クラウド延長タイムアウト (秒単位)**  
-  CSP:[CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
+  CSP:[CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
   Defender ウイルス対策を使用すると、疑わしいファイルが 10 秒間自動的にブロックされ、その間にクラウド内でそれらがスキャンされて、安全であることが確認されます。 このタイムアウトに最大 50 秒を追加できます。
 
@@ -70,17 +70,17 @@ ms.locfileid: "88819781"
 このグループの各設定について、設定を展開し、 **[追加]** を選択して、除外の値を指定できます。
 
 - **Defender の除外されるプロセス**  
-  CSP:[ExcludedProcesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+  CSP:[ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
 
   スキャン中に無視するプロセスによって開かれるファイルの一覧を指定します。 プロセス自体はスキャンから除外されません。
 
 - **スキャンおよびリアルタイム保護から除外するファイル拡張子**  
-  CSP:[ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+  CSP:[ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
 
   スキャン中に無視するファイルの種類について拡張子の一覧を指定します。
 
 - **Defender の除外されるファイルとフォルダー**  
-  CSP:[ExcludedPaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+  CSP:[ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
   スキャン中に無視するファイルとディレクトリ パスの一覧を指定します。
 
@@ -93,7 +93,7 @@ ms.locfileid: "88819781"
 **設定**:
 
 - **リアルタイム保護を有効にする**  
-  CSP:[AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  CSP:[AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   リアルタイム監視機能を使用するには、Windows 10 デスクトップ デバイス上に Defender が必要です。
   - **未構成** (*既定値*) - 設定はシステムの既定値に復元されます
@@ -127,7 +127,7 @@ ms.locfileid: "88819781"
   - **はい** - リアルタイム動作の監視の使用を強制します。 デバイス ユーザーはこの設定を変更できません。
 
 - **Turn on network protection (ネットワーク保護を有効にする)**  
-  CSP:[EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  CSP:[EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
   インターネット上のフィッシング詐欺、悪用ホスト サイト、および悪意のあるコンテンツにアクセスしないように、アプリを使用するデバイス ユーザーを保護します。 保護には、サード パーティ製のブラウザーが危険なサイトに接続するのを防ぐことが含まれます。
 
@@ -321,14 +321,14 @@ ms.locfileid: "88819781"
   署名の確認に使用する間隔を 0 から 24 (時間単位) の範囲で指定します。 値を 0 にすると、新しい署名は確認されなくなります。 値が 2 の場合、2 時間ごとに確認されます。
 
 - **定義ファイルの更新をダウンロードするためのファイル共有を定義する**  
-  CSP:[SignatureUpdateFallbackOrder](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+  CSP:[SignatureUpdateFallbackOrder](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
 
   定義ファイルの更新を取得するダウンロード元の場所として、UNC ファイル共有など、場所を管理します。 指定した更新元の 1 つから定義ファイルの更新が正しくダウンロードされたら、リストの残りの更新元には接続されません。
 
   個別の場所を**追加**したり、.csv ファイルとして場所の一覧を**インポート**したりすることができます。
 
 - **定義ファイルの更新をダウンロードするためのソースの順序を定義する**  
-  CSP:[SignatureUpdateFileSharesSources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+  CSP:[SignatureUpdateFileSharesSources](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
 
   定義ファイルの更新を取得する目的で、指定したダウンロード元に接続する順序を指定します。 指定した更新元の 1 つから定義ファイルの更新が正しくダウンロードされたら、リストの残りの更新元には接続されません。
 
@@ -346,4 +346,3 @@ ms.locfileid: "88819781"
   - **未構成** (*既定値*) - この設定を選択すると、UI と通知が許可されるクライアントの既定値に戻ります。
   - **いいえ** - Defender ユーザー インターフェイス (UI) にアクセスできず、通知は抑制されます。
   - **あり**
-

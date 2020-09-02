@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78b7a0ea6e25754e2839e1fda788b3440eaf3880
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: c2183f68cd49c9ca353511aadb4cb3a0b6901e84
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872054"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915757"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Microsoft Intune での Wi-Fi デバイス構成プロファイルのトラブルシューティング
 
@@ -72,7 +72,7 @@ Intune の Wi-Fi プロファイルの詳細については、[デバイスに W
 
 Android 上の **Omadmlog.log** ファイルには、デバイスにインストールされたときの Wi-Fi プロファイルのアクティビティの詳細が記録されます。 最大 5 つの Omadmlog ログ ファイルが存在する場合があります。 関連するログ エントリを見つけるために役立つので、最後の同期のタイムスタンプを必ず取得してください。
 
-次の例では、[CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) を使用してログを読み取り、"wifimgr" を検索します。
+次の例では、[CMTrace](/configmgr/core/support/cmtrace) を使用してログを読み取り、"wifimgr" を検索します。
 
 > [!div class="mx-imgBorder"]
 > ![Wi-Fi 接続が保存済みのネットワークとして表示される](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
@@ -201,7 +201,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
       > ![Windows 10 デバイスの WiFi プロファイル構成を示すサンプル MDM 診断情報](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)
 
   > [!TIP]
-  > 詳細については、「[Windows 10 での MDM エラーの診断](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)」を参照してください。
+  > 詳細については、「[Windows 10 での MDM エラーの診断](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)」を参照してください。
 
 - Android デバイスでは、信頼されたルート プロファイルと SCEP プロファイルがデバイスにインストールされていない場合、ポータル サイト アプリの Omadmlog ファイルに次のエントリがあります。
 
@@ -236,7 +236,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   - 完全な証明書チェーンの必要なすべての証明書が Android デバイス上にあることを確認します。 そうでない場合、Wi-Fi プロファイルをデバイスにインストールすることができません。 詳細については、「[中間認証局が存在しない](https://developer.android.com/training/articles/security-ssl#MissingCa)」(Android の Web サイトが開きます) を参照してください。
   - Omadmlog をキーワードでフィルター処理し、Wi-Fi プロファイルで使用されている証明書や、プロファイルが正常に適用されたかどうかなどの情報を探します。
 
-    たとえば、[CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) を使用してログを読み取ります。 検索文字列を使用して、"wifimgr" をフィルター処理します。
+    たとえば、[CMTrace](/configmgr/core/support/cmtrace) を使用してログを読み取ります。 検索文字列を使用して、"wifimgr" をフィルター処理します。
 
     > [!div class="mx-imgBorder"]
     > ![Android デバイスで Wi-FiMgr 構成プロファイルを検索するように CMTrace をフィルター処理する](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7858253772b554858209f3524f20bccf08839bd
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: bd15cc44ac3e6d17c36e3b623135b94ddcfcdbc3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217457"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912969"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>モバイル アプリケーション管理に関するトラブルシューティング
 
@@ -59,7 +59,7 @@ ms.locfileid: "88217457"
 プラットフォーム | 通信の種類 | 説明 |
 ---| --- | --- |
 iOS | データ転送ポリシーが "**管理対象アプリのみ**" または "**アプリなし**" に設定されている場合であっても、エンドユーザーは iOS および iPadOS 共有拡張機能を使って、管理対象ではないアプリの職場または学校のデータを開くことができます。 これはデータのリークではないのですか。 | Intune アプリ保護ポリシーは、デバイスを管理しないで iOS および iPadOS 共有拡張機能を制御することはできません。 したがって、**Intune は "企業" データをアプリの外部で共有する前に、データを暗号化します**。 これは、管理対象アプリの外部で "企業" ファイルを開いてみることによって確認できます。 ファイルは暗号化されていて、管理対象アプリの外部では開くことができないはずです。
-iOS | エンドユーザーが **Microsoft Authenticator アプリをインストールするように求められる**のはなぜですか。 | これは、アプリベースの条件付きアクセスが適用される場合に必要です。[承認されたクライアント アプリ](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access)に関する記事を参照してください。
+iOS | エンドユーザーが **Microsoft Authenticator アプリをインストールするように求められる**のはなぜですか。 | これは、アプリベースの条件付きアクセスが適用される場合に必要です。[承認されたクライアント アプリ](/azure/active-directory/conditional-access/app-based-conditional-access)に関する記事を参照してください。
 Android | デバイスを登録せずに MAM アプリ保護を使っている場合でも、エンドユーザーが**ポータル サイト アプリをインストールする必要がある**のはなぜですか。  | Android では、アプリ保護機能の多くはポータル サイト アプリに組み込まれています。 **デバイスの登録が不要な場合でも、ポータル サイト アプリは常に必要です**。 登録を行わないアプリ保護では、エンドユーザーはデバイスにポータル サイト アプリをインストールすることだけが必要です。
 iOS/Android | アプリ保護ポリシーが Outlook アプリの下書きの電子メールに適用されない | Outlook では企業と個人の両方のコンテキストをサポートしているため、下書きの電子メールに MAM は強制されません。
 iOS/Android | WXP の新しいドキュメント (Word、Excel、PowerPoint) にアプリ保護ポリシーが適用されない | WXP では企業と個人の両方のコンテキストをサポートしているため、OneDrive のような特定の企業の場所に保存されるまで、新しいドキュメントに MAM は適用されません。

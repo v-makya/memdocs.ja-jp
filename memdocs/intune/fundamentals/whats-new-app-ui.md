@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 42bcbcdbc6cc6f3256ece2f24114f2d2a52083ce
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048159"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915009"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune とエンド ユーザー アプリの UI の更新
 
@@ -32,7 +32,7 @@ Microsoft Intune アプリに対する最新の更新プログラムについて
 * アプリと登録の変更について、学生と従業員にアラートを表示する。
 * 組織のドキュメントまたはヘルプデスクのプロシージャを更新する。  
 
-従業員または学生である場合は、必ず、ポータル サイトのヘルプ ドキュメントへのリンクとスクリーンショットを確認してください。 ポータル サイト アプリを使用する方法の詳細については、[ポータル サイト ユーザーのヘルプ ドキュメント](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)を参照してください。  
+従業員または学生である場合は、必ず、ポータル サイトのヘルプ ドキュメントへのリンクとスクリーンショットを確認してください。 ポータル サイト アプリを使用する方法の詳細については、[ポータル サイト ユーザーのヘルプ ドキュメント](../user-help/use-managed-devices-to-get-work-done.md)を参照してください。  
 
 ## <a name="week-of-august-10-2020"></a>2020 年 8 月 10 日の週
 
@@ -193,7 +193,7 @@ Apple iOS 12.2 でリリースされた MDM 登録変更に合わせて、iOS �
 * [設定] アプリを開き、デバイスに管理プロファイルをインストールする。  
 * ポータル サイト アプリに戻り、登録を完了する。  
 
-更新された登録の手順と画面については、[Intune への iOS デバイスの登録](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios)に関するページを参照してください。  
+更新された登録の手順と画面については、[Intune への iOS デバイスの登録](../user-help/enroll-your-device-in-intune-ios.md)に関するページを参照してください。  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>iOS 用ポータル サイト アプリに関するユーザー エクスペリエンスの更新プログラム <!-- 2536024 -->
 iOS デバイス用ポータル サイト アプリのホーム ページが再設計されました。 この変更によって、ホーム ページでは iOS UI パターンにより適切に従うようになり、アプリと電子ブックの検出可用性も向上しました。  
@@ -217,7 +217,7 @@ Microsoft Intune 管理者は、iOS ポータル サイト アプリ内のユー
 ## <a name="week-of-august-27-2018"></a>2018 年 8 月 27 日の週  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Intune ポータル サイトの新しいユーザー エクスペリエンスの更新 <!--2000968 -->  
-顧客からのフィードバックに基づいて、Intune ポータル サイト Web サイトに新機能を追加しています。 ご利用のデバイスから、既存の機能と使いやすさの大幅な向上を体験できます。 デバイスの詳細、フィードバックとサポート、デバイスの概要など、サイトの特定の領域には、最新の応答性の高いデザインが採用されるようになりました。 [Intune ポータル サイト Web サイトのドキュメント](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website)は、これらの変更を反映するように更新されています。   
+顧客からのフィードバックに基づいて、Intune ポータル サイト Web サイトに新機能を追加しています。 ご利用のデバイスから、既存の機能と使いやすさの大幅な向上を体験できます。 デバイスの詳細、フィードバックとサポート、デバイスの概要など、サイトの特定の領域には、最新の応答性の高いデザインが採用されるようになりました。 [Intune ポータル サイト Web サイトのドキュメント](../user-help/using-the-intune-company-portal-website.md)は、これらの変更を反映するように更新されています。   
 
 更新プログラムでは、次のような内容を確認できます。  
 
@@ -257,7 +257,7 @@ Windows 用ポータル サイト アプリでアプリを参照または検索�
 
 ## <a name="week-of-april-23-2018"></a>2018 年 4 月 23 日の週
 ### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Windows 10 用ポータル サイト アプリでのナビゲーション ビューの更新 <!-- 1195010 -->
-Windows 10 の Intune ポータル サイト アプリは、[Fluent Design System のナビゲーション ビュー](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics)で更新済みです。 アプリの側面だけでなく、すべてのトップ レベルのページに静的な縦方向リストが表示されます。 リンクをクリックすると、ページをすばやく表示したり、ページを切り替えたりできます。 これは現在作成中の更新の一部であり、今後さらにアダプティブで馴染みがあり、使いやすい Intune の機能を提供していきます。 
+Windows 10 の Intune ポータル サイト アプリは、[Fluent Design System のナビゲーション ビュー](/windows/uwp/design/basics/navigation-basics)で更新済みです。 アプリの側面だけでなく、すべてのトップ レベルのページに静的な縦方向リストが表示されます。 リンクをクリックすると、ページをすばやく表示したり、ページを切り替えたりできます。 これは現在作成中の更新の一部であり、今後さらにアダプティブで馴染みがあり、使いやすい Intune の機能を提供していきます。 
 
 ![Fluent デザイン ナビゲーション ビューが示されている Intune ポータル サイト アプリのダッシュボードのスクリーンショット](./media/whats-new-app-ui/1804_WindowsCP_Fluent_01.png)
 

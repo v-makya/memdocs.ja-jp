@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55e38ac8b5503e98df4878529ac892b55a52be47
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 2c6648f66c585dac5b8913fdb13adfcb98cbf927
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429617"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912697"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Windows 10 デバイス上で Intune を使用してテスト アプリを構成する
 
@@ -49,7 +49,7 @@ ms.locfileid: "83429617"
   - `user@contoso.com`
   - `computerName\username`
 - **[アカウント名]** :ローカルのゲスト アカウントの種類を設定するには、テスト アプリで使用するアカウントの名前を入力します。 このアカウント名は、サインイン画面にタイルとして表示されます。 学生は、このタイルをクリックしてテストを開始します。  
-- **評価 URL**:ユーザーに受けさせるテストの URL を入力します。 URL の取得の詳細については、[テストに関するドキュメント](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)を参照してください。
+- **評価 URL**:ユーザーに受けさせるテストの URL を入力します。 URL の取得の詳細については、[テストに関するドキュメント](/education/windows/take-tests-in-windows-10)を参照してください。
 - **[プリンター接続]** :プリンターに接続されているデバイスからのみテスト アプリへのアクセスを許可するには、 **[必要]** を選択します。 また、この設定により、テストを受けるユーザーがアプリの印刷ボタンを使用できるようになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、学生がプリンターに接続されていないデバイスからアプリにアクセスすることが OS によって許可される場合があります。  
 - **画面の監視**: **[許可]** に設定すると、ユーザーがテストを受けているときに、画面の動作を監視できます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、テスト中に画面を監視することが OS によって禁止される場合があります。
 - **[テキスト候補]** :受験者がテキストの候補を表示できるようにするには、 **[許可]** を選択します。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、ユーザーがテストを受けているときに、OS によってテキストの候補がブロックされる可能性があります。

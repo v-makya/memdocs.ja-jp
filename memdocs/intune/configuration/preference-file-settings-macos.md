@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebf65ecc6dbe5059adbd6fec70833bf2fcab9de7
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 478cce186d5f2943aeb5730acf90c3e875c8b687
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988674"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915315"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Microsoft Intune を使用してプロパティ リスト ファイルを macOS デバイスに追加する
 
@@ -66,7 +66,7 @@ Microsoft Intune を使用すると、macOS デバイス用のプロパティ �
 
     - **[優先ドメイン名]** : バンドル ID を入力します (`com.company.application` など)。 たとえば、「`com.Contoso.applicationName`」、「`com.Microsoft.Edge`」、または「`com.microsoft.wdav`」と入力します。
 
-      通常、プロパティ リスト ファイルは、Web ブラウザー (Microsoft Edge)、[Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)、およびカスタム アプリに使用されます。 優先ドメインを作成すると、バンドル ID も作成されます。
+      通常、プロパティ リスト ファイルは、Web ブラウザー (Microsoft Edge)、[Microsoft Defender Advanced Threat Protection](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)、およびカスタム アプリに使用されます。 優先ドメインを作成すると、バンドル ID も作成されます。
 
     - **[プロパティ リスト ファイル]** : アプリに関連付けられているプロパティ リスト ファイルを選択します。 `.plist` ファイルまたは `.xml` ファイルであることを確認してください。 たとえば、`YourApp-Manifest.plist` ファイルまたは `YourApp-Manifest.xml` ファイルをアップロードします。
 
@@ -97,4 +97,4 @@ Microsoft Intune を使用すると、macOS デバイス用のプロパティ �
 
 [プロファイルを割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
 
-Microsoft Edge 用の設定ファイルの詳細については、[macOS での Microsoft Edge ポリシー設定の構成](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac)に関するページを参照してください。
+Microsoft Edge 用の設定ファイルの詳細については、[macOS での Microsoft Edge ポリシー設定の構成](/deployedge/configure-microsoft-edge-on-mac)に関するページを参照してください。

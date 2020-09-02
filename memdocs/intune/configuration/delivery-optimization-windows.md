@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: e42d7f303d3d79e2683845b50c7d3dceb11f1686
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3ffef32f4f33e79b25145dd4c0257b8a5bcfd32a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820444"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913768"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Microsoft Intune での配信の最適化設定
 
@@ -30,7 +30,7 @@ Intune では、ご利用の Windows 10 デバイスに合わせて配信の最�
 
 Intune でサポートされる配信の最適化設定の一覧については、「[Intune 用の配信最適化の設定](delivery-optimization-settings.md)」を参照してください。  
 
-Windows 10 での配信の最適化について学習するには、Windows ドキュメントの[配信の最適化更新プログラム](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)に関するページを参照してください。  
+Windows 10 での配信の最適化について学習するには、Windows ドキュメントの[配信の最適化更新プログラム](/windows/deployment/update/waas-delivery-optimization)に関するページを参照してください。  
 
 ## <a name="create-the-profile"></a>プロファイルの作成
 

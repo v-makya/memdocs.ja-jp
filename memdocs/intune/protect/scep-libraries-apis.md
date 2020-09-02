@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16b212bde0f46861b8acb1470588b784c6f2a7fb
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 03c43adb14c854b89ef914f0b9b30ea2be690a92
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565667"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906788"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>SCEP 用のサード パーティ CA を Intune に追加するための API の使用
 
@@ -96,7 +96,7 @@ Intune に対して認証するには、SCEP サーバーには Azure アプリ�
 
 SCEP サーバーの管理者がこのデータを取得するには、Azure Portal にサインインし、アプリケーションを登録し、アプリケーションに **Microsoft Intune API\SCEP チャレンジ検証**権限を付与し、アプリケーションのキーを作成し、アプリケーション ID、そのキー、テナント ID をダウンロードする必要があります。
 
-アプリケーションの登録手順および ID とキーの取得方法については、「[リソースにアクセスできる Azure Active Directory アプリケーションとサービス プリンシパルをポータルで作成する](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)」を参照してください。
+アプリケーションの登録手順および ID とキーの取得方法については、「[リソースにアクセスできる Azure Active Directory アプリケーションとサービス プリンシパルをポータルで作成する](/azure/azure-resource-manager/resource-group-create-service-principal-portal)」を参照してください。
 
 ### <a name="java-library-api"></a>Java ライブラリ API
 
@@ -241,7 +241,7 @@ SCEP 要求の処理中にエラーが発生したことを Intune に通知し�
 
 - **transactionId** - SCEP のトランザクション ID
 - **certificateRequest** - 文字列としてエンコードされた、DER によってエンコードされた PKCS #10 証明書要求 Base64
-- **hResult** - 発生したエラーを最も正しく説明する Win32 エラー コード。 「[Win32 エラー コード](https://msdn.microsoft.com/library/cc231199.aspx)」を参照してください。
+- **hResult** - 発生したエラーを最も正しく説明する Win32 エラー コード。 「[Win32 エラー コード](/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d)」を参照してください。
 - **errorDescription** - 発生したエラーの説明
 
 **スロー**:

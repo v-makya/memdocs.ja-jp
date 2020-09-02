@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: d29240dcbcbbcd5a4399dbfb3648c2a6df47764c
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 322e3be8e7421b0c622a8e656a3312791ed7feac
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663431"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913445"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -55,12 +55,12 @@ Microsoft Intune によってサポートされている Microsoft Defender Adva
 
 ご使用の環境が [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites) を使用するための前提条件を満たしている場合は、Microsoft Defender Advanced Threat Protection ベースラインを使用できます。
 
-このベースラインは、物理デバイス用に最適化されており、現在は仮想マシン (VM) や VDI エンドポイントでの使用は推奨されていません。 特定のベースライン設定が、仮想化された環境でのリモート対話型セッションに影響を与える可能性があります。 詳細については、Windows ドキュメントの「[Increase compliance to the Microsoft Defender ATP security baseline (Microsoft Defender ATP のセキュリティ ベースラインに対するコンプライアンスの強化)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)」をご覧ください。
+このベースラインは、物理デバイス用に最適化されており、現在は仮想マシン (VM) や VDI エンドポイントでの使用は推奨されていません。 特定のベースライン設定が、仮想化された環境でのリモート対話型セッションに影響を与える可能性があります。 詳細については、Windows ドキュメントの「[Increase compliance to the Microsoft Defender ATP security baseline (Microsoft Defender ATP のセキュリティ ベースラインに対するコンプライアンスの強化)](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)」をご覧ください。
 
 
 ## <a name="application-guard"></a>Application Guard
 
-詳細については、Windows のドキュメントの「[WindowsDefenderApplicationGuard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp)」を参照してください。  
+詳細については、Windows のドキュメントの「[WindowsDefenderApplicationGuard CSP](/windows/client-management/mdm/windowsdefenderapplicationguard-csp)」を参照してください。  
 
 Microsoft Edge を使用しているとき、ご利用の環境は Windows Defender Application Guard によって、組織で信頼されていないサイトから保護されます。 分離ネットワーク境界のリストに含まれないサイトにユーザーがアクセスすると、そのサイトは Hyper-V 仮想ブラウズ セッションで開きます。 信頼済みサイトは、ネットワーク境界によって定義されます。  
 
@@ -89,7 +89,7 @@ Microsoft Edge を使用しているとき、ご利用の環境は Windows Defen
     - **PC とブラウザーの間でのコピー/貼り付けを許可する** - コンテンツに対するブロックは存在しません。
 
 - **Windows ネットワーク分離ポリシー**  
-  CSP:[ポリシー CSP - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation)
+  CSP:[ポリシー CSP - NetworkIsolation](/windows/client-management/mdm/policy-csp-networkisolation)
 
   "*ネットワーク ドメイン*" のリストを指定します。これらは Application Guard がエンタープライズ サイトとして処理するクラウド内でホストされているエンタープライズ リソースです。
   - **構成** (*既定値*)
@@ -102,7 +102,7 @@ Microsoft Edge を使用しているとき、ご利用の環境は Windows Defen
 
 ## <a name="bitlocker"></a>BitLocker
 
-詳細については、Windows のドキュメントの「[BitLocker グループ ポリシー設定](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings)」を参照してください。
+詳細については、Windows のドキュメントの「[BitLocker グループ ポリシー設定](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings)」を参照してください。
 
 - **ストレージ カードの暗号化が必須 (モバイルのみ)**  
   CSP:[RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)
@@ -290,7 +290,7 @@ Microsoft Edge を使用しているとき、ご利用の環境は Windows Defen
 ## <a name="dma-guard"></a>DMA ガード
 
 - **Kernel DMA Protection と互換性のない外部デバイスの列挙**  
-  CSP: [DmaGuard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP: [DmaGuard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   このポリシーでは、外部 DMA 対応デバイスに対して追加のセキュリティを提供することができます。 これにより、DMA の再マッピング/デバイス メモリの分離およびサンドボックス化と互換性のない外部 DMA 対応デバイスの列挙をより詳細に制御できます。
   
@@ -302,10 +302,10 @@ Microsoft Edge を使用しているとき、ご利用の環境は Windows Defen
 
 ## <a name="endpoint-detection-and-response"></a>エンドポイントの検出と応答
 
-次の設定の詳細については、Windows ドキュメント内の「[WindowsAdvancedThreatProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)」を参照してください。
+次の設定の詳細については、Windows ドキュメント内の「[WindowsAdvancedThreatProtection CSP](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)」を参照してください。
 
 - **すべてのファイルのサンプル共有**:  
-  CSP: [Configuration/SampleSharing](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP: [Configuration/SampleSharing](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Microsoft Defender Advanced Threat Protection サンプル共有の構成パラメーターを返すか設定します。  
   
@@ -313,7 +313,7 @@ Microsoft Edge を使用しているとき、ご利用の環境は Windows Defen
   - **未構成**
 
 - **テレメトリの報告頻度を早める**:  
-  CSP: [Configuration/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP: [Configuration/TelemetryReportingFrequency](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Microsoft Defender Advanced Threat Protection テレメトリの報告頻度を早めます。  
 
@@ -322,7 +322,7 @@ Microsoft Edge を使用しているとき、ご利用の環境は Windows Defen
 
 ## <a name="firewall"></a>ファイアウォール
 
-詳細については、Windows のドキュメントの「[Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)」 (ファイアウォール CSP) を参照してください。
+詳細については、Windows のドキュメントの「[Firewall CSP](/windows/client-management/mdm/firewall-csp)」 (ファイアウォール CSP) を参照してください。
 
 - **ステートフル ファイル転送プロトコル (FTP) を無効にする**  
   CSP:[MdmStore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
@@ -590,7 +590,7 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
   既定では、これは **[午前 2:00]** に設定されます。
 
 - **スケジュールされたスキャン用に低い CPU 優先度を構成**  
-  CSP: [Defender/EnableLowCPUPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
+  CSP: [Defender/EnableLowCPUPriority](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
   -**はい** (*既定値*)
   - **未構成**
@@ -630,7 +630,7 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
   項目が削除されるまでの [検疫] フォルダーでの保管日数を構成します。 既定値はゼロ (**0**) です。この場合、検疫されたファイルは削除されません。
 
 - **Defender システム スキャンのスケジュール**  
-  CSP:[Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+  CSP:[Defender/ScheduleScanDay](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
 
   Defender がデバイスをスキャンする曜日をスケジュールします。 既定では、スキャンは **[ユーザー定義]** になっています。その設定は *[毎日]* にすることも、曜日にすることも、 *[スケジュールされたスキャンはありません]* とすることもできます。
 
@@ -754,7 +754,7 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
   - **未構成** - クライアントはその既定値に戻されます。これにより、ネットワーク ファイルのスキャンが無効にされます。
   
 - **Defender potentially unwanted app action (Defender の望ましくないアプリに対するアクション)**  
-  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+  CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
   望ましくない可能性のあるアプリケーション (PUA) の検出レベルを指定します。 望ましくない可能性のあるソフトウェアをダウンロードするか、デバイスにインストールしようとすると、Defender からユーザーに警告されます。
   - **デバイスの既定**
@@ -762,7 +762,7 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
   - **監査** - Defender で、望ましくない可能性のあるアプリケーションが検出されますが、対策は何も行われません。 イベント ビューアーで Defender によって作成されたイベントを検索することで、Defender でアプリケーションに対して実行されたアクションに関する情報を確認できます。
 
 - **Turn on cloud-delivered protection (クラウドによる保護を有効にする)**  
-  CSP:[AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP:[AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   既定では、Windows 10 デスクトップ デバイス上の Defender から、検出された問題に関する情報が Microsoft に送信されます。 Microsoft ではその情報を分析し、お客様や他のユーザーに影響する問題の詳細を把握して、改善されたソリューションを提供しています。
 
@@ -879,7 +879,7 @@ CSP:[MdmStore/Global/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)
 
 ## <a name="windows-hello-for-business"></a>Windows Hello for Business
 
-詳細については、Windows のドキュメントの「[PassportForWork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp)」を参照してください。
+詳細については、Windows のドキュメントの「[PassportForWork CSP](/windows/client-management/mdm/passportforwork-csp)」を参照してください。
 
 - **Windows Hello for Business をブロックする**  
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69b4df0b5ceb947ab875f82a0d6f5ac59ce89eef
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: e2a00ef50676ee24de30f93ad5b5ddd88192b6db
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252624"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915077"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Intune を使用してデバイスを保護するための Windows 10 (以降) の設定
 
@@ -34,7 +34,7 @@ Microsoft Defender ウイルス対策を構成するには、[Windows 10 のデ�
 
 [エンドポイント保護デバイス構成プロファイルを作成](endpoint-protection-configure.md)します。  
 
-構成サービス プロバイダー (CSP) の詳細については、「[構成サービス プロバイダーのリファレンス](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)」を参照してください。  
+構成サービス プロバイダー (CSP) の詳細については、「[構成サービス プロバイダーのリファレンス](/windows/client-management/mdm/configuration-service-provider-reference)」を参照してください。  
 
 ## <a name="microsoft-defender-application-guard"></a>Microsoft Defender Application Guard  
 
@@ -44,7 +44,7 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
 
 - **[Application Guard]**  
   **既定値**:未構成  
-   Application Guard CSP: [Settings/AllowWindowsDefenderApplicationGuard](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
+   Application Guard CSP: [Settings/AllowWindowsDefenderApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
 
   - **[Edge に対して有効にする]** - この機能をオンにすると、信頼されていないサイトが Hyper-V 仮想ブラウズ コンテナーで開かれます。  
   - **[未構成]** - デバイス上で任意のサイト (信頼されたおよび信頼されていない) を開くことができます。  
@@ -63,7 +63,7 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
 - **[クリップボードの内容]**  
   この設定は、 *[クリップボードの動作]* が "*許可*" 設定の中のいずれかに設定されている場合にのみ使用できます。  
   **既定値**:未構成  
-  Application Guard CSP: [Settings/ClipboardFileType](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
+  Application Guard CSP: [Settings/ClipboardFileType](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
 
   許可されているクリップボードの内容を選択します。  
   - **未構成**  
@@ -315,19 +315,19 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
 
 - **[方向]**    
   **既定値**:未構成  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/Direction](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#direction)  
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/Direction](/windows/client-management/mdm/firewall-csp#direction)  
   
   この規則を**受信**または**送信**トラフィックに適用するかどうかを指定します。 **[未構成]** として設定すると、送信トラフィックに規則が自動的に適用されます。  
 
 - **操作**  
   **既定値**:未構成  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/Action](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#action)、および [FirewallRules/*FirewallRuleName*/Action/Type](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#type)  
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/Action](/windows/client-management/mdm/firewall-csp#action)、および [FirewallRules/*FirewallRuleName*/Action/Type](/windows/client-management/mdm/firewall-csp#type)  
 
   **[許可]** または **[ブロック]** から選択します。 **[未構成]** として設定した場合、既定では規則によってトラフィックが許可されます。  
 
 - **[ネットワークの種類]**  
   **既定値**:0 件選択済み  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/Profiles](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#profiles)  
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/Profiles](/windows/client-management/mdm/firewall-csp#profiles)  
 
   この規則が属するネットワークの種類を最大 3 種類まで選択します。 オプションには、 **[ドメイン]** 、 **[プライベート]** 、 **[パブリック]** があります。  ネットワークの種類を選択しなかった場合、3 種類のネットワークすべてに規則が適用されます。  
 
@@ -338,13 +338,13 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
 
   アプリまたはプログラム用の接続を制御します。 次のいずれかのオプションを選択してから、追加の構成を完了します。  
   - **[パッケージ ファミリ名]** – パッケージ ファミリ名を指定します。 パッケージ ファミリ名を検索するには、PowerShell コマンド **Get-AppxPackage** を使用します。   
-    Firewall CSP: [FirewallRules/*FirewallRuleName*/App/PackageFamilyName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#packagefamilyname)  
+    Firewall CSP: [FirewallRules/*FirewallRuleName*/App/PackageFamilyName](/windows/client-management/mdm/firewall-csp#packagefamilyname)  
  
   - **[ファイル パス]** – クライアント デバイス上のアプリへのファイル パス (絶対パスまたは相対パス) を指定する必要があります。 次に例を示します。C:\Windows\System\Notepad.exe or %WINDIR%\Notepad.exe.  
-    Firewall CSP: [FirewallRules/*FirewallRuleName*/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)  
+    Firewall CSP: [FirewallRules/*FirewallRuleName*/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)  
 
   - **[Windows サービス]** – トラフィックを送信または受信するアプリケーションではなくサービスである場合に、Windows サービスの短い名前を指定します。 サービスの短い名前を検索するには、PowerShell コマンド **Get-Service** を使用します。  
-    Firewall CSP: [FirewallRules/*FirewallRuleName*/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)  
+    Firewall CSP: [FirewallRules/*FirewallRuleName*/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)  
 
   - **[すべて]** – *追加の構成はありません*。  
 
@@ -354,7 +354,7 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
 
 - **[ローカル アドレス]**     
   **既定値**: [任意のアドレス]  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
 
   **[任意のアドレス]** または **[指定されたアドレス]** を選択します。  
 
@@ -367,7 +367,7 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
 
 - **[リモート アドレス]**  
   **既定値**: [任意のアドレス]  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
  
   **[任意のアドレス]** または **[指定されたアドレス]** を選択します。  
 
@@ -392,21 +392,21 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
 
 - **プロトコル**  
   **既定値**:任意  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)  
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/Protocol](/windows/client-management/mdm/firewall-csp#protocol)  
   次の中から選択し、必要な構成を完了します。  
   - **[すべて]** – 追加の構成はありません。  
   - **TCP** – ローカルおよびリモートのポートを構成します。 両方のオプションで、すべてのポートまたは指定されたポートがサポートされます。 コンマ区切りのリストを使用して、指定されたポートを入力します。  
-    - **ローカル ポート** -    ファイアウォール CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
-    - **リモート ポート** -   Firewall CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
+    - **ローカル ポート** -    ファイアウォール CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
+    - **リモート ポート** -   Firewall CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)  
   - **[UDP]** – ローカルおよびリモートのポートを構成します。 両方のオプションで、すべてのポートまたは指定されたポートがサポートされます。 コンマ区切りのリストを使用して、指定されたポートを入力します。  
-    - **ローカル ポート** -    ファイアウォール CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
-    - **リモート ポート** -   Firewall CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
+    - **ローカル ポート** -    ファイアウォール CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
+    - **リモート ポート** -   Firewall CSP: [FirewallRules/*FirewallRuleName*/RemotePortRanges](/windows/client-management/mdm/firewall-csp#remoteportranges)  
   - **[カスタム]** – 0 から 255 までのカスタム **プロトコル**番号を指定します。  
 
 #### <a name="advanced-configuration"></a>詳細構成  
 - **[インターフェイスの種類]**  
   **既定値**:0 件選択済み  
-  Firewall CSP: [FirewallRules/*FirewallRuleName*/InterfaceTypes](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#interfacetypes)  
+  Firewall CSP: [FirewallRules/*FirewallRuleName*/InterfaceTypes](/windows/client-management/mdm/firewall-csp#interfacetypes)  
 
   次のオプションから選択します。  
   - **[リモート アクセス]**  
@@ -483,7 +483,7 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
   - **[Azure AD 参加中の暗号化の有効化を標準ユーザーに許可する]**  
     *この設定は、Azure Active Directory 参加済み (Azure ADJ) のデバイスにのみ適用され、前の設定 [`Warning for other disk encryption`] に依存します。*  
     **既定値**:未構成  
-    BitLocker CSP: [AllowStandardUserEncryption](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
+    BitLocker CSP: [AllowStandardUserEncryption](/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
      - **[許可]** - 標準ユーザー (管理者以外) はサインイン時に BitLocker 暗号化を有効にすることができます。  
      - **[未構成]** - デバイス上で BitLocker 暗号化を有効にすることを管理者にのみ許可します。  
@@ -656,7 +656,7 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
 
   - **クライアント主導の回復パスワードの交換**  
     **既定値**: [Azure AD 参加済みデバイスに対して有効にされたキー交換]  
-    BitLocker CSP: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
+    BitLocker CSP: [ConfigureRecoveryPasswordRotation](/windows/client-management/mdm/bitlocker-csp)  
     
     この設定では、OS ドライブの回復後 (bootmgr または WinRE のいずれかを使用) に、クライアント主導の回復パスワードのローテーションが開始されます。  
 
@@ -780,7 +780,7 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
  
 ## <a name="microsoft-defender-exploit-guard"></a>Microsoft Defender Exploit Guard  
 
-[悪用に対する保護](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/exploit-protection)を使用して、従業員が使用するアプリに対する攻撃を管理し、回避することができます。  
+[悪用に対する保護](/windows/security/threat-protection/microsoft-defender-atp/exploit-protection)を使用して、従業員が使用するアプリに対する攻撃を管理し、回避することができます。  
 
 ### <a name="attack-surface-reduction"></a>攻撃の回避  
 
@@ -790,7 +790,7 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
 
 - **Windows ローカル セキュリティ機関サブシステムからの資格情報の盗難にフラグを設定する**  
   **既定値**:未構成  
-  規則: [Windows ローカル セキュリティ機関サブシステム (lsass.exe) からの資格情報の盗難をブロックする](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+  規則: [Windows ローカル セキュリティ機関サブシステム (lsass.exe) からの資格情報の盗難をブロックする](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   コンピューターを感染させるために、悪用目的のマルウェアによって一般的に使用されるアクションとアプリを防ぐのに役立ちます。  
 
@@ -800,7 +800,7 @@ Application Guard は Windows 10 (64 ビット) デバイスでのみ使用可�
 
 - **[Adobe Reader (ベータ版) からのプロセスの作成]**  
   **既定値**:未構成  
-  規則: [Adobe Reader による子プロセスの作成をブロックする](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
+  規則: [Adobe Reader による子プロセスの作成をブロックする](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
 
   - **未構成**  
   - **[有効]** - Adobe Reader から作成された子プロセスをブロックします。  
@@ -812,7 +812,7 @@ Office アプリによる次の操作をブロックします。
 
 - **他のプロセス内に挿入する Office アプリ (例外なし)**  
   **既定値**:未構成  
-  規則: [Office アプリケーションによる他のプロセスへのコード挿入をブロックする](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
+  規則: [Office アプリケーションによる他のプロセスへのコード挿入をブロックする](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
 
   - **未構成**  
   - **[ブロック]** - Office アプリが他のプロセスに挿入することをブロックします。  
@@ -820,7 +820,7 @@ Office アプリによる次の操作をブロックします。
 
 - **実行可能なコンテンツを作成する Office アプリ/マクロ**  
   **既定値**:未構成  
-  規則: [Office アプリケーションによる実行可能なコンテンツの作成をブロックする](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
+  規則: [Office アプリケーションによる実行可能なコンテンツの作成をブロックする](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
 
   - **未構成**  
   - **[ブロック]** - Office アプリとマクロが、実行可能なコンテンツを作成することをブロックします。  
@@ -828,7 +828,7 @@ Office アプリによる次の操作をブロックします。
 
 - **子プロセスを起動する Office アプリ**  
   **既定値**:未構成  
-  規則: [すべての Office アプリケーションによる子プロセスの作成をブロックする](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
+  規則: [すべての Office アプリケーションによる子プロセスの作成をブロックする](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
 
   - **未構成**  
   - **[ブロック]** - Office アプリが子プロセスを起動することをブロックします。  
@@ -836,7 +836,7 @@ Office アプリによる次の操作をブロックします。
   
 - **Office のマクロ コードからの Win32 のインポート**  
   **既定値**:未構成  
-  規則: [Office マクロからの Win32 API 呼び出しをブロックする](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
+  規則: [Office マクロからの Win32 API 呼び出しをブロックする](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
 
   - **未構成**  
   - **[ブロック]** - Office でマクロ コードから Win32 をインポートすることをブロックします。  
@@ -844,7 +844,7 @@ Office アプリによる次の操作をブロックします。
   
 - **[Office 通信製品からプロセスの作成]**  
   **既定値**:未構成  
-  規則: [Office 通信アプリケーションによる子プロセスの作成をブロックする](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
+  規則: [Office 通信アプリケーションによる子プロセスの作成をブロックする](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
 
   - **未構成**  
   - **[有効]** - Office の通信アプリからの子プロセスの作成をブロックします。  
@@ -856,7 +856,7 @@ Office アプリによる次の操作をブロックします。
 
 - **難読化された js/vbs/ps/マクロ コード**  
   **既定値**:未構成  
-  規則: [難読化された可能性のあるスクリプトの実行をブロックする](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
+  規則: [難読化された可能性のあるスクリプトの実行をブロックする](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
 
   - **未構成**  
   - **[ブロック]** - 難読化された js/vbs/ps/マクロ コードをブロックします。  
@@ -864,7 +864,7 @@ Office アプリによる次の操作をブロックします。
 
 - **インターネットからダウンロードしたペイロードを実行する js/vbs (例外なし)**  
   **既定値**:未構成  
-  規則: [JavaScript または VBScript による、ダウンロードされた実行可能なコンテンツの起動をブロックする](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
+  規則: [JavaScript または VBScript による、ダウンロードされた実行可能なコンテンツの起動をブロックする](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
 
   - **未構成**  
   - **[ブロック]** - js/vbs が、インターネットからダウンロードしたペイロードを実行することをブロックします。  
@@ -872,7 +872,7 @@ Office アプリによる次の操作をブロックします。
 
 - **PSExec および WMI コマンドからのプロセス作成**  
   **既定値**:未構成  
-  規則: [PSExec および WMI コマンドから開始されるプロセス作成をブロックする](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
+  規則: [PSExec および WMI コマンドから開始されるプロセス作成をブロックする](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
 
   - **未構成**  
   - **[ブロック]** - PSExec および WMI コマンドから開始されるプロセス作成をブロックします。  
@@ -881,7 +881,7 @@ Office アプリによる次の操作をブロックします。
 
 - **USB から実行された信頼されていない署名なしのプロセス**  
   **既定値**:未構成  
-  規則: [USB から実行された信頼されていない署名なしのプロセスをブロックする](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
+  規則: [USB から実行された信頼されていない署名なしのプロセスをブロックする](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
 
   - **未構成**  
   - **[ブロック]** - USB から実行された信頼されていない署名なしのプロセスをブロックします。  
@@ -889,7 +889,7 @@ Office アプリによる次の操作をブロックします。
   
 - **普及、経過時間、または信頼されたリストの条件を満たしていない実行可能ファイル**  
   **既定値**:未構成  
-  規則: [普及、経過時間、または信頼されたリストの条件を満たしていない実行可能ファイルの実行をブロックする](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
+  規則: [普及、経過時間、または信頼されたリストの条件を満たしていない実行可能ファイルの実行をブロックする](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
   - **未構成**  
   - **[ブロック]** - 普及、経過時間、または信頼されたリストの条件を満たしていない実行可能ファイルの実行をブロックします。  
@@ -901,7 +901,7 @@ Office アプリによる次の操作をブロックします。
 
 - **電子メール (Web メール/メール クライアント) からドロップされた実行可能なコンテンツ (exe、dll、ps、js、vbs など) の実行 (例外なし)**  
   **既定値**:未構成  
-  規則: [電子メール クライアントと Web メールからの実行可能なコンテンツをブロックする](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
+  規則: [電子メール クライアントと Web メールからの実行可能なコンテンツをブロックする](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
 
   - **未構成**  
   - **[ブロック]** - 電子メール (Web メール/メール クライアント) からドロップされた実行可能なコンテンツ (exe、dll、ps、js、vbs など) の実行をブロックします。  
@@ -911,7 +911,7 @@ Office アプリによる次の操作をブロックします。
 
 - **高度なランサムウェア防止**  
   既定:未構成  
-  規則: [ランサムウェアに対して高度な保護を使用する](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
+  規則: [ランサムウェアに対して高度な保護を使用する](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
 
   - **未構成**  
   - **[有効]** - 積極的なランサムウェア防止を使います。  
@@ -940,7 +940,7 @@ Office アプリによる次の操作をブロックします。
 
 ### <a name="controlled-folder-access"></a>フォルダー アクセスの制御  
 
-ランサムウェアなど、悪意のあるアプリおよび脅威からの[重要なデータの保護](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/controlled-folders)に役立ちます。  
+ランサムウェアなど、悪意のあるアプリおよび脅威からの[重要なデータの保護](/windows/security/threat-protection/microsoft-defender-atp/controlled-folders)に役立ちます。  
 
 - **[フォルダーの保護]**  
   **既定値**:未構成  
@@ -986,7 +986,7 @@ Office アプリによる次の操作をブロックします。
 - **[XML をアップロードする]**  
   **既定値**:*未構成*  
 
-  悪用に対する保護を使用して、[デバイスを悪用から保護](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)するには、必要なシステムとアプリケーションの軽減策設定を含む XML ファイルを作成します。 XML ファイルを作成するには、次の 2 つの方法があります。  
+  悪用に対する保護を使用して、[デバイスを悪用から保護](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)するには、必要なシステムとアプリケーションの軽減策設定を含む XML ファイルを作成します。 XML ファイルを作成するには、次の 2 つの方法があります。  
 
   - *PowerShell* - *Get-ProcessMitigation*、*Set-ProcessMitigation*、*ConvertTo-ProcessMitigationPolicy* のうちの 1 つ以上の PowerShell コマンドレットを使います。 これらのコマンドレットは、軽減策設定を構成し、それらの XML 表現をエクスポートします。  
 
@@ -1043,7 +1043,7 @@ Windows Defender Credential Guard によって、資格情報盗難攻撃から�
 
 ## <a name="microsoft-defender-security-center"></a>Microsoft Defender セキュリティ センター  
 
-Microsoft Defender セキュリティ センターは、個々の機能とは別のアプリまたはプロセスとして動作します。 アクション センターで通知を表示します。 コレクターまたは 1 つの場所として機能し、状態の表示、各機能の一部の構成を実行します。 詳細については、[Microsoft Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) に関するドキュメントを参照してください。  
+Microsoft Defender セキュリティ センターは、個々の機能とは別のアプリまたはプロセスとして動作します。 アクション センターで通知を表示します。 コレクターまたは 1 つの場所として機能し、状態の表示、各機能の一部の構成を実行します。 詳細については、[Microsoft Defender](/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) に関するドキュメントを参照してください。  
 
 ### <a name="microsoft-defender-security-center-app-and-notifications"></a>Microsoft Defender セキュリティ センターのアプリと通知  
 
@@ -1257,7 +1257,7 @@ Microsoft Defender セキュリティ センターのアプリとアプリ通知
 
 - **[ログオンなしでデバイスを装着解除する]**  
   **既定値**:未構成  
-  LocalPoliciesSecurityOptions CSP: [Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
+  LocalPoliciesSecurityOptions CSP: [Devices_AllowUndockWithoutHavingToLogon](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
   - **[ブロック]** - ユーザーはデバイスにサインインし、デバイスを取り外すアクセス許可を受ける必要があります。
   - **[未構成]** - ユーザーは装着しているポータブル デバイス本体の取り出しボタンを押すことでデバイスを安全に取り外すことができます。
@@ -1321,7 +1321,7 @@ Microsoft Defender セキュリティ センターのアプリとアプリ通知
 
 - **[ロック画面上のユーザー情報]**  
   **既定値**:未構成  
-  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)  
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)  
 
   セッションがロックされているときに表示されるユーザー情報を構成します。 構成しないと、ユーザーの表示名、ドメイン、およびユーザー名が表示されます。  
 
@@ -1648,4 +1648,4 @@ Microsoft Defender セキュリティ センターのアプリとアプリ通知
 
 プロファイルは作成されましたが、まだ何も行われていません。 次に、[プロファイルを割り当て](../configuration/device-profile-assign.md)、[その状態を監視](../configuration/device-profile-monitor.md)します。  
 
-[macOS](endpoint-protection-macos.md) デバイス上でエンドポイント保護設定を構成します。  
+[macOS](endpoint-protection-macos.md) デバイス上でエンドポイント保護設定を構成します。

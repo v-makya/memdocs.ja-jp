@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: c99300e1c29aa7d3ec7519727dd6d12527626bfa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943843"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911490"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Intune のネットワーク構成の要件と帯域幅
 
@@ -79,7 +79,7 @@ Intune クライアント用にコンテンツをキャッシュするプロキ�
 
 配信の最適化では、Intune を使用して、Windows 10 デバイスでアプリケーションおよび更新プログラムをダウンロードするときに消費される帯域幅を削減することができます。 自己整理型の分散キャッシュを使用すると、従来のサーバーや代替ソース (ネットワーク ピアなど) からダウンロードをプルできます。
 
-配信の最適化によってサポートされる Windows 10 のバージョンとコンテンツの種類の完全な一覧については、「[Windows 10 更新プログラムの配信の最適化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements)」をご覧ください。
+配信の最適化によってサポートされる Windows 10 のバージョンとコンテンツの種類の完全な一覧については、「[Windows 10 更新プログラムの配信の最適化](/windows/deployment/update/waas-delivery-optimization#requirements)」をご覧ください。
 
 デバイスの構成プロファイルの一部として、[配信の最適化を設定する](../configuration/delivery-optimization-settings.md)ことができます。
 
@@ -95,7 +95,7 @@ Microsoft Intune を使用して、[モバイル デバイス管理 (MDM) によ
 > [!NOTE]
 > Windows 上の MDM 管理については、MobileMSI アプリの種類用の OS の管理インターフェイスのみで、ダウンロードに BITS が使用されます。 AppX/MsiX では、BITS 以外の配信の最適化を使用する Intune エージェント経由で、独自の BITS 以外のダウンロード スタックと Win32 アプリを使用します。
 
-BITS と Windows コンピューターの詳細については、TechNet ライブラリの「[バックグラウンド インテリジェント転送サービス](https://technet.microsoft.com/library/bb968799.aspx)」を参照してください。
+BITS と Windows コンピューターの詳細については、TechNet ライブラリの「[バックグラウンド インテリジェント転送サービス](/windows/win32/bits/background-intelligent-transfer-service-portal)」を参照してください。
 
 
 #### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>コンピューターで BranchCache を使用する (Intune ソフトウェア クライアントが必要)
@@ -111,7 +111,7 @@ BranchCache を使用するには、クライアント コンピューターで 
 
 Intune クライアントをコンピューターにインストールすると、既定で、BranchCache と分散キャッシュ モードが有効になります。 ただし、グループ ポリシーで BranchCache が無効になっている場合、Intune でそのポリシーがオーバーライドされることはなく、BranchCache は無効のままになります。
 
-BranchCache を使用する場合、グループ ポリシーと Intune ファイアウォール ポリシーを管理する組織内の他の管理者と共同作業を行います。 他の管理者が、BranchCache を無効にするポリシーやファイアウォールの例外を展開しないようにしてください。 BranchCache の詳細については、「[BranchCache の概要](https://technet.microsoft.com/library/hh831696.aspx)」を参照してください。
+BranchCache を使用する場合、グループ ポリシーと Intune ファイアウォール ポリシーを管理する組織内の他の管理者と共同作業を行います。 他の管理者が、BranchCache を無効にするポリシーやファイアウォールの例外を展開しないようにしてください。 BranchCache の詳細については、「[BranchCache の概要](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11))」を参照してください。
 
 
 ## <a name="next-steps"></a>次のステップ

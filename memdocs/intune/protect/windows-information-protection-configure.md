@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d127dd8ba455ecb7e10fc94c343d12099a678d5
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 008f750fd15caeac8da9397a1c3ff0684cdf28f7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079010"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914669"
 ---
 # <a name="how-to-configure-windows-information-protection-in-microsoft-intune"></a>Microsoft Intune で Windows Information Protection を構成する方法
 
@@ -38,7 +38,7 @@ ms.locfileid: "82079010"
 > Windows 10 ポータル サイト アプリを Windows Information Protection とともに使用するには、ポータル サイト アプリを Windows Information Protection モードの**除外対象**に追加する必要があります。 
 
 詳細については、次をご覧ください。
-- [Windows 情報保護 (WIP) を使用した企業データの保護](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip)
-- [従来の Microsoft Intune コンソールを使用して Windows 情報保護 (WIP) ポリシーを作成する](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune)
-- [Azure Portal での Microsoft Intune を使用して MDM で Windows 情報保護 (WIP) ポリシーを作成する](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune-azure)
-- [Azure Portal での Microsoft Intune を使用して MAM で Windows 情報保護 (WIP) ポリシーを作成する](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure)
+- [Windows 情報保護 (WIP) を使用した企業データの保護](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [従来の Microsoft Intune コンソールを使用して Windows 情報保護 (WIP) ポリシーを作成する](/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune)
+- [Azure Portal での Microsoft Intune を使用して MDM で Windows 情報保護 (WIP) ポリシーを作成する](/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune-azure)
+- [Azure Portal での Microsoft Intune を使用して MAM で Windows 情報保護 (WIP) ポリシーを作成する](/windows/threat-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure)

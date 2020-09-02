@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78ed3fe234fb4ab236fe35b5e1778582f3eb731d
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: b0324755ef4706e1642357ae7a4e7dc90e719a7e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461710"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915196"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Android Enterprise フル マネージド デバイスの Intune 登録を設定する 
 
@@ -60,7 +60,7 @@ Android Enterprise フル マネージド デバイスの管理を設定する�
 2. **[会社が所有するユーザー デバイスの登録をユーザーに許可する]** で **[はい]** を選択します。
 
 > [!NOTE]
-> *[デバイスは準拠としてマーク済みである必要があります]* 許可コントロールまたはブロック ポリシーを使用し、**すべてのクラウド アプリ**、**Android** および**ブラウザー**に適用される、Azure AD 条件付きアクセス ポリシーを定義している場合、このポリシーから **Microsoft Intune** クラウド アプリを除外する必要があります。 これは、Android のセットアップ プロセスで、登録時に Chrome タブを使用してユーザーを認証するためです。 詳細については、「[Azure AD 条件付きアクセスのドキュメント](https://docs.microsoft.com/azure/active-directory/conditional-access/)」を参照してください。
+> *[デバイスは準拠としてマーク済みである必要があります]* 許可コントロールまたはブロック ポリシーを使用し、**すべてのクラウド アプリ**、**Android** および**ブラウザー**に適用される、Azure AD 条件付きアクセス ポリシーを定義している場合、このポリシーから **Microsoft Intune** クラウド アプリを除外する必要があります。 これは、Android のセットアップ プロセスで、登録時に Chrome タブを使用してユーザーを認証するためです。 詳細については、「[Azure AD 条件付きアクセスのドキュメント](/azure/active-directory/conditional-access/)」を参照してください。
 
 **[はい]** に設定すると、登録トークン (無作為の文字列) と Intune テナントの QR コードが与えられます。 この 1 個の登録トークンは登録するすべてのユーザーに対して有効であり、有効期限はありません。 デバイスの Android OS とバージョンに基づき、トークンと QR コードのいずれかを利用してデバイスを登録できます。
 
@@ -70,4 +70,3 @@ Android Enterprise フル マネージド デバイスの管理を設定する�
 ## <a name="next-steps"></a>次のステップ
 - [Android Enterprise フル マネージド デバイス構成ポリシーを追加する](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
 - [Android Enterprise フル マネージド デバイスのアプリ構成ポリシーを構成する](../apps/app-configuration-policies-use-android.md)
-

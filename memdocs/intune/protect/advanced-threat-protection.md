@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f54bf7f281fca65e01d839e926200bc68c49765
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 1420bf03fe236decba0345e299eb5d5893f96c93
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663449"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915111"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Intune で条件付きアクセスによる Microsoft Defender ATP のコンプライアンスを強制する
 
@@ -51,7 +51,7 @@ Intune を Microsoft Defender ATP と統合する場合、Microsoft Defender ATP
 Microsoft Defender ATP は、このシナリオのようなセキュリティ イベントを解決するのに役立ちます。
 
 - この例では、Microsoft Defender ATP によって、デバイスで異常なコードが実行され、プロセスの特権エスカレーションが発生し、悪意のあるコードが挿入され、不審なリモート シェルが発行されたことが検出されます。
-- デバイスからのこのようなアクションに基づいて、Microsoft Defender ATP により[そのデバイスは危険度が高いと分類され](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity)、Microsoft Defender セキュリティ センターのポータルに疑わしいアクティビティに関する詳細なレポートが追加されます。
+- デバイスからのこのようなアクションに基づいて、Microsoft Defender ATP により[そのデバイスは危険度が高いと分類され](/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity)、Microsoft Defender セキュリティ センターのポータルに疑わしいアクティビティに関する詳細なレポートが追加されます。
 
 Mobile Threat Defense ソリューションとして Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) を Microsoft Intune と統合できます。 統合することで、セキュリティ侵害を防止し、組織内での侵害の影響を抑えることができます。
 
@@ -65,7 +65,7 @@ Intune で Microsoft Defender ATP を使用する場合は、以下が構成済�
 
 - Enterprise Mobility + Security E3 および Windows E5 (または Microsoft 365 Enterprise E5) のライセンス済みテナント
 - [Intune で管理されている](../enrollment/windows-enroll.md) Windows 10 デバイスまたは Android デバイス (Azure AD にも参加している) を含む Microsoft Intune 環境
-- Microsoft Defender セキュリティ センター (ATP ポータル) にアクセスできる [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) 環境
+- Microsoft Defender セキュリティ センター (ATP ポータル) にアクセスできる [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) 環境
 
 > [!NOTE]
 > Microsoft Defender ATP は、iOS/iPadOS および Android の Intune アプリ保護ポリシーではサポートされていません。
@@ -81,5 +81,5 @@ Intune のドキュメントで詳細を確認します。
 
 Microsoft Defender ATP のドキュメントで詳細を確認します。
 
-- [Microsoft Defender ATP の条件付きアクセス](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Microsoft Defender ATP のリスク ダッシュボード](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Microsoft Defender ATP の条件付きアクセス](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Microsoft Defender ATP のリスク ダッシュボード](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

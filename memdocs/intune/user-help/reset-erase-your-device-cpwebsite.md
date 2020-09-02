@@ -19,12 +19,12 @@ ms.reviewer: coferro
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 77643d689a2a5693b71f85a7e82b98bddec9a646
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: b61265a1c278b83a91ac1e353794a358dcc5fdb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881474"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915519"
 ---
 # <a name="reset-device-from-company-portal-website"></a>Intune ポータル サイト Web サイからデバイスをリセットする
 
@@ -32,7 +32,7 @@ ms.locfileid: "83881474"
 
 デバイスをリセットすると、ポータル サイトに表示されなくなります。 これまで存在していたアプリやファイルは消去され、デバイスは出荷時の既定の設定に復元されます。 
 
-iOS デバイスによっては、Intune ポータル サイトでのデバイスのリセットを使用できない場合があります。 IT サポート担当者がデバイスのリセットとその制限について詳しく知りたい場合は、「[ワイプ、インベントリからの削除、デバイス登録の手動解除を使用し、デバイスを削除する](https://docs.microsoft.com/intune/devices-wipe)」を参照してください。  
+iOS デバイスによっては、Intune ポータル サイトでのデバイスのリセットを使用できない場合があります。 IT サポート担当者がデバイスのリセットとその制限について詳しく知りたい場合は、「[ワイプ、インベントリからの削除、デバイス登録の手動解除を使用し、デバイスを削除する](/intune/devices-wipe)」を参照してください。  
 
 > [!Note]
 > 登録済みの別のデバイスから、これらの手順を行うこともできます。 Intune ポータル サイト アプリを開き、同様のリセット エクスペリエンスの手順を完了します。 

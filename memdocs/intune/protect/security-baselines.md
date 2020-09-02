@@ -18,12 +18,12 @@ ms.custom:
 - intune-azure
 - contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca22e74469cf84967d4d9630293a2b4e617e3d81
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5a3954057d14aaf24a1a0147d9717cfc01413d51
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698781"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914924"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Intune でのセキュリティ ベースラインを使用した Windows 10 デバイスの構成
 
@@ -46,7 +46,7 @@ Intune でユーザーやデバイスのグループに対してセキュリテ�
 - Intune を使用したことがなく、どこから手を付けたらよいかわからない場合は、セキュリティ ベースラインを使用すると便利です。 組織のリソースとデータの保護に役立つことがわかっているので、セキュリティで保護されたプロファイルをすばやく作成して展開できます。
 - 現在グループ ポリシーを使用している場合は、このようなベースラインを使用すると、管理のために Intune に移行する作業がはるかに簡単になります。 このようなベースラインはネイティブで Intune に組み込まれており、最新の管理エクスペリエンスが含まれています。
 
-「[Windows セキュリティ基本計画](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines)」は、この機能の詳細を学ぶ際に役立つリソースです。 「[Mobile device management (モバイル デバイス管理)](https://docs.microsoft.com/windows/client-management/mdm/)」(MDM) は、MDM と、Windows デバイス上で実行できることに関する優れたリソースです。
+「[Windows セキュリティ基本計画](/windows/security/threat-protection/windows-security-baselines)」は、この機能の詳細を学ぶ際に役立つリソースです。 「[Mobile device management (モバイル デバイス管理)](/windows/client-management/mdm/)」(MDM) は、MDM と、Windows デバイス上で実行できることに関する優れたリソースです。
 
 ## <a name="available-security-baselines"></a>使用可能なセキュリティ ベースライン
 
@@ -62,7 +62,7 @@ Intune では、次のセキュリティ ベースラインのインスタンス
   - [2020 年 3 月の Microsoft Defender ATP ベースライン - バージョン 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
   > [!NOTE]
-  > Microsoft Defender ATP のセキュリティ ベースラインは、物理デバイス用に最適化されており、現在は仮想マシン (VM) や VDI エンドポイントでの使用は推奨されていません。 特定のベースライン設定が、仮想化された環境でのリモート対話型セッションに影響を与える可能性があります。  詳細については、Windows ドキュメントの「[Increase compliance to the Microsoft Defender ATP security baseline (Microsoft Defender ATP のセキュリティ ベースラインに対するコンプライアンスの強化)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)」をご覧ください。
+  > Microsoft Defender ATP のセキュリティ ベースラインは、物理デバイス用に最適化されており、現在は仮想マシン (VM) や VDI エンドポイントでの使用は推奨されていません。 特定のベースライン設定が、仮想化された環境でのリモート対話型セッションに影響を与える可能性があります。  詳細については、Windows ドキュメントの「[Increase compliance to the Microsoft Defender ATP security baseline (Microsoft Defender ATP のセキュリティ ベースラインに対するコンプライアンスの強化)](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline)」をご覧ください。
 
 - **Microsoft Edge ベースライン**
   - [2020 年 4 月 (Edge バージョン 80 以降) の Microsoft Edge ベースライン](security-baseline-settings-edge.md?pivots-edge-april-2020)
@@ -253,9 +253,9 @@ Microsoft Endpoint Manager では、一般的な組織のニーズの変化に�
 
 ## <a name="co-managed-devices"></a>共同管理デバイス
 
-Intune マネージド デバイスに関するセキュリティのベースラインは、Configuration Manager との共同マネージド デバイスと似ています。 共同マネージド デバイスでは、Configuration Manager と Microsoft Intune を使用して Windows 10 デバイスが同時に管理されます。 これにより、既存の Configuration Manager への投資を Intune のメリットへとクラウドで結び付けることができます。 Configuration Manager を使用していて、クラウドのメリットも必要な場合、[共同管理の概要](https://docs.microsoft.com/configmgr/comanage/overview)に関するページは優れたリソースです。
+Intune マネージド デバイスに関するセキュリティのベースラインは、Configuration Manager との共同マネージド デバイスと似ています。 共同マネージド デバイスでは、Configuration Manager と Microsoft Intune を使用して Windows 10 デバイスが同時に管理されます。 これにより、既存の Configuration Manager への投資を Intune のメリットへとクラウドで結び付けることができます。 Configuration Manager を使用していて、クラウドのメリットも必要な場合、[共同管理の概要](/configmgr/comanage/overview)に関するページは優れたリソースです。
 
-共同マネージド デバイスを使用する場合は、 **[デバイス構成]** ワークロード (その設定) を Intune に切り替える必要があります。 詳細については、[デバイス構成ワークロード](https://docs.microsoft.com/configmgr/comanage/workloads#device-configuration)に関するセクションを参照してください。
+共同マネージド デバイスを使用する場合は、 **[デバイス構成]** ワークロード (その設定) を Intune に切り替える必要があります。 詳細については、[デバイス構成ワークロード](/configmgr/comanage/workloads#device-configuration)に関するセクションを参照してください。
 
 ## <a name="q--a"></a>Q & A
 
@@ -273,11 +273,11 @@ Microsoft セキュリティ チームは、これらの推奨事項を作成す
 
 ### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Microsoft のセキュリティのベースラインにはどのような認定資格がありますか? 
 
-- Microsoft は、グループ ポリシー (GPO) および [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) 用のセキュリティのベースラインを長年にわたって公開し続けています。 これらのベースラインは多くの組織で使用されています。 これらのベースラインの推奨事項は、Microsoft セキュリティ チームと、米国国防総省 (DoD)、National Institute of Standards and Technology (NIST) などの企業のお客様および外部機関との関わりから得られたものです。 Microsoft の推奨事項とベースラインは、これらの組織と共有しています。 また、これらの組織には、Microsoft の推奨事項を厳密に反映した独自の推奨事項もあります。 モバイル デバイス管理 (MDM) がクラウドへと成長を続けた過程で、Microsoft はこのようなグループ ポリシーのベースラインと同等の MDM の推奨事項を作成しました。 このような追加のベースラインは Microsoft Intune に組み込まれており、ベースラインに準拠している (または準拠していない) ユーザー、グループ、およびデバイスに関するコンプライアンス レポートが含まれています。
+- Microsoft は、グループ ポリシー (GPO) および [Security Compliance Toolkit](/windows/security/threat-protection/security-compliance-toolkit-10) 用のセキュリティのベースラインを長年にわたって公開し続けています。 これらのベースラインは多くの組織で使用されています。 これらのベースラインの推奨事項は、Microsoft セキュリティ チームと、米国国防総省 (DoD)、National Institute of Standards and Technology (NIST) などの企業のお客様および外部機関との関わりから得られたものです。 Microsoft の推奨事項とベースラインは、これらの組織と共有しています。 また、これらの組織には、Microsoft の推奨事項を厳密に反映した独自の推奨事項もあります。 モバイル デバイス管理 (MDM) がクラウドへと成長を続けた過程で、Microsoft はこのようなグループ ポリシーのベースラインと同等の MDM の推奨事項を作成しました。 このような追加のベースラインは Microsoft Intune に組み込まれており、ベースラインに準拠している (または準拠していない) ユーザー、グループ、およびデバイスに関するコンプライアンス レポートが含まれています。
 
 - 多くのお客様は、Intune のベースラインの推奨事項を出発点として使用し、お客様の IT とセキュリティの要求を満たすようにカスタマイズしています。 Microsoft の Windows 10 RS5 **MDM セキュリティ ベースライン**が、最初にリリースされたベースラインです。 このベースラインは、CIS、NIST などの標準に基づいて、お客様が他のセキュリティのベースラインを最終的にインポートできるようにするための汎用のインフラストラクチャとして構築されています。 現在、これは Windows で利用できます。最終的には iOS/iPadOS および Android が含まれる予定です。
 
-- Microsoft Intune と共に Azure Active Directory (AD) を使用して、オンプレミスの Active Directory グループ ポリシーから純粋なクラウド ソリューションに移行することは、1 つの旅です。 サポートのために、[Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) にはグループ ポリシー テンプレートが含まれています。これは、ハイブリッド AD と Azure AD 参加済みデバイスの管理に役立ちます。 このようなデバイスは、必要に応じてクラウド (Intune) から MDM 設定を取得し、オンプレミス ドメイン コントローラーからグループ ポリシー設定を取得できます。
+- Microsoft Intune と共に Azure Active Directory (AD) を使用して、オンプレミスの Active Directory グループ ポリシーから純粋なクラウド ソリューションに移行することは、1 つの旅です。 サポートのために、[Security Compliance Toolkit](/windows/security/threat-protection/security-compliance-toolkit-10) にはグループ ポリシー テンプレートが含まれています。これは、ハイブリッド AD と Azure AD 参加済みデバイスの管理に役立ちます。 このようなデバイスは、必要に応じてクラウド (Intune) から MDM 設定を取得し、オンプレミス ドメイン コントローラーからグループ ポリシー設定を取得できます。
 
 ## <a name="next-steps"></a>次のステップ
 

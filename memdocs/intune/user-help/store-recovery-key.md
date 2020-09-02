@@ -19,12 +19,12 @@ ms.reviewer: annochiva
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 826515026e578cb993bb706fc61dedb4a80fb3e6
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: f0a674753ff23fca509bd21e6b52101104a6803f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86465016"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910793"
 ---
 # <a name="store-your-personal-filevault-key"></a>個人の FileVault キーを格納する 
 
@@ -81,7 +81,7 @@ IT サポート担当者から、個人の回復キーをアップロードす�
 
 ## <a name="it-pro-support"></a>IT プロフェッショナル サポート
 
-あなたが IT サポート担当者であり、組織内の Mac デバイス用に FileVault 暗号化を構成して管理する場合は、[「Intune で macOS 用の FileVault ディスク暗号化を使用する」](https://docs.microsoft.com/mem/intune/protect/encrypt-devices-filevault)を参照してください。  
+あなたが IT サポート担当者であり、組織内の Mac デバイス用に FileVault 暗号化を構成して管理する場合は、[「Intune で macOS 用の FileVault ディスク暗号化を使用する」](../protect/encrypt-devices-filevault.md)を参照してください。  
 
 ## <a name="next-steps"></a>次のステップ
 
@@ -89,4 +89,4 @@ IT サポート担当者から、個人の回復キーをアップロードす�
 
 ポータル サイト Web サイトで他に何ができるかを調べましょう。 アクションの一覧については、「[Intune ポータル サイト Web サイトの使用](using-the-intune-company-portal-website.md)」を参照してください。  
 
-サポートが必要な場合は、 IT サポート担当者にお問い合わせください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。  
+サポートが必要な場合は、 IT サポート担当者にお問い合わせください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。
