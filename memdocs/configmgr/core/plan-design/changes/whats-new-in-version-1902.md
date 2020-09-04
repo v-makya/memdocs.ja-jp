@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 54794a575cda4197bc11160d1c5e374d06c143c6
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 78150c497757c1a3f0b65a870c35516983711d9a
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995247"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193829"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1902 の新機能
 
@@ -351,7 +351,7 @@ Configuration Manager を使用して、Windows の既知のフォルダーを O
 
 OneDrive for Business のこの機能の詳細については、「[Windows の既知のフォルダーを OneDrive にリダイレクトして移動する](/onedrive/redirect-known-folders)」を参照してください。
 
-まず、[Microsoft 365 テナント ID を見つけます](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id)。 次に、OneDrive 同期クライアント バージョン 18.111.0603.0004 以降を展開します。 詳細については、「[Configuration Manager を使用した OneDrive アプリの展開](https://docs.microsoft.com/onedrive/deploy-on-windows)」を参照してください。  
+まず、[Microsoft 365 テナント ID を見つけます](/onedrive/find-your-office-365-tenant-id)。 次に、OneDrive 同期クライアント バージョン 18.111.0603.0004 以降を展開します。 詳細については、「[Configuration Manager を使用した OneDrive アプリの展開](/onedrive/deploy-on-windows)」を参照してください。  
 
 OneDrive for Business プロファイルを作成して展開するには、Configuration Manager コンソールで **[資産とコンプライアンス]** ワークスペースに移動します。 **[コンプライアンス設定]** を展開し、 **[OneDrive for Business プロファイル]** ノードを選びます。  
 

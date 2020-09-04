@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 57b353dd9dd9fcf7f97d10480f4067bd65a1f483
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 1c8710c50dc2feabebd7e8f0f84ac49b3b0dd35c
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697978"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068023"
 ---
 # <a name="create-stand-alone-media"></a>スタンドアロン メディアの作成
 
@@ -78,7 +78,7 @@ Configuration Manager のスタンドアロン メディアには、ネットワ
 >
 > または、カスタムの [[コマンド ラインの実行]](../understand/task-sequence-steps.md#BKMK_RunCommandLine) ステップを使用します。 [[Windows と ConfigMgr のセットアップ]](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) ステップの後、最初の **[パッケージのインストール]** ステップの前に追加します。 **[コマンド ラインの実行]** ステップでは、最初の [パッケージのインストール] ステップの前に、以下の WMIC コマンドを実行してソフトウェア配布エージェントを有効にします。  
 >
-> `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
+> `WMIC /namespace:\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
 
 ### <a name="distribute-all-content-associated-with-the-task-sequence"></a>タスク シーケンスに関連付けられているすべてのコンテンツを配布する
 

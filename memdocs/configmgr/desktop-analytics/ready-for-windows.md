@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 484b1d808484984b4beaf434c0c27f2f1bec4e10
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2d431f744ab09aeb938a7961ebf713f71c0f8015
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995196"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193684"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Ready for Modern Desktop の提供終了に関する FAQ
 
@@ -49,7 +49,7 @@ Desktop Analytics を使うと、商用デバイスで見つかった資産の�
 
 *Ready for Modern Desktop* ディレクトリには、Windows 10 および Microsoft 365 Apps for enterprise を実行している商用デバイスでサポートされ、使用されているソフトウェア ソリューションが掲載されていました。 このディレクトリは、Windows 10 および Microsoft 365 の最新バージョンの展開を検討している IT 管理者を支援するものです。
 
-IT 管理者からは、これらの分析情報を既に使用しているツールと統合して展開計画を立てたいというフィードバックをいただいています。 Windows 10 と Microsoft 365 Apps for enterprise のアップグレード プロジェクトを計画および管理するには、Configuration Manager で [Desktop Analytics](https://aka.ms/dadocs) と [Microsoft 365 Apps の準備機能](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)を使用します。 
+IT 管理者からは、これらの分析情報を既に使用しているツールと統合して展開計画を立てたいというフィードバックをいただいています。 Windows 10 と Microsoft 365 Apps for enterprise のアップグレード プロジェクトを計画および管理するには、Configuration Manager で [Desktop Analytics](https://aka.ms/dadocs) と [Microsoft 365 Apps の準備機能](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch)を使用します。 
 
 > [!Note]
 > 2020 年 4 月 21 日以降、Office 365 ProPlus は、**Microsoft 365 Apps for enterprise** に名前が変更されます。 詳細については、「[Office 365 ProPlus の名前の変更](/deployoffice/name-change)」を参照してください。 コンソールの更新中は、Configuration Manager コンソールやサポート ドキュメントに古い名前へのリファレンスが表示される場合があります。
@@ -122,4 +122,4 @@ Microsoft では、ソフトウェア ベンダーからのサポートに関す
 
 現時点で御社のデスクトップ アプリケーションに互換性があることを確認し、Windows 10 との互換性を今後も維持してください。 詳細については、「[アプリケーションの互換性](https://developer.microsoft.com/windows/desktop/app-compatibility)」を参照してください。
 
-Microsoft 365 Apps for enterprise 用のソリューションを開発している場合は、「[Office での COM、VSTO、および VBA アドインの開発に関するベストプラクティス](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)」を参照してください。
+Microsoft 365 Apps for enterprise 用のソリューションを開発している場合は、「[Office での COM、VSTO、および VBA アドインの開発に関するベストプラクティス](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office)」を参照してください。

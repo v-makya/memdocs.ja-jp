@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: e0ef22ec7bc5eb3d6b9ac3800b3e97374421944c
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: d850e582b43e08743e5a61b17e6958ddc6084af1
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819798"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194142"
 ---
 # <a name="manage-microsoft-365-apps-with-configuration-manager"></a>Configuration Manager での Microsoft 365 Apps の管理
 
@@ -248,7 +248,7 @@ ADR の変更方法の詳細については、「[ソフトウェア更新プロ
 
 ## <a name="change-the-update-channel-after-you-enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager"></a>Configuration Manager から更新プログラムを受信できるように Microsoft 365 Apps クライアントを設定した後で更新プログラム チャネルを変更する
 
-Microsoft 365 Apps を展開した後、グループ ポリシーまたは Office 展開ツール (ODT) を使用して更新プログラム チャネルを変更できます。 たとえば、半期チャネルから半期チャネル (対象指定) にデバイスを移行できます。 チャネルを変更すると、完全バージョンを再インストールまたはダウンロードしなくても Office は自動的に更新されます。 詳細については、「[組織のデバイスの Microsoft 365 Apps 更新プログラム チャネルを変更する](https://docs.microsoft.com/deployoffice/change-update-channels)」を参照してください。
+Microsoft 365 Apps を展開した後、グループ ポリシーまたは Office 展開ツール (ODT) を使用して更新プログラム チャネルを変更できます。 たとえば、半期チャネルから半期チャネル (対象指定) にデバイスを移行できます。 チャネルを変更すると、完全バージョンを再インストールまたはダウンロードしなくても Office は自動的に更新されます。 詳細については、「[組織のデバイスの Microsoft 365 Apps 更新プログラム チャネルを変更する](/deployoffice/change-update-channels)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

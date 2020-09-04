@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 7f6cc0caf4df54196dbdb1859a69f19b3bbcacaa
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: a7b61e1a609e0693ffcd30f3f7dc931f4cb38eef
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995485"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193640"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager の Technical Preview 1511 の機能
 
@@ -67,7 +67,7 @@ Microsoft から Windows Server Updates Services (WSUS) に新しい Microsoft 3
 
 4. コンソール内の監視機能またはレポートを使用して、Microsoft 365 更新プログラムのコンプライアンス対応を確認できます。  
 
-   詳しい手順については、[Configuration Manager Technical Preview での Microsoft 365 クライアント更新プログラムの管理](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)に関する記事をご覧ください。  
+   詳しい手順については、[Configuration Manager Technical Preview での Microsoft 365 クライアント更新プログラムの管理](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager)に関する記事をご覧ください。  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> 高可用性データベース用の SQL Server AlwaysOn のサポート  
  Configuration Manager は、SQL Server AlwaysOn 可用性グループを使用したサイト データベースのホスティングをサポートします。  新しいサイトをインストールするときに、SQL Server の通常のインスタンスではなく、可用性グループを使用するようにセットアップに指示できます。  

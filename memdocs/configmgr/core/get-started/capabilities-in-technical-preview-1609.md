@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2ab05abee2889259cc6c92e9081e4d10e2123923
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995536"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193751"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Configuration Manager の Technical Preview 1609 の機能
 
@@ -347,7 +347,7 @@ Configuration Manager の Technical Preview 1609 では、新しいダッシュ�
 - Office 365 クライアントのバージョン
 - Office 365 クライアントの言語
 - Office 365 クライアントのチャネル     
-詳細については、[Microsoft 365 アプリの更新チャネルの概要](https://docs.microsoft.com/deployoffice/overview-update-channels)に関するページをご覧ください。
+詳細については、[Microsoft 365 アプリの更新チャネルの概要](/deployoffice/overview-update-channels)に関するページをご覧ください。
 - Office 365 クライアントが使用可能な製品のセットで選択した自動展開規則
 
 ダッシュボードでは、次の操作を実行できます。

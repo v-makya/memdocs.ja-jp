@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76d1edf8598e1abd71b6fd1db7faffa1750110d4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129122"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432576"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager の Technical Preview
 
@@ -166,11 +166,8 @@ With each CB release, review and remove from this list for anything that's now a
 
 | 機能        | Technical Preview のバージョン |
 |----------------|---------------------------|
-| 共同管理デバイスでポータル サイト アプリを使用する <!--3601237--> | [Tech Preview 2006](2020/technical-preview-2006.md#bkmk_portal) |
 | CMG を介した利用可能なアプリの改善 <!--7033501--> | [Tech Preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| テナント接続:Microsoft Endpoint Manager admin center での Configuration Manager 操作の改善 <!--7518897--> | [Tech Preview 2006](2020/technical-preview-2006.md#bkmk_apps) |
 | テナントのアタッチ:管理センターのデバイス タイムライン <!--7141381--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| テナントのアタッチ:管理センターからアプリケーションをインストールする <!--6024389--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_apps) |
 | テナントのアタッチ:管理センターからの CMPivot <!--6024392--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | テナントのアタッチ:管理センターからスクリプトを実行する <!--6234688--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | クラウド管理ゲートウェイ コマンドレットの強化 <!--6978300--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |

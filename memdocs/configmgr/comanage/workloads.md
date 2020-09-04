@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: 0425b937062acd96b8df66df38ec53a04e91b4de
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 08261c51170e110dff40ebaaf7699c631ceda7e7
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995230"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193717"
 ---
 # <a name="co-management-workloads"></a>共同管理ワークロード
 
@@ -112,7 +112,7 @@ Intune 機能の詳細については、「[Microsoft Intune でのデバイス 
 
 - **Office 365 アプリケーションがデバイス上の Intune で管理されているか**という新しいグローバル条件があります。 この条件は、新しい Microsoft 365 アプリケーションの要件として既定で追加されます。 このワークロードを移行すると、共同管理されたクライアントでアプリケーションの要件が満たされなくなります。 そのため、Configuration Manager で展開される Microsoft 365 がインストールされません。  
 
-Intune 機能の詳細については、「[Microsoft Intune を使用して Windows 10 デバイスに Microsoft 365 アプリを割り当てる](https://docs.microsoft.com/intune/apps-add-office365)」をご覧ください。
+Intune 機能の詳細については、「[Microsoft Intune を使用して Windows 10 デバイスに Microsoft 365 アプリを割り当てる](/intune/apps-add-office365)」をご覧ください。
 
 ## <a name="client-apps"></a>クライアント アプリ
 
