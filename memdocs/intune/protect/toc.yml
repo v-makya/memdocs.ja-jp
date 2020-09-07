@@ -214,6 +214,8 @@
       items:
         - name: 認証に証明書を使用する
           href: certificates-configure.md
+        - name: 証明書のコネクタ
+          href: certificate-connectors.md
         - name: SCEP
           items:
             - name: SCEP のインフラストラクチャ
