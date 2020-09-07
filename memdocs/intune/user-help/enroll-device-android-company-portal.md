@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2ef0cf3909442cec818fd775bef4f848d6be5a83
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: ef1b6c82cae82763dc327f16e35d0e3bc522c3c7
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022315"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057472"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Intune ポータル サイトでデバイスを登録する  
 自分個人または会社所有の Android デバイスを登録して、会社のメール、アプリ、データにアクセスします。 Intune ポータル サイトでは、Android 4.4 以降が実行されている Samsung Knox などの Android デバイスがサポートされています。  
@@ -32,11 +32,24 @@ ms.locfileid: "86022315"
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o?rel=0]
 
 > [!NOTE]
-> Samsung KNOX は、ネイティブ Android に用意されている以外の追加保護のために特定の Samsung 製のデバイスで使用されるセキュリティの一種です。 Samsung KNOX デバイスかどうかを確認するには、 **[設定]**  >  **[About device]\(デバイス情報\)** を選択します。 そこに **[KNOX version]\(KNOX バージョン\)** と表示されない場合は、ネイティブ Android デバイスです。
+> Samsung KNOX は、ネイティブ Android に用意されている以外の追加保護のために特定の Samsung 製のデバイスで使用されるセキュリティの一種です。 Samsung KNOX デバイスかどうかを確認するには、 **[設定]**  >  **[About device]\(デバイス情報\)** を選択します。 そこに **[KNOX version]\(KNOX バージョン\)** と表示されない場合は、ネイティブ Android デバイスです。  
+
+## <a name="install-company-portal-app"></a>ポータル サイト アプリをインストールする  
+Intune ポータル サイト アプリを [Google Play から](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)インストールします。 中華人民共和国でアプリを提供するストアの一覧については、[中華人民共和国でポータル サイト アプリをインストールする](install-company-portal-android-china.md)方法に関するページをご覧ください。
+
+1. **[ホーム]**  >  **[Play ストア]** の順にタップします。
+
+2. **Intune ポータル サイト**を検索します。 アプリをタップして開きます。 
+
+    ![android-search-company-portal](./media/and-cpinstall-1-search-cp.png)
+
+4. **[インストール]** をタップします。
+
+5. アプリのアクセス許可に関するプロンプトが表示されたら、 **[同意する]** をタップします。  
+
+    ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 
 ## <a name="enroll-device"></a>デバイスを登録する  
-[Google Play から](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) Intune ポータル サイト アプリをインストールしてください。 中華人民共和国でアプリを提供するストアの一覧については、[中華人民共和国でポータル サイト アプリをインストールする](install-company-portal-android-china.md)方法に関するページをご覧ください。
-
 登録中に、デバイスの使用方法に適したカテゴリを選ぶように求められる場合があります。 会社のサポートは、その回答を使用して、ユーザーがアクセスできるアプリを確認します。  
 
 1. Intune ポータル サイト アプリを開き、職場または学校アカウントでサインインします。  

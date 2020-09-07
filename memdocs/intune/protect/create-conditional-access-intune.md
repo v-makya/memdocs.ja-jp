@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e40f9bc84e4969e963629479f22a6f988e025c4e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ed80cd89728a1ce58d37be8c16b8e61dcfbb5566
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985052"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992676"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>デバイス ベースの条件付きアクセス ポリシーを作成する
 
@@ -89,7 +89,7 @@ Intune では、モバイル デバイスのコンプライアンスをアクセ
    - **[デバイスの状態]** : [はい] を選択して、[ハイブリッド Azure AD 参加済みのデバイス] または [デバイスは準拠としてマーク済み] のどちらか (または両方) の状態を特に除外していない限り、条件付きアクセス ポリシーがすべてのデバイスの状態に適用されます。
 
      > [!TIP]
-     > **先進認証**クライアントと **Exchange ActiveSync クライアント**の両方を保護する場合、クライアントの種類ごとに 1 つずつ、計 2 つの別個の条件付きアクセス ポリシーを作成します。 Exchange ActiveSync では先進認証をサポートしていますが、Exchange ActiveSync でサポートされる条件はプラットフォームだけです。 多要素認証などのその他の条件は、サポートされていません。 Exchange ActiveSync から Exchange Online へのアクセスを効率よく保護するには、[サポートされているプラットフォームのみにポリシーを適用する] を選択したうえで、クラウド アプリ Office 365 Exchange Online とクライアント アプリ Exchange ActiveSync を指定する条件付きアクセス ポリシーを作成します。
+     > **先進認証**クライアントと **Exchange ActiveSync クライアント**の両方を保護する場合、クライアントの種類ごとに 1 つずつ、計 2 つの別個の条件付きアクセス ポリシーを作成します。 Exchange ActiveSync では先進認証をサポートしていますが、Exchange ActiveSync でサポートされる条件はプラットフォームだけです。 多要素認証などのその他の条件は、サポートされていません。 Exchange ActiveSync から Exchange Online へのアクセスを効率よく保護するには、[サポートされているプラットフォームのみにポリシーを適用する] を選択したうえで、クラウド アプリ Microsoft 365 Exchange Online とクライアント アプリ Exchange ActiveSync を指定する条件付きアクセス ポリシーを作成します。
 
 9. **[完了]** を選びます。
 

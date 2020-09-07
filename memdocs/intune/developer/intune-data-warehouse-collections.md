@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6d3f3ea7423cf87d2644611bcbd6e298ac60699
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 348bafecd462aa9e4722443c33b62311b2f97e1a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820325"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993107"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune データ ウェアハウスのコレクション
 
@@ -69,7 +69,7 @@ ms.locfileid: "88820325"
 | 3         | iOS ストア アプリ                   | iOS ストア アプリ。                                 |
 | 4         | iOS LOB アプリ                     | iOS の基幹業務アプリ。                      |
 | 5         | 管理対象 iOS ストア アプリ (MAM)     | 管理が有効になっている iOS ストア アプリ。       |
-| 6         | O365 Pro Plus Suite             | Windows 10 用の Microsoft 365 アプリ。     |
+| 6         | Microsoft 365 Apps for enterprise        | Windows 10 用の Microsoft 365 アプリ。     |
 | 7         | Web アプリ                         | Web アプリ。                                        |
 | 8         | Windows Phone 8.1 ストア アプリ     | Windows Phone 8.1 ストア アプリ。                    |
 | 9         | Windows ストア アプリ               | Windows ストア アプリ。                              |
@@ -235,7 +235,7 @@ ms.locfileid: "88820325"
 | DeviceCategoryKey          | このデバイスに関連付けられているカテゴリのキー。                                                                                                                                     |
 | DeviceEnrollmentType       | このデバイスに関連付けられている登録の種類を示すキーであり、登録の方法を示します。                                                                                             |
 | ComplianceStateKey         | このデバイスに関連付けられているコンプライアンスの状態のキー。                                                                                                                             |
-| office365Version           | デバイスにインストールされている Office 365 のバージョン。                                                                                                                             |
+| office365Version           | デバイスにインストールされている Microsoft 365 のバージョン。                                                                                                                             |
 | OSVersion                  | デバイスのオペレーティング システムのバージョン。                                                                                                                                                |
 | EasDeviceId                | デバイスの Exchange ActiveSync ID。                                                                                                                                                  |
 | SerialNumber               | SerialNumber                                                                                                                                                                           |
@@ -286,7 +286,7 @@ ms.locfileid: "88820325"
 | 11           | Android           | デバイス管理者によって管理された Android デバイス   |
 | 12           | ISocConsumer      | iSoc Consumer デバイス                                |
 | 13           | Unix              | Unix デバイス                                         |
-| 14           | MacMDM            | 組み込み MDM エージェントによって管理された Mac OS X デバイス |
+| 14           | MacMDM            | 組み込み MDM エージェントによって管理された OS X デバイス |
 | 15           | HoloLens          | HoloLens デバイス                                       |
 | 16           | SurfaceHub        | Surface Hub デバイス                                  |
 | 17           | AndroidForWork    | Android Profile Owner によって管理された Android デバイス  |
@@ -459,13 +459,13 @@ ms.locfileid: "88820325"
 |   ApplicationInstanceKey   |                                                               データ ウェアハウスにおける MAM アプリ インスタンスを示す一意識別子 - 代理キー。                                                                |                 123                  |
 |           UserId           |                                                                              この MAM アプリをインストールしたユーザーのユーザー ID。                                                                              | b66bc706-ffff-7437-0340-032819502773 |
 |   ApplicationInstanceId    |                                              MAM アプリ インスタンスを示す一意識別子 - ApplicationInstanceKey に似ていますが、識別子はナチュラル キーです。                                              | b66bc706-ffff-7437-0340-032819502773 |
-| mamApplicationId | この MAM アプリケーション インスタンスが作成される MAM アプリケーションのアプリケーション ID。   | 11/23/2016 12:00:00 AM   |
+| mamApplicationId | この MAM アプリケーション インスタンスの作成に使用された MAM アプリケーションのアプリケーション ID。   | 11/23/2016 12:00:00 AM   |
 |     ApplicationVersion     |                                                                                     この MAM アプリのアプリケーション バージョン。                                                                                      |                  2                   |
 |        CreatedDate         |                                                                 MAM アプリ インスタンスのこのレコードが作成された日付 値は null を取ることができます。                                                                 |        11/23/2016 12:00:00 AM        |
 |          プラットフォーム          |                                                                          この MAM アプリがインストールされているデバイスのプラットフォーム。                                                                           |                  2                   |
 |      PlatformVersion       |                                                                      この MAM アプリがインストールされているデバイスのプラットフォーム バージョン。                                                                       |                 2.2                  |
 |         SdkVersion         |                                                                            この MAM アプリをラップした MAM SDK バージョン。                                                                            |                 3.2                  |
-| mamDeviceId | MAM アプリケーション インスタンスが関連付けられているデバイスのデバイス ID。   | 11/23/2016 12:00:00 AM   |
+| mamDeviceId | MAM アプリケーションのインスタンスが関連付けられているデバイスのデバイス ID。   | 11/23/2016 12:00:00 AM   |
 | mamDeviceType | MAM アプリケーション インスタンスが関連付けられているデバイスのデバイスの種類。   | 11/23/2016 12:00:00 AM   |
 | mamDeviceName | MAM アプリケーション インスタンスが関連付けられているデバイスのデバイス名。   | 11/23/2016 12:00:00 AM   |
 |         IsDeleted          | この MAM アプリ インスタンス レコードが更新されているかどうかを示します。 <br>True - この MAM アプリ インスタンスには新しいレコードがあり、そのフィールドはこのテーブルで更新されています。 <br>False - この MAM アプリ インスタンスの最新のレコード。 |              真/偽              |
@@ -595,7 +595,7 @@ Microsoft Intune によるモバイル アプリケーション管理を使用�
 | ownerTypeName | デバイスの所有者の種類を表します。Corporate - 会社が所有するデバイスです。  Personal - 個人が所有するデバイスです (BYOD)。   Unknown - このデバイスの情報はありません。 | 会社、個人、不明 |
 
 > [!Note]  
-> デバイスに対して動的グループを作成する場合の AzureAD の `ownerTypeName` フィルターでは、値 `deviceOwnership` を `Company` として設定する必要があります。 詳細については、「[デバイスのルール](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)」を参照してください。 
+> デバイスに対して動的グループを作成する場合の AzureAD の `ownerTypeName` フィルターでは、値 `deviceOwnership` を `Company` として設定する必要があります。 詳細については、「[デバイスのルール](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)」を参照してください。 
 
 ## <a name="policies"></a>policies
 **Policy** エンティティには、デバイス構成プロファイル、アプリ構成プロファイル、およびコンプライアンス ポリシーが表示されます。 モバイル デバイス管理 (MDM) を含むポリシーを社内のグループに割り当てることができます。

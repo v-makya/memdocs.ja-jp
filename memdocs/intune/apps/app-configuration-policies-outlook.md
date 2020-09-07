@@ -16,32 +16,32 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3db207e4c1c75706c1f54762bf74c1757d342ac1
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: ac2133455d4440e8048e7b9aba8f9f9b13d98a53
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973045"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996539"
 ---
 # <a name="manage-messaging-collaboration-access-by-using-outlook-for-ios-and-android-with-microsoft-intune"></a>Microsoft Intune で iOS および Android 用の Outlook を使用してメッセージングおよびコラボレーションへのアクセスを管理する
 
 iOS および Android 用の Outlook アプリは、メール、予定表、連絡先、その他のファイルを 1 か所にまとめることにより、組織内のユーザーが自身のモバイル デバイスからより多くのことを実行できるように設計されています。
 
-Office 365 データの豊富で広範な保護機能は、Enterprise Mobility + Security スイートにサブスクライブすると利用できます。これには、条件付きアクセスなどの Microsoft Intune と Azure Active Directory Premium の機能が含まれます。 少なくとも、モバイル デバイスから iOS および Android 用の Outlook への接続を許可する条件付きアクセス ポリシーと、コラボレーション エクスペリエンスが保護されることを保証する Intune のアプリ保護ポリシーを展開することをお勧めします。
+Microsoft 365 データの豊富で広範な保護機能は、Enterprise Mobility + Security スイートにサブスクライブすると利用できます。これには、条件付きアクセスなどの Microsoft Intune と Azure Active Directory Premium の機能が含まれます。 少なくとも、モバイル デバイスから iOS および Android 用の Outlook への接続を許可する条件付きアクセス ポリシーと、コラボレーション エクスペリエンスが保護されることを保証する Intune のアプリ保護ポリシーを展開することをお勧めします。
 
 ## <a name="apply-conditional-access"></a>条件付きアクセスを適用する
-組織は Azure AD 条件付きアクセス ポリシーを使用して、ユーザーが iOS および Android 用の Outlook を使用して確実に職場または学校のコンテンツにのみアクセスできるようにすることができます。 これを行うには、可能性のあるすべてのユーザーを対象とする条件付きアクセス ポリシーが必要です。 このポリシーの作成の詳細については、[条件付きアクセスを使用してクラウド アプリへのアクセスにアプリ保護ポリシーを要求する方法](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)に関するページを参照してください。
+組織は Azure AD 条件付きアクセス ポリシーを使用して、ユーザーが iOS および Android 用の Outlook を使用して確実に職場または学校のコンテンツにのみアクセスできるようにすることができます。 これを行うには、可能性のあるすべてのユーザーを対象とする条件付きアクセス ポリシーが必要です。 このポリシーの作成の詳細については、[条件付きアクセスを使用してクラウド アプリへのアクセスにアプリ保護ポリシーを要求する方法](/azure/active-directory/conditional-access/app-protection-based-conditional-access)に関するページを参照してください。
 
-1. 「[シナリオ 1: Office 365 アプリで、承認済みアプリとアプリ保護ポリシーの使用を必須にする](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)」の「ステップ 1: Office 365 用の Azure AD 条件付きアクセス ポリシーを構成する」に従い、iOS および Android 用の Outlook が Exchange Online に接続することを許可し、OAuth 対応 Exchange ActiveSync クライアントはブロックします。
+1. 「[シナリオ 1: Office 365 アプリで、承認済みアプリとアプリ保護ポリシーの使用を必須にする](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)」の「ステップ 1: Office 365 用の Azure AD 条件付きアクセス ポリシーを構成する」に従い、iOS および Android 用の Outlook が Exchange Online に接続することを許可し、OAuth 対応 Exchange ActiveSync クライアントはブロックします。
 
    > [!NOTE]
    > このポリシーにより、モバイル ユーザーは適用可能なアプリを使用してすべての Office エンドポイントに確実にアクセスできます。
 
-2. 「[シナリオ 1: Office 365 アプリで、承認済みアプリとアプリ保護ポリシーの使用を必須にする](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)」の「ステップ 2: ActiveSync (EAS) を使用する Exchange Online 用の Azure AD 条件付きアクセス ポリシーを構成する」に従い、基本認証を利用する Exchange ActiveSync クライアントが、Exchange Online に接続できないようにします。
+2. 「[シナリオ 1: Office 365 アプリで、承認済みアプリとアプリ保護ポリシーの使用を必須にする](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)」の「ステップ 2: ActiveSync (EAS) を使用する Exchange Online 用の Azure AD 条件付きアクセス ポリシーを構成する」に従い、基本認証を利用する Exchange ActiveSync クライアントが、Exchange Online に接続できないようにします。
 
-   上記のポリシーでは、許可の制御の[[アプリの保護ポリシーが必要]](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference) を利用します。これにより、アクセスを許可する前に、iOS および Android 用の Outlook 内の関連するアカウントに Intune のアプリ保護ポリシーが確実に適用されます。 ユーザーが Intune のアプリ保護ポリシーに割り当てられていない場合、Intune のライセンスが付与されていない場合、またはアプリが Intune アプリ保護ポリシーに含まれていない場合、ポリシーにより、そのユーザーがアクセス トークンを取得してメッセージング データにアクセスできないようにします。
+   上記のポリシーでは、許可の制御の[[アプリの保護ポリシーが必要]](/azure/active-directory/active-directory-conditional-access-technical-reference) を利用します。これにより、アクセスを許可する前に、iOS および Android 用の Outlook 内の関連するアカウントに Intune のアプリ保護ポリシーが確実に適用されます。 ユーザーが Intune のアプリ保護ポリシーに割り当てられていない場合、Intune のライセンスが付与されていない場合、またはアプリが Intune アプリ保護ポリシーに含まれていない場合、ポリシーにより、そのユーザーがアクセス トークンを取得してメッセージング データにアクセスできないようにします。
 
-3. 最後に、「[方法: 条件付きアクセスを使用して Azure AD へのレガシ認証をブロックする](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication)」に従い、iOS および Android デバイス上の他の Exchange プロトコルのレガシ認証をブロックします。このポリシーでは、Office 365 Exchange Online クラウド アプリと、iOS および Android デバイス プラットフォームのみを対象にする必要があります。 これにより、基本認証を使用する Exchange Web サービス、IMAP4、または POP3 プロトコルを使用しているモバイル アプリは、Exchange Online に接続できなくなります。
+3. 最後に、「[方法: 条件付きアクセスを使用して Azure AD へのレガシ認証をブロックする](/azure/active-directory/conditional-access/block-legacy-authentication)」に従い、iOS および Android デバイス上の他の Exchange プロトコルのレガシ認証をブロックします。このポリシーでは、Microsoft Exchange Online クラウド アプリと、iOS および Android デバイス プラットフォームのみを対象にする必要があります。 これにより、基本認証を使用する Exchange Web サービス、IMAP4、または POP3 プロトコルを使用しているモバイル アプリは、Exchange Online に接続できなくなります。
 
 ## <a name="create-intune-app-protection-policies"></a>Intune のアプリ保護ポリシーを作成する
 
@@ -55,7 +55,7 @@ APP データ保護フレームワークは 3 つの異なる構成レベルに�
 
 各構成レベルおよび、最低限保護する必要のあるアプリに関する具体的な推奨事項については、「[アプリ保護ポリシーを使用するデータ保護フレームワーク](app-protection-framework.md)」を参照してください。
 
-デバイスが統合エンドポイント管理 (UEM) ソリューションに登録されているかどうかに関係なく、「[アプリ保護ポリシーを作成して割り当てる方法](app-protection-policies.md)」の手順を使用して、iOS アプリと Android アプリの両方に対して Intune アプリ保護ポリシーを作成する必要があります。 これらのポリシーは、少なくとも次の条件を満たしている必要があります。
+デバイスが統合エンドポイント管理 (UEM) ソリューションに登録されているかどうかに関係なく、[アプリ保護ポリシーを作成して割り当てる方法](app-protection-policies.md)に関するページの手順を使用して、iOS アプリと Android アプリの両方に対して Intune アプリ保護ポリシーを作成する必要があります。 これらのポリシーは、少なくとも次の条件を満たしている必要があります。
 
 1. Microsoft Edge、Outlook、OneDrive、Office、Teams など、すべての Microsoft 365 モバイル アプリケーションを含める。これにより、ユーザーは Microsoft アプリ内の職場または学校のデータに対し、セキュリティで保護された方法でアクセスして操作できることが保証されます。
 
@@ -79,7 +79,7 @@ iOS および Android 用の Outlook では、Microsoft Endpoint Manager など�
 - S/MIME 設定
 - データ保護設定
 
-iOS および Android 用 Outlook でサポートされるアプリ構成設定に関する特定の手順と詳細なドキュメントについては、「[Deploying Outlook for iOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)」 (iOS および Android 用 Outlook のアプリ構成設定の展開) を参照してください。
+iOS および Android 用 Outlook でサポートされるアプリ構成設定に関する特定の手順と詳細なドキュメントについては、「[Deploying Outlook for iOS and Android app configuration settings](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)」 (iOS および Android 用 Outlook のアプリ構成設定の展開) を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

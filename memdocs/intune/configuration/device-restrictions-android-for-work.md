@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b08d5f1395c30b646885470c95fed2c7a96d3f9
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819611"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194108"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限するように Android エンタープライズ デバイスを設定する
 
@@ -296,7 +296,7 @@ End of comment -->
 - **[デバイスがワイプされるまでのサインイン失敗回数]** :デバイスがワイプされるまでに許容される間違ったパスワードの回数を 4 から 11 の範囲で入力します。 `0` (ゼロ) を使用すると、デバイスのワイプ機能を無効にできます。 値が空白の場合、Intune でこの設定が変更または更新されることはありません。
 
   > [!NOTE]
-  > フル マネージド、専用、および会社所有の仕事用プロファイル デバイスは、パスワードの設定を求められることはありません。 設定が適用され、パスワードを手動で設定する必要があります。 これを適用するポリシーでは、要件を満たすパスワードを設定するまで、失敗と報告されます。
+  > フル マネージド、専用、および会社所有の仕事用プロファイル デバイスは、パスワードの設定を求められることはありません。 設定は必須ですが、ユーザーに通知されないことがあります。 ユーザーはパスワードを手動で設定する必要があります。 要件を満たすパスワードをユーザーが設定するまで、ポリシーによって失敗として報告されます。
 
 ### <a name="power-settings"></a>電源設定
 

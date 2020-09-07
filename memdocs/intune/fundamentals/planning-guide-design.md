@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6412b0d23edb9f93becb3973cc1ae02c0a068dea
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 6a1f3f4dc6187616d007c0ab9c97072bc3970c0a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663244"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996369"
 ---
 # <a name="create-a-design"></a>設計の作成
 
@@ -134,15 +134,15 @@ Intune の設計は、[このガイドの他のセクション](planning-guide.m
 
 ### <a name="identity"></a>ID
 
-ID は、組織に属している、デバイスに登録されているユーザーを識別する方法です。 Intune では、ユーザー ID プロバイダーとして Azure Active Directory (Azure AD) が必要です。 このサービスを既に使っている場合は、クラウドの既存の ID を利用できます。 さらに、オンプレミスのユーザー ID を Microsoft クラウド サービスと同期するには、Azure AD Connect が推奨されるツールです。 組織が Office 365 を既に使っている場合は、Intune でも同じ Azure AD 環境を使うことが重要です。
+ID は、組織に属している、デバイスに登録されているユーザーを識別する方法です。 Intune では、ユーザー ID プロバイダーとして Azure Active Directory (Azure AD) が必要です。 このサービスを既に使っている場合は、クラウドの既存の ID を利用できます。 さらに、オンプレミスのユーザー ID を Microsoft クラウド サービスと同期するには、Azure AD Connect が推奨されるツールです。 組織が Microsoft 365 を既に使っている場合は、Intune でも同じ Azure AD 環境を使うことが重要です。
 
 次に示す Intune の ID 要件に関する詳細情報をご確認ください。
 
-- [ID の要件](https://docs.microsoft.com/azure/active-directory/understand-azure-identity-solutions)については、こちらをご覧ください。
+- [ID の要件](/azure/active-directory/understand-azure-identity-solutions)については、こちらをご覧ください。
 
-- [ディレクトリ同期の要件](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)については、こちらをご覧ください。
+- [ディレクトリ同期の要件](/azure/active-directory/connect/active-directory-aadconnect)については、こちらをご覧ください。
 
-- [多要素認証の要件](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)については、こちらをご覧ください。
+- [多要素認証の要件](/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)については、こちらをご覧ください。
 
 ### <a name="user-and-device-groups"></a>ユーザーとデバイス グループ
 

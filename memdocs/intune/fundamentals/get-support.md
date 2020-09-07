@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 2a476be4fb8c9d40150648e72d3203df564893dd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820665"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994346"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Microsoft Intune のサポートを受ける方法
 
 Microsoft サポートは、Microsoft Intune に世界的な技術、購入前、請求、およびサブスクリプションのサポートを提供しています。 有料サブスクリプションと試用版サブスクリプションについて、オンラインと電話によるサポートを利用できます。 オンライン テクニカル サポートは、英語と日本語で提供されています。 電話によるサポートとオンライン課金サポートは、他の言語でも利用できます。
 
-Intune 管理者は、 **[ヘルプとサポート]** オプションを使用して、Azure portal から Intune 用のオンライン サポート チケットを提出することができます。 サポート インシデントを作成して管理するには、お使いのアカウントに、"*アクション*" **microsoft.office365.supportTickets** を含む Azure Active Directory (Azure AD) ロールが付与されている必要があります。 サポート チケットを作成するために必要な Azure AD のロールとアクセス許可については、[Azure Active Directory での管理者ロール](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal)に関するページを参照してください。
+Intune 管理者は、 **[ヘルプとサポート]** オプションを使用して、Azure portal から Intune 用のオンライン サポート チケットを提出することができます。 サポート インシデントを作成して管理するには、お使いのアカウントに、"*アクション*" **microsoft.office365.supportTickets** を含む Azure Active Directory (Azure AD) ロールが付与されている必要があります。 サポート チケットを作成するために必要な Azure AD のロールとアクセス許可については、[Azure Active Directory での管理者ロール](/azure/active-directory/active-directory-assign-admin-roles-azure-portal)に関するページを参照してください。
 
 >[!IMPORTANT]
 > Intune と連携するサードパーティ製品 (Saaswedo、Cisco、Lookout など) のテクニカル サポートについては、まず、その製品の提供元に連絡してください。 Intune サポート要求を開始する前に、その他の製品が正しく構成されていることを確認します。
@@ -50,7 +50,7 @@ Intune 用に新しく作成されたテナントを使用するとき、*ヘル
 
 エラーの詳細には、*セッション ID* や*拡張機能*の詳細などが含まれます。
 
-この問題は、 https://admin.microsoft.com の **M365 管理センター**または https://portal.office.com の **Office 365 ポータル**で新しいテナント アカウントを認証していない場合に発生します。 この問題を解決するには、メッセージに含まれている *M365 管理センター*のリンクを選択するか、 https://portal.office.com にアクセスしてサインインします。 いずれかの場所での認証後、Intune の*ヘルプとサポート*にアクセスできるようになります。
+この問題は、 https://admin.microsoft.com の **Microsoft 365 管理センター**または https://portal.office.com の **Office 365 ポータル**で新しいテナント アカウントを認証していない場合に発生します。 この問題を解決するには、メッセージに含まれている "*Microsoft 365 管理センター*" のリンクを選択するか、 https://portal.office.com にアクセスしてサインインします。 いずれかの場所での認証後、Intune の*ヘルプとサポート*にアクセスできるようになります。
 
 **ヘルプとサポート**にアクセスする:
 

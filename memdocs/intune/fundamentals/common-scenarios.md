@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 644235178d39ff1e7c641383c4fb45dde80cf4b5
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: b5ed8b6974971e3e2e8182d32cad39a5481331b2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531878"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994125"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Microsoft Intune の一般的な使用方法
 
@@ -50,21 +50,21 @@ Intune と Microsoft Enterprise Mobility + Security (EMS) では、Exchange Serv
 
 <!-- Learn more about how to plan and deploy Intune to help secure on-premises email and data. -->
 
-## <a name="protecting-your-office-365-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>モバイル デバイスで安全にアクセスできるように Office 365 の電子メールとデータを保護する
+## <a name="protecting-your-microsoft-365-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>モバイル デバイスで安全にアクセスできるように Microsoft 365 の電子メールとデータを保護する
 
-Office 365 の企業データ (電子メール、ドキュメント、インスタント メッセージ、連絡先) の保護は、非常に簡単かつシームレスに行えます。
+Microsoft 365 の企業データ (電子メール、ドキュメント、インスタント メッセージ、連絡先) の保護は、容易ではない場合や、ユーザーに対してシームレスでないことがあります。
 
-Intune と Microsoft Enterprise Mobility + Security によって提供される統合された条件付きアクセス ソリューションにより、会社のコンプライアンス要件 ([多要素認証](../enrollment/multi-factor-authentication.md)、Intune での登録、管理されたアプリの使用、サポート対象の OS のバージョン、デバイスの PIN、リスクの低いユーザー プロファイルなど) を満たしていない限り、どのユーザーやアプリ、デバイスも Office 365 のデータにアクセスできないようにすることができます。
+Intune と Microsoft Enterprise Mobility + Security によって提供される統合された条件付きアクセス ソリューションにより、会社のコンプライアンス要件 (実行された[多要素認証](../enrollment/multi-factor-authentication.md)、Intune での登録、管理されたアプリの使用、サポート対象の OS のバージョン、デバイスの PIN、リスクの低いユーザー プロファイルなど) を満たしていない限り、どのユーザーやアプリ、デバイスも Microsoft 365 のデータにアクセスできないようにすることができます。
 
-それぞれのアプリ ストアの Office モバイル アプリは Intune で構成できるデータ封じ込めポリシーに対応しています。 そのため、IT 部門で管理されていないアプリ (ネイティブの電子メール アプリなど) や記憶域の場所 (Dropbox など) とのデータの共有を防ぐことができます。 こうした機能はすべて Office 365 と EMS に組み込まれているので、 新たにインフラストラクチャを展開する必要はありません。
+それぞれのアプリ ストアの Office モバイル アプリは Intune で構成できるデータ封じ込めポリシーに対応しています。 そのため、IT 部門で管理されていないアプリ (ネイティブの電子メール アプリなど) や記憶域の場所 (Dropbox など) とのデータの共有を防ぐことができます。 こうした機能はすべて Microsoft 365 と EMS に組み込まれています。 新たにインフラストラクチャを展開する必要はありません。
 
-Office 365 の一般的な展開方法では、デバイスを企業のアプリ、証明書、Wi-Fi、VPN 構成を使用して完全にセットアップする必要がある場合 (通常は会社所有のデバイスの場合)、そのデバイスを管理システムに登録する必要があります。  
+Microsoft 365 の一般的な展開方法では、デバイスを企業のアプリ、証明書、Wi-Fi、VPN 構成を使用して完全にセットアップする必要がある場合 (通常は会社所有のデバイスの場合)、そのデバイスを管理システムに登録する必要があります。  
 
 ただし、個人的に所有しているデバイスなどで、ユーザーが会社の電子メールとドキュメントへのアクセスのみ必要な場合は、[アプリ保護ポリシー](../apps/app-protection-policies.md)を適用してある Office モバイル アプリを使用すれば、デバイスの登録を省略できます。  
 
-どちらの方法でも、Office 365 のデータは定義されているポリシーによって保護されます。
+どちらの方法でも、Microsoft 365 のデータは定義されているポリシーによって保護されます。
 
-<!-- Learn more about how to plan and deploy Intune to help secure Office 365 email and data. -->
+<!-- Learn more about how to plan and deploy Intune to help secure Microsoft 365 email and data. -->
 
 ## <a name="offer-a-bring-your-own-device-program-to-all-employees"></a>すべての従業員に "Bring your own device" プログラムを提供する
 
@@ -72,7 +72,7 @@ Office 365 の一般的な展開方法では、デバイスを企業のアプリ
 
 デバイスの登録が現実的でない場合のために、Intune には単に[企業データを含むアプリケーションを管理する](../apps/app-protection-policies.md)だけの BYOD アプローチも用意されています。 Intune は、Office モバイル アプリのようにアプリが会社と個人の両方のデータにアクセスする場合でも、会社のデータを保護することができます。  
 
-この場合、管理者は Office モバイル アプリから Office 365 にアクセスするようユーザーに要求し、データを保護するポリシー (暗号化、PIN による保護など) を使用してアプリを構成する必要があります。 これらのアプリ保護ポリシーにより、管理対象外のアプリとストレージの場所 (アプリの内外を問わず) へのデータ損失を防ぎます。 たとえば、どちらも Outlook Mobile 内で構成されたプロファイルであっても、会社の電子メール プロファイルからコンシューマー向けの電子メール プロファイルにテキストがコピーされないようにします。 同様の構成は、BYOD ユーザーに必要な他のサービスやアプリケーションにも展開できます。
+この場合、管理者は Office モバイル アプリから Microsoft 365 にアクセスするようユーザーに要求し、データを保護するポリシー (暗号化、PIN による保護など) を使用してアプリを構成する必要があります。 これらのアプリ保護ポリシーにより、管理対象外のアプリとストレージの場所 (アプリの内外を問わず) へのデータ損失を防ぎます。 たとえば、どちらも Outlook Mobile 内で構成されたプロファイルであっても、会社の電子メール プロファイルからコンシューマー向けの電子メール プロファイルにテキストがコピーされないようにします。 同様の構成は、BYOD ユーザーに必要な他のサービスやアプリケーションにも展開できます。
 
 <!-- Learn more about how to plan and deploy Intune to support BYOD.-->
 
@@ -96,7 +96,7 @@ Intune の[一括プロビジョニングと管理のソリューション](../e
 
 <!-- Learn more about how to plan and deploy Intune to support shared tablets. -->
 
-## <a name="enable-your-employees-to-securely-access-office-365-from-an-unmanaged-public-kiosk"></a>公共の場所から Office 365 に安全にアクセスできるようにする
+## <a name="enable-your-employees-to-securely-access-microsoft-365-from-an-unmanaged-public-kiosk"></a>従業員が管理されていない公共の場所から Microsoft 365 に安全にアクセスできるようにする
 
 従業員は、展示会場やホテルのロビーにある公共のコンピューターなど、会社が管理できないデバイスやアプリ、ブラウザーを使用しなければならない場合があります。
 

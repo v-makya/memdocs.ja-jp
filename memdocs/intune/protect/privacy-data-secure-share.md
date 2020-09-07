@@ -2,7 +2,7 @@
 title: Intune でのデータのセキュリティと共有
 titleSuffix: Microsoft Intune
 description: Intune で個人データがどのように保護され、共有されるかについて学習します。
-keywords: ''
+keywords: プライバシー, データ
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f4e6d425923637d991ef62bb0e3c8090e657403
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: fba72c89676d8974f5e7f9aac25d3365b69f61c7
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079554"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286256"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Intune でのデータのセキュリティと共有
 
@@ -36,17 +36,9 @@ Microsoft Intune は、Microsoft Azure サービス チームがデータ侵害�
 
 詳細については、「[Service Trust Portal](https://www.microsoft.com/en-us/TrustCenter/stp)」を参照してください。
 
-Intune では、次のようなデータ最小化の手法を使用しています。
-
-- aggregation
-- 一部の機能に対する省略可能なデータ コレクション
-- 正確性または機密性を低くしたデータ
-
-Intune では、既定でのデータ保護を確実にするため、サポート インシデントの RBAC および JiT セキュリティなどの手法も使用します。 
-
 ### <a name="data-breach-reporting"></a>データ侵害レポート
 
-顧客レポート可能なセキュリティ インシデント (CRSI) が識別されると、顧客に通知されます。 このプロセスには、Microsoft O365 チームと連携して、Intune を使用している Microsoft O365 のすべての顧客に侵害通知を送信することが含まれます。
+顧客レポート可能なセキュリティ インシデント (CRSI) が識別されると、顧客に通知されます。 このプロセスには、Microsoft 365 チームと連携して、Intune を使用している Microsoft 365 のすべての顧客に侵害通知を送信することが含まれます。
 
 ## <a name="data-sharing"></a>データ共有
 
@@ -55,7 +47,7 @@ Intune では、既定でのデータ保護を確実にするため、サポー�
 - Microsoft のエージェントとして活動しているサード パーティ。
 - Microsoft のエージェントとしては活動していないが、テナント管理者が明示的に Intune にそのように活動するための権限を与えた場合にのみエージェントとして活動するサード パーティ。
 
-Microsoft のエージェントとして活動しているすべてのサードパーティは、「[Online Services Subcontractor list](https://aka.ms/Online_Serv_Subcontractor_List)」 (オンライン サービスの下請業者の一覧) に含まれています。
+Microsoft のエージェントとして活動しているすべてのサードパーティは、[オンライン サービスの下請業者の一覧](https://aka.ms/Online_Serv_Subcontractor_List)に関するページに含まれています。
 
 このようなエンティティとのデータの共有は、顧客とテクニカル サポート、サービスのメンテナンス、およびその他の作業を支援するために行われます。
 
@@ -72,7 +64,7 @@ Microsoft のエージェントとして活動しているすべてのサード�
 
 Microsoft Intune では、データが Configuration Manager と共有されることはありません。 Configuration Manager は、お客様が直接デプロイ、管理、操作するオンプレミス製品です。 Configuration Manager で収集される診断データおよび使用状況データは、今後のリリースでインストールのエクスペリエンス、品質、セキュリティを向上させるためだけに使用されます。
 
-詳細については、[Configuration Manager の診断結果と使用状況データ](https://docs.microsoft.com/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data)に関するページをご覧ください。 
+詳細については、[Configuration Manager の診断結果と使用状況データ](/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data)に関するページをご覧ください。 
 
 
 ## <a name="next-steps"></a>次のステップ

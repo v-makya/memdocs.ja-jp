@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: ba4bef364f734f9078b7c404e06978b018f4c387
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383259"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281083"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>Microsoft Intune で、iOS および Android 用の Office を使用するコラボレーション エクスペリエンスを管理する
 
@@ -32,12 +32,12 @@ iOS および Android 用の Office の主な利点は、次のとおりです�
 - Office Lens テクノロジを統合して、カメラ機能を最大限に活用できます。たとえば、画像を編集可能な Word 文書や Excel ドキュメントに変換したり、PDF をスキャンしたりすることができます。また、自動デジタル拡張機能を使用してホワイトボードをキャプチャし、コンテンツを読みやすくすることもできます。
 - 電話での作業時にしばしば発生する一般的なタスク (クイックノートの作成、PDF への署名、QR コードのスキャン、デバイス間でのファイルの転送など) のための新しい機能を追加します。
 
-Office 365 データの豊富で広範な保護機能は、Enterprise Mobility + Security スイートにサブスクライブすると利用できます。これには、条件付きアクセスなどの Microsoft Intune と Azure Active Directory Premium の機能が含まれます。 少なくとも、モバイル デバイスから iOS および Android 用の Office への接続を許可する条件付きアクセス ポリシーと、コラボレーション エクスペリエンスが保護されることを保証する Intune のアプリ保護ポリシーを展開することをお勧めします。
+Microsoft 365 データの豊富で広範な保護機能は、Enterprise Mobility + Security スイートにサブスクライブすると利用できます。これには、条件付きアクセスなどの Microsoft Intune と Azure Active Directory Premium の機能が含まれます。 少なくとも、モバイル デバイスから iOS および Android 用の Office への接続を許可する条件付きアクセス ポリシーと、コラボレーション エクスペリエンスが保護されることを保証する Intune のアプリ保護ポリシーを展開することをお勧めします。
 
 ## <a name="apply-conditional-access"></a>条件付きアクセスを適用する
-組織は Azure AD 条件付きアクセス ポリシーを使用して、ユーザーが iOS および Android 用の Office を使用して確実に職場または学校のコンテンツにのみアクセスできるようにすることができます。 これを行うには、可能性のあるすべてのユーザーを対象とする条件付きアクセス ポリシーが必要です。 このポリシーの作成の詳細については、[条件付きアクセスを使用してクラウド アプリへのアクセスにアプリ保護ポリシーを要求する方法](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)に関するページを参照してください。
+組織は Azure AD 条件付きアクセス ポリシーを使用して、ユーザーが iOS および Android 用の Office を使用して確実に職場または学校のコンテンツにのみアクセスできるようにすることができます。 これを行うには、可能性のあるすべてのユーザーを対象とする条件付きアクセス ポリシーが必要です。 このポリシーの作成の詳細については、[条件付きアクセスを使用してクラウド アプリへのアクセスにアプリ保護ポリシーを要求する方法](/azure/active-directory/conditional-access/app-protection-based-conditional-access)に関するページを参照してください。
 
-1. 「[シナリオ 1: Office 365 アプリで、承認済みアプリとアプリ保護ポリシーの使用を必須にする](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)」の「ステップ 1: Office 365 用の Azure AD 条件付きアクセス ポリシーを構成する」に従い、iOS および Android 用の Office が Office 365 エンドポイントに接続することを許可し、サードパーティの OAuth 対応モバイル デバイス クライアントはブロックします。
+1. 「[シナリオ 1: Office 365 アプリで、承認済みアプリとアプリ保護ポリシーの使用を必須にする](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies)」の「ステップ 1: Office 365 用の Azure AD 条件付きアクセス ポリシーを構成する」に従い、iOS および Android 用の Office が Office 365 エンドポイントに接続することを許可し、サードパーティの OAuth 対応モバイル デバイス クライアントはブロックします。
 
    >[!NOTE]
    > このポリシーにより、モバイル ユーザーは適用可能なアプリを使用してすべての Office エンドポイントに確実にアクセスできます。
@@ -74,6 +74,7 @@ iOS および Android 用の Office では、Microsoft Endpoint Manager など�
 アプリ構成を配信するには、登録済みデバイスのモバイル デバイス管理 (MDM) OS チャネル (iOS 用の[マネージド アプリ構成](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html)チャネルまたは Android 用の [Android in the Enterprise](https://developer.android.com/work/managed-configurations) チャネル) を使用するか、または Intune アプリ保護ポリシー (APP) チャネルを使用します。 iOS および Android 用の Office では、次の構成シナリオがサポートされています。
 
 - 職場または学校アカウントのみ許可
+- 一般的なアプリの構成
 - データ保護設定
 
 > [!IMPORTANT]
@@ -96,6 +97,26 @@ iOS および Android 用の Office では、Microsoft Endpoint Manager など�
 
 > [!NOTE]
 > 現時点では、Android 用の Office のみが、組織に許可されたアカウント モードをサポートしています。
+
+## <a name="general-app-configuration-scenarios"></a>一般的なアプリ構成シナリオ
+
+iOS および Android 用の Office では、管理者は、いくつかのアプリ内設定について既定の構成をカスタマイズできます。  この機能は、任意の UEM プロバイダーを介して登録されたデバイスと未登録のデバイスの両方に対して、Office for iOS および Android で Intune アプリ保護ポリシーが適用されている場合に提供されます。
+
+> [!NOTE]
+> アプリ保護ポリシーがユーザーを対象としている場合は、一般的なアプリ構成設定を**マネージド アプリ**登録モデルに展開することをお勧めします。 これにより、登録されているデバイスと登録されていないデバイスの両方にアプリ構成ポリシーが展開されます。 
+
+Office では、次の構成設定がサポートされています。
+
+- 付箋の作成を管理する
+
+### <a name="manage-the-creation-of-sticky-notes"></a>付箋の作成を管理する
+
+既定では、iOS および Android 用の Office を利用するユーザーは付箋を作成できます。 Exchange Online のメールボックスを使用しているユーザーの場合、付箋はユーザーのメールボックスに同期されます。 オンプレミスのメールボックスを使用しているユーザーの場合、これらの付箋はローカル デバイスにのみ保存されます。
+
+|    Key    |    値    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.office.NotesCreationEnabled    |    **true** (既定値) の場合、職場または学校アカウントに対して付箋の作成が有効になります<br>**false** の場合、職場または学校アカウントに対して付箋の作成が無効になります    |
+
 
 ## <a name="data-protection-app-configuration-scenarios"></a>データ保護アプリ構成シナリオ
 

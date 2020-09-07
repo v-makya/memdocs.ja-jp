@@ -15,12 +15,12 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 7f4d3f8193eeaf9597d56c8cf1cd999147915e61
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 9aceb4d2b8b0b67af297fa5d15cdf66ae04a83f4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531572"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996624"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Intune におけるアプリ保護ポリシーの展開のトラブルシューティング
 
@@ -57,14 +57,14 @@ MDM ソリューションに依存しない Intune アプリ保護ポリシー�
 - ユーザーは、アプリ保護ポリシーの対象となるセキュリティ グループに属している必要があります。 同一のアプリ保護ポリシーでは、使用中の特定のアプリを対象とする必要があります。
 - Android デバイスでは、ポータル サイト アプリがアプリ保護ポリシーを受け取る必要があります。
 - [Word、Excel、または PowerPoint](https://products.office.com/business/office) アプリを使用する場合は、次の追加要件が満たされている必要があります。
-    - ユーザーに、自分の Azure Active Directory (Azure AD) アカウントにリンクされた [Microsoft 365 Apps for business または Microsoft 365 Apps for enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) のライセンスが必要です。 サブスクリプションには、モバイル デバイスの Office アプリが含まれている必要があります。また、[OneDrive for Business](https://onedrive.live.com/about/business/) のクラウド ストレージ アカウントを含めることも可能です。 Office 365 ライセンスは、[Microsoft 365 管理センター](https://admin.microsoft.com)で割り当てることができます。[こちらの手順](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)に従ってください。
+    - ユーザーに、自分の Azure Active Directory (Azure AD) アカウントにリンクされた [Microsoft 365 Apps for business または Microsoft 365 Apps for enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) のライセンスが必要です。 サブスクリプションには、モバイル デバイスの Office アプリが含まれている必要があります。また、[OneDrive for Business](https://onedrive.live.com/about/business/) のクラウド ストレージ アカウントを含めることも可能です。 Microsoft 365 ライセンスは、[こちらの手順](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)に従うことで [Microsoft 365 管理センター](https://admin.microsoft.com)で割り当てることができます。
     - ユーザーは、詳細な **[名前を付けて保存]** 機能を使用して構成された管理対象の場所を持っている必要があります。 このコマンドは、 **[組織データのコピーを保存]** アプリケーション保護ポリシー設定の下にあります。 たとえば、管理対象の場所が OneDrive の場合、[OneDrive](https://onedrive.live.com/about/) アプリは、ユーザーの Word アプリ、Excel アプリ、または PowerPoint アプリ内で構成される必要があります。
     - 管理対象の場所が OneDrive の場合、アプリは、ユーザーに展開されているアプリの保護ポリシーの対象となる必要があります。
 
   > [!NOTE]
   > 現段階では、Office モバイル アプリは SharePoint Online のみをサポートし、オンプレミスの SharePoint はサポートされていません。
 
-- Intune アプリ保護ポリシーをオンプレミスのリソース (Microsoft Skype for Business と Microsoft Exchange Server) と共に使用する場合は、[Skype for Business と Exchange に対してハイブリッド先進認証 (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) を有効にする必要があります。
+- Intune アプリ保護ポリシーをオンプレミスのリソース (Microsoft Skype for Business と Microsoft Exchange Server) と共に使用する場合は、[Skype for Business と Exchange に対してハイブリッド先進認証 (HMA)](/office365/enterprise/hybrid-modern-auth-overview) を有効にする必要があります。
 
 Intune アプリ保護ポリシーでは、アプリケーションと [Intune App SDK](../developer/app-sdk-get-started.md) の間でユーザーの ID の一貫性が保たれていることが必要です。 この一貫性を保証する唯一の方法は、最新の認証を使用することです。 最新の認証を使用せずに、オンプレミスの構成でアプリが動作する可能性のあるシナリオがあります。 ただし、結果は一貫性がないか、保証されていません。
 
@@ -74,7 +74,7 @@ Skype for Business のハイブリッド構成とオンプレミス構成で HMA
 [SfB と Exchange のハイブリッドな最新認証が一般公開](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)
 
 - **オンプレミス**<br>
-[AAD による SfB オンプレミスの最新認証](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
+[Azure AD による SfB オンプレミスの最新認証](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
 
 ### <a name="check-app-protection-policy-status"></a>アプリ保護ポリシーの状態を確認する
 
@@ -83,7 +83,7 @@ Skype for Business のハイブリッド構成とオンプレミス構成で HMA
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 2. **[アプリ]**  >  **[モニター]**  >  **[アプリの保護状態]** を選択した後、 **[割り当てられたユーザー]** タイルを選択します。
 3. **[アプリ レポート]** ページ上で、 **[ユーザーの選択]** を選択してユーザーとグループの一覧を表示させます。
-4. 一覧から影響を受けているユーザーのいずれかを検索して選択し、 **[ユーザーの選択]** を選択します。 [アプリ レポート] ページの上部で、ユーザーがアプリ保護のライセンスを取得しているかどうか、O365 のライセンスを取得しているかどうかを確認できます。 また、すべてのユーザーのデバイスのアプリの状態を確認することもできます。
+4. 一覧から影響を受けているユーザーのいずれかを検索して選択し、 **[ユーザーの選択]** を選択します。 [アプリ レポート] ページの上部で、ユーザーがアプリ保護のライセンスを取得しているかどうか、Microsoft 365 のライセンスを取得しているかどうかを確認できます。 また、すべてのユーザーのデバイスのアプリの状態を確認することもできます。
 5. 対象となるアプリ、デバイスの種類、ポリシー、デバイスのチェックイン状態、最終同期時刻などの重要な情報をメモしておきます。
 
 > [!NOTE]
@@ -95,9 +95,9 @@ Skype for Business のハイブリッド構成とオンプレミス構成で HMA
 
 ほとんどのシナリオでは、ユーザーはユーザー プリンシパル名 (UPN) を使用してアカウントにログインします。 ただし、一部の環境 (オンプレミスのシナリオなど) では、ユーザーは他の形式のサインイン資格情報を使用する場合があります。 このような場合は、アプリで使用されている UPN が Azure AD の UPN オブジェクトと一致していないことがあります。 この問題が発生した場合、アプリ保護ポリシーは想定どおりに適用されません。
 
-Microsoft の推奨するベスト プラクティスは、UPN をプライマリ SMTP アドレスと一致させることです。 これにより、ユーザーは一貫性のある ID を使用して、マネージド アプリ、Intune アプリ保護、およびその他の Azure AD リソースにログインできるようになります。 詳細については、[Azure AD UserPrincipalName の設定](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-userprincipalname)に関するページを参照してください。
+Microsoft の推奨するベスト プラクティスは、UPN をプライマリ SMTP アドレスと一致させることです。 これにより、ユーザーは一貫性のある ID を使用して、マネージド アプリ、Intune アプリ保護、およびその他の Azure AD リソースにログインできるようになります。 詳細については、[Azure AD UserPrincipalName の設定](/azure/active-directory/connect/active-directory-aadconnect-userprincipalname)に関するページを参照してください。
 
-環境に代替サインイン方法が必要な場合は、「[代替ログイン ID を構成する](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id)」で、特に[代替 ID を使用したハイブリッド先進認証](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id)に関する説明を参照してください。
+環境に代替サインイン方法が必要な場合は、「[代替ログイン ID を構成する](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id)」で、特に[代替 ID を使用したハイブリッド先進認証](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id)に関する説明を参照してください。
 
 ### <a name="verify-that-the-user-is-targeted"></a>ユーザーが対象になっていることを確認する
 
@@ -115,7 +115,7 @@ Intune アプリ保護ポリシーは、ユーザーを対象にする必要が�
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 2. **[グループ] > [すべてのグループ]** を選択し、アプリ保護ポリシーの割り当てに使用するグループを検索して選択します。
 3. **[管理]** セクションの **[メンバー]** を選択します。
-4. 影響を受けるユーザーが一覧に表示されない場合は、[Azure Active Directory グループを使用してアプリとリソースのアクセスを管理する](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)方法に関するページを参照し、グループ メンバーシップ規則を確認します。 影響を受けるユーザーがグループに含まれていることを確認します。
+4. 影響を受けるユーザーが一覧に表示されない場合は、[Azure Active Directory グループを使用してアプリとリソースのアクセスを管理する](/azure/active-directory/fundamentals/active-directory-manage-groups)方法に関するページを参照し、グループ メンバーシップ規則を確認します。 影響を受けるユーザーがグループに含まれていることを確認します。
 5. 影響を受けるユーザーが、ポリシーの除外対象グループのいずれにも含まれていないことを確認します。
 
 > [!IMPORTANT]

@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2e32b6e1c5e976669e78d3cf00610fbd57b68dd1
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 0d4ae3b78e9bbb2e6135bec4a0e1ab69e80092ba
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048040"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057404"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>iOS デバイスからの会社のリソースへのアクセスを設定する  
 
@@ -54,11 +54,11 @@ ms.locfileid: "88048040"
 ### <a name="setting-notifications"></a>通知の設定  
 登録後、組織で多要素認証などの新しいセキュリティ要件が適用された場合、ポータル サイト アプリによって通知されます。 デバイスから作業を続行できるように、設定を調整することができます。  
 
-登録の詳細については、[ポータル サイト アプリをインストールして、デバイスを登録するとどうなるか](https://docs.microsoft.com//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios)についてのページを参照してください。  
+登録の詳細については、[ポータル サイト アプリをインストールして、デバイスを登録するとどうなるか](//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios)についてのページを参照してください。  
 
-## <a name="prerequisties"></a>前提条件  
+## <a name="prerequisites"></a>前提条件    
 
-* App Store に移動して、[Intune ポータル サイト アプリ](install-and-sign-in-to-the-intune-company-portal-app-ios.md)をダウンロードしてデバイスにインストールします。 
+* [App Store から](https://go.microsoft.com/fwlink/?linkid=2141414)ポータル サイトをインストールします。
 * すべての手順が完了するまで Wi-Fi 接続を維持します。
 * デバイス上の Safari Web ブラウザーにアクセスできるようにします。
 
@@ -188,4 +188,4 @@ ms.locfileid: "88048040"
 ## <a name="next-steps"></a>次のステップ  
 職場または学校で役立つアプリを検索します。 ポータル サイトを通じて[アプリがどのように使用可能になるか](use-managed-apps-on-your-device-ios.md)を学習します。  
 
-サポートが必要な場合は、 会社のサポートに問い合わせてください。 連絡先の情報は、[会社のポータル Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)でわかります。  
+サポートが必要な場合は、 会社のサポートに問い合わせてください。 連絡先の情報は、[会社のポータル Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)でわかります。

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8814e1a2c6b1af48d71a0a82c02492e48b44dda9
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 2c8d007ba2fccb92fd90de4da64945155678041d
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84271009"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281202"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Intune スタンドアロン - Win32 アプリ管理
 
@@ -240,7 +240,7 @@ Win32 アプリの管理を使用する場合は、必ず、次の基準を満�
                 ![[検出規則] ウィンドウ - フォルダーの存在を確認する場合のスクリーンショット](./media/apps-win32-app-management/apps-win32-app-04.png)
         
         3. **[レジストリ]** – 値、文字列、整数、またはバージョンに基づいて確認を行います。
-            - **[キーのパス]** – 検出する値を含むレジストリ エントリの完全なパス。
+            - **[キーのパス]** – 検出する値を含むレジストリ エントリの完全なパス。 有効な構文は HKEY_LOCAL_MACHINE\Software\WinRAR または HKLM\Software\WinRAR です。
             - **[値の名前]** - 検出するレジストリ値の名前。 この値が空の場合、検出はキーで実行されます。 検出方法がファイルまたはフォルダーの存在の確認以外である場合は、キーの (既定) 値が検出値として使用されます。
             - **[検出方法]** – アプリの存在を確認するために使用する検出方法の種類を選択します。
             - **[Associated with a 32-bit app on 64-bit clients]\(64 ビット クライアントの 32 ビット アプリに関連している\)** - **[はい]** を選択すると、64 ビット クライアントで 32 ビットのレジストリが検索されます。 **[いいえ]** (既定) を選択すると、64 ビット クライアントで 64 ビットのレジストリが検索されます。 32 ビット クライアントは、常に 32 ビットのレジストリを検索します。

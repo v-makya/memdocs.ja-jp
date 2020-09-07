@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b57bc0b7c76a6b67a26c7b1fdacb7880173a055c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: fdb3a3defbaab5f952a2a5636a30f9734418f841
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429687"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993320"
 ---
 # <a name="windows-10-team-settings-to-allow-or-restrict-features-on-surface-hub-devices-using-intune"></a>Intune を使用して Surface Hub デバイスの機能を許可または制限するための Windows 10 Team の設定
 
@@ -33,7 +33,7 @@ ms.locfileid: "83429687"
 
 ## <a name="apps-and-experience"></a>アプリとエクスペリエンス
 
-これらの設定には、[SurfaceHub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp) を使用します。
+これらの設定には、[SurfaceHub CSP](/windows/client-management/mdm/surfacehub-csp) を使用します。
 
 - **[ユーザーの入室時に画面のスリープ状態を解除する]** : **[ブロック]** に設定すると、センサーによって室内に誰かがいることが検出されたときに、画面のスリープ状態が自動的に解除されなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。
 - **[ようこそ画面に表示される会議情報]** :ようこそ画面の [会議] タイルに表示される情報を選択します。 次のようなオプションがあります。
@@ -43,7 +43,7 @@ ms.locfileid: "83429687"
 - **[ようこそ画面の背景画像の URL]** :Windows 10 Team デバイスの**ようこそ**画面でカスタムの背景として使用する .png イメージの URL を入力します。 画像は PNG 形式である必要があり、URL は `https://` で始まっている必要があります。
 - **[接続の自動起動]** : **[ブロック]** に設定すると、プロジェクションの開始時に接続アプリが自動的に開かなくなります。 ブロックされている場合、ユーザーは Hub の設定から接続アプリを手動で起動できます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。
 - **[サインイン候補]** : **[ブロック]** に設定すると、スケジュールされている会議に招待された人をサインイン ダイアログに自動入力する機能が無効になります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。
-- **[会議とファイル]** : **[ブロック]** に設定すると、[スタート] メニューの **[会議とファイル]** 機能が無効になります。 この機能を使用すると、サインインしているユーザーの会議とファイルを Office 365 から確認できます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。
+- **[会議とファイル]** : **[ブロック]** に設定すると、[スタート] メニューの **[会議とファイル]** 機能が無効になります。 この機能を使用すると、サインインしているユーザーの会議とファイルを Microsoft 365 から確認できます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。
 
 ## <a name="azure-operational-insights"></a>Azure Operational Insights
 
@@ -53,7 +53,7 @@ ms.locfileid: "83429687"
 
 ## <a name="maintenance"></a>メンテナンス
 
-これらの設定には、[SurfaceHub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp) を使用します。
+これらの設定には、[SurfaceHub CSP](/windows/client-management/mdm/surfacehub-csp) を使用します。
 
 - **[更新プログラムのメンテナンス期間]** : **[有効]** に設定すると、更新プログラムをインストールできるメンテナンス期間が作成されます。 メンテナンス期間の **[開始時刻]** と、 **[期間 (時間単位)]** (1 から 5 時間) を入力します。
 
@@ -61,7 +61,7 @@ ms.locfileid: "83429687"
 
 ## <a name="session"></a>セッション
 
-これらの設定には、[SurfaceHub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp) を使用します。
+これらの設定には、[SurfaceHub CSP](/windows/client-management/mdm/surfacehub-csp) を使用します。
 
 - **[ボリューム]** :新しいセッションの既定のボリューム値 (0 から 100) を入力します。 空のままにすると、Intune によってこの設定は変更または更新されません。 既定では、OS によってボリュームが 45 に設定される場合があります。
 - **[スクリーン タイムアウト]** :ハブ スクリーンがオフになるまでの時間を分単位で入力します。
@@ -71,7 +71,7 @@ ms.locfileid: "83429687"
 
 ## <a name="wireless-projection"></a>ワイヤレス投影
 
-これらの設定には、[SurfaceHub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp) を使用します。
+これらの設定には、[SurfaceHub CSP](/windows/client-management/mdm/surfacehub-csp) を使用します。
 
 - **[ワイヤレス投影の PIN]** : **[必須]** に設定すると、デバイス上でワイヤレス投影機能を使用する前に、ユーザーに PIN の入力が強制されます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。
 - **[Miracast ワイヤレス投影]** : **[ブロック]** に設定すると、Miracast が有効になっているデバイスを使用して投影できなくなります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。

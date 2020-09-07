@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31cc746edce40300b5678439550ce3108270750d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ae034699d3a07311ca6a51557cbbc673916569bf
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988871"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994278"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Microsoft Intune にサインアップまたはサインインする
 
 このトピックでは、システム管理者が Intune アカウントにサインアップする方法を説明します。
 
-Intune にサインアップする前に、Microsoft Online Services アカウント、Enterprise Agreement、または同等のボリューム ライセンス契約が既にあるかどうかを確認してください。 Microsoft ボリューム ライセンス契約や、Office 365 などの他の Microsoft クラウド サービス サブスクリプションには、通常、職場または学校アカウントが含まれます。
+Intune にサインアップする前に、Microsoft Online Services アカウント、Enterprise Agreement、または同等のボリューム ライセンス契約が既にあるかどうかを確認してください。 Microsoft ボリューム ライセンス契約や、Microsoft 365 などの他の Microsoft クラウド サービス サブスクリプションには、通常、職場または学校アカウントが含まれます。
 
 既に職場または学校アカウントがある場合は、そのアカウントで**サインイン**し、Intune をサブスクリプションに追加します。 それ以外の場合は、新しいアカウントに**サインアップ**して、組織で Intune を使うことができます。
 
@@ -70,12 +70,12 @@ Intune for Education: https://intuneeducation.portal.azure.com
 
 Intune クラシック ポータル: https://manage.microsoft.com Intune クラシック ポータルは、Intune PC ソフトウェア クライアントで登録されたデバイスの管理にのみ使用されます
 
-### <a name="urls-for-intune-services-provided-by-office-365"></a>Office 365 によって提供される Intune サービスの URL
+### <a name="urls-for-intune-services-provided-by-microsoft-365"></a>Microsoft 365 によって提供される Intune サービスの URL
 
 Microsoft 365 Business: https://portal.microsoft.com/adminportal
 
-Office 365 モバイル デバイス管理: https://admin.microsoft.com/adminportal/home#/MifoDevices
+Microsoft 365 モバイル デバイス管理: https://admin.microsoft.com/adminportal/home#/MifoDevices
 
 ## <a name="see-also"></a>関連項目
 
-[Office 365、Azure、または Intune にサインインできない](https://support.microsoft.com/help/2412085)
+[Microsoft 365、Azure、または Intune にサインインできない](https://support.microsoft.com/help/2412085)

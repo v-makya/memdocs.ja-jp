@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 08/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d90870a60ea292939926816bb74b5d285dc6a09f
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 10d9320932e7835b8c2ecac46e35ea5a57375904
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431606"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068135"
 ---
 # <a name="firewall-policy-settings-for-endpoint-security-in-intune"></a>Intune でのエンドポイント セキュリティのファイアウォール ポリシー設定
 
@@ -198,22 +198,22 @@ ms.locfileid: "83431606"
   - **未構成**
 
 - **パッケージ ファミリ名**  
-  [Get-AppxPackage](https://docs.microsoft.com/previous-versions//hh856044(v=technet.10))
+  [Get-AppxPackage](/previous-versions//hh856044(v=technet.10))
 
   PowerShell から Get-AppxPackage コマンドを実行して、パッケージ ファミリ名を取得できます。
 
 - **ファイル パス**  
-  CSP:[FirewallRules/FirewallRuleName/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)
+  CSP:[FirewallRules/FirewallRuleName/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)
 
   アプリのファイル パスを指定するには、クライアント デバイス上のアプリの場所を入力します。 例: `C:\Windows\System\Notepad.exe` または `%WINDIR%\Notepad.exe`
 
 - **サービス名**  
-  [FirewallRules/FirewallRuleName/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)
+  [FirewallRules/FirewallRuleName/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   アプリケーションではなくサービスによってトラフィックの送受信が行われる場合は、Windows サービスの短い名前を使用します。 サービスの短い名前を取得するには、PowerShell から `Get-Service` コマンドを実行します。
 
 - **プロトコル**  
-  CSP:[FirewallRules/FirewallRuleName/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)
+  CSP:[FirewallRules/FirewallRuleName/Protocol](/windows/client-management/mdm/firewall-csp#protocol)
 
   このポート規則のプロトコルを指定します。
   - *TCP(6)* や *UDP(17)* などのトランスポート層プロトコルでは、ポートまたはポート範囲を指定できます。
@@ -228,7 +228,7 @@ ms.locfileid: "83431606"
   - **未構成**
 
 - **許可されているユーザー**  
-  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
+  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   この規則に対して承認されたローカル ユーザーのリストを指定します。 このポリシー内の "*サービス名*" が Windows サービスとして設定されている場合、許可されているユーザーの一覧を指定することはできません。 許可されているユーザーが指定されていない場合、既定値は *[すべてのユーザー]* になります。
 
@@ -237,9 +237,14 @@ ms.locfileid: "83431606"
   - **はい** - 任意のローカル アドレスをサポートし、アドレス範囲は構成しません。
 
 - **ローカル アドレス範囲**  
-  CSP:[FirewallRules/FirewallRuleName/LocalAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localaddressranges)  
+  CSP:[FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)  
 
-  1 つまたは複数のアドレスを、規則の対象となるローカル アドレスのコンマ区切りリストとして追加します。 有効なエントリ (トークン) には、次のオプションが含まれています。
+  この規則のローカル アドレス範囲を管理します。 次の操作を行います。
+  - 1 つまたは複数のアドレスを、規則の対象となるローカル アドレスのコンマ区切りリストとして**追加**します。
+  - ローカル アドレス範囲として使用するアドレスの一覧が含まれる .csv ファイルを**インポート**します。
+  - .csv ファイルとしてローカル アドレス範囲の現行一覧を**エクスポート**します。
+
+  有効なエントリ (トークン) には、次のオプションが含まれています。
   - **アスタリスク** - アスタリスク (\*) は任意のローカル アドレスを示します。 存在する場合、アスタリスクを、含める唯一のトークンとする必要があります。
   - **サブネット** - サブネット マスクまたはネットワーク プレフィックス表記を使用してサブネットを指定します。 サブネット マスクもネットワーク プレフィックスも指定されていない場合、サブネット マスクの既定値は 255.255.255.255 となります。
   - **有効な IPv6 アドレス**
@@ -253,9 +258,14 @@ ms.locfileid: "83431606"
   - **はい** - 任意のリモート アドレスをサポートし、アドレス範囲は構成しません。
 
 - **リモート アドレス範囲**  
-  CSP:[FirewallRules/FirewallRuleName/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  CSP:[FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
 
-  1 つまたは複数のアドレスを、規則の対象となるリモート アドレスのコンマ区切りリストとして追加します。 有効なエントリ (トークン) には次のものが含まれます。大文字と小文字は区別されません。
+  この規則のリモート アドレス範囲を管理します。 次の操作を行います。
+  - 1 つまたは複数のアドレスを、規則の対象となるリモート アドレスのコンマ区切りリストとして**追加**します。
+  - リモート アドレス範囲として使用するアドレスの一覧が含まれる .csv ファイルを**インポート**します。
+  - .csv ファイルとしてリモート アドレス範囲の現行一覧を**エクスポート**します。
+
+  有効なエントリ (トークン) には次のものが含まれます。大文字と小文字は区別されません。
   - **アスタリスク** - アスタリスク (\*) は任意のリモート アドレスを示します。 存在する場合、アスタリスクを、含める唯一のトークンとする必要があります。
   - **Defaultgateway**
   - **DHCP**

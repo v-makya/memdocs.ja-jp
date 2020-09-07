@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4991ced4517ffe5902f876c196b47c2c2b50a8a6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 1bfb903cbff6f4e2a47117f504981759c00b1d27
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262763"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993853"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>ガイド付きシナリオ - クラウド マネージド モダン デスクトップ
 
@@ -55,14 +55,14 @@ ms.locfileid: "87262763"
 
 - Azure Active Directory でテスト ユーザー アカウントが設定します。
 - Windows 10 バージョン 1903 以降が稼働するテスト デバイスを作成します。
-- (省略可能) [Windows Autopilot にテスト デバイスを登録します](../enrollment/enrollment-autopilot.md#add-devices)。
+- (省略可能) [Windows Autopilot にテスト デバイスを登録します](../../autopilot/enrollment-autopilot.md#add-devices)。
 - (省略可能) [組織の Azure Active Directory サインイン ページに対してブランド化](https://go.microsoft.com/fwlink/?linkid=2102455)を有効にします。
 
 ## <a name="step-2---user"></a>ステップ 2 - ユーザー
 
 デバイス上で設定するユーザーを選択します。 このユーザーは、デバイスのプライマリ ユーザーとなります。
 
-この構成にさらにユーザーまたはデバイスを追加する場合は、ウィザードによって生成された AAD セキュリティ グループにユーザーとデバイスを追加するだけです。 他のガイド付きシナリオとは異なり、構成をカスタマイズすることはできないため、ウィザードを複数回実行する必要はありません。 作成された AAD グループにユーザーとデバイスをさらに追加するだけです。 ウィザードを完了したら、展開した推奨ポリシーで生成されたグループを表示できるようになります。
+この構成にさらにユーザーまたはデバイスを追加する場合は、ウィザードによって生成された Azure AD セキュリティ グループにユーザーとデバイスを追加するだけです。 他のガイド付きシナリオとは異なり、構成をカスタマイズすることはできないため、ウィザードを複数回実行する必要はありません。 作成された Azure AD グループにユーザーとデバイスをさらに追加するだけです。 ウィザードを完了したら、展開した推奨ポリシーで生成されたグループを表示できるようになります。
 
 ## <a name="step-3---device"></a>ステップ 3 - デバイス
 
@@ -74,7 +74,7 @@ Windows Autopilot では新しいデバイスの構成が自動化されてい�
 
 ### <a name="option-b--manual-device-enrollment"></a>オプション B – 手動でのデバイスの登録
 
-ユーザーはモバイル デバイス管理で自分の新しいデバイスを手動で設定して登録します。 このシナリオを完了したら、デバイスをリセットし、Windows デバイス用の登録手順をプライマリ ユーザーに示します。 詳細については、[初回実行時の Windows 10 デバイスの Azure AD への参加](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device)に関するページを参照してください。
+ユーザーはモバイル デバイス管理で自分の新しいデバイスを手動で設定して登録します。 このシナリオを完了したら、デバイスをリセットし、Windows デバイス用の登録手順をプライマリ ユーザーに示します。 詳細については、[初回実行時の Windows 10 デバイスの Azure AD への参加](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device)に関するページを参照してください。
 
 ## <a name="step-4---review--create"></a>ステップ 4 - 確認と作成
 
@@ -90,12 +90,12 @@ Windows Autopilot では新しいデバイスの構成が自動化されてい�
         - **Microsoft Intune** アプリの場合は **[すべて]** に設定します。または、
         - **[一部]** に設定します。 また、このガイド付きシナリオで作成したユーザー グループを追加します。
 2. 選択したユーザーがデバイスを Azure Active Directory に参加させることができることを確認します。
-    - AAD への参加を次のように確実に設定します。
+    - Azure AD 参加が確実に次のようになるようにします。
         - **[すべて]** に設定します。または、
         - **[一部]** に設定します。 また、このガイド付きシナリオで作成したユーザー グループを追加します。
 3. 次の条件に基づいて Azure AD にデバイスを参加させるには、デバイスに対する適切な手順に従います。
-    - Autopilot を使用する場合: 詳細については、「[Windows Autopilot ユーザー駆動モード](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)」を参照してください。
-    - Autopilot を使用しない場合: 詳細については、[初回実行時の Windows 10 デバイスの Azure AD への参加](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device)に関するページを参照してください。
+    - Autopilot を使用する場合: 詳細については、「[Windows Autopilot ユーザー駆動モード](/windows/deployment/windows-autopilot/user-driven)」を参照してください。
+    - Autopilot を使用しない場合: 詳細については、[初回実行時の Windows 10 デバイスの Azure AD への参加](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device)に関するページを参照してください。
 
 ### <a name="what-happens-when-i-click-deploy"></a>[展開] をクリックするとどうなりますか?
 ユーザーとデバイスが新しいセキュリティ グループに追加されます。 それらはまた、職場または学校でのセキュリティと生産性のために Intune で推奨される設定を使用して構成されます。 ユーザーがデバイスを Azure AD に参加させると、追加のアプリと設定がデバイスに追加されます。 このような追加の構成の詳細については、「[クイックスタート: Windows 10 デバイスを登録する](../enrollment/quickstart-enroll-windows-device.md)」を参照してください。
@@ -122,7 +122,7 @@ Windows Autopilot では新しいデバイスの構成が自動化されてい�
 
 ユーザーがデバイスを Azure Active Directory に参加させると、デバイスには次の構成が適用されます。
 
-1. Microsoft 365 アプリがクラウド マネージド PC に自動的にインストールされます。 これには、Access、Excel、OneNote、Outlook、PowerPoint、Publisher、Skype for Business、Word など、馴染みのあるアプリケーションが含まれます。 これらのアプリケーションを使用して、SharePoint Online、Exchange Online、Skype for Business Online などの Office 365 サービスに接続することができます。 Microsoft 365 アプリは、サブスクリプション版ではない Office のバージョンとは異なり、新機能で定期的に更新されます。 新機能の一覧については、「Office 365 の新機能」を参照してください。
+1. Microsoft 365 アプリがクラウド マネージド PC に自動的にインストールされます。 これには、Access、Excel、OneNote、Outlook、PowerPoint、Publisher、Skype for Business、Word など、馴染みのあるアプリケーションが含まれます。 これらのアプリケーションを使用して、SharePoint Online、Exchange Online、Skype for Business Online などの Microsoft 365 サービスに接続することができます。 Microsoft 365 アプリは、サブスクリプション版ではない Office のバージョンとは異なり、新機能で定期的に更新されます。 新機能の一覧については、「Microsoft 365 の新機能」を参照してください。
 2. Windows セキュリティ ベースラインがクラウド マネージド PC にインストールされます。 Microsoft Defender Advanced Threat Protection が設定されている場合、ガイド付きシナリオでは、Defender に対してベースライン設定も構成されます。 Defender Advanced Threat Protection により、Windows 10 セキュリティ スタックに新しい侵害後保護レイヤーが提供されます。 Windows 10 に組み込まれたクライアント テクノロジと堅牢なクラウド サービスとの組み合わせにより、他の防御を通過した脅威を容易に検出できるようになります。 
 
 ## <a name="next-steps"></a>次のステップ

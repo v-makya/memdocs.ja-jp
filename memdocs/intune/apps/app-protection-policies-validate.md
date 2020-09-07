@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0630c38a28499c0add8cacf4deb5356345167c99
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 02266ce355d4fc4b74487840a91b503d69bf7b2e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990475"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996505"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Microsoft Intune でアプリ保護ポリシーの設定を検証する方法
 
@@ -39,20 +39,20 @@ ms.locfileid: "83990475"
 テストの結果、アプリ保護ポリシーの動作が期待どおりに機能していないことがわかった場合は、以下の項目を確認します。
 
 - ユーザーはアプリ保護のライセンスを取得していますか。
-- ユーザーは O365 のライセンスを取得していますか。
+- ユーザーは Microsoft 365 のライセンスを取得していますか。
 - 各ユーザーのアプリ保護アプリの状態は期待どおりですか。 アプリの状態は、 **[確認済み]** か **[未確認]** のはずです。
 
 ### <a name="user-app-protection-status"></a>ユーザーのアプリ保護の状態
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 3. **[アプリ]**  >  **[モニター]**  >   **[アプリの保護状態]** を選択した後、 **[割り当てられたユーザー]** タイルを選択します。 
 4. **[アプリ レポート]** ページ上で、 **[ユーザーの選択]** を選択してユーザーとグループの一覧を表示させます。 
-5. 一覧からユーザーを検索して選択し、 **[ユーザーの選択]** を選択します。 **[アプリ レポート]** ページの上部で、ユーザーがアプリ保護のライセンスを取得しているかどうかを確認できます。 また、ユーザーが O365 のライセンスを取得しているかどうか、およびすべてのユーザーのデバイスのアプリの状態を確認できます。
+5. 一覧からユーザーを検索して選択し、 **[ユーザーの選択]** を選択します。 **[アプリ レポート]** ページの上部で、ユーザーがアプリ保護のライセンスを取得しているかどうかを確認できます。 また、ユーザーが Microsoft 365 のライセンスを取得しているかどうか、およびすべてのユーザーのデバイスのアプリの状態を確認できます。
 
 ## <a name="what-to-do"></a>対処
 ユーザーの状態に基づいて実行するアクションを次に示します。
 
 - ユーザーがアプリ保護のライセンスを取得していない場合は、[Intune ライセンス](../fundamentals/licenses.md)をそのユーザーに割り当てます。
-- ユーザーが O365 のライセンスを取得していない場合、そのユーザーの[ライセンス](../fundamentals/licenses.md)を取得します。
+- ユーザーが Microsoft 365 のライセンスを取得していない場合、そのユーザーの[ライセンス](../fundamentals/licenses.md)を取得します。
 - ユーザーのアプリが **[チェックインされていません]** という状態で一覧に表示される場合は、そのアプリの[アプリ保護ポリシー](app-protection-policies-validate.md)を正しく構成したかどうかを確認します。
 - [アプリ保護ポリシー](app-protection-policies-monitor.md)を適用するすべてのユーザー全体に、これらの条件が適用されていることを確認します。
 

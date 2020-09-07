@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 717ad28625b5eac97c26bcd09a21ef34250a7d39
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 3d011d6111ede4bb5879e53e771d20b792bf00d3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565718"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995128"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Microsoft Intune の電子メール プロファイルに関する一般的な問題と解決方法
 
@@ -51,7 +51,7 @@ ms.locfileid: "86565718"
 
 ## <a name="device-already-has-an-email-profile-installed"></a>デバイスに電子メール プロファイルが既にインストールされている
 
-ユーザーが Intune または Office 365 MDM に登録する前に電子メール プロファイルを作成すると、Intune によって展開された電子メール プロファイルが想定どおりに動作しない場合があります。
+ユーザーが Intune または Microsoft 365 MDM に登録する前に電子メール プロファイルを作成すると、Intune によって展開された電子メール プロファイルが想定どおりに動作しない場合があります。
 
 - **iOS および iPadOS**:Intune は、ホスト名と電子メール アドレスに基づいて既存の重複する電子メール プロファイルを検出します。 ユーザーが作成した電子メール プロファイルがあると、Intune で作成されたプロファイルが展開されません。 このシナリオは一般的な問題です。iOS および iPadOS ユーザーは、通常、電子メール プロファイルを作成し、それから登録するためです。 ポータル サイト アプリには、ユーザーが準拠していないと表示され、電子メール プロファイルを削除するようにユーザーが求められる場合があります。
 

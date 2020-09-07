@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 08/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: e70952b0d90222bd31a4e9df997d70e9d528ef24
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819662"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194200"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune での macOS デバイスの機能設定
 
@@ -267,7 +267,12 @@ Intune では、次のことができます。
 - **[SSO アプリ拡張機能の種類]** : SSO アプリ拡張機能の種類を選択します。 次のようなオプションがあります。
 
   - **[未構成]** :アプリの拡張機能は使用されません。 アプリの拡張機能を無効にするには、SSO アプリの拡張機能の種類を **[未構成]** に切り替えます。
-  - **Microsoft Azure AD**:リダイレクト型 SSO アプリ拡張機能である Microsoft Enterprise SSO プラグインが使用されます。 このプラグインにより、[Apple の Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) 機能をサポートするすべての macOS アプリケーションで Active Directory アカウントに対する SSO が提供されます。 この SSO アプリ拡張機能の種類を使用して、Azure AD を使用して認証する Microsoft アプリ、組織アプリ、Web サイトで SSO を有効にします。
+  - **Microsoft Azure AD**: 
+
+    > [!IMPORTANT]
+    > Microsoft Azure AD SSO 拡張機能が現在も開発中です。 Intune のユーザー インターフェイスに表示されますが、想定どおりに機能しません。 SSO アプリ拡張機能の種類として **Microsoft Azure AD** を使用しないでください。
+
+    リダイレクト型 SSO アプリ拡張機能である Microsoft Enterprise SSO プラグインが使用されます。 このプラグインにより、[Apple の Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) 機能をサポートするすべての macOS アプリケーションで Active Directory アカウントに対する SSO が提供されます。 この SSO アプリ拡張機能の種類を使用して、Azure AD を使用して認証する Microsoft アプリ、組織アプリ、Web サイトで SSO を有効にします。
 
     SSO プラグインは、高度な認証ブローカーとして機能し、セキュリティとユーザー エクスペリエンスの向上を提供します。
 
@@ -324,7 +329,7 @@ Intune では、次のことができます。
 - **[自動検出]** (Kerberos のみ): **[ブロック]** に設定すると、Kerberos 拡張機能で Active Directory サイト名を決定する際に LDAP と DNS が自動的に使用されません。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、拡張機能によって Active Directory サイト名が自動的に検出されるようになる場合があります。
 - **[パスワード変更]** (Kerberos のみ): **[ブロック]** を選択すると、ユーザーが入力したドメインへのサインインに使用するパスワードを変更できないようになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、パスワードの変更が許可される場合があります。  
 - **[パスワード同期]** (Kerberos のみ): **[有効]** を選択すると、ユーザーのローカル パスワードが Azure AD に同期されます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、Azure AD とパスワードの同期が無効にされる場合があります。 この設定は、SSO の代替またはバックアップとして使用します。 ユーザーが Apple モバイル アカウントでサインインする場合、この設定は機能しません。
-- **[Windows Server Active Directory のパスワードの複雑さ]** (Kerberos のみ): **[必要]** を選択すると、ユーザー パスワードが Active Directory のパスワードの複雑さの要件を満たすように強制されます。 詳細については、「[複雑さの要件を満たす必要があるパスワード](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements)」を参照してください。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、ユーザーは Active Directory のパスワード要件を満たす必要がなくなる場合があります。
+- **[Windows Server Active Directory のパスワードの複雑さ]** (Kerberos のみ): **[必要]** を選択すると、ユーザー パスワードが Active Directory のパスワードの複雑さの要件を満たすように強制されます。 詳細については、「[複雑さの要件を満たす必要があるパスワード](/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements)」を参照してください。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、ユーザーは Active Directory のパスワード要件を満たす必要がなくなる場合があります。
 - **[パスワードの最小文字数]** (Kerberos のみ): ユーザーのパスワードを構成できる最小文字数を入力します。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、ユーザーにパスワードの最小文字数は強制されない可能性があります。
 - **[パスワード再利用の制限]** (Kerberos のみ): ドメインで以前のパスワードを再利用できるようになるまで使用する、新しいパスワードの個数 (1 から 24 個) を入力します。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、パスワードの再利用制限が適用されない可能性があります。
 - **[パスワードの変更禁止期間]** (Kerberos のみ): ユーザーがパスワードを変更できるようになるまでの、ドメインでパスワードを使用する日数を入力します。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、パスワードを変更できるようになるまでのパスワードの変更禁止期間は強制されない可能性があります。
@@ -344,7 +349,7 @@ Intune では、次のことができます。
 
   **[はい]** に設定すると、既存のすべてのユーザー アカウントがデバイスからワイプされます。 データの損失を避けるため、または出荷時の設定にリセットされないよう、この設定によってデバイスがどのように変更されるかを理解してください。
 
-  共有デバイスモードの詳細については、「[共有デバイス モードの概要](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices)」を参照してください。
+  共有デバイスモードの詳細については、「[共有デバイス モードの概要](/azure/active-directory/develop/msal-shared-devices)」を参照してください。
 
 - **[アプリ バンドル ID]** (Microsoft Azure AD、Kerberos): デバイスでシングル サインオンを使用するアプリ バンドル ID を **[追加]** します。 これらのアプリには、Kerberos チケット保証チケットと認証チケットへのアクセスが許可されます。 また、アプリでは、アクセスする権限があるサービスに対するユーザーの認証も行います。
 - **[ドメイン領域マッピング]** (Kerberos のみ): 領域にマップするドメインの DNS サフィックスを **[追加]** します。 ホストの DNS 名が領域名と一致しない場合、この設定を使用します。 ほとんどの場合、このカスタム ドメインから領域へのマッピングを作成する必要はありません。

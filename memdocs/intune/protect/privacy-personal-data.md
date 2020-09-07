@@ -2,7 +2,7 @@
 title: Intune におけるプライバシーと個人データ
 titleSuffix: Microsoft Intune
 description: Intune では、どのような個人データが収集され、処理されるかについて説明します。
-keywords: ''
+keywords: プライバシー, GDPR, 個人データ
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -18,16 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 275bb43552b0dda3409dcd11ef14311334f13fa9
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 6cf808f814a4bb26531c15110946cac50492ad0e
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079513"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068074"
 ---
 # <a name="privacy-and-personal-data-in-intune"></a>Intune におけるプライバシーと個人データ
 
-エンド ユーザーは、Intune によって管理されているデバイスで、データの受信、送信、格納ができます。 ユーザーは、データのプライバシーが保護されていて、期待していたとおりの方法でのみ使用されると信じています。 Intune 管理者がこのような要望を設定できるようにするため、このセクションの記事では、Intune が個人データを収集、格納、保持、処理、保護、共有、監査、エクスポートしている方法に関する情報を提供します。 また、個人データを表示、修正、削除する方法についても学習します。
+Microsoft Intune は必要に応じてお客様に代わってデータ プロセッサとして動作し、[Microsoft Online Services Terms (OST)](https://go.microsoft.com/fwlink/p/?LinkId=2098215) の記載に基づき、要求されたサービスをお客様に提供します。 個人データは、顧客管理者が Azure portal または Microsoft Endpoint Manager 管理者センターから、あるいは管理対象として登録するときにお客様のデバイスから Intune を使用することで直接提供されます。 個人データは、[Apple ボリューム購入プログラムの設定](privacy-data-secure-share.md#data-sharing)など、お客様の指示に基づいてサードパーティ サービスでも収集されます。 お客様は、Intune によって管理されているデバイスで、データの受信、送信、格納ができます。 個人データは、[Microsoft Online Services Terms (OST)](https://go.microsoft.com/fwlink/p/?LinkId=2098215) によって保証される技術的セキュリティ対策の下、Intune サービスの監査コンプライアンスの範囲内で処理され、格納されます。 
+
+データのプライバシー保護方法について求められるものを Intune 管理者が設定できるようにするため、この記事では、Intune が個人データを収集、格納、保持、処理、保護、共有、監査、エクスポートしている方法に関する情報を提供します。 また、個人データを確認、修正、削除する方法についても説明します。
 
 Microsoft Intune では、プロファイル、広告、またはマーケティング目的のサービスを提供する一環として収集した個人データが使用されることはありません。
 
@@ -35,7 +37,7 @@ Microsoft Intune では、プロファイル、広告、またはマーケティ
 
 ## <a name="your-company-terms-and-conditions"></a>会社の使用条件
 
-[プライバシーに関する声明を、自社のエンド ユーザーの使用条件に含める](../apps/company-portal-app.md)ことができます。 このようなプライバシーに関する声明には、エンド ユーザーの個人データの使用とプライバシーに関する情報を含めることができます。
+[Microsoft プライバシー ステートメント](https://privacy.microsoft.com/en-us/privacystatement)に加え、[プライバシーに関する声明を、自社のエンド ユーザーの使用条件に含める](../apps/company-portal-app.md)ことができます。 このようなプライバシーに関する声明には、エンド ユーザーの個人データの使用とプライバシーに関する情報を含めることができます。
 
 Intune ポータル サイト アプリで、会社の使用条件を表示することができます。 これにより、ユーザーは Intune に登録して会社の資産やデータにアクセスする前に、プライバシーに関する声明を含む使用条件を確認することができます。
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 778937ed360a2271c342c55bdd03e33ddb5bdb25
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: f6ce7aeb5d7a64d98ec27fe3882c256120358d3c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217551"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994159"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>クイック スタート: Microsoft Intune を無料で試す
 
@@ -121,7 +121,7 @@ MDM 機関について詳しくは、「[モバイル デバイス管理機関�
    ![Microsoft 365 管理センターのスクリーンショット - [ドメイン名の確認]](./media/free-trial-sign-up/domain-custom-verify.png)
 
    > [!NOTE]
-   > TXT レコードの検証の詳細については、「[任意の DNS ホスティング プロバイダーで Office 365 用の DNS レコードを作成する](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166)」を参照してください。
+   > TXT レコードの検証の詳細については、[任意の DNS ホスティング プロバイダーで Microsoft 365 用の DNS レコードを作成する](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166)方法に関するページを参照してください。
 
 ## <a name="admin-experiences"></a>管理者向けの操作性
 

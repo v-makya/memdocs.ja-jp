@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5ed7b8c0e8a4953dd2b125fbaf3e63ce74873a7
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 46e2f716808f5f3c91e44932572146d04c259484
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217491"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993904"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>ガイド付きシナリオ - Microsoft Office モバイル アプリをセキュリティで保護する
 
@@ -52,7 +52,7 @@ Office モバイル アプリおよびモバイル用 Microsoft Edge では、�
 - **組織データのコピーを保存**や**切り取り、コピー、貼り付けの制限**などの、データ再配置ポリシー。
 - アクセスにシンプルな PIN を要求し、脱獄またはルート化されたデバイスでのマネージド アプリの実行を禁止する、アクセス ポリシーの設定。
 
-アプリ ベースの条件付きアクセスとクライアント アプリ管理は、Intune アプリ保護ポリシーをサポートするクライアント アプリのみが Exchange Online やその他の Office 365 サービスにアクセスできるようにすることで、セキュリティ層を追加します。
+アプリベースの条件付きアクセスとクライアント アプリ管理では、Intune アプリ保護ポリシーをサポートするクライアント アプリのみが Exchange Online やその他の Microsoft 365 サービスに確実にアクセスできるようにすると、セキュリティ層が追加されます。
 
 Microsoft Outlook アプリのみが Exchange Online にアクセスできるようにすると、iOS/iPadOS および Android 上の組み込みメール アプリをブロックできます。 また、Intune アプリ保護ポリシーを適用していないアプリが SharePoint Online にアクセスするのをブロックできます。
 

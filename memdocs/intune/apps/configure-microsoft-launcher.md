@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 08/27/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09ebf7fde0cedb907e105e42abe7338237d231af
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 7d9fe4c3a48cbf333fffd83d013b6a2d5fcf4ed9
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795705"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281134"
 ---
 # <a name="configure-microsoft-launcher"></a>Microsoft Launcher の構成
 
@@ -219,7 +219,7 @@ Microsoft Launcher の構成設定を定義するのに使用できる 2 つの�
         }, 
         {
             "key": "com.microsoft.launcher.Wallpaper.Url", 
-            "valueBool": "http://www.contoso.com/wallpaper.png"
+            "valueString": "http://www.contoso.com/wallpaper.png"
         }, 
         {
             "key": "com.microsoft.launcher.HomeScreen.GridSize", 

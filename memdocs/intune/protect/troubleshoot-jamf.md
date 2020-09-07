@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78f69edbc38bc41863783010a0e795290b7762c5
-ms.sourcegitcommit: 1e04fcd0d6c43897cf3993f705d8947cc9be2c25
+ms.openlocfilehash: 492c6dd82e0b2c016da77b8dd6f10d9e3d4b5db6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84270924"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993063"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Jamf Pro と Microsoft Intune の統合のトラブルシューティング
 
@@ -38,7 +38,7 @@ ms.locfileid: "84270924"
 - Jamf Pro と Intune の統合を構成する方法に応じて、次の記事の前提条件を確認してください。
   - [Jamf Cloud コネクタを使用して Jamf Pro を Intune と統合する](conditional-access-jamf-cloud-connector.md)
   - [Jamf Pro と Intune を統合する](conditional-access-integrate-jamf.md#prerequisites)
-- すべてのユーザーが、 Microsoft Intune と Microsoft AAD Premium P1 のライセンスを持っている必要があります
+- すべてのユーザーが、Microsoft Intune と Microsoft Azure AD Premium P1 のライセンスを持っている必要があります
 - Jamf Pro コンソールで Microsoft Intune 統合アクセス許可を持つユーザー アカウントが必要です。
 - Azure でグローバル管理者のアクセス許可を持つユーザー アカウントが必要です。
 
@@ -85,7 +85,7 @@ Jamf Pro と Intune の統合を調べるときは、次の情報を考慮して
 
 ### <a name="mac-devices-prompt-for-keychain-sign-in-when-you-open-an-app"></a>Mac デバイスでアプリを開くとキーチェーンのサインインを求められる  
 
-Intune と Jamf Pro の統合を構成し、条件付きアクセス ポリシーを展開した後、Jamf Pro で管理されているデバイスのユーザーは、Teams、Outlook、および Azure AD 認証を必要とするその他のアプリなどの Microsoft Office 365 アプリケーションを開くと、パスワードの入力を求められます。 
+Intune と Jamf Pro の統合を構成し、条件付きアクセス ポリシーを展開した後、Jamf Pro で管理されているデバイスのユーザーは、Teams、Outlook、および Azure AD 認証を必要とするその他のアプリなどの Microsoft 365 アプリケーションを開くと、パスワードの入力を求められます。 
 
 たとえば、Microsoft Teams を開くと、次の例のテキストのようなプロンプトが表示されます。
 
@@ -157,7 +157,7 @@ Intune ポータル サイト アプリでユーザーに **`Not registered`** �
 
 **解決方法**  
 登録ソースを Intune から Jamf に変更するには:
-1. [Intune から macOS デバイスの登録を解除します](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-macos)。 Intune から完全に削除されていないデバイスでさらに問題が発生するのを防ぐため、この原因一覧の「[*原因 6*](#cause-6)」を参照してください。  
+1. [Intune から macOS デバイスの登録を解除します](../user-help/unenroll-your-device-from-intune-macos.md)。 Intune から完全に削除されていないデバイスでさらに問題が発生するのを防ぐため、この原因一覧の「[*原因 6*](#cause-6)」を参照してください。  
 
 2. デバイスで、Jamf Self Service を使用して Intune ポータル サイト アプリを開き、Intune にデバイスを登録します。 このタスクを行うには、[Jamf を使用して macOS 用の Intune ポータル サイト アプリを展開](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro)し、[ユーザー デバイスを Azure AD に登録するポリシーを Jamf Pro で作成](conditional-access-assign-jamf.md#create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory)しておく必要があります。  
 

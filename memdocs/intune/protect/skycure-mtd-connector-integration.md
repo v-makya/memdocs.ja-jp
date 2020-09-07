@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f6b117855430af281db7087d77f53bb0e11c61
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 3d7ba1f42ebffa8580e368d89ea9720e544e0063
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137423"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994006"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Symantec Endpoint Protection Mobile と Intune の統合を設定する
 
@@ -138,7 +138,7 @@ SEP Mobile は、Mobile Threat Defense サービスを実行しているデバ�
 
     ![Active Directory への iOS/iPadOS アプリの追加を示す画像](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
 
-7. ディレクトリを管理する Office 365 アカウントの Azure Active Directory 資格情報を使ってサインインします。
+7. ディレクトリを管理する Microsoft 365 アカウントの Azure Active Directory 資格情報を使ってサインインします。
 
 8. **[同意する]** ボタンを選んで、SEP Mobile iOS/iPadOS アプリを Azure Active Directory に追加します。
 

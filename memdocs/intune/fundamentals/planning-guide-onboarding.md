@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19de56bfab6e4f4cf2f1243c6cbaf98053e6ba5e
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 0b479f770053051e580a68aa810a60c35d745ac5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663261"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996352"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Microsoft Intune の計画を実装する
 
@@ -37,7 +37,7 @@ Intune スタンドアロンの主な要件は次のようになります。
 
 - Enterprise Mobility + Security (EMS)/Intune のサブスクリプション
 
-- Office 365 サブスクリプション (Office アプリとアプリ保護ポリシー管理アプリ用)
+- Microsoft 365 サブスクリプション (Office アプリとアプリ保護ポリシー管理アプリ用)
 
 - Apple APNs 証明書 (iOS/iPadOS デバイス プラットフォーム管理を有効にする)
 
@@ -60,11 +60,11 @@ Intune の展開の実装に関しては、13 の個別タスクが識別され�
 
 - Microsoft Intune の購入方法については[こちら](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing)をご覧ください。
 
-### <a name="task-2-add-office-365-subscription"></a>タスク 2: Office 365 サブスクリプションを追加する
+### <a name="task-2-add-microsoft-365-subscription"></a>タスク 2: Microsoft 365 サブスクリプションを追加する
 
-この手順は省略可能です。 Exchange Online を使い、アプリ保護ポリシーで Office モバイル アプリを管理する予定の場合は、Office 365 のサブスクリプションが必要です。 組織が Office 365 サブスクリプションを持っていない場合、Microsoft または組織の Microsoft アカウント チームに問い合わせ、Office 365 の購入に関心があることを伝えてください。
+この手順は省略可能です。 Exchange Online を使い、アプリ保護ポリシーで Office モバイル アプリを管理する予定の場合は、Microsoft 365 のサブスクリプションが必要です。 組織が Microsoft 365 サブスクリプションを持っていない場合、Microsoft または組織の Microsoft アカウント チームに問い合わせ、Microsoft 365 の購入に関心があることを伝えてください。
 
-- Office 365 の購入方法については[ここ](https://products.office.com/business/compare-office-365-for-business-plans)をご覧ください。
+- Microsoft 365 の購入方法については[こちら](https://products.office.com/business/compare-office-365-for-business-plans)をご覧ください。
 
 ### <a name="task-3-add-users-groups-in-azure-ad"></a>タスク 3: Azure AD にユーザー グループを追加する
 
@@ -74,9 +74,9 @@ Intune 展開のユース ケース シナリオや要件によっては、Activ
 <!---why not send them to the AAD connect topic? Question out to Andre: https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect--->
 
 
-### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>タスク 4: Intune と Office 365 のユーザー ライセンスを割り当てる
+### <a name="task-4-assign-intune-and-microsoft-365-user-licenses"></a>タスク 4: Intune と Microsoft 365 のユーザー ライセンスを割り当てる
 
-EMS/Intune や Office 365 の展開の対象になるすべてのユーザーに、ライセンスを割り当てる必要があります。 EMS/Intune と Office 365 のライセンスの割り当ては、Microsoft 365 管理センターで行うことができます。
+EMS/Intune や Microsoft 365 の展開の対象になるすべてのユーザーに、ライセンスを割り当てる必要があります。 EMS/Intune と Microsoft 365 のライセンスの割り当ては、Microsoft 365 管理センターで行うことができます。
 
 - Intune ライセンスの割り当て方法については[ここ](licenses-assign.md)をご覧ください。
 
@@ -130,7 +130,7 @@ Intune は、Exchange Online、Exchange オンプレミス、SharePoint Online�
 
 ### <a name="task-13-enroll-devices"></a>タスク 13: デバイスの登録
 
-Intune では、iOS/iPadOS、Mac OS、Android、Windows デスクトップの各デバイス プラットフォームがサポートされています。 Intune 展開のユース ケースと要件に基づき、モバイル デバイス プラットフォームを適宜登録します。
+Intune では、iOS/iPadOS、macOS、Android、Windows デスクトップの各デバイス プラットフォームがサポートされています。 Intune 展開のユース ケースと要件に基づき、モバイル デバイス プラットフォームを適宜登録します。
 
 - デバイスの登録方法については[ここ](../enrollment/device-enrollment.md)をご覧ください。
 

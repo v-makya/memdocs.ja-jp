@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 5c0aadb15587822ca2500ec477b6264ce4e96ed2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865824"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993524"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune でのデバイス登録に関するトラブルシューティング
 
@@ -47,8 +47,8 @@ ms.locfileid: "87865824"
 
 マネージド デバイスのユーザーが登録ログと診断ログを収集しておくと、管理者が確認できます。 ユーザーがログを収集する手順については、次のページを参照してください。
 
-- [IT 管理者に Android の登録に関するエラーを送信する](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
-- [IT 管理者に iOS/iPadOS に関するエラーを送信する](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
+- [IT 管理者に Android の登録に関するエラーを送信する](../user-help/send-logs-to-your-it-admin-using-cable-android.md)
+- [IT 管理者に iOS/iPadOS に関するエラーを送信する](../user-help/send-errors-to-your-it-admin-ios.md)
 
 
 ## <a name="general-enrollment-issues"></a>登録に関する一般的な問題
@@ -121,12 +121,12 @@ ms.locfileid: "87865824"
 **問題:** この問題は、ADFS に 2 番目の確認済みドメインを追加すると発生する可能性があります。 2 番目のドメインのユーザー プリンシパル名 (UPN) サフィックスを持つユーザーがポータルにログインできなくなる場合や、デバイスを登録できなくなる場合があります。
 
 
-<strong>解決方法:</strong>Microsoft Office 365 ユーザーは、次の場合に、各サフィックスに対して別々の AD FS 2.0 フェデレーション サービス インスタンスを展開する必要があります。
+<strong>解決方法:</strong>Microsoft 365 ユーザーは、次の場合に、各サフィックスに対して別々の AD FS 2.0 フェデレーション サービス インスタンスを展開する必要があります。
 - AD FS 2.0 によるシングル サインオン (SSO) を使用する。かつ
 - 組織内にユーザーの UPN サフィックス用のトップ レベル ドメイン (@contoso.com、@fabrikam.com など) を複数持っている。
 
 
-[AD FS 2.0 用ロールアップ](https://support.microsoft.com/kb/2607496)が <strong>SupportMultipleDomain</strong> スイッチと連携することで、AD FS 2.0 サーバーを追加しなくても、AD FS サーバーはこのような状況に対応できます。 詳細については、[このブログ](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/)を参照してください。
+[AD FS 2.0 用ロールアップ](https://support.microsoft.com/kb/2607496)が <strong>SupportMultipleDomain</strong> スイッチと連携することで、AD FS 2.0 サーバーを追加しなくても、AD FS サーバーはこのような状況に対応できます。 詳細については、[このブログ](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365)を参照してください。
 
 
 ## <a name="android-issues"></a>Android の問題
@@ -215,7 +215,7 @@ Android 6.0 へのアップグレードを試みるようユーザーに通知�
 
 企業の資格情報を入力し、フェデレーション ログイン ページにリダイレクトされた後も、証明書がないというエラーが表示される場合があります。 その場合のエラーは、Active Directory フェデレーション サービス (AD FS) サーバーで中間証明書が不足していることを意味する可能性があります。
 
-Android デバイスでは、[SSL のサーバー ハロー](https://technet.microsoft.com/library/cc783349.aspx)に中間証明書が含まれている必要があるため、この証明書エラーが発生します。 現在、AD FS サーバーまたは WAP - AD FS プロキシ サーバーの既定のインストールでは、AD FS サービスの SSL 証明書だけが、SSL のクライアント ハローに対する SSL のサーバー ハロー応答で送信されます。
+Android デバイスでは、[SSL のサーバー ハロー](/previous-versions/windows/it-pro/windows-server-2003/cc783349(v=ws.10))に中間証明書が含まれている必要があるため、この証明書エラーが発生します。 現在、AD FS サーバーまたは WAP - AD FS プロキシ サーバーの既定のインストールでは、AD FS サービスの SSL 証明書だけが、SSL のクライアント ハローに対する SSL のサーバー ハロー応答で送信されます。
 
 この問題を解決するには、AD FS サーバーまたはプロキシでコンピューターの個人証明書に証明書を次のようにインポートします。
 
@@ -294,9 +294,9 @@ Android デバイスでは、[SSL のサーバー ハロー](https://technet.mic
 Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 ```
 
-詳細については、[Get-AdfsEndpoint のドキュメント](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint)を参照してください。
+詳細については、[Get-AdfsEndpoint のドキュメント](/powershell/module/adfs/get-adfsendpoint?view=win10-ps)を参照してください。
 
-詳細については、「[Best practices for securing Active Directory Federation Services](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs)」 (Active Directory フェデレーション サービスのセキュリティ保護に関するベスト プラクティス) を参照してください。 WS-Trust 1.3 Username/Mixed が ID フェデレーション プロバイダーで有効になっているかどうかを判断するには、次にお問い合わせください。
+詳細については、「[Best practices for securing Active Directory Federation Services](/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS)」 (Active Directory フェデレーション サービスのセキュリティ保護に関するベスト プラクティス) を参照してください。 WS-Trust 1.3 Username/Mixed が ID フェデレーション プロバイダーで有効になっているかどうかを判断するには、次にお問い合わせください。
 - ADFS を使用している場合は、Microsoft サポート
 - サード パーティの ID ベンダー
 

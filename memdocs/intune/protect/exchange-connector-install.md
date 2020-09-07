@@ -18,26 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db9f275254a7b392491d01769db71d42f04c33f2
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 27d123629baa925756f842d13212f9801da13f55
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048125"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996165"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>オンプレミスの Intune Exchange Connector を設定する
 
 > [!IMPORTANT]
 > この記事の情報は、Exchange Connector の使用がサポートされているお客様に適用されます。
 >
-> 2020 年 7 月以降、Exchange Connector のサポートは非推奨とされ、Exchange の[ハイブリッド先進認証](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) に置き換えられます。  ご使用の環境に Exchange Connector が設定されている場合、Intune テナントの使用は引き続きサポートされ、その構成をサポートする UI に引き続きアクセスできます。 引き続きコネクタを使用するか、HMA を構成してから、コネクタをアンインストールすることができます。
+> 2020 年 7 月以降、Exchange Connector のサポートは非推奨とされ、Exchange の[ハイブリッド先進認証](/office365/enterprise/hybrid-modern-auth-overview) (HMA) に置き換えられます。  ご使用の環境に Exchange Connector が設定されている場合、Intune テナントの使用は引き続きサポートされ、その構成をサポートする UI に引き続きアクセスできます。 引き続きコネクタを使用するか、HMA を構成してから、コネクタをアンインストールすることができます。
 >
 >HMA を使用する場合、Intune をセットアップして Exchange Connector を使用する必要はありません。 サブスクリプションで Exchange Connector を既に使用していない限り、Intune の Exchange Connector を構成および管理するための UI は、この変更により Microsoft エンドポイント マネージャー管理センターから削除されています。
 
 Exchange へのアクセスを保護するために、Intune は Microsoft Intune Exchange Connector というオンプレミスのコンポーネントに依存しています。 このコネクタは、Intune コンソールの一部の場所では *[Exchange ActiveSync のオンプレミス コネクタ]* とも表示されます。
 
 > [!IMPORTANT]
-> Intune では、2007 年 (7 月) のリリースで開始した Intune サービスから Exchange On-Premises Connector 機能のサポートが削除されます。 アクティブなコネクタを使用している既存のお客様は、現時点では現在の機能を引き続き利用できます。 新規のお客様や、アクティブなコネクタをお持ちでない既存のお客様は、Intune での新しいコネクタの作成、または Exchange ActiveSync (EAS) デバイスの管理は実行できなくなります。 これらのテナントについては、Exchange の[ハイブリッド先進認証 (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) を使用して Exchange On-Premises へのアクセスを保護することを Microsoft はお勧めします。 HMA を使用すると、Intune App Protection ポリシー (MAM とも呼ばれます) と Outlook Mobile を使用した条件付きアクセスの両方が Exchange On-Premises に対して有効になります。
+> Intune では、2007 年 (7 月) のリリースで開始した Intune サービスから Exchange On-Premises Connector 機能のサポートが削除されます。 アクティブなコネクタを使用している既存のお客様は、現時点では現在の機能を引き続き利用できます。 新規のお客様や、アクティブなコネクタをお持ちでない既存のお客様は、Intune での新しいコネクタの作成、または Exchange ActiveSync (EAS) デバイスの管理は実行できなくなります。 これらのテナントについては、Exchange の[ハイブリッド先進認証 (HMA)](/office365/enterprise/hybrid-modern-auth-overview) を使用して Exchange On-Premises へのアクセスを保護することを Microsoft はお勧めします。 HMA を使用すると、Intune App Protection ポリシー (MAM とも呼ばれます) と Outlook Mobile を使用した条件付きアクセスの両方が Exchange On-Premises に対して有効になります。
 
 この記事の情報は、Intune Exchange Connector のインストールと監視に役立ちます。 コネクタと[条件付きアクセス ポリシー](conditional-access-exchange-create.md)を使用して、Exchange On-Premises メールボックスへのアクセスを許可またはブロックすることができます。
 
@@ -154,7 +154,7 @@ Intune Exchange Connector をインストールするには、次の手順を実
 
    ホスト型 Exchange Server の場合、Exchange Server のアドレスを指定します。 ホスト型 Exchange サーバーの URL を見つけるには:
 
-   1. Outlook for Office 365 を開きます。
+   1. Outlook for Microsoft 365 を開きます。
 
    2. 左上の **?** アイコンを選択し、 **[バージョン情報]** を選択します。
 
@@ -174,7 +174,7 @@ Intune Exchange Connector をインストールするには、次の手順を実
 
 5. ユーザーの Exchange Server メールボックスに通知を送信するための資格情報を指定します。 このユーザーは通知専用でもかまいません。 通知ユーザーには、メールで通知を送信するための Exchange メールボックスが必要です。 これらの通知は、Intune で条件付きアクセス ポリシーを使用して構成できます。
 
-   Exchange CAS 上で自動検出サービスと Exchange Web サービスが構成されていることを確認します。 詳細については、「[クライアント アクセス サーバー](https://technet.microsoft.com/library/dd298114.aspx)」を参照してください。
+   Exchange CAS 上で自動検出サービスと Exchange Web サービスが構成されていることを確認します。 詳細については、「[クライアント アクセス サーバー](/Exchange/architecture/client-access/client-access?view=exchserver-2019)」を参照してください。
 
 6. **[パスワード]** フィールドに、このアカウントで Intune から Exchange サーバーにアクセスするために必要なパスワードを入力します。
 

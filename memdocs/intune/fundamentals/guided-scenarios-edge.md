@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fc1e75f38767de77f89dce2a85c747a7390e76d
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: ee6961de9a33f54db4f3fa8bb4c5a2bfa9406fbb
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217414"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993836"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>ガイド付きシナリオ - モバイル用の Microsoft Edge を展開する
 
@@ -34,7 +34,7 @@ Microsoft Edge を使用すると、ユーザーは、作業内容の統合、�
 > ユーザーが iOS/iPadOS、Android のデバイスを登録できないようにしてある場合、このシナリオでは登録できず、ユーザーは自分で Edge をインストールする必要があります。
 Intune ポリシーによって有効化された次の Microsoft Edge エンタープライズ機能が含まれます。
 
-- **デュアル ID** -ユーザーは、閲覧用に、個人アカウントに加えて、職場アカウントを追加できます。 2 つの ID の間は完全に分離されており、Office 365 と Outlook のアーキテクチャとエクスペリエンスに似ています。 Intune 管理者は、職場アカウント内に保護された閲覧エクスペリエンス用の必要なポリシーを設定できます。
+- **デュアル ID** -ユーザーは、閲覧用に、個人アカウントに加えて、職場アカウントを追加できます。 2 つの ID の間は完全に分離されており、Microsoft 365 と Outlook のアーキテクチャとエクスペリエンスに似ています。 Intune 管理者は、職場アカウント内に保護された閲覧エクスペリエンス用の必要なポリシーを設定できます。
 - **Intune アプリ保護ポリシーの統合**- 管理者は、切り取り、コピー、貼り付けの制御、画面キャプチャの禁止、ユーザーが選択したリンクを他の管理対象アプリでのみ開けるようにするなどのアプリ保護ポリシーの対象として Microsoft Edge を指定できるようになりました。
 - **Azure アプリケーション プロキシの統合**- エンドユーザーが企業ネットワークから接続するか、インターネットから接続するかに関係なく、管理者は SaaS アプリおよび Web アプリへのアクセスを制御し、ブラウザー ベースのアプリをセキュリティで保護された Microsoft Edge ブラウザーでのみ実行させることができます。
 - **管理されたお気に入りとホーム ページのショートカット** - 管理者は、企業コンテキスト内のエンドユーザーがアクセスしやすいように、[お気に入り] の下に表示される URL を設定できます。 管理者は、企業ユーザーが Microsoft Edge で新しいページまたは新しいタブを開いたときに、プライマリ ショートカットとして表示されるホームページ ショートカットを設定できます。

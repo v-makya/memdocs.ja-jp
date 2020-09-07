@@ -1,7 +1,7 @@
 ---
 title: チュートリアル - アンマネージド デバイス上で Exchange Online の電子メールを保護する
 titleSuffix: Microsoft Intune
-description: Intune アプリの保護ポリシーと Azure AD 条件付きアクセスを利用して Office 365 Exchange Online をセキュリティ保護する方法について説明します。
+description: Intune アプリの保護ポリシーと Azure AD 条件付きアクセスを利用して Microsoft 365 Exchange Online をセキュリティ保護する方法について説明します。
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f32ced29b6bb53f8c091ba1a0f42261a2baa493
-ms.sourcegitcommit: d05b1472385c775ebc0b226e8b465dbeb5bf1f40
+ms.openlocfilehash: 12b776af250a9d4a9bf0fb6c8ba7eec98540f883
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605220"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993955"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>チュートリアル:アンマネージド デバイス上で Exchange Online の電子メールを保護する
 
@@ -120,7 +120,7 @@ Outlook 用のアプリ保護ポリシーが作成されます。 次に、Outlo
 
 4. **[割り当て]** で、 **[ユーザーとグループ]** を選択します。 **[含む]** タブで **[すべてのユーザー]** を選択して、 **[完了]** を選択します。
 
-5. **[割り当て]** で、 **[クラウド アプリまたは操作]** を選択します。 Office 365 Exchange Online のメールを保護するので、次の手順で選択します。
+5. **[割り当て]** で、 **[クラウド アプリまたは操作]** を選択します。 Microsoft 365 Exchange Online のメールを保護するので、次の手順で選択します。
 
    1. **[含む]** タブで、 **[アプリを選択]** を選択します。
    2. **[選択]** を選択します。
@@ -170,7 +170,7 @@ Outlook 用のアプリ保護ポリシーが作成されます。 次に、Outlo
 
 4. **[割り当て]** で、 **[ユーザーとグループ]** を選択します。 *[含む]* タブで **[すべてのユーザー]** を選択して、 **[完了]** を選択します。
 
-5. **[割り当て]** で、 **[クラウド アプリまたは操作]** を選択します。 次の手順を使用して、Office 365 Exchange Online 電子メールを選択します。
+5. **[割り当て]** で、 **[クラウド アプリまたは操作]** を選択します。 次の手順を使用して、Microsoft 365 Exchange Online 電子メールを選択します。
 
    1. *[含む]* タブで、 **[アプリを選択]** を選択します。
    2. **[選択]** を選択します。
@@ -205,7 +205,7 @@ Outlook 用のアプリ保護ポリシーが作成されます。 次に、Outlo
 
 ## <a name="try-it-out"></a>試してみましょう
 
-作成したポリシーを使用する場合、デバイスが Intune に登録され、Outlook モバイル アプリを使用して Office 365 電子メールにアクセスしている必要があります。 iOS デバイスでこのシナリオをテストするには、テスト テナントのユーザーの資格情報を使用して、Exchange Online へのサインインを試みます。
+作成したポリシーを使用する場合、デバイスが Intune に登録され、Outlook モバイル アプリを使用して Microsoft 365 電子メールにアクセスしている必要があります。 iOS デバイスでこのシナリオをテストするには、テスト テナントのユーザーの資格情報を使用して、Exchange Online へのサインインを試みます。
 
 1. iPhone でテストするには、 **[Settings]\(設定\)**  >  **[Passwords & Accounts]\(パスワードとアカウント\)**  >  **[Add Account]\(アカウントの追加\)**  >  **[Exchange]** に移動します。
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 257f717243e021e7fd643a6e7ca41644e4369bcd
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 76d1141a1c4dd442f6fb94a06b5d20adc8c7fa77
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080132"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996335"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>ユース ケース シナリオの要件の決定
 
@@ -64,7 +64,7 @@ ms.locfileid: "82080132"
   - 電子メール (Windows 10 Mobile)
 
 - **アプリ**
-  - アプリの保護ポリシー付きの Office 365
+  - アプリの保護ポリシー付きの Microsoft 365
   - アプリの保護ポリシー付きの基幹業務 (LOB)
 
 ## <a name="next-steps"></a>次のステップ

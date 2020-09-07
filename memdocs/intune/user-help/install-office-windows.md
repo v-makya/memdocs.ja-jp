@@ -1,6 +1,6 @@
 ---
-title: Windows 10 デバイスに Office 365 をインストールする | Microsoft Docs
-description: ''
+title: Windows 10 デバイスに Office をインストールする | Microsoft Docs
+description: Windows 10 デバイスに Office スイートをインストールする方法について説明します。 自分の会社にとって利用可能なその他のサポート オプションをご覧ください。
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -19,14 +19,14 @@ ms.reviewer: aiwang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a49d5de1ce0dd91ff9dacb07d50970bc9ef2e90d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4d7ea5c59c27939fbef454d372c0a18e4b51feee
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882170"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057387"
 ---
-# <a name="installing-office-365-on-your-windows-10-device"></a>Windows 10 デバイスに Office 365 をインストールする
+# <a name="install-office-on-your-windows-10-device"></a>お使いの Windows 10 デバイスに Office をインストールする
 
 Windows 10 デバイスに Office スイートをインストールするには、多くの方法があります。 会社の規模によっては、複数のバージョンの Office が会社のポータルからダウンロードできる場合があります。
 

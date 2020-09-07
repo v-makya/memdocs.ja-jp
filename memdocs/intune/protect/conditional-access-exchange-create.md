@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19a2d82f23abef49f193859c46a17cbb44a61f49
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 7dc7fb7b01add52b75fcc4a4a42f57951decf484
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663346"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993131"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Intune の Exchange On-Premises アクセスを構成する
 
@@ -34,7 +34,7 @@ Exchange Online Dedicated 環境を使用していて、それが新しい構成
 > [!IMPORTANT]
 > この記事の情報は、Exchange Connector の使用がサポートされているお客様に適用されます。
 >
-> 2020 年 7 月以降、Exchange Connector のサポートは非推奨とされ、Exchange の[ハイブリッド先進認証](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) に置き換えられます。  ご使用の環境に Exchange Connector が設定されている場合、Intune テナントの使用は引き続きサポートされ、その構成をサポートする UI に引き続きアクセスできます。 引き続きコネクタを使用するか、HMA を構成してから、コネクタをアンインストールすることができます。
+> 2020 年 7 月以降、Exchange Connector のサポートは非推奨とされ、Exchange の[ハイブリッド先進認証](/office365/enterprise/hybrid-modern-auth-overview) (HMA) に置き換えられます。  ご使用の環境に Exchange Connector が設定されている場合、Intune テナントの使用は引き続きサポートされ、その構成をサポートする UI に引き続きアクセスできます。 引き続きコネクタを使用するか、HMA を構成してから、コネクタをアンインストールすることができます。
 >
 > HMA を使用する場合、Intune をセットアップして Exchange Connector を使用する必要はありません。 サブスクリプションで Exchange Connector を既に使用していない限り、Intune の Exchange Connector を構成および管理するための UI は、この変更により Microsoft エンドポイント マネージャー管理センターから削除されています。
 
@@ -59,7 +59,7 @@ Exchange Online Dedicated 環境を使用していて、それが新しい構成
   - Intune に**登録**されているか、ドメインに参加している PC である。
   - **Azure Active Directory に登録されている**。 また、クライアントの Exchange ActiveSync ID を Azure Active Directory に登録する必要があります。
 
-- Azure AD Device Registration サービス (DRS) は、Intune や Office 365 のお客様に対して自動的にアクティブ化されます。 ADFS Device Registration Service をデプロイ済みのお客様には、オンプレミスの Active Directory に登録されたデバイスは表示されません。 **これは、Windows の PC とデバイスには適用されません。**
+- Azure AD Device Registration サービス (DRS) は、Intune や Microsoft 365 のお客様に対して自動的にアクティブ化されます。 ADFS Device Registration Service をデプロイ済みのお客様には、オンプレミスの Active Directory に登録されたデバイスは表示されません。 **これは、Windows の PC とデバイスには適用されません。**
 
 - そのデバイスに展開されているデバイス コンプライアンス ポリシーに**準拠**している。
 
@@ -86,16 +86,16 @@ Exchange Online Dedicated 環境を使用していて、それが新しい構成
 
   4. **[プラットフォーム]** で **[Android エンタープライズ]** を選択し、 **[プロファイルの種類]** で **[電子メール]** を選択します。
 
-  5. [[電子メール プロファイル] の設定](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise)を構成します。
+  5. [[電子メール プロファイル] の設定](/intune/configuration/email-settings-android-enterprise#android-enterprise)を構成します。
 
   6. 完了したら、 **[OK]**  >  **[作成]** を選択して変更を保存します。
 
-  7. 電子メール プロファイルを作成したら、[グループに割り当てます](https://docs.microsoft.com/intune/device-profile-assign)。
+  7. 電子メール プロファイルを作成したら、[グループに割り当てます](/intune/device-profile-assign)。
 
-  8. [デバイスベースの条件付きアクセス](https://docs.microsoft.com/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access)を設定します。
+  8. [デバイスベースの条件付きアクセス](/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access)を設定します。
 
 > [!NOTE]
-> Exchange のオンプレミス コネクタを介した Android および iOS/iPadOS 用 Microsoft Outlook の使用はサポートされていません。 オンプレミスのメールボックスに対して iOS/iPadOS および Android 用 Outlook で Azure Active Directory の条件付きアクセス ポリシーおよび Intune アプリ保護ポリシーを活用したい場合は、「[iOS/iPadOS および Android 用の Outlook でのハイブリッド先進認証の使用](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth)」を参照してください。
+> Exchange のオンプレミス コネクタを介した Android および iOS/iPadOS 用 Microsoft Outlook の使用はサポートされていません。 オンプレミスのメールボックスに対して iOS/iPadOS および Android 用 Outlook で Azure Active Directory の条件付きアクセス ポリシーおよび Intune アプリ保護ポリシーを活用したい場合は、「[iOS/iPadOS および Android 用の Outlook でのハイブリッド先進認証の使用](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth)」を参照してください。
 
 ### <a name="support-for-pcs"></a>PC のサポート
 

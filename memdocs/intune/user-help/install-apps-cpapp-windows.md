@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: de3d4eb47a6a08c0ba2bdddb20312f7e95eb8c84
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882195"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057316"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>デバイスにアプリをインストールして共有する
 
@@ -53,12 +53,12 @@ Windows 用 Intune ポータル サイト アプリからデバイスにアプ�
 > [!IMPORTANT]
 > 必要なアプリのインストールに失敗し、組織によりそのアプリが手動でインストールできるようにされている場合は、 **[もう一度試す]** を選択します。 更新された状態が表示されるまで、最大で 10 分かかる場合があります。 この時間内に **[もう一度試す]** を再び選択してエラーが発生しても、問題はありません。 そのまま状態が更新されるのを 10 分待ちます。   
 
-会社の規模によっては、Intune ポータル サイトからダウンロードできる Office のバージョンが複数表示される場合があります。 Windows デバイス用 Office スイートに関する具体的な情報については、「[Windows 10 デバイスに Office 365 をインストールする](./install-office-windows.md)」をご覧ください。
+会社の規模によっては、Intune ポータル サイトからダウンロードできる Office のバージョンが複数表示される場合があります。 Windows デバイス用 Office スイートに関する具体的な情報については、[Windows デバイスに Microsoft 365 をインストールする](./install-office-windows.md)方法に関するページを参照してください。
 
 ## <a name="share-apps"></a>アプリを共有する  
 職場や学校の連絡先にアプリを共有したりお勧めしたりします。 次の手順は、Intune ポータル サイトから直接リンクを共有する方法を示しています。
 
-1. Intune ポータル サイトで任意のアプリを右クリックするか、長押しして、その[コンテキスト メニュー](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus)を開きます。  
+1. Intune ポータル サイトで任意のアプリを右クリックするか、長押しして、その[コンテキスト メニュー](//windows/uwp/design/controls-and-patterns/menus)を開きます。  
 
     ![アプリとデバイスの一覧が表示されている、Windows 10 用 Intune ポータル サイト アプリのフロント ページ。 クリック可能な [共有] コンテキスト メニューが、サンプル アプリのアイコンの上部に表示されます。 ](./media/1808_ShareContext_CP_Windows.png)  
 
@@ -97,4 +97,4 @@ Windows 用 Intune ポータル サイト アプリからデバイスにアプ�
 
 アプリの割り当ての種類、発行元、名前のアルファベット順、または発行日順で並べ替えるには、 **[並べ替え条件]** を使用します。 表示されるアプリをインストールの状態で制限するには、 **[フィルター条件]** を使用します。  利用できるアプリがない場合は、会社のアプリがインストールされていないことを示すメッセージが表示されます。  
 
-さらに手助けが必要ですか。 社内サポートに問い合わせてください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。  
+さらに手助けが必要ですか。 社内サポートに問い合わせてください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db975d15ec0c93bde8991872f6847364786aa429
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 99cde56dbe1f9f63cb8e0af69721191455f16d2a
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912413"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281185"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>iOS 用 Microsoft Intune App SDK 開発者ガイド
 
@@ -657,7 +657,7 @@ Intune の管理者は、Intune Azure portal と Intune Graph API を使って�
 
 * `IntuneMAMAppConfig` オブジェクトで適切なセレクターを呼び出します。 たとえば、アプリケーションのキーが文字列の場合、`stringValueForKey` や `allStringsForKey` を使用します。 戻り値とエラー条件の詳細については、`IntuneMAMAppConfig.h` を参照してください。
 
-Graph API の機能に関する詳細については、[Graph API のリファレンス](https://developer.microsoft.com/graph/docs/concepts/overview) ページを参照してください。
+Graph API の機能に関する詳細については、[Graph API のリファレンス](/graph/overview) ページを参照してください。
 
 iOS で MAM 対象アプリ構成ポリシーを作成する方法については、[iOS/iPadOS 用の Microsoft Intune アプリ構成ポリシーを使用する方法](../apps/app-configuration-policies-use-ios.md)に関するページの MAM 対象アプリ構成のセクションを参照してください。
 
@@ -753,14 +753,30 @@ SDK は、ローカル ファイル所有者の ID を追跡し、適宜、ポ�
     このメソッドはバックグラウンド スレッドから呼び出されることに注意してください。 (アプリが FALSE を返す場合のファイルを除き) ユーザーのすべてのデータが削除されるまでアプリは値を返すことはできません。
 
 ## <a name="siri-intents"></a>Siri Intents
+
 アプリが Siri Intents と統合されている場合、このシナリオをサポートする手順については、`IntuneMAMPolicy.h` の `areSiriIntentsAllowed` に関するコメントを必ずお読みください。 
     
 ## <a name="notifications"></a>通知
+
 アプリが通知を受信する場合、このシナリオをサポートする手順については、`IntuneMAMPolicy.h` の `notificationPolicy` に関するコメントを必ずお読みください。  `IntuneMAMPolicyManager.h` に記述されている `IntuneMAMPolicyDidChangeNotification` にアプリから登録し、この値をキーチェーンを介して `UNNotificationServiceExtension` に伝達することをお勧めします。
-## <a name="displaying-web-content-within-application"></a>アプリケーション内に Web コンテンツを表示する
-アプリケーションで Web ビュー内に Web サイトを表示する機能があり、表示される Web ページから任意のサイトに移動できる場合、アプリケーションでは、マネージド データが Web 表示によって漏洩できないように、現在の ID を設定する必要があります。 これにはたとえば、検索エンジンへの直接リンクまたは間接リンクが含まれる "機能を提案する" または "フィードバック" の Web ページがあります。
-複数 ID アプリケーションでは、Web ビューを表示する前に、IntuneMAMPolicyManager setUIPolicyIdentity を呼び出して空の文字列を渡す必要があります。 アプリケーションでは、Web ビューが破棄された後、setUIPolicyIdentity を呼び出して現在の ID を渡す必要があります。
-単一 ID アプリケーションでは、Web ビューを表示する前に、IntuneMAMPolicyManager setCurrentThreadIdentity を呼び出して空の文字列を渡す必要があります。 アプリケーションでは、Web ビューが破棄された後、setCurrentThreadIdentity を呼び出して nil を渡す必要があります。
+
+## <a name="displaying-web-content-within-an-application"></a>アプリケーション内に Web コンテンツを表示する
+
+Web ビュー内に Web サイトを表示できる機能がアプリケーションにある場合、個別のシナリオに応じて、データ漏洩を防ぐためのロジックを追加する必要があります。
+
+### <a name="webviews-that-display-only-non-corporate-contentwebsites"></a>社外のコンテンツまたは Web サイトのみを表示する Web ビュー
+
+Web ビューに会社のデータは表示されないアプリケーションで、ユーザーが任意のサイトを参照して、アプリケーションの他の部分からマネージド データをコピーしてパブリック フォーラムに貼り付けることができる可能性がある場合、マネージド データが Web ビューを介して漏洩しないよう、そのアプリケーションで現在の ID を設定する必要があります。 これにはたとえば、検索エンジンへの直接または間接リンクが含まれる、機能提案型またはフィードバック型の Web ページがあります。 Web ビューを表示する前に、複数 ID アプリケーションによって、IntuneMAMPolicyManager setUIPolicyIdentity が呼び出され空の文字列が渡される必要があります。 Web ビューが破棄された後、アプリケーションによって、setUIPolicyIdentity が呼び出され現在の ID が渡される必要があります。 単一 ID アプリケーションによって、Web ビューを表示する前に、IntuneMAMPolicyManager setCurrentThreadIdentity が呼び出され空の文字列が渡される必要があります。 Web ビューが破棄された後、アプリケーションによって setCurrentThreadIdentity が呼び出され nil が渡される必要があります。 これにより、Intune SDK で Web ビューが管理対象外として扱われ、アプリケーションの他の部分のマネージド データを Web ビューに貼り付けることは、ポリシーがそのように構成されている場合、確実に許可されなくなります。 
+
+### <a name="webviews-that-display-only-corporate-contentwebsites"></a>会社のコンテンツまたは Web サイトのみを表示する Web ビュー
+
+Web ビューに会社のデータのみが表示されるアプリケーションで、ユーザーが任意のサイトを参照できない場合、変更は必要ありません。
+
+### <a name="webviews-that-might-display-both-corporate-and-non-corporate-contentwebsites"></a>会社および社外の両方のコンテンツまたは Web サイトを表示する Web ビュー
+
+このシナリオでは、WKWebView のみがサポートされています。 レガシ UIWebView を使用するアプリケーションは、WKWebView に移行する必要があります。 会社のコンテンツを WKWebView 内に表示するアプリケーションで、ユーザーが社外のコンテンツまたは Web サイトにもアクセスすることができ、データ漏洩につながる可能性がある場合、IntuneMAMPolicyDelegate.h に定義されている isExternalURL: デリゲート メソッドをアプリケーションで実装する必要があります。 アプリケーションによって、デリゲート メソッドに渡される URL が、マネージド データを貼り付けることができる会社の Web サイトか、または会社のデータが漏洩する可能性がある社外の Web サイトのどちらを表すのかが判断される必要があります。 
+
+isExternalURL で NO が返されると、読み込まれている Web サイトはマネージド データを共有可能な会社の場所であることが Intune SDK に伝えられます。 YES が返されると、現在のポリシー設定で必要とされている場合、Intune SDK によって WKWebView ではなく Edge でその URL が開かれます。 これにより、アプリ内のマネージド データが外部 Web サイトに漏洩することが確実になくなります。
 
 ## <a name="ios-best-practices"></a>iOS ベスト プラクティス
 

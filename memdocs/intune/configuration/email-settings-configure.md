@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de260f56753e292ed95ac22c76b9cc16457c981b
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 99f3dcd944270acef98cc0f1f06138d75dba4453
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88145999"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996420"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Intune を使用してデバイスに電子メールの設定を追加する
 
-Microsoft Intune には、組織内のデバイスに展開できるさまざまな電子メールの設定が含まれています。 IT 管理者は、Office 365 や Gmail などのメール サーバーに接続するための固有の設定を持つ電子メール プロファイルを作成します。 次に、エンド ユーザーは、各自のモバイル デバイス上で組織の電子メール アカウントとの接続、認証、同期を行います。 電子メール プロファイルを作成して展開することで、多数のデバイス全体で設定が標準であることを確認できます。 また、正しい電子メールの設定がわからないエンド ユーザーからのサポート コールを減らすことができます。
+Microsoft Intune には、組織内のデバイスに展開できるさまざまな電子メールの設定が含まれています。 IT 管理者は、Microsoft 365 や Gmail などのメール サーバーに接続するための固有の設定を持つ電子メール プロファイルを作成します。 次に、エンド ユーザーは、各自のモバイル デバイス上で組織の電子メール アカウントとの接続、認証、同期を行います。 電子メール プロファイルを作成して展開することで、多数のデバイス全体で設定が標準であることを確認できます。 また、正しい電子メールの設定がわからないエンド ユーザーからのサポート コールを減らすことができます。
 
 電子メール プロファイルを使用して、次のデバイスの組み込みの電子メール設定を構成できます。
 

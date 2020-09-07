@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: c7d5583addc4e76f5af0ea0b9780f20d8fa78a2c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353617"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996199"
 ---
 # <a name="device-management-overview"></a>デバイス管理の概要
 
@@ -52,20 +52,20 @@ Intune により、ユーザーごと、および iOS/iPadOS、macOS、Android�
 **[一般的なシナリオ](common-scenarios.md)** は、モバイル デバイスを使用する際のよくある疑問を Intune によって解決する方法を確認できる優れたリソースです。 以下に関するシナリオを参照できます。  
 
 - オンプレミスの Exchange での電子メールの保護
-- Office 365 への安全なアクセス
+- Microsoft 365 への安全なアクセス
 - 個人のデバイスを使用して、組織のリソースにアクセスする
 
 Intune の詳細については、[Intune の概要](what-is-intune.md)に関する記事をご覧ください。
 
 ## <a name="co-management"></a>共同管理
 
-多くの組織では、デスクトップやサーバーなどのデバイスを管理するために、オンプレミスの Configuration Manager が使用されています。 オンプレミスの Configuration Manager と Microsoft Intune をクラウドで接続できます。 クラウドに接続すると、Intune とクラウドの利点が得られます。これには[条件付きアクセス](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access)、[リモート操作の実行](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions)、[Windows Autopilot の使用](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot)などが含まれます。
+多くの組織では、デスクトップやサーバーなどのデバイスを管理するために、オンプレミスの Configuration Manager が使用されています。 オンプレミスの Configuration Manager と Microsoft Intune をクラウドで接続できます。 クラウドに接続すると、Intune とクラウドの利点が得られます。これには[条件付きアクセス](../../configmgr/comanage/quickstart-conditional-access.md)、[リモート操作の実行](../../configmgr/comanage/quickstart-remote-actions.md)、[Windows Autopilot の使用](../../configmgr/comanage/quickstart-autopilot.md)などが含まれます。
 
-[Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) は、複数のサービスを統合するソリューション プラットフォームです。 これには、クラウドベースのデバイス管理用の [Microsoft Intune](what-is-intune.md) と、クラウド接続のデバイス管理用の [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) が含まれます。
+[Microsoft Endpoint Manager](../../endpoint-manager-overview.md) は、複数のサービスを統合するソリューション プラットフォームです。 これには、クラウドベースのデバイス管理用の [Microsoft Intune](what-is-intune.md) と、クラウド接続のデバイス管理用の [Configuration Manager + Intune](../../configmgr/comanage/overview.md) が含まれます。
 
 Configuration Manager を使用し、いくつかのタスクをクラウドに移動する準備ができている場合は、共同管理が適しています。
 
-Configuration Manager のクラウド接続の詳細については、「[共同管理とは](https://docs.microsoft.com/mem/configmgr/comanage/overview)」をご覧ください。
+Configuration Manager のクラウド接続の詳細については、「[共同管理とは](../../configmgr/comanage/overview.md)」をご覧ください。
 
 ## <a name="integration-with-secure-and-protect-services"></a>セキュリティおよび保護サービスとの統合
 
@@ -108,11 +108,11 @@ Intune をセットアップするときに、Azure portal でのみ作業して
 - ソフトウェア更新プログラムの管理
   - [Windows 10 更新の管理](../protect/windows-update-for-business-configure.md)  
   - [iOS/iPadOS 更新の管理](../protect/software-updates-ios.md)  
-- [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
-- [ユーザーの管理](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
-- [グループとメンバーの管理](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
+- [Azure Active Directory](/azure/active-directory)  
+- [ユーザーの管理](/azure/active-directory/fundamentals/add-users-azure-active-directory)
+- [グループとメンバーの管理](/azure/active-directory/fundamentals/active-directory-manage-groups)
 - [トラブルシューティング](help-desk-operators.md)
 
 ## <a name="next-steps"></a>次のステップ
 
-MDM または MAM ソリューションの使用を開始する準備ができたら、Intune のセットアップ、デバイスの登録、およびポリシーの作成開始のためのさまざまな手順を進めます。 [Microsoft 365 のモバイル デバイス管理](https://docs.microsoft.com/microsoft-365/enterprise/mobility-infrastructure)に関する記事も推奨されるリソースです。
+MDM または MAM ソリューションの使用を開始する準備ができたら、Intune のセットアップ、デバイスの登録、およびポリシーの作成開始のためのさまざまな手順を進めます。 [Microsoft 365 のモバイル デバイス管理](/microsoft-365/enterprise/mobility-infrastructure)に関する記事も推奨されるリソースです。

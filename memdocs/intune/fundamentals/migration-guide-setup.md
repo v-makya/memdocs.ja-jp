@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b7784d4ad86e3418259f85ca1c4577d2289dc86
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c39174dded9fae0055786b6132b3f964f187b1b1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79358157"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992710"
 ---
 # <a name="basic-setup"></a>基本的なセットアップ
 
@@ -33,17 +33,17 @@ ms.locfileid: "79358157"
 
 Intune では、ID プロバイダーおよびユーザー グループ化のプロバイダーとして Azure Active Directory (Azure AD) が必要です。 詳細については、下記のリンクをクリックしてください。
 
-- [ID の要件](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
+- [ID の要件](/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
-- [ディレクトリ同期の要件](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
+- [ディレクトリ同期の要件](/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
-- [多要素認証 (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
+- [多要素認証 (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks)
 
 - [ユーザー グループとデバイス グループの計画](users-add.md)
 
 - [ユーザー グループとデバイス グループを作成する方法](groups-get-started.md)
 
-組織が Office 365 を既に使っている場合は、Intune でも同じ Azure Active Directory 環境を使う必要があります。
+組織が Microsoft 365 を既に使っている場合は、Intune でも同じ Azure Active Directory 環境を使う必要があります。
 
 ### <a name="pki-optional"></a>PKI (省略可能)
 
@@ -63,7 +63,7 @@ Intune に移行するには、まず [Intune サブスクリプション](accou
 
 - Intune ユーザー ライセンスを割り当てる方法については、[こちら](licenses-assign.md)を参照してください。
 
-- 新しい Azure Active Directory テナントを作成した場合は、[新しいユーザーを作成したり、オンプレミスの Active Directory (AD) からユーザーを同期する方法](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)を参照してください。
+- 新しい Azure Active Directory テナントを作成した場合は、[新しいユーザーを作成したり、オンプレミスの Active Directory (AD) からユーザーを同期する方法](/azure/active-directory/connect/active-directory-aadconnect)を参照してください。
 
 ### <a name="task-3-set-your-mdm-authority-to-intune"></a>タスク 3: MDM 機関を Intune に設定する
 

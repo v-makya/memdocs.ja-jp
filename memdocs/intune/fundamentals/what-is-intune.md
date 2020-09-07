@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28a5bc7a1ee00e9595c50d274605af1b33c1ea90
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 939a9b46c3972bc4d575b3b58d08f5f6fb169239
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332802"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996261"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune はデバイスの MDM および MAM プロバイダーです
 
@@ -34,7 +34,7 @@ Intune は、Microsoft の [Enterprise Mobility + Security (EMS) スイート](h
 
 Intune では次のことができます。
 
-- Intune を使用した 100% のクラウドにするか、Configuration Manager と Intune を使用した[共同管理](https://docs.microsoft.com/configmgr/comanage/overview)にするかを選択する。
+- Intune を使用した 100% のクラウドにするか、Configuration Manager と Intune を使用した[共同管理](/configmgr/comanage/overview)にするかを選択する。
 - 個人および組織所有のデバイスで、データとネットワークにアクセスするルールを設定し、設定を構成する。
 - オンプレミスとモバイルのデバイスにアプリを展開し、認証する。
 - ユーザーが情報にアクセスして共有する方法を制御して、会社情報を保護する。
@@ -106,9 +106,9 @@ Intune は次のように利用できます。
 
 - スタンドアロン [Azure サービス](https://go.microsoft.com/fwlink/?linkid=2090973)として
 - [Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune) および[政府機関向け Microsoft 365](https://www.microsoft.com/microsoft-365/government) に付属している機能
-- いくつかの限られた Intune 機能で構成されている [Office 365 のモバイル デバイス管理](https://support.office.com/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)として
+- いくつかの限られた Intune 機能で構成されている [Microsoft 365 のモバイル デバイス管理](https://support.office.com/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)として
 
-Intune は多くの部門で使用されています。たとえば、[政府機関](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description)、[教育機関](https://www.microsoft.com/en-us/education/intune)、[キオスクまたは専用デバイス](../configuration/kiosk-settings.md) (製造および小売用) などです。
+Intune は多くの部門で使用されています。たとえば、[政府機関](/enterprise-mobility-security/solutions/ems-govt-service-description)、[教育機関](https://www.microsoft.com/en-us/education/intune)、[キオスクまたは専用デバイス](../configuration/kiosk-settings.md) (製造および小売用) などです。
 
 ## <a name="next-steps"></a>次のステップ
 

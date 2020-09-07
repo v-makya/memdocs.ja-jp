@@ -2,7 +2,7 @@
 title: 管理されていないデバイスでのデータ漏洩の防止
 titleSuffix: Microsoft Intune
 description: Microsoft Intune を使用して、デバイス上での企業データへのアクセスを許可し、データ漏洩を防ぎます。
-keywords: データ保護 漏洩の防止 デバイス O365 Office 365
+keywords: データ保護 漏洩の防止 デバイス M365 Microsoft 365
 ms.author: dougeby
 author: dougeby
 manager: dougeby
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d694a2221dff705d6ec2c1dc1db426740d95cdbe
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c979d6cf35611a419c4e27605b696c6ad3d85cd9
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79352424"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996182"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Microsoft Intune を使用して、管理されていないデバイスでのデータ漏洩を防止する
 
-Office 365 でホストされている会社のデータへのアクセスを許可すると、意図的または偶発的なデータ漏洩のリスクなしでユーザーがデータを共有したり保存したりする方法を制御できます。 Microsoft Intune は、ユーザーが所有するデバイス上の会社データの保護のために設定するアプリの保護ポリシーを提供します。 デバイスを Intune サービスに登録する必要はありません。 
+Microsoft 365 でホストされている会社のデータへのアクセスを許可すると、意図的または偶発的なデータ漏洩のリスクなしでユーザーがデータを共有したり保存したりする方法を制御できます。 Microsoft Intune は、ユーザーが所有するデバイス上の会社データの保護のために設定するアプリの保護ポリシーを提供します。 デバイスを Intune サービスに登録する必要はありません。 
 
 Intune で設定されたアプリの保護ポリシーは、Microsoft 以外のデバイス管理ソリューションで管理されるデバイスでも動作します。 IT 部門によって管理されるのは会社のデータのみで、デバイス上の個人データは管理されません。 
 
@@ -40,7 +40,7 @@ Intune アプリの保護ポリシーは、デバイスの管理に依存しま�
 次の行動計画は、次の要件を満たすことで使用できます。
 
 * 会社が、クラウドに安全に移行する準備ができている。
-* 会社が Office 365 Exchange Online、SharePoint Online、OneDrive for Business、または Yammer を使用している。
+* 会社が Microsoft 365 Exchange Online、SharePoint Online、OneDrive for Business、または Yammer を使用している。
 * 会社が Microsoft 365、Enterprise Mobility + Security (EMS)、または Azure Information Protection のライセンスを持っている。
 * 会社が会社所有の、または個人所有の Windows、iOS、iPadOS、Android デバイスから会社のデータへのアクセスをユーザーに許可している。
 * 会社がデバイス管理サービスで個人所有のデバイスの登録を求めていない。
@@ -55,7 +55,7 @@ iOS/iPadOS および Android デバイスの場合:
 
 Windows 10 デバイスの場合:
 
-1. [Windows 情報保護 (WIP) のしくみ](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip)をご確認ください。
+1. [Windows 情報保護 (WIP) のしくみ](/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip)をご確認ください。
 2. [Windows 10 用のアプリ保護ポリシー](../apps/app-protection-policies-configure-windows-10.md)を構成する準備をします。
 3. [Intune で WIP アプリ保護ポリシーを作成して展開します](../apps/windows-information-protection-policy-create.md)。
 
@@ -68,4 +68,4 @@ Windows 10 デバイスの場合:
 
 ## <a name="next-steps"></a>次のステップ
 
-EMS または Office 365 のさまざまなシナリオを有効にする支援をご希望ですか? Microsoft 365、Enterprise Mobility + Security、または Azure Active Directory Premium のライセンスを 150 以上お持ちでしたら、[FastTrack の特典](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program)をご利用いただけます。
+EMS または Microsoft 365 のさまざまなシナリオを有効にする支援をご希望ですか? Microsoft 365、Enterprise Mobility + Security、または Azure Active Directory Premium のライセンスを 150 以上お持ちでしたら、[FastTrack の特典](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program)をご利用いただけます。

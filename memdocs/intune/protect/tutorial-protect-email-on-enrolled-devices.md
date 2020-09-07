@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24bdaf71f90e3da84fb26c4b69d9b81f43413c69
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: feabc9f889d0bce83c96df92f8154784e31b84e4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079061"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996709"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>チュートリアル:マネージド デバイス上で Exchange Online の電子メールを保護する
 
@@ -104,11 +104,11 @@ Intune デバイス コンプライアンス ポリシーを設定して、デ�
 
 1. Intune で、 **[エンドポイント セキュリティ]**  >  **[条件付きアクセス]**  >  **[新しいポリシー]** の順に選択します。
 
-2. **[名前]** に「**Test policy for Office 365 email**」と入力します。
+2. **[名前]** に「**Test policy for Microsoft 365 email**」と入力します。
 
 3. **[割り当て]** で、 **[ユーザーとグループ]** を選択します。 **[含む]** タブで **[すべてのユーザー]** を選択して、 **[完了]** を選択します。
 
-4. **[割り当て]** で、 **[クラウド アプリまたは操作]** を選択します。 Office 365 Exchange Online のメールを保護するので、次の手順で選択します。
+4. **[割り当て]** で、 **[クラウド アプリまたは操作]** を選択します。 Microsoft 365 Exchange Online のメールを保護するので、次の手順で選択します。
 
    1. **[含む]** タブで、 **[アプリを選択]** を選択します。
 
@@ -162,7 +162,7 @@ Intune デバイス コンプライアンス ポリシーを設定して、デ�
 
 ## <a name="try-it-out"></a>試してみましょう
 
-作成したポリシーでは、Office 365 のメールにサインインしようとするすべての iOS デバイスは、Intune に登録され、iOS または iPadOS 用 Outlook モバイル アプリを使用している必要があります。 iOS デバイスでこのシナリオをテストするには、テスト テナントのユーザーの資格情報を使用して、Exchange Online へのサインインを試みます。 デバイスを登録し、Outlook モバイル アプリをインストールするよう求めるメッセージが表示されます。
+作成したポリシーでは、Microsoft 365 のメールにサインインしようとするすべての iOS デバイスは、Intune に登録され、iOS または iPadOS 用 Outlook モバイル アプリを使用している必要があります。 iOS デバイスでこのシナリオをテストするには、テスト テナントのユーザーの資格情報を使用して、Exchange Online へのサインインを試みます。 デバイスを登録し、Outlook モバイル アプリをインストールするよう求めるメッセージが表示されます。
 
 1. iPhone でテストするには、 **[Settings]\(設定\)**  >  **[Passwords & Accounts]\(パスワードとアカウント\)**  >  **[Add Account]\(アカウントの追加\)**  >  **[Exchange]** に移動します。
 
@@ -189,4 +189,4 @@ Intune デバイス コンプライアンス ポリシーを設定して、デ�
 
 ## <a name="next-steps"></a>次のステップ
 
-このチュートリアルでは、iOS デバイスに対して、Intune に登録することと、Outlook アプリを使用して Exchange Online のメールにアクセスすることを要求する、ポリシーを作成しました。 Exchange ActiveSync クライアントや Office 365 Exchange Online などの他のアプリやサービスを保護するために条件付きアクセスで Intune を使用する方法については、「[条件付きアクセスの設定](conditional-access.md)」を参照してください。
+このチュートリアルでは、iOS デバイスに対して、Intune に登録することと、Outlook アプリを使用して Exchange Online のメールにアクセスすることを要求する、ポリシーを作成しました。 Exchange ActiveSync クライアントや Microsoft 365 Exchange Online などの他のアプリやサービスを保護するために条件付きアクセスで Intune を使用する方法については、[条件付きアクセスの設定](conditional-access.md)に関するページを参照してください。

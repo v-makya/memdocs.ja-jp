@@ -1,7 +1,7 @@
 ---
-title: Microsoft Intune を使用して macOS デバイスに Office 365 アプリをインストールする
+title: Microsoft Intune を使用して macOS デバイスに Microsoft 365 アプリをインストールする
 titleSuffix: ''
-description: Microsoft Intune を使用し、Office 365 アプリを macOS デバイスにインストールする方法について説明します。
+description: Microsoft Intune を使用し、Microsoft 365 アプリを macOS デバイスにインストールする方法について説明します。
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14a4d66cfd5ac0ee3c0938e96794ed12d5b5fde6
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2eb8ea29739e2478df68e3b9926f111f2ee8d0e4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989523"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996488"
 ---
-# <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Microsoft Intune を使用して macOS デバイスに Office 365 を割り当てる
+# <a name="assign-microsoft-365-to-macos-devices-with-microsoft-intune"></a>Microsoft Intune を使用して macOS デバイスに Microsoft 365 を割り当てる
 
-このアプリの種類では、Office 365 2016 アプリを macOS デバイスに簡単に割り当てることができます。 このアプリの種類を使用すると、Word、Excel、PowerPoint、Outlook、OneNote、Teams をインストールできます。 アプリケーションのセキュリティを強化し、最新の状態に保つために、これらのアプリには Microsoft AutoUpdate (MAU) が付属しています。 必要なアプリは、Intune コンソールのアプリ一覧に 1 つのアプリとして表示されます。
+このアプリの種類では、Microsoft 365 アプリを macOS デバイスに簡単に割り当てることができます。 このアプリの種類を使用すると、Word、Excel、PowerPoint、Outlook、OneNote、Teams をインストールできます。 アプリケーションのセキュリティを強化し、最新の状態に保つために、これらのアプリには Microsoft AutoUpdate (MAU) が付属しています。 必要なアプリは、Intune コンソールのアプリ一覧に 1 つのアプリとして表示されます。
 
 > [!NOTE]
 > Microsoft Office 365 ProPlus は **Microsoft 365 Apps for enterprise** に名前変更されています。 このドキュメントでは、これを通例 **Microsoft 365 アプリ**と呼びます。
 
 ## <a name="before-you-start"></a>開始する前に
 
-macOS に Office 365 アプリを追加し始める前に、次の詳細を理解してください。
+macOS に Microsoft 365 アプリを追加し始める前に、次の詳細を理解してください。
 
 - これらのアプリを展開するデバイスでは、macOS 10.10 以降を実行している必要があります。
 - Intune は、Office 2016 for Mac スイートに含まれる Office アプリの追加のみをサポートします。
@@ -89,5 +89,5 @@ macOS に Office 365 アプリを追加し始める前に、次の詳細を理�
 
 ## <a name="next-steps"></a>次のステップ
 
-- Windows 10 デバイスに Office 365 アプリを追加する方法については、[Microsoft Intune を使用して Windows 10 デバイスに Microsoft 365 アプリを割り当てる方法](apps-add-office365.md)に関するページを参照してください。
+- Windows 10 デバイスに Microsoft 365 アプリを追加する方法については、[Microsoft Intune を使用して Windows 10 デバイスに Microsoft 365 アプリを割り当てる方法](apps-add-office365.md)に関するページを参照してください。
 - アプリ割り当てをユーザーのグループに追加したり、除外したりする方法については、「[アプリ割り当ての組み込みと除外](apps-inc-exl-assignments.md)」を参照してください。

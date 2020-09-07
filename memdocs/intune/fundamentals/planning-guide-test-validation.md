@@ -17,12 +17,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aeca72af3eadf55174f1ad97c1e294f48f131801
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ae07904d9fb21773fbc4caad18cb183d9565c401
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79357234"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996301"
 ---
 # <a name="intune-testing-and-validation"></a>Intune のテストと検証
 
@@ -40,7 +40,7 @@ ms.locfileid: "79357234"
 
 ある設計部品が、要件またはシナリオに合わせて調整される 1 つ以上のテスト条件に存在しない場合、その設計部品が必要かどうかを検討してください。 また、次の項目を用意する必要があります。
 
-- **アカウント:** あらゆるユース ケース シナリオをテストするために EMS や Office 365 にライセンス供与されているテスト アカウント。
+- **アカウント:** あらゆるユース ケース シナリオをテストするために EMS や Microsoft 365 にライセンス供与されているテスト アカウント。
 
 - **デバイス:** ワイプまたは工場出荷時の既定値へのリセットが可能なテスト デバイス。
 

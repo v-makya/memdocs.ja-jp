@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37724c4d9acdfcdb9e371a21a7b15c509de78c60
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: c81216ae7350beafcf1e090b278d5975d6fea086
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865474"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993293"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune での iOS/iPadOS デバイスの登録に関する問題のトラブルシューティング
 
@@ -87,7 +87,7 @@ ms.locfileid: "87865474"
 **原因:** デバイスを登録しようとしているユーザーに、Microsoft Intune ライセンスがありません。
 
 #### <a name="resolution"></a>解決策
-1. [Office 365 管理センター](https://admin.microsoft.com)にアクセスし、 **[ユーザー] > [アクティブなユーザー]** を選択します。
+1. [Microsoft 365 管理センター](https://admin.microsoft.com)にアクセスし、 **[ユーザー]、[アクティブなユーザー]** の順に選択します。
 2. Intune ユーザー ライセンスを割り当てるユーザー アカウントを選択し、 **[製品ライセンス] > [編集]** の順に選択します。
 3. このユーザーに割り当てるライセンスのトグルを **[オン]** 位置に切り替え、 **[保存]** を選択します。
 4. デバイスを再度登録します。
@@ -181,7 +181,7 @@ APNs 証明書を更新してから、デバイスを再登録します。
 > APNs 証明書を更新したことを確認します。 APNs 証明書を置き換えないでください。 証明書を置き換えた場合は、すべての iOS/iPadOS デバイスを Intune に再登録する必要があります。 
 
 - Intune スタンドアロンで APNs 証明書を更新するには、「[Apple MDM プッシュ証明書を更新する](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate)」を参照してください。
-- Office 365 で APNs 証明書を更新するには、[iOS/iPadOS デバイスでの APNs 証明書の作成](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7)に関する記事を参照してください。
+- Microsoft 365 で APNs 証明書を更新するには、[iOS/iPadOS デバイスでの APNs 証明書の作成](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7)に関する記事を参照してください。
 
 ### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR 接続が無効です
 

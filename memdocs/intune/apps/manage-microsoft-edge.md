@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2eb5a5e87b54fd8a92fc40c6d1295250d90b05c4
-ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
+ms.openlocfilehash: ee7f02571e31656825f7f85fa128247126ecb890
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501186"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995145"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>iOS および Android 用の Edge と Microsoft Intune を使用して Web アクセスを管理する
 
@@ -34,20 +34,20 @@ iOS 用の Edge は、iOS 12.0 以降でサポートされています。 Androi
 > [!NOTE]
 > iOS および Android 用の Edge では、ユーザーが自分のデバイス上でネイティブ ブラウザーに対して行った設定は使用されません。これは、iOS および Android 用の Edge でこれらの設定にアクセスできないためです。
 
-Office 365 データの豊富で広範な保護機能は、Enterprise Mobility + Security スイートにサブスクライブすると利用できます。これには、条件付きアクセスなどの Microsoft Intune と Azure Active Directory Premium の機能が含まれます。 少なくとも、モバイル デバイスから iOS および Android 用の Edge への接続のみを許可する条件付きアクセス ポリシーと、閲覧エクスペリエンスが保護される Intune アプリ保護ポリシーを展開することをお勧めします。
+Microsoft 365 データの豊富で広範な保護機能は、Enterprise Mobility + Security スイートにサブスクライブすると利用できます。これには、条件付きアクセスなどの Microsoft Intune と Azure Active Directory Premium の機能が含まれます。 少なくとも、モバイル デバイスから iOS および Android 用の Edge への接続のみを許可する条件付きアクセス ポリシーと、閲覧エクスペリエンスが保護される Intune アプリ保護ポリシーを展開することをお勧めします。
 
 > [!NOTE]
 > 保護されたブラウザーで開く必要がある場合、iOS デバイス上の新しい Web クリップ (ピン留めされた Web アプリ) は、Intune Managed Browser ではなく iOS および Android 用の Edge で開かれます。 以前の iOS Web クリップの場合は、これらの Web クリップのターゲットを再設定して、Managed Browser ではなく iOS および Android 用の Edge で開くようにする必要があります。
 
 ## <a name="apply-conditional-access"></a>条件付きアクセスを適用する
-組織は Azure AD 条件付きアクセス ポリシーを使用して、ユーザーが iOS および Android 用の Edge を使用して職場または学校のコンテンツにのみ確実にアクセスできるようにすることができます。 これを行うには、可能性のあるすべてのユーザーを対象とする条件付きアクセス ポリシーが必要です。 このポリシーの作成の詳細については、[条件付きアクセスを使用してクラウド アプリへのアクセスにアプリ保護ポリシーを要求する方法](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)に関するページを参照してください。
+組織は Azure AD 条件付きアクセス ポリシーを使用して、ユーザーが iOS および Android 用の Edge を使用して職場または学校のコンテンツにのみ確実にアクセスできるようにすることができます。 これを行うには、可能性のあるすべてのユーザーを対象とする条件付きアクセス ポリシーが必要です。 このポリシーの作成の詳細については、[条件付きアクセスを使用してクラウド アプリへのアクセスにアプリ保護ポリシーを要求する方法](/azure/active-directory/conditional-access/app-protection-based-conditional-access)に関するページを参照してください。
 
-1. [シナリオ 2:ブラウザー アプリとしてアプリ保護ポリシーが適用された承認済みアプリを要求する方法](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies)の説明に従い、iOS および Android 用の Edge が Office 365 エンドポイントに接続することを許可し、他のモバイル デバイス Web ブラウザーはブロックします。
+1. [シナリオ 2:ブラウザー アプリとしてアプリ保護ポリシーが適用された承認済みアプリを要求する方法](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies)の説明に従い、iOS および Android 用の Edge が Office 365 エンドポイントに接続することを許可し、他のモバイル デバイス Web ブラウザーはブロックします。
 
    >[!NOTE]
-   > このポリシーにより、モバイル ユーザーは、iOS および Android 用の Edge 内からすべての Office 365 エンドポイントにアクセスできるようになります。 また、このポリシーは、ユーザーが InPrivate を使用して Office 365 エンドポイントにアクセスできないようにします。
+   > このポリシーにより、モバイル ユーザーは、iOS および Android 用の Edge 内からすべての Microsoft 365 エンドポイントにアクセスできるようになります。 また、このポリシーは、ユーザーが InPrivate を使用して Microsoft 365 エンドポイントにアクセスできないようにします。
 
-条件付きアクセスを使用すると、[Azure AD アプリケーション プロキシ](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)経由で外部ユーザーに公開したオンプレミス サイトを対象にすることもできます。
+条件付きアクセスを使用すると、[Azure AD アプリケーション プロキシ](/azure/active-directory/active-directory-application-proxy-get-started)経由で外部ユーザーに公開したオンプレミス サイトを対象にすることもできます。
 
 ## <a name="create-intune-app-protection-policies"></a>Intune のアプリ保護ポリシーを作成する
 
@@ -268,7 +268,7 @@ Android 用の Edge は、次の設定を使用して、キオスク アプリ�
 - パスワード
 - アドレスなど (オートフィル フォーム入力)
 
-同期機能はユーザーの同意によって有効になり、ユーザーは上記の各種データに対して同期をオンまたはオフにすることができます。 詳細については、[Microsoft Edge の同期](https://docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync)に関するページを参照してください。
+同期機能はユーザーの同意によって有効になり、ユーザーは上記の各種データに対して同期をオンまたはオフにすることができます。 詳細については、[Microsoft Edge の同期](/DeployEdge/microsoft-edge-enterprise-sync)に関するページを参照してください。
 
 組織は、iOS および Android で Edge 同期を無効にする機能を備えています。 
 
@@ -343,7 +343,7 @@ iOS および Android 用の Edge に対して許可またはブロックする�
 
 ### <a name="manage-proxy-configuration"></a>プロキシの構成を管理する
 
-iOS および Android 用の Edge と [Azure AD アプリケーション プロキシ](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)を一緒に使用して、ユーザーが自分のモバイル デバイスでイントラネット サイトにアクセスできるようにすることができます。 次に例を示します。 
+iOS および Android 用の Edge と [Azure AD アプリケーション プロキシ](/azure/active-directory/active-directory-application-proxy-get-started)を一緒に使用して、ユーザーが自分のモバイル デバイスでイントラネット サイトにアクセスできるようにすることができます。 次に例を示します。 
 
 - ユーザーは、Intune で保護されている、Outlook モバイル アプリを使用しています。 その後、メールでイントラネット サイトへのリンクをクリックすると、iOS および Android 用の Edge によって、このイントラネット サイトがアプリケーション プロキシを介してユーザーに公開されていることが認識されます。 ユーザーは、イントラネット サイトに到達する前に、適用される多要素認証と条件付きアクセスによる認証を行うため、アプリケーション プロキシを経由するよう自動的にルーティングされます。 これにより、ユーザーはモバイル デバイス上でも内部サイトにアクセスできるようになり、Outlook のリンクが意図したとおりに機能するようになります。
 - ユーザーは、iOS または Android デバイスで、ユーザーが iOS および Android 用の Edge を開きます。 iOS および Android 用の Edge が Intune で保護されており、アプリケーション プロキシが有効になっている場合、ユーザーは、内部 URL を使用してイントラネット サイトに移動できます。 iOS および Android 用の Edge では、このイントラネット サイトがアプリケーション プロキシを使ってユーザーに公開されていることが認識されます。 ユーザーは、イントラネット サイトに到達する前に認証を行うため、アプリケーション プロキシを経由するよう自動的にルーティングされます。 
@@ -351,7 +351,7 @@ iOS および Android 用の Edge と [Azure AD アプリケーション プロ�
 始める前に
 
 - Azure AD アプリケーション プロキシを経由するように内部アプリケーションを設定します。
-  - アプリケーション プロキシを構成し、アプリケーションを公開するには、[セットアップに関するドキュメント](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy)を参照してください。
+  - アプリケーション プロキシを構成し、アプリケーションを公開するには、[セットアップに関するドキュメント](/azure/active-directory/manage-apps/application-proxy)を参照してください。
 - iOS および Android 用の Edge アプリのユーザーは、[Intune アプリの保護ポリシー](app-protection-policy.md)を割り当てておく必要があります。
 - Microsoft アプリには、 **[その他のアプリでの Web コンテンツの転送を制限する]** データ転送設定が **[Microsoft Edge]** に設定されているアプリ保護ポリシーが必要です。
 
@@ -438,7 +438,7 @@ iOS または Android デバイスに iOS および Android 用の Edge をイ�
 
 アプリ ログに格納されている設定の一覧については、「[クライアント アプリの保護ログのレビュー](app-protection-policy-settings-log.md)」を参照してください。
 
-Android デバイスでログを表示する方法については、[メールによる IT 管理者へのログの送信](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android)に関するページを参照してください。
+Android デバイスでログを表示する方法については、[メールによる IT 管理者へのログの送信](../user-help/send-logs-to-your-it-admin-by-email-android.md)に関するページを参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

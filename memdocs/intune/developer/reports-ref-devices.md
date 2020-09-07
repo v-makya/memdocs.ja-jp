@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc01428430eb665dc609cff84ee322f28e3b7d79
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 852d119d7b80df28436f5a8e25fe39782e1e5cc0
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165432"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996386"
 ---
 # <a name="reference-for-devices-entities"></a>デバイス エンティティの参照
 
@@ -65,7 +65,7 @@ ms.locfileid: "84165432"
 | 10 |IPod |iPod デバイス |
 | 11 |Android |Android デバイス - デバイス管理者により管理 |
 | 12 |ISocConsumer |iSoc Consumer デバイス |
-| 14 |MacMDM |Mac OS X デバイス - 組み込み MDM エージェントにより管理 |
+| 14 |MacMDM |組み込み MDM エージェントによって管理された OS X デバイス |
 | 15 |HoloLens |HoloLens デバイス |
 | 16 |SurfaceHub |Surface Hub デバイス |
 | 17 |AndroidForWork |Android デバイス - Android Profile Owner により管理 |
@@ -170,7 +170,7 @@ ms.locfileid: "84165432"
 | ownerTypeName |デバイスの所有者の種類を表します。  <br>[会社] - 会社が所有するデバイスです。 <br>[個人] - 個人が所有するデバイスです (BYOD)。  <br>[不明] - このデバイスの情報はありません。 |会社、個人、不明 |
 
 > [!Note]  
-> デバイスに対して動的グループを作成する場合の AzureAD の `ownerTypeName` では、フィルター値 `deviceOwnership` を `Company` として設定する必要があります。 詳細については、「[デバイスのルール](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)」を参照してください。 
+> デバイスに対して動的グループを作成する場合の AzureAD の `ownerTypeName` では、フィルター値 `deviceOwnership` を `Company` として設定する必要があります。 詳細については、「[デバイスのルール](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices)」を参照してください。 
 
 ## <a name="managementstates"></a>managementStates
 
@@ -266,7 +266,7 @@ ms.locfileid: "84165432"
 | windowsOsEdition           | Windows オペレーティング システムのエディション。                                                                                                                             |
 | ethernetMacAddress           | このデバイスの一意のネットワーク識別子。                                                                                                                                        |
 | 対象となるのは、モデル                      | デバイスのモデル。                                                                                                                                                                      |
-| office365Version           | デバイスにインストールされている Office 365 のバージョン。                                                                                                                             |
+| office365Version           | デバイスにインストールされている Microsoft 365 のバージョン。                                                                                                                             |
 
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
@@ -288,4 +288,3 @@ ms.locfileid: "84165432"
 | deviceCategoryKey          | このデバイスのデバイス カテゴリ属性のキー。 
 | physicalMemoryInBytes      | 物理メモリ (バイト単位)。                                                                                                                                                          |
 | totalStorageSpaceInBytes   | 記憶域の合計容量 (バイト単位)。                                                                                                                                                                |
-

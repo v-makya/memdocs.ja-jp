@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d71326dc46d404925bdd94bd5d1140f23151748c
-ms.sourcegitcommit: 24fcf19054dcd62429f6181cdc568d894e01b99a
+ms.openlocfilehash: b0f360509f456489a321e072c2acfbf26c14bf98
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86946645"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970500"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Intune で PKCS 証明書を構成して使用する
 
@@ -40,12 +40,12 @@ Intune で PKCS 証明書を使用するには、次のインフラストラク�
 - **Active Directory ドメイン**:  
   このセクションで示されているすべてのサーバーは、Active Directory ドメインに参加する必要があります。
 
-  Active Directory Domain Services (AD DS) をインストールして構成する詳細については、「[Active Directory の設計と計画について](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning)」を参照してください。
+  Active Directory Domain Services (AD DS) をインストールして構成する詳細については、「[Active Directory の設計と計画について](/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning)」を参照してください。
 
 - **証明機関**:  
    エンタープライズ証明機関 (CA)。
 
-  Active Directory 証明書サービス (AD CS) のインストールおよび構成の詳細については、「[Active Directory 証明書サービス ステップ バイ ステップ ガイド](https://technet.microsoft.com/library/cc772393)」を参照してください。
+  Active Directory 証明書サービス (AD CS) のインストールおよび構成の詳細については、「[Active Directory 証明書サービス ステップ バイ ステップ ガイド](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772393(v=ws.10))」を参照してください。
 
   > [!WARNING]  
   > Intune ではスタンドアロン CA ではなく、エンタープライズ証明機関 (CA) の AD CS を実行する必要があります。
@@ -82,7 +82,7 @@ Intune で PKCS 証明書を使用するには、次のインフラストラク�
   - 認証および S/MIME メールの署名のシナリオ用の Microsoft Intune Certificate Connector
   - S/MIME メールの暗号化シナリオ用の PFX Certificate Connector for Microsoft Intune
 
-  コネクタには、[デバイス エンドポイント コンテンツ](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices)に記載されているとおり、マネージド デバイスの詳細と同じポートにアクセスする必要があります。
+  コネクタには、[デバイス エンドポイント コンテンツ](/intune/fundamentals/intune-endpoints#access-for-managed-devices)に記載されているとおり、マネージド デバイスの詳細と同じポートにアクセスする必要があります。
 
   Intune では、*Microsoft Intune Certificate Connector* と同じサーバー上に *PFX Certificate Connector* をインストールすることができます。
   
@@ -119,6 +119,12 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
     > 既定では、 **[テンプレート名]** は **[テンプレート表示名]** (*スペースなし*) と同じです。 テンプレートの名前をメモします。後で必要になります。
 
 6. **[要求処理]** で、 **[プライベート キーのエクスポートを許可する]** を選択します。
+    
+    > [!NOTE]
+    > SCEP とは対照的に、PKCS では、証明書の秘密キーはデバイス上ではなく、コネクタがインストールされているサーバー上で生成されます。 証明書テンプレートで秘密キーのエクスポートを許可する必要があります。それにより、証明書コネクタでは、PFX 証明書をエクスポートし、それをデバイスに送信できます。 
+    >
+    > ただし、証明書はデバイス自体にインストールされますが、秘密キーはエクスポート不可としてマークされることにご注意ください。
+    
 7. **[暗号化]** で、 **[最小キー サイズ]** が 2048 に設定されていることを確認します。
 8. **[サブジェクト名]** で **[要求に含まれる]** を選択します。
 9. **[拡張子]** で、 **[アプリケーション ポリシー]** に暗号化ファイル システム、セキュリティで保護された電子メール、クライアント認証が表示されていることを確認します。
@@ -160,7 +166,7 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
 6. **[詳細設定]** タブでは、 **[このコンピューターの SYSTEM アカウントを使用する (既定)]** をオンのままにすることをお勧めします。
 7. **[適用]**  >  **[閉じる]** を選択します
 8. Intune ポータルに戻ります ( **[Intune]**  >  **[デバイス構成]**  >  **[証明書のコネクタ]** )。 しばらくすると、緑のチェックマークが表示され、 **[接続の状態]** が **[アクティブ]** になります。 これでコネクタ サーバーは Intune と通信できます。
-9. ご利用のネットワーク環境に Web プロキシがある場合、コネクタが動作するように追加の構成が必要になる可能性があります。 詳細については、Azure Active Directory ドキュメントの「[既存のオンプレミス プロキシ サーバーと連携する](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers)」を参照してください。
+9. ご利用のネットワーク環境に Web プロキシがある場合、コネクタが動作するように追加の構成が必要になる可能性があります。 詳細については、Azure Active Directory ドキュメントの「[既存のオンプレミス プロキシ サーバーと連携する](/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers)」を参照してください。
     - Android Enterprise (*仕事用プロファイル*)
     - iOS
     - macOS
@@ -292,16 +298,16 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
   - **CN={{IMEINumber}}** : 携帯電話の識別に使用される IMEI (International Mobile Equipment Identity) の一意の番号です。
   - **CN={{OnPrem_Distinguished_Name}}** : コンマで区切られた相対識別名のシーケンスです (*CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com* など)。
 
-    *{{OnPrem_Distinguished_Name}}* 変数を使用するには、[Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) を使用して、*onpremisesdistinguishedname* ユーザー属性をご自分の Azure AD に同期してください。
+    *{{OnPrem_Distinguished_Name}}* 変数を使用するには、[Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) を使用して、*onpremisesdistinguishedname* ユーザー属性をご自分の Azure AD に同期してください。
 
   - **CN={{onPremisesSamAccountName}}** : 管理者は、Azure AD Connect を使用して、Active Directory の samAccountName 属性を、Azure AD の *onPremisesSamAccountName* という属性に同期できます。 Intune では、証明書のサブジェクト内の証明書発行要求の一部として、その変数を置き換えることができます。 samAccountName 属性は、以前のバージョンの Windows (windows 2000 より前) のクライアントとサーバーをサポートするために使われるユーザー サインイン名です。 ユーザー サインイン名の形式は次のとおりです。*DomainName\testUser*、または *testUser* のみ。
 
-    *{{onPremisesSamAccountName}}* 変数を使用するには、[Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) を使用して、*onPremisesSamAccountName* ユーザー属性をご自分の Azure AD に同期してください。
+    *{{onPremisesSamAccountName}}* 変数を使用するには、[Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect) を使用して、*onPremisesSamAccountName* ユーザー属性をご自分の Azure AD に同期してください。
 
   これらの変数と静的文字列の 1 つまたは複数を組み合わせて使用することで、次のようなサブジェクト名のカスタム形式を作成できます。  
   - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
   
-  その例には、CN 変数と E 変数に加えて、組織単位、組織、場所、州、国の各値を表す文字列を使用するサブジェクト名形式が含まれています。 [CertStrToName 関数](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx)の記事では、この関数とそのサポートされる文字列について説明されています。
+  その例には、CN 変数と E 変数に加えて、組織単位、組織、場所、州、国の各値を表す文字列を使用するサブジェクト名形式が含まれています。 [CertStrToName 関数](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea)の記事では、この関数とそのサポートされる文字列について説明されています。
 
 - **デバイス証明書の種類**  
   サブジェクト名の形式のフォーマットオプションには、次の変数が含まれます。 

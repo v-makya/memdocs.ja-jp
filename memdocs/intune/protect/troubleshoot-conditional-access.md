@@ -18,18 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 088c3d6a281efcb1877d80d68382b1dc848ae321
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 7e51f7dc4bf76b9dc35b3eb560bc2dcbe9c48916
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663380"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993819"
 ---
 # <a name="troubleshoot-conditional-access"></a>条件付きアクセスに関するトラブルシューティング
 この記事では、条件付きアクセスで保護されているリソースにユーザーがアクセスできなかった場合、または保護されているリソースにユーザーがアクセスできるがブロックする必要がある場合の対処方法について説明します。
 
 Intune と条件付きアクセスを使用すると、次のようなサービスへのアクセスを保護できます。
-- Office 365 サービス (Exchange Online、SharePoint Online、Skype for Business Online など)
+
+- Microsoft 365 サービス (Exchange Online、SharePoint Online、Skype for Business Online など)
 - Exchange On-Premises
 - その他のさまざまなサービス
 
@@ -49,7 +50,7 @@ Intune と条件付きアクセスを使用すると、次のようなサービ�
 
 - オンプレミスの Exchange の場合は、Intune Exchange Connector が適切に構成されている必要があります。 詳細については、[Microsoft Intune での Exchange Connector のトラブルシューティング](troubleshoot-exchange-connector.md)に関するページをご覧ください。
 
-- オンプレミスの Skype の場合は、ハイブリッド先進認証を構成する必要があります。 [ハイブリッド先進認証の概要](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)に関する記事を参照してください。
+- オンプレミスの Skype の場合は、ハイブリッド先進認証を構成する必要があります。 [ハイブリッド先進認証の概要](/office365/enterprise/hybrid-modern-auth-overview)に関する記事を参照してください。
 
 各デバイスのこれらの状態は、Azure portal およびデバイスのインベントリ レポートで確認できます。
 
@@ -77,11 +78,11 @@ Intune と条件付きアクセスを使用すると、次のようなサービ�
 
 - 登録され、ポリシーに準拠している Android デバイスでも、企業のリソースに初めてアクセスしようとした際に、ブロックされて検疫通知を受け取る場合があります。 この場合は、ポータル サイト アプリが実行されていないことを確認してから、検疫メールに記載されている **[今すぐ開始]** リンクを選択して、評価をトリガーします。 この処理は、条件付きアクセスを初めて有効にする場合にのみ実行する必要があります。
 
-- 登録されている Android デバイスでは、"証明書が見つかりません" というメッセージが表示され、O365 リソースへのアクセスが許可されません。 ユーザーは、次のように、登録されたデバイスの *[ブラウザー アクセスを有効にする]* オプションを有効にする必要があります。
+- 登録されている Android デバイスでは、"証明書が見つかりません" というメッセージが表示され、Microsoft 365 リソースへのアクセスが許可されません。 ユーザーは、次のように、登録されたデバイスの *[ブラウザー アクセスを有効にする]* オプションを有効にする必要があります。
   1. ポータル サイト アプリを開きます。
   2. トリプル ドット (...) またはハードウェアのメニュー ボタンから [設定] ページに移動します。
   3. *[ブラウザー アクセスを有効にする]* ボタンを選択します。
-  4. Chrome ブラウザーでは、Office 365 からサインアウトし、Chrome を再起動します。  
+  4. Chrome ブラウザーでは、Microsoft 365 からサインアウトし、Chrome を再起動します。  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>デバイスがブロックされ、検疫電子メールが受信されない
@@ -94,7 +95,7 @@ Intune と条件付きアクセスを使用すると、次のようなサービ�
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>デバイスが準拠していないが、ユーザーがブロックされていない
 
-- Windows PC では、条件付きアクセスによって、ネイティブ電子メール アプリ、先進認証を使用する Office 2013、または Office 2016 のみがブロックされます。 Windows PC 上の以前のバージョンの Outlook またはすべてのメール アプリをブロックするには、[Azure Active Directory の条件付きアクセス用の SharePoint Online および Exchange Online の設定](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication)に関するページに従って、Azure AD Device Registration および Active Directory フェデレーション サービス (AD FS) を構成する必要があります。
+- Windows PC では、条件付きアクセスによって、ネイティブ電子メール アプリ、先進認証を使用する Office 2013、または Office 2016 のみがブロックされます。 Windows PC 上の以前のバージョンの Outlook またはすべてのメール アプリをブロックするには、[Azure Active Directory の条件付きアクセス用の SharePoint Online および Exchange Online の設定](/azure/active-directory/active-directory-conditional-access-no-modern-authentication)に関するページに従って、Azure AD Device Registration および Active Directory フェデレーション サービス (AD FS) を構成する必要があります。
 
 - デバイスが選択的にワイプされるか、Intune から削除された場合、削除後に数時間にわたってアクセス許可を持ち続ける可能性があります。 これは、Exchange によってアクセス権が 6 時間キャッシュされるためです。 このシナリオでは、使用中止となったデバイスのデータの保護には別の手段を検討してください。
 

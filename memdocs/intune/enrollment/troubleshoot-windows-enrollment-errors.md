@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d296137f71b89abf65f20493fbc1151ffebf28
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 5f72acb12f6e17b3634c0b87b8ad298a410fb83f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795586"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994227"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune での Windows デバイスの登録に関する問題のトラブルシューティング
 
@@ -133,7 +133,7 @@ ms.locfileid: "84795586"
 ### <a name="looks-like-the-mdm-terms-of-use-endpoint-is-not-correctly-configured"></a>MDM の利用規約エンドポイントが正しく構成されていないようです。
 
 **原因:** 次の条件のいずれかに該当している場合。 
- - テナントで Office 365 用モバイル デバイス管理 (MDM) と Intune の両方が使用されていて、デバイスを登録しようとしているユーザーに、有効な Intune ライセンスまたは Office 365 ライセンスがありません。     
+ - テナントで Microsoft 365 用モバイル デバイス管理 (MDM) と Intune の両方が使用されていて、デバイスを登録しようとしているユーザーに、有効な Intune ライセンスまたは Office 365 ライセンスがありません。     
 - Azure AD の MDM 使用条件が空白であるか、正しい URL が含まれていません。    
 
 #### <a name="resolution"></a>解決策
@@ -141,7 +141,7 @@ ms.locfileid: "84795586"
 この問題を解決するには、次のいずれかの方法を使用します。 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>ユーザーに有効なライセンスを割り当てる
-[Microsoft 365 管理センター](https://admin.microsoft.com)にアクセスし、Intune または Office 365 のライセンスをユーザーに割り当てます。
+[Microsoft 365 管理センター](https://admin.microsoft.com)にアクセスし、Intune または Microsoft 365 のライセンスをユーザーに割り当てます。
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>MDM 利用規約 URL を修正する
   1. [Azure portal](https://portal.azure.com/) にサインインしてから、 **[Azure Active Directory]** を選択します。    
@@ -216,9 +216,9 @@ ms.locfileid: "84795586"
 
    **[選択済み]** を選択する場合は、 **[選択済み]** をクリックしてから **[メンバーの追加]** をクリックし、Azure AD にデバイスを参加させることができるすべてのユーザーを追加します。 プロビジョニング パッケージのすべての Azure AD アカウントが追加されていることを確認します。
  
-Windows 構成デザイナー用のプロビジョニング パッケージを作成する方法について詳しくは、「[Windows 10 向けのプロビジョニング パッケージの作成](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package)」を参照してください。
+Windows 構成デザイナー用のプロビジョニング パッケージを作成する方法について詳しくは、「[Windows 10 向けのプロビジョニング パッケージの作成](/windows/configuration/provisioning-packages/provisioning-create-package)」を参照してください。
 
-学校用 PC のセットアップ アプリについて詳しくは、「[学校用 PC のセットアップ アプリを使用する](https://docs.microsoft.com/education/windows/use-set-up-school-pcs-app)」を参照してください。
+学校用 PC のセットアップ アプリについて詳しくは、「[学校用 PC のセットアップ アプリを使用する](/education/windows/use-set-up-school-pcs-app)」を参照してください。
 
 
 ### <a name="auto-mdm-enroll-failed"></a>MDM の自動登録: Failed 
@@ -276,7 +276,7 @@ UPN に未確認またはルーティング不可能なドメインが含まれ�
 **原因:** この問題は、ID プロバイダー (IdP) へのアクセスをブロックしているプロキシ、ファイアウォール、または他のネットワーク デバイスがある場合に発生します。
 
 #### <a name="resolution"></a>解決策
-Autopilot 用のインターネット ベースのサービスに対して必要なアクセスがブロックされていないことを確認します。 詳しくは、[Windows Autopilot ネットワークの要件](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements-network)に関する記事を参照してください。
+Autopilot 用のインターネット ベースのサービスに対して必要なアクセスがブロックされていないことを確認します。 詳しくは、[Windows Autopilot ネットワークの要件](/windows/deployment/windows-autopilot/windows-autopilot-requirements-network)に関する記事を参照してください。
 
 ### <a name="autopilot-device-enrollment-failed-with-error-hresult--0x80180022"></a>オートパイロット デバイスを登録できず、エラー HRESULT = 0x80180022 が表示される
 
@@ -294,7 +294,7 @@ TPM チップをバージョン 2.0 にアップグレードします。
 
 問題が解決しない場合は、同じデバイスが 2 つのグループに割り当てられていて、各グループに異なる Autopilot プロファイルが割り当てられてないかどうか確認します。 2 つのグループに属している場合は、どちらの Autopilot プロファイルをデバイスに適用するかを決定し、他のプロファイルの割り当てを削除します。
 
-Autopilot を使用してキオスク モードで Windows デバイスを展開する方法について詳しくは、「[Windows Autopilot を使用したキオスクの展開](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/)」を参照してください。
+Autopilot を使用してキオスク モードで Windows デバイスを展開する方法について詳しくは、「[Windows Autopilot を使用したキオスクの展開](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot)」を参照してください。
 
 
 ### <a name="securing-your-hardware-failed-0x800705b4"></a>ハードウェアのセキュリティ保護 (失敗: 0x800705b4)。
@@ -317,7 +317,7 @@ Registering your device for mobile management (Previous step failed)
 #### <a name="resolution"></a>解決策
 対象デバイスが、「**原因**」セクションで説明されている両方の要件を満たしていることを確認します。
 
-Autopilot を使用してキオスク モードで Windows デバイスを展開する方法について詳しくは、「[Windows Autopilot を使用したキオスクの展開](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/)」を参照してください。
+Autopilot を使用してキオスク モードで Windows デバイスを展開する方法について詳しくは、「[Windows Autopilot を使用したキオスクの展開](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot)」を参照してください。
 
 
 ### <a name="something-went-wrong-error-code-80070774"></a>問題が発生しました。 エラー コード 80070774。
@@ -365,7 +365,7 @@ Description:
 }
 ```
 
-この問題は、通常、Windows Autopilot デバイスが作成される組織単位にアクセス許可を誤って委任することにより発生します。 詳しくは、「[組織単位でコンピューター アカウントの上限を増やす](windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit)」を参照してください。
+この問題は、通常、Windows Autopilot デバイスが作成される組織単位にアクセス許可を誤って委任することにより発生します。 詳しくは、「[組織単位でコンピューター アカウントの上限を増やす](../../autopilot/windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit)」を参照してください。
 
 1. **[Active Directory ユーザーとコンピューター]** (DSA.msc) を開きます。
 2. ハイブリッド Azure AD に参加しているコンピューターを作成するために使用する組織単位を右クリックして、 **[制御の委任]** を選択します。
@@ -398,4 +398,4 @@ Description:
 - [Microsoft Intune サポート チームのブログを読む](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Microsoft Enterprise Mobility and Security チームのブログを読む](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Microsoft Intune のサポートを受ける](../fundamentals/get-support.md)
-- [共同管理の登録エラーを調べる](https://docs.microsoft.com/configmgr/comanage/how-to-monitor#enrollment-errors)
+- [共同管理の登録エラーを調べる](/configmgr/comanage/how-to-monitor#enrollment-errors)

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 630d270202f1064c9e80e7cb87df3929138ee54a
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 048e1d3efcb96d18453bfd7b3dbf332dc83b7a1f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048108"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992574"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Intune でインポートした PKCS 証明書を構成して使用する
 
@@ -69,7 +69,7 @@ Intune では、次のプラットフォーム用の PFX 証明書のインポ�
 
   Windows Server を使用して、PFX Certificate Connector for Microsoft Intune をホストします。  コネクタは、Intune にインポートされる証明書の要求を処理するために使用されます。
   
-  コネクタは、マネージド デバイスの詳細で説明しているポートと同じポートにアクセスする必要があります。[デバイス エンドポイント コンテンツ](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices)を参照してください。
+  コネクタは、マネージド デバイスの詳細で説明しているポートと同じポートにアクセスする必要があります。[デバイス エンドポイント コンテンツ](/intune/fundamentals/intune-endpoints#access-for-managed-devices)を参照してください。
 
   Intune では、*PFX Certificate Connector for Microsoft Intune* と同じサーバー上に *Microsoft Intune Certificate Connector* をインストールすることができます。
 
@@ -104,7 +104,7 @@ Intune を使用して、**インポートした PFX 証明書**をユーザー�
 5. インストール後、PFX Certificate Connector for Microsoft Intune によって **[登録]** タブが開かれます。 Intune への接続を有効にするには、 **[サインイン]** を選択し、Azure 全体管理者のアクセス許可または Intune 管理者のアクセス許可を持つアカウントを入力します。
 
    > [!WARNING]
-   > 既定では、Windows Server の **[IE セキュリティ強化の構成]** が **[オン]** に設定されています。これにより、Office 365 へのサインインに関する問題が発生する可能性があります。
+   > 既定では、Windows Server の **[IE セキュリティ強化の構成]** が **[オン]** に設定されています。これにより、Microsoft 365 へのサインインに関する問題が発生する可能性があります。
 
 6. ウィンドウを閉じます。
 
@@ -112,9 +112,9 @@ Intune を使用して、**インポートした PFX 証明書**をユーザー�
 
 ## <a name="import-pfx-certificates-to-intune"></a>Intune への PFX 証明書のインポート
 
-[Microsoft Graph](https://docs.microsoft.com/graph) を使用して、ユーザーの PFX 証明書を Intune にインポートします。 [GitHub のヘルパー PFXImport PowerShell プロジェクト](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell)では、操作を簡単に行うためのコマンドレットが提供されています。
+[Microsoft Graph](/graph) を使用して、ユーザーの PFX 証明書を Intune にインポートします。 [GitHub のヘルパー PFXImport PowerShell プロジェクト](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell)では、操作を簡単に行うためのコマンドレットが提供されています。
 
-Graph を使用して独自のカスタム ソリューションを使用する場合は、[userPFXCertificate リソースの種類](https://docs.microsoft.com/graph/api/resources/intune-raimportcerts-userpfxcertificate?view=graph-rest-beta)を使用します。
+Graph を使用して独自のカスタム ソリューションを使用する場合は、[userPFXCertificate リソースの種類](/graph/api/resources/intune-raimportcerts-userpfxcertificate?view=graph-rest-beta)を使用します。
 
 ### <a name="build-pfximport-powershell-project-cmdlets"></a>"PFXImport PowerShell プロジェクト" コマンドレットの構築
 
@@ -210,7 +210,7 @@ PowerShell モジュールには、Windows 暗号化を使用してキーを作�
 
 8. 証明書がインポートされたことを確認するには、`Get-IntuneUserPfxCertificate -UserList "<UserUPN>"` を実行します
 
-9.  ベスト プラクティスとして、AAD トークン キャッシュが有効期限切れになるまで待たずにクリーンアップするため、`Remove-IntuneAuthenticationToken` を実行することをお勧めします。
+9.  ベスト プラクティスとして、Azure AD トークン キャッシュが有効期限切れになるまで待たずにクリーンアップするため、`Remove-IntuneAuthenticationToken` を実行することをお勧めします。
 
 その他の使用可能なコマンドについて詳しくは、[GitHub の PFXImport PowerShell プロジェクト](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell)にある readme ファイルをご覧ください。
 

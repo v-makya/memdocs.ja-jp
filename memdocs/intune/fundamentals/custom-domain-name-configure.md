@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 572519d8ddf3558f1573f26b84fd6217108a24b3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 267bf556447308ee0c81c5ad9c9bb8153df9532d
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83987998"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994108"
 ---
 # <a name="configure-a-custom-domain-name"></a>カスタムのドメイン名を構成する
 
@@ -32,10 +32,10 @@ ms.locfileid: "83987998"
 
 ユーザー アカウントを作成する、またはオンプレミスの Active Directory を同期する前に、.onmicrosoft.com ドメインのみを使用するか、1 つ以上のカスタム ドメイン名を追加するかを決定することを強くお勧めします。 ユーザー管理を簡単にするために、ユーザーを追加する前にカスタム ドメインを設定します。 カスタム ドメインを設定すると、ユーザーは他のドメイン リソースへのアクセスに使う資格情報でサインインできます。
 
-Microsoft のクラウドベースのサービスにサブスクライブすると、そのサービスのインスタンスが Microsoft [Azure AD テナント](https://technet.microsoft.com/library/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)になり、Azure AD によって、クラウドベースのサービスの ID サービスとディレクトリ サービスが提供されます。 Intune で組織のカスタム ドメイン名の使用を構成するタスクは、他の Azure AD テナントの場合と同じため、[ドメインの追加](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/)に関する記事の情報と手順を利用できます。
+Microsoft のクラウドベースのサービスにサブスクライブすると、そのサービスのインスタンスが Microsoft [Azure AD テナント](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant)になり、Azure AD によって、クラウドベースのサービスの ID サービスとディレクトリ サービスが提供されます。 Intune で組織のカスタム ドメイン名の使用を構成するタスクは、他の Azure AD テナントの場合と同じため、[ドメインの追加](/azure/active-directory/fundamentals/add-custom-domain)に関する記事の情報と手順を利用できます。
 
 > [!TIP]
-> カスタム ドメインについて詳しくは、「[Azure Active Directory でのカスタム ドメイン名の概念の概要](https://azure.microsoft.com/documentation/articles/active-directory-add-domain-concepts/)」をご覧ください。
+> カスタム ドメインについて詳しくは、「[Azure Active Directory でのカスタム ドメイン名の概念の概要](/azure/active-directory/users-groups-roles/domains-manage)」をご覧ください。
 
 最初のドメイン名 onmicrosoft.com を変更または削除することはできません。 ビジネス ID をクリアにするために、Intune で使われるカスタム ドメイン名を追加、確認、削除することはできます。
 
@@ -52,8 +52,8 @@ Microsoft のクラウドベースのサービスにサブスクライブする�
     - **Register.com ユーザー**:この[ステップ バイ ステップの指示](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify)に従って、TXT レコードを作成します。
 5. [Intune の登録用に追加の DNS レコードを作成することが必要な場合があります](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium)。
 
-カスタム ドメインを追加し、確認する手順は、[Azure Active Directory でも実行](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/)できます。
+カスタム ドメインを追加し、確認する手順は、[Azure Active Directory でも実行](/azure/active-directory/fundamentals/add-custom-domain)できます。
 
-詳しくは、「[Office 365 の最初の onmicrosoft.com ドメインの概要](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A)」をご覧ください
+詳しくは、[Microsoft 365 の最初の onmicrosoft.com ドメインの概要](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A)に関するページをご覧ください
 
 Intune サーバーに登録をリダイレクトする DNS CNAME を作成することにより、[Azure AD Premium を使用せずに Windows の登録を簡略化する](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium)方法について、詳しく知ることができます。

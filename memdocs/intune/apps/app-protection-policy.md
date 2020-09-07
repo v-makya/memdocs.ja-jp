@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9688397218539ef3cc16f6fed91380e1820dbb15
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: ce01d71ecc928af48eb72da9235a7074623ff34c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997979"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996760"
 ---
 # <a name="app-protection-policies-overview"></a>アプリ保護ポリシーの概要
 
@@ -52,7 +52,7 @@ Intune のアプリ保護ポリシーは**あらゆるモバイル デバイス�
 - **いずれのモバイル デバイス管理ソリューションにも登録されていないデバイス:** これらのデバイスは通常、Intune またはその他の MDM ソリューションにおいて管理や登録が行われていない従業員所有のデバイスです。
 
 > [!IMPORTANT]
-> Office 365 サービスに接続する Office モバイル アプリ向けのモバイル アプリ管理ポリシーを作成することができます。 ハイブリッドの最新認証に対応する iOS/iPadOS および Android 用の Outlook のために Intune アプリ保護ポリシーを作成することで、Exchange オンプレミス メールボックスへのアクセスも保護できます。 この機能を使用する前に、[iOS/iPadOS および Android 用 Outlook の要件](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx)を満たしていることを確認します。 アプリ保護ポリシーは、オンプレミス Exchange サービスや SharePoint サービスに接続する他のアプリではサポートされていません。
+> Microsoft 365 サービスに接続する Office モバイル アプリ向けのモバイル アプリ管理ポリシーを作成することができます。 ハイブリッドの最新認証に対応する iOS/iPadOS および Android 用の Outlook のために Intune アプリ保護ポリシーを作成することで、Exchange オンプレミス メールボックスへのアクセスも保護できます。 この機能を使用する前に、[iOS/iPadOS および Android 用 Outlook の要件](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019)を満たしていることを確認します。 アプリ保護ポリシーは、オンプレミス Exchange サービスや SharePoint サービスに接続する他のアプリではサポートされていません。
 
 ## <a name="benefits-of-using-app-protection-policies"></a>アプリ保護ポリシーを利用した場合のメリット
 
@@ -149,7 +149,7 @@ MDM ソリューションに登録されていない BYOD デバイスでは、�
 
 Intune SDK 開発チームは、ネイティブの Android、iOS/iPadOS (Obj-C、Swift)、Xamarin、および Xamarin.Forms プラットフォームを使ってビルドされたアプリに対するサポートを、積極的にテストして管理しています。 一部のお客様は、Intune SDK とその他のプラットフォーム (React Native や NativeScript など) の統合に成功されていますが、Microsoft では、サポートされているプラットフォーム以外を使うアプリ開発者に向けた明示的なガイダンスやプラグインは提供されません。
 
-[Intune SDK](../developer/app-sdk.md) では、ファースト パーティおよびサード パーティ両方のバージョンの SDK に対して、[Azure Active Directory 認証ライブラリ](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) による最新の高度な認証機能がいくつか利用されています。 そのため、[Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (MSAL) は、Intune App Protection サービスへの認証や条件付き起動などの主要なシナリオの多くで、正常に機能しません。 すべての Microsoft Office アプリについて MSAL に切り替えることが Microsoft の ID チームの全体的な指針であり、[Intune SDK](../developer/app-sdk.md) では最終的にそれがサポートされる必要がありますが、今のところその計画はありません。
+[Intune SDK](../developer/app-sdk.md) では、ファースト パーティおよびサード パーティ両方のバージョンの SDK に対して、[Azure Active Directory 認証ライブラリ](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) による最新の高度な認証機能がいくつか利用されています。 そのため、[Microsoft Authentication Library](/azure/active-directory/develop/reference-v2-libraries) (MSAL) は、Intune App Protection サービスへの認証や条件付き起動などの主要なシナリオの多くで、正常に機能しません。 すべての Microsoft Office アプリについて MSAL に切り替えることが Microsoft の ID チームの全体的な指針であり、[Intune SDK](../developer/app-sdk.md) では最終的にそれがサポートされる必要がありますが、今のところその計画はありません。
 
 ## <a name="end-user-requirements-to-use-app-protection-policies"></a>アプリ保護ポリシーを使用するためのエンドユーザーの要件
 
@@ -171,15 +171,15 @@ Microsoft Office アプリにアプリ保護ポリシーを利用する場合は
 [Outlook モバイル アプリ](https://products.office.com/outlook)を使用するための追加要件には、以下が含まれます。
 
 - エンドユーザーが、Outlook モバイル アプリをデバイスにインストールしている必要があります。
-- エンド ユーザーに、[Office 365 Exchange Online](https://products.office.com/exchange/exchange-online) メールボックスと Azure Active Directory アカウントにリンクされたライセンスが必要です。
+- エンド ユーザーに、[Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online) メールボックスと Azure Active Directory アカウントにリンクされたライセンスが必要です。
 
   >[!NOTE]
-  > 現段階では、Outlook モバイル アプリは Microsoft Exchange Online と[ハイブリッド先進認証を使用する Exchange Server](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx) のみをサポートし、Office 365 専用の Exchange はサポートされていません。
+  > 現段階では、Outlook モバイル アプリは Microsoft Exchange Online と[ハイブリッド先進認証を使用する Exchange Server](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019) のみをサポートし、Office 365 専用の Exchange はサポートされていません。
 
 ### <a name="word-excel-and-powerpoint"></a>Word、Excel、PowerPoint
 [Word、Excel、PowerPoint](https://products.office.com/business/office) アプリを使用するための追加要件には、以下が含まれます。
 
-- エンドユーザーに、Azure Active Directory アカウントにリンクされた [Microsoft 365 Apps for business または Microsoft 365 Apps for enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) のライセンスが必要です。 サブスクリプションには、モバイル デバイスの Office アプリが含まれている必要があります。また、[OneDrive for Business](https://onedrive.live.com/about/business/) のクラウド ストレージ アカウントを含めることも可能です。 Office 365 ライセンスは、[Microsoft 365 管理センター](https://admin.microsoft.com)で割り当てることができます。[こちら](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)の手順に従ってください。
+- エンドユーザーに、Azure Active Directory アカウントにリンクされた [Microsoft 365 Apps for business または Microsoft 365 Apps for enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) のライセンスが必要です。 サブスクリプションには、モバイル デバイスの Office アプリが含まれている必要があります。また、[OneDrive for Business](https://onedrive.live.com/about/business/) のクラウド ストレージ アカウントを含めることも可能です。 Microsoft 365 ライセンスは、[Microsoft 365 管理センター](https://admin.microsoft.com)で割り当てることができます。[こちら](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)の手順に従ってください。
 
 - エンド ユーザーは、[組織データのコピーを保存] アプリケーション保護ポリシー設定の機能として、詳細保存を使用して管理対象の場所を構成しておく必要があります。 たとえば、管理対象の場所が OneDrive の場合、[OneDrive](https://onedrive.live.com/about/) アプリは、エンド ユーザーの Word アプリ、Excel アプリ、または PowerPoint アプリ内で構成される必要があります。
 
@@ -192,7 +192,7 @@ Microsoft Office アプリにアプリ保護ポリシーを利用する場合は
 Office には、管理される場所 (OneDrive など) が必要です。 Intune では、アプリ内のすべてのデータが "企業" または "個人用" のいずれかとしてマークされます。 勤務地から送信されたデータは "企業" データと見なされます。 Office アプリについては、Intune では電子メール (Exchange) またはクラウド ストレージ (OneDrive for Business アカウントを使用した OneDrive アプリ) が勤務地と見なされます。
 
 ### <a name="skype-for-business"></a>Skype for Business
-Skype for Business を使用するためには、追加要件があります。 [Skype for Business](https://products.office.com/skype-for-business/it-pros) のライセンス要件を参照してください。 Skype for Business (SfB) のハイブリッド構成とオンプレミス構成の場合は、「[Hybrid Modern Auth for SfB and Exchange goes GA](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)」(SfB と Exchange のハイブリッドな最新認証が一般公開) と「[Modern Auth for SfB OnPrem with AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)」(AAD による SfB オンプレミスの最新認証) をそれぞれ参照してください。
+Skype for Business を使用するためには、追加要件があります。 [Skype for Business](https://products.office.com/skype-for-business/it-pros) のライセンス要件を参照してください。 Skype for Business (SfB) のハイブリッド構成とオンプレミス構成の場合は、「[SfB と Exchange のハイブリッドな最新認証が一般公開](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)」と「[Azure AD による SfB オンプレミスの最新認証](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)」をそれぞれ参照してください。
 
 ## <a name="app-protection-global-policy"></a>アプリ保護グローバル ポリシー
 

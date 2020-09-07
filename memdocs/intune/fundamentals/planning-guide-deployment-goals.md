@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74fbf1af85fdaef7cebde5c58f7892015b433ff6
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 63ef6acb54f079f2a47800ae84cbe49cd4fabed3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079231"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992643"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>展開の目標、目的、課題を判別する
 
@@ -33,9 +33,9 @@ ms.locfileid: "82079231"
 
 展開の目標は、組織に Intune を展開することで得られるであろう長期的な実績です。 次の一覧では、そのような目標の例と、目標の説明およびビジネス価値を示します。
 
-- **Office 365 と統合し、Office モバイル アプリの使用をサポートする**
+- **Microsoft 365 と統合し、Office モバイル アプリの使用をサポートする**
 
-  - **説明:** Office 365 との緊密な統合、およびアプリ保護付きの Office モバイル アプリの使用を提供します。
+  - **説明:** Microsoft 365 との緊密な統合、およびアプリ保護付きの Office モバイル アプリの使用を提供します。
 
   - **ビジネス価値:** ユーザーが使い慣れた好みのアプリの使用を許可して、セキュリティで保護し、ユーザー エクスペリエンスを向上させます。
 

@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1655c7b18262d0515308a00c617f06d917d976de
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: 92c0911ff9250fb1b2832df4b7e269f192ee8cda
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972186"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057523"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Wandera Mobile Threat Defense コネクタと Intune  
 
@@ -38,7 +38,7 @@ Wandera のモバイル アプリは、Microsoft Intune を使用してシーム
 
 Intune のコンプライアンス ポリシーには、Wandera のリスク評価に基づく MTD のルールが含まれています。 このルールを有効にすると、Intune は、有効にされたポリシーに基づいてデバイスの準拠状態を評価します。
 
-非準拠のデバイスについては、Office 365 などのリソースへのアクセスをブロックできます。 ブロックされたデバイスを使っているユーザーには、問題を解決してアクセスを回復するためのガイダンスが Wandera アプリから届きます。
+非準拠のデバイスについては、Microsoft 365 などのリソースへのアクセスをブロックできます。 ブロックされたデバイスを使っているユーザーには、問題を解決してアクセスを回復するためのガイダンスが Wandera アプリから届きます。
 
 各デバイスの最新の脅威レベル (安全、低、中、高) が変更されるたびに、Wandera によって Intune がそのレベルで更新されます。 この脅威レベルは Wandera Security Cloud によって継続的に再計算されます。レベルは、デバイスの状態、ネットワークの活動、さまざまな脅威カテゴリにわたるさまざまなモバイル脅威インテリジェンス フィードに基づきます。
 

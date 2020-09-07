@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a9fad599342cf358409c7be09ebb8b4eb1c0c4a5
-ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
+ms.openlocfilehash: 8843ab5c8bf3d0e6970398c1ad81a8a2b3b8f9cb
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334625"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193965"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Intune で Windows 10 の BitLocker ポリシーを管理する
 
@@ -97,7 +97,7 @@ Intune で BitLocker を管理するには、アカウントに適切な Intune 
    1. **[プラットフォーム]** :Windows 10 以降
    2. **[プロファイルの種類]** :エンドポイント保護
 
-   ![BitLocker プロファイルの選択](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![プロファイルを選択します](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. **[設定]**  >  **[Windows 暗号化]** の順に選択します。
 
@@ -123,7 +123,8 @@ BitLocker ポリシーを受信するデバイスに関する情報を表示す�
 
 BitLocker をサイレント モードで有効にするには、デバイスが次の条件を満たしている必要があります。
 
-- デバイスで Windows 10 バージョン 1809 以降を実行している必要があります
+- エンド ユーザーがデバイスに管理者としてログインする場合、デバイスで Windows 10 バージョン 1803 以降が実行されている必要があります。
+- エンド ユーザーがデバイスに標準ユーザーとしてログインする場合、デバイスで Windows 10 バージョン 1809 以降が実行されている必要があります。
 - デバイスが Azure AD に参加している必要があります  
 
 **BitLocker ポリシーの構成**:
@@ -156,7 +157,7 @@ Intune では BitLocker 用の Azure AD ブレードにアクセスできます�
 
    キーが Azure AD 内に存在していない場合、Intune によって "*このデバイスの BitLocker キーが見つかりません*" が表示されます。
 
-BitLocker の情報については、[BitLocker 構成サービス プロバイダー](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP) に関するページを参照してください。 BitLocker CSP は、Windows 10 の場合、バージョン 1703 以降で、Windows 10 Pro の場合、バージョン 1809 以降でサポートされています。
+BitLocker の情報については、[BitLocker 構成サービス プロバイダー](/windows/client-management/mdm/bitlocker-csp) (CSP) に関するページを参照してください。 BitLocker CSP は、Windows 10 の場合、バージョン 1703 以降で、Windows 10 Pro の場合、バージョン 1809 以降でサポートされています。
 
 ### <a name="rotate-bitlocker-recovery-keys"></a>BitLocker 回復キーを交換する
 

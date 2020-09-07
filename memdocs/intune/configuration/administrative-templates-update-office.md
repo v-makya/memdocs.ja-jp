@@ -1,6 +1,6 @@
 ---
-title: Microsoft Intune で管理用テンプレートを使用して Office 365 を更新する - Azure |Microsoft Docs
-description: Microsoft Intune の管理用テンプレートを使用して、Office 365 アプリを最新バージョンに更新し、Office が更新プログラムをチェックする頻度を選択します。 Office 更新プログラムへの Intune ポリシーが適用されたときに更新されるデバイス レジストリ キーを確認します。
+title: Microsoft Intune で管理用テンプレートを使用して Microsoft 365 を更新する - Azure |Microsoft Docs
+description: Microsoft Intune の管理用テンプレートを使用して、Microsoft 365 アプリを最新バージョンに更新し、Office が更新プログラムをチェックする頻度を選択します。 Office 更新プログラムへの Intune ポリシーが適用されたときに更新されるデバイス レジストリ キーを確認します。
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,29 +16,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72b0ef53f0451314ef121f82524697ddfdc38cd3
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 2af6784db43b2513b57d850d85fa4deaa3052613
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531725"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193846"
 ---
-# <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>更新プログラム チャネルとターゲット バージョンの設定を使用して、Microsoft Intune 管理用テンプレートで Office 365 を更新する
+# <a name="use-update-channel-and-target-version-settings-to-update-microsoft-365-with-microsoft-intune-administrative-templates"></a>更新プログラム チャネルとターゲット バージョンの設定を使用して、Microsoft Intune 管理用テンプレートで Microsoft 365 を更新する
 
-Intune では [Windows 10 テンプレートを使用してグループ ポリシー設定を構成](administrative-templates-windows.md)することができます。 この記事では、Intune で管理用テンプレートを使用して Office 365 を更新する方法について説明します。 また、ポリシーが正常に適用されることを確認するためのガイダンスも提供します。 この情報は、トラブルシューティング時にも役立ちます。
+Intune では [Windows 10 テンプレートを使用してグループ ポリシー設定を構成](administrative-templates-windows.md)することができます。 この記事では、Intune で管理用テンプレートを使用して Microsoft 365 を更新する方法について説明します。 また、ポリシーが正常に適用されることを確認するためのガイダンスも提供します。 この情報は、トラブルシューティング時にも役立ちます。
 
-このシナリオでは、デバイス上の Office 365 を更新する管理用テンプレートを Intune で作成します。
+このシナリオでは、デバイス上の Microsoft 365 を更新する管理用テンプレートを Intune で作成します。
 
 管理用テンプレートの詳細については、[Windows 10 テンプレートを使用したグループ ポリシー設定の構成](administrative-templates-windows.md)に関するページを参照してください。
 
 適用対象:
 
 - Windows 10 以降
-- Office 365
+- Microsoft 365
 
 ## <a name="prerequisites"></a>[前提条件]
 
-お使いの Office アプリで [Microsoft 365 アプリの自動更新を有効](https://docs.microsoft.com/deployoffice/configure-update-settings-for-office-365-proplus)にしてください。 これは、グループ ポリシーまたは Intune Office 2016 ADMX テンプレートを使用して行うことができます。
+お使いの Office アプリで [Microsoft 365 アプリの自動更新を有効](/deployoffice/configure-update-settings-for-office-365-proplus)にしてください。 これは、グループ ポリシーまたは Intune Office 2016 ADMX テンプレートを使用して行うことができます。
 
 > [!div class="mx-imgBorder"]
 > ![Intune 管理用テンプレートで、Office の [自動更新を有効にする] 設定を設定する](./media/administrative-templates-update-office/admx-enable-automatic-updates.png)
@@ -56,7 +56,7 @@ Intune では [Windows 10 テンプレートを使用してグループ ポリ�
 2. 必ず、Windows 10 デバイスに[ポリシーを割り当て](device-profile-assign.md)てください。 ポリシーをより早くテストするために、ポリシーを同期することもできます。
 
     - [Intune でポリシーを同期する](../remote-actions/device-sync.md)
-    - [デバイスでポリシーを手動で同期する](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows#sync-from-settings-app)
+    - [デバイスでポリシーを手動で同期する](../user-help/sync-your-device-manually-windows.md#sync-from-settings-app)
 
 ## <a name="check-the-intune-registry-keys"></a>Intune のレジストリ キーを確認する
 
@@ -79,7 +79,7 @@ Intune では [Windows 10 テンプレートを使用してグループ ポリ�
     > ![管理用テンプレート L_Updatebranch レジストリ キーの例](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
-    > [Configuration Manager を使用した Microsoft 365 アプリの管理](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)に関するページには、その値一覧とその意味が示されています。 レジストリ値は、選択した配布チャネルに基づきます。
+    > [Configuration Manager を使用した Microsoft 365 アプリの管理](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)に関するページには、その値一覧とその意味が示されています。 レジストリ値は、選択した配布チャネルに基づきます。
     >
     >- 月次チャネル - value="Current"
     >- 月次チャネル (対象指定) - value="Current"
@@ -97,9 +97,9 @@ Intune では [Windows 10 テンプレートを使用してグループ ポリ�
     次のレジストリ キーが表示されます。
 
     - `UpdateChannel`: 構成された設定に応じて変更される動的キー。
-    - `CDNBaseUrl`: Office 365 をデバイスにインストールするときに設定します。
+    - `CDNBaseUrl`: Microsoft 365 をデバイスにインストールするときに設定します。
 
-3. `UpdateChannel` 値を確認します。 この値は、Office が更新される頻度を示します。 [Configuration Manager を使用した Microsoft 365 アプリの管理](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)に関するページには、その値とその設定値が示されています。
+3. `UpdateChannel` 値を確認します。 この値は、Office が更新される頻度を示します。 [Configuration Manager を使用した Microsoft 365 アプリの管理](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)に関するページには、その値とその設定値が示されています。
 
     次の例を見ると、`UpdateChannel` が `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60` に設定されていることがわかります。これは、**毎月**です。
 
@@ -134,7 +134,7 @@ Intune では [Windows 10 テンプレートを使用してグループ ポリ�
 
     ポリシーに設定されている値で更新される必要があります。 この例では、値は `http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114` に設定される必要があります。
 
-この時点で、デバイスで Office 更新プログラム チャネルが正常に変更されています。 この更新プログラムを受信して状態を確認するユーザーに対して、Office 365 アプリを開くことができます。
+この時点で、デバイスで Office 更新プログラム チャネルが正常に変更されています。 この更新プログラムを受信して状態を確認するユーザーに対して、Microsoft 365 アプリを開くことができます。
 
 ## <a name="force-the-office-synchronization-to-update-account-information"></a>Office の同期を強制してアカウント情報を更新する  
 
@@ -142,7 +142,7 @@ Intune では [Windows 10 テンプレートを使用してグループ ポリ�
 
 ### <a name="step-1-force-the-office-version-to-update"></a>手順 1:Office のバージョンを強制的に更新する
 
-1. 選択している更新プログラム チャネルが Office バージョンでサポートされていることを確認します。 「[Microsoft 365 アプリの更新履歴](https://docs.microsoft.com/officeupdates/update-history-office365-proplus-by-date)」には、さまざまな更新チャネルをサポートするビルド番号が一覧表示されています。
+1. 選択している更新プログラム チャネルが Office バージョンでサポートされていることを確認します。 「[Microsoft 365 アプリの更新履歴](/officeupdates/update-history-office365-proplus-by-date)」には、さまざまな更新チャネルをサポートするビルド番号が一覧表示されています。
 
 2. [Intune 管理用テンプレート](administrative-templates-windows.md#create-the-template)で、 **[ターゲット バージョン]** 設定にアクセスして、必要なバージョンを入力します。
 
@@ -181,8 +181,8 @@ Intune では [Windows 10 テンプレートを使用してグループ ポリ�
 
 ## <a name="next-steps"></a>次のステップ
 
-[Office 365 クライアントの更新プログラム チャネル値の更新](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
+[Microsoft 365 クライアントの更新プログラム チャネル値の更新](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
-[Microsoft 365 アプリの Office クラウド ポリシー サービスの概要](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
+[Microsoft 365 アプリの Office クラウド ポリシー サービスの概要](/deployoffice/overview-office-cloud-policy-service)
 
 [Windows 10 テンプレートを使用し、Microsoft Intune でグループ ポリシー設定を構成する](administrative-templates-windows.md)

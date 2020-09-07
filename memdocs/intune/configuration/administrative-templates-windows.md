@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89635c9eb2849b4896ea3df85dd081d6e267627e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: faa217bd5e56a304b80298f2039ad3c541612e54
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990199"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992805"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Windows 10 テンプレートを使用し、Microsoft Intune でグループ ポリシー設定を構成する
 
@@ -33,7 +33,7 @@ ms.locfileid: "83990199"
 
 - Windows 10 以降
 
-Windows の設定は、Active Directory (AD) のグループ ポリシー (GPO) 設定に似ています。 これらの設定は、Windows に組み込みの、XML を使用する [ADMX ベースの設定](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) です。 Office と Microsoft Edge の設定には ADMX が取り込まれていて、[Office の管理用テンプレート ファイル](https://www.microsoft.com/download/details.aspx?id=49030)と [Microsoft Edge 管理用テンプレート ファイル](https://www.microsoftedgeinsider.com/enterprise)で ADMX 設定が使われています。 そして、Intune のテンプレートは 100% クラウドベースです。 これらによって、設定を構成し、必要な設定を見つけるための、簡単で明快な方法が提供されます。
+Windows の設定は、Active Directory (AD) のグループ ポリシー (GPO) 設定に似ています。 これらの設定は、Windows に組み込みの、XML を使用する [ADMX ベースの設定](/windows/client-management/mdm/understanding-admx-backed-policies) です。 Office と Microsoft Edge の設定には ADMX が取り込まれていて、[Office の管理用テンプレート ファイル](https://www.microsoft.com/download/details.aspx?id=49030)と [Microsoft Edge 管理用テンプレート ファイル](https://www.microsoftedgeinsider.com/enterprise)で ADMX 設定が使われています。 そして、Intune のテンプレートは 100% クラウドベースです。 これらによって、設定を構成し、必要な設定を見つけるための、簡単で明快な方法が提供されます。
 
 **管理用テンプレート**は Intune 内に構築されており、OMA-URI の使用を含め、カスタマイズを必要としません。 モバイル デバイス管理 (MDM) ソリューションの一部として、これらのテンプレート設定を総合ポータルとして使用し、Windows 10 デバイスを管理します。
 
@@ -43,7 +43,7 @@ Windows の設定は、Active Directory (AD) のグループ ポリシー (GPO) 
 
 - これらの設定の一部は、Windows 10 バージョン 1709 (RS2/ビルド 15063) 以降で使用可能です。 すべての Windows エディションに含まれているわけではない設定もあります。 最適なエクスペリエンスを得るには、Windows 10 Enterprise バージョン 1903 (19H1/ビルド 18362) 以降を使用することをお勧めします。
 
-- Windows の設定では、[Windows ポリシー CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies) が使用されます。 CSP は、Home、Professional、Enterprise など、さまざまなエディションの Windows で動作します。 CSP が特定のエディションで動作するかどうかを確認するには、[Windows ポリシー CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies) に移動してください。
+- Windows の設定では、[Windows ポリシー CSP](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies) が使用されます。 CSP は、Home、Professional、Enterprise など、さまざまなエディションの Windows で動作します。 CSP が特定のエディションで動作するかどうかを確認するには、[Windows ポリシー CSP](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies) に移動してください。
 
 ## <a name="create-the-template"></a>テンプレートを作成する
 
@@ -136,6 +136,6 @@ Windows の設定は、Active Directory (AD) のグループ ポリシー (GPO) 
 
 テンプレートは作成されましたが、まだ何も実行できません。 次に、[テンプレート (プロファイルとも呼ばれる) を割り当て](device-profile-assign.md)、[その状態を監視](device-profile-monitor.md)します。
 
-[管理用テンプレートを使用して Office 365](administrative-templates-update-office.md) を更新します。
+[管理用テンプレートを使用して Microsoft 365](administrative-templates-update-office.md) を更新します。
 
 [チュートリアル:クラウドを使用して、ADMX テンプレートと Microsoft Intune で Windows 10 デバイスにグループ ポリシーを構成する](tutorial-walkthrough-administrative-templates.md)

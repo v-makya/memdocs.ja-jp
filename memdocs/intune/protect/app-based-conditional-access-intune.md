@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27033c2452224bc93e335f3517c9548ad65666c4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e1619f3dde57b002ce8884e4af7d4a02e3d71b9f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080149"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992761"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Intune でのアプリベースの条件付きアクセス
 
 [Intune アプリ保護ポリシー](../apps/app-protection-policy.md)を使用すると、Intune に登録されているデバイス上の会社のデータを保護できます。 Intune での管理対象に登録されていない従業員所有のデバイスでも、アプリ保護ポリシーを使用できます。 この場合、会社はデバイスを管理しなくても、会社のデータとリソースが保護されるようにする必要はあります。
 
-アプリベースの条件付きアクセスとクライアント アプリ管理では、Intune アプリ保護ポリシーをサポートするクライアント アプリのみが Exchange Online やその他の Office 365 サービスにアクセスできるようにすることで、セキュリティ層が追加されます。
+アプリベースの条件付きアクセスとクライアント アプリ管理では、Intune アプリ保護ポリシーをサポートするクライアント アプリのみが Exchange Online やその他の Microsoft 365 サービスに確実にアクセスできるようにすると、セキュリティ層が追加されます。
 
 > [!NOTE]
 > 管理対象アプリは、アプリ保護ポリシーが適用されたアプリであり、Intune で管理できます。
@@ -47,9 +47,9 @@ Microsoft Outlook アプリのみが Exchange Online にアクセスできるよ
 
 ## <a name="supported-apps"></a>サポートされているアプリ
 
-アプリベースの条件付きアクセスをサポートしているアプリの一覧については、[Azure Active Directory の条件付きアクセスのテクニカル リファレンス ドキュメント](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference)をご覧ください。
+アプリベースの条件付きアクセスをサポートしているアプリの一覧については、[Azure Active Directory の条件付きアクセスのテクニカル リファレンス ドキュメント](/azure/active-directory/active-directory-conditional-access-technical-reference)をご覧ください。
 
-アプリベースの条件付きアクセスでは[基幹業務 (LOB) アプリもサポート](app-modern-authentication-block.md)されていますが、これらのアプリでは [Office 365 の先進認証](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)が使用されている必要があります。 
+アプリベースの条件付きアクセスでは[基幹業務 (LOB) アプリもサポート](app-modern-authentication-block.md)されていますが、これらのアプリでは [Microsoft 365 の先進認証](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)が使用されている必要があります。 
 
 ## <a name="how-app-based-conditional-access-works"></a>アプリベースの条件付きアクセスのしくみ
 

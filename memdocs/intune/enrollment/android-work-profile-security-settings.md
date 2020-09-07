@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4283caf8f21e87736b09a3d6c7b31f8daf1f6075
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: b661068515069b1bc4c20acdc1c9ad00a12fe7dd
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546828"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286205"
 ---
 # <a name="android-enterprise-work-profile-security-configurations"></a>Android Enterprise 仕事用プロファイルのセキュリティ設定
 
@@ -90,7 +90,9 @@ ms.locfileid: "87546828"
 | 仕事用プロファイル設定 | パスワードの有効期限 (日) | 未構成 | 組織では、各自のパスワード ポリシーに合うようにこの設定の更新が必要になる可能性があります。 |
 | 仕事用プロファイル設定 | 必要なパスワードの種類 | 数値複素数 ||
 | 仕事用プロファイル設定 | 前のパスワードの再利用を防止 | 未構成 | 組織では、各自のパスワード ポリシーに合うようにこの設定の更新が必要になる可能性があります。|
+| 仕事用プロファイル設定 | 顔を使用したロック解除 | 未構成 ||
 | 仕事用プロファイル設定 | 指紋によるロック解除 | 未構成 ||
+| 仕事用プロファイル設定 | 虹彩を使用したロック解除 | 未構成 ||
 | 仕事用プロファイル設定 | Smart Lock などの信頼できるエージェント | 未構成 |||
 | デバイスのパスワード | パスワードの最小文字数 | 6 | 組織では、各自のパスワード ポリシーに合うようにこの設定の更新が必要になる可能性があります。 |
 | デバイスのパスワード | 画面がロックされるまでの非アクティブな最長時間 (分) | 5 | 組織では、各自のパスワード ポリシーに合うようにこの設定の更新が必要になる可能性があります。 |

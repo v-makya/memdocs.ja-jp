@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34f88d4e7aefe9a32238bb6d14203de0defd65ef
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b501ab979d87461067018f789d6d096020d3819e
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988260"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057421"
 ---
 # <a name="remotely-assist-mobile-devices-managed-by-microsoft-endpoint-manager"></a>Microsoft Endpoint Manager によって管理されるモバイル デバイスをリモートで支援する
 
@@ -30,7 +30,7 @@ Microsoft Endpoint Manager によって管理されるデバイスをリモー�
 - [Microsoft Teams](https://products.office.com/microsoft-teams/) は、どこにいてもチャット、会議、共同作業を行うことができるチーム作業のハブです。
 - [クイック アシスト](https://support.microsoft.com/help/4027243/windows-10-solve-pc-problems-with-quick-assist)は、2 人でリモート接続を介してデバイスを共有できる Windows 10 アプリケーションです。
 - [TeamViewer](https://www.teamviewer.com/) は、個別に購入するサード パーティ プログラムです。 包括的な一連のリモート アクセス機能とサポート機能を備えています。 Intune と [TeamViewer の統合](teamviewer-support.md)により、TeamViewer を使用したリモート サポートが可能になり、コネクタは Intune で直接管理されるようになりました。
-- [リモート制御](https://docs.microsoft.com/configmgr/core/clients/manage/remote-control/introduction-to-remote-control)は、Microsoft Endpoint Configuration Manager に含まれています。 ワークグループ コンピューターとドメインに参加しているコンピューターのリモートでの管理、支援、または表示に使用されます。
+- [リモート制御](/configmgr/core/clients/manage/remote-control/introduction-to-remote-control)は、Microsoft Endpoint Configuration Manager に含まれています。 ワークグループ コンピューターとドメインに参加しているコンピューターのリモートでの管理、支援、または表示に使用されます。
 
 | 機能、プラットフォーム、ライセンス | **Teams** | クイック アシスト | TeamViewer (Intune) | リモート制御 (ConfigMgr) |
 |:---:|:---:|:---:|:---:|:---:|
@@ -49,4 +49,4 @@ Microsoft Endpoint Manager によって管理されるデバイスをリモー�
 | デバイスを Configuration Manager と Intune で共同管理する必要があります ||||![チェックマーク](../enrollment/media/enrollment-method-capab/checkmark.png)|
 | 追加のライセンスが必要です\* |![チェックマーク](../enrollment/media/enrollment-method-capab/checkmark.png)||![チェックマーク](../enrollment/media/enrollment-method-capab/checkmark.png)|![チェックマーク](../enrollment/media/enrollment-method-capab/checkmark.png)|
 
-\* Teams には O365 または M365 のライセンスが必要です。 TeamViewer と Intune を使用するには、TeamViewer と Intune の両方のライセンスが必要です。 リモート制御は Configuration Manager の機能であり、Configuration Manager ライセンスが必要です。
+\* Teams には Microsoft 365 ライセンスが必要です。 TeamViewer と Intune を使用するには、TeamViewer と Intune の両方のライセンスが必要です。 リモート制御は Configuration Manager の機能であり、Configuration Manager ライセンスが必要です。

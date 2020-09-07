@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 534a7f60668091e613ff9dd9fc8a388ec59a247a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f99ddee5a30b7fb6d604e91711d12ed81b53dd91
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989413"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993938"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>ユーザーとデバイスを整理するためのグループを追加する
 
@@ -54,7 +54,7 @@ Intune では、デバイスとユーザーの管理に Azure Active Directory (
         >
         > プライマリ ロールがデバイス管理の場合は、[Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) を使用することをお勧めします。
 
-    - **[Office 365]** : メンバーに共有メールボックス、予定表、ファイル、SharePoint サイトなどへのアクセス権を付与することで、コラボレーションの機会を提供します。 このオプションを使用すると、組織外のユーザーにグループへのアクセス権を付与することもできます。 詳細については、「[Office 365 グループの概要](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2)」を参照してください。
+    - **Microsoft 365**:メンバーに共有メールボックス、予定表、ファイル、SharePoint サイトなどへのアクセス権を付与することで、コラボレーションの機会を提供します。 このオプションを使用すると、組織外のユーザーにグループへのアクセス権を付与することもできます。 詳細については、「[Microsoft 365 グループについて](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2)」を参照してください。
 
 4. 新しいグループの **[グループ名]** と **[グループの説明]** を入力します。 他のユーザーがそのグループの目的を理解できるように、具体的な情報にしてください。
 
@@ -70,8 +70,8 @@ Intune では、デバイスとユーザーの管理に Azure Active Directory (
 
     これらのメンバーシップの種類の詳細と動的な式の作成については、以下を参照してください。
 
-    - [Azure AD を使用して基本グループを作成してメンバーを追加する](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-    - [Azure AD の動的グループ メンバーシップ ルール](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership)
+    - [Azure AD を使用して基本グループを作成してメンバーを追加する](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
+    - [Azure AD の動的グループ メンバーシップ ルール](/azure/active-directory/users-groups-roles/groups-dynamic-membership)
 
     > [!NOTE]
     > この管理センターでは、ユーザーまたはグループを作成するときに、**Azure Active Directory** のブランド表示がない場合があります。 しかし、それは使用されています。
@@ -106,4 +106,4 @@ Intune では、デバイスとユーザーの管理に Azure Active Directory (
 ## <a name="see-also"></a>関連項目
 
 - [Microsoft Intune でのロールベースのアクセス制御 (RBAC)](role-based-access-control.md)
-- [Azure AD グループを使用してリソースへのアクセス権を管理する](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)
+- [Azure AD グループを使用してリソースへのアクセス権を管理する](/azure/active-directory/active-directory-manage-groups)

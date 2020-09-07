@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc307f22e3caa77357d8d3054a432c8d42c38fc4
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 26545af603e71c0adff5a0c5dcdcbbc337ce4eb3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146509"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995179"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Intune でのポリシーとプロファイルのトラブルシューティング
 
@@ -122,15 +122,15 @@ Microsoft Intune には、トラブルシューティング機能がいくつか
 ## <a name="policy-troubleshooting-resources"></a>ポリシーのトラブルシューティングに関するリソース
 
 - [デバイスに適用されない iOS/iPadOS または Android ポリシーのトラブルシューティング](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (別の Microsoft サイトを開きます)
-- [Windows 10 Intune ポリシー エラーのトラブルシューティング](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (ブログを開きます)
+- [Windows 10 Intune ポリシー エラーのトラブルシューティング](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures) (ブログを開きます)
 - [Windows 10 の CSP カスタム設定のトラブルシューティング](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (別の Microsoft サイトを開きます)
-- [Windows 10 グループ ポリシーと Intune MDM ポリシー](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (別の Microsoft サイトを開きます)
+- [Windows 10 グループ ポリシーと Intune MDM ポリシー](/archive/blogs/cbernier/windows-10-group-policy-vs-intune-mdm-policy-who-wins) (別の Microsoft サイトを開きます)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>アラート:アクセス ルールを Exchange に保存できませんでした
 
 **問題**:管理コンソールで "**アクセス ルールを Exchange に保存できませんでした**" というアラートを受け取ります。
 
-[Exchange On-Premises ポリシー] ワークスペース (管理コンソール) でポリシーを作成したが、Office 365 を使用している場合は、構成されたポリシー設定が Intune によって適用されません。 アラートでポリシー ソースに注意します。 [Exchange On-Premises ポリシー] ワークスペースで、従来のルールを削除します。 従来のルールはオンプレミスの Exchange で使用する、Intune 内のグローバルの Exchange ルールであり、Office 365 に関連しないためです。 次に、Office 365 の新しいポリシーを作成します。
+[Exchange On-Premises ポリシー] ワークスペース (管理コンソール) でポリシーを作成したが、Microsoft 365 を使用している場合は、構成されたポリシー設定が Intune によって適用されません。 アラートでポリシー ソースに注意します。 [Exchange On-Premises ポリシー] ワークスペースで、従来のルールを削除します。 従来のルールはオンプレミスの Exchange で使用する、Intune 内のグローバルの Exchange ルールであり、Microsoft 365 に関連しないためです。 次に、Microsoft 365 の新しいポリシーを作成します。
 
 「[Intune のオンプレミス Exchange Connector のトラブルシューティング](../protect/troubleshoot-exchange-connector.md)」が役に立つ場合があります。
 

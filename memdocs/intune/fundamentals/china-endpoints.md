@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5551e537716ed12a0a5b5de19b747ffc7c4dcac
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: fd52b34b70b71874a42486cbdc87cd3d7d2f9037
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347340"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994244"
 ---
 # <a name="china-endpoints-for-microsoft-intune"></a>Microsoft Intune の中国のエンドポイント
 
@@ -49,7 +49,7 @@ ms.locfileid: "84347340"
 
 ## <a name="intune-customer-designated-endpoints-in-china"></a>Intune のお客様向けに指定された中国のエンドポイント
 - Azure portal: https:\//portal.azure.cn/
-- Office 365: https:\//portal.partner.microsoftonline.cn/
+- Microsoft 365: https:\//portal.partner.microsoftonline.cn/
 - Intune ポータル サイト: https:\//portal.manage.microsoftonline.cn/
 - Microsoft Endpoint Manager admin center: https:\//endpoint.microsoftonline.cn/
 

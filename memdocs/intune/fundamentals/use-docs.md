@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d5d8d2d9882c033f3fbb726db937ba48d67fdc8
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 07574b0e08d3e46785b354551434007bc63bee44
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988174"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194075"
 ---
 # <a name="using-the-intune-docs"></a>Intune のドキュメントの使用
 
@@ -48,11 +48,11 @@ Intune に関する一般的なヘルプとサポートについては、[Intune
 
 ## <a name="provide-doc-feedback"></a>ドキュメントのフィードバックを提供する
 
-「フィードバック」セクションは、各記事の最後にあります。 すべての記事の右上にある **[フィードバック]** リンクをクリックすると、このセクションに移動できます。 「フィードバック」は GitHub の Issue と統合されています。 GitHub Issues との統合の詳細については、こちらの[ドキュメント プラットフォームに関するブログ記事](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs)をご覧ください。
+「フィードバック」セクションは、各記事の最後にあります。 すべての記事の右上にある **[フィードバック]** リンクをクリックすると、このセクションに移動できます。 「フィードバック」は GitHub の Issue と統合されています。 GitHub Issues との統合の詳細については、こちらの[ドキュメント プラットフォームに関するブログ記事](/teamblog/a-new-feedback-system-is-coming-to-docs)をご覧ください。
 
 Intune のサービス (ドキュメントではなく) に関するフィードバックを共有するには、 **[製品のフィードバック]** をクリックします。
 
-ドキュメントに関するフィードバックを送信するには、[GitHub アカウント](https://github.com/join)が必要です。 サインイン後、MicrosoftDocs の 1 回限りの承認を受けます。 次に **[コンテンツに関するフィードバック]** をクリックし、タイトルとコメントを入力し、 **[フィードバックの送信]** をクリックします。 このアクションによって、対象の記事に関する新しいイシューが [Intune GitHub リポジトリ](https://github.com/MicrosoftDocs/intunedocs/issues)に提出されます。
+ドキュメントに関するフィードバックを送信するには、[GitHub アカウント](https://github.com/join)が必要です。 サインイン後、MicrosoftDocs の 1 回限りの承認を受けます。 次に **[コンテンツに関するフィードバック]** をクリックし、タイトルとコメントを入力し、**[フィードバックの送信]** をクリックします。 このアクションによって、対象の記事に関する新しいイシューが [Intune GitHub リポジトリ](https://github.com/MicrosoftDocs/intunedocs/issues)に提出されます。
 
 また、対象の記事に関する、未処理または終了済みの既存のイシューも表示されます。 表示された場合、確認してから新しい問題を送信してください。 関連する問題が見つかった場合、顔アイコンをクリックして意見を追加します。あるいは、問題を展開してコメントを追加できます。
 
@@ -62,19 +62,19 @@ GitHub Issues を使用し、次の種類のフィードバックを送信しま
 
 - ドキュメント バグ:内容が古い、はっきりしない、紛らわしい、あるいは不完全です。
 - ドキュメント改善:記事を良くするための提案。
-- ドキュメント質問:既存のドキュメントが見つからず、困っています。
+- ドキュメント質問: 既存のドキュメントが見つからず、困っています。
 - ドキュメント アイデア:新しい記事の提案。 ドキュメントに関するフィードバックとして、UserVoice の代わりにこの方法を使用します。
 - 称賛:情報が役立った記事に関する好意的なフィードバック。
 - ローカリゼーション:コンテンツの翻訳に関するフィードバック。
 - 検索エンジン最適化 (SEO):コンテンツを検索できない問題に関するフィードバック。 コメントには、検索エンジン、キーワード、対象記事を含めます。
 
-[製品フィードバック](https://microsoftintune.uservoice.com/forums/291681-ideas)、[製品質問](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod)、[サポート依頼](get-support.md)など、ドキュメント以外のトピックで問題が投稿された場合、その問題は完了とされ、ユーザーはその問題の本来のフィードバック チャンネルにリダイレクトされます。
+[製品フィードバック](https://microsoftintune.uservoice.com/forums/291681-ideas)、[製品質問](/answers/products/mem)、[サポート依頼](get-support.md)など、ドキュメント以外のトピックで問題が投稿された場合、その問題は完了とされ、ユーザーはその問題の本来のフィードバック チャンネルにリダイレクトされます。
 
 docs.microsoft.com プラットフォームに関するフィードバックを投稿するには、[ドキュメント フィードバック](https://aka.ms/sitefeedback)に関するページをご覧ください。 このプラットフォームには、見出し、目次、右側のメニューなど、すべてのラッパー コンポーネントが含まれています。 また、フォント、アラート ボックス、ページ アンカーなど、ブラウザーで記事をレンダリングする方法も含まれています。
 
 ## <a name="contribute-to-docs"></a>ドキュメントへの寄稿
 
-docs.microsoft.com にあるほとんどのコンテンツと同様に、Intune のドキュメントは GitHub でオープンソース化されています。 このライブラリは、コミュニティの寄稿を受け入れ、奨励しています。 概要については、[投稿に関するガイド](https://docs.microsoft.com/contribute) ページをご覧ください。 [GitHub アカウント](https://github.com/join)の作成が唯一の前提条件です。
+docs.microsoft.com にあるほとんどのコンテンツと同様に、Intune のドキュメントは GitHub でオープンソース化されています。 このライブラリは、コミュニティの寄稿を受け入れ、奨励しています。 概要については、[投稿に関するガイド](/contribute) ページをご覧ください。 [GitHub アカウント](https://github.com/join)の作成が唯一の前提条件です。
 
 ### <a name="basic-steps-to-contribute-to-docs"></a>ドキュメントに寄稿するための基本手順
 
@@ -82,7 +82,7 @@ docs.microsoft.com にあるほとんどのコンテンツと同様に、Intune 
 
 2. ソース ファイルを編集するには、鉛筆アイコンをクリックします。  
 
-3. マークダウン ソースで変更を加えます。 詳細については、「[How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/contribute-how-to-write-use-markdown)」 (ドキュメントの記述にマークダウンを使用する方法) を参照してください。  
+3. マークダウン ソースで変更を加えます。 詳細については、「[How to use Markdown for writing Docs](/contribute/contribute-how-to-write-use-markdown)」 (ドキュメントの記述にマークダウンを使用する方法) を参照してください。  
 
 4. ファイル変更の提案セクションで、公開コミット コメントを入力し、自分が *"変更した内容"* を説明します。 **[Propose file change]\(ファイル変更の提案\)** をクリックします。  
 
@@ -109,7 +109,7 @@ Intune のドキュメントに投稿する場合、次の一般的なガイド�
 
 - いきなり大規模な pull requests を行わないでください。 そうではなく、[問題を報告](#provide-doc-feedback)してディスカッションを開始してください。 これで、大量の時間を費やす前にその方向性が正しいかどうか確認できます。  
 
-- [Microsoft スタイル ガイド](https://aka.ms/MicrosoftStyle)をご覧ください。 [Microsoft のスタイルとボイスに関する 10 のヒント](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)を把握してください。  
+- [Microsoft スタイル ガイド](https://aka.ms/MicrosoftStyle)をご覧ください。 [Microsoft のスタイルとボイスに関する 10 のヒント](/style-guide/top-10-tips-style-voice)を把握してください。  
 
 - [GitHub Flow ワークフロー](https://guides.github.com/introduction/flow/)に従ってください。  
 
@@ -117,7 +117,7 @@ Intune のドキュメントに投稿する場合、次の一般的なガイド�
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Microsoft エンドポイント マネージャーのドキュメントの統合
 
-Intune と Configuration Manager の結合シナリオをより適切にサポートするために、Intune と Configuration Manager のドキュメントが Microsoft Endpoint Manager サイトに統合されました。 Intune のドキュメントは現在 [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) にあり、Configuration Manager のドキュメント ライブラリは [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr) で入手できます。 古い URL を使用している場合、すべてのリンクは自動的にリダイレクトされるため、このコンテンツを読むために変更を行う必要はありません。
+Intune と Configuration Manager の結合シナリオをより適切にサポートするために、Intune と Configuration Manager のドキュメントが Microsoft Endpoint Manager サイトに統合されました。 Intune のドキュメントは現在、[../index.yml](../index.yml) にあり、Configuration Manager のドキュメント ライブラリは [../../configmgr/index.yml](../../configmgr/index.yml) で入手できます。 古い URL を使用している場合、すべてのリンクは自動的にリダイレクトされるため、このコンテンツを読むために変更を行う必要はありません。
 
 フィードバックを提供したり、記事に投稿したりする場合は、いくつかの変更が必要です。
 
