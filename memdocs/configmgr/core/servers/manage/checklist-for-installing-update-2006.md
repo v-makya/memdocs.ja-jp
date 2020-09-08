@@ -2,7 +2,7 @@
 title: 2006 のチェックリスト
 titleSuffix: Configuration Manager
 description: Configuration Manager バージョン 2006 に更新する前に実行するアクションについて説明します。
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6d359306-69ae-4873-ba90-964b6ae51d79
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 05264780ef3971a7aa8b2d1778f0fe27c90b0b71
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 842264dcbbf93be623f68854b158d33c2f505928
+ms.sourcegitcommit: 68631e0f7d5bd09ae0ee9dc301a561ee9df10931
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696465"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89245003"
 ---
 # <a name="checklist-for-installing-update-2006-for-configuration-manager"></a>Configuration Manager の更新プログラム 2006 をインストールするためのチェックリスト
 
@@ -68,36 +68,38 @@ Configuration Manager の Current Branch を使用している場合、バージ
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of May 11, 2020, version 2006 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+2020 年 8 月 31 日より、バージョン 2006 は全世界のすべてのお客様がインストールできるようになります。 事前に早期更新リングをオプトインしている場合は、この Current Branch バージョンに対する更新に注目してください。
 
-現時点では、バージョン 2006 は早期更新リングに対してリリースされます。 この更新プログラムをインストールするには、オプトインする必要があります。 次の PowerShell スクリプトでは、階層またはスタンドアロンのプライマリ サイトが、バージョン 2006 の早期更新リングに追加されます。
+<!--
+At this time, version 2006 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2006:
 
-[バージョン 2006 のオプトイン スクリプト](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2006 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target --
 
-スクリプトは、Microsoft によってデジタル署名されて、署名された自己解凍形式の実行可能ファイル内にバンドルされます。
+Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!NOTE]
-> バージョン 2006 の更新プログラムは、バージョン 1810 以降が実行されているサイトにのみ適用されます。
+> The version 2006 update is only applicable to sites running version 1810 or later.
 
-早期更新リングにオプトインするには:
+To opt-in to the early update ring:
 
-1. **管理者として** Windows PowerShell バージョン 5 セッションを開きます
+1. Open a Windows PowerShell version 5 session **as administrator**
 
     > [!IMPORTANT]
-    > Configuration Manager の現在のブランチでは、現在 PowerShell バージョン 7 はサポートされていません。 PowerShell バージョン 7 を既にインストールしてある場合、PowerShell バージョン 5 をまだ使用できます。 詳細については、「[PowerShell 7 を Windows PowerShell 5.1 とサイド バイ サイドで使用する](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51)」を参照してください。
+    > Configuration Manager current branch doesn't currently support PowerShell version 7. If you've already installed PowerShell version 7, you can still use PowerShell version 5. For more information, see [Using PowerShell 7 side-by-side with Windows PowerShell 5.1](/powershell/scripting/install/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7#using-powershell-7-side-by-side-with-windows-powershell-51).
 
-1. 次の構文を使って、**EnableEarlyUpdateRing2006.ps1** スクリプトを実行します。
+1. Run the **EnableEarlyUpdateRing2006.ps1** script, using the following syntax:
 
     `EnableEarlyUpdateRing2006.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    `SiteServer` では、中央管理サイト サーバーまたはスタンドアロン プライマリ サイト サーバーが参照されています。 たとえば、`EnableEarlyUpdateRing2006.ps1 cmprimary01` のように指定します。
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2006.ps1 cmprimary01`
 
-1. 更新プログラムを確認する。 詳しくは、「[利用可能な更新プログラムの取得](install-in-console-updates.md#get-available-updates)」をご覧ください。
+1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md#get-available-updates).
 
-バージョン 2006 の更新プログラムが、コンソールで使用できるようになります。
+The version 2006 update should now be available in the console.
 
 > [!IMPORTANT]
-> このスクリプトでは、サイトはバージョン 2006 の早期更新リングに対してのみ追加されます。 永続的な変更ではありません。
+> This script only adds your site to the early update ring for version 2006. It's not a permanent change.
+-->
 
 ## <a name="checklist"></a>チェックリスト
 

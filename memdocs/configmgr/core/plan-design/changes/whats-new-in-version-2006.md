@@ -2,7 +2,7 @@
 title: バージョン 2006 の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager Current Branch のバージョン 2006 で導入された変更点および新機能について説明します。
-ms.date: 08/20/2020
+ms.date: 09/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fc12c81a1ec58d17580b91e21a1ba7d2e0cb0cbc
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3c061236202e685a6b59eeca3254a80cc1ddabf9
+ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819679"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385364"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 2006 の新機能
 
@@ -340,8 +340,7 @@ Configuration Manager 向け Windows PowerShell コマンドレットの変更�
 
 管理サービスの REST API の変更に関する詳細については、[管理サービスのリリース ノート](../../../develop/adminservice/release-notes.md#bkmk_2006)を参照してください。
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4556203).
+このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Configuration Manager Current Branch バージョン 2006 での変更の概要](https://support.microsoft.com/help/4578830)」を参照してください。
 
 <!--
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
@@ -363,9 +362,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>次のステップ
 
-現時点では、バージョン 2006 は早期更新リングに対してリリースされます。 この更新プログラムをインストールするには、オプトインする必要があります。 詳しくは、「[早期更新リング](../../servers/manage/checklist-for-installing-update-2006.md#early-update-ring)」をご覧ください。
+<!-- At this time, version 2006 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2006.md#early-update-ring). -->
 
-<!-- As of May 11, 2020, version 2006 is globally available for all customers to install. -->
+2020 年 8 月 31 日より、バージョン 2006 は全世界のすべてのお客様がインストールできるようになります。
 
 このバージョンをインストールする準備ができたら、[Configuration Manager の更新プログラムのインストール](../../servers/manage/updates.md)に関する記事および「[2006 に更新するためのチェックリスト](../../servers/manage/checklist-for-installing-update-2006.md)」をご覧ください。
 

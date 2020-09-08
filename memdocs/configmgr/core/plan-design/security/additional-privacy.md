@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f6d3f6dbbbb407ee63eb8253cbf3ca740a10479c
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: b419f313b9d4d300d286cf32605ebfe7e0e1573c
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699791"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068057"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Configuration Manager のプライバシーに関する詳細
 
@@ -89,7 +89,10 @@ Microsoft Cloud Protection Service が意図的に個人情報を収集するこ
 
 ## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>サイト階層 – Bing Maps を使用した地図
 
-Configuration Manager コンソールで、 **[監視]** ワークスペースに移動し、 **[サイト階層]** ノードを選択して、 **[地図]** に切り替えます。 この表示では、Microsoft Bing Maps の提供する地図を使って Configuration Manager 物理サーバー トポロジを表示できます。 この機能を実現するために、お客様の入力した場所情報が、サーバーから Bing Maps の Web サービスに送信されます。
+> [!IMPORTANT]
+> 2020 年 8 月以降、この機能は非推奨となりました。 **[階層図]** オプションを使用してください。<!--8116777-->
+
+Configuration Manager コンソールで、**[監視]** ワークスペースに移動し、**[サイト階層]** ノードを選択して、**[地図]** に切り替えます。 この表示では、Microsoft Bing Maps の提供する地図を使って Configuration Manager 物理サーバー トポロジを表示できます。 この機能を実現するために、お客様の入力した場所情報が、サーバーから Bing Maps の Web サービスに送信されます。
 
 マイクロソフトではこの情報を、Microsoft Bing Maps およびその他の Microsoft のサイトとサービスを提供および向上するために役立てています。 詳細については、「[Microsoft のプライバシーに関する声明](https://privacy.microsoft.com/privacystatement)」を参照してください。
 

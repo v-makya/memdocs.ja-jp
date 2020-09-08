@@ -2,7 +2,7 @@
 title: 非推奨の機能
 titleSuffix: Configuration Manager
 description: Configuration Manager でサポートされなくなった機能について説明します。
-ms.date: 08/11/2020
+ms.date: 08/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 29b5dd8fdceb803de77aff9adbd0614d1e201b18
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: aca9dc5c2ff2d88155ab19656f391cf87a4e977f
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694257"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068091"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager から削除された機能と非推奨の機能
 
@@ -31,6 +31,7 @@ ms.locfileid: "88694257"
 
 |機能|最初に非推奨と発表|削除されたサポート&nbsp;|
 |-----------|---|--------------|
+|Configuration Manager コンソールにおける **[監視]** ワークスペースの **[サイト階層]** ノードの地図。<!--8116777-->|2020 年 8 月|TBD|
 |Azure からコンテンツを共有するための実装が変更されました。 コンテンツが有効なクラウド管理ゲートウェイを使用します。 今後は、従来のクラウド配布ポイントを作成できなくなります。|2019 年 2 月|未定<sup>[注 1](#bkmk_note1)</sup>|
 |クラウド管理ゲートウェイとクラウドの配布ポイントのための Azure への従来のサービス展開。 詳細については、[CMG の計画](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)に関するページを参照してください。|2018 年 11 月|未定<sup>[注 1](#bkmk_note1)</sup>|
 

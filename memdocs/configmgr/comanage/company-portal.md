@@ -2,7 +2,7 @@
 title: ポータル サイトのアプリ
 titleSuffix: Configuration Manager
 description: 共同管理デバイスで Intune ポータル サイト アプリを使用するための、一貫したユーザー エクスペリエンスが提供されます。
-ms.date: 08/20/2020
+ms.date: 09/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 535b91b82e024431e4221824b4623b6ffc17b286
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: cd49546e49d6964cfe37b0b13e1abe9175f4aa0e
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700876"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432559"
 ---
 # <a name="use-the-company-portal-app-on-co-managed-devices"></a>共同管理デバイスでポータル サイト アプリを使用する
 
@@ -50,7 +50,9 @@ Intune ポータル サイトでは、次の操作がサポートされていま
 
 ## <a name="prerequisites"></a>前提条件
 
-- Configuration Manager Current Branch バージョン 2006 以降
+- Configuration Manager Current Branch バージョン 2006 以降 <sup>([FAQ を参照](#bkmk_ver-prereq))</sup>
+
+- ポータル サイト アプリのバージョン 11.0.8980.0 以降
 
 - Windows 10 バージョン 1803 以降:
 
@@ -116,6 +118,10 @@ Intune ポータル サイトでは、次の操作がサポートされていま
 Configuration Manager アプリのインストールに関する問題のトラブルシューティングについては、Intune ポータル サイトの **[ヘルプとサポート]** セクションに移動します。 **[問い合わせ]** オプションを使用すると、要求の一部として Configuration Manager のログ ファイルを送信できます。
 
 ## <a name="frequently-asked-questions-faq"></a>よく寄せられる質問 (FAQ)
+
+### <a name="im-using-configuration-manager-version-2002-why-is-the-new-company-portal-showing-configuration-manager-apps"></a><a name="bkmk_ver-prereq"></a> Configuration Manager バージョン 2002 を使用していますが、新しいポータル サイトに Configuration Manager アプリが表示されるのはなぜですか。
+
+ポータル サイト バージョン 11.0.8980.0 以降では、Configuration Manager で展開されたアプリケーションが、それを使用するすべての共同管理クライアントに表示されます。 コントロール通知にクライアント設定が追加されるため、Configuration Manager バージョン 2006 が前提条件です。 以前のバージョンの共同管理デバイスにポータル サイトをインストールした場合、またはクライアント設定を構成していない場合は、両方のポータルからの通知がユーザーに表示されます。 ユーザーにとって、このエクスペリエンスは混乱を招く可能性があります。
 
 ### <a name="does-company-portal-support-applications-deployed-as-software-updates-from-configuration-manager"></a>Intune ポータル サイトでは、Configuration Manager からソフトウェア更新プログラムとして展開されたアプリケーションがサポートされますか?
 

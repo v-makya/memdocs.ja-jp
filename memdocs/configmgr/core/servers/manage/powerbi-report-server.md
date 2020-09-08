@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dc8aa57bda5f5a29d72af854be9a18e4f32760f8
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699587"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432542"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Power BI Report Server との統合
 
@@ -103,9 +103,15 @@ Power BI Desktop レポート ファイル (.PBIX) が保存され、Power BI Re
 
 1. レポートを保存する準備ができたら、 **[ファイル]** メニューにアクセスし、 **[名前を付けて保存]** 、 **[Power BI Report Server]** の順に選択します。
 
-1. **[Power BI Report Server の選択]** ウィンドウで、**新しいレポート サーバー アドレス**としてレポート サービス ポイントの URL を入力します。 たとえば、`https://rsp.contoso.com/Reports` となります。
+1. **[Power BI Report Server の選択]** ウィンドウで、**新しいレポート サーバー アドレス**としてレポート サービス ポイントの URL を入力します。 たとえば、`https://rsp.contoso.com/Reports` となります。 **[OK]** を選択します。
 
-Configuration Manager コンソールで、Power BI レポートの一覧に新しいレポートが表示されます。
+1. **[レポートの保存]** ウィンドウで、`ConfigMgr_<SiteCode>` フォルダーをダブルクリックします。 たとえば、`ConfigMgr_PS1` です (`PS1` は ConfigMgr サイト コード)。 必要に応じて、これを保存するサブ フォルダーを (レポート サーバーから) 選択または作成することもできます。
+    > [!TIP]
+    > レポートおよび Power BI レポートを含むレポート フォルダーは、レポート サーバー上の `ConfigMgr_<SiteCode>` フォルダーに配置する必要があります。そうしないと、Configuration Manager コンソールに表示されません。
+
+1. **[ファイル名]** にレポートの名前を入力します。
+
+Configuration Manager コンソールで、Power BI レポートの一覧に新しいレポートが表示されます。 レポートが表示されない場合は、レポートを `ConfigMgr_<SiteCode>` フォルダーに保存したことを確認してください。
 
 ## <a name="next-steps"></a>次のステップ
 
