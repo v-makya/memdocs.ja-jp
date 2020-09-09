@@ -8,9 +8,15 @@
       href: client-details.md
     - name: アプリケーションのインストール (プレビュー)
       href: applications.md
+    - name: デバイスのタイムライン (プレビュー)
+      href: timeline.md
+    - name: リソース エクスプローラー (プレビュー)
+      href: resource-explorer.md
 - name: テナントにアタッチされたデバイスの CMPivot (プレビュー)
   items:
-    - name: CMPivot の概要
+    - name: CMPivot の起動 (プレビュー)
+      href: cmpivot-start.md
+    - name: CMPivot 使用状況の概要
       href: cmpivot-overview-attached.md
     - name: CMPivot サンプル スクリプト
       href: cmpivot-samples-attached.md
@@ -30,3 +36,9 @@
       href: troubleshoot-client-details.md
     - name: アプリケーションのインストール (プレビュー)
       href: troubleshoot-applications.md
+    - name: タイムライン (プレビュー)
+      href: troubleshoot-timeline.md
+    - name: リソース エクスプローラー (プレビュー)
+      href: troubleshoot-resource-explorer.md
+    - name: CMPivot (プレビュー)
+      href: troubleshoot-cmpivot.md
