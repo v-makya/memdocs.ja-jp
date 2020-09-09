@@ -1,7 +1,7 @@
 ---
 title: PFX 証明書プロファイルインポート
 titleSuffix: Configuration Manager
-description: Configuration Manager で PFX ファイルを使用して、暗号化されたデータ交換をサポートするユーザー固有の証明書を生成する方法について説明します。
+description: Configuration Manager で PFX ファイルをインポートして、暗号化されたデータ交換をサポートするユーザー固有の証明書を生成する方法について説明します。
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
@@ -10,12 +10,12 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df5dfdeab010012a258fe59612a348c269081c45
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: ef8c1656c12ead992d5305cdf86b1ab8fcfcb836
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700499"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608432"
 ---
 # <a name="import-pfx-certificate-profiles"></a>PFX 証明書プロファイルインポート
 
@@ -70,9 +70,9 @@ PFX 証明書をインストールする必要がある Windows 10 デバイス�
 
 PFX 証明書をインポートするには、次の Configuration Manager PowerShell コマンドレットを使用して PFX 作成スクリプトをプロビジョニングします。
 
-- [取得-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx?view=sccm-ps)
-- [インポート-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx?view=sccm-ps)
-- [CMClientCertificatePfx を削除します。](/powershell/module/configurationmanager/remove-cmclientcertificatepfx?view=sccm-ps)
+- [取得-CMClientCertificatePfx](/powershell/module/configurationmanager/get-cmclientcertificatepfx)
+- [インポート-CMClientCertificatePfx](/powershell/module/configurationmanager/import-cmclientcertificatepfx)
+- [CMClientCertificatePfx を削除します。](/powershell/module/configurationmanager/remove-cmclientcertificatepfx)
 
 ### <a name="example-script"></a>サンプル スクリプト
 

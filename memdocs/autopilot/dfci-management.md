@@ -4,6 +4,7 @@ ms.reviewer: ''
 manager: laurawi
 description: Windows 自動操縦の展開と Intune を使用すると、デバイスファームウェア構成インターフェイス (DFCI) を使用して、UEFI (BIOS) 設定を登録した後に管理できます。
 keywords: 自動操縦、DFCI、UEFI、Windows 10
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,20 +15,20 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: df49fb939b709c15f2b01b3577f7fc7ced60140d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 95979a3c53752bb77c31710e20de54dbc2781262
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908347"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606616"
 ---
-# <a name="dfci-management"></a>DFCI の管理
+# <a name="device-firmware-configuration-interface-dfci-management"></a>デバイスファームウェア構成インターフェイス (DFCI) の管理
 
 **適用対象**
 
--   Windows 10
+- Windows 10
 
-Windows 自動操縦の展開と Intune を使用すると、デバイスファームウェア構成インターフェイス (DFCI) を使用して、Unified Extensible Firmware Interface (UEFI) 設定を登録した後に管理できます。  DFCI を使用すると、Windows は Intune から UEFI に展開されたデバイスに [管理コマンドを渡すことができ](/windows/client-management/mdm/uefi-csp) ます。 これにより、エンドユーザーによる BIOS 設定の制御を制限できます。 たとえば、ブートオプションをロックダウンして、ユーザーが別の OS を起動しないようにすることができます。たとえば、同じセキュリティ機能がない場合などです。
+Windows 自動操縦の展開と Intune を使用すると、デバイスファームウェア構成インターフェイス (DFCI) を使用して、Unified Extensible Firmware Interface (UEFI) 設定を登録した後に管理できます。 DFCI を [使用すると、Windows は](/windows/client-management/mdm/uefi-csp) 、展開されたデバイスの管理コマンドを INTUNE から UEFI に渡すことができます。 この機能を使用すると、エンドユーザーによる BIOS 設定の制御を制限できます。 たとえば、ブートオプションをロックダウンして、ユーザーが別の OS を起動しないようにすることができます。たとえば、同じセキュリティ機能がない場合などです。
 
 ユーザーが以前のバージョンの Windows を再インストールした場合、別の OS をインストールした場合、またはハードドライブをフォーマットした場合、DFCI 管理を上書きすることはできません。 この機能を使用すると、管理者特権での OS プロセスを含む OS プロセスとマルウェアが通信するのを防ぐことができます。 DFCI の信頼チェーンは公開キー暗号化を使用し、ローカルの UEFI パスワードセキュリティには依存しません。 このセキュリティ層は、ローカルユーザーがデバイスの UEFI メニューから管理設定にアクセスするのをブロックします。
 
@@ -35,9 +36,18 @@ DFCI の利点、シナリオ、前提条件の概要については、「 [Devi
 
 ## <a name="dfci-management-lifecycle"></a>DFCI 管理ライフサイクル
 
-DFCI 管理ライフサイクルは、UEFI 統合、デバイスの登録、プロファイルの作成、登録、管理、提供終了、回復として表示できます。 次の図を参照してください。
+DFCI 管理ライフサイクルには、次のプロセスが含まれます。
+- UEFI 統合
+- デバイス登録
+- プロファイルの作成
+- 登録
+- 管理
+- 廃止
+- 復元
 
-   ![ライフサイクル](images/dfci.png)
+次の図を参照してください。
+
+ ![ライフサイクル](images/dfci.png)
 
 ## <a name="requirements"></a>必要条件
 

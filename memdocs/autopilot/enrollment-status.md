@@ -4,6 +4,7 @@ ms.reviewer: ''
 manager: laurawi
 description: 登録ステータスページの機能、構成の概要を示します。
 keywords: 自動操縦プラグアンド忘れ、Windows 10
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,24 +15,29 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: dd60c47e0e22aa24cf1d4d4df3324f3b1bfed21c
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: a7d368aef0b10fbe78e2c4ca141a39aa4ed6d803
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908256"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606603"
 ---
 # <a name="windows-autopilot-enrollment-status-page"></a>Windows 自動操縦の登録ステータスページ
 
 **適用対象**
 
--   Windows 10 バージョン 1803 以降 
+-  Windows 10 バージョン 1803 以降 
 
-[登録ステータス] ページ (ESP) には、MDM で管理されているユーザーが初めてデバイスにサインインしたときの、完全なデバイス構成プロセスの状態が表示されます。  ESP は、ユーザーが初めてデスクトップにアクセスできるようになる前に、デバイスのプロビジョニングの進行状況を把握し、デバイスが組織の目的の状態を満たしていることを確認するのに役立ちます。
+ユーザーが初めてデバイスにサインインすると、登録ステータスページ (ESP) にデバイスの構成の進行状況が表示されます。 また、ESP は、ユーザーが初めてデスクトップにアクセスできるようになる前に、デバイスが予期された状態であることを確認します。
 
-ESP は、アプリケーション、セキュリティポリシー、証明書、およびネットワーク接続のインストールを追跡します。  Intune を使用すると、管理者は、ライセンスを付与された Intune ユーザーに ESP プロファイルを展開し、ESP プロファイル内で特定の設定を構成できます。これらの設定のいくつかを次に示します。指定したアプリケーションを強制的にインストールし、ユーザーがトラブルシューティングログを収集できるようにし、デバイスのセットアップが失敗したときにユーザーが実行できる操作を指定します。  詳細については、「 [Intune で登録ステータスページ](/intune/windows-enrollment-status)を設定する方法」を参照してください。   
+ESP は、アプリケーション、セキュリティポリシー、証明書、およびネットワーク接続のインストールを追跡します。 管理者は、ライセンスを付与された Intune ユーザーに ESP プロファイルを展開し、ESP プロファイル内で特定の設定を構成できます。 これらの設定のいくつかを次に示します。
+- 指定されたアプリケーションを強制的にインストールします。
+- ユーザーがトラブルシューティングログを収集できるようにします。
+- デバイスの設定が失敗した場合にユーザーが行えることを指定する。
+
+詳細については、「 [Intune で登録ステータスページ](/intune/windows-enrollment-status)を設定する方法」を参照してください。  
  
- ![登録状態ページ](images/enrollment-status-page.png)
+![登録状態ページ](images/enrollment-status-page.png)
  
 
 ## <a name="more-information"></a>詳細情報
