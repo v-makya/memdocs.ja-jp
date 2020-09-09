@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51fbb59fa0557df1757258b9463514c6355ff92d
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: faabd2656e8b72502c682eaab37a0cc5b484ea03
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996250"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423936"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune の新機能 (過去数か月)
 
@@ -447,7 +447,7 @@ Intune では、Intune 内で特定のタスクまたは一連のタスクを完
 詳細については、「[Intune のガイド付きシナリオの概要](guided-scenarios-overview.md)」を参照してください。
 
 #### <a name="additional-app-configuration-variable-available---4969237-----"></a>追加のアプリ構成変数を利用できる<!-- 4969237   -->
-アプリ構成ポリシーを作成するとき、構成設定の一部として `AAD Device ID` 構成変数を含めることができます。 Intune で **[クライアント アプリ]**  >  **[アプリ構成ポリシー]**  >  **[追加]** の順に選択します。 構成ポリシーの詳細を入力し、 **[構成設定]** を選択して **[構成設定]** ブレードを表示します。 詳細については、「マネージド Android Enterprise デバイス用にアプリ構成ポリシーを追加する」の「[構成デザイナーを使用する](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer)」を参照してください。
+アプリ構成ポリシーを作成するとき、構成設定の一部として `AAD_Device_ID` 構成変数を含めることができます。 Intune で **[クライアント アプリ]**  >  **[アプリ構成ポリシー]**  >  **[追加]** の順に選択します。 構成ポリシーの詳細を入力し、 **[構成設定]** を選択して **[構成設定]** ブレードを表示します。 詳細については、「マネージド Android Enterprise デバイス用にアプリ構成ポリシーを追加する」の「[構成デザイナーを使用する](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer)」を参照してください。
 
 #### <a name="create-groups-of-management-objects-called-policy-sets---3762880----"></a>ポリシー セットと呼ばれる管理オブジェクトのグループを作成する<!-- 3762880  -->
 ポリシー セットを使用すると、1 つの概念単位として識別、対象化、監視する必要がある既存の管理エンティティへの参照のバンドルを作成できます。 ポリシー セットによって、既存の概念やオブジェクトが置き換えられることはありません。 Intune で引き続き個々のオブジェクトを割り当てることができて、ポリシー セットの一部として個々のオブジェクトを参照できます。 そのため、個々のオブジェクトに対する変更は、ポリシー セットに反映されます。  Intune では、 **[ポリシーセット]** 、 **[作成]** の順に選択し、新しいポリシー セットを作成します。
@@ -479,7 +479,7 @@ Intune 用に iOS ソフトウェアの更新ポリシーを[作成](../protect/
 #### <a name="engaged-restart-settings-are-removed-from-windows-update-rings----4464404--------"></a>Windows 更新プログラム リングから再起動猶予期間設定が削除された<!--  4464404      -->
 前に発表したように、Intune の Windows 10 更新プログラム リングでは、[期限の設定がサポート](../protect/windows-update-settings.md)されるようになり、*再起動猶予期間*はサポートされなくなりました。 Intune で更新プログラム リングを構成または管理するときに、*再起動猶予期間*の設定は利用できなくなりました。  
 
-この変更は、最近の [Windows サービス変更](//windows/whats-new/whats-new-windows-10-version-1903#servicing)に合わせるためのものであり、Windows 10 1903 以降で実行されるデバイスでは、*期限*が*再起動猶予期間*の構成より優先されます。
+この変更は、最近の [Windows サービス変更](/windows/whats-new/whats-new-windows-10-version-1903#servicing)に合わせるためのものであり、Windows 10 1903 以降で実行されるデバイスでは、*期限*が*再起動猶予期間*の構成より優先されます。
 
 #### <a name="prevent-installation-of-apps-from-unknown-sources-on-android-enterprise-work-profile-devices---4760025-----"></a>Android Enterprise の仕事用プロファイル デバイスに不明ソースからアプリをインストールできなくする<!-- 4760025   -->
 Android Enterprise の仕事用プロファイル デバイスでは、ユーザーは不明ソースからアプリをインストールできなくなりました。 この更新プログラムには、**個人プロファイルでは、不明ソースからのアプリ インストールが禁止される**という新しい設定があります。 既定では、この設定により、ユーザーはデバイスで不明ソースから個人プロファイルにアプリをサイドロードできなくなります。
@@ -1346,7 +1346,7 @@ IT 管理者がより簡単に Android Enterprise 管理を構成および使用
 ### <a name="device-configuration"></a>デバイスの構成
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---1533038---"></a>PFX Certificate Connector for Microsoft Intune の更新<!-- 1533038 -->
-新しい要求の処理を停止するコネクタの原因である、既存の PFX 証明書の再処理が続行する問題に対処する、[Microsoft Intune の PFX 証明書コネクタ](../protect/certficates-pfx-configure.md#whats-new-for-connectors)の更新プログラムをリリースしました。
+新しい要求の処理を停止するコネクタの原因である、既存の PFX 証明書の再処理が続行する問題に対処する、[Microsoft Intune の PFX 証明書コネクタ](../protect/certificate-connectors.md#whats-new-for-connectors)の更新プログラムをリリースしました。
 
 #### <a name="intune-security-tasks-for-defender-atp-in-public-preview---3208597---"></a>Defender ATP 用の Intune セキュリティ タスク (パブリック プレビュー)<!-- 3208597 -->
 パブリック プレビューでは、Intune を使用して [Microsoft Defender Advanced Threat Protection (ATP) 用のセキュリティ タスクを管理できます](../protect/atp-manage-vulnerabilities.md)。 この ATP との統合によってリスク ベースの手法が追加され、エンドポイントの脆弱性や誤設定を検出し、優先度を付けて修復できるようになり、検出から軽減までにかかる時間が短縮されます。
@@ -1400,7 +1400,7 @@ F5 は、iOS 上の Intune に、F5 Access で NAC 機能を許可する BIG-IP 
 適用対象: iOS
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---doc-vso-1521237----"></a>PFX Certificate Connector for Microsoft Intune の更新<!-- doc-vso 1521237  -->  
-ポーリング間隔を 5 分から 30 秒に減らす [PFX Certificate Connector for Microsoft Intune](../protect/certficates-pfx-configure.md#whats-new-for-connectors) の更新プログラムをリリースしました。
+ポーリング間隔を 5 分から 30 秒に減らす [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#whats-new-for-connectors) の更新プログラムをリリースしました。
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1487,7 +1487,7 @@ iOS 用の**サードパーティ製キーボード**の設定での Intune ア�
 ### <a name="device-configuration"></a>デバイスの構成
 
 #### <a name="updated-certificate-connectors---icm-113304612---"></a>更新された証明書コネクタ<!-- ICM 113304612 -->
-[Intune Certificate Connector と Microsoft Intune 用 PFX 証明書コネクタ](../protect/certficates-pfx-configure.md#whats-new-for-connectors)の両方の更新プログラムをリリースしました。 新しいリリースでは、いくつかの既知の問題を修正しています。
+[Intune Certificate Connector と Microsoft Intune 用 PFX 証明書コネクタ](../protect/certificate-connectors.md#whats-new-for-connectors)の両方の更新プログラムをリリースしました。 新しいリリースでは、いくつかの既知の問題を修正しています。
 
 #### <a name="set-login-settings-and-control-restart-options-on-macos-devices---1210083----"></a>macOS デバイスでログイン設定を行い、再起動オプションを制御する<!-- 1210083  -->
 macOS デバイスで、デバイス構成プロファイルを作成できます ( **[デバイス構成]**  >  **[プロファイル]**  >  **[プロファイルの作成]** > プラットフォームに **[macOS]** を選択し、プロファイルの種類に **[デバイス機能]** を選択します)。 この更新には、カスタム バナーの表示、ユーザーのサインイン方法の選択、電源設定の表示または非表示などの新しいログイン ウィンドウ設定が含まれています。

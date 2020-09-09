@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2fcb7be9d5a75f17e2b9c347be9cd5d4eedd925d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ea17b57fc0881e189d0d57b823caece3610b4528
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907652"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390842"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Windows 用 Intune ポータル サイト アプリからデバイスの名前を変更する
 他のデバイスから認識しやすいようにデバイスの名前を変更します。 Windows 用ポータル サイト アプリでは、接続されている次の種類のデバイスの名前を変更できます。  
@@ -47,7 +47,7 @@ ms.locfileid: "88907652"
      ![Windows 用ポータル サイト アプリの [デバイスの詳細] ページの [名前の変更] ポップアップフィールドのサンプル スクリーンショット。](./media/1808_RenameApp_Popup.png)  
 
 ## <a name="rename-device-from-device-context-menu"></a>デバイス コンテキスト メニューからデバイスの名前を変更する  
-[コンテキスト メニュー](//windows/uwp/design/controls-and-patterns/menus) アクションを使用してデバイスを削除するには、次の手順を完了します。  
+[コンテキスト メニュー](/windows/uwp/design/controls-and-patterns/menus) アクションを使用してデバイスを削除するには、次の手順を完了します。  
 
 1. ポータル サイト アプリの **[ホーム]** ページで、 **[デバイス]** に移動します。
 
