@@ -3,12 +3,12 @@ title: Microsoft Endpoint Configuration Manager のドキュメント
 summary: Microsoft Endpoint Manager の次のコンポーネントに関する公式製品ドキュメントです。Configuration Manager、共同管理、デスクトップ分析
 metadata:
   ms.topic: hub-page
-  ms.openlocfilehash: de62324e6ac5c78467c15b4cac2d4d38955df6c7
-  ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+  ms.openlocfilehash: f86f49d789d2b2c90ab164852305f8426287228f
+  ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/27/2020
-  ms.locfileid: "88992727"
+  ms.lasthandoff: 09/09/2020
+  ms.locfileid: "89606374"
 highlightedContent:
   items:
   - title: 新機能
@@ -211,7 +211,7 @@ additionalContent:
     items:
     - title: 開発
       links:
-      - url: /powershell/sccm/overview?view=sccm-ps
+      - url: /powershell/sccm/overview
         text: PowerShell
       - url: ./develop/index.yml
         text: ソフトウェア開発キット (SDK)
