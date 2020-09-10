@@ -202,6 +202,8 @@
               href: data-transfer-between-apps-manage-ios.md
         - name: アプリの保護ログのレビュー
           href: app-protection-policy-settings-log.md
+    - name: Office アプリのポリシー
+      href: app-office-policies.md
     - name: トラブルシューティング
       items:
         - name: ユーザーによる問題のトラブルシューティングをサポートする
