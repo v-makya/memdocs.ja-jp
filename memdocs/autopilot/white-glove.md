@@ -3,6 +3,7 @@ title: ホワイトグローブ展開のための Windows 自動操縦
 description: ホワイトグローブ展開のための Windows 自動操縦
 keywords: mdm、セットアップ、windows、windows 10、oobe、管理、展開、自動操縦、ztd、ゼロタッチ、パートナー、msfb、intune、事前プロビジョニング
 ms.prod: w10
+ms.technology: windows
 ms.mktglfcycl: deploy
 ms.localizationpriority: low
 ms.sitesec: library
@@ -11,14 +12,15 @@ audience: itproF
 manager: laurawi
 ms.audience: itpro
 author: greg-lindsay
+ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: df7b4bc3cbac23024dc8d108a91defebbf6dde38
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 21b55882d4af8d4d20b6ff2690d23680141e2e47
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614689"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643442"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>ホワイトグローブ展開のための Windows 自動操縦
 
@@ -26,13 +28,13 @@ ms.locfileid: "88614689"
 
 Windows の自動操縦は、プレインストールされた OEM イメージとドライバーを使用して新しいデバイスを簡単にプロビジョニングするのに役立ちます。 これにより、エンドユーザーは単純なプロセスを使用して、デバイスをビジネス対応にすることができます。
 
- ![OEM](images/wg01.png)
+ ![OEM の処理](images/wg01.png)
 
 また、windows 自動操縦では、パートナーまたは IT スタッフが完全に構成された、ビジネス対応の Windows 10 PC を事前に準備するのに役立つ <I>ホワイトグローブ</I> サービスを提供することもできます。 エンドユーザーの視点から見ると、Windows の自動操縦機能は変更されていませんが、デバイスを完全にプロビジョニングされた状態にする方が高速です。
 
 **Windows の自動操縦によるホワイトグローブ展開**では、プロビジョニングプロセスが分割されます。 時間のかかる部分は、IT、パートナー、または Oem によって行われます。 エンドユーザーは、必要ないくつかの設定とポリシーを完了するだけで、デバイスの使用を開始できます。
 
- ![OEM](images/wg02.png)
+ ![パートナーとの OEM プロセス](images/wg02.png)
 
 ホワイトグローブ展開では、Windows 10 バージョン1903以降の Microsoft Intune を使用します。 このようなデプロイは、既存の Windows 自動操縦の [ユーザー主導型のシナリオ](user-driven.md) を基に構築されており、Azure Active Directory 参加済みデバイスとハイブリッド Azure Active Directory 参加しているデバイスの両方のユーザー主導モードのシナリオをサポートします。
 
@@ -86,7 +88,7 @@ Win32 アプリと LOB アプリの両方を同じデバイスに対象としな
 - デバイスを起動します (Windows 10 Pro、Enterprise、または教育 Sku、バージョン1903以降を実行している場合)。
 - 最初の OOBE 画面 (言語の選択またはロケール選択画面) で、[ **次へ**] をクリックしないでください。 代わりに、Windows キーを5回押すと、[追加のオプション] ダイアログボックスが表示されます。 この画面で、[ **Windows 自動操縦] プロビジョニング** オプションを選択し、[ **続行**] をクリックします。
 
- ![choice](images/choice.png)
+ ![Windows 自動操縦のプロビジョニングオプション](images/choice.png)
 
 - [ **Windows 自動操縦の構成** ] 画面に、デバイスに関する情報が表示されます。
  - デバイスに割り当てられている自動操縦プロファイル。
@@ -96,13 +98,13 @@ Win32 アプリと LOB アプリの両方を同じデバイスに対象としな
  - **注**: QR コードは、コンパニオンアプリを使用してスキャンできます。 また、アプリは、デバイスが属しているユーザーを指定するようにデバイスを構成します。 Graph API を使用して Intune と統合された [コンパニオンアプリのオープンソースのサンプル](https://github.com/Microsoft/WindowsAutopilotCompanion) は、自動操縦チームによって GitHub に発行されています。
 - 表示された情報を検証します。 変更が必要な場合は、変更を加え、[ **更新** ] をクリックして、更新された自動実行プロファイルの詳細を再ダウンロードします。
 
- ![」](images/landing.png)
+ ![Windows 自動操縦の構成画面](images/landing.png)
 
 - [ **プロビジョニング] をクリックして** 、プロビジョニングプロセスを開始します。
 
 事前プロビジョニングプロセスが正常に完了した場合:
 - 緑の状態の画面に、デバイスに関する情報が表示されます。これについては、前に示したのと同じ詳細が含まれます。 たとえば、自動操縦プロファイル、組織名、割り当てられたユーザー、QR コードなどです。 プロビジョニング前の手順の経過時間も表示されます。
- ![ホワイトグローブ-結果](images/white-glove-result.png)
+ ![緑の構成画面](images/white-glove-result.png)
 - [再 **シール** ] をクリックして、デバイスをシャットダウンします。 その時点で、デバイスをエンドユーザーに出荷することができます。
 
 >[!NOTE]

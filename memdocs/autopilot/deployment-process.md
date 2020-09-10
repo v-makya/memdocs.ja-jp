@@ -6,18 +6,20 @@ manager: laurawi
 ms.audience: itpro
 keywords: アップグレード, インプレース, 構成, 展開
 ms.prod: w10
+ms.technology: windows
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 audience: itpro
 author: greg-lindsay
+ms.author: greglin
 ms.topic: article
-ms.openlocfilehash: 96c76aacf8185af671354c89cd5b89775a470710
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1e32e53b9177e40ad74ab1071a2503e550017882
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908367"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643451"
 ---
 #  <a name="windows-autopilot-deployment-process"></a>Windows 自動操縦の展開プロセス
 
