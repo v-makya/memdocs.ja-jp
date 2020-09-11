@@ -10,12 +10,12 @@ ms.assetid: a49a9564-0863-44c3-991e-a8e271fed586
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 20b23cec74ae3d201bc81fe1834e87e7eb8fcc13
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 32800284c415de6a36e856abf473bc6d8d729e6f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129563"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608243"
 ---
 # <a name="changes-to-cmpivot"></a>CMPivot に対する変更
 
@@ -359,7 +359,7 @@ SQL またはプロバイダーが同じマシン上にない場合や、SQL Alw
       1. **[Kerberos のみを使う]** を選びます。
       1. ポートとインスタンスと共に各プライマリ サイトの SQL サーバー サービスを追加します。
       1. これらの変更が会社のセキュリティ ポリシーに合致していることを確認します。
-1. [SPN が CAS SQL リスナー名と各プライマリ SQL リスナー名に公開されている](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SPNs)ことを確認します。
+1. [SPN が CAS SQL リスナー名と各プライマリ SQL リスナー名に公開されている](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover#SPNs)ことを確認します。
 1. プライマリ SQL サーバーを再起動します。
 1. CAS サイト サーバーと CAS SQL サーバーを再起動します。
 

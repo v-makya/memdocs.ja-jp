@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a7b61e1a609e0693ffcd30f3f7dc931f4cb38eef
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: fb2fb87a483328d06b3e0757fb6eb5a25e734b1d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193640"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607907"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager の Technical Preview 1511 の機能
 
@@ -110,7 +110,7 @@ Microsoft から Windows Server Updates Services (WSUS) に新しい Microsoft 3
  次の手順を使用して、可用性グループを作成して構成してから、その可用性グループを使用する新しい Configuration Manager サイトをインストールします。  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>SQL Server AlwaysOn 可用性グループを作成するには  
-[SQL Server 可用性グループを作成する](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) プロセスは、SQL Server ドキュメント ライブラリに記載されています。  可用性グループを作成するときに、Configuration Manager で使用するための次の要件が満たされていることを確認します。  
+[SQL Server 可用性グループを作成する](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server) プロセスは、SQL Server ドキュメント ライブラリに記載されています。  可用性グループを作成するときに、Configuration Manager で使用するための次の要件が満たされていることを確認します。  
 
 -   最大 3 つのメンバー:  
 

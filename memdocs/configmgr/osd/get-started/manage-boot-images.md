@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3ddcf0c9ff4a9af1e74a745d8bda326804365206
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697638"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606304"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Configuration Manager でブート イメージを管理する
 
@@ -206,7 +206,7 @@ PXE を使用してオペレーティング システムを展開する方法の
 - **WinPE の既定のキーボード レイアウトを設定する**: <!--4910348-->バージョン 1910 以降では、ブート イメージの既定のキーボード レイアウトを構成します。 en-us 以外の言語を選択した場合でも、Configuration Manager によって、使用可能な入力ロケールに en-us が含められます。 デバイス上の初期のキーボード レイアウトは選択されたロケールですが、ユーザーは必要に応じてデバイスを en-us に切り替えることができます。
 
 > [!Tip]
-> スクリプトからこれらの設定を構成するには、PowerShell コマンドレット [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) を使用します。
+> スクリプトからこれらの設定を構成するには、PowerShell コマンドレット [Set-CMBootImage](/powershell/module/configurationmanager/set-cmbootimage) を使用します。
 
 #### <a name="optional-components"></a>オプション コンポーネント
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 99a053800971642b1c771329c2ff9b3a29ce7912
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995451"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607880"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Configuration Manager の Technical Preview 1705 の機能
 
@@ -121,12 +121,12 @@ ms.locfileid: "88995451"
 
 - このリリースでは、非同期コミット レプリカをサイト データベースとして使用するためのフェールオーバーはサポートされていません。
   > [!CAUTION]  
-  > Configuration Manager では、非同期コミット レプリカが最新のものかどうかを確認するために状態を検証せず、また、[このようなレプリカは意図的に非同期にできる](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes)ため、非同期コミット レプリカをサイト データベースとして使用すると、サイトとデータの整合性が危険にさらされる場合があります。  
+  > Configuration Manager では、非同期コミット レプリカが最新のものかどうかを確認するために状態を検証せず、また、[このようなレプリカは意図的に非同期にできる](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server#AvailabilityModes)ため、非同期コミット レプリカをサイト データベースとして使用すると、サイトとデータの整合性が危険にさらされる場合があります。  
 
 - 可用性グループでは、使用する SQL Server のバージョンでサポートされているのと同じ数と種類のレプリカを使用できます    (以前のサポートでは、同期コミット レプリカは 2 つに制限されていました)。
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>非同期コミット レプリカを構成する
-非同期レプリカを[ Configuration Manager で使用する可用性グループ](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)に追加するために、同期レプリカの構成に必要な構成スクリプトを実行する必要はありません  (これは、その非同期レプリカをサイト データベースとして使用するためのサポートがないためです)。詳細については、[可用性グループへのセカンダリ レプリカの追加](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014)に関するページを参照してください。
+非同期レプリカを[ Configuration Manager で使用する可用性グループ](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)に追加するために、同期レプリカの構成に必要な構成スクリプトを実行する必要はありません  (これは、その非同期レプリカをサイト データベースとして使用するためのサポートがないためです)。詳細については、[可用性グループへのセカンダリ レプリカの追加](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server)に関するページを参照してください。
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>非同期レプリカを使用してサイトを回復する
 非同期レプリカを使用してサイト データベースを回復する前に、サイト データベースへの追加の書き込みを防止するために、アクティブなプライマリ サイトを停止する必要があります。 サイトの停止後、[手動で回復したデータベース](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered)の代わりに、非同期レプリカを使用することができます。

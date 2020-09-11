@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1c8710c50dc2feabebd7e8f0f84ac49b3b0dd35c
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: 8ff3e0ee8f002a21e283b8a56f55d0daa2490253
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068023"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606363"
 ---
 # <a name="create-stand-alone-media"></a>スタンドアロン メディアの作成
 
@@ -151,7 +151,7 @@ Configuration Manager のスタンドアロン メディアには、ネットワ
         >
         > スタンドアロン メディアでは、タスク シーケンス ステップとその変数のみが暗号化されます。 メディアの残りのコンテンツは暗号化されません。 タスク シーケンスのスクリプトには機密情報を含めないでください。 機密情報はすべて、タスク シーケンスの変数を使用して保存し、実装します。  
 
-    - **このスタンドアロン メディアが有効な日付の範囲を選択する**: メディアに任意の開始日付/有効期限を設定します。 この設定は既定で無効になっています。 スタンドアロン メディアが実行される前に、この日付はコンピューター上のシステム時刻と比較されます。 システム時刻が開始時刻より前か、有効期限より後の場合、スタンドアロン メディアは開始されません。 これらのオプションは、[New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia?view=sccm-ps) PowerShell コマンドレットを使用して利用することもできます。  
+    - **このスタンドアロン メディアが有効な日付の範囲を選択する**: メディアに任意の開始日付/有効期限を設定します。 この設定は既定で無効になっています。 スタンドアロン メディアが実行される前に、この日付はコンピューター上のシステム時刻と比較されます。 システム時刻が開始時刻より前か、有効期限より後の場合、スタンドアロン メディアは開始されません。 これらのオプションは、[New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia) PowerShell コマンドレットを使用して利用することもできます。  
 
 6. **[スタンドアロン CD/DVD]** ページで、OS を展開するタスク シーケンスを選択します。 ブート イメージに関連付けられたタスク シーケンスのみを選択できます。 タスク シーケンスによって参照されるコンテンツの一覧を確認します。  
 

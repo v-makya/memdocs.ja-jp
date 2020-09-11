@@ -10,12 +10,12 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: ff992361959fcaad51acf3b78f5618e95f5af9e0
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: e8e4bf4eb11502d798ffa97500436494bc639aae
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692606"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607595"
 ---
 # <a name="custom-locations-for-configuration-manager-site-database-files"></a>Configuration Manager のサイト データベース ファイルのカスタムの場所
 
@@ -36,6 +36,6 @@ ms.locfileid: "88692606"
 
 -   Configuration Manager サイト サーバーで、**SMS_Executive** サービスを停止します。  
 
--   ユーザー データベースを移動する方法の詳細については、[ユーザー データベースの移動](/sql/relational-databases/databases/move-user-databases?view=sql-server-2014)に関するページを参照してください。  
+-   ユーザー データベースを移動する方法の詳細については、[ユーザー データベースの移動](/sql/relational-databases/databases/move-user-databases)に関するページを参照してください。  
 
 -   データベース ファイルの移動が完了したら、Configuration Manager サイト サーバーで **SMS_Executive** サービスを再起動します。

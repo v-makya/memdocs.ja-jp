@@ -10,12 +10,12 @@ ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 988a9c31fca8d06104ce317f4709ee990089d723
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 90e4c0dfd2b55ec5acf943cd591ba45c719a68ff
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699145"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607522"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>サイト データベースに対して SQL Server クラスターを使用する
 
@@ -63,7 +63,7 @@ Configuration Manager のセットアップ中に、Microsoft Windows Server ク
 - Kerberos 認証をサポートするには、各 SQL Server クラスター ノードのネットワーク接続に対して **TCP/IP** ネットワーク通信プロトコルを有効にします。 **名前付きパイプ** プロトコルは不要ですが、Kerberos 認証の問題をトラブルシューティングするために使用できます。 ネットワーク プロトコルの設定は、 **[SQL Server ネットワークの構成]** にある **[SQL Server 構成マネージャー]** で構成します。  
 
 - サイト データベースに対して SQL Server クラスターを使用する場合の特定の証明書要件があります。 詳細については、以下の記事を参照してください。
-  - [SQL フェールオーバー クラスター構成に証明書をインストールする](/sql/database-engine/configure-windows/manage-certificates?view=sql-server-ver15#provision-failover-cluster-cert)
+  - [SQL フェールオーバー クラスター構成に証明書をインストールする](/sql/database-engine/configure-windows/manage-certificates#provision-failover-cluster-cert)
   - [Configuration Manager での PKI 証明書の要件](../../../plan-design/network/pki-certificate-requirements.md#BKMK_PKIcertificates_for_servers)
 
   > [!NOTE]
@@ -101,7 +101,7 @@ Configuration Manager では、名前付きインスタンスを使用する SQL
 
 サイト データベースを準備するために完了する主なタスクを次に示します。
 
-- サイト データベースをホストする仮想 SQL Server クラスターを既存の Windows Server クラスター環境で作成します。 SQL Server クラスターをインストールおよび設定するための特定の手順については、使用している SQL Server のバージョンのドキュメントをご覧ください。 詳細については、「[新しい SQL Server フェールオーバー クラスターの作成](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup?view=sql-server-2017)」を参照してください。  
+- サイト データベースをホストする仮想 SQL Server クラスターを既存の Windows Server クラスター環境で作成します。 SQL Server クラスターをインストールおよび設定するための特定の手順については、使用している SQL Server のバージョンのドキュメントをご覧ください。 詳細については、「[新しい SQL Server フェールオーバー クラスターの作成](/sql/sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup)」を参照してください。  
 
 - SQL Server クラスター内の各コンピューターで、Configuration Manager によるサイト コンポーネントのインストールを望まない各ドライブのルート フォルダーにファイルを配置します。 そのファイルに `NO_SMS_ON_DRIVE.SMS` という名前を付けます。 既定では、Configuration Manager は各物理ノードにいくつかのコンポーネントをインストールして、バックアップなどの操作をサポートします。  
 

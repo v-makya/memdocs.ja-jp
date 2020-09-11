@@ -10,12 +10,12 @@ ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 73acd43ef9d7924682de9df66487c5a04297e640
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 855351fc7fe28b40f23e1e01767fd62a782bc1e0
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697502"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606987"
 ---
 # <a name="install-software-updates"></a>ソフトウェア更新プログラムのインストール
 
@@ -107,7 +107,7 @@ dism /Unmount-Image /MountDir:C:\Mountdir /Commit
 - CBS ベースの更新プログラムしかサポートされない。 Microsoft 365 アプリの更新プログラムを適用することはできません。
 
 > [!Tip]  
-> PowerShell を使用してソフトウェア更新プログラムの選択を自動化することができます。 [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate?view=sccm-ps) コマンドレットを使用して、更新プログラムのリストを取得します。 [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule?view=sccm-ps) コマンドレットを使用して、オフライン サービスのスケジュールを作成します。 次の例は、このアクションを自動化する 1 つのメソッドを示しています。
+> PowerShell を使用してソフトウェア更新プログラムの選択を自動化することができます。 [Get-CMSoftwareUpdate](/powershell/module/configurationmanager/get-cmsoftwareupdate) コマンドレットを使用して、更新プログラムのリストを取得します。 [New-CMOperatingSystemImageUpdateSchedule](/powershell/module/configurationmanager/new-cmoperatingsystemimageupdateschedule) コマンドレットを使用して、オフライン サービスのスケジュールを作成します。 次の例は、このアクションを自動化する 1 つのメソッドを示しています。
 >
 > ```PowerShell
 > # Get the OS image

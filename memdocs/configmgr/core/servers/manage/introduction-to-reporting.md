@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 25ccc3936d156a4d9b5442190ea957b2d1eaf1f6
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bfed31b820ac1f09b240122207b5bf27e432b10a
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699706"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607539"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Configuration Manager のレポートの概要
 
@@ -39,7 +39,7 @@ Configuration Manager では、SQL Server Reporting Services をプライマリ 
 
 - さまざまな種類のよく使われる形式でレポートをエクスポートします。  
 
-詳細については、「[SQL Server Reporting Services (SSRS) について](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)」を参照してください。
+詳細については、「[SQL Server Reporting Services (SSRS) について](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)」を参照してください。
 
 ## <a name="power-bi-report-server"></a>Power BI Report Server
 

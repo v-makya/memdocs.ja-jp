@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: eae605c067094665f2f6866e75fa8f9a94a5df52
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995009"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607727"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1806 の新機能
 
@@ -584,7 +584,7 @@ WSUS クリーンアップ ウィザードでは、ソフトウェアの更新�
 
 このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Summary of changes in Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701)」(Configuration Manager Current Branch バージョン 1806 での変更の概要) をご覧ください。
 
-Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell 1806 リリース ノート](/powershell/sccm/1806_release_notes?view=sccm-ps)を参照してください。
+Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell 1806 リリース ノート](/powershell/sccm/1806_release_notes)を参照してください。
 
 2018 年 10 月 24 日以降、コンソールで、[Configuration Manager Current Branch バージョン 1806 の更新プログラムのロールアップ](https://support.microsoft.com/help/4462978) (4462978) が利用できるようになりました。
 

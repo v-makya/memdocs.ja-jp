@@ -10,12 +10,12 @@ ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 3c31f97e2a494fa4b0d3e9e825a81b562859e5dd
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 7d9760a49815b9eb33c7886f4d9a8f9637dedd21
+ms.sourcegitcommit: 9f072da27aa64f46a9409470b5dac5bfac3a0fe5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240356"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468313"
 ---
 # <a name="import-configuration-data-with-configuration-manager"></a>Configuration Manager による構成データのインポート
 
@@ -28,8 +28,6 @@ Configuration Manager コンソールで構成基準と構成項目を作成す�
 - System Center 2012 Configuration Manager 以降からエクスポートされた構成データ。  
 
 - 外部で作成され、SML スキーマに従う構成データ。  
-
-  System Center 2012 Configuration Manager サイト サーバーの役割のコンプライアンスを管理するのに役立つ構成パックの例については、 [System Center 2012 Configuration Manager 構成パック](https://www.microsoft.com/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all)に関するページを参照してください。  
 
 構成基準をインポートするとき、構成基準で参照される一部またはすべての構成項目をキャビネット ファイルにも含める必要がある場合があります。 インポート処理中に、Configuration Manager は、構成基準で参照されるすべての構成項目がキャビネット ファイルにも含まれているかどうかや、既に Configuration Manager に存在するかどうかを確認します。 構成基準のインポートを試みたときに、その構成基準が参照する構成データが見つからない場合は、そのインポート処理は失敗します。  
 
@@ -48,9 +46,9 @@ Configuration Manager コンソールで構成基準と構成項目を作成す�
 ### <a name="import-configuration-data"></a>構成データのインポート  
 
 1.  Configuration Manager コンソールで、 **[資産とコンプライアンス]**  >  **[構成アイテム]** または **[構成基準]** の順にクリックします。
-2.  **[ホーム]** タブの **[作成]** グループで、 **[構成データのインポート]** をクリックします。  
-3.  **ファイルの選択** のページ、 **構成データのインポート ウィザード**, 、 をクリックして **追加**, 、し、次に、 **開く**  ダイアログ ボックスで、インポートする .cab ファイルを選択します。  
-4.  Configuration Manager コンソールでインポートした構成データを編集可能にする場合は、 **[インポートする構成項目と構成基準を含む新しいファイルを作成する]** チェックボックスをオンにします。  
+2.  **[ホーム]** タブの **[作成]** グループで、**[構成データのインポート]** をクリックします。  
+3.  **ファイルの選択]** のページ、 **構成データのインポート ウィザード**, 、] をクリックして **追加**, 、し、次に、 **開く** ] ダイアログ ボックスで、インポートする .cab ファイルを選択します。  
+4.  Configuration Manager コンソールでインポートした構成データを編集可能にする場合は、**[インポートする構成項目と構成基準を含む新しいファイルを作成する]** チェックボックスをオンにします。  
 5.  **[概要]** ページで、実行される操作を確認し、ウィザードを完了します。  
 
-インポートされた構成データは、 **[資産とコンプライアンス]** ワークスペースの **[コンプライアンス設定]** ノードに表示されます。  
+インポートされた構成データは、**[資産とコンプライアンス]** ワークスペースの **[コンプライアンス設定]** ノードに表示されます。  

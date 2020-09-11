@@ -10,12 +10,12 @@ ms.assetid: 42e80570-d637-41a4-97b7-ebf1f8975af3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a01b6a3dde9921af2f5486475b0defb0c869cccd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2513941ede51ec8af3dfd1776c31ac428d7260c6
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81691270"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606794"
 ---
 # <a name="get-help-from-fasttrack-for-co-management"></a>FastTrack から共同管理のサポートを受ける
 
@@ -25,7 +25,7 @@ FastTrack 組織は、共同管理の設定を含む、すべての種類の組�
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/How-to-Request-Assistance-from-FastTrack/player]
 
-FastTrack からのサポートを要求するには、まず、[FastTrack for Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security) に移動します。 **[サインイン]** を選択して、組織の ID を入力します。 認証の後、ダッシュボードに移動し、指示に従って **[Request for Assistance]\(サポートの要求\)** フォームを見つけます。
+FastTrack からのサポートを要求するには、まず、[FastTrack for Microsoft 365](https://www.microsoft.com/fasttrack/microsoft-365/security) に移動します。 **[サインイン]** を選択して、組織の ID を入力します。 認証の後、ダッシュボードに移動し、指示に従って **[Request for Assistance]\(サポートの要求\)** フォームを見つけます。
 
 送信内容が確認され、適切な FastTrack チームにルーティングされます。 適格性と特定のニーズに対応します。 
 
@@ -34,7 +34,7 @@ FastTrack for Microsoft 365 サイトには、エキスパートが作成した�
 
 ### <a name="make-a-fasttrack-request"></a>FastTrack の要求を行う
 
-1. 組織の ID とパスワードを使用して、[FastTrack for Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security) にサインインします。  
+1. 組織の ID とパスワードを使用して、[FastTrack for Microsoft 365](https://www.microsoft.com/fasttrack/microsoft-365/security) にサインインします。  
 
 2. [Welcome to FastTrack]\(FastTrack へようこそ\) セクションで、 **[Request FastTrack Assistance]\(FastTrack のサポートを要求する\)** を選択します。  
 

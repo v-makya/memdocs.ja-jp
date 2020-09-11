@@ -10,12 +10,12 @@ ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0b79e0ec67fa7c1d7ede0af1549c8cda4dd3ee3c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3dedef9ffe785ce7127fc371030cfd990d70e38
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81700040"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608388"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Updates Publisher でパブリケーションを管理する
 
@@ -83,11 +83,8 @@ Updates Publisher のリポジトリからパブリケーションをエクス�
 
 エクスポートの一部として依存するソフトウェア更新プログラムをエクスポート (インクルード) するオプションもあります。
 
-## <a name="rename-a-publication"></a>パブリケーションの名前を変更する
-パブリケーションの名前を変更するには、 **[パブリケーション] ワークスペース**からパブリケーションを選択し、リボンの **[パブリケーション]** タブから **[編集]** を選択します。
-
-## <a name="delete-a-publication"></a>パブリケーションを削除する
-パブリケーションを削除するには、 **[パブリケーション] ワークスペース**からパブリケーションを選択し、リボンの **[パブリケーション]** タブから **[削除]** を選択します。
+## <a name="delete-a-publication"></a>パブリケーションの削除
+パブリケーションを削除するには、**[パブリケーション] ワークスペース**からパブリケーションを選択し、リボンの **[パブリケーション]** タブから **[削除]** を選択します。
 
 Updates Publisher からパブリケーションを削除した後、そのパブリケーションに含まれていた更新プログラムは Updates Publisher のリポジトリで引き続き使用できます。
 

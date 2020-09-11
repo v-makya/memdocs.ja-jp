@@ -10,12 +10,12 @@ ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b52fe5a60899d7e871381d1a34a2360bbe68a36c
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 82b122f96806b6e3f77afccf8b8d4195c294b224
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820478"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608023"
 ---
 # <a name="bitlocker-settings-reference"></a>BitLocker 設定のリファレンス
 
@@ -56,7 +56,7 @@ Windows 8.1 デバイスの場合、 **[Drive encryption method and cipher stren
 - AES 128 ビット (既定)
 - AES 256 ビット
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy)」をご覧ください。
 
 #### <a name="windows-10-devices"></a>Windows 10 デバイス
 
@@ -72,7 +72,7 @@ Windows 10 デバイスの場合、 **[Drive encryption method and cipher streng
 >
 > Windows 10 を実行していないデバイスでリムーバブル ドライブを使用する必要がある場合は、AES-CBC を使用します。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMBLEncryptionMethodWithXts](/powershell/module/configurationmanager/new-cmblencryptionmethodwithxts?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMBLEncryptionMethodWithXts](/powershell/module/configurationmanager/new-cmblencryptionmethodwithxts)」をご覧ください。
 
 #### <a name="general-usage-notes-for-drive-encryption-and-cipher-strength"></a>ドライブの暗号化と暗号強度に関する使用上の一般的な注意事項
 
@@ -92,7 +92,7 @@ Windows PowerShell を使用してこのポリシーを作成する方法の詳�
 
 このポリシーを構成しない場合、BitLocker は、コンピューターの再起動時にメモリからシークレットを削除します。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMNoOverwritePolicy](/powershell/module/configurationmanager/new-cmnooverwritepolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMNoOverwritePolicy](/powershell/module/configurationmanager/new-cmnooverwritepolicy)」をご覧ください。
 
 ### <a name="validate-smart-card-certificate-usage-rule-compliance"></a>スマート カード証明書の使用規則の準拠を検証する
 
@@ -102,7 +102,7 @@ Windows PowerShell を使用してこのポリシーを作成する方法の詳�
 
 このポリシーを構成しない場合、BitLocker は、既定のオブジェクト識別子 `1.3.6.1.4.1.311.67.1.1` を使用して証明書を指定します。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMScCompliancePolicy](/powershell/module/configurationmanager/new-cmsccompliancepolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMScCompliancePolicy](/powershell/module/configurationmanager/new-cmsccompliancepolicy)」をご覧ください。
 
 ### <a name="organization-unique-identifiers"></a>組織の一意識別子
 
@@ -114,7 +114,7 @@ Windows PowerShell を使用してこのポリシーを作成する方法の詳�
 
 組織でより高度なセキュリティ対策が必要な場合は、 **[Identification]\(識別\)** フィールドを構成してください。 対象となるすべての USB デバイスでこのフィールドを設定し、この設定に適合させます。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMUidPolicy](/powershell/module/configurationmanager/new-cmuidpolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMUidPolicy](/powershell/module/configurationmanager/new-cmuidpolicy)」をご覧ください。
 
 ## <a name="os-drive"></a>OS ドライブ
 
@@ -144,7 +144,7 @@ Windows PowerShell を使用してこのポリシーを作成する方法の詳�
 >
 > - スリープ時にスタンバイ状態 (S1-S3) を許可する (バッテリ使用時)
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMBMSOSDEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsosdencryptionpolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMBMSOSDEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsosdencryptionpolicy)」をご覧ください。
 
 ### <a name="allow-enhanced-pins-for-startup"></a>拡張スタートアップ PIN を許可する
 
@@ -161,7 +161,7 @@ Windows PowerShell を使用してこのポリシーを作成する方法の詳�
 
 このポリシー設定を無効にした場合、または構成しない場合、BitLocker は拡張 PIN を使用しません。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMEnhancedPIN](/powershell/module/configurationmanager/new-cmenhancedpin?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMEnhancedPIN](/powershell/module/configurationmanager/new-cmenhancedpin)」をご覧ください。
 
 ### <a name="operating-system-drive-password-policy"></a>オペレーティング システム ドライブのパスワード ポリシー
 
@@ -177,7 +177,7 @@ Windows PowerShell を使用してこのポリシーを作成する方法の詳�
 
 このポリシー設定を有効にすると、ユーザーは管理者が定義した要件を満たすパスワードを構成できます。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMOSPassphrase](/powershell/module/configurationmanager/new-cmospassphrase?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMOSPassphrase](/powershell/module/configurationmanager/new-cmospassphrase)」をご覧ください。
 
 #### <a name="general-usage-notes-for-os-drive-password-policy"></a>OS ドライブのパスワード ポリシーに関する使用上の一般的な注意事項
 
@@ -197,7 +197,7 @@ BitLocker の回復後、Windows が起動したときにプラットフォー�
 
 このポリシー設定を無効にした場合、Windows によって、この状況でプラットフォームの検証データは更新されません。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMTpmAutoResealPolicy](/powershell/module/configurationmanager/new-cmtpmautoresealpolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMTpmAutoResealPolicy](/powershell/module/configurationmanager/new-cmtpmautoresealpolicy)」をご覧ください。
 
 ### <a name="pre-boot-recovery-message-and-url"></a>[プリブート回復メッセージと URL]
 
@@ -220,7 +220,7 @@ BitLocker で OS ドライブがロックされているときに、この設定
 > [!NOTE]
 > プリブートでは、一部の文字および言語はサポートされていません。 最初に、カスタム メッセージまたは URL をテストして、それがプリブート BitLocker 回復画面に正しく表示されることを確認してください。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMPrebootRecoveryInfo](/powershell/module/configurationmanager/new-cmprebootrecoveryinfo?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMPrebootRecoveryInfo](/powershell/module/configurationmanager/new-cmprebootrecoveryinfo)」をご覧ください。
 
 ### <a name="encryption-policy-enforcement-settings-os-drive"></a>Encryption policy enforcement settings (OS drive) (暗号化ポリシーの強制設定 (OS ドライブ))
 
@@ -236,7 +236,7 @@ Windows PowerShell を使用してこのポリシーを作成する方法の詳�
 
 ポリシーをただちに適用するには、猶予期間として `0` を設定します。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMUseOsEnforcePolicy](/powershell/module/configurationmanager/new-cmuseosenforcepolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMUseOsEnforcePolicy](/powershell/module/configurationmanager/new-cmuseosenforcepolicy)」をご覧ください。
 
 ## <a name="fixed-drive"></a>固定ドライブ
 
@@ -256,7 +256,7 @@ Windows PowerShell を使用してこのポリシーを作成する方法の詳�
 
 この設定を無効にした場合、ユーザーは固定データ ドライブを BitLocker で保護できなくなります。 BitLocker によって固定データ ドライブが暗号化された後にこのポリシーを無効にすると、BitLocker は固定データ ドライブの暗号化を解除します。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMBMSFDVEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsfdvencryptionpolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMBMSFDVEncryptionPolicy](/powershell/module/configurationmanager/new-cmbmsfdvencryptionpolicy)」をご覧ください。
 
 ### <a name="deny-write-access-to-fixed-drives-not-protected-by-bitlocker"></a>BitLocker で保護されていない固定ドライブへの書き込みアクセスを拒否する
 
@@ -272,7 +272,7 @@ Windows でデバイス上の固定ドライブにデータを書き込む場合
 
 この設定を構成しなかった場合、Windows はすべての固定データ ドライブを読み取りおよび書き込みアクセスでマウントします。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMFDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmfdvdenywriteaccesspolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMFDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmfdvdenywriteaccesspolicy)」をご覧ください。
 
 ### <a name="fixed-data-drive-password-policy"></a>固定データ ドライブのパスワード ポリシー
 
@@ -294,7 +294,7 @@ Windows PowerShell を使用してこのポリシーを作成する方法の詳�
 
 ポリシーが構成されていない場合、BitLocker では既定の設定でパスワードがサポートされます。 既定の設定には、パスワードの複雑さの要件は含まれず、必要とされるのは 8 文字のみです。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMFDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmfdvpassphrasepolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMFDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmfdvpassphrasepolicy)」をご覧ください。
 
 #### <a name="general-usage-notes-for-fixed-data-drive-password-policy"></a>固定データ ドライブのパスワード ポリシーに関する使用上の一般的な注意事項
 
@@ -318,7 +318,7 @@ Windows PowerShell を使用してこのポリシーを作成する方法の詳�
 
 ポリシーをただちに適用するには、猶予期間として `0` を設定します。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMUseFddEnforcePolicy](/powershell/module/configurationmanager/new-cmusefddenforcepolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMUseFddEnforcePolicy](/powershell/module/configurationmanager/new-cmusefddenforcepolicy)」をご覧ください。
 
 ## <a name="removable-drive"></a>リムーバブル ドライブ
 
@@ -348,7 +348,7 @@ Windows PowerShell を使用してこのポリシーを作成する方法の詳�
 
 この設定を無効にした場合、ユーザーはリムーバブル ドライブで BitLocker を使用できません。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMRDVConfigureBDEPolicy](/powershell/module/configurationmanager/new-cmrdvconfigurebdepolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMRDVConfigureBDEPolicy](/powershell/module/configurationmanager/new-cmrdvconfigurebdepolicy)」をご覧ください。
 
 ### <a name="deny-write-access-to-removable-drives-not-protected-by-bitlocker"></a>BitLocker で保護されていないリムーバブル ドライブへの書き込みアクセスを拒否する
 
@@ -369,7 +369,7 @@ Windows でデバイス上のリムーバブル ドライブにデータを書�
 > [!NOTE]
 > この設定は、 **[システム]**  >  **[リムーバブル記憶域へのアクセス]** のグループ ポリシー設定によって上書きできます。 グループ ポリシー設定の **[リムーバブル ディスク: 書き込みアクセス権の拒否]** を有効にすると、BitLocker はこの Configuration Manager 設定を無視します。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMRDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmrdvdenywriteaccesspolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMRDVDenyWriteAccessPolicy](/powershell/module/configurationmanager/new-cmrdvdenywriteaccesspolicy)」をご覧ください。
 
 ### <a name="removable-data-drive-password-policy"></a>リムーバブル データ ドライブのパスワード ポリシー
 
@@ -391,7 +391,7 @@ Windows PowerShell を使用してこのポリシーを作成する方法の詳�
 
 ポリシーが構成されていない場合、BitLocker では既定の設定でパスワードがサポートされます。 既定の設定には、パスワードの複雑さの要件は含まれず、必要とされるのは 8 文字のみです。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMRDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmrdvpassphrasepolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMRDVPassPhrasePolicy](/powershell/module/configurationmanager/new-cmrdvpassphrasepolicy)」をご覧ください。
 
 #### <a name="general-usage-notes-for-removable-data-drive-password-policy"></a>リムーバブル データ ドライブのパスワード ポリシーに関する使用上の一般的な注意事項
 
@@ -419,8 +419,8 @@ Windows PowerShell を使用してこのポリシーを作成する方法の詳�
 
 Windows PowerShell を使用してこれらのポリシーを作成する方法の詳細については、次をご覧ください。
 
-- [Set-CMBlmPlaintextStorage](/powershell/module/configurationmanager/set-cmblmplaintextstorage?view=sccm-ps)
-- [New-CMBMSClientConfigureCheckIntervalPolicy](/powershell/module/configurationmanager/new-cmbmsclientconfigurecheckintervalpolicy?view=sccm-ps)
+- [Set-CMBlmPlaintextStorage](/powershell/module/configurationmanager/set-cmblmplaintextstorage)
+- [New-CMBMSClientConfigureCheckIntervalPolicy](/powershell/module/configurationmanager/new-cmbmsclientconfigurecheckintervalpolicy)
 
 ### <a name="user-exemption-policy"></a>ユーザーの除外ポリシー
 
@@ -447,7 +447,7 @@ Windows PowerShell を使用してこれらのポリシーを作成する方法�
 > [!NOTE]
 > BitLocker は、コンピューターごとではなく、ユーザーごとに除外を管理します。 複数のユーザーが同じコンピューターにサインインし、1 人でも除外されていないユーザーがいると、BitLocker によってそのコンピューターは暗号化されます。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMBMSUserExemptionPolicy](/powershell/module/configurationmanager/new-cmbmsuserexemptionpolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMBMSUserExemptionPolicy](/powershell/module/configurationmanager/new-cmbmsuserexemptionpolicy)」をご覧ください。
 
 ### <a name="url-for-the-security-policy-link"></a>URL for the security policy link (セキュリティ ポリシーのリンクの URL)
 
@@ -459,8 +459,8 @@ Windows で**会社のセキュリティ ポリシー**としてユーザーに�
 
 この設定を無効にした場合、または構成しない場合、BitLocker でセキュリティ ポリシー リンクは表示されません。
 
-Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMMoreInfoUrlPolicy](/powershell/module/configurationmanager/new-cmmoreinfourlpolicy?view=sccm-ps)」をご覧ください。
+Windows PowerShell を使用してこのポリシーを作成する方法の詳細については、「[New-CMMoreInfoUrlPolicy](/powershell/module/configurationmanager/new-cmmoreinfourlpolicy)」をご覧ください。
 
 ## <a name="next-steps"></a>次の手順
 
-Windows PowerShell を使用してこれらのポリシー オブジェクトを作成する場合は、[New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps) コマンドレットを使用します。 このコマンドレットによって、指定したすべてのポリシーを含む BitLocker 管理ポリシー設定オブジェクトを作成できます。 ポリシー設定をコレクションに展開するには、[New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps) コマンドレットを使用します。
+Windows PowerShell を使用してこれらのポリシー オブジェクトを作成する場合は、[New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting) コマンドレットを使用します。 このコマンドレットによって、指定したすべてのポリシーを含む BitLocker 管理ポリシー設定オブジェクトを作成できます。 ポリシー設定をコレクションに展開するには、[New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment) コマンドレットを使用します。

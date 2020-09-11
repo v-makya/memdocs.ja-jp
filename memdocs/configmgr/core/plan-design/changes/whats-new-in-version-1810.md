@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a92d5a627d6cbe4e64ffa221ae00458f4227c844
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699842"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607758"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1810 の新機能
 
@@ -427,7 +427,7 @@ SMS プロバイダーで、WMI over HTTPS に対する読み取り専用の API
 
 このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Summary of changes in Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4482169)」(Configuration Manager Current Branch バージョン 1810 での変更の概要) をご覧ください。
 
-Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 1810 のリリース ノート](/powershell/sccm/1810-release-notes?view=sccm-ps)を参照してください。
+Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 1810 のリリース ノート](/powershell/sccm/1810-release-notes)を参照してください。
 
 2019 年 3 月 25 日以降、コンソールで次の更新プログラムのロールアップ (4488598) を利用できるようになりました: [Configuration Manager Current Branch バージョン 1810 の更新プログラムのロールアップ 2](https://support.microsoft.com/help/4488598)。 これは、以前の更新プログラムのロールアップ KB 4486457 に代わるものです。
 

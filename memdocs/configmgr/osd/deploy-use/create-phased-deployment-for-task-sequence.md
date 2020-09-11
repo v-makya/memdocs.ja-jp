@@ -10,12 +10,12 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: a14448c03596853be943440c0fab775ee1d19081
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 71e7f9c23b55beecc98bffb5da73465f0681a4a4
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820427"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606397"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>Configuration Manager で段階的展開を作成する
 
@@ -53,8 +53,8 @@ ms.locfileid: "88820427"
 
 バージョン 2002 以降では、次の Windows PowerShell コマンドレットを使用して、ソフトウェア更新プログラム用のフェーズとタスク シーケンスの段階的な展開を手動で構成します。
 
-- [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase?view=sccm-ps)
-- [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase?view=sccm-ps)
+- [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase)
+- [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase)
 
 ### <a name="criteria-for-success-of-the-first-phase"></a>最初のフェーズの成功の基準
 
@@ -118,9 +118,9 @@ ms.locfileid: "88820427"
 
 バージョン 2002 以降では、次の Windows PowerShell コマンドレットを使用してこのタスクを実行できます。
 
-- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment?view=sccm-ps)
-- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment?view=sccm-ps)
-- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequenceautophaseddeployment?view=sccm-ps)
+- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment)
+- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment)
+- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequenceautophaseddeployment)
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases"></a><a name="bkmk_manual"></a> 手動で構成したフェーズを使用して段階的展開を作成する
 <!--1358148-->
@@ -170,8 +170,8 @@ ms.locfileid: "88820427"
 
 バージョン 2002 以降では、次の Windows PowerShell コマンドレットを使用してこのタスクを実行できます。
 
-- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment?view=sccm-ps)
-- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment?view=sccm-ps)
+- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment)
+- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment)
 
 段階的展開を作成した後、そのプロパティを開いて変更します。  
 

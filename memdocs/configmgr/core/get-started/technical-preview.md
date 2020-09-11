@@ -2,7 +2,7 @@
 title: Technical Preview リリース
 titleSuffix: Configuration Manager
 description: Configuration Manager の新機能を体験する Technical Preview Branch について説明します。
-ms.date: 08/11/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432576"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564212"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager の Technical Preview
 
@@ -167,8 +167,6 @@ With each CB release, review and remove from this list for anything that's now a
 | 機能        | Technical Preview のバージョン |
 |----------------|---------------------------|
 | CMG を介した利用可能なアプリの改善 <!--7033501--> | [Tech Preview 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| テナントのアタッチ:管理センターのデバイス タイムライン <!--7141381--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| テナントのアタッチ:管理センターからの CMPivot <!--6024392--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | テナントのアタッチ:管理センターからスクリプトを実行する <!--6234688--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | クラウド管理ゲートウェイ コマンドレットの強化 <!--6978300--> | [Tech Preview 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
 | セットアップとアップグレードの失敗を Microsoft に報告する <!--5622909--> | [Tech Preview 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |

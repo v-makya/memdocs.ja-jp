@@ -10,12 +10,12 @@ ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 744abfcd36b2f162fffdc5e7f3e8c9258a617496
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 357b13b06bcfaabf6c22f68a3c21e498630cebf2
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699978"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608210"
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>アプリごとの VPN のパッケージ ファミリ名 (PFN) の検索
 
@@ -26,7 +26,7 @@ ms.locfileid: "88699978"
 
 ## <a name="find-a-pfn-for-an-app-thats-installed-on-a-windows-10-computer"></a>Windows 10 コンピューターにインストールされているアプリの PFN の検索
 
-作業しているアプリが既に Windows 10 コンピューターにインストールされている場合は、[Get-AppxPackage](/powershell/module/appx/get-appxpackage?view=win10-ps) PowerShell コマンドレットを使用して PFN を取得できます。
+作業しているアプリが既に Windows 10 コンピューターにインストールされている場合は、[Get-AppxPackage](/powershell/module/appx/get-appxpackage) PowerShell コマンドレットを使用して PFN を取得できます。
 
 Get-AppxPackage の構文は次のとおりです。
 

@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7efc775199a34a66a8cd4a83b85baccd4a3ab5cb
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0c2894bcdf80901171cceba96e7829793f899383
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699485"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606776"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Configuration Manager をサポートするオンプレミス インフラストラクチャのアップグレード
 
@@ -242,15 +242,15 @@ Configuration Manager は次のバージョンへの SQL Server の一括アッ�
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-SQL CE の互換性レベルとその設定方法の詳細については、「[ALTER DATABASE 互換性レベル (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017)」を参照してください。
+SQL CE の互換性レベルとその設定方法の詳細については、「[ALTER DATABASE 互換性レベル (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)」を参照してください。
 
 SQL Server のアップグレードについて詳しくは、次の SQL Server の記事をご覧ください。  
 
 - [SQL Server 2017 へのアップグレード](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [SQL Server 2016 へのアップグレード](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+- [SQL Server 2016 へのアップグレード](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
-- [SQL Server 2014 へのアップグレード](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [SQL Server 2014 へのアップグレード](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>サイト データベース サーバー上の SQL Server をアップグレードするには  
 

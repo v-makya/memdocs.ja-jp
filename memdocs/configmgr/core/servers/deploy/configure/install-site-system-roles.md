@@ -10,12 +10,12 @@ ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 30b57de75e637aa083070832783647b8ad35b4a7
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 8cb16b6fd703142e0c3c6400403207976b4208f5
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700533"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607561"
 ---
 # <a name="install-site-system-roles-for-configuration-manager"></a>Configuration Manager のサイト システム役割のインストール
 
@@ -56,7 +56,7 @@ Configuration Manager では、**サイト システムのインストール ア
 1. ウィザードを完了します。 特定のロールには、追加のページが表示される場合があります。 詳細については、[サイト システムの役割の構成オプション](configuration-options-for-site-system-roles.md)に関するページを参照してください。
 
 > [!TIP]
-> Windows PowerShell コマンドレットの **New-CMSiteSystemServer** を使用すると、この手順と同じ機能が実行されます。 詳細については、「[New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)」を参照してください。
+> Windows PowerShell コマンドレットの **New-CMSiteSystemServer** を使用すると、この手順と同じ機能が実行されます。 詳細については、「[New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver)」を参照してください。
 
 ## <a name="install-roles-on-a-new-site-system-server"></a><a name="bkmk_createnew"></a> 新しいサイト システム サーバーに役割をインストールする
 
@@ -76,7 +76,7 @@ Configuration Manager では、**サイト システムのインストール ア
 1. ウィザードを完了します。 特定のロールには、追加のページが表示される場合があります。 詳細については、[サイト システムの役割の構成オプション](configuration-options-for-site-system-roles.md)に関するページを参照してください。
 
 > [!TIP]
-> Windows PowerShell コマンドレットの **New-CMSiteSystemServer** を使用すると、この手順と同じ機能が実行されます。 詳細については、「[New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver?view=sccm-ps)」を参照してください。
+> Windows PowerShell コマンドレットの **New-CMSiteSystemServer** を使用すると、この手順と同じ機能が実行されます。 詳細については、「[New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: c8159928e5fe3e8524c3282cfd1eb543dc9537da
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7623663e340d964593854883fa588484e239b4d0
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696499"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607865"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>Configuration Manager ラボの設定
 
@@ -45,7 +45,7 @@ ms.locfileid: "88696499"
 
     -   **SQL 照合順序** クラスとしての **SQL_Latin1_General_CP1_CI_AS** 。  
 
-    -   **SQL 認証**ではなく、 [Windows 認証](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15)ではなく、 is required.  
+    -   **SQL 認証**ではなく、 [Windows 認証](/sql/relational-databases/security/choose-an-authentication-mode)ではなく、 is required.  
 
     -   **専用の SQL Server インスタンス**が必要です。  
 

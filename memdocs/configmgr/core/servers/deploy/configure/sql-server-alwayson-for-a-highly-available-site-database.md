@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c9cf8e74793213e47dd503de1fdf1284bdc7d6a9
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5e9c911929dd5a99c6b63beed9c6b221e69e9b25
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699230"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607553"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager で SQL Server Always On 可用性グループを使用するための準備
 
@@ -315,7 +315,7 @@ MSF Enabled : 1 (DWORD)
 
 ### <a name="unsupported-sql-server-options-and-configurations"></a>サポートされていない SQL Server のオプションと構成
 
-- **基本的な可用性グループ**:SQL Server 2016 Standard エディションで導入された基本的な可用性グループでは、セカンダリ レプリカに対する読み取りアクセスがサポートされていません。 構成にはこのアクセスが必要です。 詳しくは、[基本的な SQL Server 可用性グループ](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017)に関するページをご覧ください。  
+- **基本的な可用性グループ**:SQL Server 2016 Standard エディションで導入された基本的な可用性グループでは、セカンダリ レプリカに対する読み取りアクセスがサポートされていません。 構成にはこのアクセスが必要です。 詳しくは、[基本的な SQL Server 可用性グループ](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups)に関するページをご覧ください。  
 
 - **フェールオーバー クラスター インスタンス**:フェールオーバー クラスター インスタンスは、Configuration Manager で使用するレプリカではサポートされていません。 詳しくは、「[AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)」をご覧ください。  
 

@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 78150c497757c1a3f0b65a870c35516983711d9a
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 950146c694addc5be0b351278a381ff4839e7bca
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193829"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607783"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1902 の新機能
 
@@ -479,7 +479,7 @@ Configuration Manager コンソールをインストールするときに必要�
 
 このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Summary of changes in Configuration Manager current branch, version 1902 (Configuration Manager Current Branch バージョン 1902 での変更の概要)](https://support.microsoft.com/help/4498910)」をご覧ください。
 
-Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 1902 のリリース ノート](/powershell/sccm/1902-release-notes?view=sccm-ps)を参照してください。
+Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 1902 のリリース ノート](/powershell/sccm/1902-release-notes)を参照してください。
 
 2019 年 6 月 17 日以降、コンソールで次の更新プログラムのロールアップ (4500571) を利用できるようになりました: [Configuration Manager Current Branch バージョン 1902 の更新プログラムのロールアップ](https://support.microsoft.com/help/4500571)。
 
