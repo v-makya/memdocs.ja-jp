@@ -2,7 +2,7 @@
 title: バージョン 2006 の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager Current Branch のバージョン 2006 で導入された変更点および新機能について説明します。
-ms.date: 09/01/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c061236202e685a6b59eeca3254a80cc1ddabf9
-ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
+ms.openlocfilehash: 7e67773c359291db3c537ac0ed8fe6ce6fbcfc1f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89385364"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607657"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 2006 の新機能
 
@@ -32,12 +32,26 @@ Configuration Manager の新機能をすべて利用するには、サイトを�
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a>Microsoft Endpoint Manager テナントのアタッチ
 
+### <a name="device-timeline-in-the-admin-center"></a><a name="bkmk_timeline"></a> 管理センターのデバイス タイムライン
+<!--7220536, CM7141381-->
+Configuration Manager で、テナントのアタッチを使用してデバイスを Microsoft Endpoint Manager と同期すると、イベントのタイムラインを確認できるようになります。 このタイムラインにはそのデバイス上での過去の活動が表示され、問題のトラブルシューティングに役立ちます。 詳細については、[管理センターのデバイス タイムライン](../../../tenant-attach/timeline.md)に関する記事をご覧ください。
+
+### <a name="resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> 管理センターのリソース エクスプローラー
+<!--6479284-->
+Microsoft エンドポイント管理の管理センターから、リソース エクスプローラーを使用して、アップロードされた Configuration Manager デバイスのハードウェア インベントリを表示できます。 詳細については、「[テナントのアタッチ:管理センターのリソース エクスプローラー](../../../tenant-attach/resource-explorer.md)」を参照してください。
+
+### <a name="cmpivot-from-the-admin-center"></a><a name="bkmk_cmpivot"></a> 管理センターからの CMPivot
+<!--6024392-->
+CMPivot の機能を、Microsoft エンドポイント マネージャー管理センターに導入できます。 Helpdesk などの追加のペルソナが、ConfigMgr マネージド デバイスそれぞれに対してクラウドからリアルタイムのクエリを開始して、結果を管理センターに返すことができるようになりました。 これにより、CMPivot の従来の利点すべてを利用して、IT 管理者やその他の指定されたペルソナが環境内のデバイスの状態をすばやく評価し、アクションを実行することが可能になります。
+
+管理センターからの CMPivot の詳細については、[CMPivot の前提条件](../../../tenant-attach/cmpivot-start.md)、[CMPivot の概要](../../../tenant-attach/cmpivot-overview-attached.md)、[CMPivot のサンプル スクリプト](../../../tenant-attach/cmpivot-samples-attached.md)に関する記事をご覧ください。
+
 ### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> テナントのアタッチ:Microsoft Endpoint Manager admin center の Microsoft Defender ウイルス対策ポリシー
 <!--4812909-->
 Microsoft エンドポイント マネージャー コンソールで Microsoft Defender ウイルス対策ポリシーを作成し、構成マネージャー コレクションに展開できるようになりました。 詳細な手順や使用可能な設定などについて詳しくは、次の記事を参照してください。
 - [テナントのアタッチ:管理センターから Microsoft Defender ATP に構成マネージャー クライアントをオンボードする (プレビュー)](../../../tenant-attach/atp-onboard.md)
 - [テナントのアタッチ:管理センターからエンドポイント セキュリティ ウイルス対策ポリシーを展開する (プレビュー)](../../../tenant-attach/deploy-antivirus-policy.md)
-- [Microsoft Intune のテナントにアタッチされたデバイスの Microsoft Defender ウイルス対策ポリシーの設定](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)。 
+- [Microsoft Intune のテナントにアタッチされたデバイスの Microsoft Defender ウイルス対策ポリシーの設定](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)。
 
 ### <a name="install-applications-from-the-admin-center"></a>管理センターからアプリケーションをインストールする
 <!--7518897, 6024389-->
@@ -336,7 +350,7 @@ Starting with this version, the following features are no longer [pre-release](.
 ### Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956
 -->
 
-Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 2006 のリリース ノート](/powershell/sccm/2006-release-notes?view=sccm-ps)を参照してください。
+Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell バージョン 2006 のリリース ノート](/powershell/sccm/2006-release-notes)を参照してください。
 
 管理サービスの REST API の変更に関する詳細については、[管理サービスのリリース ノート](../../../develop/adminservice/release-notes.md#bkmk_2006)を参照してください。
 

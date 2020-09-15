@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f52d6956cf860de8e45ac4e532500d32bcf077ba
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3e618a8a0db81ad870c5aeedc89b01ba6089a0f8
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074505"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607930"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-configuration-manager"></a>Configuration Manager の Technical Preview 1512 の機能
 
@@ -81,7 +81,7 @@ Technical Preview 1512 以降、Configuration Manager を Microsoft Intune と�
 
          たとえば、管理者によって設定され、ユーザーが変更を許可されていない Windows 10 の Windows Defender の設定を次に示します。  
 
-         ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
+         ![Windows Defender - サンプルの自動送信](../../core/get-started/media/TechRef_WinDefender.png)  
 
     さらに、Endpoint Protection マルウェア対策ポリシーの [除外の設定] セクションの既存の **[ファイルとフォルダーを除外する]** 設定が改善され、デバイスを除外できるようになりました。 たとえば、 **\device\mvfs** を除外するよう指定できます (Multiversion File System の場合)。 ポリシーはデバイスのパスを検証しません。Endpoint Protection のポリシー設定は、デバイスの文字列を解釈できるクライアントのマルウェア対策エンジンに提供されます。  
 

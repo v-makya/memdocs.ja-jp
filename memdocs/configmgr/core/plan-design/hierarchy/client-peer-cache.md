@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c302e839c2a41ba27d160db24928f7e202de78dc
-ms.sourcegitcommit: 2cafbba6073edca555594deb99ae29e79cd0bc79
+ms.openlocfilehash: 4d0bd136278053ded38d0d6ed4cfe4059ffe3037
+ms.sourcegitcommit: 0ec6d8dabb14f20b1d84f7b503f1b03aac2a30d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82110187"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479316"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>構成マネージャー クライアントのピア キャッシュ
 
@@ -54,7 +54,7 @@ ms.locfileid: "82110187"
 
 ピア キャッシュを有効にするには、[クライアント設定](#bkmk_settings)をコレクションに展開します。 すると、そのコレクションのメンバーは、同じ境界グループ内の他のクライアント用のピア キャッシュ ソースとして機能します。  
 
-- ピア コンテンツ ソースとして動作するクライアントは、状態メッセージを利用し、キャッシュされている利用可能なコンテンツの一覧を管理ポイントに送信します。
+- ピア コンテンツ ソースとして動作するクライアントは、状態メッセージを利用し、キャッシュされている利用可能なコンテンツの一覧を管理ポイントに送信します。 また、ピア コンテンツ ソースのクライアントは、そのローカル キャッシュからコンテンツを削除するときにも管理ポイントに状態メッセージを送信します。
 
    > [!NOTE]
    > 該当するピア コンテンツ ソース状態メッセージの一覧は「[Configuration Manager の状態メッセージ](state-messaging-system-center-configuration-manager.md#7200-state_topictype_super_peer_update_cache_map)」を参照してください (特に、ID が 7200、7201、7202、7203 の状態メッセージ)。

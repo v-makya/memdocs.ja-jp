@@ -10,12 +10,12 @@ manager: dougeby
 ms.date: 09/06/2019
 ms.topic: how-to
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 88c8b34437ba52e700ef97885aafed40734a0f32
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 50f606f008c52470b1742840fcde391f1030455c
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776958"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606820"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Configuration Manager のワークロードを Intune に切り替える方法
 
@@ -43,7 +43,7 @@ ms.locfileid: "84776958"
 
 4. **[ステージング]** タブに移動し、必要に応じて、ワークロードの **[パイロット コレクション]** を変更します。
   
-   ![共同管理プロパティ ページの [ワークロード] タブのスクリーンショット](media/3555750-co-management-staging-tab.png)
+   ![共同管理プロパティ ページの [ステージング] タブのスクリーンショット](media/3555750-co-management-staging-tab.png)
 
 > [!Important]  
 > - ワークロードを切り替える前に、それに対応するワークロードが Intune で適切に構成され、展開されていることを確認します。 デバイス用の管理ツールのいずれかでワークロードが常に管理されていることを確認します。
@@ -60,7 +60,7 @@ ms.locfileid: "84776958"
 
 3. **[ワークロード]** タブに切り替えます。既定では、すべてのワークロードは **[Configuration Manager]** 設定に設定されています。 ワークロードを切り替えるには、そのワークロードのスライダー コントロールを目的の設定まで動かします。  
 
-    ![共同管理プロパティ ページの [ワークロード] タブのスクリーンショット](media/properties-workloads.png)
+    ![共同管理プロパティ ページの [ワークロード] タブのスクリーンショット (バージョン 1902)](media/properties-workloads.png)
 
     - **Configuration Manager**:Configuration Manager では引き続きこのワークロードが管理されます。  
 

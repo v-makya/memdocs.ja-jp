@@ -4,23 +4,24 @@ ms.date: 05/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
+description: MMS 2019 docathon の情報とルール
 ms.assetid: 8fe2ecfc-f5c1-4fa6-8703-245339400723
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: c6e4c0f7c6a1be519a33343508da3bd72cd2cd48
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 91430688fd2af93e5d5b5ce7eb0cbc6358388ea4
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695581"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607835"
 ---
 # <a name="mms-2019-docathon"></a>MMS 2019 Docathon
 
 Midwest Management Summit (MMS) 2019 の開催中、Configuration Manager と Microsoft Intune の Microsoft コンテンツ チームは Docathon を行っています。 5 月 6 日月曜日の [Docs.microsoft.com ハンズオン ラボ](https://sched.co/N6fd) セッションに参加するのであれば、その時が Microsoft ライターからのサポートを受けて、コントリビューションに取り組むときです。 Docathon は会議全体で行われ、登録した MMS 2019 のすべての出席者が参加できます。
 
-どうして参加すべきなのでしょうか? docs.microsoft.com は、GitHub を利用した Microsoft 製品ドキュメント用のオープンソース プラットフォームです。 Microsoft は、すべてのユーザーがドキュメントに投稿することをお勧めしています。 投稿すると、プラットフォームのすべての記事の共同作成者の一覧でお客様が認識されます。 以下のコントリビューションは、コミュニティで提供できる種類の一部です。
+どうして参加すべきなのでしょうか?  docs.microsoft.com は、GitHub を利用した Microsoft 製品ドキュメント用のオープンソース プラットフォームです。 Microsoft は、すべてのユーザーがドキュメントに投稿することをお勧めしています。 投稿すると、プラットフォームのすべての記事の共同作成者の一覧でお客様が認識されます。 以下のコントリビューションは、コミュニティで提供できる種類の一部です。
 
 - 入力ミス
 - 説明
@@ -40,7 +41,7 @@ Midwest Management Summit (MMS) 2019 の開催中、Configuration Manager と Mi
 
 - 2 要素認証を有効にする  
 
-#### <a name="additional-considerations"></a>その他の考慮事項
+#### <a name="additional-considerations"></a>その他の注意点
 
 - オープンソース コントリビューションに関する会社のポリシーを確認する  
 
@@ -71,15 +72,15 @@ Midwest Management Summit (MMS) 2019 の開催中、Configuration Manager と Mi
 > Git と VSCode でのより複雑なワークフローに関心がある場合は、「[コンテンツ オーサリング ツールのインストール](/contribute/get-started-setup-tools)」を参照してください。 かつ/または Aaron または Erik にサポートを依頼してください。 次のアクションは、次のより複雑なワークフローを使用する理由の一部です。
 >
 > - 新しい記事の作成
-> - イメージの追加
+> - 画像の追加
 > - 文字列の検索と置換 (正規表現を含む)
 > - より大きい、より複雑な変更  
 
 ## <a name="determine-your-goals"></a>目標の決定
 
-このイベントにおける自分の目標を考え、計画することを始めます。 何を実現したいですか?
+このイベントにおける自分の目標を考え、計画することを始めます。 何を実現したいですか? 
 
-- スコープ内のリポジトリで既存の問題を調べます。 **good-first-issue** や **help-wanted** などのラベルで、適切な出発点を識別できます。 これらの問題のいずれかに取り組む場合は、 **#MMS2019Docathon** と @author のタグを付けて、問題をあなたに割り当てることを依頼するようにコメントします。 つまり、これを[自分のものだと主張します](https://www.merriam-webster.com/words-at-play/word-origin-dibs)。 必要なだけこのプロセスを繰り返します。  
+- スコープ内のリポジトリで既存の問題を調べます。 **good-first-issue** や **help-wanted** などのラベルで、適切な出発点を識別できます。 これらの問題のいずれかに取り組む場合は、**#MMS2019Docathon** と @author のタグを付けて、問題をあなたに割り当てることを依頼するようにコメントします。 つまり、これを[自分のものだと主張します](https://www.merriam-webster.com/words-at-play/word-origin-dibs)。 必要なだけこのプロセスを繰り返します。  
     たとえば、Aaron が記事の作成者の SCCMDocs の場合: `@aczechowski I'm claiming this issue for #MMS2019Docathon`
 
 - 記事の問題のことを知っていますが、まだ登録されているフィードバックがありません。 つまり、記事の下部の「**フィードバック**」セクションに何もないということです。 新しい問題を登録して、上述と同じ手順を使って要求します。  
@@ -113,7 +114,7 @@ Midwest Management Summit (MMS) 2019 の開催中、Configuration Manager と Mi
 
 大賞の受賞者は次の賞品を受け取ります。
 
-- [MMS Jazz Edition](https://mmsmoa.com/sessions/jazz-edition.html) (MMS 運営委員会の敬称) への登録パス、$1799 の価値!
+- [MMS Jazz Edition](https://mmsmoa.com/sessions/jazz-edition.html) (MMS 運営委員会の敬称) への登録パス、$1799 の価値! 
 - Yeti Rambler ブランドの 30 オンス タンブラー
 - PopSocket ブランドの車載ホルダー + グリップ
 
@@ -252,6 +253,6 @@ Microsoft Cloud + AI 開発者リレーションシップのコンテンツと M
 
 13. プライバシー
 
-    Microsoft では、お客様のプライバシーの保護に努めています。 Microsoft は、Microsoft の製品、アップグレード、拡張機能に関する重要な情報を通知し、その他の Microsoft の製品とサービスに関する情報を送信するために、お客様がこのフォームで提供した情報を使用します。 Microsoft は、お客様が要求したサービスまたはトランザクションを完了する必要がある場合、または法律で要求される場合を除き、お客様の許可なく、お客様が提供した情報を第三者と共有することはありません。 Microsoft は、個人情報の保護に努めています。 セキュリティに関するさまざまなテクノロジおよび手順を駆使して、不正なアクセス、利用、または開示から個人情報を保護します。 お客様の個人情報は、上述の条件下以外で、お客様の許可なく、社外と共有されることは決してありません。
+    Microsoft では、お客様のプライバシーの保護に努めています。 Microsoft は、Microsoft の製品、アップグレード、拡張機能に関する重要な情報を通知し、その他の Microsoft の製品とサービスに関する情報を送信するために、お客様がこのフォームで提供した情報を使用します。 Microsoft は、お客様が要求したサービスまたはトランザクションを完了する必要がある場合、または法律で要求される場合を除き、お客様の許可なく、お客様が提供した情報を第三者と共有することはありません。 Microsoft は、お客様の個人情報のセキュリティ保護に努めています。 お客様の個人情報を不正アクセス、不正利用、漏洩から守るため、セキュリティに関してさまざまな技術および手続きを採用しています。 お客様の個人情報は、上述の条件下以外で、お客様の許可なく、社外と共有されることは決してありません。
 
     Microsoft がこの声明を忠実に守っていないと考える場合は、privrc@microsoft.com に電子メールを送信するか、Microsoft Privacy Response Center (Microsoft Corporation, One Microsoft Way, Redmond, WA 98052) に郵送することで、Microsoft にお問い合わせください。

@@ -5,12 +5,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
 ms.date: 08/11/2020
-ms.openlocfilehash: a61bf84a872458f37826c3de07ede05b1b658f0c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b0c25174873e00cf23dacd2c77208775f1fb1ced
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127310"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89644333"
 ---
 <!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
 
@@ -61,6 +61,6 @@ ms.locfileid: "88127310"
 
 1. **[ステージング]** ページで、**パイロット Intune** に設定された各ワークロードのパイロット コレクションを指定します。
 
-   ![Intune 自動登録の指定 ](../media/3555750-co-management-onboarding-staging.png)
+   ![共同管理構成ウィザードの [ステージング] ページでパイロット コレクションを指定する](../media/3555750-co-management-onboarding-staging.png)
 
 1. 共同管理を有効にするには、ウィザードを終了します。

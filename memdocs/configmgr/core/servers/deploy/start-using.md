@@ -9,12 +9,13 @@ ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7d12116cc3c2b2e05d1fc6e0a793b09380722572
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+description: Configuration Manager サイト サーバーと役割をインストールするための記事へのリンク。
+ms.openlocfilehash: f0a52186b1ca42032903805ab394bf58d570930b
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81701870"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606178"
 ---
 # <a name="deploy-servers-and-roles"></a>サーバーおよび役割の展開
 

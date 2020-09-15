@@ -10,12 +10,12 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: feb9f4206df65ee34228577a9e589ddd1be72870
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 11a7330220ed1aa8f4c3f813418ea86e59e0e1fc
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127251"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607999"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Configuration Manager でのデバイスの再起動通知
 
@@ -51,7 +51,7 @@ Windows のトースト通知では、デバイスを再起動する必要があ
 
 ソフトウェア センターは次の最終カウントダウン通知を表示します。ユーザーが通知を閉じたり、再通知を選択したりすることはできません。
 
-:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="ソフトウェア センターの最終カウントダウン通知":::
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="ソフトウェア センターの最後の再起動カウントダウン":::
 
 バージョン 1906 以降では、保留中の再起動までの時間が 24 時間未満になるまで、再起動通知の進行状況バーはユーザーに対して表示されません。
 
@@ -223,7 +223,7 @@ _バージョン 1906 以降_
 
 このクライアント設定を構成すると、トースト通知からの再起動が必要な、すべての必要な展開のユーザー エクスペリエンスが変更されます。
 
-:::image type="content" source="media/3555947-restart-toast-initial.png" alt-text="再起動が必要 というトースト通知":::
+:::image type="content" source="media/3555947-restart-toast-initial.png" alt-text=""再起動が必要" というトースト通知":::
 
 さらに詳細なソフトウェア センターのダイアログ ウィンドウになります。
 
@@ -237,11 +237,11 @@ _バージョン 1906 以降_
 
 - トーストではなく、ソフトウェア センターのダイアログ ウィンドウを使用したときの一時的な通知:
 
-    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="再通知ボタンのある保留中再起動のソフトウェア センター通知":::
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="再通知ボタンのある保留中再起動のソフトウェア センター通知 (バージョン 1902)":::
 
 一時的な通知の後でユーザーが再起動を行わない場合は、閉じることができない最終的なカウントダウン通知が表示されます。 最終通知が表示されるタイミングは、次のクライアント設定に基づきます: **[ユーザーがログオフするかコンピューターを再起動するまでの時間を知らせる、ユーザーが閉じることのできないダイアログ ボックスを表示する (分)]** 。 たとえば、設定が 60 の場合、再起動が強制される前の 1 時間、最終通知がユーザーに対して表示されます。
 
-:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="ソフトウェア センターの最終カウントダウン通知":::
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="ソフトウェア センターの最終カウントダウン通知 (バージョン 1902)":::
 
 以下の設定は、コンピューターに適用される最短の[メンテナンス期間](../manage/collections/use-maintenance-windows.md)より短い期間にする必要があります。
 

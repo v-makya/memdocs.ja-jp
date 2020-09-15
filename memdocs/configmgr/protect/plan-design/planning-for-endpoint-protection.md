@@ -9,12 +9,13 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2c733ef03482ddfc1f3e6502d7f5fe8ae0d20b76
-ms.sourcegitcommit: f3f2632df123cccd0e36b2eacaf096a447022b9d
+description: マルウェア対策ポリシーと Windows ファイアウォールのセキュリティを計画します
+ms.openlocfilehash: 2e3904b7b7232e92fd4a246d2e0519ef32fb67f6
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85590509"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606835"
 ---
 # <a name="planning-for-endpoint-protection-in-configuration-manager"></a>Configuration Manager の Endpoint Protection の計画
 
@@ -34,7 +35,7 @@ Configuration Manager で Endpoint Protection を使用すると、次のよう�
 
 -   クライアント コンピューターでマルウェアが検出された場合は、電子メールによる通知送信、コンソール内の監視機能の使用、およびレポートの表示を行うことで管理ユーザーに通知することができます。  
 
-Windows 10 コンピューターでは、Endpoint Protection 管理のために追加のクライアントは不要です。 Windows 8.1 およびそれ以前のコンピューターでは、Endpoint Protection をインストールすると、Configuration Manager クライアントに加え、独自のクライアントもインストールされます。 Endpoint Protection クライアントには、次の機能があります。  
+Windows 10 コンピューターでは、Endpoint Protection 管理のために追加のクライアントは不要です。 Windows 8.1 およびそれ以前のコンピューターでは、Endpoint Protection により、構成マネージャー クライアントに加え、独自のクライアントもインストールされます。 Endpoint Protection クライアントには、次の機能があります。  
 
 -   マルウェアとスパイウェアの検出と修復  
 
@@ -55,7 +56,7 @@ Windows 10 コンピューターでは、Endpoint Protection 管理のために�
 
 ## <a name="managing-malware-with-endpoint-protection"></a>Endpoint Protection によるマルウェアの管理  
 
-Configuration Manager の Endpoint Protection を使用すれば、Endpoint Protection クライアント構成用の設定を含むマルウェア対策ポリシーを作成することができます。 その後、このマルウェア対策ポリシーをクライアント コンピューターに展開し、 **[監視]** ワークスペースの **[Endpoint Protection のステータス]** ノードで監視するか、Configuration Manager レポートを使って監視できます。  
+Configuration Manager の Endpoint Protection を使用すれば、Endpoint Protection クライアント構成用の設定を含むマルウェア対策ポリシーを作成することができます。 その後、このマルウェア対策ポリシーをクライアント コンピューターに展開し、**[監視]** ワークスペースの **[Endpoint Protection のステータス]** ノードで監視するか、Configuration Manager レポートを使って監視できます。  
 
  追加情報:  
 

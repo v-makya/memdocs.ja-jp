@@ -10,12 +10,12 @@ ms.assetid: 36385bea-f05e-4300-947f-cb3927b3bac5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6bddf46df63eac70a536faaee04a2ac7243e534a
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 7302262c0da5f48bae83f5194ce41206055ae94d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128275"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608354"
 ---
 # <a name="troubleshoot-cmpivot"></a>CMPivot のトラブルシューティング
 
@@ -49,7 +49,7 @@ CAS から CMPivot を実行すると、プライマリ サイトとの通信の
 
 次に、CMPivot ウィンドウで ID を探します。 この ID は `ClientOperationID` です。
 
-![ClientOperationID が強調表示されている CMPivot ウィンドウ](media/cmpivot-client-operationid-1902.png)
+![ClientOperationID が強調表示されている CMPivot ウィンドウ (バージョン 1902)](media/cmpivot-client-operationid-1902.png)
 
 ClientAction テーブルから `TaskID` を検索します。 `TaskID` は ClientAction テーブルの `UniqueID` に対応しています。
 

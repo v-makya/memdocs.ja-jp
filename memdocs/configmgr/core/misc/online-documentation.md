@@ -9,12 +9,13 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b598cfad1d3a73f77e91bf3b41baab60c6c3616
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+description: Configuration Manager ヘルプ ドキュメントの追加リンク
+ms.openlocfilehash: 00ac9ad91739a4144e3b8a4e44d6e5d31e8abada
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819696"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607823"
 ---
 # <a name="online-documentation-for-configuration-manager"></a>Configuration Manager のオンライン ドキュメント
 
@@ -36,11 +37,11 @@ Configuration Manager の Current Branch のオンライン ドキュメント�
 
 - [Configuration Manager でのエンタープライズ オペレーティング システムの管理](../../osd/understand/introduction-to-operating-system-deployment.md)  
 
-- [Configuration Manager でのアプリケーションの展開と管理](../../apps/deploy-use/deploy-applications.md)  
+- [Configuration Manager によるアプリケーションの展開と管理](../../apps/deploy-use/deploy-applications.md)  
 
 - [Configuration Manager でのソフトウェア更新プログラムの展開と管理](../../sum/understand/software-updates-introduction.md)  
 
-- [Configuration Manager でのデバイス コンプライアンスの確認](../../compliance/understand/ensure-device-compliance.md)  
+- [Configuration Manager を使用したデバイス コンプライアンスの確認](../../compliance/understand/ensure-device-compliance.md)  
 
 - [Configuration Manager でのデータとサイト インフラストラクチャの保護](../../protect/understand/protect-data-and-site-infrastructure.md)  
 
@@ -56,7 +57,7 @@ Configuration Manager の Current Branch のオンライン ドキュメント�
 
 詳細については、「[Configuration Manager の使用に関するヘルプの検索](../understand/find-help.md)」を参照してください。
 
-### <a name="accessibility"></a>アクセシビリティ
+### <a name="accessibility"></a>ユーザー補助
 
 詳細については、[Configuration Manager コンソールのユーザー補助機能](../understand/accessibility-features.md)に関する記事を参照してください。
 
@@ -100,10 +101,10 @@ Configuration Manager の Current Branch のオンライン ドキュメント�
 
 - [System Center 2012 Configuration Manager のテクニカル文書](/previous-versions/system-center/system-center-2012-R2/hh531521\(v=technet.10\))  
 
-### <a name="accessibility"></a>アクセシビリティ
+### <a name="accessibility"></a>ユーザー補助
 
 Configuration Manager を障碍のある方にとってより使いやすくするための機能、製品、サービスについては、「[Configuration Manager のユーザー補助機能](/previous-versions/system-center/system-center-2012-R2/jj553406\(v=technet.10\))」を参照してください。
 
-### <a name="downloadable-documentation"></a>ダウンロード可能なドキュメント
+### <a name="downloadable-documentation"></a>ドキュメントのダウンロード
 
 System Center 2012 R2 Configuration Manager テクニカル ドキュメントのコピーは、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=29256)からダウンロードできます。

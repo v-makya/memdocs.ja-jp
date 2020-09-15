@@ -2,7 +2,7 @@
 title: リアルタイム データ用 CMPivot
 titleSuffix: Configuration Manager
 description: Configuration Manager でクライアントに対してクエリをリアルタイムで実行するために CMPivot を使用する方法について学習します。
-ms.date: 08/11/2020
+ms.date: 09/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 11b5a58a6d9501b0368fcb0b47bf31df1bd8a6af
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fa96d09302b9b4cd908880e97e1735fff5f43743
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700584"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643575"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>Configuration Manager でのリアルタイム データ用の CMPivot
 
@@ -188,7 +188,8 @@ CMPivot ウィンドウには、次の要素があります。
 
    - 結果ウィンドウ内の行の合計数。 たとえば、 `1 objects` と記述します。  
 
-
+> [!TIP]
+> クライアントで現在の CMPivot クエリを再実行するには、**Ctrl** キーを押しながら **[実行]** をクリックします。
 
 ## <a name="example-scenarios"></a>シナリオ例
 

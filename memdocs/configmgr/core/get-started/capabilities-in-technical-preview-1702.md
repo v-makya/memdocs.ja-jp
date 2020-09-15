@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 7a4c42891276b36fd888f0f70495bdcd504f23a1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: e9fa71060b8125b7d0872a40d197f1c423217bad
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693014"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607940"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-configuration-manager"></a>Configuration Manager の Technical Preview 1702 の機能
 
@@ -186,11 +186,11 @@ Windows Update for Business 更新プログラムのコンプライアンス評�
 
    たとえば、プロパティでは次のようなカスタム通知を構成できます。
 
-   ![タスク シーケンスのカスタム通知](./media/user-notification.png)
+   ![タスク シーケンスのカスタム通知のプロパティ](./media/user-notification.png)
 
    エンドユーザーがソフトウェア センターからインストールを開くときに、次の通知メッセージが表示されます。
 
-   ![タスク シーケンスのカスタム通知](./media/user-notification-enduser.png)
+   ![タスク シーケンスのカスタム通知 - ソフトウェア センター](./media/user-notification-enduser.png)
 
 ### <a name="configure-software-center-properties"></a>ソフトウェア センターのプロパティを構成する
 ソフトウェア センターに表示されるタスク シーケンスの詳細を構成するには、次の手順を実行します。 これは参考目的のみの情報です。  

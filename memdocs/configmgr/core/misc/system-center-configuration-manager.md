@@ -9,17 +9,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 8ccadb3736d2eeea88618f905be20d834a523f27
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+description: Configuration Manager ドキュメントのプレースホルダー ファイル
+ms.openlocfilehash: 610b63659ece4bd270f52006171750cc604bd600
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695479"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607775"
 ---
-# <a name="configuration-manager"></a>Configuration Manager
+# <a name="configuration-manager"></a>Configuratoin Manager
 
 *適用対象:Configuration Manager (Current Branch)*
 
 Configuration Manager へようこそ。 Configuration Manager を使用すると、ソフトウェアの展開、コンプライアンス設定の管理、およびサーバー、デスクトップ、モバイル デバイスの総合資産管理における安全性と拡張性が強化され、IT サービスの効率性が向上します。  
 
-このバージョンの Configuration Manager の最新コンテンツについては、次のリンクからオンラインでご覧ください: [Configuration Manager のオンライン ドキュメント](/configmgr)。
+このバージョンの Configuration Manager の最新コンテンツについては、次のリンクからオンラインでご覧ください: [Configuration Manager のオンライン ドキュメント](/mem/configmgr)。

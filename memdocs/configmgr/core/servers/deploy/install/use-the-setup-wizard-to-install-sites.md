@@ -9,12 +9,13 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 8325102e9a818191eae5061b7adf60dbbb7269b5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+description: Configuration Manager セットアップ ウィザードを使用して新しいサイトをインストールします。
+ms.openlocfilehash: a0956e53af0d8ca4dd182dd3c2be944d3a0a703d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700703"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606189"
 ---
 # <a name="use-the-setup-wizard-to-install-configuration-manager-sites"></a>セットアップ ウィザードを使用した Configuration Manager サイトのインストール
 
