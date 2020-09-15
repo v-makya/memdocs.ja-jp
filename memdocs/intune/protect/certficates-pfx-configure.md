@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune で秘密キーと公開キーの証明書を使用する - Azure | Microsoft Docs
-description: Microsoft Intune で Public Key Cryptography Standards (PKCS) 証明書を使用し、ルート証明書と証明書テンプレートを処理し、Intune Certificate Connector (NDES) をインストールし、PKCS 証明書用のデバイス構成プロファイルを使用します。
+description: Microsoft Intune で公開キー暗号化標準 (PKCS) 証明書を使用し、ルート証明書と証明書テンプレートを処理し、Microsoft Intune コネクタ (NDES) をインストールし、PKCS 証明書のデバイス構成プロファイルを使用します。
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/22/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b0f360509f456489a321e072c2acfbf26c14bf98
-ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
+ms.openlocfilehash: 1024681ed42c192983ffde23777de72c40622c65
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970500"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423724"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Intune で PKCS 証明書を構成して使用する
 
@@ -56,48 +56,24 @@ Intune で PKCS 証明書を使用するには、次のインフラストラク�
 - **ルート証明書**:  
   エンタープライズ CA のルート証明書のエクスポートされたコピーです。
 
-- **Microsoft Intune Certificate Connector** ("*NDES 証明書コネクタ*" とも呼ばれます):  
-  Intune ポータルで、 **[デバイス構成]**  >  **[証明書コネクタ]**  >  **[追加]** の順に移動して、*PKCS #12 用コネクタをインストールする手順*に従います。 ポータルのダウンロード リンクを使用して、証明書コネクタのインストーラー **NDESConnectorSetup.exe** のダウンロードを開始します。  
+- **PFX Certificate Connector for Microsoft Intune**:
 
-  Intune では、テナントごとにこのコネクタのインスタンスが最大 100 サポートされます。 コネクタの各インスタンスは、別個の Windows サーバー上に置く必要があります。 このコネクタのインスタンスは、Microsoft Intune 用の PFX Certificate Connector のインスタンスと同じサーバー上にインストールできます。 複数のコネクタを使用する場合、コネクタのインフラストラクチャによって冗長と負荷分散がサポートされます。使用可能なコネクタ インスタンスによって PKCS 証明書要求を処理できるためです。 
+  前提条件やリリース バージョンなど、PFX 証明書コネクタの詳細については、[証明書コネクタ](certificate-connectors.md)に関する記事を参照してください。
 
-  このコネクタは、認証または S/MIME メールの署名で使用される PKCS 証明書の要求を処理します。
-
-  Microsoft Intune Certificate Connector では、Federal Information Processing Standard (FIPS) モードもサポートされています。 FIPS は必須ではありませんが、有効になっている場合は、証明書の発行および失効を行うことができます。
-
-- **PFX Certificate Connector for Microsoft Intune**:  
-  S/MIME メールの暗号化の使用を計画している場合は、Intune ポータルを使用して、PFX 証明書のインポートをサポートする *PFX Certificate Connector* をダウンロードします。  **[デバイス構成]**  >  **[証明書コネクタ]**  >  **[追加]** の順に移動して、*インポートした PFX 証明書用コネクタをインストールする手順*に従います。 ポータルのダウンロード リンクを使用して、インストーラー **PfxCertificateConnectorBootstrapper.exe** のダウンロードを開始します。
-
-  このコネクタでは、特定のユーザーを対象にした S/MIME メールの暗号化のために Intune にインポートされる PFX ファイルに対する要求を処理します。 Microsoft Intune Certificate Connector のインスタンスと同じサーバー上に、このコネクタをインストールできます。 
-
-  このコネクタは、新しいバージョンが利用可能になったときに自動更新することができます。 更新機能を使用するには、次の操作を実行する必要があります。
-  - PFX Certificate Connector for Microsoft Intune をサーバーにインストールします。  
-  - 重要な更新プログラムを自動的に受け取るには、確実にファイアウォールがオープンになっていることを確認し、コネクタがポート **443** で **autoupdate.msappproxy.net** にコンタクトできるようにします。   
-
-  詳細については、「[Microsoft Intune のネットワーク エンドポイント](../fundamentals/intune-endpoints.md)」および「[Intune のネットワーク構成の要件と帯域幅](../fundamentals/network-bandwidth-use.md)」をご覧ください。
-
-- **Windows サーバー**:  
-  Windows Server を使用して以下をホストします。
-
-  - 認証および S/MIME メールの署名のシナリオ用の Microsoft Intune Certificate Connector
-  - S/MIME メールの暗号化シナリオ用の PFX Certificate Connector for Microsoft Intune
-
-  コネクタには、[デバイス エンドポイント コンテンツ](/intune/fundamentals/intune-endpoints#access-for-managed-devices)に記載されているとおり、マネージド デバイスの詳細と同じポートにアクセスする必要があります。
-
-  Intune では、*Microsoft Intune Certificate Connector* と同じサーバー上に *PFX Certificate Connector* をインストールすることができます。
+  > [!IMPORTANT]
+  > PFX 証明書コネクタのバージョン 6.2008.60.607 のリリース以降、PKCS 証明書プロファイルでは Microsoft Intune コネクタが不要になりました。 
   
 ## <a name="export-the-root-certificate-from-the-enterprise-ca"></a>エンタープライズ CA からルート証明書をエクスポートする
 
 VPN、WiFi、またはその他のリソースを使用してデバイスを認証するには、デバイスにルートまたは中間の CA 証明書が必要です。 次の手順では、エンタープライズ CA から必要な証明書を取得する方法について説明します。
 
 **コマンド ラインの使用**:  
+
 1. 管理者アカウントでルート証明機関サーバーにログインします。
- 
-2. **[スタート]**  >  **[実行]** の順に移動し、「**Cmd**」を入力してコマンド プロンプトを開きます。 
-    
+
+2. **[スタート]**  >  **[実行]** の順に移動し、「**Cmd**」を入力してコマンド プロンプトを開きます。
+
 3. **certutil -ca.cert ca_name.cer** を指定して、ルート証明書を *ca_name.cer* という名前のファイルとしてエクスポートします。
-
-
 
 ## <a name="configure-certificate-templates-on-the-ca"></a>CA 上で証明書テンプレートを構成する
 
@@ -119,12 +95,12 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
     > 既定では、 **[テンプレート名]** は **[テンプレート表示名]** (*スペースなし*) と同じです。 テンプレートの名前をメモします。後で必要になります。
 
 6. **[要求処理]** で、 **[プライベート キーのエクスポートを許可する]** を選択します。
-    
+
     > [!NOTE]
     > SCEP とは対照的に、PKCS では、証明書の秘密キーはデバイス上ではなく、コネクタがインストールされているサーバー上で生成されます。 証明書テンプレートで秘密キーのエクスポートを許可する必要があります。それにより、証明書コネクタでは、PFX 証明書をエクスポートし、それをデバイスに送信できます。 
     >
     > ただし、証明書はデバイス自体にインストールされますが、秘密キーはエクスポート不可としてマークされることにご注意ください。
-    
+
 7. **[暗号化]** で、 **[最小キー サイズ]** が 2048 に設定されていることを確認します。
 8. **[サブジェクト名]** で **[要求に含まれる]** を選択します。
 9. **[拡張子]** で、 **[アプリケーション ポリシー]** に暗号化ファイル システム、セキュリティで保護された電子メール、クライアント認証が表示されていることを確認します。
@@ -132,21 +108,20 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
     > [!IMPORTANT]
     > iOS/iPadOS の証明書テンプレートの場合、 **[拡張]** タブで、 **[キー使用法]** を更新し、 **[署名は発行元の証明である]** が選択されていないことを確認します。
 
-10. **[セキュリティ]** で、Microsoft Intune Certificate Connector をインストールするサーバーのコンピューター アカウントを追加します。 このアカウントに、**読み取り**と**登録**のアクセス許可を割り当てます。
+10. **[セキュリティ]** で、Microsoft Intune コネクタがインストールされているサーバーのコンピューター アカウントを追加します。 このアカウントに、**読み取り**と**登録**のアクセス許可を割り当てます。
 11. **[適用]**  >  **[OK]** をクリックして証明書テンプレートを保存します。 **証明書テンプレート コンソール**を閉じます。
 12. **[証明機関]** コンソールで **[証明書テンプレート]** を右クリックして、 **[新規作成]**  >  **[発行する証明書テンプレート]** をクリックします。 上記の手順で作成したテンプレートを選択します。 **[OK]** を選択します。
 13. 登録されたデバイスとユーザーの証明書をサーバーで管理する場合は、次の手順を使用します。
 
     1. 証明機関を右クリックして、 **[プロパティ]** を選択します。
-    2. [セキュリティ] タブで、コネクタ (**Microsoft Intune Certificate Connector** または **PFX Certificate Connector for Microsoft Intune**) を実行するサーバーのコンピューター アカウントを追加します。 
+    2. [セキュリティ] タブで、コネクタ (**Microsoft Intune コネクタ**、または **PFX Certificate Connector for Microsoft Intune**) が実行されているサーバーのコンピューター アカウントを追加します。 
     3. このコンピューター アカウントに、**証明書の発行と管理**と**証明書の要求**のアクセス許可を付与します。
 
 14. エンタープライズ CA からサインアウトします。
 
-## <a name="download-install-and-configure-the-microsoft-intune-certificate-connector"></a>Microsoft Intune Certificate Connector のダウンロード、インストール、および構成
+## <a name="download-install-and-configure-the-pfx-certificate-connector"></a>PFX 証明書コネクタのダウンロード、インストール、構成を行う
 
-> [!IMPORTANT]  
-> Microsoft Intune Certificate Connector を、発行元証明機関 (CA) にインストールすることはできません。代わりに、別の Windows サーバーにインストールする必要があります。  
+開始する前に、[コネクタの要件を確認](certificate-connectors.md)し、ご利用の環境と Windows Server でコネクタをサポートする準備ができていることを確認します。
 
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
@@ -154,26 +129,20 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
 
 3. PKCS #12 のコネクタの *[Certificate Connector ソフトウェアをネットワーク上のセキュリティで保護された場所にダウンロード]* をクリックし、コネクタのインストール先となるサーバーからアクセスできる場所にファイルを保存します。
 
-   ![Microsoft Intune Certificate Connector のダウンロード](./media/certficates-pfx-configure/download-ndes-connector.png)
+   ![Microsoft Intune コネクタのダウンロード](./media/certficates-pfx-configure/download-connector.png)
 
-4. ダウンロードが完了したら、サーバーにサインインします。 次のことを行います。
+4. ダウンロードが完了したら、サーバーにサインインし、インストーラー (PfxCertificateConnectorBootstrapper) を実行します。  
+   - 既定のインストール場所を受け入れると、コネクタは `Program Files\Microsoft Intune\PFXCertificateConnector` にインストールされます。
+   - コネクタ サービスはローカル システム アカウントの下で実行されます。 インターネットにアクセスするためにプロキシが必要な場合は、ローカル サービス アカウントがサーバー上のプロキシ設定にアクセスできることを確認します。
 
-    1. .NET Framework 4.5 以降がインストールされていることを確認します。NDES 証明書コネクタで必要となるからです。 .NET Framework 4.5 は、Windows Server 2012 R2 およびそれ以降の新しいバージョンには自動的に含められます。
-    2. インストーラー (NDESConnectorSetup.exe) を実行し、既定の場所を受け入れます。 コネクターは `\Program Files\Microsoft Intune\NDESConnectorUI` にインストールされます。 [インストーラー オプション] で **[PFX の配布]** を選択します。 インストールを継続し完了させます。
-    3. 既定では、コネクタ サービスはローカル システム アカウントの下で実行されます。 インターネットにアクセスするのにプロキシが必要な場合は、ローカル サービス アカウントがサーバー上のプロキシ設定にアクセスできることを確認します。
+5. インストール後、PFX Certificate Connector for Microsoft Intune によって **[登録]** タブが開かれます。 Intune への接続を有効にするには、 **[サインイン]** を選択し、Azure 全体管理者のアクセス許可または Intune 管理者のアクセス許可を持つアカウントを入力します。
 
-5. Microsoft Intune Certificate Connector 上で、 **[登録]** タブが開かれます。Intune への接続を有効にするには、 **[サインイン]** を選択し、グローバル管理アクセス許可を持つアカウントを入力します。
-6. **[詳細設定]** タブでは、 **[このコンピューターの SYSTEM アカウントを使用する (既定)]** をオンのままにすることをお勧めします。
-7. **[適用]**  >  **[閉じる]** を選択します
-8. Intune ポータルに戻ります ( **[Intune]**  >  **[デバイス構成]**  >  **[証明書のコネクタ]** )。 しばらくすると、緑のチェックマークが表示され、 **[接続の状態]** が **[アクティブ]** になります。 これでコネクタ サーバーは Intune と通信できます。
-9. ご利用のネットワーク環境に Web プロキシがある場合、コネクタが動作するように追加の構成が必要になる可能性があります。 詳細については、Azure Active Directory ドキュメントの「[既存のオンプレミス プロキシ サーバーと連携する](/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers)」を参照してください。
-    - Android Enterprise (*仕事用プロファイル*)
-    - iOS
-    - macOS
-    - Windows 10 以降
+   > [!WARNING]
+   > 既定では、Windows Server の **[IE セキュリティ強化の構成]** が **[オン]** に設定されています。これにより、Office 365 へのサインインに関する問題が発生する可能性があります。
 
-> [!NOTE]
-> Microsoft Intune Certificate Connector では、TLS 1.2 がサポートされています。 TLS 1.2 がコネクタをホストするサーバーにインストールされている場合、コネクタは TLS 1.2 を使用します。 それ以外の場合は、TLS 1.1 が使用されます。 現在、デバイスとサーバー間の認証には、TLS 1.1 が使用されています。
+6. ウィンドウを閉じます。
+
+7. Microsoft Endpoint Manager admin center で、 **[テナント管理]**  >  **[コネクタとトークン]**  >  **[証明書のコネクタ]** に戻ります。 しばらくすると、緑のチェック マークが表示され、接続状態が更新されます。 これでコネクタ サーバーは Intune と通信できます。
 
 ## <a name="create-a-trusted-certificate-profile"></a>信頼済み証明書プロファイルを作成する
 
@@ -328,45 +297,9 @@ VPN、WiFi、またはその他のリソースを使用してデバイスを認�
   > [!IMPORTANT]  
   > - 変数を指定する場合は、エラーが発生しないように、例に示すように、変数名を中かっこ { } で囲みます。  
   > - デバイス証明書の "*サブジェクト*" または *SAN* で使用されるデバイス プロパティ (**IMEI**、**SerialNumber**、**FullyQualifiedDomainName** など) は、デバイスへのアクセス権を持つユーザーによってスプーフィングされる可能性のあるプロパティです。
-  > - 証明書プロファイルをデバイスにインストールする場合は、そのプロファイルで指定されたすべての変数が該当するデバイスでサポートされている必要があります。  たとえば、 **{{IMEI}}** が SCEP プロファイルのサブジェクト名に使用されていて、IMEI 番号を持たないデバイスに割り当てられている場合、プロファイルのインストールは失敗します。  
- 
-## <a name="whats-new-for-connectors"></a>コネクタの新機能
-
-2 つの証明書コネクタの更新プログラムは、定期的にリリースされます。 コネクタが更新された場合、その変更についてここから確認することができます。
-
-*PFX Certificate Connector for Microsoft Intune* では[自動更新がサポートされている](#requirements)のに対し、*Intune Certificate Connector* は手動で更新されます。
-
-### <a name="may-17-2019"></a>2019 年 5 月 17 日
-
-- **PFX Certificate Connector for Microsoft Intune - バージョン 6.1905.0.404**  
-  このリリースの変更点:  
-  - コネクタで新しい要求の処理が停止される原因となる、既存の PFX 証明書の再処理が続行される問題を修正しました。 
-
-### <a name="may-6-2019"></a>2019 年 5 月 6 日
-
-- **PFX Certificate Connector for Microsoft Intune - バージョン 6.1905.0.402**  
-  このリリースの変更点:  
-  - コネクタのポーリング間隔が、5 分から 30 秒に短縮されました。
-
-### <a name="april-2-2019"></a>2019 年 4 月 2 日
-
-- **Intune Certificate Connector - バージョン 6.1904.1.0**  
-  このリリースの変更点:  
-  - グローバル管理者アカウントを使用してコネクタにサインインした後に、コネクタが Intune への登録に失敗することがある問題を修正しました。  
-  - 証明書の失効への信頼性の修正が含まれています。  
-  - PKCS 証明書の要求の処理速度を向上するパフォーマンスの修正が含まれています。  
-
-- **PFX Certificate Connector for Microsoft Intune - バージョン 6.1904.0.401**
-  > [!NOTE]  
-  > PFX コネクタのこのバージョンの自動更新は、2019 年 4 月 11 日まで使用できません。  
-
-  このリリースの変更点:  
-  - グローバル管理者アカウントを使用してコネクタにサインインした後に、コネクタが Intune への登録に失敗することがある問題を修正しました。  
-
+  > - 証明書プロファイルをデバイスにインストールする場合は、そのプロファイルで指定されたすべての変数が該当するデバイスでサポートされている必要があります。  たとえば、 **{{IMEI}}** が SCEP プロファイルのサブジェクト名に使用されていて、IMEI 番号を持たないデバイスに割り当てられている場合、プロファイルのインストールは失敗します。
 
 ## <a name="next-steps"></a>次のステップ
-
-プロファイルは作成されましたが、まだ何も行われていません。 次に、[プロファイルを割り当て](../configuration/device-profile-assign.md)、[その状態を監視](../configuration/device-profile-monitor.md)します。
 
 [証明書に SCEP を使用](certificates-scep-configure.md)するか、[Symantec PKI マネージャー Web サービスから PKCS 証明書を発行](certificates-digicert-configure.md)します。
 

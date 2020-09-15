@@ -15,12 +15,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 21b55882d4af8d4d20b6ff2690d23680141e2e47
-ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
+ms.openlocfilehash: 61bddf4ffcb844a997e19ad4d954b2e2a8ec6b45
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89643442"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081711"
 ---
 # <a name="windows-autopilot-for-white-glove-deployment"></a>ホワイトグローブ展開のための Windows 自動操縦
 
@@ -45,7 +45,7 @@ Windows の自動操縦は、プレインストールされた OEM イメージ�
 - Windows 10 バージョン1903以降。
 - Intune サブスクリプション。
 - TPM 2.0 およびデバイスの構成証明をサポートする物理デバイス。 仮想マシンはサポートされていません。 ホワイトグローブプロビジョニングプロセスでは、Windows 自動操縦の自己展開機能を使用するため、TPM 2.0 が必要です。
-- イーサネット接続のある物理デバイス。 Wi-fi 接続を作成するための言語、ロケール、およびキーボードを選択する必要があるため、wi-fi 接続はサポートされていません。 事前プロビジョニングプロセスでこの要件を適用すると、ユーザーがデバイスを受信したときに独自の言語、ロケール、キーボードを選択できなくなる可能性があります。
+- イーサネット接続を備えた物理デバイスは、事前プロビジョニングを実行するために必要です。 Wi-fi 接続を作成するための言語、ロケール、およびキーボードを選択する必要があるため、wi-fi 接続はサポートされていません。 事前プロビジョニングプロセスでこの要件を適用すると、ユーザーがデバイスを受信したときに独自の言語、ロケール、キーボードを選択できなくなる可能性があります。 詳細については、「 [Windows 自動操縦用ホワイトグローブでのワイヤレスネットワーク接続の使用](https://oofhours.com/2019/11/14/using-a-wireless-network-connection-with-windows-autopilot-white-glove/)」を参照してください。
 
 >[!IMPORTANT]
 >OEM またはベンダーがホワイトグローブプロセスを実行するため、 <u>エンドユーザーのオンプレミスドメインインフラストラクチャへのアクセスは必要ありません</u>。 これは、デバイスの再起動が延期されるため、一般的なハイブリッド Azure AD 結合シナリオとは異なります。 デバイスは、ドメインコントローラーへの接続が予想される時間前に resealed され、エンドユーザーによってデバイスのオンプレミスのボックス化が解除されると、ドメインネットワークに接続されます。

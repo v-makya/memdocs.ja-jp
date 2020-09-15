@@ -7,14 +7,20 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 7027eac119ef36adfdb9a0057a74d276696620b3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b26cec11b2bdf64e6ef99d45395de00b43fa1bfa
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820064"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564102"
 ---
 以下の通知では、今後の Intune の変更と機能に備えるために役立つ重要な情報が提供されます。
+
+### <a name="updated-end-user-experience-for-android-device-administrator-wi-fi-profiles---7662680----"></a>Android デバイス管理者の Wi-Fi プロファイルのエンド ユーザー エクスペリエンスの更新<!-- 7662680  -->
+Google によって加えられた変更により、新しい Wi-Fi プロファイルのエンド ユーザー エクスペリエンスは、10 月のポータル サイト アプリのリリースとは大幅に異なります。 ユーザーは追加のアクセス許可を付与し、展開時に Wi-Fi 構成を明示的に受け入れる必要があります。 Wi-Fi の構成は、既知の Wi-Fi ネットワークの一覧には表示されませんが、範囲内の場合は自動的に接続されます。 既存の Wi-Fi プロファイルの動作に変更はありません。 エンドポイント マネージャー管理センターでの管理者エクスペリエンスにも変更はありません。
+
+適用対象:
+- Android デバイス管理者、Android 10 以降
 
 ### <a name="microsoft-intune-ends-support-for-windows-phone-81-and-windows-10-mobile---3544938-3544909---"></a>Microsoft Intune での Windows Phone 8.1 と Windows 10 Mobile のサポートが終了<!-- 3544938, 3544909 -->
 Windows Phone 8.1 に対する Microsoft のメインストリーム サポートは 2017 年 7 月に終了し、拡張サポートは 2019 年 6 月に終了しました。 Windows Phone 8.1 用のポータル サイト アプリは、2017 年 10 月から維持モードになっています。 さらに、2020 年 2 月 20 日に、Windows Phone 8.1 に対する Microsoft Intune のサポートが終了しました。 
@@ -46,7 +52,7 @@ Google によるこれらの変更により、2020 年 10 月には、影響を�
 デバイス管理者のサポート縮小によって影響を受けるデバイスは、次の 3 つの条件すべてに該当するデバイスです。
 - デバイス管理者の管理に登録されている。
 - Android 10 以降が実行されている。
-- Samsung デバイスではない。
+- Samsung を除く、すべての Android 製造元。
 
 次のいずれかに該当するデバイスは影響を受けません。
 - デバイス管理者の管理に登録されていない。
@@ -76,15 +82,6 @@ Google によるこれらの変更により、2020 年 10 月には、影響を�
 
 ![[Android コンプライアンス ポリシー] ページのスクリーンショット](../fundamentals/media/notices/android-compliance-settings.png)
 
-###### <a name="additional-impacts-based-on-android-os-version"></a>Android OS のバージョンに基づくその他の影響
-
-**Android 10**: Google では、管理者によって管理され、Android 10 以降が実行されているすべてのデバイス (Samsung を含む) に対して、ポータル サイトなどのデバイス管理者の管理エージェントを使ってデバイス識別子の情報にアクセスする機能を制限しています。 この制限により、Android 10 以降にデバイスを更新すると、次の Intune 機能が影響を受けます。
-- VPN のネットワーク アクセス制御が機能しなくなる
-- IMEI またはシリアル番号を使用した企業所有のデバイスの識別で、デバイスが企業所有として自動的にマークされなくなる
-- Intune で IT 管理者に IMEI とシリアル番号が表示されなくなる
-
-**Android 11**: Microsoft では、現在、デバイス管理者によって管理されているデバイスに影響があるかどうかを評価するために、最新の開発者向けベータ リリースで Android 11 のサポートのテストを行っています。
-
 #### <a name="user-experience-of-impacted-settings-on-impacted-devices"></a>影響を受けるデバイスの影響を受ける設定のユーザー エクスペリエンス
 
 影響を受ける構成設定:
@@ -95,6 +92,9 @@ Google によるこれらの変更により、2020 年 10 月には、影響を�
 - 既に登録済みで、設定が既に適用されているデバイスについては、影響を受けるコンプライアンス設定が、コンプライアンス違反の理由として [デバイスの更新設定] ページに表示され、デバイスはコンプライアンスに準拠しなくなります。さらに、設定アプリでは、パスワード要件が引き続き適用されます。
 - 新たに登録されるデバイス、新しく割り当てられる設定、更新された設定については、影響を受けるコンプライアンス設定が、コンプライアンス違反の理由として [デバイスの更新設定] ページに表示され、デバイスはコンプライアンスに対応していませんが、設定アプリでは、より厳格なパスワード要件が適用されることはありません。
 
+Wi-Fi プロファイルに対する追加のユーザー エクスペリエンスの変更
+- ユーザーは追加のアクセス許可を付与し、展開時に Wi-Fi 構成を明示的に受け入れる必要があります。 Wi-Fi の構成は、既知の Wi-Fi ネットワークの一覧には表示されませんが、範囲内の場合は自動的に接続されます。 既存の Wi-Fi プロファイルに対する動作の変更はありません。 エンドポイント マネージャー管理センターでの管理者エクスペリエンスにも変更はありません。  
+
 #### <a name="cause-of-impact"></a>影響の原因 
 デバイスへの影響が出始めるのは、2020 年 10 月からです。 そのときに、([Google の要求に応じて](https://www.blog.google/products/android-enterprise/da-migration/)) ポータル サイト API のターゲットをレベル 28 からレベル 29 に上げるポータル サイト アプリの更新があります。 
 
@@ -102,10 +102,28 @@ Google によるこれらの変更により、2020 年 10 月には、影響を�
 - Android 10 以降に更新する。
 - ポータル サイト アプリを、API レベル 29 を対象とするバージョンに更新する。
 
+#### <a name="additional-impacts-based-on-android-os-version"></a>Android OS のバージョンに基づくその他の影響 
+**Android 10**:  Google では、Android 10 以降が実行されているすべてのデバイス管理者のマネージド デバイス (Samsung を含む) に対して、ポータル サイトなどのデバイス管理者の管理エージェントによってデバイス識別子の情報にアクセスする機能を制限しています。 この制限により、Android 10 以降にデバイスを更新すると、次の Intune 機能が影響を受けます。 
+- VPN のネットワーク アクセス制御が機能しなくなる 
+- IMEI またはシリアル番号を使用した企業所有のデバイスの識別で、デバイスが企業所有として自動的にマークされなくなる 
+- Intune で IT 管理者に IMEI とシリアル番号が表示されなくなる 
+
+**Android 11**: デバイス管理者のマネージド デバイスへの影響を評価するために、最新の Android 11 ベータ リリースのテストを続けています。 次のようなことがわかりました。 
+- Google では、Android 11 以降が実行されているデバイス管理者のデバイス (Samsung を除く) に対して、ポータル サイト アプリへの 10 月の更新より前に、ポータル サイトなどの管理エージェントによってカメラのブロックを強制する機能を削除しました。 Android 11 に更新する前にデバイスに適用されているカメラをブロックするポリシーは、引き続き適用されます。  
+- Android 11 では、信頼されたルート証明書は、デバイス管理者で登録されたデバイスに展開できなくなりました (Samsung デバイスを除く)。 ユーザーは、信頼されたルート証明書をデバイスに手動でインストールする必要があります。 信頼されたルート証明書をデバイスに手動でインストールすると、SCEP を使用して、デバイスに証明書をプロビジョニングできます。 このシナリオでも、信頼された証明書ポリシーを作成してデバイスに展開し、そのポリシーを SCEP 証明書プロファイルにリンクする必要があります。 
+    - 信頼されたルート証明書がデバイス上にある場合、SCEP 証明書プロファイルは正常にインストールされます。  
+    - 信頼された証明書が見つからない場合、SCEP 証明書プロファイルは失敗します。 
+
+
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>この変更に対して必要な準備
 2020 年 10 月に実施される機能の縮小を回避するために、次のことをお勧めします。
 - **新規登録**: 新しいデバイスを [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) 管理 (利用可能な場合) および[アプリ保護ポリシー](../apps/app-protection-policies.md)にオンボードします。 新しいデバイスをデバイス管理者の管理にオンボードしないようにしてください。 
 - **以前に登録されたデバイス**: デバイス管理者によって管理されているデバイスが Android 10 以降を実行している場合、または Android 10 以降に更新する可能性がある場合 (特に Samsung デバイスではない場合)、そのデバイスをデバイス管理者の管理から [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) 管理または[アプリ保護ポリシー](../apps/app-protection-policies.md)に移行します。 [Android デバイスをデバイス管理者から仕事用プロファイル管理に移動する](../enrollment/android-move-device-admin-work-profile.md)には、合理化されたフローを利用できます。
+- **パスワードの複雑さを構成する**: 影響を受ける Android 10 以降が実行されているデバイスの場合、パスワードの複雑さと呼ばれる今後の設定によって、パスワードの制限とコンプライアンスを引き続き適用できます。 パスワードの複雑さは、パスワードの種類、長さ、品質を考慮に入れるパスワードの強度を測定するものです。
+
+#### <a name="what-if-i-have-non-samsung-devices-that-cannot-move-to-android-enterprise"></a>Android Enterprise に移行できない Samsung 以外のデバイスがある場合はどうすればよいですか? 
+一部のデバイスでは、デバイス管理者から Android Enterprise 管理に移行できません。 たとえば、[Google は Android Enterprise を一部の市場では利用できなくしています](https://support.google.com/work/android/answer/6270910?hl=en)。 デバイス管理者で Samsung 以外のデバイスを管理するために、引き続き Intune を使用できますが、この投稿で言及されている機能への変更が適用されます。 Android Enterprise が使用できない場合のデバイス管理に関するガイダンスについては、「[Google Mobile Services のない環境で Intune を使用する方法](../apps/manage-without-gms.md)」を参照してください。 
+
 
 #### <a name="additional-information"></a>追加情報
 - [Android デバイスをデバイス管理者から仕事用プロファイル管理に移動する](../enrollment/android-move-device-admin-work-profile.md)

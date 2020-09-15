@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/3/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e2a00ef50676ee24de30f93ad5b5ddd88192b6db
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 12ac9998f60236a9aa661fc2088449db982180bf
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915077"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432610"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Intune を使用してデバイスを保護するための Windows 10 (以降) の設定
 
@@ -1016,6 +1016,9 @@ Microsoft Defender アプリケーション制御によって監査する必要�
   - **[未構成]** - アプリケーション制御はデバイスに追加されません。 ただし、以前に追加された設定は、割り当てられたデバイスに引き続き適用されます。 
  
   - **[監査のみ]** - アプリケーションはブロックされません。 すべてのイベントがローカル クライアントのログに記録されます。  
+
+    > [!NOTE]
+    > この設定を使用する場合、現在の AppLocker CSP の動作では、ポリシーが展開されたときに、エンド ユーザーに対してコンピューターの再起動を求めるメッセージが表示されます。
 
 ## <a name="microsoft-defender-credential-guard"></a>Microsoft Defender Credential Guard  
 

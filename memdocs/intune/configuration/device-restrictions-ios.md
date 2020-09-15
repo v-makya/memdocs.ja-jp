@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 09/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 273efc6be6b3f93c04c0ce39c2688859d3c96c56
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303438"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423885"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用した機能を許可または制限するための iOS および iPadOS デバイスの設定
 
@@ -70,8 +70,9 @@ ms.locfileid: "86303438"
   この設定を使用するには、 **[画面キャプチャ]** 設定を **[ブロック]** に設定します。
 
   この機能は、以下に適用されます。  
-  - iOS 9.3 以降
-  - iPadOS 13.0 以降
+  - iOS 9.3 - iOS 12.x: 監視対象デバイスが必要です
+  - iOS 13.0 以降: 監視対象デバイスは必要ありません
+  - iPadOS 13.0 以降: デバイスは、デバイスの登録または自動デバイス登録 (ADE) を使用して登録する必要があります
 
 - **[Classroom アプリによるプロンプトなしの画面監視]** : **[許可]** を選択すると、教師は、学生に知らせることなく、Classroom アプリを使用して学生の iOS/iPadOS の画面を警告なしで観察できます。 学生のデバイスが Classroom アプリを使用してクラスに登録されると、その学科の教師にアクセス許可が自動的に付与されます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、OS により、この機能が禁止される場合があります。
 

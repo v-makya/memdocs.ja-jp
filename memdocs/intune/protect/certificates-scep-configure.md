@@ -1,11 +1,11 @@
 ---
 title: Microsoft Intune を使用して SCEP 証明書プロファイルをサポートするようにインフラストラクチャを構成する - Azure | Microsoft Docs
-description: SCEP を Microsoft Intune で使うには、オンプレミスの AD ドメインを構成し、証明機関を作成し、NDES サーバーを設定して、Intune Certificate Connector をインストールします。
+description: SCEP を Microsoft Intune で使うには、オンプレミスの AD ドメインを構成し、証明機関を作成し、NDES サーバーを設定して、Microsoft Certificate Connector をインストールします。
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3d422978fe6e2cbb123b87311e5c175483b9f66
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 9e681129d5cc17e2e828a8f7a03e305f9b938b47
+ms.sourcegitcommit: 0ec6d8dabb14f20b1d84f7b503f1b03aac2a30d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915995"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479350"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Intune を使用して SCEP をサポートするようにインフラストラクチャを構成する
 
-Intune では、[アプリと企業リソースへの接続を認証する](certificates-configure.md)ために Simple Certificate Enrollment Protocol (SCEP) の使用がサポートされています。 SCEP では、証明機関 (CA) 証明書を使用して、証明書署名要求 (CSR) のメッセージ交換をセキュリティで保護します。 ご使用のインフラストラクチャで SCEP がサポートされている場合は、Intune *SCEP 証明書*プロファイル (Intune のデバイス プロファイルの種類) を使用して、証明書をご使用のデバイスに展開することができます。 Active Directory 証明書サービス証明機関を使用する場合、Intune で SCEP 証明書プロファイルを使用するには、Microsoft Intune Certificate Connector が必要です。 [サードパーティの証明機関](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration)を使用する場合、コネクタは必要ありません。 
+Intune では、[アプリと企業リソースへの接続を認証する](certificates-configure.md)ために Simple Certificate Enrollment Protocol (SCEP) の使用がサポートされています。 SCEP では、証明機関 (CA) 証明書を使用して、証明書署名要求 (CSR) のメッセージ交換をセキュリティで保護します。 ご使用のインフラストラクチャで SCEP がサポートされている場合は、Intune *SCEP 証明書*プロファイル (Intune のデバイス プロファイルの種類) を使用して、証明書をご使用のデバイスに展開することができます。 Active Directory 証明書サービス証明機関を使用する場合、Intune で SCEP 証明書プロファイルを使用するには、Microsoft Intune コネクタが必要です。 [サードパーティの証明機関](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration)を使用する場合、コネクタは必要ありません。 
 
 この記事の情報は、Active Directory 証明書サービスを使用する場合に、SCEP をサポートするようにインフラストラクチャを構成するのに役立ちます。 インフラストラクチャを構成したら、Intune で [SCEP 証明書プロファイルを作成して展開](certificates-profile-scep.md)できます。
 
@@ -46,25 +46,25 @@ Intune では、[アプリと企業リソースへの接続を認証する](cert
 
   - NDES をホストするサーバーは、ドメインに参加している必要があり、ご使用のエンタープライズ CA と同じフォレストにある必要があります。
   - エンタープライズ CA をホストするサーバーにインストールされている NDES を使用することはできません。
-  - NDES をホストしているのと同じサーバーに、Microsoft Intune Certificate Connector をインストールします。
+  - NDES をホストしているのと同じサーバーに、Microsoft Intune コネクタをインストールします。
 
   NDES の詳細については、Windows Server のドキュメントの「[ネットワーク デバイス登録サービスのガイダンス](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11))」、および「[ポリシー モジュールとネットワーク デバイス登録サービスの使用](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11))」を参照してください。
 
-- **Microsoft Intune Certificate Connector** – Intune で SCEP 証明書プロファイルを使用するには、Microsoft Intune Certificate Connector が必要です。 この記事では、[このコネクタをインストールする](#install-the-intune-certificate-connector)手順について説明します。
+- **Microsoft Intune コネクタ** – Intune で SCEP 証明書プロファイルを使用するには、Microsoft Intune コネクタが必要です。 この記事では、[このコネクタをインストールする](#install-the-microsoft-intune-connector)手順について説明します。
 
   コネクタでは、Federal Information Processing Standards (FIPS) モードがサポートされています。 FIPS は必須ではありませんが、有効になっている場合は、証明書の発行および失効を行うことができます。
   - このコネクタのネットワーク要件は、[マネージド デバイス](../fundamentals/intune-endpoints.md#access-for-managed-devices)と同じです。
   - コネクタは、NDES サーバー ロールと同じサーバー (Windows Server 2012 R2 以降が実行されているサーバー) 上で実行する必要があります。
   - コネクタで必要な .NET 4.5 Framework は、Windows Server 2012 R2 に自動的に含まれます。
-  - Internet Explorer セキュリティ強化の構成は、[NDES と Microsoft Intune Certificate Connector をホストするサーバーで無効にする必要があります](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10))。
+  - Internet Explorer セキュリティ強化の構成は、[NDES と Microsoft Intune コネクタをホストするサーバーで無効にする必要があります](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10))。
 
-次のオンプレミス インフラストラクチャは省略可能です。
+#### <a name="support-for-ndes-on-the-internet"></a>インターネットでの NDES のサポート
 
-インターネット上のデバイスで証明書を取得できるようにするには、企業ネットワークの外部に NDES URL を発行する必要があります。 Azure AD アプリケーション プロキシ、Web アプリケーション プロキシ サーバー、別のリバース プロキシのいずれかを使用できます。
+インターネット上のデバイスで証明書を取得できるようにするには、企業ネットワークの外部に NDES URL を発行する必要があります。 これを行うには、"*Azure AD アプリケーション プロキシ*" または "*Web ApplicationProxy サーバー*" のいずれかを使用できます。 また、選択した別のリバース プロキシを使用することもできます。
 
-- **Azure AD アプリケーション プロキシ** (省略可能) – 専用 Web アプリケーション プロキシ (WAP) サーバーの代わりに Azure AD アプリケーション プロキシを使用して、NDES URL をインターネットに公開することができます。 これにより、イントラネットとインターネットに接続するどちらのデバイスでも証明書を取得できるようになります。 詳細については、「[オンプレミス アプリケーションへの安全なリモート アクセスを実現する方法](/azure/active-directory/manage-apps/application-proxy)」を参照してください。
+- **Azure AD アプリケーション プロキシ** – 専用 Web アプリケーション プロキシ (WAP) サーバーの代わりに Azure AD アプリケーション プロキシを使用して、NDES URL をインターネットに公開することができます。 これにより、イントラネットとインターネットに接続するどちらのデバイスでも証明書を取得できるようになります。 詳細については、「[ネットワーク デバイス登録サービス (NDES) サーバー上の Azure AD アプリケーション プロキシとの統合](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes)」を参照してください。
 
-- **Web アプリケーション プロキシ サーバー** (省略可能) - NDES URL をインターネットに公開するには、Windows Server 2012 R2 以降を実行しているサーバーを Web アプリケーション プロキシ (WAP) サーバーとして使用します。  これにより、イントラネットとインターネットに接続するどちらのデバイスでも証明書を取得できるようになります。
+- **Web アプリケーション プロキシ サーバー** - NDES URL をインターネットに公開するには、Windows Server 2012 R2 以降を実行しているサーバーを Web アプリケーション プロキシ (WAP) サーバーとして使用します。  これにより、イントラネットとインターネットに接続するどちらのデバイスでも証明書を取得できるようになります。
 
   WAP をホストするサーバーは、ネットワーク デバイス登録サービスで使用される長い URL のサポートを有効にする [更新プログラムをインストールする](/archive/blogs/ems/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2) 必要があります。 この更新プログラムは、 [2014 年 12 月の更新プログラムのロールアップ](https://support.microsoft.com/kb/3013769)に含まれます。または、 [KB3011135](https://support.microsoft.com/kb/3011135)から個別に入手できます。
 
@@ -101,7 +101,7 @@ SCEP を使用する場合は、次の証明書とテンプレートが使用さ
 |オブジェクト    |詳細    |
 |----------|-----------|
 |**SCEP 証明書テンプレート**         |デバイスの SCEP 要求を満たすために使用される発行元 CA で構成するテンプレート。 |
-|**クライアント認証証明書** |発行元 CA またはパブリック CA から要求されます。<br /> この証明書は、NDES サービスをホストするコンピューターにインストールします。これは Intune Certificate Connector によって使用されます。<br /> この証明書を発行するために使用する CA テンプレートで、証明書に*クライアント*と*サーバーの認証*キーの使用法 (**拡張キー使用法**) が設定されている場合は、 サーバーとクライアントの認証に同じ証明書を使用できます。 |
+|**クライアント認証証明書** |発行元 CA またはパブリック CA から要求されます。<br /> この証明書は、NDES サービスをホストするコンピューターにインストールします。これは Microsoft Intune コネクタによって使用されます。<br /> この証明書を発行するために使用する CA テンプレートで、証明書に*クライアント*と*サーバーの認証*キーの使用法 (**拡張キー使用法**) が設定されている場合は、 サーバーとクライアントの認証に同じ証明書を使用できます。 |
 |**サーバー認証証明書** |発行元 CA またはパブリック CA から要求される Web サーバー証明書。<br /> この SSL 証明書は、NDES をホストするコンピューターの IIS にインストールしてバインドします。<br />この証明書を発行するために使用する CA テンプレートで、証明書に*クライアント*と*サーバーの認証*キーの使用法 (**拡張キー使用法**) が設定されている場合は、 サーバーとクライアントの認証に同じ証明書を使用できます。 |
 |**信頼されたルート CA 証明書**       |SCEP 証明書プロファイルを使用するには、デバイスで信頼されたルート証明機関 (CA) を信頼する必要があります。 Intune で*信頼済み証明書プロファイル*を使用して、信頼されたルート CA 証明書をユーザーとデバイスにプロビジョニングします。 <br/><br/> **-** オペレーティング システムのプラットフォームごとに 1 つの信頼されたルート CA 証明書を使用し、作成する各信頼済み証明書プロファイルにその証明書を関連付けます。 <br /><br /> **-** 必要に応じて、信頼されたルート CA 証明書を追加して使用できます。 たとえば、追加の証明書を使用して、Wi-Fi アクセス ポイント用のサーバー認証証明書に署名する CA の信頼性を担保することができます。 CA を発行するための追加の信頼されたルート CA 証明書を作成します。  Intune で作成する SCEP 証明書プロファイルでは、発行元 CA の信頼されたルート CA プロファイルを必ず指定します。<br/><br/> 信頼済み証明書プロファイルの詳細については、*Intune での認証に証明書を使用*に関するページの「[信頼されたルート CA 証明書をエクスポートする](certificates-configure.md#export-the-trusted-root-ca-certificate)」と「[信頼済み証明書プロファイルを作成する](certificates-configure.md#create-trusted-certificate-profiles)」を参照してください。 |
 
@@ -177,7 +177,7 @@ SCEP を使用する場合は、次の証明書とテンプレートが使用さ
 
 ### <a name="create-the-client-certificate-template"></a>クライアント証明書テンプレートを作成する
 
-Intune certificate Connector には、*クライアント認証*の拡張キー使用法とサブジェクト名 (コネクタがインストールされているコンピューターの FQDN と同じ) を持つ証明書が必要です。 次のプロパティを持つテンプレートが必要です。
+Microsoft Intune コネクタには、"*クライアント認証*" の拡張キー使用法とサブジェクト名 (コネクタがインストールされているコンピューターの FQDN と同じ) を持つ証明書が必要です。 次のプロパティを持つテンプレートが必要です。
 
 - **[拡張機能]**  >  **[アプリケーション ポリシー]** に **[クライアント認証]** を含める必要がある
 - **[サブジェクト名]**  >  **[要求に含まれる]**
@@ -192,13 +192,13 @@ NDES サーバーでのマネージド デバイスと IIS 間の通信では HT
 - **[サブジェクト名]**  >  **[要求に含まれる]**
 
 > [!NOTE]
-> クライアント証明書テンプレートとサーバー証明書テンプレートの両方の要件を満たす証明書がある場合は、1 つの証明書を IIS と Intune Certificate Connector の両方に使用できます。
+> クライアントとサーバーの証明書テンプレートの両方の要件を満たす証明書がある場合は、1 つの証明書を IIS と Microsoft Intune コネクタの両方に使用できます。
 
 ### <a name="grant-permissions-for-certificate-revocation"></a>証明書失効のためのアクセス許可を付与する
 
 不要になった証明書を Intune で失効できるようにするには、証明機関でアクセス許可を付与する必要があります。
 
-Intune Certificate Connector では、NDES サーバーの**システム アカウント**または **NDES サービス アカウント**などの特定のアカウントを使用できます。
+Microsoft Intune コネクタでは、NDES サーバーの**システム アカウント**または **NDES サービス アカウント**などの特定のアカウントのいずれかを使用できます。
 
 1. 証明機関コンソールで、CA 名を右クリックし、 **[プロパティ]** を選択します。
 
@@ -336,7 +336,7 @@ NDES サーバーには、構成に必要な証明書が 2 つあります。
 
 - **クライアント認証証明書** 
 
-   この証明書は、Intune 証明書コネクタのインストール時に使用されます。
+   この証明書は、Microsoft Intune コネクタのインストール時に使用されます。
 
    内部 CA またはパブリック CA に **クライアント認証** 証明書を要求してインストールします。
    
@@ -372,10 +372,9 @@ NDES サーバーには、構成に必要な証明書が 2 つあります。
    
       1. **[SSL 証明書]** で、サーバー認証証明書を指定します。
 
+## <a name="install-the-microsoft-intune-connector"></a>Microsoft Intune コネクタをインストールする
 
-## <a name="install-the-intune-certificate-connector"></a>Intune Certificate Connector をインストールする
-
-Microsoft Intune Certificate Connector は、NDES サービスが実行されているサーバーにインストールされます。 発行元の証明機関 (CA) と同じサーバーで NDES または Intune Certificate Connector を使用することはサポートされていません。
+Microsoft Intune コネクタは、NDES サービスが実行されているサーバーにインストールされます。 発行元の証明機関 (CA) と同じサーバーで NDES または Microsoft Intune コネクタを使用することはサポートされていません。
 
 ### <a name="to-install-the-certificate-connector"></a>Certificate Connector をインストールするには
 
@@ -389,7 +388,7 @@ Microsoft Intune Certificate Connector は、NDES サービスが実行されて
 
 4. ダウンロードが完了した後、ネットワーク デバイス登録サービス (NDES) の役割をホストしているサーバーに移動します。 次のことを行います。
 
-   1. .NET Framework 4.5 がインストールされていることを確認します。これは Intune Certificate Connector で必要となります。 .NET Framework 4.5 は、Windows Server 2012 R2 以降の新しいバージョンには自動的に含まれています。
+   1. .NET 4.5 Framework がインストールされていることを確認します。これは Microsoft Intune コネクタで必要となります。 .NET Framework 4.5 は、Windows Server 2012 R2 以降の新しいバージョンには自動的に含まれています。
 
    2. インストーラー (**NDESConnectorSetup.exe**) を実行するには、サーバーに対する管理者アクセス許可のあるアカウントを使用します。 インストーラーによって、NDES のポリシー モジュールと IIS 証明書登録ポイント (CRP) Web サービスもインストールされます。 CRP Web サービス *CertificateRegistrationSvc* は、IIS でアプリケーションとして実行されます。
 
@@ -397,10 +396,10 @@ Microsoft Intune Certificate Connector は、NDES サービスが実行されて
 
 5. Certificate Connector のクライアント証明書の入力を求められたら、 **[選択]** を選び、この記事で前述した「[NDES をホストするサーバーに証明書をインストールしてバインドする](#install-and-bind-certificates-on-the-server-that-hosts-ndes)」の手順 3 で NDES サーバーにインストールした**クライアント認証**証明書を選択します。
 
-   クライアント認証証明書を選択すると、 **[Microsoft Intune Certificate Connector のクライアント証明書]** 画面に戻ります。 選択した証明書は表示されませんが、 **[次へ]** を選択してその証明書のプロパティを表示します。 **[次へ]** を選択して、 **[インストール]** を選択します。
+   クライアント認証証明書を選択すると、**Microsoft Intune コネクタのクライアント証明書** の画面に戻ります。 選択した証明書は表示されませんが、 **[次へ]** を選択してその証明書のプロパティを表示します。 **[次へ]** を選択して、 **[インストール]** を選択します。
 
 > [!NOTE]
-> Intune Certificate Connector を起動する前に、GCC High テナントに対して次の変更を行う必要があります。
+> Microsoft Intune コネクタを起動する前に、GCC High テナントに対して次の変更を行う必要があります。
 > 
 > 次に示す 2 つの構成ファイルを編集します。これにより、GCC High 環境のサービス エンドポイントが更新されます。 これらの更新により、URI のサフィックスが **.com** から **.us** に変更されることに注意してください。 合計 3 つの URI の更新が行われます。NDESConnectorUI.exe.config 構成ファイルで 2 つの更新、NDESConnector.exe.config ファイルで 1 つの更新です。
 > 
@@ -437,7 +436,7 @@ Microsoft Intune Certificate Connector は、NDES サービスが実行されて
 
    2. 使用するアカウントには、有効な Intune ライセンスが割り当てられている必要があります。
 
-   3. サインインすると、Intune Certificate Connector によって Intune から証明書がダウンロードされます。 この証明書は、コネクタと Intune 間の認証に使用されます。 使用したアカウントに Intune ライセンスがない場合、コネクタ (NDESConnectorUI.exe) は、Intune から証明書を取得できません。  
+   3. サインインすると、Microsoft Intune コネクタによって Intune から証明書がダウンロードされます。 この証明書は、コネクタと Intune 間の認証に使用されます。 使用したアカウントに Intune ライセンスがない場合、コネクタ (NDESConnectorUI.exe) は、Intune から証明書を取得できません。  
 
       組織でプロキシ サーバーを使用していて、NDES サーバーがインターネットにアクセスするためにプロキシが必要な場合は、 **[プロキシ サーバーを使用する]** を選択します。 次に、接続するためのプロキシ サーバーの名前、ポート、およびアカウント資格情報を入力します。
 
@@ -450,9 +449,9 @@ Microsoft Intune Certificate Connector は、NDES サービスが実行されて
 サービスが実行していることを確認するには、ブラウザーを開き、次の URL を入力します。 **403** エラー: `https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll` が返されます。
 
 > [!NOTE]
-> Intune Certificate Connector では、TLS 1.2 がサポートされています。 このコネクタをホストするサーバーが TLS 1.2 をサポートしている場合は、TLS 1.2 が使用されます。 サーバーが TLS 1.2 をサポートしない場合、TLS 1.1 が使用されます。 現在、デバイスとサーバー間の認証には、TLS 1.1 が使用されています。
+> Microsoft Intune コネクタでは、TLS 1.2 がサポートされています。 このコネクタをホストするサーバーが TLS 1.2 をサポートしている場合は、TLS 1.2 が使用されます。 サーバーが TLS 1.2 をサポートしない場合、TLS 1.1 が使用されます。 現在、デバイスとサーバー間の認証には、TLS 1.1 が使用されています。
 
 ## <a name="next-steps"></a>次のステップ
 
 [SCEP 証明書プロファイルを作成する](certificates-profile-scep.md)  
-[Intune Certificate Connector の問題のトラブルシューティング](troubleshoot-certificate-connector-events.md)
+[Microsoft Intune コネクタの問題のトラブルシューティング](troubleshoot-certificate-connector-events.md)

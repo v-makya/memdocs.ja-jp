@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7becc53b9464cad6f864f219f2d59046c2e61707
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: dc8fa6f2d4fe5171bd8a4ffe977eec7f6eed2093
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193785"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564103"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
@@ -53,6 +53,44 @@ ms.locfileid: "89193785"
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## <a name="week-of-september-7-2020"></a>2020 年 9 月 7 日の週
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>デバイス管理
+
+#### <a name="tenant-attach-device-timeline-in-the-admin-center"></a>テナントのアタッチ:管理センターのデバイス タイムライン
+<!--7220536, CM7141381-->
+Configuration Manager で、テナントのアタッチを使用してデバイスを Microsoft Endpoint Manager と同期すると、イベントのタイムラインを確認できるようになります。 このタイムラインにはそのデバイス上での過去の活動が表示され、問題のトラブルシューティングに役立ちます。 詳細については、「[テナントのアタッチ:管理センターのデバイスのタイムライン](../../configmgr/tenant-attach/timeline.md)」を参照してください。
+
+#### <a name="tenant-attach-resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> テナントのアタッチ:管理センターのリソース エクスプローラー
+<!--IN7220536, CM6479284 -->
+Microsoft エンドポイント管理の管理センターから、リソース エクスプローラーを使用して、アップロードされた Configuration Manager デバイスのハードウェア インベントリを表示できます。 詳細については、「[テナントのアタッチ:管理センターのリソース エクスプローラー](../../configmgr/tenant-attach/resource-explorer.md)」を参照してください。
+
+#### <a name="tenant-attach-cmpivot-from-the-admin-center"></a>テナントのアタッチ:管理センターからの CMPivot
+<!--IN7220536, CM6024392-->
+CMPivot の機能を、Microsoft エンドポイント マネージャー管理センターに導入できます。 Helpdesk などの追加のペルソナが、ConfigMgr マネージド デバイスそれぞれに対してクラウドからリアルタイムのクエリを開始して、結果を管理センターに返すことができるようになりました。 これにより、CMPivot の従来の利点すべてを利用して、IT 管理者やその他の指定されたペルソナが環境内のデバイスの状態をすばやく評価し、アクションを実行することが可能になります。
+
+管理センターからの CMPivot の詳細については、[CMPivot の前提条件](../../configmgr/tenant-attach/cmpivot-start.md)、[CMPivot の概要](../../configmgr/tenant-attach/cmpivot-overview-attached.md)、[CMPivot のサンプル スクリプト](../../configmgr/tenant-attach/cmpivot-samples-attached.md)に関するページを参照してください。
+
+## <a name="week-of-august-31-2020"></a>2020 年 8 月 31 日の週
+
+### <a name="device-configuration"></a>デバイスの構成
+
+#### <a name="new-version-of-the-pfx-certificate-connector-and-changes-for-pkcs-certificate-profile-support-----4839686----"></a>新しいバージョンの PFX Certificate Connector および PKCS 証明書プロファイルのサポートに対する変更 <!--  4839686  -->
+
+PFX Certificate Connector の新しいバージョン (バージョン **6.2008.60.607**) がリリースされました。 この新しいコネクタのバージョン:
+
+- サポートされているすべてのプラットフォーム (Windows 8.1 を除く) の PKCS 証明書プロファイルをサポートします
+ 
+  PFX Certificate Connector では、すべての PCKS サポートを統合しました。  つまり、お使いの環境で SCEP を使用せず、他の目的で NDES を使用しない場合は、Microsoft Certificate Connector を削除して、お使いの環境から NDES をアンインストールできます。 
+ 
+- Microsoft Certificate Connector では機能が削除されていないため、PKCS 証明書プロファイルをサポートするために引き続き使用できます。
+- Outlook S/MIME に対する証明書の失効をサポートします
+- .NET Framework 4.7.2 が必要です
+
+両方の証明書コネクタのコネクタ リリースの一覧など、証明書コネクタの詳細については、[証明書コネクタ](../protect/certificate-connectors.md)に関するページを参照してください。
+
 
 <!-- ########################## -->
 ## <a name="week-of-august-24-2020-2008-service-release"></a>2020 年 8 月 24 日の週 (2008 サービス リリース)
@@ -179,7 +217,7 @@ Microsoft Intune 管理者は、Windows ポータル サイト アプリ内の�
 ### <a name="app-management"></a>アプリ管理
 
 #### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>ポータル サイトに Configuration Manager アプリケーションのサポートが追加される<!-- 4297660 -->
-ポータル サイトでは、Configuration Manager アプリケーションがサポートされるようになりました。 エンド ユーザーはこの機能によって、共同管理されている顧客に対して、ポータル サイト上で Configuration Manager および Intune の両方にデプロイされているアプリケーションを表示できるようになります。 このサポートによって、管理者は異なるエンド ユーザー ポータルのエクスペリエンスを統合できます。 詳細については、「[共同管理デバイスでポータル サイト アプリを使用する](../../configmgr/comanage/company-portal.md)」を参照してください。 
+ポータル サイトでは、Configuration Manager アプリケーションがサポートされるようになりました。 エンド ユーザーはこの機能によって、共同管理されている顧客に対して、ポータル サイト上で Configuration Manager および Intune の両方にデプロイされているアプリケーションを表示できるようになります。 この新しいバージョンのポータル サイトには、共同管理されているすべての顧客に対して、Configuration Manager にデプロイされているアプリが表示されます。 このサポートによって、管理者は異なるエンド ユーザー ポータルのエクスペリエンスを統合できます。 詳細については、「[共同管理デバイスでポータル サイト アプリを使用する](../../configmgr/comanage/company-portal.md)」を参照してください。 
 
 ### <a name="device-security"></a>デバイス セキュリティ
 
@@ -639,6 +677,9 @@ Android Enterprise フル マネージドを実行するデバイス上の Outlo
 #### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>管理者は Microsoft Endpoint Manager 管理コンソールにアクセスするための Intune ライセンスが不要になった<!--1335430 -->
 管理者が MEM 管理コンソールとクエリ グラフ API にアクセスするための Intune ライセンス要件を削除する、テナント全体の切り替えを設定できるようになりました。 ライセンス要件を削除してから復帰させることはできません。 
 
+
+> [!Note]
+> Teamviewer Connector フローを含む一部のアクションでは、引き続き Intune ライセンスを完了する必要があります。
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

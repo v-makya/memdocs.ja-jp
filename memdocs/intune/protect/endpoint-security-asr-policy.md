@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 09/3/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6d94748356b342fe6dc9498d815edbdb92038af3
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 303acae2eba275907b70fcc52660217568913c62
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913496"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432525"
 ---
 # <a name="attack-surface-reduction-policy-for-endpoint-security-in-intune"></a>Intune でのエンドポイント セキュリティの攻撃の回避ポリシー
 
@@ -58,6 +58,9 @@ Windows 10 デバイスで Defender ウイルス対策が使用されている�
 - **アプリケーション制御** - アプリケーション制御設定を使用すると、ユーザーが実行できるアプリケーションと System Core (カーネル) で実行されるコードを制限することで、セキュリティの脅威を軽減できます。 署名されていないスクリプトと MSI をブロックし、Windows PowerShell を制約付き言語モードで実行するように制限するための設定を管理します。
 
   詳細については、Microsoft Defender ATP ドキュメントの[アプリケーション制御](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)に関するページを参照してください。
+  
+    > [!NOTE]
+    > この設定を使用する場合、現在の AppLocker CSP の動作では、ポリシーが展開されたときに、エンド ユーザーに対してコンピューターの再起動を求めるメッセージが表示されます。
 
 - **攻撃の回避規則** – マルウェアおよび悪意のあるアプリでコンピューターに感染させるために通常使用される動作を対象とする、攻撃の回避規則の設定を構成します。次にその一部を示します。
   - ファイルのダウンロードまたは実行を試みる、Office アプリまたは Web メールで使用される実行可能ファイルおよびスクリプト。

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1db36b0ea3d2ba691811958a01043a606b4681a
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 22bfe44b95eedcdf87a41cfaaf959c72cfbe93e2
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251974"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423817"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Microsoft Intune で認証に証明書を使用する
 
@@ -44,11 +44,13 @@ Intune で証明書を使用し、VPN、Wi-Fi、電子メール プロファイ�
 
 Microsoft の証明機関 (CA) を使用する場合:
 
-- SCEP 証明書プロファイルを使用するには、Intune で使用する[ネットワーク デバイス登録サービス (NDES) サーバーを設定する](certificates-scep-configure.md#set-up-ndes)必要があります。
-- 次の証明書プロファイルの種類を使用するには、[Microsoft Intune 証明書コネクタをインストールする](certificates-scep-configure.md#install-the-intune-certificate-connector)必要があります。
-  - SCEP 証明書プロファイル
-  - PKCS 証明書プロファイル
+- SCEP 証明書プロファイルを作成するには:
+  - Intune で使用する[ネットワーク デバイス登録サービス (NDES) サーバーを設定](certificates-scep-configure.md#set-up-ndes)します。
+  - [Microsoft Certificate Connector をインストールします](certificates-scep-configure.md#install-the-microsoft-intune-connector)。
 
+- PKCS 証明書プロファイルを使用するには、次を実行します。
+  - [PFX Certificate Connector for Microsoft Intune をインストールします] (certificates-imported-pfx-configure)。
+  
 - PKCS のインポートされた証明書を使用するには:
   - [PFX Certificate Connector for Microsoft Intune をインストールします](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune)。
   - 証明機関から証明書をエクスポートし、Microsoft Intune にインポートします。 「[PFXImport PowerShell プロジェクト](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell)」を参照してください。
@@ -80,13 +82,13 @@ Microsoft の証明機関 (CA) を使用する場合:
 | プラットフォーム              | 信頼された証明書プロファイル | PKCS 証明書プロファイル | SCEP 証明書プロファイル | PKCS のインポートされた証明書プロファイル  |
 |--|--|--|--|---|
 | Android デバイス管理者 | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png)|  ![サポート](./media/certificates-configure/green-check.png) |
-| Android エンタープライズ <br> - フル マネージド (デバイスの所有者)   | ![サポート](./media/certificates-configure/green-check.png) |   | ![サポート](./media/certificates-configure/green-check.png) |  ![サポート](./media/certificates-configure/green-check.png)  |
-| Android エンタープライズ <br> - 専用 (デバイスの所有者)   | ![サポート](./media/certificates-configure/green-check.png)  | ![サポート](./media/certificates-configure/green-check.png) | ![サポートされています](./media/certificates-configure/green-check.png)  | ![サポート](./media/certificates-configure/green-check.png)|
-| Android エンタープライズ <br> - 会社所有の仕事用プロファイル   | ![サポート](./media/certificates-configure/green-check.png)  |  | ![サポート](./media/certificates-configure/green-check.png)  | ![サポート](./media/certificates-configure/green-check.png)  |
-| Android エンタープライズ <br> - 仕事用プロファイル    | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポートされています](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) |
-| iOS/iPadOS                   | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポートされています](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) |
+| Android エンタープライズ <br> - フル マネージド (デバイスの所有者)   | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png)  | ![サポートされています](./media/certificates-configure/green-check.png) |  ![サポート](./media/certificates-configure/green-check.png)  |
+| Android エンタープライズ <br> - 専用 (デバイスの所有者)   | ![サポートされています](./media/certificates-configure/green-check.png)  | ![サポート](./media/certificates-configure/green-check.png) | ![サポートされています](./media/certificates-configure/green-check.png)  | ![サポート](./media/certificates-configure/green-check.png)|
+| Android エンタープライズ <br> - 会社所有の仕事用プロファイル   | ![サポート](./media/certificates-configure/green-check.png)  | ![サポートされています](./media/certificates-configure/green-check.png)  | ![サポートされています](./media/certificates-configure/green-check.png)  | ![サポート](./media/certificates-configure/green-check.png)  |
+| Android エンタープライズ <br> - 仕事用プロファイル    | ![サポート](./media/certificates-configure/green-check.png) | ![サポートされています](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) |
+| iOS/iPadOS                   | ![サポート](./media/certificates-configure/green-check.png) | ![サポートされています](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) | ![サポートされています](./media/certificates-configure/green-check.png) |
 | macOS                 | ![サポート](./media/certificates-configure/green-check.png) |  ![サポートされています](./media/certificates-configure/green-check.png) |![サポート](./media/certificates-configure/green-check.png)|![サポート](./media/certificates-configure/green-check.png)|
-| Windows 8.1 以降 |![サポート](./media/certificates-configure/green-check.png)  |  |![サポート](./media/certificates-configure/green-check.png) |   |
+| Windows 8.1 以降 |![サポート](./media/certificates-configure/green-check.png)  |  |![サポートされています](./media/certificates-configure/green-check.png) |   |
 | Windows 10 以降  | ![サポート](./media/certificates-configure/green-check.png) | ![サポートされています](./media/certificates-configure/green-check.png) | ![サポートされています](./media/certificates-configure/green-check.png) | ![サポート](./media/certificates-configure/green-check.png) |
 
 ## <a name="export-the-trusted-root-ca-certificate"></a>信頼されたルート CA 証明書をエクスポートする
@@ -172,3 +174,5 @@ SCEP、PKCS、PKCS のインポートされた証明書プロファイルの場�
 - [Intune を使用して SCEP 証明書をサポートするようにインフラストラクチャを構成する](certificates-scep-configure.md)  
 - [Intune で PKCS 証明書を構成して管理する](certficates-pfx-configure.md)  
 - [PKCS のインポートされた証明書プロファイルを作成する](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+
+[証明書コネクタ](certificate-connectors.md)について説明します。

@@ -81,9 +81,17 @@
             - name: macOS LOB アプリ
               href: lob-apps-macos.md
             - name: Win32 アプリの管理
-              href: apps-win32-app-management.md
-            - name: S モード デバイスでの Win32 アプリ
-              href: apps-win32-s-mode.md
+              items:
+                - name: Win32 アプリの管理の概要
+                  href: apps-win32-app-management.md
+                - name: Win32 アプリの準備
+                  href: apps-win32-prepare.md
+                - name: Win32 アプリの追加
+                  href: apps-win32-add.md
+                - name: Win32 アプリのトラブルシューティング
+                  href: apps-win32-troubleshoot.md
+                - name: S モード デバイスでの Win32 アプリ
+                  href: apps-win32-s-mode.md
         - name: 特定のアプリを追加する
           items:
             - name: ポータルサイトアプリ - オートパイロット

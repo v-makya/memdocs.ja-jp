@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e359a87cb9e62b6d7542d82d9819b5c132a8bc2
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 4dca7e5b790cd932841211b04cf463602df55a57
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910266"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390774"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Microsoft Intune を使用して Windows 10 ポータル サイト アプリを追加する
 
@@ -33,6 +33,9 @@ ms.locfileid: "88910266"
 
  > [!IMPORTANT]
  > ポータル サイト アプリをダウンロードする場合、この記事で説明されたオプションでは、アプリの更新プログラムがリリースされるたびに、手動で更新プログラムを割り当てる必要があります。 Windows 10 Autopilot でプロビジョニングされたデバイス用のポータル サイト アプリを展開するには、[Windows 10 ポータル サイト アプリのオートパイロット デバイスの追加](store-apps-company-portal-autopilot.md)に関するページをご覧ください。
+
+> [!NOTE]
+> Intune ポータル サイトでは、Configuration Manager アプリケーションがサポートされています。 エンド ユーザーはこの機能によって、共同管理されている顧客に対して、ポータル サイト上で Configuration Manager および Intune の両方にデプロイされているアプリケーションを表示できるようになります。 この新しいバージョンのポータル サイトには、共同管理されているすべての顧客に対して、Configuration Manager にデプロイされているアプリが表示されます。 このサポートによって、管理者は異なるエンド ユーザー ポータルのエクスペリエンスを統合できます。 詳細については、「[共同管理デバイスでポータル サイト アプリを使用する](/mem/configmgr/comanage/company-portal)」を参照してください。
 
 ## <a name="configure-settings-to-show-offline-apps"></a>オフライン アプリ表示するように設定を構成する
 1. 自分の管理アカウントを使って[ビジネス向け Microsoft Store](https://www.microsoft.com/business-store) にサインインします。

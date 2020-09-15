@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c98025ecf731e856de150d1cb5ffa854ef623c0e
-ms.sourcegitcommit: 15450a1e92d9f67f74ae619ffe192c15948107c5
+ms.openlocfilehash: 421c9ebcf15e9c45bd235c10062dd63179a9f59c
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516306"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076191"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-windows-autopilot"></a>Windows Autopilot を使用して、Intune での Windows デバイスを登録する
 
@@ -119,6 +119,9 @@ Autopilot Deployment プロファイルは、Autopilot デバイスを構成す�
     - **[アカウントの変更オプションを非表示にする] (Windows 10 バージョン 1809 以降が必要)** : **[非表示]** を選択すると、会社のサインイン ページとドメイン エラー ページにアカウント変更オプションが表示されなくなります。 これらのオプションでは、[Azure Active Directory で会社のブランドを構成する](/azure/active-directory/fundamentals/customize-branding)必要があります。
     - **[ユーザー アカウントの種類]** : ユーザーのアカウントの種類を選択します (**管理者**ユーザーまたは**標準**ユーザー)。 デバイスを参加させるユーザーをローカル管理グループに追加することで、それらのユーザーをローカル管理者にすることができます。 ユーザーをデバイスの既定の管理者にすることはできません。
     - **[White Glove OOBE を許可する]** (Windows 10 バージョン 1903 以降が必要、[追加の物理的要件](white-glove.md#prerequisites)): **[はい]** を選択して、White Glove のサポートを許可します。
+    > [!NOTE]
+    > これを [いいえ] (ホワイトグローブをブロックする) に設定する場合でも、OOBE 中に Windows キーを5回押してホワイトグローブを起動し、そのパスを進めることができることに注意してください。 ただし、Intune は後でこの設定を適用するため、エラーコード0x80180005 でのプロビジョニング前のエラーを示す赤い画面が表示されます。
+
     - **[デバイス名のテンプレートを適用する]** (Windows 10 バージョン 1809 以降と [Azure AD の結合の種類] が必要) **[はい]** を選択すると、登録中にデバイスに名前を付けるときに使用するテンプレートが作成されます。 名前を 15 文字以下にする必要があります。また、文字、数字、ハイフンを含めることができます。 数字だけで名前を作ることはできません。 [%SERIAL% マクロ](/windows/client-management/mdm/accounts-csp)を使用し、ハードウェア固有のシリアル番号を追加します。 または、[%RAND:x% マクロ](/windows/client-management/mdm/accounts-csp)を使用して、数字のランダム文字列を追加します。x は追加する桁数です。 [ドメイン参加プロファイル](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile)には、ハイブリッド デバイスのプレフィックスのみを指定できます。 
     - **[言語 (リージョン)]** \*: デバイスで使用する言語を選択します。 このオプションは、 **[配置モード]** に **[自己展開]** を選択した場合のみ使用できます。
     - **[キーボードを自動的に構成する]** \*: **[言語 (リージョン)]** を選択している場合は、 **[はい]** を選択してキーボード選択ページをスキップします。 このオプションは、 **[配置モード]** に **[自己展開]** を選択した場合のみ使用できます。

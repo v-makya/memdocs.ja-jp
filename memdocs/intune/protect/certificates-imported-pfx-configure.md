@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/29/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 048e1d3efcb96d18453bfd7b3dbf332dc83b7a1f
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 89da26da402648d95a3a1e91482c1cbe7ad415e4
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992574"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423792"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Intune でインポートした PKCS 証明書を構成して使用する
 
@@ -89,13 +89,15 @@ Intune を使用して、**インポートした PFX 証明書**をユーザー�
 
 ## <a name="download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune"></a>PFX Certificate Connector for Microsoft Intune のダウンロード、インストール、および構成
 
+開始する前に、[コネクタの要件を確認](certificate-connectors.md)し、ご利用の環境と Windows Server でコネクタをサポートする準備ができていることを確認します。
+
 1. [Microsoft Endpoint Manager 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)にサインインします。
 
-2. **[テナント管理]**  >  **[コネクタとトークン]**  >  **[証明書のコネクタ]**  >  **[追加]** の順に選択します。
+2. **[テナント管理]** 、 **[コネクタとトークン]** 、 **[証明書のコネクタ]** 、 **[+ 追加]** の順に選択します。
 
-   ![PFX Certificate Connector for Microsoft Intune のダウンロード](./media/certificates-imported-pfx-configure/download-imported-pfxconnector.png)
+3. PKCS #12 のコネクタの *[Certificate Connector ソフトウェアをネットワーク上のセキュリティで保護された場所にダウンロード]* をクリックし、コネクタのインストール先となるサーバーからアクセスできる場所にファイルを保存します。
 
-3. ガイダンスに従って、*PFX Certificate Connector for Microsoft Intune* を、コネクタをインストールしようとしているサーバーからアクセスできる場所にダウンロードします。
+   ![Microsoft Intune コネクタのダウンロード](./media/certificates-imported-pfx-configure/download-connector.png)
 
 4. ダウンロードが完了したら、サーバーにサインインし、インストーラー (PfxCertificateConnectorBootstrapper) を実行します。  
    - 既定のインストール場所を受け入れると、コネクタは `Program Files\Microsoft Intune\PFXCertificateConnector` にインストールされます。

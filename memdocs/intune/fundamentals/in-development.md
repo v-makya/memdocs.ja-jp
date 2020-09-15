@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb277f30401f31ddb400f5e3f6cd7709fa31c0b
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: f9ec657e7d2ee83f3f4f54f9a33a5a350faa4229
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286239"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564246"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune 用に開発中
 
@@ -218,15 +218,6 @@ PowerShell スクリプトでは、Intune で Azure AD に登録されたデバ�
 ### <a name="log-analytics-will-include-device-details-log--6014987----"></a>Log Analytics には、デバイスの詳細ログが含まれる<!--6014987  -->
 Intune デバイスの詳細ログは、 **[レポート]**  >  **[ログ分析]** で入手できます。 デバイスの詳細を相互に関連付けて、カスタム クエリと Azure ブックを作成することができます。
 
-### <a name="tenant-attach-device-timeline-in-the-admin-center--7220536-cm7141381---"></a>テナントのアタッチ:管理センターのデバイス タイムライン<!--7220536, CM7141381 -->
-Configuration Manager で、テナントのアタッチを使用してデバイスを Microsoft Endpoint Manager と同期すると、イベントのタイムラインを確認できるようになります。 このタイムラインにはそのデバイス上での過去の活動が表示され、問題のトラブルシューティングに役立ちます。 詳細については、[Configuration Manager Technical Preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_timeline) に関する記事をご覧ください。  
-
-### <a name="tenant-attach-install-an-application-from-the-admin-center---7220536-cm6024389---"></a>テナントのアタッチ:管理センターからアプリケーションをインストールする<!-- 7220536, CM6024389 -->
-Microsoft エンドポイント管理の管理センターからテナントに接続されたデバイスへのアプリケーションのインストールを、リアルタイムで開始できるようになります。 詳細については、[Configuration Manager Technical Preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_apps) に関する記事をご覧ください。
-
-### <a name="tenant-attach-cmpivot-from-the-admin-center--7220536-cm6024392---"></a>テナントのアタッチ:管理センターからの CMPivot<!--7220536, CM6024392 -->
-[CMPivot](../../configmgr/tenant-attach/cmpivot-overview-attached.md) の機能を、Microsoft Endpoint Manager admin center に導入できるようになります。 Helpdesk などの追加のペルソナが、ConfigMgr マネージド デバイスそれぞれに対してクラウドからリアルタイムのクエリを開始して、結果を管理センターに返すことができるようになりました。 これにより、CMPivot の従来の利点すべてを利用して、IT 管理者やその他の指定されたペルソナが環境内のデバイスの状態をすばやく評価し、アクションを実行することが可能になります。 詳細については、[Configuration Manager Technical Preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot) に関する記事をご覧ください。 
-
 ### <a name="tenant-attach-run-scripts-from-the-admin-center--7220536-cm6234688---"></a>テナントのアタッチ:管理センターからスクリプトを実行する<!--7220536, CM6234688 -->
 Configuration Manager のオンプレミスの[スクリプト実行](../../configmgr/apps/deploy-use/create-deploy-scripts.md)機能を、Microsoft Endpoint Manager admin center に導入できるようになります。 Helpdesk などの追加のペルソナが、Configuration Manager マネージド デバイスそれぞれに対してクラウドから PowerShell スクリプトを実行できるようになります。 これにより、Configuration Manager 管理者によって既に定義され、承認されている PowerShell スクリプトの従来の利点すべてを、この新しい環境でも利用できるようになります。 詳細については、[Configuration Manager Technical Preview 2005](../../configmgr/core/get-started/2020/technical-preview-2005.md#bkmk_scripts) に関する記事をご覧ください。 
 
@@ -275,11 +266,11 @@ Intune でのエンドポイント セキュリティの詳細については、
 適用対象:
 - Windows 10 以降
 
-#### <a name="new-windows-10-feature-update-report---6473121-----"></a>新しい Windows 10 の機能更新プログラム レポート<!-- 6473121   -->
-**機能更新プログラムのエラー** レポートでは、**Windows 10 の機能更新プログラム** ポリシーがあり、更新が試行されたターゲットのデバイスについてエラーの詳細が提供されます。 [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[監視]**  >  **[機能更新プログラムのエラー]** の順に選択して、このレポートを表示します。
-
 #### <a name="new-windows-10-feature-update-report---6473128----"></a>新しい Windows 10 の機能更新プログラム レポート<!-- 6473128  -->
 **Windows の機能更新プログラム** レポートでは、**Windows 10 機能更新** ポリシーがあるターゲットのデバイスについてコンプライアンスの全体的なビューが表示されます。 [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[レポート]**  >  **[Windows 10 の機能更新プログラム (プレビュー)]**  >  **[機能更新プログラムのエラー]** の順に選択して、このレポートのサマリを表示します。 特定のポリシーのレポートを表示するには、 **[レポート]** タブを選択し、**Windows の機能更新プログラム レポート**を開きます。 
+
+#### <a name="new-windows-10-feature-failures-update-report---6473121-----"></a>新しい Windows 10 の機能更新プログラムのエラー レポート<!-- 6473121   -->
+**機能更新プログラムのエラー** レポートでは、**Windows 10 の機能更新プログラム** ポリシーがあり、更新が試行されたターゲットのデバイスについてエラーの詳細が提供されます。 [Microsoft エンドポイント マネージャー管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイス]**  >  **[監視]**  >  **[機能更新プログラムのエラー]** の順に選択して、このレポートを表示します。
 
 <!-- ***********************************************-->
 <!--

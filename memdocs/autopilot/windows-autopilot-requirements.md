@@ -17,16 +17,16 @@ ms.topic: article
 ms.custom:
 - CI 116757
 - CSSTroubleshooting
-ms.openlocfilehash: 37d249c75f18d52f7fa17a0e271f45b17465da1a
-ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
+ms.openlocfilehash: bf0b6d1f074de85793f025f9578892a126bbce3d
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89385334"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076079"
 ---
 # <a name="windows-autopilot-requirements"></a>Windows Autopilot の要件
 
-**適用対象: Windows 10**
+**適用先:Windows 10**
 
 Windows Autopilot は、Microsoft Intune など、Windows 10、Azure Active Directory、MDM サービスで利用可能な特定の機能に依存しています。  Windows の自動操縦を使用してこれらの機能を利用するには、いくつかの要件が満たされている必要があります。
 
@@ -41,7 +41,7 @@ Windows Autopilot は、Microsoft Intune など、Windows 10、Azure Active Dire
   - Windows 10 Pro for Workstations
   - Windows 10 Enterprise
   - Windows 10 Education
-  - Windows 10 Enterprise 2019 LTSC
+  - Windows 10 Enterprise 2019 LTSC (自己展開モードをサポートしていません)
 
 >[!NOTE]
 >Windows 自動操縦を展開する手順は、特定の製品とバージョンを参照している場合があります。 これらの製品をこのコンテンツに含めることは、サポートライフサイクルを超えるバージョンのサポートの拡張を意味するものではありません。 Windows 自動操縦では、サポートライフサイクルを超える製品はサポートされていません。 詳しくは、「[Microsoft ライフサイクル ポリシー](https://go.microsoft.com/fwlink/p/?LinkId=208270)」をご覧ください。

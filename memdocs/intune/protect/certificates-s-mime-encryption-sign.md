@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c27a78d78678234b30ea80cfc192cb4250eca2e1
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 5bf1150a32db213c2c8b697625076a601377c1e6
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915570"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423766"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Intune で電子メールに署名し、暗号化する S/MIME の概要
 
@@ -45,7 +45,11 @@ Exchange を使用した S/MIME メールの署名と暗号化の詳細につい
 
 Intune での署名証明書は、PKCS 証明書を使います。 「[Intune で PKCS 証明書を構成して使用する](certficates-pfx-configure.md)」では、Intune 環境に PKCS 証明書を展開して使う方法が説明されています。 その手順は次のとおりです。
 
-- PKCS 証明書の要求をサポートするための Microsoft Intune Certificate Connector をダウンロードしてインストールします。 このコネクタのネットワーク要件は、[マネージド デバイス](../fundamentals/intune-endpoints.md#access-for-managed-devices)と同じです。
+- PKCS 証明書要求をサポートするための PFX 証明書コネクタをダウンロードしてインストールします。 このコネクタのネットワーク要件は、[マネージド デバイス](../fundamentals/intune-endpoints.md#access-for-managed-devices)と同じです。
+  > [!IMPORTANT]
+  > PFX 証明書コネクタのバージョン 6.2008.60.607 (2020 年 8 月にリリース) 以降、このコネクタは、PCKS #12 証明書要求に対する証明書の展開をサポートし、特定のユーザーに対して S/MIME 電子メール暗号化を行うために Intune にインポートされた PFX ファイルの要求を処理します。 PKCS 証明書プロファイルを使用する場合に、Microsoft Intune コネクタを使用する必要がなくなります。
+  > 
+  > 詳細については、[証明書コネクタ](certificate-connectors.md)に関する記事を参照してください。
 - お使いのデバイス用の信頼されたルート証明書プロファイルを作成します。 このステップには、お使いの証明機関に対する信頼されたルート証明書と中間証明書の使用と、デバイスへのプロファイルの展開が含まれます。
 - 作成した証明書テンプレートを使って、PKCS 証明書プロファイルを作成します。 このプロファイルは、署名証明書をデバイスに発行し、PKCS 証明書プロファイルをデバイスに展開します。
 

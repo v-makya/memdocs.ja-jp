@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8843ab5c8bf3d0e6970398c1ad81a8a2b3b8f9cb
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 4c652907d105b4b0363b2113916e892360feab39
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193965"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564263"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Intune で Windows 10 の BitLocker ポリシーを管理する
 
@@ -97,7 +97,7 @@ Intune で BitLocker を管理するには、アカウントに適切な Intune 
    1. **[プラットフォーム]** :Windows 10 以降
    2. **[プロファイルの種類]** :エンドポイント保護
 
-   ![プロファイルを選択します](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![BitLocker プロファイルを選択する](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. **[設定]**  >  **[Windows 暗号化]** の順に選択します。
 
@@ -149,6 +149,8 @@ Intune では BitLocker 用の Azure AD ブレードにアクセスできます�
 2. **[デバイス]**  >  **[すべてのデバイス]** の順に選択します。
 
 3. 一覧からデバイスを選択して、 *[監視]* 下にある **[回復キー]** を選択します。
+
+4. **[回復キーの表示]** をクリックします。 これを選択すると、"KeyManagement" アクティビティの下に監査ログ エントリが生成されます。
   
    キーが Azure AD で利用できる場合は、次の情報を入手できます。
    - BitLocker キー ID
@@ -158,6 +160,8 @@ Intune では BitLocker 用の Azure AD ブレードにアクセスできます�
    キーが Azure AD 内に存在していない場合、Intune によって "*このデバイスの BitLocker キーが見つかりません*" が表示されます。
 
 BitLocker の情報については、[BitLocker 構成サービス プロバイダー](/windows/client-management/mdm/bitlocker-csp) (CSP) に関するページを参照してください。 BitLocker CSP は、Windows 10 の場合、バージョン 1703 以降で、Windows 10 Pro の場合、バージョン 1809 以降でサポートされています。
+
+監査ログ エントリの詳細については、[Azure Portal の監査ログ](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#audit-logs)に関する記事を参照してください。
 
 ### <a name="rotate-bitlocker-recovery-keys"></a>BitLocker 回復キーを交換する
 

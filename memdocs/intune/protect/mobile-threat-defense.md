@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2020
+ms.date: 09/1/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80b725393323484ecb33aad947a95894604c4d5a
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 0c6655f9d7aaa708e5dd0b2818c9cfc1ba4c9cdc
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906890"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390791"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Mobile Threat Defense の Intune との統合
 
@@ -80,13 +80,15 @@ Mobile Threat Defense ソリューションによってデバイスが感染し�
 ## <a name="sample-scenarios-for-unenrolled-devices-using-intune-app-protection-policies"></a>Intune アプリ保護ポリシーを使用する未登録デバイスのサンプル シナリオ
 
 Mobile Threat Defense ソリューションによってデバイスが感染したと見なされた場合<br>
-![Mobile Threat Defense と感染しているデバイスを示す画像](./media/mobile-threat-defense/MTD-image-3.png)
+![Mobile Threat Defense によって感染したデバイスを示す画像](./media/mobile-threat-defense/MTD-image-3.png)
 
 デバイスが修復されたときにアクセスが許可されます。<br>
 ![Mobile Threat Defense とアクセス付与を示す画像](./media/mobile-threat-defense/MTD-image-4.png)
 
 > [!NOTE]
-> 1 つの Intune テナントで、複数の Mobile Defense ベンダーを使用することができます。 ただし、2 つ以上のベンダーが同じプラットフォームでの使用向けに構成されている場合、そのプラットフォームを実行するすべてのデバイスで、各 MTD アプリをインストールし、脅威をスキャンする必要があります。 構成された任意のアプリからスキャンの送信に失敗すると、そのデバイスは非準拠としてマークされます。 
+> プラットフォームごとに、1 テナントあたり 1 つの Mobile Threat Defense ベンダーを使用することをお勧めします。 
+> 
+> デバイス コンプライアンスに対しては、1 つの Intune テナントで、複数の Mobile Defense ベンダーを使用することができます。 ただし、2 つ以上のベンダーが同じプラットフォームでの使用向けに構成されている場合、そのプラットフォームを実行するすべてのデバイスで、各 MTD アプリをインストールし、脅威をスキャンする必要があります。 構成された任意のアプリからスキャンの送信に失敗すると、そのデバイスは非準拠としてマークされます。 
 
 ## <a name="mobile-threat-defense-partners"></a>Mobile Threat Defense パートナー
 
