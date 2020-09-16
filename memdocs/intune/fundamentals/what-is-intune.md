@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 939a9b46c3972bc4d575b3b58d08f5f6fb169239
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 6e8fa8db5e7a960677eeafaf03ca43662da9b8d3
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996261"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012648"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune はデバイスの MDM および MAM プロバイダーです
 
@@ -63,9 +63,11 @@ Intune にデバイスを登録して管理すると、管理者は次のこと�
 - [Microsoft Intune でデバイスを保護する](../protect/device-protect.md)
 
 ### <a name="try-the-interactive-guide"></a>対話型ガイドを試す
-「[Microsoft Endpoint Manager を使用してデバイスを管理する](https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager)」の対話型ガイドでは、Microsoft Endpoint Manager 管理センターを使用して、モバイル アプリケーションとデスクトップ アプリケーションを管理および保護する方法を説明します。</br></br>
+「[Microsoft Endpoint Manager を使用してデバイスを管理する](https://mslearn.cloudguides.com/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager)」の対話型ガイドでは、Microsoft Endpoint Manager 管理センターを使用して、モバイル アプリケーションとデスクトップ アプリケーションを管理および保護する方法を説明します。</br></br>
 
-> [!VIDEO https://mslearn.cloudguides.com/en-us/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager]
+<div align=”center”>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy" importance="low"/></iframe>
+</div>
 
 ## <a name="manage-apps"></a>アプリを管理する
 
