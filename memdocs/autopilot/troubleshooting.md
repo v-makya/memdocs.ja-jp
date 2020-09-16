@@ -4,6 +4,7 @@ description: Windows 自動操縦の展開プロセス中に発生した問題�
 keywords: MDM, セットアップ, Windows, Windows 10, OOBE, 管理, 展開, Autopilot, ZTD, ゼロタッチ, パートナー, MSFB, Intune
 ms.reviewer: mniehaus
 manager: laurawi
+ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -14,16 +15,16 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: f6a9e3008a493185a2338a5af1106806d86dd130
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 38f140717d256d6edd4e9bd6cd0a66b6bc853740
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907910"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574581"
 ---
 # <a name="troubleshooting-windows-autopilot"></a>Windows 自動操縦のトラブルシューティング
 
-**適用対象: Windows 10**
+**適用先:Windows 10**
 
 Windows の自動操縦は、Windows デバイスのライフサイクルのすべての部分を簡略化するように設計されていますが、問題が発生する可能性が常にあります。 トラブルシューティングに役立つ次の情報を確認してください。
 
@@ -42,9 +43,9 @@ Windows の自動操縦は、Windows デバイスのライフサイクルのす�
 
 - 構成: Azure Active Directory と Microsoft Intune (または同等の MDM サービス) は、「 [Windows 自動構成の要件](configuration-requirements.md)」で指定したとおりに構成されていますか。
 - ネットワーク接続: デバイスは、「 [Windows 自動操縦ネットワーク要件](networking-requirements.md)」に記載されているサービスにアクセスできますか。
-- 自動操縦装置 (OOBE) の動作: 予期しない既定のエクスペリエンス画面のみが表示されていました。 Azure AD の資格情報ページでは、組織固有の詳細情報が想定どおりにカスタマイズされていますか。
-- Azure AD 参加の問題: デバイスは Azure Active Directory に参加できましたか?
-- MDM の登録に関する問題: デバイスは Microsoft Intune (または同等の MDM サービス) に登録できましたか?
+- 自動操縦機能 (OOBE) の動作: 想定される [oobe](#troubleshooting-autopilot-oobe-issues) 画面が表示されますか。 Azure AD の資格情報] ページでは、組織固有の詳細情報が想定どおりにカスタマイズされていますか。
+- Azure AD 参加の問題: デバイスは Azure Active Directory に [参加](#troubleshooting-azure-ad-join-issues)できますか。
+- MDM の登録に関する問題: デバイスは Microsoft Intune (または同等の MDM サービス) [に登録](#troubleshooting-intune-enrollment-issues) できますか。
 
 ## <a name="troubleshooting-autopilot-device-import"></a>自動操縦用デバイスのインポートのトラブルシューティング
 
@@ -115,7 +116,7 @@ Windows 10 バージョン1803以降では、イベントログエントリが�
 
 自動操縦展開サービスから受け取った自動操縦プロファイル設定は、デバイスのレジストリに格納されます。 この情報については、 **HKLM\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot**を参照してください。 使用できるレジストリエントリは次のとおりです。
 
-| 値 | 説明 |
+| [値] | 説明 |
 |-------|-------------|
 | AadTenantId | ユーザーがサインインした Azure AD テナントの GUID。 このエントリがデバイスの登録に使用されたテナントと一致しない場合、ユーザーはエラーを受け取ります。 |
 | CloudAssignedTenantDomain | デバイスが登録されている Azure AD テナント (例、"contosomn.onmicrosoft.com")。 デバイスが自動操縦に登録されていない場合、この値は空白になります。 |
