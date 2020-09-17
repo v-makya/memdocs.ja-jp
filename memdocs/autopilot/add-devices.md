@@ -14,12 +14,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: da7ab26cc748b64426ec256a0814beae4ced1a5f
-ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
+ms.openlocfilehash: 776cc47865853ae9b52218c0b2257840aea09219
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89280934"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689333"
 ---
 # <a name="adding-devices-to-windows-autopilot"></a>Windows 自動操縦にデバイスを追加する
 
@@ -44,6 +44,8 @@ OEM が組織のデバイスを登録する前に、組織は OEM のアクセ�
 
 Oem と同様に、CSP パートナーは、組織のデバイスを登録するためのアクセス許可を付与する必要があります。 [お客様の同意ページ](registration-auth.md#csp-authorization)で説明されているプロセスを使用できます。 CSP パートナーが組織との関係を要求します。 組織の全体管理者が要求を承認します。 承認後、CSP パートナーは、web サイトから直接、または同じタスクを自動化できる利用可能な Api を介して、 [パートナーセンター](https://partner.microsoft.com/pcv/dashboard/overview)を使用してデバイスを追加します。
 
+Surface デバイスの場合、Microsoft サポートはデバイスの登録に役立ちます。  詳細については、「 [Windows 自動操縦の Surface Registration サポート](https://docs.microsoft.com/surface/surface-autopilot-registration-support)」を参照してください。
+
 CSP パートナーと組織の間の関係を確立するときに、Windows 自動操縦の管理者権限は必要ありません。 グローバル管理者の承認プロセスの一環として、[委任された管理アクセス許可を含める] チェックボックスをオフにすることができます。
 
 > [!Note]
@@ -52,10 +54,11 @@ CSP パートナーと組織の間の関係を確立するときに、Windows �
 ## <a name="automatic-registration-of-existing-devices"></a>既存のデバイスの自動登録
 
 次の場合は、既存のデバイスを自動的に登録できます。
-- サポートされているバージョンの Windows 10 半期チャネルを実行する
+- サポートされているバージョンの Windows 10 半期チャネルを実行しています。
 - Intune などの MDM サービスに登録されている。
 
 両方の要件を満たすデバイスの場合、MDM サービスはデバイスにハードウェアハッシュを要求できます。 その後、デバイスを Windows 自動操縦に自動的に登録できます。
+
 Microsoft Intune でこの操作を行う方法については、「すべての対象デバイスを自動操縦に変換する」設定を説明している「 [自動操縦展開プロファイルの作成](/intune/enrollment-autopilot#create-an-autopilot-deployment-profile) 」を参照してください。 
 
 Intune の **すべての対象デバイスを自動操縦する設定に変換** することで、このようなデバイスを Windows に自動的に変換できます。 詳しくは、「[Autopilot Deployment プロファイルを作成する](https://docs.microsoft.com/intune/enrollment-autopilot#create-an-autopilot-deployment-profile)」をご覧ください。 
@@ -75,7 +78,7 @@ Windows 自動操縦装置を使用してデバイスを識別するには、デ
 
 ハードウェアハッシュには、デバイスの詳細が含まれています。
 - manufacturer
-- 対象となるのは、モデル
+- model
 - デバイスのシリアル番号
 - ハードドライブのシリアル番号
 - ID が生成された日時の詳細
@@ -202,6 +205,6 @@ Windows 自動操縦を使用して新しいデバイスを展開する場合は
 2. [デバイスプロファイルを構成](profiles.md)します。 デバイスの展開方法と、表示するユーザーエクスペリエンスを指定します。
 3. デバイスを起動します。 デバイスがインターネットにアクセスできるネットワークに接続されている場合、デバイスが登録されているかどうかを確認するために、Windows 自動展開サービスに連絡します。 登録されている場合は、エンドユーザーエクスペリエンスをカスタマイズするために使用される、 [登録ステータスページ](enrollment-status.md)などのプロファイル設定がダウンロードされます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [Bitlocker 暗号化設定](bitlocker.md): 自動暗号化を開始する前に適用する bitlocker 暗号化設定を構成できます。
