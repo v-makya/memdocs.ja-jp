@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 273efc6be6b3f93c04c0ce39c2688859d3c96c56
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: ca9fb5b350cd9c89b8d4eb37144340b93e9ebbab
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423885"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574815"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用した機能を許可または制限するための iOS および iPadOS デバイスの設定
 
@@ -173,9 +173,9 @@ ms.locfileid: "89423885"
   > [!NOTE]
   > ユーザーが登録したデバイスの場合、ユーザーは 6 桁を超える PIN を設定することができます。 しかしながら、デバイスでは 6 桁以下の数字が適用されます。 たとえば、管理者が最小の長さを `8` に設定したとします。 ユーザー登録デバイスでは、ユーザーは 6 桁の PIN を設定するだけで済みます。 ユーザー登録デバイスでは、Intune で 6 桁を超える PIN が強制されることはありません。
 
-- **[デバイスがワイプされるまでのサインイン失敗回数]** :デバイスをワイプするまでのサインイン エラーの数 (4 から 11 まで) を入力します。
+- **[デバイスがワイプされるまでのサインイン失敗回数]** :デバイスがワイプされるまでのサインイン エラーの数 (2 から 11 まで) を入力します。 この値を `2` または `3` に設定することは推奨されません。 間違ったパスワードを入力することは非常によくあることです。 2 つまたは 3 つの間違ったパスワードの試行後のデバイスのワイプが頻繁に見られます。 この値は `4` 以上に設定することをお勧めします。 
   
-  iOS および iPadOS には、この設定に影響する可能性がある組み込みのセキュリティがあります。 たとえば、iOS および iPadOS では、サインインに失敗した回数に応じて、ポリシーのトリガーが遅れる場合があります。 また、1 回の試行と同じパスコードを繰り返し入力することも考えられます。 Apple の [iOS および iPadOS セキュリティ ガイド](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf)(Apple の Web サイトが開きます) は優れたリソースであり、パスコードの詳細が示されています。
+  iOS および iPadOS には、この設定に影響する可能性がある組み込みのセキュリティがあります。 たとえば、iOS および iPadOS では、サインインに失敗した回数に応じて、ポリシーのトリガーが遅れる場合があります。 また、1 回の試行と同じパスコードを繰り返し入力することも考えられます。 Apple の [iOS および iPadOS セキュリティ ガイド](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf)(Apple の Web サイトが開きます) は優れたリソースであり、パスコードの詳細が示されています。 
   
 - **[画面ロック後にパスワードが要求されるまでの最長時間 (分)]** <sup>1</sup>:デバイスのアイドル状態が許容される時間を入力します。この時間を超えると、ユーザーはパスワードを再入力する必要があります。 入力した時間がデバイスの現在の設定よりも長い場合、入力した時間はデバイスによって無視されます。
 

@@ -51,9 +51,11 @@
           displayName: 'psk, oma-uri, eap'
         - name: Wi-Fi のトラブルシューティング
           href: troubleshoot-wi-fi-profiles.md
-    - name: 管理用テンプレート
-      displayName: 'admx, gpo, group policy'
+    - name: グループ ポリシーと管理用テンプレート
+      displayName: 'admx, gpo'
       items:
+        - name: グループ ポリシー分析
+          href: group-policy-analytics.md
         - name: 管理用テンプレートを作成する
           href: administrative-templates-windows.md
         - name: 管理用テンプレートを使用して Office を更新する

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 09/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4aee16fc0dacce46e75735a161ae2c56d3bdb15
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4e1850249acab42c3284b3e77c96a764bfad9898
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990677"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081792"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>iOS の基幹業務アプリを Microsoft Intune に追加する
 
@@ -35,6 +35,8 @@ ms.locfileid: "83990677"
 > iOS デバイスのユーザーは Stocks や Maps などの一部の iOS 組み込みアプリを削除できます。 Intune を使用してこれらのアプリを再展開することはできません。 ユーザーがこれらのアプリを削除した場合は、アプリ ストアから手動で再インストールする必要があります。
 >
 > iOS の LOB アプリには、アプリごとに最大 2 GB のサイズ制限があります。
+>
+> Apple の共有 iPad では LOB アプリはサポートされていません。
 
 > [!NOTE]
 > バンドル識別子 (*com.contoso.app* など) は、アプリを一意に識別するものでなければなりません。 たとえば、テスト目的で運用バージョンの隣に LOB アプリのベータ版をインストールするには、ベータ版に異なる一意の識別子を与える必要があります (*com.contoso.app-beta* など)。 そうしないと、ベータ版が運用版と重複し、アップグレードとして扱われます。 .ipa ファイルの名前を変更してもこの動作に影響はありません。
@@ -61,8 +63,8 @@ ms.locfileid: "83990677"
     - **名前**:アプリの名前を入力します。これは会社のポータルに表示されます。 使用するアプリ名はすべて一意にします。 同じアプリ名が 2 つ存在する場合、いずれか 1 つのアプリのみが会社のポータルに表示されます。
     - **説明**:アプリの説明を入力します。 説明はポータル サイトに表示されます。
     - **[発行元]** : アプリの発行元の名前を入力します。
-    - **[最低限のオペレーティング システム]** :アプリをインストールできる最小限のオペレーティング システム バージョンを一覧から選択します。 これよりも前のオペレーティング システムがアプリの割り当て先デバイスにインストールされている場合、そのアプリはインストールされません。
-    - **[カテゴリ]** :1 つまたは複数の組み込みアプリ カテゴリを選択するか、ご自身で作成したカテゴリを選択します。 カテゴリを使用すれば、ユーザーはポータル サイトを参照する際にアプリを見つけやすくなります。
+    - **[オペレーティング システムの最小要件]**: アプリをインストールできる最小限のオペレーティング システム バージョンを一覧から選択します。 これよりも前のオペレーティング システムがアプリの割り当て先デバイスにインストールされている場合、そのアプリはインストールされません。
+    - **[カテゴリ]** : 1 つまたは複数の組み込みアプリ カテゴリを選択するか、ご自身で作成したカテゴリを選択します。 カテゴリを使用すれば、ユーザーはポータル サイトを参照する際にアプリを見つけやすくなります。
     - **[会社のポータルでおすすめアプリとして表示します]** : ユーザーがアプリを参照するとき、会社のポータルのメイン ページにアプリが目立つように表示されます。
     - **[情報 URL]** : このアプリに関する情報が含まれる Web サイトの URL を入力することもできます。 この URL はポータル サイトに表示されます。
     - **[プライバシー URL]** : このアプリのプライバシー情報が含まれる Web サイトの URL を入力することもできます。 この URL はポータル サイトに表示されます。
@@ -95,7 +97,7 @@ ms.locfileid: "83990677"
 > [!NOTE]
 > iOS LOB アプリのプロビジョニング プロファイルは、期限切れになる 30 日前に通知されます。
 
-## <a name="step-5-update-a-line-of-business-app"></a>手順 5:基幹業務アプリを更新する
+## <a name="step-5-update-a-line-of-business-app"></a>手順 5: 基幹業務アプリの更新
 
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 

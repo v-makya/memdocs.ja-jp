@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 09/08/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 348bafecd462aa9e4722443c33b62311b2f97e1a
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: e0a9ecebd86404d4218142d1a3acb591974b027d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993107"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608085"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune データ ウェアハウスのコレクション
 
@@ -34,30 +34,30 @@ ms.locfileid: "88993107"
 
 |          プロパティ          |                                      [説明]                                      |                例               |
 |----------------------------|---------------------------------------------------------------------------------------|--------------------------------------|
-| AppKey                     | アプリを示す一意識別子。                                                         | 123                                  |
-| ApplicationId              | アプリを示す一意識別子 - AppKey に似ていますが、このキーはナチュラルです。        | b66bc706-ffff-7437-0340-032819502773 |
-| リビジョン                   | バイナリのアップロード中に管理者が挙げたバージョン。                   | 2                                    |
-| タイトル                      | アプリのタイトル。                                                                     | Excel                                |
-| 発行者                  | アプリの発行者。                                                                 | Microsoft                            |
-| UploadState                | アプリのアップロード状態。                                                              | 1                                    |
-| AppTypeKey                 | AppType の参照 (次のセクションに説明あり)。                            | 1                                    |
-| VppProgramTypeKey          | VppProgramType の参照 (下に説明あり)。                                        | 30876                                |
-| CreationTime               | このリビジョンが作成された日時。                                            | 11/23/2016 0:00                      |
-| ModifiedTime               | このリビジョンに関連する事項が最後に変更された日時。                            | 11/23/2016 0:00                      |
-| Size                       | バイナリのサイズ (バイト単位)。                                                          | 120,392,000                          |
-| StartDateInclusiveUTC      | このアプリ リビジョンがデータ ウェアハウスで作成されたときの UTC 日時。      | 11/23/2016 0:00                      |
-| EndDateExclusiveUTC        | このアプリ リビジョンが推奨されなくなったときの UTC 日時。                        | 11/23/2016 0:00                      |
-| IsCurrent                  | データ ウェアハウスにおいて、このアプリ バージョンが現行のものであるかどうかを示します。         | 真/偽                           |
-| RowLastModifiedDateTimeUTC | このアプリ バージョンがデータ ウェアハウスで最後に変更されたときの UTC 日時。 | 11/23/2016 0:00                      |
+| appKey                     | アプリを示す一意識別子。                                                         | 123                                  |
+| applicationId              | アプリを示す一意識別子 - AppKey に似ていますが、このキーはナチュラルです。        | b66bc706-ffff-7437-0340-032819502773 |
+| revision                   | バイナリのアップロード中に管理者が挙げたバージョン。                   | 2                                    |
+| title                      | アプリのタイトル。                                                                     | Excel                                |
+| publisher                  | アプリの発行者。                                                                 | Microsoft                            |
+| uploadState                | アプリのアップロード状態。                                                              | 1                                    |
+| appTypeKey                 | AppType の参照 (次のセクションに説明あり)。                            | 1                                    |
+| vppProgramTypeKey          | VppProgramType の参照 (下に説明あり)。                                        | 30876                                |
+| creationTime               | このリビジョンが作成された日時。                                            | 11/23/2016 0:00                      |
+| modifiedTime               | このリビジョンに関連する事項が最後に変更された日時。                            | 11/23/2016 0:00                      |
+| サイズ                       | バイナリのサイズ (バイト単位)。                                                          | 120,392,000                          |
+| startDateInclusiveUTC      | このアプリ リビジョンがデータ ウェアハウスで作成されたときの UTC 日時。      | 11/23/2016 0:00                      |
+| endDateExclusiveUTC        | このアプリ リビジョンが推奨されなくなったときの UTC 日時。                        | 11/23/2016 0:00                      |
+| isCurrent                  | データ ウェアハウスにおいて、このアプリ バージョンが現行のものであるかどうかを示します。         | 真/偽                           |
+| rowLastModifiedDateTimeUTC | このアプリ バージョンがデータ ウェアハウスで最後に変更されたときの UTC 日時。 | 11/23/2016 0:00                      |
 
 ## <a name="apptypes"></a>appTypes
 **appType** エンティティには、アプリのインストール ソースがリストされています。
 
 |   プロパティ  |        [説明]        |
 |-------------|---------------------------|
-| AppTypeID   | 種類の ID           |
-| AppTypeKey  | キーの代理キー |
-| AppTypeName | アプリの種類                  |
+| appTypeID   | 種類の ID           |
+| appTypeKey  | キーの代理キー |
+| appTypeName | アプリの種類                  |
 
 ### <a name="example"></a>例
 
@@ -82,28 +82,28 @@ ms.locfileid: "88993107"
 
 |    プロパティ   |                                                                                      [説明]                                                                                     |  例 |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| DateKey       | コンプライアンス ポリシーの概要が作成されたときの日付キー。                                                                                                                   | 20161204 |
-| Unknown       | 何らかの理由でオフラインになっているか、Intune または Azure AD との通信に失敗したデバイスの数。                                                                           | 5        |
-| NotApplicable | 管理者が適用対象とするデバイス コンプライアンス ポリシーが適用されないデバイスの数。                                                                                     | 201      |
-| [準拠]     | 管理者が適用対象とする 1 つ以上のデバイス コンプライアンス ポリシーが正常に適用されているデバイスの数。                                                                        | 4083     |
-| InGracePeriod | 準拠していないが、管理者によって定義された猶予期間内にあるデバイスの数。                                                                                  | 57       |
-| NonCompliant  | 管理者が適用対象とする 1 つ以上のデバイス コンプライアンス ポリシーの適用に失敗した、または管理者が適用対象とするポリシーにユーザーが準拠していないデバイスの数。 | 43       |
-|    エラー      |    Intune または Azure AD との通信に失敗し、エラー メッセージが返されたデバイスの数。                                                                          |    3     |
+| dateKey       | コンプライアンス ポリシーの概要が作成されたときの日付キー。                                                                                                                   | 20161204 |
+| unknown       | 何らかの理由でオフラインになっているか、Intune または Azure AD との通信に失敗したデバイスの数。                                                                           | 5        |
+| notApplicable | 管理者が適用対象とするデバイス コンプライアンス ポリシーが適用されないデバイスの数。                                                                                     | 201      |
+| 対応     | 管理者が適用対象とする 1 つ以上のデバイス コンプライアンス ポリシーが正常に適用されているデバイスの数。                                                                        | 4083     |
+| inGracePeriod | 準拠していないが、管理者によって定義された猶予期間内にあるデバイスの数。                                                                                  | 57       |
+| nonCompliant  | 管理者が適用対象とする 1 つ以上のデバイス コンプライアンス ポリシーの適用に失敗した、または管理者が適用対象とするポリシーにユーザーが準拠していないデバイスの数。 | 43       |
+|    error      |    Intune または Azure AD との通信に失敗し、エラー メッセージが返されたデバイスの数。                                                                          |    3     |
 
 ## <a name="compliancepolicystatusdeviceperpolicyactivities"></a>compliancePolicyStatusDevicePerPolicyActivities
 次の表は、デバイスへのコンプライアンス ポリシーの割り当ての状態をポリシーごとおよびポリシーの種類ベースごとにまとめたものです。 割り当てられたコンプライアンス ポリシーごとに、各コンプライアンスの状態で見つかったデバイスの数を一覧表示します。
 
 |      プロパティ     |                                                                                      [説明]                                                                                     |  例 |
 |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| DateKey           | コンプライアンス ポリシーの概要が作成されたときの日付キー。                                                                                                                   | 20161219 |
-| PolicyKey         | 概要の作成対象のコンプライアンス ポリシーのキー。                                                                                                                   | 10178    |
-| PolicyPlatformKey | 概要の作成対象のコンプライアンス ポリシーのプラットフォームの種類のキー。                                                                                            | 5        |
-| Unknown           | 何らかの理由でオフラインになっているか、Intune または Azure AD との通信に失敗したデバイスの数。                                                                           | 13       |
-| NotApplicable     | 管理者が適用対象とするデバイス コンプライアンス ポリシーが適用されないデバイスの数。                                                                                     | 3        |
-| [準拠]         | 管理者が適用対象とする 1 つ以上のデバイス コンプライアンス ポリシーが正常に適用されているデバイスの数。                                                                        | 45       |
-| InGracePeriod     | 準拠していないが、管理者によって定義された猶予期間内にあるデバイスの数。                                                                                  | 3        |
-| NonCompliant      | 管理者が適用対象とする 1 つ以上のデバイス コンプライアンス ポリシーの適用に失敗した、または管理者が適用対象とするポリシーにユーザーが準拠していないデバイスの数。 | 7        |
-| エラー             | Intune または Azure AD との通信に失敗し、エラー メッセージが返されたデバイスの数。                                                                             | 3        |
+| dateKey           | コンプライアンス ポリシーの概要が作成されたときの日付キー。                                                                                                                   | 20161219 |
+| policyKey         | 概要の作成対象のコンプライアンス ポリシーのキー。                                                                                                                   | 10178    |
+| policyPlatformKey | 概要の作成対象のコンプライアンス ポリシーのプラットフォームの種類のキー。                                                                                            | 5        |
+| unknown           | 何らかの理由でオフラインになっているか、Intune または Azure AD との通信に失敗したデバイスの数。                                                                           | 13       |
+| notApplicable     | 管理者が適用対象とするデバイス コンプライアンス ポリシーが適用されないデバイスの数。                                                                                     | 3        |
+| 対応         | 管理者が適用対象とする 1 つ以上のデバイス コンプライアンス ポリシーが正常に適用されているデバイスの数。                                                                        | 45       |
+| inGracePeriod     | 準拠していないが、管理者によって定義された猶予期間内にあるデバイスの数。                                                                                  | 3        |
+| nonCompliant      | 管理者が適用対象とする 1 つ以上のデバイス コンプライアンス ポリシーの適用に失敗した、または管理者が適用対象とするポリシーにユーザーが準拠していないデバイスの数。 | 7        |
+| error             | Intune または Azure AD との通信に失敗し、エラー メッセージが返されたデバイスの数。                                                                             | 3        |
 ## <a name="compliancestates"></a>complianceStates
 
 |      プロパティ      |                       [説明]                      |
@@ -129,24 +129,24 @@ ms.locfileid: "88993107"
 
 |     プロパティ    |                       [説明]                      |    例    |
 |-----------------|--------------------------------------------------------|---------------|
-| DateKey         | データ ウェアハウス内のこの日付を示す一意識別子。 | 20160703      |
-| FullDate        | この日付を完全な日時形式で表した日付。        | 7/3/2016 0:00 |
-| DayOfWeek       | 曜日                                            | 1             |
-| DayOfMonth      | 月の日付                                           | 3             |
-| DayOfYear       | 年の通算日                                            | 185           |
-| WeekOfYear      | 年の通算週                                           | 28            |
-| MonthOfYear     | 月                                      | 7             |
-| CalendarQuarter | カレンダーの四半期                                       | 3             |
-| CalendarYear    | カレンダーの年                                          | 2016          |
-| DateKey         | データ ウェアハウス内のこの日付を示す一意識別子。 | 20160703      |
-| FullDate        | この日付を完全な日時形式で表した日付。        | 7/3/2016 0:00 |
-| DayOfWeek       | 曜日                                            | 1             |
-| DayOfMonth      | 月の日付                                           | 3             |
-| DayOfYear       | 年の通算日                                            | 185           |
-| WeekOfYear      | 年の通算週                                           | 28            |
-| MonthOfYear     | 月                                      | 7             |
-| CalendarQuarter | カレンダーの四半期                                       | 3             |
-| CalendarYear    | カレンダーの年                                          | 2016          |
+| dateKey         | データ ウェアハウス内のこの日付を示す一意識別子。 | 20160703      |
+| fullDate        | この日付を完全な日時形式で表した日付。        | 7/3/2016 0:00 |
+| dayOfWeek       | 曜日                                            | 1             |
+| dayOfMonth      | 月の日付                                           | 3             |
+| dayOfYear       | 年の通算日                                            | 185           |
+| weekOfYear      | 年の通算週                                           | 28            |
+| monthOfYear     | 月                                      | 7             |
+| calendarQuarter | カレンダーの四半期                                       | 3             |
+| calendarYear    | カレンダーの年                                          | 2016          |
+| dateKey         | データ ウェアハウス内のこの日付を示す一意識別子。 | 20160703      |
+| fullDate        | この日付を完全な日時形式で表した日付。        | 7/3/2016 0:00 |
+| dayOfWeek       | 曜日                                            | 1             |
+| dayOfMonth      | 月の日付                                           | 3             |
+| dayOfYear       | 年の通算日                                            | 185           |
+| weekOfYear      | 年の通算週                                           | 28            |
+| monthOfYear     | 月                                      | 7             |
+| calendarQuarter | カレンダーの四半期                                       | 3             |
+| calendarYear    | カレンダーの年                                          | 2016          |
 
 ## <a name="devicecategories"></a>deviceCategories
 
@@ -161,38 +161,38 @@ ms.locfileid: "88993107"
 
 |  プロパティ |                                          [説明]                                          |  例 |
 |-----------|-----------------------------------------------------------------------------------------------|----------|
-| DateKey   | デバイス構成プロファイルのチェックインがデータ ウェアハウスに記録されたときの日付キー。 | 20160703 |
-| Pending   | 保留状態の一意のデバイス数。                                                    | 123      |
+| dateKey   | デバイス構成プロファイルのチェックインがデータ ウェアハウスに記録されたときの日付キー。 | 20160703 |
+| pending   | 保留状態の一意のデバイス数。                                                    | 123      |
 | 成功 | 成功状態の一意のデバイス数。                                                    | 12       |
-| エラー     | エラー状態の一意のデバイス数。                                                      | 10       |
-| Failed    | 失敗状態の一意のデバイス数。                                                     | 2        |
+| error     | エラー状態の一意のデバイス数。                                                      | 10       |
+| 失敗    | 失敗状態の一意のデバイス数。                                                     | 2        |
 
 ## <a name="deviceconfigurationprofileuseractivities"></a>deviceConfigurationProfileUserActivities 
 **DeviceConfigurationProfileUserActivity** エンティティには、成功、保留中、失敗、エラー状態のユーザー数/日が表示されます。 この数は、エンティティに割り当てられているデバイス構成プロファイルを反映しています。 たとえば、割り当てられているすべてのポリシーでユーザーが成功状態の場合、その日の成功カウンターが 1 つ増えます。 ユーザーに、成功状態のプロファイルとエラー状態のプロファイルの 2 つのプロファイルが割り当てられている場合、エラー状態のユーザーがカウントされます。 **DeviceConfigurationProfileUserActivity** エンティティには、過去 30 日間の各状態のユーザー数/日が表示されます。 
 
 | プロパティ  | [説明]  | 例  |
 |------------|----------------------------------------------------------------------------------------------|-----------|
-| DateKey  | デバイス構成プロファイル チェックインがデータ ウェアハウスに記録されたときの日付キー。  | 20160703  |
-| Pending  | 保留状態の一意のユーザー数。  | 123  |
+| dateKey  | デバイス構成プロファイル チェックインがデータ ウェアハウスに記録されたときの日付キー。  | 20160703  |
+| pending  | 保留状態の一意のユーザー数。  | 123  |
 | 成功  | 成功状態の一意のユーザー数。  | 12  |
-| エラー  | エラー状態の一意のユーザー数。  | 10  |
-| Failed  | 失敗状態の一意のユーザー数。  | 2  |
+| error  | エラー状態の一意のユーザー数。  | 10  |
+| 失敗  | 失敗状態の一意のユーザー数。  | 2  |
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
 |          プロパティ          |                                                                                      [説明]                                                                                     |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DateKey                    | 日付テーブルの参照であり、日を示します。                                                                                                                                          |
-| DeviceKey                  | データ ウェアハウスでのデバイスの一意識別子 - 代理キー。 これは、Intune デバイス ID が含まれるデバイス テーブルの参照です。                               |
-| DeviceName                 | デバイスに名前を付けられるプラットフォーム上にあるデバイスの名前。 その他のプラットフォームの場合、Intune がその他のプロパティから名前を作成します。 この属性は一部のデバイスでは利用できません。 |
-| DeviceRegistrationStateKey | このデバイスのデバイス登録状態属性のキー。                                                                                                                    |
-| OwnerTypeKey               | このデバイスの所有者の種類属性のキー: 会社、個人、不明                                                                                                  |
-| ManagementStateKey         | このデバイスに関連付けられている管理状態を示すキーであり、リモート アクションの最新の状態を示すか、脱獄/ルート化状態を示します。                                                |
-| AzureADRegistered          | デバイスが Azure Active Directory に登録されているかどうか。                                                                                                                             |
-| ComplianceStateKey         | ComplianceState へのキー。                                                                                                                                                            |
-| OSVersion                  | OS のバージョン。                                                                                                                                                                          |
-| JailBroken                 | デバイスが脱獄またはルート化されているかどうか。                                                                                                                                         |
-| DeviceCategoryKey          | このデバイスのデバイス カテゴリ属性のキー。                                                                                                                                    |
+| dateKey                    | 日付テーブルの参照であり、日を示します。                                                                                                                                          |
+| deviceKey                  | データ ウェアハウスでのデバイスの一意識別子 - 代理キー。 これは、Intune デバイス ID が含まれるデバイス テーブルの参照です。                               |
+| deviceName                 | デバイスに名前を付けられるプラットフォーム上にあるデバイスの名前。 その他のプラットフォームの場合、Intune がその他のプロパティから名前を作成します。 この属性は一部のデバイスでは利用できません。 |
+| deviceRegistrationStateKey | このデバイスのデバイス登録状態属性のキー。                                                                                                                    |
+| ownerTypeKey               | このデバイスの所有者の種類属性のキー: 会社、個人、不明                                                                                                  |
+| managementStateKey         | このデバイスに関連付けられている管理状態を示すキーであり、リモート アクションの最新の状態を示すか、脱獄/ルート化状態を示します。                                                |
+| azureADRegistered          | デバイスが Azure Active Directory に登録されているかどうか。                                                                                                                             |
+| complianceStateKey         | ComplianceState へのキー。                                                                                                                                                            |
+| oSVersion                  | OS のバージョン。                                                                                                                                                                          |
+| jailBroken                 | デバイスが脱獄またはルート化されているかどうか。                                                                                                                                         |
+| deviceCategoryKey          | このデバイスのデバイス カテゴリ属性のキー。                                                                                                                                    |
 | physicalMemoryInBytes      | 物理メモリ (バイト単位)。                                                                                                                                    |
 | totalStorageSpaceInBytes      | 記憶域の合計容量 (バイト単位)。                                                                                                                                    |
 
@@ -205,56 +205,56 @@ ms.locfileid: "88993107"
 | deviceRegistrationStateID   | 登録状況の一意識別子                                            |
 | deviceRegistrationStateKey  | データ ウェアハウスにおける登録状況を示す一意識別子 - 代理キー |
 | deviceRegistrationStateName | 登録状況                                                                  |
-|    NotRegistered                     |    未登録                                                                                                                                                                  |
-|    登録済み                        |       登録済み                                                                                                                                                                   |
-|    取り消し済み                           |       状態は IT 管理者がクライアントをブロックしたことを意味します。クライアントのブロックを解除できます。 デバイスは、ワイプした後やインベントリから削除した後にも取り消し済み状態になります。        |
-|    KeyConflict                       |    キー競合                                                                                                                                                                    |
-|    ApprovalPending                   |    承認保留中                                                                                                                                                                |
-|    CertificateReset                  |    証明書のリセット                                                                                                                                                               |
-|    NotRegisteredPendingEnrollment    |    未登録で登録保留中                                                                                                                                               |
-|    Unknown                           |    状態が不明                                                                                                                                                                   |
+|    notRegistered                     |    未登録                                                                                                                                                                  |
+|    registered                        |       登録済み                                                                                                                                                                   |
+|    revoked                           |       状態は IT 管理者がクライアントをブロックしたことを意味します。クライアントのブロックを解除できます。 デバイスは、ワイプした後やインベントリから削除した後にも取り消し済み状態になります。        |
+|    keyConflict                       |    キー競合                                                                                                                                                                    |
+|    approvalPending                   |    承認保留中                                                                                                                                                                |
+|    certificateReset                  |    証明書のリセット                                                                                                                                                               |
+|    notRegisteredPendingEnrollment    |    未登録で登録保留中                                                                                                                                               |
+|    unknown                           |    状態が不明                                                                                                                                                                   |
 
 ## <a name="devices"></a>デバイス
 **device** エンティティには、管理中のすべての登録済みデバイスとそれに対応するプロパティが一覧表示されます。
 
 |          プロパティ          |                                                                                       [説明]                                                                                      |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DeviceKey                  | データ ウェアハウスにおけるデバイスを示す一意識別子 - 代理キー。                                                                                                               |
-| DeviceId                   | デバイスの一意識別子。                                                                                                                                                     |
-| DeviceName                 | デバイスに名前を付けられるプラットフォーム上にあるデバイスの名前。 その他のプラットフォームの場合、Intune がその他のプロパティから名前を作成します。 この属性は一部のデバイスで利用できません。 |
-| DeviceTypeKey              | このデバイスの種類属性のキー。                                                                                                                                    |
-| DeviceRegistrationState    | このデバイスのクライアント登録状態属性のキー。                                                                                                                      |
-| OwnerTypeKey               | このデバイスの所有者の種類属性のキー: 会社、個人、不明。                                                                                                    |
-| EnrolledDateTime           | このデバイスが登録された日時。                                                                                                                                         |
+| deviceKey                  | データ ウェアハウスにおけるデバイスを示す一意識別子 - 代理キー。                                                                                                               |
+| deviceId                   | デバイスの一意識別子。                                                                                                                                                     |
+| deviceName                 | デバイスに名前を付けられるプラットフォーム上にあるデバイスの名前。 その他のプラットフォームの場合、Intune がその他のプロパティから名前を作成します。 この属性は一部のデバイスで利用できません。 |
+| deviceTypeKey              | このデバイスの種類属性のキー。                                                                                                                                    |
+| deviceRegistrationState    | このデバイスのクライアント登録状態属性のキー。                                                                                                                      |
+| ownerTypeKey               | このデバイスの所有者の種類属性のキー: 会社、個人、不明。                                                                                                    |
+| enrolledDateTime           | このデバイスが登録された日時。                                                                                                                                         |
 | ethernetMacAddress           | このデバイスの一意のネットワーク識別子。                                                                                                                                         |
-| LastSyncDateTime           | Intune によるデバイス チェックインで最後に確認されているもの。                                                                                                                                              |
-| ManagementAgentKey         | このデバイスに関連付けられている管理エージェントのキー。                                                                                                                             |
-| ManagementStateKey         | このデバイスに関連付けられている管理状態を示すキーであり、リモート アクションの最新の状態を示すか、脱獄/ルート化状態を示します。                                                |
-| AzureADDeviceId            | このデバイスの Azure deviceID。                                                                                                                                                  |
-| AzureADRegistered          | デバイスが Azure Active Directory に登録されているかどうか。                                                                                                                             |
-| DeviceCategoryKey          | このデバイスに関連付けられているカテゴリのキー。                                                                                                                                     |
-| DeviceEnrollmentType       | このデバイスに関連付けられている登録の種類を示すキーであり、登録の方法を示します。                                                                                             |
-| ComplianceStateKey         | このデバイスに関連付けられているコンプライアンスの状態のキー。                                                                                                                             |
+| lastSyncDateTime           | Intune によるデバイス チェックインで最後に確認されているもの。                                                                                                                                              |
+| managementAgentKey         | このデバイスに関連付けられている管理エージェントのキー。                                                                                                                             |
+| managementStateKey         | このデバイスに関連付けられている管理状態を示すキーであり、リモート アクションの最新の状態を示すか、脱獄/ルート化状態を示します。                                                |
+| azureADDeviceId            | このデバイスの Azure deviceID。                                                                                                                                                  |
+| azureADRegistered          | デバイスが Azure Active Directory に登録されているかどうか。                                                                                                                             |
+| deviceCategoryKey          | このデバイスに関連付けられているカテゴリのキー。                                                                                                                                     |
+| deviceEnrollmentType       | このデバイスに関連付けられている登録の種類を示すキーであり、登録の方法を示します。                                                                                             |
+| complianceStateKey         | このデバイスに関連付けられているコンプライアンスの状態のキー。                                                                                                                             |
 | office365Version           | デバイスにインストールされている Microsoft 365 のバージョン。                                                                                                                             |
-| OSVersion                  | デバイスのオペレーティング システムのバージョン。                                                                                                                                                |
-| EasDeviceId                | デバイスの Exchange ActiveSync ID。                                                                                                                                                  |
-| SerialNumber               | SerialNumber                                                                                                                                                                           |
-| UserId                     | デバイスに関連付けられているユーザーの一意識別子。                                                                                                                           |
-| RowLastModifiedDateTimeUTC | このデバイスがデータ ウェアハウスで最後に変更されたときの UTC 日時。                                                                                                       |
-| 製造元               | デバイスの製造元                                                                                                                                                             |
-| モデル                      | デバイスのモデル                                                                                                                                                                    |
-| OperatingSystem            | デバイスのオペレーティング システム。 Windows、iOS、iPadOS など                                                                                                                                   |
-| IsDeleted                  | デバイスを削除されているかどうかを示すバイナリ。                                                                                                                                 |
-| AndroidSecurityPatchLevel  | Android セキュリティ パッチ レベル                                                                                                                                                           |
-| MEID                       | MEID                                                                                                                                                                                   |
+| oSVersion                  | デバイスのオペレーティング システムのバージョン。                                                                                                                                                |
+| easDeviceId                | デバイスの Exchange ActiveSync ID。                                                                                                                                                  |
+| serialNumber               | SerialNumber                                                                                                                                                                           |
+| userId                     | デバイスに関連付けられているユーザーの一意識別子。                                                                                                                           |
+| rowLastModifiedDateTimeUTC | このデバイスがデータ ウェアハウスで最後に変更されたときの UTC 日時。                                                                                                       |
+| manufacturer               | デバイスの製造元                                                                                                                                                             |
+| 対象となるのは、モデル                      | デバイスのモデル                                                                                                                                                                    |
+| operatingSystem            | デバイスのオペレーティング システム。 Windows、iOS、iPadOS など                                                                                                                                   |
+| isDeleted                  | デバイスを削除されているかどうかを示すバイナリ。                                                                                                                                 |
+| androidSecurityPatchLevel  | Android セキュリティ パッチ レベル                                                                                                                                                           |
+| mEID                       | MEID                                                                                                                                                                                   |
 | isSupervised               | デバイスの監視状態                                                                                                                                                               |
-| FreeStorageSpaceInBytes    | 記憶域の空き容量 (バイト単位)                                                                                                                                                                 |
-| EncryptionState            | デバイスの暗号化の状態。                                                                                                                                                      |
-| SubscriberCarrier          | デバイスの通信事業者                                                                                                                                                       |
-| PhoneNumber                | デバイスの電話番号                                                                                                                                                             |
-| IMEI                       | IMEI                                                                                                                                                                                   |
-| CellularTechnology         | デバイスの携帯電話テクノロジ。                                                                                                                                                    |
-| WiFiMacAddress             | Wi-Fi MAC。                                                                                                                                                                              |
+| freeStorageSpaceInBytes    | 記憶域の空き容量 (バイト単位)                                                                                                                                                                 |
+| encryptionState            | デバイスの暗号化の状態。                                                                                                                                                      |
+| subscriberCarrier          | デバイスの通信事業者                                                                                                                                                       |
+| phoneNumber                | デバイスの電話番号                                                                                                                                                             |
+| iMEI                       | IMEI                                                                                                                                                                                   |
+| cellularTechnology         | デバイスの携帯電話テクノロジ。                                                                                                                                                    |
+| wiFiMacAddress             | Wi-Fi MAC。                                                                                                                                                                              |
 | windowsOsEdition             | Windows オペレーティング システムのエディション。                                                                                                                                                                              |
 
 
@@ -263,9 +263,9 @@ ms.locfileid: "88993107"
 
 |    プロパティ    |                                  [説明]                                 |
 |----------------|------------------------------------------------------------------------------|
-| DeviceTypeID   | デバイスの種類を示す一意識別子                                       |
-| DeviceTypeKey  | データ ウェアハウスにおけるデバイスの種類を示す一意識別子 - 代理キー |
-| DeviceTypeName | デバイスの種類                                                                |
+| deviceTypeID   | デバイスの種類を示す一意識別子                                       |
+| deviceTypeKey  | データ ウェアハウスにおけるデバイスの種類を示す一意識別子 - 代理キー |
+| deviceTypeName | デバイスの種類                                                                |
 
 ### <a name="example"></a>例
 
@@ -412,27 +412,27 @@ ms.locfileid: "88993107"
 
 |       プロパティ      |                          説明                          | 例 |
 |---------------------|---------------------------------------------------------------|---------|
-| DateKey             | 日付の一意識別子。                                | 123     |
-| TenantKey           | テナントの一意識別子。                              | 456     |
-| DeviceKey           | デバイスの一意識別子。                              | 789     |
-| ExtensionVersionKey | IntuneManagementExtension バージョンの一意識別子。 | 1       |
-| ExtensionStateKey   | ヘルス状態の一意識別子。                            | 2       |
+| dateKey             | 日付の一意識別子。                                | 123     |
+| tenantKey           | テナントの一意識別子。                              | 456     |
+| deviceKey           | デバイスの一意識別子。                              | 789     |
+| extensionVersionKey | IntuneManagementExtension バージョンの一意識別子。 | 1       |
+| extensionStateKey   | ヘルス状態の一意識別子。                            | 2       |
 
 ## <a name="intunemanagementextensionhealthstates"></a>intuneManagementExtensionHealthStates
 **IntuneManagementExtensionHealthState** には、**IntuneManagementExtension** のべての可能な正常性状態がリストされています。
 
 |      プロパティ     |                   説明                  | 例 |
 |-------------------|------------------------------------------------|---------|
-| ExtensionStateKey | 正常性状態の一意識別子。           | 2       |
-| ExtensionState    | IntuneManagementExtension の正常性状態。 | Healthy |
+| extensionStateKey | 正常性状態の一意識別子。           | 2       |
+| extensionState    | IntuneManagementExtension の正常性状態。 | Healthy |
 
 ## <a name="intunemanagementextensionversions"></a>intuneManagementExtensionVersions
 **IntuneManagementExtensionVersion** エンティティには、**IntuneManagementExtension** で使用されるすべてのバージョンがリストされています。
 
 |       プロパティ      |                          説明                          | 例 |
 |---------------------|---------------------------------------------------------------|---------|
-| ExtensionVersionKey | IntuneManagementExtension バージョンの一意識別子。 | 1       |
-| ExtensionVersion    | 4 桁のバージョン番号。                                   | 1.0.2.0 |
+| extensionVersionKey | IntuneManagementExtension バージョンの一意識別子。 | 1       |
+| extensionVersion    | 4 桁のバージョン番号。                                   | 1.0.2.0 |
 
 ## <a name="mamapplications"></a>MamApplications
 
@@ -443,10 +443,10 @@ ms.locfileid: "88993107"
 | mamApplicationKey |MAM アプリケーションの一意識別子。 | 432 |
 | mamApplicationName |MAM アプリケーションの名前。 |MAM Application Example Name |
 | mamApplicationId |MAM アプリケーションのアプリケーション ID。 | 123 |
-| IsDeleted |この MAM アプリ レコードが更新されているかどうかを示します。 <br>True - MAM アプリには新しいレコードがあり、そのフィールドはこのテーブルで更新されています。 <br>False - この MAM アプリの最新のレコード。 |真/偽 |
-| StartDateInclusiveUTC |この MAM アプリがデータ ウェアハウスで作成されたときの UTC 日時。 |11/23/2016 12:00:00 AM |
-| DeletedDateUTC |IsDeleted が True に変更されたときの UTC 日時。 |11/23/2016 12:00:00 AM |
-| RowLastModifiedDateTimeUTC |この MAM アプリがデータ ウェアハウスで最後に変更されたときの UTC 日時。 |11/23/2016 12:00:00 AM |
+| isDeleted |この MAM アプリ レコードが更新されているかどうかを示します。 <br>True - MAM アプリには新しいレコードがあり、そのフィールドはこのテーブルで更新されています。 <br>False - この MAM アプリの最新のレコード。 |真/偽 |
+| startDateInclusiveUTC |この MAM アプリがデータ ウェアハウスで作成されたときの UTC 日時。 |11/23/2016 12:00:00 AM |
+| deletedDateUTC |IsDeleted が True に変更されたときの UTC 日時。 |11/23/2016 12:00:00 AM |
+| rowLastModifiedDateTimeUTC |この MAM アプリがデータ ウェアハウスで最後に変更されたときの UTC 日時。 |11/23/2016 12:00:00 AM |
 
 
 ## <a name="mamapplicationinstances"></a>MamApplicationInstances
@@ -456,22 +456,22 @@ ms.locfileid: "88993107"
 
 |          プロパティ          |                                                                                                  説明                                                                                                  |               例                |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-|   ApplicationInstanceKey   |                                                               データ ウェアハウスにおける MAM アプリ インスタンスを示す一意識別子 - 代理キー。                                                                |                 123                  |
-|           UserId           |                                                                              この MAM アプリをインストールしたユーザーのユーザー ID。                                                                              | b66bc706-ffff-7437-0340-032819502773 |
-|   ApplicationInstanceId    |                                              MAM アプリ インスタンスを示す一意識別子 - ApplicationInstanceKey に似ていますが、識別子はナチュラル キーです。                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   applicationInstanceKey   |                                                               データ ウェアハウスにおける MAM アプリ インスタンスを示す一意識別子 - 代理キー。                                                                |                 123                  |
+|           userId           |                                                                              この MAM アプリをインストールしたユーザーのユーザー ID。                                                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   applicationInstanceId    |                                              MAM アプリ インスタンスを示す一意識別子 - ApplicationInstanceKey に似ていますが、識別子はナチュラル キーです。                                              | b66bc706-ffff-7437-0340-032819502773 |
 | mamApplicationId | この MAM アプリケーション インスタンスの作成に使用された MAM アプリケーションのアプリケーション ID。   | 11/23/2016 12:00:00 AM   |
-|     ApplicationVersion     |                                                                                     この MAM アプリのアプリケーション バージョン。                                                                                      |                  2                   |
-|        CreatedDate         |                                                                 MAM アプリ インスタンスのこのレコードが作成された日付 値は null を取ることができます。                                                                 |        11/23/2016 12:00:00 AM        |
-|          プラットフォーム          |                                                                          この MAM アプリがインストールされているデバイスのプラットフォーム。                                                                           |                  2                   |
-|      PlatformVersion       |                                                                      この MAM アプリがインストールされているデバイスのプラットフォーム バージョン。                                                                       |                 2.2                  |
-|         SdkVersion         |                                                                            この MAM アプリをラップした MAM SDK バージョン。                                                                            |                 3.2                  |
+|     applicationVersion     |                                                                                     この MAM アプリのアプリケーション バージョン。                                                                                      |                  2                   |
+|        createdDate         |                                                                 MAM アプリ インスタンスのこのレコードが作成された日付 値は null を取ることができます。                                                                 |        11/23/2016 12:00:00 AM        |
+|          platform          |                                                                          この MAM アプリがインストールされているデバイスのプラットフォーム。                                                                           |                  2                   |
+|      platformVersion       |                                                                      この MAM アプリがインストールされているデバイスのプラットフォーム バージョン。                                                                       |                 2.2                  |
+|         sdkVersion         |                                                                            この MAM アプリをラップした MAM SDK バージョン。                                                                            |                 3.2                  |
 | mamDeviceId | MAM アプリケーションのインスタンスが関連付けられているデバイスのデバイス ID。   | 11/23/2016 12:00:00 AM   |
 | mamDeviceType | MAM アプリケーション インスタンスが関連付けられているデバイスのデバイスの種類。   | 11/23/2016 12:00:00 AM   |
 | mamDeviceName | MAM アプリケーション インスタンスが関連付けられているデバイスのデバイス名。   | 11/23/2016 12:00:00 AM   |
-|         IsDeleted          | この MAM アプリ インスタンス レコードが更新されているかどうかを示します。 <br>True - この MAM アプリ インスタンスには新しいレコードがあり、そのフィールドはこのテーブルで更新されています。 <br>False - この MAM アプリ インスタンスの最新のレコード。 |              真/偽              |
-|   StartDateInclusiveUtc    |                                                              この MAM アプリ インスタンスがデータ ウェアハウスで作成されたときの UTC 日時。                                                               |        11/23/2016 12:00:00 AM        |
-|       DeletedDateUtc       |                                                                             IsDeleted が True に変更されたときの UTC 日時。                                                                              |        11/23/2016 12:00:00 AM        |
-| RowLastModifiedDateTimeUtc |                                                           この MAM アプリ インスタンスがデータ ウェアハウスで最後に変更されたときの UTC 日時。                                                            |        11/23/2016 12:00:00 AM        |
+|         isDeleted          | この MAM アプリ インスタンス レコードが更新されているかどうかを示します。 <br>True - この MAM アプリ インスタンスには新しいレコードがあり、そのフィールドはこのテーブルで更新されています。 <br>False - この MAM アプリ インスタンスの最新のレコード。 |              真/偽              |
+|   startDateInclusiveUtc    |                                                              この MAM アプリ インスタンスがデータ ウェアハウスで作成されたときの UTC 日時。                                                               |        11/23/2016 12:00:00 AM        |
+|       deletedDateUtc       |                                                                             IsDeleted が True に変更されたときの UTC 日時。                                                                              |        11/23/2016 12:00:00 AM        |
+| rowLastModifiedDateTimeUtc |                                                           この MAM アプリ インスタンスがデータ ウェアハウスで最後に変更されたときの UTC 日時。                                                            |        11/23/2016 12:00:00 AM        |
 
 ## <a name="mamcheckins"></a>MamCheckins
 
@@ -482,13 +482,13 @@ ms.locfileid: "88993107"
 
 | プロパティ | 説明 | 例 |
 |---------|------------|--------|
-| DateKey |MAM アプリ チェックインがデータ ウェアハウスに記録されたときの日付キー。 | 20160703 |
-| ApplicationInstanceKey |この MAM アプリ チェックインに関連付けられているアプリ インスタンスのキー。 | 123 |
-| UserKey |この MAM アプリ チェックインに関連付けられているユーザーのキー。 | 4323 |
+| dateKey |MAM アプリ チェックインがデータ ウェアハウスに記録されたときの日付キー。 | 20160703 |
+| applicationInstanceKey |この MAM アプリ チェックインに関連付けられているアプリ インスタンスのキー。 | 123 |
+| userKey |この MAM アプリ チェックインに関連付けられているユーザーのキー。 | 4323 |
 | mamApplicationKey |MAM アプリケーションのチェックインに関連付けられているアプリケーションのアプリケーション キー。 | 432 |
-| DeviceHealthKey |この MAM アプリ チェックインに関連付けられている DeviceHealth のキー。 | 321 |
-| PlatformKey |この MAM アプリ チェックインに関連付けられているデバイスのプラットフォームを表します。 |123 |
-| LastCheckInDate |この MAM アプリが最後にチェックインした日時 値は null を取ることができます。 |11/23/2016 12:00:00 AM |
+| deviceHealthKey |この MAM アプリ チェックインに関連付けられている DeviceHealth のキー。 | 321 |
+| platformKey |この MAM アプリ チェックインに関連付けられているデバイスのプラットフォームを表します。 |123 |
+| lastCheckInDate |この MAM アプリが最後にチェックインした日時 値は null を取ることができます。 |11/23/2016 12:00:00 AM |
 
 ## <a name="mamdevicehealths"></a>MamDeviceHealths
 
@@ -496,10 +496,10 @@ ms.locfileid: "88993107"
 
 | プロパティ | 説明 | 例 |
 |---------|------------|--------|
-| DeviceHealthKey |データ ウェアハウスにおけるデバイスとそれに関連付けられている正常性を示す一意識別子 - 代理キー。 |123 |
-| DeviceHealth |デバイスとそれに関連付けられている正常性を示す一意識別子 - DeviceHealthKey に似ていますが、この識別子はナチュラル キーです。 |b66bc706-ffff-7777-0340-032819502773 |
-| DeviceHealthName |デバイスの状態を表します。 <br>利用不可 - このデバイスの情報はありません。 <br>正常 - デバイスは脱獄されていません。 <br>異常 - デバイスは脱獄されています。 |利用不可、正常、異常 |
-| RowLastModifiedDateTimeUtc |この特定の MAM デバイス正常性がデータ ウェアハウスで最後に変更されたときの UTC 日時。 |11/23/2016 12:00:00 AM |
+| deviceHealthKey |データ ウェアハウスにおけるデバイスとそれに関連付けられている正常性を示す一意識別子 - 代理キー。 |123 |
+| deviceHealth |デバイスとそれに関連付けられている正常性を示す一意識別子 - DeviceHealthKey に似ていますが、この識別子はナチュラル キーです。 |b66bc706-ffff-7777-0340-032819502773 |
+| deviceHealthName |デバイスの状態を表します。 <br>利用不可 - このデバイスの情報はありません。 <br>正常 - デバイスは脱獄されていません。 <br>異常 - デバイスは脱獄されています。 |利用不可、正常、異常 |
+| rowLastModifiedDateTimeUtc |この特定の MAM デバイス正常性がデータ ウェアハウスで最後に変更されたときの UTC 日時。 |11/23/2016 12:00:00 AM |
 
 ## <a name="mamplatforms"></a>MamPlatforms
 
@@ -508,19 +508,19 @@ ms.locfileid: "88993107"
 
 |          プロパティ          |                                    説明                                    |                         例                         |
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
-|        PlatformKey         |     データ ウェアハウスにおけるプラットフォームを示す一意識別子 - 代理キー。      |                           123                           |
-|          プラットフォーム          | プラットフォームを示す一意識別子 - PlatformKey に似ていますが、ナチュラル キーです。 |                           123                           |
-|        PlatformName        |                                   プラットフォームの名前                                   | 利用不可 <br>なし <br>Windows <br>IOS <br>Android。 |
-| RowLastModifiedDateTimeUtc | このプラットフォームがデータ ウェアハウスで最後に変更されたときの UTC 日時。  |                 11/23/2016 12:00:00 AM                  |
+|        platformKey         |     データ ウェアハウスにおけるプラットフォームを示す一意識別子 - 代理キー。      |                           123                           |
+|          platform          | プラットフォームを示す一意識別子 - PlatformKey に似ていますが、ナチュラル キーです。 |                           123                           |
+|        platformName        |                                   プラットフォームの名前                                   | 利用不可 <br>なし <br>Windows <br>IOS <br>Android。 |
+| rowLastModifiedDateTimeUtc | このプラットフォームがデータ ウェアハウスで最後に変更されたときの UTC 日時。  |                 11/23/2016 12:00:00 AM                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
 **managementAgentType** エンティティは、デバイスの管理に使用されるエージェントを表します。
 
 |         プロパティ        |                                       [説明]                                       |
 |-------------------------|-----------------------------------------------------------------------------------------|
-| ManagementAgentTypeID   | 管理エージェントの種類を示す一意識別子。                                         |
-| ManagementAgentTypeKey  | データ ウェアハウスにおける管理エージェントの種類を示す一意識別子 - 代理キー。 |
-| ManagementAgentTypeName | デバイスの管理に利用されているエージェントの種類を示します。                              |
+| managementAgentTypeID   | 管理エージェントの種類を示す一意識別子。                                         |
+| managementAgentTypeKey  | データ ウェアハウスにおける管理エージェントの種類を示す一意識別子 - 代理キー。 |
+| managementAgentTypeName | デバイスの管理に利用されているエージェントの種類を示します。                              |
 
 ### <a name="example"></a>例
 
@@ -569,21 +569,21 @@ MobileAppInstallState エンティティは、デバイス、ユーザー、ま�
 
 |       プロパティ      |                        [説明]                       |
 |---------------------|----------------------------------------------------------|
-| AppInstallStateKey  | アカウントにおけるアプリのインストール状態の一意の ID。 |
-| AppInstallState     | アプリのインストール状態の列挙値。                     |
-| AppInstallStateName | アプリのインストール状態の名前。                           |
+| appInstallStateKey  | アカウントにおけるアプリのインストール状態の一意の ID。 |
+| appInstallState     | アプリのインストール状態の列挙値。                     |
+| appInstallStateName | アプリのインストール状態の名前。                           |
 
 ## <a name="mobileappinstallstatuscounts"></a>mobileAppInstallStatusCounts
 Microsoft Intune によるモバイル アプリケーション管理を使用している特定のターゲット デバイスの種類に対するモバイル アプリのインストール状態を表します。
 
 |      プロパティ      |                                                          [説明]                                                          |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------|
-| DateKey            | アプリのインストール状態が記録されたときの日付のキー。                                                                     |
-| AppKey             | AppRevision のインスタンスの識別に使用する、モバイル アプリのキー。                                                          |
-| DeviceTypeKey      | モバイル アプリケーションに関連付けられているデバイス種類のキー。                                                              |
-| AppInstallStateKey | MobileAppInstallState のインスタンスの識別に使用する、アプリのインストール状態のキー。                                         |
-| ErrorCode          | アプリのインストーラー、モバイル プラットフォーム、またはアプリのインストールと関わりがあるサービスによって返されるエラー コード。 |
-| カウント              | 総数。                                                                                                                  |
+| dateKey            | アプリのインストール状態が記録されたときの日付のキー。                                                                     |
+| appKey             | AppRevision のインスタンスの識別に使用する、モバイル アプリのキー。                                                          |
+| deviceTypeKey      | モバイル アプリケーションに関連付けられているデバイス種類のキー。                                                              |
+| appInstallStateKey | MobileAppInstallState のインスタンスの識別に使用する、アプリのインストール状態のキー。                                         |
+| errorCode          | アプリのインストーラー、モバイル プラットフォーム、またはアプリのインストールと関わりがあるサービスによって返されるエラー コード。 |
+| count              | 総数。                                                                                                                  |
 
 ## <a name="ownertypes"></a>ownerTypes
 **ownerType** エンティティは、デバイスの種類として企業所有、個人所有、不明のいずれかを示します。
@@ -602,67 +602,67 @@ Microsoft Intune によるモバイル アプリケーション管理を使用�
 
 |          プロパティ          |                                                                       説明                                                                      |                例               |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| PolicyKey                  | データ ウェアハウス内のポリシーを表す一意のキー。                                                                                              | 123                                  |
-| PolicyId                   | データ ウェアハウス内のポリシーを示す一意識別子。                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
-| PolicyName                 | ポリシーの名前。                                                                                                                                    | "Windows 10 Baseline"                |
-| PolicyVersion              | ポリシーのバージョン。 ポリシーを編集または変更すると、新しいバージョンが作成されます。                                                             | 1, 2, 3                              |
-| IsDeleted                  | ポリシー レコードが更新されているかどうかを示します。  True - ポリシーには、フィールドが更新された新しいレコードがあります。  False - ポリシーの最新のレコードです。 | 真/偽                           |
-| StartDateInclusiveUTC      | ポリシーがデータ ウェアハウスで作成されたときの UTC 日時。                                                                              | 11/23/2016 0:00                      |
-| DeletedDateUTC             | IsDeleted が True に変更されたときの UTC 日時。                                                                                                   | 11/23/2016 0:00                      |
-| RowLastModifiedDateTimeUTC | ポリシーがデータ ウェアハウスで最後に変更されたときの UTC 日時。                                                                        | 11/23/2016 0:00                      |
+| policyKey                  | データ ウェアハウス内のポリシーを表す一意のキー。                                                                                              | 123                                  |
+| policyId                   | データ ウェアハウス内のポリシーを示す一意識別子。                                                                                                 | b66bc706-ffff-7437-0340-032819502773 |
+| policyName                 | ポリシーの名前。                                                                                                                                    | "Windows 10 Baseline"                |
+| policyVersion              | ポリシーのバージョン。 ポリシーを編集または変更すると、新しいバージョンが作成されます。                                                             | 1, 2, 3                              |
+| isDeleted                  | ポリシー レコードが更新されているかどうかを示します。  True - ポリシーには、フィールドが更新された新しいレコードがあります。  False - ポリシーの最新のレコードです。 | 真/偽                           |
+| startDateInclusiveUTC      | ポリシーがデータ ウェアハウスで作成されたときの UTC 日時。                                                                              | 11/23/2016 0:00                      |
+| deletedDateUTC             | IsDeleted が True に変更されたときの UTC 日時。                                                                                                   | 11/23/2016 0:00                      |
+| rowLastModifiedDateTimeUTC | ポリシーがデータ ウェアハウスで最後に変更されたときの UTC 日時。                                                                        | 11/23/2016 0:00                      |
 
 ## <a name="policydeviceactivities"></a>policyDeviceActivities
 次の表に、成功、保留中、失敗、またはエラー状態のデバイス数/日の一覧を示します。 数は、ポリシーの種類のプロファイルごとのデータを反映しています。 たとえば、割り当てられているすべてのポリシーでデバイスが成功状態の場合、その日の成功カウンターが 1 つ増えます。 成功状態のプロファイルとエラー状態のプロファイルという 2 つのプロファイルがデバイスに割り当てられている場合、エンティティは成功カウンターを増やし、デバイスをエラー状態にします。 **policyDeviceActivity** エンティティには、過去 30 日間の各状態のデバイス数/日が表示されます。
 
 |  プロパティ |                                           説明                                           |        例        |
 |-----------|-------------------------------------------------------------------------------------------------|-----------------------|
-| DateKey   | デバイス構成プロファイル チェックインがデータ ウェアハウスに記録されたときの日付キー。 | 20160703              |
-| Pending   | 保留状態の一意のデバイス数。                                                    | 123                   |
+| dateKey   | デバイス構成プロファイル チェックインがデータ ウェアハウスに記録されたときの日付キー。 | 20160703              |
+| pending   | 保留状態の一意のデバイス数。                                                    | 123                   |
 | 成功 | 成功状態の一意のデバイス数。                                                    | 12                    |
-| PolicyKey | ポリシー キーとポリシーを結合して、policyName を取得できます。                                  | Windows 10 ベースライン |
-| エラー     | エラー状態の一意デバイスの数。                                                      | 10                    |
-| Failed    | 失敗状態の一意デバイスの数。                                                     | 2                     |
+| policyKey | ポリシー キーとポリシーを結合して、policyName を取得できます。                                  | Windows 10 ベースライン |
+| error     | エラー状態の一意デバイスの数。                                                      | 10                    |
+| 失敗    | 失敗状態の一意デバイスの数。                                                     | 2                     |
 
 ## <a name="policyplatformtypes"></a>policyPlatformTypes
 
 |        プロパティ        |                      説明                      |     例    |
 |------------------------|-------------------------------------------------------|----------------|
-| PolicyPlatformTypeKey  | ポリシー プラットフォームの種類の一意キー。        | 20170519       |
-| PolicyPlatformTypeId   | ポリシー プラットフォームの種類の一意の ID。 | 1              |
-| PolicyPlatformTypeName | ポリシー プラットフォームの種類の名前。              | AndroidForWork |
+| policyPlatformTypeKey  | ポリシー プラットフォームの種類の一意キー。        | 20170519       |
+| policyPlatformTypeId   | ポリシー プラットフォームの種類の一意の ID。 | 1              |
+| policyPlatformTypeName | ポリシー プラットフォームの種類の名前。              | AndroidForWork |
 
 ## <a name="policytypeactivities"></a>policyTypeActivities
 **PolicyTypeActivity** エンティティには、成功、保留中、失敗、またはエラー状態のデバイスの累積数が表示されます。 デバイス構成プロファイル、アプリ構成プロファイル、またはコンプライアンス ポリシーについて、これらの状態が 1 日単位で表示されます。
 
 |    プロパティ   |                                          説明                                          |           例           |
 |---------------|-----------------------------------------------------------------------------------------------|-----------------------------|
-| DateKey       | デバイス構成プロファイル チェックインがデータ ウェアハウスに記録されたときの日付キー。 | 20160703                    |
-| PolicyKey     | ポリシー キーとポリシーを結合して、policyName を取得できます。                                | Windows 10 baseline         |
-| PolicyTypeKey | ポリシー キーの種類とポリシーの種類を結合してポリシーの種類名を取得できます。             | Windows10 のコンプライアンス ポリシー |
-| Pending       | 保留状態の一意のデバイス数。                                                    | 123                         |
+| dateKey       | デバイス構成プロファイル チェックインがデータ ウェアハウスに記録されたときの日付キー。 | 20160703                    |
+| policyKey     | ポリシー キーとポリシーを結合して、policyName を取得できます。                                | Windows 10 baseline         |
+| policyTypeKey | ポリシー キーの種類とポリシーの種類を結合してポリシーの種類名を取得できます。             | Windows10 のコンプライアンス ポリシー |
+| pending       | 保留状態の一意のデバイス数。                                                    | 123                         |
 | 成功     | 成功状態の一意のデバイス数。                                                    | 12                          |
-| エラー         | エラー状態の一意のデバイス数。                                                      | 10                          |
-| Failed        | 失敗状態の一意のデバイス数。                                                     | 2                           |
+| error         | エラー状態の一意のデバイス数。                                                      | 10                          |
+| 失敗        | 失敗状態の一意のデバイス数。                                                     | 2                           |
 
 ## <a name="policytypes"></a>policyTypes
 **PolicyType** エンティティには、デバイス構成プロファイル、アプリ構成プロファイル、およびコンプライアンス ポリシーの種類が表示されます。 モバイル デバイス管理 (MDM) を含むポリシーを社内のグループに割り当てることができます。
 
 |    プロパティ    |                       説明                      |            例            |
 |----------------|--------------------------------------------------------|-------------------------------|
-| PolicyTypeId   | ソース システムのポリシーを示す一意識別子。  | 123                           |
-| PolicyTypeKey  | データ ウェアハウス内のポリシーを示す一意識別子。 | 1                             |
-| PolicyTypeName | ポリシーの種類の名前                               | Windows 10 のコンプライアンス ポリシー。 |
+| policyTypeId   | ソース システムのポリシーを示す一意識別子。  | 123                           |
+| policyTypeKey  | データ ウェアハウス内のポリシーを示す一意識別子。 | 1                             |
+| policyTypeName | ポリシーの種類の名前                               | Windows 10 のコンプライアンス ポリシー。 |
 
 ## <a name="policyuseractivities"></a>policyUserActivities
 次の表に、成功、保留中、失敗、またはエラー状態のユーザー数/日の一覧を示します。 数は、ポリシーの種類のプロファイルごとのデータを反映しています。 たとえば、割り当てられているすべてのポリシーでユーザーが成功状態の場合、その日の成功カウンターが 1 つ増えます。 ユーザーに、成功状態のプロファイルとエラー状態のプロファイルの 2 つのプロファイルが割り当てられている場合、エラー状態のユーザーがカウントされます。 **PolicyUserActivity** エンティティには、過去 30 日間の各状態のユーザー数/日が表示されます。
 
 |  プロパティ |                                          説明                                          |       例       |
 |-----------|-----------------------------------------------------------------------------------------------|---------------------|
-| DateKey   | デバイス構成プロファイルのチェックインがデータ ウェアハウスに記録されたときの日付キー。 | 20160703            |
-| Pending   | 保留状態の一意のデバイス数。                                                    | 123                 |
+| dateKey   | デバイス構成プロファイルのチェックインがデータ ウェアハウスに記録されたときの日付キー。 | 20160703            |
+| pending   | 保留状態の一意のデバイス数。                                                    | 123                 |
 | 成功 | 成功状態の一意のデバイス数。                                                    | 12                  |
-| PolicyKey | ポリシー キーとポリシーを結合して、policyName を取得できます。                                | Windows 10 baseline |
-| エラー     | エラー状態の一意のデバイス数。                                                      | 10                  |
+| policyKey | ポリシー キーとポリシーを結合して、policyName を取得できます。                                | Windows 10 baseline |
+| error     | エラー状態の一意のデバイス数。                                                      | 10                  |
 
 ## <a name="termsandconditions"></a>termsAndConditions
 **termsAndConditions** エンティティは、特定の使用条件 (T&C) ポリシーのメタデータと内容を表します。 T&C ポリシーの内容は、ユーザーが初めて Intune に登録しようとしたとき、およびそれ以降に管理者が再承認を必要とする部分を編集するときに、ユーザーに対して提示されます。 デバイスを Intune に登録するためにユーザーが同意する必要のあるプロビジョニングを管理者が通信できるようにします。
@@ -686,11 +686,11 @@ Microsoft Intune によるモバイル アプリケーション管理を使用�
 
 |        名前        |                                             説明                                            |     例     |
 |--------------------|----------------------------------------------------------------------------------------------------|-----------------|
-| UserKey            | データ ウェアハウス内のユーザーを示す一意識別子   (代理キー)。                            | 123             |
-| DeviceKey          | データ ウェアハウス内のデバイスを示す一意識別子。                                             | 123             |
-| CreatedDateTimeUTC | ユーザー デバイスの関連付けが作成されたときの日時。 UTC 形式を使用します。                     | 11/23/2016 0:00 |
-| IsDeleted          | ユーザーがそのデバイスを登録解除し、その関連付けが最新でなくなったことを示します。 | 真/偽      |
-| EndedDateTimeUTC   | IsDeleted が True に変更されたときの UTC 日時。                                               | 6/23/2017 0:00  |
+| userKey            | データ ウェアハウス内のユーザーを示す一意識別子   (代理キー)。                            | 123             |
+| deviceKey          | データ ウェアハウス内のデバイスを示す一意識別子。                                             | 123             |
+| createdDateTimeUTC | ユーザー デバイスの関連付けが作成されたときの日時。 UTC 形式を使用します。                     | 11/23/2016 0:00 |
+| isDeleted          | ユーザーがそのデバイスを登録解除し、その関連付けが最新でなくなったことを示します。 | 真/偽      |
+| endedDateTimeUTC   | IsDeleted が True に変更されたときの UTC 日時。                                               | 6/23/2017 0:00  |
 
 ## <a name="users"></a>ユーザー
 **user** エンティティには、社内のすべての Azure Active Directory (Azure AD) ユーザーと割り当てられているライセンスがリストされています。
@@ -699,14 +699,14 @@ Microsoft Intune によるモバイル アプリケーション管理を使用�
 
 |          プロパティ          |                                                                                                           説明                                                                                                          |                例               |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
-| UserKey                    | データ ウェアハウス内のユーザーを示す一意識別子 - 代理キー。                                                                                                                                                         | 123                                  |
-| UserId                     | ユーザーを示す一意識別子 - UserKey と似ていますが、ナチュラル キーです。                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
-| UserEmail                  | ユーザーの電子メール アドレス。                                                                                                                                                                                                     | John@constoso.com                    |
+| userKey                    | データ ウェアハウス内のユーザーを示す一意識別子 - 代理キー。                                                                                                                                                         | 123                                  |
+| userId                     | ユーザーを示す一意識別子 - UserKey と似ていますが、ナチュラル キーです。                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
+| userEmail                  | ユーザーの電子メール アドレス。                                                                                                                                                                                                     | John@constoso.com                    |
 | userPrincipalName                        | ユーザーのユーザー プリンシパル名。                                                                                                                                                                                               | John@constoso.com                    |
-| DisplayName                | ユーザーの表示名。                                                                                                                                                                                                      | John                                 |
-| IntuneLicensed             | ユーザーに Intune のライセンスがあるかどうかを示します。                                                                                                                                                                              | 真/偽                           |
-| IsDeleted                  | そのユーザーのすべてのライセンスの期限が切れているかどうか、および、そのユーザーがそのため Intune から削除されたかどうかを示します。 1 つのレコードでは、このフラグは変更されません。 代わりに、新しいユーザー状態用の新しいレコードが作成されます。 | 真/偽                           |
-| RowLastModifiedDateTimeUTC | レコードがデータ ウェアハウスで最後に変更されたときの UTC 日時                                                                                                                                                 | 11/23/2016 0:00                      |
+| displayName                | ユーザーの表示名。                                                                                                                                                                                                      | John                                 |
+| intuneLicensed             | ユーザーに Intune のライセンスがあるかどうかを示します。                                                                                                                                                                              | 真/偽                           |
+| isDeleted                  | そのユーザーのすべてのライセンスの期限が切れているかどうか、および、そのユーザーがそのため Intune から削除されたかどうかを示します。 1 つのレコードでは、このフラグは変更されません。 代わりに、新しいユーザー状態用の新しいレコードが作成されます。 | 真/偽                           |
+| rowLastModifiedDateTimeUTC | レコードがデータ ウェアハウスで最後に変更されたときの UTC 日時                                                                                                                                                 | 11/23/2016 0:00                      |
 
 ## <a name="usertermsandconditionsacceptances"></a>userTermsAndConditionsAcceptances
 **userTermsAndConditionsAcceptance** エンティティは、特定のユーザーによる特定の使用条件 (T&C) ポリシーの同意状態を表します。 ユーザーは、Intune ポータル サイトへのアクセスを維持するには、条件の最新バージョンに同意する必要があります。
@@ -724,9 +724,9 @@ Microsoft Intune によるモバイル アプリケーション管理を使用�
 
 |      プロパティ      |          [説明]         |
 |--------------------|------------------------------|
-| VppProgramTypeID   | 種類の ID。           |
-| VppProgramTypeKey  | キーの代理キー。 |
-| VppProgramTypeName | VPP プログラムの種類。          |
+| vppProgramTypeID   | 種類の ID。           |
+| vppProgramTypeKey  | キーの代理キー。 |
+| vppProgramTypeName | VPP プログラムの種類。          |
 
 ### <a name="example"></a>例
 

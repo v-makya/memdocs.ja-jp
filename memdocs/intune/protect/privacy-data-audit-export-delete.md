@@ -2,11 +2,11 @@
 title: 個人データの監査、エクスポート、または削除
 titleSuffix: Microsoft Intune
 description: 個人データの監査、エクスポート、または削除方法について説明します。
-keywords: ''
+keywords: GDPR, 個人データ, プライバシー
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 9/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bdf057893ff24cd4bc5b671d53fbb5c75f597f5
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 5d792df5a4a8690751d7d140aa7fa89191aedb1b
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995995"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012631"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Intune での個人データの監査、エクスポート、または削除
 
@@ -60,7 +60,7 @@ Intune による管理から個人データを削除するには、3 つの方�
 
 ### <a name="delete-a-user-from-intune"></a>Intune からユーザーを削除する
 
-Intune からエンド ユーザーの個人データを削除するには、管理者が [Azure Active Directory (AAD)](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user) からユーザーを削除する必要があります。 ユーザーが AAD から削除 (物理的に削除) されると、Intune は AAD から削除信号を受信し、自動的にそのユーザーのすべての個人データを Intune サービスから消去し始めます。 ユーザーの情報は、削除アクションから 30 日以内に Intune サービスから削除されます。
+Intune からエンド ユーザーの個人データを削除するには、管理者が [Azure Active Directory (Azure AD) からユーザーを削除](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user)する必要があります。 ユーザーが Azure AD から削除 (物理的に削除) されると、Intune は Azure AD から削除信号を受信し、自動的にそのユーザーのすべての個人データを Intune サービスから消去し始めます。 ユーザーの情報は、削除アクションから 30 日以内に Intune サービスから削除されます。
 
 ### <a name="reset-device-to-factory-settings"></a>デバイスを出荷時設定にリセットする
 出荷時設定にリセットすると、会社と個人のデータと設定はすべて元の出荷時設定に復元されます。 この方法は、次の従業員にデバイスを提供する場合に便利です。 ユーザー ファイル、ユーザーがインストールしたアプリケーション、および既定以外の設定は削除されます。このデータは、削除アクションから 30 日以内に Intune サービスから削除されます。
@@ -77,4 +77,4 @@ Intune テナントの顧客が Intune アカウントをキャンセルする�
 
 ## <a name="next-steps"></a>次のステップ
 
-Intune で個人データを[監査、エクスポート、または削除](privacy-data-audit-export-delete.md)する方法について確認します。
+Intune で[個人データを表示および修正](privacy-data-view-correct.md)する方法を確認します。

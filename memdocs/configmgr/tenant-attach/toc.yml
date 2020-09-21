@@ -12,6 +12,8 @@
       href: timeline.md
     - name: リソース エクスプローラー (プレビュー)
       href: resource-explorer.md
+    - name: スクリプトの実行 (プレビュー)
+      href: scripts.md
 - name: テナントにアタッチされたデバイスの CMPivot (プレビュー)
   items:
     - name: CMPivot の起動 (プレビュー)
@@ -28,6 +30,10 @@
       href: deploy-antivirus-policy.md
     - name: Microsoft Defender ウイルス対策ポリシーの設定
       href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+- name: リファレンス
+  items:
+    - name: テナントのアタッチのデータ コレクション
+      href: data-collection.md
 - name: トラブルシューティング
   items:
     - name: テナントのアタッチとデバイス アクション
@@ -40,5 +46,7 @@
       href: troubleshoot-timeline.md
     - name: リソース エクスプローラー (プレビュー)
       href: troubleshoot-resource-explorer.md
+    - name: スクリプトの実行 (プレビュー)
+      href: troubleshoot-scripts.md
     - name: CMPivot (プレビュー)
       href: troubleshoot-cmpivot.md

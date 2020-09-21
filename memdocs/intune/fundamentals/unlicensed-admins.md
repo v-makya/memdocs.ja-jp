@@ -17,14 +17,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6dcd41377234bbb1b40e513f16c3393d763b17f
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: a5f479dcad0c293c547edec24f0f835a4fc987e1
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088192"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574832"
 ---
 # <a name="unlicensed-admins"></a>ライセンス未付与の管理者
+
+> [!Important]
+> このオプションでは、管理者が Microsoft エンドポイント マネージャーにアクセスするためのライセンス要件のみが削除されます。 Azure Active Directory Premium などの他の機能やサービスの使用で、管理者のライセンスが必要になる場合があります。
 
 Intune ライセンスのない管理者に、Intune または Microsoft エンドポイント マネージャー管理センターのアクセス権を付与することができます。
 

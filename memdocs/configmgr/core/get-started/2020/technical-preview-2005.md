@@ -10,12 +10,13 @@ ms.assetid: cde78b6d-2e0e-4a14-a196-4592e0063953
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f7520c6abd6c9ff986e60abc00266d240d00aab7
-ms.sourcegitcommit: 0d2f6132428b5fa994e5b770ab1d2bf7d78ac179
+ROBOTS: NOINDEX
+ms.openlocfilehash: 6cd7e7f949c61977320902e1d17a882886e889fa
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226394"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081826"
 ---
 # <a name="features-in-configuration-manager-technical-preview-version-2005"></a>Configuration Manager Technical Preview バージョン 2005 の機能
 

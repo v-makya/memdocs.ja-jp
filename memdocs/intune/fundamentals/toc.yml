@@ -217,6 +217,8 @@
       items:
         - name: Intune レポート
           href: reports.md
+        - name: グラフを使用してレポートをエクスポートする
+          href: reports-export-graph-apis.md
         - name: Intune のアクティビティの監査ログ
           href: monitor-audit-logs.md
         - name: Azure Monitor でのログのレビュー

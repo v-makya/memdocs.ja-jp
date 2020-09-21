@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22bfe44b95eedcdf87a41cfaaf959c72cfbe93e2
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: f91de698a518a8f8530ae42d5a8842d7876074a1
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423817"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076221"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Microsoft Intune で認証に証明書を使用する
 
@@ -49,7 +49,7 @@ Microsoft の証明機関 (CA) を使用する場合:
   - [Microsoft Certificate Connector をインストールします](certificates-scep-configure.md#install-the-microsoft-intune-connector)。
 
 - PKCS 証明書プロファイルを使用するには、次を実行します。
-  - [PFX Certificate Connector for Microsoft Intune をインストールします] (certificates-imported-pfx-configure)。
+  - [PFX Certificate Connector for Microsoft Intune をインストールします](certficates-pfx-configure.md)。
   
 - PKCS のインポートされた証明書を使用するには:
   - [PFX Certificate Connector for Microsoft Intune をインストールします](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune)。

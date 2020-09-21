@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 2fc05ced647e8784333c2a20bc13c27aa2bf3447
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051589"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076126"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>登録ステータス ページを設定する
  
@@ -122,8 +122,8 @@ ESP は [Windows オートパイロット](../../autopilot/index.yml)のプロ�
 登録ステータス ページを使用して、次のデバイス セットアップ項目を追跡します。
 
 - セキュリティ ポリシー
-  - すべての登録に対する 1 つの構成サービス プロバイダー (CSP)。
-  - Intune で構成されている実際の CSP は、ここでは追跡されません。
+  - 現在、Microsoft Edge、割り当てられたアクセス、およびキオスク ブラウザーのポリシーが追跡されます。
+  - その他のポリシーは追跡されません。
 - アプリケーション
   - コンピューター単位の基幹業務 (LoB) MSI アプリ。
   - インストール コンテキストがデバイスの LoB ストア アプリ。
@@ -138,8 +138,8 @@ ESP は [Windows オートパイロット](../../autopilot/index.yml)のプロ�
 アカウントのセットアップの場合、登録ステータス ページでは、次の項目が現在のログイン ユーザーに割り当てられている場合、これらの項目が追跡されます。
 
 - セキュリティ ポリシー
-  - すべての登録に対する 1 つの CSP。
-  - Intune で構成されている実際の CSP は、ここでは追跡されません。
+  - 現在、Microsoft Edge、割り当てられたアクセス、およびキオスク ブラウザーのポリシーが追跡されます。
+  - その他のポリシーは追跡されません。
 - アプリケーション
   - すべてのデバイス、すべてのユーザー、またはデバイスを登録しているユーザーがメンバーであるユーザー グループに割り当てられている、ユーザー単位の LoB MSI アプリ。
   - すべてのユーザー、またはデバイスを登録しているユーザーがメンバーであるユーザー グループに割り当てられている、コンピューター単位の LoB MSI アプリ。
@@ -152,53 +152,6 @@ ESP は [Windows オートパイロット](../../autopilot/index.yml)のプロ�
   - すべてのユーザー、またはデバイスを登録しているユーザーがメンバーであるユーザー グループに割り当てられている、VPN または Wi-Fi プロファイル。
 - 証明書
   - すべてのユーザー、またはデバイスを登録しているユーザーがメンバーであるユーザー グループに割り当てられている、証明書プロファイル。
-
-### <a name="troubleshooting"></a>トラブルシューティング
-
-次に、登録ステータス ページに関連する問題のトラブルシューティングに関してよく寄せられる質問とその回答を示します。
-
-- 登録ステータス ページを見ても、アプリケーションがインストールされておらず、追跡記録されていません。なぜですか。
-  - アプリケーションを確実にインストールして追跡記録するよう、登録ステータス ページを利用するには、次のように手配します。
-      - "必須" 割り当てを利用することで、デバイス (デバイス対象アプリの場合) またはユーザー (ユーザー対象アプリの場合) が含まれる Azure AD グループにアプリを割り当てます。  (デバイス対象アプリは ESP のデバイス段階中に追跡記録され、ユーザー対象アプリは ESP のユーザー段階中に追跡記録されます)
-      - **[すべてのアプリとプロファイルがインストールされるまでデバイスの使用をブロックする]** を指定するか、 **[Block device use until these required apps are installed]\(これらの必要なアプリがインストールされるまでデバイスの使用をブロックする\)** にアプリを含めます。
-      - アプリはデバイス関連でインストールされ、ユーザー関連で適用される規則は与えられません。
-
-- たとえば、ユーザーが Configuration Manager で共同管理に登録されているデバイスに初めてログインする場合など、Autopilot ではない展開で登録ステータス ページが表示されるのはなぜですか?  
-  - 登録ステータス ページには、次のようなすべての登録方法に対するインストール状態が表示されます
-      - Autopilot
-      - Configuration Manager の共同管理
-      - 登録ステータス ページ ポリシーが初めて適用されたデバイスに新しいユーザーがログインしたとき
-      - **[out-of-box experience (OOBE) でプロビジョニングされたデバイスにのみページを表示する]** の設定がオンになっていて、ポリシーが設定されている場合は、デバイスに最初にサインインしたユーザーに対してのみ [登録ステータス ページ] が表示されます
-
-- 登録ステータス ページがデバイスで構成されている場合、それを無効にする方法はありますか?
-  - 登録ステータス ページ ポリシーは、登録時にデバイスに設定されます。 登録ステータス ページを無効にするには、ユーザーとデバイスの登録ステータス ページのセクションを無効にする必要があります。 セクションを無効にするには、次の構成で OMA-URI のカスタム設定を作成します。
-
-      ユーザーの登録ステータス ページを無効にする:
-
-      ```
-      Name:  Disable User ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipUserStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-      デバイスの登録ステータス ページを無効にする:
-
-      ```
-      Name:  Disable Device ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipDeviceStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-- ログ ファイルを収集するにはどうすればよいですか?
-  - 登録ステータス ページのログ ファイルを収集するには、次の 2 つの方法があります。
-      - ユーザーが ESP ポリシーでログを収集できるようにします。 登録ステータス ページでタイムアウトが発生した場合、エンド ユーザーは **[ログの収集]** のオプションを選択できます。 USB ドライブを挿入することにより、ログ ファイルをドライブにコピーできます
-      - Shift + F10 キー シーケンスを入力してコマンド プロンプトを開いた後、次のコマンド ラインを入力してログ ファイルを生成します。 
-
-      ```
-      mdmdiagnosticstool.exe -area Autopilot -cab <pathToOutputCabFile>.cab 
-      ```
 
 ### <a name="known-issues"></a>既知の問題
 
@@ -219,4 +172,6 @@ ESP は [Windows オートパイロット](../../autopilot/index.yml)のプロ�
 
 ## <a name="next-steps"></a>次のステップ
 
-Windows 登録ページを設定したら、Windows デバイスの管理方法を学習します。 詳細については、「[Microsoft Intune デバイスの管理とは](../remote-actions/device-management.md)」をご覧ください。
+Windows 登録ページを設定したら、[Windows デバイスの管理](../remote-actions/device-management.md)方法を学習します。
+
+[Windows 登録状態ページのトラブルシューティング](https://docs.microsoft.com/troubleshoot/mem/intune/understand-troubleshoot-esp#troubleshooting)

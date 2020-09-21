@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/30/2020
+ms.date: 08/28/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b35011577b6c5882a2f136d9b6d321b182c2be6a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 166681c4cdb2ac3652234c12e50bcb185c43dcbe
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991081"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076177"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Microsoft Intune で SCEP 証明書プロファイルのためのデバイスから NDES サーバーへの通信をトラブルシューティングする
 
@@ -76,8 +76,8 @@ IIS ログには、すべてのプラットフォームに対して同じ種類�
 キー エントリには、次のサンプル テキスト文字列が含まれています。
 
 - There are 1 requests
-- Received '200 OK' when sending GetCACaps(ca) to https://\<サーバー>.msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACaps&message=ca
-- Signing pkiMessage using key belonging to [dn=CN=\<ユーザー名>; serial=1]
+- Received '200 OK' when sending GetCACaps(ca) to https://\<server>.msappproxy.net/certsrv/mscep/mscep.dll?operation=GetCACaps&message=ca
+- Signing pkiMessage using key belonging to [dn=CN=\<username>; serial=1]
 
 
 接続のログは IIS でも記録されます。これは NDES サーバーの %SystemDrive%\inetpub\logs\LogFiles\W3SVC1\ フォルダーにあります。 次に例を示します。
@@ -191,6 +191,7 @@ SCEP サーバーの URL に移動すると、次のネットワーク デバイ
   ```
 
   インストールが失敗した場合は、Microsoft Intune コネクタを削除してから再インストールしてください。
+  インストールが正常に完了し、一般的な NDES メッセージを受信し続ける場合は、**iisreset** コマンドを実行して IIS を再起動します。
 
 #### <a name="http-error-503"></a>HTTP エラー 503
 

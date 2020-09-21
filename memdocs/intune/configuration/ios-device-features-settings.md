@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad78240aa9f2a1ef515be2635cfad0ce68e8ecc8
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 6989dc3559a1de950f5d2ec8280894f1f1983b61
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909008"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574866"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune で一般的な iOS および iPadOS 機能を使用するための iOS および iPadOS デバイスの設定
 
@@ -343,7 +343,7 @@ iPhone にポリシーを割り当てると、ページは次の画像のよう�
   - URL は、`http://` または `https://` で始まる必要があります。
 
 - **追加の構成** (Microsoft Azure AD、リダイレクト、資格情報):SSO アプリ拡張機能に渡す追加の拡張機能固有のデータを入力します。
-  - **キー**:追加する項目の名前 (`user name` など) を入力します。
+  - **キー**:追加する項目の名前 (`user name` など) を入力します。 `AppAllowList` の大文字と小文字は区別されます。 必ず 'AppAllowList' を正確に入力してください。 
   - **種類**:データの種類を入力します。 次のようなオプションがあります。
 
     - 文字列型

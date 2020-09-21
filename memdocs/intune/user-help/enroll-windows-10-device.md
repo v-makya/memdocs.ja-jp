@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: 812e82df-76df-402b-bfe9-29302838f40e
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: jieyang
+ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cb9812505bb1a4560c7b5668aee5b83d5cc0aec7
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 46f8d7d46e376d2fb8f1cab1b3d0b3bc583bdeed
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179589"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643480"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Intune ポータル サイトで Windows 10 デバイスを登録する
 
@@ -65,10 +65,6 @@ Windows 10 は、デスクトップ、スマートフォン、タブレットな
 8. 接続を再確認するには、 **[設定]**  >  **[アカウント]**  >  **[職場または学校にアクセスする]** に戻ります。  自分のアカウントが表示されるようになっているはずです。  
 
 
-    ![接続が正しくセットアップされたことを確認する](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
-
-それでも職場または学校の電子メール、ファイルなどのデータにアクセスできない場合は、 [アカウントに関する問題のトラブルシューティングを行う](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school)方法を参照してください。  
-
 ## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>Windows 10 バージョン 1511 以前のデバイスを登録する  
 以下の手順では、Windows 10 バージョン 1511 以前が実行されているデバイスを登録する方法について説明します。  
 
@@ -91,7 +87,10 @@ Windows 10 は、デスクトップ、スマートフォン、タブレットな
 
     ![サインイン](./media/W10-enroll-4-sign-in.png)  
 
-それでも職場または学校の電子メール、ファイルなどのデータにアクセスできない場合は、 登録中に[アカウント関連の問題のトラブルシューティングを行う](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account)方法を参照してください。  
+
+## <a name="troubleshooting"></a>トラブルシューティング 
+エラー メッセージとその他の接続問題の解決方法を抜粋した一覧については、[Windows 10 デバイスでのアクセスのトラブルシューティング](troubleshoot-your-windows-10-device-windows.md)に関する記事を参照してください。  
+
 
 ## <a name="it-administrator-support"></a>IT 管理者のサポート   
 

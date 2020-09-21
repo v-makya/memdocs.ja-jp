@@ -1,11 +1,11 @@
 ---
-title: Windows 10 デバイスの登録に関するトラブルシューティング | Microsoft Docs
-description: ''
+title: Windows 10 デバイスでの職場または学校へのアクセスのトラブルシューティング | Microsoft Intune
+description: 登録済みの Windows 10 デバイスでのアクセスまたはアカウント接続に関する問題を解決します。
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,52 +15,61 @@ ms.assetid: 4ab630b6-47ff-443b-a2a5-be23388bcea7
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: priyar
+ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 75f163d3f6f5761f1804edd23839bc2e20cca0f0
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 7c96bef7c1be004714f0b06dd47c9c28850118da
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881757"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643429"
 ---
-# <a name="troubleshoot-your-windows-10-device-enrollment"></a>Windows 10 デバイスの登録に関するトラブルシューティング
-ご利用のデバイスを登録しても、職場または学校のメール アドレスやファイルにまだアクセスできない場合は、次のトラブルシューティング手順をお試しください。  
+# <a name="troubleshoot-windows-10-device-access"></a>Windows 10 デバイスでのアクセスのトラブルシューティング
+この記事では、登録済みの Windows 10 デバイスでのアクセスの問題を解決する方法について説明します。 
 
-1. 次の 2 つの画面を見て、お使いのデバイスの表示画面に似ている方をご確認ください。 お使いのデバイスの表示画面に対応する手順に従います。
+## <a name="check-wi-fi-connection"></a>Wi-Fi 接続を確認する  
 
-    次の画面が表示されている場合は、「[[Access work or school (職場または学校へのアクセス)] が表示されている場合のトラブルシューティング手順](#troubleshooting-steps-to-follow-if-you-see-access-work-or-school)」の手順に従います。
+職場または学校のリソースにアクセスするには、Wi-Fi への接続が必要です。 Wi-Fi に接続していることを確認してから、もう一度リソースにアクセスしてみてください。  
 
-    ![settings-accounts-access-work-or-school](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+## <a name="add-work-or-school-account-in-settings-app"></a>設定アプリに職場または学校のアカウントを追加する  
+これらの手順は、デバイスを登録するために使用したものと同じです。 ただし、お使いのアカウントが**設定**アプリに表示されない場合は、これらの手順をもう一度実行する必要があります。  
 
-    次の画面が表示されている場合は、「[[お使いのアカウント] が表示されている場合のトラブルシューティング手順](#troubleshooting-steps-to-follow-if-you-see-your-account)」の手順に従います。
+1. **[設定]** アプリを開きます。 
+2. **[アカウント]** を選択します。
+3. 次の手順は、使用している Windows 10 のバージョンによって異なります。 
+    * バージョン 1607 以降: **[職場または学校にアクセスする]** を選択します。
+    * バージョン 1511 以前: **[職場のアクセス]** を選びます。  
+4. お使いのアカウントを確認します。 それが表示されていない場合は、 **[接続]** プラス記号ボタンを選択して追加します。 
+5. 職場または学校の資格情報でサインインします。 
+6. 画面の指示に従って、接続を完了します。  
+7. 完了すると、お使いのアカウントが接続として追加されます。 組織が利用可能にしているすべてのリソースにアクセスできます。   
 
-    ![settings-accounts-your-account](./media/W10-enroll-2-accounts-your-account.png)
+## <a name="contact-it-support-for-access-requirements"></a>アクセス要件を IT サポートに問い合わせる  
+設定アプリに職場または学校のアカウントが表示されていれば、お使いのデバイスとアカウントは既に接続されています。 IT サポート担当者に連絡して、アクセス問題に対するヘルプを求めてください。 特定のリソースにアクセスできないようにしている制限や要件が適用されている場合があります。  
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>[職場または学校にアクセスする] が表示される場合のトラブルシューティング手順
+## <a name="error-messages"></a>エラー メッセージ  
 
-1. 上記の手順を実行しても職場または学校の電子メールやファイルにアクセスできない場合は、 **[職場または学校にアクセスする]** に戻ります。
+### <a name="we-couldnt-auto-discover-a-management-endpoint-matching-the-username-entered-please-check-your-username-and-try-again-if-you-know-the-url-to-your-management-endpoint-please-enter-it"></a>入力されたユーザー名と一致する管理エンドポイントを自動検出できませんでした。 ユーザー名を確認して、やり直してください。 管理エンドポイントの URL がわかっている場合は、それを入力してください。
 
-2. 以下のいずれかを実行します。
+**原因**:指定された URL (管理エンドポイントとも呼ばれます) とアカウントを検証できませんでした。  
 
-   - 次の画像のような接続が表示される場合は、その接続をタップして、[管理]、[情報]、[切断] の各オプションが表示されることを確認します。 これらのオプションが表示される場合は、登録および接続は完了しています。
+#### <a name="resolution"></a>解決策
+1. ユーザー名とパスワードを再入力します。 
+2. それでもうまくいかない場合は、IT サポート担当者に連絡して、正しい URL を入手してください (例: www.yourcompany.onmicrosoft.com)。 
+3. メッセージが表示されたら、提供された URL を入力します。 
 
-     ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
+### <a name="it-looks-like-youre-not-connected-make-sure-youre-connected-to-the-network"></a>接続されていないようです。 ネットワークに接続していることを確認します。
 
-   - 上に示した接続情報が表示されない場合、または接続情報は表示されるが一部のオプションが表示されない場合は、 **[接続]** をタップします。 職場または学校の資格情報でサインインして、接続します。  
+**原因**:デバイスが Wi-Fi に接続されていません。職場または学校のアカウントを追加するには、接続が必要です。     
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>[お使いのアカウント] が表示される場合のトラブルシューティング手順
+#### <a name="resolution"></a>解決策
+1. デバイスのツールバーまたは設定から、 **[ネットワークの状態]** 地球アイコンを選択します。
+2. [Wi-Fi ネットワーク] > **[接続]** を選択します。  
+3. お使いのアカウントにもう一度接続してみてください。  
 
-上記の手順を実行しても、職場または学校の電子メールやファイルなどのデータにアクセスできない場合は、 **[アカウント]** に戻り、 **[職場のアクセス]** をタップします。
 
-- ご利用の職場または学校のアカウントが一覧に表示された場合は、接続されています。  
+## <a name="next-steps"></a>次のステップ  
 
-- 職場または学校のアカウントが表示されない場合は、 **[接続]** をタップしてから、職場または学校の資格情報でサインインします。
-
-## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>[職場または学校アカウントの設定] が表示される場合のトラブルシューティング手順
-
-"<strong>入力されたユーザー名と一致する管理エンドポイントを自動検出できませんでした。ユーザー名を確認して、やり直してください。管理エンドポイントの URL がわかっている場合は、それを入力してください。</strong>" というメッセージが表示される場合は、ユーザー名とパスワードを再入力する必要があります。 それでもうまくいかない場合は、<strong>[管理エンドポイント]</strong> ボックスに入力する必要のある Web サイトの会社のサポートに確認する必要があります。 これは、<strong>www.yourcompany.onmicrosoft.com</strong> のような Web サイトです。
-
-サポートが必要な場合は、 社内サポートに問い合わせてください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。
+サポートが必要な場合は、 IT サポート担当者にお問い合わせください。 連絡先情報については、[ポータル サイト Web サイト](https://go.microsoft.com/fwlink/?linkid=2010980)をご確認ください。

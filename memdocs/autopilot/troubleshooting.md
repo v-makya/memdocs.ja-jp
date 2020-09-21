@@ -15,12 +15,12 @@ author: greg-lindsay
 ms.author: greglin
 ms.collection: M365-modern-desktop
 ms.topic: article
-ms.openlocfilehash: 38f140717d256d6edd4e9bd6cd0a66b6bc853740
-ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
+ms.openlocfilehash: ac359871b9f565b66d6d179048ae8c64ebf5392d
+ms.sourcegitcommit: 81f6b4cac6c991d34bc864f950c82e5b57e906c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574581"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90779518"
 ---
 # <a name="troubleshooting-windows-autopilot"></a>Windows 自動操縦のトラブルシューティング
 
@@ -93,7 +93,7 @@ OOBE に予期しない自動操縦動作が含まれている場合は、デバ
 
 ### <a name="windows-10-version-1803-and-above"></a>Windows 10 バージョン1803以降
 
-Windows 10 バージョン1803以降では、イベントログエントリが追加されます。 Og エントリを使用して、自動操縦プロファイル設定と OOBE フローに関連する詳細を確認できます。 これらのエントリはイベントビューアーを使用して表示できます。 詳細については、「 **アプリケーションとサービスのログ– > Microsoft – > Windows – > >** 」1903を参照してください。 バージョン1903以降については、「 **アプリケーションとサービスのログ– > Microsoft – > Windows – > ModernDeployment – > 自動操縦**」を参照してください。 シナリオとプロファイルの構成によっては、次のイベントが記録される場合があります。
+Windows 10 バージョン1803以降では、イベントログエントリが追加されます。 ログエントリを使用して、自動操縦プロファイル設定と OOBE フローに関連する詳細を確認できます。 これらのエントリはイベントビューアーを使用して表示できます。 詳細については、「 **アプリケーションとサービスのログ– > Microsoft – > Windows – > >** 」1903を参照してください。 バージョン1903以降については、「 **アプリケーションとサービスのログ– > Microsoft – > Windows – > ModernDeployment – > 自動操縦**」を参照してください。 シナリオとプロファイルの構成によっては、次のイベントが記録される場合があります。
 
 | イベント ID | Type | 説明 |
 |----------|------|-------------| 

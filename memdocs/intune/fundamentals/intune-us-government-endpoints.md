@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25ec8099c628c4a39266a9352b3b4b9810698592
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 032e6468ce326637e264b232cdd4e4d954ea70d8
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996590"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081809"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Microsoft Intune の米国政府機関のエンドポイント
 
-このページには、Intune のデプロイでのプロキシ設定に必要な米国政府機関エンドポイントがリストされています。
+このページには、Intune デプロイでのプロキシ設定に必要な US Government、US Government Community (GCC) High、および Department of Defense (DoD) エンドポイントが一覧表示されます。
 
 ファイアウォールとプロキシ サーバーの背後にあるデバイスを管理するには、Intune に対する通信を有効にする必要があります。
 

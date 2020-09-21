@@ -28,6 +28,8 @@
       href: get-started/configure-classifications-and-products.md
     - name: ソフトウェア更新の設定の管理
       href: get-started/manage-settings-for-software-updates.md
+    - name: SSL を使用するようにソフトウェアの更新ポイントを構成する
+      href: get-started/software-update-point-ssl.md
     - name: 切断された環境でのソフトウェア更新プログラムの同期
       items:
         - name: 切断されているソフトウェアの更新ポイントからのソフトウェア更新プログラムの同期

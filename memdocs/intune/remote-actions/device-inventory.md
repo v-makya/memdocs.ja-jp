@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2020
+ms.date: 09/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6aa3c887a22c468d8d482ce2d4ba0da8202fceb
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1cc9cf0bdba9a6dea77955a6b88d3221053ea50f
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906822"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076143"
 ---
 # <a name="see-device-details-in-intune"></a>Intune でデバイスの詳細を確認する
 
@@ -105,7 +105,7 @@ ms.locfileid: "88906822"
 |暗号化|**[はい]** の場合、デバイスに格納されているデータが暗号化されます。|Windows、iOS/iPadOS、Android|
 
 > [!Note]  
-> Android Enterprise 専用デバイスまたはフル マネージド デバイスでは、電話番号はインベントリされません。
+> 電話番号は、Android Enterprise 専用、フル マネージド、または会社所有の仕事用プロファイル デバイスではインベントリされません。
 
 ## <a name="next-steps"></a>次のステップ
 Intune で[デバイスを管理](device-management.md)するために他に行えることを確認します。

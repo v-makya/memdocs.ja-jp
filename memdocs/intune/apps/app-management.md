@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 68336d252cb3d3d3d49cc0c7a32e49e94ba5cdd7
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252307"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012665"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Microsoft Intune アプリの管理とは
 
@@ -101,6 +101,7 @@ Intune では、アプリを実行するデバイス上で必要なアプリを�
     - **[アプリ構成ポリシー]** :ユーザーがアプリを実行するときに必要となる場合がある設定を指定するには、このオプションを選択します。 詳しくは、[アプリの構成ポリシー](app-configuration-policies-use-ios.md)、[iOS アプリ構成ポリシー](app-configuration-policies-use-ios.md)、および [Android アプリ構成ポリシー](app-configuration-policies-overview.md)に関するページをご覧ください。
     - **[iOS アプリ プロビジョニング プロファイル]** : iOS アプリには、プロビジョニング プロファイルと、証明書によって署名されたコードが含まれます。 証明書の期限が切れると、アプリを実行できなくなります。 Intune には、有効期限が近づいているアプリを持つデバイスに新しいプロビジョニング プロファイルのポリシーを事前に割り当てるツールが用意されています。 詳しくは、[iOS アプリ プロビジョニング プロファイル](app-provisioning-profile-ios.md)に関するページをご覧ください。
     - **[S モードの補足ポリシー]** : マネージド S モード デバイスでの追加アプリケーションの実行を承認するには、このオプションを選択します。 詳しくは、[S モードの補足ポリシー](apps-win32-s-mode.md)に関するページをご覧ください。
+    - **[Office アプリのポリシー]** :Microsoft 365 サービスに接続する Office モバイル アプリ向けのモバイル アプリ管理ポリシーを作成する場合に、このオプションを選択します。 ハイブリッドの最新認証に対応する iOS/iPadOS および Android 用の Outlook のために Intune アプリ保護ポリシーを作成することで、Exchange オンプレミス メールボックスへのアクセスも保護できます。 Office アプリのポリシーを使用するための要件を満たす必要があります。 要件の詳細については、「[Office クラウド ポリシー サービスを使うための要件](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service)」を参照してください。 アプリ保護ポリシーは、オンプレミス Exchange サービスや SharePoint サービスに接続する他のアプリではサポートされていません。 関連情報については、「[Microsoft 365 Apps for enterprise の Office クラウド ポリシー サービスの概要](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)」を参照してください。
     - **[ポリシー セット]** : アプリ、ポリシー、および作成したその他の管理オブジェクトの割り当て可能なコレクションを作成するには、このオプションを選択します。 詳しくは、[ポリシー セット](../fundamentals/policy-sets.md)に関するページをご覧ください。
 - **[その他]** :    
     - **[アプリの選択的ワイプ]** :このオプションを選択すると、選択したユーザーのデバイスから会社のデータのみを削除することができます。 詳しくは、[アプリの選択的ワイプ](apps-selective-wipe.md)に関するページをご覧ください。
@@ -109,10 +110,10 @@ Intune では、アプリを実行するデバイス上で必要なアプリを�
 - **[ヘルプとサポート]** :トラブルシューティング、サポートの要求、または Intune の状態の表示を行います。 詳しくは、[問題のトラブルシューティング](../fundamentals/help-desk-operators.md)に関するページをご覧ください。
 
 ### <a name="try-the-interactive-guide"></a>対話型ガイドを試す
-「[Microsoft Endpoint Manager を使用してモバイル アプリケーションとデスクトップ アプリケーションを管理および保護する](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager)」の対話型ガイドでは、Microsoft Endpoint Manager 管理センターを使用して、Intune での登録したデバイスの管理、ポリシー準拠の強制、組織のデータの保護を行う方法を説明します。</br></br>
+「[Microsoft Endpoint Manager を使用してモバイル アプリケーションとデスクトップ アプリケーションを管理および保護する](https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager)」の対話型ガイドでは、Microsoft Endpoint Manager 管理センターを使用して、Intune での登録したデバイスの管理、ポリシー準拠の強制、組織のデータの保護を行う方法を説明します。</br></br>
 
 <div align=”center”>
-<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy"/></iframe>
 </div>
 
 ## <a name="additional-information"></a>追加情報

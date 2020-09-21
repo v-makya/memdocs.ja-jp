@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99cde56dbe1f9f63cb8e0af69721191455f16d2a
-ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
+ms.openlocfilehash: 08f0f02075baf7447815beb56c0f9c0a726c4d43
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281185"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039399"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>iOS 用 Microsoft Intune App SDK 開発者ガイド
 
@@ -70,6 +70,7 @@ iOS 用 Microsoft Intune App SDK を使用すると、ネイティブ iOS アプ
 
 -  IntuneMAMAppConfig.h
 -  IntuneMAMAppConfigManager.h
+-  IntuneMAMComplianceManager.h
 -  IntuneMAMDataProtectionInfo.h
 -  IntuneMAMDataProtectionManager.h
 -  IntuneMAMDefs.h
@@ -77,12 +78,15 @@ iOS 用 Microsoft Intune App SDK を使用すると、ネイティブ iOS アプ
 -  IntuneMAMEnrollmentDelegate.h
 -  IntuneMAMEnrollmentManager.h
 -  IntuneMAMEnrollmentStatus.h
+-  IntuneMAMFile.h
 -  IntuneMAMFileProtectionInfo.h
 -  IntuneMAMFileProtectionManager.h
 -  IntuneMAMLogger.h
 -  IntuneMAMPolicy.h
 -  IntuneMAMPolicyDelegate.h
 -  IntuneMAMPolicyManager.h
+-  IntuneMAMSettings.h
+-  IntuneMAMUIHelper.h
 -  IntuneMAMVersionInfo.h
 
 開発者は、IntuneMAM.h をインポートするだけで、前のすべてのヘッダーの内容を使用可能にすることができます
@@ -214,19 +218,19 @@ Intune App SDK では、その認証および条件付き起動シナリオに [
 
 3. さらに、**IntuneMAMSettings** ディクショナリで、キー名 `ADALRedirectUri` を使用して、MSAL 呼び出しに使用するリダイレクト URI を指定します。 また、アプリケーションのリダイレクト URI の形式が `scheme://bundle_id` の場合は、代わりに `ADALRedirectScheme` を指定することもできます。
 
-さらに、アプリは、実行時にこれらの Azure AD 設定をオーバーライドすることができます。 上書きするには、`IntuneMAMPolicyManager` インスタンスの `aadAuthorityUriOverride`、`aadClientIdOverride`、および `aadRedirectUriOverride` プロパティを設定します。
+さらに、アプリは、実行時にこれらの Azure AD 設定をオーバーライドすることができます。 これを行うには、`IntuneMAMSettings` クラスの `aadAuthorityUriOverride`、`aadClientIdOverride`、および `aadRedirectUriOverride` プロパティを設定します。
 
 4. iOS のアプリにアプリ保護ポリシー (APP) サービスへのアクセス許可を付与するための手順に従っていることを確認します。 [Intune SDK ガイドの概要](app-sdk-get-started.md#next-steps-after-integration)に関するページの「[Intune アプリ保護サービスへのアクセス権をアプリに付与する (省略可能)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)」の下に記載されている手順を使用します。  
 
 > [!NOTE]
-> Info.plist アプローチは、静的で、かつ実行時に定義する必要がないあらゆる設定に推奨されます。 `IntuneMAMPolicyManager` のプロパティに割り当てられた値は、Info.plist で指定された対応するどの値よりも優先され、アプリの再起動後も保持されます。 ユーザーの登録が解除されるまで、あるいは値が消去または変更されるまで、SDK は引き続きこの値を使用してポリシーのチェックインを行います。
+> Info.plist アプローチは、静的で、かつ実行時に定義する必要がないあらゆる設定に推奨されます。 実行時に `IntuneMAMSettings` クラス プロパティに割り当てられた値は、Info.plist で指定された対応するどの値よりも優先され、アプリの再起動後も保持されます。 ユーザーの登録が解除されるまで、あるいは値が消去または変更されるまで、SDK は引き続きこの値を使用してポリシーのチェックインを行います。
 
 ### <a name="if-your-app-does-not-use-msal"></a>アプリで MSAL が使用されていない場合
 
 既に説明したように、Intune App SDK によって、その認証と条件付き起動シナリオに [Microsoft 認証ライブラリ](https://github.com/AzureAD/microsoft-authentication-library-for-objc)が使用されます。 また、デバイスを登録せずに管理するために MAM サービスにユーザー ID を登録する場合も、MSAL を利用します。 **アプリで独自の認証メカニズム用に MSAL が使用されない**場合、カスタム AAD の設定を構成することが必要な場合があります。
 
 * 開発者は、[こちら](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration)で指定されている形式のカスタム リダイレクト URI を使用して、AAD でのアプリの登録を作成する必要があります。 
-* 開発者は、前に説明した `ADALClientID` および `ADALRedirectUri` の設定、または `IntuneMAMPolicyManager` インスタンスの `aadClientIdOverride` および `aadRedirectUriOverride` のプロパティを設定する必要があります。 
+* 開発者は、前に説明した `ADALClientID` および `ADALRedirectUri` の設定、または `IntuneMAMSettings` クラスの `aadClientIdOverride` および `aadRedirectUriOverride` プロパティを設定する必要があります。 
 * また、開発者は、前のセクションのステップ 4 に従って、アプリの登録に Intune App Protection サービスへのアクセスを許可する必要があります。
 
 ### <a name="special-considerations-when-using-msal"></a>MSAL を使用する場合の特別な考慮事項 
@@ -766,7 +770,7 @@ Web ビュー内に Web サイトを表示できる機能がアプリケーシ�
 
 ### <a name="webviews-that-display-only-non-corporate-contentwebsites"></a>社外のコンテンツまたは Web サイトのみを表示する Web ビュー
 
-Web ビューに会社のデータは表示されないアプリケーションで、ユーザーが任意のサイトを参照して、アプリケーションの他の部分からマネージド データをコピーしてパブリック フォーラムに貼り付けることができる可能性がある場合、マネージド データが Web ビューを介して漏洩しないよう、そのアプリケーションで現在の ID を設定する必要があります。 これにはたとえば、検索エンジンへの直接または間接リンクが含まれる、機能提案型またはフィードバック型の Web ページがあります。 Web ビューを表示する前に、複数 ID アプリケーションによって、IntuneMAMPolicyManager setUIPolicyIdentity が呼び出され空の文字列が渡される必要があります。 Web ビューが破棄された後、アプリケーションによって、setUIPolicyIdentity が呼び出され現在の ID が渡される必要があります。 単一 ID アプリケーションによって、Web ビューを表示する前に、IntuneMAMPolicyManager setCurrentThreadIdentity が呼び出され空の文字列が渡される必要があります。 Web ビューが破棄された後、アプリケーションによって setCurrentThreadIdentity が呼び出され nil が渡される必要があります。 これにより、Intune SDK で Web ビューが管理対象外として扱われ、アプリケーションの他の部分のマネージド データを Web ビューに貼り付けることは、ポリシーがそのように構成されている場合、確実に許可されなくなります。 
+Web ビューに会社のデータは表示されないアプリケーションで、ユーザーが任意のサイトを参照して、アプリケーションの他の部分からマネージド データをコピーしてパブリック フォーラムに貼り付けることができる可能性がある場合、マネージド データが Web ビューを介して漏洩しないよう、そのアプリケーションで現在の ID を設定する必要があります。 これにはたとえば、検索エンジンへの直接または間接リンクが含まれる、機能提案型またはフィードバック型の Web ページがあります。 Web ビューを表示する前に、複数 ID アプリケーションによって `IntuneMAMPolicyManager` インスタンスで `setUIPolicyIdentity` が呼び出され、空の文字列が渡される必要があります。 Web ビューが破棄された後、アプリケーションによって `setUIPolicyIdentity` が呼び出され、現在の ID が渡される必要があります。 Web ビューを表示する前に、単一 ID アプリケーションによって `IntuneMAMPolicyManager` インスタンスで `setCurrentThreadIdentity` が呼び出され、空の文字列が渡される必要があります。 Web ビューが破棄された後、アプリケーションによって `setCurrentThreadIdentity` が呼び出され、nil が渡される必要があります。 これにより、Intune SDK で Web ビューが管理対象外として扱われ、アプリケーションの他の部分のマネージド データを Web ビューに貼り付けることは、ポリシーがそのように構成されている場合、確実に許可されなくなります。 
 
 ### <a name="webviews-that-display-only-corporate-contentwebsites"></a>会社のコンテンツまたは Web サイトのみを表示する Web ビュー
 
@@ -774,9 +778,9 @@ Web ビューに会社のデータのみが表示されるアプリケーショ�
 
 ### <a name="webviews-that-might-display-both-corporate-and-non-corporate-contentwebsites"></a>会社および社外の両方のコンテンツまたは Web サイトを表示する Web ビュー
 
-このシナリオでは、WKWebView のみがサポートされています。 レガシ UIWebView を使用するアプリケーションは、WKWebView に移行する必要があります。 会社のコンテンツを WKWebView 内に表示するアプリケーションで、ユーザーが社外のコンテンツまたは Web サイトにもアクセスすることができ、データ漏洩につながる可能性がある場合、IntuneMAMPolicyDelegate.h に定義されている isExternalURL: デリゲート メソッドをアプリケーションで実装する必要があります。 アプリケーションによって、デリゲート メソッドに渡される URL が、マネージド データを貼り付けることができる会社の Web サイトか、または会社のデータが漏洩する可能性がある社外の Web サイトのどちらを表すのかが判断される必要があります。 
+このシナリオでは、WKWebView のみがサポートされています。 レガシ UIWebView を使用するアプリケーションは、WKWebView に移行する必要があります。 会社のコンテンツを WKWebView 内に表示するアプリケーションで、ユーザーが社外のコンテンツまたは Web サイトにもアクセスすることができ、データ漏洩につながる可能性がある場合、`IntuneMAMPolicyDelegate.h` に定義されている `isExternalURL:` デリゲート メソッドがアプリケーションによって実装される必要があります。 アプリケーションによって、デリゲート メソッドに渡される URL が、マネージド データを貼り付けることができる会社の Web サイトか、または会社のデータが漏洩する可能性がある社外の Web サイトのどちらを表すのかが判断される必要があります。 
 
-isExternalURL で NO が返されると、読み込まれている Web サイトはマネージド データを共有可能な会社の場所であることが Intune SDK に伝えられます。 YES が返されると、現在のポリシー設定で必要とされている場合、Intune SDK によって WKWebView ではなく Edge でその URL が開かれます。 これにより、アプリ内のマネージド データが外部 Web サイトに漏洩することが確実になくなります。
+`isExternalURL` で NO が返されると、読み込まれている Web サイトはマネージド データを共有可能な会社の場所であることが Intune SDK に伝えられます。 YES が返されると、現在のポリシー設定で必要とされている場合、Intune SDK によって WKWebView ではなく Edge でその URL が開かれます。 これにより、アプリ内のマネージド データが外部 Web サイトに漏洩することが確実になくなります。
 
 ## <a name="ios-best-practices"></a>iOS ベスト プラクティス
 
@@ -827,7 +831,7 @@ SDK は、次の操作をバックグラウンドで定期的に実行します�
 
 ### <a name="is-there-a-sample-app-that-demonstrates-how-to-integrate-the-sdk"></a>SDK を統合する方法を示すサンプル アプリはありますか
 
-はい、ご利用いただけます。 最近、オープンソースのサンプル アプリ [Wagr for iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App) を改良したばかりです。 Wagr は Intune App SDK を使用してアプリ保護ポリシーで使用できるようになりました。
+はい、ご利用いただけます。 [Chatr サンプル アプリ](https://github.com/msintuneappsdk/Chatr-Sample-Intune-iOS-App)に関するページを参照してください。
 
 ### <a name="how-can-i-troubleshoot-my-app"></a>アプリをトラブルシューティングするにはどうすればよいですか
 

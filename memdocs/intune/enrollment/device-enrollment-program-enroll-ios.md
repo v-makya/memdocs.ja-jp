@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a28d2810c3a93cd60013ae347c054783515196d7
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: d5ec26d03336e73f7dadf0912992b018058dc493
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907298"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574883"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>Apple の自動デバイス登録を使用して iOS または iPadOS デバイスを自動登録する
 
@@ -226,8 +226,7 @@ ADE で iOS または iPadOS デバイスを登録するには、Apple の ADE �
 
 14. 前の手順で **[証明書による Apple Configurator の許可]** を選択した場合は、インポートする Apple Configurator の証明書を選択します。
 
-15. デバイスに対して登録時に自動的に適用される名前付け形式と、連続する各チェックインにおける名前付け形式を指定することができます。 名前付けテンプレートを作成するには、 **[デバイス名のテンプレートを適用する]** に **[はい]** を選択します。 次に、 **[デバイス名のテンプレート]** ボックスに、このプロファイルを使用する名前に使うテンプレートを入力します。 デバイスの種類とシリアル番号を含むテンプレート形式を指定できます。 
-
+15. デバイスに対して登録時に自動的に適用される名前付け形式と、連続する各チェックインにおける名前付け形式を指定することができます。 名前付けテンプレートを作成するには、 **[デバイス名のテンプレートを適用する]** に **[はい]** を選択します。 次に、 **[デバイス名のテンプレート]** ボックスに、このプロファイルを使用する名前に使うテンプレートを入力します。 デバイスの種類とシリアル番号を含むテンプレート形式を指定できます。 デバイス名のテンプレートには、iPhone、iPad、iPod Touch のサポートが含まれています。 
 16. **[Next: Setup Assistant Customization]\(次へ: セットアップ アシスタントのカスタマイズ\)** を選択します。
 
 17. **[セットアップ アシスタントのカスタマイズ]** ページで、次のプロファイル設定を構成します。![セットアップ アシスタントのカスタマイズ。](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)

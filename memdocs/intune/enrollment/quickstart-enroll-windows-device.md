@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f70c8487d9cb30b2a7cced63e6e019541f73704
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 67de7db6587c1f80d849808c139bf1ae94f4bbd5
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327054"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643640"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>クイック スタート: Windows 10 デバイスを登録する
 
@@ -87,7 +87,7 @@ Windows 10 デスクトップを登録する前に、インストールされて
 
    ![新しく追加したアカウントのスクリーンショット](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
-    前の手順を実行しても職場または学校の電子メール アカウントとファイルにまだアクセスできない場合は、「[[職場または学校にアクセスする] が表示されている場合のトラブルシューティング手順](../user-help/troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school)」に従ってください。
+    前の手順を実行しても職場または学校の電子メール アカウントとファイルにアクセスできない場合は、[Windows 10 デバイスでのアクセスのトラブルシューティング](../user-help/troubleshoot-your-windows-10-device-windows.md)に関する記事の手順に従ってください。  
 
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Intune でのデバイス登録を確認する
 

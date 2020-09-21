@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 2e79017726e8b8924ac5502c7522b124f11e6c60
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194108"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606958"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune を使用して機能を許可または制限するように Android エンタープライズ デバイスを設定する
 
@@ -37,11 +37,11 @@ ms.locfileid: "89194108"
 
 一部の設定は、すべての登録の種類でサポートされているわけではありません。 どの設定がどの種類の登録でサポートされているかについては、ユーザー インターフェイスを参照してください。 各設定は、その設定を使用できる登録の種類を示す見出しの下にあります。
 
-![設定の見出し。](./media/device-restrictions-android-for-work/setting-headers.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Microsoft Intune とエンドポイント マネージャーで適用される Android Enterprise の [ユーザーとアカウント] 設定のヘッダーと登録の種類をご覧ください。":::
 
 一部の設定は、仕事用プロファイルを含む会社所有のバイスに対して仕事用プロファイル レベルでのみ適用されます。 これらの設定は、フル マネージドおよび専用デバイスに対しても、デバイス全体に適用されます。 これらの設定は、ユーザー インターフェイスで " *(work profile-level)* " 記述子でマークされます。
 
-![設定の見出し。](./media/device-restrictions-android-for-work/work-profile-level.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="Microsoft Intune とエンドポイント マネージャーで仕事用プロファイル レベルで適用される Android Enterprise の [アプリケーション] の設定をご覧ください。":::
 
 
 ### <a name="general"></a>全般
@@ -239,7 +239,7 @@ ms.locfileid: "89194108"
 - **[フル マネージド]** : フル マネージド デバイスで Microsoft Launcher アプリを構成します。
 
   - **Microsoft Launcher を既定のランチャーにする**: **[有効]** にすると、Microsoft Launcher がホーム画面の既定のランチャーとして設定されます。 Launcher を既定に設定した場合、ユーザーは別のランチャーを使用できません。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、Microsoft Launcher は既定のランチャーとして強制されません。
-  - **[Configure custom wallpaper]\(カスタムの壁紙を構成する\)** : **[有効]** に設定すると、ホーム画面の壁紙として独自のイメージを適用し、ユーザーがイメージを変更できるかどうかを選択することができます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、デバイスで現在の壁紙が保持されます。
+  - **[Configure custom wallpaper]\(カスタムの壁紙を構成する\)** :Microsoft Launcher アプリで **[有効]** に設定すると、ホーム画面の壁紙として独自の画像を適用し、ユーザーが画像を変更できるかどうかを選択することができます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、デバイスで現在の壁紙が保持されます。
     - **[Enter URL of wallpaper image]\(壁紙イメージの URL を入力する\)** :壁紙イメージの URL を入力します。 このイメージは、デバイスのホーム画面に表示されます。 たとえば、「`http://www.contoso.com/image.jpg`」と入力します。 
     - **[Allow user to modify wallpaper]\(壁紙の変更をユーザーに許可する\)** : **[有効]** に設定すると、ユーザーは壁紙イメージを変更できます。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、ユーザーは壁紙を変更できません。
   - **[Enable launcher feed]\(ランチャー フィードを有効にする\)** : **[有効]** に設定すると、カレンダー、ドキュメント、最近のアクティビティを表示するランチャー フィードがオンになります。 **[未構成]** (既定) に設定すると、Intune では、この設定は変更または更新されません。 既定では、このフィードは表示されません。

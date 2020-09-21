@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d23af858db709deb041fa1259d7c7d203eaa65dd
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 148e549d72c3d5802bc9d86f7d0fd81d55b21aa7
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217711"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039229"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Android の基幹業務アプリを Microsoft Intune に追加する
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-基幹業務 (LOB) アプリとは、アプリのインストール ファイルから Intune に追加するアプリのことです。 通常、この種類のアプリは社内で作成されます。 Intune によって、ユーザーのデバイス上に LOB アプリがインストールされます。 
+基幹業務 (LOB) アプリとは、アプリのインストール ファイルから Intune に追加するアプリのことです。 通常、この種類のアプリは社内で作成されます。 Intune によって、ユーザーのデバイス上に LOB アプリがインストールされます。 これは、デバイス管理者が管理するデバイスにのみ適用されます。
 
 > [!Note]
 > LOB アプリと Google Play Developer Console の詳細については、「[Google Developer Console を使用したマネージド Google Play プライベート (LOB) アプリの公開](apps-add-android-for-work.md?#managed-google-play-private-lob-app-publishing-using-the-google-developer-console)」を参照してください。 
 
 > [!Note]
-> Android for Work については、「[Intune で Google Play マネージド アプリを Android Enterprise デバイスに追加する](apps-add-android-for-work.md)」を参照してください。 
+> Android Enterprise デバイスについては、「[Intune で Google Play マネージド アプリを Android Enterprise デバイスに追加する](apps-add-android-for-work.md)」を参照してください。 
 
 ## <a name="select-the-app-type"></a>アプリの種類を選択する
 
@@ -58,8 +58,8 @@ ms.locfileid: "88217711"
     - **名前**:アプリの名前を入力します。これは会社のポータルに表示されます。 使用するアプリ名はすべて一意にします。 同じアプリ名が 2 つ存在する場合、いずれか 1 つのアプリのみが会社のポータルに表示されます。
     - **説明**:アプリの説明を入力します。 説明はポータル サイトに表示されます。
     - **[発行元]** : アプリの発行元の名前を入力します。
-    - **[最低限のオペレーティング システム]** :アプリをインストールできる最小限のオペレーティング システム バージョンを一覧から選択します。 これよりも前のオペレーティング システムがアプリの割り当て先デバイスにインストールされている場合、そのアプリはインストールされません。
-    - **[カテゴリ]** :1 つまたは複数の組み込みアプリ カテゴリを選択するか、ご自身で作成したカテゴリを選択します。 カテゴリを使用すれば、ユーザーはポータル サイトを参照する際にアプリを見つけやすくなります。
+    - **[オペレーティング システムの最小要件]**: アプリをインストールできる最小限のオペレーティング システム バージョンを一覧から選択します。 これよりも前のオペレーティング システムがアプリの割り当て先デバイスにインストールされている場合、そのアプリはインストールされません。
+    - **[カテゴリ]** : 1 つまたは複数の組み込みアプリ カテゴリを選択するか、ご自身で作成したカテゴリを選択します。 カテゴリを使用すれば、ユーザーはポータル サイトを参照する際にアプリを見つけやすくなります。
     - **[会社のポータルでおすすめアプリとして表示します]** : ユーザーがアプリを参照するとき、会社のポータルのメイン ページにアプリが目立つように表示されます。
     - **[情報 URL]** : このアプリに関する情報が含まれる Web サイトの URL を入力することもできます。 この URL はポータル サイトに表示されます。
     - **[プライバシー URL]** : このアプリのプライバシー情報が含まれる Web サイトの URL を入力することもできます。 この URL はポータル サイトに表示されます。
@@ -87,7 +87,7 @@ ms.locfileid: "88217711"
 
     基幹業務アプリの **[概要]** ブレードが表示されます。
 
-## <a name="step-5-update-a-line-of-business-app"></a>手順 5:基幹業務アプリを更新する
+## <a name="step-5-update-a-line-of-business-app"></a>手順 5: 基幹業務アプリの更新
 
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 

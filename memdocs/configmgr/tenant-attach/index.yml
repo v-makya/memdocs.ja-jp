@@ -11,24 +11,48 @@ metadata:
   author: mestew
   ms.author: mstewart
   ms.date: 04/01/2020
-  ms.openlocfilehash: 80a602c8aa6be7599bbb579f41f34fb560d903c3
-  ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+  ms.openlocfilehash: b3d6c2510cb26fb520c3b765a0931991aaed6e14
+  ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/28/2020
-  ms.locfileid: "89067989"
+  ms.lasthandoff: 09/18/2020
+  ms.locfileid: "90802824"
 landingContent:
 - title: テナントのアタッチについて
   linkLists:
-  - linkListType: overview
+  - linkListType: get-started
     links:
     - text: テナントのアタッチを有効にする
       url: device-sync-actions.md
-    - text: ConfigMgr クライアントの詳細の表示 (プレビュー)
-      url: client-details.md
   - linkListType: reference
     links:
     - text: テナントのアタッチとデバイス アクションのトラブルシューティング
       url: troubleshoot.md
     - text: ConfigMgr クライアントの詳細のトラブルシューティング (プレビュー)
       url: troubleshoot-client-details.md
+- title: アップロードされたデバイスに関する情報を取得する
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: ConfigMgr クライアントの詳細の表示 (プレビュー)
+      url: client-details.md
+    - text: デバイスのタイムライン (プレビュー)
+      url: timeline.md
+    - text: リソース エクスプローラー (プレビュー)
+      url: resource-explorer.md
+- title: 上位のタスク
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: スクリプトの実行
+      url: scripts.md
+    - text: アプリケーションをインストールする
+      url: applications.md
+    - text: CMPivot の起動
+      url: cmpivot-start.md
+  - linkListType: concept
+    links:
+    - text: CMPivot 使用状況の概要
+      url: cmpivot-overview-attached.md
+    - text: CMPivot サンプル スクリプト
+      url: cmpivot-samples-attached.md
