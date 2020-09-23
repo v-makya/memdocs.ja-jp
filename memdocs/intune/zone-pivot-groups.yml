@@ -12,6 +12,8 @@ groups:
   title: Windows MDM のベースライン バージョン
   prompt: バージョンを選択する
   pivots:
+  - id: mdm-sept-2020
+    title: 2020 年 8 月
   - id: mdm-may-2019
     title: 2019 年 5 月
   - id: mdm-preview
@@ -28,14 +30,16 @@ groups:
   title: ATP のベースライン バージョン
   prompt: バージョンを選択する
   pivots:
+  - id: atp-sept-2020
+    title: 2020 年 9 月
   - id: atp-april-2020
     title: 2020 年 4 月
   - id: atp-march-2020
     title: 2020 年 3 月
 metadata:
-  ms.openlocfilehash: 304a1087e156f7c491afd83b9981cdba996dc9fc
-  ms.sourcegitcommit: a4ec80c5dd51e40f3b468e96a71bbe29222ebafd
+  ms.openlocfilehash: 339abb3d5dae662b7c83000369529c8115aeaf99
+  ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82693280"
+  ms.lasthandoff: 09/22/2020
+  ms.locfileid: "91002683"

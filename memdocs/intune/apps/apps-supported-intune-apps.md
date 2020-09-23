@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a831208d2d2311744cbc2aaf727aea2d0f6f98a1
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: d95a4457bdcf9aee24ec87ad93a2151ce0084d6b
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996777"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008296"
 ---
 # <a name="microsoft-intune-protected-apps"></a>保護されている Microsoft Intune アプリ  
 
@@ -95,7 +95,7 @@ ms.locfileid: "88996777"
 | **iBabs for Intune**<p><img alt="Partner app - iBabs for Intune icon" src="./media/apps-supported-intune-apps/icon-p-ibabs.png" width="100">| ISEC7 Mobile Exchange Delegate を使用すると、iPhone や iPad を介して承認された担当者は、同僚の予定を承認したり、連絡先を管理したり、他のユーザーの代わりに電子メールに回答したりできます。 | [App Store のリンク (iOS)](https://itunes.apple.com/us/app/ibabs-for-intune/id1130847428?mt=8) |
 | **Intune の ISEC7 MED**<p><img alt="Partner app - ISEC7 MED for Intune icon" src="./media/apps-supported-intune-apps/icon-p-isec7-med.png" width="100">| よりシンプルで、より生産的で、より環境に優しい会議を実現します。 | [App Store のリンク (iOS)](https://apps.apple.com/app/isec7-med-for-intune/id1491037389?ls=1) |
 | **Lexmark Mobile Print Intune**<p><img alt="Partner app - Lexmark Mobile Print Intune icon" src="./media/apps-supported-intune-apps/icon-p-lexmark-mobile-print.png" width="100">| モバイル コンピューティングは至るところに広がっています — それは、常時接続で、バリアフリーの接続状態であり、あなたを楽しませ、あなたを啓発すると共に、あなたがより多くの仕事を処理するのに役立っています。 <br><br>ビジネス ユーザーはデスクトップとモバイル印刷が同じように便利になることを期待していますが、モバイル デバイスには固有の特性があるため、シームレスな出力を提供する方法がいかに複雑になるかを IT 管理者は知っています。 複数のオペレーティング システム間で接続、セキュリティ、およびネットワークの課題を解決する必要があるため、ユーザーが期待する柔軟性に優れた印刷を実現する方法は複雑になります。 <br><br>Lexmark は、IT 担当者を煩わせない簡単で方法でユーザーの印刷ニーズを満たすことを可能にするエクスペリエンスと技術革新を提供しています。 Lexmark は広範囲にわたるツールとオプションを使用してお客様の課題に対処することによって、お客様が透過的で、シンプルかつ安全なモバイル印刷エクスペリエンスを実現できるように支援します。  | [App Store のリンク (iOS)](https://itunes.apple.com/us/app/lexmark-mobile-print-intune/id1368424840?ls=1&mt=8) |
-| **Meetio Enterprise**<p><img alt="Partner app - Meetio Enterprise icon" src="./media/apps-supported-intune-apps/icon-p-meetio.png" width="100">| Meetio の部屋管理ソリューションを使用する組織向けの Meetio のモバイル アプリ。 Meetio Enterprise を使うと、移動中でも一度に会議や会議室のスケジュールを設定でき、仕事が簡単になります。 | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.getmeetio.personal)、<br>[App Store のリンク (iOS)](https://apps.apple.com/se/app/meetio-enterprise/id1340190306) |
+| **Meetio Enterprise**<p><img alt="Partner app - Meetio Enterprise icon" src="./media/apps-supported-intune-apps/icon-p-meetio.png" width="100">| Meetio の部屋管理ソリューションを使用する組織向けの Meetio のモバイル アプリ。 Meetio Enterprise を使うと、移動中でも一度に会議や会議室のスケジュールを設定でき、仕事が簡単になります。 | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.getmeetio.personal)、<br>[App Store のリンク (iOS)](https://apps.apple.com/us/app/meetio/id1340190306) |
 | **Nine Work for Intune**<p><img alt="Partner app - Nine Work for Intune icon" src="./media/apps-supported-intune-apps/icon-p-nine-work.png" width="100"> | Nine はダイレクト プッシュ テクノロジに基づく Android 用の本格的なメール アプリケーションで、Microsoft Exchange ActiveSync を使って Microsoft Exchange Server と同期します。また、同僚や友人、家族のメンバーと時間、場所に関係なく効率的にコミュニケーションしたい起業家や通常のユーザー向けに設計されています。 | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.ninefolders.hd3.work.intune)、<br>[App Store のリンク (iOS)](https://apps.apple.com/us/app/nine-mail-email-calendar/id1079689905) |  
 | **Now<sup>&#174;</sup> Mobile - Intune**<p><img alt="Partner app - Now Mobile for Intune icon" src="./media/apps-supported-intune-apps/icon-p-now-mobile.png" width="100"> | これで、従業員は、IT、人事、設備、財務、法務、およびその他の部門を跨いで、Now Platform<sup>&#174;</sup> が搭載された最新のモバイル アプリからあらゆる情報を取得できるようになります。<p>Now Platform<sup>&#174;</sup> では、複数の部門、システム、および人にわたるデジタル ワークフローを通じて従業員のエクスペリエンスと生産性を提供しています。<p>アプリで実行できる操作の例は次のとおりです。<ul><li>IT:ラップトップまたはパスワードのリセットの要求</li><li>設備:会議室の検索と予約</li><li>財務:社用クレジットカードの要求</li><li>法務:新しいベンダーの秘密保持契約 (NDA) への署名</li><li>人事:次の会社の休日の検索と、休暇ポリシーの確認</li></ul><p>Now<sup>&#174;</sup> Mobile powered by the Now Platform<sup>&#174;</sup> - これで、仕事も私生活のようにすばらしくなるでしょう | [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.servicenow.requestor.mam.intune)、<br>[App Store のリンク (iOS)](https://apps.apple.com/us/app/now-mobile-intune/id1494183300) | 
 | **PrinterOn for Microsoft**<p><img alt="Partner app - PrinterOn for Microsoft icon" src="./media/apps-supported-intune-apps/icon-p-printeron.png" width="100"> | PrinterOn のワイヤレス モバイル印刷ソリューションは、時間や場所を問わず、セキュリティで保護されたネットワークを経由したリモート印刷を可能にします。| [Google Play のリンク (Android)](https://play.google.com/store/apps/details?id=com.printeron.droid.phone)、<br>[App Store のリンク (iOS)](https://itunes.apple.com/us/app/printeron-for-microsoft/id1258715414?mt=8) | 

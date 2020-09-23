@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/17/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8012b11557971ff8a7e3a05360243010d891fa2e
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: b5f08f4ce77bf068ac67e6a83e4e15e9a11f6e2d
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262780"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814860"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Microsoft Intune で Android デバイス用のカスタム設定を使用する
 
@@ -50,7 +50,7 @@ Android のカスタム プロファイルでは、Open Mobile Alliance Uniform 
 
     - **名前**:プロファイルのわかりやすい名前を入力します。 後で簡単に識別できるよう、プロファイルに名前を付けます。 たとえば、適切なプロファイル名は **Android カスタム プロファイル**です。
     - **説明**:プロファイルの説明を入力します。 この設定は省略可能ですが、推奨されます。
-    - **[プラットフォーム]** : **[Android]** を選択します。
+    - **[プラットフォーム]** : **[Android デバイス管理者]** を選択します。
     - **[プロファイルの種類]** : **[カスタム]** を選択します。
 
 4. **[OMA-URI のカスタム設定]** で、 **[追加]** を選択します。 次の設定を入力します。

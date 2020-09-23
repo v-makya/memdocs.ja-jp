@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/01/2020
+ms.date: 09/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 975ab2faa91a5e904beb5aa17b776061f122916d
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: 1486b75526af470444c6a5880ccd27920f2ceb00
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286273"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814843"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Android 用 Microsoft Intune アプリ SDK 開発者テスト ガイド
 
@@ -33,7 +33,7 @@ Android 用 Microsoft Intune アプリ SDK テスト ガイドは、Intune で�
 1. [Microsoft CDX テナント作成サイト](https://cdx.transform.microsoft.com/my-tenants/create-tenant)に移動し、Microsoft 365 Enterprise テナントを作成します。
 2. モバイル デバイス管理 (MDM) が有効になるよう、[Intune をセットアップ](../fundamentals/setup-steps.md)します。
 3. [ユーザーを作成します](../fundamentals/users-add.md)。
-4. [グループの作成]../fundamentals/(groups-add.md).
+4. [グループを作成します](../fundamentals/groups-add.md)。
 5. テストに適した[ライセンスを割り当てます](../fundamentals/licenses-assign.md)。
 
 
@@ -72,7 +72,6 @@ Android 用 Microsoft Intune アプリ SDK テスト ガイドは、Intune で�
     - ご自分のアプリと管理対象アプリの間でコンテンツを共有できます。
     - ご自分のアプリと非管理対象アプリ (Chrome など) の間の共有は禁止されています。
 
-
 #### <a name="restrict-receiving-data-from-other-apps"></a>他のアプリからのデータ受信を制限する
 
 1. **[他のアプリに組織データを送信]** を **[すべてのアプリ]** に設定します。
@@ -97,7 +96,7 @@ Android 用 Microsoft Intune アプリ SDK テスト ガイドは、Intune で�
     - アプリからアンマネージド アプリ (例: Messages) へのテキストのコピーはブロックされています。
 
 ### <a name="prevent-save"></a>保存を禁止する
-アプリに一体型の "名前を付けて保存" コントロールが必要な場合、**名前を付けて保存**機能を次のように制御できます。
+アプリに[一体型の "名前を付けて保存" コントロール](app-sdk-android.md#example-data-transfer-between-apps-and-device-or-cloud-storage-locations)が必要な場合、**名前を付けて保存**機能を次のように制御できます。
 
 1. **[名前を付けて保存することを禁止]** を **[はい]** に設定します。
 2. 次の条件を確認します。

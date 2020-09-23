@@ -23,6 +23,8 @@
     - name: プライバシーおよび個人データ
       href: privacy-personal-data.md
       items:
+        - name: クライアント アプリのオプションの診断データ
+          href: client-apps-optional-data.md
         - name: データ コレクション
           href: privacy-data-collect.md
         - name: データ ストレージと処理

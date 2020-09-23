@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cafc7549dfb04bff14b0cdfe8c737ee4971d4db1
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 57e9195a71c268a9d7465be767b51f0f335dfb8d
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443824"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008177"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Microsoft Intune を使用してアプリをグループに割り当てる
 
@@ -64,7 +64,7 @@ ms.locfileid: "87443824"
    - **[登録済みデバイスで使用可能]** :ポータル サイト アプリまたは Web サイトからアプリをインストールできるユーザーのグループにアプリを割り当てます。
    - **[登録の有無にかかわらず使用可能]** :このアプリを、デバイスが Intune に登録されていないユーザーのグループに割り当てます。 ユーザーに Intune ライセンスを割り当てる必要があります ([Intune のライセンス](../fundamentals/licenses.md)を参照)。
    - **必須**:アプリは選択したグループのデバイスにインストールされます。 一部のプラットフォームでは、アプリのインストールが開始される前に、エンド ユーザーが確認するための追加のプロンプトが表示されることがあります。
-   - **アンインストール**: 同じデプロイを使って、[登録済みデバイスで使用可能] または [必須] 割り当て経由で、Intune によりデバイスにアプリケーションが以前にインストールされていた場合、アプリは選択したグループのデバイスからアンインストールされます。 デプロイ後に Web リンクを削除することはできません。
+   - **アンインストール**: 同じデプロイを使って、[登録済みデバイスで使用可能] または [必須] 割り当て経由で、Intune によりデバイスにアプリケーションが以前にインストールされていた場合、アプリは選択したグループのデバイスからアンインストールされます。 
 
      > [!NOTE]
      > **iOS/iPadOS アプリのみの場合**:

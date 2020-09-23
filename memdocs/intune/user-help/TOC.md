@@ -22,6 +22,7 @@
 ##### [Intercede に登録する](enroll-android-device-intercede.md)
 ##### [DISA Purebred を使用して登録する](enroll-android-device-disa-purebred.md)
 ### [新しいデバイス管理のセットアップに移動する](move-to-new-device-management-setup.md)
+### [Microsoft Tunnel for Android を使用する](use-microsoft-tunnel-android.md)
 ### [デバイスで管理対象アプリを使用する](use-managed-apps-on-your-device-android.md)
 ### [デバイスを暗号化する](encrypt-your-device-android.md)
 ### [PIN またはパスワードを設定する](set-your-pin-or-password-android.md)
@@ -71,7 +72,7 @@
 ##### [Entrust Datacard で登録する](enroll-ios-device-entrust-datacard.md)
 ##### [Intercede に登録する](enroll-ios-device-intercede.md)
 ##### [DISA Purebred を使用して登録する](enroll-ios-device-disa-purebred.md)
-
+### [Microsoft Tunnel for iOS を使用する](use-microsoft-tunnel-iOS.md)
 
 ### [デバイスで管理対象アプリを使用する](use-managed-apps-on-your-device-ios.md)
 ### [パスコードを設定または変更する](set-or-change-your-passcode-ios.md)

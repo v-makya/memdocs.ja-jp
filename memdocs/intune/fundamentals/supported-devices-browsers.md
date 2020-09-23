@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8bfddd247f2f86d8fc5a9162a5c68efd5e7ffb5
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 463e2b7c72c91131de88eb3de956556d65d50788
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996284"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002768"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Intune でサポートされるオペレーティング システムとブラウザー
 
@@ -95,7 +95,7 @@ Microsoft Intune をセットアップする前に、サポートされている
 > [!Note]
 > Microsoft により、2020 年 1 月 14 日に Windows 7 のサポートが終了することが発表されました。 この日に、Intune でも Windows 7 を実行しているデバイスに対するサポートが廃止されます。
 >
-> 詳細については、[Intune の変更の計画: Windows 7 のサポート終了](whats-new.md#windows-7-ends-extended-support)に関する記事をご覧ください。
+> 詳細については、[Intune の変更の計画: Windows 7 のサポート終了](whats-new-archive.md#windows-7-ends-extended-support)に関する記事をご覧ください。
 >
 > Microsoft Intune での Silverlight ベースの Intune コンソールのサポートは、2020 年 10 月 15 日に廃止されます。 この廃止には、Silverlight コンソールで構成された PC ソフトウェア クライアント (別名: PC エージェント) のサポート終了も含まれます。
 >
