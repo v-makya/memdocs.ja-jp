@@ -115,6 +115,14 @@
               href: encrypt-devices-filevault.md
             - name: ディスク暗号化の監視
               href: encryption-monitor.md
+    - name: Microsoft Tunnel
+      items:
+        - name: Microsoft Tunnel の概要
+          href: microsoft-tunnel-overview.md
+        - name: Microsoft Tunnel の構成
+          href: microsoft-tunnel-configure.md
+        - name: Microsoft Tunnel の監視
+          href: microsoft-tunnel-monitor.md
     - name: ID 保護
       items:
         - name: Windows Hello
@@ -338,6 +346,8 @@
           href: security-baseline-settings-defender-atp.md
         - name: Microsoft Edge のベースライン設定
           href: security-baseline-settings-edge.md
+    - name: Microsoft Tunnel のコマンドライン ツール
+      href: microsoft-tunnel-reference.md
     - name: Windows Update の設定
       href: windows-update-settings.md
     - name: エラー コードと説明
