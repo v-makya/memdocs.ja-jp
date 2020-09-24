@@ -2,7 +2,7 @@
 title: クライアント設定
 titleSuffix: Configuration Manager
 description: クライアントの動作を制御する既定の設定とカスタム設定について説明します。
-ms.date: 08/20/2020
+ms.date: 09/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9e44c67e2dd7c78787d849e84784a39c40125dc0
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693422"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076092"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Configuration Manager のクライアント設定について
 
@@ -644,11 +644,9 @@ Configuration Manager コンソールで開始されるリモート アシスタ
 ### <a name="select-the-user-portal"></a>ユーザー ポータルを選択する
 
 <!--CMADO-3601237,INADO-4297660-->
-バージョン 2006 以降では、Intune ポータル サイトを共同管理デバイスに展開する場合、この設定を **[ポータル サイト]** に構成します。 この設定により、ユーザーは Intune ポータル サイトからの通知のみを受け取るようになります。
+バージョン 2006 以降では、Intune ポータル サイトを共同管理デバイスに展開する場合、この設定を **[ポータル サイト]** に構成します。 この設定により、Configuration Manager からの通知によっても Intune からの通知によってもポータル サイトが確実に起動されます。 ポータル サイトでサポートされていないシナリオに対する Configuration Manager 通知の場合、通知を選択するとソフト ウェアセンターが起動されます。
 
-共同管理デバイスに Intune ポータル サイトをインストールしても、この設定を **[ソフトウェア センター]** に構成した場合は、両方のポータルからの通知がユーザーに表示されます。 ユーザーにとって、このエクスペリエンスは混乱を招く可能性があります。
-
-[ポータル サイト] にクライアントの設定を変更した場合、ユーザーが Configuration Manager の通知を選択すると、Intune ポータル サイトが起動されます。 Intune ポータル サイトでサポートされていないシナリオに対する通知の場合、通知を選択するとソフト ウェアセンターが起動されます。
+共同管理デバイスにポータル サイトをインストールしても、この設定を **[ソフトウェア センター]** に構成した場合は、Configuration Manager からの通知によってソフトウェア センターが起動されます。 Intune からの通知によってポータル サイトが起動されます。 この動作は、ユーザーがさまざまなポータルを操作する場合に混乱を招く可能性があります。
 
 ポータル サイトの動作は、共同管理ワークロードの構成によって異なります。 詳細については、「[共同管理デバイスでポータル サイト アプリを使用する](../../../comanage/company-portal.md)」を参照してください。
 

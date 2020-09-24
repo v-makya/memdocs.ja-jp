@@ -5,17 +5,17 @@ description: Configuration Manager でのソフトウェア更新プログラム
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: 3a48ce044f3d1aecbebf2ba93e936dd34b904140
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2809a6852cc3739cfe48418580ba464c3abe956a
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696640"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718690"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Configuration Manager でのソフトウェア更新プログラムのベスト プラクティス
 
@@ -53,7 +53,8 @@ Configuration Manager と WSUS のデータベースが SQL Server の同じイ�
 
 WSUS をインストールするときに、設定 **[更新プログラムをローカルに保存する]** をオンにします。 この設定を指定すると、WSUS はソフトウェア更新プログラムに関連付けられているライセンス条項をダウンロードします。 同期処理中に条項をダウンロードして、WSUS サーバーのローカル ハード ドライブに格納します。 この設定を選択しないと、クライアント コンピューターはライセンス条項が含まれるソフトウェア更新プログラムのコンプライアンス スキャンで失敗する可能性があります。 ソフトウェアの更新ポイントの **WSUS 同期マネージャー** コンポーネントは、既定では、この設定が有効になっていることを 60 分ごとに確認します。  
 
-
+### <a name="configure-your-software-update-points-to-use-tlsssl"></a><a name="bkmk_ssl"></a> TLS/SSL を使用するようにソフトウェアの更新ポイントを構成する
+TLS/SSL を使用するように Windows Server Update Services (WSUS) サーバーとそれに対応するソフトウェアの更新ポイントを構成すると、攻撃者がクライアントをリモートで侵害して特権を昇格させる能力が低下する可能性があります。 最適なセキュリティ プロトコルが確実に導入されるように、TLS/SSL プロトコルを使用してソフトウェア更新インフラストラクチャをセキュリティで保護することを強くお勧めします。 詳細については、「[PKI 証明書で TLS/SSL を使用するようにソフトウェアの更新ポイントを構成するチュートリアル](../get-started/software-update-point-ssl.md)」を参照してください。
 
 ## <a name="operational-best-practices"></a><a name="bkmk_operation"></a> 運用に関するベスト プラクティス  
 

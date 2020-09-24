@@ -5,17 +5,17 @@ description: Configuration Manager の運用環境でソフトウェア更新プ
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: 991f367dbd842037aecf4f808f27c4fb2961cc38
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: c38f3b509ba6104647dd60c8284fde52b5b4995e
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696720"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718826"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Configuration Manager でソフトウェア更新プログラムを計画する
 
@@ -260,10 +260,10 @@ WSUS サーバーがソフトウェアの更新ポイントとして構成され
 プライマリ サイト サーバーにソフトウェアの更新ポイントの役割を追加するときは、レプリカとして構成されている WSUS サーバーを使用できません。 WSUS サーバーがレプリカとして構成されていると、Configuration Manager で、WSUS サーバーの構成と WSUS の同期が失敗します。 プライマリ サイトにインストールする最初のソフトウェアの更新ポイントは、既定のソフトウェアの更新ポイントになります。 サイトの追加のソフトウェアの更新ポイントは、既定のソフトウェアの更新ポイントのレプリカとして構成されます。  
 
 ####  <a name="decide-whether-to-configure-wsus-to-use-ssl"></a><a name="BKMK_WSUSandSSL"></a> SSL を使うように WSUS を構成するかどうかを決定する  
-ソフトウェアの更新ポイントをセキュリティで保護するには、SSL プロトコルを使用します。 WSUS は、SSL を使用して、クライアント コンピューターおよび WSUS サーバーの下流 WSUS サーバーを認証します。 また、WSUS は、ソフトウェア更新プログラムのメタデータの暗号化にも SSL を使用します。 SSL を使用して WSUS を保護する場合は、ソフトウェアの更新ポイントをインストールする前に WSUS サーバーを準備します。 詳しくは、WSUS に関するドキュメントの記事「[Configure SSL on the WSUS server](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)」(WSUS Server をSSL を構成する) をご覧ください。 
 
-ソフトウェアの更新ポイントをインストールして構成する場合は、**WSUS サーバーの SSL 通信を有効にする**ためのオプションを選択します。 それ以外の場合、Configuration Manager は SSL を使用しないように WSUS を構成します。 ソフトウェアの更新ポイントで SSL を有効にするときは、子サイトのソフトウェアの更新ポイントも SSL を使用するように構成します。  
+ソフトウェアの更新ポイントをセキュリティで保護するのに役立つので、SSL プロトコルの使用を強くお勧めします。 WSUS は、SSL を使用して、クライアント コンピューターおよび WSUS サーバーの下流 WSUS サーバーを認証します。 また、WSUS は、ソフトウェア更新プログラムのメタデータの暗号化にも SSL を使用します。 SSL を使用して WSUS を保護する場合は、ソフトウェアの更新ポイントをインストールする前に WSUS サーバーを準備します。
 
+ソフトウェアの更新ポイントをインストールして構成する場合は、**WSUS サーバーの SSL 通信を有効にする**ためのオプションを選択します。 それ以外の場合、Configuration Manager は SSL を使用しないように WSUS を構成します。 ソフトウェアの更新ポイントで SSL を有効にするときは、子サイトのソフトウェアの更新ポイントも SSL を使用するように構成します。 詳細については、「[PKI 証明書で TLS/SSL を使用するようにソフトウェアの更新ポイントを構成するチュートリアル](../get-started/software-update-point-ssl.md)」を参照してください。
 
 ###  <a name="configure-firewalls"></a><a name="BKMK_ConfigureFirewalls"></a> ファイアウォールの構成  
 

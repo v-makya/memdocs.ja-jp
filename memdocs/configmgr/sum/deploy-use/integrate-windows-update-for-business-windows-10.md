@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 62f5059ef02d7b2594a506135abf332a8b6c0def
+ms.sourcegitcommit: 4b8c317c71535c2d464f336c03b5bebdd2c6d4c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699808"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90083898"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Windows Update for Business との統合
 
@@ -90,9 +90,9 @@ Windows Insider プログラムの詳細については、[Windows Insider Progr
     - **ブランチ準備レベル**:デバイスが Windows 更新プログラムを受信するブランチを設定します。 半期チャネル (対象指定)、半期チャネル、または Windows Insider ビルドを選択します。
 
         > [!NOTE]
-        > **[半期チャネル (対象指定)]** のポリシーを Windows 10、*バージョン 1903 以降* に展開します。 **[半期チャネル]** のポリシーを Windows 10、*バージョン 1809 以前*に展開します。
+        > **[半期チャネル]** のポリシーを Windows 10 "*バージョン 1903 以降*" に展開します。 **[半期チャネル (対象指定)]** のポリシーを Windows 10 "*バージョン 1809 以前*" に展開します。
         >
-        > **[半期チャネル]** のポリシーを Windows 10 バージョン 1903 以降に展開した場合、展開はエラー **0x8004100c** で失敗します。<!-- 5593139 -->
+        > **[半期チャネル (対象指定)]** のポリシーを Windows 10 バージョン 1903 以降に展開した場合、展開はエラー **0x8004100c** で失敗します。<!-- 5593139 -->
 
     - **遅延期間 (日数)** :機能更新プログラムを遅延させる日数を指定します。 これらの機能更新プログラムの受け取りは、そのリリースから最大 365 日間遅延させることができます。
     - **機能更新プログラムの一時停止の開始**:更新プログラムを一時停止した時点から最大 35 日間、デバイスでの機能更新プログラムの受け取りを一時停止するかどうかを選択します。 最大日数が経過すると、一時停止機能は自動的に期限切れとなり、デバイスは適用可能な更新を確認するために Windows Update をスキャンします。 このスキャンが終ったら、もう一度更新を一時停止することができます。 機能更新プログラムの一時停止を解除するには、チェック ボックスをオフにします。

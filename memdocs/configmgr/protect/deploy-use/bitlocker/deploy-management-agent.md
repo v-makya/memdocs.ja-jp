@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8ef60b82e6ab594689576520443bc74eac7bd17d
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 018b8f09b0f5595c854eee761f495974665a45ce
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606943"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574680"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker 管理の展開
 
@@ -214,7 +214,8 @@ Configuration Manager では BitLocker ドライブ暗号化で既に保護さ�
 
 BitLocker の Configuration Manager クライアント ハンドラーは、共同管理に対応しています。 デバイスが共同管理されており、[Endpoint Protection ワークロード](../../../comanage/workloads.md#endpoint-protection)を Intune に切り替える場合、Configuration Manager クライアントはその BitLocker ポリシーを無視します。 デバイスは、Intune から Windows 暗号化ポリシーを取得します。
 
-暗号化管理機関を切り替え、必要な暗号化アルゴリズムも変わる場合は、[再暗号化](#re-encryption)を計画する必要があります。
+> [!NOTE]
+> 目的の暗号化アルゴリズムを維持しながら暗号化管理機関を切り替える場合、クライアントで追加の操作を実行する必要はありません。 ただし、暗号化管理機関を切り替え、必要な暗号化アルゴリズムも変わる場合は、[再暗号化](#re-encryption)を計画する必要があります。
 
 Intune での BitLocker の管理に関する詳細については、次の記事を参照してください。
 

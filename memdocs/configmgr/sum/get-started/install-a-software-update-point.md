@@ -5,17 +5,17 @@ description: プライマリ サイトでは、ソフトウェア更新プログ
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/27/2019
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 0cddb8df51624a562597da17ea310db0a26081f3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1f3ab3c108a7f8481aee84b6df5cd41b4b186246
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81696930"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718843"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>ソフトウェアの更新ポイントのインストールと構成  
 
@@ -69,7 +69,7 @@ ms.locfileid: "81696930"
 ### <a name="configure-ssl-communications-to-wsus"></a>WSUS への SSL 通信の構成  
  SSL 通信の構成は、ウィザードの **[全般]** ページまたはソフトウェアの更新ポイントのプロパティの **[全般]** タブで行うことができます。  
 
- SSL の使用方法の詳細については、「 [SSL を使うように WSUS を構成するかどうかを決定する](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL)」を参照してください。  
+ SSL の使用方法の詳細については、「[SSL を使うように WSUS を構成するかどうかを決定する](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL)」および「[PKI 証明書で TLS/SSL を使用するようにソフトウェアの更新ポイントを構成するチュートリアル](../get-started/software-update-point-ssl.md)」を参照してください。  
 
 ### <a name="wsus-server-connection-account"></a>WSUS サーバー接続アカウント  
  ソフトウェアの更新ポイントで実行されている WSUS にサイト サーバーが接続するときにサイト サーバーで使用するアカウントを構成できます。 このアカウントを構成しない場合は、Configuration Manager によって、サイト サーバーが WSUS に接続するときにコンピューター アカウントが使用されます。 WSUS サーバー接続アカウントの構成は、ウィザードの **[プロキシとアカウントの設定]** ページまたはソフトウェアの更新ポイントのプロパティの **[プロキシとアカウントの設定]** タブで行います。  使用する Configuration Manager のバージョンに応じて、ウィザードのさまざまな場所でこのアカウントを構成できます。  

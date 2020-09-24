@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37abb7cba84c8e2479e59070e47c3f09b3b2b8d9
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 49792ea588f01cc57a1dbce9cc137b94a0e4d291
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606962"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574798"
 ---
 # <a name="task-sequence-steps"></a>タスク シーケンスのステップ
 
@@ -1096,8 +1096,9 @@ BitLocker を使用して、コンピューター システムの複数のドラ
 
 このステップでは、次のタスク シーケンス変数を使用します。  
 
-- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)  
-- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)  
+- [OSDBitLockerPIN](task-sequence-variables.md#OSDBitLockerPIN)
+- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)
+- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)
 
 ### <a name="cmdlets-for-enable-bitlocker"></a>BitLocker の有効化のコマンドレット
 
@@ -1592,12 +1593,20 @@ Configuration Manager は、無効なアプリケーションまたは次のよ�
 
 このステップでは、キー情報だけではなく、Configuration Manager クライアントが完全に削除されます。 タスク シーケンスは、キャプチャされた OS イメージを展開するとき、毎回新しい Configuration Manager クライアントをインストールします。  
 
-> [!Note]  
-> タスク シーケンス エンジンは、 **[参照オペレーティング システム イメージを構築およびキャプチャする]** タスク シーケンスの間にだけ、クライアントを削除します。 タスク シーケンス エンジンでは、メディアのキャプチャやカスタム タスク シーケンスなど、他のキャプチャ方法でクライアントは削除されません。  
+> [!TIP]
+> 既定で、タスク シーケンス エンジンは、 **[参照オペレーティング システム イメージを構築およびキャプチャする]** タスク シーケンスの間にだけ、クライアントを削除します。 タスク シーケンス エンジンでは、メディアのキャプチャやカスタム タスク シーケンスなど、他のキャプチャ方法でクライアントは削除されません。 OS 展開のタスク シーケンスでは、この動作を上書きすることができます。 「**ConfigMgr クライアントのキャプチャの準備**」の手順の前に、タスク シーケンス変数 **SMSTSUninstallCCMClient** を **TRUE** に設定します。 この変数と動作は、OS 展開のタスク シーケンスにのみ適用されます。 デバイスの次の再起動後にクライアントが削除されます。
 
 このタスク シーケンス ステップは完全な OS でのみ実行されます。 Windows PE では実行されません。  
 
 タスク シーケンス エディターでこのステップを追加するには、 **[追加]** を選び、 **[イメージ]** を選んで、 **[ConfigMgr クライアントのキャプチャの準備]** を選びます。
+
+
+### <a name="variables-for-prepare-configmgr-client-for-capture"></a>ConfigMgr クライアントのキャプチャの準備の変数
+
+このステップでは、次のタスク シーケンス変数を使用します。  
+
+- SMSTSUninstallCCMClient
+
 
 ### <a name="cmdlets-for-prepare-configmgr-client-for-capture"></a>ConfigMgr クライアントのキャプチャの準備のコマンドレット
 
@@ -2462,7 +2471,7 @@ Windows PowerShell のコマンド ラインで使用するパラメーターで
 
 クライアントのインストール時に使用するコマンド ライン オプションを指定します。 たとえば、「`/skipprereq: silverlight.exe`」と入力すると、CCMSetup.exe に Microsoft Silverlight 前提条件をインストールしないように通知します。 CCMSetup.exe の使用可能なコマンド ライン オプションの詳細については、「[クライアント インストールのプロパティについて](../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
 
-Azure AD に参加しているか、トークンベースの認証を使用しているインターネットベースのクライアントで OS 展開タスク シーケンスを実行する場合は、 **[Windows と ConfigMgr のセットアップ]** ステップで [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) プロパティを指定する必要があります。 たとえば、`CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939` となります。
+Azure AD に参加しているか、トークンベースの認証を使用しているインターネットベースのクライアントで OS 展開タスク シーケンスを実行する場合は、 **[Windows と ConfigMgr のセットアップ]** ステップで [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) プロパティを指定する必要があります。 たとえば、「 `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939` 」のように入力します。
 
 ### <a name="options-for-setup-windows-and-configmgr"></a>Windows と ConfigMgr のセットアップのオプション
 

@@ -2,7 +2,7 @@
 title: BitLocker ポータルのセットアップ
 titleSuffix: Configuration Manager
 description: セルフサービス ポータルおよび管理と監視用 Web サイト用の BitLocker 管理コンポーネントをインストールします
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d1b07d30c7a593ec0bd70e6c330c57364186f2c8
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: f6834090cd2a58113fb26e298c0c451f846f5ce9
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697264"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574594"
 ---
 # <a name="set-up-bitlocker-portals"></a>BitLocker ポータルのセットアップ
 
@@ -106,6 +106,8 @@ IIS がインストールされた既存のサイト サーバーまたはサイ
 - `-IISWebSite`: スクリプトによって MBAM Web アプリケーションがインストールされる Web サイト。 既定では、IIS の既定の Web サイトが使用されます。 このパラメーターを使用する前に、カスタム Web サイトを作成してください。
 
 - `-InstallDirectory`: スクリプトによって Web アプリケーションのファイルがインストールされるパス。 既定では、このパスは `C:\inetpub` です。 このパラメーターを使用する前に、カスタム ディレクトリを作成してください。
+
+- `-DomainName` *適用対象: バージョン 2002 以降*:ヘルプ デスクまたはセルフサービス Web ポータル ロールを使用してサーバーの NetBIOS ドメイン名を指定します。 NetBIOS ドメイン名が DNS ドメイン名と一致しない場合にのみ必要です。 この構成は、不整合なドメイン名前空間とも呼ばれます。 たとえば、DNS ドメイン名が `contoso.com` である `-DomainName fabrikham` です。<!-- MEMDocs #759 -->
 
 - `-Uninstall`: BitLocker 管理ヘルプデスク/セルフサービス Web ポータル サイトを、以前にインストールされていた Web サーバー上からアンインストールします。
 

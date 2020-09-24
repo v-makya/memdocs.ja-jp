@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7c5c9868949fa9bbf08bbf00083eda8e60750470
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 4035a6684fc346205f7c7af109bf4c0389576e77
+ms.sourcegitcommit: 4b8c317c71535c2d464f336c03b5bebdd2c6d4c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607695"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90083966"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 2002 の新機能
 
@@ -443,7 +443,7 @@ Configuration Manager 向け Windows PowerShell コマンドレットの変更�
 | [4575339](https://support.microsoft.com/help/4575339) | Microsoft Endpoint Configuration Manager 管理センターにデバイスが 2 回表示される | 2020 年 7 月 23 日 | いいえ |
 | [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck コマンドレットが Configuration Manager (バージョン 2002) で失敗する | 2020 年 7 月 24 日 | いいえ |
 | [4576782](https://support.microsoft.com/help/4576782) | [アプリケーション] ブレードが Microsoft Endpoint Manager 管理センターでタイムアウトになる | 2020 年 8 月 11 日 | いいえ |
-
+| [4578123](https://support.microsoft.com/help/4578123) | Configuration Manager バージョン 2002 で、CMPivot クエリから予期しない結果が返される | 2020 年 8 月 24 日 | いいえ |
 <!--
 > [!NOTE]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).

@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 852ab8b709dcec90d7819a63a6cb6dbb2c781534
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697349"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689465"
 ---
 # <a name="task-sequence-variables"></a>タスク シーケンス変数
 
@@ -579,6 +579,12 @@ WINS サーバー IP アドレスのコンマ区切りの一覧。 このプロ�
 (入力)
 
 ドライバー カタログ カテゴリの一意の ID を記載するカンマ区切りの一覧です。 **[ドライバーの自動適用]** ステップでは、指定されたカテゴリの少なくとも 1 つのドライバーのみが考慮されます。 この値は省略可能であり、既定では設定されていません。 利用可能なカテゴリ ID は、サイトの **SMS_CategoryInstance** オブジェクトの一覧を列挙して取得します。
+
+### <a name="osdbitlockerpin"></a><a name="OSDBitLockerPIN"></a> OSDBitLockerPIN
+<!-- MEMDOcs #764 -->
+*[BitLocker の有効化](task-sequence-steps.md#BKMK_EnableBitLocker)ステップに適用されます。*
+
+BitLocker 暗号化の PIN を指定します。 この変数は、BitLocker モードが **[TPM および PIN]** になっている場合にのみ有効です。
 
 ### <a name="osdbitlockerrebootcount"></a><a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 
@@ -1645,7 +1651,9 @@ Windows PE ピア キャッシュで初期ブロードキャストに使用さ�
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
-タスク シーケンスの完了後に実行されるコマンドを指定します。 たとえば、タスク シーケンスが完了してから 30 秒後にコンピューターを再起動するには、`shutdown.exe /r /t 30 /f` と指定します。
+タスク シーケンスの完了後に実行されるコマンドを指定します。 タスク シーケンスを終了する直前に、指定した事後アクションが TSManager プロセスによって生成されます。 それは何らかの状態を待機または記録することもなく、そのコマンドの呼び出しの後に終了するだけです。<!-- MEMDocs #719 -->
+
+たとえば、タスク シーケンスが完了してから 30 秒後にコンピューターを再起動するには、`shutdown.exe /r /t 30 /f` と指定します。
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

@@ -10,12 +10,12 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd49546e49d6964cfe37b0b13e1abe9175f4aa0e
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: d44116ee022f2f01fb8b84244fb903fa6d440345
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432559"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076160"
 ---
 # <a name="use-the-company-portal-app-on-co-managed-devices"></a>共同管理デバイスでポータル サイト アプリを使用する
 
@@ -121,7 +121,12 @@ Configuration Manager アプリのインストールに関する問題のトラ�
 
 ### <a name="im-using-configuration-manager-version-2002-why-is-the-new-company-portal-showing-configuration-manager-apps"></a><a name="bkmk_ver-prereq"></a> Configuration Manager バージョン 2002 を使用していますが、新しいポータル サイトに Configuration Manager アプリが表示されるのはなぜですか。
 
-ポータル サイト バージョン 11.0.8980.0 以降では、Configuration Manager で展開されたアプリケーションが、それを使用するすべての共同管理クライアントに表示されます。 コントロール通知にクライアント設定が追加されるため、Configuration Manager バージョン 2006 が前提条件です。 以前のバージョンの共同管理デバイスにポータル サイトをインストールした場合、またはクライアント設定を構成していない場合は、両方のポータルからの通知がユーザーに表示されます。 ユーザーにとって、このエクスペリエンスは混乱を招く可能性があります。
+ポータル サイト バージョン 11.0.8980.0 以降では、Configuration Manager で展開されたアプリケーションが、それを使用するすべての共同管理クライアントに表示されます。 コントロール通知にクライアント設定が追加されるため、Configuration Manager バージョン 2006 が前提条件です。 以前のバージョンの共同管理デバイスにポータル サイトをインストールする場合、またはクライアント設定を構成しない場合は、それによって、ユーザーが混乱する可能性のある動作が発生します。 Configuration Manager からの通知によってソフトウェア センターが起動されるのに対して、Intune からの通知によって起動されるのはポータル サイトです。
+
+Microsoft は次のことをお勧めしています。
+
+- Configuration Manager バージョン 2006 以降が実行されている共同管理クライアント上ではポータル サイト バージョン 11.0.8980.0 以降を使用してください。
+- クライアント設定 **[ユーザー ポータルを選択]** を **[ポータル サイト]** に構成してください。
 
 ### <a name="does-company-portal-support-applications-deployed-as-software-updates-from-configuration-manager"></a>Intune ポータル サイトでは、Configuration Manager からソフトウェア更新プログラムとして展開されたアプリケーションがサポートされますか?
 

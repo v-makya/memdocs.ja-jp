@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e9c911929dd5a99c6b63beed9c6b221e69e9b25
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: eef375cad028a6903a0fa28d1cc3f7562bcebf6f
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607553"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689414"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager で SQL Server Always On 可用性グループを使用するための準備
 
@@ -390,6 +390,9 @@ Configuration Manager のセットアップを実行してサイト データベ
 可用性グループの 1 つ以上のノードがまだ機能している場合は、サイトの回復オプション **[データベースの回復をスキップする (このオプションは、サイト データベースが障害の影響を受けていない場合に選択してください)]** を使用します。
 
 バージョン 1906 以降では、サイトの回復で SQL Always On グループにデータベースを再作成できます。 このプロセスは、手動と自動の両方のシード処理で機能します。<!-- SCCMDocs-pr#3846 -->
+
+> [!TIP]
+> セットアップまたは回復ウィザードを実行すると、 **[新しい可用性グループ データベース]** ページは手動のシード処理構成にのみ適用されます。 自動シード処理の場合、共有されるデータベース バックアップが存在しないため、ウィザードのそのページは表示されません。<!-- SCCMDocs #2242 -->
 
 バージョン 1902 以前では、可用性グループのすべてのノードが失われた場合、サイトを回復するには、まず、可用性グループを再作成します。 Configuration Manager では可用性ノードの再構築や復元はできません。 グループを再作成し、バックアップを復元して、SQL を再構成します。 その後、サイト回復オプション **[データベースの回復をスキップする (このオプションは、サイト データベースが障害の影響を受けていない場合に選択してください)]** を使用します。
 

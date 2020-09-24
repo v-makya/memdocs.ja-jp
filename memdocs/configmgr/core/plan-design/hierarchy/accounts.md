@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fff07351725e6606a49804bba79f226a9042c349
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698488"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039348"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager で使用されるアカウント
 
@@ -336,7 +336,7 @@ Windows でアカウントのパスワードを変更する場合は、新しい
 > 4. その後、Configuration Manager と Active Directory Domain Services から古いアカウントを削除します  
 
 > [!IMPORTANT]  
-> このアカウントには、ローカルにサインインする権限を与えないでください。  
+> ドメインまたはローカル グループ ポリシーを使用して、Windows ユーザー権利を **[ローカルでのログオンを拒否する]** に割り当てます。 管理者グループのメンバーとして、このアカウントにはローカルでサインインする権限が付与されていますが、これは必要ありません。 セキュリティを強化するには、このアカウントにおける権限を明示的に拒否してください。 拒否権限は許可権限よりも優先されます。<!--MEMDocs#744-->
 
 詳しくは、「[クライアント プッシュ インストール](../../clients/deploy/plan/client-installation-methods.md#client-push-installation)」をご覧ください。
 

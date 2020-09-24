@@ -3,19 +3,19 @@ title: ソフトウェア更新プログラムのセキュリティとプライ�
 titleSuffix: Configuration Manager
 description: ソフトウェア更新プログラムのセキュリティのベスト プラクティスおよび Configuration Manager でのプライバシー情報の処理方法について説明します。
 manager: dougeby
-ms.date: 10/06/2016
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 5c7a1ac5e88aa669ae1d5e6bb9333e1f54fb5980
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0838f43abf7ff972ac3f6ca2cdf44dcafda323ca
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81708730"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718724"
 ---
 # <a name="security-and-privacy-for-software-updates-in-configuration-manager"></a>Configuration Manager のソフトウェア更新プログラムのセキュリティとプライバシー
 
@@ -42,7 +42,9 @@ ms.locfileid: "81708730"
 
 -   Windows Server Update Services (WSUS). の SSL を有効にし、WSUS をセキュリティ保護するためのベスト プラクティスに従います。  
 
-     Configuration Manager で使用する WSUS のバージョン用のセキュリティのベストプラクティスを確認し、これに従います。  
+     Configuration Manager で使用する WSUS のバージョン用のセキュリティのベストプラクティスを確認し、これに従います。 
+
+     SSL を有効にする方法の詳細については、「[PKI 証明書で TLS/SSL を使用するようにソフトウェアの更新ポイントを構成するチュートリアル](../get-started/software-update-point-ssl.md)」を参照してください。 
 
     > [!IMPORTANT]  
     >  WSUS サーバーで SSL コミュニケーションを有効にするようにソフトウェア更新ポイントを構成する場合は、WSUS サーバーの SSL の仮想ルートを構成する必要があります。  
@@ -57,7 +59,7 @@ ms.locfileid: "81708730"
 
      ソフトウェアの更新ポイントに WSUS をインストールする場合、既存の IIS 既定 Web サイトを使用するか、またはカスタム WSUS Web サイトを作成するかを選択できます。 他の Configuration Manager サイト システムまたは他のアプリケーションで使用されているのと同じ Web サイトを共有せずに、WSUS サービスが IIS によって専用の仮想 Web サイトでホストされるようにするには、WSUS のカスタム Web サイトを作成してください。  
 
-     詳細については、「[WSUS がカスタム Web サイトを使用するように構成する](plan-for-software-updates.md#BKMK_CustomWebSite)」を参照してください。  
+     詳細については、「 [Configure WSUS to use a custom web site](plan-for-software-updates.md#BKMK_CustomWebSite)」をご覧ください。  
 
 ##  <a name="privacy-information-for-software-updates"></a><a name="BKMK_Privacy_HardwareInventory"></a> ソフトウェア更新プログラムに関するプライバシー情報  
  ソフトウェアの更新は、クライアント コンピューターをスキャンして、必要なソフトウェアの更新を判断し、情報をサイト データベースに返送します。 ソフトウェアの更新プロセスの間、Configuration Manager では、コンピューターとログオン アカウントを識別する情報がクライアントとサーバー間で送信されることがあります。  

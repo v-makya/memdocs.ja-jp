@@ -2,7 +2,7 @@
 title: Microsoft 接続キャッシュ
 titleSuffix: Configuration Manager
 description: 配信の最適化のローカル キャッシュ サーバーとして Configuration Manager の配布ポイントを使用する
-ms.date: 05/05/2020
+ms.date: 09/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a42e0937748ecd31b16698904f724260b9b60512
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699332"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039297"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager における Microsoft 接続済みキャッシュ
 
@@ -23,7 +23,7 @@ ms.locfileid: "88699332"
 
 <!--3555764-->
 
-バージョン 1906 以降、配布ポイントに Microsoft 接続済みキャッシュ サーバーをインストールできます。 このコンテンツをオンプレミスでキャッシュすることによって、クライアントは配信の最適化機能から恩恵を受けることができますが、お客様が WAN リンクを保護するのに役立てることができます。
+バージョン 1906 以降、配布ポイントに Microsoft 接続済みキャッシュ サーバーをインストールできます。 このコンテンツをオンプレミスでキャッシュすることによって、クライアントは、WAN リンクを保護するのに役立つ配信の最適化機能から、恩恵を受けることができます。
 
 > [!NOTE]
 > バージョン 1910 以降、この機能は、**Microsoft 接続済みキャッシュ**という名前になりました。 以前は、"配信の最適化のネットワーク内キャッシュ" という名前でした。

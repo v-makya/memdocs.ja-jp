@@ -2,7 +2,7 @@
 title: BitLocker 管理の計画
 titleSuffix: Configuration Manager
 description: Configuration Manager を使用して BitLocker ドライブ暗号化を管理する計画を立てます
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 22e78fdba1c004554d671ba2db96c61395f95ca2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 193189e0e949aefdff15630476a306c1dc4ef2c7
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699961"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574533"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker 管理の計画
 
@@ -23,12 +23,12 @@ ms.locfileid: "88699961"
 
 <!-- 3601034 -->
 
-バージョン 1910 以降は、Configuration Manager を使用して、Active Directory に参加しているオンプレミスの Windows クライアント用の BitLocker ドライブ暗号化 (BDE) を管理します。 Azure Active Directory に参加している、またはワークグループのクライアントはサポートされていません。 Configuration Manager には、Microsoft BitLocker Administration and Monitoring (MBAM) の代わりに使用できる完全な BitLocker ライフサイクル管理機能が用意されています。
+バージョン 1910 以降は、Configuration Manager を使用して、Active Directory に参加しているオンプレミスの Windows クライアント用の BitLocker ドライブ暗号化 (BDE) を管理します。 Configuration Manager には、Microsoft BitLocker Administration and Monitoring (MBAM) の代わりに使用できる完全な BitLocker ライフサイクル管理機能が用意されています。
 
 > [!NOTE]
 > Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options)」 (更新プログラムのオプション機能の有効化) を参照してください。  
 
-詳細については、「[BitLocker の概要](/windows/security/information-protection/bitlocker/bitlocker-overview)」を参照してください。
+BitLocker の一般的な情報については、[BitLocker の概要](/windows/security/information-protection/bitlocker/bitlocker-overview)に関するページを参照してください。
 
 > [!TIP]
 > Microsoft Endpoint Manager クラウド サービスを使用して共同管理されている Windows 10 デバイスの暗号化を管理するには、[**Endpoint Protection** ワークロード](../../comanage/workloads.md#endpoint-protection)を Intune に切り替えます。 Intune の使用方法の詳細については、「[Windows 暗号化](/intune/protect/endpoint-protection-windows-10#windows-encryption)」を参照してください。
@@ -71,6 +71,8 @@ Windows 10 または Windows 8.1 が動作しているマネージド Windows �
 ユーザーは、BitLocker で暗号化されたデバイスのロックを解除するための使い捨てのキーを使用できます。 このキーを使用すると、デバイス用に新しいキーが生成されます。
 
 ## <a name="prerequisites"></a>[前提条件]
+
+- Azure Active Directory に参加しているワーク グループ クライアント、または信頼されていないドメインのクライアントはサポートされていません。 現在、クライアントはオンプレミスの Active Directory に参加する必要があります。 この構成は、復旧サービスで認証してキーのエスクローを行うためです。
 
 - BitLocker 管理ポリシーを作成するには、Configuration Manager での**完全な権限を持つ管理者**ロールが必要です。
 

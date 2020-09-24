@@ -2,7 +2,7 @@
 title: Technical Preview リリース
 titleSuffix: Configuration Manager
 description: Configuration Manager の新機能を体験する Technical Preview Branch について説明します。
-ms.date: 09/08/2020
+ms.date: 09/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: a27cd1e7a28b52ccc224f965b678d7d578be75eb
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564212"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081741"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager の Technical Preview
 
@@ -116,19 +116,21 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2009.md) <!--ID-->
 
 最新の Configuration Manager Technical Preview バージョンでは、以下の機能を使用できます。
 
-### <a name="technical-preview-version-2008"></a>Technical Preview バージョン 2008
+### <a name="technical-preview-version-2009"></a>Technical Preview バージョン 2009
 
-- [コレクション クエリのプレビュー](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
-- [機能更新プログラムの SetupDiag エラーを分析する](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
-- [シナリオの正常性の監視](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
-- [コレクション評価ビュー](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
-- [コンソールのタスク シーケンス サイズの確認](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
-- [期限切れの収集診断ファイルの削除タスク](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
-- [現在のフォルダーにオブジェクトをインポートする](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
+- [仮想マシン スケール セットを使用したクラウド管理ゲートウェイ](2020/technical-preview-2009.md#bkmk_cmgvmss) <!--3601040-->
+- [リモート制御の機能強化](2020/technical-preview-2009.md#bkmk_remctrl) <!--4575930-->
+- [ブート メディアを使用して CMG 経由で OS を展開する](2020/technical-preview-2009.md#bkmk_osdcmg) <!--3555923-->
+- [コレクションの関係の表示](2020/technical-preview-2009.md#bkmk_coll) <!--3608121-->
+- [展開の期限に達したときにピア ウェイクアップを使用してコンピューターのスリープ状態を解除する](2020/technical-preview-2009.md#bkmk_wol) <!--3734819-->
+- [コンソール内の通知の改善](2020/technical-preview-2009.md#bkmk_notifications) <!--7410221-->
+- [更新プログラムを受信しなくなったデバイスの通知](2020/technical-preview-2009.md#bkmk_patch) <!--7520646-->
+- [管理者以外のアカウントでの Windows Server の再起動エクスペリエンスの向上](2020/technical-preview-2009.md#bkmk_server) <!--7821529-->
+- [OS 展開の機能強化](2020/technical-preview-2009.md#bkmk_osd) <!--7799892,7068388-->
 
 > [!NOTE]
 > Technical Preview の以前のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、Configuration Manager の Current Branch に追加された機能は、Technical Preview Branch でも引き続き利用できます。
@@ -145,6 +147,16 @@ When there's a new CB, add any features not in that CB to the table in H2 "Featu
 
 > [!TIP]
 > 新しい Current Branch バージョンが利用できるようになると、そのバージョンで利用できる機能が最新の "*新機能*" 記事に記載されます。 詳しくは、[増分バージョンの新機能](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)に関する記事をご覧ください。
+
+### <a name="technical-preview-version-2008"></a>Technical Preview バージョン 2008
+
+- [コレクション クエリのプレビュー](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [機能更新プログラムの SetupDiag エラーを分析する](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [シナリオの正常性の監視](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [コレクション評価ビュー](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [コンソールのタスク シーケンス サイズの確認](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [期限切れの収集診断ファイルの削除タスク](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [現在のフォルダーにオブジェクトをインポートする](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 ### <a name="technical-preview-version-2007"></a>Technical Preview バージョン 2007
 
